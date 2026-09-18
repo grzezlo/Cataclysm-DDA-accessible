@@ -5,8 +5,9 @@ items to `ACCESS_DONE.md` together with their verification notes.
 
 ## Next playable slice
 
-- [ ] Make the minimum new-game or preset-character path keyboard discoverable.
-- [ ] Announce loading state and arrival in the game world.
+- [ ] Announce new game messages without repeating message-history redraws.
+- [ ] Announce movement results, the current tile, and nearby threats.
+- [ ] Add a concise command for reviewing the current location and surroundings.
 
 ## Platform follow-up
 

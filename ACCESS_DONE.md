@@ -85,3 +85,17 @@ Limitations:
   Release tiles build completed successfully.
 - User-verified the announcement content, navigation behavior, and F6 repetition
   with NVDA 2026.1 without requesting changes.
+
+## 2026-09-18 — Accessible quick-start path
+
+- Identified `Play Now! (Default Scenario)` as the shortest new-game path because
+  it bypasses the interactive character creator and template dialogs.
+- Added semantic status announcements for core-data loading, save loading, and
+  world generation using the game's existing translated strings.
+- Added a ready announcement containing an existing translated welcome, the
+  character name, and the translated name of the current map tile.
+- Applied the same ready announcement to loaded games with `Welcome back`.
+- Extended the capture-backend test to cover status announcements; all 13 focused
+  assertions passed, and the Windows x64 Release tiles build completed.
+- User-verified the complete keyboard path from the main menu through world
+  generation to the ready announcement with NVDA 2026.1.

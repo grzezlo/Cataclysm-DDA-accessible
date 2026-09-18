@@ -20,6 +20,7 @@ class backend
 bool is_available();
 bool announce( const std::string &message );
 bool announce_focus( const std::string &label, const std::string &context = {} );
+bool announce_status( const std::string &message );
 bool repeat_last_announcement();
 std::string last_announcement();
 

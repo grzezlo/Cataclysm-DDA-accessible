@@ -67,6 +67,11 @@ bool announce_focus( const std::string &label, const std::string &context )
     return announce( context + ". " + label );
 }
 
+bool announce_status( const std::string &message )
+{
+    return announce( message );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {

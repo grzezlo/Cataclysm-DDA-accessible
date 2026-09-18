@@ -37,6 +37,7 @@
 #endif
 
 #include "achievement.h"
+#include "accessibility.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
@@ -787,6 +788,7 @@ void game::reenter_fullscreen()
 void game::setup()
 {
     new_game = true;
+    accessibility::announce_status( _( "Please wait while the world data loads…\nLoading core data" ) );
     {
         static_popup popup;
         popup.message( "%s", _( "Please wait while the world data loads…\nLoading core data" ) );
@@ -911,6 +913,7 @@ bool game::start_game()
 
     background_pane background;
     static_popup popup;
+    accessibility::announce_status( _( "Please wait as we build your world" ) );
     popup.message( "%s", _( "Please wait as we build your world" ) );
     ui_manager::redraw();
     refresh_display();
@@ -1177,6 +1180,8 @@ bool game::start_game()
         debug_menu::do_debug_quick_setup();
         add_msg( m_good, _( "Debug character detected.  Quick setup applied, good luck on the testing!" ) );
     }
+    accessibility::announce_status( _( "Welcome!" ) + std::string( " " ) + u.name + ". " +
+                                    string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
     return true;
 }
 
@@ -3229,6 +3234,8 @@ bool game::load( const save_t &name )
 {
     map &here = get_map();
 
+    accessibility::announce_status( _( "Loading the save…" ) );
+
     const cata_path worldpath = PATH_INFO::world_base_save_path();
     const cata_path save_file_path = PATH_INFO::world_base_save_path() /
                                      ( name.base_path() + SAVE_EXTENSION );
@@ -3392,6 +3399,8 @@ bool game::load( const save_t &name )
     }
 
     loading_ui::done();
+    accessibility::announce_status( _( "Welcome back." ) + std::string( " " ) + u.name + ". " +
+                                    string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
     return true;
 }
 
