@@ -21,8 +21,11 @@ bool is_available();
 bool announce( const std::string &message );
 bool announce_focus( const std::string &label, const std::string &context = {} );
 bool announce_status( const std::string &message );
+bool announce_game_message( const std::string &message );
 bool repeat_last_announcement();
 std::string last_announcement();
+
+void enable_game_messages( bool enabled );
 
 void set_backend_for_testing( std::unique_ptr<backend> replacement );
 void reset_backend_after_testing();

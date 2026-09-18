@@ -99,3 +99,18 @@ Limitations:
   assertions passed, and the Windows x64 Release tiles build completed.
 - User-verified the complete keyboard path from the main menu through world
   generation to the ready announcement with NVDA 2026.1.
+
+## 2026-09-18 — Live game messages
+
+- Added a semantic game-message operation that is disabled in menus and during
+  world initialization, then enabled when a new or loaded game is ready.
+- Hooked announcements into message insertion rather than sidebar rendering, so
+  display redraws cannot repeat speech.
+- Suppressed developer debug messages, messages hidden by the game's cooldown,
+  and repetitions already coalesced by the game.
+- Removed visual color markup before sending messages to a screen reader.
+- Extended the capture-backend test to cover the gameplay gate and repeat-last
+  behavior; all 17 focused assertions passed, and the Windows x64 Release tiles
+  build completed.
+- User-verified a movement-related game message with NVDA 2026.1. Ordinary steps
+  correctly remained silent because they do not create game-log messages.

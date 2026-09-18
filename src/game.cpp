@@ -1180,6 +1180,7 @@ bool game::start_game()
         debug_menu::do_debug_quick_setup();
         add_msg( m_good, _( "Debug character detected.  Quick setup applied, good luck on the testing!" ) );
     }
+    accessibility::enable_game_messages( true );
     accessibility::announce_status( _( "Welcome!" ) + std::string( " " ) + u.name + ". " +
                                     string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
     return true;
@@ -3399,6 +3400,7 @@ bool game::load( const save_t &name )
     }
 
     loading_ui::done();
+    accessibility::enable_game_messages( true );
     accessibility::announce_status( _( "Welcome back." ) + std::string( " " ) + u.name + ". " +
                                     string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
     return true;

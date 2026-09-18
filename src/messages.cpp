@@ -10,6 +10,7 @@
 #include <type_traits>
 #include <unordered_set>
 
+#include "accessibility.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "catacharset.h"
@@ -206,6 +207,9 @@ class messages_impl
             }
 
             messages.emplace_back( m );
+            if( type != m_debug && !m.is_in_cooldown() ) {
+                accessibility::announce_game_message( remove_color_tags( m.message ) );
+            }
         }
 
         /** Check if the current message needs to be prevented (hidden) or not from being displayed in the side bar.

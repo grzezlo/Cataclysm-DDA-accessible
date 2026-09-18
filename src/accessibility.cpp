@@ -38,6 +38,12 @@ std::string &last_message()
     return message;
 }
 
+bool &game_messages_enabled()
+{
+    static bool enabled = false;
+    return enabled;
+}
+
 } // namespace
 
 bool is_available()
@@ -72,6 +78,14 @@ bool announce_status( const std::string &message )
     return announce( message );
 }
 
+bool announce_game_message( const std::string &message )
+{
+    if( !game_messages_enabled() ) {
+        return false;
+    }
+    return announce( message );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {
@@ -86,6 +100,11 @@ std::string last_announcement()
     return last_message();
 }
 
+void enable_game_messages( const bool enabled )
+{
+    game_messages_enabled() = enabled;
+}
+
 void set_backend_for_testing( std::unique_ptr<backend> replacement )
 {
     active_backend() = replacement ? std::move( replacement ) : std::make_unique<null_backend>();
@@ -96,6 +115,7 @@ void reset_backend_after_testing()
 {
     active_backend() = make_platform_backend();
     last_message().clear();
+    game_messages_enabled() = false;
 }
 
 } // namespace accessibility
