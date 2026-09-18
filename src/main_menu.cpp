@@ -92,6 +92,67 @@ void main_menu::on_move() const
     sfx::play_variant_sound( "menu_move", "default", 100 );
 }
 
+void main_menu::announce_selection( const bool include_menu_name, const bool include_tab ) const
+{
+    const auto spoken_text = []( const std::string &text ) {
+        return remove_color_tags( shortcut_text( c_white, text ) );
+    };
+
+    std::string context;
+    if( include_menu_name ) {
+        context = _( "Main menu" );
+    }
+
+    const std::string tab = spoken_text( vMenuItems[sel1] );
+    std::string focused_item;
+    switch( static_cast<main_menu_opts>( sel1 ) ) {
+        case main_menu_opts::NEWCHAR:
+            if( sel2 >= 0 && static_cast<size_t>( sel2 ) < vNewGameSubItems.size() ) {
+                focused_item = spoken_text( vNewGameSubItems[sel2] );
+            }
+            break;
+        case main_menu_opts::SETTINGS:
+            if( sel2 >= 0 && static_cast<size_t>( sel2 ) < vSettingsSubItems.size() ) {
+                focused_item = spoken_text( vSettingsSubItems[sel2] );
+            }
+            break;
+        case main_menu_opts::LOADCHAR:
+        case main_menu_opts::WORLD: {
+            const bool create_world = static_cast<main_menu_opts>( sel1 ) == main_menu_opts::WORLD &&
+                                      sel2 == 0;
+            if( create_world ) {
+                focused_item = _( "Create World" );
+                break;
+            }
+
+            const std::vector<std::string> worlds = world_generator->all_worldnames();
+            const int world_index = sel2 -
+                                    ( static_cast<main_menu_opts>( sel1 ) == main_menu_opts::WORLD ? 1 : 0 );
+            if( world_index >= 0 && static_cast<size_t>( world_index ) < worlds.size() ) {
+                focused_item = worlds[world_index];
+            }
+            break;
+        }
+        case main_menu_opts::MOTD:
+        case main_menu_opts::TUTORIAL:
+        case main_menu_opts::HELP:
+        case main_menu_opts::CREDITS:
+        case main_menu_opts::QUIT:
+        default:
+            break;
+    }
+
+    if( include_tab && !tab.empty() && !focused_item.empty() ) {
+        if( context.empty() ) {
+            context = tab;
+        } else {
+            context += ". " + tab;
+        }
+    }
+
+    accessibility::announce_focus( focused_item.empty() ? tab : focused_item, context );
+}
+
 void main_menu::on_error()
 {
     sfx::play_variant_sound( "menu_error", "default", 100 );
@@ -658,7 +719,7 @@ bool main_menu::opening_screen()
     EM_ASM( window.dispatchEvent( new Event( 'menuready' ) ); );
 #endif
 
-    accessibility::announce( _( "Main menu" ) );
+    announce_selection( true, true );
 
     while( !start ) {
         ui_manager::redraw();
@@ -723,6 +784,7 @@ bool main_menu::opening_screen()
                         sel2 = sel1 == getopt( main_menu_opts::LOADCHAR ) ? last_world_pos : 0;
                         sel_line = 0;
                         on_move();
+                        announce_selection( false, true );
                     }
                     if( action == "SELECT" &&
                         ( sel1 == getopt( main_menu_opts::HELP ) || sel1 == getopt( main_menu_opts::QUIT ) ) ) {
@@ -737,10 +799,14 @@ bool main_menu::opening_screen()
                 for( const auto &it : main_menu_sub_button_map ) {
                     if( coord.has_value() && it.first.contains( coord.value() ) ) {
                         if( sel1 != it.second.first || sel2 != it.second.second ) {
+                            sel1 = it.second.first;
+                            sel2 = it.second.second;
                             on_move();
+                            announce_selection( false, false );
+                        } else {
+                            sel1 = it.second.first;
+                            sel2 = it.second.second;
                         }
-                        sel1 = it.second.first;
-                        sel2 = it.second.second;
                         sel_line = 0;
                         if( action == "SELECT" ) {
                             action = "CONFIRM";
@@ -765,6 +831,7 @@ bool main_menu::opening_screen()
                                    static_cast<int>( main_menu_opts::NUM_MENU_OPTS ) );
             sel2 = sel1 == getopt( main_menu_opts::LOADCHAR ) ? last_world_pos : 0;
             on_move();
+            announce_selection( false, true );
         } else if( action == "UP" || action == "DOWN" ||
                    action == "PAGE_UP" || action == "PAGE_DOWN" ||
                    action == "SCROLL_UP" || action == "SCROLL_DOWN" ) {
@@ -818,6 +885,7 @@ bool main_menu::opening_screen()
                     }
                 }
                 on_move();
+                announce_selection( false, false );
             }
         } else if( action == "CONFIRM" ) {
             switch( static_cast<main_menu_opts>( sel1 ) ) {

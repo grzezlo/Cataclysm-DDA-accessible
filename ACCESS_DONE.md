@@ -70,3 +70,18 @@ Limitations:
 
 - The NVDA DLL is currently a local Git-ignored runtime file. Release packaging
   must include the matching architecture and its LGPL 2.1 license.
+
+## 2026-09-18 — Semantic main-menu focus
+
+- Added a semantic focus operation to the renderer-independent accessibility
+  service.
+- The initial announcement identifies the main menu, selected tab, and selected
+  submenu item.
+- Left and right navigation announces the new tab and its selected item. Up and
+  down navigation announces only the changed submenu item to avoid repetition.
+- Reused the menu's translated labels after removing visual shortcut markup.
+- Included world names and the create-world action in focus announcements.
+- The focused accessibility test passed with 11 assertions, and the Windows x64
+  Release tiles build completed successfully.
+- User-verified the announcement content, navigation behavior, and F6 repetition
+  with NVDA 2026.1 without requesting changes.

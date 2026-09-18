@@ -37,14 +37,14 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
     CHECK( capture_ptr->messages.empty() );
 
     CHECK( accessibility::announce( "Main menu" ) );
-    CHECK( accessibility::announce( "New game" ) );
-    CHECK( accessibility::last_announcement() == "New game" );
+    CHECK( accessibility::announce_focus( "Custom character", "New game" ) );
+    CHECK( accessibility::last_announcement() == "New game. Custom character" );
     REQUIRE( accessibility::repeat_last_announcement() );
 
     REQUIRE( capture_ptr->messages.size() == 3 );
     CHECK( capture_ptr->messages[0] == "Main menu" );
-    CHECK( capture_ptr->messages[1] == "New game" );
-    CHECK( capture_ptr->messages[2] == "New game" );
+    CHECK( capture_ptr->messages[1] == "New game. Custom character" );
+    CHECK( capture_ptr->messages[2] == "New game. Custom character" );
 
     accessibility::reset_backend_after_testing();
 }

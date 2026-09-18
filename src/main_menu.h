@@ -54,6 +54,9 @@ class main_menu
         // Play a sound whenever the user moves left or right in the main menu or its tabs
         void on_move() const;
 
+        /** Announce the selected tab or submenu item through the accessibility service. */
+        void announce_selection( bool include_menu_name, bool include_tab ) const;
+
         // Play a sound *once* when an error occurs in the main menu or its tabs
         void on_error();
 

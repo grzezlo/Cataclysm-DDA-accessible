@@ -55,6 +55,18 @@ bool announce( const std::string &message )
     return active_backend()->announce( message );
 }
 
+bool announce_focus( const std::string &label, const std::string &context )
+{
+    if( label.empty() ) {
+        return announce( context );
+    }
+    if( context.empty() ) {
+        return announce( label );
+    }
+
+    return announce( context + ". " + label );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {
