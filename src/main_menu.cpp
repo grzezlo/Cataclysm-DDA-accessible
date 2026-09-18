@@ -21,6 +21,7 @@
 #include <emscripten.h>
 #endif
 
+#include "accessibility.h"
 #include "auto_pickup.h"
 #include "avatar.h"
 #include "cata_path.h"
@@ -601,6 +602,7 @@ bool main_menu::opening_screen()
     ctxt.register_action( "PAGE_DOWN" );
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     // for mouse selection
     ctxt.register_action( "SELECT" );
@@ -656,10 +658,17 @@ bool main_menu::opening_screen()
     EM_ASM( window.dispatchEvent( new Event( 'menuready' ) ); );
 #endif
 
+    accessibility::announce( _( "Main menu" ) );
+
     while( !start ) {
         ui_manager::redraw();
         std::string action = ctxt.handle_input();
         input_event sInput = ctxt.get_raw_input();
+
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        }
 
         // check automatic menu shortcuts
         bool match = false;

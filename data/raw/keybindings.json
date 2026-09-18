@@ -692,6 +692,12 @@
   },
   {
     "type": "keybinding",
+    "id": "ACCESSIBILITY_REPEAT_LAST",
+    "name": "Repeat last screen reader message",
+    "bindings": [ { "input_method": "keyboard_any", "key": "F6" } ]
+  },
+  {
+    "type": "keybinding",
     "id": "HELP_KEYBINDINGS",
     "name": "Display keybindings menu",
     "bindings": [ { "input_method": "keyboard_char", "key": "?" }, { "input_method": "keyboard_code", "key": "/", "mod": [ "shift" ] } ]
