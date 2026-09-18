@@ -14426,6 +14426,10 @@ void avatar_moves( const tripoint_abs_ms &old_abs_pos, const avatar &u, const ma
 {
     const tripoint_bub_ms new_pos = u.pos_bub();
     const tripoint_abs_ms new_abs_pos = m.get_abs( new_pos );
+    const std::string tile_name = m.has_furn( new_pos ) ? m.furn( new_pos ).obj().name() :
+                                  m.ter( new_pos ).obj().name();
+    accessibility::announce_movement(
+        direction_name( direction_from( old_abs_pos.raw(), new_abs_pos.raw() ) ), tile_name );
     mtype_id mount_type;
     if( u.is_mounted() ) {
         mount_type = u.mounted_creature->type->id;

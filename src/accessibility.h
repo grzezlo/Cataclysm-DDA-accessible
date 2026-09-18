@@ -22,6 +22,7 @@ bool announce( const std::string &message );
 bool announce_focus( const std::string &label, const std::string &context = {} );
 bool announce_status( const std::string &message );
 bool announce_game_message( const std::string &message );
+bool announce_movement( const std::string &direction, const std::string &tile );
 bool repeat_last_announcement();
 std::string last_announcement();
 

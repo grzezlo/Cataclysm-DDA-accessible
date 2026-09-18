@@ -43,15 +43,17 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
     CHECK_FALSE( accessibility::announce_game_message( "Hidden during setup" ) );
     accessibility::enable_game_messages( true );
     CHECK( accessibility::announce_game_message( "You hear a noise." ) );
-    CHECK( accessibility::last_announcement() == "You hear a noise." );
+    CHECK( accessibility::announce_movement( "northwest", "wooden floor" ) );
+    CHECK( accessibility::last_announcement() == "northwest. wooden floor" );
     REQUIRE( accessibility::repeat_last_announcement() );
 
-    REQUIRE( capture_ptr->messages.size() == 5 );
+    REQUIRE( capture_ptr->messages.size() == 6 );
     CHECK( capture_ptr->messages[0] == "Main menu" );
     CHECK( capture_ptr->messages[1] == "New game. Custom character" );
     CHECK( capture_ptr->messages[2] == "Loading" );
     CHECK( capture_ptr->messages[3] == "You hear a noise." );
-    CHECK( capture_ptr->messages[4] == "You hear a noise." );
+    CHECK( capture_ptr->messages[4] == "northwest. wooden floor" );
+    CHECK( capture_ptr->messages[5] == "northwest. wooden floor" );
 
     accessibility::reset_backend_after_testing();
 }

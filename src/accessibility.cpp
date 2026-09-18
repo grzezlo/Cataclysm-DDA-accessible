@@ -86,6 +86,14 @@ bool announce_game_message( const std::string &message )
     return announce( message );
 }
 
+bool announce_movement( const std::string &direction, const std::string &tile )
+{
+    if( !game_messages_enabled() ) {
+        return false;
+    }
+    return announce_focus( tile, direction );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {
