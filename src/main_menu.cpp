@@ -976,6 +976,9 @@ bool main_menu::opening_screen()
                 default:
                     break;
             }
+            if( !start ) {
+                announce_selection( true, true );
+            }
         }
     }
     if( start && !load_game && get_scenario() ) {

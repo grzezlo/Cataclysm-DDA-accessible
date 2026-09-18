@@ -8,6 +8,7 @@
 #include <memory>
 #include <set>
 
+#include "accessibility.h"
 #include "avatar.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "cata_assert.h"
@@ -962,6 +963,25 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
     do {
         ui_manager::redraw();
 
+        std::string semantic_selection;
+        if( selected >= 0 && static_cast<size_t>( selected ) < entries.size() ) {
+            semantic_selection = entries[selected]._txt_nocolor();
+            const std::string &column = entries[selected]._ctxt_nocolor();
+            if( !column.empty() ) {
+                semantic_selection += ". " + column;
+            }
+        }
+        const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
+        if( !accessibility_open ) {
+            const std::string semantic_context = remove_color_tags( !title.empty() ? title : text );
+            accessibility::announce_focus( semantic_selection, semantic_context );
+            accessibility_open = true;
+            accessibility_selection = selection_key;
+        } else if( selection_key != accessibility_selection ) {
+            accessibility::announce_focus( semantic_selection );
+            accessibility_selection = selection_key;
+        }
+
         ret_act = ctxt.handle_input( timeout );
         const input_event event = ctxt.get_raw_input();
         ret_evt = event;
@@ -1030,6 +1050,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
             }
         }
     } while( loop && ret == UILIST_WAIT_INPUT );
+
+    if( ret != UILIST_WAIT_INPUT ) {
+        accessibility_open = false;
+        accessibility_selection.clear();
+    }
 
     return ui;
 }

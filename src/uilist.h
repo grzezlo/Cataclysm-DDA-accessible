@@ -494,6 +494,8 @@ class uilist // NOLINT(cata-xy)
         bool recalc_start = false;
         bool clicked = false;
         bool need_to_scroll = false;
+        bool accessibility_open = false;
+        std::string accessibility_selection;
         std::vector<std::pair<std::string, std::string>> categories;
         std::function<bool( const uilist_entry &, const std::string & )> category_filter;
         size_t current_category = 0;

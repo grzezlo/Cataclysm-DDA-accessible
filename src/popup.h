@@ -209,6 +209,7 @@ class query_popup
 
         std::string category;
         std::string text;
+        std::string last_announced_text;
         std::vector<query_option> options;
         size_t cur;
         nc_color default_text_color;

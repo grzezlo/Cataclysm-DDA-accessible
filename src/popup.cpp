@@ -4,6 +4,7 @@
 #include <array>
 #include <memory>
 
+#include "accessibility.h"
 #include "cached_options.h"
 #include "cata_imgui.h"
 #include "catacharset.h"
@@ -287,6 +288,12 @@ query_popup::result query_popup::query_once()
 
     if( test_mode ) {
         return { false, "ERROR", {} };
+    }
+
+    const std::string semantic_text = remove_color_tags( text );
+    if( !semantic_text.empty() && semantic_text != last_announced_text ) {
+        accessibility::announce_status( semantic_text );
+        last_announced_text = semantic_text;
     }
 
     std::shared_ptr<query_popup_impl> impl = create_or_get_impl();

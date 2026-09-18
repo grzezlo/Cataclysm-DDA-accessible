@@ -114,3 +114,33 @@ Limitations:
   build completed.
 - User-verified a movement-related game message with NVDA 2026.1. Ordinary steps
   correctly remained silent because they do not create game-log messages.
+
+## 2026-09-19 — Movement and current-tile announcements
+
+- Added a semantic movement operation gated to active gameplay.
+- Successful movement announces the translated direction and the translated
+  terrain or furniture name at the destination.
+- Blocked movement remains silent, avoiding false position feedback.
+- Extended the capture-backend test to cover movement and repeat-last behavior;
+  all 19 focused assertions passed, and the Windows x64 Release tiles build
+  completed successfully.
+- User-verified normal floor and furniture movement, as well as silence at a
+  blocked map edge, with NVDA 2026.1.
+
+## 2026-09-19 — Standard list navigation and menu return
+
+- Added semantic focus announcements to the shared `uilist` control. Opening a
+  list announces its title and selected entry; navigation announces only the
+  newly selected entry and includes meaningful second-column text.
+- Added one-time announcements for standard popup text, with visual color tags
+  removed and repeated redraws deduplicated.
+- Restored the main-menu context announcement after returning from a child
+  screen such as character loading, settings, help, or world management.
+- Built the Windows x64 Release tiles executable successfully after the changes.
+- User-verified the saved-character list, navigation between its entries, and
+  the announcement on returning to the main menu with NVDA 2026.1.
+
+Limitations:
+
+- Standard popup announcements are implemented but have not yet received a
+  dedicated NVDA acceptance test.
