@@ -60,12 +60,42 @@ over upstream contribution policy or exact UI parity.
 - Delay AccessKit integration until the semantic model and an NVDA-backed
   playable vertical slice are working.
 
+### Accessibility implementation map
+
+- `src/accessibility.h` and `src/accessibility.cpp` own the renderer-independent
+  accessibility service, announcement history, gameplay gating, and shared
+  deduplication policy.  They must not depend on game UI or map objects.
+- `src/accessibility_nvda.cpp` is the only place for NVDA Controller Client and
+  Windows desktop calls.  Other code must use the accessibility service.
+- `tests/accessibility_test.cpp` contains the capture backend and service-level
+  contract tests.  Prefer small semantic formatters that can be tested with
+  fixed inputs over assertions against rendered windows.
+- `src/main_menu.cpp`, `src/uilist.cpp`, `src/popup.cpp`, and
+  `src/messages.cpp` are shared announcement integration points.  Extend a
+  shared control only when the semantics are valid for every caller; otherwise
+  keep the hook in the owning feature.
+- `src/game.cpp` currently owns gameplay lifecycle, movement, visible-threat,
+  look-around, and nearby-object integration.  Keep additions there narrow and
+  move reusable semantic formatting into the accessibility service.
+- `data/raw/keybindings.json` owns default accessibility bindings.  New actions
+  must also be discoverable through the in-game keybinding and help interfaces.
+- Before changing an integration point, inspect its current symbol and recent
+  history.  Upstream synchronization may move UI code; update the relevant
+  stage inventory in `ACCESS_TODO.md` when it does.
+
 ## Progress tracking
 
 - Treat `ACCESS_TODO.md` and `ACCESS_DONE.md` as the authoritative source for
   current scope, priorities, milestones, and completed work.
-- Keep active work in `ACCESS_TODO.md`.  It should contain only current, next,
-  and later work, plus concise known blockers and acceptance criteria.
+- Keep the complete numbered roadmap for unfinished accessibility work in
+  `ACCESS_TODO.md`.  Mark exactly one stage `CURRENT` and one stage `NEXT`; all
+  remaining stages are later work.
+- Keep stage numbers stable.  Insert an unplanned stage with a suffix such as
+  `03A` instead of renumbering stages that have already been referenced.
+- Each stage must state its outcome, dependencies, feature-specific code
+  inventory, success criteria, possible automated tests, and required human
+  verification.  Do not duplicate the stable architecture map or repository
+  workflow in every stage.
 - When an item is completed, remove it from `ACCESS_TODO.md` and move it to
   `ACCESS_DONE.md`.  Completing this documentation update is part of completing
   the work item.
@@ -77,6 +107,16 @@ over upstream contribution policy or exact UI parity.
 - Read `ACCESS_TODO.md` before starting accessibility work.  Consult
   `ACCESS_DONE.md` only when historical context or regression coverage is
   needed.
+- A native stage is complete only after its implementation and automated checks
+  pass, the Windows x64 tiles build succeeds, and a blind NVDA user confirms
+  every required human scenario.  A non-native backend stage uses a blind user
+  of each declared screen-reader/platform combination and must also pass native
+  regression checks.  Human confirmation must cover keyboard operation, focus
+  order, announcement count, concise and detailed output, repeat-last, and
+  behavior after speech interruption.
+- When closing a stage, record the Windows version, NVDA version, tested commit,
+  results, and limitations in `ACCESS_DONE.md`; mark the next roadmap stage
+  `CURRENT` and its successor `NEXT` in the same change.
 
 ## Branching and upstream synchronization
 
