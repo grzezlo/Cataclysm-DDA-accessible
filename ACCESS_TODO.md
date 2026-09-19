@@ -8,33 +8,6 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-## Roadmap
-
-1. **CURRENT - On-demand situation review**
-2. **NEXT - Look-around exploration**
-3. Nearby item and creature lists
-4. Player condition and gameplay status
-5. Reusable input controls and command discovery
-6. Standard inventory and item information
-7. Advanced inventory and multiselect transfers
-8. Directional and environmental interaction
-9. Pickup, drop, and container transfers
-10. Ranged and thrown targeting
-11. Crafting and disassembly
-12. Construction, activities, and interruptions
-13. Character information
-14. Bionics, mutations, spells, and martial arts
-15. NPC dialogue
-16. Trading
-17. Missions
-18. Overmap navigation and zones
-19. Vehicles
-20. Custom character creation
-21. World, mod, and application configuration
-22. Coverage and announcement-policy audit
-23. Windows packaging and playable-release acceptance
-24. Browser backend and web acceptance
-
 Stages 01-10 establish the minimum independent survival and combat loop.  Stages
 11-21 cover the major progression, management, and setup interfaces.  Stages
 22-23 are native release gates.  Stage 24 starts only after the native semantic
@@ -46,12 +19,10 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Stage 24 uses the declared browser and screen
 reader combinations instead.
 
-## Stage 01 - On-demand situation review - CURRENT
+## Stage 01 - On-demand situation review
 
-**Outcome:** A player can request concise or detailed information about the
-current position and immediate surroundings without moving.
-
-**Depends on:** Completed movement, live-message, threat, and repeat-last work.
+**Outcome:** A player can efficiently inspect the current position and immediate
+surroundings and return to gameplay without moving the character.
 
 **Code inventory:** `src/game.cpp` and `src/game.h` for visible local state and
 look helpers; `src/map.cpp` for terrain/furniture names; `src/handle_action.cpp`
@@ -59,30 +30,31 @@ and `data/raw/keybindings.json` for dispatch; the accessibility service and test
 
 **Success criteria:**
 
-- One command reports the current terrain/furniture, movement state, and a short
-  summary of visible adjacent obstacles, exits, items, creatures, and hazards.
-- A separate detail command provides enough normally visible information to
-  choose a next action; both results work with repeat-last and never fire on a
-  passive redraw.
-- Ordering and direction/distance wording are stable, translatable, and do not
-  reveal occluded, invisible, remembered-only, or otherwise hidden state.
+- The interaction design selected through the required three-option review
+  provides efficient access to visible obstacles, exits, items, creatures,
+  hazards, terrain, furniture, and movement state.
+- Information volume and detail are under the player's control according to the
+  accepted design; the player is not forced to wait through irrelevant detail.
+- Focus, ordering, direction/distance wording, return to gameplay, and
+  repeat-last behavior are stable and translatable.  Passive redraws are silent.
+- The interaction does not reveal occluded, invisible, remembered-only, or
+  otherwise hidden state.
 
-**Possible automated tests:** Format fixed empty, indoor, outdoor, furniture,
-item, hazard, and creature snapshots; verify ordering, limits, visibility,
-gameplay gating, deduplication, and repeat-last.  Add a map-backed visibility
-test if pure snapshots cannot prove parity.
+**Possible automated tests:** Exercise the selected interaction with fixed empty,
+indoor, outdoor, furniture, item, hazard, and creature snapshots; verify its
+accepted focus/order and detail behavior, visibility, gameplay gating,
+deduplication, repeat-last, and cancel/return.  Add a map-backed visibility test
+if pure snapshots cannot prove parity.
 
 **Required human verification:** Review indoor and outdoor positions, furniture,
-an item pile, a hazard, and a visible creature.  Confirm concise output is quick,
-detail is sufficient, hidden state is not disclosed, and passive redraws are
-silent.
+an item pile, a hazard, and a visible creature.  Confirm the desired information
+can be reached efficiently, navigation and return are predictable, hidden state
+is not disclosed, and passive redraws are silent.
 
-## Stage 02 - Look-around exploration - NEXT
+## Stage 02 - Look-around exploration
 
 **Outcome:** A player can inspect visible map tiles with a semantic cursor without
 moving the character.
-
-**Depends on:** Stage 01.
 
 **Code inventory:** `game::look_around`, `game::draw_look_around_cursor`, and the
 look-information helpers in `src/game.cpp`/`src/game.h`;
@@ -107,8 +79,6 @@ spatially understandable and fast navigation leaves the correct final focus.
 **Outcome:** The `V` interface provides efficient list-based exploration of
 normally visible nearby items and creatures.
 
-**Depends on:** Stage 02.
-
 **Code inventory:** `game::list_items_monsters`, `game::list_items`, and monster
 list handling in `src/game.cpp`/`src/game.h`; `src/map_item_stack.cpp` for grouped
 items; `src/uilist.cpp` only where the shared list actually owns focus.
@@ -130,8 +100,6 @@ losing context.
 
 **Outcome:** All important sidebar/HUD information is available on demand, while
 urgent changes are announced once without turn-by-turn chatter.
-
-**Depends on:** Stage 01.
 
 **Code inventory:** `src/panels.cpp` for HUD data; `src/game.cpp` and
 `src/handle_action.cpp` for gameplay dispatch; `src/player_display.cpp` for
@@ -156,8 +124,6 @@ concise/detail commands replace the need to inspect the sidebar visually.
 **Outcome:** Common controls expose consistent semantics before more bespoke
 screens depend on them, and accessibility commands can be discovered in-game.
 
-**Depends on:** Stage 04.
-
 **Code inventory:** `src/uilist.cpp`, `src/popup.cpp`, `src/input_popup.cpp`,
 `src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`,
 `src/help.cpp`, `data/core/help.json`, and `data/raw/keybindings.json`.
@@ -181,8 +147,6 @@ there are no silent controls or keyboard traps.
 **Outcome:** Common inventory selectors, item details, comparisons, and item
 actions are usable without visual columns, colors, or highlights.
 
-**Depends on:** Stage 05.
-
 **Code inventory:** `src/inventory_ui.cpp`, `src/game_inventory.cpp`,
 `src/item_action.cpp`, `src/ui_iteminfo.cpp`, and `src/iteminfo_query.cpp`.
 
@@ -204,8 +168,6 @@ ordered usefully and verbosity remains manageable.
 
 **Outcome:** Two-pane and multiselect item transfers are independently usable.
 
-**Depends on:** Stage 06.
-
 **Code inventory:** `src/advanced_inv.cpp`, `src/advanced_inv_pane.cpp`, other
 `src/advanced_inv_*` helpers, and multiselect paths in `src/inventory_ui.cpp`.
 
@@ -226,8 +188,6 @@ invalid-destination failures.
 
 **Outcome:** Direction selection and terrain/furniture interaction clearly expose
 the target, choices, warnings, and outcome.
-
-**Depends on:** Stages 02 and 05.
 
 **Code inventory:** action dispatch in `src/handle_action.cpp`; adjacent-target
 helpers in `src/game.cpp`; terrain/furniture interactions in `src/iexamine.cpp`;
@@ -251,8 +211,6 @@ and cancel nested prompts.
 **Outcome:** Local item transfer workflows expose item, quantity, source,
 destination, capacity, ownership, and result.
 
-**Depends on:** Stages 06 and 08.
-
 **Code inventory:** `src/pickup.cpp`, pickup/drop selectors in
 `src/game_inventory.cpp` and `src/inventory_ui.cpp`, item locations and container
 selection paths reached by those workflows.
@@ -272,8 +230,6 @@ items; transfer to/from a container; exercise capacity and ownership warnings.
 
 **Outcome:** A player can inspect targets, choose an aim action, and fire or throw
 with the same normally visible tactical information.
-
-**Depends on:** Stages 02-06.
 
 **Code inventory:** targeting and aim UI in `src/ranged.cpp`/`src/ranged.h`;
 combat dispatch in `src/game.cpp` and `src/handle_action.cpp`; existing result
@@ -298,8 +254,6 @@ Confirm target choice is reliable under rapid navigation and interrupted speech.
 **Outcome:** Recipe selection, requirements, batch choices, crafting, and
 disassembly are independently usable.
 
-**Depends on:** Stages 05-07.
-
 **Code inventory:** `src/crafting_gui.cpp`, crafting/disassembly selectors in
 `src/game_inventory.cpp`, and crafting state providers used by those screens.
 
@@ -319,8 +273,6 @@ with missing requirements, search/filter, and disassemble an item with NVDA.
 
 **Outcome:** Projects and long-running actions expose selection, placement,
 progress on request, interruptions, resumption, and completion.
-
-**Depends on:** Stages 08 and 11.
 
 **Code inventory:** `src/construction.cpp`, `src/player_activity.cpp`,
 `src/activity_actor.cpp`, `src/activity_handlers.cpp`, and
@@ -344,8 +296,6 @@ cancel another.
 **Outcome:** All read-only character information presented in tabs, rows, colors,
 and detail panes is semantically reviewable.
 
-**Depends on:** Stages 04-06.
-
 **Code inventory:** `src/player_display.cpp` and the character/body/morale/skill
 providers it uses.
 
@@ -366,8 +316,6 @@ assistance.
 
 **Outcome:** Character capabilities can be inspected, selected, activated, and
 configured without relying on layout or color.
-
-**Depends on:** Stages 05 and 13.
 
 **Code inventory:** `src/bionics_ui.cpp`, `src/mutation_ui.cpp`, `src/magic.cpp`,
 `src/martialarts.cpp`, and their owning data/state modules.
@@ -390,8 +338,6 @@ case for each available system.
 **Outcome:** Conversation text and response selection support complete branching
 dialogue without repeated rereading.
 
-**Depends on:** Stage 05.
-
 **Code inventory:** dialogue rendering, response input, and nested menus in
 `src/npctalk.cpp`/`src/npctalk.h`; shared lists and popups where actually used.
 
@@ -411,8 +357,6 @@ disabled response, nested choice, long text, and clean return to gameplay.
 **Outcome:** Buying, selling, quantity selection, balance, and capacity are clear
 in the two-party trade interface.
 
-**Depends on:** Stages 06-07 and 15.
-
 **Code inventory:** `src/trade_ui.cpp`, `src/npctrade.cpp`, inventory selectors,
 and item information used by trade.
 
@@ -431,8 +375,6 @@ details, correct an unfavorable/invalid trade, accept it, and return to dialogue
 
 **Outcome:** Mission discovery, acceptance, tracking, details, and completion are
 usable without visual tabs or map markers alone.
-
-**Depends on:** Stages 13 and 15.
 
 **Code inventory:** `src/mission_ui.cpp`, `src/mission.cpp`, and mission dialogue
 in `src/npctalk.cpp`.  Stage 18 owns the later overmap handoff.
@@ -454,8 +396,6 @@ in a mission; inspect one mission without a known location and one failed state.
 **Outcome:** Known-world exploration, route planning, notes, and zone management
 are spatially understandable without revealing unexplored information.
 
-**Depends on:** Stages 02, 05, and 17.
-
 **Code inventory:** `src/overmap_ui.cpp`, known-state providers in
 `src/overmapbuffer.cpp` and `src/overmap.cpp`, and zone UI in `src/clzones.cpp`.
 
@@ -475,8 +415,6 @@ locate a mission, plan/follow a route, change z-level, and create/edit a zone.
 
 **Outcome:** Vehicle entry, controls, driving, status, parts, and maintenance are
 accessible through semantic direction and state information.
-
-**Depends on:** Stages 04, 08-10, and 18.
 
 **Code inventory:** `src/vehicle_use.cpp`, `src/vehicle_display.cpp`, vehicle
 movement/state modules, and vehicle action dispatch in `src/game.cpp`.
@@ -498,8 +436,6 @@ blocked/invalid case.
 
 **Outcome:** A player can create and start a custom character using every
 creation tab instead of relying on quick start.
-
-**Depends on:** Stages 05, 06, and 13-14.
 
 **Code inventory:** creation tabs, state, and validation in
 `src/newcharacter.cpp`; existing fixtures in `tests/new_character_test.cpp`;
@@ -523,8 +459,6 @@ template.
 **Outcome:** World management, mods, options, rule editors, and presentation
 configuration are independently usable.
 
-**Depends on:** Stages 05 and 20.
-
 **Code inventory:** `src/worldfactory.cpp`, `src/mod_manager_ui.cpp`,
 `src/options.cpp`, `src/safemode_ui.cpp`, `src/auto_pickup.cpp`, `src/panels.cpp`,
 and main-menu world management in `src/main_menu.cpp`.
@@ -546,8 +480,6 @@ reset, and delete confirmations.
 
 **Outcome:** Every keyboard-reachable interface is classified and tested, speech
 policy is consistent, and remaining bespoke-screen gaps are closed.
-
-**Depends on:** Stages 01-21.
 
 **Code inventory:** all `accessibility::` call sites; all registered
 `input_context` categories and bespoke UI entry points; the accessibility service
@@ -577,8 +509,6 @@ popup integration, and record all accepted limitations.
 **Outcome:** A new blind player can obtain, start, understand, and play the
 Windows x64 tiles build without assembling development dependencies.
 
-**Depends on:** Stage 22.
-
 **Code inventory:** repository Windows build/package scripts;
 `src/accessibility_nvda.cpp` runtime lookup; `README.md`, `doc/`, release notes,
 licenses, translations, and distribution contents.
@@ -601,8 +531,6 @@ NVDA, commit, and artifact versions; this is the native release gate.
 
 **Outcome:** The Emscripten build exposes the stable semantic event model through
 browser accessibility APIs without parsing canvas pixels or rendered text.
-
-**Depends on:** Stage 23.
 
 **Code inventory:** the backend-neutral accessibility service; the NVDA backend
 as a boundary reference only; Emscripten build and web-shell paths to be recorded

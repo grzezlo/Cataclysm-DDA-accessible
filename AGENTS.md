@@ -32,8 +32,9 @@ over upstream contribution policy or exact UI parity.
   perceive, but it must not reveal hidden creatures, state, intentions, or
   other information unavailable through normal gameplay.
 - Do not communicate state through color, layout, symbols, or sound alone.
-- Prefer short focus announcements, with separate commands for detailed
-  information.
+- Prefer short focus announcements and user-controlled access to detail.  The
+  detail interaction may be a command, a navigable semantic view, or another
+  design selected through the interaction review below.
 - Deduplicate and prioritize announcements so routine redraws do not flood the
   screen reader.
 - Preserve the last meaningful announcement so the player can request it
@@ -44,6 +45,28 @@ over upstream contribution policy or exact UI parity.
 - Treat testing with a blind NVDA user as the primary acceptance standard for
   interaction quality.  Do not claim that a feature is accessible until it has
   been tested with NVDA or clearly mark it as unverified.
+
+### Interaction design review
+
+- Before implementing a new player-facing accessibility interaction, present
+  the user with three genuinely distinct and feasible interaction designs and
+  wait for an explicit choice.  A roadmap outcome does not authorize one
+  particular interaction design.
+- Describe each option from the player's perspective: keyboard operation,
+  focus/navigation model, what is spoken and when, how detail is requested, how
+  the player returns or cancels, and any visible UI effect.
+- State the important usability, information-density, implementation, and
+  maintenance tradeoffs.  Recommend one option and explain why it best supports
+  blind play.
+- After the user chooses, record the selected interaction and its essential
+  behavior in the current `ACCESS_TODO.md` stage before changing code, so another
+  agent does not have to infer the decision.
+- Do not satisfy this review with superficial technical variations of the same
+  interaction.  Consider patterns such as concise announcements, navigable
+  semantic lists or views, and layered overview/detail access when applicable.
+- A small regression fix that preserves an already accepted interaction design
+  does not require a new three-option review.  Material changes to its controls,
+  focus model, speech behavior, or information organization do.
 
 ## Architecture
 
@@ -88,13 +111,16 @@ over upstream contribution policy or exact UI parity.
 - Treat `ACCESS_TODO.md` and `ACCESS_DONE.md` as the authoritative source for
   current scope, priorities, milestones, and completed work.
 - Keep the complete numbered roadmap for unfinished accessibility work in
-  `ACCESS_TODO.md`.  Mark exactly one stage `CURRENT` and one stage `NEXT`; all
-  remaining stages are later work.
+  `ACCESS_TODO.md`.  The first stage in the file is current and the following
+  stage is next; do not duplicate that ordering in a table of contents or with
+  status labels.
 - Keep stage numbers stable.  Insert an unplanned stage with a suffix such as
   `03A` instead of renumbering stages that have already been referenced.
-- Each stage must state its outcome, dependencies, feature-specific code
-  inventory, success criteria, possible automated tests, and required human
-  verification.  Do not duplicate the stable architecture map or repository
+- Each stage must state its outcome, feature-specific code inventory, success
+  criteria, possible automated tests, and required human verification.  The
+  roadmap is sequential, so do not list earlier stages as dependencies.  Record
+  only exceptional external blockers or independently runnable work where it is
+  relevant.  Do not duplicate the stable architecture map or repository
   workflow in every stage.
 - When an item is completed, remove it from `ACCESS_TODO.md` and move it to
   `ACCESS_DONE.md`.  Completing this documentation update is part of completing
@@ -115,8 +141,9 @@ over upstream contribution policy or exact UI parity.
   order, announcement count, concise and detailed output, repeat-last, and
   behavior after speech interruption.
 - When closing a stage, record the Windows version, NVDA version, tested commit,
-  results, and limitations in `ACCESS_DONE.md`; mark the next roadmap stage
-  `CURRENT` and its successor `NEXT` in the same change.
+  results, and limitations in `ACCESS_DONE.md`.  Removing it from
+  `ACCESS_TODO.md` makes the following stage current without another status
+  update.
 
 ## Branching and upstream synchronization
 
