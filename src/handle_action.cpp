@@ -10,6 +10,7 @@
 #include <utility>
 
 #include "action.h"
+#include "accessibility.h"
 #include "activity_actor_definitions.h"
 #include "advanced_inv.h"
 #include "auto_note.h"
@@ -2568,6 +2569,14 @@ bool game::do_regular_action( action_id &act, avatar &player_character,
 
         case ACTION_LIST_ITEMS:
             list_items_monsters();
+            break;
+
+        case ACTION_ACCESSIBILITY_SITUATION:
+            accessibility_situation_review();
+            break;
+
+        case ACTION_ACCESSIBILITY_REPEAT_LAST:
+            accessibility::repeat_last_announcement();
             break;
 
         case ACTION_ZONES:

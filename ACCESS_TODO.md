@@ -24,15 +24,40 @@ reader combinations instead.
 **Outcome:** A player can efficiently inspect the current position and immediate
 surroundings and return to gameplay without moving the character.
 
+**Selected interaction:** A rebindable gameplay command opens a standard
+keyboard-navigable `uilist` containing normally visible situation elements as a
+single flat list from the current z-level and within the engine's maximum
+60-tile visibility range, ordered by distance from the player with a stable
+tie-breaker.  The range includes only state the character can currently see but
+is independent of visual zoom, window size, panels, and camera offset; there is
+no separate entry-count limit.  The current position,
+movement state, obstacles, exits, items, creatures, hazards, and furniture are
+represented as semantic entries rather than visual map cells or category
+headings.  Ordinary ground such as grass, pavement, and floors is omitted;
+mechanically significant terrain is represented as a hazard, exit, or obstacle.
+Connected tiles with the same obstacle or area-hazard semantics form one entry,
+using eight-directional adjacency and reporting the region's tile count and
+nearest location.  Creatures, items, exits, traps, furniture, and other discrete
+objects remain separate entries.  Moving focus speaks a concise, self-contained entry with the
+information needed to understand that element without a second detail mode.
+Enter or Escape closes the list and returns directly to unchanged gameplay.  The
+visible list mirrors the spoken content, passive redraws remain silent, and F6
+repeats the most recent focus announcement; moving away and back repeats an
+entry as well.  The reusable list-building approach should support later
+nearby-object interfaces without embedding map or NVDA dependencies in the
+accessibility service.
+
 **Code inventory:** `src/game.cpp` and `src/game.h` for visible local state and
-look helpers; `src/map.cpp` for terrain/furniture names; `src/handle_action.cpp`
-and `data/raw/keybindings.json` for dispatch; the accessibility service and test.
+look helpers; `src/map.cpp` for terrain/furniture names; `src/uilist.cpp` for the
+shared semantic list behavior; `src/handle_action.cpp` and
+`data/raw/keybindings.json` for dispatch; the accessibility service and test.
 
 **Success criteria:**
 
 - The interaction design selected through the required three-option review
   provides efficient access to visible obstacles, exits, items, creatures,
-  hazards, terrain, furniture, and movement state.
+  hazards, mechanically significant terrain, furniture, and movement state
+  without listing every ordinary ground tile.
 - Information volume and detail are under the player's control according to the
   accepted design; the player is not forced to wait through irrelevant detail.
 - Focus, ordering, direction/distance wording, return to gameplay, and

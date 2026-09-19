@@ -209,6 +209,10 @@ std::string action_ident( action_id act )
             return "peek";
         case ACTION_LIST_ITEMS:
             return "listitems";
+        case ACTION_ACCESSIBILITY_SITUATION:
+            return "accessibility_situation";
+        case ACTION_ACCESSIBILITY_REPEAT_LAST:
+            return "ACCESSIBILITY_REPEAT_LAST";
         case ACTION_ZONES:
             return "zones";
         case ACTION_LOOT:
@@ -427,6 +431,8 @@ bool can_action_change_worldstate( const action_id act )
         // Environment Interaction
         case ACTION_LOOK:
         case ACTION_LIST_ITEMS:
+        case ACTION_ACCESSIBILITY_SITUATION:
+        case ACTION_ACCESSIBILITY_REPEAT_LAST:
         case ACTION_ZONES:
         // Long-term / special actions
         case ACTION_SAVE:
@@ -874,6 +880,8 @@ action_id handle_action_menu( map &here )
             REGISTER_ACTION( ACTION_LOOK );
             REGISTER_ACTION( ACTION_PEEK );
             REGISTER_ACTION( ACTION_LIST_ITEMS );
+            REGISTER_ACTION( ACTION_ACCESSIBILITY_SITUATION );
+            REGISTER_ACTION( ACTION_ACCESSIBILITY_REPEAT_LAST );
             REGISTER_ACTION( ACTION_ZONES );
             REGISTER_ACTION( ACTION_MAP );
             REGISTER_ACTION( ACTION_SKY );

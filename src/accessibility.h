@@ -18,6 +18,25 @@ class backend
         virtual bool announce( const std::string &message ) = 0;
 };
 
+struct semantic_list_entry {
+    int distance;
+    int z;
+    int y;
+    int x;
+    int kind;
+    std::string label;
+    std::string context;
+};
+
+struct connected_semantic_list_group {
+    semantic_list_entry nearest;
+    size_t count;
+};
+
+void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries );
+std::vector<connected_semantic_list_group> group_connected_semantic_list_entries(
+    std::vector<semantic_list_entry> entries );
+
 bool is_available();
 bool announce( const std::string &message );
 bool announce_focus( const std::string &label, const std::string &context = {} );

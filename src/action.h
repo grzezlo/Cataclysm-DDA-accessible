@@ -132,6 +132,10 @@ enum action_id : int {
     ACTION_PEEK,
     /** List items and monsters in a given square */
     ACTION_LIST_ITEMS,
+    /** Review the current position and visible nearby situation semantically */
+    ACTION_ACCESSIBILITY_SITUATION,
+    /** Repeat the last screen reader announcement */
+    ACTION_ACCESSIBILITY_REPEAT_LAST,
     /** Open the zone manager */
     ACTION_ZONES,
     /** Sort out the loot */

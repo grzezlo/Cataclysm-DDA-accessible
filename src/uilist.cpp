@@ -539,6 +539,7 @@ input_context uilist::create_main_input_context() const
     }
     ctxt.register_action( "ANY_INPUT" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     for( const auto &additional_action : additional_actions ) {
         ctxt.register_action( additional_action.first, additional_action.second );
     }
@@ -988,7 +989,9 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         const auto iter = keymap.find( ret_evt );
         recalc_start = false;
 
-        if( scrollby( scroll_amount_from_action( ret_act ) ) ) {
+        if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( scrollby( scroll_amount_from_action( ret_act ) ) ) {
             need_to_scroll = true;
             recalc_start = true;
         } else if( filtering && ret_act == "UILIST.FILTER" ) {

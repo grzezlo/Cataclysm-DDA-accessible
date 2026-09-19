@@ -70,3 +70,52 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
 
     accessibility::reset_backend_after_testing();
 }
+
+TEST_CASE( "semantic accessibility lists have stable distance ordering",
+           "[accessibility][nogame]" )
+{
+    std::vector<accessibility::semantic_list_entry> entries = {
+        { 2, 0, 0, 2, 0, "far east", "2 tiles east" },
+        { 1, 0, 1, 0, 1, "south item", "1 tile south" },
+        { 1, 0, -1, 0, 2, "north obstacle", "1 tile north" },
+        { 0, 0, 0, 0, 0, "current position", "here" },
+        { 1, 0, -1, 0, 1, "north hazard", "1 tile north" },
+    };
+
+    accessibility::sort_semantic_list_entries( entries );
+
+    REQUIRE( entries.size() == 5 );
+    CHECK( entries[0].label == "current position" );
+    CHECK( entries[1].label == "north hazard" );
+    CHECK( entries[2].label == "north obstacle" );
+    CHECK( entries[3].label == "south item" );
+    CHECK( entries[4].label == "far east" );
+}
+
+TEST_CASE( "semantic accessibility lists group connected matching regions",
+           "[accessibility][nogame]" )
+{
+    std::vector<accessibility::semantic_list_entry> entries = {
+        { 3, 0, 0, 3, 1, "wall", "3 tiles east" },
+        { 1, 0, 0, 1, 1, "wall", "1 tile east" },
+        { 2, 0, 1, 2, 1, "wall", "2 tiles southeast" },
+        { 5, 0, 0, -5, 1, "wall", "5 tiles west" },
+        { 2, 0, 0, 2, 2, "deep water", "2 tiles east" },
+        { 3, 0, 1, 3, 2, "deep water", "3 tiles southeast" },
+        { 4, 1, 1, 3, 1, "wall", "above" },
+    };
+
+    const std::vector<accessibility::connected_semantic_list_group> groups =
+        accessibility::group_connected_semantic_list_entries( std::move( entries ) );
+
+    REQUIRE( groups.size() == 4 );
+    CHECK( groups[0].nearest.label == "wall" );
+    CHECK( groups[0].nearest.context == "1 tile east" );
+    CHECK( groups[0].count == 3 );
+    CHECK( groups[1].nearest.label == "deep water" );
+    CHECK( groups[1].count == 2 );
+    CHECK( groups[2].nearest.context == "above" );
+    CHECK( groups[2].count == 1 );
+    CHECK( groups[3].nearest.context == "5 tiles west" );
+    CHECK( groups[3].count == 1 );
+}

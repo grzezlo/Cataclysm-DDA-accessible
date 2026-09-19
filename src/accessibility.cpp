@@ -1,7 +1,10 @@
 #include "accessibility.h"
 
+#include <algorithm>
+#include <map>
 #include <memory>
 #include <set>
+#include <tuple>
 #include <utility>
 
 namespace accessibility
@@ -64,6 +67,64 @@ std::string &previous_movement_direction()
 }
 
 } // namespace
+
+void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries )
+{
+    std::sort( entries.begin(), entries.end(),
+    []( const semantic_list_entry & lhs, const semantic_list_entry & rhs ) {
+        return std::tie( lhs.distance, lhs.z, lhs.y, lhs.x, lhs.kind, lhs.label ) <
+               std::tie( rhs.distance, rhs.z, rhs.y, rhs.x, rhs.kind, rhs.label );
+    } );
+}
+
+std::vector<connected_semantic_list_group> group_connected_semantic_list_entries(
+    std::vector<semantic_list_entry> entries )
+{
+    sort_semantic_list_entries( entries );
+
+    using entry_key = std::tuple<int, int, int, int, std::string>;
+    std::map<entry_key, size_t> entries_by_position;
+    for( size_t index = 0; index < entries.size(); ++index ) {
+        const semantic_list_entry &entry = entries[index];
+        entries_by_position.emplace( entry_key( entry.z, entry.y, entry.x, entry.kind, entry.label ),
+                                     index );
+    }
+
+    std::vector<bool> visited( entries.size(), false );
+    std::vector<connected_semantic_list_group> groups;
+    for( size_t index = 0; index < entries.size(); ++index ) {
+        if( visited[index] ) {
+            continue;
+        }
+
+        visited[index] = true;
+        size_t count = 0;
+        std::vector<size_t> pending = { index };
+        while( !pending.empty() ) {
+            const size_t current_index = pending.back();
+            pending.pop_back();
+            ++count;
+
+            const semantic_list_entry &current = entries[current_index];
+            for( int y_offset = -1; y_offset <= 1; ++y_offset ) {
+                for( int x_offset = -1; x_offset <= 1; ++x_offset ) {
+                    if( x_offset == 0 && y_offset == 0 ) {
+                        continue;
+                    }
+                    const entry_key neighbor_key( current.z, current.y + y_offset,
+                                                  current.x + x_offset, current.kind, current.label );
+                    const auto neighbor = entries_by_position.find( neighbor_key );
+                    if( neighbor != entries_by_position.end() && !visited[neighbor->second] ) {
+                        visited[neighbor->second] = true;
+                        pending.push_back( neighbor->second );
+                    }
+                }
+            }
+        }
+        groups.push_back( { entries[index], count } );
+    }
+    return groups;
+}
 
 bool is_available()
 {

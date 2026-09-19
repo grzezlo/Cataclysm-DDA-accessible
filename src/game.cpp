@@ -2731,6 +2731,8 @@ input_context get_default_mode_input_context()
     ctxt.register_action( "look" );
     ctxt.register_action( "peek" );
     ctxt.register_action( "listitems" );
+    ctxt.register_action( "accessibility_situation" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.register_action( "zones" );
     ctxt.register_action( "inventory" );
     ctxt.register_action( "compare" );
@@ -8711,6 +8713,159 @@ std::string io::enum_to_string<list_item_sort_mode>( list_item_sort_mode data )
             return "CATEGORY_NAME";
     }
     cata_fatal( "Invalid list item sort mode" );
+}
+
+namespace
+{
+
+enum class situation_entry_kind : int {
+    current_position,
+    hazard,
+    creature,
+    exit,
+    obstacle,
+    furniture,
+    item
+};
+
+std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
+{
+    const int distance = rl_dist( origin, target );
+    if( distance == 0 ) {
+        return _( "here" );
+    }
+
+    const std::string direction = direction_name( direction_from( origin.raw(), target.raw() ) );
+    return string_format( n_gettext( "%1$d tile %2$s", "%1$d tiles %2$s", distance ),
+                          distance, direction );
+}
+
+void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entries,
+                          const situation_entry_kind kind,
+                          const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
+                          const std::string &label )
+{
+    const tripoint_rel_ms offset = position - origin;
+    entries.push_back( { rl_dist( origin, position ), offset.z(), offset.y(), offset.x(),
+                         static_cast<int>( kind ), label, situation_location( origin, position ) } );
+}
+
+} // namespace
+
+void game::accessibility_situation_review()
+{
+    map &here = get_map();
+    const tripoint_bub_ms origin = u.pos_bub( here );
+    std::vector<accessibility::semantic_list_entry> situation_entries;
+    std::vector<accessibility::semantic_list_entry> region_entries;
+
+    std::string current_name = here.tername( origin );
+    if( here.has_furn( origin ) ) {
+        current_name += ", " + here.furnname( origin );
+    }
+    const std::string movement_mode = u.current_movement_mode()->name();
+    add_situation_entry( situation_entries, situation_entry_kind::current_position, origin, origin,
+                         string_format( _( "Current position: %1$s. Movement: %2$s" ),
+                                        current_name, movement_mode ) );
+
+    for( const tripoint_bub_ms &position : here.points_in_radius( origin,
+            MAX_VIEW_DISTANCE, 0 ) ) {
+        if( position == origin || !u.sees( here, position ) ) {
+            continue;
+        }
+
+        const trap &visible_trap = here.tr_at( position );
+        if( visible_trap.can_see( position, u ) && !visible_trap.is_benign() ) {
+            add_situation_entry( situation_entries, situation_entry_kind::hazard, origin, position,
+                                 string_format( _( "Hazard: %s" ), visible_trap.name() ) );
+        }
+        for( const std::pair<const field_type_id, field_entry> &field : here.field_at( position ) ) {
+            if( field.second.is_dangerous() ) {
+                add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
+                                     string_format( _( "Hazard: %s" ), field.second.name() ) );
+            }
+        }
+
+        const Creature *creature = get_creature_tracker().creature_at( position, true );
+        if( creature != nullptr && creature != &u && u.sees( here, *creature ) ) {
+            const std::string attitude = u.has_trait( trait_INATTENTIVE ) ? _( "Unknown" ) :
+                                         Creature::get_attitude_ui_data( creature->attitude_to( u ) ).first.translated();
+            add_situation_entry( situation_entries, situation_entry_kind::creature, origin, position,
+                                 string_format( _( "Creature: %1$s. Attitude: %2$s" ),
+                                                creature->disp_name(), attitude ) );
+        }
+
+        const bool is_exit = here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_DOOR, position ) ||
+                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_UP, position ) ||
+                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_DOWN, position ) ||
+                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_UP, position ) ||
+                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_DOWN, position );
+        const bool is_obstacle = here.impassable( position );
+        const bool is_terrain_hazard =
+            here.has_flag_ter( ter_furn_flag::TFLAG_DEEP_WATER, position ) ||
+            here.has_flag_ter( ter_furn_flag::TFLAG_ROUGH, position ) ||
+            here.has_flag_ter( ter_furn_flag::TFLAG_SHARP, position ) ||
+            here.has_flag_ter( ter_furn_flag::TFLAG_UNSTABLE, position ) ||
+            here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, position ) ||
+            here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR_WATER, position );
+        if( is_exit ) {
+            const std::string name = here.has_furn( position ) ? here.furnname( position ) :
+                                     here.tername( position );
+            const std::string passability = is_obstacle ? _( "Impassable" ) : _( "Passable" );
+            add_situation_entry( situation_entries, situation_entry_kind::exit, origin, position,
+                                 string_format( _( "Exit: %1$s. %2$s" ), name, passability ) );
+        } else if( is_obstacle ) {
+            const std::string name = here.has_furn( position ) ? here.furnname( position ) :
+                                     here.tername( position );
+            add_situation_entry( region_entries, situation_entry_kind::obstacle, origin, position,
+                                 string_format( _( "Obstacle: %s" ), name ) );
+        } else if( is_terrain_hazard ) {
+            add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
+                                 string_format( _( "Hazard: %s" ), here.tername( position ) ) );
+        }
+
+        if( here.has_furn( position ) && !is_exit && !is_obstacle ) {
+            add_situation_entry( situation_entries, situation_entry_kind::furniture, origin, position,
+                                 string_format( _( "Furniture: %s" ), here.furnname( position ) ) );
+        }
+
+        if( here.sees_some_items( position, u ) ) {
+            std::map<std::string, int> items_here;
+            for( const item &it : here.i_at( position ) ) {
+                items_here[it.tname()] += it.count();
+            }
+            for( const std::pair<const std::string, int> &item_entry : items_here ) {
+                const std::string name = item_entry.second > 1 ?
+                                         string_format( _( "%1$s (%2$d)" ), item_entry.first, item_entry.second ) :
+                                         item_entry.first;
+                add_situation_entry( situation_entries, situation_entry_kind::item, origin, position,
+                                     string_format( _( "Item: %s" ), name ) );
+            }
+        }
+    }
+
+    for( accessibility::connected_semantic_list_group &group :
+         accessibility::group_connected_semantic_list_entries( std::move( region_entries ) ) ) {
+        if( group.count > 1 ) {
+            group.nearest.context = string_format(
+                                        n_gettext( "%1$d connected tile; nearest: %2$s",
+                                                "%1$d connected tiles; nearest: %2$s", group.count ),
+                                        group.count, group.nearest.context );
+        }
+        situation_entries.push_back( std::move( group.nearest ) );
+    }
+
+    accessibility::sort_semantic_list_entries( situation_entries );
+
+    uilist menu;
+    menu.title = _( "Situation review" );
+    menu.footer_text = _( "Enter or Escape: return to game. F6: repeat the last announcement." );
+    for( size_t index = 0; index < situation_entries.size(); ++index ) {
+        const accessibility::semantic_list_entry &entry = situation_entries[index];
+        menu.addentry_col( static_cast<int>( index ), true, std::nullopt, entry.label,
+                           entry.context );
+    }
+    menu.query();
 }
 
 void game::list_items_monsters()
