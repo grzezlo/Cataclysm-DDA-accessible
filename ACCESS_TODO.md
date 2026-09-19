@@ -19,53 +19,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Stage 24 uses the declared browser and screen
 reader combinations instead.
 
-## Stage 02 - Look-around exploration
-
-**Outcome:** A player can inspect visible map tiles with a semantic cursor without
-moving the character.
-
-**Selected interaction:** Use a layered semantic cursor.  Entering look-around
-announces the mode and cursor origin.  Each actual cursor or z-level change
-announces the visible contents of that single tile in the same category wording
-and ordering used by the `Alt+V` situation review, without connected-region
-compression.  Empty categories are omitted.  The announcement ends with the
-direction and distance measured from the stable character position captured on
-entry, before any temporary peeking displacement; a relative z-level, when
-needed, is stated immediately before that location.  Redraws remain silent,
-while rapid navigation must leave the final tile as the repeatable last announcement.
-Extended description provides navigable category detail and returns focus to the
-current cursor tile; leaving look-around restores gameplay context.  Peeking uses
-the same tile output while explicitly identifying the peek direction,
-observation origin, available peek actions, and return to the unchanged character
-position and movement mode.
-
-**Code inventory:** `game::look_around`, `game::draw_look_around_cursor`,
-`game::peek`, direction selection, and the look-information helpers in
-`src/game.cpp`/`src/game.h`;
-`src/ui_extended_description.cpp` for detailed tile/entity descriptions.
-
-**Success criteria:** Entering the mode identifies it and the cursor origin.
-Each cursor move reports relative direction, distance, z-level, terrain,
-furniture, fields/hazards, vehicle, visible creatures, and visible items in a
-consistent order.  Extended detail and exit restore meaningful focus.  Rapid
-movement suppresses redraw duplicates without losing the final position.
-Peeking identifies its direction and observation origin, preserves crouching
-and character position correctly, and makes its return and available peek
-actions unambiguous.
-
-**Possible automated tests:** Capture entry, unchanged focus, cardinal/diagonal
-movement, z-level changes, empty/occupied tiles, extended detail, hidden tiles,
-rapid movement, and return to gameplay.  Cover peek direction selection,
-cancellation, crouched peeking, z-level peeking, position restoration, and
-available peek actions.
-
-**Required human verification:** Explore a room, street, multiple z-levels,
-vehicle, item pile, creature, hazard, and obscured area.  Confirm the cursor is
-spatially understandable and fast navigation leaves the correct final focus.
-Peek from standing and crouched positions, cancel during direction selection,
-and confirm that its origin, time cost, available actions, and return to the
-unchanged character position are understandable.
-
 ## Stage 03 - Nearby item and creature lists
 
 **Outcome:** The `V` interface provides efficient list-based exploration of

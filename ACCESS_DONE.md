@@ -218,3 +218,38 @@ Limitations:
   testing commit `bfd9be513b` (`cdda-0.I-2026-09-10-0827-14-gbfd9be513b`).
   Confirmed efficient navigation, predictable return with `Enter` or `Escape`,
   silence on passive redraws, and reliable repeat with `Alt+R`.
+
+## 2026-09-20 — Stage 02: Look-around exploration
+
+- Added a layered semantic cursor to look-around.  Each actual cursor or
+  z-level change announces visible terrain, furniture, fields and hazards,
+  vehicle information, creatures, and items in a stable order while redraws
+  and cursor blinking remain silent.
+- Placed relative z-level information near the end of each announcement and
+  direction and distance from the character's stable position last.  Peeking
+  retains that origin even while the game temporarily moves the character for
+  visibility calculations.
+- Shared tile categories and descriptions with the `Alt+V` situation review,
+  while keeping connected-region compression exclusive to that list.
+- Added semantic extended descriptions with navigable creature, furniture,
+  terrain, and vehicle tabs, including visible signs and inscriptions.  Closing
+  detail restores the current cursor announcement, and leaving look-around
+  restores gameplay focus.
+- Added peek direction cancellation, observation origin, time cost, available
+  action, movement-mode restoration, and return announcements without changing
+  the existing position and crouching behavior.
+- Added renderer-independent semantic-sequence formatting coverage.  The
+  focused accessibility suite passed with 57 assertions in 6 test cases, the
+  Windows x64 test executable built successfully, AStyle reported no formatting
+  changes, and the Windows x64 Release tiles build completed successfully.
+- A blind user accepted the interaction with NVDA 2026.1 on Windows 25H2,
+  build 26200.9457, using implementation commit `afc67940ab`.  Verification
+  covered spatial cursor output, rapid navigation and repeat-last behavior,
+  multiple z-levels, representative terrain and entities, extended detail,
+  obscured areas, standing and crouched peeking, cancellation, available peek
+  actions, and return to the unchanged character position.
+
+Limitations:
+
+- Newly introduced source strings can fall back to English until translation
+  catalogs receive updated translations.
