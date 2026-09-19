@@ -47,7 +47,8 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
     CHECK( accessibility::announce_movement( "northwest", "grass" ) );
     CHECK( accessibility::announce_movement( "east", "grass" ) );
     CHECK_FALSE( accessibility::announce_threats( {}, "No nearby threats." ) );
-    CHECK( accessibility::announce_threats( { "monster-1" }, "Nearby threats: zombie, 5 tiles north." ) );
+    CHECK( accessibility::announce_threats( { "monster-1" },
+                                            "Nearby threats: zombie, 5 tiles north." ) );
     CHECK_FALSE( accessibility::announce_threats( { "monster-1" }, "This must be deduplicated." ) );
     CHECK( accessibility::announce_threats( { "monster-2" }, "A new nearby threat." ) );
     CHECK_FALSE( accessibility::announce_threats( { "monster-2" }, "This must be deduplicated too." ) );

@@ -4839,8 +4839,8 @@ void game::mon_info_update( )
         }
     }
 
-    std::sort( nearby_threats.begin(), nearby_threats.end(), [&]( const Creature *lhs,
-    const Creature *rhs ) {
+    std::sort( nearby_threats.begin(), nearby_threats.end(), [&]( const Creature * lhs,
+    const Creature * rhs ) {
         return rl_dist( pos, lhs->pos_bub( here ) ) < rl_dist( pos, rhs->pos_bub( here ) );
     } );
     std::vector<std::string> threat_ids;
@@ -8847,7 +8847,7 @@ void game::accessibility_situation_review()
         if( group.count > 1 ) {
             group.nearest.context = string_format(
                                         n_gettext( "%1$d connected tile; nearest: %2$s",
-                                                "%1$d connected tiles; nearest: %2$s", group.count ),
+                                                   "%1$d connected tiles; nearest: %2$s", group.count ),
                                         group.count, group.nearest.context );
         }
         situation_entries.push_back( std::move( group.nearest ) );

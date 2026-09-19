@@ -178,6 +178,12 @@ over upstream contribution policy or exact UI parity.
 - Run `build_win_x64.bat` for the tiles game and
   `build_tests_win_x64.bat` for the test executable.  Run `test_access.bat`
   for the focused accessibility suite and `test_all.bat` for the full suite.
+- Use AStyle 3.1 directly on Windows instead of the Makefile targets, whose
+  checks require a POSIX shell and can report success without running.  Format
+  changed C and C++ files with
+  `astyle --options=.astylerc -n <files>` and verify them with
+  `astyle --options=.astylerc --dry-run -X -Q --ascii <files>`; a clean check
+  prints no `Formatted` lines.
 - Every entry-point batch file must call `setenv.bat` first.  Keep
   `VcpkgInstalledDir` pointed at `msvc-full-features\vcpkg_installed`; invoking
   MSBuild without that explicit directory can create an incorrect nested
