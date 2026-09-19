@@ -27,6 +27,10 @@ over upstream contribution policy or exact UI parity.
 - Support complete keyboard-only operation.  Never require a mouse to reach an
   action or obtain information.
 - Announce semantic information, not rendered text or pixel content.
+- Preserve informational parity with the standard interface.  Accessibility
+  may describe, summarize, or reorganize information that a sighted player can
+  perceive, but it must not reveal hidden creatures, state, intentions, or
+  other information unavailable through normal gameplay.
 - Do not communicate state through color, layout, symbols, or sound alone.
 - Prefer short focus announcements, with separate commands for detailed
   information.
