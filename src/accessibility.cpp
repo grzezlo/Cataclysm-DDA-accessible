@@ -204,6 +204,37 @@ bool announce_threats( const std::vector<std::string> &threat_ids, const std::st
     return announce( message );
 }
 
+std::string format_semantic_sequence( const std::vector<std::string> &parts )
+{
+    std::string result;
+    for( const std::string &part : parts ) {
+        const std::string normalized = normalize_status_announcement( part, false );
+        if( normalized.empty() ) {
+            continue;
+        }
+        if( !result.empty() ) {
+            const char last = result.back();
+            if( last != '.' && last != '!' && last != '?' && last != ':' && last != ';' ) {
+                result += '.';
+            }
+            result += ' ';
+        }
+        result += normalized;
+    }
+    if( !result.empty() ) {
+        const char last = result.back();
+        if( last != '.' && last != '!' && last != '?' ) {
+            result += '.';
+        }
+    }
+    return result;
+}
+
+bool announce_semantic_sequence( const std::vector<std::string> &parts )
+{
+    return announce( format_semantic_sequence( parts ) );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {

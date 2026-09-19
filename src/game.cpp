@@ -6582,6 +6582,201 @@ void game::pickup( const tripoint_bub_ms &p )
     u.pick_up( game_menus::inv::pickup( p ) );
 }
 
+namespace
+{
+
+enum class situation_entry_kind : int {
+    current_position,
+    hazard,
+    creature,
+    exit,
+    obstacle,
+    furniture,
+    item
+};
+
+struct semantic_tile_info {
+    std::string terrain;
+    std::string furniture;
+    std::vector<std::string> fields_and_hazards;
+    std::vector<std::string> hazards;
+    std::string vehicle;
+    std::string creature;
+    std::vector<std::string> items;
+};
+
+std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
+{
+    const int distance = rl_dist( origin.xy(), target.xy() );
+    if( distance == 0 ) {
+        return _( "here" );
+    }
+
+    const std::string direction = direction_name( direction_from( origin.xy().raw(),
+                                  target.xy().raw() ) );
+    return string_format( n_gettext( "%1$d tile %2$s", "%1$d tiles %2$s", distance ),
+                          distance, direction );
+}
+
+std::string relative_z_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
+{
+    const int difference = target.z() - origin.z();
+    if( difference == 0 ) {
+        return {};
+    }
+    if( difference > 0 ) {
+        return string_format( n_gettext( "%d level above", "%d levels above", difference ), difference );
+    }
+    const int levels_below = -difference;
+    return string_format( n_gettext( "%d level below", "%d levels below", levels_below ),
+                          levels_below );
+}
+
+semantic_tile_info collect_semantic_tile_info( map &here, avatar &viewer,
+        const tripoint_bub_ms &position )
+{
+    semantic_tile_info result;
+    result.terrain = string_format( _( "Terrain: %s" ), here.tername( position ) );
+    if( here.has_furn( position ) ) {
+        result.furniture = string_format( _( "Furniture: %s" ), here.furnname( position ) );
+    }
+
+    const trap &visible_trap = here.tr_at( position );
+    if( visible_trap.can_see( position, viewer ) ) {
+        const std::string trap_description = visible_trap.is_benign() ?
+                                             string_format( _( "Trap: %s" ), visible_trap.name() ) :
+                                             string_format( _( "Hazard: %s" ), visible_trap.name() );
+        result.fields_and_hazards.push_back( trap_description );
+        if( !visible_trap.is_benign() ) {
+            result.hazards.push_back( trap_description );
+        }
+    }
+    for( const std::pair<const field_type_id, field_entry> &field : here.field_at( position ) ) {
+        const std::string field_description = field.second.is_dangerous() ?
+                                              string_format( _( "Hazard: %s" ), field.second.name() ) :
+                                              string_format( _( "Field: %s" ), field.second.name() );
+        result.fields_and_hazards.push_back( field_description );
+        if( field.second.is_dangerous() ) {
+            result.hazards.push_back( field_description );
+        }
+    }
+
+    const bool is_terrain_hazard =
+        here.has_flag_ter( ter_furn_flag::TFLAG_DEEP_WATER, position ) ||
+        here.has_flag_ter( ter_furn_flag::TFLAG_ROUGH, position ) ||
+        here.has_flag_ter( ter_furn_flag::TFLAG_SHARP, position ) ||
+        here.has_flag_ter( ter_furn_flag::TFLAG_UNSTABLE, position ) ||
+        here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, position ) ||
+        here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR_WATER, position );
+    if( is_terrain_hazard ) {
+        const std::string terrain_hazard = string_format( _( "Hazard: %s" ), here.tername( position ) );
+        result.fields_and_hazards.push_back( terrain_hazard );
+        result.hazards.push_back( terrain_hazard );
+    }
+
+    if( const optional_vpart_position vp = here.veh_at( position ) ) {
+        std::string vehicle_description = vp->vehicle().name;
+        if( const std::optional<vpart_reference> displayed_part = vp.part_displayed() ) {
+            vehicle_description += ", " + displayed_part->part().name();
+        }
+        result.vehicle = string_format( _( "Vehicle: %s" ), vehicle_description );
+    }
+
+    const Creature *creature = get_creature_tracker().creature_at( position, true );
+    if( creature != nullptr && creature != &viewer && viewer.sees( here, *creature ) ) {
+        const std::string attitude = viewer.has_trait( trait_INATTENTIVE ) ? _( "Unknown" ) :
+                                     Creature::get_attitude_ui_data( creature->attitude_to( viewer ) ).first.translated();
+        result.creature = string_format( _( "Creature: %1$s. Attitude: %2$s" ),
+                                         creature->disp_name(), attitude );
+    }
+
+    if( here.sees_some_items( position, viewer ) ) {
+        if( here.has_flag( ter_furn_flag::TFLAG_CONTAINER, position ) &&
+            !here.could_see_items( position, viewer ) ) {
+            result.items.push_back( _( "Items: contents are not visible" ) );
+        } else if( viewer.has_effect( effect_blind ) || viewer.worn_with_flag( flag_BLIND ) ) {
+            result.items.push_back( _( "Items: something is here, but it is not visible" ) );
+        } else {
+            std::map<std::string, int> items_here;
+            for( const item &it : here.i_at( position ) ) {
+                items_here[it.tname()] += it.count();
+            }
+            for( const std::pair<const std::string, int> &item_entry : items_here ) {
+                const std::string name = item_entry.second > 1 ?
+                                         string_format( _( "%1$s (%2$d)" ), item_entry.first, item_entry.second ) :
+                                         item_entry.first;
+                result.items.push_back( string_format( _( "Item: %s" ), name ) );
+            }
+        }
+    }
+    return result;
+}
+
+std::vector<std::string> semantic_look_parts( map &here, avatar &viewer,
+        const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
+        const visibility_variables &cache )
+{
+    std::vector<std::string> parts;
+    visibility_type visibility = visibility_type::HIDDEN;
+    if( here.inbounds( position ) ) {
+        visibility = here.get_visibility( here.apparent_light_at( position, cache ), cache );
+    }
+    if( visibility == visibility_type::CLEAR ) {
+        const semantic_tile_info tile = collect_semantic_tile_info( here, viewer, position );
+        parts.push_back( tile.terrain );
+        parts.push_back( tile.furniture );
+        parts.insert( parts.end(), tile.fields_and_hazards.begin(), tile.fields_and_hazards.end() );
+        parts.push_back( tile.vehicle );
+        parts.push_back( tile.creature );
+        parts.insert( parts.end(), tile.items.begin(), tile.items.end() );
+    } else {
+        switch( visibility ) {
+            case visibility_type::CLEAR:
+                break;
+            case visibility_type::BOOMER:
+                parts.push_back( _( "A bright pink blur" ) );
+                break;
+            case visibility_type::BOOMER_DARK:
+                parts.push_back( _( "A pink blur" ) );
+                break;
+            case visibility_type::DARK:
+                parts.push_back( _( "Darkness" ) );
+                break;
+            case visibility_type::LIT:
+                parts.push_back( _( "Bright light" ) );
+                break;
+            case visibility_type::HIDDEN:
+                parts.push_back( _( "Unseen" ) );
+                break;
+        }
+    }
+    parts.push_back( relative_z_location( origin, position ) );
+    parts.push_back( situation_location( origin, position ) );
+    return parts;
+}
+
+std::string gameplay_focus_description( map &here, const avatar &viewer )
+{
+    const tripoint_bub_ms position = viewer.pos_bub( here );
+    std::string tile = here.tername( position );
+    if( here.has_furn( position ) ) {
+        tile += ", " + here.furnname( position );
+    }
+    return string_format( _( "Gameplay. Current position: %s" ), tile );
+}
+
+void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entries,
+                          const situation_entry_kind kind,
+                          const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
+                          const std::string &label )
+{
+    const tripoint_rel_ms offset = position - origin;
+    entries.push_back( { rl_dist( origin.xy(), position.xy() ), offset.z(), offset.y(), offset.x(),
+                         static_cast<int>( kind ), label, situation_location( origin, position ) } );
+}
+
+} // namespace
+
 //Shift player by one tile, look_around(), then restore previous position.
 //represents carefully peeking around a corner, hence the large move cost.
 void game::peek()
@@ -6590,6 +6785,8 @@ void game::peek()
 
     const std::optional<tripoint_rel_ms> p = choose_direction( _( "Peek where?" ), true );
     if( !p ) {
+        accessibility::announce_status( _( "Peek canceled." ) + std::string( " " ) +
+                                        gameplay_focus_description( here, u ) );
         return;
     }
     tripoint_bub_ms new_pos = u.pos_bub() + *p;
@@ -6603,11 +6800,15 @@ void game::peek()
             u.move_to( old_loc );
             here.vertical_shift( old_loc.z() );
         } else {
+            accessibility::announce_status( _( "You cannot peek in that direction." ) +
+                                            std::string( " " ) + gameplay_focus_description( here, u ) );
             return;
         }
     }
 
     if( here.impassable( new_pos ) ) {
+        accessibility::announce_status( _( "You cannot peek in that direction." ) +
+                                        std::string( " " ) + gameplay_focus_description( here, u ) );
         return;
     }
 
@@ -6618,8 +6819,13 @@ void game::peek( const tripoint_bub_ms &p )
 {
     map &here = get_map();
 
-    u.mod_moves( -u.get_speed() * 2 );
     tripoint_bub_ms prev = u.pos_bub();
+    accessibility::announce_semantic_sequence( {
+        _( "Peek" ),
+        string_format( _( "Observation origin: %s" ), situation_location( prev, p ) ),
+        _( "Time cost: two seconds" )
+    } );
+    u.mod_moves( -u.get_speed() * 2 );
     u.setpos( here, p, false );
     const bool is_same_pos = u.pos_bub() == prev;
     const bool is_standup_peek = is_same_pos && u.is_crouching();
@@ -6628,7 +6834,7 @@ void game::peek( const tripoint_bub_ms &p )
     here.update_visibility_cache( p.z() );
 
     look_around_result result;
-    const look_around_params looka_params = { true, center, center, false, false, true, true};
+    const look_around_params looka_params = { true, center, center, false, false, true, true, prev };
     if( is_standup_peek ) {   // Non moving peek from crouch is a standup peek
         u.reset_move_mode();
         result = look_around( looka_params );
@@ -6648,6 +6854,11 @@ void game::peek( const tripoint_bub_ms &p )
     }
     here.invalidate_map_cache( p.z() );
     here.invalidate_visibility_cache();
+    accessibility::announce_semantic_sequence( {
+        _( "Returned from peeking to the unchanged character position" ),
+        string_format( _( "Movement: %s" ), u.current_movement_mode()->name() ),
+        gameplay_focus_description( here, u )
+    } );
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -7992,7 +8203,7 @@ look_around_result game::look_around(
     const bool show_window, tripoint_bub_ms &center, const tripoint_bub_ms &start_point,
     bool has_first_point,
     bool select_zone, bool peeking, bool is_moving_zone, const tripoint_bub_ms &end_point,
-    bool change_lv )
+    bool change_lv, const std::optional<tripoint_bub_ms> &accessibility_origin )
 {
     map &here = get_map();
 
@@ -8092,6 +8303,36 @@ look_around_result game::look_around(
 
     here.update_visibility_cache( old_levz );
     const visibility_variables &cache = here.get_visibility_variables_cache();
+
+    const bool semantic_look = show_window && !select_zone && !is_moving_zone;
+    const tripoint_bub_ms semantic_origin = accessibility_origin.value_or( u.pos_bub( here ) );
+    const auto describe_peek_action = [&]( const std::string & action_id ) {
+        const std::string action_name = ctxt.get_action_name( action_id );
+        const std::string binding = ctxt.get_desc( action_id );
+        return binding.empty() ?
+               string_format( _( "Available peek action: %s (unbound)" ), action_name ) :
+               string_format( _( "Available peek action: %1$s (%2$s)" ), action_name, binding );
+    };
+    const auto announce_cursor = [&]( const bool entering ) {
+        if( !semantic_look ) {
+            return;
+        }
+        std::vector<std::string> parts;
+        if( entering ) {
+            parts.push_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
+            parts.push_back( _( "Cursor origin: character position" ) );
+            if( peeking ) {
+                parts.push_back( describe_peek_action( "throw_blind" ) );
+                parts.push_back( describe_peek_action( "throw_blind_wielded" ) );
+            }
+        }
+        std::vector<std::string> tile_parts = semantic_look_parts( here, u, semantic_origin, lp, cache );
+        parts.insert( parts.end(), std::make_move_iterator( tile_parts.begin() ),
+                      std::make_move_iterator( tile_parts.end() ) );
+        accessibility::announce_semantic_sequence( parts );
+    };
+    announce_cursor( true );
+    tripoint_bub_ms last_announced_position = lp;
 
     bool blink = true;
     look_around_result result;
@@ -8311,6 +8552,10 @@ look_around_result game::look_around(
             zoom_out();
             mark_main_ui_adaptor_resize();
         }
+        if( semantic_look && ( lp != last_announced_position || action == "EXTENDED_DESCRIPTION" ) ) {
+            announce_cursor( false );
+            last_announced_position = lp;
+        }
     } while( action != "QUIT" && action != "CONFIRM" && action != "SELECT" && action != "TRAVEL_TO" &&
              action != "throw_blind" && action != "throw_blind_wielded" );
 
@@ -8340,6 +8585,10 @@ look_around_result game::look_around(
     }
 #endif
 
+    if( semantic_look && !peeking ) {
+        accessibility::announce_status( gameplay_focus_description( here, u ) );
+    }
+
     return result;
 }
 
@@ -8348,7 +8597,7 @@ look_around_result game::look_around( look_around_params looka_params )
     return look_around( looka_params.show_window, looka_params.center, looka_params.start_point,
                         looka_params.has_first_point, looka_params.select_zone, looka_params.peeking, false,
                         tripoint_bub_ms::zero,
-                        looka_params.change_lv );
+                        looka_params.change_lv, looka_params.accessibility_origin );
 }
 
 static void add_item_recursive( std::vector<std::string> &item_order,
@@ -8713,43 +8962,6 @@ std::string io::enum_to_string<list_item_sort_mode>( list_item_sort_mode data )
     cata_fatal( "Invalid list item sort mode" );
 }
 
-namespace
-{
-
-enum class situation_entry_kind : int {
-    current_position,
-    hazard,
-    creature,
-    exit,
-    obstacle,
-    furniture,
-    item
-};
-
-std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
-{
-    const int distance = rl_dist( origin, target );
-    if( distance == 0 ) {
-        return _( "here" );
-    }
-
-    const std::string direction = direction_name( direction_from( origin.raw(), target.raw() ) );
-    return string_format( n_gettext( "%1$d tile %2$s", "%1$d tiles %2$s", distance ),
-                          distance, direction );
-}
-
-void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entries,
-                          const situation_entry_kind kind,
-                          const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
-                          const std::string &label )
-{
-    const tripoint_rel_ms offset = position - origin;
-    entries.push_back( { rl_dist( origin, position ), offset.z(), offset.y(), offset.x(),
-                         static_cast<int>( kind ), label, situation_location( origin, position ) } );
-}
-
-} // namespace
-
 void game::accessibility_situation_review()
 {
     map &here = get_map();
@@ -8772,25 +8984,14 @@ void game::accessibility_situation_review()
             continue;
         }
 
-        const trap &visible_trap = here.tr_at( position );
-        if( visible_trap.can_see( position, u ) && !visible_trap.is_benign() ) {
-            add_situation_entry( situation_entries, situation_entry_kind::hazard, origin, position,
-                                 string_format( _( "Hazard: %s" ), visible_trap.name() ) );
+        const semantic_tile_info tile = collect_semantic_tile_info( here, u, position );
+        for( const std::string &hazard : tile.hazards ) {
+            add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
+                                 hazard );
         }
-        for( const std::pair<const field_type_id, field_entry> &field : here.field_at( position ) ) {
-            if( field.second.is_dangerous() ) {
-                add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
-                                     string_format( _( "Hazard: %s" ), field.second.name() ) );
-            }
-        }
-
-        const Creature *creature = get_creature_tracker().creature_at( position, true );
-        if( creature != nullptr && creature != &u && u.sees( here, *creature ) ) {
-            const std::string attitude = u.has_trait( trait_INATTENTIVE ) ? _( "Unknown" ) :
-                                         Creature::get_attitude_ui_data( creature->attitude_to( u ) ).first.translated();
+        if( !tile.creature.empty() ) {
             add_situation_entry( situation_entries, situation_entry_kind::creature, origin, position,
-                                 string_format( _( "Creature: %1$s. Attitude: %2$s" ),
-                                                creature->disp_name(), attitude ) );
+                                 tile.creature );
         }
 
         const bool is_exit = here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_DOOR, position ) ||
@@ -8799,13 +9000,6 @@ void game::accessibility_situation_review()
                              here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_UP, position ) ||
                              here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_DOWN, position );
         const bool is_obstacle = here.impassable( position );
-        const bool is_terrain_hazard =
-            here.has_flag_ter( ter_furn_flag::TFLAG_DEEP_WATER, position ) ||
-            here.has_flag_ter( ter_furn_flag::TFLAG_ROUGH, position ) ||
-            here.has_flag_ter( ter_furn_flag::TFLAG_SHARP, position ) ||
-            here.has_flag_ter( ter_furn_flag::TFLAG_UNSTABLE, position ) ||
-            here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, position ) ||
-            here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR_WATER, position );
         if( is_exit ) {
             const std::string name = here.has_furn( position ) ? here.furnname( position ) :
                                      here.tername( position );
@@ -8817,28 +9011,16 @@ void game::accessibility_situation_review()
                                      here.tername( position );
             add_situation_entry( region_entries, situation_entry_kind::obstacle, origin, position,
                                  string_format( _( "Obstacle: %s" ), name ) );
-        } else if( is_terrain_hazard ) {
-            add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
-                                 string_format( _( "Hazard: %s" ), here.tername( position ) ) );
         }
 
-        if( here.has_furn( position ) && !is_exit && !is_obstacle ) {
+        if( !tile.furniture.empty() && !is_exit && !is_obstacle ) {
             add_situation_entry( situation_entries, situation_entry_kind::furniture, origin, position,
-                                 string_format( _( "Furniture: %s" ), here.furnname( position ) ) );
+                                 tile.furniture );
         }
 
-        if( here.sees_some_items( position, u ) ) {
-            std::map<std::string, int> items_here;
-            for( const item &it : here.i_at( position ) ) {
-                items_here[it.tname()] += it.count();
-            }
-            for( const std::pair<const std::string, int> &item_entry : items_here ) {
-                const std::string name = item_entry.second > 1 ?
-                                         string_format( _( "%1$s (%2$d)" ), item_entry.first, item_entry.second ) :
-                                         item_entry.first;
-                add_situation_entry( situation_entries, situation_entry_kind::item, origin, position,
-                                     string_format( _( "Item: %s" ), name ) );
-            }
+        for( const std::string &item_description : tile.items ) {
+            add_situation_entry( situation_entries, situation_entry_kind::item, origin, position,
+                                 item_description );
         }
     }
 

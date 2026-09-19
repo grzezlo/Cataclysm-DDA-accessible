@@ -112,6 +112,21 @@ TEST_CASE( "semantic accessibility lists have stable distance ordering",
     CHECK( entries[4].label == "far east" );
 }
 
+TEST_CASE( "semantic accessibility sequences omit empty parts and preserve order",
+           "[accessibility][nogame]" )
+{
+    const std::vector<std::string> parts = {
+        "Terrain: wooden floor",
+        "",
+        "  Creature: zombie.  ",
+        "Z-level: one level above",
+        "5 tiles northeast"
+    };
+
+    CHECK( accessibility::format_semantic_sequence( parts ) ==
+           "Terrain: wooden floor. Creature: zombie. Z-level: one level above. 5 tiles northeast." );
+}
+
 TEST_CASE( "status announcements suppress animated progress values",
            "[accessibility][nogame]" )
 {

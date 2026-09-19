@@ -24,6 +24,21 @@ reader combinations instead.
 **Outcome:** A player can inspect visible map tiles with a semantic cursor without
 moving the character.
 
+**Selected interaction:** Use a layered semantic cursor.  Entering look-around
+announces the mode and cursor origin.  Each actual cursor or z-level change
+announces the visible contents of that single tile in the same category wording
+and ordering used by the `Alt+V` situation review, without connected-region
+compression.  Empty categories are omitted.  The announcement ends with the
+direction and distance measured from the stable character position captured on
+entry, before any temporary peeking displacement; a relative z-level, when
+needed, is stated immediately before that location.  Redraws remain silent,
+while rapid navigation must leave the final tile as the repeatable last announcement.
+Extended description provides navigable category detail and returns focus to the
+current cursor tile; leaving look-around restores gameplay context.  Peeking uses
+the same tile output while explicitly identifying the peek direction,
+observation origin, available peek actions, and return to the unchanged character
+position and movement mode.
+
 **Code inventory:** `game::look_around`, `game::draw_look_around_cursor`,
 `game::peek`, direction selection, and the look-information helpers in
 `src/game.cpp`/`src/game.h`;

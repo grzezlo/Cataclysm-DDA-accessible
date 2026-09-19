@@ -44,6 +44,8 @@ bool announce_status( const std::string &message );
 bool announce_game_message( const std::string &message );
 bool announce_movement( const std::string &direction, const std::string &tile );
 bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
+std::string format_semantic_sequence( const std::vector<std::string> &parts );
+bool announce_semantic_sequence( const std::vector<std::string> &parts );
 bool repeat_last_announcement();
 std::string last_announcement();
 std::string normalize_status_announcement( const std::string &message, bool progress );

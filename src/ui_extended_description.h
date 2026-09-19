@@ -37,6 +37,7 @@ class extended_description_window : public cataimgui::window
         void draw_furniture_tab();
         void draw_terrain_tab();
         void draw_vehicle_tab();
+        void announce_current_tab() const;
 
         input_context ctxt;
         description_target cur_target = description_target::terrain;

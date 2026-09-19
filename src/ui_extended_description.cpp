@@ -2,6 +2,7 @@
 
 #include <imgui/imgui.h>
 
+#include "accessibility.h"
 #include "character.h"
 #include "color.h"
 #include "creature.h"
@@ -219,6 +220,64 @@ void extended_description_window::draw_vehicle_tab()
     }
 }
 
+void extended_description_window::announce_current_tab() const
+{
+    std::string category;
+    std::string empty_message;
+    const std::vector<std::string> *description = nullptr;
+    switch( cur_target ) {
+        case description_target::creature:
+            category = _( "Creature" );
+            empty_message = _( "You do not see any creature here." );
+            description = &creature_description;
+            break;
+        case description_target::furniture:
+            category = _( "Furniture" );
+            empty_message = _( "You do not see any furniture here." );
+            description = &furniture_description;
+            break;
+        case description_target::terrain:
+            category = _( "Terrain" );
+            empty_message = _( "You can't see the terrain here." );
+            description = &terrain_description;
+            break;
+        case description_target::vehicle:
+            category = _( "Vehicle/Appliance" );
+            empty_message = _( "You can't see vehicles or appliances here." );
+            description = &veh_app_description;
+            break;
+        case description_target::num_targets:
+            return;
+    }
+
+    std::vector<std::string> parts = { _( "Extended description" ), category };
+    if( description->empty() ) {
+        parts.push_back( empty_message );
+    } else {
+        for( const std::string &line : *description ) {
+            if( line != "--" ) {
+                parts.push_back( remove_color_tags( line ) );
+            }
+        }
+    }
+
+    const Character &viewer = get_player_character();
+    if( cur_target == description_target::furniture ) {
+        const std::string signage = get_map().get_signage( p );
+        if( !signage.empty() ) {
+            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ? _( "Sign: ???" ) :
+                             string_format( _( "Sign: %s" ), signage ) );
+        }
+    } else if( cur_target == description_target::terrain ) {
+        const std::string graffiti = get_map().graffiti_at( p );
+        if( !graffiti.empty() ) {
+            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ? _( "Inscription: ???" ) :
+                             string_format( _( "Inscription: %s" ), graffiti ) );
+        }
+    }
+    accessibility::announce_semantic_sequence( parts );
+}
+
 cataimgui::bounds extended_description_window::get_bounds()
 {
     return bounds;
@@ -226,23 +285,34 @@ cataimgui::bounds extended_description_window::get_bounds()
 
 void extended_description_window::show()
 {
+    bool announce_tab = true;
     while( true ) {
         ui_manager::redraw_invalidated();
+        if( announce_tab ) {
+            announce_current_tab();
+            announce_tab = false;
+        }
         std::string action = ctxt.handle_input();
         if( action == "NEXT_TAB" ) {
             switch_target = cur_target;
             ++switch_target;
+            announce_tab = true;
         } else if( action == "PREV_TAB" ) {
             switch_target = cur_target;
             --switch_target;
+            announce_tab = true;
         } else if( action == "CREATURE" ) {
             switch_target = description_target::creature;
+            announce_tab = true;
         } else if( action == "FURNITURE" ) {
             switch_target = description_target::furniture;
+            announce_tab = true;
         } else if( action == "TERRAIN" ) {
             switch_target = description_target::terrain;
+            announce_tab = true;
         } else if( action == "VEHICLE" ) {
             switch_target = description_target::vehicle;
+            announce_tab = true;
         } else if( action == "CONFIRM" || action == "QUIT" ) {
             return;
         }
