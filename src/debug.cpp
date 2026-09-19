@@ -37,6 +37,7 @@
 #include "filesystem.h"
 #include "get_version.h"
 #include "input.h"
+#include "input_context.h"
 #include "loading_ui.h"
 #include "mod_manager.h"
 #include "options.h"
@@ -359,6 +360,11 @@ static void debug_error_prompt(
                                           , backtrace_instructions
 #endif
                                       );
+    input_context ctxt( "DEBUG_MSG", keyboard_mode::keycode );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ANY_INPUT" );
+
+    const std::string repeat_key = ctxt.get_desc( "ACCESSIBILITY_REPEAT_LAST" );
     const std::string instructions = string_format(
                                          " %s\n" // translated user string: space to continue
                                          " %s\n" // translated user string: ignore key
@@ -373,7 +379,9 @@ static void debug_error_prompt(
                                          , _( "Press <color_white>C</color> (or <color_white>c</color>) to copy this message to the clipboard." )
 #endif // TILES
                                          , _( "Press <color_white>D</color> (or <color_white>d</color>) to hear the full error report." )
-                                         , _( "Press <color_white>F6</color> to repeat the last announcement." )
+                                         , string_format(
+                                                 _( "Press <color_white>%s</color> to repeat the last announcement." ),
+                                                 repeat_key )
                                      );
     std::string message = error_message + instructions;
     ui.on_redraw( [&]( const ui_adaptor & ) {
@@ -392,15 +400,14 @@ static void debug_error_prompt(
         concise_error = utf8_truncate( concise_error, 239 ) + "…";
     }
     std::string semantic_summary = string_format(
-                                       _( "An error has occurred: %s. Press space to continue, I to ignore this message in the future, D for the full report, or F6 to repeat this announcement." ),
-                                       concise_error );
+                                       _( "An error has occurred: %1$s. Press space to continue, I to ignore this message in the future, D for the full report, or %2$s to repeat this announcement." ),
+                                       concise_error, repeat_key );
 #if defined(TILES)
     semantic_summary += " " + std::string( _( "Press C to copy the report." ) );
 #endif // TILES
     accessibility::announce_status( semantic_summary );
 
 #if defined(__ANDROID__)
-    input_context ctxt( "DEBUG_MSG", keyboard_mode::keycode );
     ctxt.register_manual_key( 'C' );
     ctxt.register_manual_key( 'D' );
     ctxt.register_manual_key( 'I' );
@@ -408,7 +415,12 @@ static void debug_error_prompt(
 #endif
     for( bool stop = false; !stop; ) {
         ui_manager::redraw();
-        switch( inp_mngr.get_input_event().get_first_input() ) {
+        const std::string action = ctxt.handle_input();
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        }
+        switch( ctxt.get_raw_input().get_first_input() ) {
 #if defined(TILES)
             case 'c':
             case 'C':
@@ -418,9 +430,6 @@ static void debug_error_prompt(
             case 'd':
             case 'D':
                 accessibility::announce_status( formatted_report );
-                break;
-            case KEY_F( 6 ):
-                accessibility::repeat_last_announcement();
                 break;
             case 'i':
             case 'I':

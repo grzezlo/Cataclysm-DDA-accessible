@@ -41,11 +41,20 @@ nearest location.  Creatures, items, exits, traps, furniture, and other discrete
 objects remain separate entries.  Moving focus speaks a concise, self-contained entry with the
 information needed to understand that element without a second detail mode.
 Enter or Escape closes the list and returns directly to unchanged gameplay.  The
-visible list mirrors the spoken content, passive redraws remain silent, and F6
-repeats the most recent focus announcement; moving away and back repeats an
+visible list mirrors the spoken content, passive redraws remain silent, and
+Alt+R repeats the most recent focus announcement; moving away and back repeats an
 entry as well.  The reusable list-building approach should support later
 nearby-object interfaces without embedding map or NVDA dependencies in the
 accessibility service.
+
+**Selected command access:** Accessibility commands use Alt as a familiar,
+compact-keyboard-friendly modifier.  Alt+R repeats the last screen-reader
+announcement in gameplay and every supported menu context; Alt+V opens the
+situation review from gameplay.  F6 and F7 are not retained as aliases.  The
+existing Enter action menu has a top-level `Accessibility` category whose
+entries can be selected with arrows and Enter or with menu-local R and V.  A
+repeat selected through that menu repeats the meaningful announcement from
+before the menu opened rather than the menu's own focus announcement.
 
 **Code inventory:** `src/game.cpp` and `src/game.h` for visible local state and
 look helpers; `src/map.cpp` for terrain/furniture names; `src/uilist.cpp` for the
@@ -81,8 +90,9 @@ is not disclosed, and passive redraws are silent.
 **Outcome:** A player can inspect visible map tiles with a semantic cursor without
 moving the character.
 
-**Code inventory:** `game::look_around`, `game::draw_look_around_cursor`, and the
-look-information helpers in `src/game.cpp`/`src/game.h`;
+**Code inventory:** `game::look_around`, `game::draw_look_around_cursor`,
+`game::peek`, direction selection, and the look-information helpers in
+`src/game.cpp`/`src/game.h`;
 `src/ui_extended_description.cpp` for detailed tile/entity descriptions.
 
 **Success criteria:** Entering the mode identifies it and the cursor origin.
@@ -90,14 +100,22 @@ Each cursor move reports relative direction, distance, z-level, terrain,
 furniture, fields/hazards, vehicle, visible creatures, and visible items in a
 consistent order.  Extended detail and exit restore meaningful focus.  Rapid
 movement suppresses redraw duplicates without losing the final position.
+Peeking identifies its direction and observation origin, preserves crouching
+and character position correctly, and makes its return and available peek
+actions unambiguous.
 
 **Possible automated tests:** Capture entry, unchanged focus, cardinal/diagonal
 movement, z-level changes, empty/occupied tiles, extended detail, hidden tiles,
-rapid movement, and return to gameplay.
+rapid movement, and return to gameplay.  Cover peek direction selection,
+cancellation, crouched peeking, z-level peeking, position restoration, and
+available peek actions.
 
 **Required human verification:** Explore a room, street, multiple z-levels,
 vehicle, item pile, creature, hazard, and obscured area.  Confirm the cursor is
 spatially understandable and fast navigation leaves the correct final focus.
+Peek from standing and crouched positions, cancel during direction selection,
+and confirm that its origin, time cost, available actions, and return to the
+unchanged character position are understandable.
 
 ## Stage 03 - Nearby item and creature lists
 

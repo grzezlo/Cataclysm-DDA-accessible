@@ -8857,7 +8857,10 @@ void game::accessibility_situation_review()
 
     uilist menu;
     menu.title = _( "Situation review" );
-    menu.footer_text = _( "Enter or Escape: return to game. F6: repeat the last announcement." );
+    const input_context ctxt = get_default_mode_input_context();
+    menu.footer_text = string_format(
+                           _( "Enter or Escape: return to game. %s: repeat the last announcement." ),
+                           ctxt.get_desc( "ACCESSIBILITY_REPEAT_LAST" ) );
     for( size_t index = 0; index < situation_entries.size(); ++index ) {
         const accessibility::semantic_list_entry &entry = situation_entries[index];
         menu.addentry_col( static_cast<int>( index ), true, std::nullopt, entry.label,

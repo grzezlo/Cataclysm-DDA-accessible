@@ -9,6 +9,7 @@
 #include <string>
 #include <utility>
 
+#include "accessibility.h"
 #include "avatar.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "cata_utility.h"
@@ -748,6 +749,7 @@ bool can_interact_at( action_id action, map &here, const tripoint_bub_ms &p )
 action_id handle_action_menu( map &here )
 {
     const input_context ctxt = get_default_mode_input_context();
+    const std::string announcement_before_menu = accessibility::last_announcement();
     std::string catgname;
 
 #define REGISTER_ACTION( name ) entries.emplace_back( name, true, hotkey_for_action( name, /*maximum_modifier_count=*/1 ), \
@@ -847,6 +849,7 @@ action_id handle_action_menu( map &here )
                 }
             }
 
+            REGISTER_CATEGORY( _( "Accessibility" ) );
             REGISTER_CATEGORY( _( "Look" ) );
             REGISTER_CATEGORY( _( "Interact" ) );
             REGISTER_CATEGORY( _( "Inventory" ) );
@@ -880,11 +883,14 @@ action_id handle_action_menu( map &here )
             REGISTER_ACTION( ACTION_LOOK );
             REGISTER_ACTION( ACTION_PEEK );
             REGISTER_ACTION( ACTION_LIST_ITEMS );
-            REGISTER_ACTION( ACTION_ACCESSIBILITY_SITUATION );
-            REGISTER_ACTION( ACTION_ACCESSIBILITY_REPEAT_LAST );
             REGISTER_ACTION( ACTION_ZONES );
             REGISTER_ACTION( ACTION_MAP );
             REGISTER_ACTION( ACTION_SKY );
+        } else if( category == _( "Accessibility" ) ) {
+            entries.emplace_back( ACTION_ACCESSIBILITY_REPEAT_LAST, true, 'r',
+                                  ctxt.get_action_name( action_ident( ACTION_ACCESSIBILITY_REPEAT_LAST ) ) );
+            entries.emplace_back( ACTION_ACCESSIBILITY_SITUATION, true, 'v',
+                                  ctxt.get_action_name( action_ident( ACTION_ACCESSIBILITY_SITUATION ) ) );
         } else if( category == _( "Inventory" ) ) {
             REGISTER_ACTION( ACTION_INVENTORY );
             REGISTER_ACTION( ACTION_ADVANCEDINV );
@@ -1036,6 +1042,9 @@ action_id handle_action_menu( map &here )
             }
         } else if( selection > NUM_ACTIONS ) {
             category = categories_by_int[selection];
+        } else if( selection == ACTION_ACCESSIBILITY_REPEAT_LAST ) {
+            accessibility::announce( announcement_before_menu );
+            return ACTION_NULL;
         } else {
             return static_cast<action_id>( selection );
         }

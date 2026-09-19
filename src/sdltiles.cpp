@@ -1502,6 +1502,21 @@ void cata_cursesport::curses_drawwindow( const catacurses::window &w )
 
 static int alt_buffer = 0;
 static bool alt_down = false;
+static bool alt_shortcut_pending_text = false;
+
+static bool is_alt_shortcut( const SDL_Keysym &keysym )
+{
+    if( !( keysym.mod & KMOD_ALT ) || ( keysym.mod & KMOD_CTRL ) ) {
+        return false;
+    }
+    if( keysym.sym >= SDLK_0 && keysym.sym <= SDLK_9 ) {
+        return false;
+    }
+    if( keysym.sym >= SDLK_KP_0 && keysym.sym <= SDLK_KP_9 ) {
+        return false;
+    }
+    return keysym.sym != SDLK_LALT && keysym.sym != SDLK_RALT;
+}
 
 static void begin_alt_code()
 {
@@ -3077,7 +3092,10 @@ static void CheckMessages()
                     mode = keyboard_mode::keycode;
                 }
 #endif
-                if( mode == keyboard_mode::keychar ) {
+                if( mode == keyboard_mode::keychar && is_alt_shortcut( ev.key.keysym ) ) {
+                    alt_shortcut_pending_text = true;
+                    last_input = sdl_keysym_to_keycode_evt( ev.key.keysym );
+                } else if( mode == keyboard_mode::keychar ) {
                     const int lc = sdl_keysym_to_curses( ev.key.keysym );
                     if( lc <= 0 ) {
                         // a key we don't know in curses and won't handle.
@@ -3138,6 +3156,7 @@ static void CheckMessages()
                 is_repeat = ev.key.repeat;
                 if( mode == keyboard_mode::keychar ) {
                     if( ev.key.keysym.sym == SDLK_LALT || ev.key.keysym.sym == SDLK_RALT ) {
+                        alt_shortcut_pending_text = false;
                         int code = end_alt_code();
                         if( code ) {
                             last_input = input_event( code, input_event_t::keyboard_char );
@@ -3150,10 +3169,19 @@ static void CheckMessages()
             }
             break;
             case SDL_TEXTINPUT:
+                if( alt_shortcut_pending_text ) {
+                    alt_shortcut_pending_text = false;
+                    break;
+                }
                 if( !add_alt_code( *ev.text.text ) ) {
                     if( strlen( ev.text.text ) > 0 ) {
                         const unsigned lc = UTF8_getch( ev.text.text );
-                        last_input = input_event( lc, input_event_t::keyboard_char );
+                        std::set<keymod_t> modifiers;
+                        const SDL_Keymod sdl_modifiers = SDL_GetModState();
+                        if( ( sdl_modifiers & KMOD_ALT ) && !( sdl_modifiers & KMOD_CTRL ) ) {
+                            modifiers.emplace( keymod_t::alt );
+                        }
+                        last_input = input_event( modifiers, lc, input_event_t::keyboard_char );
 #if defined(__ANDROID__)
                         if( !android_is_hardware_keyboard_available() ) {
                             if( !is_string_input( touch_input_context ) && !touch_input_context.allow_text_entry ) {

@@ -5,6 +5,8 @@
 
 #include "accessibility.h"
 #include "cata_catch.h"
+#include "input_context.h"
+#include "input_enums.h"
 
 namespace
 {
@@ -25,6 +27,23 @@ class capture_backend final : public accessibility::backend
 };
 
 } // namespace
+
+TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
+{
+    input_context gameplay( "DEFAULTMODE", keyboard_mode::keycode );
+    gameplay.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    gameplay.register_action( "accessibility_situation" );
+
+    const input_event alt_r( { keymod_t::alt }, 'r', input_event_t::keyboard_code );
+    const input_event alt_v( { keymod_t::alt }, 'v', input_event_t::keyboard_code );
+    const input_event alt_r_char( { keymod_t::alt }, 'r', input_event_t::keyboard_char );
+    const input_event alt_v_char( { keymod_t::alt }, 'v', input_event_t::keyboard_char );
+
+    CHECK( gameplay.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( gameplay.input_to_action( alt_v ) == "accessibility_situation" );
+    CHECK( gameplay.input_to_action( alt_r_char ) == "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( gameplay.input_to_action( alt_v_char ) == "accessibility_situation" );
+}
 
 TEST_CASE( "accessibility announcements can be captured and repeated", "[accessibility][nogame]" )
 {

@@ -694,14 +694,14 @@
     "type": "keybinding",
     "id": "ACCESSIBILITY_REPEAT_LAST",
     "name": "Repeat last screen reader message",
-    "bindings": [ { "input_method": "keyboard_any", "key": "F6" } ]
+    "bindings": [ { "input_method": "keyboard_any", "key": "r", "mod": [ "alt" ] } ]
   },
   {
     "type": "keybinding",
     "id": "accessibility_situation",
     "category": "DEFAULTMODE",
     "name": "Review current situation",
-    "bindings": [ { "input_method": "keyboard_any", "key": "F7" } ]
+    "bindings": [ { "input_method": "keyboard_any", "key": "v", "mod": [ "alt" ] } ]
   },
   {
     "type": "keybinding",
