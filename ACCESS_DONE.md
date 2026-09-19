@@ -144,3 +144,24 @@ Limitations:
 
 - Standard popup announcements are implemented but have not yet received a
   dedicated NVDA acceptance test.
+
+## 2026-09-19 — Nearby threat changes
+
+- Added semantic threat-set tracking that activates only during gameplay.
+- New or changed hostile groups announce up to the three nearest creatures with
+  translated names, distance, and direction; additional creatures are counted.
+- Gameplay-scoped monster/NPC identifiers rather than raw object addresses or
+  positions are tracked, so allocator address reuse cannot suppress a new
+  threat and movement by the same visible enemies does not repeat the entire
+  announcement.
+- The first empty scan stays silent. Losing the final visible threat announces
+  the existing translated `Nothing` message.
+- Extended the capture-backend test to cover initial silence, deduplication,
+  identifier changes, threat appearance, disappearance, and repeat-last
+  behavior; the focused test now contains 32 assertions.
+- User-verified spawning and approaching a zombie without repeated threat
+  announcements, then removing it and hearing the expected clear message, with
+  NVDA 2026.1.
+- Combat messages encountered during the test, including an injured body part
+  and an attack causing no damage, were already announced by the live-message
+  integration.

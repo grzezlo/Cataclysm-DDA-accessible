@@ -4676,6 +4676,7 @@ void game::mon_info_update( )
     auto &unique_mons = mon_visible.unique_mons;
     auto &dangerous = mon_visible.dangerous;
     mon_visible.has_dangerous_creature_in_proximity = false;
+    std::vector<Creature *> nearby_threats;
 
     // 7 0 1    unique_types uses these indices;
     // 6 8 2    0-7 are provide by direction_from()
@@ -4799,6 +4800,7 @@ void game::mon_info_update( )
                     if( !passmon ) {
                         newseen++;
                         new_seen_mon.push_back( shared_from( critter ) );
+                        nearby_threats.push_back( c );
                     }
                 }
             }
@@ -4831,10 +4833,48 @@ void game::mon_info_update( )
             if( need_processing ) {
                 mon_visible.has_dangerous_creature_in_proximity = true;
                 newseen++;
+                nearby_threats.push_back( c );
             }
             unique_types[index].push_back( p );
         }
     }
+
+    std::sort( nearby_threats.begin(), nearby_threats.end(), [&]( const Creature *lhs,
+    const Creature *rhs ) {
+        return rl_dist( pos, lhs->pos_bub( here ) ) < rl_dist( pos, rhs->pos_bub( here ) );
+    } );
+    std::vector<std::string> threat_ids;
+    std::vector<std::string> threat_descriptions;
+    threat_ids.reserve( nearby_threats.size() );
+    constexpr size_t max_described_threats = 3;
+    for( size_t index = 0; index < nearby_threats.size(); ++index ) {
+        const Creature *threat = nearby_threats[index];
+        if( const monster *mon = dynamic_cast<const monster *>( threat ) ) {
+            threat_ids.push_back( string_format( "monster:%d",
+                                                 get_creature_tracker().temporary_id( *mon ) ) );
+        } else if( const npc *person = dynamic_cast<const npc *>( threat ) ) {
+            threat_ids.push_back( string_format( "npc:%d", person->getID().get_value() ) );
+        }
+        if( index < max_described_threats ) {
+            const tripoint_bub_ms threat_pos = threat->pos_bub( here );
+            const std::string distance = string_format( _( "%d tiles" ), rl_dist( pos, threat_pos ) );
+            const std::string direction = string_format( _( "to the %s" ),
+                                          direction_name( direction_from( pos, threat_pos ) ) );
+            threat_descriptions.push_back(
+                string_format( pgettext( "monster description", "%1$s %2$s %3$s" ),
+                               threat->disp_name(), distance, direction ) );
+        }
+    }
+    if( nearby_threats.size() > max_described_threats ) {
+        const size_t other_count = nearby_threats.size() - max_described_threats;
+        threat_descriptions.push_back( string_format(
+                                           n_gettext( _( "%d other" ), _( "%d others" ), other_count ), other_count ) );
+    }
+    const std::string threat_announcement = threat_descriptions.empty() ?
+                                            _( "Nothing" ) :
+                                            string_format( _( "%s spotted!" ),
+                                                    enumerate_as_string( threat_descriptions ) );
+    accessibility::announce_threats( threat_ids, threat_announcement );
 
     if( uistate.distraction_hostile_spotted && newseen > mostseen ) {
         if( newseen - mostseen == 1 ) {

@@ -1,6 +1,7 @@
 #include "accessibility.h"
 
 #include <memory>
+#include <set>
 #include <utility>
 
 namespace accessibility
@@ -42,6 +43,24 @@ bool &game_messages_enabled()
 {
     static bool enabled = false;
     return enabled;
+}
+
+std::set<std::string> &previous_threats()
+{
+    static std::set<std::string> threats;
+    return threats;
+}
+
+bool &threats_initialized()
+{
+    static bool initialized = false;
+    return initialized;
+}
+
+std::string &previous_movement_direction()
+{
+    static std::string direction;
+    return direction;
 }
 
 } // namespace
@@ -91,7 +110,36 @@ bool announce_movement( const std::string &direction, const std::string &tile )
     if( !game_messages_enabled() ) {
         return false;
     }
-    return announce_focus( tile, direction );
+
+    std::string message = tile;
+    if( direction != previous_movement_direction() ) {
+        if( !message.empty() && !direction.empty() ) {
+            message += ". ";
+        }
+        message += direction;
+        previous_movement_direction() = direction;
+    }
+    return announce( message );
+}
+
+bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message )
+{
+    if( !game_messages_enabled() ) {
+        return false;
+    }
+
+    const std::set<std::string> current_threats( threat_ids.begin(), threat_ids.end() );
+    if( !threats_initialized() ) {
+        threats_initialized() = true;
+        previous_threats() = current_threats;
+        return current_threats.empty() ? false : announce( message );
+    }
+    if( current_threats == previous_threats() ) {
+        return false;
+    }
+
+    previous_threats() = current_threats;
+    return announce( message );
 }
 
 bool repeat_last_announcement()
@@ -110,6 +158,11 @@ std::string last_announcement()
 
 void enable_game_messages( const bool enabled )
 {
+    if( game_messages_enabled() != enabled ) {
+        previous_threats().clear();
+        threats_initialized() = false;
+        previous_movement_direction().clear();
+    }
     game_messages_enabled() = enabled;
 }
 
@@ -117,6 +170,9 @@ void set_backend_for_testing( std::unique_ptr<backend> replacement )
 {
     active_backend() = replacement ? std::move( replacement ) : std::make_unique<null_backend>();
     last_message().clear();
+    previous_threats().clear();
+    threats_initialized() = false;
+    previous_movement_direction().clear();
 }
 
 void reset_backend_after_testing()
@@ -124,6 +180,9 @@ void reset_backend_after_testing()
     active_backend() = make_platform_backend();
     last_message().clear();
     game_messages_enabled() = false;
+    previous_threats().clear();
+    threats_initialized() = false;
+    previous_movement_direction().clear();
 }
 
 } // namespace accessibility
