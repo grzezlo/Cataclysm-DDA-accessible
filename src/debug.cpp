@@ -26,8 +26,10 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
 #include "cached_options.h"
 #include "cata_assert.h"
+#include "catacharset.h"
 #include "cata_scope_helpers.h"
 #include "cata_utility.h"
 #include "color.h"
@@ -363,11 +365,15 @@ static void debug_error_prompt(
 #if defined(TILES)
                                          " %s\n" // translated user string: copy
 #endif // TILES
+                                         " %s\n" // translated user string: detail
+                                         " %s\n" // translated user string: repeat announcement
                                          , _( "Press <color_white>space bar</color> to continue the game." )
                                          , _( "Press <color_white>I</color> (or <color_white>i</color>) to also ignore this particular message in the future." )
 #if defined(TILES)
                                          , _( "Press <color_white>C</color> (or <color_white>c</color>) to copy this message to the clipboard." )
 #endif // TILES
+                                         , _( "Press <color_white>D</color> (or <color_white>d</color>) to hear the full error report." )
+                                         , _( "Press <color_white>F6</color> to repeat the last announcement." )
                                      );
     std::string message = error_message + instructions;
     ui.on_redraw( [&]( const ui_adaptor & ) {
@@ -377,9 +383,26 @@ static void debug_error_prompt(
         wnoutrefresh( catacurses::stdscr );
     } );
 
+    std::string concise_error = text;
+    const size_t first_line_end = concise_error.find( '\n' );
+    if( first_line_end != std::string::npos ) {
+        concise_error.erase( first_line_end );
+    }
+    if( utf8_width( concise_error ) > 240 ) {
+        concise_error = utf8_truncate( concise_error, 239 ) + "…";
+    }
+    std::string semantic_summary = string_format(
+                                       _( "An error has occurred: %s. Press space to continue, I to ignore this message in the future, D for the full report, or F6 to repeat this announcement." ),
+                                       concise_error );
+#if defined(TILES)
+    semantic_summary += " " + std::string( _( "Press C to copy the report." ) );
+#endif // TILES
+    accessibility::announce_status( semantic_summary );
+
 #if defined(__ANDROID__)
     input_context ctxt( "DEBUG_MSG", keyboard_mode::keycode );
     ctxt.register_manual_key( 'C' );
+    ctxt.register_manual_key( 'D' );
     ctxt.register_manual_key( 'I' );
     ctxt.register_manual_key( ' ' );
 #endif
@@ -392,6 +415,13 @@ static void debug_error_prompt(
                 SDL_SetClipboardText( formatted_report.c_str() );
                 break;
 #endif // TILES
+            case 'd':
+            case 'D':
+                accessibility::announce_status( formatted_report );
+                break;
+            case KEY_F( 6 ):
+                accessibility::repeat_last_announcement();
+                break;
             case 'i':
             case 'I':
                 ignored_messages.insert( msg_key );

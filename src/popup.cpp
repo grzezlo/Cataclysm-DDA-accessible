@@ -145,9 +145,32 @@ void query_popup_impl::on_resized()
 }
 
 query_popup::query_popup()
-    : cur( 0 ), default_text_color( c_white ), anykey( false ), cancel( false ),
-      ontop( false ), fullscr( false ), pref_kbd_mode( keyboard_mode::keycode )
+    : static_announcements( false ), cur( 0 ), default_text_color( c_white ), anykey( false ),
+      cancel( false ), ontop( false ), fullscr( false ), pref_kbd_mode( keyboard_mode::keycode )
 {
+}
+
+void query_popup::enable_static_announcements()
+{
+    static_announcements = true;
+}
+
+void query_popup::set_message( const std::string &display_text, const std::string &semantic_text,
+                               const bool progress )
+{
+    invalidate_ui();
+    text = display_text;
+    if( !static_announcements ) {
+        return;
+    }
+
+    const std::string announcement = accessibility::normalize_status_announcement(
+                                         remove_color_tags( semantic_text ), progress );
+    const bool repeated_progress = progress && announcement == accessibility::last_announcement();
+    if( !announcement.empty() && announcement != last_static_announcement && !repeated_progress ) {
+        accessibility::announce_status( announcement );
+        last_static_announcement = announcement;
+    }
 }
 
 query_popup &query_popup::context( const std::string &cat )
@@ -459,5 +482,6 @@ bool query_popup::button::contains( const point &p ) const
 
 static_popup::static_popup()
 {
+    enable_static_announcements();
     ui = create_or_get_impl();
 }

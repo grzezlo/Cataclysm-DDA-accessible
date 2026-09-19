@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <map>
 #include <memory>
+#include <regex>
 #include <set>
 #include <tuple>
 #include <utility>
@@ -215,6 +216,25 @@ bool repeat_last_announcement()
 std::string last_announcement()
 {
     return last_message();
+}
+
+std::string normalize_status_announcement( const std::string &message, const bool progress )
+{
+    std::string result = message;
+    if( progress ) {
+        static const std::regex fraction( R"(\s*\[\s*\d+\s*/\s*\d+\s*\])" );
+        static const std::regex percentage( R"(\s*\d+(\.\d+)?\s*%)" );
+        result = std::regex_replace( result, fraction, "" );
+        result = std::regex_replace( result, percentage, "" );
+    }
+    static const std::regex whitespace( R"(\s+)" );
+    result = std::regex_replace( result, whitespace, " " );
+    const size_t first = result.find_first_not_of( ' ' );
+    if( first == std::string::npos ) {
+        return {};
+    }
+    const size_t last = result.find_last_not_of( ' ' );
+    return result.substr( first, last - first + 1 );
 }
 
 void enable_game_messages( const bool enabled )

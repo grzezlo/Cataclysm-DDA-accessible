@@ -165,3 +165,31 @@ Limitations:
 - Combat messages encountered during the test, including an injured body part
   and an attack causing no damage, were already announced by the live-message
   integration.
+
+## 2026-09-19 — Startup and modal notices
+
+- Added a concise semantic announcement for the dedicated developer-error
+  screen, including its available keyboard actions.
+- Added `D` to speak the full technical report on demand and `F6` to repeat the
+  most recent summary or detail.  Space, `I`, and `C` retain their existing
+  continue, ignore, and copy behavior.
+- Added shared announcements for non-interactive static popup instructions and
+  statuses.  Progress percentages, item counts, spinner frames, unchanged
+  redraws, and repeated animation waits are suppressed while meaningful phase
+  changes remain available.
+- Reused the shared static-popup path for world loading and generation instead
+  of maintaining duplicate feature hooks.
+- Added fixed-input tests for whitespace cleanup and progress normalization.
+  The focused accessibility suite passed with 52 assertions in 4 test cases,
+  and the Windows x64 Release tiles build completed successfully.
+- User-verified that changing data `keybindings.json` produces an NVDA-readable,
+  usable stale-data warning before the main menu.  The test used Windows 25H2,
+  build 26200.9457, NVDA 2026.1, and a working tree based on commit
+  `1bc81a560cd1` (`cdda-0.I-2026-09-10-0827-12-g1bc81a560c-dirty`).
+
+Limitations:
+
+- Immediate developer errors outside startup, representative static
+  instructions and progress popups, and repeat behavior after interrupted
+  detail speech were not separately exercised with NVDA.  They remain explicit
+  regression scenarios for Stage 22 rather than blocking the current roadmap.

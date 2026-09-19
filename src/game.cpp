@@ -788,7 +788,6 @@ void game::reenter_fullscreen()
 void game::setup()
 {
     new_game = true;
-    accessibility::announce_status( _( "Please wait while the world data loads…\nLoading core data" ) );
     {
         static_popup popup;
         popup.message( "%s", _( "Please wait while the world data loads…\nLoading core data" ) );
@@ -913,7 +912,6 @@ bool game::start_game()
 
     background_pane background;
     static_popup popup;
-    accessibility::announce_status( _( "Please wait as we build your world" ) );
     popup.message( "%s", _( "Please wait as we build your world" ) );
     ui_manager::redraw();
     refresh_display();
@@ -13691,7 +13689,7 @@ void game::quicksave()
     add_msg( m_info, _( "Saving game, this may take a while." ) );
 
     static_popup popup;
-    popup.message( "%s", _( "Saving game, this may take a while." ) );
+    popup.progress_message( "%s", _( "Saving game, this may take a while." ) );
     ui_manager::redraw();
     refresh_display();
 

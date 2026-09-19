@@ -92,6 +92,22 @@ TEST_CASE( "semantic accessibility lists have stable distance ordering",
     CHECK( entries[4].label == "far east" );
 }
 
+TEST_CASE( "status announcements suppress animated progress values",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::normalize_status_announcement(
+               "  Select first point.\n", false ) == "Select first point." );
+    CHECK( accessibility::normalize_status_announcement(
+               "Searching…  10%\nCancel", true ) == "Searching… Cancel" );
+    CHECK( accessibility::normalize_status_announcement(
+               "Please wait as the map saves [12/50]", true ) ==
+           "Please wait as the map saves" );
+    CHECK( accessibility::normalize_status_announcement(
+               "Compressing maps [1/20]", true ) ==
+           accessibility::normalize_status_announcement(
+               "Compressing maps [19/20]", true ) );
+}
+
 TEST_CASE( "semantic accessibility lists group connected matching regions",
            "[accessibility][nogame]" )
 {

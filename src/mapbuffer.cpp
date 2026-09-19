@@ -200,8 +200,8 @@ void mapbuffer::save( bool delete_after_save )
     for( auto &elem : submaps ) {
         std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
         if( last_update + update_interval < now ) {
-            popup.message( _( "Please wait as the map saves [%d/%d]" ),
-                           num_saved_submaps, num_total_submaps );
+            popup.progress_message( _( "Please wait as the map saves [%d/%d]" ),
+                                    num_saved_submaps, num_total_submaps );
             ui_manager::redraw();
             refresh_display();
             inp_mngr.pump_events();

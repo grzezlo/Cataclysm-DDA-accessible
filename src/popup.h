@@ -90,15 +90,15 @@ class query_popup
         template <typename ...Args>
         query_popup &message( const std::string &fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = string_format( fmt, std::forward<Args>( args )... );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( formatted, formatted, false );
             return *this;
         }
         template <typename ...Args>
         query_popup &message( const char *const fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = string_format( fmt, std::forward<Args>( args )... );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( formatted, formatted, false );
             return *this;
         }
         /**
@@ -107,29 +107,29 @@ class query_popup
         template <typename ...Args>
         query_popup &wait_message( const nc_color &bar_color, const std::string &fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = wait_text( string_format( fmt, std::forward<Args>( args )... ), bar_color );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( wait_text( formatted, bar_color ), formatted, true );
             return *this;
         }
         template <typename ...Args>
         query_popup &wait_message( const nc_color &bar_color, const char *const fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = wait_text( string_format( fmt, std::forward<Args>( args )... ), bar_color );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( wait_text( formatted, bar_color ), formatted, true );
             return *this;
         }
         template <typename ...Args>
         query_popup &wait_message( const std::string &fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = wait_text( string_format( fmt, std::forward<Args>( args )... ) );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( wait_text( formatted ), formatted, true );
             return *this;
         }
         template <typename ...Args>
         query_popup &wait_message( const char *const fmt, Args &&... args ) {
             assert_format( fmt, std::forward<Args>( args )... );
-            invalidate_ui();
-            text = wait_text( string_format( fmt, std::forward<Args>( args )... ) );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( wait_text( formatted ), formatted, true );
             return *this;
         }
         /**
@@ -197,6 +197,17 @@ class query_popup
          * resizing of the popup.
          */
         std::shared_ptr<query_popup_impl> create_or_get_impl();
+        void enable_static_announcements();
+        void set_message( const std::string &display_text, const std::string &semantic_text,
+                          bool progress );
+
+        template <typename ...Args>
+        static void assert_format( const std::string_view, Args &&... ) {
+            static_assert( sizeof...( Args ) > 0,
+                           "Format string should take at least one argument.  "
+                           "If your message is not a format string, "
+                           "use `message( \"%s\", text )` instead." );
+        }
 
     private:
         struct query_option {
@@ -210,6 +221,8 @@ class query_popup
         std::string category;
         std::string text;
         std::string last_announced_text;
+        std::string last_static_announcement;
+        bool static_announcements;
         std::vector<query_option> options;
         size_t cur;
         nc_color default_text_color;
@@ -236,14 +249,6 @@ class query_popup
 
         void invalidate_ui() const;
 
-        template <typename ...Args>
-        static void assert_format( const std::string_view, Args &&... ) {
-            static_assert( sizeof...( Args ) > 0,
-                           "Format string should take at least one argument.  "
-                           "If your message is not a format string, "
-                           "use `message( \"%s\", text )` instead." );
-        }
-
         static std::string wait_text( const std::string &text, const nc_color &bar_color );
         static std::string wait_text( const std::string &text );
 };
@@ -260,7 +265,7 @@ class query_popup
  * if( not_loaded ) {
  *     static_popup popup;
  *     while( loading ) {
- *         popup.message( _( "Please wait…  %d%% complete" ), percentage );
+ *         popup.progress_message( _( "Please wait…  %d%% complete" ), percentage );
  *         ui_manager::redraw();
  *         refresh_display(); // force redraw since we're not receiving input here
  *         inp_mngr.pump_events(); // handle window events such as resize
@@ -275,6 +280,21 @@ class static_popup : public query_popup
 {
     public:
         static_popup();
+
+        template <typename ...Args>
+        static_popup &progress_message( const std::string &fmt, Args &&... args ) {
+            assert_format( fmt, std::forward<Args>( args )... );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( formatted, formatted, true );
+            return *this;
+        }
+        template <typename ...Args>
+        static_popup &progress_message( const char *const fmt, Args &&... args ) {
+            assert_format( fmt, std::forward<Args>( args )... );
+            const std::string formatted = string_format( fmt, std::forward<Args>( args )... );
+            set_message( formatted, formatted, true );
+            return *this;
+        }
 
     private:
         std::shared_ptr<query_popup_impl> ui;

@@ -1639,7 +1639,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                     }
                     last_update = now;
                     double percent = 100.0 * at / out_of;
-                    popup.message( _( "Searching… %3.0f%%\n%s\n" ), percent, cancel_btn );
+                    popup.progress_message( _( "Searching… %3.0f%%\n%s\n" ), percent, cancel_btn );
                     ui_manager::redraw();
                     refresh_display();
                     inp_mngr.pump_events();

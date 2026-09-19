@@ -526,8 +526,9 @@ test build, tiles build, and the branch's static checks.
 
 **Required human verification:** Complete the coverage-manifest journey and a
 long play session, deliberately navigating rapidly and interrupting speech.
-Confirm every unverified popup noted in `ACCESS_DONE.md`, including the standard
-popup integration, and record all accepted limitations.
+Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
+developer-error, static-instruction, and progress-popup integration, and record
+all accepted limitations.
 
 ## Stage 23 - Windows packaging and playable-release acceptance
 
@@ -577,8 +578,9 @@ limitations before claiming web accessibility.
 
 ## Known blockers and required follow-up
 
-- Standard popup announcements are implemented but still need the dedicated
-  NVDA check included in Stage 22, or earlier if a stage relies on them.
+- Standard, developer-error, and static popup announcements are implemented but
+  still need the remaining dedicated NVDA checks recorded in `ACCESS_DONE.md`.
+  Stage 22 owns those checks unless an earlier stage relies on a popup type.
 - The NVDA Controller Client DLL and license remain local ignored artifacts until
   Stage 23 establishes packaging.
 - The current host may require single-process MSBuild invocations.

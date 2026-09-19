@@ -2118,7 +2118,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::filesystem::path maps_dict_path = maps_dict.get_unrelative_path();
             size_t done = 0;
             for( const cata_path &map_folder : maps_folders ) {
-                popup.message( _( "Compressing maps [%d/%d]" ), done++, maps_folders.size() );
+                popup.progress_message( _( "Compressing maps [%d/%d]" ), done++, maps_folders.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2144,7 +2144,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
                 if( overmap_file_name.generic_u8string().find( "o." ) != 0 ) {
                     continue;
                 }
-                popup.message( _( "Compressing overmaps [%d/%d]" ), done++, overmaps.size() );
+                popup.progress_message( _( "Compressing overmaps [%d/%d]" ), done++, overmaps.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2169,7 +2169,8 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             // Each map memory region file inside the folders is compressed separately.
             character_map_memories = get_files_from_path( ".mm1", folder_path(), false, true );
             for( const cata_path &character_map_memory_folder : character_map_memories ) {
-                popup.message( _( "Compressing map memory [%d/%d]" ), done++, character_map_memories.size() );
+                popup.progress_message( _( "Compressing map memory [%d/%d]" ), done++,
+                                        character_map_memories.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2198,7 +2199,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::error_code ec;
             saves = get_files_from_path( ".sav", world_folder_path );
             for( const cata_path &save : saves ) {
-                popup.message( _( "Compressing main save files [%d/%d]" ), done++, saves.size() );
+                popup.progress_message( _( "Compressing main save files [%d/%d]" ), done++, saves.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2251,7 +2252,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
         size_t done = 0;
         size_t to_do = folders_to_clean.size() + files_to_clean.size();
         for( const cata_path &folder : folders_to_clean ) {
-            popup.message( _( "Cleaning up [%d/%d]" ), done++, to_do );
+            popup.progress_message( _( "Cleaning up [%d/%d]" ), done++, to_do );
             ui_manager::redraw();
             refresh_display();
             inp_mngr.pump_events();
@@ -2259,7 +2260,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::filesystem::remove_all( folder.get_unrelative_path(), ec );
         }
         for( const cata_path &file : files_to_clean ) {
-            popup.message( _( "Cleaning up [%d/%d]" ), done++, to_do );
+            popup.progress_message( _( "Cleaning up [%d/%d]" ), done++, to_do );
             ui_manager::redraw();
             refresh_display();
             inp_mngr.pump_events();
@@ -2290,7 +2291,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
         {
             std::filesystem::path maps_dict_path = maps_dict.get_unrelative_path();
             for( const cata_path &map_zzip : maps_zzips ) {
-                popup.message( _( "Decompressing maps [%d/%d]" ), done++, maps_zzips.size() );
+                popup.progress_message( _( "Decompressing maps [%d/%d]" ), done++, maps_zzips.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2309,7 +2310,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::filesystem::path dest_folder_name = folder_path().get_unrelative_path();
             for( cata_path &overmap_zzip : overmap_zzips ) {
 
-                popup.message( _( "Decompressing overmaps [%d/%d]" ), done++, overmap_zzips.size() );
+                popup.progress_message( _( "Decompressing overmaps [%d/%d]" ), done++, overmap_zzips.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2327,8 +2328,8 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::filesystem::path mmr_dict_path = mmr_dict.get_unrelative_path();
             std::vector<cata_path> character_map_memory_zzips;
             for( const cata_path &character_map_memory_zzip : character_map_memory_folders ) {
-                popup.message( _( "Decompressing map memory [%d/%d]" ), done++,
-                               character_map_memory_folders.size() );
+                popup.progress_message( _( "Decompressing map memory [%d/%d]" ), done++,
+                                        character_map_memory_folders.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2357,7 +2358,8 @@ bool WORLD::set_compression_enabled( bool enabled ) const
             std::filesystem::path dest_folder_name = world_folder_path.get_unrelative_path();
             for( cata_path &save_zzip : save_zzips ) {
 
-                popup.message( _( "Decompressing main save files [%d/%d]" ), done++, overmap_zzips.size() );
+                popup.progress_message( _( "Decompressing main save files [%d/%d]" ), done++,
+                                        overmap_zzips.size() );
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -2374,7 +2376,7 @@ bool WORLD::set_compression_enabled( bool enabled ) const
         remove_file( mmr_dict );
         done = 0;
         for( const cata_path &zzip_to_clean : zzips_to_clean ) {
-            popup.message( _( "Cleaning up [%d/%d]" ), done++, zzips_to_clean.size() );
+            popup.progress_message( _( "Cleaning up [%d/%d]" ), done++, zzips_to_clean.size() );
             ui_manager::redraw();
             refresh_display();
             inp_mngr.pump_events();
