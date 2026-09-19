@@ -193,3 +193,28 @@ Limitations:
   instructions and progress popups, and repeat behavior after interrupted
   detail speech were not separately exercised with NVDA.  They remain explicit
   regression scenarios for Stage 22 rather than blocking the current roadmap.
+
+## 2026-09-20 — On-demand situation review
+
+- Added a rebindable gameplay action `Alt+V` to open an on-demand situation
+  review list, and `Alt+R` to repeat the last announcement in gameplay and menu
+  contexts.
+- Represented visible obstacles, exits, items, creatures, hazards, furniture,
+  and current position as semantic entries sorted by distance with stable
+  tie-breaking.
+- Connected tiles sharing the same obstacle or area-hazard semantics are
+  grouped into a single entry reporting tile count and nearest location.
+- Omitted ordinary ground tiles and respected character line of sight and
+  maximum visibility range without revealing occluded or remembered state.
+- Added an `Accessibility` category to the action menu (`Enter`), allowing
+  navigation or direct `R` / `V` selection, with repeat preserving the prior
+  gameplay context announcement.
+- Added automated tests in `tests/accessibility_test.cpp` covering stable
+  distance ordering and connected matching region grouping; all 56 assertions
+  in 5 test cases passed.
+- Built the Windows x64 Release tiles executable successfully.
+- User-verified indoor and outdoor positions, furniture, item piles, hazards,
+  and visible creatures with NVDA 2026.1 on Windows 25H2, build 26200.9457,
+  testing commit `bfd9be513b` (`cdda-0.I-2026-09-10-0827-14-gbfd9be513b`).
+  Confirmed efficient navigation, predictable return with `Enter` or `Escape`,
+  silence on passive redraws, and reliable repeat with `Alt+R`.
