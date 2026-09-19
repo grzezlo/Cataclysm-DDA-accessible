@@ -37,9 +37,9 @@ over upstream contribution policy or exact UI parity.
 - Do not add a speech-cancel command.  NVDA already lets the user interrupt
   speech with Shift or Control.  Do not intercept those keys or immediately
   requeue an interrupted message.
-- Treat the repository owner, as a blind NVDA user, as the primary acceptance
-  tester for interaction quality.  Do not claim that a feature is accessible
-  until it has been tested with NVDA or clearly mark it as unverified.
+- Treat testing with a blind NVDA user as the primary acceptance standard for
+  interaction quality.  Do not claim that a feature is accessible until it has
+  been tested with NVDA or clearly mark it as unverified.
 
 ## Architecture
 
@@ -56,23 +56,10 @@ over upstream contribution policy or exact UI parity.
 - Delay AccessKit integration until the semantic model and an NVDA-backed
   playable vertical slice are working.
 
-## Scope and milestones
-
-Prioritize a playable vertical slice in this order:
-
-1. Startup and main-menu navigation.
-2. Loading a game or starting with a simple character preset.
-3. Game-message announcements.
-4. Movement, current-tile descriptions, and nearby threats.
-5. Basic inventory and item use.
-6. Accessible targeting and combat.
-7. Saving and quitting.
-
-Crafting, advanced inventory, vehicles, construction, and less common screens
-come after this first playable slice.
-
 ## Progress tracking
 
+- Treat `ACCESS_TODO.md` and `ACCESS_DONE.md` as the authoritative source for
+  current scope, priorities, milestones, and completed work.
 - Keep active work in `ACCESS_TODO.md`.  It should contain only current, next,
   and later work, plus concise known blockers and acceptance criteria.
 - When an item is completed, remove it from `ACCESS_TODO.md` and move it to
@@ -110,3 +97,21 @@ come after this first playable slice.
 - Prefer textual diagnostics and logs over screenshot-only evidence.
 - Preserve upstream license and attribution files.  Document the use of AI in
   developing this fork clearly in its public README and release information.
+
+## Windows command-line workflow
+
+- Use the repository-root batch files for Windows x64 MSVC work.  They locate
+  Visual Studio, MSBuild, and the Visual Studio vcpkg component through
+  `vswhere`; do not hardcode installation paths or edit the tracked
+  `CMakePresets.json` for one machine.
+- Run `build_win_x64.bat` for the tiles game and
+  `build_tests_win_x64.bat` for the test executable.  Run `test_access.bat`
+  for the focused accessibility suite and `test_all.bat` for the full suite.
+- Every entry-point batch file must call `setenv.bat` first.  Keep
+  `VcpkgInstalledDir` pointed at `msvc-full-features\vcpkg_installed`; invoking
+  MSBuild without that explicit directory can create an incorrect nested
+  `x64-windows-static\x64-windows-static` package tree with some Visual Studio
+  vcpkg versions.
+- Do not manually copy or install packages into a nested triplet directory.
+  Let the batch workflow restore missing manifest dependencies into the
+  canonical install tree.
