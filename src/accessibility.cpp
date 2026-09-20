@@ -249,6 +249,13 @@ std::string last_announcement()
     return last_message();
 }
 
+void set_last_announcement( const std::string &message )
+{
+    if( !message.empty() ) {
+        last_message() = message;
+    }
+}
+
 std::string normalize_status_announcement( const std::string &message, const bool progress )
 {
     std::string result = message;

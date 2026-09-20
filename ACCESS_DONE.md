@@ -253,3 +253,35 @@ Limitations:
 
 - Newly introduced source strings can fall back to English until translation
   catalogs receive updated translations.
+
+## 2026-09-20 — Stage 02A: On-demand progress repeat during blocking operations
+
+- Added on-demand progress repeat using `Alt+R` during world loading, map saving,
+  save compression, and other blocking operations where standard input contexts
+  are inactive.
+- Implemented `accessibility::set_last_announcement` to update the active
+  progress snapshot quietly in `last_message` without triggering premature or
+  flooding speech output.
+- Connected `loading_ui::show` to update the active context and step status,
+  preserving informational parity with the text visible to sighted players at
+  the bottom of the loading screen.
+- Connected `query_popup::set_message` progress tracking to update `last_message`
+  with full semantic text (including progress counters and percentages) while
+  automatic speech remains deduplicated.
+- Intercepted `Alt+R` in `input_manager::pump_events()` to trigger
+  `accessibility::repeat_last_announcement()` immediately when requested during
+  blocking loops before clearing input events.
+- Added automated Catch2 tests covering quiet status updates and on-demand
+  repeat; the focused accessibility test suite passed with 72 assertions in 7
+  test cases, AStyle formatting checks passed cleanly, and both the test
+  executable and Windows x64 Release tiles build succeeded.
+- A blind user confirmed the interaction with NVDA 2026.1 on Windows 25H2,
+  build 26200.9457.  Verification confirmed complete silence during loading,
+  immediate spoken feedback reporting the current step upon pressing `Alt+R`,
+  and normal arrival announcements upon entering gameplay.
+
+Limitations:
+
+- Very short sub-second operations between event pumping calls might not capture
+  rapid intermediate micro-steps before execution completes.
+

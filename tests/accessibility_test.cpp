@@ -108,6 +108,34 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "accessibility last announcement can be set quietly and repeated",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    accessibility::announce_status( "Loading the save…" );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages[0] == "Loading the save…" );
+
+    // Quietly update progress during loading - no speech should be emitted
+    accessibility::set_last_announcement( "Loading the save… Core game data" );
+    CHECK( capture_ptr->messages.size() == 1 );
+    CHECK( accessibility::last_announcement() == "Loading the save… Core game data" );
+
+    accessibility::set_last_announcement( "Loading the save… Overmap" );
+    CHECK( capture_ptr->messages.size() == 1 );
+    CHECK( accessibility::last_announcement() == "Loading the save… Overmap" );
+
+    // Repeating speaks the latest quiet progress update on demand
+    REQUIRE( accessibility::repeat_last_announcement() );
+    REQUIRE( capture_ptr->messages.size() == 2 );
+    CHECK( capture_ptr->messages[1] == "Loading the save… Overmap" );
+
+    accessibility::reset_backend_after_testing();
+}
+
 TEST_CASE( "semantic accessibility lists have stable distance ordering",
            "[accessibility][nogame]" )
 {

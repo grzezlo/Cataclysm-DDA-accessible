@@ -171,6 +171,9 @@ void query_popup::set_message( const std::string &display_text, const std::strin
         accessibility::announce_status( announcement );
         last_static_announcement = announcement;
     }
+    if( progress ) {
+        accessibility::set_last_announcement( remove_color_tags( semantic_text ) );
+    }
 }
 
 query_popup &query_popup::context( const std::string &cat )

@@ -2,6 +2,7 @@
 
 #include "cached_options.h"
 #include "options.h"
+#include "accessibility.h"
 #include "input.h"
 #include "output.h"
 #include "ui_manager.h"
@@ -155,6 +156,13 @@ void loading_ui::show( const std::string &context, const std::string &step )
         return;
     }
     update_state( context, step );
+    if( !context.empty() && !step.empty() ) {
+        accessibility::set_last_announcement( string_format( "%s %s", context, step ) );
+    } else if( !context.empty() ) {
+        accessibility::set_last_announcement( context );
+    } else if( !step.empty() ) {
+        accessibility::set_last_announcement( step );
+    }
     ui_manager::redraw();
     refresh_display();
     inp_mngr.pump_events();

@@ -46,8 +46,15 @@ bool announce_movement( const std::string &direction, const std::string &tile );
 bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
 bool announce_semantic_sequence( const std::vector<std::string> &parts );
+/** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
+/** Return the most recent announcement text (spoken or quietly set). */
 std::string last_announcement();
+/** Update the stored last announcement without triggering speech.
+ *  Use this for progress updates that should only be spoken on demand
+ *  (e.g. via Alt+R during blocking operations). Empty strings are ignored. */
+void set_last_announcement( const std::string &message );
+/** Strip progress counters and percentages for deduplication. */
 std::string normalize_status_announcement( const std::string &message, bool progress );
 
 void enable_game_messages( bool enabled );

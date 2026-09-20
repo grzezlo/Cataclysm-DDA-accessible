@@ -34,6 +34,7 @@
 #endif
 
 #include "avatar.h"
+#include "accessibility.h"
 #include "cached_options.h"
 #include "cata_assert.h"
 #include "cata_scope_helpers.h"
@@ -3946,8 +3947,14 @@ void input_manager::pump_events()
         return;
     }
 
-    // Handle all events, but ignore any keypress
+    // Handle all events, but check for accessibility repeat shortcut before ignoring
     CheckMessages();
+
+    if( last_input.type == input_event_t::keyboard_code &&
+        last_input.modifiers == std::set<keymod_t> { keymod_t::alt } &&
+        last_input.get_first_input() == 'r' ) {
+        accessibility::repeat_last_announcement();
+    }
 
     last_input = input_event();
     previously_pressed_key = 0;
