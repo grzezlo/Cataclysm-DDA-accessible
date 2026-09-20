@@ -43,6 +43,23 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( gameplay.input_to_action( alt_v ) == "accessibility_situation" );
     CHECK( gameplay.input_to_action( alt_r_char ) == "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( alt_v_char ) == "accessibility_situation" );
+
+    const input_event altgr_r( { keymod_t::ctrl, keymod_t::alt }, 'r', input_event_t::keyboard_code );
+    const input_event altgr_v( { keymod_t::ctrl, keymod_t::alt }, 'v', input_event_t::keyboard_code );
+    const input_event altgr_r_char( { keymod_t::ctrl, keymod_t::alt }, 'r',
+                                    input_event_t::keyboard_char );
+    const input_event altgr_v_char( { keymod_t::ctrl, keymod_t::alt }, 'v',
+                                    input_event_t::keyboard_char );
+
+    CHECK( gameplay.input_to_action( altgr_r ) != "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( gameplay.input_to_action( altgr_v ) != "accessibility_situation" );
+    CHECK( gameplay.input_to_action( altgr_r_char ) != "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( gameplay.input_to_action( altgr_v_char ) != "accessibility_situation" );
+
+    const input_event pure_r( {}, 'r', input_event_t::keyboard_char );
+    const input_event pure_v( {}, 'v', input_event_t::keyboard_char );
+    CHECK( gameplay.input_to_action( pure_r ) != "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( gameplay.input_to_action( pure_v ) != "accessibility_situation" );
 }
 
 TEST_CASE( "accessibility announcements can be captured and repeated", "[accessibility][nogame]" )

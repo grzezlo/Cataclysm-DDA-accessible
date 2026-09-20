@@ -1509,9 +1509,6 @@ static bool is_alt_shortcut( const SDL_Keysym &keysym )
     if( !( keysym.mod & KMOD_ALT ) || ( keysym.mod & KMOD_CTRL ) ) {
         return false;
     }
-    if( keysym.sym >= SDLK_0 && keysym.sym <= SDLK_9 ) {
-        return false;
-    }
     if( keysym.sym >= SDLK_KP_0 && keysym.sym <= SDLK_KP_9 ) {
         return false;
     }
@@ -1727,13 +1724,15 @@ static int sdl_keysym_to_curses( const SDL_Keysym &keysym )
         }
     }
 
-    if( keysym.mod & KMOD_CTRL && keysym.sym >= 'a' && keysym.sym <= 'z' ) {
+    if( ( keysym.mod & KMOD_CTRL ) && !( keysym.mod & KMOD_ALT ) &&
+        keysym.sym >= 'a' && keysym.sym <= 'z' ) {
         // ASCII ctrl codes, ^A through ^Z.
         return keysym.sym - 'a' + '\1';
     }
     switch( keysym.sym ) {
         // This is special: allow entering a Unicode character with ALT+number
         case SDLK_RALT:
+            return -1;
         case SDLK_LALT:
             begin_alt_code();
             return -1;
@@ -3026,6 +3025,9 @@ static void CheckMessages()
 #else
                     case SDL_WINDOWEVENT_FOCUS_LOST:
                         window_focus = false;
+                        alt_shortcut_pending_text = false;
+                        alt_down = false;
+                        alt_buffer = 0;
                         if( SDL_IsTextInputActive() ) {
                             text_input_active_when_regaining_focus = true;
                             // Stop text input to not intefere with other programs
@@ -3096,6 +3098,7 @@ static void CheckMessages()
                     alt_shortcut_pending_text = true;
                     last_input = sdl_keysym_to_keycode_evt( ev.key.keysym );
                 } else if( mode == keyboard_mode::keychar ) {
+                    alt_shortcut_pending_text = false;
                     const int lc = sdl_keysym_to_curses( ev.key.keysym );
                     if( lc <= 0 ) {
                         // a key we don't know in curses and won't handle.
@@ -3128,6 +3131,7 @@ static void CheckMessages()
 #endif
                     }
                 } else {
+                    alt_shortcut_pending_text = false;
                     last_input = sdl_keysym_to_keycode_evt( ev.key.keysym );
                 }
             }
@@ -3154,9 +3158,9 @@ static void CheckMessages()
                 }
 #endif
                 is_repeat = ev.key.repeat;
+                alt_shortcut_pending_text = false;
                 if( mode == keyboard_mode::keychar ) {
                     if( ev.key.keysym.sym == SDLK_LALT || ev.key.keysym.sym == SDLK_RALT ) {
-                        alt_shortcut_pending_text = false;
                         int code = end_alt_code();
                         if( code ) {
                             last_input = input_event( code, input_event_t::keyboard_char );
