@@ -88,6 +88,7 @@
 #include "dialogue.h"
 #include "dialogue_chatbin.h"
 #include "diary.h"
+#include "display.h"
 #include "distraction_manager.h"
 #include "editmap.h"
 #include "effect.h"
@@ -252,6 +253,8 @@ static const damage_type_id damage_stab( "stab" );
 
 static const efftype_id effect_adrenaline_mycus( "adrenaline_mycus" );
 static const efftype_id effect_asked_to_train( "asked_to_train" );
+static const efftype_id effect_bite( "bite" );
+static const efftype_id effect_bleed( "bleed" );
 static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_bouldering( "bouldering" );
 static const efftype_id effect_contacts( "contacts" );
@@ -261,6 +264,7 @@ static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_fake_common_cold( "fake_common_cold" );
 static const efftype_id effect_fake_flu( "fake_flu" );
 static const efftype_id effect_gliding( "gliding" );
+static const efftype_id effect_infected( "infected" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_led_by_leash( "led_by_leash" );
 static const efftype_id effect_no_sight( "no_sight" );
@@ -2730,6 +2734,7 @@ input_context get_default_mode_input_context()
     ctxt.register_action( "peek" );
     ctxt.register_action( "listitems" );
     ctxt.register_action( "accessibility_situation" );
+    ctxt.register_action( "accessibility_status" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.register_action( "zones" );
     ctxt.register_action( "inventory" );
@@ -4875,6 +4880,7 @@ void game::mon_info_update( )
                                             string_format( _( "%s spotted!" ),
                                                     enumerate_as_string( threat_descriptions ) );
     accessibility::announce_threats( threat_ids, threat_announcement );
+    check_condition_transitions();
 
     if( uistate.distraction_hostile_spotted && newseen > mostseen ) {
         if( newseen - mostseen == 1 ) {
@@ -9054,6 +9060,321 @@ void game::accessibility_situation_review()
                            entry.context );
     }
     menu.query();
+}
+
+static std::string semantic_hunger_text( const Character &u )
+{
+    if( !u.needs_food() ) {
+        return _( "Without hunger" );
+    }
+    const std::string text = display::hunger_text_color( u ).first;
+    return text.empty() ? _( "Satisfied" ) : text;
+}
+
+static std::string semantic_thirst_text( const Character &u )
+{
+    const std::string text = display::thirst_text_color( u ).first;
+    return text.empty() ? _( "Hydrated" ) : text;
+}
+
+static std::string semantic_sleepiness_text( const Character &u )
+{
+    const std::string text = display::sleepiness_text_color( u ).first;
+    return text.empty() ? _( "Rested" ) : text;
+}
+
+static std::string semantic_env_temp_text( const Character &u )
+{
+    const std::string temp = display::get_temp( u );
+    return temp == "-" ? _( "Unknown" ) : temp;
+}
+
+void game::check_condition_transitions()
+{
+    accessibility::condition_tracker current;
+    current.hunger_tier = semantic_hunger_text( u );
+    current.thirst_tier = semantic_thirst_text( u );
+    current.sleepiness_tier = semantic_sleepiness_text( u );
+    current.pain_tier = display::pain_text_color( u ).first;
+    current.weariness_tier = display::weariness_text_color( u ).first;
+
+    const int stam_max = u.get_stamina_max();
+    current.stamina_critical = stam_max > 0 && u.get_stamina() <= ( stam_max / 4 );
+
+    for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
+        if( u.get_effect_int( effect_bleed, bp ) > 0 ) {
+            current.bleeding_limbs.push_back( body_part_name_as_heading( bp, 1 ) );
+        }
+        if( u.is_limb_broken( bp ) ) {
+            current.broken_limbs.push_back( body_part_name_as_heading( bp, 1 ) );
+        }
+    }
+
+    accessibility::check_and_announce_condition_transitions( current );
+}
+
+void game::accessibility_status_review()
+{
+    enum class status_category : int {
+        health = 0,
+        stamina_condition,
+        needs,
+        temperature_effects,
+        wielded_weapon,
+        movement_safety,
+        time_environment,
+        count
+    };
+
+    const input_context ctxt = get_default_mode_input_context();
+    const std::string repeat_desc = ctxt.get_desc( "ACCESSIBILITY_REPEAT_LAST" );
+    int selected = 0;
+
+    while( true ) {
+        uilist main_menu;
+        main_menu.title = _( "Status review" );
+        main_menu.footer_text = string_format(
+                                    _( "Up/Down: navigate. Enter: view details. Escape: return to game. %s: repeat." ),
+                                    repeat_desc );
+
+        // 1. Health & Pain
+        std::string health_summary = display::health_text_color( u ).first + ", " +
+                                     display::pain_text_color( u ).first;
+        bool has_bleeding = false;
+        bool has_broken = false;
+        for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
+            if( u.get_effect_int( effect_bleed, bp ) > 0 ) {
+                has_bleeding = true;
+            }
+            if( u.is_limb_broken( bp ) ) {
+                has_broken = true;
+            }
+        }
+        if( has_bleeding ) {
+            health_summary += ", ";
+            health_summary += _( "Bleeding!" );
+        }
+        if( has_broken ) {
+            health_summary += ", ";
+            health_summary += _( "Broken limb!" );
+        }
+        main_menu.addentry_col( static_cast<int>( status_category::health ), true, std::nullopt,
+                               _( "Health & Pain" ), health_summary );
+
+        // 2. Stamina & Condition
+        const int stam_max = u.get_stamina_max();
+        const int stam_pct = stam_max > 0 ? ( u.get_stamina() * 100 ) / stam_max : 0;
+        const std::string stamina_summary = string_format(
+                                                _( "Stamina: %1$d%%, Focus: %2$d, %3$s: %4$s" ),
+                                                stam_pct, u.get_focus(), _( "Weariness" ),
+                                                display::weariness_text_color( u ).first );
+        main_menu.addentry_col( static_cast<int>( status_category::stamina_condition ), true, std::nullopt,
+                               _( "Stamina & Condition" ), stamina_summary );
+
+        // 3. Needs
+        const std::string needs_summary = string_format(
+                                              _( "Hunger: %1$s, Thirst: %2$s, Sleepiness: %3$s" ),
+                                              semantic_hunger_text( u ),
+                                              semantic_thirst_text( u ),
+                                              semantic_sleepiness_text( u ) );
+        main_menu.addentry_col( static_cast<int>( status_category::needs ), true, std::nullopt,
+                               _( "Needs" ), needs_summary );
+
+        // 4. Temperature & Effects
+        const std::string env_temp_str = semantic_env_temp_text( u );
+        std::string temp_summary = string_format(
+                                       _( "Body: %1$s, Env: %2$s" ),
+                                       display::temp_text_color( u ).first,
+                                       env_temp_str );
+        size_t active_effect_count = 0;
+        for( const effect &eff : u.get_effects() ) {
+            if( !eff.disp_name().empty() ) {
+                active_effect_count++;
+            }
+        }
+        if( active_effect_count > 0 ) {
+            temp_summary += ", " + string_format(
+                                n_gettext( "%d effect", "%d effects", active_effect_count ),
+                                active_effect_count );
+        }
+        main_menu.addentry_col( static_cast<int>( status_category::temperature_effects ), true, std::nullopt,
+                               _( "Temperature & Effects" ), temp_summary );
+
+        // 5. Wielded Weapon & Ammo
+        std::string weapon_summary = u.weapname();
+        const std::string ammo_str = u.weapname_ammo();
+        if( !ammo_str.empty() ) {
+            weapon_summary += " (" + ammo_str + ")";
+        }
+        main_menu.addentry_col( static_cast<int>( status_category::wielded_weapon ), true, std::nullopt,
+                               _( "Wielded weapon" ), weapon_summary );
+
+        // 6. Movement & Safety
+        const std::string move_summary = string_format(
+                                             _( "Mode: %1$s, Speed: %2$d, %3$s" ),
+                                             u.current_movement_mode()->name(),
+                                             u.get_speed(),
+                                             display::safe_mode_text_color( false ).first );
+        main_menu.addentry_col( static_cast<int>( status_category::movement_safety ), true, std::nullopt,
+                               _( "Movement & Safety" ), move_summary );
+
+        // 7. Time & Environment
+        const std::string env_summary = string_format(
+                                            _( "%1$s, %2$s, %3$s" ),
+                                            display::time_string( u ),
+                                            display::date_string(),
+                                            display::weather_text_color( u ).first );
+        main_menu.addentry_col( static_cast<int>( status_category::time_environment ), true, std::nullopt,
+                               _( "Time & Environment" ), env_summary );
+
+        main_menu.selected = selected;
+        main_menu.query();
+
+        if( main_menu.ret < 0 ) {
+            break;
+        }
+
+        selected = main_menu.ret;
+
+        // Submenu for detail drill-down
+        uilist detail_menu;
+        detail_menu.footer_text = string_format(
+                                      _( "Up/Down: navigate. Escape or Enter: return to status list. %s: repeat." ),
+                                      repeat_desc );
+
+        switch( static_cast<status_category>( selected ) ) {
+            case status_category::health: {
+                detail_menu.title = _( "Health & Pain details" );
+                int idx = 0;
+                for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
+                    const std::string name = body_part_name_as_heading( bp, 1 );
+                    std::string status = string_format( _( "%1$d/%2$d HP" ),
+                                                        u.get_part_hp_cur( bp ), u.get_part_hp_max( bp ) );
+                    if( u.is_limb_broken( bp ) ) {
+                        status += ", ";
+                        status += _( "Broken" );
+                    }
+                    if( u.worn_with_flag( json_flag_SPLINT, bp ) ) {
+                        status += ", ";
+                        status += _( "Splinted" );
+                    }
+                    const int bleed = u.get_effect_int( effect_bleed, bp );
+                    if( bleed > 0 ) {
+                        status += ", " + string_format( _( "Bleeding (intensity %d)" ), bleed );
+                    }
+                    if( u.has_effect( effect_bite, bp.id() ) ) {
+                        status += ", ";
+                        status += _( "Bitten" );
+                    }
+                    if( u.has_effect( effect_infected, bp.id() ) ) {
+                        status += ", ";
+                        status += _( "Infected" );
+                    }
+                    detail_menu.addentry_col( idx++, true, std::nullopt, name, status );
+                }
+                detail_menu.addentry_col( idx++, true, std::nullopt,
+                                          _( "Lifestyle health" ), display::health_text_color( u ).first );
+                detail_menu.addentry_col( idx++, true, std::nullopt,
+                                          _( "Pain" ),
+                                          string_format( _( "%1$s (level %2$d)" ),
+                                                         display::pain_text_color( u ).first, u.get_pain() ) );
+                break;
+            }
+            case status_category::stamina_condition: {
+                detail_menu.title = _( "Stamina & Condition details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Stamina" ),
+                                          string_format( _( "%1$d / %2$d (%3$d%%)" ),
+                                                         u.get_stamina(), stam_max, stam_pct ) );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Focus" ), std::to_string( u.get_focus() ) );
+                detail_menu.addentry_col( 2, true, std::nullopt,
+                                          _( "Weariness" ), display::weariness_text_color( u ).first );
+                detail_menu.addentry_col( 3, true, std::nullopt,
+                                          _( "Weariness penalty" ), display::weary_malus_text_color( u ).first );
+                detail_menu.addentry_col( 4, true, std::nullopt,
+                                          _( "Activity level" ), display::activity_text_color( u ).first );
+                break;
+            }
+            case status_category::needs: {
+                detail_menu.title = _( "Needs details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Hunger" ), semantic_hunger_text( u ) );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Thirst" ), semantic_thirst_text( u ) );
+                detail_menu.addentry_col( 2, true, std::nullopt,
+                                          _( "Sleepiness" ), semantic_sleepiness_text( u ) );
+                detail_menu.addentry_col( 3, true, std::nullopt,
+                                          _( "Weight category" ), display::weight_text_color( u ).first );
+                detail_menu.addentry_col( 4, true, std::nullopt,
+                                          _( "Weight description" ), display::weight_long_description( u ) );
+                break;
+            }
+            case status_category::temperature_effects: {
+                detail_menu.title = _( "Temperature & Effects details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Body temperature feel" ), display::temp_text_color( u ).first );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Environment temperature" ), semantic_env_temp_text( u ) );
+                int eff_idx = 2;
+                for( const effect &eff : u.get_effects() ) {
+                    const std::string name = eff.disp_name();
+                    if( !name.empty() ) {
+                        std::string desc = eff.disp_desc();
+                        detail_menu.addentry_col( eff_idx++, true, std::nullopt, name, desc );
+                    }
+                }
+                break;
+            }
+            case status_category::wielded_weapon: {
+                detail_menu.title = _( "Wielded weapon details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Wielded item" ), u.weapname() );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Ammunition" ),
+                                          u.weapname_ammo().empty() ? _( "None" ) : u.weapname_ammo() );
+                detail_menu.addentry_col( 2, true, std::nullopt,
+                                          _( "Attack mode" ),
+                                          u.weapname_mode().empty() ? _( "Standard" ) : u.weapname_mode() );
+                detail_menu.addentry_col( 3, true, std::nullopt,
+                                          _( "Martial style" ),
+                                          u.martial_arts_data->selected_style_name( u ) );
+                break;
+            }
+            case status_category::movement_safety: {
+                detail_menu.title = _( "Movement & Safety details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Movement mode" ), u.current_movement_mode()->name() );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Speed" ), std::to_string( u.get_speed() ) );
+                detail_menu.addentry_col( 2, true, std::nullopt,
+                                          _( "Move counter & mode" ), display::move_count_and_mode_text_color( u ).first );
+                detail_menu.addentry_col( 3, true, std::nullopt,
+                                          _( "Safe mode" ), display::safe_mode_text_color( false ).first );
+                break;
+            }
+            case status_category::time_environment: {
+                detail_menu.title = _( "Time & Environment details" );
+                detail_menu.addentry_col( 0, true, std::nullopt,
+                                          _( "Time" ), display::time_string( u ) );
+                detail_menu.addentry_col( 1, true, std::nullopt,
+                                          _( "Date" ), display::date_string() );
+                detail_menu.addentry_col( 2, true, std::nullopt,
+                                          _( "Weather" ), display::weather_text_color( u ).first );
+                detail_menu.addentry_col( 3, true, std::nullopt,
+                                          _( "Wind" ), display::wind_text_color( u ).first );
+                detail_menu.addentry_col( 4, true, std::nullopt,
+                                          _( "Time of day" ), display::time_approx() );
+                break;
+            }
+            default:
+                break;
+        }
+
+        if( !detail_menu.entries.empty() ) {
+            detail_menu.query();
+        }
+    }
 }
 
 void game::list_items_monsters()

@@ -2575,6 +2575,10 @@ bool game::do_regular_action( action_id &act, avatar &player_character,
             accessibility_situation_review();
             break;
 
+        case ACTION_ACCESSIBILITY_STATUS:
+            accessibility_status_review();
+            break;
+
         case ACTION_ACCESSIBILITY_REPEAT_LAST:
             accessibility::repeat_last_announcement();
             break;

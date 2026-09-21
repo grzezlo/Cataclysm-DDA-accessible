@@ -134,6 +134,8 @@ enum action_id : int {
     ACTION_LIST_ITEMS,
     /** Review the current position and visible nearby situation semantically */
     ACTION_ACCESSIBILITY_SITUATION,
+    /** Review player condition and gameplay status semantically */
+    ACTION_ACCESSIBILITY_STATUS,
     /** Repeat the last screen reader announcement */
     ACTION_ACCESSIBILITY_REPEAT_LAST,
     /** Open the zone manager */

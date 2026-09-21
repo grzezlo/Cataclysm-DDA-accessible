@@ -20,51 +20,6 @@ scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
 
-## Stage 04 - Player condition and gameplay status
-
-**Outcome:** All important sidebar/HUD information is available on demand, while
-urgent changes are announced once without turn-by-turn chatter.
-
-**Code inventory:** `src/widget.cpp` and `src/display.cpp` for HUD data
-extraction; `src/game.cpp` and `src/handle_action.cpp` for gameplay dispatch;
-`src/player_display.cpp` for detailed status; character state providers;
-`src/messages.cpp` to avoid duplicating existing game-log announcements.
-
-**Implementation hints:**
-
-- HUD data is computed by `display::` namespace functions in `src/display.cpp`:
-  - Health: `display::health_text_color()`.
-  - Stamina: `Character::get_stamina()` / `Character::get_stamina_max()`.
-  - Needs: `display::hunger_text_color()`, `display::thirst_text_color()`,
-    `display::sleepiness_text_color()`.
-  - Pain: `display::pain_text_color()`.
-  - Temperature: `display::temp_text_color()`.
-  - Time: `display::time_string()`, `display::date_string()`.
-  - Weather: `display::weather_text_color()`.
-  - Weariness: `display::weariness_text_color()`.
-- These functions return `std::pair<std::string, nc_color>` — strip the color,
-  keep the text for accessibility.
-- Widget rendering goes through `widget::color_text_function_string()` in
-  `src/widget.cpp`, which dispatches to the `display::` functions above.
-- For urgent transitions: compare the text label between turns and announce only
-  on change.  Threshold categories already exist in the `display::` functions
-  (e.g., hunger goes through "Satisfied" → "Hungry" → "Very Hungry").
-- Register a new action (e.g., `ACTION_ACCESSIBILITY_STATUS`) for the on-demand
-  status command that reads all HUD values in sequence.
-
-**Success criteria:** Concise and detailed commands cover health/pain, stamina,
-focus, needs, temperature, effects, wielded item/ammunition, movement mode,
-time/weather, and safe mode to the same precision as the HUD.  Critical
-transitions are timely; routine value changes stay on demand.
-
-**Possible automated tests:** Snapshot healthy, injured, exhausted, hungry,
-effect-heavy, armed, and unarmed states; test transition thresholds, priority,
-deduplication, and overlap with game messages.
-
-**Required human verification:** Play through exertion, hunger/thirst,
-pain/damage, effects, and weapon use.  Confirm urgent changes are timely and
-concise/detail commands replace the need to inspect the sidebar visually.
-
 ## Stage 04A - Message log review
 
 **Outcome:** A player can browse, search, and read the full scrollable message

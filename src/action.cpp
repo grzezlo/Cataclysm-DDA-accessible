@@ -212,6 +212,8 @@ std::string action_ident( action_id act )
             return "listitems";
         case ACTION_ACCESSIBILITY_SITUATION:
             return "accessibility_situation";
+        case ACTION_ACCESSIBILITY_STATUS:
+            return "accessibility_status";
         case ACTION_ACCESSIBILITY_REPEAT_LAST:
             return "ACCESSIBILITY_REPEAT_LAST";
         case ACTION_ZONES:
@@ -433,6 +435,7 @@ bool can_action_change_worldstate( const action_id act )
         case ACTION_LOOK:
         case ACTION_LIST_ITEMS:
         case ACTION_ACCESSIBILITY_SITUATION:
+        case ACTION_ACCESSIBILITY_STATUS:
         case ACTION_ACCESSIBILITY_REPEAT_LAST:
         case ACTION_ZONES:
         // Long-term / special actions
@@ -891,6 +894,8 @@ action_id handle_action_menu( map &here )
                                   ctxt.get_action_name( action_ident( ACTION_ACCESSIBILITY_REPEAT_LAST ) ) );
             entries.emplace_back( ACTION_ACCESSIBILITY_SITUATION, true, 'v',
                                   ctxt.get_action_name( action_ident( ACTION_ACCESSIBILITY_SITUATION ) ) );
+            entries.emplace_back( ACTION_ACCESSIBILITY_STATUS, true, 's',
+                                  ctxt.get_action_name( action_ident( ACTION_ACCESSIBILITY_STATUS ) ) );
         } else if( category == _( "Inventory" ) ) {
             REGISTER_ACTION( ACTION_INVENTORY );
             REGISTER_ACTION( ACTION_ADVANCEDINV );

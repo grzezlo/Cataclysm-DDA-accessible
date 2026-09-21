@@ -324,3 +324,46 @@ Limitations:
 - An additional full-suite run encountered unrelated repository/environment
   failures, including a missing Russian `TEST_DATA.mo` fixture, and was stopped
   after the required Stage 03 checks had passed.
+
+## 2026-09-22 — Stage 04: Player condition and gameplay status
+
+- Added on-demand accessible status review via `Alt+S` (`ACTION_ACCESSIBILITY_STATUS`),
+  registered in `DEFAULTMODE` and exposed in the in-game accessibility action menu.
+- Implemented `game::accessibility_status_review()` presenting a 7-category
+  navigable status menu:
+  - Health & Pain (lifestyle health, pain rating, bleeding and broken limb alerts).
+  - Stamina & Condition (stamina percentage, focus score, explicitly labeled
+    weariness level).
+  - Needs (hunger, thirst, sleepiness with semantic fallbacks for baseline
+    conditions).
+  - Temperature & Effects (body temperature feel, environment temperature with
+    fallback for missing thermometer, active effect count).
+  - Wielded weapon (weapon name, ammunition, attack mode, martial arts style).
+  - Movement & Safety (movement mode, speed, move counter, safe mode).
+  - Time & Environment (time, date, weather, wind, time of day).
+- Implemented detailed submenus on `Enter` drill-down for each category, reporting
+  per-limb HP, bleeding intensity, broken/splinted/bitten/infected states, full
+  active effect descriptions, exact ammunition, and movement details.
+- Added semantic text fallbacks for needs (`Satisfied`, `Hydrated`, `Rested`, and
+  `Unknown` for temperature) so no colons are followed by empty strings when
+  screen-reader punctuation reading is disabled.
+- Implemented `game::check_condition_transitions()` and
+  `accessibility::evaluate_condition_transitions()` checking condition metrics
+  each turn before player input to announce urgent transitions once without
+  routine speech flooding (bleeding start/stop per limb, broken limbs, critical
+  stamina drops, hunger/thirst/sleepiness/pain/weariness tier changes).
+- Extended automated Catch2 tests in `tests/accessibility_test.cpp` to verify
+  `Alt+S`, `AltGr+S`, and pure `s` key event handling, as well as condition
+  transition detection, edge cases, and capture backend delivery (137 assertions
+  in 12 test cases passed).
+- Built the Windows x64 test executable and Release tiles executable
+  successfully.
+- A blind user confirmed the interaction with NVDA 2026.1 on Windows 25H2,
+  build 26200.9457.  Verification confirmed keyboard navigation, drill-down
+  submenus, clear Polish labels (`Znużenie`, `Najedzenie`, `Nawodnienie`,
+  `Wyspanie`), repeat-last, and return to gameplay.
+
+Limitations:
+
+- Newly introduced source strings fall back to English if the translation
+  catalog does not contain translations.

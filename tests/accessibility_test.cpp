@@ -45,33 +45,45 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     input_context gameplay( "DEFAULTMODE", keyboard_mode::keycode );
     gameplay.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     gameplay.register_action( "accessibility_situation" );
+    gameplay.register_action( "accessibility_status" );
 
     const input_event alt_r( { keymod_t::alt }, 'r', input_event_t::keyboard_code );
     const input_event alt_v( { keymod_t::alt }, 'v', input_event_t::keyboard_code );
+    const input_event alt_s( { keymod_t::alt }, 's', input_event_t::keyboard_code );
     const input_event alt_r_char( { keymod_t::alt }, 'r', input_event_t::keyboard_char );
     const input_event alt_v_char( { keymod_t::alt }, 'v', input_event_t::keyboard_char );
+    const input_event alt_s_char( { keymod_t::alt }, 's', input_event_t::keyboard_char );
 
     CHECK( gameplay.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( alt_v ) == "accessibility_situation" );
+    CHECK( gameplay.input_to_action( alt_s ) == "accessibility_status" );
     CHECK( gameplay.input_to_action( alt_r_char ) == "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( alt_v_char ) == "accessibility_situation" );
+    CHECK( gameplay.input_to_action( alt_s_char ) == "accessibility_status" );
 
     const input_event altgr_r( { keymod_t::ctrl, keymod_t::alt }, 'r', input_event_t::keyboard_code );
     const input_event altgr_v( { keymod_t::ctrl, keymod_t::alt }, 'v', input_event_t::keyboard_code );
+    const input_event altgr_s( { keymod_t::ctrl, keymod_t::alt }, 's', input_event_t::keyboard_code );
     const input_event altgr_r_char( { keymod_t::ctrl, keymod_t::alt }, 'r',
                                     input_event_t::keyboard_char );
     const input_event altgr_v_char( { keymod_t::ctrl, keymod_t::alt }, 'v',
                                     input_event_t::keyboard_char );
+    const input_event altgr_s_char( { keymod_t::ctrl, keymod_t::alt }, 's',
+                                    input_event_t::keyboard_char );
 
     CHECK( gameplay.input_to_action( altgr_r ) != "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( altgr_v ) != "accessibility_situation" );
+    CHECK( gameplay.input_to_action( altgr_s ) != "accessibility_status" );
     CHECK( gameplay.input_to_action( altgr_r_char ) != "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( altgr_v_char ) != "accessibility_situation" );
+    CHECK( gameplay.input_to_action( altgr_s_char ) != "accessibility_status" );
 
     const input_event pure_r( {}, 'r', input_event_t::keyboard_char );
     const input_event pure_v( {}, 'v', input_event_t::keyboard_char );
+    const input_event pure_s( {}, 's', input_event_t::keyboard_char );
     CHECK( gameplay.input_to_action( pure_r ) != "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( pure_v ) != "accessibility_situation" );
+    CHECK( gameplay.input_to_action( pure_s ) != "accessibility_status" );
 }
 
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
@@ -354,4 +366,97 @@ TEST_CASE( "semantic_accessibility_lists_group_connected_matching_regions",
     CHECK( groups[2].count == 1 );
     CHECK( groups[3].nearest.context == "5 tiles west" );
     CHECK( groups[3].count == 1 );
+}
+
+TEST_CASE( "condition_transitions_detection", "[accessibility][nogame]" )
+{
+    accessibility::condition_tracker tracker;
+
+    // Initial state: healthy and normal
+    accessibility::condition_tracker initial_state;
+    initial_state.hunger_tier = "Satisfied";
+    initial_state.thirst_tier = "Slaked";
+    initial_state.sleepiness_tier = "Rested";
+    initial_state.pain_tier = "No Pain";
+    initial_state.weariness_tier = "Fresh";
+    initial_state.stamina_critical = false;
+
+    // First turn: initialization should produce 0 alerts
+    std::vector<std::string> alerts = accessibility::evaluate_condition_transitions(
+                                          tracker, initial_state );
+    CHECK( alerts.empty() );
+    CHECK( tracker.initialized );
+
+    // Same state on next turn: 0 alerts
+    alerts = accessibility::evaluate_condition_transitions( tracker, initial_state );
+    CHECK( alerts.empty() );
+
+    // Hunger transitions to Hungry
+    accessibility::condition_tracker hungry_state = initial_state;
+    hungry_state.hunger_tier = "Hungry";
+    alerts = accessibility::evaluate_condition_transitions( tracker, hungry_state );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0].find( "Hungry" ) != std::string::npos );
+
+    // Next turn still hungry: 0 alerts
+    alerts = accessibility::evaluate_condition_transitions( tracker, hungry_state );
+    CHECK( alerts.empty() );
+
+    // Bleeding starts on Left Arm
+    accessibility::condition_tracker bleeding_state = hungry_state;
+    bleeding_state.bleeding_limbs = { "Left Arm" };
+    alerts = accessibility::evaluate_condition_transitions( tracker, bleeding_state );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0].find( "Bleeding" ) != std::string::npos );
+    CHECK( alerts[0].find( "Left Arm" ) != std::string::npos );
+
+    // Bleeding stops
+    accessibility::condition_tracker healed_state = bleeding_state;
+    healed_state.bleeding_limbs.clear();
+    alerts = accessibility::evaluate_condition_transitions( tracker, healed_state );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0].find( "Stopped bleeding" ) != std::string::npos );
+    CHECK( alerts[0].find( "Left Arm" ) != std::string::npos );
+
+    // Broken limb occurs
+    accessibility::condition_tracker broken_state = healed_state;
+    broken_state.broken_limbs = { "Right Leg" };
+    alerts = accessibility::evaluate_condition_transitions( tracker, broken_state );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0].find( "Broken limb" ) != std::string::npos );
+    CHECK( alerts[0].find( "Right Leg" ) != std::string::npos );
+
+    // Stamina critical drop occurs
+    accessibility::condition_tracker exhausted_state = broken_state;
+    exhausted_state.stamina_critical = true;
+    alerts = accessibility::evaluate_condition_transitions( tracker, exhausted_state );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0].find( "Stamina critical" ) != std::string::npos );
+
+    // Multiple transitions simultaneously
+    accessibility::condition_tracker multi_state = exhausted_state;
+    multi_state.pain_tier = "Severe Pain";
+    multi_state.thirst_tier = "Dehydrated";
+    alerts = accessibility::evaluate_condition_transitions( tracker, multi_state );
+    REQUIRE( alerts.size() == 2 );
+    CHECK( alerts[0].find( "Severe Pain" ) != std::string::npos );
+    CHECK( alerts[1].find( "Dehydrated" ) != std::string::npos );
+
+    // Global announce helper test with capture backend
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    // First call initializes
+    CHECK_FALSE( accessibility::check_and_announce_condition_transitions( initial_state ) );
+    CHECK( capture_ptr->messages.empty() );
+
+    // Second call with change announces
+    accessibility::condition_tracker changed = initial_state;
+    changed.hunger_tier = "Starving";
+    CHECK( accessibility::check_and_announce_condition_transitions( changed ) );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages[0].find( "Starving" ) != std::string::npos );
+
+    accessibility::reset_backend_after_testing();
 }

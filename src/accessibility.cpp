@@ -356,6 +356,93 @@ void enable_game_messages( const bool enabled )
     game_messages_enabled() = enabled;
 }
 
+condition_tracker &global_condition_tracker()
+{
+    static condition_tracker tracker;
+    return tracker;
+}
+
+std::vector<std::string> evaluate_condition_transitions( condition_tracker &tracker,
+                                                         const condition_tracker &current )
+{
+    if( !tracker.initialized ) {
+        tracker = current;
+        tracker.initialized = true;
+        return {};
+    }
+
+    std::vector<std::string> alerts;
+
+    // Bleeding started
+    for( const std::string &limb : current.bleeding_limbs ) {
+        if( std::find( tracker.bleeding_limbs.begin(), tracker.bleeding_limbs.end(), limb ) ==
+            tracker.bleeding_limbs.end() ) {
+            alerts.push_back( string_format( _( "Bleeding: %s!" ), limb ) );
+        }
+    }
+    // Bleeding stopped
+    for( const std::string &limb : tracker.bleeding_limbs ) {
+        if( std::find( current.bleeding_limbs.begin(), current.bleeding_limbs.end(), limb ) ==
+            current.bleeding_limbs.end() ) {
+            alerts.push_back( string_format( _( "Stopped bleeding: %s." ), limb ) );
+        }
+    }
+
+    // Broken limbs
+    for( const std::string &limb : current.broken_limbs ) {
+        if( std::find( tracker.broken_limbs.begin(), tracker.broken_limbs.end(), limb ) ==
+            tracker.broken_limbs.end() ) {
+            alerts.push_back( string_format( _( "Broken limb: %s!" ), limb ) );
+        }
+    }
+
+    // Stamina critical drop
+    if( current.stamina_critical && !tracker.stamina_critical ) {
+        alerts.push_back( _( "Stamina critical!" ) );
+    }
+
+    // Needs & pain & weariness transitions
+    if( !current.pain_tier.empty() && current.pain_tier != tracker.pain_tier ) {
+        alerts.push_back( string_format( _( "Pain: %s." ), current.pain_tier ) );
+    }
+    if( !current.hunger_tier.empty() && current.hunger_tier != tracker.hunger_tier ) {
+        alerts.push_back( string_format( _( "Hunger: %s." ), current.hunger_tier ) );
+    }
+    if( !current.thirst_tier.empty() && current.thirst_tier != tracker.thirst_tier ) {
+        alerts.push_back( string_format( _( "Thirst: %s." ), current.thirst_tier ) );
+    }
+    if( !current.sleepiness_tier.empty() && current.sleepiness_tier != tracker.sleepiness_tier ) {
+        alerts.push_back( string_format( _( "Sleepiness: %s." ), current.sleepiness_tier ) );
+    }
+    if( !current.weariness_tier.empty() && current.weariness_tier != tracker.weariness_tier ) {
+        alerts.push_back( string_format( _( "Weariness: %s." ), current.weariness_tier ) );
+    }
+
+    tracker = current;
+    tracker.initialized = true;
+    return alerts;
+}
+
+bool announce_condition_transitions( condition_tracker &tracker,
+                                     const condition_tracker &current )
+{
+    const std::vector<std::string> alerts = evaluate_condition_transitions( tracker, current );
+    if( alerts.empty() ) {
+        return false;
+    }
+    return announce_semantic_sequence( alerts );
+}
+
+void reset_condition_tracker()
+{
+    global_condition_tracker() = condition_tracker{};
+}
+
+bool check_and_announce_condition_transitions( const condition_tracker &current )
+{
+    return announce_condition_transitions( global_condition_tracker(), current );
+}
+
 void set_backend_for_testing( std::unique_ptr<backend> replacement )
 {
     active_backend() = replacement ? std::move( replacement ) : std::make_unique<null_backend>();
@@ -363,6 +450,7 @@ void set_backend_for_testing( std::unique_ptr<backend> replacement )
     previous_threats().clear();
     threats_initialized() = false;
     previous_movement_direction().clear();
+    reset_condition_tracker();
 }
 
 void reset_backend_after_testing()
@@ -373,6 +461,7 @@ void reset_backend_after_testing()
     previous_threats().clear();
     threats_initialized() = false;
     previous_movement_direction().clear();
+    reset_condition_tracker();
 }
 
 } // namespace accessibility

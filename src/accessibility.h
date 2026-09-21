@@ -76,6 +76,31 @@ void set_last_announcement( const std::string &message );
 /** Strip progress counters and percentages for deduplication. */
 std::string normalize_status_announcement( const std::string &message, bool progress );
 
+/** Discrete condition state tracked between turns to detect urgent transitions. */
+struct condition_tracker {
+    std::string hunger_tier;
+    std::string thirst_tier;
+    std::string sleepiness_tier;
+    std::string pain_tier;
+    std::string weariness_tier;
+    bool stamina_critical = false;
+    std::vector<std::string> bleeding_limbs;
+    std::vector<std::string> broken_limbs;
+    bool initialized = false;
+};
+
+/** Evaluate condition transitions between previous and current states.
+ *  Returns transition announcements (if any) and updates `tracker`. */
+std::vector<std::string> evaluate_condition_transitions( condition_tracker &tracker,
+                                                         const condition_tracker &current );
+/** Announce urgent condition transitions via the active backend if any occurred. */
+bool announce_condition_transitions( condition_tracker &tracker,
+                                     const condition_tracker &current );
+/** Reset the global condition tracker (e.g. at game start or between tests). */
+void reset_condition_tracker();
+/** Check against the global condition tracker and announce any urgent transitions. */
+bool check_and_announce_condition_transitions( const condition_tracker &current );
+
 void enable_game_messages( bool enabled );
 
 void set_backend_for_testing( std::unique_ptr<backend> replacement );
