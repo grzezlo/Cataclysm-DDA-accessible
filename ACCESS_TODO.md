@@ -33,19 +33,19 @@ extraction; `src/game.cpp` and `src/handle_action.cpp` for gameplay dispatch;
 **Implementation hints:**
 
 - HUD data is computed by `display::` namespace functions in `src/display.cpp`:
-  - Health: `display::health_text_color` (display.cpp:1439).
-  - Stamina: `Character::get_stamina()` / `get_stamina_max()`.
-  - Needs: `display::hunger_text_color` (:1417), `display::thirst_text_color`
-    (:1406), `display::sleepiness_text_color` (:1449).
-  - Pain: `display::pain_text_color` (:1463).
-  - Temperature: `display::temp_text_color` (:1528).
-  - Time: `display::time_string` (:218), `display::date_string` (:198).
-  - Weather: `display::weather_text_color` (:1506).
-  - Weariness: `display::weariness_text_color` (:1367).
+  - Health: `display::health_text_color()`.
+  - Stamina: `Character::get_stamina()` / `Character::get_stamina_max()`.
+  - Needs: `display::hunger_text_color()`, `display::thirst_text_color()`,
+    `display::sleepiness_text_color()`.
+  - Pain: `display::pain_text_color()`.
+  - Temperature: `display::temp_text_color()`.
+  - Time: `display::time_string()`, `display::date_string()`.
+  - Weather: `display::weather_text_color()`.
+  - Weariness: `display::weariness_text_color()`.
 - These functions return `std::pair<std::string, nc_color>` — strip the color,
   keep the text for accessibility.
-- Widget rendering goes through `widget::color_text_function_string`
-  (widget.cpp:1210-1239) which dispatches to the `display::` functions above.
+- Widget rendering goes through `widget::color_text_function_string()` in
+  `src/widget.cpp`, which dispatches to the `display::` functions above.
 - For urgent transitions: compare the text label between turns and announce only
   on change.  Threshold categories already exist in the `display::` functions
   (e.g., hunger goes through "Satisfied" → "Hungry" → "Very Hungry").
@@ -75,18 +75,18 @@ history deque in `messages_impl`; filter and scroll logic.
 
 **Implementation hints:**
 
-- The message log dialog is `Messages::dialog` (messages.cpp:529-885).
-- Entry point: `Messages::display_messages()` (messages.cpp:925-930), triggered
-  by `ACTION_MESSAGES` (the `P` key) in handle_action.cpp.
-- Input context: `"MESSAGE_LOG"` (messages.cpp:620-630).  Actions: `"UP"`,
+- The message log dialog class is `Messages::dialog` in `src/messages.cpp`.
+- Entry point: `Messages::display_messages()` in `src/messages.cpp`, triggered
+  by `ACTION_MESSAGES` (the `P` key) in `src/handle_action.cpp`.
+- Input context: `"MESSAGE_LOG"` in `Messages::dialog::init()`.  Actions: `"UP"`,
   `"DOWN"`, `"PAGE_UP"`, `"PAGE_DOWN"`, `"FILTER"`, `"RESET_FILTER"`, `"QUIT"`.
-- The dialog currently uses a viewport offset model (messages.cpp:839-857)
+- The dialog currently uses a viewport offset model in `Messages::dialog::input()`
   rather than a per-message cursor.  For accessibility, track an active cursor
   index within `folded_filtered` and announce each message line on UP/DOWN.
-- Message text is in `game_message::get_with_count()` (messages.cpp:72-78).
-- Elapsed time per message: `to_string_clipped(calendar::turn - msg_time)`
-  (messages.cpp:725).
-- Filter: `do_filter()` (messages.cpp:781-817) supports `<type>:<text>` prefix
+- Message text is in `game_message::get_with_count()` in `src/messages.cpp`.
+- Elapsed time per message: `to_string_clipped(calendar::turn - msg_time, ...)`
+  in `Messages::dialog::show()`.
+- Filter: `Messages::dialog::do_filter()` supports `<type>:<text>` prefix
   filtering.
 - Register `"ACCESSIBILITY_REPEAT_LAST"` in the input context.
 - Follow the `uilist.cpp` pattern: announce on open (title + message count),
@@ -117,19 +117,19 @@ screens depend on them, and accessibility commands can be discovered in-game.
 
 **Implementation hints:**
 
-- `uilist` already has accessibility hooks (uilist.cpp:978-984).  This stage
-  extends coverage to disabled-entry reasons (the `uilist_entry::enabled`
+- `uilist` already has accessibility hooks in `uilist::query()` (`src/uilist.cpp`).
+  This stage extends coverage to disabled-entry reasons (the `uilist_entry::enabled`
   flag and `desc_enabled` description text), desc text on focus, and
   empty/error states.
 - `query_yn` is implemented in `src/popup.cpp` as a `query_popup` with two
-  options.  Hook the existing `query_popup::query_once()` (popup.cpp:321)
-  path to announce the question and options.
+  options.  Hook the existing `query_popup::query_once()` path in `src/popup.cpp`
+  to announce the question and options.
 - `query_int` / numeric input uses `string_input_popup` in
   `src/string_input_popup.cpp`.  Announce the prompt, current value, and
   bounds on open and on value change.
-- `iteminfo_window::execute()` (ui_iteminfo.cpp:64-96) is a scrollable
+- `iteminfo_window::execute()` in `src/ui_iteminfo.cpp` is a scrollable
   document viewer.  Announce the full text on open via
-  `format_item_info()` (output.cpp:1156-1232) with color tags removed.
+  `format_item_info()` in `src/output.cpp` with color tags removed.
 - Help: `src/help.cpp` and `data/core/help.json` define the help screen.
   Add an `Accessibility` category listing all accessibility actions.
 - For keybinding discovery: `input_context` in `src/input_context.cpp`
@@ -169,26 +169,26 @@ transfers.
 
 **Implementation hints:**
 
-- Class hierarchy: `inventory_selector` is the base multi-column controller
-  (inventory_ui.cpp:2889-2918 for context registration).  It manages
-  `inventory_column` instances, each holding `inventory_entry` items.
+- Class hierarchy: `inventory_selector` in `src/inventory_ui.cpp` is the base
+  multi-column controller.  It manages `inventory_column` instances, each holding
+  `inventory_entry` items.
 - Focus/selection change hook: `inventory_column::highlight(size_t, scroll_direction)`
-  (inventory_ui.cpp:905-916) sets `highlighted_index`.  After highlight, read
-  `get_highlighted()` (inventory_ui.cpp:1179) to get the focused entry.
-- Semantic text for an entry: `preset.get_caption(entry)` (inventory_ui.cpp:735-751)
-  returns the item name with stack count.  Extra column cells from
-  `preset.get_cell_text(entry, i)` (inventory_ui.cpp:758-765) provide weight,
-  volume, etc.  Denial reason is `entry.denial` string.
-- Category navigation: `toggle_navigation_mode()` (inventory_ui.cpp:3330-3336)
-  switches between `ITEM` and `CATEGORY` modes.
-- Column switching: `set_active_column(index)` (inventory_ui.cpp:3172-3179)
-  and `toggle_active_column(dir)` (inventory_ui.cpp:3308-3328).
-- Stats header: `get_stats()` (inventory_ui.cpp:2732) returns weight, volume,
+  sets `highlighted_index`.  After highlight, read `inventory_column::get_highlighted()`
+  to get the focused entry.
+- Semantic text for an entry: `inventory_selector_preset::get_caption(entry)` returns
+  the item name with stack count.  Extra column cells from
+  `inventory_selector_preset::get_cell_text(entry, i)` provide weight, volume, etc.
+  Denial reason is `entry.denial` string.
+- Category navigation: `inventory_selector::toggle_navigation_mode()` switches between
+  `ITEM` and `CATEGORY` modes.
+- Column switching: `inventory_selector::set_active_column(index)` and
+  `inventory_selector::toggle_active_column(dir)`.
+- Stats header: `inventory_selector::get_stats()` returns weight, volume,
   and holster usage.
-- Item examination: `action_examine(item_location)` (inventory_ui.cpp:3544)
-  opens the `iteminfo_window`.
-- Input context: registered in the `inventory_selector` constructor
-  (inventory_ui.cpp:2889-2918) — register `"ACCESSIBILITY_REPEAT_LAST"` there.
+- Item examination: `inventory_selector::action_examine(item_location)` opens
+  the `iteminfo_window`.
+- Input context: registered in `inventory_selector::inventory_selector()` — register
+  `"ACCESSIBILITY_REPEAT_LAST"` there.
 - Follow `uilist.cpp` focus pattern: announce on open (title + stats), announce
   on selection change (caption + cells + denial), announce on column change
   (column name).
@@ -216,23 +216,21 @@ inventory selectors from Stage 06 where they serve specific actions.
 
 **Implementation hints:**
 
-- All single-item actions go through `inv_internal` (game_inventory.cpp:139-215),
+- All single-item actions go through `inv_internal()` in `src/game_inventory.cpp`,
   which wraps `inventory_pick_selector::execute()` with title, hint, and
-  `none_message`.  Hook announcements in `inv_internal` for the shared flow.
-- Action-specific presets define extra columns:
-  - Wield: `weapon_inventory_preset` (game_inventory.cpp:1897) — DAMAGE, MOVES,
-    TO HIT.
-  - Wear: `wear_inventory_preset` (game_inventory.cpp:424).
-  - Consume: `comestible_inventory_preset` (game_inventory.cpp:662) — CALORIES,
-    QUENCH, JOY, HEALTH, SHELF LIFE.
-  - Read: `read_inventory_preset` (game_inventory.cpp:1406) — READ TIME, SKILL.
-  - Reload: `select_ammo_inventory_preset` (game_inventory.cpp:3007) — DAMAGE,
-    AP, RANGE.
-- Item action menu: `game::item_action_menu` (item_action.cpp:258-383) uses
+  `none_message`.  Hook announcements in `inv_internal()` for the shared flow.
+- Action-specific presets in `src/game_inventory.cpp` define extra columns:
+  - Wield: `weapon_inventory_preset` — DAMAGE, MOVES, TO HIT.
+  - Wear: `wear_inventory_preset`.
+  - Consume: `comestible_inventory_preset` — CALORIES, QUENCH, JOY, HEALTH,
+    SHELF LIFE.
+  - Read: `read_inventory_preset` — READ TIME, SKILL.
+  - Reload: `select_ammo_inventory_preset` — DAMAGE, AP, RANGE.
+- Item action menu: `game::item_action_menu()` in `src/item_action.cpp` uses
   `uilist` with `desc_enabled = true`.  The uilist already speaks entry text
   and `ctxt` column, but the `desc` (method description) is not spoken on
   focus.  Add it to the focus announcement when `desc_enabled` is active.
-- Consume needs hint: `get_consume_needs_hint()` (game_inventory.cpp:988-1012)
+- Consume needs hint: `get_consume_needs_hint()` in `src/game_inventory.cpp`
   formats hunger/thirst/fatigue — include in the selector's opening
   announcement.
 
@@ -256,23 +254,27 @@ a stack, a disabled item, and a failed action.
 
 **Implementation hints:**
 
-- Entry point: `create_advanced_inv()` (advanced_inv.cpp:2480) instantiates
-  `advanced_inventory` and calls `display()` (advanced_inv.cpp:2011-2112).
+- Entry point: `create_advanced_inv()` in `src/advanced_inv.cpp` instantiates
+  `advanced_inventory` and calls `advanced_inventory::display()`.
 - Two-pane structure: `std::array<advanced_inventory_pane, NUM_PANES> panes`
-  (advanced_inv.h:122), `src = left/right`, `dest` is always opposite.
-- Pane switching: `"LEFT"` / `"RIGHT"` / `"TOGGLE_TAB"` (advanced_inv.cpp:1982-1986).
+  in `src/advanced_inv.h`, `src = left/right`, `dest` is always opposite.
+- Pane switching: `"LEFT"` / `"RIGHT"` / `"TOGGLE_TAB"` in
+  `advanced_inventory::display()`.
 - Area selection: 15 `ITEMS_*` actions (inventory, worn, ground tiles, vehicle,
   container, parent).
-- Item rows: name, charges, weight, volume, category (advanced_inv.cpp:395-460).
-- Pane header: area title, weight/volume capacity (advanced_inv.cpp:321-360).
-- Transfer: `action_move_item` (advanced_inv.cpp:1516-1600) and
-  `move_all_items` (advanced_inv.cpp:1034-1180).
-- Quantity prompt: `query_charges()` (advanced_inv.cpp:1602-1670).
-- Input context: `"ADVANCED_INVENTORY"` (advanced_inv.cpp:1285).
+- Item rows: name, charges, weight, volume, category rendered in
+  `advanced_inventory::print_items()`.
+- Pane header: area title, weight/volume capacity rendered in
+  `advanced_inventory::print_items()`.
+- Transfer: `advanced_inventory::action_move_item()` and
+  `advanced_inventory::move_all_items()` in `src/advanced_inv.cpp`.
+- Quantity prompt: `advanced_inventory::query_charges()` in `src/advanced_inv.cpp`.
+- Input context: `"ADVANCED_INVENTORY"` registered in
+  `advanced_inventory::display()`.
 - Multiselect in standard inventory: `inventory_multiselector` in
-  inventory_ui.cpp.  `toggle_entry()` (inventory_ui.cpp:3874) and
-  `toggle_entries()` (inventory_ui.cpp:3962) manage selection marks
-  (`'-'`, `'+'`, `'#'` at inventory_ui.cpp:1796-1804).
+  `src/inventory_ui.cpp`.  `inventory_multiselector::toggle_entry()` and
+  `inventory_multiselector::toggle_entries()` manage selection marks
+  (`'-'`, `'+'`, `'#'` formatted in `selection_column::print_cell()`).
 
 **Success criteria:** Speech identifies source/destination pane, area, category,
 selection, marks, quantity, weight/volume capacity, destination validity, and
@@ -298,7 +300,7 @@ shared prompts and lists.
 
 **Implementation hints:**
 
-- Examination dispatch: `game::examine(tripoint, bool)` (game.cpp:6369-6508)
+- Examination dispatch: `game::examine(tripoint, bool)` in `src/game.cpp`
   evaluates candidates in priority order: creatures → vehicles → partial
   constructions → traps → computers → furniture → terrain → items.
 - Each terrain/furniture type can have an `examine` callback registered in its
@@ -342,25 +344,25 @@ is Stage 18, but travel initiation is in scope here).
 
 **Implementation hints:**
 
-- Route storage: `Character::set_destination(route, ...)` (character.cpp:11546).
-- Step generation: `Character::get_next_auto_move_direction()`
-  (character.cpp:11609-11636) converts delta to next waypoint into a movement
-  action.
-- Route abort: `Character::abort_automove()` (character.cpp:11562-11568).
+- Route storage: `Character::set_destination(route, ...)` in `src/character.cpp`.
+- Step generation: `Character::get_next_auto_move_direction()` in
+  `src/character.cpp` converts delta to next waypoint into a movement action.
+- Route abort: `Character::abort_automove()` in `src/character.cpp`.
 - Local auto-travel mode: toggled via `"auto_travel_mode"` in
-  handle_action.cpp:2812.  Pressing a direction calculates a ray of up to
-  12 tiles via `here.route()` and calls `set_destination()`
-  (handle_action.cpp:2371-2384).
-- Look-around travel: `"TRAVEL_TO"` in look-around calls `safe_route_to()`
-  (game.cpp:8488) and `u.set_destination()` (game.cpp:8493).
-- Overmap fast travel: `create_path` (overmap_ui.cpp:1900-1928) prompts
+  `game::handle_action()` (`src/handle_action.cpp`).  Pressing a direction calculates
+  a ray of up to 12 tiles via `map::route()` and calls
+  `Character::set_destination()`.
+- Look-around travel: `"TRAVEL_TO"` in `game::look_around()` (`src/game.cpp`) calls
+  `game::safe_route_to()` and `Character::set_destination()`.
+- Overmap fast travel: `create_path` helper in `src/overmap_ui.cpp` prompts
   "Travel to this point?", sets `omt_path`, and assigns `ACT_TRAVELLING`.
-- Travel per-turn: `travel_do_turn` (activity_handlers.cpp:1640-1657) routes
-  local submap path and calls `set_destination()`.
-- Interruptions: `cancel_auto_move(Character, text)` (game.cpp:1586-1598)
-  queries `query_yn("Cancel auto move?")`.
-- Arrival message: `_("You have reached your destination.")` in travel_do_turn
-  (activity_handlers.cpp:1653).
+- Travel per-turn: `activity_handlers::travel_do_turn()` in
+  `src/activity_handlers.cpp` routes local submap path and calls
+  `Character::set_destination()`.
+- Interruptions: `cancel_auto_move()` in `src/game.cpp` queries
+  `query_yn("Cancel auto move?")`.
+- Arrival message: `_("You have reached your destination.")` in
+  `activity_handlers::travel_do_turn()`.
 - For accessibility: announce destination name/direction on start, announce
   terrain changes during travel (reuse `announce_movement`), announce
   interruption reason, announce arrival.
@@ -390,22 +392,21 @@ destination, capacity, ownership, and result.
 
 **Implementation hints:**
 
-- Interactive pickup entry: `game_menus::inv::pickup()` (game_inventory.cpp:2425)
-  creates `pickup_selector` (inventory_ui.cpp:4244-4396).
-- `pickup_selector::execute()` (inventory_ui.cpp:4278-4315) runs the
-  multi-select loop.  Additional actions: `"WEAR"` and `"WIELD"` for direct
-  equip from ground (inventory_ui.cpp:4248-4249).
-- Transfer execution: `Pickup::do_pickup()` (pickup.cpp:357-408) processes
-  selected items, calling `pick_one_up()` (pickup.cpp:181-355).
-- Problematic pickup: `handle_problematic_pickup()` (pickup.cpp:84-110) shows
+- Interactive pickup entry: `game_menus::inv::pickup()` in `src/game_inventory.cpp`
+  creates `pickup_selector` in `src/inventory_ui.cpp`.
+- `pickup_selector::execute()` in `src/inventory_ui.cpp` runs the multi-select
+  loop.  Additional actions: `"WEAR"` and `"WIELD"` for direct equip from ground.
+- Transfer execution: `Pickup::do_pickup()` in `src/pickup.cpp` processes
+  selected items, calling `pick_one_up()`.
+- Problematic pickup: `handle_problematic_pickup()` in `src/pickup.cpp` shows
   spill/wield/cancel choices.
-- Ownership warning: `Pickup::query_thief()` (pickup.cpp:112-143).
-- Summary message: `show_pickup_message()` (pickup.cpp:55-68) — already
+- Ownership warning: `Pickup::query_thief()` in `src/pickup.cpp`.
+- Summary message: `show_pickup_message()` in `src/pickup.cpp` — already
   reaches the live message system.
-- Drop: `game_menus::inv::multidrop()` (game_inventory.cpp:2401) uses
-  `inventory_drop_selector` (inventory_ui.cpp:4079).
-- Insert into container: `game_menus::inv::holster()` (game_inventory.cpp:2008)
-  uses `inventory_insert_selector` (inventory_ui.cpp:4197).
+- Drop: `game_menus::inv::multidrop()` in `src/game_inventory.cpp` uses
+  `inventory_drop_selector::execute()` in `src/inventory_ui.cpp`.
+- Insert into container: `game_menus::inv::holster()` in `src/game_inventory.cpp`
+  uses `inventory_insert_selector` in `src/inventory_ui.cpp`.
 - Pickup builds on Stage 06 `inventory_selector` hooks.
 
 **Success criteria:** Single and multi-item pickup/drop, quantities, container
@@ -430,29 +431,27 @@ messages in `src/messages.cpp`.
 
 **Implementation hints:**
 
-- Core class: `target_ui` (ranged.cpp:210-469).
-- Entry points: `target_handler::mode_fire()` (ranged.cpp:482),
-  `target_handler::mode_throw()` (ranged.cpp:496),
-  `target_handler::mode_reach()` (ranged.cpp:509),
-  `target_handler::mode_spell()` (ranged.cpp:570).
-- Main targeting loop: `target_ui::run()` (ranged.cpp:2673-2948).
-- Input context: `"TARGET"` (ranged.cpp:2981).  Actions include
+- Core class: `target_ui` in `src/ranged.cpp` and `src/ranged.h`.
+- Entry points: `target_handler::mode_fire()`, `target_handler::mode_throw()`,
+  `target_handler::mode_reach()`, and `target_handler::mode_spell()` in `src/ranged.cpp`.
+- Main targeting loop: `target_ui::run()` in `src/ranged.cpp`.
+- Input context: `"TARGET"` initialized in `target_ui::run()`.  Actions include
   `register_directions()`, `"FIRE"`, `"NEXT_TARGET"`, `"PREV_TARGET"`,
   `"SWITCH_MODE"`, `"SWITCH_AMMO"`, `"AIM"`, `"AIMED_SHOT"`,
   `"CAREFUL_SHOT"`, `"PRECISE_SHOT"`.
-- Cursor movement: `handle_cursor_movement()` (ranged.cpp:3033-3090) and
-  `set_cursor_pos()` (ranged.cpp:3092-3150).
-- Target cycling: `NEXT_TARGET` / `PREV_TARGET` (ranged.cpp:3075-3078) cycle
-  through the `targets` vector.
+- Cursor movement: `target_ui::handle_cursor_movement()` and
+  `target_ui::set_cursor_pos()`.
+- Target cycling: `"NEXT_TARGET"` / `"PREV_TARGET"` cycle through `targets` vector
+  in `target_ui::handle_cursor_movement()`.
 - Semantic text:
-  - Title: `uitext_title()` (ranged.cpp:3946-3959) — "Firing %s", "Throwing %s".
-  - Range/elevation/target count: ranged.cpp:4130-4151.
-  - Gun & ammo: ranged.cpp:4153-4181.
-  - Recoil: ranged.cpp:4183-4200 ("None", "Low", "Medium", "High").
-  - Target info: creature name/health via `dst_critter->print_info()`
-    (ranged.cpp:4270), vehicle name (ranged.cpp:4300), terrain (ranged.cpp:4315).
-  - Hit probability: `print_aim()` (ranged.cpp:2169-2325) for firearms,
-    `draw_throw_aim()` (ranged.cpp:2327-2420) for thrown.
+  - Title: `target_ui::uitext_title()` — "Firing %s", "Throwing %s".
+  - Range/elevation/target count: `target_ui::panel_range_elevation_and_target_count()`.
+  - Gun & ammo: `target_ui::panel_gun_info()`.
+  - Recoil: `target_ui::panel_recoil()` ("None", "Low", "Medium", "High").
+  - Target info: `target_ui::panel_target_info()` (creature name/health via
+    `dst_critter->print_info()`, vehicle name via `dst_veh->name`, terrain info).
+  - Hit probability: `print_aim()` for firearms, `draw_throw_aim()` for thrown
+    weapons in `src/ranged.cpp`.
 - Safe-mode warnings are handled by `game.cpp` threat announcements (already
   completed).  The safe-mode configuration UI (`src/safemode_ui.cpp`) is a
   rule editor owned by Stage 21A.
@@ -481,20 +480,22 @@ disassembly are independently usable.
 
 **Implementation hints:**
 
-- Entry point: `select_crafter_and_crafting_recipe()` (crafting_gui.cpp:1246-2045).
-- Input context: `"CRAFTING"` (crafting_gui.cpp:622).
-- Main loop: crafting_gui.cpp:1758-2044.
-- Category/subcategory tabs: drawn by `draw_recipe_tabs` (crafting_gui.cpp:2438)
-  and `draw_recipe_subtabs` (crafting_gui.cpp:2495).
-- Recipe list entry: `current[line]->result_name()` (crafting_gui.cpp:1704).
-- Detailed recipe info: `recipe_info()` (crafting_gui.cpp:398-615) computes
+- Entry point and main loop: `select_crafter_and_crafting_recipe()` in
+  `src/crafting_gui.cpp`.
+- Input context: `"CRAFTING"` initialized in
+  `select_crafter_and_crafting_recipe()`.
+- Category/subcategory tabs: drawn by `draw_recipe_tabs()` and
+  `draw_recipe_subtabs()` in `src/crafting_gui.cpp`.
+- Recipe list entry: `current[line]->result_name()` in
+  `select_crafter_and_crafting_recipe()`.
+- Detailed recipe info: `recipe_info()` in `src/crafting_gui.cpp` computes
   all attributes — skill requirements, proficiencies, success/failure chance,
   duration, exertion, light conditions, ingredients, tools, components.
-- Search: `filter_recipes()` (crafting_gui.cpp:948-1010).
+- Search: `filter_recipes()` in `src/crafting_gui.cpp`.
 - Batch cycling: `"CYCLE_BATCH"` action.
 - Related recipes: `"RELATED_RECIPES"` action.
-- Disassembly: `game_menus::inv::disassemble()` (game_inventory.cpp:655) uses
-  `disassemble_inventory_preset` (game_inventory.cpp:600).
+- Disassembly: `game_menus::inv::disassemble()` in `src/game_inventory.cpp` uses
+  `disassemble_inventory_preset`.
 
 **Success criteria:** Category, recipe, variant, availability, missing
 requirements, skill, time, batch size, related recipe, search, confirmation,
@@ -518,25 +519,23 @@ validation); `src/handle_action.cpp` (action dispatch).
 
 **Implementation hints:**
 
-- Entry point: `construction_menu(bool)` (construction.cpp:480-1099).
-- Input context: `"CONSTRUCTION"` (construction.cpp:531-544).
-- Main loop: construction.cpp:920-1094.
-- Category tabs: `construct_cat[tabindex].name()` (construction.cpp:843).
-- Project name: `group->name()` (construction.cpp:857).
-- Requirement details computed in `recalc_buffer` lambda
-  (construction.cpp:568-745):
-  - Stage title and resulting terrain: construction.cpp:613-662.
-  - Skill requirements: construction.cpp:669-684.
-  - Precursor terrain: construction.cpp:692-707.
-  - Duration: `current_con->get_folded_time_string()` (construction.cpp:714).
-  - Tools: `current_con->requirements->get_folded_tools_list()`
-    (construction.cpp:716).
-  - Components: `get_folded_components_list()` (construction.cpp:719).
-- Placement: `place_construction()` (construction.cpp:1233-1335) uses
-  `choose_adjacent` (construction.cpp:1261-1283) for directional cursor.
-- Validation: `can_construct()` (construction.cpp:1425-1442).
-- Failure reason: `con.explain_failure(pnt)` (construction.cpp:1290).
-- On confirm: starts `player_activity(ACT_BUILD)` (construction.cpp:1330).
+- Entry point and main loop: `construction_menu()` in `src/construction.cpp`.
+- Input context: `"CONSTRUCTION"` in `construction_menu()`.
+- Category tabs: `construct_cat[tabindex].name()`.
+- Project name: `group->name()`.
+- Requirement details computed in `recalc_buffer` lambda inside
+  `construction_menu()`:
+  - Stage title and resulting terrain.
+  - Skill requirements.
+  - Precursor terrain.
+  - Duration: `current_con->get_folded_time_string()`.
+  - Tools: `current_con->requirements->get_folded_tools_list()`.
+  - Components: `current_con->requirements->get_folded_components_list()`.
+- Placement: `place_construction()` in `src/construction.cpp` uses
+  `choose_adjacent()` for directional cursor.
+- Validation: `can_construct()` in `src/construction.cpp`.
+- Failure reason: `con.explain_failure(pnt)`.
+- On confirm: starts `player_activity(ACT_BUILD)`.
 
 **Success criteria:** Construction category/project, requirements, variants,
 placement direction, valid/invalid tile, and disabled reason are announced.
@@ -561,27 +560,27 @@ turn-by-turn flooding.  Sleep, wait, and book reading are included.
 **Implementation hints:**
 
 - Activity lifecycle:
-  - Start: `player_activity::start_or_resume()` (player_activity.cpp:222-233)
+  - Start: `player_activity::start_or_resume()` in `src/player_activity.cpp`
     fires `event_type::character_starts_activity`.
-  - Per-turn: `player_activity::do_turn()` (player_activity.cpp:235-418).
-  - Completion: fires `event_type::character_finished_activity`
-    (player_activity.cpp:394).
-  - Cancel: `player_activity::canceled()` (player_activity.cpp:420-428) fires
+  - Per-turn: `player_activity::do_turn()` in `src/player_activity.cpp`.
+  - Completion: fires `event_type::character_finished_activity` in
+    `player_activity::do_turn()`.
+  - Cancel: `player_activity::canceled()` in `src/player_activity.cpp` fires
     the same event with `canceled = true`.
-- Progress: `get_progress_message()` (player_activity.cpp:170-220) returns
-  verb + percentage or verb + extra_info.  Use this for on-demand progress
+- Progress: `player_activity::get_progress_message()` in `src/player_activity.cpp`
+  returns verb + percentage or verb + extra_info.  Use this for on-demand progress
   via `Alt+R`.
-- Stamina exhaustion: `uilist tired_query` (player_activity.cpp:351-369)
+- Stamina exhaustion: `uilist tired_query` in `player_activity::do_turn()`
   prompts "Keep trying?" with continue/stop/force options.
-- Interruptions: `game::cancel_activity_or_ignore_query()` (game.cpp:1600-1653)
+- Interruptions: `game::cancel_activity_or_ignore_query()` in `src/game.cpp`
   uses `query_popup` with context `"CANCEL_ACTIVITY_OR_IGNORE_QUERY"` and
   options YES/NO/IGNORE/MANAGER.
-- Distraction types: `distraction_type` enum in enums.h:334-356 (noise, pain,
+- Distraction types: `enum class distraction_type` in `src/enums.h` (noise, pain,
   hostile spotted, weather, etc.).
-- Distraction settings UI: `distraction_manager_gui::show()`
-  (distraction_manager.cpp:49-175), context `"DISTRACTION_MANAGER"`.
+- Distraction settings UI: `distraction_manager_gui::show()` in
+  `src/distraction_manager.cpp`, context `"DISTRACTION_MANAGER"`.
 - Sleep/rest: `ACT_WAIT` and `ACT_WAIT_WEATHER` with finish handler
-  `wait_finish` (activity_handlers.cpp:1480-1488).
+  `activity_handlers::wait_finish()` in `src/activity_handlers.cpp`.
 - Book reading: dispatched through the modern `activity_actor` system;
   `read_activity_actor` handles chapter progress and skill gain.
 - Pattern: hook `start_or_resume` to announce activity start, use
@@ -612,36 +611,33 @@ providers it uses.
 
 **Implementation hints:**
 
-- Entry point: `Character::disp_info(bool)` (player_display.cpp:1520-1977).
-- Input context: `"PLAYER_INFO"` (player_display.cpp:1675-1704).
-- Tab enum: `player_display_tab` (player_display.cpp:289-299) — `stats`,
+- Entry point: `Character::disp_info()` in `src/player_display.cpp`.
+- Input context: `"PLAYER_INFO"` in `Character::disp_info()`.
+- Tab enum: `enum class player_display_tab` in `src/player_display.cpp` — `stats`,
   `encumbrance`, `speed`, `skills`, `traits`, `bionics`, `effects`,
   `proficiencies` (8 tabs).
-- Tab switching: `"LEFT"` / `"RIGHT"` / `"NEXT_TAB"` / `"PREV_TAB"`
-  (player_display.cpp:1338-1350).  Direct jump: `"SELECT_STATS_TAB"` etc.
-  (player_display.cpp:1441-1490).
-- Row navigation: `navigate_ui_list()` (player_display.cpp:1293-1306).
-  Skills tab skips category headers via `skip_skill_headers`
-  (player_display.cpp:1302).
+- Tab switching: `"LEFT"` / `"RIGHT"` / `"NEXT_TAB"` / `"PREV_TAB"` and direct
+  jump actions (`"SELECT_STATS_TAB"`, etc.) handled in `Character::disp_info()`.
+- Row navigation: `navigate_ui_list()` in `Character::disp_info()`.  Skills tab
+  skips category headers via `skip_skill_headers`.
 - Per-tab semantic text:
-  - Stats: `display_stat()` (player_display.cpp:427-448) — current vs base.
-    Info: `draw_stats_info` (player_display.cpp:483-570).
-  - Encumbrance: body part name, base + layer penalty, temperature
-    (player_display.cpp:572-589).  Info: `get_encumbrance_description`
-    (player_display.cpp:228-272) — this is the layering review screen.
-  - Speed: `get_speedlist_entries()` (player_display.cpp:955-988) — cause,
-    type (S/M), signed value.
-  - Skills: `get_HeaderSkills()` (player_display.cpp:1653) — category
+  - Stats: `display_stat` lambda inside `Character::disp_info()` — current vs base.
+    Info pane: `draw_stats_info()`.
+  - Encumbrance: body part name, base + layer penalty, temperature in
+    `draw_encumbrance_tab()`.  Info pane: `get_encumbrance_description()` — this
+    is the layering review screen.
+  - Speed: `get_speedlist_entries()` — cause, type (S/M), signed value.
+  - Skills: `Character::get_HeaderSkills()` / `disp_skills_tab()` — category
     headers, name, level, exercise %, rust, training status.
-  - Traits: `get_mutations_variants()` (player_display.cpp:1628) — name,
-    description, purifier status.
-  - Bionics: `bionic_grouping` (player_display.cpp:664-668) — name, count,
+  - Traits: `Character::get_mutations_variants()` — name, description,
+    purifier status.
+  - Bionics: `struct bionic_grouping` / `disp_bionics_tab()` — name, count,
     power.
-  - Effects: `effect_name_and_text` gathered at player_display.cpp:1525-1624.
-  - Proficiencies: `display_proficiencies()` (player_display.cpp:325) —
-    name, progress %.
-- Info pane scrolling: `"SCROLL_INFOBOX_UP"` / `"SCROLL_INFOBOX_DOWN"`
-  (player_display.cpp:1431-1439).
+  - Effects: `effect_name_and_text` gathered in `Character::disp_info()`.
+  - Proficiencies: `Character::display_proficiencies()` / `disp_proficiencies_tab()`
+    — name, progress %.
+- Info pane scrolling: `"SCROLL_INFOBOX_UP"` / `"SCROLL_INFOBOX_DOWN"` handled in
+  `Character::disp_info()`.
 
 **Success criteria:** Tab/section identity and focused row are explicit.  Stats,
 body condition, encumbrance with layering detail, skills, traits, effects,
@@ -667,23 +663,23 @@ owning data/state modules.
 
 **Implementation hints:**
 
-- Bionics entry: `avatar::power_bionics()` (bionics_ui.cpp:575-1049).
-  Context: `"BIONICS"` (bionics_ui.cpp:659).
-- Bionic tabs: `TAB_ACTIVE` / `TAB_PASSIVE` with counts
-  (bionics_ui.cpp:381-385).
-- Bionic entry text: `build_bionic_powerdesc_string()` (bionics_ui.cpp:364-374)
+- Bionics entry: `avatar::power_bionics()` in `src/bionics_ui.cpp`.
+  Context: `"BIONICS"`.
+- Bionic tabs: `TAB_ACTIVE` / `TAB_PASSIVE` with counts in
+  `avatar::power_bionics()`.
+- Bionic entry text: `build_bionic_powerdesc_string()` in `src/bionics_ui.cpp`
   — name, power cost, per-turn drain, ON/OFF status.
-- Power display: `draw_bionics_titlebar` (bionics_ui.cpp:212-311) — current
+- Power display: `draw_bionics_titlebar()` in `src/bionics_ui.cpp` — current
   power in kJ/J/mJ vs max, available fuels.
 - Examine mode: `"TOGGLE_EXAMINE"` switches between activating and examining;
-  `draw_description` (bionics_ui.cpp:400-425) renders detail.
-- Mutations entry: `avatar::power_mutations()` (mutation_ui.cpp:100-673).
-  Context: `"MUTATIONS"` (mutation_ui.cpp:217).
-- Two columns: `"Passive:"` and `"Active:"` (mutation_ui.cpp:253-254),
-  switched via `"NEXT_TAB"` / `"PREV_TAB"`.
-- Active trait text: name + cost + resource + cooldown + active status
-  (mutation_ui.cpp:310-349).
-- Description: `mutation_desc(id)` (mutation_ui.cpp:358-362).
+  `draw_description()` in `src/bionics_ui.cpp` renders detail.
+- Mutations entry: `avatar::power_mutations()` in `src/mutation_ui.cpp`.
+  Context: `"MUTATIONS"`.
+- Two columns: `"Passive:"` and `"Active:"` switched via `"NEXT_TAB"` / `"PREV_TAB"`
+  in `avatar::power_mutations()`.
+- Active trait text: name + cost + resource + cooldown + active status in
+  `avatar::power_mutations()`.
+- Description: `mutation_desc()` in `src/mutation_ui.cpp`.
 
 **Success criteria:** Each screen reports tab/column, selection, active/passive
 state, cost, cooldown, description, and disabled reason.  Activation,
@@ -705,23 +701,23 @@ independently usable.
 
 **Implementation hints:**
 
-- Spell selection: `known_magic::select_spell(Character)` (magic.cpp:3246-3348)
+- Spell selection: `known_magic::select_spell()` in `src/magic.cpp`
   creates `uilist spell_menu` with category tabs.
-- Spell menu context: `"SPELL_MENU"` (magic.cpp:3286).
-- Spell callback: `spellcasting_callback` (magic.cpp:2745-2827) handles the
+- Spell menu context: `"SPELL_MENU"` registered in `known_magic::select_spell()`.
+- Spell callback: `class spellcasting_callback` in `src/magic.cpp` handles the
   side panel.
-- Spell details: `display_spell_info(index)` (magic.cpp:2916-3148) — class,
-  flags, cast time, targets, range, AoE, damage, duration, requirements.
+- Spell details: `spellcasting_callback::display_spell_info()` in `src/magic.cpp`
+  — class, flags, cast time, targets, range, AoE, damage, duration, requirements.
   Not currently spoken on selection change — add it.
 - Spell entry: `spell::name()`, hotkey, can-cast status, favorite marker.
-- Categories: "all", "favorites", and spell classes (magic.cpp:3295-3314).
-- Style picker: `character_martial_arts::pick_style(Character)` in
-  character.cpp:13690-13774, uses `uilist` with context
-  `"MELEE_STYLE_PICKER"`.
-- Style details: `ma_details_ui` class (martialarts.cpp:2209-2532), context
-  `"MA_DETAILS_UI"` (martialarts.cpp:2255).  Shows general info, buffs,
+- Categories: "all", "favorites", and spell classes in `known_magic::select_spell()`.
+- Style picker: `character_martial_arts::pick_style()` in `src/character.cpp`
+  uses `uilist` with context `"MELEE_STYLE_PICKER"`.
+- Style details: `class ma_details_ui` / `class ma_details_ui_impl` in
+  `src/martialarts.cpp`, context `"MA_DETAILS_UI"`.  Shows general info, buffs,
   techniques, and compatible weapons.
-- `"SHOW_DESCRIPTION"` in the style uilist opens the details window.
+- `"SHOW_DESCRIPTION"` in the style uilist opens the details window via
+  `show_ma_details_ui()`.
 
 **Success criteria:** Spell list reports name, class, can-cast, cost, and key
 detail on focus.  Spell details are available on demand.  Style picker reports
@@ -744,15 +740,15 @@ dialogue without repeated rereading.
 
 **Implementation hints:**
 
-- Entry / response loop: `dialogue::gen_responses()` (npctalk.cpp:2950-3050).
-- Input context: `"DIALOGUE_CHOOSE_RESPONSE"` (npctalk.cpp:2953).
-- History scrolling: `d_win.set_up_scrolling(ctxt)` registers scrolling actions.
-- Speaker name: `actor(true)->disp_name()` (npctalk.cpp:2988).
-- Responses: `response_lines` generated via `talk_response::create_option_line`
+- Entry / response loop: `dialogue::gen_responses()` in `src/npctalk.cpp`.
+- Input context: `"DIALOGUE_CHOOSE_RESPONSE"` initialized in `dialogue::gen_responses()`.
+- History scrolling: `dialogue_window::set_up_scrolling()` registers scrolling actions.
+- Speaker name: `actor(true)->disp_name()`.
+- Responses: `response_lines` generated via `talk_response::create_option_line()`
   with hotkey `evt` and text `td.text`.  Currently selected response is
   `d_win.sel_response`.
-- New dialogue lines: `d_win.add_to_history()` handles incoming dialogue text.
-  Hook speech to announce new speaker text on topic transitions, and announce
+- New dialogue lines: `dialogue_window::add_to_history()` handles incoming dialogue
+  text.  Hook speech to announce new speaker text on topic transitions, and announce
   focused response option text on cursor movement.
 
 **Success criteria:** Speaker, newly presented text, focused response, visible
@@ -776,18 +772,17 @@ and item information used by trade.
 
 **Implementation hints:**
 
-- Two panes: `_panes[_you]` and `_panes[_trader]` in `trade_ui`
-  (trade_ui.cpp:48-60).  Derived from `inventory_multiselector`.
-- Active pane switching: `_cpane = -_cpane + 1` in `trade_ui::_process`
-  (trade_ui.cpp:266-268).
+- Two panes: `_panes[_you]` and `_panes[_trader]` in `class trade_ui` in
+  `src/trade_ui.cpp` (derived from `inventory_multiselector`).
+- Active pane switching: `_cpane = -_cpane + 1` in `trade_ui::_process()`.
 - Balance & Acceptance: `_balance`, `cost_str` ("Credit %s" / "Debt %s"),
-  evaluated by `npc_trading::npc_will_accept_trade()` (trade_ui.cpp:308-316).
-- Confirmation check: `trade_ui::_confirm_trade()` (trade_ui.cpp:276-302)
-  validates credit limits, pocket capacity, and prompts `query_yn()`.
-- Unit price: `trade_preset` formats price via
-  `format_money(npc_trading::trading_price(...))` (trade_ui.cpp:54).
-- Autobalance action: `trade_ui::autobalance()` (trade_ui.cpp:215-228).
-- Bank balance: `trade_ui::bank_balance()` (trade_ui.cpp:230-244).
+  evaluated by `npc_trading::npc_will_accept_trade()` in `src/npctrade.cpp`.
+- Confirmation check: `trade_ui::_confirm_trade()` validates credit limits,
+  pocket capacity, and prompts `query_yn()`.
+- Unit price: `trade_preset` in `src/trade_ui.cpp` formats price via
+  `format_money(npc_trading::trading_price(...))`.
+- Autobalance action: `trade_ui::autobalance()` in `src/trade_ui.cpp`.
+- Bank balance: `trade_ui::bank_balance()` in `src/trade_ui.cpp`.
 
 **Success criteria:** Active party/pane, item, marks, quantity, unit/total price,
 running balance, capacity, acceptance state, ownership, invalid reason,
@@ -810,18 +805,18 @@ in `src/npctalk.cpp`.  Stage 18 owns the later overmap handoff.
 
 **Implementation hints:**
 
-- Entry point: `mission_ui::draw_mission_ui()` (mission_ui.cpp:91-120).
-- Input context: `ctxt` (mission_ui.cpp:93-108) with actions
-  `register_navigate_ui_list()`, `NEXT_TAB`, `PREV_TAB`, `CONFIRM` ("Set
-  selected mission as current objective"), `QUIT`.
-- Tabs: `ACTIVE`, `COMPLETED`, `FAILED` (`mission_ui_tab_enum` in
-  mission_ui.cpp:168-185).
+- Entry point: `mission_ui::draw_mission_ui()` in `src/mission_ui.cpp`.
+- Input context: `ctxt` in `mission_ui::draw_mission_ui()` with actions
+  `register_navigate_ui_list()`, `"NEXT_TAB"`, `"PREV_TAB"`, `"CONFIRM"` ("Set
+  selected mission as current objective"), `"QUIT"`.
+- Tabs: `ACTIVE`, `COMPLETED`, `FAILED` (`enum class mission_ui_tab_enum` in
+  `src/mission_ui.cpp`).
 - Missions list: `get_avatar().get_active_missions()`,
   `get_completed_missions()`, `get_failed_missions()`.
 - Mission attributes: title `m->get_type().name()`, description
   `m->get_description()`, deadline `m->get_deadline()`, target location
   `m->get_target()`.
-- Confirmation: `CONFIRM` sets tracked mission.
+- Confirmation: `"CONFIRM"` sets tracked mission.
 
 **Success criteria:** Mission category/state, title, giver, objective, deadline,
 reward, tracked state, normally known location, success/failure, and focus return
@@ -845,27 +840,24 @@ understandable without revealing unexplored information.
 
 **Implementation hints:**
 
-- Entry point: `ui::omap::display()` (overmap_ui.cpp:2506) invokes static
-  `display()` (overmap_ui.cpp:1930).
-- Input context: `"OVERMAP"` (overmap_ui.cpp:1981-2025).
-- Main loop: overmap_ui.cpp:2041-2246.
-- Cursor movement: `get_direction_rel_omt(action)` adjusts `curs`
-  (overmap_ui.cpp:2070-2075).  Z-level: `"LEVEL_UP"` / `"LEVEL_DOWN"`
-  (overmap_ui.cpp:2096-2099).
-- Semantic text at cursor: `draw_om_sidebar` (overmap_ui.cpp:968) computes:
-  - Terrain: `overmap_buffer.get_description_at(sm_pos)` (overmap_ui.cpp:1047).
-  - Explored/unexplored: "unexplored" (overmap_ui.cpp:1078).
+- Entry point: `ui::omap::display()` in `src/overmap_ui.cpp` invokes static
+  `overmap_ui::display()`.
+- Input context: `"OVERMAP"` registered in `overmap_ui::display()`.
+- Main loop: interaction loop in `overmap_ui::display()`.
+- Cursor movement: `get_direction_rel_omt(action)` adjusts `curs`.  Z-level:
+  `"LEVEL_UP"` / `"LEVEL_DOWN"`.
+- Semantic text at cursor: `draw_om_sidebar()` in `src/overmap_ui.cpp` computes:
+  - Terrain: `overmap_buffer.get_description_at(sm_pos)`.
+  - Explored/unexplored: "unexplored" flag.
   - Notes: `overmap_buffer.has_note(curs)` / `overmap_buffer.note(curs)`.
-  - Weather: `get_weather_at_point(cursor_pos)->name.translated()`
-    (overmap_ui.cpp:1088).
-  - Mission distance: overmap_ui.cpp:1152-1167.
-- Search: `search()` (overmap_ui.cpp:1359) scans radius and enters cycling
-  loop (overmap_ui.cpp:1486-1503).  Result info: index/total, distance,
-  direction (overmap_ui.cpp:1463-1470).
-- Notes: `draw_notes(origin)` (overmap_ui.cpp:462) is a `uilist` list.
-  `create_note()` (overmap_ui.cpp:1262) is a note editor dialog.
-- Route: `get_overmap_path_to()` (overmap_ui.cpp:1807) generates A* path.
-  `try_travel_to_destination()` (overmap_ui.cpp:1863) initiates travel.
+  - Weather: `get_weather_at_point(cursor_pos)->name.translated()`.
+  - Mission distance: formatted in `draw_om_sidebar()`.
+- Search: `search()` in `src/overmap_ui.cpp` scans radius and enters cycling
+  loop.  Result info: index/total, distance, direction.
+- Notes: `draw_notes()` in `src/overmap_ui.cpp` is a `uilist` list.
+  `create_note()` in `src/overmap_ui.cpp` is a note editor dialog.
+- Route: `get_overmap_path_to()` in `src/overmap_ui.cpp` generates A* path.
+  `try_travel_to_destination()` initiates travel.
 - Hook: on cursor movement announce terrain, note, distance from player,
   and direction.
 
@@ -891,21 +883,20 @@ independently usable.
 
 **Implementation hints:**
 
-- Zone manager entry: `game::zones_manager()` (game.cpp:7447).
-- Input context: `"ZONES_MANAGER"` (game.cpp:7503-7523).
-- Main loop: game.cpp:7675-7890.
+- Zone manager entry and main loop: `game::zones_manager()` in `src/game.cpp`.
+- Input context: `"ZONES_MANAGER"` in `game::zones_manager()`.
 - Zone list row text: enabled status `[X]`/`[ ]`, displayed marker, name,
-  distance, type (game.cpp:7715-7735).
-- Zone type selector: `zone_manager::query_type()` (clzones.cpp:583) uses
+  distance, type rendered in `game::zones_manager()`.
+- Zone type selector: `zone_manager::query_type()` in `src/clzones.cpp` uses
   `uilist` — benefits from existing hooks.
-- Zone name: `zone_manager::query_name()` (clzones.cpp:568) uses
+- Zone name: `zone_manager::query_name()` in `src/clzones.cpp` uses
   `string_input_popup`.
-- Zone options descriptions: `zone_options::get_descriptions()`
-  (clzones.cpp:451-487) — construct type, filter, seed, unload settings.
-- Zone creation sub-flow: calls `look_around` twice for start/end points,
-  then queries type, options, and name (game.cpp:7610).
-- Zone editing: `zone_data::set_name()` (clzones.cpp:630),
-  `set_type()` (clzones.cpp:647), `set_enabled()` (clzones.cpp:727).
+- Zone options descriptions: `zone_options::get_descriptions()` in
+  `src/clzones.cpp` — construct type, filter, seed, unload settings.
+- Zone creation sub-flow: calls `game::look_around()` twice for start/end points,
+  then queries type, options, and name in `game::zones_manager()`.
+- Zone editing: `zone_data::set_name()`, `zone_data::set_type()`, and
+  `zone_data::set_enabled()` in `src/clzones.cpp`.
 
 **Success criteria:** Zone list reports name, type, enabled state, and distance.
 Creation walks through placement, type selection, options, and naming.
@@ -928,23 +919,23 @@ accessible through speech.
 
 **Implementation hints:**
 
-- Vehicle interaction entry: `vehicle::interact_with()` (vehicle_use.cpp:2600)
+- Vehicle interaction entry: `vehicle::interact_with()` in `src/vehicle_use.cpp`
   builds and queries a `veh_menu` (wraps `uilist`).
-- `veh_menu::query()` (veh_utils.cpp:424) creates `uilist` with context
+- `veh_menu::query()` in `src/veh_utils.cpp` creates `uilist` with context
   `"VEHICLE"`.  Existing uilist hooks provide basic focus announcements.
-- Electronics menu: `vehicle::build_electronics_menu()` (vehicle_use.cpp:289)
+- Electronics menu: `vehicle::build_electronics_menu()` in `src/vehicle_use.cpp`
   — toggles for lights, stereo, climate, kitchen.  State changes via
-  `add_electronic_toggle()` (vehicle_use.cpp:250).
-- Handbrake: `handbrake()` (vehicle_use.cpp:113) zeroes cruise velocity.
-- Engine control: `vehicle::control_engines()` (vehicle_use.cpp:384).
-- Start/stop: `vehicle::start_engines()` (vehicle_use.cpp:795) /
-  `stop_engines()` (vehicle_use.cpp:762).
-- Driving: `game::pldrive` (handle_action.cpp:501) calls `veh->pldrive()`
-  (vehicle_move.cpp:1427).
-- Cruise control: `vehicle::cruise_change()` (vehicle_move.cpp:645).
-- Speed gauge: `vehicle::print_speed_gauge()` (vehicle_display.cpp:477) —
+  `add_electronic_toggle()`.
+- Handbrake: `handbrake()` in `src/vehicle_use.cpp` zeroes cruise velocity.
+- Engine control: `vehicle::control_engines()` in `src/vehicle_use.cpp`.
+- Start/stop: `vehicle::start_engines()` / `vehicle::stop_engines()` in
+  `src/vehicle_use.cpp`.
+- Driving: `pldrive()` in `src/handle_action.cpp` calls `vehicle::pldrive()`
+  in `src/vehicle_move.cpp`.
+- Cruise control: `vehicle::cruise_change()` in `src/vehicle_move.cpp`.
+- Speed gauge: `vehicle::print_speed_gauge()` in `src/vehicle_display.cpp` —
   cruise target, actual speed, strain coloration (normal/yellow/red).
-- Fuel gauge: `vehicle::print_fuel_indicator()` (vehicle_display.cpp:404) —
+- Fuel gauge: `vehicle::print_fuel_indicator()` in `src/vehicle_display.cpp` —
   percentage, fuel name, rate, estimated time remaining.
 - For accessibility: create `vehicle::get_accessibility_status_summary()`
   using `print_speed_gauge` and `print_fuel_indicators` data for on-demand
@@ -970,27 +961,26 @@ screen, part grid, task handlers).
 
 **Implementation hints:**
 
-- Entry: `veh_interact::run()` (veh_interact.cpp:234) instantiates the screen
-  and calls `do_main_loop()` (veh_interact.cpp:496-604).
-- Input context: `"VEH_INTERACT"` (veh_interact.cpp:272-300).
-- Cursor movement: `veh_interact::move_cursor()` (veh_interact.cpp:2199)
-  shifts tile, recalculates `parts_here`, `cpart`, and repair/mount status.
-- Part list at tile: `vehicle::print_part_list()` (vehicle_display.cpp:148).
-- Part descriptions: `vehicle::print_vparts_descs()` (vehicle_display.cpp:247).
-- Vehicle stats: `display_stats()` (veh_interact.cpp:2422-2608) — speeds,
-  mass, cargo volume, durability, most damaged parts.
-- Action bar: `display_mode()` (veh_interact.cpp:2666) — enabled/disabled
-  tasks with reasons via `cant_do()` and `veh_act_desc` (veh_interact.cpp:2643).
-- Task sub-loops:
-  - Install: `do_install()` (veh_interact.cpp:969) — tabs/categories,
-    installable parts (veh_interact.cpp:1014-1095).
-  - Repair: `do_repair()` (veh_interact.cpp:1122) — parts on tile
-    (veh_interact.cpp:1168-1219).
-  - Remove: `do_remove()` (veh_interact.cpp:1809-1913).
-  - Overview: `overview()` (veh_interact.cpp:1631-1715).
-- Requirements format: `format_reqs()` (veh_interact.cpp:359-407).
-- Accessibility hooks: on `move_cursor` announce tile position and parts
-  summary; on task selection announce available action and requirements.
+- Entry: `veh_interact::run()` in `src/veh_interact.cpp` instantiates the screen
+  and calls `veh_interact::do_main_loop()`.
+- Input context: `"VEH_INTERACT"` registered in `veh_interact::do_main_loop()`.
+- Cursor movement: `veh_interact::move_cursor()` shifts tile, recalculates
+  `parts_here`, `cpart`, and repair/mount status.
+- Part list at tile: `vehicle::print_part_list()` in `src/vehicle_display.cpp`.
+- Part descriptions: `vehicle::print_vparts_descs()` in `src/vehicle_display.cpp`.
+- Vehicle stats: `veh_interact::display_stats()` in `src/veh_interact.cpp` —
+  speeds, mass, cargo volume, durability, most damaged parts.
+- Action bar: `veh_interact::display_mode()` in `src/veh_interact.cpp` —
+  enabled/disabled tasks with reasons via `veh_interact::cant_do()` and
+  `veh_act_desc()`.
+- Task sub-loops in `src/veh_interact.cpp`:
+  - Install: `veh_interact::do_install()` — tabs/categories, installable parts.
+  - Repair: `veh_interact::do_repair()` — parts on tile.
+  - Remove: `veh_interact::do_remove()`.
+  - Overview: `veh_interact::overview()`.
+- Requirements format: `veh_interact::format_reqs()`.
+- Accessibility hooks: on `veh_interact::move_cursor()` announce tile position
+  and parts summary; on task selection announce available action and requirements.
 
 **Success criteria:** Part selection, status, install/remove/repair choices,
 disabled reasons, skill/tool requirements, and results are announced.  The
@@ -1012,20 +1002,19 @@ background/hobbies) are independently usable.
 
 **Implementation hints:**
 
-- Tab manager: `tab_manager` class (newcharacter.cpp:136-203) tracks position,
-  handles `PREV_TAB`/`NEXT_TAB`/`SELECT`/`QUIT`.
-- Tabs declared in `avatar::create` (newcharacter.cpp:755-766): POINTS (0),
+- Tab manager: `class tab_manager` in `src/newcharacter.cpp` tracks position,
+  handles `"PREV_TAB"`, `"NEXT_TAB"`, `"SELECT"`, `"QUIT"`.
+- Tabs declared in `avatar::create()` in `src/newcharacter.cpp`: POINTS (0),
   SCENARIO (1), PROFESSION (2), BACKGROUND (3), STATS (4), TRAITS (5),
   SKILLS (6), DESCRIPTION (7).
-- Tab 0 (Points): `set_points()` (newcharacter.cpp:1163-1299), context
-  `"NEW_CHAR_POINTS"`.  Already has `screen_reader_mode` branch
-  (newcharacter.cpp:1245-1251) — extend it.
-- Tab 1 (Scenario): `set_scenario()` (newcharacter.cpp:3590-4044), context
+- Tab 0 (Points): `set_points()` in `src/newcharacter.cpp`, context
+  `"NEW_CHAR_POINTS"`.  Already has `screen_reader_mode` branch — extend it.
+- Tab 1 (Scenario): `set_scenario()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_SCENARIOS"`.  Left pane: scenario list with point costs.  Right
   pane: `scrolling_text_view details` with description, locations, missions.
-- Tab 2 (Profession): `set_profession()` (newcharacter.cpp:2524-2877), context
+- Tab 2 (Profession): `set_profession()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_PROFESSIONS"`.  Same left/right layout.
-- Tab 3 (Background): `set_hobbies()` (newcharacter.cpp:2879-3219), context
+- Tab 3 (Background): `set_hobbies()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_PROFESSIONS"`.  Same layout.
 - All tabs support `"FILTER"`, `"SORT"`, and `"RANDOMIZE"`.
 - Announce tab identity on switch, entry name + point cost on selection change,
@@ -1051,24 +1040,23 @@ logic.
 
 **Implementation hints:**
 
-- Tab 4 (Stats): `set_stats()` (newcharacter.cpp:1491-1703), context
+- Tab 4 (Stats): `set_stats()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_STATS"`.  Four stats with LEFT/RIGHT to adjust values.  Detail
-  pane: `assemble_stat_details` shows derived effects (HP, carry, damage,
+  pane: `assemble_stat_details()` shows derived effects (HP, carry, damage,
   throw distance, etc.).
-- Tab 5 (Traits): `set_traits()` (newcharacter.cpp:1705-2522), context
+- Tab 5 (Traits): `set_traits()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_TRAITS"`.  2–3 columns (positive, negative, neutral).  Locked
   traits by scenario/profession/hobby.  Conflict highlighting.
-- Tab 6 (Skills): `set_skills()` (newcharacter.cpp:3221-3588), context
+- Tab 6 (Skills): `set_skills()` in `src/newcharacter.cpp`, context
   `"NEW_CHAR_SKILLS"`.  Skills grouped under category headers.  LEFT/RIGHT
   adjusts level.
-- Tab 7 (Description): `set_description()` (newcharacter.cpp:4046-5143),
-  context `"NEW_CHAR_DESCRIPTION"`.  Name, gender, height, age, blood type,
-  start location, vehicle.  `"SAVE_TEMPLATE"`, `"REROLL_CHARACTER"`,
+- Tab 7 (Description): `set_description()` in `src/newcharacter.cpp`, context
+  `"NEW_CHAR_DESCRIPTION"`.  Name, gender, height, age, blood type,
+  start location, vehicle.  Actions: `"SAVE_TEMPLATE"`, `"REROLL_CHARACTER"`,
   `"CHOOSE_LOCATION"`.
 - Final confirmation: `"NEXT_TAB"` on Description tab validates points,
-  prompts confirmation, and sets `tabs.complete = true`
-  (newcharacter.cpp:4503-4543).
-- Template save/load: template management in Description tab.
+  prompts confirmation, and sets `tabs.complete = true` in `set_description()`.
+- Template save/load: template management in `set_description()`.
 
 **Success criteria:** Stats, traits, skills, description, start location,
 randomization, templates, naming, and final confirmation are complete and
@@ -1093,24 +1081,25 @@ are independently usable.
 
 **Implementation hints:**
 
-- World selection: `worldfactory::pick_world()` (worldfactory.cpp:454-690),
-  context `"PICK_WORLD_DIALOG"` (worldfactory.cpp:622).
-- World creation basic: `worldfactory::show_worldgen_basic()`
-  (worldfactory.cpp:1494-1834), context `"WORLDGEN_CONFIRM_DIALOG"`
-  (worldfactory.cpp:1502).
-- World name: `prompt_world_name()` (worldfactory.cpp:207-225).
-- World deletion: `main_menu.cpp:1240-1310` — manage world menu with
-  delete/reset confirmation popups.
-- Mod selection: `show_worldgen_tab_modselection` (worldfactory.cpp:978-1492).
-- Mod list drawing: `draw_mod_list` (worldfactory.cpp:761-905).
-- Mod manager context: `"MODMANAGER_DIALOG"` (worldfactory.cpp:994).
-- Mod info: `mod_ui::get_information(mod)` (mod_manager_ui.cpp:18-69) —
+- World selection: `worldfactory::pick_world()` in `src/worldfactory.cpp`,
+  context `"PICK_WORLD_DIALOG"`.
+- World creation basic: `worldfactory::show_worldgen_basic()` in
+  `src/worldfactory.cpp`, context `"WORLDGEN_CONFIRM_DIALOG"`.
+- World name: `prompt_world_name()` in `src/worldfactory.cpp`.
+- World deletion and reset: `main_menu::world_tab()` in `src/main_menu.cpp` —
+  manage world menu with delete/reset confirmation popups.
+- Mod selection: `worldfactory::show_worldgen_tab_modselection()` in
+  `src/worldfactory.cpp`.
+- Mod list drawing: `worldfactory::draw_mod_list()` in `src/worldfactory.cpp`.
+- Mod manager context: `"MODMANAGER_DIALOG"` registered in
+  `worldfactory::show_worldgen_tab_modselection()`.
+- Mod info: `mod_ui::get_information()` in `src/mod_manager_ui.cpp` —
   authors, dependencies, version, description.
-- Mod actions: `try_add` (mod_manager_ui.cpp:84-157), `try_rem`
-  (mod_manager_ui.cpp:159-184), `try_shift` (mod_manager_ui.cpp:186-225).
-- Two columns: "Mod List" (available) and "Mod Load Order" (active)
-  (worldfactory.cpp:1068-1069).
-- Category tabs: worldfactory.cpp:1220-1234.
+- Mod actions: `mod_ui::try_add()`, `mod_ui::try_rem()`, and `mod_ui::try_shift()`
+  in `src/mod_manager_ui.cpp`.
+- Two columns: "Mod List" (available) and "Mod Load Order" (active) in
+  `worldfactory::show_worldgen_tab_modselection()`.
+- Category tabs: tabs in `worldfactory::show_worldgen_tab_modselection()`.
 
 **Success criteria:** World selection/create/copy/reset/delete, naming, mod
 category/order/dependencies, and confirmation are announced.
@@ -1132,24 +1121,24 @@ and sidebar panel configuration are independently usable.
 
 **Implementation hints:**
 
-- Options screen: `options_manager::show()` (options.cpp:3342-3945), context
-  `"OPTIONS"` (options.cpp:3379).
+- Options screen: `options_manager::show()` in `src/options.cpp`, context
+  `"OPTIONS"`.
 - Option tabs/pages: `pages_[i].name_` ("General", "Interface", "Graphics",
-  "Sound", etc.) (options.cpp:3603-3620).
-- Option entry text: `fmt_name_value` (options.cpp:3500-3540) — group header
-  or option name + value.
-- Tooltip: `curr_item.fmt_tooltip()` (options.cpp:3625).
-- Value editing: `on_select_option` (options.cpp:3657-3699) — LEFT/RIGHT
-  cycles, CONFIRM opens input for numeric types.
+  "Sound", etc.) in `options_manager::show()`.
+- Option entry text: `fmt_name_value` lambda in `options_manager::show()` — group
+  header or option name + value.
+- Tooltip: `curr_item.fmt_tooltip()`.
+- Value editing: `on_select_option` lambda in `options_manager::show()` —
+  LEFT/RIGHT cycles, CONFIRM opens input for numeric types.
 - Note: the curses options screen does not have search/filter — options are
   organized by pages and collapsible groups.
 - Safe-mode rules: `src/safemode_ui.cpp` — rule list with add/edit/delete.
 - Autopickup rules: `src/auto_pickup.cpp` — similar rule editor pattern.
-- Panel admin: `panel_manager::show_adm()` (panels.cpp:711-881), context
-  `"PANEL_MGMT"` (panels.cpp:713-722).  Two columns: panel list and layout
-  list.  Toggle panel visibility, reorder, activate layout.
-- Distraction settings: `distraction_manager_gui::show()`
-  (distraction_manager.cpp:49-175), context `"DISTRACTION_MANAGER"`.
+- Panel admin: `panel_manager::show_adm()` in `src/panels.cpp`, context
+  `"PANEL_MGMT"`.  Two columns: panel list and layout list.  Toggle panel
+  visibility, reorder, activate layout.
+- Distraction settings: `distraction_manager_gui::show()` in
+  `src/distraction_manager.cpp`, context `"DISTRACTION_MANAGER"`.
 
 **Success criteria:** Options pages, group expand/collapse, value editing,
 defaults, safe-mode/autopickup rules, panel configuration, and distraction
