@@ -1,12 +1,24 @@
+#include <algorithm>
 #include <memory>
 #include <string>
 #include <utility>
 #include <vector>
 
 #include "accessibility.h"
+#include "avatar.h"
+#include "calendar.h"
 #include "cata_catch.h"
+#include "cata_scope_helpers.h"
+#include "game.h"
 #include "input_context.h"
 #include "input_enums.h"
+#include "item.h"
+#include "map.h"
+#include "map_helpers.h"
+#include "map_item_stack.h"
+#include "player_helpers.h"
+#include "point.h"
+#include "type_id.h"
 
 namespace
 {
@@ -62,7 +74,7 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( gameplay.input_to_action( pure_v ) != "accessibility_situation" );
 }
 
-TEST_CASE( "accessibility announcements can be captured and repeated", "[accessibility][nogame]" )
+TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
 {
     auto capture = std::make_unique<capture_backend>();
     capture_backend *capture_ptr = capture.get();
@@ -108,7 +120,7 @@ TEST_CASE( "accessibility announcements can be captured and repeated", "[accessi
     accessibility::reset_backend_after_testing();
 }
 
-TEST_CASE( "accessibility last announcement can be set quietly and repeated",
+TEST_CASE( "accessibility_last_announcement_can_be_set_quietly_and_repeated",
            "[accessibility][nogame]" )
 {
     auto capture = std::make_unique<capture_backend>();
@@ -136,7 +148,7 @@ TEST_CASE( "accessibility last announcement can be set quietly and repeated",
     accessibility::reset_backend_after_testing();
 }
 
-TEST_CASE( "semantic accessibility lists have stable distance ordering",
+TEST_CASE( "semantic_accessibility_lists_have_stable_distance_ordering",
            "[accessibility][nogame]" )
 {
     std::vector<accessibility::semantic_list_entry> entries = {
@@ -157,7 +169,7 @@ TEST_CASE( "semantic accessibility lists have stable distance ordering",
     CHECK( entries[4].label == "far east" );
 }
 
-TEST_CASE( "semantic accessibility sequences omit empty parts and preserve order",
+TEST_CASE( "semantic_accessibility_sequences_omit_empty_parts_and_preserve_order",
            "[accessibility][nogame]" )
 {
     const std::vector<std::string> parts = {
@@ -172,7 +184,135 @@ TEST_CASE( "semantic accessibility sequences omit empty parts and preserve order
            "Terrain: wooden floor. Creature: zombie. Z-level: one level above. 5 tiles northeast." );
 }
 
-TEST_CASE( "status announcements suppress animated progress values",
+TEST_CASE( "semantic_creature_status_descriptions_are_reusable", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_creature_attitude( "Hostile" ) == "Attitude: Hostile" );
+    CHECK( accessibility::format_creature_attitude( "" ).empty() );
+    CHECK( accessibility::format_creature_health( 100, 100 ) == "Health: uninjured" );
+    CHECK( accessibility::format_creature_health( 80, 100 ) == "Health: lightly injured" );
+    CHECK( accessibility::format_creature_health( 60, 100 ) == "Health: moderately injured" );
+    CHECK( accessibility::format_creature_health( 30, 100 ) == "Health: heavily injured" );
+    CHECK( accessibility::format_creature_health( 10, 100 ) == "Health: severely injured" );
+    CHECK( accessibility::format_creature_health( 9, 100 ) == "Health: nearly dead" );
+    CHECK( accessibility::format_creature_health( 0, 0 ).empty() );
+}
+
+TEST_CASE( "nearby_list_semantics_report_mode_focus_stacks_and_empty_results",
+           "[accessibility][nogame]" )
+{
+    const accessibility::nearby_list_entry item_entry = {
+        "aspirin", 6, 2, 3, "4 tiles northeast",
+        { "Category: drugs", "At this location: 2", "High priority" }, 5, 9
+    };
+
+    CHECK( accessibility::format_nearby_list_context( "Nearby items", 9 ) ==
+           "Nearby items. 9 results." );
+    CHECK( accessibility::format_nearby_list_context( "Nearby items", 9,
+            "Sorted by name" ) == "Nearby items. Sorted by name. 9 results." );
+    CHECK( accessibility::format_nearby_list_context( "Nearby creatures", 0 ) ==
+           "Nearby creatures. No results." );
+    CHECK( accessibility::format_nearby_list_entry( item_entry ) ==
+           "aspirin. Count: 6. Location 2 of 3. 4 tiles northeast. Category: drugs. "
+           "At this location: 2. High priority. 5 of 9." );
+}
+
+TEST_CASE( "nearby_list_focus_announcements_cover_navigation_and_context_restoration",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    accessibility::nearby_list_entry first_item = {
+        "aspirin", 2, 1, 2, "2 tiles east", { "Category: drugs" }, 1, 2
+    };
+    accessibility::nearby_list_entry second_item = {
+        "flashlight", 1, 0, 0, "3 tiles south", { "Category: tools" }, 2, 2
+    };
+    accessibility::nearby_list_entry creature = {
+        "zombie", 0, 0, 0, "5 tiles northwest",
+        { "Attitude: Hostile", "Behavior: Tracking", "Health: lightly injured" }, 1, 1
+    };
+
+    CHECK( accessibility::announce_nearby_list_focus(
+               first_item, accessibility::format_nearby_list_context( "Nearby items", 2 ) ) );
+    CHECK( accessibility::announce_nearby_list_focus( second_item ) );
+
+    first_item.position_index = 2;
+    first_item.location = "4 tiles northeast";
+    CHECK( accessibility::announce_nearby_list_focus( first_item ) );
+
+    CHECK( accessibility::announce_nearby_list_focus(
+               first_item, accessibility::format_nearby_list_context(
+                   "Nearby items", 1, "Filter: asp" ) ) );
+    CHECK( accessibility::announce_nearby_list_focus(
+               first_item, accessibility::format_nearby_list_context(
+                   "Nearby items", 1, "Sorted by name" ) ) );
+    CHECK( accessibility::announce_nearby_list_focus(
+               creature, accessibility::format_nearby_list_context( "Nearby creatures", 1 ) ) );
+
+    // Returning from look or detail deliberately restores the same focused row.
+    CHECK( accessibility::announce_nearby_list_focus( creature ) );
+    CHECK( accessibility::announce_focus( {}, "Gameplay. Current position: grass" ) );
+
+    REQUIRE( capture_ptr->messages.size() == 8 );
+    CHECK( capture_ptr->messages[0] ==
+           "Nearby items. 2 results. aspirin. Count: 2. Location 1 of 2. 2 tiles east. "
+           "Category: drugs. 1 of 2." );
+    CHECK( capture_ptr->messages[1] ==
+           "flashlight. Count: 1. 3 tiles south. Category: tools. 2 of 2." );
+    CHECK( capture_ptr->messages[2].find( "Location 2 of 2" ) != std::string::npos );
+    CHECK( capture_ptr->messages[3].find( "Filter: asp" ) != std::string::npos );
+    CHECK( capture_ptr->messages[4].find( "Sorted by name" ) != std::string::npos );
+    CHECK( capture_ptr->messages[5] ==
+           "Nearby creatures. 1 result. zombie. 5 tiles northwest. Attitude: Hostile. "
+           "Behavior: Tracking. Health: lightly injured. 1 of 1." );
+    CHECK( capture_ptr->messages[6] ==
+           "zombie. 5 tiles northwest. Attitude: Hostile. Behavior: Tracking. "
+           "Health: lightly injured. 1 of 1." );
+    CHECK( capture_ptr->messages[7] == "Gameplay. Current position: grass" );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "nearby_item_collection_groups_visible_positions_and_respects_blindness",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    const time_point previous_time = calendar::turn;
+    const on_out_of_scope cleanup( [previous_time]() {
+        clear_avatar();
+        clear_map();
+        set_time( previous_time );
+    } );
+
+    set_time_to_day();
+    avatar &viewer = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms origin = viewer.pos_bub( here );
+    const itype_id rock_type( "rock" );
+    const item rock( rock_type, calendar::turn );
+    here.add_item_or_charges( origin + tripoint::east, rock );
+    here.add_item_or_charges( origin + tripoint::south, rock );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+
+    const std::vector<map_item_stack> visible_items = g->find_nearby_items( 10 );
+    const auto rock_stack = std::find_if( visible_items.begin(), visible_items.end(),
+    [&]( const map_item_stack & stack ) {
+        return stack.example != nullptr && stack.example->typeId() == rock_type;
+    } );
+    REQUIRE( rock_stack != visible_items.end() );
+    CHECK( rock_stack->totalcount == 2 );
+    CHECK( rock_stack->vIG.size() == 2 );
+
+    player_wear_blindfold();
+    REQUIRE( viewer.is_blind() );
+    CHECK( g->find_nearby_items( 10 ).empty() );
+}
+
+TEST_CASE( "status_announcements_suppress_animated_progress_values",
            "[accessibility][nogame]" )
 {
     CHECK( accessibility::normalize_status_announcement(
@@ -188,7 +328,7 @@ TEST_CASE( "status announcements suppress animated progress values",
                "Compressing maps [19/20]", true ) );
 }
 
-TEST_CASE( "semantic accessibility lists group connected matching regions",
+TEST_CASE( "semantic_accessibility_lists_group_connected_matching_regions",
            "[accessibility][nogame]" )
 {
     std::vector<accessibility::semantic_list_entry> entries = {

@@ -8,7 +8,7 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stages 03–10 establish the minimum independent survival and combat loop.  Stages
+Stages 04–10 establish the minimum independent survival and combat loop.  Stages
 11–21A cover the major progression, management, and setup interfaces.  Stages
 22–23 are native release gates.  Stage 24 starts only after the native semantic
 model is stable.
@@ -19,56 +19,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
-
-## Stage 03 - Nearby item and creature lists
-
-**Outcome:** The `V` interface provides efficient list-based exploration of
-normally visible nearby items and creatures.
-
-**Selected interaction:** Preserve the existing `V` list and its visible UI.
-Opening announces the active item or creature mode, result count, and current
-selection.  Focus movement gives a concise semantic row containing name, count,
-direction, distance, and the most important item or creature state.  Existing
-examine and compare commands provide detail on demand.  Tab changes mode and
-announces its count and restored selection; filtering, sorting, paging, and
-item-stack position changes announce the resulting state without rereading the
-whole list.  Look handoff preserves the selected target and reannounces it on
-return.  Escape restores and announces gameplay focus.  Empty modes are
-explicit.  This interaction adds no accessibility-only visible screen.
-
-**Code inventory:** `game::list_items_monsters`, `game::list_items`, and monster
-list handling in `src/game.cpp`/`src/game.h`; `src/map_item_stack.cpp` for grouped
-items.  The two `V` lists are bespoke `ui_adaptor` loops rather than `uilist`, so
-their focus announcements belong in `src/game.cpp`.
-
-**Implementation hints:**
-
-- Entry point: `game::list_items_monsters` dispatches to `game::list_items` and
-  the monster list.  The `V` action is `ACTION_LIST_ITEMS` in
-  `src/handle_action.cpp`.
-- Both lists use bespoke `ui_adaptor` loops.  Follow the focus-announcement
-  policy used by `uilist`, but keep the hooks local to these list loops.
-- `map_item_stack` in `src/map_item_stack.cpp` groups identical items by
-  position; the accessibility announcement should use the stack's
-  `display_name()` and `totalcount`.
-- The relationship to `Alt+V` situation review: `Alt+V` is a spatial overview
-  while `V` is the game's standard item/creature list with filtering, sorting,
-  and look handoff.  Both coexist.
-- Follow the announcement pattern in `game::accessibility_situation_review`
-  (`game.cpp:8969-9047`) for distance/direction formatting.
-
-**Success criteria:** Opening announces active item/creature mode and selection.
-Navigation reports name, count, direction, distance, attitude, and meaningful
-secondary detail.  Mode switching, sorting, filtering, paging, look handoff, and
-return are keyboard operable and restore focus.  Empty results are explicit.
-
-**Possible automated tests:** Capture both modes, focus changes, stacks, empty
-results, mode switch, filter/sort/page changes, look handoff, and visibility
-filtering.
-
-**Required human verification:** Locate a chosen item and creature in a crowded
-area, use filters and both list modes, hand off to look mode, and return without
-losing context.
 
 ## Stage 04 - Player condition and gameplay status
 

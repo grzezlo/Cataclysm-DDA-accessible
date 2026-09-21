@@ -124,6 +124,7 @@ struct look_around_params {
     bool peeking;
     bool change_lv;
     std::optional<tripoint_bub_ms> accessibility_origin = std::nullopt;
+    bool announce_gameplay_on_exit = true;
 };
 
 struct w_map {
@@ -701,13 +702,15 @@ class game
         * @param is_moving_zone true if the zone is being moved, false by default
         * @param end_point the end point of the targeting zone, only used if is_moving_zone is true, default is tripoint::zero
         * @param change_lv determines allow if change z-level
+        * @param announce_gameplay_on_exit restore gameplay speech after leaving look-around
         * @return look_around_result
         */
         look_around_result look_around( bool show_window, tripoint_bub_ms &center,
                                         const tripoint_bub_ms &start_point, bool has_first_point, bool select_zone, bool peeking,
                                         bool is_moving_zone = false, const tripoint_bub_ms &end_point = tripoint_bub_ms::zero,
                                         bool change_lv = true,
-                                        const std::optional<tripoint_bub_ms> &accessibility_origin = std::nullopt );
+                                        const std::optional<tripoint_bub_ms> &accessibility_origin = std::nullopt,
+                                        bool announce_gameplay_on_exit = true );
         look_around_result look_around( look_around_params );
 
         // Shared method to print "look around" info
@@ -887,6 +890,9 @@ class game
         // Regular movement. Returns false if it failed for any reason
         bool walk_move( const tripoint_bub_ms &dest, bool via_ramp = false, bool furniture_move = false );
         void on_move_effects();
+
+        /** Collect normally visible nearby items, grouped for the V menu. */
+        std::vector<map_item_stack> find_nearby_items( int iRadius );
     private:
         // Game-start procedures
         bool load( const save_t &name ); // Load a player-specific save file
@@ -924,7 +930,6 @@ class game
         };
 
         game::vmenu_ret list_items( const std::vector<map_item_stack> &item_list );
-        std::vector<map_item_stack> find_nearby_items( int iRadius );
         void reset_item_list_state( const catacurses::window &window, int height,
                                     list_item_sort_mode sortMode );
 

@@ -285,3 +285,42 @@ Limitations:
 - Very short sub-second operations between event pumping calls might not capture
   rapid intermediate micro-steps before execution completes.
 
+## 2026-09-21 — Stage 03: Nearby item and creature lists
+
+- Preserved the standard visible `V` interface while adding renderer-independent
+  semantic rows and concise focus announcements to its bespoke item and creature
+  list loops.
+- Item focus reports display name, total count, position within a multi-location
+  stack, direction, distance, category, priority, newness, and result position.
+- Creature focus reports name, direction, distance, broad attitude, current
+  behavior, visible injury state, whether it sees the player, safe-mode blacklist
+  state, and result position without bypassing visibility or the Inattentive
+  trait's information restriction.
+- Opening, Tab mode changes, filtering, filter reset, sorting, paging, stack
+  position changes, and empty results announce the resulting context without
+  speaking on routine redraws.  `Alt+R` repeats the current row.
+- Item examination and comparison restore the selected row.  Creature look
+  handoff starts at the selected creature, returns to the same row, and suppresses
+  the otherwise incorrect intermediate gameplay-focus announcement.  Closing
+  `V` restores gameplay focus, including when `V` was opened from look-around.
+- Added capture-backend contract tests for both modes, focus movement, stacks,
+  empty results, filtering, sorting, paging, mode and detail return, plus a map
+  fixture covering grouped visible items and blindness filtering.  The focused
+  suite passed all 107 assertions in 11 test cases; the normalized-name check
+  passed all 1226 assertions.
+- Built the Windows x64 test executable and Release tiles executable
+  successfully.  AStyle and `git diff --check` completed cleanly.
+- A blind user accepted the interaction with NVDA 2026.1 on Windows 25H2,
+  build 26200.9457, using
+  `cdda-0.I-2026-09-10-0827-21-g26e1aa65a7-dirty`.  Verification confirmed the
+  nearby item and creature modes, concise focus output, filtering and sorting,
+  stack and page navigation, look handoff and focus restoration, repeat-last,
+  and recovery after speech interruption.
+
+Limitations:
+
+- Newly introduced source strings can fall back to English until translation
+  catalogs are updated during Stage 23.
+- An additional full-suite run encountered unrelated repository/environment
+  failures, including a missing Russian `TEST_DATA.mo` fixture, and was stopped
+  after the required Stage 03 checks had passed.

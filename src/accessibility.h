@@ -33,6 +33,18 @@ struct connected_semantic_list_group {
     size_t count;
 };
 
+/** Renderer-independent semantic row for the nearby item and creature lists. */
+struct nearby_list_entry {
+    std::string name;
+    int count = 0;
+    int position_index = 0;
+    int position_count = 0;
+    std::string location;
+    std::vector<std::string> details;
+    int result_index = 0;
+    int result_count = 0;
+};
+
 void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries );
 std::vector<connected_semantic_list_group> group_connected_semantic_list_entries(
     std::vector<semantic_list_entry> entries );
@@ -46,6 +58,13 @@ bool announce_movement( const std::string &direction, const std::string &tile );
 bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
 bool announce_semantic_sequence( const std::vector<std::string> &parts );
+std::string format_creature_attitude( const std::string &attitude );
+std::string format_creature_health( int current, int maximum );
+std::string format_nearby_list_entry( const nearby_list_entry &entry );
+std::string format_nearby_list_context( const std::string &mode, int result_count,
+                                        const std::string &change = {} );
+bool announce_nearby_list_focus( const nearby_list_entry &entry,
+                                 const std::string &context = {} );
 /** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
 /** Return the most recent announcement text (spoken or quietly set). */

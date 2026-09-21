@@ -8,6 +8,9 @@
 #include <tuple>
 #include <utility>
 
+#include "string_formatter.h"
+#include "translations.h"
+
 namespace accessibility
 {
 
@@ -233,6 +236,74 @@ std::string format_semantic_sequence( const std::vector<std::string> &parts )
 bool announce_semantic_sequence( const std::vector<std::string> &parts )
 {
     return announce( format_semantic_sequence( parts ) );
+}
+
+std::string format_creature_attitude( const std::string &attitude )
+{
+    if( attitude.empty() ) {
+        return {};
+    }
+    return string_format( _( "Attitude: %s" ), attitude );
+}
+
+std::string format_creature_health( const int current, const int maximum )
+{
+    if( maximum <= 0 ) {
+        return {};
+    }
+    if( current >= maximum ) {
+        return _( "Health: uninjured" );
+    }
+    if( current >= maximum * 0.8 ) {
+        return _( "Health: lightly injured" );
+    }
+    if( current >= maximum * 0.6 ) {
+        return _( "Health: moderately injured" );
+    }
+    if( current >= maximum * 0.3 ) {
+        return _( "Health: heavily injured" );
+    }
+    if( current >= maximum * 0.1 ) {
+        return _( "Health: severely injured" );
+    }
+    return _( "Health: nearly dead" );
+}
+
+std::string format_nearby_list_entry( const nearby_list_entry &entry )
+{
+    std::vector<std::string> parts = { entry.name };
+    if( entry.count > 0 ) {
+        parts.push_back( string_format( _( "Count: %d" ), entry.count ) );
+    }
+    if( entry.position_count > 1 && entry.position_index > 0 ) {
+        parts.push_back( string_format( _( "Location %1$d of %2$d" ), entry.position_index,
+                                        entry.position_count ) );
+    }
+    parts.push_back( entry.location );
+    parts.insert( parts.end(), entry.details.begin(), entry.details.end() );
+    if( entry.result_count > 0 && entry.result_index > 0 ) {
+        parts.push_back( string_format( _( "%1$d of %2$d" ), entry.result_index,
+                                        entry.result_count ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_nearby_list_context( const std::string &mode, const int result_count,
+                                        const std::string &change )
+{
+    std::vector<std::string> parts = { mode, change };
+    if( result_count == 0 ) {
+        parts.push_back( _( "No results" ) );
+    } else {
+        parts.push_back( string_format( n_gettext( "%d result", "%d results", result_count ),
+                                        result_count ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+bool announce_nearby_list_focus( const nearby_list_entry &entry, const std::string &context )
+{
+    return announce_semantic_sequence( { context, format_nearby_list_entry( entry ) } );
 }
 
 bool repeat_last_announcement()
