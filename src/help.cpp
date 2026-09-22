@@ -122,30 +122,28 @@ std::string help::get_dir_grid_speech()
     std::vector<std::pair<std::string, std::vector<std::string>>> bindings;
     bindings.reserve( 9 );
 
+    const auto collect_keys = []( action_id act ) {
+        std::vector<std::string> keys_desc;
+        for( const input_event &key : keys_bound_to( act, /*maximum_modifier_count=*/0,
+                /*restrict_to_printable=*/false ) ) {
+            const std::string desc = key.short_description();
+            if( !desc.empty() && std::find( keys_desc.begin(), keys_desc.end(), desc ) == keys_desc.end() ) {
+                keys_desc.push_back( desc );
+            }
+        }
+        return keys_desc;
+    };
+
     for( size_t i = 0; i < 4; ++i ) {
         const auto &entry = dir_actions[i];
-        std::vector<std::string> keys_desc;
-        for( const input_event &key : keys_bound_to( entry.second, /*maximum_modifier_count=*/0 ) ) {
-            keys_desc.push_back( key.short_description() );
-        }
-        bindings.emplace_back( _( entry.first ), std::move( keys_desc ) );
+        bindings.emplace_back( _( entry.first ), collect_keys( entry.second ) );
     }
 
-    {
-        std::vector<std::string> pause_keys;
-        for( const input_event &key : keys_bound_to( ACTION_PAUSE, /*maximum_modifier_count=*/0 ) ) {
-            pause_keys.push_back( key.short_description() );
-        }
-        bindings.emplace_back( _( "Pause" ), std::move( pause_keys ) );
-    }
+    bindings.emplace_back( _( "Pause" ), collect_keys( ACTION_PAUSE ) );
 
     for( size_t i = 4; i < 8; ++i ) {
         const auto &entry = dir_actions[i];
-        std::vector<std::string> keys_desc;
-        for( const input_event &key : keys_bound_to( entry.second, /*maximum_modifier_count=*/0 ) ) {
-            keys_desc.push_back( key.short_description() );
-        }
-        bindings.emplace_back( _( entry.first ), std::move( keys_desc ) );
+        bindings.emplace_back( _( entry.first ), collect_keys( entry.second ) );
     }
 
     return accessibility::format_help_directions( bindings );

@@ -10,6 +10,7 @@
 #include "cata_catch.h"
 #include "cata_scope_helpers.h"
 #include "game.h"
+#include "help.h"
 #include "input_context.h"
 #include "input_enums.h"
 #include "item.h"
@@ -703,6 +704,13 @@ TEST_CASE( "help_topic_and_document_formatting", "[accessibility][nogame]" )
     CHECK( accessibility::format_help_directions( unbound ) ==
            "Movement keys: Northwest: unbound." );
     CHECK( accessibility::format_help_directions( {} ).empty() );
+
+    const std::string dir_speech = help::get_dir_grid_speech();
+    CHECK( dir_speech.find( "North: " ) != std::string::npos );
+    CHECK( dir_speech.find( "UP" ) != std::string::npos );
+    CHECK( dir_speech.find( "DOWN" ) != std::string::npos );
+    CHECK( dir_speech.find( "LEFT" ) != std::string::npos );
+    CHECK( dir_speech.find( "RIGHT" ) != std::string::npos );
 }
 
 TEST_CASE( "help_browser_navigation_document_reading_and_repeat_last", "[accessibility][nogame]" )
