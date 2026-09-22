@@ -358,3 +358,32 @@ Limitations:
 
 - Newly introduced source strings fall back to English if the translation
   catalog does not contain translations.
+
+## 2026-09-22 — Stage 03A: Main-menu information
+
+- Announced the title, version, tip of the day, and MOTD/reporting hint on menu
+  entry.  Added a visible Tip of the day tab for keyboard retrieval.
+- Announced New Game hints and world names with save counts, including semantic
+  empty states.  MOTD and Credits speak source-text lines through Up/Down and
+  retain independent reading positions when the player changes tabs.
+- Kept long source lines intact for speech as selected by the user.  URLs in
+  MOTD and Credits remain text; the visible interface does not activate them.
+- Capture tests covered opening and focus changes, world counts, empty lists,
+  document entry and navigation, independent cursor positions, repeat-last,
+  and menu return.  `test_access.bat` passed with 198 assertions in 16 test
+  cases; `build_win_x64.bat` succeeded; AStyle checks were clean.
+- Tested Windows version: 25H2, build 26200.9457.  NVDA version: 2026.1.
+  Tested fork version: `cdda-0.I-2026-09-10-0827-28-g87636cdcad` (commit
+  `87636cdcad4ea2cb1a8ea35f592cbf686bd83e09`).  The user confirmed MOTD,
+  Credits, a world with one save, and return to each document's prior line, and
+  accepted closure of the stage.
+
+Limitations:
+
+- Worlds with zero or multiple saves were covered by capture tests but not by
+  NVDA testing because the tester had only a one-save world.  Recheck them in
+  Stage 22 as recorded in `ACCESS_TODO.md`.
+- Individual outcomes for every other Stage 03A human scenario were not
+  separately reported in the acceptance message.  The user accepted closure
+  with this verification record.
+- New source strings may remain in English until Stage 23 translation work.

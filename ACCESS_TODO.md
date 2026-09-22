@@ -8,7 +8,7 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stages 03A–03C close the remaining start-screen, tutorial, and help gaps.
+Stages 03B–03C close the remaining tutorial and help gaps.
 Stages 04–10 establish the minimum independent survival and combat loop.  Stages
 11–21A cover the major progression, management, and setup interfaces.  Stages
 22–23 are native release gates.  Stage 24 starts only after the native semantic
@@ -20,62 +20,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
-
-## Stage 03A - Main-menu information
-
-**Outcome:** All meaningful information presented directly on the main-menu
-screen, outside the already accessible menu focus, is available without relying
-on visual layout.
-
-**Selected interaction (2026-09-22):** Keep the existing menu navigation model.
-On opening the menu, announce the version, tip of the day, general MOTD/reporting
-hint, and current focus.  Give the tip and general hint their own visible,
-keyboard-reachable menu tab so they can be revisited.
-Entering MOTD or Credits announces the tab and its first source-text line;
-Up/Down moves through source lines, speaks the newly selected line, and scrolls
-the visible text to match.  Each document remembers its line when Left/Right
-changes tabs, and returning from a child screen restores the current menu focus.
-New Game focus announces its contextual
-hint; Load and World focus announces each world's name and save count.  Existing
-repeat-last remains available.  Do not add speech-specific wrapping of long
-source lines in this stage; assess that only if NVDA testing finds a problem.
-No separate reading mode or speech-cancel action is added.
-
-**Code inventory:** `main_menu::print_menu()`, `display_sub_menu()`,
-`display_text()`, `announce_selection()`, `init_strings()`, and
-`menu_document_lines()` in `src/main_menu.cpp`; semantic menu formatters and
-document-line selection in `src/accessibility.cpp`; capture coverage in
-`tests/accessibility_test.cpp`; title, MOTD, credits, tip, world, and save-count
-data loaded by those paths.
-
-**Implementation hints:**
-
-- The title and version are drawn by `main_menu::print_menu()` above the menu.
-- The selected new-game method has a contextual entry in `vNewGameHints`; other
-  tabs show the bug-report/MOTD hint.  The tip of the day is stored in `vdaytip`.
-- `display_text()` presents MOTD and credits as folded, scrollable text using a
-  viewport offset rather than a semantic text cursor.
-- Load and World visually show each world as `name (save count)`, while
-  `announce_selection()` currently speaks only the world name.
-- Seasonal title art is decorative unless it conveys information not available
-  elsewhere; do not read ASCII art line by line.
-- Before implementation, complete the required three-option interaction review
-  for concise screen context and long text, then record the selected keyboard,
-  focus, speech, detail, return, and visible-UI behavior in this stage.
-
-**Success criteria:** Version, contextual hints, tip of the day, MOTD, credits,
-world names, save counts, and meaningful empty/error states are independently
-available.  Long content can be reviewed and repeated without redraw flooding,
-and returning from a child screen restores accurate main-menu context.
-
-**Possible automated tests:** Capture initial context, focus changes that alter
-a hint, world/save-count output, empty lists, MOTD and credits entry, long-text
-navigation, repeat-last, and return focus using fixed menu data.
-
-**Required human verification:** With NVDA, inspect every main-menu tab, read a
-tip, MOTD, and credits, switch away from each document and back to confirm its
-reading position, review worlds with zero and multiple saves, interrupt and
-repeat long speech, and return from child screens without losing context.
 
 ## Stage 03B - Tutorial lesson access and assessment
 
@@ -1381,6 +1325,9 @@ instructions and revise the guide before accepting the stage.
 
 ## Known blockers and required follow-up
 
+- Stage 03A world announcements for zero and multiple saves passed capture tests
+  but were not exercised with NVDA; the tester had one world with one save.
+  Recheck both counts during the Stage 22 coverage audit.
 - Standard, developer-error, and static popup announcements are implemented but
   still need the remaining dedicated NVDA checks recorded in `ACCESS_DONE.md`.
   Stage 22 owns those checks unless an earlier stage relies on a popup type.
