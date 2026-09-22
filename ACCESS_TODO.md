@@ -8,7 +8,8 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stages 03B–03C close the remaining tutorial and help gaps.
+Stage 03C closes the help gap.  Stage 03B audits the complete tutorial after
+the gameplay and interface stages, before the final coverage and release gates.
 Stages 04–10 establish the minimum independent survival and combat loop.  Stages
 11–21A cover the major progression, management, and setup interfaces.  Stages
 22–23 are native release gates.  Stage 24 starts only after the native semantic
@@ -20,46 +21,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
-
-## Stage 03B - Tutorial lesson access and assessment
-
-**Outcome:** A blind player can launch the tutorial, read and recover its lesson
-instructions, understand how to continue or leave, and identify any exercise
-whose underlying gameplay interface belongs to a later roadmap stage.
-
-**Code inventory:** tutorial launch in `src/main_menu.cpp`;
-`tutorial_game::init()`, `per_turn()`, `pre_action()`, `post_action()`, and
-`add_message()` in `src/gamemode_tutorial.cpp`; tutorial snippets in
-`data/mods/dda_tutorial/snippets.json`; triggered lessons and map structure in
-`data/mods/dda_tutorial/traps.json` and `mapgen.json`.
-
-**Implementation hints:**
-
-- The legacy tutorial uses both C++-triggered snippet popups and map trap
-  messages.  Inventory every lesson trigger, continuation instruction, and
-  required action before deciding the interaction.
-- Keybinding tags are expanded before C++ tutorial lessons are displayed;
-  verify the same effective information for data-driven trap lessons.
-- Record tutorial exercises against their owning feature stages so this stage
-  does not silently duplicate inventory, crafting, construction, targeting, or
-  other feature work.
-- Before implementation, complete the required three-option interaction review
-  for lesson delivery, recovery, and progress awareness, then record the
-  selected behavior here.
-
-**Success criteria:** Tutorial launch and exit are announced; every lesson's
-semantic text and current continuation instruction can be recovered after it is
-closed or interrupted; repeated triggers do not flood speech; and an inventory
-maps every exercise to accessible existing behavior or a precise later stage.
-
-**Possible automated tests:** Use fixed lessons to capture launch, keybinding
-substitution, first delivery, deduplication, current-lesson recovery, transition
-to a new lesson, completion, save/exit warning, and return to the main menu.
-
-**Required human verification:** Launch the tutorial with NVDA, complete the
-introductory movement sequence, inspect representative C++ and trap lessons,
-recover interrupted instructions, exercise save/exit, and record the first
-inaccessible exercise together with its owning roadmap stage.
 
 ## Stage 03C - Help browser
 
@@ -1179,6 +1140,58 @@ panel changes, save/cancel, and return focus.
 
 **Required human verification:** Change and restore options, add/edit rules,
 configure panels, and confirm all value changes are announced.
+
+## Stage 03B - Complete tutorial acceptance
+
+**Outcome:** A blind player can complete the entire built-in tutorial with
+keyboard and NVDA, understand every lesson and continuation instruction, and
+leave or resume safely.  This stage follows the gameplay and interface stages
+because its exercises use their controls.
+
+**Code inventory:** tutorial launch in `src/main_menu.cpp`;
+`tutorial_game::init()`, `per_turn()`, `pre_action()`, `post_action()`, and
+`add_message()` in `src/gamemode_tutorial.cpp`; C++ lessons in
+`data/mods/dda_tutorial/snippets.json`; trap lessons and map structure in
+`data/mods/dda_tutorial/traps.json` and `mapgen.json`.  The preliminary trigger,
+continuation, and exercise inventory is in `doc/tutorial_lesson_inventory.md`.
+
+**Implementation hints:**
+
+- Current C++ and EOC lessons already speak their full popup text through the
+  shared popup path.  Reassess the actual NVDA experience after the exercised
+  controls are accessible, including interruption, repetition, and speech from
+  triggers that can fire again on reentry.
+- Recheck every lesson trigger, map route, continuation instruction, and required
+  action against the then-current game.  Update the inventory if upstream data
+  or integration points have changed.
+- Confirm that both C++ and EOC lessons expand keybinding tags and that their
+  spoken instructions match the current controls.  Correct misleading tutorial
+  data or accessibility gaps found during the full walkthrough.
+- If a new player-facing lesson interaction is needed, present three distinct
+  designs and record the selected behavior here before changing code.
+
+**Initial assessment:** The current data has 35 C++ snippet texts, of which 33
+have a trigger, and 14 EOC popup lessons on the tutorial map.  One additional
+trap sets pain without showing a lesson.  Several exercises rely on Stages
+06/06A, 08–12, and 13.  The bat pickup near the start depends on Stage 09.
+
+**Success criteria:** The entire tutorial route and every required exercise can
+be completed without a mouse or visual cues.  Lesson text, current instructions,
+feedback, and exit/save warnings are spoken accurately; interrupted information
+can be recovered; repeated triggers do not flood speech; and no lesson relies
+on a control or visual detail that remains inaccessible.  The final exercise
+and return to the main menu are verified.
+
+**Possible automated tests:** Use fixed lessons and map fixtures to capture
+launch, C++ and EOC delivery, keybinding substitution, repeat triggers,
+interruption recovery, transitions, completion, save/exit warning, and menu
+return.  Check that every referenced action and tutorial trap exists.
+
+**Required human verification:** A blind NVDA user plays the full tutorial from
+launch through the final room, completes every required exercise, checks both
+lesson sources and continuation guidance, deliberately interrupts speech and
+recovers the instructions, saves/exits, and confirms the menu return.  Record
+the tested Windows, NVDA, and fork versions and any remaining limitations.
 
 ## Stage 22 - Coverage and announcement-policy audit
 
