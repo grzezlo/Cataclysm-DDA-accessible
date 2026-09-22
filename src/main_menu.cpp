@@ -81,6 +81,9 @@ enum class main_menu_opts : int {
     NUM_MENU_OPTS,
 };
 
+static constexpr size_t motd_document = 0;
+static constexpr size_t credits_document = 1;
+
 std::string main_menu::queued_world_to_load;
 std::string main_menu::queued_save_id_to_load;
 
@@ -118,6 +121,18 @@ static std::vector<std::pair<std::string, int>> menu_document_lines( const std::
 void main_menu::on_move() const
 {
     sfx::play_variant_sound( "menu_move", "default", 100 );
+}
+
+int main_menu::current_text_line() const
+{
+    switch( static_cast<main_menu_opts>( sel1 ) ) {
+        case main_menu_opts::MOTD:
+            return text_cursors.position( motd_document );
+        case main_menu_opts::CREDITS:
+            return text_cursors.position( credits_document );
+        default:
+            return 0;
+    }
 }
 
 void main_menu::announce_selection( const bool include_menu_name, const bool include_tab,
@@ -172,11 +187,13 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
         }
         case main_menu_opts::MOTD:
             focused_item = mmenu_motd_lines.empty() ? _( "No message today." ) :
-                           mmenu_motd_lines[std::min<size_t>( sel_line, mmenu_motd_lines.size() - 1 )].first;
+                           mmenu_motd_lines[std::min<size_t>( current_text_line(),
+                                                              mmenu_motd_lines.size() - 1 )].first;
             break;
         case main_menu_opts::CREDITS:
             focused_item = mmenu_credits_lines.empty() ? _( "No credits information found." ) :
-                           mmenu_credits_lines[std::min<size_t>( sel_line, mmenu_credits_lines.size() - 1 )].first;
+                           mmenu_credits_lines[std::min<size_t>( current_text_line(),
+                                                                 mmenu_credits_lines.size() - 1 )].first;
             break;
         case main_menu_opts::TUTORIAL:
         case main_menu_opts::HELP:
@@ -537,6 +554,7 @@ void main_menu::init_windows()
 
 void main_menu::init_strings()
 {
+    text_cursors.reset();
     // ASCII Art
     mmenu_title = load_file( PATH_INFO::title( current_holiday ), _( "Cataclysm: Dark Days Ahead" ) );
     // MOTD
@@ -735,8 +753,6 @@ bool main_menu::opening_screen()
     avatar &player_character = get_avatar();
     player_character = avatar();
 
-    sel_line = 0;
-
     // Make [Load Game] the default cursor position if there's game save available
     if( !world_generator->get_all_worlds().empty() ) {
         std::vector<std::string> worlds = world_generator->all_worldnames();
@@ -752,7 +768,7 @@ bool main_menu::opening_screen()
 
     ui_adaptor ui;
     ui.on_redraw( [&]( const ui_adaptor & ) {
-        print_menu( w_open, sel1, menu_offset, sel_line );
+        print_menu( w_open, sel1, menu_offset, current_text_line() );
     } );
     ui.on_screen_resize( [this]( ui_adaptor & ui ) {
         init_windows();
@@ -794,7 +810,6 @@ bool main_menu::opening_screen()
                 if( sInput.text == hotkey && sel1 != i ) {
                     sel1 = i;
                     sel2 = i == getopt( main_menu_opts::LOADCHAR ) ? last_world_pos : 0;
-                    sel_line = 0;
                     if( i == getopt( main_menu_opts::HELP ) ) {
                         action = "CONFIRM";
                     } else if( i == getopt( main_menu_opts::QUIT ) ) {
@@ -840,7 +855,6 @@ bool main_menu::opening_screen()
                     if( sel1 != it.second ) {
                         sel1 = it.second;
                         sel2 = sel1 == getopt( main_menu_opts::LOADCHAR ) ? last_world_pos : 0;
-                        sel_line = 0;
                         on_move();
                         announce_selection( false, true );
                     }
@@ -865,7 +879,6 @@ bool main_menu::opening_screen()
                             sel1 = it.second.first;
                             sel2 = it.second.second;
                         }
-                        sel_line = 0;
                         if( action == "SELECT" ) {
                             action = "CONFIRM";
                         }
@@ -884,7 +897,6 @@ bool main_menu::opening_screen()
             }
 #endif
         } else if( action == "LEFT" || action == "PREV_TAB" || action == "RIGHT" || action == "NEXT_TAB" ) {
-            sel_line = 0;
             sel1 = inc_clamp_wrap( sel1, action == "RIGHT" || action == "NEXT_TAB",
                                    static_cast<int>( main_menu_opts::NUM_MENU_OPTS ) );
             sel2 = sel1 == getopt( main_menu_opts::LOADCHAR ) ? last_world_pos : 0;
@@ -901,14 +913,16 @@ bool main_menu::opening_screen()
                 case main_menu_opts::CREDITS: {
                     const auto &lines = opt == main_menu_opts::MOTD ? mmenu_motd_lines : mmenu_credits_lines;
                     if( !lines.empty() ) {
-                        const int previous = sel_line;
+                        const size_t document = opt == main_menu_opts::MOTD ? motd_document :
+                                                credits_document;
+                        const int previous = text_cursors.position( document );
                         const int step = action == "PAGE_UP" || action == "PAGE_DOWN" ? 10 : 1;
                         const bool backwards = action == "UP" || action == "PAGE_UP" ||
                                                action == "SCROLL_UP";
-                        sel_line = accessibility::move_document_cursor( sel_line,
-                                   static_cast<int>( lines.size() ), backwards ? -step : step );
-                        if( sel_line != previous ) {
-                            accessibility::announce( lines[sel_line].first );
+                        const int selected = text_cursors.move( document,
+                                                                static_cast<int>( lines.size() ), backwards ? -step : step );
+                        if( selected != previous ) {
+                            accessibility::announce( lines[selected].first );
                         }
                     }
                     break;

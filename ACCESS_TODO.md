@@ -33,8 +33,9 @@ hint, and current focus.  Give the tip and general hint their own visible,
 keyboard-reachable menu tab so they can be revisited.
 Entering MOTD or Credits announces the tab and its first source-text line;
 Up/Down moves through source lines, speaks the newly selected line, and scrolls
-the visible text to match.  Left/Right changes tabs, and returning from a child
-screen restores the current menu focus.  New Game focus announces its contextual
+the visible text to match.  Each document remembers its line when Left/Right
+changes tabs, and returning from a child screen restores the current menu focus.
+New Game focus announces its contextual
 hint; Load and World focus announces each world's name and save count.  Existing
 repeat-last remains available.  Do not add speech-specific wrapping of long
 source lines in this stage; assess that only if NVDA testing finds a problem.
@@ -72,7 +73,8 @@ a hint, world/save-count output, empty lists, MOTD and credits entry, long-text
 navigation, repeat-last, and return focus using fixed menu data.
 
 **Required human verification:** With NVDA, inspect every main-menu tab, read a
-tip, MOTD, and credits, review worlds with zero and multiple saves, interrupt and
+tip, MOTD, and credits, switch away from each document and back to confirm its
+reading position, review worlds with zero and multiple saves, interrupt and
 repeat long speech, and return from child screens without losing context.
 
 ## Stage 03B - Tutorial lesson access and assessment

@@ -75,6 +75,18 @@ struct semantic_document_line {
 std::vector<semantic_document_line> select_document_lines(
     const std::vector<std::string> &source_lines );
 int move_document_cursor( int current, int line_count, int delta );
+/** Retain independent reading positions when switching between documents. */
+class document_cursor_memory
+{
+    public:
+        explicit document_cursor_memory( size_t document_count );
+        int position( size_t document ) const;
+        int move( size_t document, int line_count, int delta );
+        void reset();
+
+    private:
+        std::vector<int> positions_;
+};
 std::string format_creature_attitude( const std::string &attitude );
 std::string format_creature_health( int current, int maximum );
 std::string format_nearby_list_entry( const nearby_list_entry &entry );

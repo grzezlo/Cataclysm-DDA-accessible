@@ -7,6 +7,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "enums.h"
@@ -57,6 +58,7 @@ class main_menu
         /** Announce the selected tab or submenu item through the accessibility service. */
         void announce_selection( bool include_menu_name, bool include_tab,
                                  bool include_screen_info = false ) const;
+        int current_text_line() const;
 
         // Play a sound *once* when an error occurs in the main menu or its tabs
         void on_error();
@@ -78,7 +80,7 @@ class main_menu
         input_context ctxt;
         int sel1 = 2;
         int sel2 = 1;
-        int sel_line = 0;
+        accessibility::document_cursor_memory text_cursors{ 2 };
         size_t last_world_pos = 0;
         int sub_opt_off = 0;
         point LAST_TERM;

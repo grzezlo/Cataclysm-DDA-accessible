@@ -285,6 +285,28 @@ int move_document_cursor( const int current, const int line_count, const int del
     return line_count <= 0 ? 0 : std::clamp( current + delta, 0, line_count - 1 );
 }
 
+document_cursor_memory::document_cursor_memory( const size_t document_count ) :
+    positions_( document_count, 0 )
+{
+}
+
+int document_cursor_memory::position( const size_t document ) const
+{
+    return positions_.at( document );
+}
+
+int document_cursor_memory::move( const size_t document, const int line_count, const int delta )
+{
+    int &position = positions_.at( document );
+    position = move_document_cursor( position, line_count, delta );
+    return position;
+}
+
+void document_cursor_memory::reset()
+{
+    std::fill( positions_.begin(), positions_.end(), 0 );
+}
+
 std::string format_creature_attitude( const std::string &attitude )
 {
     if( attitude.empty() ) {

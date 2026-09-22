@@ -261,6 +261,25 @@ TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibili
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "main_menu_documents_keep_independent_reading_positions", "[accessibility][nogame]" )
+{
+    accessibility::document_cursor_memory cursors( 2 );
+    CHECK( cursors.position( 0 ) == 0 );
+    CHECK( cursors.position( 1 ) == 0 );
+
+    CHECK( cursors.move( 0, 5, 1 ) == 1 );
+    CHECK( cursors.move( 0, 5, 1 ) == 2 );
+    CHECK( cursors.move( 1, 3, 1 ) == 1 );
+    CHECK( cursors.position( 0 ) == 2 );
+    CHECK( cursors.position( 1 ) == 1 );
+    CHECK( cursors.move( 0, 5, 1 ) == 3 );
+    CHECK( cursors.position( 1 ) == 1 );
+
+    cursors.reset();
+    CHECK( cursors.position( 0 ) == 0 );
+    CHECK( cursors.position( 1 ) == 0 );
+}
+
 TEST_CASE( "semantic_creature_status_descriptions_are_reusable", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_creature_attitude( "Hostile" ) == "Attitude: Hostile" );
