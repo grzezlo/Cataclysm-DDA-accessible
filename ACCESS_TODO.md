@@ -8,6 +8,7 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
+Stages 03A–03C close the remaining start-screen, tutorial, and help gaps.
 Stages 04–10 establish the minimum independent survival and combat loop.  Stages
 11–21A cover the major progression, management, and setup interfaces.  Stages
 22–23 are native release gates.  Stage 24 starts only after the native semantic
@@ -19,6 +20,122 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
+
+## Stage 03A - Main-menu information
+
+**Outcome:** All meaningful information presented directly on the main-menu
+screen, outside the already accessible menu focus, is available without relying
+on visual layout.
+
+**Code inventory:** `main_menu::print_menu()`, `display_sub_menu()`,
+`display_text()`, `announce_selection()`, and `init_strings()` in
+`src/main_menu.cpp`; title, MOTD, credits, tip, world, and save-count data loaded
+by those paths.
+
+**Implementation hints:**
+
+- The title and version are drawn by `main_menu::print_menu()` above the menu.
+- The selected new-game method has a contextual entry in `vNewGameHints`; other
+  tabs show the bug-report/MOTD hint.  The tip of the day is stored in `vdaytip`.
+- `display_text()` presents MOTD and credits as folded, scrollable text using a
+  viewport offset rather than a semantic text cursor.
+- Load and World visually show each world as `name (save count)`, while
+  `announce_selection()` currently speaks only the world name.
+- Seasonal title art is decorative unless it conveys information not available
+  elsewhere; do not read ASCII art line by line.
+- Before implementation, complete the required three-option interaction review
+  for concise screen context and long text, then record the selected keyboard,
+  focus, speech, detail, return, and visible-UI behavior in this stage.
+
+**Success criteria:** Version, contextual hints, tip of the day, MOTD, credits,
+world names, save counts, and meaningful empty/error states are independently
+available.  Long content can be reviewed and repeated without redraw flooding,
+and returning from a child screen restores accurate main-menu context.
+
+**Possible automated tests:** Capture initial context, focus changes that alter
+a hint, world/save-count output, empty lists, MOTD and credits entry, long-text
+navigation, repeat-last, and return focus using fixed menu data.
+
+**Required human verification:** With NVDA, inspect every main-menu tab, read a
+tip, MOTD, and credits, review worlds with zero and multiple saves, interrupt and
+repeat long speech, and return from child screens without losing context.
+
+## Stage 03B - Tutorial lesson access and assessment
+
+**Outcome:** A blind player can launch the tutorial, read and recover its lesson
+instructions, understand how to continue or leave, and identify any exercise
+whose underlying gameplay interface belongs to a later roadmap stage.
+
+**Code inventory:** tutorial launch in `src/main_menu.cpp`;
+`tutorial_game::init()`, `per_turn()`, `pre_action()`, `post_action()`, and
+`add_message()` in `src/gamemode_tutorial.cpp`; tutorial snippets in
+`data/mods/dda_tutorial/snippets.json`; triggered lessons and map structure in
+`data/mods/dda_tutorial/traps.json` and `mapgen.json`.
+
+**Implementation hints:**
+
+- The legacy tutorial uses both C++-triggered snippet popups and map trap
+  messages.  Inventory every lesson trigger, continuation instruction, and
+  required action before deciding the interaction.
+- Keybinding tags are expanded before C++ tutorial lessons are displayed;
+  verify the same effective information for data-driven trap lessons.
+- Record tutorial exercises against their owning feature stages so this stage
+  does not silently duplicate inventory, crafting, construction, targeting, or
+  other feature work.
+- Before implementation, complete the required three-option interaction review
+  for lesson delivery, recovery, and progress awareness, then record the
+  selected behavior here.
+
+**Success criteria:** Tutorial launch and exit are announced; every lesson's
+semantic text and current continuation instruction can be recovered after it is
+closed or interrupted; repeated triggers do not flood speech; and an inventory
+maps every exercise to accessible existing behavior or a precise later stage.
+
+**Possible automated tests:** Use fixed lessons to capture launch, keybinding
+substitution, first delivery, deduplication, current-lesson recovery, transition
+to a new lesson, completion, save/exit warning, and return to the main menu.
+
+**Required human verification:** Launch the tutorial with NVDA, complete the
+introductory movement sequence, inspect representative C++ and trap lessons,
+recover interrupted instructions, exercise save/exit, and record the first
+inaccessible exercise together with its owning roadmap stage.
+
+## Stage 03C - Help browser
+
+**Outcome:** The in-game Help browser and its topic documents can be navigated
+and read without relying on two-column placement, colors, or memorized hotkeys.
+
+**Code inventory:** `help::display_help()`, `draw_menu()`, dynamic keybinding and
+direction substitutions, and `scrollable_text()` use in `src/help.cpp`;
+`src/help.h`; help topics in `data/core/help.json`.
+
+**Implementation hints:**
+
+- The `DISPLAY_HELP` screen draws topics in two visual columns and assigns
+  runtime hotkeys.  Its existing keyboard path selects a topic by hotkey; mouse
+  hover provides the only persistent visual selection state.
+- Topic bodies are assembled after expanding note colors, direction diagrams,
+  action bindings, and translated text, then passed to `scrollable_text()`.
+- Add an Accessibility topic listing every accessibility action and its current
+  binding, while keeping keybinding editing in Stage 05.
+- Before implementation, complete the required three-option interaction review
+  for topic navigation and document reading, then record the selected behavior
+  here.
+
+**Success criteria:** Opening Help announces its purpose and controls.  A player
+can browse all topics, hear each topic and hotkey, open and navigate a document,
+understand expanded diagrams and bindings semantically, repeat content, and
+return first to the topic list and then to the originating screen.  The
+Accessibility topic exposes every accessibility action.
+
+**Possible automated tests:** Capture Help open, topic navigation across the
+visual column boundary, direct hotkeys, topic entry, expanded directions and
+bindings, document scrolling, repeat-last, topic return, and Help exit.
+
+**Required human verification:** With NVDA, enter Help from the main menu and
+gameplay, find topics by navigation and direct hotkey, read short and long
+documents, inspect the Accessibility topic, interrupt and recover speech, and
+verify both return paths.
 
 ## Stage 04A - Message log review
 
@@ -67,8 +184,8 @@ recovered by browsing history.
 screens depend on them, and accessibility commands can be discovered in-game.
 
 **Code inventory:** `src/uilist.cpp`, `src/popup.cpp`, `src/input_popup.cpp`,
-`src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`,
-`src/help.cpp`, `data/core/help.json`, and `data/raw/keybindings.json`.
+`src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`, and
+`data/raw/keybindings.json`.
 
 **Implementation hints:**
 
@@ -85,24 +202,21 @@ screens depend on them, and accessibility commands can be discovered in-game.
 - `iteminfo_window::execute()` in `src/ui_iteminfo.cpp` is a scrollable
   document viewer.  Announce the full text on open via
   `format_item_info()` in `src/output.cpp` with color tags removed.
-- Help: `src/help.cpp` and `data/core/help.json` define the help screen.
-  Add an `Accessibility` category listing all accessibility actions.
 - For keybinding discovery: `input_context` in `src/input_context.cpp`
   manages the keybinding UI invoked by `HELP_KEYBINDINGS`.
 
 **Success criteria:** Lists, disabled entries, yes/no prompts, text and numeric
 fields, quantity prompts, and scrolling detail announce label, role, value,
-state, bounds, errors, and focus return.  Help and keybinding interfaces contain
-an accessibility section and expose every accessibility action.  Intentionally
-hidden input remains private.
+state, bounds, errors, and focus return.  The keybinding interface exposes every
+accessibility action.  Intentionally hidden input remains private.
 
 **Possible automated tests:** Widget-level capture tests for entry, focus/value
 change, disabled reason, bounds, editing, accept/cancel, scrolling, and focus
-restoration; help/action-presence tests.
+restoration; keybinding action-presence tests.
 
 **Required human verification:** Exercise every control type, find and rebind
-each accessibility action, read its help, resolve a binding conflict, and confirm
-there are no silent controls or keyboard traps.
+each accessibility action, resolve a binding conflict, and confirm there are no
+silent controls or keyboard traps.
 
 ## Stage 06 - Inventory selector navigation and item information
 
@@ -1184,6 +1298,69 @@ restart; build and smoke-test Emscripten and Windows targets.
 23 acceptance journey in every declared supported browser/screen-reader pair.
 Record browser, screen reader, operating system, artifact versions, results, and
 limitations before claiming web accessibility.
+
+## Stage 25 - Accessible player guide and quick start
+
+**Outcome:** `access_guide.md` gives a blind player one reliable starting point
+for learning the fork's accessibility features and the basic gameplay loop.  A
+short, task-oriented quick start uses the opening of a standard evacuee game to
+show how to obtain information, make decisions, act, recover from mistakes, and
+continue playing without assuming prior Cataclysm knowledge.
+
+**Code inventory:** Create `access_guide.md`; link it from `README.md` and the
+packaged first-run documentation.  Verify every documented command and spoken
+behavior against `data/raw/keybindings.json`, the accessibility service and its
+game/UI integration points, and the completed-stage record in
+`ACCESS_DONE.md`.  Verify the quick-start scenario and optional guidance against
+`data/json/scenarios.json`, `data/core/help.json`, the evac-shelter map and
+computer data, and the Reach Refugee Center mission definition.  Record any
+additional source paths discovered while writing the guide.
+
+**Content requirements:**
+
+- Explain supported platform and screen-reader requirements, enabling or
+  detecting accessibility, keyboard discovery, announcement types, concise and
+  detailed information, repeat-last, speech interruption, saving, exiting,
+  known limitations, and where to report defects.
+- Describe the game as an open-ended survival sandbox.  Clearly distinguish
+  required mechanics from suggestions, optional missions, lore, and examples so
+  the guide does not imply a single mandatory route through the game.
+- Provide a concise quick start based on the standard evacuee start.  Walk the
+  player through understanding the initial situation, reviewing character and
+  status information, examining the shelter, finding and managing useful items,
+  reading the notice board or shelter computer, deciding whether to accept the
+  optional Refugee Center objective, leaving safely, handling nearby threats,
+  and saving the game.
+- For each step, state the goal, keyboard action or discoverable command, the
+  important speech feedback, and what success or a recoverable error sounds
+  like.  Avoid fixed keys where bindings may differ; give the action name and
+  explain how to discover its current binding.
+- Keep essential instructions in the main flow and place deeper command or
+  gameplay explanations in clearly named reference sections.  Use short
+  headings, lists, and plain language suitable for sequential screen-reader
+  reading.
+
+**Success criteria:** A new blind player can find the guide from the repository
+and packaged build, configure and verify NVDA output, discover rather than guess
+the relevant bindings, complete the documented shelter sequence, understand
+that the Refugee Center objective is optional, leave the shelter with basic
+supplies, respond to a visible threat, save, exit, and resume.  Every described
+announcement and accessibility feature matches the shipped build; the guide
+does not expose hidden gameplay information or depend on color, layout, symbols,
+screenshots, or mouse operation.
+
+**Possible automated tests:** Check internal links and referenced files; verify
+that named input actions exist in `data/raw/keybindings.json`; lint headings and
+required sections; detect undocumented literal key assumptions; and run the
+focused accessibility suite plus the documentation/package validation from
+Stage 23.
+
+**Required human verification:** A blind NVDA user unfamiliar with the guide
+follows it from a clean configuration without coaching, completes the quick
+start using keyboard input only, deliberately interrupts speech and uses
+repeat-last, recovers from at least one mistaken or cancelled action, saves,
+exits, and resumes.  Record confusing, missing, excessive, or inaccurate
+instructions and revise the guide before accepting the stage.
 
 ## Known blockers and required follow-up
 
