@@ -8,11 +8,10 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stage 03C closes the help gap.  Stages 04–10 establish the minimum independent
-survival and combat loop.  Stages 11–21A cover the major progression, management,
-and setup interfaces.  Stages 22, 22A, and 23 are native release gates: coverage,
-the complete tutorial, and packaging.  Stage 24 starts only after the native
-semantic model is stable.
+Stages 04A–10 establish the minimum independent survival and combat loop.  Stages 11–21A
+cover the major progression, management, and setup interfaces.  Stages 22, 22A, and 23
+are native release gates: coverage, the complete tutorial, and packaging.  Stage 24
+starts only after the native semantic model is stable.
 
 Unless a stage lists an exception, its automated gate includes
 `test_access.bat` and a successful `build_win_x64.bat`.  The human gate for
@@ -20,35 +19,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
-
-## Stage 03C - Help browser
-
-**Outcome:** The in-game Help browser and its topic documents can be navigated
-and read without relying on two-column placement, colors, or memorized hotkeys.
-
-**Code inventory:** `help::display_help()`, `draw_menu()`, dynamic keybinding and
-direction substitutions, and `scrollable_text()` use in `src/help.cpp`;
-`src/help.h`; help topics in `data/core/help.json`.
-
-**Selected interaction design:**
-- **Topic navigation:** Linear 1D cursor navigation across both visual columns using `Up` and `Down`. Opening Help announces its purpose, topic count, controls, and initial topic (`"Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction"`). `Up` and `Down` move sequentially through all topics, speaking hotkey and topic title (`"b: Movement"`). `Page Up` and `Page Down` jump by 5 topics. Direct hotkeys (`a`–`w`) jump to and open the topic. `Enter` opens the focused topic. `Alt+R` repeats the current topic announcement. `Escape` exits Help and restores focus to the originating caller.
-- **Document reader:** Reuses the Stage 03A document-reading model (`accessibility::move_document_cursor` and `accessibility::format_document_focus`). Opening a topic announces its title and first paragraph. `Down` and `Up` move between paragraphs and speak the paragraph text directly without index prefixes (matching MOTD/Credits). `Page Down` and `Page Up` jump by 3 paragraphs. `Alt+R` repeats the current paragraph. `Escape` or `Enter` returns to the topic list, preserving cursor position and announcing the returned topic.
-- **Diagrams and bindings:** `<HELP_DRAW_DIRECTIONS>` is expanded into a semantic compass description for speech, listing each direction and Pause with its bound primary and secondary keys. Keybinding tokens (`<press_action>`) are formatted as clean spoken key names without color tags.
-- **Scope adjustment:** The dedicated Accessibility help topic is deferred to the final stages (tutorial/release gate) as directed by the user.
-
-**Success criteria:** Opening Help announces its purpose and controls.  A player
-can browse all topics, hear each topic and hotkey, open and navigate a document,
-understand expanded diagrams and bindings semantically, repeat content, and
-return first to the topic list and then to the originating screen.
-
-**Possible automated tests:** Capture Help open, topic navigation across the
-visual column boundary, direct hotkeys, topic entry, expanded directions and
-bindings, document scrolling, repeat-last, topic return, and Help exit.
-
-**Required human verification:** With NVDA, enter Help from the main menu and
-gameplay, find topics by navigation and direct hotkey, read short and long
-documents, interrupt and recover speech with Alt+R, and verify both return
-paths.
 
 ## Stage 04A - Message log review
 

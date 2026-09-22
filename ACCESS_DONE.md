@@ -387,3 +387,39 @@ Limitations:
   separately reported in the acceptance message.  The user accepted closure
   with this verification record.
 - New source strings may remain in English until Stage 23 translation work.
+
+## 2026-09-23 — Stage 03C: Help browser
+
+- Implemented linear 1D topic list navigation across two visual columns using
+  Up/Down and Page Up/Page Down, announcing topic hotkey and title.
+- Preserved direct hotkey jumping and opening (`a`–`w`) and Enter activation.
+- Reused the renderer-independent document reader from Stage 03A for help
+  topics, reading text paragraph-by-paragraph with Up/Down and Page Up/Page Down
+  without paragraph index prefixes.
+- Replaced the visual ASCII compass rose (`<HELP_DRAW_DIRECTIONS>`) with a
+  semantic spoken description listing all compass directions and pause along with
+  their bound keys, including non-printable arrow keys (`UP`, `DOWN`, `LEFT`, `RIGHT`),
+  vi keys, and numpad keys.
+- Expanded keybinding tokens (`<press_action>`) to clean spoken key descriptions
+  without color markup.
+- Supported `Alt+R` (`ACCESSIBILITY_REPEAT_LAST`) for repeating topic focus and
+  paragraph text without interrupting or fighting screen-reader controls.
+- Preserved topic cursor position when returning from document reading to the
+  topic list, with clean return to the caller (main menu or gameplay) on Escape.
+- Added capture and formatter coverage for menu open, topic navigation across
+  columns, direct hotkeys, topic entry, document scrolling, direction bindings,
+  repeat-last, and return paths. `test_access.bat` passed with 234 assertions in
+  18 test cases; `build_win_x64.bat` succeeded; AStyle and `git diff --check`
+  were clean.
+- Tested Windows version: 25H2, build 26200.9457. NVDA version: 2026.1. Tested fork
+  version: `cdda-0.I-2026-09-10-0827-33-gd750c7070c` (commit
+  `d750c7070ce5182c93654ccd7c436b3b400eb918`). A blind user verified topic list
+  navigation, direct hotkeys, document paragraph reading, movement keys including
+  arrow keys, repeat-last, and return navigation with NVDA, and confirmed the stage.
+
+Limitations:
+
+- Dedicated Accessibility help topic is deferred to final stages (tutorial and
+  release gate) as directed by the user.
+- New source strings fall back to English if the translation catalog lacks
+  translations.
