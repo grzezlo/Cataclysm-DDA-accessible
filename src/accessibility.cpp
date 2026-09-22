@@ -187,24 +187,31 @@ bool announce_movement( const std::string &direction, const std::string &tile )
     return announce( message );
 }
 
-bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message )
+std::optional<std::string> evaluate_threat_transition(
+    const std::vector<std::string> &threat_ids, const std::string &message )
 {
     if( !game_messages_enabled() ) {
-        return false;
+        return std::nullopt;
     }
 
     const std::set<std::string> current_threats( threat_ids.begin(), threat_ids.end() );
     if( !threats_initialized() ) {
         threats_initialized() = true;
         previous_threats() = current_threats;
-        return current_threats.empty() ? false : announce( message );
+        return current_threats.empty() ? std::nullopt : std::optional<std::string>( message );
     }
     if( current_threats == previous_threats() ) {
-        return false;
+        return std::nullopt;
     }
 
     previous_threats() = current_threats;
-    return announce( message );
+    return message;
+}
+
+bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message )
+{
+    const std::optional<std::string> transition = evaluate_threat_transition( threat_ids, message );
+    return transition && announce( *transition );
 }
 
 std::string format_semantic_sequence( const std::vector<std::string> &parts )
@@ -362,8 +369,76 @@ condition_tracker &global_condition_tracker()
     return tracker;
 }
 
+std::string format_safe_mode_status( const safe_mode_state state, const bool auto_safe_mode,
+                                     const int turns_until_auto_safe )
+{
+    if( state == safe_mode_state::stopped ) {
+        return _( "Stopped by threat" );
+    }
+    if( state == safe_mode_state::on ) {
+        return _( "On" );
+    }
+    if( !auto_safe_mode ) {
+        return _( "Off" );
+    }
+    if( turns_until_auto_safe <= 0 ) {
+        return _( "Off; auto-safe pending" );
+    }
+    return string_format( n_gettext( "Off; auto-safe in %d turn",
+                                     "Off; auto-safe in %d turns",
+                                     turns_until_auto_safe ), turns_until_auto_safe );
+}
+
+std::vector<status_summary_entry> format_status_summary( const status_snapshot &snapshot )
+{
+    std::vector<status_summary_entry> entries;
+    entries.reserve( 7 );
+
+    std::string health = snapshot.health + ", " + snapshot.pain;
+    if( snapshot.bleeding ) {
+        health += ", ";
+        health += _( "Bleeding!" );
+    }
+    if( snapshot.broken_limb ) {
+        health += ", ";
+        health += _( "Broken limb!" );
+    }
+    entries.push_back( { _( "Health & Pain" ), health } );
+
+    entries.push_back( {
+        _( "Stamina & Condition" ),
+        string_format( _( "Stamina: %1$d%%, Focus: %2$d, %3$s: %4$s" ),
+                       snapshot.stamina_percent, snapshot.focus, _( "Weariness" ), snapshot.weariness )
+    } );
+    entries.push_back( {
+        _( "Needs" ),
+        string_format( _( "Hunger: %1$s, Thirst: %2$s, Sleepiness: %3$s" ),
+                       snapshot.hunger, snapshot.thirst, snapshot.sleepiness )
+    } );
+
+    std::string temperature = string_format( _( "Body: %1$s, Env: %2$s" ),
+                              snapshot.body_temperature, snapshot.environment_temperature );
+    if( snapshot.active_effect_count > 0 ) {
+        const int effect_count = static_cast<int>( snapshot.active_effect_count );
+        temperature += ", " + string_format(
+                           n_gettext( "%d effect", "%d effects", effect_count ), effect_count );
+    }
+    entries.push_back( { _( "Temperature & Effects" ), temperature } );
+    entries.push_back( { _( "Wielded weapon" ), snapshot.wielded_weapon } );
+    entries.push_back( {
+        _( "Movement & Safety" ),
+        string_format( _( "Mode: %1$s, Speed: %2$d, Safe mode: %3$s" ),
+                       snapshot.movement_mode, snapshot.speed, snapshot.safe_mode )
+    } );
+    entries.push_back( {
+        _( "Time & Environment" ),
+        string_format( _( "%1$s, %2$s, %3$s" ), snapshot.time, snapshot.date, snapshot.weather )
+    } );
+    return entries;
+}
+
 std::vector<std::string> evaluate_condition_transitions( condition_tracker &tracker,
-                                                         const condition_tracker &current )
+        const condition_tracker &current )
 {
     if( !tracker.initialized ) {
         tracker = current;
@@ -423,6 +498,11 @@ std::vector<std::string> evaluate_condition_transitions( condition_tracker &trac
     return alerts;
 }
 
+std::vector<std::string> evaluate_condition_transitions( const condition_tracker &current )
+{
+    return evaluate_condition_transitions( global_condition_tracker(), current );
+}
+
 bool announce_condition_transitions( condition_tracker &tracker,
                                      const condition_tracker &current )
 {
@@ -440,17 +520,22 @@ void reset_condition_tracker()
 
 bool check_and_announce_condition_transitions( const condition_tracker &current )
 {
-    return announce_condition_transitions( global_condition_tracker(), current );
+    return announce_semantic_sequence( evaluate_condition_transitions( current ) );
+}
+
+void reset_game_state()
+{
+    previous_threats().clear();
+    threats_initialized() = false;
+    previous_movement_direction().clear();
+    reset_condition_tracker();
 }
 
 void set_backend_for_testing( std::unique_ptr<backend> replacement )
 {
     active_backend() = replacement ? std::move( replacement ) : std::make_unique<null_backend>();
     last_message().clear();
-    previous_threats().clear();
-    threats_initialized() = false;
-    previous_movement_direction().clear();
-    reset_condition_tracker();
+    reset_game_state();
 }
 
 void reset_backend_after_testing()
@@ -458,10 +543,7 @@ void reset_backend_after_testing()
     active_backend() = make_platform_backend();
     last_message().clear();
     game_messages_enabled() = false;
-    previous_threats().clear();
-    threats_initialized() = false;
-    previous_movement_direction().clear();
-    reset_condition_tracker();
+    reset_game_state();
 }
 
 } // namespace accessibility

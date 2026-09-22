@@ -3,6 +3,7 @@
 #define CATA_SRC_ACCESSIBILITY_H
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -55,6 +56,9 @@ bool announce_focus( const std::string &label, const std::string &context = {} )
 bool announce_status( const std::string &message );
 bool announce_game_message( const std::string &message );
 bool announce_movement( const std::string &direction, const std::string &tile );
+/** Update visible-threat state and return an announcement only when it changed. */
+std::optional<std::string> evaluate_threat_transition(
+    const std::vector<std::string> &threat_ids, const std::string &message );
 bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
 bool announce_semantic_sequence( const std::vector<std::string> &parts );
@@ -89,10 +93,53 @@ struct condition_tracker {
     bool initialized = false;
 };
 
+enum class safe_mode_state {
+    off,
+    on,
+    stopped
+};
+
+/** Semantic safe-mode state, including information otherwise conveyed only by color. */
+std::string format_safe_mode_status( safe_mode_state state, bool auto_safe_mode,
+                                     int turns_until_auto_safe );
+
+struct status_snapshot {
+    std::string health;
+    std::string pain;
+    bool bleeding = false;
+    bool broken_limb = false;
+    int stamina_percent = 0;
+    int focus = 0;
+    std::string weariness;
+    std::string hunger;
+    std::string thirst;
+    std::string sleepiness;
+    std::string body_temperature;
+    std::string environment_temperature;
+    size_t active_effect_count = 0;
+    std::string wielded_weapon;
+    std::string movement_mode;
+    int speed = 0;
+    std::string safe_mode;
+    std::string time;
+    std::string date;
+    std::string weather;
+};
+
+struct status_summary_entry {
+    std::string label;
+    std::string value;
+};
+
+/** Format the seven concise status-review categories from a fixed semantic snapshot. */
+std::vector<status_summary_entry> format_status_summary( const status_snapshot &snapshot );
+
 /** Evaluate condition transitions between previous and current states.
  *  Returns transition announcements (if any) and updates `tracker`. */
 std::vector<std::string> evaluate_condition_transitions( condition_tracker &tracker,
-                                                         const condition_tracker &current );
+        const condition_tracker &current );
+/** Evaluate transitions against the process-wide gameplay tracker. */
+std::vector<std::string> evaluate_condition_transitions( const condition_tracker &current );
 /** Announce urgent condition transitions via the active backend if any occurred. */
 bool announce_condition_transitions( condition_tracker &tracker,
                                      const condition_tracker &current );
@@ -100,6 +147,8 @@ bool announce_condition_transitions( condition_tracker &tracker,
 void reset_condition_tracker();
 /** Check against the global condition tracker and announce any urgent transitions. */
 bool check_and_announce_condition_transitions( const condition_tracker &current );
+/** Reset transient accessibility state when starting or loading a game. */
+void reset_game_state();
 
 void enable_game_messages( bool enabled );
 

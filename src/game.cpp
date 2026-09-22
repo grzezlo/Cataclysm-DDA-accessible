@@ -1182,6 +1182,7 @@ bool game::start_game()
         debug_menu::do_debug_quick_setup();
         add_msg( m_good, _( "Debug character detected.  Quick setup applied, good luck on the testing!" ) );
     }
+    accessibility::reset_game_state();
     accessibility::enable_game_messages( true );
     accessibility::announce_status( _( "Welcome!" ) + std::string( " " ) + u.name + ". " +
                                     string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
@@ -3405,6 +3406,7 @@ bool game::load( const save_t &name )
     }
 
     loading_ui::done();
+    accessibility::reset_game_state();
     accessibility::enable_game_messages( true );
     accessibility::announce_status( _( "Welcome back." ) + std::string( " " ) + u.name + ". " +
                                     string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
@@ -4879,8 +4881,15 @@ void game::mon_info_update( )
                                             _( "Nothing" ) :
                                             string_format( _( "%s spotted!" ),
                                                     enumerate_as_string( threat_descriptions ) );
-    accessibility::announce_threats( threat_ids, threat_announcement );
-    check_condition_transitions();
+    std::vector<std::string> accessibility_alerts;
+    if( const std::optional<std::string> threat_transition =
+            accessibility::evaluate_threat_transition( threat_ids, threat_announcement ) ) {
+        accessibility_alerts.push_back( *threat_transition );
+    }
+    std::vector<std::string> condition_alerts = check_condition_transitions();
+    accessibility_alerts.insert( accessibility_alerts.end(), condition_alerts.begin(),
+                                 condition_alerts.end() );
+    accessibility::announce_semantic_sequence( accessibility_alerts );
 
     if( uistate.distraction_hostile_spotted && newseen > mostseen ) {
         if( newseen - mostseen == 1 ) {
@@ -9083,19 +9092,25 @@ static std::string semantic_sleepiness_text( const Character &u )
     return text.empty() ? _( "Rested" ) : text;
 }
 
+static std::string semantic_pain_text( const Character &u )
+{
+    const std::string text = display::pain_text_color( u ).first;
+    return text.empty() ? _( "No pain" ) : text;
+}
+
 static std::string semantic_env_temp_text( const Character &u )
 {
     const std::string temp = display::get_temp( u );
     return temp == "-" ? _( "Unknown" ) : temp;
 }
 
-void game::check_condition_transitions()
+std::vector<std::string> game::check_condition_transitions()
 {
     accessibility::condition_tracker current;
     current.hunger_tier = semantic_hunger_text( u );
     current.thirst_tier = semantic_thirst_text( u );
     current.sleepiness_tier = semantic_sleepiness_text( u );
-    current.pain_tier = display::pain_text_color( u ).first;
+    current.pain_tier = semantic_pain_text( u );
     current.weariness_tier = display::weariness_text_color( u ).first;
 
     const int stam_max = u.get_stamina_max();
@@ -9110,7 +9125,7 @@ void game::check_condition_transitions()
         }
     }
 
-    accessibility::check_and_announce_condition_transitions( current );
+    return accessibility::evaluate_condition_transitions( current );
 }
 
 void game::accessibility_status_review()
@@ -9137,9 +9152,9 @@ void game::accessibility_status_review()
                                     _( "Up/Down: navigate. Enter: view details. Escape: return to game. %s: repeat." ),
                                     repeat_desc );
 
-        // 1. Health & Pain
-        std::string health_summary = display::health_text_color( u ).first + ", " +
-                                     display::pain_text_color( u ).first;
+        accessibility::status_snapshot snapshot;
+        snapshot.health = display::health_text_color( u ).first;
+        snapshot.pain = semantic_pain_text( u );
         bool has_bleeding = false;
         bool has_broken = false;
         for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
@@ -9150,82 +9165,52 @@ void game::accessibility_status_review()
                 has_broken = true;
             }
         }
-        if( has_bleeding ) {
-            health_summary += ", ";
-            health_summary += _( "Bleeding!" );
-        }
-        if( has_broken ) {
-            health_summary += ", ";
-            health_summary += _( "Broken limb!" );
-        }
-        main_menu.addentry_col( static_cast<int>( status_category::health ), true, std::nullopt,
-                               _( "Health & Pain" ), health_summary );
+        snapshot.bleeding = has_bleeding;
+        snapshot.broken_limb = has_broken;
 
-        // 2. Stamina & Condition
         const int stam_max = u.get_stamina_max();
         const int stam_pct = stam_max > 0 ? ( u.get_stamina() * 100 ) / stam_max : 0;
-        const std::string stamina_summary = string_format(
-                                                _( "Stamina: %1$d%%, Focus: %2$d, %3$s: %4$s" ),
-                                                stam_pct, u.get_focus(), _( "Weariness" ),
-                                                display::weariness_text_color( u ).first );
-        main_menu.addentry_col( static_cast<int>( status_category::stamina_condition ), true, std::nullopt,
-                               _( "Stamina & Condition" ), stamina_summary );
-
-        // 3. Needs
-        const std::string needs_summary = string_format(
-                                              _( "Hunger: %1$s, Thirst: %2$s, Sleepiness: %3$s" ),
-                                              semantic_hunger_text( u ),
-                                              semantic_thirst_text( u ),
-                                              semantic_sleepiness_text( u ) );
-        main_menu.addentry_col( static_cast<int>( status_category::needs ), true, std::nullopt,
-                               _( "Needs" ), needs_summary );
-
-        // 4. Temperature & Effects
-        const std::string env_temp_str = semantic_env_temp_text( u );
-        std::string temp_summary = string_format(
-                                       _( "Body: %1$s, Env: %2$s" ),
-                                       display::temp_text_color( u ).first,
-                                       env_temp_str );
-        size_t active_effect_count = 0;
+        snapshot.stamina_percent = stam_pct;
+        snapshot.focus = u.get_focus();
+        snapshot.weariness = display::weariness_text_color( u ).first;
+        snapshot.hunger = semantic_hunger_text( u );
+        snapshot.thirst = semantic_thirst_text( u );
+        snapshot.sleepiness = semantic_sleepiness_text( u );
+        snapshot.body_temperature = display::temp_text_color( u ).first;
+        snapshot.environment_temperature = semantic_env_temp_text( u );
         for( const effect &eff : u.get_effects() ) {
             if( !eff.disp_name().empty() ) {
-                active_effect_count++;
+                snapshot.active_effect_count++;
             }
         }
-        if( active_effect_count > 0 ) {
-            temp_summary += ", " + string_format(
-                                n_gettext( "%d effect", "%d effects", active_effect_count ),
-                                active_effect_count );
+        snapshot.wielded_weapon = u.weapname();
+        snapshot.movement_mode = u.current_movement_mode()->name();
+        snapshot.speed = u.get_speed();
+
+        accessibility::safe_mode_state semantic_safe_mode = accessibility::safe_mode_state::off;
+        if( safe_mode == SAFE_MODE_ON ) {
+            semantic_safe_mode = accessibility::safe_mode_state::on;
+        } else if( safe_mode == SAFE_MODE_STOP ) {
+            semantic_safe_mode = accessibility::safe_mode_state::stopped;
         }
-        main_menu.addentry_col( static_cast<int>( status_category::temperature_effects ), true, std::nullopt,
-                               _( "Temperature & Effects" ), temp_summary );
-
-        // 5. Wielded Weapon & Ammo
-        std::string weapon_summary = u.weapname();
-        const std::string ammo_str = u.weapname_ammo();
-        if( !ammo_str.empty() ) {
-            weapon_summary += " (" + ammo_str + ")";
+        const bool auto_safe_mode = get_option<bool>( "AUTOSAFEMODE" );
+        int turns_until_auto_safe = 0;
+        if( auto_safe_mode && safe_mode == SAFE_MODE_OFF ) {
+            turns_until_auto_safe = std::max( 0, get_option<int>( "AUTOSAFEMODETURNS" ) -
+                                              to_turns<int>( turnssincelastmon ) );
         }
-        main_menu.addentry_col( static_cast<int>( status_category::wielded_weapon ), true, std::nullopt,
-                               _( "Wielded weapon" ), weapon_summary );
+        snapshot.safe_mode = accessibility::format_safe_mode_status(
+                                 semantic_safe_mode, auto_safe_mode, turns_until_auto_safe );
+        snapshot.time = display::time_string( u );
+        snapshot.date = display::date_string();
+        snapshot.weather = display::weather_text_color( u ).first;
 
-        // 6. Movement & Safety
-        const std::string move_summary = string_format(
-                                             _( "Mode: %1$s, Speed: %2$d, %3$s" ),
-                                             u.current_movement_mode()->name(),
-                                             u.get_speed(),
-                                             display::safe_mode_text_color( false ).first );
-        main_menu.addentry_col( static_cast<int>( status_category::movement_safety ), true, std::nullopt,
-                               _( "Movement & Safety" ), move_summary );
-
-        // 7. Time & Environment
-        const std::string env_summary = string_format(
-                                            _( "%1$s, %2$s, %3$s" ),
-                                            display::time_string( u ),
-                                            display::date_string(),
-                                            display::weather_text_color( u ).first );
-        main_menu.addentry_col( static_cast<int>( status_category::time_environment ), true, std::nullopt,
-                               _( "Time & Environment" ), env_summary );
+        const std::vector<accessibility::status_summary_entry> summaries =
+            accessibility::format_status_summary( snapshot );
+        for( size_t index = 0; index < summaries.size(); ++index ) {
+            main_menu.addentry_col( static_cast<int>( index ), true, std::nullopt,
+                                    summaries[index].label, summaries[index].value );
+        }
 
         main_menu.selected = selected;
         main_menu.query();
@@ -9277,7 +9262,8 @@ void game::accessibility_status_review()
                 detail_menu.addentry_col( idx++, true, std::nullopt,
                                           _( "Pain" ),
                                           string_format( _( "%1$s (level %2$d)" ),
-                                                         display::pain_text_color( u ).first, u.get_pain() ) );
+                                                  semantic_pain_text( u ),
+                                                  u.get_perceived_pain() ) );
                 break;
             }
             case status_category::stamina_condition: {
@@ -9285,7 +9271,7 @@ void game::accessibility_status_review()
                 detail_menu.addentry_col( 0, true, std::nullopt,
                                           _( "Stamina" ),
                                           string_format( _( "%1$d / %2$d (%3$d%%)" ),
-                                                         u.get_stamina(), stam_max, stam_pct ) );
+                                                  u.get_stamina(), stam_max, stam_pct ) );
                 detail_menu.addentry_col( 1, true, std::nullopt,
                                           _( "Focus" ), std::to_string( u.get_focus() ) );
                 detail_menu.addentry_col( 2, true, std::nullopt,
@@ -9329,7 +9315,7 @@ void game::accessibility_status_review()
             case status_category::wielded_weapon: {
                 detail_menu.title = _( "Wielded weapon details" );
                 detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Wielded item" ), u.weapname() );
+                                          _( "Wielded item" ), u.weapname_simple() );
                 detail_menu.addentry_col( 1, true, std::nullopt,
                                           _( "Ammunition" ),
                                           u.weapname_ammo().empty() ? _( "None" ) : u.weapname_ammo() );
@@ -9350,7 +9336,7 @@ void game::accessibility_status_review()
                 detail_menu.addentry_col( 2, true, std::nullopt,
                                           _( "Move counter & mode" ), display::move_count_and_mode_text_color( u ).first );
                 detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Safe mode" ), display::safe_mode_text_color( false ).first );
+                                          _( "Safe mode" ), snapshot.safe_mode );
                 break;
             }
             case status_category::time_environment: {

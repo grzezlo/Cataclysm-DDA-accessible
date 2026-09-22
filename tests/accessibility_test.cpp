@@ -460,3 +460,125 @@ TEST_CASE( "condition_transitions_detection", "[accessibility][nogame]" )
 
     accessibility::reset_backend_after_testing();
 }
+
+TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    accessibility::reset_game_state();
+
+    accessibility::condition_tracker normal;
+    normal.hunger_tier = "Satisfied";
+    normal.thirst_tier = "Hydrated";
+    normal.sleepiness_tier = "Rested";
+    normal.pain_tier = "No pain";
+    normal.weariness_tier = "Fresh";
+
+    CHECK_FALSE( accessibility::evaluate_threat_transition( {}, "Nothing" ) );
+    CHECK( accessibility::evaluate_condition_transitions( normal ).empty() );
+
+    const std::optional<std::string> threat = accessibility::evaluate_threat_transition(
+    { "monster-1" }, "Zombie spotted!" );
+    REQUIRE( threat );
+
+    accessibility::condition_tracker hungry = normal;
+    hungry.hunger_tier = "Hungry";
+    std::vector<std::string> alerts = { *threat };
+    const std::vector<std::string> condition_alerts =
+        accessibility::evaluate_condition_transitions( hungry );
+    alerts.insert( alerts.end(), condition_alerts.begin(), condition_alerts.end() );
+
+    REQUIRE( accessibility::announce_semantic_sequence( alerts ) );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages[0] == "Zombie spotted! Hunger: Hungry." );
+    CHECK( accessibility::last_announcement() == capture_ptr->messages[0] );
+
+    accessibility::reset_game_state();
+    CHECK( accessibility::evaluate_condition_transitions( hungry ).empty() );
+    CHECK( accessibility::evaluate_threat_transition( { "monster-1" }, "Zombie spotted!" ) );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "accessible_status_summary_formats_semantic_state", "[accessibility][nogame]" )
+{
+    accessibility::status_snapshot healthy;
+    healthy.health = "Feel Fine";
+    healthy.pain = "No pain";
+    healthy.stamina_percent = 100;
+    healthy.focus = 100;
+    healthy.weariness = "Fresh";
+    healthy.hunger = "Satisfied";
+    healthy.thirst = "Hydrated";
+    healthy.sleepiness = "Rested";
+    healthy.body_temperature = "Comfortable";
+    healthy.environment_temperature = "21 C";
+    healthy.wielded_weapon = "fists";
+    healthy.movement_mode = "Walking";
+    healthy.speed = 100;
+    healthy.safe_mode = accessibility::format_safe_mode_status(
+                            accessibility::safe_mode_state::on, true, 0 );
+    healthy.time = "08:00";
+    healthy.date = "Spring, day 1";
+    healthy.weather = "Clear";
+
+    const std::vector<accessibility::status_summary_entry> healthy_entries =
+        accessibility::format_status_summary( healthy );
+    REQUIRE( healthy_entries.size() == 7 );
+    CHECK( healthy_entries[0].value == "Feel Fine, No pain" );
+    CHECK( healthy_entries[3].value == "Body: Comfortable, Env: 21 C" );
+    CHECK( healthy_entries[4].value == "fists" );
+    CHECK( healthy_entries[5].value == "Mode: Walking, Speed: 100, Safe mode: On" );
+
+    accessibility::status_snapshot snapshot;
+    snapshot.health = "Feel Fine";
+    snapshot.pain = "Moderate pain";
+    snapshot.bleeding = true;
+    snapshot.broken_limb = true;
+    snapshot.stamina_percent = 24;
+    snapshot.focus = 87;
+    snapshot.weariness = "Weary";
+    snapshot.hunger = "Hungry";
+    snapshot.thirst = "Dehydrated";
+    snapshot.sleepiness = "Tired";
+    snapshot.body_temperature = "Chilly";
+    snapshot.environment_temperature = "3 C";
+    snapshot.active_effect_count = 2;
+    snapshot.wielded_weapon = "Glock 19 (7/15)";
+    snapshot.movement_mode = "Walking";
+    snapshot.speed = 95;
+    snapshot.safe_mode = accessibility::format_safe_mode_status(
+                             accessibility::safe_mode_state::off, true, 12 );
+    snapshot.time = "08:15";
+    snapshot.date = "Spring, day 3";
+    snapshot.weather = "Clear";
+
+    const std::vector<accessibility::status_summary_entry> entries =
+        accessibility::format_status_summary( snapshot );
+
+    REQUIRE( entries.size() == 7 );
+    CHECK( entries[0].label == "Health & Pain" );
+    CHECK( entries[0].value ==
+           "Feel Fine, Moderate pain, Bleeding!, Broken limb!" );
+    CHECK( entries[1].value == "Stamina: 24%, Focus: 87, Weariness: Weary" );
+    CHECK( entries[2].value == "Hunger: Hungry, Thirst: Dehydrated, Sleepiness: Tired" );
+    CHECK( entries[3].value == "Body: Chilly, Env: 3 C, 2 effects" );
+    CHECK( entries[4].value == "Glock 19 (7/15)" );
+    CHECK( entries[5].value ==
+           "Mode: Walking, Speed: 95, Safe mode: Off; auto-safe in 12 turns" );
+    CHECK( entries[6].value == "08:15, Spring, day 3, Clear" );
+
+    CHECK( accessibility::format_safe_mode_status(
+               accessibility::safe_mode_state::on, true, 0 ) == "On" );
+    CHECK( accessibility::format_safe_mode_status(
+               accessibility::safe_mode_state::stopped, true, 0 ) == "Stopped by threat" );
+    CHECK( accessibility::format_safe_mode_status(
+               accessibility::safe_mode_state::off, false, 0 ) == "Off" );
+    CHECK( accessibility::format_safe_mode_status(
+               accessibility::safe_mode_state::off, true, 0 ) == "Off; auto-safe pending" );
+    CHECK( accessibility::format_safe_mode_status(
+               accessibility::safe_mode_state::off, true, 1 ) == "Off; auto-safe in 1 turn" );
+}

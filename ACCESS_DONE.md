@@ -327,41 +327,32 @@ Limitations:
 
 ## 2026-09-22 — Stage 04: Player condition and gameplay status
 
-- Added on-demand accessible status review via `Alt+S` (`ACTION_ACCESSIBILITY_STATUS`),
-  registered in `DEFAULTMODE` and exposed in the in-game accessibility action menu.
-- Implemented `game::accessibility_status_review()` presenting a 7-category
-  navigable status menu:
-  - Health & Pain (lifestyle health, pain rating, bleeding and broken limb alerts).
-  - Stamina & Condition (stamina percentage, focus score, explicitly labeled
-    weariness level).
-  - Needs (hunger, thirst, sleepiness with semantic fallbacks for baseline
-    conditions).
-  - Temperature & Effects (body temperature feel, environment temperature with
-    fallback for missing thermometer, active effect count).
-  - Wielded weapon (weapon name, ammunition, attack mode, martial arts style).
-  - Movement & Safety (movement mode, speed, move counter, safe mode).
-  - Time & Environment (time, date, weather, wind, time of day).
-- Implemented detailed submenus on `Enter` drill-down for each category, reporting
-  per-limb HP, bleeding intensity, broken/splinted/bitten/infected states, full
-  active effect descriptions, exact ammunition, and movement details.
-- Added semantic text fallbacks for needs (`Satisfied`, `Hydrated`, `Rested`, and
-  `Unknown` for temperature) so no colons are followed by empty strings when
-  screen-reader punctuation reading is disabled.
-- Implemented `game::check_condition_transitions()` and
-  `accessibility::evaluate_condition_transitions()` checking condition metrics
-  each turn before player input to announce urgent transitions once without
-  routine speech flooding (bleeding start/stop per limb, broken limbs, critical
-  stamina drops, hunger/thirst/sleepiness/pain/weariness tier changes).
-- Extended automated Catch2 tests in `tests/accessibility_test.cpp` to verify
-  `Alt+S`, `AltGr+S`, and pure `s` key event handling, as well as condition
-  transition detection, edge cases, and capture backend delivery (137 assertions
-  in 12 test cases passed).
-- Built the Windows x64 test executable and Release tiles executable
-  successfully.
-- A blind user confirmed the interaction with NVDA 2026.1 on Windows 25H2,
-  build 26200.9457.  Verification confirmed keyboard navigation, drill-down
-  submenus, clear Polish labels (`Znużenie`, `Najedzenie`, `Nawodnienie`,
-  `Wyspanie`), repeat-last, and return to gameplay.
+- Added the `Alt+S` status review with seven concise categories and navigable
+  detail lists for health and perceived pain, stamina and weariness, needs,
+  temperature and effects, wielded weapon, movement and safety, and time and
+  environment.
+- Kept semantic extraction renderer-independent by formatting concise status
+  snapshots, safe-mode state, threat transitions, and condition transitions in
+  the accessibility service.
+- Added automatic threshold announcements for bleeding, broken limbs, critical
+  stamina, pain, hunger, thirst, sleepiness, and weariness.  A simultaneous
+  visible-threat change and condition change are combined into one announcement
+  so NVDA and repeat-last preserve the complete warning.
+- Reset transient threat, movement, and condition state when starting or loading
+  a character, preventing announcements inherited from a previous game.
+- Reported perceived rather than underlying pain, removed duplicated weapon
+  mode/ammunition, and exposed auto-safe countdown and threat-stop state as text
+  rather than color alone.
+- Added capture and fixed-snapshot coverage for bindings, healthy and adverse
+  status, armed and unarmed state, safe/auto-safe/threat-stop text, transition
+  deduplication, session reset, combined urgent delivery, and repeat-last.
+- `test_access.bat` passed with 165 assertions in 14 test cases.  The Windows x64
+  Release tiles build completed successfully with `build_win_x64.bat`; AStyle
+  and `git diff --check` were clean.
+- A blind user confirmed the corrected interaction works with NVDA 2026.1 on
+  Windows 25H2 build 26200.9457, including the updated speech behavior.  Tested
+  source state: base commit `faf61e82e911fe9467c514646f92c2b0e748b3c9`
+  plus stable source patch ID `4791db52fc98911f3265df5cc4a7a22dd9672f72`.
 
 Limitations:
 
