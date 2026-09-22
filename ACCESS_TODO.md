@@ -30,24 +30,16 @@ and read without relying on two-column placement, colors, or memorized hotkeys.
 direction substitutions, and `scrollable_text()` use in `src/help.cpp`;
 `src/help.h`; help topics in `data/core/help.json`.
 
-**Implementation hints:**
-
-- The `DISPLAY_HELP` screen draws topics in two visual columns and assigns
-  runtime hotkeys.  Its existing keyboard path selects a topic by hotkey; mouse
-  hover provides the only persistent visual selection state.
-- Topic bodies are assembled after expanding note colors, direction diagrams,
-  action bindings, and translated text, then passed to `scrollable_text()`.
-- Add an Accessibility topic listing every accessibility action and its current
-  binding, while keeping keybinding editing in Stage 05.
-- Before implementation, complete the required three-option interaction review
-  for topic navigation and document reading, then record the selected behavior
-  here.
+**Selected interaction design:**
+- **Topic navigation:** Linear 1D cursor navigation across both visual columns using `Up` and `Down`. Opening Help announces its purpose, topic count, controls, and initial topic (`"Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction"`). `Up` and `Down` move sequentially through all topics, speaking hotkey and topic title (`"b: Movement"`). `Page Up` and `Page Down` jump by 5 topics. Direct hotkeys (`a`–`w`) jump to and open the topic. `Enter` opens the focused topic. `Alt+R` repeats the current topic announcement. `Escape` exits Help and restores focus to the originating caller.
+- **Document reader:** Reuses the Stage 03A document-reading model (`accessibility::move_document_cursor` and `accessibility::format_document_focus`). Opening a topic announces its title and first paragraph. `Down` and `Up` move between paragraphs and speak the paragraph text directly without index prefixes (matching MOTD/Credits). `Page Down` and `Page Up` jump by 3 paragraphs. `Alt+R` repeats the current paragraph. `Escape` or `Enter` returns to the topic list, preserving cursor position and announcing the returned topic.
+- **Diagrams and bindings:** `<HELP_DRAW_DIRECTIONS>` is expanded into a semantic compass description for speech, listing each direction and Pause with its bound primary and secondary keys. Keybinding tokens (`<press_action>`) are formatted as clean spoken key names without color tags.
+- **Scope adjustment:** The dedicated Accessibility help topic is deferred to the final stages (tutorial/release gate) as directed by the user.
 
 **Success criteria:** Opening Help announces its purpose and controls.  A player
 can browse all topics, hear each topic and hotkey, open and navigate a document,
 understand expanded diagrams and bindings semantically, repeat content, and
-return first to the topic list and then to the originating screen.  The
-Accessibility topic exposes every accessibility action.
+return first to the topic list and then to the originating screen.
 
 **Possible automated tests:** Capture Help open, topic navigation across the
 visual column boundary, direct hotkeys, topic entry, expanded directions and
@@ -55,8 +47,8 @@ bindings, document scrolling, repeat-last, topic return, and Help exit.
 
 **Required human verification:** With NVDA, enter Help from the main menu and
 gameplay, find topics by navigation and direct hotkey, read short and long
-documents, inspect the Accessibility topic, interrupt and recover speech, and
-verify both return paths.
+documents, interrupt and recover speech with Alt+R, and verify both return
+paths.
 
 ## Stage 04A - Message log review
 

@@ -666,3 +666,115 @@ TEST_CASE( "accessible_status_summary_formats_semantic_state", "[accessibility][
     CHECK( accessibility::format_safe_mode_status(
                accessibility::safe_mode_state::off, true, 1 ) == "Off; auto-safe in 1 turn" );
 }
+
+TEST_CASE( "help_topic_and_document_formatting", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_help_menu_open( 23, "a", "Introduction" ) ==
+           "Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction" );
+    CHECK( accessibility::format_help_menu_open( 0, "", "" ) ==
+           "Help. 0 topics. Escape to exit." );
+
+    CHECK( accessibility::format_help_topic_focus( "b", "Movement" ) == "b: Movement" );
+    CHECK( accessibility::format_help_topic_focus( "", "Movement" ) == "Movement" );
+    CHECK( accessibility::format_help_topic_focus( "b", "" ) == "b" );
+
+    CHECK( accessibility::format_document_focus( "Movement", "First paragraph" ) ==
+           "Movement. First paragraph" );
+    CHECK( accessibility::format_document_focus( "", "First paragraph" ) == "First paragraph" );
+    CHECK( accessibility::format_document_focus( "Help", "b: Movement" ) == "Help. b: Movement" );
+
+    const std::vector<std::pair<std::string, std::vector<std::string>>> bindings = {
+        { "Northwest", { "7", "y" } },
+        { "North", { "8", "k" } },
+        { "Northeast", { "9", "u" } },
+        { "West", { "4", "h" } },
+        { "Pause", { "5", "." } },
+        { "East", { "6", "l" } },
+        { "Southwest", { "1", "b" } },
+        { "South", { "2", "j" } },
+        { "Southeast", { "3", "n" } }
+    };
+    CHECK( accessibility::format_help_directions( bindings ) ==
+           "Movement keys: Northwest: 7, y; North: 8, k; Northeast: 9, u; West: 4, h; Pause: 5, .; East: 6, l; Southwest: 1, b; South: 2, j; Southeast: 3, n." );
+
+    const std::vector<std::pair<std::string, std::vector<std::string>>> unbound = {
+        { "Northwest", {} }
+    };
+    CHECK( accessibility::format_help_directions( unbound ) ==
+           "Movement keys: Northwest: unbound." );
+    CHECK( accessibility::format_help_directions( {} ).empty() );
+}
+
+TEST_CASE( "help_browser_navigation_document_reading_and_repeat_last", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    // 1. Open Help menu
+    accessibility::announce( accessibility::format_help_menu_open( 23, "a", "Introduction" ) );
+
+    // 2. Linear navigation through topics across visual columns
+    accessibility::announce( accessibility::format_help_topic_focus( "b", "Movement" ) );
+    accessibility::announce( accessibility::format_help_topic_focus( "c", "Viewing" ) );
+    // Cross-column boundary navigation (e.g. topic 13: Combat)
+    accessibility::announce( accessibility::format_help_topic_focus( "n", "Combat" ) );
+
+    // 3. Repeat-last on topic list
+    CHECK( accessibility::repeat_last_announcement() );
+
+    // 4. Open Movement topic
+    const std::string para0 = "Movement is performed using the numpad, the arrow keys, or vikeys.";
+    const std::string para1 =
+        "Movement keys: Northwest: 7, y; North: 8, k; Northeast: 9, u; West: 4, h; Pause: 5, .; East: 6, l; Southwest: 1, b; South: 2, j; Southeast: 3, n.";
+    const std::string para2 =
+        "Each step will take 100 movement points (or more, depending on the terrain).";
+
+    accessibility::announce( accessibility::format_document_focus( "Movement", para0 ) );
+
+    // 5. Navigate paragraphs without index prefixes
+    int para_cursor = 0;
+    para_cursor = accessibility::move_document_cursor( para_cursor, 3, 1 );
+    CHECK( para_cursor == 1 );
+    accessibility::announce( para1 );
+
+    para_cursor = accessibility::move_document_cursor( para_cursor, 3, 1 );
+    CHECK( para_cursor == 2 );
+    accessibility::announce( para2 );
+
+    // 6. Repeat-last in document reading
+    CHECK( accessibility::repeat_last_announcement() );
+
+    // 7. Navigate back up
+    para_cursor = accessibility::move_document_cursor( para_cursor, 3, -1 );
+    CHECK( para_cursor == 1 );
+    accessibility::announce( para1 );
+
+    // 8. Return from document to Help topic list
+    accessibility::announce( accessibility::format_document_focus(
+                                 "Help", accessibility::format_help_topic_focus( "b", "Movement" ) ) );
+
+    // 9. Repeat-last on returned topic list
+    CHECK( accessibility::repeat_last_announcement() );
+
+    // 10. Exit Help back to originating caller (e.g. Main menu)
+    accessibility::announce( "Main menu. Help." );
+
+    REQUIRE( capture_ptr->messages.size() == 13 );
+    CHECK( capture_ptr->messages[0] ==
+           "Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction" );
+    CHECK( capture_ptr->messages[1] == "b: Movement" );
+    CHECK( capture_ptr->messages[2] == "c: Viewing" );
+    CHECK( capture_ptr->messages[3] == "n: Combat" );
+    CHECK( capture_ptr->messages[4] == "n: Combat" );
+    CHECK( capture_ptr->messages[5] == "Movement. " + para0 );
+    CHECK( capture_ptr->messages[6] == para1 );
+    CHECK( capture_ptr->messages[7] == para2 );
+    CHECK( capture_ptr->messages[8] == para2 );
+    CHECK( capture_ptr->messages[9] == para1 );
+    CHECK( capture_ptr->messages[10] == "Help. b: Movement" );
+    CHECK( capture_ptr->messages[11] == "Help. b: Movement" );
+    CHECK( capture_ptr->messages[12] == "Main menu. Help." );
+
+    accessibility::reset_backend_after_testing();
+}

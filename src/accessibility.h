@@ -87,6 +87,16 @@ class document_cursor_memory
     private:
         std::vector<int> positions_;
 };
+/** Format a document title and the first line or paragraph for opening announcement. */
+std::string format_document_focus( const std::string &title, const std::string &text );
+/** Format opening announcement for the help topic menu. */
+std::string format_help_menu_open( size_t topic_count, const std::string &initial_hotkey,
+                                   const std::string &initial_topic );
+/** Format a menu topic with its hotkey and title. */
+std::string format_help_topic_focus( const std::string &hotkey, const std::string &topic_name );
+/** Format compass directions and bound keys semantically. */
+std::string format_help_directions(
+    const std::vector<std::pair<std::string, std::vector<std::string>>> &direction_bindings );
 std::string format_creature_attitude( const std::string &attitude );
 std::string format_creature_health( int current, int maximum );
 std::string format_nearby_list_entry( const nearby_list_entry &entry );

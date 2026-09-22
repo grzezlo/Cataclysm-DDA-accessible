@@ -307,6 +307,74 @@ void document_cursor_memory::reset()
     std::fill( positions_.begin(), positions_.end(), 0 );
 }
 
+std::string format_document_focus( const std::string &title, const std::string &text )
+{
+    if( title.empty() ) {
+        return text;
+    }
+    if( text.empty() ) {
+        return title;
+    }
+    return string_format( "%s. %s", title, text );
+}
+
+std::string format_help_topic_focus( const std::string &hotkey, const std::string &topic_name )
+{
+    if( hotkey.empty() ) {
+        return topic_name;
+    }
+    if( topic_name.empty() ) {
+        return hotkey;
+    }
+    return string_format( "%s: %s", hotkey, topic_name );
+}
+
+std::string format_help_menu_open( const size_t topic_count, const std::string &initial_hotkey,
+                                   const std::string &initial_topic )
+{
+    if( topic_count == 0 ) {
+        return _( "Help. 0 topics. Escape to exit." );
+    }
+    const std::string topic_str = format_help_topic_focus( initial_hotkey, initial_topic );
+    return string_format(
+               _( "Help. %1$d topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. %2$s" ),
+               static_cast<int>( topic_count ), topic_str );
+}
+
+std::string format_help_directions(
+    const std::vector<std::pair<std::string, std::vector<std::string>>> &direction_bindings )
+{
+    if( direction_bindings.empty() ) {
+        return {};
+    }
+    std::vector<std::string> parts;
+    parts.reserve( direction_bindings.size() );
+    for( const auto &entry : direction_bindings ) {
+        std::string keys_str;
+        if( entry.second.empty() ) {
+            keys_str = _( "unbound" );
+        } else {
+            for( size_t i = 0; i < entry.second.size(); ++i ) {
+                if( i > 0 ) {
+                    keys_str += ", ";
+                }
+                keys_str += entry.second[i];
+            }
+        }
+        parts.push_back( string_format( "%s: %s", entry.first, keys_str ) );
+    }
+
+    std::string result = _( "Movement keys: " );
+    for( size_t i = 0; i < parts.size(); ++i ) {
+        if( i > 0 ) {
+            result += "; ";
+        }
+        result += parts[i];
+    }
+    result += ".";
+    return result;
+}
+
 std::string format_creature_attitude( const std::string &attitude )
 {
     if( attitude.empty() ) {

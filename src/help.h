@@ -25,11 +25,15 @@ class help
         static void load( const JsonObject &jo, const std::string &src );
         static void reset();
         void display_help() const;
+        static std::string get_dir_grid_speech();
     private:
         void load_object( const JsonObject &jo, const std::string &src );
         void reset_instance();
         std::map<int, inclusive_rectangle<point>> draw_menu( const catacurses::window &win,
                                                int selected, std::map<int, input_event> &hotkeys ) const;
+        void display_topic( const std::string &topic_name,
+                            const std::vector<std::string> &visual_paragraphs,
+                            const std::vector<std::string> &spoken_paragraphs ) const;
         static std::string get_note_colors();
         static std::string get_dir_grid();
         // Modifier for each mods order

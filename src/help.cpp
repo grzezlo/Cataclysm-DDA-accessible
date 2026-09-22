@@ -11,6 +11,7 @@
 #include <unordered_map>
 #include <vector>
 
+#include "accessibility.h"
 #include "action.h"
 #include "cata_path.h"
 #include "cata_utility.h"
@@ -104,6 +105,52 @@ std::string help::get_dir_grid()
     return movement;
 }
 
+std::string help::get_dir_grid_speech()
+{
+    static const std::array<std::pair<std::string, action_id>, 8> dir_actions = {{
+            { translate_marker( "Northwest" ), ACTION_MOVE_FORTH_LEFT },
+            { translate_marker( "North" ), ACTION_MOVE_FORTH },
+            { translate_marker( "Northeast" ), ACTION_MOVE_FORTH_RIGHT },
+            { translate_marker( "West" ), ACTION_MOVE_LEFT },
+            { translate_marker( "East" ), ACTION_MOVE_RIGHT },
+            { translate_marker( "Southwest" ), ACTION_MOVE_BACK_LEFT },
+            { translate_marker( "South" ), ACTION_MOVE_BACK },
+            { translate_marker( "Southeast" ), ACTION_MOVE_BACK_RIGHT }
+        }
+    };
+
+    std::vector<std::pair<std::string, std::vector<std::string>>> bindings;
+    bindings.reserve( 9 );
+
+    for( size_t i = 0; i < 4; ++i ) {
+        const auto &entry = dir_actions[i];
+        std::vector<std::string> keys_desc;
+        for( const input_event &key : keys_bound_to( entry.second, /*maximum_modifier_count=*/0 ) ) {
+            keys_desc.push_back( key.short_description() );
+        }
+        bindings.emplace_back( _( entry.first ), std::move( keys_desc ) );
+    }
+
+    {
+        std::vector<std::string> pause_keys;
+        for( const input_event &key : keys_bound_to( ACTION_PAUSE, /*maximum_modifier_count=*/0 ) ) {
+            pause_keys.push_back( key.short_description() );
+        }
+        bindings.emplace_back( _( "Pause" ), std::move( pause_keys ) );
+    }
+
+    for( size_t i = 4; i < 8; ++i ) {
+        const auto &entry = dir_actions[i];
+        std::vector<std::string> keys_desc;
+        for( const input_event &key : keys_bound_to( entry.second, /*maximum_modifier_count=*/0 ) ) {
+            keys_desc.push_back( key.short_description() );
+        }
+        bindings.emplace_back( _( entry.first ), std::move( keys_desc ) );
+    }
+
+    return accessibility::format_help_directions( bindings );
+}
+
 std::map<int, inclusive_rectangle<point>> help::draw_menu( const catacurses::window &win,
                                        int selected, std::map<int, input_event> &hotkeys ) const
 {
@@ -160,6 +207,129 @@ std::string help::get_note_colors()
     return text;
 }
 
+void help::display_topic( const std::string &topic_name,
+                          const std::vector<std::string> &visual_paragraphs,
+                          const std::vector<std::string> &spoken_paragraphs ) const
+{
+    catacurses::window w;
+    int width = 0;
+    int height = 0;
+    int text_w = 0;
+    int text_h = 0;
+    std::vector<std::string> folded_lines;
+    std::vector<int> para_line_starts;
+    int beg_line = 0;
+    int max_beg_line = 0;
+    int current_para = 0;
+    const int num_paragraphs = static_cast<int>( spoken_paragraphs.size() );
+
+    ui_adaptor ui;
+    const auto screen_resize_cb = [&]( ui_adaptor & ui ) {
+        w = catacurses::newwin( FULL_SCREEN_HEIGHT, FULL_SCREEN_WIDTH,
+                                point( TERMX > FULL_SCREEN_WIDTH ? ( TERMX - FULL_SCREEN_WIDTH ) / 2 : 0,
+                                       TERMY > FULL_SCREEN_HEIGHT ? ( TERMY - FULL_SCREEN_HEIGHT ) / 2 : 0 ) );
+        width = getmaxx( w );
+        height = getmaxy( w );
+        text_w = std::max( 0, width - 2 );
+        text_h = std::max( 0, height - 2 );
+
+        folded_lines.clear();
+        para_line_starts.clear();
+        para_line_starts.reserve( visual_paragraphs.size() );
+
+        for( size_t i = 0; i < visual_paragraphs.size(); ++i ) {
+            para_line_starts.push_back( static_cast<int>( folded_lines.size() ) );
+            std::vector<std::string> folded = foldstring( visual_paragraphs[i], text_w );
+            folded_lines.insert( folded_lines.end(), folded.begin(), folded.end() );
+            if( i + 1 < visual_paragraphs.size() ) {
+                folded_lines.emplace_back();
+            }
+        }
+        max_beg_line = std::max( 0, static_cast<int>( folded_lines.size() ) - text_h );
+        if( current_para >= 0 && current_para < static_cast<int>( para_line_starts.size() ) ) {
+            beg_line = std::min( para_line_starts[current_para], max_beg_line );
+        }
+
+        ui.position_from_window( w );
+    };
+    screen_resize_cb( ui );
+    ui.on_screen_resize( screen_resize_cb );
+
+    ui.on_redraw( [&]( const ui_adaptor & ) {
+        werase( w );
+        draw_border( w, BORDER_COLOR, string_format( _( "Help: %s" ), topic_name ) );
+        for( int line = beg_line, pos_y = 1;
+             line < std::min<int>( beg_line + text_h, folded_lines.size() );
+             ++line, ++pos_y ) {
+            nc_color dummy = c_white;
+            print_colored_text( w, point( 1, pos_y ), dummy, dummy, folded_lines[line] );
+        }
+        scrollbar().offset_x( width - 1 ).offset_y( 1 ).content_size( folded_lines.size() )
+        .viewport_pos( std::min( beg_line, max_beg_line ) ).viewport_size( text_h ).apply( w );
+        wnoutrefresh( w );
+    } );
+
+    input_context ctxt( "HELP_DOCUMENT" );
+    ctxt.register_action( "UP" );
+    ctxt.register_action( "DOWN" );
+    ctxt.register_action( "PAGE_UP" );
+    ctxt.register_action( "PAGE_DOWN" );
+    ctxt.register_action( "CONFIRM" );
+    ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "SCROLL_UP" );
+    ctxt.register_action( "SCROLL_DOWN" );
+
+    if( num_paragraphs > 0 ) {
+        accessibility::announce( accessibility::format_document_focus(
+                                     topic_name, spoken_paragraphs[0] ) );
+    }
+
+    std::string action;
+    do {
+        ui_manager::redraw();
+        action = ctxt.handle_input();
+
+        const auto update_view_to_para = [&]() {
+            if( current_para >= 0 && current_para < static_cast<int>( para_line_starts.size() ) ) {
+                beg_line = std::min( para_line_starts[current_para], max_beg_line );
+            }
+        };
+
+        if( action == "DOWN" || action == "SCROLL_DOWN" ) {
+            const int prev = current_para;
+            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, 1 );
+            if( current_para != prev ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "UP" || action == "SCROLL_UP" ) {
+            const int prev = current_para;
+            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, -1 );
+            if( current_para != prev ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "PAGE_DOWN" ) {
+            const int prev = current_para;
+            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, 3 );
+            if( current_para != prev ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "PAGE_UP" ) {
+            const int prev = current_para;
+            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, -3 );
+            if( current_para != prev ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        }
+    } while( action != "CONFIRM" && action != "QUIT" );
+}
+
 void help::display_help() const
 {
     catacurses::window w_help_border;
@@ -180,8 +350,11 @@ void help::display_help() const
 
     input_context ctxt( "DISPLAY_HELP", keyboard_mode::keychar );
     ctxt.register_cardinal();
+    ctxt.register_action( "PAGE_UP" );
+    ctxt.register_action( "PAGE_DOWN" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "CONFIRM" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     // for mouse selection
     ctxt.register_action( "SELECT" );
     ctxt.register_action( "MOUSE_MOVE" );
@@ -190,15 +363,20 @@ void help::display_help() const
 
     std::string action;
     std::map<int, inclusive_rectangle<point>> opt_map;
-    int sel = -1;
 
     const hotkey_queue &hkq = hotkey_queue::alphabets();
     input_event next_hotkey = ctxt.first_unassigned_hotkey( hkq );
     std::map<int, input_event> hotkeys;
+    std::vector<int> topic_orders;
+    topic_orders.reserve( help_texts.size() );
     for( const auto &text : help_texts ) {
+        topic_orders.push_back( text.first );
         hotkeys.emplace( text.first, next_hotkey );
         next_hotkey = ctxt.next_unassigned_hotkey( hkq, next_hotkey );
     }
+
+    int sel_index = topic_orders.empty() ? -1 : 0;
+    int sel = sel_index >= 0 ? topic_orders[sel_index] : -1;
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         draw_border( w_help_border, BORDER_COLOR, _( "Help" ) );
@@ -206,10 +384,20 @@ void help::display_help() const
         opt_map = draw_menu( w_help, sel, hotkeys );
     } );
 
+    if( !topic_orders.empty() ) {
+        const auto first_it = help_texts.find( topic_orders.front() );
+        const std::string first_hotkey = hotkeys[topic_orders.front()].short_description();
+        const std::string first_title = first_it != help_texts.end() ?
+                                        first_it->second.first.translated() : std::string();
+        accessibility::announce( accessibility::format_help_menu_open(
+                                     topic_orders.size(), first_hotkey, first_title ) );
+    }
+
     do {
+        sel = sel_index >= 0 && sel_index < static_cast<int>( topic_orders.size() ) ?
+              topic_orders[sel_index] : -1;
         ui_manager::redraw();
 
-        sel = -1;
         action = ctxt.handle_input();
         input_event input = ctxt.get_raw_input();
 
@@ -217,76 +405,142 @@ void help::display_help() const
         if( action == "MOUSE_MOVE" || action == "SELECT" ) {
             std::optional<point> coord = ctxt.get_coordinates_text( w_help );
             if( !!coord ) {
+                int mouse_sel = -1;
                 int cnt = run_for_point_in<int, point>( opt_map, *coord,
-                [&sel]( const std::pair<int, inclusive_rectangle<point>> &p ) {
-                    sel = p.first;
+                [&mouse_sel]( const std::pair<int, inclusive_rectangle<point>> &p ) {
+                    mouse_sel = p.first;
                 } );
-                if( cnt > 0 && action == "SELECT" ) {
-                    auto iter = hotkeys.find( sel );
-                    if( iter != hotkeys.end() ) {
-                        input = iter->second;
+                if( cnt > 0 ) {
+                    for( size_t i = 0; i < topic_orders.size(); ++i ) {
+                        if( topic_orders[i] == mouse_sel ) {
+                            sel_index = static_cast<int>( i );
+                            sel = mouse_sel;
+                            break;
+                        }
+                    }
+                    if( action == "SELECT" ) {
                         action = "CONFIRM";
                     }
                 }
             }
         }
 
-        for( const auto &hotkey_entry : hotkeys ) {
-            auto help_text_it = help_texts.find( hotkey_entry.first );
-            if( help_text_it == help_texts.end() ) {
-                continue;
+        const auto announce_current_topic = [&]() {
+            if( sel_index >= 0 && sel_index < static_cast<int>( topic_orders.size() ) ) {
+                const int order = topic_orders[sel_index];
+                const auto it = help_texts.find( order );
+                if( it != help_texts.end() ) {
+                    accessibility::announce( accessibility::format_help_topic_focus(
+                                                 hotkeys[order].short_description(),
+                                                 it->second.first.translated() ) );
+                }
             }
-            if( input == hotkey_entry.second ) {
-                std::vector<std::string> i18n_help_texts;
-                i18n_help_texts.reserve( help_text_it->second.second.size() );
-                std::transform( help_text_it->second.second.begin(), help_text_it->second.second.end(),
-                std::back_inserter( i18n_help_texts ), [&]( const translation & line ) {
-                    std::string line_proc = line.translated();
-                    if( line_proc == "<DRAW_NOTE_COLORS>" ) {
-                        line_proc = get_note_colors();
-                    } else if( line_proc == "<HELP_DRAW_DIRECTIONS>" ) {
-                        line_proc = get_dir_grid();
-                    }
-                    size_t pos = line_proc.find( "<press_", 0, 7 );
-                    while( pos != std::string::npos ) {
-                        size_t pos2 = line_proc.find( ">", pos, 1 );
+        };
 
-                        std::string action = line_proc.substr( pos + 7, pos2 - pos - 7 );
-                        std::string replace = "<color_light_blue>" +
-                                              press_x( look_up_action( action ), "", "" ) + "</color>";
+        if( action == "UP" ) {
+            if( !topic_orders.empty() ) {
+                const int prev = sel_index;
+                sel_index = std::max( 0, sel_index - 1 );
+                if( sel_index != prev ) {
+                    announce_current_topic();
+                }
+            }
+        } else if( action == "DOWN" ) {
+            if( !topic_orders.empty() ) {
+                const int prev = sel_index;
+                sel_index = std::min( static_cast<int>( topic_orders.size() ) - 1, sel_index + 1 );
+                if( sel_index != prev ) {
+                    announce_current_topic();
+                }
+            }
+        } else if( action == "PAGE_UP" ) {
+            if( !topic_orders.empty() ) {
+                const int prev = sel_index;
+                sel_index = std::max( 0, sel_index - 5 );
+                if( sel_index != prev ) {
+                    announce_current_topic();
+                }
+            }
+        } else if( action == "PAGE_DOWN" ) {
+            if( !topic_orders.empty() ) {
+                const int prev = sel_index;
+                sel_index = std::min( static_cast<int>( topic_orders.size() ) - 1, sel_index + 5 );
+                if( sel_index != prev ) {
+                    announce_current_topic();
+                }
+            }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action != "QUIT" ) {
+            int target_topic_order = -1;
+            for( size_t i = 0; i < topic_orders.size(); ++i ) {
+                const int order = topic_orders[i];
+                if( input == hotkeys[order] ) {
+                    sel_index = static_cast<int>( i );
+                    target_topic_order = order;
+                    break;
+                }
+            }
+            if( target_topic_order == -1 && action == "CONFIRM" &&
+                sel_index >= 0 && sel_index < static_cast<int>( topic_orders.size() ) ) {
+                target_topic_order = topic_orders[sel_index];
+            }
 
-                        if( replace.empty() ) {
-                            debugmsg( "Help json: Unknown action: %s", action );
+            if( target_topic_order != -1 ) {
+                auto help_text_it = help_texts.find( target_topic_order );
+                if( help_text_it != help_texts.end() ) {
+                    std::vector<std::string> visual_paragraphs;
+                    std::vector<std::string> spoken_paragraphs;
+                    visual_paragraphs.reserve( help_text_it->second.second.size() );
+                    spoken_paragraphs.reserve( help_text_it->second.second.size() );
+
+                    for( const translation &line : help_text_it->second.second ) {
+                        std::string line_proc = line.translated();
+                        std::string line_spoken = line_proc;
+
+                        if( line_proc == "<DRAW_NOTE_COLORS>" ) {
+                            line_proc = get_note_colors();
+                            line_spoken = remove_color_tags( line_proc );
+                        } else if( line_proc == "<HELP_DRAW_DIRECTIONS>" ) {
+                            line_proc = get_dir_grid();
+                            line_spoken = get_dir_grid_speech();
                         } else {
-                            line_proc = string_replace(
-                                            line_proc, "<press_" + std::move( action ) + ">", replace );
+                            size_t pos = line_proc.find( "<press_", 0, 7 );
+                            while( pos != std::string::npos ) {
+                                size_t pos2 = line_proc.find( ">", pos, 1 );
+                                std::string action_str = line_proc.substr( pos + 7, pos2 - pos - 7 );
+                                std::string replace = "<color_light_blue>" +
+                                                      press_x( look_up_action( action_str ), "", "" ) + "</color>";
+                                if( replace.empty() ) {
+                                    debugmsg( "Help json: Unknown action: %s", action_str );
+                                } else {
+                                    line_proc = string_replace(
+                                                    line_proc, "<press_" + action_str + ">", replace );
+                                }
+                                pos = line_proc.find( "<press_", pos2, 7 );
+                            }
+                            line_spoken = remove_color_tags( line_proc );
                         }
 
-                        pos = line_proc.find( "<press_", pos2, 7 );
+                        visual_paragraphs.push_back( std::move( line_proc ) );
+                        spoken_paragraphs.push_back( std::move( line_spoken ) );
                     }
-                    return line_proc;
-                } );
 
-                if( !i18n_help_texts.empty() ) {
-                    ui.on_screen_resize( nullptr );
+                    if( !visual_paragraphs.empty() ) {
+                        ui.on_screen_resize( nullptr );
+                        display_topic( help_text_it->second.first.translated(),
+                                       visual_paragraphs, spoken_paragraphs );
+                        ui.on_screen_resize( init_windows );
 
-                    const auto get_w_help_border = [&]() {
-                        init_windows( ui );
-                        return w_help_border;
-                    };
-
-                    scrollable_text( get_w_help_border, _( "Help" ),
-                                     std::accumulate( i18n_help_texts.begin() + 1, i18n_help_texts.end(),
-                                                      i18n_help_texts.front(),
-                    []( std::string lhs, const std::string & rhs ) {
-                        return std::move( lhs ) + "\n\n" + rhs;
-                    } ) );
-
-                    ui.on_screen_resize( init_windows );
+                        // Announce return to topic menu
+                        accessibility::announce( accessibility::format_document_focus(
+                                                     _( "Help" ),
+                                                     accessibility::format_help_topic_focus(
+                                                         hotkeys[target_topic_order].short_description(),
+                                                         help_text_it->second.first.translated() ) ) );
+                        action.clear();
+                    }
                 }
-                action = "CONFIRM";
-                break;
-
             }
         }
     } while( action != "QUIT" );
