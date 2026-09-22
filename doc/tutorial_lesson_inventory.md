@@ -1,8 +1,8 @@
-# Tutorial lesson inventory for Stage 03B
+# Tutorial lesson inventory for Stage 22A
 
 This inventory describes the tutorial data and triggers as assessed before the
 gameplay and interface stages.  A lesson's instructions are not proof that its
-gameplay control is accessible.  Stage 03B will recheck the entire tutorial
+gameplay control is accessible.  Stage 22A will recheck the entire tutorial
 with NVDA after those controls are implemented.
 
 ## C++ snippet lessons
@@ -78,7 +78,7 @@ reentry.
 - Pickup, stack quantity, dropping, and container transfers belong to Stage 09.
   The first required bat pickup needs verification during the full walkthrough.
 - Gun firing, reach targeting, and throwing belong to Stage 10; melee also
-  needs gameplay feedback checked during the Stage 03B NVDA assessment.
+  needs gameplay feedback checked during the Stage 22A NVDA assessment.
 - Food crafting belongs to Stage 11, construction to Stage 12, and detailed
   character or encumbrance inspection to Stage 13.
 - Keybinding discovery and editing belong to Stage 05; Help browsing belongs

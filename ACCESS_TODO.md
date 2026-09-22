@@ -8,12 +8,11 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stage 03C closes the help gap.  Stage 03B audits the complete tutorial after
-the gameplay and interface stages, before the final coverage and release gates.
-Stages 04–10 establish the minimum independent survival and combat loop.  Stages
-11–21A cover the major progression, management, and setup interfaces.  Stages
-22–23 are native release gates.  Stage 24 starts only after the native semantic
-model is stable.
+Stage 03C closes the help gap.  Stages 04–10 establish the minimum independent
+survival and combat loop.  Stages 11–21A cover the major progression, management,
+and setup interfaces.  Stages 22, 22A, and 23 are native release gates: coverage,
+the complete tutorial, and packaging.  Stage 24 starts only after the native
+semantic model is stable.
 
 Unless a stage lists an exception, its automated gate includes
 `test_access.bat` and a successful `build_win_x64.bat`.  The human gate for
@@ -1141,12 +1140,43 @@ panel changes, save/cancel, and return focus.
 **Required human verification:** Change and restore options, add/edit rules,
 configure panels, and confirm all value changes are announced.
 
-## Stage 03B - Complete tutorial acceptance
+## Stage 22 - Coverage and announcement-policy audit
+
+**Outcome:** Every keyboard-reachable interface is classified and tested, speech
+policy is consistent, and remaining bespoke-screen gaps are closed.
+
+**Code inventory:** all `accessibility::` call sites; all registered
+`input_context` categories and bespoke UI entry points; the accessibility service
+and feature tests.  Create and maintain a concise coverage manifest during this
+stage so later upstream merges do not require rediscovering every screen.
+
+**Success criteria:** The manifest maps each reachable screen to a shared
+accessible control, a feature hook, or an explicit accepted limitation.  Event
+categories define focus, screen, status, message, movement, threat, urgent alert,
+and on-demand detail priority/deduplication.  Rapid events preserve the newest
+meaningful state; repeat-last is correct; no speech-cancel or automatic requeue
+exists.  Save/load, death screen, errors, debug-disabled normal play, and exit
+are covered by an end-to-end keyboard journey.  No perceptible gameplay slowdown
+with accessibility enabled in a scenario with 50+ visible creatures and rapid
+movement.
+
+**Possible automated tests:** Table-driven service tests for categories,
+collisions, mode transitions, backend failure/reset, deduplication, and history;
+coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows
+test build, tiles build, and the branch's static checks.
+
+**Required human verification:** Complete the coverage-manifest journey and a
+long play session, deliberately navigating rapidly and interrupting speech.
+Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
+developer-error, static-instruction, and progress-popup integration.  Confirm
+the death screen and record all accepted limitations.
+
+## Stage 22A - Complete tutorial acceptance
 
 **Outcome:** A blind player can complete the entire built-in tutorial with
 keyboard and NVDA, understand every lesson and continuation instruction, and
-leave or resume safely.  This stage follows the gameplay and interface stages
-because its exercises use their controls.
+leave or resume safely.  This stage follows the gameplay, interface, and
+coverage stages because its exercises use their controls.
 
 **Code inventory:** tutorial launch in `src/main_menu.cpp`;
 `tutorial_game::init()`, `per_turn()`, `pre_action()`, `post_action()`, and
@@ -1192,37 +1222,6 @@ launch through the final room, completes every required exercise, checks both
 lesson sources and continuation guidance, deliberately interrupts speech and
 recovers the instructions, saves/exits, and confirms the menu return.  Record
 the tested Windows, NVDA, and fork versions and any remaining limitations.
-
-## Stage 22 - Coverage and announcement-policy audit
-
-**Outcome:** Every keyboard-reachable interface is classified and tested, speech
-policy is consistent, and remaining bespoke-screen gaps are closed.
-
-**Code inventory:** all `accessibility::` call sites; all registered
-`input_context` categories and bespoke UI entry points; the accessibility service
-and feature tests.  Create and maintain a concise coverage manifest during this
-stage so later upstream merges do not require rediscovering every screen.
-
-**Success criteria:** The manifest maps each reachable screen to a shared
-accessible control, a feature hook, or an explicit accepted limitation.  Event
-categories define focus, screen, status, message, movement, threat, urgent alert,
-and on-demand detail priority/deduplication.  Rapid events preserve the newest
-meaningful state; repeat-last is correct; no speech-cancel or automatic requeue
-exists.  Save/load, death screen, errors, debug-disabled normal play, and exit
-are covered by an end-to-end keyboard journey.  No perceptible gameplay slowdown
-with accessibility enabled in a scenario with 50+ visible creatures and rapid
-movement.
-
-**Possible automated tests:** Table-driven service tests for categories,
-collisions, mode transitions, backend failure/reset, deduplication, and history;
-coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows
-test build, tiles build, and the branch's static checks.
-
-**Required human verification:** Complete the coverage-manifest journey and a
-long play session, deliberately navigating rapidly and interrupting speech.
-Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
-developer-error, static-instruction, and progress-popup integration.  Confirm
-the death screen and record all accepted limitations.
 
 ## Stage 23 - Windows packaging and playable-release acceptance
 
