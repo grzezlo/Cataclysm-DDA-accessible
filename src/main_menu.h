@@ -29,8 +29,8 @@ class main_menu
         std::vector<std::string> mmenu_title;
         std::string mmenu_motd;
         std::string mmenu_credits;
-        int mmenu_motd_len;
-        int mmenu_credits_len;
+        std::vector<std::pair<std::string, int>> mmenu_motd_lines;
+        std::vector<std::pair<std::string, int>> mmenu_credits_lines;
         std::vector<std::string> vMenuItems; // MOTD, New Game, Load Game, etc.
         std::vector<std::string> vWorldSubItems;
         std::vector<std::string> vNewGameSubItems;
@@ -55,7 +55,8 @@ class main_menu
         void on_move() const;
 
         /** Announce the selected tab or submenu item through the accessibility service. */
-        void announce_selection( bool include_menu_name, bool include_tab ) const;
+        void announce_selection( bool include_menu_name, bool include_tab,
+                                 bool include_screen_info = false ) const;
 
         // Play a sound *once* when an error occurs in the main menu or its tabs
         void on_error();
@@ -75,8 +76,9 @@ class main_menu
         // These variables are shared between @opening_screen and the tab functions.
         // TODO: But this is an ugly short-term solution.
         input_context ctxt;
-        int sel1 = 1;
+        int sel1 = 2;
         int sel2 = 1;
+        int sel_line = 0;
         size_t last_world_pos = 0;
         int sub_opt_off = 0;
         point LAST_TERM;
@@ -112,7 +114,7 @@ class main_menu
          */
         void print_menu( const catacurses::window &w_open, int iSel, const point &offset, int sel_line );
 
-        void display_text( const std::string &text, const std::string &title, int &selected );
+        void display_text( const std::string &text, const std::string &title, int selected );
 
         void display_sub_menu( int sel, const point &bottom_left, int sel_line );
 

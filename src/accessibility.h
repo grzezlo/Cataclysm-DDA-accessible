@@ -62,6 +62,19 @@ std::optional<std::string> evaluate_threat_transition(
 bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
 bool announce_semantic_sequence( const std::vector<std::string> &parts );
+/** Describe a main-menu world using its save count rather than visual parentheses. */
+std::string format_main_menu_world( const std::string &name, size_t save_count );
+std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
+                                    const std::string &focused, const std::string &title = {},
+                                    const std::string &version = {}, const std::string &tip = {} );
+struct semantic_document_line {
+    std::string text;
+    size_t source_index;
+};
+/** Keep meaningful source lines in reading order without splitting long lines. */
+std::vector<semantic_document_line> select_document_lines(
+    const std::vector<std::string> &source_lines );
+int move_document_cursor( int current, int line_count, int delta );
 std::string format_creature_attitude( const std::string &attitude );
 std::string format_creature_health( int current, int maximum );
 std::string format_nearby_list_entry( const nearby_list_entry &entry );

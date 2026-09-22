@@ -15,6 +15,7 @@
 #include <map>
 #include <memory>
 #include <optional>
+#include <sstream>
 #include <string>
 
 #if defined(EMSCRIPTEN)
@@ -68,6 +69,7 @@ static const mod_id MOD_INFORMATION_dda_tutorial( "dda_tutorial" );
 
 enum class main_menu_opts : int {
     MOTD = 0,
+    TIP,
     NEWCHAR,
     LOADCHAR,
     WORLD,
@@ -87,21 +89,43 @@ static int getopt( main_menu_opts o )
     return static_cast<int>( o );
 }
 
+static std::string main_menu_general_hint()
+{
+    return _( "Bugs?  Suggestions?  Use links in MOTD to report them." );
+}
+
+static std::vector<std::pair<std::string, int>> menu_document_lines( const std::string &text )
+{
+    std::vector<std::string> source_lines;
+    std::vector<int> visible_offsets;
+    std::istringstream stream( text );
+    std::string source_line;
+    int visible_offset = 0;
+    while( std::getline( stream, source_line ) ) {
+        source_lines.push_back( remove_color_tags( source_line ) );
+        visible_offsets.push_back( visible_offset );
+        visible_offset += std::max<int>( 1, foldstring( source_line, FULL_SCREEN_WIDTH - 2 ).size() );
+    }
+
+    std::vector<std::pair<std::string, int>> result;
+    for( const accessibility::semantic_document_line &line :
+         accessibility::select_document_lines( source_lines ) ) {
+        result.emplace_back( line.text, visible_offsets[line.source_index] );
+    }
+    return result;
+}
+
 void main_menu::on_move() const
 {
     sfx::play_variant_sound( "menu_move", "default", 100 );
 }
 
-void main_menu::announce_selection( const bool include_menu_name, const bool include_tab ) const
+void main_menu::announce_selection( const bool include_menu_name, const bool include_tab,
+                                    const bool include_screen_info ) const
 {
-    const auto spoken_text = []( const std::string &text ) {
+    const auto spoken_text = []( const std::string & text ) {
         return remove_color_tags( shortcut_text( c_white, text ) );
     };
-
-    std::string context;
-    if( include_menu_name ) {
-        context = _( "Main menu" );
-    }
 
     const std::string tab = spoken_text( vMenuItems[sel1] );
     std::string focused_item;
@@ -109,7 +133,16 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
         case main_menu_opts::NEWCHAR:
             if( sel2 >= 0 && static_cast<size_t>( sel2 ) < vNewGameSubItems.size() ) {
                 focused_item = spoken_text( vNewGameSubItems[sel2] );
+                if( static_cast<size_t>( sel2 ) < vNewGameHints.size() ) {
+                    focused_item = accessibility::format_semantic_sequence( {
+                        focused_item, vNewGameHints[sel2]
+                    } );
+                }
             }
+            break;
+        case main_menu_opts::TIP:
+            focused_item = accessibility::format_semantic_sequence( { vdaytip,
+                           main_menu_general_hint() } );
             break;
         case main_menu_opts::SETTINGS:
             if( sel2 >= 0 && static_cast<size_t>( sel2 ) < vSettingsSubItems.size() ) {
@@ -129,28 +162,39 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
             const int world_index = sel2 -
                                     ( static_cast<main_menu_opts>( sel1 ) == main_menu_opts::WORLD ? 1 : 0 );
             if( world_index >= 0 && static_cast<size_t>( world_index ) < worlds.size() ) {
-                focused_item = worlds[world_index];
+                WORLD *world = world_generator->get_world( worlds[world_index] );
+                focused_item = world ? accessibility::format_main_menu_world(
+                                   worlds[world_index], world->world_saves.size() ) : worlds[world_index];
+            } else if( static_cast<main_menu_opts>( sel1 ) == main_menu_opts::LOADCHAR ) {
+                focused_item = _( "No worlds to load." );
             }
             break;
         }
         case main_menu_opts::MOTD:
+            focused_item = mmenu_motd_lines.empty() ? _( "No message today." ) :
+                           mmenu_motd_lines[std::min<size_t>( sel_line, mmenu_motd_lines.size() - 1 )].first;
+            break;
+        case main_menu_opts::CREDITS:
+            focused_item = mmenu_credits_lines.empty() ? _( "No credits information found." ) :
+                           mmenu_credits_lines[std::min<size_t>( sel_line, mmenu_credits_lines.size() - 1 )].first;
+            break;
         case main_menu_opts::TUTORIAL:
         case main_menu_opts::HELP:
-        case main_menu_opts::CREDITS:
         case main_menu_opts::QUIT:
         default:
             break;
     }
 
-    if( include_tab && !tab.empty() && !focused_item.empty() ) {
-        if( context.empty() ) {
-            context = tab;
-        } else {
-            context += ". " + tab;
-        }
-    }
-
-    accessibility::announce_focus( focused_item.empty() ? tab : focused_item, context );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 include_menu_name ? _( "Main menu" ) : "",
+                                 include_tab && !focused_item.empty() ? tab : "",
+                                 focused_item.empty() ? tab : focused_item,
+                                 include_screen_info ? _( "Cataclysm: Dark Days Ahead" ) : "",
+                                 include_screen_info ? _( "Version: 0.I (Ito) Stable Release" ) : "",
+    include_screen_info ? accessibility::format_semantic_sequence( {
+        string_format( _( "Tip of the day: %s" ), vdaytip ),
+        main_menu_general_hint()
+    } ) : "" ) );
 }
 
 void main_menu::on_error()
@@ -243,11 +287,16 @@ void main_menu::display_sub_menu( int sel, const point &bottom_left, int sel_lin
     main_menu_opts sel_o = static_cast<main_menu_opts>( sel );
     switch( sel_o ) {
         case main_menu_opts::CREDITS:
-            display_text( mmenu_credits, _( "Credits" ), sel_line );
+            display_text( mmenu_credits, _( "Credits" ), mmenu_credits_lines.empty() ? 0 :
+                          mmenu_credits_lines[std::min<size_t>( sel_line, mmenu_credits_lines.size() - 1 )].second );
             return;
         case main_menu_opts::MOTD:
             //~ Message Of The Day
-            display_text( mmenu_motd, _( "MOTD" ), sel_line );
+            display_text( mmenu_motd, _( "MOTD" ), mmenu_motd_lines.empty() ? 0 :
+                          mmenu_motd_lines[std::min<size_t>( sel_line, mmenu_motd_lines.size() - 1 )].second );
+            return;
+        case main_menu_opts::TIP:
+            display_text( vdaytip, _( "Tip of the day" ), 0 );
             return;
         case main_menu_opts::SETTINGS:
             for( int i = 0; static_cast<size_t>( i ) < vSettingsSubItems.size(); ++i ) {
@@ -369,8 +418,7 @@ void main_menu::print_menu( const catacurses::window &w_open, int iSel, const po
     if( iSel == getopt( main_menu_opts::NEWCHAR ) ) {
         center_print( w_open, window_height - 2, c_yellow, vNewGameHints[sel2] );
     } else {
-        center_print( w_open, window_height - 2, c_red,
-                      _( "Bugs?  Suggestions?  Use links in MOTD to report them." ) );
+        center_print( w_open, window_height - 2, c_red, main_menu_general_hint() );
     }
 
     center_print( w_open, window_height - 1, c_light_cyan, string_format( _( "Tip of the day: %s" ),
@@ -499,14 +547,14 @@ void main_menu::init_strings()
         mmenu_motd += ( line.empty() ? " " : line ) + "\n";
     }
     mmenu_motd = colorize( mmenu_motd, c_light_red );
-    mmenu_motd_len = foldstring( mmenu_motd, FULL_SCREEN_WIDTH - 2 ).size();
+    mmenu_motd_lines = menu_document_lines( mmenu_motd );
 
     // Credits
     mmenu_credits.clear();
     read_from_file_optional( PATH_INFO::credits(), [&]( std::istream & stream ) {
         std::string line;
         while( std::getline( stream, line ) ) {
-            if( line[0] != '#' ) {
+            if( line.empty() || line[0] != '#' ) {
                 mmenu_credits += ( line.empty() ? " " : line ) + "\n";
             }
         }
@@ -515,11 +563,12 @@ void main_menu::init_strings()
     if( mmenu_credits.empty() ) {
         mmenu_credits = _( "No credits information found." );
     }
-    mmenu_credits_len = foldstring( mmenu_credits, FULL_SCREEN_WIDTH - 2 ).size();
+    mmenu_credits_lines = menu_document_lines( mmenu_credits );
 
     // fill menu with translated menu items
     vMenuItems.clear();
     vMenuItems.emplace_back( pgettext( "Main Menu", "<M|m>OTD" ) );
+    vMenuItems.emplace_back( pgettext( "Main Menu", "T<i|I>p of the day" ) );
     vMenuItems.emplace_back( pgettext( "Main Menu", "<N|n>ew Game" ) );
     vMenuItems.emplace_back( pgettext( "Main Menu", "Lo<a|A>d" ) );
     vMenuItems.emplace_back( pgettext( "Main Menu", "<W|w>orld" ) );
@@ -597,9 +646,12 @@ void main_menu::init_strings()
         std::exit( 1 );
     }
     vdaytip = SNIPPET.random_from_category( "tip" ).value_or( translation() ).translated();
+    if( vdaytip.empty() ) {
+        vdaytip = _( "No tip available." );
+    }
 }
 
-void main_menu::display_text( const std::string &text, const std::string &title, int &selected )
+void main_menu::display_text( const std::string &text, const std::string &title, int selected )
 {
     const int w_open_height = getmaxy( w_open );
     const int b_height = FULL_SCREEN_HEIGHT - clamp( ( FULL_SCREEN_HEIGHT - w_open_height ) + 4, 0, 4 );
@@ -617,6 +669,8 @@ void main_menu::display_text( const std::string &text, const std::string &title,
     int height = b_height - 2;
     const auto vFolded = foldstring( text, width );
     int iLines = vFolded.size();
+
+    selected = std::clamp( selected, 0, std::max( 0, iLines - height ) );
 
     fold_and_print_from( w_text, point::zero, width, selected, c_light_gray, text );
 
@@ -681,7 +735,7 @@ bool main_menu::opening_screen()
     avatar &player_character = get_avatar();
     player_character = avatar();
 
-    int sel_line = 0;
+    sel_line = 0;
 
     // Make [Load Game] the default cursor position if there's game save available
     if( !world_generator->get_all_worlds().empty() ) {
@@ -721,7 +775,7 @@ bool main_menu::opening_screen()
     EM_ASM( window.dispatchEvent( new Event( 'menuready' ) ); );
 #endif
 
-    announce_selection( true, true );
+    announce_selection( true, true, true );
 
     while( !start ) {
         ui_manager::redraw();
@@ -745,6 +799,8 @@ bool main_menu::opening_screen()
                         action = "CONFIRM";
                     } else if( i == getopt( main_menu_opts::QUIT ) ) {
                         action = "QUIT";
+                    } else {
+                        announce_selection( false, true );
                     }
                     match = true;
                     break;
@@ -842,19 +898,21 @@ bool main_menu::opening_screen()
             main_menu_opts opt = static_cast<main_menu_opts>( sel1 );
             switch( opt ) {
                 case main_menu_opts::MOTD:
-                case main_menu_opts::CREDITS:
-                    if( action == "UP" || action == "PAGE_UP" || action == "SCROLL_UP" ) {
-                        if( sel_line > 0 ) {
-                            sel_line--;
-                        }
-                    } else if( action == "DOWN" || action == "PAGE_DOWN" || action == "SCROLL_DOWN" ) {
-                        int effective_height = sel_line + FULL_SCREEN_HEIGHT - 2;
-                        if( ( opt == main_menu_opts::CREDITS && effective_height < mmenu_credits_len ) ||
-                            ( opt == main_menu_opts::MOTD && effective_height < mmenu_motd_len ) ) {
-                            sel_line++;
+                case main_menu_opts::CREDITS: {
+                    const auto &lines = opt == main_menu_opts::MOTD ? mmenu_motd_lines : mmenu_credits_lines;
+                    if( !lines.empty() ) {
+                        const int previous = sel_line;
+                        const int step = action == "PAGE_UP" || action == "PAGE_DOWN" ? 10 : 1;
+                        const bool backwards = action == "UP" || action == "PAGE_UP" ||
+                                               action == "SCROLL_UP";
+                        sel_line = accessibility::move_document_cursor( sel_line,
+                                   static_cast<int>( lines.size() ), backwards ? -step : step );
+                        if( sel_line != previous ) {
+                            accessibility::announce( lines[sel_line].first );
                         }
                     }
                     break;
+                }
                 case main_menu_opts::LOADCHAR:
                     max_item_count = world_generator->get_all_worlds().size();
                     break;
@@ -869,6 +927,7 @@ bool main_menu::opening_screen()
                     max_item_count = vSettingsSubItems.size();
                     break;
                 case main_menu_opts::TUTORIAL:
+                case main_menu_opts::TIP:
                 case main_menu_opts::HELP:
                 case main_menu_opts::QUIT:
                 default:

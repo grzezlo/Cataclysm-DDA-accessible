@@ -196,6 +196,71 @@ TEST_CASE( "semantic_accessibility_sequences_omit_empty_parts_and_preserve_order
            "Terrain: wooden floor. Creature: zombie. Z-level: one level above. 5 tiles northeast." );
 }
 
+TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "Main menu", "New Game", "Custom Character. Customize the character",
+                                 "Cataclysm: Dark Days Ahead", "Version: 0.I",
+                                 "Tip of the day: Find shelter. Bugs? Use MOTD to report them" ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "", "", "Preset Character. Choose a template" ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "", "Tip of the day", "Find shelter. Bugs? Use MOTD to report them" ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "", "Load", accessibility::format_main_menu_world( "Empty", 0 ) ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "", "World", accessibility::format_main_menu_world( "Survival", 3 ) ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "", "Load", "No worlds to load" ) );
+
+    const std::string long_line( 240, 'x' );
+    const std::vector<accessibility::semantic_document_line> motd =
+        accessibility::select_document_lines( { "", "*******", "First MOTD line", "  ",
+                long_line, "Last MOTD line" } );
+    REQUIRE( motd.size() == 3 );
+    CHECK( motd[0].source_index == 2 );
+    CHECK( motd[1].source_index == 4 );
+    CHECK( motd[1].text == long_line );
+    CHECK( motd[2].source_index == 5 );
+
+    accessibility::announce( accessibility::format_main_menu_focus( "", "MOTD", motd[0].text ) );
+    const int second = accessibility::move_document_cursor( 0, motd.size(), 1 );
+    CHECK( second == 1 );
+    accessibility::announce( motd[second].text );
+    CHECK( accessibility::move_document_cursor( second, motd.size(), 10 ) == 2 );
+    CHECK( accessibility::move_document_cursor( 0, motd.size(), -1 ) == 0 );
+    CHECK( accessibility::move_document_cursor( 0, 0, 1 ) == 0 );
+    CHECK( accessibility::repeat_last_announcement() );
+
+    const auto credits = accessibility::select_document_lines( { "Author: Ada", "Author: Bea" } );
+    accessibility::announce( accessibility::format_main_menu_focus( "", "Credits", credits[0].text ) );
+    accessibility::announce( accessibility::format_main_menu_focus(
+                                 "Main menu", "World", accessibility::format_main_menu_world( "Survival", 3 ) ) );
+
+    REQUIRE( capture_ptr->messages.size() == 11 );
+    CHECK( capture_ptr->messages[0] == "Cataclysm: Dark Days Ahead. Version: 0.I. "
+           "Tip of the day: Find shelter. Bugs? Use MOTD to report them. "
+           "Main menu. New Game. Custom Character. "
+           "Customize the character." );
+    CHECK( capture_ptr->messages[1] == "Preset Character. Choose a template." );
+    CHECK( capture_ptr->messages[2] ==
+           "Tip of the day. Find shelter. Bugs? Use MOTD to report them." );
+    CHECK( capture_ptr->messages[3] == "Load. Empty. 0 saves." );
+    CHECK( capture_ptr->messages[4] == "World. Survival. 3 saves." );
+    CHECK( capture_ptr->messages[5] == "Load. No worlds to load." );
+    CHECK( capture_ptr->messages[6] == "MOTD. First MOTD line." );
+    CHECK( capture_ptr->messages[7] == long_line );
+    CHECK( capture_ptr->messages[8] == long_line );
+    CHECK( capture_ptr->messages[9] == "Credits. Author: Ada." );
+    CHECK( capture_ptr->messages[10] == "Main menu. World. Survival. 3 saves." );
+
+    accessibility::reset_backend_after_testing();
+}
+
 TEST_CASE( "semantic_creature_status_descriptions_are_reusable", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_creature_attitude( "Hostile" ) == "Attitude: Hostile" );

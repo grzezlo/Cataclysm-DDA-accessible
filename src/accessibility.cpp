@@ -245,6 +245,46 @@ bool announce_semantic_sequence( const std::vector<std::string> &parts )
     return announce( format_semantic_sequence( parts ) );
 }
 
+std::string format_main_menu_world( const std::string &name, const size_t save_count )
+{
+    return format_semantic_sequence( {
+        name,
+        string_format( n_gettext( "%d save", "%d saves", save_count ),
+                       static_cast<int>( save_count ) )
+    } );
+}
+
+std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
+                                    const std::string &focused, const std::string &title,
+                                    const std::string &version, const std::string &tip )
+{
+    return format_semantic_sequence( { title, version, tip, menu_name, tab, focused } );
+}
+
+std::vector<semantic_document_line> select_document_lines(
+    const std::vector<std::string> &source_lines )
+{
+    std::vector<semantic_document_line> lines;
+    for( size_t index = 0; index < source_lines.size(); ++index ) {
+        const std::string &source = source_lines[index];
+        const size_t first = source.find_first_not_of( " \t\r" );
+        if( first == std::string::npos ) {
+            continue;
+        }
+        const size_t last = source.find_last_not_of( " \t\r" );
+        const std::string text = source.substr( first, last - first + 1 );
+        if( text.find_first_not_of( '*' ) != std::string::npos ) {
+            lines.push_back( { text, index } );
+        }
+    }
+    return lines;
+}
+
+int move_document_cursor( const int current, const int line_count, const int delta )
+{
+    return line_count <= 0 ? 0 : std::clamp( current + delta, 0, line_count - 1 );
+}
+
 std::string format_creature_attitude( const std::string &attitude )
 {
     if( attitude.empty() ) {
