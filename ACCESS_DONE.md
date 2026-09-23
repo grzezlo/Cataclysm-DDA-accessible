@@ -423,3 +423,35 @@ Limitations:
   release gate) as directed by the user.
 - New source strings fall back to English if the translation catalog lacks
   translations.
+
+## 2026-09-24 — Stage 04A: Message log review
+
+- Added a semantic message cursor to the existing log dialog.  Opening focuses
+  the newest message; Up/Down move by complete messages and Page Up/Page Down
+  move by a viewport of messages.  The visible selection follows focus, and
+  navigation respects the configured log flow direction.
+- Focus speaks the full message and elapsed time.  Enter adds the message type
+  and position in the current results.  Wrapped display lines remain one
+  message.  Redraws do not announce.
+- Kept the shared text and localized `<type>:<text>` filter.  Its field speaks
+  the current query and available type names; applying or clearing it announces
+  the result count and focused message.  Empty results and invalid type prefixes
+  are explicit.  Cancel restores the prior filter and focus.  Repeat Last works
+  in the log and filter field, and closing restores gameplay context.
+- Capture tests covered opening, cursor and page movement, detail, text and type
+  filters, empty and invalid results, reset, repeat-last, and return context.
+  `test_access.bat` passed with 283 assertions in 20 test cases.  The Windows
+  x64 Release tiles build succeeded with `build_win_x64.bat`; AStyle and
+  `git diff --check` were clean.
+- A blind user confirmed the requested NVDA checks: keyboard navigation,
+  focus and announcement behavior, detailed output, filtering and reset,
+  repeat-last after speech interruption, and return to gameplay.  Tested
+  Windows version: 25H2, build 26200.9457.  NVDA version: 2026.1.  Tested
+  fork version: `cdda-0.I-2026-09-19-2324-37-g00560e743b` (commit
+  `00560e743bf08c223e24f591418512a0fd4c106c`).
+
+Limitations:
+
+- The options screen is not yet independently usable with NVDA; Stage 21A owns
+  that interface.  The default log flow remains newest at the bottom.
+- New source strings may fall back to English until Stage 23 translation work.
