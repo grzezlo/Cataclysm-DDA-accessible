@@ -207,7 +207,7 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
                                  include_tab && !focused_item.empty() ? tab : "",
                                  focused_item.empty() ? tab : focused_item,
                                  include_screen_info ? _( "Cataclysm: Dark Days Ahead" ) : "",
-                                 include_screen_info ? _( "Version: 0.I (Ito) Stable Release" ) : "",
+                                 include_screen_info ? _( "Version: 0.I-1 (Ito-1) Stable Release" ) : "",
     include_screen_info ? accessibility::format_semantic_sequence( {
         string_format( _( "Tip of the day: %s" ), vdaytip ),
         main_menu_general_hint()
