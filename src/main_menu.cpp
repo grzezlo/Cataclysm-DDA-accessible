@@ -36,7 +36,6 @@
 #include "filesystem.h"
 #include "game.h"
 #include "gamemode.h"
-#include "get_version.h"
 #include "help.h"
 #include "imgui_demo.h"
 #include "localized_comparator.h"
@@ -95,6 +94,11 @@ static int getopt( main_menu_opts o )
 static std::string main_menu_general_hint()
 {
     return _( "Bugs?  Suggestions?  Use links in MOTD to report them." );
+}
+
+static std::string main_menu_version_text()
+{
+    return _( "Version: 0.I-1 (Ito-1) Stable Release" );
 }
 
 static std::vector<std::pair<std::string, int>> menu_document_lines( const std::string &text )
@@ -207,7 +211,7 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
                                  include_tab && !focused_item.empty() ? tab : "",
                                  focused_item.empty() ? tab : focused_item,
                                  include_screen_info ? _( "Cataclysm: Dark Days Ahead" ) : "",
-                                 include_screen_info ? _( "Version: 0.I-1 (Ito-1) Stable Release" ) : "",
+                                 include_screen_info ? main_menu_version_text() : "",
     include_screen_info ? accessibility::format_semantic_sequence( {
         string_format( _( "Tip of the day: %s" ), vdaytip ),
         main_menu_general_hint()
@@ -474,9 +478,7 @@ void main_menu::print_menu( const catacurses::window &w_open, int iSel, const po
     }
 
     iLine++;
-    center_print( w_open, iLine, c_light_blue,
-                  string_format( _( "Version: 0.I-1 (Ito-1) Stable Release" ),
-                                 getVersionString() ) );
+    center_print( w_open, iLine, c_light_blue, main_menu_version_text() );
 
     int menu_length = 0;
     for( size_t i = 0; i < vMenuItems.size(); ++i ) {
