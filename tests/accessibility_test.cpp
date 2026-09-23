@@ -85,6 +85,16 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( gameplay.input_to_action( pure_r ) != "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( gameplay.input_to_action( pure_v ) != "accessibility_situation" );
     CHECK( gameplay.input_to_action( pure_s ) != "accessibility_status" );
+
+    input_context message_log( "MESSAGE_LOG", keyboard_mode::keycode );
+    message_log.register_action( "FILTER" );
+    message_log.register_action( "RESET_FILTER" );
+    message_log.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( message_log.input_to_action( input_event( {}, 'f', input_event_t::keyboard_code ) ) ==
+           "FILTER" );
+    CHECK( message_log.input_to_action( input_event( {}, 'r', input_event_t::keyboard_code ) ) ==
+           "RESET_FILTER" );
+    CHECK( message_log.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
 }
 
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
@@ -131,6 +141,111 @@ TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessi
     CHECK( capture_ptr->messages[10] == "No nearby threats." );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "message_log_review_keeps_complete_messages_and_filter_focus",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    accessibility::message_log_review log;
+    log.set_entries( {
+        { 0, "A zombie approaches.", "warning", "Warning", "Now" },
+        { 1, "You hear a crash x 3", "info", "Information", "2 minutes ago" },
+        { 2, "You close the door.", "neutral", "", "5 minutes ago" }
+    }, true );
+    const std::vector<std::string> types = { "warning", "info", "neutral" };
+    REQUIRE( log.set_filter( "", types ) );
+    REQUIRE( log.focused() != nullptr );
+    accessibility::announce( accessibility::format_message_log_open( log.matches().size(),
+                             log.focused() ) );
+    CHECK( log.move( 1 ) );
+    REQUIRE( log.focused() != nullptr );
+    accessibility::announce( accessibility::format_message_log_focus( *log.focused() ) );
+    CHECK( log.page( 1, 2 ) );
+    REQUIRE( log.focused() != nullptr );
+    accessibility::announce( accessibility::format_message_log_focus( *log.focused() ) );
+    CHECK( log.focused_position() == 3 );
+    accessibility::announce( accessibility::format_message_log_detail( *log.focused(),
+                             log.focused_position(), log.matches().size() ) );
+    CHECK_FALSE( log.move( 1 ) );
+    CHECK( accessibility::repeat_last_announcement() );
+
+    accessibility::announce( accessibility::format_message_log_filter_field( "",
+    { "warning", "info", "neutral" } ) );
+    accessibility::announce( accessibility::format_message_log_filter_value( "warning:z" ) );
+    REQUIRE( log.set_filter( "warning:z", types ) );
+    CHECK( log.matches().size() == 1 );
+    REQUIRE( log.focused() != nullptr );
+    CHECK( accessibility::format_message_log_detail( *log.focused(), log.focused_position(),
+            log.matches().size() ) == "Message 1 of 1. Warning. A zombie approaches. Now." );
+    accessibility::announce( accessibility::format_message_log_filter( "warning:z",
+                             log.matches().size(), log.focused() ) );
+    REQUIRE( log.set_filter( "warning:nothing", types ) );
+    CHECK( log.focused() == nullptr );
+    accessibility::announce( accessibility::format_message_log_filter( "warning:nothing",
+                             log.matches().size(), log.focused() ) );
+    CHECK_FALSE( log.set_filter( "unknown:zombie", types ) );
+    CHECK( log.matches().empty() );
+    accessibility::announce( accessibility::format_message_log_invalid_type( "unknown" ) );
+
+    REQUIRE( log.set_filter( "", types ) );
+    CHECK( log.focus_source( 2 ) );
+    accessibility::announce( accessibility::format_message_log_filter( "", log.matches().size(),
+                             log.focused() ) );
+    accessibility::announce( "Gameplay. Current position: floor" );
+
+    REQUIRE( capture_ptr->messages.size() == 12 );
+    CHECK( capture_ptr->messages[0] ==
+           "Message log. 3 messages. A zombie approaches. Now." );
+    CHECK( capture_ptr->messages[1] ==
+           "You hear a crash x 3. 2 minutes ago." );
+    CHECK( capture_ptr->messages[2] == "You close the door. 5 minutes ago." );
+    CHECK( capture_ptr->messages[3] ==
+           "Message 3 of 3. You close the door. 5 minutes ago." );
+    CHECK( capture_ptr->messages[4] == capture_ptr->messages[3] );
+    CHECK( capture_ptr->messages[5] ==
+           "Message log filter. Empty. Search text or use type:text. Types: warning, info, neutral. Enter to apply, Escape to cancel." );
+    CHECK( capture_ptr->messages[6] == "Filter text: warning:z" );
+    CHECK( capture_ptr->messages[7] ==
+           "Filter: warning:z. 1 message. A zombie approaches. Now." );
+    CHECK( capture_ptr->messages[8] ==
+           "Filter: warning:nothing. 0 messages. No matching messages." );
+    CHECK( capture_ptr->messages[9] == "Unknown message type: unknown" );
+    CHECK( capture_ptr->messages[10] ==
+           "Filter cleared. 3 messages. You close the door. 5 minutes ago." );
+    CHECK( capture_ptr->messages[11] == "Gameplay. Current position: floor" );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "message_log_review_handles_oldest_first_and_empty_history", "[accessibility][nogame]" )
+{
+    accessibility::message_log_review log;
+    log.set_entries( {}, false );
+    CHECK( log.focused() == nullptr );
+    CHECK_FALSE( log.move( 1 ) );
+    CHECK( accessibility::format_message_log_open( 0, log.focused() ) ==
+           "Message log. 0 messages. Empty." );
+
+    log.set_entries( {
+        { 2, "Oldest", "neutral", "", "1 hour ago" },
+        { 1, "Middle", "info", "Information", "5 minutes ago" },
+        { 0, "Newest", "warning", "Warning", "Now" }
+    }, false );
+    REQUIRE( log.focused() != nullptr );
+    CHECK( log.focused()->source_index == 0 );
+    CHECK( log.page( -1, 2 ) );
+    REQUIRE( log.focused() != nullptr );
+    CHECK( log.focused()->source_index == 2 );
+    REQUIRE( log.set_filter( ":Middle", { "neutral", "info", "warning" } ) );
+    REQUIRE( log.focused() != nullptr );
+    CHECK( log.focused()->source_index == 1 );
+    REQUIRE( log.set_filter( "", { "neutral", "info", "warning" } ) );
+    REQUIRE( log.focused() != nullptr );
+    CHECK( log.focused()->source_index == 1 );
 }
 
 TEST_CASE( "accessibility_last_announcement_can_be_set_quietly_and_repeated",

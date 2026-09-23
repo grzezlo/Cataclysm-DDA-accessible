@@ -28,16 +28,43 @@ history to catch up on missed or interrupted speech.
 **Code inventory:** `Messages::dialog` in `src/messages.cpp`; the message
 history deque in `messages_impl`; filter and scroll logic.
 
+**Selected interaction (2026-09-24):** The user chose a single navigable list
+of complete messages.
+
+- Opening the log focuses the newest message and announces the log title, the
+  number of messages, and that message.  An empty log announces its empty state.
+- Up/Down moves one message at a time; Page Up/Down moves by a viewport of
+  messages.  The visible selection follows the focused message.  Focus speaks
+  the complete source message with its repeat count and elapsed time, never an
+  arbitrary wrapped screen line.  Enter speaks the message type, position in
+  the current results, full text, and elapsed time on demand, without opening
+  another view.  Redraws do not speak.
+- Filter opens an editable field containing the current query.  Announce the
+  field and its current value on entry, and give keyboard feedback when its
+  value changes.  Keep the existing live visual filtering, but do not announce
+  result counts for every keystroke.  Enter applies the query, announces the
+  active filter and the number of matching messages, then focuses the newest
+  match.  An empty result is announced and leaves Filter, Reset Filter, and
+  Quit available.  Escape in the field discards the draft and restores the
+  previous filter and focused message.
+- Preserve text search and the existing localized `<type>:<text>` syntax.
+  Announce an unrecognized type prefix instead of silently ignoring it.
+  Reset Filter clears the query, announces the restored count, and keeps the
+  same message focused when possible.  Repeat Last repeats the latest log
+  announcement.  Quit closes the log and restores gameplay context.
+
 **Implementation hints:**
 
 - The message log dialog class is `Messages::dialog` in `src/messages.cpp`.
 - Entry point: `Messages::display_messages()` in `src/messages.cpp`, triggered
   by `ACTION_MESSAGES` (the `P` key) in `src/handle_action.cpp`.
 - Input context: `"MESSAGE_LOG"` in `Messages::dialog::init()`.  Actions: `"UP"`,
-  `"DOWN"`, `"PAGE_UP"`, `"PAGE_DOWN"`, `"FILTER"`, `"RESET_FILTER"`, `"QUIT"`.
+  `"DOWN"`, `"PAGE_UP"`, `"PAGE_DOWN"`, `"CONFIRM"`, `"FILTER"`,
+  `"RESET_FILTER"`, `"QUIT"`.
 - The dialog currently uses a viewport offset model in `Messages::dialog::input()`
-  rather than a per-message cursor.  For accessibility, track an active cursor
-  index within `folded_filtered` and announce each message line on UP/DOWN.
+  rather than a per-message cursor.  Add a message-level cursor and use folded
+  lines only to lay out the visible list; a wrapped message remains one focus
+  item.
 - Message text is in `game_message::get_with_count()` in `src/messages.cpp`.
 - Elapsed time per message: `to_string_clipped(calendar::turn - msg_time, ...)`
   in `Messages::dialog::show()`.
@@ -54,8 +81,8 @@ announces the active filter and result count.  Clearing the filter and closing
 restore gameplay context.
 
 **Possible automated tests:** Capture log open, cursor movement, page
-navigation, filter activation, filter results, filter clear, and close using
-deterministic message fixtures.
+navigation, on-demand detail, filter activation, filter results, filter clear,
+and close using deterministic message fixtures.
 
 **Required human verification:** Open the log after combat, scroll through
 messages, apply and clear a filter, and confirm that interrupted speech can be

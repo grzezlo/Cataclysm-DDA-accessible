@@ -6,6 +6,7 @@
 #include <deque>
 #include <iterator>
 #include <memory>
+#include <optional>
 #include <string>
 #include <type_traits>
 #include <unordered_set>
@@ -507,20 +508,11 @@ static const std::vector<std::pair<game_message_type, const char *>> &msg_type_a
         { m_info, translate_marker_context( "message type", "info" ) },
         { m_neutral, translate_marker_context( "message type", "neutral" ) },
         { m_debug, translate_marker_context( "message type", "debug" ) },
+        { m_headshot, translate_marker_context( "message type", "headshot" ) },
+        { m_critical, translate_marker_context( "message type", "critical hit" ) },
+        { m_grazing, translate_marker_context( "message type", "grazing hit" ) },
     };
     return type_n_names;
-}
-
-// Get message type from translated name, returns true if name is a valid translated name
-static bool msg_type_from_name( game_message_type &type, const std::string &name )
-{
-    for( const auto &p : msg_type_and_names() ) {
-        if( name == pgettext( "message type", p.second ) ) {
-            type = p.first;
-            return true;
-        }
-    }
-    return false;
 }
 
 namespace Messages
@@ -535,7 +527,9 @@ class dialog
         void init( ui_adaptor &ui );
         void show();
         void input();
-        void do_filter( const std::string &filter_str );
+        bool do_filter( const std::string &query );
+        void keep_focus_visible();
+        void announce_focus() const;
         static std::vector<std::string> filter_help_text( int width );
 
         const nc_color border_color;
@@ -575,6 +569,7 @@ class dialog
         string_input_popup filter;
         bool filtering = false;
         std::string filter_str;
+        std::string filter_error;
 
         input_context ctxt;
 
@@ -582,6 +577,10 @@ class dialog
         std::vector<std::pair<size_t, std::string>> folded_all;
         // Indices of filtered messages
         std::vector<size_t> folded_filtered;
+
+        accessibility::message_log_review review;
+        std::optional<size_t> focus_before_filter;
+        bool semantic_mode = false;
 
         size_t offset = 0; // Index of the first printed message
 
@@ -617,17 +616,26 @@ void Messages::dialog::init( ui_adaptor &ui )
     w = catacurses::newwin( w_height, w_width, point( w_x, w_y ) );
 
     if( first_init ) {
+        semantic_mode = accessibility::is_available();
         ctxt = input_context( "MESSAGE_LOG" );
         ctxt.register_action( "UP", to_translation( "Scroll up" ) );
         ctxt.register_action( "DOWN", to_translation( "Scroll down" ) );
         ctxt.register_action( "PAGE_UP" );
         ctxt.register_action( "PAGE_DOWN" );
+        ctxt.register_action( "CONFIRM" );
         ctxt.register_action( "FILTER" );
         ctxt.register_action( "RESET_FILTER" );
         ctxt.register_action( "QUIT" );
         ctxt.register_action( "HELP_KEYBINDINGS" );
         ctxt.register_action( "SCROLL_UP" );
         ctxt.register_action( "SCROLL_DOWN" );
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        filter.custom_actions.emplace_back( "ACCESSIBILITY_REPEAT_LAST",
+                                            to_translation( "Repeat last screen reader message" ) );
+        filter.add_callback( "ACCESSIBILITY_REPEAT_LAST", []() {
+            accessibility::repeat_last_announcement();
+            return false;
+        } );
 
         // Calculate time string display width. The translated strings are expected to
         // be aligned, so we choose an arbitrary duration here to calculate the width.
@@ -647,7 +655,7 @@ void Messages::dialog::init( ui_adaptor &ui )
     w_fh_width = w_width;
     w_fh_x = w_x;
     help_text = filter_help_text( w_fh_width - border_width * 2 );
-    w_fh_height = help_text.size() + border_width * 2;
+    w_fh_height = help_text.size() + border_width * 2 + 1;
     w_fh_y = w_y + w_height - w_fh_height;
     w_filter_help = catacurses::newwin( w_fh_height, w_fh_width, point( w_fh_x, w_fh_y ) );
 
@@ -656,12 +664,29 @@ void Messages::dialog::init( ui_adaptor &ui )
                    w_fh_width - border_width - 2 );
 
     // Initialize folded messages
+    const accessibility::message_log_entry *old_focus = review.focused();
+    const std::optional<size_t> old_source = old_focus ?
+            std::optional<size_t>( old_focus->source_index ) : std::nullopt;
+    std::vector<accessibility::message_log_entry> entries;
     folded_all.clear();
     folded_filtered.clear();
     const size_t msg_count = size();
+    entries.reserve( msg_count );
     for( size_t ind = 0; ind < msg_count; ++ind ) {
         const size_t msg_ind = log_from_top ? ind : msg_count - 1 - ind;
         const game_message &msg = player_messages.history( msg_ind );
+        const auto &type_names = msg_type_and_names();
+        const auto type_name = std::find_if( type_names.begin(), type_names.end(),
+        [&msg]( const auto & entry ) {
+            return entry.first == msg.type;
+        } );
+        const std::string type = type_name == type_names.end() ? std::string() :
+                                 pgettext( "message type", type_name->second );
+        const time_duration age = calendar::turn - msg.timestamp_in_turns;
+        entries.push_back( { msg_ind, remove_color_tags( msg.get_with_count() ), type,
+                             msg.type == m_neutral ? std::string() : type,
+                             age <= 0_turns ? _( "Now" ) : string_format( _( "%s ago" ),
+                                     to_string_clipped( age ) ) } );
         const auto &folded = foldstring( msg.get_with_count(), msg_width );
         for( const auto &it : folded ) {
             folded_filtered.emplace_back( folded_all.size() );
@@ -669,10 +694,18 @@ void Messages::dialog::init( ui_adaptor &ui )
         }
     }
 
-    do_filter( filter_str );
+    review.set_entries( std::move( entries ), log_from_top );
+    do_filter( filtering ? filter.text() : filter_str );
+    if( old_source && review.focus_source( *old_source ) ) {
+        keep_focus_visible();
+    }
 
     ui.position_from_window( w );
 
+    if( first_init && semantic_mode ) {
+        accessibility::announce( accessibility::format_message_log_open( review.matches().size(),
+                                 review.focused() ) );
+    }
     first_init = false;
 }
 
@@ -713,8 +746,13 @@ void Messages::dialog::show()
         const size_t folded_ind = offset + line;
         const size_t msg_ind = folded_all[folded_filtered[folded_ind]].first;
         const game_message &msg = player_messages.history( msg_ind );
+        const accessibility::message_log_entry *focused = review.focused();
+        const bool selected = semantic_mode && focused && focused->source_index == msg_ind;
 
         nc_color col = msgtype_to_color( msg.type, false );
+        if( selected ) {
+            col = hilite( col );
+        }
 
         // Print current line
         print_colored_text( w, point( border_width + time_width + padding_width, border_width + line ),
@@ -742,6 +780,10 @@ void Messages::dialog::show()
             printing_range = true;
         }
 
+        if( selected ) {
+            mvwputch( w, point( w_width - 1, border_width + line ), c_yellow, '>' );
+        }
+
         // Decrement for !log_from_top is done at the beginning
         if( log_from_top ) {
             ++line;
@@ -757,6 +799,10 @@ void Messages::dialog::show()
             nc_color col = filter_help_color;
             print_colored_text( w_filter_help, point( border_width, border_width + line ), col, col,
                                 help_text[line] );
+        }
+        if( !filter_error.empty() ) {
+            mvwprintz( w_filter_help, point( border_width, border_width + help_text.size() ),
+                       c_light_red, "%s", trim_by_length( filter_error, w_fh_width - border_width * 2 ) );
         }
         mvwprintz( w_filter_help, point( border_width, w_fh_height - 1 ), border_color, "< " );
         mvwprintz( w_filter_help, point( w_fh_width - border_width - 2, w_fh_height - 1 ), border_color,
@@ -778,41 +824,63 @@ void Messages::dialog::show()
     }
 }
 
-void Messages::dialog::do_filter( const std::string &filter_str )
+bool Messages::dialog::do_filter( const std::string &query )
 {
-    // Split the search string into type and text
-    bool has_type_filter = false;
-    game_message_type filter_type = m_neutral;
-    std::string filter_text;
-    const size_t colon = filter_str.find( ':' );
-    if( colon != std::string::npos ) {
-        has_type_filter = msg_type_from_name( filter_type, filter_str.substr( 0, colon ) );
-        filter_text = filter_str.substr( colon + 1 );
-    } else {
-        filter_text = filter_str;
+    std::vector<std::string> type_names;
+    for( const auto &type : msg_type_and_names() ) {
+        type_names.emplace_back( pgettext( "message type", type.second ) );
+    }
+    if( !review.set_filter( query, type_names ) ) {
+        return false;
     }
 
-    // Start filtering the log
+    const std::unordered_set<size_t> matches( review.matches().begin(), review.matches().end() );
     folded_filtered.clear();
-    for( size_t folded_ind = 0; folded_ind < folded_all.size(); ) {
-        const size_t msg_ind = folded_all[folded_ind].first;
-        const game_message &msg = player_messages.history( msg_ind );
-        const bool match = ( !has_type_filter || filter_type == msg.type ) &&
-                           ci_find_substr( remove_color_tags( msg.get_with_count() ), filter_text ) >= 0;
-
-        // Always advance the index, but only add to filtered list if the original message matches
-        for( ; folded_ind < folded_all.size() && folded_all[folded_ind].first == msg_ind; ++folded_ind ) {
-            if( match ) {
-                folded_filtered.emplace_back( folded_ind );
-            }
+    for( size_t folded_ind = 0; folded_ind < folded_all.size(); ++folded_ind ) {
+        if( matches.count( folded_all[folded_ind].first ) > 0 ) {
+            folded_filtered.emplace_back( folded_ind );
         }
     }
 
-    // Reset view
-    if( log_from_top || max_lines > folded_filtered.size() ) {
+    if( semantic_mode ) {
+        keep_focus_visible();
+    } else if( log_from_top || max_lines > folded_filtered.size() ) {
         offset = 0;
     } else {
         offset = folded_filtered.size() - max_lines;
+    }
+    return true;
+}
+
+void Messages::dialog::keep_focus_visible()
+{
+    const accessibility::message_log_entry *entry = review.focused();
+    if( !entry || folded_filtered.empty() ) {
+        offset = 0;
+        return;
+    }
+    size_t first = folded_filtered.size();
+    size_t last = 0;
+    for( size_t line = 0; line < folded_filtered.size(); ++line ) {
+        if( folded_all[folded_filtered[line]].first == entry->source_index ) {
+            first = std::min( first, line );
+            last = line;
+        }
+    }
+    if( first == folded_filtered.size() ) {
+        return;
+    }
+    if( last - first + 1 >= max_lines || first < offset ) {
+        offset = first;
+    } else if( last >= offset + max_lines ) {
+        offset = last + 1 - max_lines;
+    }
+}
+
+void Messages::dialog::announce_focus() const
+{
+    if( semantic_mode && review.focused() ) {
+        accessibility::announce( accessibility::format_message_log_focus( *review.focused() ) );
     }
 }
 
@@ -820,24 +888,89 @@ void Messages::dialog::input()
 {
     canceled = false;
     if( filtering ) {
+        const std::string old_text = filter.text();
         filter.query( false );
-        if( filter.confirmed() || filter.canceled() ) {
+        if( filter.canceled() ) {
             filtering = false;
-        }
-        if( !filter.canceled() ) {
-            const std::string &new_filter_str = filter.text();
-            if( new_filter_str != filter_str ) {
-                filter_str = new_filter_str;
-
-                do_filter( filter_str );
-            }
-        } else {
+            filter_error.clear();
             filter.text( filter_str );
+            do_filter( filter_str );
+            if( focus_before_filter && review.focus_source( *focus_before_filter ) ) {
+                keep_focus_visible();
+            }
+            focus_before_filter.reset();
+            if( semantic_mode ) {
+                accessibility::announce_semantic_sequence( {
+                    _( "Filter canceled" ),
+                    review.focused() ? accessibility::format_message_log_focus( *review.focused() ) :
+                    _( "No matching messages" )
+                } );
+            }
+        } else if( filter.confirmed() ) {
+            const std::string query = filter.text();
+            if( do_filter( query ) ) {
+                filter_str = query;
+                filtering = false;
+                filter_error.clear();
+                focus_before_filter.reset();
+                review.focus_newest();
+                keep_focus_visible();
+                if( semantic_mode ) {
+                    accessibility::announce( accessibility::format_message_log_filter(
+                                                 filter_str, review.matches().size(), review.focused() ) );
+                }
+            } else {
+                const size_t colon = query.find( ':' );
+                filter_error = accessibility::format_message_log_invalid_type( query.substr( 0, colon ) );
+                if( semantic_mode ) {
+                    accessibility::announce( filter_error );
+                }
+            }
+        } else if( filter.text() != old_text ) {
+            filter_error.clear();
+            do_filter( filter.text() );
+            if( semantic_mode ) {
+                accessibility::announce( accessibility::format_message_log_filter_value( filter.text() ) );
+            }
         }
     } else {
         const std::string &action = ctxt.handle_input();
-        if( ( action == "DOWN" || action == "SCROLL_DOWN" ) &&
-            offset + max_lines < folded_filtered.size() ) {
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( semantic_mode && action == "CONFIRM" ) {
+            if( review.focused() ) {
+                accessibility::announce( accessibility::format_message_log_detail( *review.focused(),
+                                         review.focused_position(), review.matches().size() ) );
+            } else {
+                accessibility::announce( _( "No matching messages" ) );
+            }
+        } else if( semantic_mode && ( action == "DOWN" || action == "SCROLL_DOWN" ) ) {
+            if( review.move( 1 ) ) {
+                keep_focus_visible();
+                announce_focus();
+            }
+        } else if( semantic_mode && ( action == "UP" || action == "SCROLL_UP" ) ) {
+            if( review.move( -1 ) ) {
+                keep_focus_visible();
+                announce_focus();
+            }
+        } else if( semantic_mode && ( action == "PAGE_DOWN" || action == "PAGE_UP" ) ) {
+            size_t page_size = 0;
+            size_t previous = size();
+            for( size_t line = offset; line < std::min( offset + max_lines, folded_filtered.size() );
+                 ++line ) {
+                const size_t current = folded_all[folded_filtered[line]].first;
+                if( current != previous ) {
+                    ++page_size;
+                    previous = current;
+                }
+            }
+            if( review.page( action == "PAGE_DOWN" ? 1 : -1, page_size ) ) {
+                keep_focus_visible();
+                announce_focus();
+            }
+        } else if( ( action == "DOWN" || action == "SCROLL_DOWN" ) &&
+                   offset + max_lines < folded_filtered.size() ) {
             ++offset;
         } else if( ( action == "UP" || action == "SCROLL_UP" ) && offset > 0 ) {
             --offset;
@@ -857,10 +990,34 @@ void Messages::dialog::input()
             }
         } else if( action == "FILTER" ) {
             filtering = true;
+            filter_error.clear();
+            const accessibility::message_log_entry *focused = review.focused();
+            focus_before_filter = focused ? std::optional<size_t>( focused->source_index ) : std::nullopt;
+            filter.text( filter_str );
+            if( semantic_mode ) {
+                std::vector<std::string> types;
+                for( const auto &type : msg_type_and_names() ) {
+                    if( debug_mode || type.first != m_debug ) {
+                        types.emplace_back( pgettext( "message type", type.second ) );
+                    }
+                }
+                accessibility::announce( accessibility::format_message_log_filter_field( filter_str,
+                                         types ) );
+            }
         } else if( action == "RESET_FILTER" ) {
+            const accessibility::message_log_entry *focused = review.focused();
+            const std::optional<size_t> old_source = focused ?
+                    std::optional<size_t>( focused->source_index ) : std::nullopt;
             filter_str.clear();
             filter.text( filter_str );
             do_filter( filter_str );
+            if( old_source && review.focus_source( *old_source ) ) {
+                keep_focus_visible();
+            }
+            if( semantic_mode ) {
+                accessibility::announce( accessibility::format_message_log_filter(
+                                             filter_str, review.matches().size(), review.focused() ) );
+            }
         } else if( action == "QUIT" ) {
             canceled = true;
         }

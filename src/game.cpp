@@ -6794,6 +6794,11 @@ void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entri
 
 } // namespace
 
+void game::announce_gameplay_focus()
+{
+    accessibility::announce_focus( {}, gameplay_focus_description( get_map(), u ) );
+}
+
 //Shift player by one tile, look_around(), then restore previous position.
 //represents carefully peeking around a corner, hence the large move cost.
 void game::peek()

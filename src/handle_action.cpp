@@ -2951,6 +2951,7 @@ bool game::do_regular_action( action_id &act, avatar &player_character,
 
         case ACTION_MESSAGES:
             Messages::display_messages();
+            announce_gameplay_focus();
             break;
 
         case ACTION_HELP:

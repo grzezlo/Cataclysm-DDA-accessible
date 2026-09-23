@@ -1,6 +1,7 @@
 #include "accessibility.h"
 
 #include <algorithm>
+#include <cstdint>
 #include <map>
 #include <memory>
 #include <regex>
@@ -8,6 +9,7 @@
 #include <tuple>
 #include <utility>
 
+#include "cata_utility.h"
 #include "string_formatter.h"
 #include "translations.h"
 
@@ -71,6 +73,175 @@ std::string &previous_movement_direction()
 }
 
 } // namespace
+
+void message_log_review::set_entries( std::vector<message_log_entry> entries,
+                                      const bool newest_first )
+{
+    entries_ = std::move( entries );
+    newest_first_ = newest_first;
+    matches_.clear();
+    for( const message_log_entry &entry : entries_ ) {
+        matches_.push_back( entry.source_index );
+    }
+    focus_newest();
+}
+
+bool message_log_review::set_filter( const std::string &query,
+                                     const std::vector<std::string> &types )
+{
+    std::string text = query;
+    std::string type;
+    const size_t colon = query.find( ':' );
+    if( colon != std::string::npos ) {
+        type = query.substr( 0, colon );
+        text = query.substr( colon + 1 );
+        if( !type.empty() && std::find( types.begin(), types.end(), type ) == types.end() ) {
+            return false;
+        }
+    }
+
+    const message_log_entry *previous = focused();
+    const std::optional<size_t> previous_source = previous ?
+            std::optional<size_t>( previous->source_index ) : std::nullopt;
+    matches_.clear();
+    for( const message_log_entry &entry : entries_ ) {
+        if( ( type.empty() || entry.type == type ) && lcmatch( entry.text, text ) ) {
+            matches_.push_back( entry.source_index );
+        }
+    }
+    if( !previous_source || !focus_source( *previous_source ) ) {
+        focus_newest();
+    }
+    return true;
+}
+
+const std::vector<size_t> &message_log_review::matches() const
+{
+    return matches_;
+}
+
+const message_log_entry *message_log_review::focused() const
+{
+    if( matches_.empty() ) {
+        return nullptr;
+    }
+    const size_t source_index = matches_[focused_];
+    const auto found = std::find_if( entries_.begin(), entries_.end(),
+    [source_index]( const message_log_entry & entry ) {
+        return entry.source_index == source_index;
+    } );
+    return found == entries_.end() ? nullptr : &*found;
+}
+
+size_t message_log_review::focused_position() const
+{
+    return matches_.empty() ? 0 : focused_ + 1;
+}
+
+bool message_log_review::focus_source( const size_t source_index )
+{
+    const auto found = std::find( matches_.begin(), matches_.end(), source_index );
+    if( found == matches_.end() ) {
+        return false;
+    }
+    focused_ = std::distance( matches_.begin(), found );
+    return true;
+}
+
+void message_log_review::focus_newest()
+{
+    focused_ = newest_first_ || matches_.empty() ? 0 : matches_.size() - 1;
+}
+
+bool message_log_review::move( const int delta )
+{
+    if( matches_.empty() || delta == 0 ) {
+        return false;
+    }
+    const size_t old = focused_;
+    if( delta > 0 ) {
+        focused_ = std::min( matches_.size() - 1, focused_ + static_cast<size_t>( delta ) );
+    } else {
+        const size_t step = static_cast<size_t>( -( static_cast<int64_t>( delta ) ) );
+        focused_ = step > focused_ ? 0 : focused_ - step;
+    }
+    return focused_ != old;
+}
+
+bool message_log_review::page( const int direction, const size_t page_size )
+{
+    if( matches_.empty() || direction == 0 ) {
+        return false;
+    }
+    const size_t old = focused_;
+    const size_t step = std::max<size_t>( 1, page_size );
+    if( direction > 0 ) {
+        focused_ = std::min( matches_.size() - 1, focused_ + step );
+    } else {
+        focused_ = step > focused_ ? 0 : focused_ - step;
+    }
+    return focused_ != old;
+}
+
+std::string format_message_log_focus( const message_log_entry &entry )
+{
+    return format_semantic_sequence( { entry.text, entry.elapsed } );
+}
+
+std::string format_message_log_detail( const message_log_entry &entry, const size_t position,
+                                       const size_t count )
+{
+    return format_semantic_sequence( {
+        string_format( _( "Message %d of %d" ), static_cast<int>( position ), static_cast<int>( count ) ),
+        entry.spoken_type, entry.text, entry.elapsed
+    } );
+}
+
+std::string format_message_log_open( const size_t count, const message_log_entry *entry )
+{
+    const std::string count_text = string_format( n_gettext( "%d message", "%d messages", count ),
+                                   static_cast<int>( count ) );
+    return format_semantic_sequence( { _( "Message log" ), count_text,
+                                       entry ? format_message_log_focus( *entry ) : _( "Empty" ) } );
+}
+
+std::string format_message_log_filter( const std::string &query, const size_t count,
+                                       const message_log_entry *entry )
+{
+    const std::string filter = query.empty() ? _( "Filter cleared" ) :
+                               string_format( _( "Filter: %s" ), query );
+    const std::string count_text = string_format( n_gettext( "%d message", "%d messages", count ),
+                                   static_cast<int>( count ) );
+    return format_semantic_sequence( { filter, count_text,
+                                       entry ? format_message_log_focus( *entry ) : _( "No matching messages" ) } );
+}
+
+std::string format_message_log_filter_field( const std::string &query,
+        const std::vector<std::string> &types )
+{
+    std::string type_list;
+    for( const std::string &type : types ) {
+        if( !type_list.empty() ) {
+            type_list += ", ";
+        }
+        type_list += type;
+    }
+    return format_semantic_sequence( { _( "Message log filter" ),
+                                       query.empty() ? _( "Empty" ) : string_format( _( "Current query: %s" ), query ),
+                                       _( "Search text or use type:text" ),
+                                       type_list.empty() ? std::string() : string_format( _( "Types: %s" ), type_list ),
+                                       _( "Enter to apply, Escape to cancel" ) } );
+}
+
+std::string format_message_log_filter_value( const std::string &query )
+{
+    return query.empty() ? _( "Filter text empty" ) : string_format( _( "Filter text: %s" ), query );
+}
+
+std::string format_message_log_invalid_type( const std::string &type )
+{
+    return string_format( _( "Unknown message type: %s" ), type );
+}
 
 void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries )
 {

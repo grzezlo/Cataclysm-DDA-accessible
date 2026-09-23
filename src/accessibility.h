@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_ACCESSIBILITY_H
 #define CATA_SRC_ACCESSIBILITY_H
 
+#include <cstddef>
 #include <memory>
 #include <optional>
 #include <string>
@@ -45,6 +46,47 @@ struct nearby_list_entry {
     int result_index = 0;
     int result_count = 0;
 };
+
+/** Source messages in visual order; wrapped screen lines are never separate entries. */
+struct message_log_entry {
+    size_t source_index = 0;
+    std::string text;
+    std::string type;
+    std::string spoken_type;
+    std::string elapsed;
+};
+
+class message_log_review
+{
+    public:
+        void set_entries( std::vector<message_log_entry> entries, bool newest_first );
+        /** Invalid nonempty type prefixes leave the current results unchanged. */
+        bool set_filter( const std::string &query, const std::vector<std::string> &types );
+        const std::vector<size_t> &matches() const;
+        const message_log_entry *focused() const;
+        size_t focused_position() const;
+        bool focus_source( size_t source_index );
+        void focus_newest();
+        bool move( int delta );
+        bool page( int direction, size_t page_size );
+
+    private:
+        std::vector<message_log_entry> entries_;
+        std::vector<size_t> matches_;
+        size_t focused_ = 0;
+        bool newest_first_ = true;
+};
+
+std::string format_message_log_focus( const message_log_entry &entry );
+std::string format_message_log_detail( const message_log_entry &entry, size_t position,
+                                       size_t count );
+std::string format_message_log_open( size_t count, const message_log_entry *entry );
+std::string format_message_log_filter( const std::string &query, size_t count,
+                                       const message_log_entry *entry );
+std::string format_message_log_filter_field( const std::string &query,
+        const std::vector<std::string> &types );
+std::string format_message_log_filter_value( const std::string &query );
+std::string format_message_log_invalid_type( const std::string &type );
 
 void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries );
 std::vector<connected_semantic_list_group> group_connected_semantic_list_entries(

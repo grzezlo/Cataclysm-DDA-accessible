@@ -690,6 +690,8 @@ class game
 
         // Look at nearby terrain ';', or select zone points
         std::optional<tripoint_bub_ms> look_around();
+        /** Restore spoken gameplay context after closing an accessibility view. */
+        void announce_gameplay_focus();
         /**
         * @brief
         *
