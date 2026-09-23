@@ -154,6 +154,9 @@ over upstream contribution policy or exact UI parity.
 - Keep upstream tracking branches clean.  Develop accessibility work on a
   dedicated feature branch derived from `access`, then merge completed work
   back into `access`.
+- After verifying that a feature branch has been successfully merged into
+  `access`, delete that branch locally and from the fork remote if it was pushed.
+  Keep unmerged branches and branches still needed for active work.
 - Treat a future port to upstream `master` or 0.J as a separate experimental
   line until it is stable enough for players.
 - Keep accessibility commits focused so they can be ported across upstream UI
