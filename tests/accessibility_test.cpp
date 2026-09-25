@@ -17,6 +17,7 @@
 #include "map.h"
 #include "map_helpers.h"
 #include "map_item_stack.h"
+#include "output.h"
 #include "player_helpers.h"
 #include "point.h"
 #include "type_id.h"
@@ -323,7 +324,7 @@ TEST_CASE( "semantic_accessibility_sequences_omit_empty_parts_and_preserve_order
            "Terrain: wooden floor. Creature: zombie. Z-level: one level above. 5 tiles northeast." );
 }
 
-TEST_CASE( "uilist_announces_detail_availability_and_restores_focus",
+TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place",
            "[accessibility][nogame]" )
 {
     auto capture = std::make_unique<capture_backend>();
@@ -331,26 +332,28 @@ TEST_CASE( "uilist_announces_detail_availability_and_restores_focus",
     accessibility::set_backend_for_testing( std::move( capture ) );
 
     const std::string disabled = accessibility::format_uilist_focus(
-                                     "Torso", "Bandaged", true, true );
-    CHECK( disabled == "Torso. Bandaged. Unavailable. Details available." );
+                                     "Torso", "Bandaged", true );
+    CHECK( disabled == "Torso. Bandaged. Unavailable." );
     const std::string open = accessibility::format_uilist_open(
                                  "Treat which part?", disabled, "Alt+D", true );
     CHECK( open == "Treat which part? List. Use arrow keys to choose. Alt+D for details. " +
            disabled );
     CHECK( accessibility::announce( open ) );
-    CHECK( accessibility::announce( accessibility::format_document_focus(
-                                        "Torso", "Bandaged: poor to good" ) ) );
-    CHECK( accessibility::announce( "You don't expect any effect from using this." ) );
+    const std::string short_details = "Light exercise comparable in intensity to walking.";
+    CHECK_FALSE( accessibility::uilist_details_need_document( short_details ) );
+    CHECK( accessibility::announce( short_details ) );
     CHECK( accessibility::repeat_last_announcement() );
-    CHECK( accessibility::announce( disabled ) );
-    REQUIRE( capture_ptr->messages.size() == 5 );
-    CHECK( capture_ptr->messages[3] == capture_ptr->messages[2] );
-    CHECK( capture_ptr->messages.back() == disabled );
+    REQUIRE( capture_ptr->messages.size() == 3 );
+    CHECK( capture_ptr->messages[2] == short_details );
 
-    const std::string plain = accessibility::format_uilist_focus( "Moderate", "", false, false );
+    const std::string plain = accessibility::format_uilist_focus( "Moderate", "", false );
     CHECK( plain == "Moderate." );
     CHECK( accessibility::format_uilist_open( "Choose intensity", plain, "Alt+D", false ) ==
            "Choose intensity. List. Use arrow keys to choose. Moderate." );
+    CHECK( accessibility::uilist_details_need_document( std::string( 161, 'x' ) ) );
+    CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 160, 'x' ) ) );
+    CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 100, 'x' ) + "ó" ) );
+    CHECK( foldstring( std::string( 161, 'x' ), 100 ).size() > 1 );
 
     accessibility::reset_backend_after_testing();
 }

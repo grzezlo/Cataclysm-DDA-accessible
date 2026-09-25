@@ -25,21 +25,23 @@ verification.
 **Outcome:** Common controls expose consistent semantics before more bespoke
 screens depend on them, and accessibility commands can be discovered in-game.
 
-**Selected `uilist` interaction (2026-09-25):** Keep the accepted arrow-key list
-navigation and concise focus announcements.  When a list contains item details,
-its opening announcement identifies it as a list, tells the player to use the
-arrow keys, and gives the current binding for the new `Accessibility details`
-action (default `Alt+D`).  A focused entry with an available description says
-that details are available without reading the description on every movement.
-With accessibility active, disabled entries can be focused and are identified as
-unavailable; activating one remains blocked unless the caller explicitly allows
-disabled entries.  `Alt+D` opens the focused entry's
-visible description in a navigable semantic document view.  Opening reads the
-first fragment; document navigation reads subsequent fragments; Repeat Last
-repeats the current announcement; Escape returns to the same list entry and
-restores its focus announcement.  An entry without a description reports that
-no additional details are available.  The detail view does not change the list
-selection.  All new speech uses translated strings, and the displayed binding
+**Selected `uilist` interaction (2026-09-25, revised 2026-09-26 after NVDA
+feedback):** Keep arrow-key list navigation and concise focus announcements.
+When a list contains item details, its opening announcement identifies it as a
+list, tells the player to use the arrow keys, and gives the current binding for
+`Accessibility details` (default `Alt+D`).  Do not repeat detail availability
+on each entry.  With accessibility active, disabled entries can be focused and
+are identified as unavailable; activating one remains blocked unless the caller
+explicitly allows disabled entries.  `Alt+D` speaks a focused description of up
+to 160 visible characters in place, retaining list focus so the next arrow key
+moves to another entry.
+For a longer description, `Alt+D` opens a navigable semantic document view;
+opening reads its first fragment, arrows read subsequent fragments, and Escape
+returns to the same list entry and restores its focus announcement.  Long
+single-line descriptions must have multiple navigable fragments.  Repeat Last
+repeats the current announcement in either case.  An entry without a displayed
+description responds `No details available.`  Details do not change the list
+selection.  All new speech uses translated strings, and the announced binding
 must follow rebindings.  This choice applies to `uilist` only; other controls
 receive their own interaction review.
 

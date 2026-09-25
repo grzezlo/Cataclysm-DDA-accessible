@@ -880,10 +880,10 @@ shared_ptr_fast<uilist_impl> uilist::create_or_get_ui()
 static bool has_entry_details( const uilist_entry &entry )
 {
     const std::string description = remove_color_tags( entry.desc );
-    return description.find_first_not_of( " \t\r\n" ) != std::string::npos;
+    return description.find_first_not_of( " \t\r\n*" ) != std::string::npos;
 }
 
-static void show_entry_details( uilist_entry &entry )
+static bool show_entry_details( uilist_entry &entry )
 {
     std::vector<std::string> visual_source_lines;
     std::vector<std::string> spoken_source_lines;
@@ -902,9 +902,25 @@ static void show_entry_details( uilist_entry &entry )
         spoken_paragraphs.push_back( paragraph.text );
     }
 
+    const std::string spoken_details = string_join( spoken_paragraphs, " " );
+    if( !accessibility::uilist_details_need_document( spoken_details ) ) {
+        accessibility::announce( spoken_details );
+        return false;
+    }
+
+    std::vector<std::string> visual_fragments;
+    std::vector<std::string> spoken_fragments;
+    for( const std::string &paragraph : visual_paragraphs ) {
+        for( const std::string &fragment : foldstring( paragraph, 100 ) ) {
+            visual_fragments.push_back( fragment );
+            spoken_fragments.push_back( remove_color_tags( fragment ) );
+        }
+    }
+
     const std::string name = entry._txt_nocolor();
     accessibility_ui::show_document( string_format( _( "Details: %s" ), name ), name,
-                                     visual_paragraphs, spoken_paragraphs );
+                                     visual_fragments, spoken_fragments );
+    return true;
 }
 
 /**
@@ -1010,8 +1026,7 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         if( selected_valid ) {
             semantic_selection = accessibility::format_uilist_focus(
                                      entries[selected]._txt_nocolor(),
-                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
-                                     selected_has_details );
+                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled );
         } else {
             semantic_selection = _( "No matching entries" );
         }
@@ -1040,10 +1055,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
             accessibility::repeat_last_announcement();
         } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
             if( selected_has_details ) {
-                show_entry_details( entries[selected] );
-                accessibility::announce( semantic_selection );
+                if( show_entry_details( entries[selected] ) ) {
+                    accessibility::announce( semantic_selection );
+                }
             } else {
-                accessibility::announce_status( _( "No additional details available" ) );
+                accessibility::announce_status( _( "No details available." ) );
             }
         } else if( scrollby( scroll_amount_from_action( ret_act ) ) ) {
             need_to_scroll = true;

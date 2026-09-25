@@ -148,9 +148,11 @@ bool announce_nearby_list_focus( const nearby_list_entry &entry,
                                  const std::string &context = {} );
 /** Build concise list speech without reading the focused entry's description. */
 std::string format_uilist_focus( const std::string &label, const std::string &column,
-                                 bool unavailable, bool has_details );
+                                 bool unavailable );
 std::string format_uilist_open( const std::string &context, const std::string &focus,
                                 const std::string &details_binding, bool has_details );
+/** Use the document reader when spoken list details exceed a concise announcement. */
+bool uilist_details_need_document( const std::string &details );
 /** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
 /** Return the most recent announcement text (spoken or quietly set). */

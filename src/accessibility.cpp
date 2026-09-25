@@ -10,6 +10,7 @@
 #include <utility>
 
 #include "cata_utility.h"
+#include "catacharset.h"
 #include "string_formatter.h"
 #include "translations.h"
 
@@ -615,11 +616,10 @@ bool announce_nearby_list_focus( const nearby_list_entry &entry, const std::stri
 }
 
 std::string format_uilist_focus( const std::string &label, const std::string &column,
-                                 const bool unavailable, const bool has_details )
+                                 const bool unavailable )
 {
     return format_semantic_sequence( { label, column,
-                                       unavailable ? _( "Unavailable" ) : std::string(),
-                                       has_details ? _( "Details available" ) : std::string() } );
+                                       unavailable ? _( "Unavailable" ) : std::string() } );
 }
 
 std::string format_uilist_open( const std::string &context, const std::string &focus,
@@ -628,6 +628,11 @@ std::string format_uilist_open( const std::string &context, const std::string &f
     return format_semantic_sequence( { context, _( "List. Use arrow keys to choose" ),
                                        has_details ? string_format( _( "%s for details" ),
                                                details_binding ) : std::string(), focus } );
+}
+
+bool uilist_details_need_document( const std::string &details )
+{
+    return utf8_width( details ) > 160;
 }
 
 bool repeat_last_announcement()
