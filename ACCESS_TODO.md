@@ -82,7 +82,8 @@ restoration; keybinding action-presence tests.
 
 **Required human verification:** Exercise every control type, find and rebind
 each accessibility action, resolve a binding conflict, and confirm there are no
-silent controls or keyboard traps.
+silent controls or keyboard traps.  Confirm that NVDA reads the application
+window title without a commit identifier when the game starts or regains focus.
 
 ## Stage 06 - Inventory selector navigation and item information
 

@@ -2,7 +2,6 @@
 
 #include "cata_utility.h"
 #include "debug.h"
-#include "get_version.h"
 #include "path_info.h"
 #include "text_snippets.h"
 #include "translations.h"
@@ -104,5 +103,5 @@ void set_language( const std::string &lang )
     // names.
     SNIPPET.reload_names( PATH_INFO::names() );
 
-    set_title( string_format( _( "Cataclysm: Dark Days Ahead - %s" ), getVersionString() ) );
+    set_title( _( "Cataclysm: Dark Days Ahead" ) );
 }
