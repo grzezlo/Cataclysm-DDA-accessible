@@ -1,6 +1,7 @@
 #include "accessibility.h"
 
 #include <algorithm>
+#include <cctype>
 #include <cstdint>
 #include <map>
 #include <memory>
@@ -633,6 +634,53 @@ std::string format_uilist_open( const std::string &context, const std::string &f
 bool uilist_details_need_document( const std::string &details )
 {
     return utf8_width( details ) > 160;
+}
+
+std::vector<std::string> split_uilist_detail_sentences( const std::string &details )
+{
+    std::string normalized;
+    normalized.reserve( details.size() );
+    for( const unsigned char ch : details ) {
+        if( std::isspace( ch ) ) {
+            if( !normalized.empty() && normalized.back() != ' ' ) {
+                normalized.push_back( ' ' );
+            }
+        } else {
+            normalized.push_back( static_cast<char>( ch ) );
+        }
+    }
+    if( !normalized.empty() && normalized.back() == ' ' ) {
+        normalized.pop_back();
+    }
+
+    std::vector<std::string> sentences;
+    size_t start = 0;
+    for( size_t i = 0; i < normalized.size(); ++i ) {
+        const char ch = normalized[i];
+        if( ch != '.' && ch != '!' && ch != '?' ) {
+            continue;
+        }
+        size_t end = i + 1;
+        while( end < normalized.size() &&
+               ( normalized[end] == '"' || normalized[end] == '\'' || normalized[end] == ')' ) ) {
+            ++end;
+        }
+        if( end < normalized.size() && normalized[end] != ' ' ) {
+            continue;
+        }
+        const size_t next = std::min( end + 1, normalized.size() );
+        if( ch == '.' && next < normalized.size() &&
+            std::islower( static_cast<unsigned char>( normalized[next] ) ) ) {
+            continue;
+        }
+        sentences.push_back( normalized.substr( start, end - start ) );
+        start = next;
+        i = end;
+    }
+    if( start < normalized.size() ) {
+        sentences.push_back( normalized.substr( start ) );
+    }
+    return sentences;
 }
 
 bool repeat_last_announcement()

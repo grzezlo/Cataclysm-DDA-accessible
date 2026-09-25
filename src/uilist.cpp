@@ -885,20 +885,16 @@ static bool has_entry_details( const uilist_entry &entry )
 
 static bool show_entry_details( uilist_entry &entry )
 {
-    std::vector<std::string> visual_source_lines;
     std::vector<std::string> spoken_source_lines;
     std::istringstream stream( entry.desc );
     std::string line;
     while( std::getline( stream, line ) ) {
-        visual_source_lines.push_back( line );
         spoken_source_lines.push_back( remove_color_tags( line ) );
     }
 
-    std::vector<std::string> visual_paragraphs;
     std::vector<std::string> spoken_paragraphs;
     for( const accessibility::semantic_document_line &paragraph :
          accessibility::select_document_lines( spoken_source_lines ) ) {
-        visual_paragraphs.push_back( visual_source_lines[paragraph.source_index] );
         spoken_paragraphs.push_back( paragraph.text );
     }
 
@@ -908,18 +904,12 @@ static bool show_entry_details( uilist_entry &entry )
         return false;
     }
 
-    std::vector<std::string> visual_fragments;
-    std::vector<std::string> spoken_fragments;
-    for( const std::string &paragraph : visual_paragraphs ) {
-        for( const std::string &fragment : foldstring( paragraph, 100 ) ) {
-            visual_fragments.push_back( fragment );
-            spoken_fragments.push_back( remove_color_tags( fragment ) );
-        }
-    }
+    const std::vector<std::string> sentences =
+        accessibility::split_uilist_detail_sentences( spoken_details );
 
     const std::string name = entry._txt_nocolor();
     accessibility_ui::show_document( string_format( _( "Details: %s" ), name ), name,
-                                     visual_fragments, spoken_fragments );
+                                     sentences, sentences );
     return true;
 }
 

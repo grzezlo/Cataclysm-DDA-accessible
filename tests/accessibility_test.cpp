@@ -17,7 +17,6 @@
 #include "map.h"
 #include "map_helpers.h"
 #include "map_item_stack.h"
-#include "output.h"
 #include "player_helpers.h"
 #include "point.h"
 #include "type_id.h"
@@ -353,9 +352,30 @@ TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place
     CHECK( accessibility::uilist_details_need_document( std::string( 161, 'x' ) ) );
     CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 160, 'x' ) ) );
     CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 100, 'x' ) + "ó" ) );
-    CHECK( foldstring( std::string( 161, 'x' ), 100 ).size() > 1 );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "long_list_details_follow_sentences_across_visual_lines", "[accessibility][nogame]" )
+{
+    const auto firewood = accessibility::split_uilist_detail_sentences(
+                              "Source for firewood or other flammable materials in this zone may be used "
+                              "to automatically refuel fires.  This will be done to maintain light "
+                              "during long-running tasks such as crafting, reading or waiting." );
+    REQUIRE( firewood.size() == 2 );
+    CHECK( firewood[0] == "Source for firewood or other flammable materials in this zone may "
+           "be used to automatically refuel fires." );
+    CHECK( firewood[1] == "This will be done to maintain light during long-running "
+           "tasks such as crafting, reading or waiting." );
+
+    const auto wrapped = accessibility::split_uilist_detail_sentences(
+                             "This sentence spans a visual\nline but stays together. Next sentence." );
+    REQUIRE( wrapped.size() == 2 );
+    CHECK( wrapped[0] == "This sentence spans a visual line but stays together." );
+    const auto numeric = accessibility::split_uilist_detail_sentences(
+                             "Wait 1.5 seconds. Then continue." );
+    REQUIRE( numeric.size() == 2 );
+    CHECK( numeric[0] == "Wait 1.5 seconds." );
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )

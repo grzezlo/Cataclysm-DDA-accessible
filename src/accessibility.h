@@ -153,6 +153,8 @@ std::string format_uilist_open( const std::string &context, const std::string &f
                                 const std::string &details_binding, bool has_details );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
+/** Split a long list description into spoken sentences, independent of visual wrapping. */
+std::vector<std::string> split_uilist_detail_sentences( const std::string &details );
 /** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
 /** Return the most recent announcement text (spoken or quietly set). */

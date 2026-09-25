@@ -36,9 +36,11 @@ explicitly allows disabled entries.  `Alt+D` speaks a focused description of up
 to 160 visible characters in place, retaining list focus so the next arrow key
 moves to another entry.
 For a longer description, `Alt+D` opens a navigable semantic document view;
-opening reads its first fragment, arrows read subsequent fragments, and Escape
-returns to the same list entry and restores its focus announcement.  Long
-single-line descriptions must have multiple navigable fragments.  Repeat Last
+opening reads its first sentence, arrows read subsequent sentences, and Escape
+returns to the same list entry and restores its focus announcement.  Treat
+visual line wrapping as presentation only: sentences remain intact even when
+the source description spans several visual lines.  A single long sentence
+remains one spoken fragment.  Repeat Last
 repeats the current announcement in either case.  An entry without a displayed
 description responds `No details available.`  Details do not change the list
 selection.  All new speech uses translated strings, and the announced binding
