@@ -3,6 +3,9 @@
 Completed stages are moved here from `ACCESS_TODO.md`. Keep verification details
 because this file also defines the accessibility regression history.
 
+The current default binding for Repeat Last is `Alt+R`. References to `F6`
+below describe earlier builds and their historical verification.
+
 ## 2026-09-18 — Fork foundation and Windows baseline
 
 - Created the local `access` branch from upstream `0.I-branch` at commit
