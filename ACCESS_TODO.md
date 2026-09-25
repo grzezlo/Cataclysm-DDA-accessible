@@ -25,15 +25,36 @@ verification.
 **Outcome:** Common controls expose consistent semantics before more bespoke
 screens depend on them, and accessibility commands can be discovered in-game.
 
-**Code inventory:** `src/uilist.cpp`, `src/popup.cpp`, `src/input_popup.cpp`,
-`src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`, and
-`data/raw/keybindings.json`.
+**Selected `uilist` interaction (2026-09-25):** Keep the accepted arrow-key list
+navigation and concise focus announcements.  When a list contains item details,
+its opening announcement identifies it as a list, tells the player to use the
+arrow keys, and gives the current binding for the new `Accessibility details`
+action (default `Alt+D`).  A focused entry with an available description says
+that details are available without reading the description on every movement.
+With accessibility active, disabled entries can be focused and are identified as
+unavailable; activating one remains blocked unless the caller explicitly allows
+disabled entries.  `Alt+D` opens the focused entry's
+visible description in a navigable semantic document view.  Opening reads the
+first fragment; document navigation reads subsequent fragments; Repeat Last
+repeats the current announcement; Escape returns to the same list entry and
+restores its focus announcement.  An entry without a description reports that
+no additional details are available.  The detail view does not change the list
+selection.  All new speech uses translated strings, and the displayed binding
+must follow rebindings.  This choice applies to `uilist` only; other controls
+receive their own interaction review.
+
+**Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
+formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
+(shared document reader), `src/popup.cpp`, `src/input_popup.cpp`,
+`src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`,
+`tests/accessibility_test.cpp`, `data/raw/keybindings.json`, and the existing
+Viewing topic in `data/core/help.json`.
 
 **Implementation hints:**
 
 - `uilist` already has accessibility hooks in `uilist::query()` (`src/uilist.cpp`).
   This stage extends coverage to disabled-entry reasons (the `uilist_entry::enabled`
-  flag and `desc_enabled` description text), desc text on focus, and
+  flag and `desc_enabled` description text), on-demand entry details, and
   empty/error states.
 - `query_yn` is implemented in `src/popup.cpp` as a `query_popup` with two
   options.  Hook the existing `query_popup::query_once()` path in `src/popup.cpp`
@@ -44,6 +65,9 @@ screens depend on them, and accessibility commands can be discovered in-game.
 - `iteminfo_window::execute()` in `src/ui_iteminfo.cpp` is a scrollable
   document viewer.  Announce the full text on open via
   `format_item_info()` in `src/output.cpp` with color tags removed.
+- A `uilist` footer replaces the per-entry description visually.  The shared
+  details action reads only the displayed entry description; callers that need
+  both footer help and per-entry details must expose both explicitly.
 - For keybinding discovery: `input_context` in `src/input_context.cpp`
   manages the keybinding UI invoked by `HELP_KEYBINDINGS`.
 
@@ -138,9 +162,9 @@ inventory selectors from Stage 06 where they serve specific actions.
   - Read: `read_inventory_preset` — READ TIME, SKILL.
   - Reload: `select_ammo_inventory_preset` — DAMAGE, AP, RANGE.
 - Item action menu: `game::item_action_menu()` in `src/item_action.cpp` uses
-  `uilist` with `desc_enabled = true`.  The uilist already speaks entry text
-  and `ctxt` column, but the `desc` (method description) is not spoken on
-  focus.  Add it to the focus announcement when `desc_enabled` is active.
+  `uilist` with `desc_enabled = true`, but its `footer_text` replaces per-entry
+  descriptions visually.  Expose the method description visibly so the shared
+  Details action can open it without changing concise list focus speech.
 - Consume needs hint: `get_consume_needs_hint()` in `src/game_inventory.cpp`
   formats hunger/thirst/fatigue — include in the selector's opening
   announcement.

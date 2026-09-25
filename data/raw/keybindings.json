@@ -698,6 +698,12 @@
   },
   {
     "type": "keybinding",
+    "id": "ACCESSIBILITY_DETAILS",
+    "name": "Accessibility details",
+    "bindings": [ { "input_method": "keyboard_any", "key": "d", "mod": [ "alt" ] } ]
+  },
+  {
+    "type": "keybinding",
     "id": "accessibility_situation",
     "category": "DEFAULTMODE",
     "name": "Review current situation",

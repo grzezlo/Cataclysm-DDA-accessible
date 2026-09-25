@@ -614,6 +614,22 @@ bool announce_nearby_list_focus( const nearby_list_entry &entry, const std::stri
     return announce_semantic_sequence( { context, format_nearby_list_entry( entry ) } );
 }
 
+std::string format_uilist_focus( const std::string &label, const std::string &column,
+                                 const bool unavailable, const bool has_details )
+{
+    return format_semantic_sequence( { label, column,
+                                       unavailable ? _( "Unavailable" ) : std::string(),
+                                       has_details ? _( "Details available" ) : std::string() } );
+}
+
+std::string format_uilist_open( const std::string &context, const std::string &focus,
+                                const std::string &details_binding, const bool has_details )
+{
+    return format_semantic_sequence( { context, _( "List. Use arrow keys to choose" ),
+                                       has_details ? string_format( _( "%s for details" ),
+                                               details_binding ) : std::string(), focus } );
+}
+
 bool repeat_last_announcement()
 {
     if( last_message().empty() ) {

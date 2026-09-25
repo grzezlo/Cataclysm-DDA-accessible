@@ -7,8 +7,10 @@
 #include <iterator>
 #include <memory>
 #include <set>
+#include <sstream>
 
 #include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "avatar.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "cata_assert.h"
@@ -540,6 +542,7 @@ input_context uilist::create_main_input_context() const
     ctxt.register_action( "ANY_INPUT" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
     for( const auto &additional_action : additional_actions ) {
         ctxt.register_action( additional_action.first, additional_action.second );
     }
@@ -555,6 +558,7 @@ void uilist::filterlist()
     fentries.clear();
     fselected = -1;
     int f = 0;
+    const bool accessibility_navigation = accessibility::is_available();
     for( size_t i = 0; i < entries.size(); i++ ) {
         bool visible = true;
         if( !categories.empty() && !category_filter( entries[i], categories[current_category].first ) ) {
@@ -571,7 +575,7 @@ void uilist::filterlist()
         }
         if( visible ) {
             fentries.push_back( static_cast<int>( i ) );
-            if( hilight_disabled || entries[i].enabled ) {
+            if( hilight_disabled || accessibility_navigation || entries[i].enabled ) {
                 if( static_cast<int>( i ) == selected || ( static_cast<int>( i ) > selected && fselected == -1 ) ) {
                     // Either this is selected, or we are past the previously selected entry,
                     // which has been filtered out, so choose another nearby entry instead.
@@ -808,6 +812,7 @@ bool uilist::scrollby( const int scrollby )
         return false;
     }
 
+    const bool accessibility_navigation = accessibility::is_available();
     bool looparound = scrollby == -1 || scrollby == 1;
     bool backwards = scrollby < 0;
     int recmax = static_cast<int>( fentries.size() );
@@ -826,7 +831,8 @@ bool uilist::scrollby( const int scrollby )
             fselected = fentries.size() - 1;
         }
         for( size_t i = 0; i < fentries.size(); ++i ) {
-            if( hilight_disabled || entries[ fentries [ fselected ] ].enabled ) {
+            if( hilight_disabled || accessibility_navigation ||
+                entries[ fentries [ fselected ] ].enabled ) {
                 break;
             }
             --fselected;
@@ -839,7 +845,8 @@ bool uilist::scrollby( const int scrollby )
             fselected = 0;
         }
         for( size_t i = 0; i < fentries.size(); ++i ) {
-            if( hilight_disabled || entries[ fentries [ fselected ] ].enabled ) {
+            if( hilight_disabled || accessibility_navigation ||
+                entries[ fentries [ fselected ] ].enabled ) {
                 break;
             }
             ++fselected;
@@ -868,6 +875,36 @@ shared_ptr_fast<uilist_impl> uilist::create_or_get_ui()
         }
     }
     return current_ui;
+}
+
+static bool has_entry_details( const uilist_entry &entry )
+{
+    const std::string description = remove_color_tags( entry.desc );
+    return description.find_first_not_of( " \t\r\n" ) != std::string::npos;
+}
+
+static void show_entry_details( uilist_entry &entry )
+{
+    std::vector<std::string> visual_source_lines;
+    std::vector<std::string> spoken_source_lines;
+    std::istringstream stream( entry.desc );
+    std::string line;
+    while( std::getline( stream, line ) ) {
+        visual_source_lines.push_back( line );
+        spoken_source_lines.push_back( remove_color_tags( line ) );
+    }
+
+    std::vector<std::string> visual_paragraphs;
+    std::vector<std::string> spoken_paragraphs;
+    for( const accessibility::semantic_document_line &paragraph :
+         accessibility::select_document_lines( spoken_source_lines ) ) {
+        visual_paragraphs.push_back( visual_source_lines[paragraph.source_index] );
+        spoken_paragraphs.push_back( paragraph.text );
+    }
+
+    const std::string name = entry._txt_nocolor();
+    accessibility_ui::show_document( string_format( _( "Details: %s" ), name ), name,
+                                     visual_paragraphs, spoken_paragraphs );
 }
 
 /**
@@ -944,6 +981,7 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
     ret_evt = input_event();
     if( entries.empty() ) {
         ret = UILIST_ERROR;
+        accessibility::announce_status( _( "List is empty" ) );
         return nullptr;
     }
     ret = UILIST_WAIT_INPUT;
@@ -965,21 +1003,30 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         ui_manager::redraw();
 
         std::string semantic_selection;
-        if( selected >= 0 && static_cast<size_t>( selected ) < entries.size() ) {
-            semantic_selection = entries[selected]._txt_nocolor();
-            const std::string &column = entries[selected]._ctxt_nocolor();
-            if( !column.empty() ) {
-                semantic_selection += ". " + column;
-            }
+        const bool selected_valid = selected >= 0 && static_cast<size_t>( selected ) < entries.size();
+        const bool visible_entry_details = desc_enabled && footer_text.empty();
+        const bool selected_has_details = selected_valid && visible_entry_details &&
+                                          has_entry_details( entries[selected] );
+        if( selected_valid ) {
+            semantic_selection = accessibility::format_uilist_focus(
+                                     entries[selected]._txt_nocolor(),
+                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
+                                     selected_has_details );
+        } else {
+            semantic_selection = _( "No matching entries" );
         }
         const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
         if( !accessibility_open ) {
             const std::string semantic_context = remove_color_tags( !title.empty() ? title : text );
-            accessibility::announce_focus( semantic_selection, semantic_context );
+            const bool any_details = visible_entry_details &&
+                                     std::any_of( entries.begin(), entries.end(), has_entry_details );
+            accessibility::announce( accessibility::format_uilist_open(
+                                         semantic_context, semantic_selection,
+                                         ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
             accessibility_open = true;
             accessibility_selection = selection_key;
         } else if( selection_key != accessibility_selection ) {
-            accessibility::announce_focus( semantic_selection );
+            accessibility::announce( semantic_selection );
             accessibility_selection = selection_key;
         }
 
@@ -991,6 +1038,13 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
 
         if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+        } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
+            if( selected_has_details ) {
+                show_entry_details( entries[selected] );
+                accessibility::announce( semantic_selection );
+            } else {
+                accessibility::announce_status( _( "No additional details available" ) );
+            }
         } else if( scrollby( scroll_amount_from_action( ret_act ) ) ) {
             need_to_scroll = true;
             recalc_start = true;
@@ -1014,11 +1068,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
                 const auto it = std::find( fentries.begin(), fentries.end(), iter->second );
                 if( it != fentries.end() ) {
                     const bool enabled = entries[*it].enabled;
-                    if( enabled || allow_disabled || hilight_disabled ) {
+                    if( enabled || allow_disabled || hilight_disabled || accessibility::is_available() ) {
                         // Change the selection to display correctly when this function
                         // is called again.
                         fselected = std::distance( fentries.begin(), it );
-                        selected = *it;
+                        selected = previewing = *it;
                         if( enabled || allow_disabled ) {
                             ret = entries[selected].retval;
                         }

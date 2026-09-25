@@ -95,6 +95,17 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( message_log.input_to_action( input_event( {}, 'r', input_event_t::keyboard_code ) ) ==
            "RESET_FILTER" );
     CHECK( message_log.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
+
+    input_context list( "UILIST", keyboard_mode::keycode );
+    list.register_action( "ACCESSIBILITY_DETAILS" );
+    const input_event alt_d( { keymod_t::alt }, 'd', input_event_t::keyboard_code );
+    const input_event alt_d_char( { keymod_t::alt }, 'd', input_event_t::keyboard_char );
+    const input_event altgr_d( { keymod_t::ctrl, keymod_t::alt }, 'd',
+                               input_event_t::keyboard_code );
+    CHECK( list.input_to_action( alt_d ) == "ACCESSIBILITY_DETAILS" );
+    CHECK( list.input_to_action( alt_d_char ) == "ACCESSIBILITY_DETAILS" );
+    CHECK( list.input_to_action( altgr_d ) != "ACCESSIBILITY_DETAILS" );
+    CHECK( gameplay.input_to_action( alt_d ) != "ACCESSIBILITY_DETAILS" );
 }
 
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
@@ -310,6 +321,38 @@ TEST_CASE( "semantic_accessibility_sequences_omit_empty_parts_and_preserve_order
 
     CHECK( accessibility::format_semantic_sequence( parts ) ==
            "Terrain: wooden floor. Creature: zombie. Z-level: one level above. 5 tiles northeast." );
+}
+
+TEST_CASE( "uilist_announces_detail_availability_and_restores_focus",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    const std::string disabled = accessibility::format_uilist_focus(
+                                     "Torso", "Bandaged", true, true );
+    CHECK( disabled == "Torso. Bandaged. Unavailable. Details available." );
+    const std::string open = accessibility::format_uilist_open(
+                                 "Treat which part?", disabled, "Alt+D", true );
+    CHECK( open == "Treat which part? List. Use arrow keys to choose. Alt+D for details. " +
+           disabled );
+    CHECK( accessibility::announce( open ) );
+    CHECK( accessibility::announce( accessibility::format_document_focus(
+                                        "Torso", "Bandaged: poor to good" ) ) );
+    CHECK( accessibility::announce( "You don't expect any effect from using this." ) );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( accessibility::announce( disabled ) );
+    REQUIRE( capture_ptr->messages.size() == 5 );
+    CHECK( capture_ptr->messages[3] == capture_ptr->messages[2] );
+    CHECK( capture_ptr->messages.back() == disabled );
+
+    const std::string plain = accessibility::format_uilist_focus( "Moderate", "", false, false );
+    CHECK( plain == "Moderate." );
+    CHECK( accessibility::format_uilist_open( "Choose intensity", plain, "Alt+D", false ) ==
+           "Choose intensity. List. Use arrow keys to choose. Moderate." );
+
+    accessibility::reset_backend_after_testing();
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )
