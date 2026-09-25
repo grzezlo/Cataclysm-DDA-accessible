@@ -47,6 +47,11 @@ selection.  All new speech uses translated strings, and the announced binding
 must follow rebindings.  This choice applies to `uilist` only; other controls
 receive their own interaction review.
 
+**NVDA check (2026-09-26):** The tester confirmed that the long
+`Source: Firewood` zone description is now read sentence-by-sentence without
+stopping at visual line wraps.  Continue the Stage 05 human checks below for
+other controls and list edge cases.
+
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
 (shared document reader), `src/popup.cpp`, `src/input_popup.cpp`,

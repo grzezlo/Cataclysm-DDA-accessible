@@ -458,3 +458,19 @@ Limitations:
 - The options screen is not yet independently usable with NVDA; Stage 21A owns
   that interface.  The default log flow remains newest at the bottom.
 - New source strings may fall back to English until Stage 23 translation work.
+
+## 2026-09-26 — Stage 05 list detail speech checkpoint
+
+- Implemented short `uilist` descriptions spoken in place and long descriptions
+  navigated by sentence through the shared document reader.  Removed repeated
+  per-entry detail availability announcements.
+- `test_access.bat` passed with 307 assertions in 22 test cases, and the Windows
+  x64 tiles build succeeded at commit `da62ddd81c`.
+- The NVDA tester confirmed that `Source: Firewood` in the zone type list reads
+  as complete sentences rather than fragments cut at visual line wraps.
+
+Limitations:
+
+- The exact Windows and NVDA versions were not re-reported for this check.
+- The remaining Stage 05 controls and list edge cases await their own human
+  verification.
