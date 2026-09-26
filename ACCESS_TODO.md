@@ -67,6 +67,19 @@ callers need their own interaction review.
 in build `da6515e6a6` works very well.  Keep the remaining Stage 05 control
 and edge-case checks open.
 
+**Selected numeric-input interaction (2026-09-26):** Keep the existing visible
+text field, insertion cursor, Left/Right editing, Enter to accept, and Escape
+to cancel.  Announce the prompt and current value on entry.  Speak each
+accepted digit as it is typed.  After either Left or Right, speak the character
+immediately before the cursor's new position; at the start, say that the cursor
+is at the start.  This intentionally makes the spoken character identify the
+insertion point instead of the character crossed during movement.  For `123`
+with the cursor at the end, Left says `2` and Right says `3`.  Announce the
+effect of deletion and clearing; Repeat Last reads the prompt and entire
+current value.  Keep any stated limits in the prompt rather than inventing
+bounds absent from the widget.  Scope this behavior to numeric fields, leaving
+general text-entry interaction for its own review.
+
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
 (shared document reader), `src/output.cpp` (`query_yn` construction),
@@ -84,9 +97,10 @@ Viewing topic in `data/core/help.json`.
 - `query_yn` is constructed in `src/output.cpp` as a `query_popup` with two
   options.  Its shared input path is `query_popup::query_once()` in
   `src/popup.cpp`.
-- `query_int` / numeric input uses `string_input_popup` in
-  `src/string_input_popup.cpp`.  Announce the prompt, current value, and
-  bounds on open and on value change.
+- `query_int` constructs a numeric `string_input_popup` in `src/output.cpp`.
+  `string_input_popup::query_string()` in `src/string_input_popup.cpp` owns
+  cursor movement and editing.  Callers may put limits in the prompt; the
+  shared widget has no structured numeric bounds.
 - `iteminfo_window::execute()` in `src/ui_iteminfo.cpp` is a scrollable
   document viewer.  Announce the full text on open via
   `format_item_info()` in `src/output.cpp` with color tags removed.
@@ -98,8 +112,9 @@ Viewing topic in `data/core/help.json`.
 
 **Success criteria:** Lists, disabled entries, yes/no prompts, text and numeric
 fields, quantity prompts, and scrolling detail announce label, role, value,
-state, bounds, errors, and focus return.  The keybinding interface exposes every
-accessibility action.  Intentionally hidden input remains private.
+state, any caller-supplied bounds, errors, and focus return.  The keybinding
+interface exposes every accessibility action.  Intentionally hidden input
+remains private.
 
 **Possible automated tests:** Widget-level capture tests for entry, focus/value
 change, disabled reason, bounds, editing, accept/cancel, scrolling, and focus
@@ -112,6 +127,9 @@ window title without a commit identifier when the game starts or regains focus.
 For Yes/No prompts, check the opening question and default `No`, both arrow
 directions, Enter, direct Y/N, Escape, Repeat Last after changing focus, and
 return from keybinding help after speech interruption.
+For numeric input, check typing, Left/Right in both directions, insertion in
+the middle, Backspace/Delete, Home/End, rejected characters, Enter/Escape,
+and Repeat Last after an edit and after speech interruption.
 
 ## Stage 06 - Inventory selector navigation and item information
 

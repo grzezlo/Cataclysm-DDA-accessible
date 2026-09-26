@@ -3,6 +3,7 @@
 #include <cctype>
 #include <climits>
 
+#include "accessibility.h"
 #include "cata_scope_helpers.h"
 #include "catacharset.h"
 #include "condition.h"
@@ -13,6 +14,7 @@
 #include "output.h"
 #include "point.h"
 #include "ret_val.h"
+#include "string_formatter.h"
 #include "translation.h"
 #include "translations.h"
 #include "try_parse_integer.h"
@@ -388,6 +390,9 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
     if( !ctxt ) {
         create_context();
     }
+    if( _only_digits ) {
+        ctxt->register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    }
 
     if( desc_view_ptr ) {
         desc_view_ptr->set_up_navigation( *ctxt, scrolling_key_scheme::no_scheme, true );
@@ -418,6 +423,14 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
     _canceled = false;
     _confirmed = false;
+    const bool announce_numeric = _only_digits && accessibility::is_available() && !draw_only;
+    const auto numeric_context = [&]() {
+        return accessibility::format_numeric_input( remove_color_tags( _title ),
+                remove_color_tags( _description ), ret.str() );
+    };
+    if( announce_numeric ) {
+        accessibility::announce( numeric_context() );
+    }
     do {
         if( _text_changed ) {
             ret = utf8_wrapper( _text );
@@ -469,6 +482,8 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
         const input_event ev = ctxt->get_raw_input();
         ch = ev.type == input_event_t::keyboard_char ? ev.get_first_input() : 0;
         _handled = true;
+        const std::string previous_value = ret.str();
+        const int previous_position = _position;
 
         bool next_loop = false;
         for( const auto &cb : callbacks ) {
@@ -486,6 +501,8 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
         if( desc_view_ptr && desc_view_ptr->handle_navigation( action, *ctxt ) ) {
             // NO FURTHER ACTION REQUIRED
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" && _only_digits ) {
+            accessibility::repeat_last_announcement();
         } else if( action == "TEXT.QUIT" ) {
 #if defined(__ANDROID__)
             if( get_option<bool>( "ANDROID_AUTO_KEYBOARD" ) ) {
@@ -605,6 +622,49 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
             ctxt->set_edittext( ev.edit );
         } else {
             _handled = false;
+        }
+
+        if( announce_numeric ) {
+            std::string feedback;
+            const bool value_changed = ret.str() != previous_value;
+            if( action == "TEXT.LEFT" || action == "TEXT.RIGHT" ) {
+                feedback = previous_position != _position ?
+                           accessibility::format_numeric_cursor( ret.str(), _position ) :
+                           action == "TEXT.LEFT" ? _( "Start of field" ) : _( "End of field" );
+            } else if( action == "TEXT.HOME" ) {
+                feedback = _( "Start of field" );
+            } else if( action == "TEXT.END" ) {
+                feedback = _( "End of field" );
+            } else if( action == "TEXT.BACKSPACE" || action == "TEXT.DELETE" ) {
+                if( value_changed ) {
+                    const size_t deleted_cursor = static_cast<size_t>( previous_position +
+                                                  ( action == "TEXT.DELETE" ? 1 : 0 ) );
+                    feedback = string_format( _( "Deleted %s" ), accessibility::format_numeric_cursor(
+                                                  previous_value, deleted_cursor ) );
+                } else {
+                    feedback = action == "TEXT.BACKSPACE" ? _( "Start of field" ) : _( "End of field" );
+                }
+            } else if( action == "TEXT.CLEAR" && value_changed ) {
+                feedback = _( "Cleared" );
+            } else if( ( action == "HISTORY_UP" || action == "HISTORY_DOWN" ) && value_changed ) {
+                feedback = accessibility::format_numeric_input( "", "", ret.str() );
+            } else if( action == "HELP_KEYBINDINGS" ) {
+                feedback = numeric_context();
+            } else if( action == "TEXT.PASTE" || action == "TEXT.INPUT_FROM_FILE" ||
+                       action == "ANY_INPUT" ) {
+                if( value_changed && _position > previous_position ) {
+                    feedback = ret.substr( previous_position, _position - previous_position ).str();
+                    if( feedback == "-" ) {
+                        feedback = _( "Minus" );
+                    }
+                } else if( !ev.text.empty() ) {
+                    feedback = _( "Input not accepted" );
+                }
+            }
+            if( !feedback.empty() ) {
+                accessibility::announce( feedback );
+                accessibility::set_last_announcement( numeric_context() );
+            }
         }
     } while( loop );
     _text = ret.str();

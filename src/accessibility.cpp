@@ -648,6 +648,22 @@ std::string format_yes_no_prompt( const std::string &question, const std::string
     } );
 }
 
+std::string format_numeric_input( const std::string &prompt, const std::string &description,
+                                  const std::string &value )
+{
+    return format_semantic_sequence( { prompt, description,
+                                       string_format( _( "Value: %s" ), value.empty() ? _( "empty" ) : value ) } );
+}
+
+std::string format_numeric_cursor( const std::string &value, const size_t cursor )
+{
+    if( cursor == 0 || value.empty() ) {
+        return _( "Start of field" );
+    }
+    const std::string character = value.substr( std::min( cursor, value.size() ) - 1, 1 );
+    return character == "-" ? _( "Minus" ) : character;
+}
+
 bool uilist_details_need_document( const std::string &details )
 {
     return utf8_width( details ) > 160;

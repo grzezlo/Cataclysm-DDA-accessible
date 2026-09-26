@@ -157,6 +157,11 @@ std::string format_yes_no_prompt( const std::string &question, const std::string
                                   const std::string &left_binding,
                                   const std::string &right_binding,
                                   const std::string &confirm_binding, bool include_hint );
+/** Describe a numeric input's prompt and complete current value. */
+std::string format_numeric_input( const std::string &prompt, const std::string &description,
+                                  const std::string &value );
+/** Read the character immediately before an insertion cursor in a numeric value. */
+std::string format_numeric_cursor( const std::string &value, size_t cursor );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */

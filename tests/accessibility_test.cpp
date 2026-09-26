@@ -112,6 +112,12 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     yes_no.register_action( "NO" );
     yes_no.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( yes_no.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
+
+    input_context number( "STRING_INPUT", keyboard_mode::keychar );
+    number.register_action( "ANY_INPUT" );
+    number.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( number.input_to_action( alt_r_char ) == "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( number.input_to_action( pure_r ) != "ACCESSIBILITY_REPEAT_LAST" );
 }
 
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
@@ -408,6 +414,20 @@ TEST_CASE( "yes_no_confirmation_announces_default_focus_and_repeats_context",
     CHECK( capture_ptr->messages.back() == context );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "numeric_input_reads_character_before_cursor_in_either_direction",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_numeric_input( "Minutes?", "", "123" ) ==
+           "Minutes? Value: 123." );
+    CHECK( accessibility::format_numeric_input( "Minutes?", "Minimum 1", "" ) ==
+           "Minutes? Minimum 1. Value: empty." );
+    CHECK( accessibility::format_numeric_cursor( "123", 3 ) == "3" );
+    CHECK( accessibility::format_numeric_cursor( "123", 2 ) == "2" );
+    CHECK( accessibility::format_numeric_cursor( "123", 3 ) == "3" );
+    CHECK( accessibility::format_numeric_cursor( "123", 0 ) == "Start of field" );
+    CHECK( accessibility::format_numeric_cursor( "-12", 1 ) == "Minus" );
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )
