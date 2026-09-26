@@ -107,6 +107,10 @@ Keep focus in the field and add no new view.  Share the accessibility hook
 with numeric input and avoid repeated opening announcements when callers
 invoke `query_string( false )` for each key.
 
+**NVDA check (2026-09-26):** The tester reached the character-name field after
+creating an empty world and confirmed that text editing works in build
+`c52181c830`.  Specific text-entry edge cases below still need confirmation.
+
 **NVDA check (2026-09-26):** The tester confirmed numeric entry works via
 the Random Character path below, and requested the revised cursor speech above.
 The tester later confirmed that cursor speech is much better and requested
@@ -178,6 +182,10 @@ four-option gameplay prompt when reachable.
 For numeric input, check typing, Left/Right in both directions, insertion in
 the middle, Backspace/Delete, Home/End, rejected characters, Enter/Escape,
 and Repeat Last after an edit and after speech interruption.
+For text input, check Unicode letters, spaces, Left/Right and both boundaries,
+insertion in the middle, Backspace/Delete, Home/End, Enter/Escape, and Repeat
+Last after editing and speech interruption.  Confirm that a caller using
+`query_string( false )` does not repeat its opening announcement per key.
 
 ## Stage 06 - Inventory selector navigation and item information
 
