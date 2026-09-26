@@ -80,6 +80,13 @@ current value.  Keep any stated limits in the prompt rather than inventing
 bounds absent from the widget.  Scope this behavior to numeric fields, leaving
 general text-entry interaction for its own review.
 
+**NVDA check (2026-09-26):** The tester could not reach the age field because
+the character creator's first screen did not announce arrow-key navigation.
+Numeric-input behavior remains unverified by NVDA.  The three-choice template
+action popup announced its question but not its choices.  Review that shared
+multi-option `query_popup` interaction before implementing it; character
+creation screen coverage remains in Stages 20 and 20A.
+
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
 (shared document reader), `src/output.cpp` (`query_yn` construction),
@@ -978,6 +985,10 @@ perform one part action (repair or remove); exercise an invalid/blocked case.
 
 **Outcome:** The first four character creation tabs (points, scenario, profession,
 background/hobbies) are independently usable.
+
+**NVDA observation (2026-09-26):** After entering Custom Character, the Points
+tab did not announce arrow-key focus changes.  Its existing screen-reader-mode
+branch changes rendered content but does not provide semantic announcements.
 
 **Code inventory:** `src/newcharacter.cpp` tabs 0–3; main-menu entry in
 `src/main_menu.cpp`.
