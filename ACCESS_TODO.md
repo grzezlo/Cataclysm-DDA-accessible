@@ -116,11 +116,13 @@ announce arrow-key navigation.  The three-choice template action popup
 announced its question but not its choices.  The shared
 multi-option `query_popup` fix is built in `952939a6d3` and awaits NVDA
 verification.  Character creation screen coverage remains in Stages 20 and 20A.
-A temporary numeric-input test path is New Game > Random Character, which opens
-the Description tab directly.  From its initial Name selection, three Up keys
-focus Age and Enter opens `query_int`.  These intermediate focus changes are
-silent until character creation is covered; this route verifies the numeric
-control only.
+A temporary input test path is New Game > Random Character.  If no world
+exists, this first opens the currently silent basic world-creation screen:
+the default world name is already filled, and the default `F` binding selects
+Finish; confirm Yes to create the empty world.  The Description tab then opens
+with Name initially selected.  Enter opens text input; three Up keys focus Age
+and Enter opens `query_int`.  The intermediate character-creation focus changes
+are silent until Stages 20 and 20A; this route verifies the input controls only.
 
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
@@ -1106,6 +1108,11 @@ a new game.
 
 **Outcome:** World selection, creation, copying, deletion, and mod configuration
 are independently usable.
+
+**Observed blocker (2026-09-26):** After the last world was deleted, selecting
+Random Character opened the basic world-creation screen without an NVDA
+announcement.  Its default name and Finish shortcut allow keyboard completion,
+but the screen still needs the Stage 21 interaction review and implementation.
 
 **Code inventory:** `src/worldfactory.cpp` (world selection, creation, deletion),
 `src/mod_manager_ui.cpp` (mod list logic), and main-menu world management in
