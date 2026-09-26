@@ -222,6 +222,7 @@ class query_popup
         std::string text;
         std::string last_announced_text;
         std::string last_static_announcement;
+        bool has_announced_text;
         bool static_announcements;
         std::vector<query_option> options;
         size_t cur;

@@ -11,6 +11,7 @@
 #include "cata_scope_helpers.h"
 #include "game.h"
 #include "help.h"
+#include "input.h"
 #include "input_context.h"
 #include "input_enums.h"
 #include "item.h"
@@ -112,6 +113,15 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     yes_no.register_action( "NO" );
     yes_no.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( yes_no.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
+
+    input_context template_action( "LOAD_DELETE_CANCEL", keyboard_mode::keycode );
+    template_action.register_action( "LOAD" );
+    template_action.register_action( "DELETE" );
+    template_action.register_action( "CANCEL" );
+    template_action.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( template_action.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( template_action.input_to_action( input_event( {}, KEY_ESCAPE,
+                                            input_event_t::keyboard_code ) ) == "CANCEL" );
 
     input_context number( "STRING_INPUT", keyboard_mode::keychar );
     number.register_action( "ANY_INPUT" );
@@ -398,15 +408,15 @@ TEST_CASE( "yes_no_confirmation_announces_default_focus_and_repeats_context",
     accessibility::set_backend_for_testing( std::move( capture ) );
 
     const std::string question = "Stop exercising?";
-    const std::string opened = accessibility::format_yes_no_prompt(
-                                   question, "No", "Left arrow", "Right arrow", "Enter", true );
+    const std::string opened = accessibility::format_popup_prompt(
+                                   question, "No", { "Yes", "No" }, "Left arrow", "Right arrow", "Enter", true );
     CHECK( opened == "Stop exercising? No selected. Choose with Left arrow or Right arrow; "
            "confirm with Enter." );
     CHECK( accessibility::announce( opened ) );
-    CHECK( accessibility::format_yes_no_focus( "Yes" ) == "Yes selected" );
-    CHECK( accessibility::announce( accessibility::format_yes_no_focus( "Yes" ) ) );
-    const std::string context = accessibility::format_yes_no_prompt(
-                                    question, "Yes", "", "", "", false );
+    CHECK( accessibility::format_popup_option_focus( "Yes" ) == "Yes selected" );
+    CHECK( accessibility::announce( accessibility::format_popup_option_focus( "Yes" ) ) );
+    const std::string context = accessibility::format_popup_prompt(
+                                    question, "Yes", {}, "", "", "", false );
     CHECK( context == "Stop exercising? Yes selected." );
     accessibility::set_last_announcement( context );
     CHECK( accessibility::repeat_last_announcement() );
@@ -414,6 +424,20 @@ TEST_CASE( "yes_no_confirmation_announces_default_focus_and_repeats_context",
     CHECK( capture_ptr->messages.back() == context );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "multi_option_popup_announces_choices_then_focused_option",
+           "[accessibility][nogame]" )
+{
+    const std::string question = "What to do with template \"Survivor\"?";
+    const std::vector<std::string> choices = { "Load", "Delete", "Cancel" };
+    CHECK( accessibility::format_popup_prompt( question, "Load", choices,
+            "Left arrow", "Right arrow", "Enter", true ) ==
+           "What to do with template \"Survivor\"? Choices: Load, Delete, Cancel. "
+           "Load selected. Choose with Left arrow or Right arrow; confirm with Enter." );
+    CHECK( accessibility::format_popup_option_focus( "Delete" ) == "Delete selected" );
+    CHECK( accessibility::format_popup_prompt( question, "Delete", {}, "", "", "", false ) ==
+           "What to do with template \"Survivor\"? Delete selected." );
 }
 
 TEST_CASE( "numeric_input_reads_character_before_cursor_in_either_direction",

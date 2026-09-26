@@ -151,12 +151,14 @@ std::string format_uilist_focus( const std::string &label, const std::string &co
                                  bool unavailable );
 std::string format_uilist_open( const std::string &context, const std::string &focus,
                                 const std::string &details_binding, bool has_details );
-/** Describe the selected answer in a two-option confirmation prompt. */
-std::string format_yes_no_focus( const std::string &answer );
-std::string format_yes_no_prompt( const std::string &question, const std::string &answer,
-                                  const std::string &left_binding,
-                                  const std::string &right_binding,
-                                  const std::string &confirm_binding, bool include_hint );
+/** Describe the focused button in an option-bearing query popup. */
+std::string format_popup_option_focus( const std::string &option );
+/** Describe a button query; lists choices on opening when there are at least three. */
+std::string format_popup_prompt( const std::string &question, const std::string &selected,
+                                 const std::vector<std::string> &choices,
+                                 const std::string &left_binding,
+                                 const std::string &right_binding,
+                                 const std::string &confirm_binding, bool include_hint );
 /** Describe a numeric input's prompt and complete current value. */
 std::string format_numeric_input( const std::string &prompt, const std::string &description,
                                   const std::string &value );

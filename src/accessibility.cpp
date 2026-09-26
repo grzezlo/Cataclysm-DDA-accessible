@@ -631,18 +631,22 @@ std::string format_uilist_open( const std::string &context, const std::string &f
                                                details_binding ) : std::string(), focus } );
 }
 
-std::string format_yes_no_focus( const std::string &answer )
+std::string format_popup_option_focus( const std::string &option )
 {
-    return string_format( _( "%s selected" ), answer );
+    return string_format( _( "%s selected" ), option );
 }
 
-std::string format_yes_no_prompt( const std::string &question, const std::string &answer,
-                                  const std::string &left_binding,
-                                  const std::string &right_binding,
-                                  const std::string &confirm_binding, const bool include_hint )
+std::string format_popup_prompt( const std::string &question, const std::string &selected,
+                                 const std::vector<std::string> &choices,
+                                 const std::string &left_binding,
+                                 const std::string &right_binding,
+                                 const std::string &confirm_binding, const bool include_hint )
 {
     return format_semantic_sequence( {
-        question, format_yes_no_focus( answer ),
+        question,
+        choices.size() >= 3 ? string_format( _( "Choices: %s" ), string_join( choices, _( ", " ) ) ) :
+        std::string(),
+        selected.empty() ? std::string() : format_popup_option_focus( selected ),
         include_hint ? string_format( _( "Choose with %1$s or %2$s; confirm with %3$s" ),
                                       left_binding, right_binding, confirm_binding ) : std::string()
     } );

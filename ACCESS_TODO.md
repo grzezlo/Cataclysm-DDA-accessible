@@ -60,12 +60,26 @@ Left/Right/Confirm bindings.  Left/Right announce only the newly selected
 answer.  Repeat Last restores the question with the current answer; returning
 from the keybinding screen restores the prompt context.  The full question is
 available through Repeat Last, so this control needs no separate detail view.
-Limit this behavior to two-option `query_yn` prompts; other `query_popup`
-callers need their own interaction review.
+This choice first applied to two-option `query_yn` prompts; the multi-option
+choice below extends the same control after a separate interaction review.
 
 **NVDA check (2026-09-26):** The tester reported that the Yes/No interaction
 in build `da6515e6a6` works very well.  Keep the remaining Stage 05 control
 and edge-case checks open.
+
+**Selected multi-option popup interaction (2026-09-26):** Keep the existing
+visible buttons, Left/Right focus movement, Enter activation, and direct
+action bindings.  On opening an option-bearing `query_popup`, announce the
+question, focused option, and navigation hint.  When there are three or more
+options, also read their labels once so the available choices are known.
+Left/Right announce only the newly focused option; Repeat Last restores the
+question and current selection, and returning from keybinding help restores
+the same context.  Preserve the shorter accepted Yes/No opening.  Escape
+follows each dialog's existing cancel/No/Quit action; add Escape as Cancel for
+the template Load/Delete/Cancel dialog.  Leave message-only, progress, and
+key-capture popups outside this button interaction.  This applies to all
+audited `query_popup` callers with options, including Yes/No, template
+actions, interruption decisions, and Yes/No/Quit prompts.
 
 **Selected numeric-input interaction (2026-09-26):** Keep the existing visible
 text field, insertion cursor, Left/Right editing, Enter to accept, and Escape
@@ -83,8 +97,8 @@ general text-entry interaction for its own review.
 **NVDA check (2026-09-26):** The tester could not reach the age field because
 the character creator's first screen did not announce arrow-key navigation.
 Numeric-input behavior remains unverified by NVDA.  The three-choice template
-action popup announced its question but not its choices.  Review that shared
-multi-option `query_popup` interaction before implementing it; character
+action popup announced its question but not its choices.  Apply the selected
+shared multi-option `query_popup` interaction; character
 creation screen coverage remains in Stages 20 and 20A.
 
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
@@ -134,6 +148,10 @@ window title without a commit identifier when the game starts or regains focus.
 For Yes/No prompts, check the opening question and default `No`, both arrow
 directions, Enter, direct Y/N, Escape, Repeat Last after changing focus, and
 return from keybinding help after speech interruption.
+For multi-option button prompts, verify the template Load/Delete/Cancel popup
+announces all choices on entry, Left/Right focus, direct L/D/C, Enter, Escape
+as Cancel, Repeat Last, and focus return from keybinding help.  Check one
+four-option gameplay prompt when reachable.
 For numeric input, check typing, Left/Right in both directions, insertion in
 the middle, Backspace/Delete, Home/End, rejected characters, Enter/Escape,
 and Repeat Last after an edit and after speech interruption.
