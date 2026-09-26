@@ -97,9 +97,14 @@ general text-entry interaction for its own review.
 **NVDA check (2026-09-26):** The tester could not reach the age field because
 the character creator's first screen did not announce arrow-key navigation.
 Numeric-input behavior remains unverified by NVDA.  The three-choice template
-action popup announced its question but not its choices.  Apply the selected
-shared multi-option `query_popup` interaction; character
-creation screen coverage remains in Stages 20 and 20A.
+action popup announced its question but not its choices.  The shared
+multi-option `query_popup` fix is built in `952939a6d3` and awaits NVDA
+verification.  Character creation screen coverage remains in Stages 20 and 20A.
+A temporary numeric-input test path is New Game > Random Character, which opens
+the Description tab directly.  From its initial Name selection, three Up keys
+focus Age and Enter opens `query_int`.  These intermediate focus changes are
+silent until character creation is covered; this route verifies the numeric
+control only.
 
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
