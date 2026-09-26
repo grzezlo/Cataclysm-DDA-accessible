@@ -6,6 +6,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace accessibility
@@ -188,6 +189,35 @@ std::vector<std::string> split_uilist_detail_sentences( const std::string &detai
 /** Split formatted item details into clean semantic lines and sentences for document reading. */
 std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
         const std::string &raw_info );
+/** Semantic inventory row, independent of item and renderer types. */
+struct inventory_focus_entry {
+    std::string caption;
+    std::string category;
+    std::string location;
+    std::vector<std::pair<std::string, std::string>> cells;
+    std::string denial;
+    std::string selection;
+    bool favorite = false;
+    bool has_contents = false;
+    bool contents_collapsed = false;
+};
+std::string format_inventory_focus( const inventory_focus_entry &entry, bool include_context,
+                                    bool include_all_cells );
+std::string format_inventory_filter( const std::string &query, size_t result_count );
+std::string format_inventory_comparison_choice( const std::string &first,
+        const std::string &second );
+enum class inventory_comparison_relation {
+    first_better,
+    second_better,
+    equal,
+    unknown
+};
+inventory_comparison_relation compare_inventory_values( double first, double second,
+        bool lower_is_better );
+std::string format_inventory_comparison_stat( const std::string &label,
+        const std::string &first_name, const std::string &first_value,
+        const std::string &second_name, const std::string &second_value,
+        inventory_comparison_relation relation );
 /** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
 /** Return the most recent announcement text (spoken or quietly set). */

@@ -31,6 +31,25 @@ the specific item action flows (wield, wear, consume, etc.).  Stage 07 owns
 the two-pane advanced inventory.  Stage 09 owns ground pickup and drop
 transfers.
 
+**Selected interaction (2026-09-26):** Keep the existing inventory selector,
+keyboard commands, and visible layout.  On entry, announce its purpose,
+carrying stats, and focused item.  On item focus, speak a concise semantic
+summary with stack count, category, source/location, relevant displayed cells,
+and any denial reason; announce category or column context when it changes.
+Report filter results and mode changes.  The existing Examine command opens
+the navigable item-info document, then restores the same selector focus;
+longer row context is available on demand.  Repeat Last restores the most
+recent meaningful announcement.  Escape closes a detail view to the same item
+or cancels the selector from its main view.  The visible UI remains unchanged.
+In comparison selection, announce the first item's selection immediately,
+identify it as the first comparison item whenever it receives focus, announce
+deselection, and name both items when the second is chosen.  The comparison
+view gives a concise orientation and on-demand paired values with verbal
+better/worse/equal relationships where the existing data supports them.
+After closing comparison, explicitly report whether the first item remains
+selected as the comparison anchor.  Never imply an item is selected merely
+because it has keyboard focus.
+
 **Code inventory:** `src/inventory_ui.cpp` (classes `inventory_selector`,
 `inventory_column`, `inventory_entry`, `inventory_pick_selector`,
 `inventory_compare_selector`, `inventory_examiner`);

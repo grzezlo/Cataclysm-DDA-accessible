@@ -14,10 +14,13 @@
 #include "input.h"
 #include "input_context.h"
 #include "input_enums.h"
+#include "inventory_ui.h"
 #include "item.h"
+#include "item_category.h"
 #include "map.h"
 #include "map_helpers.h"
 #include "map_item_stack.h"
+#include "map_selector.h"
 #include "player_helpers.h"
 #include "point.h"
 #include "type_id.h"
@@ -38,6 +41,35 @@ class capture_backend final : public accessibility::backend
         }
 
         std::vector<std::string> messages;
+};
+
+class capture_compare_selector final : public inventory_compare_selector
+{
+    public:
+        explicit capture_compare_selector( Character &u ) : inventory_compare_selector( u ) {}
+
+        void speak_focus() {
+            announce_accessibility_focus();
+        }
+
+        void toggle_focused() {
+            inventory_entry &entry = get_active_column().get_highlighted();
+            toggle_entry( &entry );
+        }
+
+        void switch_category_mode() {
+            toggle_navigation_mode();
+        }
+};
+
+class capture_inventory_selector final : public inventory_pick_selector
+{
+    public:
+        explicit capture_inventory_selector( Character &u ) : inventory_pick_selector( u ) {}
+
+        void speak_focus() {
+            announce_accessibility_focus();
+        }
 };
 
 } // namespace
@@ -1223,4 +1255,206 @@ TEST_CASE( "format_item_info_paragraphs_splits_stats_and_sentences", "[accessibi
         REQUIRE( paras.size() == 1 );
         CHECK( paras[0] == "TOOL" );
     }
+}
+
+TEST_CASE( "inventory_focus_and_comparison_preserve_selection_semantics",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    accessibility::inventory_focus_entry first;
+    first.caption = "2 flashlights";
+    first.category = "Tools";
+    first.location = "backpack";
+    first.cells = { { "Weight", "0.4 kg" }, { "Volume", "0.5 L" }, { "Charges", "20" } };
+    first.favorite = true;
+    first.has_contents = true;
+    first.contents_collapsed = true;
+
+    const std::string initial = accessibility::format_inventory_focus( first, true, false );
+    CHECK( initial == "Tools. 2 flashlights. Location: backpack. Favorite. Contents collapsed. "
+           "Weight: 0.4 kg. Volume: 0.5 L." );
+    CHECK( accessibility::format_inventory_focus( first, false, true ).find( "Charges: 20" ) !=
+           std::string::npos );
+    first.denial = "Too heavy";
+    CHECK( accessibility::format_inventory_focus( first, false, false ).find(
+               "Unavailable: Too heavy" ) != std::string::npos );
+    first.denial.clear();
+
+    first.selection = "Selected as first comparison item";
+    CHECK( accessibility::announce( accessibility::format_inventory_focus( first, false, false ) ) );
+
+    accessibility::inventory_focus_entry candidate;
+    candidate.caption = "hammer";
+    candidate.category = "Tools";
+    candidate.location = "inventory";
+    candidate.selection = "Not selected. First comparison item: 2 flashlights";
+    CHECK( accessibility::announce( accessibility::format_inventory_focus( candidate, false,
+                                    false ) ) );
+    CHECK( accessibility::announce( accessibility::format_inventory_focus( first, false, false ) ) );
+
+    first.selection = "No comparison item selected";
+    CHECK( accessibility::announce( accessibility::format_inventory_focus( first, false, false ) ) );
+    CHECK( accessibility::announce( accessibility::format_inventory_comparison_choice(
+                                        "flashlight", "hammer" ) ) );
+    CHECK( accessibility::repeat_last_announcement() );
+
+    CHECK( accessibility::format_inventory_filter( "ham", 1 ) ==
+           "Filter: ham. 1 matching item." );
+    CHECK( accessibility::format_inventory_filter( "", 0 ) ==
+           "Filter cleared. 0 matching items." );
+    CHECK( accessibility::format_inventory_comparison_stat( "Weight", "flashlight", "0.4 kg",
+            "hammer", "1.2 kg",
+            accessibility::inventory_comparison_relation::first_better ) ==
+           "Weight. First, flashlight: 0.4 kg. Second, hammer: 1.2 kg. First is better." );
+    CHECK( accessibility::format_inventory_comparison_stat( "Damage", "flashlight", "6",
+            "hammer", "8",
+            accessibility::inventory_comparison_relation::second_better ) ==
+           "Damage. First, flashlight: 6. Second, hammer: 8. Second is better." );
+    CHECK( accessibility::format_inventory_comparison_stat( "Volume", "flashlight", "1 L",
+            "hammer", "1 L",
+            accessibility::inventory_comparison_relation::equal ) ==
+           "Volume. First, flashlight: 1 L. Second, hammer: 1 L. Equal." );
+    CHECK( accessibility::compare_inventory_values( 0.4, 1.2, true ) ==
+           accessibility::inventory_comparison_relation::first_better );
+    CHECK( accessibility::compare_inventory_values( 6.0, 8.0, false ) ==
+           accessibility::inventory_comparison_relation::second_better );
+    CHECK( accessibility::compare_inventory_values( 5.0, 5.005, false ) ==
+           accessibility::inventory_comparison_relation::equal );
+
+    REQUIRE( capture_ptr->messages.size() == 6 );
+    CHECK( capture_ptr->messages[0].find( "Selected as first comparison item" ) !=
+           std::string::npos );
+    CHECK( capture_ptr->messages[1].find( "Not selected. First comparison item: 2 flashlights" ) !=
+           std::string::npos );
+    CHECK( capture_ptr->messages[2].find( "Selected as first comparison item" ) !=
+           std::string::npos );
+    CHECK( capture_ptr->messages[3].find( "No comparison item selected" ) !=
+           std::string::npos );
+    CHECK( capture_ptr->messages[4] == "Comparing flashlight with hammer" );
+    CHECK( capture_ptr->messages[5] == capture_ptr->messages[4] );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms position = you.pos_bub();
+    item &first_item = here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
+    item &second_item = here.add_item_or_charges( position, item( itype_id( "2x4" ) ) );
+    const item_location first( map_cursor( position ), &first_item );
+    const item_location second( map_cursor( position ), &second_item );
+    REQUIRE( first );
+    REQUIRE( second );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_compare_selector selector( you );
+    selector.set_title( "Compare" );
+    selector.add_map_items( position );
+    REQUIRE( selector.highlight_one_of( { first } ) );
+    selector.speak_focus();
+    REQUIRE( !capture_ptr->messages.empty() );
+    CHECK( capture_ptr->messages.back().find( "No comparison item selected" ) !=
+           std::string::npos );
+    const size_t after_open = capture_ptr->messages.size();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.size() == after_open );
+
+    const size_t before_mark = capture_ptr->messages.size();
+    selector.toggle_focused();
+    REQUIRE( capture_ptr->messages.size() == before_mark + 1 );
+    CHECK( capture_ptr->messages.back().find( "Selected as first comparison item" ) !=
+           std::string::npos );
+
+    REQUIRE( selector.highlight_one_of( { second } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Not selected. First comparison item:" ) !=
+           std::string::npos );
+    CHECK( capture_ptr->messages.back().find( first->tname() ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find(
+               second->get_category_of_contents().name_header() ) != std::string::npos );
+
+    REQUIRE( selector.highlight_one_of( { first } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Selected as first comparison item" ) !=
+           std::string::npos );
+
+    selector.toggle_focused();
+    CHECK( capture_ptr->messages.back().find( "No comparison item selected" ) !=
+           std::string::npos );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( capture_ptr->messages.back() == capture_ptr->messages[capture_ptr->messages.size() - 2] );
+
+    selector.switch_category_mode();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Category selection mode" ) !=
+           std::string::npos );
+    selector.switch_category_mode();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Item selection mode" ) !=
+           std::string::npos );
+
+    selector.set_filter( "hammer" );
+    REQUIRE( selector.highlight_one_of( { first } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Filter: hammer. 1 matching item" ) !=
+           std::string::npos );
+    selector.set_filter( "" );
+    REQUIRE( selector.highlight_one_of( { first } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Filter cleared" ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( first->tname() ) != std::string::npos );
+
+    selector.toggle_focused();
+    REQUIRE( selector.highlight_one_of( { second } ) );
+    selector.toggle_focused();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Selected as second comparison item" ) !=
+           std::string::npos );
+    selector.toggle_focused();
+    CHECK( capture_ptr->messages.back().find( "Not selected. First comparison item:" ) !=
+           std::string::npos );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "inventory_selector_names_column_and_focus_when_source_changes", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    const item_location held = you.i_add( item( itype_id( "hammer" ) ) );
+    REQUIRE( held );
+    map &here = get_map();
+    const tripoint_bub_ms position = you.pos_bub();
+    item &ground_item = here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+    const item_location ground( map_cursor( position ), &ground_item );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_inventory_selector selector( you );
+    selector.set_title( "Inventory" );
+    selector.add_character_items( you );
+    selector.add_map_items( position );
+    REQUIRE( selector.highlight_one_of( { held } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( held->tname() ) != std::string::npos );
+
+    REQUIRE( selector.highlight_one_of( { ground } ) );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Nearby items" ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( ground->tname() ) != std::string::npos );
+
+    accessibility::reset_backend_after_testing();
 }

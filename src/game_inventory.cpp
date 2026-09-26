@@ -15,6 +15,7 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
+#include "accessibility.h"
 #include "avatar.h"
 #include "bionics.h"
 #include "bodypart.h"
@@ -2519,6 +2520,10 @@ game_menus::inv::compare_item_menu::compare_item_menu( const item &first, const 
     }
     ctxt.register_action( "QUIT" );
     ctxt.register_navigate_ui_list();
+    ctxt.register_action( "LEFT" );
+    ctxt.register_action( "RIGHT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.set_timeout( 10 );
 
     // todo: regen info when toggling language?
@@ -2580,12 +2585,159 @@ cataimgui::bounds game_menus::inv::compare_item_menu::get_bounds()
     return { 0.f, 0.f, ImGui::GetMainViewport()->Size.x, ImGui::GetMainViewport()->Size.y };
 }
 
+static std::string spoken_comparison_value( const iteminfo &info )
+{
+    std::string value = info.sFmt;
+    const size_t marker = value.find( "<num>" );
+    if( marker == std::string::npos ) {
+        value += info.sValue;
+    } else {
+        value.replace( marker, 5, info.sValue );
+    }
+    return remove_color_tags( value );
+}
+
+static std::vector<std::string> comparison_stat_rows( const std::vector<iteminfo> &first,
+        const std::vector<iteminfo> &second, const std::string &first_name,
+        const std::string &second_name )
+{
+    std::vector<std::string> rows;
+    for( const iteminfo &left : first ) {
+        if( left.sValue == "-999" || !left.bDrawName || left.sName.empty() ) {
+            continue;
+        }
+        const auto right = std::find_if( second.begin(), second.end(), [&]( const iteminfo & candidate ) {
+            return candidate.sValue != "-999" && candidate.sType == left.sType &&
+                   candidate.sName == left.sName;
+        } );
+        if( right == second.end() ) {
+            continue;
+        }
+
+        const double left_value = left.sFmt == right->sFmt ? left.dValue : left.dUnitAdjustedVal;
+        const double right_value = left.sFmt == right->sFmt ? right->dValue :
+                                   right->dUnitAdjustedVal;
+        const accessibility::inventory_comparison_relation relation =
+            accessibility::compare_inventory_values( left_value, right_value, left.bLowerIsBetter );
+        std::string label = remove_color_tags( left.sName );
+        while( !label.empty() && ( label.back() == ' ' || label.back() == ':' ) ) {
+            label.pop_back();
+        }
+        rows.push_back( accessibility::format_inventory_comparison_stat( label,
+                        first_name, spoken_comparison_value( left ), second_name,
+                        spoken_comparison_value( *right ), relation ) );
+    }
+    return rows;
+}
+
 bool game_menus::inv::compare_item_menu::show()
 {
+    const bool speaking = accessibility::is_available();
+    const std::vector<std::string> paired = speaking ? comparison_stat_rows( first_info,
+                                            second_info, first.tname(), second.tname() ) :
+                                            std::vector<std::string>();
+    const std::vector<std::string> first_details = speaking ?
+            accessibility::format_item_info_paragraphs( first.type_name(),
+                    format_item_info( first_info, {} ) ) : std::vector<std::string>();
+    const std::vector<std::string> second_details = speaking ?
+            accessibility::format_item_info_paragraphs( second.type_name(),
+                    format_item_info( second_info, {} ) ) : std::vector<std::string>();
+    bool detail_mode = false;
+    int detail_item = 0;
+    int paired_index = 0;
+    int first_detail_index = 0;
+    int second_detail_index = 0;
+    const auto current_details = [&]() -> decltype( auto ) {
+        return ( detail_item == 0 ? first_details : second_details );
+    };
+    const auto current_detail_index = [&]() -> decltype( auto ) {
+        return ( detail_item == 0 ? first_detail_index : second_detail_index );
+    };
+    const auto announce_current = [&]() {
+        if( !speaking ) {
+            return;
+        }
+        if( detail_mode ) {
+            const std::vector<std::string> &details = current_details();
+            accessibility::announce( details.empty() ? _( "No details available" ) :
+                                     details[current_detail_index()] );
+        } else {
+            accessibility::announce( paired.empty() ? _( "No shared numeric statistics" ) :
+                                     paired[paired_index] );
+        }
+    };
+
+    if( speaking ) {
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            accessibility::format_inventory_comparison_choice( first.tname(), second.tname() ),
+            confirm_message,
+            string_format( _( "Use Up and Down for paired statistics, %s for full item details, Escape to return" ),
+                           ctxt.get_desc( "ACCESSIBILITY_DETAILS" ) ),
+            paired.empty() ? _( "No shared numeric statistics" ) : paired.front()
+        } ) );
+    }
+
     while( true ) {
         ui_manager::redraw();
 
         std::string action = has_button_action() ? get_button_action() : ctxt.handle_input();
+
+        if( speaking && action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        }
+        if( speaking && action == "ACCESSIBILITY_DETAILS" ) {
+            detail_mode = !detail_mode;
+            if( detail_mode ) {
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    _( "Full item details" ),
+                    first.tname(),
+                    _( "Use Left and Right to switch items, Escape to return to paired statistics" ),
+                    first_details.empty() ? _( "No details available" ) : first_details[first_detail_index]
+                } ) );
+            } else {
+                announce_current();
+            }
+            continue;
+        }
+        if( speaking && detail_mode && ( action == "LEFT" || action == "RIGHT" ) ) {
+            detail_item = action == "LEFT" ? 0 : 1;
+            const std::string &name = detail_item == 0 ? first.tname() : second.tname();
+            const std::vector<std::string> &details = current_details();
+            accessibility::announce( accessibility::format_document_focus( name,
+                                     details.empty() ? _( "No details available" ) :
+                                     details[current_detail_index()] ) );
+            continue;
+        }
+        if( speaking && detail_mode && action == "QUIT" ) {
+            detail_mode = false;
+            announce_current();
+            continue;
+        }
+
+        int delta = 0;
+        if( action == "UP" ) {
+            delta = -1;
+        } else if( action == "DOWN" ) {
+            delta = 1;
+        } else if( action == "PAGE_UP" ) {
+            delta = -3;
+        } else if( action == "PAGE_DOWN" ) {
+            delta = 3;
+        } else if( action == "HOME" ) {
+            delta = -1000000;
+        } else if( action == "END" ) {
+            delta = 1000000;
+        }
+        if( speaking && delta != 0 ) {
+            int &index = detail_mode ? current_detail_index() : paired_index;
+            const int count = static_cast<int>( detail_mode ? current_details().size() : paired.size() );
+            const int next = accessibility::move_document_cursor( index, count, delta );
+            if( next != index ) {
+                index = next;
+                announce_current();
+            }
+        }
 
         if( action == "UP" ) {
             s = cataimgui::scroll::line_up;

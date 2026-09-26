@@ -42,6 +42,10 @@ class string_input_popup;
 class tinymap;
 class ui_adaptor;
 template <typename E> struct enum_traits;
+namespace accessibility
+{
+struct inventory_focus_entry;
+}
 
 enum class navigation_mode : int {
     ITEM = 0,
@@ -262,6 +266,9 @@ class inventory_selector_preset
         /** Number of cells in the preset. */
         size_t get_cells_count() const {
             return cells.size();
+        }
+        const std::string &get_cell_title( size_t index ) const {
+            return cells[index].title;
         }
         /** Whether items should make new stacks if components differ */
         bool get_checking_components() const {
@@ -908,6 +915,12 @@ class inventory_selector
         }
         void toggle_navigation_mode();
 
+        accessibility::inventory_focus_entry accessibility_entry( const inventory_entry &entry ) const;
+        void announce_accessibility_focus( bool force = false );
+        virtual std::string accessibility_selection_state( const inventory_entry & ) const {
+            return {};
+        }
+
         const navigation_mode_data &get_navigation_data( navigation_mode m ) const;
 
     private:
@@ -929,6 +942,13 @@ class inventory_selector
 
         const int border = 1;                // Width of the window border
         std::string filter;
+        std::string accessibility_last_snapshot;
+        std::string accessibility_last_category;
+        std::string accessibility_last_filter;
+        size_t accessibility_last_column = static_cast<size_t>( -1 );
+        navigation_mode accessibility_last_mode = navigation_mode::ITEM;
+        uimode accessibility_last_uimode = uimode::categories;
+        bool accessibility_opening = true;
 
         bool is_empty = true;
         bool display_stats = true;
@@ -1050,7 +1070,8 @@ class inventory_compare_selector : public inventory_multiselector
 
     protected:
         std::vector<const item *> compared;
-        void toggle_entry( inventory_entry *entry );
+        void toggle_entry( inventory_entry *entry, bool announce = true );
+        std::string accessibility_selection_state( const inventory_entry &entry ) const override;
 };
 
 class inventory_drop_selector : public inventory_multiselector

@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cstdint>
+#include <cmath>
 #include <map>
 #include <memory>
 #include <regex>
@@ -948,6 +949,95 @@ std::vector<std::string> format_item_info_paragraphs( const std::string &type_na
     }
 
     return paragraphs;
+}
+
+std::string format_inventory_focus( const inventory_focus_entry &entry,
+                                    const bool include_context, const bool include_all_cells )
+{
+    std::vector<std::string> parts;
+    if( include_context && !entry.category.empty() ) {
+        parts.push_back( entry.category );
+    }
+    parts.push_back( entry.caption );
+    if( !entry.selection.empty() ) {
+        parts.push_back( entry.selection );
+    }
+    if( !entry.location.empty() ) {
+        parts.push_back( string_format( _( "Location: %s" ), entry.location ) );
+    }
+    if( entry.favorite ) {
+        parts.push_back( _( "Favorite" ) );
+    }
+    if( entry.has_contents ) {
+        parts.push_back( entry.contents_collapsed ? _( "Contents collapsed" ) :
+                         _( "Contents expanded" ) );
+    }
+    const size_t cell_count = include_all_cells ? entry.cells.size() :
+                              std::min<size_t>( entry.cells.size(), 2 );
+    for( size_t i = 0; i < cell_count; ++i ) {
+        const auto &cell = entry.cells[i];
+        if( !cell.second.empty() ) {
+            parts.push_back( cell.first.empty() ? cell.second :
+                             string_format( _( "%s: %s" ), cell.first, cell.second ) );
+        }
+    }
+    if( !entry.denial.empty() ) {
+        parts.push_back( string_format( _( "Unavailable: %s" ), entry.denial ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_inventory_filter( const std::string &query, const size_t result_count )
+{
+    return format_semantic_sequence( {
+        query.empty() ? _( "Filter cleared" ) : string_format( _( "Filter: %s" ), query ),
+        string_format( n_gettext( "%d matching item", "%d matching items", result_count ),
+                       static_cast<int>( result_count ) )
+    } );
+}
+
+std::string format_inventory_comparison_choice( const std::string &first,
+        const std::string &second )
+{
+    return string_format( _( "Comparing %s with %s" ), first, second );
+}
+
+inventory_comparison_relation compare_inventory_values( const double first,
+        const double second, const bool lower_is_better )
+{
+    if( std::fabs( first - second ) < 0.01 ) {
+        return inventory_comparison_relation::equal;
+    }
+    const bool first_better = lower_is_better ? first < second : first > second;
+    return first_better ? inventory_comparison_relation::first_better :
+           inventory_comparison_relation::second_better;
+}
+
+std::string format_inventory_comparison_stat( const std::string &label,
+        const std::string &first_name, const std::string &first_value,
+        const std::string &second_name, const std::string &second_value,
+        const inventory_comparison_relation relation )
+{
+    std::string outcome;
+    switch( relation ) {
+        case inventory_comparison_relation::first_better:
+            outcome = _( "First is better" );
+            break;
+        case inventory_comparison_relation::second_better:
+            outcome = _( "Second is better" );
+            break;
+        case inventory_comparison_relation::equal:
+            outcome = _( "Equal" );
+            break;
+        case inventory_comparison_relation::unknown:
+            break;
+    }
+    return format_semantic_sequence( {
+        label,
+        string_format( _( "First, %s: %s" ), first_name, first_value ),
+        string_format( _( "Second, %s: %s" ), second_name, second_value ),
+        outcome
+    } );
 }
 
 bool repeat_last_announcement()
