@@ -3027,7 +3027,7 @@ accessibility::inventory_focus_entry inventory_selector::accessibility_entry(
     return semantic;
 }
 
-void inventory_selector::announce_accessibility_focus( const bool force )
+void inventory_selector::announce_accessibility_focus( const bool force, const std::string &event )
 {
     if( !accessibility::is_available() ) {
         return;
@@ -3092,7 +3092,7 @@ void inventory_selector::announce_accessibility_focus( const bool force )
             context.push_back( _( "Selected items" ) );
         }
     }
-    context.push_back( focus );
+    context.push_back( event.empty() ? focus : event );
     accessibility::announce( accessibility::format_semantic_sequence( context ) );
 
     accessibility_last_snapshot = snapshot;
@@ -4012,7 +4012,7 @@ std::string inventory_compare_selector::accessibility_selection_state(
     const inventory_entry &entry ) const
 {
     if( compared.empty() ) {
-        return _( "No comparison item selected" );
+        return {};
     }
     if( &*entry.any_item() == compared.front() ) {
         return _( "Selected as first comparison item" );
@@ -4020,8 +4020,7 @@ std::string inventory_compare_selector::accessibility_selection_state(
     if( compared.size() > 1 && &*entry.any_item() == compared[1] ) {
         return _( "Selected as second comparison item" );
     }
-    return string_format( _( "Not selected. First comparison item: %s" ),
-                          compared.front()->tname() );
+    return {};
 }
 
 void inventory_compare_selector::toggle_entry( inventory_entry *entry, const bool announce )
@@ -4039,7 +4038,12 @@ void inventory_compare_selector::toggle_entry( inventory_entry *entry, const boo
 
     on_change( *entry );
     if( announce && compared.size() < 2 ) {
-        announce_accessibility_focus( true );
+        if( entry->chosen_count != 0 ) {
+            announce_accessibility_focus( true );
+        } else {
+            announce_accessibility_focus( true,
+                                          string_format( _( "%s deselected for comparison" ), it->tname() ) );
+        }
     }
 }
 

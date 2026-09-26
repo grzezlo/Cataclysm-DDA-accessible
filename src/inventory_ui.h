@@ -916,7 +916,7 @@ class inventory_selector
         void toggle_navigation_mode();
 
         accessibility::inventory_focus_entry accessibility_entry( const inventory_entry &entry ) const;
-        void announce_accessibility_focus( bool force = false );
+        void announce_accessibility_focus( bool force = false, const std::string &event = {} );
         virtual std::string accessibility_selection_state( const inventory_entry & ) const {
             return {};
         }

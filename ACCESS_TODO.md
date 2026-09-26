@@ -42,10 +42,12 @@ longer row context is available on demand.  Repeat Last restores the most
 recent meaningful announcement.  Escape closes a detail view to the same item
 or cancels the selector from its main view.  The visible UI remains unchanged.
 In comparison selection, announce the first item's selection immediately,
-identify it as the first comparison item whenever it receives focus, announce
-deselection, and name both items when the second is chosen.  The comparison
-view gives a concise orientation and on-demand paired values with verbal
-better/worse/equal relationships where the existing data supports them.
+identify it as the first comparison item whenever it receives focus, and
+announce deselection immediately.  Do not speak an unselected state or repeat
+the first item's name while browsing other items.  When the second item is
+chosen, name it first and remind the player of the first item's name last.  The
+comparison view gives a concise orientation and on-demand paired values with
+verbal better/worse/equal relationships where the existing data supports them.
 After closing comparison, explicitly report whether the first item remains
 selected as the comparison anchor.  Never imply an item is selected merely
 because it has keyboard focus.

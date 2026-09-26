@@ -999,7 +999,8 @@ std::string format_inventory_filter( const std::string &query, const size_t resu
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second )
 {
-    return string_format( _( "Comparing %s with %s" ), first, second );
+    return string_format( _( "Second comparison item: %s. First comparison item: %s" ),
+                          second, first );
 }
 
 inventory_comparison_relation compare_inventory_values( const double first,

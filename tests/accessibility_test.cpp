@@ -1290,12 +1290,11 @@ TEST_CASE( "inventory_focus_and_comparison_preserve_selection_semantics",
     candidate.caption = "hammer";
     candidate.category = "Tools";
     candidate.location = "inventory";
-    candidate.selection = "Not selected. First comparison item: 2 flashlights";
     CHECK( accessibility::announce( accessibility::format_inventory_focus( candidate, false,
                                     false ) ) );
     CHECK( accessibility::announce( accessibility::format_inventory_focus( first, false, false ) ) );
 
-    first.selection = "No comparison item selected";
+    first.selection.clear();
     CHECK( accessibility::announce( accessibility::format_inventory_focus( first, false, false ) ) );
     CHECK( accessibility::announce( accessibility::format_inventory_comparison_choice(
                                         "flashlight", "hammer" ) ) );
@@ -1327,13 +1326,12 @@ TEST_CASE( "inventory_focus_and_comparison_preserve_selection_semantics",
     REQUIRE( capture_ptr->messages.size() == 6 );
     CHECK( capture_ptr->messages[0].find( "Selected as first comparison item" ) !=
            std::string::npos );
-    CHECK( capture_ptr->messages[1].find( "Not selected. First comparison item: 2 flashlights" ) !=
-           std::string::npos );
+    CHECK( capture_ptr->messages[1].find( "comparison item" ) == std::string::npos );
     CHECK( capture_ptr->messages[2].find( "Selected as first comparison item" ) !=
            std::string::npos );
-    CHECK( capture_ptr->messages[3].find( "No comparison item selected" ) !=
-           std::string::npos );
-    CHECK( capture_ptr->messages[4] == "Comparing flashlight with hammer" );
+    CHECK( capture_ptr->messages[3].find( "comparison item" ) == std::string::npos );
+    CHECK( capture_ptr->messages[4] ==
+           "Second comparison item: hammer. First comparison item: flashlight" );
     CHECK( capture_ptr->messages[5] == capture_ptr->messages[4] );
 
     accessibility::reset_backend_after_testing();
@@ -1363,8 +1361,7 @@ TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[acces
     REQUIRE( selector.highlight_one_of( { first } ) );
     selector.speak_focus();
     REQUIRE( !capture_ptr->messages.empty() );
-    CHECK( capture_ptr->messages.back().find( "No comparison item selected" ) !=
-           std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "comparison item" ) == std::string::npos );
     const size_t after_open = capture_ptr->messages.size();
     selector.speak_focus();
     CHECK( capture_ptr->messages.size() == after_open );
@@ -1377,9 +1374,8 @@ TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[acces
 
     REQUIRE( selector.highlight_one_of( { second } ) );
     selector.speak_focus();
-    CHECK( capture_ptr->messages.back().find( "Not selected. First comparison item:" ) !=
-           std::string::npos );
-    CHECK( capture_ptr->messages.back().find( first->tname() ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "comparison item" ) == std::string::npos );
+    CHECK( capture_ptr->messages.back().find( first->tname() ) == std::string::npos );
     CHECK( capture_ptr->messages.back().find(
                second->get_category_of_contents().name_header() ) != std::string::npos );
 
@@ -1389,8 +1385,11 @@ TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[acces
            std::string::npos );
 
     selector.toggle_focused();
-    CHECK( capture_ptr->messages.back().find( "No comparison item selected" ) !=
+    CHECK( capture_ptr->messages.back().find( "deselected for comparison" ) !=
            std::string::npos );
+    const size_t after_deselect = capture_ptr->messages.size();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.size() == after_deselect );
     CHECK( accessibility::repeat_last_announcement() );
     CHECK( capture_ptr->messages.back() == capture_ptr->messages[capture_ptr->messages.size() - 2] );
 
@@ -1421,7 +1420,7 @@ TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[acces
     CHECK( capture_ptr->messages.back().find( "Selected as second comparison item" ) !=
            std::string::npos );
     selector.toggle_focused();
-    CHECK( capture_ptr->messages.back().find( "Not selected. First comparison item:" ) !=
+    CHECK( capture_ptr->messages.back().find( "deselected for comparison" ) !=
            std::string::npos );
 
     accessibility::reset_backend_after_testing();
