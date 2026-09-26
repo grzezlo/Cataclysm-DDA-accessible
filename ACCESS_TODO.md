@@ -97,10 +97,10 @@ general text-entry interaction for its own review.
 **NVDA check (2026-09-26):** The tester confirmed numeric entry works via
 the Random Character path below, and requested the revised cursor speech above.
 The tester later confirmed that cursor speech is much better and requested
-removing the redundant `Deleted` prefix.  That deletion change still needs
-NVDA verification.  The character creator's first screen did not announce
-arrow-key navigation.  The three-choice
-template action popup announced its question but not its choices.  The shared
+removing the redundant `Deleted` prefix.  The tester confirmed that correction
+works in build `43dde2875b`.  The character creator's first screen did not
+announce arrow-key navigation.  The three-choice template action popup
+announced its question but not its choices.  The shared
 multi-option `query_popup` fix is built in `952939a6d3` and awaits NVDA
 verification.  Character creation screen coverage remains in Stages 20 and 20A.
 A temporary numeric-input test path is New Game > Random Character, which opens
