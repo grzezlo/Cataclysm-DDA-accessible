@@ -63,6 +63,10 @@ available through Repeat Last, so this control needs no separate detail view.
 Limit this behavior to two-option `query_yn` prompts; other `query_popup`
 callers need their own interaction review.
 
+**NVDA check (2026-09-26):** The tester reported that the Yes/No interaction
+in build `da6515e6a6` works very well.  Keep the remaining Stage 05 control
+and edge-case checks open.
+
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
 (shared document reader), `src/output.cpp` (`query_yn` construction),
