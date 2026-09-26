@@ -97,6 +97,13 @@ item-info fixtures.
 columns, examine an item, compare two items, and confirm details are ordered
 usefully and verbosity remains manageable.
 
+**Human verification in progress (2026-09-27):** The user confirmed with NVDA
+that entering comparison, marking two items, revisiting the first selection,
+and the revised selection speech work well.  Inventory browsing, categories,
+columns, filters, item details, repeat-last, and speech interruption still need
+explicit confirmation.  Record Windows, NVDA, and tested build versions before
+closing the stage.
+
 ## Stage 06A - Item action flows
 
 **Outcome:** Common item action flows expose their choices, confirmations,
