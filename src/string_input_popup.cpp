@@ -628,17 +628,15 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
             std::string feedback;
             const bool value_changed = ret.str() != previous_value;
             if( action == "TEXT.LEFT" || action == "TEXT.RIGHT" ) {
-                feedback = previous_position != _position ?
-                           accessibility::format_numeric_cursor( ret.str(), _position ) :
-                           action == "TEXT.LEFT" ? _( "Start of field" ) : _( "End of field" );
+                feedback = accessibility::format_numeric_cursor( ret.str(), _position );
             } else if( action == "TEXT.HOME" ) {
                 feedback = _( "Start of field" );
             } else if( action == "TEXT.END" ) {
                 feedback = _( "End of field" );
             } else if( action == "TEXT.BACKSPACE" || action == "TEXT.DELETE" ) {
                 if( value_changed ) {
-                    const size_t deleted_cursor = static_cast<size_t>( previous_position +
-                                                  ( action == "TEXT.DELETE" ? 1 : 0 ) );
+                    const size_t deleted_cursor = static_cast<size_t>( previous_position -
+                                                  ( action == "TEXT.BACKSPACE" ? 1 : 0 ) );
                     feedback = string_format( _( "Deleted %s" ), accessibility::format_numeric_cursor(
                                                   previous_value, deleted_cursor ) );
                 } else {

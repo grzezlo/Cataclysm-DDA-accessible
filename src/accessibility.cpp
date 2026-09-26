@@ -661,10 +661,10 @@ std::string format_numeric_input( const std::string &prompt, const std::string &
 
 std::string format_numeric_cursor( const std::string &value, const size_t cursor )
 {
-    if( cursor == 0 || value.empty() ) {
-        return _( "Start of field" );
+    if( cursor >= value.size() ) {
+        return _( "End of field" );
     }
-    const std::string character = value.substr( std::min( cursor, value.size() ) - 1, 1 );
+    const std::string character = value.substr( cursor, 1 );
     return character == "-" ? _( "Minus" ) : character;
 }
 

@@ -162,7 +162,7 @@ std::string format_popup_prompt( const std::string &question, const std::string 
 /** Describe a numeric input's prompt and complete current value. */
 std::string format_numeric_input( const std::string &prompt, const std::string &description,
                                   const std::string &value );
-/** Read the character immediately before an insertion cursor in a numeric value. */
+/** Read the character after an insertion cursor, or the end of a numeric field. */
 std::string format_numeric_cursor( const std::string &value, size_t cursor );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
