@@ -356,8 +356,8 @@ TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place
                                      "Torso", "Bandaged", true );
     CHECK( disabled == "Torso. Bandaged. Unavailable." );
     const std::string open = accessibility::format_uilist_open(
-                                 "Treat which part?", disabled, "Alt+D", true );
-    CHECK( open == "Treat which part? List. Use arrow keys to choose. Alt+D for details. " +
+                                 "Treat which part?", disabled, "Alt+d", true );
+    CHECK( open == "Treat which part? List. Use arrow keys to choose. Alt+d for details. " +
            disabled );
     CHECK( accessibility::announce( open ) );
     const std::string short_details = "Light exercise comparable in intensity to walking.";
@@ -369,7 +369,7 @@ TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place
 
     const std::string plain = accessibility::format_uilist_focus( "Moderate", "", false );
     CHECK( plain == "Moderate." );
-    CHECK( accessibility::format_uilist_open( "Choose intensity", plain, "Alt+D", false ) ==
+    CHECK( accessibility::format_uilist_open( "Choose intensity", plain, "Alt+d", false ) ==
            "Choose intensity. List. Use arrow keys to choose. Moderate." );
     CHECK( accessibility::uilist_details_need_document( std::string( 161, 'x' ) ) );
     CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 160, 'x' ) ) );
@@ -457,6 +457,125 @@ TEST_CASE( "text_input_reads_character_after_cursor_in_either_direction",
     CHECK( accessibility::format_text_cursor( u8"ąb", 0 ) == u8"ą" );
     CHECK( accessibility::format_text_cursor( u8"ąb", 1 ) == "b" );
     CHECK( accessibility::format_text_cursor( u8"ąb", 2 ) == "End of field" );
+}
+
+TEST_CASE( "keybinding_focus_and_details_expose_scope_and_all_keys",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_keybinding_focus( "Accessibility details", "Alt+d", false ) ==
+           "Accessibility details. Key: Alt+d. Global binding." );
+    CHECK( accessibility::format_keybinding_focus( "Disassemble", "D", false ) ==
+           "Disassemble. Key: Shift+d. Global binding." );
+    CHECK( accessibility::format_keybinding_focus( "Accessibility details", "", true ) ==
+           "Accessibility details. Unbound. Local binding." );
+    CHECK( accessibility::format_keybinding_details( "Accessibility details",
+    { "Alt+d", "F2" }, false, true ) ==
+    "Accessibility details. Keys: Alt+d, F2. Global binding. Customized." );
+    CHECK( accessibility::format_keybinding_details( "Craft",
+    { "C", "&" }, false, false ) ==
+    "Craft. Keys: Shift+c, &. Global binding. Default." );
+}
+
+TEST_CASE( "keybinding_open_and_filter_formatting", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_keybinding_open( "Up", "Down", "Tab", "Enter", "Alt+d",
+            "Move north. Key: Up. Global binding." ) ==
+           "Keybindings. Up and Down choose an action. Tab switches to the filter. Enter opens actions. Alt+d reads all keys. Move north. Key: Up. Global binding." );
+    CHECK( accessibility::format_keybinding_filter( "access", 2, "Tab", true ) ==
+           "Filter. Type to search. Tab returns to the action list. Text: access. Results: 2." );
+    CHECK( accessibility::format_keybinding_filter( "access", 2, "Tab", false ) ==
+           "Text: access. Results: 2." );
+    CHECK( accessibility::format_keybinding_filter( "", 150, "Tab", false ) ==
+           "Text: empty. Results: 150." );
+}
+
+TEST_CASE( "format_spoken_key_distinguishes_uppercase_and_modifiers", "[accessibility][nogame]" )
+{
+    // Single uppercase letters become Shift+<lower>
+    CHECK( accessibility::format_spoken_key( "Y" ) == "Shift+y" );
+    CHECK( accessibility::format_spoken_key( "A" ) == "Shift+a" );
+    CHECK( accessibility::format_spoken_key( "Z" ) == "Shift+z" );
+
+    // Single lowercase letters remain unchanged
+    CHECK( accessibility::format_spoken_key( "y" ) == "y" );
+    CHECK( accessibility::format_spoken_key( "a" ) == "a" );
+
+    // Modifiers combined with uppercase letters include Shift
+    CHECK( accessibility::format_spoken_key( "ctrl+Y" ) == "Ctrl+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "CTRL+Y" ) == "Ctrl+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "CTRL-Y" ) == "Ctrl+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "alt+Y" ) == "Alt+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "ALT-Y" ) == "Alt+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "ctrl+alt+Y" ) == "Ctrl+Alt+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "CTRL-ALT-Y" ) == "Ctrl+Alt+Shift+y" );
+
+    // Modifiers with lowercase letters do not add Shift
+    CHECK( accessibility::format_spoken_key( "ctrl+y" ) == "Ctrl+y" );
+    CHECK( accessibility::format_spoken_key( "CTRL-y" ) == "Ctrl+y" );
+    CHECK( accessibility::format_spoken_key( "alt+d" ) == "Alt+d" );
+    CHECK( accessibility::format_spoken_key( "ALT-d" ) == "Alt+d" );
+
+    // Shift modifier normalization
+    CHECK( accessibility::format_spoken_key( "SHIFT-y" ) == "Shift+y" );
+    CHECK( accessibility::format_spoken_key( "Shift+y" ) == "Shift+y" );
+    CHECK( accessibility::format_spoken_key( "SHIFT-Y" ) == "Shift+y" );
+    CHECK( accessibility::format_spoken_key( "Shift+Y" ) == "Shift+y" );
+    CHECK( accessibility::format_spoken_key( "CTRL-SHIFT-y" ) == "Ctrl+Shift+y" );
+    CHECK( accessibility::format_spoken_key( "ctrl+shift+Y" ) == "Ctrl+Shift+y" );
+
+    // Named keys with all-caps words remain intact without spurious Shift
+    CHECK( accessibility::format_spoken_key( "UP" ) == "UP" );
+    CHECK( accessibility::format_spoken_key( "DOWN" ) == "DOWN" );
+    CHECK( accessibility::format_spoken_key( "LEFT" ) == "LEFT" );
+    CHECK( accessibility::format_spoken_key( "RIGHT" ) == "RIGHT" );
+    CHECK( accessibility::format_spoken_key( "ESC" ) == "ESC" );
+    CHECK( accessibility::format_spoken_key( "TAB" ) == "TAB" );
+    CHECK( accessibility::format_spoken_key( "ENTER" ) == "ENTER" );
+    CHECK( accessibility::format_spoken_key( "HOME" ) == "HOME" );
+    CHECK( accessibility::format_spoken_key( "END" ) == "END" );
+    CHECK( accessibility::format_spoken_key( "PAGE_UP" ) == "PAGE_UP" );
+    CHECK( accessibility::format_spoken_key( "PAGE_DOWN" ) == "PAGE_DOWN" );
+    CHECK( accessibility::format_spoken_key( "KEYPAD_5" ) == "KEYPAD_5" );
+    CHECK( accessibility::format_spoken_key( "F1" ) == "F1" );
+    CHECK( accessibility::format_spoken_key( "F12" ) == "F12" );
+
+    // Named keys with modifiers
+    CHECK( accessibility::format_spoken_key( "CTRL-UP" ) == "Ctrl+UP" );
+    CHECK( accessibility::format_spoken_key( "ALT-ENTER" ) == "Alt+ENTER" );
+    CHECK( accessibility::format_spoken_key( "SHIFT-TAB" ) == "Shift+TAB" );
+
+    // Digits and symbols
+    CHECK( accessibility::format_spoken_key( "7" ) == "7" );
+    CHECK( accessibility::format_spoken_key( "?" ) == "?" );
+    CHECK( accessibility::format_spoken_key( "" ).empty() );
+
+    // List of keys
+    CHECK( accessibility::format_spoken_key( "Y, or 7" ) == "Shift+y, or 7" );
+    CHECK( accessibility::format_spoken_key( "y, Y" ) == "y, Shift+y" );
+}
+
+TEST_CASE( "keybinding_accessibility_actions_registered_in_contexts", "[accessibility]" )
+{
+    const input_context gameplay = get_default_mode_input_context();
+    CHECK( gameplay.is_registered_action( "accessibility_situation" ) );
+    CHECK( gameplay.is_registered_action( "accessibility_status" ) );
+    CHECK( gameplay.is_registered_action( "ACCESSIBILITY_REPEAT_LAST" ) );
+
+    input_context custom_ctx( "CUSTOM_CTX", keyboard_mode::keychar );
+    custom_ctx.register_action( "SOME_ACTION" );
+    CHECK_FALSE( custom_ctx.is_registered_action( "ACCESSIBILITY_DETAILS" ) );
+    CHECK_FALSE( custom_ctx.is_registered_action( "ACCESSIBILITY_REPEAT_LAST" ) );
+
+    for( const std::string &accessibility_action : {
+             "ACCESSIBILITY_DETAILS",
+             "ACCESSIBILITY_REPEAT_LAST"
+         } ) {
+        if( !custom_ctx.is_registered_action( accessibility_action ) ) {
+            custom_ctx.register_action( accessibility_action );
+        }
+    }
+    CHECK( custom_ctx.is_registered_action( "ACCESSIBILITY_DETAILS" ) );
+    CHECK( custom_ctx.is_registered_action( "ACCESSIBILITY_REPEAT_LAST" ) );
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )
@@ -1047,4 +1166,61 @@ TEST_CASE( "help_browser_navigation_document_reading_and_repeat_last", "[accessi
     CHECK( capture_ptr->messages[12] == "Main menu. Help." );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "format_item_info_paragraphs_splits_stats_and_sentences", "[accessibility][nogame]" )
+{
+    // Test 1: Empty raw info with type name
+    {
+        const auto paras = accessibility::format_item_info_paragraphs( "WEAPON", "" );
+        REQUIRE( paras.size() == 1 );
+        CHECK( paras[0] == "WEAPON" );
+    }
+
+    // Test 2: Empty raw info without type name
+    {
+        const auto paras = accessibility::format_item_info_paragraphs( "", "" );
+        CHECK( paras.empty() );
+    }
+
+    // Test 3: Color tags, stat lines, and prose description with multiple sentences
+    {
+        const std::string raw =
+            "<color_c_light_gray>Volume: </color><color_c_white>0.25 L</color>\n"
+            "<color_c_light_gray>Weight: </color><color_c_white>0.45 kg</color>\n"
+            "<color_c_light_gray>Bash: </color><color_c_white>4</color>  "
+            "<color_c_light_gray>Cut: </color><color_c_white>18</color>\n"
+            "\n"
+            "<color_c_white>A combat knife with an 8-inch high carbon steel blade.  "
+            "Designed for close combat and utility.  Handle has a rubberized grip.</color>\n";
+
+        const auto paras = accessibility::format_item_info_paragraphs( "KNIFE", raw );
+        REQUIRE( paras.size() == 7 );
+        CHECK( paras[0] == "KNIFE" );
+        CHECK( paras[1] == "Volume: 0.25 L" );
+        CHECK( paras[2] == "Weight: 0.45 kg" );
+        CHECK( paras[3] == "Bash: 4  Cut: 18" );
+        CHECK( paras[4] == "A combat knife with an 8-inch high carbon steel blade." );
+        CHECK( paras[5] == "Designed for close combat and utility." );
+        CHECK( paras[6] == "Handle has a rubberized grip." );
+    }
+
+    // Test 4: Single sentence description without type name
+    {
+        const std::string raw =
+            "Damage: 10\n"
+            "A sturdy stick.\n";
+
+        const auto paras = accessibility::format_item_info_paragraphs( "", raw );
+        REQUIRE( paras.size() == 2 );
+        CHECK( paras[0] == "Damage: 10" );
+        CHECK( paras[1] == "A sturdy stick." );
+    }
+
+    // Test 5: Type name with color tags
+    {
+        const auto paras = accessibility::format_item_info_paragraphs( "<color_c_green>TOOL</color>", "" );
+        REQUIRE( paras.size() == 1 );
+        CHECK( paras[0] == "TOOL" );
+    }
 }

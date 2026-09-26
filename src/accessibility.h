@@ -166,10 +166,28 @@ std::string format_text_input( const std::string &prompt, const std::string &des
 std::string format_text_character( const std::string &character );
 /** Read the Unicode character after an insertion cursor, or the end of a field. */
 std::string format_text_cursor( const std::string &value, size_t cursor );
+/** Format a key combination for screen reader speech, making uppercase letters explicit (e.g. "Shift+y", "Ctrl+Shift+y"). */
+std::string format_spoken_key( const std::string &raw_key );
+/** Describe a focused keybinding action without reading every assigned key. */
+std::string format_keybinding_focus( const std::string &name, const std::string &primary_key,
+                                     bool local );
+/** Describe every assigned key and the binding state on demand. */
+std::string format_keybinding_details( const std::string &name,
+                                       const std::vector<std::string> &keys, bool local, bool customized );
+/** Announce opening of the keybinding screen with basic navigation hints. */
+std::string format_keybinding_open( const std::string &up_binding, const std::string &down_binding,
+                                    const std::string &tab_binding, const std::string &confirm_binding,
+                                    const std::string &details_binding, const std::string &focus );
+/** Announce keybinding filter state and search results count. */
+std::string format_keybinding_filter( const std::string &query, int results_count,
+                                      const std::string &tab_binding, bool include_hint );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */
 std::vector<std::string> split_uilist_detail_sentences( const std::string &details );
+/** Split formatted item details into clean semantic lines and sentences for document reading. */
+std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
+        const std::string &raw_info );
 /** Speak the most recent announcement again via the active backend. */
 bool repeat_last_announcement();
 /** Return the most recent announcement text (spoken or quietly set). */

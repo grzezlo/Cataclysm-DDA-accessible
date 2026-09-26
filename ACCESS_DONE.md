@@ -459,18 +459,36 @@ Limitations:
   that interface.  The default log flow remains newest at the bottom.
 - New source strings may fall back to English until Stage 23 translation work.
 
-## 2026-09-26 — Stage 05 list detail speech checkpoint
+## 2026-09-26 — Stage 05: Reusable input controls and command discovery
 
-- Implemented short `uilist` descriptions spoken in place and long descriptions
-  navigated by sentence through the shared document reader.  Removed repeated
-  per-entry detail availability announcements.
-- `test_access.bat` passed with 307 assertions in 22 test cases, and the Windows
-  x64 tiles build succeeded at commit `da62ddd81c`.
-- The NVDA tester confirmed that `Source: Firewood` in the zone type list reads
-  as complete sentences rather than fragments cut at visual line wraps.
+- Made common input controls accessible before composite gameplay screens depend on them.
+- `uilist`: arrow-key navigation with concise focus speech; `Alt+D` speaks descriptions
+  up to 160 characters in place, and opens longer descriptions in a navigable document view
+  sentence-by-sentence.  Disabled entries are focusable and identified with denial reasons.
+- `query_yn` & `query_popup`: Yes/No prompts announce question, selected answer (default No),
+  Left/Right navigation, direct Y/N and Enter/Escape bindings.  Multi-option popups announce
+  question, choices, and focused option.  Repeat Last restores context.
+- `string_input_popup` (numeric & text input): announces title, description, and value on entry.
+  Speaks typed characters, Backspace/Delete removals, and cursor character navigation after
+  Left/Right without redundant "Deleted" prefix.  `End of field` announced at end.  Repeat Last
+  reads full value.
+- `input_context` (keybinding screen): accessible action list with Up/Down navigation, action name,
+  binding, and scope.  Uppercase shortcut letters announced with Shift (e.g. `Shift+y`, `Ctrl+Shift+y`)
+  via `format_spoken_key`.  Tab switches between action list and filter with result count speech.
+  `Alt+D` details announce all keys and customization status.  Enter opens operation menu;
+  cancelable key capture and conflict resolution.
+- `iteminfo_window` (item examination dialog): integrated with the shared document reader
+  (`accessibility_ui::show_document`).  Item name and type/first stat announced on open without
+  noisy positional counters ("1 of N").  Long prose descriptions split into complete sentences
+  for Up/Down navigation while stat lines remain intact.  Home and End jump to beginning and end;
+  Page Up/Down jump 3 paragraphs.  Color tags stripped from item name, type, and descriptions.
+- Automated tests: `test_access.bat` passed with 411 assertions across 30 test cases.  C++
+  formatting verified clean with AStyle.  Windows x64 tiles build succeeded with `build_win_x64.bat`.
+- Human verification: A blind NVDA user confirmed keyboard navigation, speech output, casing
+  announcement for uppercase shortcut keys, text and numeric input, and item examination reading with NVDA.
 
 Limitations:
 
-- The exact Windows and NVDA versions were not re-reported for this check.
-- The remaining Stage 05 controls and list edge cases await their own human
-  verification.
+- Polish character entry in `string_input_popup` under Windows is deferred per user direction (not an accessibility gate).
+- Intermediate character creation screens remain silent until Stages 20 and 20A.
+

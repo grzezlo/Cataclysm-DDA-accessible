@@ -531,7 +531,7 @@ std::string format_help_directions(
                 if( i > 0 ) {
                     keys_str += ", ";
                 }
-                keys_str += entry.second[i];
+                keys_str += format_spoken_key( entry.second[i] );
             }
         }
         parts.push_back( string_format( "%s: %s", entry.first, keys_str ) );
@@ -628,7 +628,7 @@ std::string format_uilist_open( const std::string &context, const std::string &f
 {
     return format_semantic_sequence( { context, _( "List. Use arrow keys to choose" ),
                                        has_details ? string_format( _( "%s for details" ),
-                                               details_binding ) : std::string(), focus } );
+                                               format_spoken_key( details_binding ) ) : std::string(), focus } );
 }
 
 std::string format_popup_option_focus( const std::string &option )
@@ -648,7 +648,8 @@ std::string format_popup_prompt( const std::string &question, const std::string 
         std::string(),
         selected.empty() ? std::string() : format_popup_option_focus( selected ),
         include_hint ? string_format( _( "Choose with %1$s or %2$s; confirm with %3$s" ),
-                                      left_binding, right_binding, confirm_binding ) : std::string()
+                                      format_spoken_key( left_binding ), format_spoken_key( right_binding ),
+                                      format_spoken_key( confirm_binding ) ) : std::string()
     } );
 }
 
@@ -674,6 +675,180 @@ std::string format_text_cursor( const std::string &value, const size_t cursor )
         return _( "End of field" );
     }
     return format_text_character( characters.substr( cursor, 1 ).str() );
+}
+
+static std::string trim_spaces( const std::string &str )
+{
+    const size_t first = str.find_first_not_of( " \t\r\n" );
+    if( first == std::string::npos ) {
+        return {};
+    }
+    const size_t last = str.find_last_not_of( " \t\r\n" );
+    return str.substr( first, last - first + 1 );
+}
+
+std::string format_spoken_key( const std::string &raw_key )
+{
+    if( raw_key.empty() ) {
+        return raw_key;
+    }
+
+    if( raw_key.size() >= 3 && raw_key.front() == '[' && raw_key.back() == ']' ) {
+        return "[" + format_spoken_key( raw_key.substr( 1, raw_key.size() - 2 ) ) + "]";
+    }
+
+    const size_t comma_pos = raw_key.find( ", " );
+    if( comma_pos != std::string::npos ) {
+        return format_spoken_key( raw_key.substr( 0, comma_pos ) ) + ", " +
+               format_spoken_key( raw_key.substr( comma_pos + 2 ) );
+    }
+
+    const std::string or_sep = _( " or " );
+    if( or_sep != " or " ) {
+        const size_t tr_or_pos = raw_key.find( or_sep );
+        if( tr_or_pos != std::string::npos ) {
+            return format_spoken_key( raw_key.substr( 0, tr_or_pos ) ) + or_sep +
+                   format_spoken_key( raw_key.substr( tr_or_pos + or_sep.size() ) );
+        }
+    }
+    const size_t en_or_pos = raw_key.find( " or " );
+    if( en_or_pos != std::string::npos ) {
+        return format_spoken_key( raw_key.substr( 0, en_or_pos ) ) + " or " +
+               format_spoken_key( raw_key.substr( en_or_pos + 4 ) );
+    }
+
+    std::string key = trim_spaces( raw_key );
+    if( key.empty() ) {
+        return key;
+    }
+
+    bool has_ctrl = false;
+    bool has_alt = false;
+    bool has_shift = false;
+
+    auto strip_prefix = []( std::string & str, const std::string & prefix ) -> bool {
+        if( prefix.empty() || str.size() < prefix.size() )
+        {
+            return false;
+        }
+        for( size_t i = 0; i < prefix.size(); ++i )
+        {
+            if( std::tolower( static_cast<unsigned char>( str[i] ) ) !=
+                std::tolower( static_cast<unsigned char>( prefix[i] ) ) ) {
+                return false;
+            }
+        }
+        str.erase( 0, prefix.size() );
+        return true;
+    };
+
+    const std::string tr_ctrl = to_translation( "key modifier", "CTRL-" ).translated();
+    const std::string tr_alt = to_translation( "key modifier", "ALT-" ).translated();
+    const std::string tr_shift = to_translation( "key modifier", "SHIFT-" ).translated();
+
+    bool matched = true;
+    while( matched && !key.empty() ) {
+        matched = false;
+        if( strip_prefix( key, "ctrl+" ) || strip_prefix( key, "ctrl-" ) ||
+            strip_prefix( key, "control+" ) || strip_prefix( key, "control-" ) ||
+            strip_prefix( key, tr_ctrl ) ) {
+            has_ctrl = true;
+            matched = true;
+            continue;
+        }
+        if( strip_prefix( key, "alt+" ) || strip_prefix( key, "alt-" ) ||
+            strip_prefix( key, tr_alt ) ) {
+            has_alt = true;
+            matched = true;
+            continue;
+        }
+        if( strip_prefix( key, "shift+" ) || strip_prefix( key, "shift-" ) ||
+            strip_prefix( key, tr_shift ) ) {
+            has_shift = true;
+            matched = true;
+            continue;
+        }
+    }
+
+    key = trim_spaces( key );
+
+    if( key.size() == 1 ) {
+        const unsigned char ch = static_cast<unsigned char>( key[0] );
+        if( ch >= 'A' && ch <= 'Z' ) {
+            has_shift = true;
+            key = std::string( 1, static_cast<char>( std::tolower( ch ) ) );
+        }
+    }
+
+    if( !has_ctrl && !has_alt && !has_shift ) {
+        return key;
+    }
+
+    std::vector<std::string> parts;
+    if( has_ctrl ) {
+        parts.push_back( pgettext( "key modifier", "Ctrl" ) );
+    }
+    if( has_alt ) {
+        parts.push_back( pgettext( "key modifier", "Alt" ) );
+    }
+    if( has_shift ) {
+        parts.push_back( pgettext( "key modifier", "Shift" ) );
+    }
+    if( !key.empty() ) {
+        parts.push_back( key );
+    }
+    return string_join( parts, "+" );
+}
+
+std::string format_keybinding_focus( const std::string &name, const std::string &primary_key,
+                                     const bool local )
+{
+    const std::string spoken_key = format_spoken_key( primary_key );
+    return format_semantic_sequence( { name,
+                                       spoken_key.empty() ? _( "Unbound" ) : string_format( _( "Key: %s" ), spoken_key ),
+                                       local ? _( "Local binding" ) : _( "Global binding" ) } );
+}
+
+std::string format_keybinding_details( const std::string &name,
+                                       const std::vector<std::string> &keys, const bool local, const bool customized )
+{
+    std::string assigned_keys;
+    for( const std::string &key : keys ) {
+        if( !assigned_keys.empty() ) {
+            assigned_keys += ", ";
+        }
+        assigned_keys += format_spoken_key( key );
+    }
+    return format_semantic_sequence( { name,
+                                       keys.empty() ? _( "Unbound" ) : string_format( _( "Keys: %s" ), assigned_keys ),
+                                       local ? _( "Local binding" ) : _( "Global binding" ),
+                                       customized ? _( "Customized" ) : _( "Default" ) } );
+}
+
+std::string format_keybinding_open( const std::string &up_binding, const std::string &down_binding,
+                                    const std::string &tab_binding, const std::string &confirm_binding,
+                                    const std::string &details_binding, const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_format( _( "Keybindings. %1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens actions. %5$s reads all keys." ),
+                       format_spoken_key( up_binding ), format_spoken_key( down_binding ),
+                       format_spoken_key( tab_binding ), format_spoken_key( confirm_binding ),
+                       format_spoken_key( details_binding ) ),
+        focus
+    } );
+}
+
+std::string format_keybinding_filter( const std::string &query, const int results_count,
+                                      const std::string &tab_binding, const bool include_hint )
+{
+    const std::string hint = include_hint
+                             ? string_format( _( "Filter. Type to search. %s returns to the action list." ),
+                                     format_spoken_key( tab_binding ) )
+                             : std::string();
+    const std::string query_text = query.empty() ? _( "empty" ) : query;
+    const std::string results = string_format( _( "Text: %1$s. Results: %2$d." ), query_text,
+                                results_count );
+    return format_semantic_sequence( { hint, results } );
 }
 
 bool uilist_details_need_document( const std::string &details )
@@ -726,6 +901,53 @@ std::vector<std::string> split_uilist_detail_sentences( const std::string &detai
         sentences.push_back( normalized.substr( start ) );
     }
     return sentences;
+}
+
+std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
+        const std::string &raw_info )
+{
+    std::vector<std::string> paragraphs;
+
+    static const std::regex color_tags( R"(<[^>]*>)" );
+    const std::string clean_type = trim_spaces( std::regex_replace( type_name, color_tags, "" ) );
+    if( !clean_type.empty() ) {
+        paragraphs.push_back( clean_type );
+    }
+
+    const std::string clean_info = std::regex_replace( raw_info, color_tags, "" );
+
+    std::vector<std::string> lines;
+    size_t start = 0;
+    while( start < clean_info.size() ) {
+        const size_t end = clean_info.find( '\n', start );
+        if( end == std::string::npos ) {
+            lines.push_back( clean_info.substr( start ) );
+            break;
+        }
+        lines.push_back( clean_info.substr( start, end - start ) );
+        start = end + 1;
+    }
+
+    for( const std::string &line : lines ) {
+        const std::string trimmed = trim_spaces( line );
+        if( trimmed.empty() ) {
+            continue;
+        }
+        if( trimmed.find( '.' ) != std::string::npos ||
+            trimmed.find( '!' ) != std::string::npos ||
+            trimmed.find( '?' ) != std::string::npos ) {
+            std::vector<std::string> sentences = split_uilist_detail_sentences( trimmed );
+            for( std::string &sentence : sentences ) {
+                if( !sentence.empty() ) {
+                    paragraphs.push_back( std::move( sentence ) );
+                }
+            }
+        } else {
+            paragraphs.push_back( trimmed );
+        }
+    }
+
+    return paragraphs;
 }
 
 bool repeat_last_announcement()

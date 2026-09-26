@@ -85,6 +85,8 @@ void show_document( const std::string &window_title, const std::string &spoken_t
     ctxt.register_action( "DOWN" );
     ctxt.register_action( "PAGE_UP" );
     ctxt.register_action( "PAGE_DOWN" );
+    ctxt.register_action( "HOME" );
+    ctxt.register_action( "END" );
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
@@ -132,6 +134,20 @@ void show_document( const std::string &window_title, const std::string &spoken_t
             const int prev = current_para;
             current_para = accessibility::move_document_cursor( current_para, num_paragraphs, -3 );
             if( current_para != prev ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "HOME" ) {
+            const int prev = current_para;
+            current_para = 0;
+            if( current_para != prev && num_paragraphs > 0 ) {
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        } else if( action == "END" ) {
+            const int prev = current_para;
+            current_para = std::max( 0, num_paragraphs - 1 );
+            if( current_para != prev && num_paragraphs > 0 ) {
                 update_view_to_para();
                 accessibility::announce( spoken_paragraphs[current_para] );
             }

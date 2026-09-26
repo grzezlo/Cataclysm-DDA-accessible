@@ -1,4 +1,4 @@
-# Accessibility roadmap
+﻿# Accessibility roadmap
 
 This file is the authoritative plan for unfinished accessibility work.  Stable
 architecture, workflow, and completion rules are in `AGENTS.md`; completed work
@@ -8,7 +8,7 @@ The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
 implementation discovers a better integration point.
 
-Stages 05–10 establish the minimum independent survival and combat loop.  Stages 11–21A
+Stages 06–10 establish the minimum independent survival and combat loop.  Stages 11–21A
 cover the major progression, management, and setup interfaces.  Stages 22, 22A, and 23
 are native release gates: coverage, the complete tutorial, and packaging.  Stage 24
 starts only after the native semantic model is stable.
@@ -19,177 +19,6 @@ native stages includes the general NVDA checks required by `AGENTS.md` plus the
 scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
-
-## Stage 05 - Reusable input controls and command discovery
-
-**Outcome:** Common controls expose consistent semantics before more bespoke
-screens depend on them, and accessibility commands can be discovered in-game.
-
-**Selected `uilist` interaction (2026-09-25, revised 2026-09-26 after NVDA
-feedback):** Keep arrow-key list navigation and concise focus announcements.
-When a list contains item details, its opening announcement identifies it as a
-list, tells the player to use the arrow keys, and gives the current binding for
-`Accessibility details` (default `Alt+D`).  Do not repeat detail availability
-on each entry.  With accessibility active, disabled entries can be focused and
-are identified as unavailable; activating one remains blocked unless the caller
-explicitly allows disabled entries.  `Alt+D` speaks a focused description of up
-to 160 visible characters in place, retaining list focus so the next arrow key
-moves to another entry.
-For a longer description, `Alt+D` opens a navigable semantic document view;
-opening reads its first sentence, arrows read subsequent sentences, and Escape
-returns to the same list entry and restores its focus announcement.  Treat
-visual line wrapping as presentation only: sentences remain intact even when
-the source description spans several visual lines.  A single long sentence
-remains one spoken fragment.  Repeat Last
-repeats the current announcement in either case.  An entry without a displayed
-description responds `No details available.`  Details do not change the list
-selection.  All new speech uses translated strings, and the announced binding
-must follow rebindings.  This choice applies to `uilist` only; other controls
-receive their own interaction review.
-
-**NVDA check (2026-09-26):** The tester confirmed that the long
-`Source: Firewood` zone description is now read sentence-by-sentence without
-stopping at visual line wraps.  Continue the Stage 05 human checks below for
-other controls and list edge cases.
-
-**Selected Yes/No interaction (2026-09-26):** Keep the existing two visible
-buttons, default `No` selection, Left/Right focus movement, Enter activation,
-direct Yes/No bindings, and Escape as `No`.  On opening a `query_yn` prompt,
-announce the question, selected answer, and a brief hint using the current
-Left/Right/Confirm bindings.  Left/Right announce only the newly selected
-answer.  Repeat Last restores the question with the current answer; returning
-from the keybinding screen restores the prompt context.  The full question is
-available through Repeat Last, so this control needs no separate detail view.
-This choice first applied to two-option `query_yn` prompts; the multi-option
-choice below extends the same control after a separate interaction review.
-
-**NVDA check (2026-09-26):** The tester reported that the Yes/No interaction
-in build `da6515e6a6` works very well.  Keep the remaining Stage 05 control
-and edge-case checks open.
-
-**Selected multi-option popup interaction (2026-09-26):** Keep the existing
-visible buttons, Left/Right focus movement, Enter activation, and direct
-action bindings.  On opening an option-bearing `query_popup`, announce the
-question, focused option, and navigation hint.  When there are three or more
-options, also read their labels once so the available choices are known.
-Left/Right announce only the newly focused option; Repeat Last restores the
-question and current selection, and returning from keybinding help restores
-the same context.  Preserve the shorter accepted Yes/No opening.  Escape
-follows each dialog's existing cancel/No/Quit action; add Escape as Cancel for
-the template Load/Delete/Cancel dialog.  Leave message-only, progress, and
-key-capture popups outside this button interaction.  This applies to all
-audited `query_popup` callers with options, including Yes/No, template
-actions, interruption decisions, and Yes/No/Quit prompts.
-
-**Selected numeric-input interaction (2026-09-26, revised after NVDA feedback):**
-Keep the existing visible text field, insertion cursor, Left/Right editing,
-Enter to accept, and Escape to cancel.  Announce the prompt and current value
-on entry.  Speak each accepted digit as it is typed.  After Left or Right,
-speak the character immediately after the cursor's new position.  At the start,
-repeated Left continues to speak the first character; at the end, say `End of field`.  For
-`123` with the cursor at the end, Left says `3`, further Left says `2`, and
-Right from just before the end says `End of field`.  Backspace and Delete
-speak only the removed character.  Announce clearing; Repeat Last reads the
-prompt and entire current value.  Keep any stated limits in the prompt rather
-than inventing bounds absent from the widget.  The text-input choice below
-extends this shared control after its own interaction review.
-
-**Selected text-input interaction (2026-09-26):** Use the same visible
-`string_input_popup` field and insertion cursor as numeric input.  On entry,
-announce its title, description, and current value.  Speak accepted characters
-as typed, including spaces and any Unicode letters the game accepts.  Left and Right read the
-character immediately after the cursor's new position; repeated Left at the
-start reads the first character, and Right at the end says `End of field`.
-Backspace and Delete speak only the removed character.  Announce clearing;
-Repeat Last reads the title, description, and full current value.  Enter
-accepts and Escape cancels according to the caller's existing behavior.
-Keep focus in the field and add no new view.  Share the accessibility hook
-with numeric input and avoid repeated opening announcements when callers
-invoke `query_string( false )` for each key.
-
-**NVDA check (2026-09-26):** The tester reached the character-name field after
-creating an empty world and confirmed that text editing works in build
-`c52181c830`, including Repeat Last via `Alt+R`.  Polish letters did not enter
-the field during the user's test.  The cause has not been established; per the
-user's direction, this input limitation is deferred and is not a Stage 05
-accessibility acceptance gate.  Other text-entry edge cases below still need
-confirmation.
-
-**NVDA check (2026-09-26):** The tester confirmed numeric entry works via
-the Random Character path below, and requested the revised cursor speech above.
-The tester later confirmed that cursor speech is much better and requested
-removing the redundant `Deleted` prefix.  The tester confirmed that correction
-works in build `43dde2875b`.  The character creator's first screen did not
-announce arrow-key navigation.  The three-choice template action popup
-announced its question but not its choices.  The shared
-multi-option `query_popup` fix is built in `952939a6d3` and awaits NVDA
-verification.  Character creation screen coverage remains in Stages 20 and 20A.
-A temporary input test path is New Game > Random Character.  If no world
-exists, this first opens the currently silent basic world-creation screen:
-the default world name is already filled, and the default `F` binding selects
-Finish; confirm Yes to create the empty world.  The Description tab then opens
-with Name initially selected.  Enter opens text input; three Up keys focus Age
-and Enter opens `query_int`.  The intermediate character-creation focus changes
-are silent until Stages 20 and 20A; this route verifies the input controls only.
-
-**Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
-formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
-(shared document reader), `src/output.cpp` (`query_yn` construction),
-`src/popup.cpp` (button focus and input), `src/input_popup.cpp`,
-`src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`,
-`tests/accessibility_test.cpp`, `data/raw/keybindings.json`, and the existing
-Viewing topic in `data/core/help.json`.
-
-**Implementation hints:**
-
-- `uilist` already has accessibility hooks in `uilist::query()` (`src/uilist.cpp`).
-  This stage extends coverage to disabled-entry reasons (the `uilist_entry::enabled`
-  flag and `desc_enabled` description text), on-demand entry details, and
-  empty/error states.
-- `query_yn` is constructed in `src/output.cpp` as a `query_popup` with two
-  options.  Its shared input path is `query_popup::query_once()` in
-  `src/popup.cpp`.
-- `query_int` constructs a numeric `string_input_popup` in `src/output.cpp`.
-  `string_input_popup::query_string()` in `src/string_input_popup.cpp` owns
-  cursor movement and editing.  Callers may put limits in the prompt; the
-  shared widget has no structured numeric bounds.
-- `iteminfo_window::execute()` in `src/ui_iteminfo.cpp` is a scrollable
-  document viewer.  Announce the full text on open via
-  `format_item_info()` in `src/output.cpp` with color tags removed.
-- A `uilist` footer replaces the per-entry description visually.  The shared
-  details action reads only the displayed entry description; callers that need
-  both footer help and per-entry details must expose both explicitly.
-- For keybinding discovery: `input_context` in `src/input_context.cpp`
-  manages the keybinding UI invoked by `HELP_KEYBINDINGS`.
-
-**Success criteria:** Lists, disabled entries, yes/no prompts, text and numeric
-fields, quantity prompts, and scrolling detail announce label, role, value,
-state, any caller-supplied bounds, errors, and focus return.  The keybinding
-interface exposes every accessibility action.  Intentionally hidden input
-remains private.
-
-**Possible automated tests:** Widget-level capture tests for entry, focus/value
-change, disabled reason, bounds, editing, accept/cancel, scrolling, and focus
-restoration; keybinding action-presence tests.
-
-**Required human verification:** Exercise every control type, find and rebind
-each accessibility action, resolve a binding conflict, and confirm there are no
-silent controls or keyboard traps.  Confirm that NVDA reads the application
-window title without a commit identifier when the game starts or regains focus.
-For Yes/No prompts, check the opening question and default `No`, both arrow
-directions, Enter, direct Y/N, Escape, Repeat Last after changing focus, and
-return from keybinding help after speech interruption.
-For multi-option button prompts, verify the template Load/Delete/Cancel popup
-announces all choices on entry, Left/Right focus, direct L/D/C, Enter, Escape
-as Cancel, Repeat Last, and focus return from keybinding help.  Check one
-four-option gameplay prompt when reachable.
-For numeric input, check typing, Left/Right in both directions, insertion in
-the middle, Backspace/Delete, Home/End, rejected characters, Enter/Escape,
-and Repeat Last after an edit and after speech interruption.
-For text input, check spaces, Left/Right and both boundaries,
-insertion in the middle, Backspace/Delete, Home/End, Enter/Escape, and Repeat
-Last after speech interruption.  Confirm that a caller using
-`query_string( false )` does not repeat its opening announcement per key.
 
 ## Stage 06 - Inventory selector navigation and item information
 

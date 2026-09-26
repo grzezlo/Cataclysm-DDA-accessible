@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "color.h"
 #include "input_enums.h"
 #include "translations.h"
@@ -65,6 +67,24 @@ void iteminfo_window::execute()
 {
     if( data.without_getch ) {
         ui_manager::redraw();
+        return;
+    }
+
+    if( accessibility::is_available() ) {
+        const std::string raw_info = format_item_info( data.get_item_display(), data.get_item_compare() );
+        const std::string clean_item_name = remove_color_tags( data.get_item_name() );
+        const std::string clean_type_name = remove_color_tags( data.get_type_name() );
+        const std::string type_name =
+            ( !clean_type_name.empty() &&
+              clean_item_name.find( clean_type_name ) == std::string::npos )
+            ? clean_type_name : std::string();
+        std::vector<std::string> paragraphs =
+            accessibility::format_item_info_paragraphs( type_name, raw_info );
+        if( paragraphs.empty() ) {
+            paragraphs.push_back( _( "No details available." ) );
+        }
+        accessibility_ui::show_document( string_format( _( "Item info: %s" ), clean_item_name ),
+                                         clean_item_name, paragraphs, paragraphs );
         return;
     }
 

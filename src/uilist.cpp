@@ -1100,6 +1100,9 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         } else {
             // including HELP_KEYBINDINGS, in case the caller wants to refresh their contents
             bool unhandled = callback == nullptr || !callback->key( ctxt, event, selected, this );
+            if( ret_act == "HELP_KEYBINDINGS" ) {
+                accessibility_selection.clear();
+            }
             if( unhandled && allow_anykey ) {
                 ret = UILIST_UNBOUND;
             } else if( unhandled && allow_additional ) {

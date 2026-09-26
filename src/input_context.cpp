@@ -13,6 +13,7 @@
 #include <type_traits>
 #include <utility>
 
+#include "accessibility.h"
 #include "action.h"
 #include "cata_imgui.h"
 #include "cata_utility.h"
@@ -34,6 +35,7 @@
 #include "string_formatter.h"
 #include "string_input_popup.h"
 #include "translations.h"
+#include "uilist.h"
 #include "ui_manager.h"
 
 enum class kb_menu_status {
@@ -61,6 +63,8 @@ class keybindings_ui : public cataimgui::window
         std::vector<std::string> filtered_registered_actions;
         std::string hotkeys;
         int highlight_row_index = -1;
+        bool accessibility_focus = false;
+        bool scroll_to_focused = false;
         size_t scroll_offset = 0;
         //std::string filter_text;
         keybindings_ui( bool permit_execute_action, input_context *parent );
@@ -683,6 +687,10 @@ void keybindings_ui::draw_controls()
     if( last_status != status && status == kb_menu_status::filter ) {
         ImGui::SetKeyboardFocusHere( -1 );
     }
+    if( accessibility_focus ) {
+        ImGui::Text( _( "Press %s to switch between filter and action list." ),
+                     ctxt->get_desc( "NEXT_TAB", 1 ).c_str() );
+    }
     ImGui::Separator();
 
     if( last_status != status && status == kb_menu_status::show ) {
@@ -756,13 +764,17 @@ void keybindings_ui::draw_controls()
             cataimgui::draw_colored_text( key_text, col, 0.0f,
                                           status == kb_menu_status::show ? nullptr : &is_selected,
                                           nullptr, &is_hovered );
-            if( ( is_selected || is_hovered ) && invlet != ' ' ) {
+            if( ( is_selected || is_hovered ) && invlet != ' ' && !accessibility_focus ) {
                 highlight_row_index = i;
             }
             //ImGui::SameLine();
             //ImGui::SetCursorPosX(str_width_to_pixels(TERMX >= 100 ? 62 : 52));
             ImGui::TableNextColumn();
             ImGui::Text( "%s", ctxt->get_desc( action_id ).c_str() );
+            if( accessibility_focus && scroll_to_focused && i == static_cast<size_t>( highlight_row_index ) ) {
+                ImGui::SetScrollHereY( 0.5f );
+                scroll_to_focused = false;
+            }
         }
         ImGui::EndTable();
     }
@@ -799,7 +811,7 @@ bool input_context::resolve_conflicts( const std::vector<input_event> &events,
         conflict_list += action + ": ";
         std::string sep;
         for( const input_event &event : events ) {
-            conflict_list += sep + event.long_description();
+            conflict_list += sep + accessibility::format_spoken_key( event.long_description() );
             sep = ", ";
         }
         conflict_list += "\n";
@@ -907,12 +919,16 @@ bool input_context::action_remove( const std::string &name, const std::string &a
 bool input_context::action_add( const std::string &name, const std::string &action_id,
                                 bool is_local, kb_menu_status status )
 {
-    const input_event new_event = query_popup()
-                                  .preferred_keyboard_mode( preferred_keyboard_mode )
-                                  .message( _( "New key for %s" ), name )
-                                  .allow_anykey( true )
-                                  .query()
-                                  .evt;
+    const query_popup::result capture = query_popup()
+                                        .preferred_keyboard_mode( preferred_keyboard_mode )
+                                        .message( _( "New key for %s" ), name )
+                                        .allow_anykey( true )
+                                        .allow_cancel( true )
+                                        .query();
+    if( capture.action == "QUIT" ) {
+        return false;
+    }
+    const input_event new_event = capture.evt;
 
     if( action_uses_input( action_id, new_event )
         // Allow adding keys already used globally to local bindings
@@ -938,6 +954,16 @@ bool input_context::action_add( const std::string &name, const std::string &acti
 action_id input_context::display_menu( bool permit_execute_action )
 {
     action_id action_to_execute = ACTION_NULL;
+    const std::vector<std::string> original_registered_actions = registered_actions;
+    for( const std::string &accessibility_action : {
+             "ACCESSIBILITY_DETAILS",
+             "ACCESSIBILITY_REPEAT_LAST"
+         } ) {
+        if( std::find( registered_actions.begin(), registered_actions.end(),
+                       accessibility_action ) == registered_actions.end() ) {
+            register_action( accessibility_action );
+        }
+    }
 
     input_context ctxt( "HELP_KEYBINDINGS", keyboard_mode::keychar );
     // Keybinding menu actions
@@ -952,8 +978,13 @@ action_id input_context::display_menu( bool permit_execute_action )
     ctxt.register_action( "TEXT.CONFIRM" );
     ctxt.register_action( "PAGE_UP" );
     ctxt.register_action( "PAGE_DOWN" );
+    ctxt.register_action( "UP" );
+    ctxt.register_action( "DOWN" );
+    ctxt.register_action( "NEXT_TAB" );
     ctxt.register_action( "END" );
     ctxt.register_action( "HOME" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.register_action( "FILTER" );
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "TEXT.INPUT_FROM_FILE" );
@@ -986,14 +1017,147 @@ action_id input_context::display_menu( bool permit_execute_action )
     kb_menu.filtered_registered_actions = org_registered_actions;
     kb_menu.hotkeys = ctxt.get_available_single_char_hotkeys( display_help_hotkeys );
     kb_menu.init();
+    const bool accessibility_navigation = accessibility::is_available();
+    kb_menu.accessibility_focus = accessibility_navigation;
+    std::string focused_action = org_registered_actions.empty() ? "" : org_registered_actions.front();
+    std::string previous_filter;
+    const auto sync_focus = [&]() {
+        if( kb_menu.filtered_registered_actions.empty() ) {
+            focused_action.clear();
+            kb_menu.highlight_row_index = -1;
+            return;
+        }
+        const auto found = std::find( kb_menu.filtered_registered_actions.begin(),
+                                      kb_menu.filtered_registered_actions.end(), focused_action );
+        if( found == kb_menu.filtered_registered_actions.end() ) {
+            focused_action = kb_menu.filtered_registered_actions.front();
+            kb_menu.highlight_row_index = 0;
+        } else {
+            kb_menu.highlight_row_index = std::distance( kb_menu.filtered_registered_actions.begin(), found );
+        }
+    };
+    const auto spoken_keys = [&]( const std::string & action_id ) {
+        std::vector<std::string> keys;
+        for( const input_event &event : inp_mngr.get_input_for_action( action_id, category ) ) {
+            keys.push_back( accessibility::format_spoken_key( event.long_description() ) );
+        }
+        return keys;
+    };
+    const auto focus_text = [&]() {
+        if( focused_action.empty() ) {
+            return std::string( _( "No matching actions." ) );
+        }
+        bool local = false;
+        inp_mngr.get_action_attributes( focused_action, category, &local );
+        const std::vector<std::string> keys = spoken_keys( focused_action );
+        return accessibility::format_keybinding_focus( get_action_name( focused_action ),
+                keys.empty() ? "" : keys.front(), local );
+    };
+    const auto announce_focus = [&]() {
+        accessibility::announce( focus_text() );
+        kb_menu.scroll_to_focused = true;
+    };
+    const auto announce_filter = [&]( const bool include_hint ) {
+        accessibility::announce( accessibility::format_keybinding_filter(
+                                     kb_menu.get_filter(),
+                                     static_cast<int>( kb_menu.filtered_registered_actions.size() ),
+                                     ctxt.get_desc( "NEXT_TAB", 1 ), include_hint ) );
+    };
+    const auto open_action_menu = [&]() {
+        if( focused_action.empty() ) {
+            accessibility::announce_status( _( "No matching actions." ) );
+            return false;
+        }
+        const std::string action_id = focused_action;
+        const std::string name = get_action_name( action_id );
+        bool is_local = false;
+        const action_attributes &attributes = inp_mngr.get_action_attributes( action_id, category,
+                                              &is_local );
+        bool basic_local = false;
+        const action_attributes &basic = inp_mngr.get_action_attributes( action_id, category,
+                                         &basic_local, true );
+        const bool customized = is_local != basic_local || attributes.input_events != basic.input_events;
+        const bool empty = attributes.input_events.empty();
+        uilist actions;
+        actions.title = string_format( _( "Keybindings for %s" ), name );
+        actions.desc_enabled = true;
+        actions.addentry_desc( 0, true, MENU_AUTOASSIGN, _( "Add local binding" ),
+                               _( "Assign a key that applies only on this screen." ) );
+        actions.addentry_desc( 1, !is_local, MENU_AUTOASSIGN, _( "Add global binding" ),
+                               is_local
+                               ? _( "Local bindings are already defined. Remove them before adding a global binding." )
+                               : _( "Assign a key that applies globally across all screens." ) );
+        actions.addentry_desc( 2, is_local || !empty, MENU_AUTOASSIGN, _( "Remove binding" ),
+                               is_local && empty
+                               ? _( "Reset this action to inherit global bindings." )
+                               : ( !is_local && empty
+                                   ? _( "Action has no bindings to remove." )
+                                   : _( "Clear the assigned keys for this action." ) ) );
+        actions.addentry_desc( 3, customized, MENU_AUTOASSIGN, _( "Reset binding" ),
+                               customized
+                               ? _( "Restore this action to its default keybindings." )
+                               : _( "Action is already using its default keybindings." ) );
+        if( permit_execute_action ) {
+            const bool can_execute = look_up_action( action_id ) != ACTION_NULL;
+            actions.addentry_desc( 4, can_execute, MENU_AUTOASSIGN, _( "Execute action" ),
+                                   can_execute
+                                   ? _( "Execute this action immediately and close the menu." )
+                                   : _( "This action cannot be executed from this menu." ) );
+        }
+        actions.query();
+        bool operation_changed = false;
+        switch( actions.ret ) {
+            case 0:
+                operation_changed = action_add( name, action_id, is_local, kb_menu_status::add );
+                break;
+            case 1:
+                operation_changed = action_add( name, action_id, is_local, kb_menu_status::add_global );
+                break;
+            case 2:
+                operation_changed = action_remove( name, action_id, is_local, empty );
+                break;
+            case 3:
+                operation_changed = action_reset( action_id );
+                break;
+            case 4:
+                action_to_execute = look_up_action( action_id );
+                return true;
+            default:
+                break;
+        }
+        changed = changed || operation_changed;
+        announce_focus();
+        return false;
+    };
+    if( accessibility_navigation ) {
+        sync_focus();
+        kb_menu.scroll_to_focused = true;
+        accessibility::announce( accessibility::format_keybinding_open(
+                                     ctxt.get_desc( "UP", 1 ), ctxt.get_desc( "DOWN", 1 ),
+                                     ctxt.get_desc( "NEXT_TAB", 1 ), ctxt.get_desc( "TEXT.CONFIRM", 1 ),
+                                     ctxt.get_desc( "ACCESSIBILITY_DETAILS", 1 ), focus_text() ) );
+    }
     int raw_input_char = 0;
     //const auto redraw = [&]( ui_adaptor & ui ) {
     //};
     //ui.on_redraw( redraw );
 
     while( true ) {
-        kb_menu.highlight_row_index = -1;
+        if( accessibility_navigation ) {
+            sync_focus();
+        } else {
+            kb_menu.highlight_row_index = -1;
+        }
         ui_manager::redraw();
+        if( accessibility_navigation && kb_menu.get_filter() != previous_filter ) {
+            previous_filter = kb_menu.get_filter();
+            kb_menu.filtered_registered_actions = filter_strings_by_phrase( org_registered_actions,
+                                                  previous_filter );
+            sync_focus();
+            if( kb_menu.status == kb_menu_status::filter ) {
+                announce_filter( false );
+            }
+        }
         if( kb_menu.has_button_action() ) {
             action = kb_menu.get_button_action();
             raw_input_char = 0;
@@ -1009,6 +1173,93 @@ action_id input_context::display_menu( bool permit_execute_action )
 
         kb_menu.filtered_registered_actions = filter_strings_by_phrase( org_registered_actions,
                                               kb_menu.get_filter() );
+        if( accessibility_navigation ) {
+            sync_focus();
+            if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+                accessibility::repeat_last_announcement();
+                continue;
+            }
+            if( action == "NEXT_TAB" ) {
+                kb_menu.status = kb_menu.status == kb_menu_status::filter ? kb_menu_status::show :
+                                 kb_menu_status::filter;
+                if( kb_menu.status == kb_menu_status::filter ) {
+                    announce_filter( true );
+                } else {
+                    announce_focus();
+                }
+                continue;
+            }
+            if( action == "FILTER" && kb_menu.status == kb_menu_status::show ) {
+                kb_menu.status = kb_menu_status::filter;
+                announce_filter( true );
+                continue;
+            }
+            if( kb_menu.status == kb_menu_status::filter && action == "TEXT.CONFIRM" ) {
+                kb_menu.status = kb_menu_status::show;
+                announce_focus();
+                continue;
+            }
+            if( kb_menu.status == kb_menu_status::show &&
+                ( action == "UP" || action == "DOWN" ||
+                  action == "PAGE_UP" || action == "PAGE_DOWN" ||
+                  action == "HOME" || action == "END" ) ) {
+                if( !kb_menu.filtered_registered_actions.empty() ) {
+                    const int count = static_cast<int>( kb_menu.filtered_registered_actions.size() );
+                    int next = kb_menu.highlight_row_index;
+                    if( action == "HOME" ) {
+                        next = 0;
+                    } else if( action == "END" ) {
+                        next = count - 1;
+                    } else if( action == "PAGE_UP" ) {
+                        next = std::max( 0, next - 10 );
+                    } else if( action == "PAGE_DOWN" ) {
+                        next = std::min( count - 1, next + 10 );
+                    } else {
+                        const int direction = action == "UP" ? -1 : 1;
+                        next = ( next + count + direction ) % count;
+                    }
+                    focused_action = kb_menu.filtered_registered_actions[next];
+                    sync_focus();
+                    announce_focus();
+                }
+                continue;
+            }
+            if( kb_menu.status == kb_menu_status::show && action == "ACCESSIBILITY_DETAILS" ) {
+                if( focused_action.empty() ) {
+                    accessibility::announce_status( _( "No matching actions." ) );
+                } else {
+                    bool local = false;
+                    bool basic_local = false;
+                    const action_attributes &attributes = inp_mngr.get_action_attributes( focused_action,
+                                                          category, &local );
+                    const action_attributes &basic = inp_mngr.get_action_attributes( focused_action,
+                                                     category, &basic_local, true );
+                    accessibility::announce( accessibility::format_keybinding_details(
+                                                 get_action_name( focused_action ), spoken_keys( focused_action ), local,
+                                                 local != basic_local || attributes.input_events != basic.input_events ) );
+                }
+                continue;
+            }
+            if( kb_menu.status == kb_menu_status::show && action == "TEXT.CONFIRM" ) {
+                if( open_action_menu() ) {
+                    break;
+                }
+                continue;
+            }
+            if( action == "QUIT" && kb_menu.status == kb_menu_status::filter ) {
+                kb_menu.status = kb_menu_status::show;
+                announce_focus();
+                continue;
+            }
+            if( action == "QUIT" && kb_menu.status != kb_menu_status::show ) {
+                kb_menu.status = kb_menu_status::show;
+                announce_focus();
+                continue;
+            }
+            if( kb_menu.status == kb_menu_status::filter ) {
+                continue;
+            }
+        }
 
         // In addition to the modifiable hotkeys, we also check for hardcoded
         // keys, e.g. '+', '-', '=', '.' in order to prevent the user from
@@ -1068,7 +1319,8 @@ action_id input_context::display_menu( bool permit_execute_action )
             // update available hotkeys in case they've changed
             kb_menu.hotkeys = ctxt.get_available_single_char_hotkeys( display_help_hotkeys );
         } else if( !kb_menu.filtered_registered_actions.empty() &&
-                   kb_menu.status != kb_menu_status::show ) {
+                   kb_menu.status != kb_menu_status::show &&
+                   kb_menu.status != kb_menu_status::filter ) {
             size_t action_index = SIZE_MAX;
             if( action == "SELECT" && kb_menu.highlight_row_index != -1 ) {
                 action_index = kb_menu.highlight_row_index;
@@ -1121,6 +1373,7 @@ action_id input_context::display_menu( bool permit_execute_action )
         inp_mngr.action_contexts.swap( old_action_contexts );
     }
 
+    registered_actions = original_registered_actions;
     return action_to_execute;
 }
 
