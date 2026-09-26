@@ -108,49 +108,27 @@ void show_document( const std::string &window_title, const std::string &spoken_t
                 beg_line = std::min( para_line_starts[current_para], max_beg_line );
             }
         };
+        const auto move_by = [&]( const int delta ) {
+            const int next = accessibility::move_document_cursor( current_para, num_paragraphs, delta );
+            if( next != current_para && num_paragraphs > 0 ) {
+                current_para = next;
+                update_view_to_para();
+                accessibility::announce( spoken_paragraphs[current_para] );
+            }
+        };
 
         if( action == "DOWN" || action == "SCROLL_DOWN" ) {
-            const int prev = current_para;
-            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, 1 );
-            if( current_para != prev ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( 1 );
         } else if( action == "UP" || action == "SCROLL_UP" ) {
-            const int prev = current_para;
-            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, -1 );
-            if( current_para != prev ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( -1 );
         } else if( action == "PAGE_DOWN" ) {
-            const int prev = current_para;
-            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, 3 );
-            if( current_para != prev ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( 3 );
         } else if( action == "PAGE_UP" ) {
-            const int prev = current_para;
-            current_para = accessibility::move_document_cursor( current_para, num_paragraphs, -3 );
-            if( current_para != prev ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( -3 );
         } else if( action == "HOME" ) {
-            const int prev = current_para;
-            current_para = 0;
-            if( current_para != prev && num_paragraphs > 0 ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( -current_para );
         } else if( action == "END" ) {
-            const int prev = current_para;
-            current_para = std::max( 0, num_paragraphs - 1 );
-            if( current_para != prev && num_paragraphs > 0 ) {
-                update_view_to_para();
-                accessibility::announce( spoken_paragraphs[current_para] );
-            }
+            move_by( num_paragraphs - 1 - current_para );
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         }
