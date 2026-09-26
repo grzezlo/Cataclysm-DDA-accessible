@@ -106,6 +106,12 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( list.input_to_action( alt_d_char ) == "ACCESSIBILITY_DETAILS" );
     CHECK( list.input_to_action( altgr_d ) != "ACCESSIBILITY_DETAILS" );
     CHECK( gameplay.input_to_action( alt_d ) != "ACCESSIBILITY_DETAILS" );
+
+    input_context yes_no( "YESNO", keyboard_mode::keycode );
+    yes_no.register_action( "YES" );
+    yes_no.register_action( "NO" );
+    yes_no.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    CHECK( yes_no.input_to_action( alt_r ) == "ACCESSIBILITY_REPEAT_LAST" );
 }
 
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
@@ -376,6 +382,32 @@ TEST_CASE( "long_list_details_follow_sentences_across_visual_lines", "[accessibi
                              "Wait 1.5 seconds. Then continue." );
     REQUIRE( numeric.size() == 2 );
     CHECK( numeric[0] == "Wait 1.5 seconds." );
+}
+
+TEST_CASE( "yes_no_confirmation_announces_default_focus_and_repeats_context",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    const std::string question = "Stop exercising?";
+    const std::string opened = accessibility::format_yes_no_prompt(
+                                   question, "No", "Left arrow", "Right arrow", "Enter", true );
+    CHECK( opened == "Stop exercising? No selected. Choose with Left arrow or Right arrow; "
+           "confirm with Enter." );
+    CHECK( accessibility::announce( opened ) );
+    CHECK( accessibility::format_yes_no_focus( "Yes" ) == "Yes selected" );
+    CHECK( accessibility::announce( accessibility::format_yes_no_focus( "Yes" ) ) );
+    const std::string context = accessibility::format_yes_no_prompt(
+                                    question, "Yes", "", "", "", false );
+    CHECK( context == "Stop exercising? Yes selected." );
+    accessibility::set_last_announcement( context );
+    CHECK( accessibility::repeat_last_announcement() );
+    REQUIRE( capture_ptr->messages.size() == 3 );
+    CHECK( capture_ptr->messages.back() == context );
+
+    accessibility::reset_backend_after_testing();
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )

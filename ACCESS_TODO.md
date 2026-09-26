@@ -52,9 +52,21 @@ receive their own interaction review.
 stopping at visual line wraps.  Continue the Stage 05 human checks below for
 other controls and list edge cases.
 
+**Selected Yes/No interaction (2026-09-26):** Keep the existing two visible
+buttons, default `No` selection, Left/Right focus movement, Enter activation,
+direct Yes/No bindings, and Escape as `No`.  On opening a `query_yn` prompt,
+announce the question, selected answer, and a brief hint using the current
+Left/Right/Confirm bindings.  Left/Right announce only the newly selected
+answer.  Repeat Last restores the question with the current answer; returning
+from the keybinding screen restores the prompt context.  The full question is
+available through Repeat Last, so this control needs no separate detail view.
+Limit this behavior to two-option `query_yn` prompts; other `query_popup`
+callers need their own interaction review.
+
 **Code inventory:** `src/uilist.cpp`, `src/accessibility.{h,cpp}` (semantic
 formatters), `src/accessibility_document_view.{h,cpp}` and `src/help.cpp`
-(shared document reader), `src/popup.cpp`, `src/input_popup.cpp`,
+(shared document reader), `src/output.cpp` (`query_yn` construction),
+`src/popup.cpp` (button focus and input), `src/input_popup.cpp`,
 `src/string_input_popup.cpp`, `src/ui_iteminfo.cpp`, `src/input_context.cpp`,
 `tests/accessibility_test.cpp`, `data/raw/keybindings.json`, and the existing
 Viewing topic in `data/core/help.json`.
@@ -65,9 +77,9 @@ Viewing topic in `data/core/help.json`.
   This stage extends coverage to disabled-entry reasons (the `uilist_entry::enabled`
   flag and `desc_enabled` description text), on-demand entry details, and
   empty/error states.
-- `query_yn` is implemented in `src/popup.cpp` as a `query_popup` with two
-  options.  Hook the existing `query_popup::query_once()` path in `src/popup.cpp`
-  to announce the question and options.
+- `query_yn` is constructed in `src/output.cpp` as a `query_popup` with two
+  options.  Its shared input path is `query_popup::query_once()` in
+  `src/popup.cpp`.
 - `query_int` / numeric input uses `string_input_popup` in
   `src/string_input_popup.cpp`.  Announce the prompt, current value, and
   bounds on open and on value change.
@@ -93,6 +105,9 @@ restoration; keybinding action-presence tests.
 each accessibility action, resolve a binding conflict, and confirm there are no
 silent controls or keyboard traps.  Confirm that NVDA reads the application
 window title without a commit identifier when the game starts or regains focus.
+For Yes/No prompts, check the opening question and default `No`, both arrow
+directions, Enter, direct Y/N, Escape, Repeat Last after changing focus, and
+return from keybinding help after speech interruption.
 
 ## Stage 06 - Inventory selector navigation and item information
 

@@ -631,6 +631,23 @@ std::string format_uilist_open( const std::string &context, const std::string &f
                                                details_binding ) : std::string(), focus } );
 }
 
+std::string format_yes_no_focus( const std::string &answer )
+{
+    return string_format( _( "%s selected" ), answer );
+}
+
+std::string format_yes_no_prompt( const std::string &question, const std::string &answer,
+                                  const std::string &left_binding,
+                                  const std::string &right_binding,
+                                  const std::string &confirm_binding, const bool include_hint )
+{
+    return format_semantic_sequence( {
+        question, format_yes_no_focus( answer ),
+        include_hint ? string_format( _( "Choose with %1$s or %2$s; confirm with %3$s" ),
+                                      left_binding, right_binding, confirm_binding ) : std::string()
+    } );
+}
+
 bool uilist_details_need_document( const std::string &details )
 {
     return utf8_width( details ) > 160;

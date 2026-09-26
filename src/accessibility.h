@@ -151,6 +151,12 @@ std::string format_uilist_focus( const std::string &label, const std::string &co
                                  bool unavailable );
 std::string format_uilist_open( const std::string &context, const std::string &focus,
                                 const std::string &details_binding, bool has_details );
+/** Describe the selected answer in a two-option confirmation prompt. */
+std::string format_yes_no_focus( const std::string &answer );
+std::string format_yes_no_prompt( const std::string &question, const std::string &answer,
+                                  const std::string &left_binding,
+                                  const std::string &right_binding,
+                                  const std::string &confirm_binding, bool include_hint );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */

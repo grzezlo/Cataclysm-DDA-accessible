@@ -10,6 +10,7 @@
 #include "catacharset.h"
 #include "color.h"
 #include "imgui/imgui.h"
+#include "input.h"
 #include "input_context.h"
 #include "output.h"
 #include "string_formatter.h"
@@ -316,11 +317,9 @@ query_popup::result query_popup::query_once()
         return { false, "ERROR", {} };
     }
 
+    const bool yes_no_prompt = category == "YESNO" && options.size() == 2 &&
+                               options[0].action == "YES" && options[1].action == "NO";
     const std::string semantic_text = remove_color_tags( text );
-    if( !semantic_text.empty() && semantic_text != last_announced_text ) {
-        accessibility::announce_status( semantic_text );
-        last_announced_text = semantic_text;
-    }
 
     std::shared_ptr<query_popup_impl> impl = create_or_get_impl();
 
@@ -350,10 +349,39 @@ query_popup::result query_popup::query_once()
     if( cancel ) {
         ctxt.register_action( "QUIT" );
     }
+    if( yes_no_prompt ) {
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    }
+
+    const auto selected_answer = [&]() {
+        const size_t index = static_cast<size_t>( impl->keyboard_selected_option );
+        return index < options.size() ? ctxt.get_action_name( options[index].action ) : std::string();
+    };
+    const auto navigation_binding = [&]( const std::string & action, const int arrow ) {
+        const std::vector<input_event> keys = ctxt.keys_bound_to( action, -1, false, true );
+        if( keys.empty() ) {
+            return ctxt.get_desc( action, 1 );
+        }
+        const auto preferred = std::find_if( keys.begin(), keys.end(), [arrow]( const input_event & key ) {
+            return key.modifiers.empty() && key.get_first_input() == arrow;
+        } );
+        return ( preferred != keys.end() ? *preferred : keys.front() ).long_description();
+    };
+    const auto spoken_prompt = [&]( const bool include_hint ) {
+        return accessibility::format_yes_no_prompt(
+                   semantic_text, selected_answer(), navigation_binding( "LEFT", KEY_LEFT ),
+                   navigation_binding( "RIGHT", KEY_RIGHT ), ctxt.get_desc( "CONFIRM", 1 ),
+                   include_hint );
+    };
+    if( !semantic_text.empty() && semantic_text != last_announced_text ) {
+        accessibility::announce_status( yes_no_prompt ? spoken_prompt( true ) : semantic_text );
+        last_announced_text = semantic_text;
+    }
 
     result res;
     // Assign outside construction of `res` to ensure execution order
     res.wait_input = !anykey;
+    const short previous_selection = impl->keyboard_selected_option;
     do {
         ui_manager::redraw();
         res.action = ctxt.handle_input( 50 );
@@ -402,6 +430,11 @@ query_popup::result query_popup::query_once()
             impl->on_resized();
         }
         //init();
+        if( yes_no_prompt ) {
+            accessibility::announce( spoken_prompt( false ) );
+        }
+    } else if( res.action == "ACCESSIBILITY_REPEAT_LAST" && yes_no_prompt ) {
+        accessibility::repeat_last_announcement();
     } else {
         for( size_t ind = 0; ind < options.size(); ++ind ) {
             if( res.action == options[ind].action ) {
@@ -412,6 +445,13 @@ query_popup::result query_popup::query_once()
                 }
             }
         }
+    }
+
+    if( yes_no_prompt && res.wait_input && previous_selection != impl->keyboard_selected_option ) {
+        const std::string answer = selected_answer();
+        accessibility::announce( accessibility::format_yes_no_focus( answer ) );
+        accessibility::set_last_announcement( accessibility::format_yes_no_prompt(
+                semantic_text, answer, "", "", "", false ) );
     }
 
     return res;
