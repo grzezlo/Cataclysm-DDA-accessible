@@ -97,7 +97,7 @@ extends this shared control after its own interaction review.
 **Selected text-input interaction (2026-09-26):** Use the same visible
 `string_input_popup` field and insertion cursor as numeric input.  On entry,
 announce its title, description, and current value.  Speak accepted characters
-as typed, including spaces and Unicode letters.  Left and Right read the
+as typed, including spaces and any Unicode letters the game accepts.  Left and Right read the
 character immediately after the cursor's new position; repeated Left at the
 start reads the first character, and Right at the end says `End of field`.
 Backspace and Delete speak only the removed character.  Announce clearing;
@@ -109,7 +109,11 @@ invoke `query_string( false )` for each key.
 
 **NVDA check (2026-09-26):** The tester reached the character-name field after
 creating an empty world and confirmed that text editing works in build
-`c52181c830`.  Specific text-entry edge cases below still need confirmation.
+`c52181c830`, including Repeat Last via `Alt+R`.  Polish letters did not enter
+the field during the user's test.  The cause has not been established; per the
+user's direction, this input limitation is deferred and is not a Stage 05
+accessibility acceptance gate.  Other text-entry edge cases below still need
+confirmation.
 
 **NVDA check (2026-09-26):** The tester confirmed numeric entry works via
 the Random Character path below, and requested the revised cursor speech above.
@@ -182,9 +186,9 @@ four-option gameplay prompt when reachable.
 For numeric input, check typing, Left/Right in both directions, insertion in
 the middle, Backspace/Delete, Home/End, rejected characters, Enter/Escape,
 and Repeat Last after an edit and after speech interruption.
-For text input, check Unicode letters, spaces, Left/Right and both boundaries,
+For text input, check spaces, Left/Right and both boundaries,
 insertion in the middle, Backspace/Delete, Home/End, Enter/Escape, and Repeat
-Last after editing and speech interruption.  Confirm that a caller using
+Last after speech interruption.  Confirm that a caller using
 `query_string( false )` does not repeat its opening announcement per key.
 
 ## Stage 06 - Inventory selector navigation and item information
