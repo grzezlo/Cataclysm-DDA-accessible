@@ -100,6 +100,7 @@ class string_input_popup // NOLINT(cata-xy)
         bool _confirmed = false;
         bool _handled = false;
         bool _text_changed = false;
+        bool _accessibility_announced = false;
 
         void create_window();
         void create_context();

@@ -652,20 +652,28 @@ std::string format_popup_prompt( const std::string &question, const std::string 
     } );
 }
 
-std::string format_numeric_input( const std::string &prompt, const std::string &description,
-                                  const std::string &value )
+std::string format_text_input( const std::string &prompt, const std::string &description,
+                               const std::string &value )
 {
     return format_semantic_sequence( { prompt, description,
                                        string_format( _( "Value: %s" ), value.empty() ? _( "empty" ) : value ) } );
 }
 
-std::string format_numeric_cursor( const std::string &value, const size_t cursor )
+std::string format_text_character( const std::string &character )
 {
-    if( cursor >= value.size() ) {
+    if( character == " " ) {
+        return _( "Space" );
+    }
+    return character == "-" ? _( "Minus" ) : character;
+}
+
+std::string format_text_cursor( const std::string &value, const size_t cursor )
+{
+    const utf8_wrapper characters( value );
+    if( cursor >= characters.length() ) {
         return _( "End of field" );
     }
-    const std::string character = value.substr( cursor, 1 );
-    return character == "-" ? _( "Minus" ) : character;
+    return format_text_character( characters.substr( cursor, 1 ).str() );
 }
 
 bool uilist_details_need_document( const std::string &details )

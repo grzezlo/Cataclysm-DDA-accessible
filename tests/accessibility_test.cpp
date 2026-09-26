@@ -440,20 +440,23 @@ TEST_CASE( "multi_option_popup_announces_choices_then_focused_option",
            "What to do with template \"Survivor\"? Delete selected." );
 }
 
-TEST_CASE( "numeric_input_reads_character_after_cursor_in_either_direction",
+TEST_CASE( "text_input_reads_character_after_cursor_in_either_direction",
            "[accessibility][nogame]" )
 {
-    CHECK( accessibility::format_numeric_input( "Minutes?", "", "123" ) ==
+    CHECK( accessibility::format_text_input( "Minutes?", "", "123" ) ==
            "Minutes? Value: 123." );
-    CHECK( accessibility::format_numeric_input( "Minutes?", "Minimum 1", "" ) ==
+    CHECK( accessibility::format_text_input( "Minutes?", "Minimum 1", "" ) ==
            "Minutes? Minimum 1. Value: empty." );
-    CHECK( accessibility::format_numeric_cursor( "123", 3 ) == "End of field" );
-    CHECK( accessibility::format_numeric_cursor( "123", 2 ) == "3" );
-    CHECK( accessibility::format_numeric_cursor( "123", 1 ) == "2" );
-    CHECK( accessibility::format_numeric_cursor( "123", 0 ) == "1" );
-    CHECK( accessibility::format_numeric_cursor( "123", 0 ) == "1" );
-    CHECK( accessibility::format_numeric_cursor( "", 0 ) == "End of field" );
-    CHECK( accessibility::format_numeric_cursor( "-12", 0 ) == "Minus" );
+    CHECK( accessibility::format_text_cursor( "123", 3 ) == "End of field" );
+    CHECK( accessibility::format_text_cursor( "123", 2 ) == "3" );
+    CHECK( accessibility::format_text_cursor( "123", 1 ) == "2" );
+    CHECK( accessibility::format_text_cursor( "123", 0 ) == "1" );
+    CHECK( accessibility::format_text_cursor( "", 0 ) == "End of field" );
+    CHECK( accessibility::format_text_cursor( "-12", 0 ) == "Minus" );
+    CHECK( accessibility::format_text_character( " " ) == "Space" );
+    CHECK( accessibility::format_text_cursor( u8"ąb", 0 ) == u8"ą" );
+    CHECK( accessibility::format_text_cursor( u8"ąb", 1 ) == "b" );
+    CHECK( accessibility::format_text_cursor( u8"ąb", 2 ) == "End of field" );
 }
 
 TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibility][nogame]" )

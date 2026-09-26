@@ -91,8 +91,21 @@ repeated Left continues to speak the first character; at the end, say `End of fi
 Right from just before the end says `End of field`.  Backspace and Delete
 speak only the removed character.  Announce clearing; Repeat Last reads the
 prompt and entire current value.  Keep any stated limits in the prompt rather
-than inventing bounds absent from the widget.  Scope this behavior to numeric fields, leaving
-general text-entry interaction for its own review.
+than inventing bounds absent from the widget.  The text-input choice below
+extends this shared control after its own interaction review.
+
+**Selected text-input interaction (2026-09-26):** Use the same visible
+`string_input_popup` field and insertion cursor as numeric input.  On entry,
+announce its title, description, and current value.  Speak accepted characters
+as typed, including spaces and Unicode letters.  Left and Right read the
+character immediately after the cursor's new position; repeated Left at the
+start reads the first character, and Right at the end says `End of field`.
+Backspace and Delete speak only the removed character.  Announce clearing;
+Repeat Last reads the title, description, and full current value.  Enter
+accepts and Escape cancels according to the caller's existing behavior.
+Keep focus in the field and add no new view.  Share the accessibility hook
+with numeric input and avoid repeated opening announcements when callers
+invoke `query_string( false )` for each key.
 
 **NVDA check (2026-09-26):** The tester confirmed numeric entry works via
 the Random Character path below, and requested the revised cursor speech above.

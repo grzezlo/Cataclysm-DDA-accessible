@@ -390,9 +390,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
     if( !ctxt ) {
         create_context();
     }
-    if( _only_digits ) {
-        ctxt->register_action( "ACCESSIBILITY_REPEAT_LAST" );
-    }
+    ctxt->register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     if( desc_view_ptr ) {
         desc_view_ptr->set_up_navigation( *ctxt, scrolling_key_scheme::no_scheme, true );
@@ -423,13 +421,14 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
     _canceled = false;
     _confirmed = false;
-    const bool announce_numeric = _only_digits && accessibility::is_available() && !draw_only;
-    const auto numeric_context = [&]() {
-        return accessibility::format_numeric_input( remove_color_tags( _title ),
+    const bool announce_field = accessibility::is_available() && !draw_only;
+    const auto field_context = [&]() {
+        return accessibility::format_text_input( remove_color_tags( _title ),
                 remove_color_tags( _description ), ret.str() );
     };
-    if( announce_numeric ) {
-        accessibility::announce( numeric_context() );
+    if( announce_field && !_accessibility_announced ) {
+        accessibility::announce( field_context() );
+        _accessibility_announced = true;
     }
     do {
         if( _text_changed ) {
@@ -501,7 +500,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
         if( desc_view_ptr && desc_view_ptr->handle_navigation( action, *ctxt ) ) {
             // NO FURTHER ACTION REQUIRED
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" && _only_digits ) {
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "TEXT.QUIT" ) {
 #if defined(__ANDROID__)
@@ -512,11 +511,13 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
             _text.clear();
             _position = -1;
             _canceled = true;
+            _accessibility_announced = false;
             return _text;
         } else if( action == "TEXT.CONFIRM" ) {
             add_to_history( ret.str() );
             _confirmed = true;
             _text = ret.str();
+            _accessibility_announced = false;
             if( !_hist_use_uilist ) {
                 _hist_str_ind = 0;
                 _session_str_entered.erase( 0 );
@@ -624,11 +625,11 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
             _handled = false;
         }
 
-        if( announce_numeric ) {
+        if( announce_field ) {
             std::string feedback;
             const bool value_changed = ret.str() != previous_value;
             if( action == "TEXT.LEFT" || action == "TEXT.RIGHT" ) {
-                feedback = accessibility::format_numeric_cursor( ret.str(), _position );
+                feedback = accessibility::format_text_cursor( ret.str(), _position );
             } else if( action == "TEXT.HOME" ) {
                 feedback = _( "Start of field" );
             } else if( action == "TEXT.END" ) {
@@ -637,22 +638,22 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
                 if( value_changed ) {
                     const size_t deleted_cursor = static_cast<size_t>( previous_position -
                                                   ( action == "TEXT.BACKSPACE" ? 1 : 0 ) );
-                    feedback = accessibility::format_numeric_cursor( previous_value, deleted_cursor );
+                    feedback = accessibility::format_text_cursor( previous_value, deleted_cursor );
                 } else {
                     feedback = action == "TEXT.BACKSPACE" ? _( "Start of field" ) : _( "End of field" );
                 }
             } else if( action == "TEXT.CLEAR" && value_changed ) {
                 feedback = _( "Cleared" );
             } else if( ( action == "HISTORY_UP" || action == "HISTORY_DOWN" ) && value_changed ) {
-                feedback = accessibility::format_numeric_input( "", "", ret.str() );
+                feedback = accessibility::format_text_input( "", "", ret.str() );
             } else if( action == "HELP_KEYBINDINGS" ) {
-                feedback = numeric_context();
+                feedback = field_context();
             } else if( action == "TEXT.PASTE" || action == "TEXT.INPUT_FROM_FILE" ||
                        action == "ANY_INPUT" ) {
                 if( value_changed && _position > previous_position ) {
                     feedback = ret.substr( previous_position, _position - previous_position ).str();
-                    if( feedback == "-" ) {
-                        feedback = _( "Minus" );
+                    if( _position - previous_position == 1 ) {
+                        feedback = accessibility::format_text_character( feedback );
                     }
                 } else if( !ev.text.empty() ) {
                     feedback = _( "Input not accepted" );
@@ -660,7 +661,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
             }
             if( !feedback.empty() ) {
                 accessibility::announce( feedback );
-                accessibility::set_last_announcement( numeric_context() );
+                accessibility::set_last_announcement( field_context() );
             }
         }
     } while( loop );

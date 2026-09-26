@@ -159,11 +159,13 @@ std::string format_popup_prompt( const std::string &question, const std::string 
                                  const std::string &left_binding,
                                  const std::string &right_binding,
                                  const std::string &confirm_binding, bool include_hint );
-/** Describe a numeric input's prompt and complete current value. */
-std::string format_numeric_input( const std::string &prompt, const std::string &description,
-                                  const std::string &value );
-/** Read the character after an insertion cursor, or the end of a numeric field. */
-std::string format_numeric_cursor( const std::string &value, size_t cursor );
+/** Describe a text input's prompt and complete current value. */
+std::string format_text_input( const std::string &prompt, const std::string &description,
+                               const std::string &value );
+/** Name a single character for speech, including spaces. */
+std::string format_text_character( const std::string &character );
+/** Read the Unicode character after an insertion cursor, or the end of a field. */
+std::string format_text_cursor( const std::string &value, size_t cursor );
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( const std::string &details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */
