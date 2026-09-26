@@ -637,8 +637,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
                 if( value_changed ) {
                     const size_t deleted_cursor = static_cast<size_t>( previous_position -
                                                   ( action == "TEXT.BACKSPACE" ? 1 : 0 ) );
-                    feedback = string_format( _( "Deleted %s" ), accessibility::format_numeric_cursor(
-                                                  previous_value, deleted_cursor ) );
+                    feedback = accessibility::format_numeric_cursor( previous_value, deleted_cursor );
                 } else {
                     feedback = action == "TEXT.BACKSPACE" ? _( "Start of field" ) : _( "End of field" );
                 }

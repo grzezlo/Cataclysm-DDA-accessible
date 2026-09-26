@@ -88,16 +88,18 @@ on entry.  Speak each accepted digit as it is typed.  After Left or Right,
 speak the character immediately after the cursor's new position.  At the start,
 repeated Left continues to speak the first character; at the end, say `End of field`.  For
 `123` with the cursor at the end, Left says `3`, further Left says `2`, and
-Right from just before the end says `End of field`.  Announce the effect of
-deletion and clearing; Repeat Last reads the prompt and entire current value.
-Keep any stated limits in the prompt rather than inventing
-bounds absent from the widget.  Scope this behavior to numeric fields, leaving
+Right from just before the end says `End of field`.  Backspace and Delete
+speak only the removed character.  Announce clearing; Repeat Last reads the
+prompt and entire current value.  Keep any stated limits in the prompt rather
+than inventing bounds absent from the widget.  Scope this behavior to numeric fields, leaving
 general text-entry interaction for its own review.
 
 **NVDA check (2026-09-26):** The tester confirmed numeric entry works via
 the Random Character path below, and requested the revised cursor speech above.
-The revised cursor behavior still needs NVDA verification.  The character
-creator's first screen did not announce arrow-key navigation.  The three-choice
+The tester later confirmed that cursor speech is much better and requested
+removing the redundant `Deleted` prefix.  That deletion change still needs
+NVDA verification.  The character creator's first screen did not announce
+arrow-key navigation.  The three-choice
 template action popup announced its question but not its choices.  The shared
 multi-option `query_popup` fix is built in `952939a6d3` and awaits NVDA
 verification.  Character creation screen coverage remains in Stages 20 and 20A.
