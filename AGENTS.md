@@ -119,8 +119,9 @@ over upstream contribution policy or exact UI parity.
 
 ## Progress tracking
 
-- Treat `ACCESS_TODO.md` and `ACCESS_DONE.md` as the authoritative source for
-  current scope, priorities, milestones, and completed work.
+- Treat `ACCESS_TODO.md`, `ACCESS_DONE.md`, and `ACCESS_USERTESTS.md` as the
+  authoritative source for current scope, priorities, completed work, and
+  pending screen-reader verification.
 - Keep the complete numbered roadmap for unfinished accessibility work in
   `ACCESS_TODO.md`.  The first stage in the file is current and the following
   stage is next; do not duplicate that ordering in a table of contents or with
@@ -128,7 +129,7 @@ over upstream contribution policy or exact UI parity.
 - Keep stage numbers stable.  Insert an unplanned stage with a suffix such as
   `03A` instead of renumbering stages that have already been referenced.
 - Each stage must state its outcome, feature-specific code inventory, success
-  criteria, possible automated tests, and required human verification.  The
+  criteria, possible automated tests, and user-test scenarios.  The
   roadmap is sequential, so do not list earlier stages as dependencies.  Record
   only exceptional external blockers or independently runnable work where it is
   relevant.  Do not duplicate the stable architecture map or repository
@@ -138,32 +139,37 @@ over upstream contribution policy or exact UI parity.
   the work item.
 - Use `ACCESS_DONE.md` both as the record of completed stages and as historical
   context for regression work.
-- Record the tested Windows version, NVDA version, fork version or commit, and
-  important limitations for completed milestones.
-- Keep both files concise and use headings and lists rather than large tables.
+- Record the completing commit and important limitations for completed stages.
+  Record Windows or NVDA versions only with a problem that depends on them.
+- Keep these files concise and use headings and lists rather than large tables.
 - Read `ACCESS_TODO.md` before starting accessibility work.  Consult
   `ACCESS_DONE.md` only when historical context or regression coverage is
   needed.
-- A native stage is complete only after its implementation and automated checks
-  pass, the Windows x64 tiles build succeeds, and a blind NVDA user confirms
-  every required human scenario.  A non-native backend stage uses a blind user
-  of each declared screen-reader/platform combination and must also pass native
-  regression checks.  Human confirmation must cover keyboard operation, focus
-  order, announcement count, concise and detailed output, repeat-last, and
-  behavior after speech interruption.
-- Reach hard-to-reach human scenarios through the in-game debug menu (for
-  example spawning monsters or items, bleeding, or changing time) instead of
-  progressing through normal play.  Give each such scenario a short debug-menu
-  route in its stage.  Debug setup proves the accessible behavior, not that
-  normal play reaches the state; Stages 22 and 22A cover normal play.
+- A stage is complete when its implementation and automated checks pass and
+  the Windows x64 tiles build succeeds.  Screen-reader testing does not block
+  it.  When closing a stage, move it to `ACCESS_DONE.md` with the completing
+  commit and limitations, and move its user-test scenarios that are not yet
+  confirmed to `ACCESS_USERTESTS.md`.  Removing it from `ACCESS_TODO.md` makes
+  the following stage current without another status update.
+- `ACCESS_USERTESTS.md` is the checklist for the maintainer and, before a
+  release, for beta testers.  Write each scenario for a player: what to do,
+  how to reach the situation, and what should be heard.  Scenarios must cover
+  keyboard operation, focus order, announcement count, concise and detailed
+  output, repeat-last, and behavior after speech interruption.  Remove a
+  scenario once a blind screen-reader user confirms it; mention confirmed
+  results briefly in the stage's `ACCESS_DONE.md` entry.  A reported problem
+  becomes a fix on `access`, and the scenario stays until it is confirmed.
+- Reach hard-to-reach scenarios through the in-game debug menu (for example
+  spawning monsters or items, bleeding, or changing time) instead of
+  progressing through normal play, and give the route in the scenario.  Debug
+  setup proves the accessible behavior, not that normal play reaches the
+  state; Stages 22 and 22A cover normal play.
 - A scenario that depends on an interaction a later stage has not yet made
-  accessible does not block the current stage.  Move it explicitly to the
-  verification list of the stage that enables it, and record in
-  `ACCESS_DONE.md` which scenarios were verified and which were moved where.
-- When closing a stage, record the Windows version, NVDA version, tested commit,
-  results, and limitations in `ACCESS_DONE.md`.  Removing it from
-  `ACCESS_TODO.md` makes the following stage current without another status
-  update.
+  accessible says so, so testers can skip it until that stage is complete.
+- Before a release to players (Stage 23), `ACCESS_USERTESTS.md` must be empty
+  or every remaining scenario must be explicitly accepted as a known limitation
+  in the release notes.  A non-native backend needs the same checklist confirmed
+  by a blind user of each declared screen-reader/platform combination.
 
 ## Branching and upstream synchronization
 

@@ -492,3 +492,72 @@ Limitations:
 - Polish character entry in `string_input_popup` under Windows is deferred per user direction (not an accessibility gate).
 - Intermediate character creation screens remain silent until Stages 20 and 20A.
 
+
+## 2026-09-28 — Stage 06: Inventory selector navigation and item information
+
+- Inventory selectors announce their purpose, carrying stats, and focused item
+  with count, category when it changes, location, main values, favorite and
+  contents state, and denial reason.  Column, category-mode, hierarchy, and
+  filter changes are announced.  `Alt+D` reads the full row.
+- Comparison selection names the first selected item when it gets focus,
+  announces deselection, and names the second item first when chosen.  The
+  comparison view offers paired statistics with better/worse/equal verdicts
+  and full item details for both items.
+- Commits: `70bfe66100`, `87ce1b6032`, `bd68c3f99a`; spoken bindings in the
+  comparison hints: `640ac6d1b8`.
+- Confirmed with NVDA: entering comparison, marking two items, revisiting the
+  first selection, and the selection speech.  The remaining scenarios are in
+  `ACCESS_USERTESTS.md`.
+
+## 2026-09-28 — Stage 05A: Review 01 corrections
+
+- Added the Screen reader speech option (Automatic by default, On, Off).
+  Automatic detects NVDA at startup and stays active once detected.  It is
+  separate from upstream `SCREEN_READER_MODE`, which only adjusts curses text.
+- Coalesced game messages are spoken again after a new key press; activities
+  that repeat a message without input, such as smashing, speak it once.
+- Threat alerts identify creatures by object identity, so removing another
+  creature does not repeat an unchanged alert.
+- Invlets keep upstream behavior except for accessibility shortcuts; repeat-last
+  honors its binding during blocking operations; spoken hints name current
+  bindings; translation fixes for plurals, double translation, and the
+  arrival greeting.
+- Split pure formatters into `accessibility_format.*` and moved gameplay code
+  from `game.cpp` into `accessibility_gameplay.*`; removed `std::regex` from
+  routine speech; cached NVDA availability; shared injury tiers with monster
+  descriptions; removed the stale partial Polish catalog.
+- The tutorial now enables gameplay speech; it bypasses `game::start_game()`.
+- Commits: `640ac6d1b8`, `6d4ab6eb07`, `b5f04dd579`.
+- Confirmed with NVDA: Automatic mode speaks without setup, game messages are
+  no longer lost, and walking reads the destination tile in a normal save and
+  in the tutorial.  The remaining scenarios are in `ACCESS_USERTESTS.md`.
+
+Limitations:
+
+- Coalesced-message speech is not covered by automated tests because the test
+  binary uses fake messages.
+- The full test suite had 11 failures (translation test data missing,
+  order-dependent monster spawn tests, `limit_mod_size_bonus`,
+  `tname_i18n_order`) that were not compared against a pre-change baseline.
+
+## 2026-09-28 — Stage 05B: Speech priorities and turn batching
+
+- The first focus announcement after a key press replaces unfinished speech
+  through `nvdaController_cancelSpeech`; further speech for the same key queues.
+- Game messages, movement, and alerts of one turn are spoken as one utterance
+  at the end of the turn or before the game waits for input, without
+  interrupting speech.  Pending turn speech is spoken before a prompt it causes.
+- Routine movement speech does not replace repeat-last.
+- Steps with more auto-move route ahead are silent; the final step is spoken,
+  and an interrupted route reports the position before the next input.
+- Optional `CATA_ACCESSIBILITY_TRACE` logs queued and spoken speech to
+  `debug.log`.
+- Commits: `147ee0a080`, `68eb721d90`.
+- Confirmed with NVDA: fighting several monsters spawned through the debug menu
+  is read correctly and messages do not overlap.  The remaining scenarios are
+  in `ACCESS_USERTESTS.md`.
+
+Limitations:
+
+- Navigation inside a menu may interrupt an alert; game messages remain in the
+  message log and threats in the situation review.

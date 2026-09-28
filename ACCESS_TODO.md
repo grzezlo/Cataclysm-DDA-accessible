@@ -2,7 +2,8 @@
 
 This file is the authoritative plan for unfinished accessibility work.  Stable
 architecture, workflow, and completion rules are in `AGENTS.md`; completed work
-and its verification record are in `ACCESS_DONE.md`.
+is in `ACCESS_DONE.md`, and scenarios awaiting screen-reader confirmation are in
+`ACCESS_USERTESTS.md`.
 
 The first supported configuration is the Windows x64 tiles build with NVDA.
 Stage-specific inventories below are starting points and must be corrected when
@@ -13,225 +14,10 @@ cover the major progression, management, and setup interfaces.  Stages 22, 22A, 
 are native release gates: coverage, the complete tutorial, and packaging.  Stage 24
 starts only after the native semantic model is stable.
 
-Unless a stage lists an exception, its automated gate includes
-`test_access.bat` and a successful `build_win_x64.bat`.  The human gate for
-native stages includes the general NVDA checks required by `AGENTS.md` plus the
-scenarios listed for the stage.  Each stage's possible automated tests are a
-hard gate: they must be implemented and passing before requesting human
-verification.
-
-## Stage 05A - Review 01 corrections
-
-**Outcome:** Correct the defects and inefficiencies found in the first code
-review of the fork (local `review01.md`, 2026-09-28) without changing accepted
-interactions, and make the accessible interface a player setting.
-
-**Selected interaction (2026-09-28):** A `SCREEN_READER_SPEECH` option on the
-Interface options page offers Automatic, On, and Off, with Automatic as the
-default.  Automatic detects NVDA at startup so a blind player never has to
-enable anything; if NVDA starts later, the game detects it within a few
-seconds.  Once detected, the accessible interface stays active for the session
-so it does not change when NVDA restarts or sleeps.  On forces the accessible
-interface without a screen reader (useful for sighted testing); Off disables
-all screen reader speech and accessible navigation.  It is separate from the
-upstream `SCREEN_READER_MODE` option, which only adjusts curses text layout.
-
-Speech priorities and turn batching from the same review are Stage 05B.
-
-**Code inventory:** `src/accessibility.*` (mode, service state),
-`src/accessibility_format.*` (formatters moved out of the service header),
-`src/accessibility_gameplay.*` (code moved out of `src/game.cpp`),
-`src/accessibility_nvda.cpp` (cached availability), `src/options.cpp`,
-`src/messages.cpp` (coalesced messages), `src/inventory_ui.cpp` (invlets),
-`src/sdltiles.cpp` (repeat binding during blocking work), `src/output.*` and
-`src/monster.cpp` (shared injury tiers), `src/help.cpp` and
-`src/game_inventory.cpp` (spoken bindings).
-
-**Success criteria:** A repeated game message is spoken again after a new key
-press (such as another attack) but only once while an activity such as
-smashing repeats it without input; unchanged
-threats are not re-announced when another creature is removed; invlets keep
-upstream behavior except for accessibility shortcuts; the repeat binding works
-during saves and loads after rebinding; spoken hints name the current
-bindings; per-turn alert work is skipped when the accessible interface is
-inactive.
-
-**Possible automated tests:** Screen reader mode and detection latching,
-sentence-end handling, lazy threat descriptions, threat identity across
-creature removal, and invlet selection with accessibility shortcuts.
-Coalesced-message speech cannot run in the test binary because it uses fake
-messages; verify it manually.
-
-**Required human verification:** With default options and NVDA running, start
-the game and confirm the main menu speaks without changing any setting.
-Attack and miss repeatedly and confirm each repeated message is spoken; smash
-furniture and confirm the repeated sound is spoken once.
-Confirm threat alerts are not repeated when an unrelated monster dies.  Select
-items by letter in the inventory, and use Alt+D there.  Rebind repeat-last and
-use it while saving.  Set the option to Off and confirm silence, then back to
-Automatic.
-
-**Debug-menu routes:** unrelated monster death: Spawning… > Spawn monster
-twice, far and near, then kill the nearer one; misses: spawn a monster next to
-the character and attack it.
-
-**Verified with NVDA (2026-09-28):** The default Automatic mode speaks without
-any setup.  Game messages are no longer lost during play.  Walking reads the
-destination tile in a normal save and in the tutorial.
-
-**Still to verify:** the smashing repeat rule, threat alerts after an
-unrelated monster dies, invlets and Alt+D in the inventory, rebinding
-repeat-last and using it while saving, and the Off setting.
-
-## Stage 05B - Speech priorities and turn batching
-
-**Outcome:** Speech keeps up with keyboard navigation, one turn produces one
-utterance, urgent gameplay alerts are not cut off, and repeat-last returns
-the last meaningful announcement.
-
-**Selected interaction (2026-09-28, variant 1 of 3):**
-
-- In lists, menus, the inventory, keybindings, documents, and other focus
-  views, a new focus announcement replaces the unfinished previous speech
-  (programmatic `nvdaController_cancelSpeech` before speaking the new focus).
-  There is still no player speech-cancel command.
-- During gameplay, game messages, threat alerts, and condition alerts of one
-  turn are collected and spoken as one utterance when the game waits for the
-  player's input.  Gameplay movement and routine speech never interrupt
-  queued speech, so alerts are not cut off by walking.
-- Repeat-last replays the last focus announcement or alert; routine speech
-  such as the tile name after a step does not replace it.
-- During auto-travel and other multi-step movement, per-step tile speech is
-  suppressed; interruption and arrival are still announced.
-- A prompt or menu opened during a turn first speaks that turn's pending
-  alerts and does not cut them off.  Later navigation may interrupt an alert;
-  game messages remain in the message log and threats in the situation review.
-- The visible UI is unchanged.
-
-**Code inventory:** `src/accessibility.*` (key-press generations, interrupt
-rule, turn queue, repeat buffer), `src/accessibility_nvda.cpp`
-(`nvdaController_cancelSpeech`), `src/input_context.cpp` (every key press
-in `input_context::handle_input` is reported, so each focus view needs no hook
-of its own), `src/do_turn.cpp` (flush at the end of each turn),
-`src/handle_action.cpp` and `src/accessibility_gameplay.cpp`
-(`before_player_input`, queued alerts, auto-move suppression).
-
-**Success criteria:** Rapid list navigation speaks only the current entry; a
-turn with several messages and an alert is one utterance; walking does not
-cut off an alert; repeat-last after a step repeats the alert; auto-travel is
-quiet until it stops.
-
-**Possible automated tests:** Capture backend records cancel calls and
-priorities; focus announcements cancel, gameplay announcements queue; turn
-buffer flushes once in order; routine speech does not
-change repeat-last; per-step movement speech is suppressed during auto-move.
-
-**Required human verification:** Hold Down in a long list and in the
-inventory; fight several monsters and listen to one combined turn; walk while
-an alert is spoken; use repeat-last after stepping; auto-travel to a
-destination; interrupt speech with Control and confirm nothing is requeued.
-
-**Debug-menu routes:** several monsters: Spawning… > Spawn monster, repeated
-for each monster; an alert while walking: spawn a monster several tiles away
-and step immediately; an alert that opens a prompt: Player… > Bleed self.
-
-**Verified with NVDA (2026-09-28):** Fighting several monsters spawned through
-the debug menu is read correctly and messages do not overlap.  Record the
-Windows and NVDA versions and the tested commit when closing the stage.
-
-**Still to verify:** long-list and inventory navigation while holding Down,
-walking while an alert is spoken, repeat-last after stepping, auto-travel, and
-Control interruption.
-
-**Implementation status (2026-09-28):** Implemented on `access`; automated
-tests and the Windows x64 tiles build pass.
-
-## Stage 06 - Inventory selector navigation and item information
-
-**Outcome:** Inventory selector navigation, categories, item details, and
-comparisons are usable without visual columns, colors, or highlights.
-
-Stage 06 owns the shared `inventory_selector` navigation, category switching,
-column switching, item information, and comparison flows.  Stage 06A owns
-the specific item action flows (wield, wear, consume, etc.).  Stage 07 owns
-the two-pane advanced inventory.  Stage 09 owns ground pickup and drop
-transfers.
-
-**Selected interaction (2026-09-26):** Keep the existing inventory selector,
-keyboard commands, and visible layout.  On entry, announce its purpose,
-carrying stats, and focused item.  On item focus, speak a concise semantic
-summary with stack count, category, source/location, relevant displayed cells,
-and any denial reason; announce category or column context when it changes.
-Report filter results and mode changes.  The existing Examine command opens
-the navigable item-info document, then restores the same selector focus;
-longer row context is available on demand.  Repeat Last restores the most
-recent meaningful announcement.  Escape closes a detail view to the same item
-or cancels the selector from its main view.  The visible UI remains unchanged.
-In comparison selection, announce the first item's selection immediately,
-identify it as the first comparison item whenever it receives focus, and
-announce deselection immediately.  Do not speak an unselected state or repeat
-the first item's name while browsing other items.  When the second item is
-chosen, name it first and remind the player of the first item's name last.  The
-comparison view gives a concise orientation and on-demand paired values with
-verbal better/worse/equal relationships where the existing data supports them.
-After closing comparison, explicitly report whether the first item remains
-selected as the comparison anchor.  Never imply an item is selected merely
-because it has keyboard focus.
-
-**Code inventory:** `src/inventory_ui.cpp` (classes `inventory_selector`,
-`inventory_column`, `inventory_entry`, `inventory_pick_selector`,
-`inventory_compare_selector`, `inventory_examiner`);
-`src/inventory_ui.h` for the class hierarchy;
-`src/game_inventory.cpp` (`game_menus::inv::common`, `game_menus::inv::compare`);
-`src/ui_iteminfo.cpp` for detail scrolling.
-
-**Implementation hints:**
-
-- Class hierarchy: `inventory_selector` in `src/inventory_ui.cpp` is the base
-  multi-column controller.  It manages `inventory_column` instances, each holding
-  `inventory_entry` items.
-- Focus/selection change hook: `inventory_column::highlight(size_t, scroll_direction)`
-  sets `highlighted_index`.  After highlight, read `inventory_column::get_highlighted()`
-  to get the focused entry.
-- Semantic text for an entry: `inventory_selector_preset::get_caption(entry)` returns
-  the item name with stack count.  Extra column cells from
-  `inventory_selector_preset::get_cell_text(entry, i)` provide weight, volume, etc.
-  Denial reason is `entry.denial` string.
-- Category navigation: `inventory_selector::toggle_navigation_mode()` switches between
-  `ITEM` and `CATEGORY` modes.
-- Column switching: `inventory_selector::set_active_column(index)` and
-  `inventory_selector::toggle_active_column(dir)`.
-- Stats header: `inventory_selector::get_stats()` returns weight, volume,
-  and holster usage.
-- Item examination: `inventory_selector::action_examine(item_location)` opens
-  the `iteminfo_window`.
-- Input context: registered in `inventory_selector::inventory_selector()` — register
-  `"ACCESSIBILITY_REPEAT_LAST"` there.
-- Follow `uilist.cpp` focus pattern: announce on open (title + stats), announce
-  on selection change (caption + cells + denial), announce on column change
-  (column name).
-
-**Success criteria:** A selector reports its purpose, category/column, item,
-count, location, relevant state, and disabled reason.  Categories, filtering,
-comparison, detail scrolling, and cancel are announced.
-
-**Possible automated tests:** Capture selector entry, category and item changes,
-stacks, disabled entries, filters, comparison, details, and return focus; reuse
-item-info fixtures.
-
-**Required human verification:** Browse inventory, switch categories and
-columns, examine an item, compare two items, and confirm details are ordered
-usefully and verbosity remains manageable.
-
-**Human verification in progress (2026-09-27):** The user confirmed with NVDA
-that entering comparison, marking two items, revisiting the first selection,
-and the revised selection speech work well.  Inventory browsing, categories,
-columns, filters, item details, repeat-last, and speech interruption still need
-explicit confirmation.  Record Windows, NVDA, and tested build versions before
-closing the stage.  The comparison hints now speak the current bindings, so
-recheck their wording.  All remaining scenarios are reachable now; a varied
-inventory for categories, columns, and filters comes from Spawning… > Spawn an
-item.
+Unless a stage lists an exception, a stage is complete when its possible
+automated tests are implemented, `test_access.bat` passes, and
+`build_win_x64.bat` succeeds.  Its user-test scenarios then move to
+`ACCESS_USERTESTS.md` and do not block the next stage.
 
 ## Stage 06A - Item action flows
 
@@ -269,7 +55,7 @@ confirmation, results, and errors.
 **Possible automated tests:** Capture selector entry for each action type,
 action-specific column content, quantity input, failure, and return focus.
 
-**Required human verification:** Complete every common item flow above, including
+**User-test scenarios:** Complete every common item flow above, including
 a stack, a disabled item, and a failed action.
 
 ## Stage 07 - Advanced inventory and multiselect transfers
@@ -313,7 +99,7 @@ cancel preserve context without rereading both panes.
 quantity, capacity failure, invalid destination, filters, bulk transfer, result,
 and focus restoration; reuse advanced-inventory fixtures.
 
-**Required human verification:** Move single, stacked, and multiple items between
+**User-test scenarios:** Move single, stacked, and multiple items between
 inventory, ground, and a container in both directions; include capacity and
 invalid-destination failures.
 
@@ -354,7 +140,7 @@ result, cancel, and restored gameplay context.
 containers, corpses, hazards, valid/invalid directions, nested choices,
 confirmation, cancellation, and completion.
 
-**Required human verification:** Examine and manipulate a door, container,
+**User-test scenarios:** Examine and manipulate a door, container,
 furniture, appliance, hazard, and corpse; deliberately choose invalid directions
 and cancel nested prompts.
 
@@ -404,7 +190,7 @@ choices.  Arrival is announced.  Cancel is immediate and silent.
 travel (deduplicated), obstruction interrupt, danger interrupt, arrival, and
 cancel using deterministic map/route fixtures.
 
-**Required human verification:** Auto-travel to a visible destination via
+**User-test scenarios:** Auto-travel to a visible destination via
 look-around, trigger an obstruction, cancel auto-travel, and confirm speech
 remains manageable during movement.
 
@@ -445,7 +231,7 @@ failure are keyboard operable and announced.  Returning restores local context.
 container choice, insufficient capacity, ownership warning, cancel, and result
 using deterministic item/map fixtures.
 
-**Required human verification:** Pick up and drop single, stacked, and multiple
+**User-test scenarios:** Pick up and drop single, stacked, and multiple
 items; transfer to/from a container; exercise capacity and ownership warnings.
 
 ## Stage 10 - Ranged and thrown targeting
@@ -494,7 +280,7 @@ Threat and combat messages do not duplicate or stale the target announcement.
 manual cursor, obstruction, out-of-range, aim/ammunition change, confirmation,
 fire/throw, result, cancel, visibility, and deterministic ordering.
 
-**Required human verification:** Use melee context, a firearm, and a thrown weapon
+**User-test scenarios:** Use melee context, a firearm, and a thrown weapon
 against one and several targets, including obstruction and out-of-range cases.
 Confirm target choice is reliable under rapid navigation and interrupted speech.
 
@@ -534,7 +320,7 @@ components, requirements, confirmation, and result.
 recipes, requirement detail, variant/batch changes, related recipes, start,
 failure, disassembly, and return focus using crafting fixtures.
 
-**Required human verification:** Craft single and batch recipes, inspect a recipe
+**User-test scenarios:** Craft single and batch recipes, inspect a recipe
 with missing requirements, search/filter, and disassemble an item with NVDA.
 
 ## Stage 12 - Construction and placement
@@ -573,7 +359,7 @@ Selecting a project and placing it starts the activity with confirmation.
 missing requirements, placement cursor, invalid tile, activity start, and
 return focus.
 
-**Required human verification:** Browse construction projects, attempt an
+**User-test scenarios:** Browse construction projects, attempt an
 invalid placement, complete a valid placement, and confirm the activity starts.
 
 ## Stage 12A - Activities, interruptions, and long actions
@@ -624,7 +410,7 @@ turn-by-turn flooding.  Sleep, wait, and book reading are covered.
 progress, interruption policy, resume/cancel, failure, completion, and
 on-demand progress repeat.
 
-**Required human verification:** Run a long activity (crafting or construction),
+**User-test scenarios:** Run a long activity (crafting or construction),
 trigger an interruption, resume it, cancel another, sleep, wait, and read a
 book chapter.
 
@@ -677,7 +463,7 @@ reread unchanged content.
 encumbered, effect-heavy, skilled, and morale states; capture tab, row, detail,
 scroll, and return-focus changes.
 
-**Required human verification:** Navigate every character-information tab in
+**User-test scenarios:** Navigate every character-information tab in
 simple and information-dense characters and find specified values without visual
 assistance.
 
@@ -716,7 +502,7 @@ deactivation, examine toggle, and focus return are complete.
 **Possible automated tests:** Capture screen entry, tab/column changes,
 selection/detail, activation/deactivation, insufficient-resource, and return.
 
-**Required human verification:** Inspect and operate at least one bionic and
+**User-test scenarios:** Inspect and operate at least one bionic and
 mutation, including a disabled or insufficient-resource case.
 
 ## Stage 14A - Spells and martial arts
@@ -755,7 +541,7 @@ compatibility.  Activation, selection, and focus return are complete.
 **Possible automated tests:** Capture spell/style list entry, selection changes,
 detail access, category switching, can-cast/disabled states, and return.
 
-**Required human verification:** Inspect and cast a spell, select a martial
+**User-test scenarios:** Inspect and cast a spell, select a martial
 style, and view its details with NVDA.
 
 ## Stage 15 - NPC dialogue
@@ -787,7 +573,7 @@ are announced once.  Scrolling history and nested menus retain dialogue context.
 movement, disabled response, topic transition, repeated redraw, history scroll,
 nested menu, confirmation, and exit.
 
-**Required human verification:** Complete a branching conversation with a
+**User-test scenarios:** Complete a branching conversation with a
 disabled response, nested choice, long text, and clean return to gameplay.
 
 ## Stage 16 - Trading
@@ -820,7 +606,7 @@ confirmation, and result are announced.  Pane changes do not reread both sides.
 marking, stack quantity, balance updates, insufficient funds/capacity, acceptance,
 cancel, result, and restored dialogue focus.
 
-**Required human verification:** Buy and sell single and stacked items, inspect
+**User-test scenarios:** Buy and sell single and stacked items, inspect
 details, correct an unfavorable/invalid trade, accept it, and return to dialogue.
 
 ## Stage 17 - Missions
@@ -855,7 +641,7 @@ map handoff is completed and accepted in Stage 18.
 selection/details, accept, track/untrack, known/unknown locations, deadline,
 completion/failure, and invocation of the map action.
 
-**Required human verification:** Accept, review, track, locate, complete, and turn
+**User-test scenarios:** Accept, review, track, locate, complete, and turn
 in a mission; inspect one mission without a known location and one failed state.
 
 ## Stage 18 - Overmap navigation
@@ -898,7 +684,7 @@ stays hidden.
 tiles, search, notes, mission handoff, route creation/failure/travel, and
 visibility filtering.
 
-**Required human verification:** Find a known destination, add/edit a note,
+**User-test scenarios:** Find a known destination, add/edit a note,
 locate a mission, plan/follow a route, change z-level, and return.
 
 ## Stage 18A - Zone management
@@ -933,7 +719,7 @@ Editing, reordering, enabling/disabling, and deletion are announced.
 **Possible automated tests:** Capture zone list focus, creation flow, edit,
 reorder, enable/disable, delete, and return focus.
 
-**Required human verification:** Create a zone with placement and options,
+**User-test scenarios:** Create a zone with placement and options,
 edit its name and type, reorder, disable, and delete a zone.
 
 ## Stage 19 - Vehicle controls, driving, and status
@@ -976,7 +762,7 @@ Movement feedback distinguishes character movement from vehicle motion.
 **Possible automated tests:** Reuse vehicle fixtures for entry/control, start,
 speed/heading change, blocked motion, cruise, fuel/power, and exit.
 
-**Required human verification:** Enter, start, steer, accelerate, stop, and
+**User-test scenarios:** Enter, start, steer, accelerate, stop, and
 leave a vehicle; toggle electronics; exercise a warning and blocked case.
 
 ## Stage 19A - Vehicle examination and maintenance
@@ -1017,7 +803,7 @@ tile cursor and task sub-screens are keyboard operable.
 **Possible automated tests:** Capture cursor movement, parts at tile, install
 tab/part selection, repair part selection, invalid action, and return focus.
 
-**Required human verification:** Inspect a vehicle, navigate parts, and
+**User-test scenarios:** Inspect a vehicle, navigate parts, and
 perform one part action (repair or remove); exercise an invalid/blocked case.
 
 ## Stage 20 - Character creation: scenario and profession
@@ -1059,7 +845,7 @@ filtering, sorting, and randomization are announced and focus-stable.
 **Possible automated tests:** Capture every tab entry, selection changes, point
 updates, filter, sort, and return focus using character fixtures.
 
-**Required human verification:** Create a character using each of the first four
+**User-test scenarios:** Create a character using each of the first four
 tabs, use filter and sort, randomize, and confirm tab transitions work smoothly.
 
 ## Stage 20A - Character creation: stats, traits, skills, and finish
@@ -1098,7 +884,7 @@ focus-stable.  Point totals and conflicts are announced on change.
 skill level change, description fields, template save/load, validation errors,
 and final confirmation.
 
-**Required human verification:** Complete character creation using every
+**User-test scenarios:** Complete character creation using every
 remaining tab, correct point/conflict errors, save/load a template, and start
 a new game.
 
@@ -1144,7 +930,7 @@ category/order/dependencies, and confirmation are announced.
 **Possible automated tests:** Capture world and mod focus/reorder/dependency
 errors, destructive confirmation, save/cancel, and return focus.
 
-**Required human verification:** Create a configured world, alter mod order,
+**User-test scenarios:** Create a configured world, alter mod order,
 and safely exercise copy, reset, and delete confirmations.
 
 ## Stage 21A - Options, rules, and panel configuration
@@ -1184,7 +970,7 @@ settings are announced without relying on columns or color.
 **Possible automated tests:** Capture option search/value/reset, rule editing,
 panel changes, save/cancel, and return focus.
 
-**Required human verification:** Change and restore options, add/edit rules,
+**User-test scenarios:** Change and restore options, add/edit rules,
 configure panels, and confirm all value changes are announced.
 
 ## Stage 22 - Coverage and announcement-policy audit
@@ -1212,7 +998,7 @@ collisions, mode transitions, backend failure/reset, deduplication, and history;
 coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows
 test build, tiles build, and the branch's static checks.
 
-**Required human verification:** Complete the coverage-manifest journey and a
+**User-test scenarios:** Complete the coverage-manifest journey and a
 long play session, deliberately navigating rapidly and interrupting speech.
 Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
 developer-error, static-instruction, and progress-popup integration.  Confirm
@@ -1265,7 +1051,7 @@ launch, C++ and EOC delivery, keybinding substitution, repeat triggers,
 interruption recovery, transitions, completion, save/exit warning, and menu
 return.  Check that every referenced action and tutorial trap exists.
 
-**Required human verification:** A blind NVDA user plays the full tutorial from
+**User-test scenarios:** A blind NVDA user plays the full tutorial from
 launch through the final room, completes every required exercise, checks both
 lesson sources and continuation guidance, deliberately interrupts speech and
 recovers the instructions, saves/exits, and confirms the menu return.  Record
@@ -1292,10 +1078,12 @@ accessibility strings.
 version, clean configuration, missing-DLL fallback, smoke launch, focused/full
 tests, and final tiles build from a clean checkout.
 
-**Required human verification:** A blind tester who did not prepare the source
+**User-test scenarios:** A blind tester who did not prepare the source
 tree obtains and launches the artifact, discovers controls from its documentation,
-creates or loads a game, plays, saves, exits, and restarts.  Record exact Windows,
-NVDA, commit, and artifact versions; this is the native release gate.
+creates or loads a game, plays, saves, exits, and restarts.  Beta testers work
+through `ACCESS_USERTESTS.md`; it must be empty or every remaining scenario
+must be accepted as a known limitation in the release notes.  Record the
+commit and artifact version; this is the native release gate.
 
 ## Stage 24 - Browser backend and web acceptance
 
@@ -1315,7 +1103,7 @@ behavior.  Null/capture/NVDA and native builds remain unaffected.
 event and browser keyboard tests for focus, status, rapid updates, teardown, and
 restart; build and smoke-test Emscripten and Windows targets.
 
-**Required human verification:** A blind screen-reader user completes the Stage
+**User-test scenarios:** A blind screen-reader user completes the Stage
 23 acceptance journey in every declared supported browser/screen-reader pair.
 Record browser, screen reader, operating system, artifact versions, results, and
 limitations before claiming web accessibility.
@@ -1376,7 +1164,7 @@ required sections; detect undocumented literal key assumptions; and run the
 focused accessibility suite plus the documentation/package validation from
 Stage 23.
 
-**Required human verification:** A blind NVDA user unfamiliar with the guide
+**User-test scenarios:** A blind NVDA user unfamiliar with the guide
 follows it from a clean configuration without coaching, completes the quick
 start using keyboard input only, deliberately interrupts speech and uses
 repeat-last, recovers from at least one mistaken or cancelled action, saves,
@@ -1385,12 +1173,6 @@ instructions and revise the guide before accepting the stage.
 
 ## Known blockers and required follow-up
 
-- Stage 03A world announcements for zero and multiple saves passed capture tests
-  but were not exercised with NVDA; the tester had one world with one save.
-  Recheck both counts during the Stage 22 coverage audit.
-- Standard, developer-error, and static popup announcements are implemented but
-  still need the remaining dedicated NVDA checks recorded in `ACCESS_DONE.md`.
-  Stage 22 owns those checks unless an earlier stage relies on a popup type.
 - The NVDA Controller Client DLL and license remain local ignored artifacts until
   Stage 23 establishes packaging.
 - The current host may require single-process MSBuild invocations.
