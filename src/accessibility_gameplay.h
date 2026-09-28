@@ -33,6 +33,15 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
                                      const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
                                      const visibility_variables &cache );
 std::string gameplay_focus_description( map &here, const avatar &viewer );
+/**
+ * Name the most salient thing the viewer can see at a position next to
+ * `origin`, with its direction from `origin`.
+ */
+accessibility::direction_target direction_target( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const tripoint_bub_ms &position );
+/** Describe `valid` in compass order starting north, with `origin` itself last. */
+std::vector<accessibility::direction_target> direction_targets( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const std::vector<tripoint_bub_ms> &valid );
 std::string arrival_announcement( map &here, const avatar &viewer, bool loaded );
 
 /** Open the on-demand situation review list. */

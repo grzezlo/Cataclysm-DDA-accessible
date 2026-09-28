@@ -10,6 +10,8 @@
 #include <utility>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "avatar.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "cata_utility.h"
@@ -1107,10 +1109,16 @@ action_id handle_main_menu()
     }
 }
 
-std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
+using direction_callback = std::function<std::pair<bool, std::optional<tripoint_rel_ms>>(
+                               const input_context &ctxt, const std::string &action )>;
+using adjacent_callback = std::function<std::pair<bool, std::optional<tripoint_bub_ms>>(
+                              const input_context &ctxt, const std::string &action )>;
+
+/** `targets` are spoken after the prompt when present. */
+static std::optional<tripoint_rel_ms> choose_direction_impl( const std::string &message,
+        const std::optional<std::vector<accessibility::direction_target>> &targets,
         const bool allow_vertical, const bool allow_mouse, const int timeout,
-        const std::function<std::pair<bool, std::optional<tripoint_rel_ms>>(
-            const input_context &ctxt, const std::string &action )> &action_cb )
+        const direction_callback &action_cb )
 {
     input_context ctxt( "DEFAULTMODE", keyboard_mode::keycode );
     if( timeout >= 0 ) {
@@ -1121,6 +1129,7 @@ std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
     ctxt.register_action( "pause" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     if( allow_vertical ) {
         ctxt.register_action( "LEVEL_UP" );
         ctxt.register_action( "LEVEL_DOWN" );
@@ -1131,12 +1140,17 @@ std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
         ctxt.register_action( "SELECT" );
     }
 
+    const std::string display_text = string_format( allow_mouse
+                                     //~ %s: "Close where?" "Pry where?" etc.
+                                     ? _( "%s (Direction button or mouse)" )
+                                     //~ %s: "Close where?" "Pry where?" etc.
+                                     : _( "%s (Direction button)" ), message );
+    const std::string semantic_text = targets ?
+                                      accessibility::format_direction_prompt( message, *targets, allow_mouse
+                                              ? _( "(Direction button or mouse)" ) : _( "(Direction button)" ) ) :
+                                      display_text;
     static_popup popup;
-    popup.message( allow_mouse
-                   //~ %s: "Close where?" "Pry where?" etc.
-                   ? _( "%s (Direction button or mouse)" )
-                   //~ %s: "Close where?" "Pry where?" etc.
-                   : _( "%s (Direction button)" ), message ).on_top( true );
+    popup.described_message( display_text, semantic_text ).on_top( true );
 
     temp_hide_advanced_inv();
     std::string action;
@@ -1161,6 +1175,9 @@ std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
             return tripoint_rel_ms::below;
         } else if( action == "QUIT" ) {
             done = true;
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
         }
         if( !done && action_cb ) {
             const std::pair<bool, std::optional<tripoint_rel_ms>> ret = action_cb( ctxt, action );
@@ -1178,19 +1195,21 @@ std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
     return std::nullopt;
 }
 
-std::optional<tripoint_bub_ms> choose_adjacent( const std::string &message,
-        const bool allow_vertical )
+std::optional<tripoint_rel_ms> choose_direction( const std::string &message,
+        const bool allow_vertical, const bool allow_mouse, const int timeout,
+        const direction_callback &action_cb )
 {
-    return choose_adjacent( get_player_character().pos_bub(), message, allow_vertical );
+    return choose_direction_impl( message, std::nullopt, allow_vertical, allow_mouse, timeout,
+                                  action_cb );
 }
 
-std::optional<tripoint_bub_ms> choose_adjacent( const tripoint_bub_ms &pos,
-        const std::string &message, bool allow_vertical, int timeout,
-        const std::function<std::pair<bool, std::optional<tripoint_bub_ms>>(
-            const input_context &ctxt, const std::string &action )> &action_cb )
+static std::optional<tripoint_bub_ms> choose_adjacent_impl( const tripoint_bub_ms &pos,
+        const std::string &message,
+        const std::optional<std::vector<accessibility::direction_target>> &targets,
+        const bool allow_vertical, const int timeout, const adjacent_callback &action_cb )
 {
-    const std::optional<tripoint_rel_ms> dir = choose_direction(
-                message, allow_vertical, /*allow_mouse=*/true, timeout,
+    const std::optional<tripoint_rel_ms> dir = choose_direction_impl(
+                message, targets, allow_vertical, /*allow_mouse=*/true, timeout,
     [&]( const input_context & ctxt, const std::string & action ) {
         if( action == "SELECT" ) {
             const std::optional<tripoint_bub_ms> mouse_pos = ctxt.get_coordinates(
@@ -1219,6 +1238,38 @@ std::optional<tripoint_bub_ms> choose_adjacent( const tripoint_bub_ms &pos,
     } else {
         return std::nullopt;
     }
+}
+
+std::optional<tripoint_bub_ms> choose_adjacent( const std::string &message,
+        const bool allow_vertical )
+{
+    return choose_adjacent( get_player_character().pos_bub(), message, allow_vertical );
+}
+
+std::optional<tripoint_bub_ms> choose_adjacent( const tripoint_bub_ms &pos,
+        const std::string &message, bool allow_vertical, int timeout,
+        const adjacent_callback &action_cb )
+{
+    return choose_adjacent_impl( pos, message, std::nullopt, allow_vertical, timeout, action_cb );
+}
+
+std::optional<tripoint_bub_ms> choose_adjacent_described( const std::string &message,
+        const bool allow_vertical, const std::function<bool( const tripoint_bub_ms & )> &spoken_target )
+{
+    map &here = get_map();
+    avatar &you = get_avatar();
+    const tripoint_bub_ms pos = you.pos_bub( here );
+    std::optional<std::vector<accessibility::direction_target>> targets;
+    if( accessibility::is_active() ) {
+        std::vector<tripoint_bub_ms> described;
+        for( const tripoint_bub_ms &p : here.points_in_radius( pos, 1 ) ) {
+            if( spoken_target( p ) ) {
+                described.push_back( p );
+            }
+        }
+        targets = accessibility_gameplay::direction_targets( here, you, pos, described );
+    }
+    return choose_adjacent_impl( pos, message, targets, allow_vertical, 50, nullptr );
 }
 
 std::optional<tripoint_bub_ms> choose_adjacent_highlight( map &here, const std::string &message,
@@ -1256,11 +1307,17 @@ std::optional<tripoint_bub_ms> choose_adjacent_highlight( map &here, const tripo
         }
     }
 
+    avatar &you = get_avatar();
+    const bool spoken = accessibility::is_active() && allowed;
     const bool auto_select = allow_autoselect && get_option<bool>( "AUTOSELECT_SINGLE_VALID_TARGET" );
     if( valid.empty() && auto_select ) {
         add_msg( failure_message );
         return std::nullopt;
     } else if( valid.size() == 1 && auto_select ) {
+        if( spoken ) {
+            accessibility::announce( accessibility::format_direction_auto_selected(
+                                         accessibility_gameplay::direction_target( here, you, pos, valid.back() ) ) );
+        }
         return valid.back();
     }
 
@@ -1274,9 +1331,18 @@ std::optional<tripoint_bub_ms> choose_adjacent_highlight( map &here, const tripo
         g->add_draw_callback( hilite_cb );
     }
 
-    const std::optional<tripoint_bub_ms> chosen = choose_adjacent( pos, message, allow_vertical );
+    std::optional<std::vector<accessibility::direction_target>> targets;
+    if( spoken ) {
+        targets = accessibility_gameplay::direction_targets( here, you, pos, valid );
+    }
+    const std::optional<tripoint_bub_ms> chosen = choose_adjacent_impl( pos, message, targets,
+            allow_vertical, 50, nullptr );
     if( std::find( valid.begin(), valid.end(), chosen ) != valid.end() ) {
         return chosen;
+    }
+    if( chosen && spoken ) {
+        accessibility::announce( accessibility::format_direction_invalid(
+                                     accessibility_gameplay::direction_target( here, you, pos, *chosen ) ) );
     }
 
     return std::nullopt;

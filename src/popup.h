@@ -296,6 +296,12 @@ class static_popup : public query_popup
             set_message( formatted, formatted, true );
             return *this;
         }
+        /** Show `display_text` while announcing the fuller `semantic_text`. */
+        static_popup &described_message( const std::string &display_text,
+                                         const std::string &semantic_text ) {
+            set_message( display_text, semantic_text, false );
+            return *this;
+        }
 
     private:
         std::shared_ptr<query_popup_impl> ui;

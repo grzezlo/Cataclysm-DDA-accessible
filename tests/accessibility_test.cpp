@@ -7,6 +7,7 @@
 #include "accessibility.h"
 #include "accessibility_format.h"
 #include "accessibility_gameplay.h"
+#include "action.h"
 #include "advanced_inv.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_pane.h"
@@ -2075,4 +2076,74 @@ TEST_CASE( "screen_status_binding_reaches_transfer_screens", "[accessibility]" )
         ctxt.register_action( "ACCESSIBILITY_STATUS" );
         CHECK( ctxt.input_to_action( alt_s ) == "ACCESSIBILITY_STATUS" );
     }
+}
+
+TEST_CASE( "direction_prompt_speaks_grouped_targets_and_outcomes", "[accessibility][nogame]" )
+{
+    const std::vector<accessibility::direction_target> targets = {
+        { "wooden door", "north" }, { "window", "east" }, { "window", "northeast" },
+        { "table with 2 items", "here" }
+    };
+    CHECK( accessibility::format_direction_prompt( "Close where?", targets,
+            "(Direction button or mouse)" ) ==
+           "Close where? Targets: wooden door, north; window, east, northeast; "
+           "table with 2 items, here. (Direction button or mouse)" );
+    CHECK( accessibility::format_direction_prompt( "Open where?", {}, "(Direction button)" ) ==
+           "Open where? No valid targets. (Direction button)" );
+    CHECK( accessibility::format_direction_auto_selected( { "wooden door", "north" } ) ==
+           "Auto-selected: wooden door, north." );
+    CHECK( accessibility::format_direction_invalid( { "brick wall", "west" } ) ==
+           "brick wall, west: not a valid target." );
+}
+
+TEST_CASE( "direction_targets_name_visible_adjacent_things_in_compass_order", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    const time_point previous_time = calendar::turn;
+    const on_out_of_scope cleanup( [previous_time]() {
+        clear_avatar();
+        clear_map();
+        set_time( previous_time );
+    } );
+
+    set_time_to_day();
+    avatar &viewer = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms origin = viewer.pos_bub( here );
+    const tripoint_bub_ms door = origin + tripoint::north;
+    const tripoint_bub_ms table = origin + tripoint::east;
+    here.ter_set( door, ter_str_id( "t_door_c" ) );
+    here.furn_set( table, furn_str_id( "f_table" ) );
+    here.add_item_or_charges( table, item( itype_id( "rock" ), calendar::turn ) );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+
+    // Only the closed door can be opened, as the highlighted open prompt allows.
+    std::vector<tripoint_bub_ms> openable;
+    for( const tripoint_bub_ms &p : here.points_in_radius( origin, 1 ) ) {
+        if( can_interact_at( ACTION_OPEN, here, p ) ) {
+            openable.push_back( p );
+        }
+    }
+    const std::vector<accessibility::direction_target> open_targets =
+        accessibility_gameplay::direction_targets( here, viewer, origin, openable );
+    REQUIRE( open_targets.size() == 1 );
+    CHECK( open_targets[0].target == here.tername( door ) );
+    CHECK( open_targets[0].direction == "north" );
+
+    const std::vector<accessibility::direction_target> targets =
+        accessibility_gameplay::direction_targets( here, viewer, origin, { origin, table, door } );
+    REQUIRE( targets.size() == 3 );
+    CHECK( targets[0].direction == "north" );
+    CHECK( targets[1].target == here.furnname( table ) + " with 1 item" );
+    CHECK( targets[1].direction == "east" );
+    CHECK( targets[2].direction == "here" );
+    CHECK( targets[2].target == here.tername( origin ) );
+
+    player_wear_blindfold();
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    CHECK( accessibility_gameplay::direction_target( here, viewer, origin, table ).target ==
+           "unseen" );
 }

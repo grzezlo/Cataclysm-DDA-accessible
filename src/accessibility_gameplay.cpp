@@ -1,8 +1,10 @@
 #include "accessibility_gameplay.h"
 
 #include <algorithm>
+#include <array>
 #include <cstdint>
 #include <map>
+#include <optional>
 #include <utility>
 
 #include "accessibility.h"
@@ -381,6 +383,73 @@ std::string gameplay_focus_description( map &here, const avatar &viewer )
 {
     return string_format( _( "Gameplay. Current position: %s" ),
                           current_tile_name( here, viewer.pos_bub( here ) ) );
+}
+
+accessibility::direction_target direction_target( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const tripoint_bub_ms &position )
+{
+    accessibility::direction_target result;
+    result.direction = position == origin ? _( "here" ) :
+                       direction_name( direction_from( origin.raw(), position.raw() ) );
+    if( tile_visibility( here, position, here.get_visibility_variables_cache() ) !=
+        visibility_type::CLEAR ) {
+        result.target = _( "unseen" );
+        return result;
+    }
+
+    const Creature *creature = get_creature_tracker().creature_at( position, true );
+    const optional_vpart_position vp = here.veh_at( position );
+    std::optional<vpart_reference> displayed_part;
+    if( vp ) {
+        displayed_part = vp.part_displayed();
+    }
+    if( creature != nullptr && creature != &viewer && viewer.sees( here, *creature ) ) {
+        result.target = creature->disp_name();
+    } else if( displayed_part ) {
+        result.target = displayed_part->part().name();
+    } else if( here.has_furn( position ) ) {
+        result.target = here.furnname( position );
+    } else {
+        result.target = here.tername( position );
+    }
+
+    if( here.sees_some_items( position, viewer ) && here.could_see_items( position, viewer ) &&
+        !viewer.has_effect( effect_blind ) && !viewer.worn_with_flag( flag_BLIND ) ) {
+        const int count = static_cast<int>( here.i_at( position ).size() );
+        //~ %1$s: target such as "table"; %2$d: number of items on it
+        result.target = string_format( n_gettext( "%1$s with %2$d item", "%1$s with %2$d items", count ),
+                                       result.target, count );
+    }
+    return result;
+}
+
+std::vector<accessibility::direction_target> direction_targets( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const std::vector<tripoint_bub_ms> &valid )
+{
+    static const std::array<tripoint_rel_ms, 9> compass_order = { {
+            tripoint_rel_ms::north, tripoint_rel_ms::north_east, tripoint_rel_ms::east,
+            tripoint_rel_ms::south_east, tripoint_rel_ms::south, tripoint_rel_ms::south_west,
+            tripoint_rel_ms::west, tripoint_rel_ms::north_west, tripoint_rel_ms::zero
+        }
+    };
+    std::vector<tripoint_bub_ms> ordered;
+    for( const tripoint_rel_ms &offset : compass_order ) {
+        if( std::find( valid.begin(), valid.end(), origin + offset ) != valid.end() ) {
+            ordered.push_back( origin + offset );
+        }
+    }
+    // Vertical targets follow in their original order.
+    for( const tripoint_bub_ms &position : valid ) {
+        if( std::find( ordered.begin(), ordered.end(), position ) == ordered.end() ) {
+            ordered.push_back( position );
+        }
+    }
+    std::vector<accessibility::direction_target> result;
+    result.reserve( ordered.size() );
+    for( const tripoint_bub_ms &position : ordered ) {
+        result.push_back( direction_target( here, viewer, origin, position ) );
+    }
+    return result;
 }
 
 std::string arrival_announcement( map &here, const avatar &viewer, const bool loaded )

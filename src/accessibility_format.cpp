@@ -1261,4 +1261,57 @@ std::string format_game_arrival( const bool loaded, const std::string &name,
            string_format( _( "Welcome, %1$s. Location: %2$s" ), name, location );
 }
 
+std::string format_direction_prompt( const std::string &prompt,
+                                     const std::vector<direction_target> &targets, const std::string &hint )
+{
+    std::vector<std::pair<std::string, std::vector<std::string>>> groups;
+    for( const direction_target &entry : targets ) {
+        const auto group = std::find_if( groups.begin(), groups.end(),
+        [&entry]( const std::pair<std::string, std::vector<std::string>> &candidate ) {
+            return candidate.first == entry.target;
+        } );
+        if( group == groups.end() ) {
+            groups.emplace_back( entry.target, std::vector<std::string> { entry.direction } );
+        } else {
+            group->second.push_back( entry.direction );
+        }
+    }
+    std::string target_text;
+    if( groups.empty() ) {
+        target_text = _( "No valid targets." );
+    } else {
+        std::vector<std::string> described;
+        described.reserve( groups.size() );
+        for( const std::pair<std::string, std::vector<std::string>> &group : groups ) {
+            //~ %1$s: target such as "wooden door"; %2$s: directions such as "north, east"
+            described.push_back( string_format( _( "%1$s, %2$s" ), group.first,
+                                                string_join( group.second, _( ", " ) ) ) );
+        }
+        //~ %s: valid targets of a direction prompt separated by semicolons
+        target_text = string_format( _( "Targets: %s." ), string_join( described, _( "; " ) ) );
+    }
+    std::vector<std::string> parts;
+    for( const std::string &part : {
+             trim_ascii( prompt ), target_text, trim_ascii( hint )
+         } ) {
+        if( !part.empty() ) {
+            parts.push_back( part );
+        }
+    }
+    return string_join( parts, " " );
+}
+
+std::string format_direction_auto_selected( const direction_target &target )
+{
+    //~ %1$s: target such as "wooden door"; %2$s: direction such as "north"
+    return string_format( _( "Auto-selected: %1$s, %2$s." ), target.target, target.direction );
+}
+
+std::string format_direction_invalid( const direction_target &target )
+{
+    //~ %1$s: what is in the chosen direction; %2$s: direction such as "north"
+    return string_format( _( "%1$s, %2$s: not a valid target." ), target.target,
+                          target.direction );
+}
+
 } // namespace accessibility

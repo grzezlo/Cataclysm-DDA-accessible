@@ -722,7 +722,10 @@ static void grab()
         return;
     }
 
-    const std::optional<tripoint_bub_ms> grabp_ = choose_adjacent( _( "Grab where?" ) );
+    const std::optional<tripoint_bub_ms> grabp_ = choose_adjacent_described( _( "Grab where?" ),
+    false, [&]( const tripoint_bub_ms & p ) {
+        return p != you.pos_bub( here ) && ( here.veh_at( p ) || here.has_furn( p ) );
+    } );
     if( !grabp_ ) {
         add_msg( _( "Never mind." ) );
         return;
@@ -930,8 +933,19 @@ static void haul_toggle()
 static void smash()
 {
     const bool allow_floor_bash = debug_mode; // Should later become "true"
-    const std::optional<tripoint_bub_ms> smashp_ = choose_adjacent( _( "Smash where?" ),
-            allow_floor_bash );
+    map &here = get_map();
+    const std::optional<tripoint_bub_ms> smashp_ = choose_adjacent_described( _( "Smash where?" ),
+    allow_floor_bash, [&here]( const tripoint_bub_ms & p ) {
+        if( here.is_bashable( p ) ) {
+            return true;
+        }
+        for( const item &maybe_corpse : here.i_at( p ) ) {
+            if( maybe_corpse.can_revive() ) {
+                return true;
+            }
+        }
+        return false;
+    } );
     if( !smashp_ ) {
         return;
     }

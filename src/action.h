@@ -490,6 +490,13 @@ std::optional<tripoint_bub_ms> choose_adjacent( const tripoint_bub_ms &pos,
         const std::string &message, bool allow_vertical = false, int timeout = 50,
         const std::function<std::pair<bool, std::optional<tripoint_bub_ms>>(
             const input_context &ctxt, const std::string &action )> &action_cb = nullptr );
+/**
+ * Like @ref choose_adjacent, but in screen-reader mode the prompt also speaks
+ * the adjacent tiles for which `spoken_target` is true.  It changes neither
+ * highlighting nor which tiles can be selected.
+ */
+std::optional<tripoint_bub_ms> choose_adjacent_described( const std::string &message,
+        bool allow_vertical, const std::function<bool( const tripoint_bub_ms & )> &spoken_target );
 
 /**
  * Request player input of a direction, possibly including vertical component

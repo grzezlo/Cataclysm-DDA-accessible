@@ -317,6 +317,21 @@ std::string format_threat_description( const std::string &name, int distance,
 std::string format_game_arrival( bool loaded, const std::string &name,
                                  const std::string &location );
 
+/** One valid target of a direction prompt; `direction` is already spoken text. */
+struct direction_target {
+    std::string target;
+    std::string direction;
+};
+/**
+ * Spoken direction prompt: the prompt, the valid targets grouped by identical
+ * target in the given order, then the input hint.  Empty `targets` says that
+ * there is no valid target.
+ */
+std::string format_direction_prompt( const std::string &prompt,
+                                     const std::vector<direction_target> &targets, const std::string &hint );
+std::string format_direction_auto_selected( const direction_target &target );
+std::string format_direction_invalid( const direction_target &target );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H
