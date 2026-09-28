@@ -85,3 +85,31 @@ A varied inventory comes from Spawning… > Spawn an item.
   Focus returns to the same item.
 - **Comparison hints.**  Compare two items.  The hints name the keys you
   actually have bound.
+
+## Stage 06A: Item action flows
+
+Spawning… > Spawn an item gives a knife, a jacket, a book, a canned food item,
+a loaded gun with spare ammo, and a flashlight.
+
+- **Item action menu.**  Open the inventory and press Enter on the knife.  You
+  hear "Actions for" with the item name, the details key, and the focused
+  action.  Move through the actions: "wear" says "Not possible now" or "Not
+  applicable" when it cannot be done, and available actions have no suffix.
+  "Auto pickup" says "Rule set" or "No rule".
+- **Item details from the action menu.**  In the same menu press `Alt+D`.  The
+  complete item information opens and is read by line.  Leave it: the focused
+  action is spoken again.
+- **Return after an action.**  In the action menu choose "favorite".  The
+  inventory reopens on the same item and speaks only the item, now marked
+  Favorite, without the title and hotkey count.
+- **Activation methods.**  Choose "activate" on an item with several uses, or
+  use the Apply command on the flashlight.  Each method is read with its item;
+  `Alt+D` reads the method's description when it has one.
+- **Common flows.**  Wield the knife, wear and take off the jacket, read the
+  book, eat the food, reload and unload the gun, and drop an item, using both
+  the direct commands and the item action menu.  Each selector names its
+  purpose and the action's main values; each result or refusal is spoken once.
+- **Eating hint.**  Open the eat menu.  The opening lists food, drink, pain,
+  rest, weight, and intake as separate phrases, without naming line symbols.
+- **Failure.**  Try to wear a second pair of the same boots, or read in
+  darkness (Map… > Change time to night).  The refusal is spoken.

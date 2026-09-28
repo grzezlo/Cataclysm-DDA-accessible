@@ -561,3 +561,30 @@ Limitations:
 
 - Navigation inside a menu may interrupt an alert; game messages remain in the
   message log and threats in the situation review.
+
+## 2026-09-28 — Stage 06A: Item action flows
+
+- The item action menu (Enter on an inventory item) names its item and speaks
+  each action's availability, shown visually only by color: "Not possible
+  now" or "Not applicable"; Auto pickup says whether a rule is set.  `Alt+D`
+  reads the complete item information in the document reader and returns to
+  the focused action.
+- The activation-method menu shows method descriptions instead of the
+  keybinding footer, so `Alt+D` reads them; the keybinding hint moved to the
+  header.
+- Selector hints, such as the eating needs, are spoken as phrases without
+  box-drawing separators.  A selector reopened after an item action speaks
+  only the focused item.
+- `uilist` gained optional `accessibility_context`, `accessibility_details`,
+  and per-entry `accessibility_state` for menus whose state is visual only.
+- Selected design: option A (concise focus with state, item details on
+  demand), recorded before implementation.
+- Commit: `5566501203`.
+
+Limitations:
+
+- Quantity prompts, confirmations, results, and refusals rely on the Stage 05
+  controls and game-message speech; no flow-specific wording was added.
+- Multidrop and other multiselect quantity entry remain Stage 07.
+- The item-menu state words follow upstream `hint_rating`, which does not give
+  the reason an action is not possible.

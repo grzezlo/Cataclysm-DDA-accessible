@@ -19,63 +19,6 @@ automated tests are implemented, `test_access.bat` passes, and
 `build_win_x64.bat` succeeds.  Its user-test scenarios then move to
 `ACCESS_USERTESTS.md` and do not block the next stage.
 
-## Stage 06A - Item action flows
-
-**Outcome:** Common item action flows expose their choices, confirmations,
-quantity prompts, results, and errors through speech.
-
-**Code inventory:** `src/game_inventory.cpp` (action-specific presets and
-`inv_internal` loop); `src/item_action.cpp` (`game::item_action_menu`);
-inventory selectors from Stage 06 where they serve specific actions.
-
-**Implementation hints:**
-
-- All single-item actions go through `inv_internal()` in `src/game_inventory.cpp`,
-  which wraps `inventory_pick_selector::execute()` with title, hint, and
-  `none_message`.  Hook announcements in `inv_internal()` for the shared flow.
-- Action-specific presets in `src/game_inventory.cpp` define extra columns:
-  - Wield: `weapon_inventory_preset` — DAMAGE, MOVES, TO HIT.
-  - Wear: `wear_inventory_preset`.
-  - Consume: `comestible_inventory_preset` — CALORIES, QUENCH, JOY, HEALTH,
-    SHELF LIFE.
-  - Read: `read_inventory_preset` — READ TIME, SKILL.
-  - Reload: `select_ammo_inventory_preset` — DAMAGE, AP, RANGE.
-- Item action menu: `game::item_action_menu()` in `src/item_action.cpp` uses
-  `uilist` with `desc_enabled = true`, but its `footer_text` replaces per-entry
-  descriptions visually.  Expose the method description visibly so the shared
-  Details action can open it without changing concise list focus speech.
-- Consume needs hint: `get_consume_needs_hint()` in `src/game_inventory.cpp`
-  formats hunger/thirst/fatigue — include in the selector's opening
-  announcement.
-
-**Selected interaction (option A, 2026-09-28):**
-
-- The item action menu (`game::inventory_item_menu()`, Enter on an inventory
-  item) keeps the visual order and hotkeys.  Opening speaks "Actions for
-  <item>", the list hint including the details binding, and the focused action.
-- Each focused action speaks its name followed by its availability, which is
-  otherwise shown only by color: no suffix for an available action, "Not
-  possible now" for `hint_rating::iffy` (the item permits it but circumstances
-  do not), and "Not applicable" for `hint_rating::cant`.  Auto pickup speaks
-  whether a rule exists.
-- The details action (`Alt+D`) opens the complete item information, the same
-  content as the visual side panel, in the line-by-line document reader.
-  Leaving it returns to the same action and repeats it.
-- `game::item_action_menu()` moves its keybinding hint from the footer to the
-  header text, so method descriptions are visible and `Alt+D` reads them.
-- Selector opening hints are spoken without visual separators, and reopening
-  the same selector after an item action speaks only the focused item.
-
-**Success criteria:** Wield, wear/take off, use, consume, read, reload/unload,
-and drop flows expose their action-specific columns, quantity prompts,
-confirmation, results, and errors.
-
-**Possible automated tests:** Capture selector entry for each action type,
-action-specific column content, quantity input, failure, and return focus.
-
-**User-test scenarios:** Complete every common item flow above, including
-a stack, a disabled item, and a failed action.
-
 ## Stage 07 - Advanced inventory and multiselect transfers
 
 **Outcome:** Two-pane and multiselect item transfers are independently usable.
