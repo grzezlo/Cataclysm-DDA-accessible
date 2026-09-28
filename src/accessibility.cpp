@@ -55,6 +55,8 @@ struct service_state {
     };
     std::vector<queued_speech> gameplay_queue;
     bool movement_suppressed = false;
+    std::string last_game_message;
+    uint64_t last_game_message_generation = 0;
 };
 
 service_state &state()
@@ -216,9 +218,18 @@ bool flush_gameplay_announcements()
 
 bool announce_game_message( const std::string &message )
 {
-    if( message.empty() || !state().game_messages_enabled ) {
+    service_state &current = state();
+    if( message.empty() || !current.game_messages_enabled ) {
         return false;
     }
+    // Repeat a message only in response to a new key press, such as another
+    // attack.  Activities like smashing repeat it every turn without input.
+    if( message == current.last_game_message &&
+        current.input_generation == current.last_game_message_generation ) {
+        return false;
+    }
+    current.last_game_message = message;
+    current.last_game_message_generation = current.input_generation;
     queue_gameplay_announcement( message, gameplay_speech::meaningful );
     return is_active();
 }
@@ -326,6 +337,7 @@ void enable_game_messages( const bool enabled )
         current.threats_initialized = false;
         current.previous_movement_direction.clear();
         current.gameplay_queue.clear();
+        current.last_game_message.clear();
         current.movement_suppressed = false;
     }
     current.game_messages_enabled = enabled;
@@ -358,6 +370,7 @@ void reset_game_state()
     current.threats_initialized = false;
     current.previous_movement_direction.clear();
     current.gameplay_queue.clear();
+    current.last_game_message.clear();
     current.movement_suppressed = false;
     reset_condition_tracker();
 }

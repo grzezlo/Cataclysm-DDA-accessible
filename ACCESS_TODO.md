@@ -47,7 +47,9 @@ Speech priorities and turn batching from the same review are Stage 05B.
 `src/monster.cpp` (shared injury tiers), `src/help.cpp` and
 `src/game_inventory.cpp` (spoken bindings).
 
-**Success criteria:** Repeated game messages are spoken each time; unchanged
+**Success criteria:** A repeated game message is spoken again after a new key
+press (such as another attack) but only once while an activity such as
+smashing repeats it without input; unchanged
 threats are not re-announced when another creature is removed; invlets keep
 upstream behavior except for accessibility shortcuts; the repeat binding works
 during saves and loads after rebinding; spoken hints name the current
@@ -62,7 +64,8 @@ messages; verify it manually.
 
 **Required human verification:** With default options and NVDA running, start
 the game and confirm the main menu speaks without changing any setting.
-Attack and miss repeatedly and confirm each repeated message is spoken.
+Attack and miss repeatedly and confirm each repeated message is spoken; smash
+furniture and confirm the repeated sound is spoken once.
 Confirm threat alerts are not repeated when an unrelated monster dies.  Select
 items by letter in the inventory, and use Alt+D there.  Rebind repeat-last and
 use it while saving.  Set the option to Off and confirm silence, then back to

@@ -1727,3 +1727,36 @@ TEST_CASE( "walking_speaks_each_destination_tile_after_travel", "[accessibility]
     you.setpos( here, start );
     clear_map();
 }
+
+TEST_CASE( "repeated_game_messages_need_a_new_key_press", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    // An activity such as smashing repeats the same message every turn
+    // without input; only the first one is spoken.
+    accessibility::note_player_input();
+    CHECK( accessibility::announce_game_message( "You hear whack!" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK_FALSE( accessibility::announce_game_message( "You hear whack!" ) );
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+    CHECK_FALSE( accessibility::announce_game_message( "You hear whack!" ) );
+    CHECK( accessibility::announce_game_message( "The chair is destroyed." ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+
+    // A repeat caused by a new key press, such as another attack, is spoken.
+    accessibility::note_player_input();
+    CHECK( accessibility::announce_game_message( "You miss the zombie." ) );
+    accessibility::note_player_input();
+    CHECK( accessibility::announce_game_message( "You miss the zombie." ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+
+    REQUIRE( capture_ptr->messages.size() == 3 );
+    CHECK( capture_ptr->messages[0] == "You hear whack!" );
+    CHECK( capture_ptr->messages[1] == "The chair is destroyed." );
+    CHECK( capture_ptr->messages[2] == "You miss the zombie. You miss the zombie." );
+
+    accessibility::reset_backend_after_testing();
+}
