@@ -162,12 +162,15 @@ over upstream contribution policy or exact UI parity.
   configure it as the default branch on GitHub.
 - Base `access` on the latest maintained upstream `0.I-branch`, not upstream
   `master`.
-- Keep upstream tracking branches clean.  Develop accessibility work on a
-  dedicated feature branch derived from `access`, then merge completed work
-  back into `access`.
-- After verifying that a feature branch has been successfully merged into
-  `access`, delete that branch locally and from the fork remote if it was pushed.
-  Keep unmerged branches and branches still needed for active work.
+- Keep upstream tracking branches clean.  Commit routine accessibility work
+  directly to `access` in small, focused commits; the roadmap is sequential,
+  so per-feature branches add no value.  Every commit on `access` must pass
+  `test_access.bat` and build the Windows x64 tiles game.
+- Use a separate branch derived from `access` only for experimental work or
+  work that may be abandoned.  After verifying that such a branch has been
+  merged into `access`, delete it locally.  Keep unmerged branches and
+  branches still needed for active work.
+- Do not push to or change the fork remote; the maintainer pushes `access`.
 - Treat a future port to upstream `master` or 0.J as a separate experimental
   line until it is stable enough for players.
 - Keep accessibility commits focused so they can be ported across upstream UI
