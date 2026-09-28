@@ -11,6 +11,7 @@
 
 #include "action.h"
 #include "accessibility.h"
+#include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "advanced_inv.h"
 #include "auto_note.h"
@@ -3131,6 +3132,7 @@ bool game::handle_action()
         return false;
     } else {
         // No auto-move, ask player for input
+        accessibility_gameplay::before_player_input( here, player_character );
         ctxt = get_player_input( action );
     }
 

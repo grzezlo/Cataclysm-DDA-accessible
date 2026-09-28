@@ -17,6 +17,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
 #include "action.h"
 #include "activity_type.h"
 #include "avatar.h"
@@ -691,6 +692,9 @@ bool do_turn()
     if( levz >= 0 && !u.is_underwater() ) {
         handle_weather_effects( weather.weather_id );
     }
+
+    // Speak this turn's messages and alerts as one utterance.
+    accessibility::flush_gameplay_announcements();
 
     const bool player_is_sleeping = u.has_effect( effect_sleep );
     bool wait_redraw = false;

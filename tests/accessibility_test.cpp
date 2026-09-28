@@ -43,7 +43,12 @@ class capture_backend final : public accessibility::backend
             return true;
         }
 
+        void cancel() override {
+            ++cancels;
+        }
+
         std::vector<std::string> messages;
+        int cancels = 0;
 };
 
 class capture_compare_selector final : public inventory_compare_selector
@@ -186,9 +191,16 @@ TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessi
     CHECK_FALSE( accessibility::announce_game_message( "Hidden during setup" ) );
     accessibility::enable_game_messages( true );
     CHECK( accessibility::announce_game_message( "You hear a noise." ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
     CHECK( accessibility::announce_movement( "northwest", "wooden floor" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
     CHECK( accessibility::announce_movement( "northwest", "grass" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
     CHECK( accessibility::announce_movement( "east", "grass" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    // Routine movement speech never replaces the repeat-last message.
+    CHECK( accessibility::last_announcement() == "You hear a noise." );
     CHECK_FALSE( accessibility::announce_threats( {}, "No nearby threats." ) );
     CHECK( accessibility::announce_threats( { "monster-1" },
                                             "Nearby threats: zombie, 5 tiles north." ) );
@@ -204,9 +216,9 @@ TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessi
     CHECK( capture_ptr->messages[1] == "New game. Custom character" );
     CHECK( capture_ptr->messages[2] == "Loading" );
     CHECK( capture_ptr->messages[3] == "You hear a noise." );
-    CHECK( capture_ptr->messages[4] == "wooden floor. northwest" );
-    CHECK( capture_ptr->messages[5] == "grass" );
-    CHECK( capture_ptr->messages[6] == "grass. east" );
+    CHECK( capture_ptr->messages[4] == "wooden floor. northwest." );
+    CHECK( capture_ptr->messages[5] == "grass." );
+    CHECK( capture_ptr->messages[6] == "grass. east." );
     CHECK( capture_ptr->messages[7] == "Nearby threats: zombie, 5 tiles north." );
     CHECK( capture_ptr->messages[8] == "A new nearby threat." );
     CHECK( capture_ptr->messages[9] == "No nearby threats." );
@@ -1565,15 +1577,18 @@ TEST_CASE( "threat_alerts_ignore_unrelated_creature_removal", "[accessibility]" 
     accessibility::enable_game_messages( true );
 
     accessibility_gameplay::announce_turn_alerts( here, you, { &threat } );
+    accessibility::flush_gameplay_announcements();
     REQUIRE( capture_ptr->messages.size() == 1 );
     CHECK( capture_ptr->messages[0].find( "spotted!" ) != std::string::npos );
 
     // Removing a creature earlier in the tracker must not re-announce the same threat.
     g->remove_zombie( unrelated );
     accessibility_gameplay::announce_turn_alerts( here, you, { &threat } );
+    accessibility::flush_gameplay_announcements();
     CHECK( capture_ptr->messages.size() == 1 );
 
     accessibility_gameplay::announce_turn_alerts( here, you, {} );
+    accessibility::flush_gameplay_announcements();
     REQUIRE( capture_ptr->messages.size() == 2 );
     CHECK( capture_ptr->messages[1] == "No threats in view." );
 
@@ -1589,4 +1604,63 @@ TEST_CASE( "inventory_invlets_still_select_items_except_for_accessibility_shortc
     CHECK( capture_inventory_selector::invlet_allowed_for( "EXAMINE" ) );
     CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_DETAILS" ) );
     CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_REPEAT_LAST" ) );
+}
+
+TEST_CASE( "focus_speech_interrupts_once_per_key_and_gameplay_speech_queues",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    // Speech without a new key press never interrupts.
+    CHECK( accessibility::announce( "Inventory" ) );
+    CHECK( capture_ptr->cancels == 0 );
+
+    // The first focus speech after a key replaces unfinished speech; context
+    // spoken for the same key queues behind it.
+    accessibility::note_player_input();
+    CHECK( accessibility::announce( "Hammer" ) );
+    CHECK( accessibility::announce( "Details available" ) );
+    CHECK( capture_ptr->cancels == 1 );
+    accessibility::note_player_input();
+    CHECK( accessibility::announce( "Rock" ) );
+    CHECK( capture_ptr->cancels == 2 );
+
+    // Gameplay speech of one turn is one utterance and never interrupts.
+    accessibility::enable_game_messages( true );
+    accessibility::note_player_input();
+    CHECK( accessibility::announce_movement( "north", "grass" ) );
+    CHECK( accessibility::announce_game_message( "You hear a whack!" ) );
+    accessibility::queue_gameplay_announcement( "Zombie spotted!",
+            accessibility::gameplay_speech::meaningful );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( capture_ptr->cancels == 2 );
+    CHECK( capture_ptr->messages.back() == "grass. north. You hear a whack! Zombie spotted!" );
+    // Repeat-last keeps the meaningful parts without the routine tile name.
+    CHECK( accessibility::last_announcement() == "You hear a whack! Zombie spotted!" );
+
+    // A prompt caused by the same turn speaks pending alerts first and does
+    // not cut them off.
+    accessibility::note_player_input();
+    accessibility::queue_gameplay_announcement( "Bleeding: Torso!",
+            accessibility::gameplay_speech::meaningful );
+    CHECK( accessibility::announce( "Really continue?" ) );
+    CHECK( capture_ptr->cancels == 2 );
+    REQUIRE( capture_ptr->messages.size() >= 2 );
+    CHECK( capture_ptr->messages[capture_ptr->messages.size() - 2] == "Bleeding: Torso!" );
+    CHECK( capture_ptr->messages.back() == "Really continue?" );
+
+    // Repeat-last is a key press and replaces unfinished speech.
+    accessibility::note_player_input();
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( capture_ptr->cancels == 3 );
+    CHECK( capture_ptr->messages.back() == "Really continue?" );
+
+    // Skipped auto-move steps are reported once.
+    accessibility::note_suppressed_movement();
+    CHECK( accessibility::take_suppressed_movement() );
+    CHECK_FALSE( accessibility::take_suppressed_movement() );
+
+    accessibility::reset_backend_after_testing();
 }

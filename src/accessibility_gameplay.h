@@ -43,7 +43,12 @@ void status_review( const avatar &viewer, const std::string &safe_mode );
  */
 void announce_turn_alerts( const map &here, const Character &viewer,
                            const std::vector<const Creature *> &threats );
-/** Announce the destination tile after the avatar moves. */
+/**
+ * Speak queued gameplay speech before the game waits for a key.  After
+ * auto-move, where per-step speech is skipped, also report the position.
+ */
+void before_player_input( map &here, const avatar &viewer );
+/** Queue the destination tile after the avatar moves, except during auto-move. */
 void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &viewer,
                             const map &here );
 

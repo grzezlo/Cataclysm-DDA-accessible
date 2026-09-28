@@ -88,17 +88,18 @@ the last meaningful announcement.
   such as the tile name after a step does not replace it.
 - During auto-travel and other multi-step movement, per-step tile speech is
   suppressed; interruption and arrival are still announced.
-- If a focus change in a menu cuts off an alert, the alert remains available
-  through repeat-last and the message log.
+- A prompt or menu opened during a turn first speaks that turn's pending
+  alerts and does not cut them off.  Later navigation may interrupt an alert;
+  game messages remain in the message log and threats in the situation review.
 - The visible UI is unchanged.
 
-**Code inventory:** `src/accessibility.*` (priorities, turn buffer, repeat
-buffer), `src/accessibility_nvda.cpp` (cancel call), `src/messages.cpp`,
-`src/accessibility_gameplay.cpp` (alerts, movement), the gameplay input wait in
-`src/do_turn.cpp` or `src/handle_action.cpp`, and the shared focus hooks in
-`src/uilist.cpp`, `src/inventory_ui.cpp`, `src/input_context.cpp`,
-`src/accessibility_document_view.cpp`, `src/main_menu.cpp`, and
-`src/popup.cpp`.
+**Code inventory:** `src/accessibility.*` (key-press generations, interrupt
+rule, turn queue, repeat buffer), `src/accessibility_nvda.cpp`
+(`nvdaController_cancelSpeech`), `src/input_context.cpp` (every key press
+in `input_context::handle_input` is reported, so each focus view needs no hook
+of its own), `src/do_turn.cpp` (flush at the end of each turn),
+`src/handle_action.cpp` and `src/accessibility_gameplay.cpp`
+(`before_player_input`, queued alerts, auto-move suppression).
 
 **Success criteria:** Rapid list navigation speaks only the current entry; a
 turn with several messages and an alert is one utterance; walking does not
@@ -107,13 +108,17 @@ quiet until it stops.
 
 **Possible automated tests:** Capture backend records cancel calls and
 priorities; focus announcements cancel, gameplay announcements queue; turn
-buffer flushes once in order with deduplication; routine speech does not
+buffer flushes once in order; routine speech does not
 change repeat-last; per-step movement speech is suppressed during auto-move.
 
 **Required human verification:** Hold Down in a long list and in the
 inventory; fight several monsters and listen to one combined turn; walk while
 an alert is spoken; use repeat-last after stepping; auto-travel to a
 destination; interrupt speech with Control and confirm nothing is requeued.
+
+**Implementation status (2026-09-28):** Implemented on
+`codex/stage-05b-speech-priorities`; automated tests and the Windows x64 tiles
+build pass.  NVDA verification has not been done.
 
 ## Stage 06 - Inventory selector navigation and item information
 

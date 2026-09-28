@@ -451,6 +451,10 @@ const std::string &input_context::handle_input( const int timeout )
             result = &TIMEOUT;
             break;
         }
+        if( next_action.type == input_event_t::keyboard_char ||
+            next_action.type == input_event_t::keyboard_code ) {
+            accessibility::note_player_input();
+        }
 
         const std::string &action = input_to_action( next_action );
 

@@ -20,6 +20,8 @@ class backend
 
         virtual bool is_available() const = 0;
         virtual bool announce( const std::string &message ) = 0;
+        /** Stop speech that is still being spoken or queued. */
+        virtual void cancel() {}
 };
 
 /** Player-selected screen reader mode; see the SCREEN_READER_SPEECH option. */
@@ -39,11 +41,39 @@ screen_reader_mode get_screen_reader_mode();
  */
 bool is_active();
 
+/**
+ * Record that the player pressed a key.  The first focus announcement after a
+ * key press replaces unfinished earlier speech; later announcements caused by
+ * the same key, and all gameplay speech, are queued behind it.
+ */
+void note_player_input();
+
+/** Speak a focus or status announcement immediately; it becomes repeat-last. */
 bool announce( const std::string &message );
 bool announce_focus( const std::string &label, const std::string &context = {} );
 bool announce_status( const std::string &message );
+
+enum class gameplay_speech {
+    /** Messages and alerts; they become repeat-last when spoken. */
+    meaningful,
+    /** Movement tile names and similar chatter; never repeat-last. */
+    routine
+};
+/**
+ * Queue gameplay speech for the current turn.  flush_gameplay_announcements()
+ * speaks the queue as one utterance that never interrupts earlier speech.
+ */
+void queue_gameplay_announcement( const std::string &message, gameplay_speech kind );
+/** Speak and clear the queued gameplay speech.  Returns whether anything was spoken. */
+bool flush_gameplay_announcements();
+/** Queue a game log message for this turn's utterance. */
 bool announce_game_message( const std::string &message );
+/** Queue the destination tile, adding the direction only when it changes. */
 bool announce_movement( const std::string &direction, const std::string &tile );
+/** Remember that per-step movement speech was skipped during auto-move. */
+void note_suppressed_movement();
+/** Return and clear whether movement speech was skipped since the last call. */
+bool take_suppressed_movement();
 /**
  * Update visible-threat state and return an announcement only when the set of
  * threats changed.  `describe` is called only when an announcement is needed.

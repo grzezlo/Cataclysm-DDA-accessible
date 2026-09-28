@@ -735,13 +735,30 @@ void announce_turn_alerts( const map &here, const Character &viewer,
     }
     const std::vector<std::string> condition_alerts = condition_transitions( viewer );
     alerts.insert( alerts.end(), condition_alerts.begin(), condition_alerts.end() );
-    accessibility::announce_semantic_sequence( alerts );
+    for( const std::string &alert : alerts ) {
+        accessibility::queue_gameplay_announcement( alert, accessibility::gameplay_speech::meaningful );
+    }
+}
+
+void before_player_input( map &here, const avatar &viewer )
+{
+    if( accessibility::take_suppressed_movement() ) {
+        accessibility::queue_gameplay_announcement( gameplay_focus_description( here, viewer ),
+                accessibility::gameplay_speech::routine );
+    }
+    accessibility::flush_gameplay_announcements();
 }
 
 void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &viewer,
                             const map &here )
 {
     if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
+        return;
+    }
+    if( viewer.is_auto_moving() ) {
+        // Per-step speech would flood auto-travel; the position is reported
+        // when the game next waits for the player.
+        accessibility::note_suppressed_movement();
         return;
     }
     const tripoint_bub_ms new_pos = viewer.pos_bub();

@@ -31,10 +31,12 @@ class nvda_backend final : public backend
 
         bool is_available() const override;
         bool announce( const std::string &message ) override;
+        void cancel() override;
 
     private:
         using test_if_running_fn = unsigned long( __stdcall * )();
         using speak_text_fn = unsigned long( __stdcall * )( const wchar_t * );
+        using cancel_speech_fn = unsigned long( __stdcall * )();
 
         bool is_default_desktop() const;
         bool probe() const;
@@ -49,6 +51,7 @@ class nvda_backend final : public backend
         HMODULE client = nullptr;
         test_if_running_fn test_if_running = nullptr;
         speak_text_fn speak_text = nullptr;
+        cancel_speech_fn cancel_speech = nullptr;
 };
 
 std::wstring controller_client_path()
@@ -88,11 +91,15 @@ nvda_backend::nvda_backend()
                           GetProcAddress( client, "nvdaController_testIfRunning" ) );
     speak_text = reinterpret_cast<speak_text_fn>(
                      GetProcAddress( client, "nvdaController_speakText" ) );
+    // Cancelling is optional; without it focus speech simply queues.
+    cancel_speech = reinterpret_cast<cancel_speech_fn>(
+                        GetProcAddress( client, "nvdaController_cancelSpeech" ) );
     if( test_if_running == nullptr || speak_text == nullptr ) {
         FreeLibrary( client );
         client = nullptr;
         test_if_running = nullptr;
         speak_text = nullptr;
+        cancel_speech = nullptr;
     }
 }
 
@@ -149,6 +156,13 @@ bool nvda_backend::announce( const std::string &message )
         return false;
     }
     return true;
+}
+
+void nvda_backend::cancel()
+{
+    if( cancel_speech != nullptr && is_available() ) {
+        cancel_speech();
+    }
 }
 
 #endif // _WIN32
