@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include "accessibility_format.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_pane.h"
 #include "cursesdef.h"
@@ -71,6 +72,8 @@ class advanced_inventory
         advanced_inventory_pane &get_pane( side side ) {
             return panes[side];
         }
+        /** Speak what changed since the previous announcement; called before each input. */
+        void announce_accessibility();
     private:
 
         static constexpr int head_height = 5;
@@ -222,6 +225,23 @@ class advanced_inventory
          */
         bool query_charges( aim_location destarea, const advanced_inv_listitem &sitem,
                             const std::string &action, int &amount );
+
+        // Screen reader speech; see the Stage 07 entry in ACCESS_DONE.md.
+        std::string accessibility_area_name( side p ) const;
+        std::string accessibility_destination_name( aim_location destarea,
+                const advanced_inventory_pane &dpane ) const;
+        accessibility::transfer_pane accessibility_pane( side p );
+        accessibility::transfer_row accessibility_row( side p ) const;
+        bool accessibility_opening = true;
+        int accessibility_last_src = -1;
+        int accessibility_last_index = -1;
+        bool accessibility_last_category_mode = false;
+        std::string accessibility_last_row;
+        std::string accessibility_last_category;
+        // Per pane, so switching panes does not report the other pane's settings as changes.
+        std::array<std::string, NUM_PANES> accessibility_last_area;
+        std::array<std::string, NUM_PANES> accessibility_last_filter;
+        std::array<int, NUM_PANES> accessibility_last_sort = { -1, -1 };
 };
 
 #endif // CATA_SRC_ADVANCED_INV_H

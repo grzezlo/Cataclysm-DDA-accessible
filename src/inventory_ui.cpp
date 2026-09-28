@@ -2911,6 +2911,7 @@ inventory_selector::inventory_selector( Character &u, const inventory_selector_p
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
     ctxt.register_action( "VIEW_CATEGORY_MODE" );
     ctxt.register_action( "TOGGLE_NUMPAD_NAVIGATION" );
     ctxt.register_action( "ANY_INPUT" ); // For invlets
@@ -3110,10 +3111,26 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     accessibility_context_spoken = true;
 }
 
+std::string inventory_selector::accessibility_status() const
+{
+    std::vector<std::string> parts;
+    parts.push_back( remove_color_tags( title ) );
+    if( display_stats ) {
+        for( const std::string &stat : get_stats() ) {
+            parts.push_back( remove_color_tags( stat ) );
+        }
+    }
+    if( !filter.empty() ) {
+        parts.push_back( string_format( _( "Filter: %s" ), filter ) );
+    }
+    return accessibility::format_semantic_sequence( parts );
+}
+
 bool inventory_selector::action_allows_invlet( const std::string &action )
 {
     // Accessibility shortcuts use Alt+letter; do not let the letter also pick an invlet.
-    return action != "ACCESSIBILITY_DETAILS" && action != "ACCESSIBILITY_REPEAT_LAST";
+    return action != "ACCESSIBILITY_DETAILS" && action != "ACCESSIBILITY_REPEAT_LAST" &&
+           action != "ACCESSIBILITY_STATUS";
 }
 
 inventory_input inventory_selector::process_input( const std::string &action, int ch )
@@ -3208,6 +3225,8 @@ void inventory_selector::on_input( const inventory_input &input )
             accessibility::announce( accessibility::format_inventory_focus(
                                          accessibility_entry( entry ), true, true ) );
         }
+    } else if( input.action == "ACCESSIBILITY_STATUS" ) {
+        accessibility::announce( accessibility_status() );
     } else if( input.action == "CATEGORY_SELECTION" ) {
         toggle_navigation_mode();
     } else if( input.action == "PREV_COLUMN" ) {
@@ -4158,7 +4177,58 @@ void inventory_multiselector::toggle_categorize_contained()
     }
 }
 
+std::string inventory_multiselector::accessibility_selection_state(
+    const inventory_entry &entry ) const
+{
+    return accessibility::format_inventory_selection_state( entry.chosen_count,
+            entry.get_available_count(), entry.is_selectable() );
+}
+
+size_t inventory_multiselector::accessibility_selected_entries() const
+{
+    // The selection column mirrors the marks but does not allow selecting, so count the sources.
+    size_t count = 0;
+    for( const inventory_column *col : get_all_columns() ) {
+        if( col != selection_col.get() ) {
+            count += col->get_entries( []( const inventory_entry & entry ) {
+                return entry.is_item() && entry.chosen_count > 0;
+            }, true ).size();
+        }
+    }
+    return count;
+}
+
+std::string inventory_multiselector::accessibility_status() const
+{
+    return accessibility::format_semantic_sequence( {
+        inventory_selector::accessibility_status(),
+        accessibility::format_inventory_selection_total(
+            accessibility_selected_entries() )
+    } );
+}
+
 void inventory_multiselector::on_input( const inventory_input &input )
+{
+    const std::vector<std::pair<item_location, int>> selection_before = to_use;
+    on_selection_input( input );
+    if( to_use != selection_before ) {
+        announce_accessibility_selection();
+    }
+}
+
+void inventory_multiselector::announce_accessibility_selection()
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const inventory_entry &entry = get_active_column().get_highlighted();
+    announce_accessibility_focus( true, accessibility::format_inventory_selection_change(
+                                      entry.is_item() ? remove_color_tags( preset.get_cell_text( entry, 0 ) ) : std::string(),
+                                      accessibility_selection_state( entry ),
+                                      accessibility_selected_entries() ) );
+}
+
+void inventory_multiselector::on_selection_input( const inventory_input &input )
 {
     if( input.entry != nullptr ) { // Single Item from mouse
         highlight( input.entry->any_item() );

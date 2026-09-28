@@ -7,6 +7,9 @@
 #include "accessibility.h"
 #include "accessibility_format.h"
 #include "accessibility_gameplay.h"
+#include "advanced_inv.h"
+#include "advanced_inv_area.h"
+#include "advanced_inv_pane.h"
 #include "avatar.h"
 #include "avatar_action.h"
 #include "calendar.h"
@@ -89,6 +92,43 @@ class capture_inventory_selector final : public inventory_pick_selector
             return action_allows_invlet( action );
         }
 };
+
+class capture_drop_selector final : public inventory_drop_selector
+{
+    public:
+        explicit capture_drop_selector( Character &u ) : inventory_drop_selector( u ) {}
+
+        void speak_focus() {
+            announce_accessibility_focus();
+        }
+
+        // Marking as the TOGGLE_ENTRY and count inputs do.
+        void select_focused( size_t count ) {
+            toggle_entry( get_active_column().get_highlighted(), count );
+            announce_accessibility_selection();
+        }
+
+        std::string status() const {
+            return accessibility_status();
+        }
+};
+
+// Pane areas as the advanced inventory tests set them.
+void set_transfer_panes( advanced_inventory &advinv, const std::string &source_action,
+                         aim_location source, const std::string &destination_action, aim_location destination )
+{
+    if( advinv.get_pane( advinv.get_src() ).get_area() != destination ) {
+        advinv.process_action( destination_action );
+        REQUIRE( advinv.get_pane( advinv.get_src() ).get_area() == destination );
+    }
+    advinv.process_action( "TOGGLE_TAB" );
+    if( advinv.get_pane( advinv.get_src() ).get_area() != source ) {
+        advinv.process_action( source_action );
+        REQUIRE( advinv.get_pane( advinv.get_src() ).get_area() == source );
+    }
+    advinv.recalc_pane( advanced_inventory::side::left );
+    advinv.recalc_pane( advanced_inventory::side::right );
+}
 
 } // namespace
 
@@ -1692,6 +1732,7 @@ TEST_CASE( "inventory_invlets_still_select_items_except_for_accessibility_shortc
     CHECK( capture_inventory_selector::invlet_allowed_for( "EXAMINE" ) );
     CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_DETAILS" ) );
     CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_REPEAT_LAST" ) );
+    CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_STATUS" ) );
 }
 
 TEST_CASE( "focus_speech_interrupts_once_per_key_and_gameplay_speech_queues",
@@ -1846,4 +1887,192 @@ TEST_CASE( "repeated_game_messages_need_a_new_key_press", "[accessibility][nogam
     CHECK( capture_ptr->messages[2] == "You miss the zombie. You miss the zombie." );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "transfer_and_selection_formatters_speak_semantic_state", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_inventory_selection_state( 0, 3, true ) == "Not selected" );
+    CHECK( accessibility::format_inventory_selection_state( 0, 3, false ).empty() );
+    CHECK( accessibility::format_inventory_selection_state( 2, 3, true ) == "Selected 2 of 3" );
+    CHECK( accessibility::format_inventory_selection_state( 3, 3, true ) == "Selected all 3" );
+    CHECK( accessibility::format_inventory_selection_state( 1, 1, true ) == "Selected" );
+    CHECK( accessibility::format_inventory_selection_change( "rock", "Selected 2 of 3", 1 ) ==
+           "rock. Selected 2 of 3. 1 entry selected." );
+    CHECK( accessibility::format_inventory_selection_total( 0 ) == "Nothing selected" );
+
+    accessibility::transfer_row row;
+    row.name = "rock";
+    row.count = 3;
+    row.weight = "1.50 kg";
+    row.volume = "0.75 L";
+    row.category = "OTHER";
+    row.source_area = "North";
+    row.not_owned = true;
+    row.auto_pickup = true;
+    CHECK( accessibility::format_transfer_row( row, false, false ) ==
+           "rock, 3. Not owned. 1.50 kg. 0.75 L." );
+    CHECK( accessibility::format_transfer_row( row, true, false ) ==
+           "OTHER. rock, 3. Not owned. 1.50 kg. 0.75 L." );
+    CHECK( accessibility::format_transfer_row( row, false, true ) ==
+           "OTHER. rock, 3. Not owned. 1.50 kg. 0.75 L. From: North. Auto pickup." );
+
+    accessibility::transfer_pane source;
+    source.area = "North, dirt";
+    source.item_count = 2;
+    source.capacity = "Weight 3.0 kg, volume 1.5 L of 1000 L";
+    source.filter = "rock";
+    source.sort = "none";
+    accessibility::transfer_pane destination;
+    destination.area = "Inventory";
+    destination.item_count = 1;
+    destination.capacity = "Weight 1.0 kg of 40.0 kg, volume 0.5 L of 20 L";
+    CHECK( accessibility::format_transfer_pane( source, true, false ) ==
+           "Source: North, dirt. 2 items." );
+    CHECK( accessibility::format_transfer_pane( destination, false, true ) ==
+           "Destination: Inventory. 1 item. Weight 1.0 kg of 40.0 kg, volume 0.5 L of 20 L." );
+    CHECK( accessibility::format_transfer_status( source, destination ) ==
+           "Source: North, dirt. 2 items. Weight 3.0 kg, volume 1.5 L of 1000 L. Filter: rock. "
+           "Sort: none. Destination: Inventory. 1 item. "
+           "Weight 1.0 kg of 40.0 kg, volume 0.5 L of 20 L." );
+
+    CHECK( accessibility::format_transfer_result( "rock", 1, 1, "North" ) ==
+           "Moved rock to North." );
+    CHECK( accessibility::format_transfer_result( "rocks", 3, 3, "North" ) ==
+           "Moved rocks, 3, to North." );
+    CHECK( accessibility::format_transfer_result( "rocks", 2, 3, "North" ) ==
+           "Moved 2 of 3 rocks to North." );
+    CHECK( accessibility::format_transfer_result( "", 4, 4, "Inventory" ) ==
+           "Moved 4 stacks to Inventory." );
+    CHECK( accessibility::format_transfer_result( "", 1, 4, "Inventory" ) ==
+           "Moved 1 of 4 stacks to Inventory." );
+}
+
+TEST_CASE( "multiselect_speaks_selection_state_totals_and_status", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    item_location rock;
+    for( int i = 0; i < 3; ++i ) {
+        rock = you.i_add( item( itype_id( "rock" ) ) );
+    }
+    REQUIRE( rock );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_drop_selector selector( you );
+    selector.set_title( "Drop" );
+    selector.add_character_items( you );
+    REQUIRE( selector.highlight_one_of( { rock } ) );
+    selector.speak_focus();
+    REQUIRE( !capture_ptr->messages.empty() );
+    CHECK( capture_ptr->messages.back().find( "Not selected" ) != std::string::npos );
+
+    const size_t before_mark = capture_ptr->messages.size();
+    selector.select_focused( 2 );
+    REQUIRE( capture_ptr->messages.size() == before_mark + 1 );
+    CHECK( capture_ptr->messages.back().find( "Selected 2 of 3. 1 entry selected" ) !=
+           std::string::npos );
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.size() == before_mark + 1 );
+
+    selector.select_focused( 3 );
+    CHECK( capture_ptr->messages.back().find( "Selected all 3" ) != std::string::npos );
+    CHECK( selector.status().find( "1 entry selected" ) != std::string::npos );
+
+    selector.select_focused( 0 );
+    CHECK( capture_ptr->messages.back().find( "Not selected. Nothing selected" ) !=
+           std::string::npos );
+    CHECK( selector.status().find( "Drop" ) == 0 );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( capture_ptr->messages.back() == capture_ptr->messages[capture_ptr->messages.size() - 2] );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    map &here = get_map();
+    const tripoint_bub_ms position = you.pos_bub();
+    here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
+    here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    advanced_inventory advinv;
+    advinv.init();
+    set_transfer_panes( advinv, "ITEMS_CE", AIM_CENTER, "ITEMS_INVENTORY", AIM_INVENTORY );
+    const advanced_inventory_pane &ground = advinv.get_pane( advinv.get_src() );
+    REQUIRE( ground.items.size() == 2 );
+
+    advinv.announce_accessibility();
+    REQUIRE( !capture_ptr->messages.empty() );
+    const std::string opening = capture_ptr->messages.back();
+    CHECK( opening.find( "Advanced inventory. Source: Directly below you" ) == 0 );
+    CHECK( opening.find( "2 items" ) != std::string::npos );
+    CHECK( opening.find( "Destination: Inventory" ) != std::string::npos );
+    CHECK( opening.find( ground.items.front().items.front()->display_name() ) != std::string::npos );
+    const size_t after_open = capture_ptr->messages.size();
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.size() == after_open );
+
+    advinv.process_action( "DOWN" );
+    advinv.announce_accessibility();
+    REQUIRE( capture_ptr->messages.size() == after_open + 1 );
+    const item &second = *ground.items[1].items.front();
+    const std::string second_name = second.display_name();
+    CHECK( capture_ptr->messages.back().find( "Source:" ) == std::string::npos );
+    CHECK( capture_ptr->messages.back().find( second_name ) == 0 );
+
+    advinv.process_action( "ACCESSIBILITY_DETAILS" );
+    CHECK( capture_ptr->messages.back().find( second.get_category_of_contents().name_header() ) ==
+           0 );
+    advinv.process_action( "ACCESSIBILITY_STATUS" );
+    CHECK( capture_ptr->messages.back().find( "Source: Directly below you" ) == 0 );
+    CHECK( capture_ptr->messages.back().find( "Destination: Inventory" ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "Weight" ) != std::string::npos );
+    const size_t after_status = capture_ptr->messages.size();
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.size() == after_status );
+
+    // Switching panes names the new source once, without its capacity.
+    advinv.process_action( "TOGGLE_TAB" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( "Source: Inventory" ) == 0 );
+    CHECK( capture_ptr->messages.back().find( "Weight" ) == std::string::npos );
+    advinv.process_action( "TOGGLE_TAB" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( "Source: Directly below you" ) == 0 );
+
+    advinv.process_action( "MOVE_SINGLE_ITEM" );
+    process_activity( you );
+    advinv.recalc_pane( advanced_inventory::side::left );
+    advinv.recalc_pane( advanced_inventory::side::right );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( "Moved " ) == 0 );
+    CHECK( capture_ptr->messages.back().find( "to Inventory." ) != std::string::npos );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "screen_status_binding_reaches_transfer_screens", "[accessibility]" )
+{
+    const input_event alt_s( { keymod_t::alt }, 's', input_event_t::keyboard_code );
+    for( const std::string category : {
+             "ADVANCED_INVENTORY", "INVENTORY"
+         } ) {
+        input_context ctxt( category, keyboard_mode::keycode );
+        ctxt.register_action( "ACCESSIBILITY_STATUS" );
+        CHECK( ctxt.input_to_action( alt_s ) == "ACCESSIBILITY_STATUS" );
+    }
 }

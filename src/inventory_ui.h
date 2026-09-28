@@ -924,6 +924,8 @@ class inventory_selector
         virtual std::string accessibility_selection_state( const inventory_entry & ) const {
             return {};
         }
+        /** Purpose, carrying statistics, and filter, spoken on request. */
+        virtual std::string accessibility_status() const;
 
         const navigation_mode_data &get_navigation_data( navigation_mode m ) const;
 
@@ -1045,9 +1047,14 @@ class inventory_multiselector : public inventory_selector
         bool allow_select_contained;
         virtual void on_toggle() {};
         void on_input( const inventory_input &input );
+        void on_selection_input( const inventory_input &input );
+        void announce_accessibility_selection();
+        size_t accessibility_selected_entries() const;
         int count = 0;
         stats get_raw_stats() const override;
         void toggle_categorize_contained();
+        std::string accessibility_selection_state( const inventory_entry &entry ) const override;
+        std::string accessibility_status() const override;
     private:
         std::unique_ptr<inventory_column> selection_col;
         GetStats get_stats;

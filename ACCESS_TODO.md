@@ -51,6 +51,21 @@ automated tests are implemented, `test_access.bat` passes, and
   `inventory_multiselector::toggle_entries()` manage selection marks
   (`'-'`, `'+'`, `'#'` formatted in `selection_column::print_cell()`).
 
+**Selected interaction (option A, concise focus with transfer status on demand):**
+
+- Up/Down and paging speak the focused row: name, count, weight, volume;
+  category only when it changes.  `Alt+D` reads the full row.
+- Tab, Left, and Right speak the new source pane once, for example "Source:
+  inventory, 12 items", then the focused row; the other pane is not reread.
+- Area changes speak the area and its free volume and weight, or the refusal.
+- `Alt+S` (`accessibility_status`) speaks one sentence: source and destination
+  areas, their capacity, filter, sort, and in multiselect the selection
+  summary.
+- A completed transfer speaks one result sentence naming the amount, item, and
+  destination.  Failures rely on the existing popups.
+- Multiselect focus adds the selection state ("selected 3 of 5", "not
+  selected"); toggling speaks the change and the total selected count.
+
 **Success criteria:** Speech identifies source/destination pane, area, category,
 selection, marks, quantity, weight/volume capacity, destination validity, and
 transfer result.  Pane/area switching, filtering, paging, bulk selection, and

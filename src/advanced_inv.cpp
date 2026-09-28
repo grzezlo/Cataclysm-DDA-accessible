@@ -18,6 +18,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
 #include "activity_actor_definitions.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_listitem.h"
@@ -117,6 +118,58 @@ std::string enum_to_string<aim_entry>( const aim_entry v )
 namespace
 {
 std::unique_ptr<advanced_inventory> advinv;
+
+// A transfer handed to an activity; its result is spoken when the screen returns.
+struct accessibility_transfer {
+    std::vector<item_location> items;
+    // Charges before the move for items counted by charges, otherwise 0.
+    std::vector<int> charges;
+    int requested = 0;
+    std::string item_name;
+    std::string destination;
+};
+std::optional<accessibility_transfer> pending_accessibility_transfer;
+
+void note_accessibility_transfer( const std::vector<item_location> &items, const int requested,
+                                  const std::string &item_name, const std::string &destination )
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    accessibility_transfer transfer;
+    transfer.items = items;
+    for( const item_location &loc : items ) {
+        transfer.charges.push_back( loc->count_by_charges() ? loc->charges : 0 );
+    }
+    transfer.requested = requested;
+    transfer.item_name = item_name;
+    transfer.destination = destination;
+    pending_accessibility_transfer = transfer;
+}
+
+std::string take_accessibility_transfer_result()
+{
+    if( !pending_accessibility_transfer ) {
+        return {};
+    }
+    const accessibility_transfer transfer = *pending_accessibility_transfer;
+    pending_accessibility_transfer.reset();
+    int moved = 0;
+    for( size_t i = 0; i < transfer.items.size(); ++i ) {
+        const item_location &loc = transfer.items[i];
+        if( !loc ) {
+            moved += transfer.item_name.empty() || transfer.charges[i] == 0 ? 1 : transfer.charges[i];
+        } else if( !transfer.item_name.empty() && transfer.charges[i] > 0 ) {
+            moved += std::max( 0, transfer.charges[i] - loc->charges );
+        }
+    }
+    // A location that is still valid does not prove the move failed, so stay silent.
+    if( moved == 0 ) {
+        return {};
+    }
+    return accessibility::format_transfer_result( transfer.item_name, moved, transfer.requested,
+            transfer.destination );
+}
 } // namespace
 
 void create_advanced_inv()
@@ -1188,6 +1241,15 @@ bool advanced_inventory::move_all_items()
         return false;
     }
 
+    if( accessibility::is_active() ) {
+        std::vector<item_location> moving;
+        for( const drop_or_stash_item_info &drop : pane_items ) {
+            moving.push_back( drop.loc() );
+        }
+        note_accessibility_transfer( moving, static_cast<int>( moving.size() ), std::string(),
+                                     accessibility_destination_name( dpane.get_area(), dpane ) );
+    }
+
     if( dpane.get_area() == AIM_CONTAINER ) {
         if( dpane.container ) {
             drop_locations items_to_insert;
@@ -1326,6 +1388,9 @@ input_context advanced_inventory::register_ctxt() const
 
     ctxt.register_action( "ITEMS_DEFAULT" );
     ctxt.register_action( "SAVE_DEFAULT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     return ctxt;
 }
@@ -1682,6 +1747,15 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
     // but are potentially at a different place).
     recalc = true;
     cata_assert( amount_to_move > 0 );
+    if( accessibility::is_active() ) {
+        const bool by_charges = sitem->items.front()->count_by_charges();
+        const std::vector<item_location> moving( sitem->items.begin(), by_charges ?
+                sitem->items.begin() + 1 : sitem->items.begin() + std::min<size_t>( amount_to_move,
+                        sitem->items.size() ) );
+        note_accessibility_transfer( moving, amount_to_move,
+                                     remove_color_tags( sitem->items.front()->tname( amount_to_move ) ),
+                                     accessibility_destination_name( destarea, dpane ) );
+    }
 
     if( srcarea == AIM_CONTAINER && destarea == AIM_INVENTORY &&
         spane.container.held_by( player_character ) ) {
@@ -1856,7 +1930,17 @@ void advanced_inventory::process_action( const std::string &input_action )
     avatar &u = get_avatar();
 
     const std::string &action = is_processing() ? "MOVE_ALL_ITEMS" : input_action;
-    if( action == "CATEGORY_SELECTION" ) {
+    if( action == "ACCESSIBILITY_DETAILS" ) {
+        if( sitem != nullptr ) {
+            accessibility::announce( accessibility::format_transfer_row( accessibility_row( src ), true,
+                                     true ) );
+        }
+    } else if( action == "ACCESSIBILITY_STATUS" ) {
+        accessibility::announce( accessibility::format_transfer_status( accessibility_pane( src ),
+                                 accessibility_pane( dest ) ) );
+    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+    } else if( action == "CATEGORY_SELECTION" ) {
         inCategoryMode = !inCategoryMode;
     } else if( action == "ITEMS_DEFAULT" ) {
         for( side cside : {
@@ -2105,6 +2189,9 @@ void advanced_inventory::display()
 
         if( !is_processing() && move_all_items_and_waiting_to_quit ) {
             break;
+        }
+        if( ui && !is_processing() && accessibility::is_active() ) {
+            announce_accessibility();
         }
 
         process_action( ctxt.handle_input() );
@@ -2478,4 +2565,202 @@ void cancel_aim_processing()
     uistate.transfer_save.re_enter_move_all = aim_entry::START;
     uistate.transfer_save.aim_all_location = AIM_AROUND_BEGIN;
     uistate.transfer_save.exit_code = aim_exit::none;
+}
+
+std::string advanced_inventory::accessibility_area_name( const side p ) const
+{
+    const advanced_inventory_pane &pane = panes[p];
+    if( pane.get_area() == AIM_CONTAINER && pane.container ) {
+        return string_format( _( "Container: %s" ), remove_color_tags( pane.container->tname() ) );
+    }
+    // Mirrors the pane header in redraw_pane().
+    const advanced_inv_area &square = squares[pane.get_area()];
+    const bool same_as_dragged = square.id >= AIM_SOUTHWEST && square.id <= AIM_NORTHEAST &&
+                                 square.id != AIM_CENTER && pane.in_vehicle() &&
+                                 square.off == squares[AIM_DRAGGED].off;
+    const advanced_inv_area &sq = same_as_dragged ? squares[AIM_DRAGGED] : square;
+    const bool car = square.can_store_in_vehicle() && pane.in_vehicle() && sq.id != AIM_DRAGGED;
+    std::vector<std::string> parts;
+    for( const std::string &part : {
+             square.name, car ? sq.veh->name : std::string(), sq.desc[car ? 1 : 0],
+             remove_color_tags( square.flags )
+         } ) {
+        if( !part.empty() && std::find( parts.begin(), parts.end(), part ) == parts.end() ) {
+            parts.push_back( part );
+        }
+    }
+    return enumerate_as_string( parts, enumeration_conjunction::none );
+}
+
+std::string advanced_inventory::accessibility_destination_name( const aim_location destarea,
+        const advanced_inventory_pane &dpane ) const
+{
+    if( destarea == AIM_WIELD ) {
+        return _( "your hands" );
+    }
+    if( destarea == AIM_CONTAINER && dpane.container ) {
+        return remove_color_tags( dpane.container->tname() );
+    }
+    const advanced_inv_area &square = squares[destarea];
+    if( dpane.in_vehicle() && square.veh != nullptr ) {
+        return string_format( _( "%1$s, %2$s" ), square.name, square.veh->name );
+    }
+    return square.name;
+}
+
+accessibility::transfer_pane advanced_inventory::accessibility_pane( const side p )
+{
+    const advanced_inventory_pane &pane = panes[p];
+    accessibility::transfer_pane result;
+    result.area = accessibility_area_name( p );
+    result.item_count = pane.items.size();
+    result.filter = pane.get_filter();
+    result.sort = get_sortname( pane.sortby );
+
+    const auto weight = []( const units::mass & value ) {
+        return string_format( "%.1f %s", convert_weight( value ), weight_units() );
+    };
+    const auto volume = []( const units::volume & value ) {
+        return string_format( "%s %s", format_volume( value ), volume_units_abbr() );
+    };
+    // Mirrors the capacity header in print_items().
+    if( pane.get_area() == AIM_INVENTORY || pane.get_area() == AIM_WORN ||
+        ( pane.get_area() == AIM_CONTAINER && pane.container ) ) {
+        const Character &player_character = get_player_character();
+        const bool container = pane.get_area() == AIM_CONTAINER;
+        result.capacity = string_format( _( "Weight %1$s of %2$s, volume %3$s of %4$s" ),
+                                         weight( container ? pane.container->get_total_contained_weight() :
+                                                 player_character.weight_carried() ),
+                                         weight( container ? pane.container->get_total_weight_capacity() :
+                                                 player_character.weight_capacity() ),
+                                         volume( container ? pane.container->get_total_contained_volume() :
+                                                 player_character.volume_carried() ),
+                                         volume( container ? pane.container->get_total_capacity() :
+                                                 player_character.volume_capacity() ) );
+    } else if( pane.get_area() == AIM_ALL ) {
+        const advanced_inv_area &s = squares[AIM_ALL];
+        result.capacity = string_format( _( "Weight %1$s, volume %2$s" ), weight( s.weight ),
+                                         volume( s.volume ) );
+    } else {
+        const advanced_inv_area &s = squares[pane.get_area()];
+        const units::volume maxvolume = pane.get_area() == AIM_CONTAINER ? 0_ml :
+                                        pane.in_vehicle() ? s.get_vehicle_stack().max_volume() :
+                                        get_map().max_volume( s.pos );
+        result.capacity = string_format( _( "Weight %1$s, volume %2$s of %3$s" ),
+                                         weight( pane.in_vehicle() ? s.weight_veh : s.weight ),
+                                         volume( pane.in_vehicle() ? s.volume_veh : s.volume ), volume( maxvolume ) );
+        if( s.max_size > 0 ) {
+            result.capacity = accessibility::format_semantic_sequence( {
+                result.capacity,
+                string_format( _( "Item limit %1$d of %2$d" ), s.get_item_count(), s.max_size )
+            } );
+        }
+    }
+    return result;
+}
+
+accessibility::transfer_row advanced_inventory::accessibility_row( const side p ) const
+{
+    const advanced_inventory_pane &pane = panes[p];
+    accessibility::transfer_row row;
+    if( pane.index < 0 || pane.index >= static_cast<int>( pane.items.size() ) ) {
+        row.name = pane.get_filter().empty() ? _( "No items" ) : _( "No matching items" );
+        return row;
+    }
+    // Mirrors the item row in print_items().
+    const advanced_inv_listitem &sitem = pane.items[pane.index];
+    const item &it = *sitem.items.front();
+    if( it.is_money() ) {
+        unsigned int charges_total = 0;
+        for( const item_location &loc : sitem.items ) {
+            charges_total += loc->ammo_remaining();
+        }
+        row.name = remove_color_tags( it.display_money( sitem.items.size(), charges_total ) );
+    } else {
+        row.name = remove_color_tags( it.display_name() );
+    }
+    row.count = sitem.stacks;
+    row.weight = string_format( "%.2f %s", convert_weight( sitem.weight ), weight_units() );
+    row.volume = string_format( "%s %s", format_volume( sitem.volume ), volume_units_abbr() );
+    row.category = sitem.cat != nullptr ? sitem.cat->name_header() : std::string();
+    if( pane.get_area() == AIM_ALL ) {
+        row.source_area = squares[sitem.area].name;
+    }
+    row.not_owned = !it.is_owned_by( get_player_character(), true );
+    row.auto_pickup = sitem.autopickup;
+    item_location other_container = panes[p == left ? right : left].container;
+    while( other_container ) {
+        if( other_container.get_item() == &it ) {
+            row.open_in_other_pane = true;
+            break;
+        }
+        if( !other_container.has_parent() ) {
+            break;
+        }
+        other_container = other_container.parent_item();
+    }
+    return row;
+}
+
+void advanced_inventory::announce_accessibility()
+{
+    const std::string result = take_accessibility_transfer_result();
+    advanced_inventory_pane &spane = panes[src];
+    const accessibility::transfer_row row = accessibility_row( src );
+    const std::string row_text = accessibility::format_transfer_row( row, false, false );
+    const std::string area = accessibility_area_name( src );
+    const bool src_changed = accessibility_last_src != src;
+    const bool area_changed = area != accessibility_last_area[src];
+    const bool filter_changed = spane.get_filter() != accessibility_last_filter[src];
+    const bool sort_changed = spane.sortby != accessibility_last_sort[src];
+    const bool mode_changed = inCategoryMode != accessibility_last_category_mode;
+    const bool row_changed = row_text != accessibility_last_row ||
+                             spane.index != accessibility_last_index;
+    if( !accessibility_opening && result.empty() && !src_changed && !area_changed &&
+        !filter_changed && !sort_changed && !mode_changed && !row_changed ) {
+        return;
+    }
+
+    std::vector<std::string> parts;
+    parts.push_back( result );
+    if( accessibility_opening ) {
+        parts.emplace_back( _( "Advanced inventory" ) );
+        parts.push_back( accessibility::format_transfer_pane( accessibility_pane( src ), true, true ) );
+        parts.push_back( accessibility::format_transfer_pane( accessibility_pane( dest ), false,
+                         false ) );
+    } else {
+        if( src_changed || area_changed ) {
+            parts.push_back( accessibility::format_transfer_pane( accessibility_pane( src ), true,
+                             area_changed ) );
+        }
+        if( filter_changed && !area_changed ) {
+            parts.push_back( accessibility::format_inventory_filter( spane.get_filter(),
+                             spane.items.size() ) );
+        }
+        if( sort_changed && !area_changed ) {
+            parts.push_back( string_format( _( "Sort: %s" ), get_sortname( spane.sortby ) ) );
+        }
+        if( mode_changed ) {
+            parts.emplace_back( inCategoryMode ? _( "Category navigation" ) : _( "Item navigation" ) );
+        }
+    }
+    const bool include_category = spane.sortby == SORTBY_CATEGORY &&
+                                  ( accessibility_opening || src_changed || area_changed ||
+                                    row.category != accessibility_last_category );
+    parts.push_back( accessibility::format_transfer_row( row, include_category, false ) );
+    accessibility::announce( accessibility::format_semantic_sequence( parts ) );
+
+    accessibility_opening = false;
+    accessibility_last_src = src;
+    accessibility_last_index = spane.index;
+    accessibility_last_category_mode = inCategoryMode;
+    accessibility_last_row = row_text;
+    accessibility_last_category = row.category;
+    for( const side p : {
+             left, right
+         } ) {
+        accessibility_last_area[p] = accessibility_area_name( p );
+        accessibility_last_filter[p] = panes[p].get_filter();
+        accessibility_last_sort[p] = panes[p].sortby;
+    }
 }

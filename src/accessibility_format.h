@@ -201,8 +201,39 @@ struct inventory_focus_entry {
 std::string format_inventory_focus( const inventory_focus_entry &entry, bool include_context,
                                     bool include_all_cells );
 std::string format_inventory_filter( const std::string &query, size_t result_count );
+/** Selection state of a multiselect row; empty when the row cannot be selected. */
+std::string format_inventory_selection_state( size_t chosen, size_t available, bool selectable );
+std::string format_inventory_selection_total( size_t selected_entries );
+std::string format_inventory_selection_change( const std::string &caption,
+        const std::string &state, size_t selected_entries );
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second );
+/** Semantic row of a two-pane item transfer screen. */
+struct transfer_row {
+    std::string name;
+    int count = 1;
+    std::string weight;
+    std::string volume;
+    std::string category;
+    std::string source_area;
+    bool not_owned = false;
+    bool auto_pickup = false;
+    bool open_in_other_pane = false;
+};
+std::string format_transfer_row( const transfer_row &row, bool include_category, bool detailed );
+/** Semantic pane of a two-pane item transfer screen. */
+struct transfer_pane {
+    std::string area;
+    size_t item_count = 0;
+    std::string capacity;
+    std::string filter;
+    std::string sort;
+};
+std::string format_transfer_pane( const transfer_pane &pane, bool source, bool include_capacity );
+std::string format_transfer_status( const transfer_pane &source, const transfer_pane &destination );
+/** An empty item name describes a bulk transfer counted in stacks. */
+std::string format_transfer_result( const std::string &item_name, int moved, int requested,
+                                    const std::string &destination );
 enum class inventory_comparison_relation {
     first_better,
     second_better,

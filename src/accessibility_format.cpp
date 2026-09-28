@@ -940,6 +940,121 @@ std::string format_inventory_filter( const std::string &query, const size_t resu
     } );
 }
 
+std::string format_inventory_selection_state( const size_t chosen, const size_t available,
+        const bool selectable )
+{
+    if( chosen == 0 ) {
+        return selectable ? _( "Not selected" ) : std::string();
+    }
+    if( available <= 1 ) {
+        return _( "Selected" );
+    }
+    if( chosen >= available ) {
+        return string_format( _( "Selected all %d" ), static_cast<int>( available ) );
+    }
+    return string_format( _( "Selected %1$d of %2$d" ), static_cast<int>( chosen ),
+                          static_cast<int>( available ) );
+}
+
+std::string format_inventory_selection_total( const size_t selected_entries )
+{
+    if( selected_entries == 0 ) {
+        return _( "Nothing selected" );
+    }
+    return string_format( n_gettext( "%d entry selected", "%d entries selected",
+                                     selected_entries ), static_cast<int>( selected_entries ) );
+}
+
+std::string format_inventory_selection_change( const std::string &caption,
+        const std::string &state, const size_t selected_entries )
+{
+    return format_semantic_sequence( {
+        caption, state, format_inventory_selection_total( selected_entries )
+    } );
+}
+
+std::string format_transfer_row( const transfer_row &row, const bool include_category,
+                                 const bool detailed )
+{
+    std::vector<std::string> parts;
+    if( ( include_category || detailed ) && !row.category.empty() ) {
+        parts.push_back( row.category );
+    }
+    parts.push_back( row.count > 1 ? string_format( _( "%1$s, %2$d" ), row.name, row.count ) :
+                     row.name );
+    if( row.not_owned ) {
+        parts.push_back( _( "Not owned" ) );
+    }
+    parts.push_back( row.weight );
+    parts.push_back( row.volume );
+    if( detailed ) {
+        if( !row.source_area.empty() ) {
+            parts.push_back( string_format( _( "From: %s" ), row.source_area ) );
+        }
+        if( row.auto_pickup ) {
+            parts.push_back( _( "Auto pickup" ) );
+        }
+        if( row.open_in_other_pane ) {
+            parts.push_back( _( "Open in the other pane" ) );
+        }
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_transfer_pane( const transfer_pane &pane, const bool source,
+                                  const bool include_capacity )
+{
+    std::vector<std::string> parts;
+    parts.push_back( string_format( source ? _( "Source: %s" ) : _( "Destination: %s" ),
+                                    pane.area ) );
+    parts.push_back( string_format( n_gettext( "%d item", "%d items", pane.item_count ),
+                                    static_cast<int>( pane.item_count ) ) );
+    if( include_capacity ) {
+        parts.push_back( pane.capacity );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_transfer_status( const transfer_pane &source,
+                                    const transfer_pane &destination )
+{
+    std::vector<std::string> parts;
+    for( const transfer_pane *pane : {
+             &source, &destination
+         } ) {
+        parts.push_back( format_transfer_pane( *pane, pane == &source, true ) );
+        if( !pane->filter.empty() ) {
+            parts.push_back( string_format( _( "Filter: %s" ), pane->filter ) );
+        }
+        if( !pane->sort.empty() ) {
+            parts.push_back( string_format( _( "Sort: %s" ), pane->sort ) );
+        }
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_transfer_result( const std::string &item_name, const int moved,
+                                    const int requested, const std::string &destination )
+{
+    if( item_name.empty() ) {
+        if( moved >= requested ) {
+            return string_format( n_gettext( "Moved %1$d stack to %2$s.", "Moved %1$d stacks to %2$s.",
+                                             moved ), moved, destination );
+        }
+        return string_format( n_gettext( "Moved %1$d of %2$d stack to %3$s.",
+                                         "Moved %1$d of %2$d stacks to %3$s.", requested ),
+                              moved, requested, destination );
+    }
+    if( moved >= requested && requested == 1 ) {
+        return string_format( _( "Moved %1$s to %2$s." ), item_name, destination );
+    }
+    if( moved >= requested ) {
+        return string_format( _( "Moved %1$s, %2$d, to %3$s." ), item_name, moved, destination );
+    }
+    return string_format( _( "Moved %1$d of %2$d %3$s to %4$s." ), moved, requested, item_name,
+                          destination );
+}
+
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second )
 {
