@@ -14,8 +14,11 @@ class Creature;
 class avatar;
 class map;
 class map_item_stack;
+class uilist;
+struct item_info_data;
 struct visibility_variables;
 enum class content_newness;
+enum class hint_rating;
 enum class list_item_sort_mode : int;
 
 // Gameplay-facing accessibility views and semantic descriptions.  game.cpp
@@ -58,6 +61,14 @@ accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
 accessibility::nearby_list_entry nearby_creature_entry( const map &here, const avatar &viewer,
         const Creature &creature, int result_index, int result_count, bool player_knows );
 std::string nearby_item_sort_change( list_item_sort_mode mode );
+
+accessibility::item_action_availability item_action_availability( hint_rating rating );
+/**
+ * Name the item when its action menu opens and let the details action read the
+ * complete item information.  `info` must outlive the menu query.
+ */
+void describe_item_action_menu( uilist &menu, const std::string &item_name,
+                                const item_info_data &info );
 
 } // namespace accessibility_gameplay
 

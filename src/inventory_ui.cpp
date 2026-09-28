@@ -3056,13 +3056,16 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
 
     std::vector<std::string> context;
     if( accessibility_opening ) {
-        context.push_back( remove_color_tags( title ) );
-        if( !hint.empty() ) {
-            context.push_back( remove_color_tags( hint ) );
-        }
-        if( display_stats ) {
-            for( const std::string &stat : get_stats() ) {
-                context.push_back( remove_color_tags( stat ) );
+        // Reopening after an item action returns to the same list; speak only the focus.
+        if( !accessibility_context_spoken ) {
+            context.push_back( remove_color_tags( title ) );
+            if( !hint.empty() ) {
+                context.push_back( accessibility::format_visual_hint( remove_color_tags( hint ) ) );
+            }
+            if( display_stats ) {
+                for( const std::string &stat : get_stats() ) {
+                    context.push_back( remove_color_tags( stat ) );
+                }
             }
         }
     } else {
@@ -3082,7 +3085,8 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
             }
         }
     }
-    if( ( accessibility_opening || column_changed ) && columns.size() > 1 ) {
+    if( ( ( accessibility_opening && !accessibility_context_spoken ) || column_changed ) &&
+        columns.size() > 1 ) {
         if( &get_active_column() == &own_inv_column ) {
             context.push_back( _( "Inventory items" ) );
         } else if( &get_active_column() == &own_gear_column ) {
@@ -3103,6 +3107,7 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     accessibility_last_mode = mode;
     accessibility_last_uimode = _uimode;
     accessibility_opening = false;
+    accessibility_context_spoken = true;
 }
 
 bool inventory_selector::action_allows_invlet( const std::string &action )

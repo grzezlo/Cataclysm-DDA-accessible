@@ -80,6 +80,11 @@ class capture_inventory_selector final : public inventory_pick_selector
             announce_accessibility_focus();
         }
 
+        // Opening the selector again, as the inventory does after an item action.
+        void reopen() {
+            create_or_get_ui_adaptor();
+        }
+
         static bool invlet_allowed_for( const std::string &action ) {
             return action_allows_invlet( action );
         }
@@ -1491,6 +1496,88 @@ TEST_CASE( "inventory_selector_names_column_and_focus_when_source_changes", "[ac
     selector.speak_focus();
     CHECK( capture_ptr->messages.back().find( "Nearby items" ) != std::string::npos );
     CHECK( capture_ptr->messages.back().find( ground->tname() ) != std::string::npos );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "item_action_menu_speaks_state_shown_only_by_color", "[accessibility][nogame]" )
+{
+    using accessibility::item_action_availability;
+    CHECK( accessibility_gameplay::item_action_availability( hint_rating::good ) ==
+           item_action_availability::available );
+    CHECK( accessibility_gameplay::item_action_availability( hint_rating::iffy ) ==
+           item_action_availability::not_now );
+    CHECK( accessibility_gameplay::item_action_availability( hint_rating::cant ) ==
+           item_action_availability::not_applicable );
+
+    CHECK( accessibility::format_uilist_focus( "wield", "", false,
+            accessibility::format_item_action_availability( item_action_availability::available ) ) ==
+           "wield." );
+    CHECK( accessibility::format_uilist_focus( "wear", "", false,
+            accessibility::format_item_action_availability( item_action_availability::not_now ) ) ==
+           "wear. Not possible now." );
+    CHECK( accessibility::format_uilist_focus( "read", "", false,
+            accessibility::format_item_action_availability(
+                item_action_availability::not_applicable ) ) == "read. Not applicable." );
+    CHECK( accessibility::format_uilist_focus( "Auto pickup", "", false,
+            accessibility::format_auto_pickup_rule_state( true ) ) == "Auto pickup. Rule set." );
+    CHECK( accessibility::format_uilist_focus( "Auto pickup", "", false,
+            accessibility::format_auto_pickup_rule_state( false ) ) == "Auto pickup. No rule." );
+
+    const std::string open = accessibility::format_uilist_open(
+                                 accessibility::format_item_action_menu_context( "combat knife" ),
+                                 "activate.", "Alt+d", true );
+    CHECK( open ==
+           "Actions for combat knife. List. Use arrow keys to choose. Alt+d for details. activate." );
+}
+
+TEST_CASE( "visual_hints_speak_fields_without_separator_symbols", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_visual_hint(
+               "Food: Full \xe2\x94\x82 Drink: Thirsty \xe2\x94\x82 \nConsumed today (kcal): moderate " ) ==
+           "Food: Full. Drink: Thirsty. Consumed today (kcal): moderate." );
+    CHECK( accessibility::format_visual_hint( "Item hotkeys assigned: 3/52" ) ==
+           "Item hotkeys assigned: 3/52." );
+    CHECK( accessibility::format_visual_hint( "" ).empty() );
+}
+
+TEST_CASE( "inventory_selector_reopened_after_item_action_speaks_only_focus",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    const item_location held = you.i_add( item( itype_id( "hammer" ) ) );
+    REQUIRE( held );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_inventory_selector selector( you );
+    selector.set_title( "Inventory" );
+    selector.set_hint( "Food: Full \xe2\x94\x82 Drink: Thirsty" );
+    selector.add_character_items( you );
+    REQUIRE( selector.highlight_one_of( { held } ) );
+    selector.speak_focus();
+    REQUIRE_FALSE( capture_ptr->messages.empty() );
+    const std::string first = capture_ptr->messages.back();
+    CHECK( first.find( "Inventory. Food: Full. Drink: Thirsty." ) == 0 );
+    CHECK( first.find( "\xe2\x94\x82" ) == std::string::npos );
+    CHECK( first.find( held->tname() ) != std::string::npos );
+
+    selector.reopen();
+    selector.speak_focus();
+    const std::string reopened = capture_ptr->messages.back();
+    CHECK( reopened.find( "Inventory" ) == std::string::npos );
+    CHECK( reopened.find( "Food" ) == std::string::npos );
+    CHECK( reopened.find( held->tname() ) != std::string::npos );
+
+    // A new purpose is announced again.
+    selector.set_title( "Wield item" );
+    selector.reopen();
+    selector.speak_focus();
+    CHECK( capture_ptr->messages.back().find( "Wield item" ) == 0 );
 
     accessibility::reset_backend_after_testing();
 }

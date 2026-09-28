@@ -34,6 +34,7 @@
 #include "string_formatter.h"
 #include "translations.h"
 #include "trap.h"
+#include "ui_iteminfo.h"
 #include "uilist.h"
 #include "veh_type.h"
 #include "vehicle.h"
@@ -866,6 +867,33 @@ std::string nearby_item_sort_change( const list_item_sort_mode mode )
             return _( "Sorted by category and name" );
     }
     return {};
+}
+
+accessibility::item_action_availability item_action_availability( const hint_rating rating )
+{
+    switch( rating ) {
+        case hint_rating::good:
+            break;
+        case hint_rating::iffy:
+            return accessibility::item_action_availability::not_now;
+        case hint_rating::cant:
+            return accessibility::item_action_availability::not_applicable;
+    }
+    return accessibility::item_action_availability::available;
+}
+
+void describe_item_action_menu( uilist &menu, const std::string &item_name,
+                                const item_info_data &info )
+{
+    menu.accessibility_context = accessibility::format_item_action_menu_context(
+                                     remove_color_tags( item_name ) );
+    menu.accessibility_details = [&info]() {
+        item_info_data document = info;
+        document.without_getch = false;
+        document.handle_scrolling = true;
+        iteminfo_window window( document, point( -1, -1 ), TERMX / 2, TERMY );
+        window.execute();
+    };
 }
 
 } // namespace accessibility_gameplay

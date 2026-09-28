@@ -487,6 +487,8 @@ void uilist::init()
     started = false;       // set to true when width and key calculations are done, and window is generated.
     desc_enabled = false;  // don't show option description by default
     footer_text.clear();   // takes precedence over per-entry descriptions.
+    accessibility_context.clear();
+    accessibility_details = nullptr;
     border_color = c_magenta; // border color
     text_color = c_light_gray;  // text color
     title_color = c_green;  // title color
@@ -1017,15 +1019,18 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         if( selected_valid ) {
             semantic_selection = accessibility::format_uilist_focus(
                                      entries[selected]._txt_nocolor(),
-                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled );
+                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
+                                     entries[selected].accessibility_state );
         } else {
             semantic_selection = _( "No matching entries" );
         }
         const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
         if( !accessibility_open ) {
-            const std::string semantic_context = remove_color_tags( !title.empty() ? title : text );
-            const bool any_details = visible_entry_details &&
-                                     std::any_of( entries.begin(), entries.end(), has_entry_details );
+            const std::string semantic_context = !accessibility_context.empty() ? accessibility_context :
+                                                 remove_color_tags( !title.empty() ? title : text );
+            const bool any_details = accessibility_details ||
+                                     ( visible_entry_details &&
+                                       std::any_of( entries.begin(), entries.end(), has_entry_details ) );
             accessibility::announce( accessibility::format_uilist_open(
                                          semantic_context, semantic_selection,
                                          ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
@@ -1045,7 +1050,10 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
-            if( selected_has_details ) {
+            if( accessibility_details ) {
+                accessibility_details();
+                accessibility::announce( semantic_selection );
+            } else if( selected_has_details ) {
                 if( show_entry_details( entries[selected] ) ) {
                     accessibility::announce( semantic_selection );
                 }

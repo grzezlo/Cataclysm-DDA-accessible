@@ -70,6 +70,8 @@ struct uilist_entry {
         std::string txt;            // what it says on the tin
         std::string desc;           // optional, possibly longer, description
         std::string ctxt;           // second column text
+        // Spoken after the entry when its state is shown only visually, e.g. by color.
+        std::string accessibility_state;
         nc_color hotkey_color;
         nc_color text_color;
         mvwzstr extratxt;
@@ -422,6 +424,10 @@ class uilist // NOLINT(cata-xy)
         std::string text;
         // basically the same as desc, except it doesn't change based on selection
         std::string footer_text;
+        // Spoken instead of the title or text when the list opens.
+        std::string accessibility_context;
+        // Opened by the details action for the whole list instead of entry descriptions.
+        std::function<void()> accessibility_details;
         std::vector<uilist_entry> entries;
 
         std::string input_category;

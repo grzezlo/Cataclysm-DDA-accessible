@@ -134,9 +134,21 @@ std::string format_nearby_list_context( const std::string &mode, int result_coun
                                         const std::string &change = {} );
 /** Build concise list speech without reading the focused entry's description. */
 std::string format_uilist_focus( const std::string &label, const std::string &column,
-                                 bool unavailable );
+                                 bool unavailable, const std::string &state = {} );
 std::string format_uilist_open( const std::string &context, const std::string &focus,
                                 const std::string &details_binding, bool has_details );
+/** Whether an item action is possible, which the visual menu shows only by color. */
+enum class item_action_availability {
+    available,
+    not_now,
+    not_applicable
+};
+std::string format_item_action_menu_context( const std::string &item_name );
+/** Empty for an available action. */
+std::string format_item_action_availability( item_action_availability availability );
+std::string format_auto_pickup_rule_state( bool has_rule );
+/** Speak a visual hint whose fields are separated by line breaks or box-drawing lines. */
+std::string format_visual_hint( const std::string &hint );
 /** Describe the focused button in an option-bearing query popup. */
 std::string format_popup_option_focus( const std::string &option );
 /** Describe a button query; lists choices on opening when there are at least three. */

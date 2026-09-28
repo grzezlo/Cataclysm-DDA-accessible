@@ -663,10 +663,12 @@ class inventory_selector
         void clear_items();
         /** Assigns a title that will be shown on top of the menu. */
         void set_title( const std::string &title ) {
+            accessibility_context_spoken = accessibility_context_spoken && this->title == title;
             this->title = title;
         }
         /** Assigns a hint. */
         void set_hint( const std::string &hint ) {
+            accessibility_context_spoken = accessibility_context_spoken && this->hint == hint;
             this->hint = hint;
         }
         /** Specify whether the header should show stats (weight and volume). */
@@ -951,6 +953,7 @@ class inventory_selector
         navigation_mode accessibility_last_mode = navigation_mode::ITEM;
         uimode accessibility_last_uimode = uimode::categories;
         bool accessibility_opening = true;
+        bool accessibility_context_spoken = false;
 
         bool is_empty = true;
         bool display_stats = true;

@@ -365,8 +365,11 @@ void game::item_action_menu( item_location loc )
         num++;
     }
 
-    kmenu.footer_text = string_format( _( "[<color_yellow>%s</color>] keybindings" ),
-                                       ctxt.get_desc( "HELP_KEYBINDINGS" ) );
+    // Keep the footer empty so the focused method's description stays visible
+    // and readable through the details action.
+    kmenu.accessibility_context = kmenu.text;
+    kmenu.text += "\n" + string_format( _( "[<color_yellow>%s</color>] keybindings" ),
+                                        ctxt.get_desc( "HELP_KEYBINDINGS" ) );
 
     kmenu.query();
     if( kmenu.ret < 0 || kmenu.ret >= static_cast<int>( iactions.size() ) ) {

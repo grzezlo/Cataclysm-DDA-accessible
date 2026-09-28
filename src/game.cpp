@@ -2285,6 +2285,8 @@ int game::inventory_item_menu( item_location locThisItem,
                             entry.text_color = c_light_green;
                             break;
                     }
+                    entry.accessibility_state = accessibility::format_item_action_availability(
+                                                    accessibility_gameplay::item_action_availability( hint ) );
                 };
                 addentry( 'a', pgettext( "action", "activate" ), rate_action_use( u, oThisItem ) );
                 addentry( 'R', pgettext( "action", "read" ), rate_action_read( u, oThisItem ) );
@@ -2324,6 +2326,8 @@ int game::inventory_item_menu( item_location locThisItem,
                 } else {
                     addentry( '+', _( "Auto pickup" ), hint_rating::good );
                 }
+                action_menu.entries.back().accessibility_state =
+                    accessibility::format_auto_pickup_rule_state( bHPR );
 
                 oThisItem.info( true, vThisItem );
 
@@ -2353,6 +2357,7 @@ int game::inventory_item_menu( item_location locThisItem,
 
                 data = item_info_data( oThisItem.tname(), oThisItem.type_name(), vThisItem, vDummy, iScrollPos );
                 data.without_getch = true;
+                accessibility_gameplay::describe_item_action_menu( action_menu, oThisItem.tname(), data );
 
                 ui = std::make_unique<ui_adaptor>();
                 ui->on_screen_resize( [&]( ui_adaptor & ui ) {

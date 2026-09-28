@@ -538,10 +538,63 @@ std::string format_nearby_list_context( const std::string &mode, const int resul
 }
 
 std::string format_uilist_focus( const std::string &label, const std::string &column,
-                                 const bool unavailable )
+                                 const bool unavailable, const std::string &state )
 {
     return format_semantic_sequence( { label, column,
-                                       unavailable ? _( "Unavailable" ) : std::string() } );
+                                       unavailable ? _( "Unavailable" ) : std::string(), state } );
+}
+
+std::string format_item_action_menu_context( const std::string &item_name )
+{
+    return string_format( _( "Actions for %s" ), item_name );
+}
+
+std::string format_item_action_availability( const item_action_availability availability )
+{
+    switch( availability ) {
+        case item_action_availability::available:
+            break;
+        case item_action_availability::not_now:
+            return _( "Not possible now" );
+        case item_action_availability::not_applicable:
+            return _( "Not applicable" );
+    }
+    return std::string();
+}
+
+std::string format_auto_pickup_rule_state( const bool has_rule )
+{
+    return has_rule ? _( "Rule set" ) : _( "No rule" );
+}
+
+std::string format_visual_hint( const std::string &hint )
+{
+    // Visual hints separate fields with box-drawing lines and line breaks;
+    // speak each field as its own phrase instead of naming the symbols.
+    static const std::string vertical_line = "\xe2\x94\x82";
+    std::vector<std::string> fields;
+    std::string current;
+    const auto flush = [&]() {
+        const std::string trimmed = trim_ascii( current );
+        if( !trimmed.empty() ) {
+            fields.push_back( trimmed );
+        }
+        current.clear();
+    };
+    for( size_t i = 0; i < hint.size(); ) {
+        if( hint.compare( i, vertical_line.size(), vertical_line ) == 0 ) {
+            flush();
+            i += vertical_line.size();
+        } else if( hint[i] == '\n' ) {
+            flush();
+            ++i;
+        } else {
+            current += hint[i];
+            ++i;
+        }
+    }
+    flush();
+    return format_semantic_sequence( fields );
 }
 
 std::string format_uilist_open( const std::string &context, const std::string &focus,

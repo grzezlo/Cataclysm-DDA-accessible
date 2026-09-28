@@ -48,6 +48,24 @@ inventory selectors from Stage 06 where they serve specific actions.
   formats hunger/thirst/fatigue — include in the selector's opening
   announcement.
 
+**Selected interaction (option A, 2026-09-28):**
+
+- The item action menu (`game::inventory_item_menu()`, Enter on an inventory
+  item) keeps the visual order and hotkeys.  Opening speaks "Actions for
+  <item>", the list hint including the details binding, and the focused action.
+- Each focused action speaks its name followed by its availability, which is
+  otherwise shown only by color: no suffix for an available action, "Not
+  possible now" for `hint_rating::iffy` (the item permits it but circumstances
+  do not), and "Not applicable" for `hint_rating::cant`.  Auto pickup speaks
+  whether a rule exists.
+- The details action (`Alt+D`) opens the complete item information, the same
+  content as the visual side panel, in the line-by-line document reader.
+  Leaving it returns to the same action and repeats it.
+- `game::item_action_menu()` moves its keybinding hint from the footer to the
+  header text, so method descriptions are visible and `Alt+D` reads them.
+- Selector opening hints are spoken without visual separators, and reopening
+  the same selector after an item action speaks only the focused item.
+
 **Success criteria:** Wield, wear/take off, use, consume, read, reload/unload,
 and drop flows expose their action-specific columns, quantity prompts,
 confirmation, results, and errors.
