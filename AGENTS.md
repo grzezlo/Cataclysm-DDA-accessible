@@ -151,6 +151,15 @@ over upstream contribution policy or exact UI parity.
   regression checks.  Human confirmation must cover keyboard operation, focus
   order, announcement count, concise and detailed output, repeat-last, and
   behavior after speech interruption.
+- Reach hard-to-reach human scenarios through the in-game debug menu (for
+  example spawning monsters or items, bleeding, or changing time) instead of
+  progressing through normal play.  Give each such scenario a short debug-menu
+  route in its stage.  Debug setup proves the accessible behavior, not that
+  normal play reaches the state; Stages 22 and 22A cover normal play.
+- A scenario that depends on an interaction a later stage has not yet made
+  accessible does not block the current stage.  Move it explicitly to the
+  verification list of the stage that enables it, and record in
+  `ACCESS_DONE.md` which scenarios were verified and which were moved where.
 - When closing a stage, record the Windows version, NVDA version, tested commit,
   results, and limitations in `ACCESS_DONE.md`.  Removing it from
   `ACCESS_TODO.md` makes the following stage current without another status

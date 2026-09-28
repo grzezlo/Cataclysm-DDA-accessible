@@ -71,6 +71,18 @@ items by letter in the inventory, and use Alt+D there.  Rebind repeat-last and
 use it while saving.  Set the option to Off and confirm silence, then back to
 Automatic.
 
+**Debug-menu routes:** unrelated monster death: Spawning… > Spawn monster
+twice, far and near, then kill the nearer one; misses: spawn a monster next to
+the character and attack it.
+
+**Verified with NVDA (2026-09-28):** The default Automatic mode speaks without
+any setup.  Game messages are no longer lost during play.  Walking reads the
+destination tile in a normal save and in the tutorial.
+
+**Still to verify:** the smashing repeat rule, threat alerts after an
+unrelated monster dies, invlets and Alt+D in the inventory, rebinding
+repeat-last and using it while saving, and the Off setting.
+
 ## Stage 05B - Speech priorities and turn batching
 
 **Outcome:** Speech keeps up with keyboard navigation, one turn produces one
@@ -119,9 +131,20 @@ inventory; fight several monsters and listen to one combined turn; walk while
 an alert is spoken; use repeat-last after stepping; auto-travel to a
 destination; interrupt speech with Control and confirm nothing is requeued.
 
-**Implementation status (2026-09-28):** Implemented on
-`codex/stage-05b-speech-priorities`; automated tests and the Windows x64 tiles
-build pass.  NVDA verification has not been done.
+**Debug-menu routes:** several monsters: Spawning… > Spawn monster, repeated
+for each monster; an alert while walking: spawn a monster several tiles away
+and step immediately; an alert that opens a prompt: Player… > Bleed self.
+
+**Verified with NVDA (2026-09-28):** Fighting several monsters spawned through
+the debug menu is read correctly and messages do not overlap.  Record the
+Windows and NVDA versions and the tested commit when closing the stage.
+
+**Still to verify:** long-list and inventory navigation while holding Down,
+walking while an alert is spoken, repeat-last after stepping, auto-travel, and
+Control interruption.
+
+**Implementation status (2026-09-28):** Implemented on `access`; automated
+tests and the Windows x64 tiles build pass.
 
 ## Stage 06 - Inventory selector navigation and item information
 
@@ -205,7 +228,10 @@ that entering comparison, marking two items, revisiting the first selection,
 and the revised selection speech work well.  Inventory browsing, categories,
 columns, filters, item details, repeat-last, and speech interruption still need
 explicit confirmation.  Record Windows, NVDA, and tested build versions before
-closing the stage.
+closing the stage.  The comparison hints now speak the current bindings, so
+recheck their wording.  All remaining scenarios are reachable now; a varied
+inventory for categories, columns, and filters comes from Spawning… > Spawn an
+item.
 
 ## Stage 06A - Item action flows
 
