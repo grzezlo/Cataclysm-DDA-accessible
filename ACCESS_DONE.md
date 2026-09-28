@@ -588,3 +588,37 @@ Limitations:
 - Multidrop and other multiselect quantity entry remain Stage 07.
 - The item-menu state words follow upstream `hint_rating`, which does not give
   the reason an action is not possible.
+
+## 2026-09-28 — Stage 07: Advanced inventory and multiselect transfers
+
+- Selected design: option A (concise focus with transfer status on demand),
+  recorded before implementation.
+- The advanced inventory opens with its name, the source pane (area, item
+  count, capacity), the destination pane, and the focused row.  Rows speak
+  name, count, ownership, weight, and volume; the category only when it
+  changes under category sorting.  `Alt+D` adds category, source square in
+  the surrounding-area view, auto pickup, and whether the row is the
+  container open in the other pane.
+- Tab, Left, and Right speak the new source pane once without its capacity;
+  area, vehicle, and container changes add capacity and the square's
+  terrain and hazards.  Filter, sort, and category-navigation changes are
+  spoken.  Refusals use the existing popups.
+- A transfer handed to an activity speaks "Moved ... to ..." when the screen
+  returns, counted from the source items that actually left; nothing is
+  spoken when the move cannot be confirmed.  Move all reports stacks.
+- Multiselect rows (drop, pick up, insert, haul) speak "Not selected",
+  "Selected N of M", or "Selected all N"; marking speaks the row, its new
+  state, and the number of selected entries.
+- New global action `ACCESSIBILITY_STATUS` (`Alt+S`): in the advanced
+  inventory it reads both panes with capacity, filter, and sort; in
+  inventory selectors it reads the title, statistics, filter, and in
+  multiselect the selection total.
+- Commit: `55bd32ddf5`.
+
+Limitations:
+
+- A transfer interrupted before any item moved is silent; the interruption
+  message is spoken by the game-message speech.
+- Quantity prompts, destination menus, and failure popups rely on the
+  Stage 05 controls without transfer-specific wording.
+- Page position ("page 1 of 3") is not spoken.

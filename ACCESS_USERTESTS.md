@@ -113,3 +113,42 @@ a loaded gun with spare ammo, and a flashlight.
   rest, weight, and intake as separate phrases, without naming line symbols.
 - **Failure.**  Try to wear a second pair of the same boots, or read in
   darkness (Map… > Change time to night).  The refusal is spoken.
+
+## Stage 07: Advanced inventory and multiselect transfers
+
+Wear a backpack.  Spawning… > Spawn an item places a hammer, 5 rocks, and a
+plastic bag or other container on your tile; spawn a second backpack too.
+
+- **Opening.**  Press `/`.  You hear "Advanced inventory", the source pane
+  with its item count and capacity, the destination pane, and the focused
+  row, in one announcement.  Pressing `Alt+R` repeats it.
+- **Rows.**  Move with Up and Down, Page Up, Page Down, Home, and End.  Each
+  key speaks one row: name, count when above one, weight, and volume.
+  `Alt+D` adds the category and other details.  Interrupt a row with Control;
+  the next key speaks only the new row.
+- **Panes and areas.**  Press Tab: "Source:" with the other pane's area and
+  item count is spoken once, then its row, without the capacity.  Press `5`
+  for the tile below you and `I` for your inventory: each area change adds
+  the capacity.  Press `Alt+S`: both panes, capacity, filter, and sort in one
+  announcement.
+- **Single, stacked, and partial moves.**  With the ground as source and the
+  inventory as destination, press Enter on the hammer: when the screen
+  returns you hear "Moved hammer to Inventory" and the next row.  Press `m`
+  on the rocks and enter 2: "Moved rocks, 2, to Inventory".  Press `M` to
+  move the rest of the stack.  Repeat from the inventory back to the ground.
+- **Container.**  Select the plastic bag and press `C`: the source becomes
+  "Container:" with its name and capacity.  Move a rock into and out of it.
+- **Move all.**  Press `,` on the ground pane: "Moved N stacks to Inventory".
+- **Failures.**  Take off the backpack and try to move the second backpack
+  and then all rocks to the inventory; move an item to a wall tile with the
+  direction keys.  The refusal popup is spoken and closing it returns
+  silently to the same row.
+- **Filter and sort.**  Press `F`, type "rock", and confirm: "Filter: rock"
+  and the matching count, then the row.  Press `R` to reset: "Filter
+  cleared".  Change the sort with `s`: "Sort:" and the new order.
+- **Multiselect drop.**  Close the screen and press `d` (drop).  Rows say
+  "Not selected".  Mark the rocks with the right arrow or `l`: "Selected all
+  5" and "1 entry selected".  Type 2 and confirm the number: "Selected 2 of
+  5".  Unmark: "Nothing selected".  `Alt+S` reads the purpose, weight and
+  volume statistics, and the selection total.  Confirm the drop and hear
+  the result message.

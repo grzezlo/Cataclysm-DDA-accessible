@@ -19,66 +19,6 @@ automated tests are implemented, `test_access.bat` passes, and
 `build_win_x64.bat` succeeds.  Its user-test scenarios then move to
 `ACCESS_USERTESTS.md` and do not block the next stage.
 
-## Stage 07 - Advanced inventory and multiselect transfers
-
-**Outcome:** Two-pane and multiselect item transfers are independently usable.
-
-**Code inventory:** `src/advanced_inv.cpp`, `src/advanced_inv_pane.cpp`, other
-`src/advanced_inv_*` helpers, and multiselect paths in `src/inventory_ui.cpp`
-(`inventory_multiselector`, `selection_column`).
-
-**Implementation hints:**
-
-- Entry point: `create_advanced_inv()` in `src/advanced_inv.cpp` instantiates
-  `advanced_inventory` and calls `advanced_inventory::display()`.
-- Two-pane structure: `std::array<advanced_inventory_pane, NUM_PANES> panes`
-  in `src/advanced_inv.h`, `src = left/right`, `dest` is always opposite.
-- Pane switching: `"LEFT"` / `"RIGHT"` / `"TOGGLE_TAB"` in
-  `advanced_inventory::display()`.
-- Area selection: 15 `ITEMS_*` actions (inventory, worn, ground tiles, vehicle,
-  container, parent).
-- Item rows: name, charges, weight, volume, category rendered in
-  `advanced_inventory::print_items()`.
-- Pane header: area title, weight/volume capacity rendered in
-  `advanced_inventory::print_items()`.
-- Transfer: `advanced_inventory::action_move_item()` and
-  `advanced_inventory::move_all_items()` in `src/advanced_inv.cpp`.
-- Quantity prompt: `advanced_inventory::query_charges()` in `src/advanced_inv.cpp`.
-- Input context: `"ADVANCED_INVENTORY"` registered in
-  `advanced_inventory::display()`.
-- Multiselect in standard inventory: `inventory_multiselector` in
-  `src/inventory_ui.cpp`.  `inventory_multiselector::toggle_entry()` and
-  `inventory_multiselector::toggle_entries()` manage selection marks
-  (`'-'`, `'+'`, `'#'` formatted in `selection_column::print_cell()`).
-
-**Selected interaction (option A, concise focus with transfer status on demand):**
-
-- Up/Down and paging speak the focused row: name, count, weight, volume;
-  category only when it changes.  `Alt+D` reads the full row.
-- Tab, Left, and Right speak the new source pane once, for example "Source:
-  inventory, 12 items", then the focused row; the other pane is not reread.
-- Area changes speak the area and its free volume and weight, or the refusal.
-- `Alt+S` (`accessibility_status`) speaks one sentence: source and destination
-  areas, their capacity, filter, sort, and in multiselect the selection
-  summary.
-- A completed transfer speaks one result sentence naming the amount, item, and
-  destination.  Failures rely on the existing popups.
-- Multiselect focus adds the selection state ("selected 3 of 5", "not
-  selected"); toggling speaks the change and the total selected count.
-
-**Success criteria:** Speech identifies source/destination pane, area, category,
-selection, marks, quantity, weight/volume capacity, destination validity, and
-transfer result.  Pane/area switching, filtering, paging, bulk selection, and
-cancel preserve context without rereading both panes.
-
-**Possible automated tests:** Capture pane and area changes, mark/unmark,
-quantity, capacity failure, invalid destination, filters, bulk transfer, result,
-and focus restoration; reuse advanced-inventory fixtures.
-
-**User-test scenarios:** Move single, stacked, and multiple items between
-inventory, ground, and a container in both directions; include capacity and
-invalid-destination failures.
-
 ## Stage 08 - Directional and environmental interaction
 
 **Outcome:** Direction selection and terrain/furniture interaction clearly expose
