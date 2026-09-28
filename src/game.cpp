@@ -38,6 +38,8 @@
 
 #include "achievement.h"
 #include "accessibility.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
@@ -88,7 +90,6 @@
 #include "dialogue.h"
 #include "dialogue_chatbin.h"
 #include "diary.h"
-#include "display.h"
 #include "distraction_manager.h"
 #include "editmap.h"
 #include "effect.h"
@@ -253,8 +254,6 @@ static const damage_type_id damage_stab( "stab" );
 
 static const efftype_id effect_adrenaline_mycus( "adrenaline_mycus" );
 static const efftype_id effect_asked_to_train( "asked_to_train" );
-static const efftype_id effect_bite( "bite" );
-static const efftype_id effect_bleed( "bleed" );
 static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_bouldering( "bouldering" );
 static const efftype_id effect_contacts( "contacts" );
@@ -264,7 +263,6 @@ static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_fake_common_cold( "fake_common_cold" );
 static const efftype_id effect_fake_flu( "fake_flu" );
 static const efftype_id effect_gliding( "gliding" );
-static const efftype_id effect_infected( "infected" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_led_by_leash( "led_by_leash" );
 static const efftype_id effect_no_sight( "no_sight" );
@@ -1184,8 +1182,7 @@ bool game::start_game()
     }
     accessibility::reset_game_state();
     accessibility::enable_game_messages( true );
-    accessibility::announce_status( _( "Welcome!" ) + std::string( " " ) + u.name + ". " +
-                                    string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
+    accessibility::announce_status( accessibility_gameplay::arrival_announcement( here, u, false ) );
     return true;
 }
 
@@ -3408,8 +3405,7 @@ bool game::load( const save_t &name )
     loading_ui::done();
     accessibility::reset_game_state();
     accessibility::enable_game_messages( true );
-    accessibility::announce_status( _( "Welcome back." ) + std::string( " " ) + u.name + ". " +
-                                    string_format( _( "Location: %s" ), here.name( u.pos_bub() ) ) );
+    accessibility::announce_status( accessibility_gameplay::arrival_announcement( here, u, true ) );
     return true;
 }
 
@@ -4683,7 +4679,7 @@ void game::mon_info_update( )
     auto &unique_mons = mon_visible.unique_mons;
     auto &dangerous = mon_visible.dangerous;
     mon_visible.has_dangerous_creature_in_proximity = false;
-    std::vector<Creature *> nearby_threats;
+    std::vector<const Creature *> nearby_threats;
 
     // 7 0 1    unique_types uses these indices;
     // 6 8 2    0-7 are provide by direction_from()
@@ -4846,50 +4842,7 @@ void game::mon_info_update( )
         }
     }
 
-    std::sort( nearby_threats.begin(), nearby_threats.end(), [&]( const Creature * lhs,
-    const Creature * rhs ) {
-        return rl_dist( pos, lhs->pos_bub( here ) ) < rl_dist( pos, rhs->pos_bub( here ) );
-    } );
-    std::vector<std::string> threat_ids;
-    std::vector<std::string> threat_descriptions;
-    threat_ids.reserve( nearby_threats.size() );
-    constexpr size_t max_described_threats = 3;
-    for( size_t index = 0; index < nearby_threats.size(); ++index ) {
-        const Creature *threat = nearby_threats[index];
-        if( const monster *mon = dynamic_cast<const monster *>( threat ) ) {
-            threat_ids.push_back( string_format( "monster:%d",
-                                                 get_creature_tracker().temporary_id( *mon ) ) );
-        } else if( const npc *person = dynamic_cast<const npc *>( threat ) ) {
-            threat_ids.push_back( string_format( "npc:%d", person->getID().get_value() ) );
-        }
-        if( index < max_described_threats ) {
-            const tripoint_bub_ms threat_pos = threat->pos_bub( here );
-            const std::string distance = string_format( _( "%d tiles" ), rl_dist( pos, threat_pos ) );
-            const std::string direction = string_format( _( "to the %s" ),
-                                          direction_name( direction_from( pos, threat_pos ) ) );
-            threat_descriptions.push_back(
-                string_format( pgettext( "monster description", "%1$s %2$s %3$s" ),
-                               threat->disp_name(), distance, direction ) );
-        }
-    }
-    if( nearby_threats.size() > max_described_threats ) {
-        const size_t other_count = nearby_threats.size() - max_described_threats;
-        threat_descriptions.push_back( string_format(
-                                           n_gettext( _( "%d other" ), _( "%d others" ), other_count ), other_count ) );
-    }
-    const std::string threat_announcement = threat_descriptions.empty() ?
-                                            _( "Nothing" ) :
-                                            string_format( _( "%s spotted!" ),
-                                                    enumerate_as_string( threat_descriptions ) );
-    std::vector<std::string> accessibility_alerts;
-    if( const std::optional<std::string> threat_transition =
-            accessibility::evaluate_threat_transition( threat_ids, threat_announcement ) ) {
-        accessibility_alerts.push_back( *threat_transition );
-    }
-    std::vector<std::string> condition_alerts = check_condition_transitions();
-    accessibility_alerts.insert( accessibility_alerts.end(), condition_alerts.begin(),
-                                 condition_alerts.end() );
-    accessibility::announce_semantic_sequence( accessibility_alerts );
+    accessibility_gameplay::announce_turn_alerts( here, u, nearby_threats );
 
     if( uistate.distraction_hostile_spotted && newseen > mostseen ) {
         if( newseen - mostseen == 1 ) {
@@ -6597,206 +6550,10 @@ void game::pickup( const tripoint_bub_ms &p )
     u.pick_up( game_menus::inv::pickup( p ) );
 }
 
-namespace
-{
-
-enum class situation_entry_kind : int {
-    current_position,
-    hazard,
-    creature,
-    exit,
-    obstacle,
-    furniture,
-    item
-};
-
-struct semantic_tile_info {
-    std::string terrain;
-    std::string furniture;
-    std::vector<std::string> fields_and_hazards;
-    std::vector<std::string> hazards;
-    std::string vehicle;
-    std::string creature;
-    std::vector<std::string> items;
-};
-
-std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
-{
-    const int distance = rl_dist( origin.xy(), target.xy() );
-    if( distance == 0 ) {
-        return _( "here" );
-    }
-
-    const std::string direction = direction_name( direction_from( origin.xy().raw(),
-                                  target.xy().raw() ) );
-    return string_format( n_gettext( "%1$d tile %2$s", "%1$d tiles %2$s", distance ),
-                          distance, direction );
-}
-
-std::string relative_z_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
-{
-    const int difference = target.z() - origin.z();
-    if( difference == 0 ) {
-        return {};
-    }
-    if( difference > 0 ) {
-        return string_format( n_gettext( "%d level above", "%d levels above", difference ), difference );
-    }
-    const int levels_below = -difference;
-    return string_format( n_gettext( "%d level below", "%d levels below", levels_below ),
-                          levels_below );
-}
-
-semantic_tile_info collect_semantic_tile_info( map &here, avatar &viewer,
-        const tripoint_bub_ms &position )
-{
-    semantic_tile_info result;
-    result.terrain = string_format( _( "Terrain: %s" ), here.tername( position ) );
-    if( here.has_furn( position ) ) {
-        result.furniture = string_format( _( "Furniture: %s" ), here.furnname( position ) );
-    }
-
-    const trap &visible_trap = here.tr_at( position );
-    if( visible_trap.can_see( position, viewer ) ) {
-        const std::string trap_description = visible_trap.is_benign() ?
-                                             string_format( _( "Trap: %s" ), visible_trap.name() ) :
-                                             string_format( _( "Hazard: %s" ), visible_trap.name() );
-        result.fields_and_hazards.push_back( trap_description );
-        if( !visible_trap.is_benign() ) {
-            result.hazards.push_back( trap_description );
-        }
-    }
-    for( const std::pair<const field_type_id, field_entry> &field : here.field_at( position ) ) {
-        const std::string field_description = field.second.is_dangerous() ?
-                                              string_format( _( "Hazard: %s" ), field.second.name() ) :
-                                              string_format( _( "Field: %s" ), field.second.name() );
-        result.fields_and_hazards.push_back( field_description );
-        if( field.second.is_dangerous() ) {
-            result.hazards.push_back( field_description );
-        }
-    }
-
-    const bool is_terrain_hazard =
-        here.has_flag_ter( ter_furn_flag::TFLAG_DEEP_WATER, position ) ||
-        here.has_flag_ter( ter_furn_flag::TFLAG_ROUGH, position ) ||
-        here.has_flag_ter( ter_furn_flag::TFLAG_SHARP, position ) ||
-        here.has_flag_ter( ter_furn_flag::TFLAG_UNSTABLE, position ) ||
-        here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, position ) ||
-        here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR_WATER, position );
-    if( is_terrain_hazard ) {
-        const std::string terrain_hazard = string_format( _( "Hazard: %s" ), here.tername( position ) );
-        result.fields_and_hazards.push_back( terrain_hazard );
-        result.hazards.push_back( terrain_hazard );
-    }
-
-    if( const optional_vpart_position vp = here.veh_at( position ) ) {
-        std::string vehicle_description = vp->vehicle().name;
-        if( const std::optional<vpart_reference> displayed_part = vp.part_displayed() ) {
-            vehicle_description += ", " + displayed_part->part().name();
-        }
-        result.vehicle = string_format( _( "Vehicle: %s" ), vehicle_description );
-    }
-
-    const Creature *creature = get_creature_tracker().creature_at( position, true );
-    if( creature != nullptr && creature != &viewer && viewer.sees( here, *creature ) ) {
-        const std::string attitude = viewer.has_trait( trait_INATTENTIVE ) ? _( "Unknown" ) :
-                                     Creature::get_attitude_ui_data( creature->attitude_to( viewer ) ).first.translated();
-        result.creature = accessibility::format_semantic_sequence( {
-            string_format( _( "Creature: %s" ), creature->disp_name() ),
-            accessibility::format_creature_attitude( attitude )
-        } );
-    }
-
-    if( here.sees_some_items( position, viewer ) ) {
-        if( here.has_flag( ter_furn_flag::TFLAG_CONTAINER, position ) &&
-            !here.could_see_items( position, viewer ) ) {
-            result.items.push_back( _( "Items: contents are not visible" ) );
-        } else if( viewer.has_effect( effect_blind ) || viewer.worn_with_flag( flag_BLIND ) ) {
-            result.items.push_back( _( "Items: something is here, but it is not visible" ) );
-        } else {
-            std::map<std::string, int> items_here;
-            for( const item &it : here.i_at( position ) ) {
-                items_here[it.tname()] += it.count();
-            }
-            for( const std::pair<const std::string, int> &item_entry : items_here ) {
-                const std::string name = item_entry.second > 1 ?
-                                         string_format( _( "%1$s (%2$d)" ), item_entry.first, item_entry.second ) :
-                                         item_entry.first;
-                result.items.push_back( string_format( _( "Item: %s" ), name ) );
-            }
-        }
-    }
-    return result;
-}
-
-std::vector<std::string> semantic_look_parts( map &here, avatar &viewer,
-        const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
-        const visibility_variables &cache )
-{
-    std::vector<std::string> parts;
-    visibility_type visibility = visibility_type::HIDDEN;
-    if( here.inbounds( position ) ) {
-        visibility = here.get_visibility( here.apparent_light_at( position, cache ), cache );
-    }
-    if( visibility == visibility_type::CLEAR ) {
-        const semantic_tile_info tile = collect_semantic_tile_info( here, viewer, position );
-        parts.push_back( tile.terrain );
-        parts.push_back( tile.furniture );
-        parts.insert( parts.end(), tile.fields_and_hazards.begin(), tile.fields_and_hazards.end() );
-        parts.push_back( tile.vehicle );
-        parts.push_back( tile.creature );
-        parts.insert( parts.end(), tile.items.begin(), tile.items.end() );
-    } else {
-        switch( visibility ) {
-            case visibility_type::CLEAR:
-                break;
-            case visibility_type::BOOMER:
-                parts.push_back( _( "A bright pink blur" ) );
-                break;
-            case visibility_type::BOOMER_DARK:
-                parts.push_back( _( "A pink blur" ) );
-                break;
-            case visibility_type::DARK:
-                parts.push_back( _( "Darkness" ) );
-                break;
-            case visibility_type::LIT:
-                parts.push_back( _( "Bright light" ) );
-                break;
-            case visibility_type::HIDDEN:
-                parts.push_back( _( "Unseen" ) );
-                break;
-        }
-    }
-    parts.push_back( relative_z_location( origin, position ) );
-    parts.push_back( situation_location( origin, position ) );
-    return parts;
-}
-
-std::string gameplay_focus_description( map &here, const avatar &viewer )
-{
-    const tripoint_bub_ms position = viewer.pos_bub( here );
-    std::string tile = here.tername( position );
-    if( here.has_furn( position ) ) {
-        tile += ", " + here.furnname( position );
-    }
-    return string_format( _( "Gameplay. Current position: %s" ), tile );
-}
-
-void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entries,
-                          const situation_entry_kind kind,
-                          const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
-                          const std::string &label )
-{
-    const tripoint_rel_ms offset = position - origin;
-    entries.push_back( { rl_dist( origin.xy(), position.xy() ), offset.z(), offset.y(), offset.x(),
-                         static_cast<int>( kind ), label, situation_location( origin, position ) } );
-}
-
-} // namespace
-
 void game::announce_gameplay_focus()
 {
-    accessibility::announce_focus( {}, gameplay_focus_description( get_map(), u ) );
+    accessibility::announce_focus( {}, accessibility_gameplay::gameplay_focus_description( get_map(),
+                                   u ) );
 }
 
 //Shift player by one tile, look_around(), then restore previous position.
@@ -6807,8 +6564,9 @@ void game::peek()
 
     const std::optional<tripoint_rel_ms> p = choose_direction( _( "Peek where?" ), true );
     if( !p ) {
-        accessibility::announce_status( _( "Peek canceled." ) + std::string( " " ) +
-                                        gameplay_focus_description( here, u ) );
+        accessibility::announce_semantic_sequence( {
+            _( "Peek canceled." ), accessibility_gameplay::gameplay_focus_description( here, u )
+        } );
         return;
     }
     tripoint_bub_ms new_pos = u.pos_bub() + *p;
@@ -6822,15 +6580,19 @@ void game::peek()
             u.move_to( old_loc );
             here.vertical_shift( old_loc.z() );
         } else {
-            accessibility::announce_status( _( "You cannot peek in that direction." ) +
-                                            std::string( " " ) + gameplay_focus_description( here, u ) );
+            accessibility::announce_semantic_sequence( {
+                _( "You cannot peek in that direction." ),
+                accessibility_gameplay::gameplay_focus_description( here, u )
+            } );
             return;
         }
     }
 
     if( here.impassable( new_pos ) ) {
-        accessibility::announce_status( _( "You cannot peek in that direction." ) +
-                                        std::string( " " ) + gameplay_focus_description( here, u ) );
+        accessibility::announce_semantic_sequence( {
+            _( "You cannot peek in that direction." ),
+            accessibility_gameplay::gameplay_focus_description( here, u )
+        } );
         return;
     }
 
@@ -6844,7 +6606,7 @@ void game::peek( const tripoint_bub_ms &p )
     tripoint_bub_ms prev = u.pos_bub();
     accessibility::announce_semantic_sequence( {
         _( "Peek" ),
-        string_format( _( "Observation origin: %s" ), situation_location( prev, p ) ),
+        string_format( _( "Observation origin: %s" ), accessibility_gameplay::situation_location( prev, p ) ),
         _( "Time cost: two seconds" )
     } );
     u.mod_moves( -u.get_speed() * 2 );
@@ -6879,7 +6641,7 @@ void game::peek( const tripoint_bub_ms &p )
     accessibility::announce_semantic_sequence( {
         _( "Returned from peeking to the unchanged character position" ),
         string_format( _( "Movement: %s" ), u.current_movement_mode()->name() ),
-        gameplay_focus_description( here, u )
+        accessibility_gameplay::gameplay_focus_description( here, u )
     } );
 }
 
@@ -8349,7 +8111,8 @@ look_around_result game::look_around(
                 parts.push_back( describe_peek_action( "throw_blind_wielded" ) );
             }
         }
-        std::vector<std::string> tile_parts = semantic_look_parts( here, u, semantic_origin, lp, cache );
+        std::vector<std::string> tile_parts = accessibility_gameplay::look_parts( here, u, semantic_origin,
+                                              lp, cache );
         parts.insert( parts.end(), std::make_move_iterator( tile_parts.begin() ),
                       std::make_move_iterator( tile_parts.end() ) );
         accessibility::announce_semantic_sequence( parts );
@@ -8610,7 +8373,7 @@ look_around_result game::look_around(
 #endif
 
     if( semantic_look && !peeking && announce_gameplay_on_exit ) {
-        accessibility::announce_status( gameplay_focus_description( here, u ) );
+        accessibility::announce_status( accessibility_gameplay::gameplay_focus_description( here, u ) );
     }
 
     return result;
@@ -8989,383 +8752,25 @@ std::string io::enum_to_string<list_item_sort_mode>( list_item_sort_mode data )
 
 void game::accessibility_situation_review()
 {
-    map &here = get_map();
-    const tripoint_bub_ms origin = u.pos_bub( here );
-    std::vector<accessibility::semantic_list_entry> situation_entries;
-    std::vector<accessibility::semantic_list_entry> region_entries;
-
-    std::string current_name = here.tername( origin );
-    if( here.has_furn( origin ) ) {
-        current_name += ", " + here.furnname( origin );
-    }
-    const std::string movement_mode = u.current_movement_mode()->name();
-    add_situation_entry( situation_entries, situation_entry_kind::current_position, origin, origin,
-                         string_format( _( "Current position: %1$s. Movement: %2$s" ),
-                                        current_name, movement_mode ) );
-
-    for( const tripoint_bub_ms &position : here.points_in_radius( origin,
-            MAX_VIEW_DISTANCE, 0 ) ) {
-        if( position == origin || !u.sees( here, position ) ) {
-            continue;
-        }
-
-        const semantic_tile_info tile = collect_semantic_tile_info( here, u, position );
-        for( const std::string &hazard : tile.hazards ) {
-            add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
-                                 hazard );
-        }
-        if( !tile.creature.empty() ) {
-            add_situation_entry( situation_entries, situation_entry_kind::creature, origin, position,
-                                 tile.creature );
-        }
-
-        const bool is_exit = here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_DOOR, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_UP, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_DOWN, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_UP, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_DOWN, position );
-        const bool is_obstacle = here.impassable( position );
-        if( is_exit ) {
-            const std::string name = here.has_furn( position ) ? here.furnname( position ) :
-                                     here.tername( position );
-            const std::string passability = is_obstacle ? _( "Impassable" ) : _( "Passable" );
-            add_situation_entry( situation_entries, situation_entry_kind::exit, origin, position,
-                                 string_format( _( "Exit: %1$s. %2$s" ), name, passability ) );
-        } else if( is_obstacle ) {
-            const std::string name = here.has_furn( position ) ? here.furnname( position ) :
-                                     here.tername( position );
-            add_situation_entry( region_entries, situation_entry_kind::obstacle, origin, position,
-                                 string_format( _( "Obstacle: %s" ), name ) );
-        }
-
-        if( !tile.furniture.empty() && !is_exit && !is_obstacle ) {
-            add_situation_entry( situation_entries, situation_entry_kind::furniture, origin, position,
-                                 tile.furniture );
-        }
-
-        for( const std::string &item_description : tile.items ) {
-            add_situation_entry( situation_entries, situation_entry_kind::item, origin, position,
-                                 item_description );
-        }
-    }
-
-    for( accessibility::connected_semantic_list_group &group :
-         accessibility::group_connected_semantic_list_entries( std::move( region_entries ) ) ) {
-        if( group.count > 1 ) {
-            group.nearest.context = string_format(
-                                        n_gettext( "%1$d connected tile; nearest: %2$s",
-                                                   "%1$d connected tiles; nearest: %2$s", group.count ),
-                                        group.count, group.nearest.context );
-        }
-        situation_entries.push_back( std::move( group.nearest ) );
-    }
-
-    accessibility::sort_semantic_list_entries( situation_entries );
-
-    uilist menu;
-    menu.title = _( "Situation review" );
-    const input_context ctxt = get_default_mode_input_context();
-    menu.footer_text = string_format(
-                           _( "Enter or Escape: return to game. %s: repeat the last announcement." ),
-                           ctxt.get_desc( "ACCESSIBILITY_REPEAT_LAST" ) );
-    for( size_t index = 0; index < situation_entries.size(); ++index ) {
-        const accessibility::semantic_list_entry &entry = situation_entries[index];
-        menu.addentry_col( static_cast<int>( index ), true, std::nullopt, entry.label,
-                           entry.context );
-    }
-    menu.query();
-}
-
-static std::string semantic_hunger_text( const Character &u )
-{
-    if( !u.needs_food() ) {
-        return _( "Without hunger" );
-    }
-    const std::string text = display::hunger_text_color( u ).first;
-    return text.empty() ? _( "Satisfied" ) : text;
-}
-
-static std::string semantic_thirst_text( const Character &u )
-{
-    const std::string text = display::thirst_text_color( u ).first;
-    return text.empty() ? _( "Hydrated" ) : text;
-}
-
-static std::string semantic_sleepiness_text( const Character &u )
-{
-    const std::string text = display::sleepiness_text_color( u ).first;
-    return text.empty() ? _( "Rested" ) : text;
-}
-
-static std::string semantic_pain_text( const Character &u )
-{
-    const std::string text = display::pain_text_color( u ).first;
-    return text.empty() ? _( "No pain" ) : text;
-}
-
-static std::string semantic_env_temp_text( const Character &u )
-{
-    const std::string temp = display::get_temp( u );
-    return temp == "-" ? _( "Unknown" ) : temp;
-}
-
-std::vector<std::string> game::check_condition_transitions()
-{
-    accessibility::condition_tracker current;
-    current.hunger_tier = semantic_hunger_text( u );
-    current.thirst_tier = semantic_thirst_text( u );
-    current.sleepiness_tier = semantic_sleepiness_text( u );
-    current.pain_tier = semantic_pain_text( u );
-    current.weariness_tier = display::weariness_text_color( u ).first;
-
-    const int stam_max = u.get_stamina_max();
-    current.stamina_critical = stam_max > 0 && u.get_stamina() <= ( stam_max / 4 );
-
-    for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
-        if( u.get_effect_int( effect_bleed, bp ) > 0 ) {
-            current.bleeding_limbs.push_back( body_part_name_as_heading( bp, 1 ) );
-        }
-        if( u.is_limb_broken( bp ) ) {
-            current.broken_limbs.push_back( body_part_name_as_heading( bp, 1 ) );
-        }
-    }
-
-    return accessibility::evaluate_condition_transitions( current );
+    accessibility_gameplay::situation_review( get_map(), u );
 }
 
 void game::accessibility_status_review()
 {
-    enum class status_category : int {
-        health = 0,
-        stamina_condition,
-        needs,
-        temperature_effects,
-        wielded_weapon,
-        movement_safety,
-        time_environment,
-        count
-    };
-
-    const input_context ctxt = get_default_mode_input_context();
-    const std::string repeat_desc = ctxt.get_desc( "ACCESSIBILITY_REPEAT_LAST" );
-    int selected = 0;
-
-    while( true ) {
-        uilist main_menu;
-        main_menu.title = _( "Status review" );
-        main_menu.footer_text = string_format(
-                                    _( "Up/Down: navigate. Enter: view details. Escape: return to game. %s: repeat." ),
-                                    repeat_desc );
-
-        accessibility::status_snapshot snapshot;
-        snapshot.health = display::health_text_color( u ).first;
-        snapshot.pain = semantic_pain_text( u );
-        bool has_bleeding = false;
-        bool has_broken = false;
-        for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
-            if( u.get_effect_int( effect_bleed, bp ) > 0 ) {
-                has_bleeding = true;
-            }
-            if( u.is_limb_broken( bp ) ) {
-                has_broken = true;
-            }
-        }
-        snapshot.bleeding = has_bleeding;
-        snapshot.broken_limb = has_broken;
-
-        const int stam_max = u.get_stamina_max();
-        const int stam_pct = stam_max > 0 ? ( u.get_stamina() * 100 ) / stam_max : 0;
-        snapshot.stamina_percent = stam_pct;
-        snapshot.focus = u.get_focus();
-        snapshot.weariness = display::weariness_text_color( u ).first;
-        snapshot.hunger = semantic_hunger_text( u );
-        snapshot.thirst = semantic_thirst_text( u );
-        snapshot.sleepiness = semantic_sleepiness_text( u );
-        snapshot.body_temperature = display::temp_text_color( u ).first;
-        snapshot.environment_temperature = semantic_env_temp_text( u );
-        for( const effect &eff : u.get_effects() ) {
-            if( !eff.disp_name().empty() ) {
-                snapshot.active_effect_count++;
-            }
-        }
-        snapshot.wielded_weapon = u.weapname();
-        snapshot.movement_mode = u.current_movement_mode()->name();
-        snapshot.speed = u.get_speed();
-
-        accessibility::safe_mode_state semantic_safe_mode = accessibility::safe_mode_state::off;
-        if( safe_mode == SAFE_MODE_ON ) {
-            semantic_safe_mode = accessibility::safe_mode_state::on;
-        } else if( safe_mode == SAFE_MODE_STOP ) {
-            semantic_safe_mode = accessibility::safe_mode_state::stopped;
-        }
-        const bool auto_safe_mode = get_option<bool>( "AUTOSAFEMODE" );
-        int turns_until_auto_safe = 0;
-        if( auto_safe_mode && safe_mode == SAFE_MODE_OFF ) {
-            turns_until_auto_safe = std::max( 0, get_option<int>( "AUTOSAFEMODETURNS" ) -
-                                              to_turns<int>( turnssincelastmon ) );
-        }
-        snapshot.safe_mode = accessibility::format_safe_mode_status(
-                                 semantic_safe_mode, auto_safe_mode, turns_until_auto_safe );
-        snapshot.time = display::time_string( u );
-        snapshot.date = display::date_string();
-        snapshot.weather = display::weather_text_color( u ).first;
-
-        const std::vector<accessibility::status_summary_entry> summaries =
-            accessibility::format_status_summary( snapshot );
-        for( size_t index = 0; index < summaries.size(); ++index ) {
-            main_menu.addentry_col( static_cast<int>( index ), true, std::nullopt,
-                                    summaries[index].label, summaries[index].value );
-        }
-
-        main_menu.selected = selected;
-        main_menu.query();
-
-        if( main_menu.ret < 0 ) {
-            break;
-        }
-
-        selected = main_menu.ret;
-
-        // Submenu for detail drill-down
-        uilist detail_menu;
-        detail_menu.footer_text = string_format(
-                                      _( "Up/Down: navigate. Escape or Enter: return to status list. %s: repeat." ),
-                                      repeat_desc );
-
-        switch( static_cast<status_category>( selected ) ) {
-            case status_category::health: {
-                detail_menu.title = _( "Health & Pain details" );
-                int idx = 0;
-                for( const bodypart_id &bp : u.get_all_body_parts( get_body_part_flags::only_main ) ) {
-                    const std::string name = body_part_name_as_heading( bp, 1 );
-                    std::string status = string_format( _( "%1$d/%2$d HP" ),
-                                                        u.get_part_hp_cur( bp ), u.get_part_hp_max( bp ) );
-                    if( u.is_limb_broken( bp ) ) {
-                        status += ", ";
-                        status += _( "Broken" );
-                    }
-                    if( u.worn_with_flag( json_flag_SPLINT, bp ) ) {
-                        status += ", ";
-                        status += _( "Splinted" );
-                    }
-                    const int bleed = u.get_effect_int( effect_bleed, bp );
-                    if( bleed > 0 ) {
-                        status += ", " + string_format( _( "Bleeding (intensity %d)" ), bleed );
-                    }
-                    if( u.has_effect( effect_bite, bp.id() ) ) {
-                        status += ", ";
-                        status += _( "Bitten" );
-                    }
-                    if( u.has_effect( effect_infected, bp.id() ) ) {
-                        status += ", ";
-                        status += _( "Infected" );
-                    }
-                    detail_menu.addentry_col( idx++, true, std::nullopt, name, status );
-                }
-                detail_menu.addentry_col( idx++, true, std::nullopt,
-                                          _( "Lifestyle health" ), display::health_text_color( u ).first );
-                detail_menu.addentry_col( idx++, true, std::nullopt,
-                                          _( "Pain" ),
-                                          string_format( _( "%1$s (level %2$d)" ),
-                                                  semantic_pain_text( u ),
-                                                  u.get_perceived_pain() ) );
-                break;
-            }
-            case status_category::stamina_condition: {
-                detail_menu.title = _( "Stamina & Condition details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Stamina" ),
-                                          string_format( _( "%1$d / %2$d (%3$d%%)" ),
-                                                  u.get_stamina(), stam_max, stam_pct ) );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Focus" ), std::to_string( u.get_focus() ) );
-                detail_menu.addentry_col( 2, true, std::nullopt,
-                                          _( "Weariness" ), display::weariness_text_color( u ).first );
-                detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Weariness penalty" ), display::weary_malus_text_color( u ).first );
-                detail_menu.addentry_col( 4, true, std::nullopt,
-                                          _( "Activity level" ), display::activity_text_color( u ).first );
-                break;
-            }
-            case status_category::needs: {
-                detail_menu.title = _( "Needs details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Hunger" ), semantic_hunger_text( u ) );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Thirst" ), semantic_thirst_text( u ) );
-                detail_menu.addentry_col( 2, true, std::nullopt,
-                                          _( "Sleepiness" ), semantic_sleepiness_text( u ) );
-                detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Weight category" ), display::weight_text_color( u ).first );
-                detail_menu.addentry_col( 4, true, std::nullopt,
-                                          _( "Weight description" ), display::weight_long_description( u ) );
-                break;
-            }
-            case status_category::temperature_effects: {
-                detail_menu.title = _( "Temperature & Effects details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Body temperature feel" ), display::temp_text_color( u ).first );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Environment temperature" ), semantic_env_temp_text( u ) );
-                int eff_idx = 2;
-                for( const effect &eff : u.get_effects() ) {
-                    const std::string name = eff.disp_name();
-                    if( !name.empty() ) {
-                        std::string desc = eff.disp_desc();
-                        detail_menu.addentry_col( eff_idx++, true, std::nullopt, name, desc );
-                    }
-                }
-                break;
-            }
-            case status_category::wielded_weapon: {
-                detail_menu.title = _( "Wielded weapon details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Wielded item" ), u.weapname_simple() );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Ammunition" ),
-                                          u.weapname_ammo().empty() ? _( "None" ) : u.weapname_ammo() );
-                detail_menu.addentry_col( 2, true, std::nullopt,
-                                          _( "Attack mode" ),
-                                          u.weapname_mode().empty() ? _( "Standard" ) : u.weapname_mode() );
-                detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Martial style" ),
-                                          u.martial_arts_data->selected_style_name( u ) );
-                break;
-            }
-            case status_category::movement_safety: {
-                detail_menu.title = _( "Movement & Safety details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Movement mode" ), u.current_movement_mode()->name() );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Speed" ), std::to_string( u.get_speed() ) );
-                detail_menu.addentry_col( 2, true, std::nullopt,
-                                          _( "Move counter & mode" ), display::move_count_and_mode_text_color( u ).first );
-                detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Safe mode" ), snapshot.safe_mode );
-                break;
-            }
-            case status_category::time_environment: {
-                detail_menu.title = _( "Time & Environment details" );
-                detail_menu.addentry_col( 0, true, std::nullopt,
-                                          _( "Time" ), display::time_string( u ) );
-                detail_menu.addentry_col( 1, true, std::nullopt,
-                                          _( "Date" ), display::date_string() );
-                detail_menu.addentry_col( 2, true, std::nullopt,
-                                          _( "Weather" ), display::weather_text_color( u ).first );
-                detail_menu.addentry_col( 3, true, std::nullopt,
-                                          _( "Wind" ), display::wind_text_color( u ).first );
-                detail_menu.addentry_col( 4, true, std::nullopt,
-                                          _( "Time of day" ), display::time_approx() );
-                break;
-            }
-            default:
-                break;
-        }
-
-        if( !detail_menu.entries.empty() ) {
-            detail_menu.query();
-        }
+    accessibility::safe_mode_state semantic_safe_mode = accessibility::safe_mode_state::off;
+    if( safe_mode == SAFE_MODE_ON ) {
+        semantic_safe_mode = accessibility::safe_mode_state::on;
+    } else if( safe_mode == SAFE_MODE_STOP ) {
+        semantic_safe_mode = accessibility::safe_mode_state::stopped;
     }
+    const bool auto_safe_mode = get_option<bool>( "AUTOSAFEMODE" );
+    int turns_until_auto_safe = 0;
+    if( auto_safe_mode && safe_mode == SAFE_MODE_OFF ) {
+        turns_until_auto_safe = std::max( 0, get_option<int>( "AUTOSAFEMODETURNS" ) -
+                                          to_turns<int>( turnssincelastmon ) );
+    }
+    accessibility_gameplay::status_review( u, accessibility::format_safe_mode_status(
+            semantic_safe_mode, auto_safe_mode, turns_until_auto_safe ) );
 }
 
 void game::list_items_monsters()
@@ -9418,7 +8823,8 @@ void game::list_items_monsters()
     }
     reenter_fullscreen();
     if( ret != game::vmenu_ret::FIRE && !is_looking ) {
-        accessibility::announce_status( gameplay_focus_description( get_map(), u ) );
+        accessibility::announce_status( accessibility_gameplay::gameplay_focus_description( get_map(),
+                                        u ) );
     }
 }
 
@@ -9452,100 +8858,6 @@ static void mark_items_read_rec( const item *itm )
     for( const item *child : itm->all_known_contents() ) {
         mark_items_read_rec( child );
     }
-}
-
-static accessibility::nearby_list_entry nearby_item_semantics( const avatar &viewer,
-        const map_item_stack &stack, const int page, const int result_index, const int result_count,
-        const int priority, const bool report_newness )
-{
-    accessibility::nearby_list_entry result;
-    if( stack.example == nullptr || page < 0 || static_cast<size_t>( page ) >= stack.vIG.size() ) {
-        return result;
-    }
-
-    const auto &group = stack.vIG[page];
-    result.name = remove_color_tags( group.it->display_name() );
-    result.count = stack.totalcount;
-    result.position_index = page + 1;
-    result.position_count = static_cast<int>( stack.vIG.size() );
-    result.location = situation_location( viewer.pos_bub(), viewer.pos_bub() + group.pos );
-    result.details.push_back( string_format( _( "Category: %s" ),
-                              stack.example->get_category_of_contents().name_header() ) );
-    if( group.count != stack.totalcount ) {
-        result.details.push_back( string_format( _( "At this location: %d" ), group.count ) );
-    }
-    if( priority > 0 ) {
-        result.details.push_back( _( "High priority" ) );
-    } else if( priority < 0 ) {
-        result.details.push_back( _( "Low priority" ) );
-    }
-    if( report_newness ) {
-        switch( check_items_newness( stack.example ) ) {
-            case content_newness::NEW:
-                result.details.push_back( _( "New" ) );
-                break;
-            case content_newness::MIGHT_BE_HIDDEN:
-                result.details.push_back( _( "May hide contents" ) );
-                break;
-            case content_newness::SEEN:
-                break;
-        }
-    }
-    result.result_index = result_index;
-    result.result_count = result_count;
-    return result;
-}
-
-static accessibility::nearby_list_entry nearby_creature_semantics( const map &here,
-        const avatar &viewer, const Creature &creature, const int result_index,
-        const int result_count, const bool player_knows )
-{
-    accessibility::nearby_list_entry result;
-    const monster *const mon = dynamic_cast<const monster *>( &creature );
-    const npc *const person = dynamic_cast<const npc *>( &creature );
-    result.name = mon != nullptr ? mon->name() : creature.disp_name();
-    result.location = situation_location( viewer.pos_bub(), creature.pos_bub() );
-
-    if( player_knows ) {
-        result.details.push_back( accessibility::format_creature_attitude(
-                                      Creature::get_attitude_ui_data(
-                                          creature.attitude_to( viewer ) ).first.translated() ) );
-        std::string behavior;
-        if( mon != nullptr ) {
-            behavior = mon->get_attitude().first;
-        } else if( person != nullptr ) {
-            behavior = npc_attitude_name( person->get_attitude() );
-        }
-        if( !behavior.empty() ) {
-            result.details.push_back( string_format( _( "Behavior: %s" ), behavior ) );
-        }
-        if( creature.sees( here, viewer ) ) {
-            result.details.push_back( _( "Sees you" ) );
-        }
-    } else {
-        result.details.push_back( accessibility::format_creature_attitude( _( "unknown" ) ) );
-    }
-    result.details.push_back( accessibility::format_creature_health( creature.get_hp(),
-                              creature.get_hp_max() ) );
-    result.result_index = result_index;
-    result.result_count = result_count;
-    return result;
-}
-
-static std::string nearby_item_sort_change( const list_item_sort_mode mode )
-{
-    switch( mode ) {
-        case list_item_sort_mode::count:
-        case list_item_sort_mode::DISTANCE:
-            return _( "Sorted by distance" );
-        case list_item_sort_mode::NAME:
-            return _( "Sorted by name" );
-        case list_item_sort_mode::CATEGORY_DISTANCE:
-            return _( "Sorted by category and distance" );
-        case list_item_sort_mode::CATEGORY_NAME:
-            return _( "Sorted by category and name" );
-    }
-    return {};
 }
 
 game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
@@ -9933,7 +9245,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
 
             mSortCategory.clear();
             refilter = true;
-            semantic_change = nearby_item_sort_change( uistate.list_item_sort );
+            semantic_change = accessibility_gameplay::nearby_item_sort_change( uistate.list_item_sort );
             announce_semantic_context = true;
         } else if( action == "TRAVEL_TO" && activeItem ) {
             // try finding route to the tile, or one tile away from it
@@ -10122,10 +9434,12 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
             if( activeItem != nullptr && selected_item_index >= 0 ) {
                 const int priority = selected_item_index < highPEnd ? 1 :
                                      selected_item_index >= lowPStart ? -1 : 0;
-                semantic_entry = nearby_item_semantics( u, *activeItem, page_num,
-                                                        selected_item_index + 1,
-                                                        static_cast<int>( filtered_items.size() ), priority,
-                                                        highlight_unread_items );
+                semantic_entry = accessibility_gameplay::nearby_item_entry( u, *activeItem, page_num,
+                                 selected_item_index + 1,
+                                 static_cast<int>( filtered_items.size() ), priority,
+                                 highlight_unread_items && activeItem->example != nullptr ?
+                                 std::optional<content_newness>( check_items_newness( activeItem->example ) ) :
+                                 std::nullopt );
             }
             if( announce_semantic_context ) {
                 const std::string context = accessibility::format_nearby_list_context(
@@ -10509,7 +9823,8 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
         if( announce_semantic_context || force_semantic_selection || selection_changed ) {
             accessibility::nearby_list_entry semantic_entry;
             if( cCurMon != nullptr ) {
-                semantic_entry = nearby_creature_semantics( here, u, *cCurMon, iActive + 1, recmax,
+                semantic_entry = accessibility_gameplay::nearby_creature_entry( here, u, *cCurMon, iActive + 1,
+                                 recmax,
                                  player_knows );
                 if( !get_safemode().empty() ) {
                     const monster *const mon = dynamic_cast<const monster *>( cCurMon );
@@ -15325,10 +14640,7 @@ void avatar_moves( const tripoint_abs_ms &old_abs_pos, const avatar &u, const ma
 {
     const tripoint_bub_ms new_pos = u.pos_bub();
     const tripoint_abs_ms new_abs_pos = m.get_abs( new_pos );
-    const std::string tile_name = m.has_furn( new_pos ) ? m.furn( new_pos ).obj().name() :
-                                  m.ter( new_pos ).obj().name();
-    accessibility::announce_movement(
-        direction_name( direction_from( old_abs_pos.raw(), new_abs_pos.raw() ) ), tile_name );
+    accessibility_gameplay::announce_avatar_moved( old_abs_pos, u, m );
     mtype_id mount_type;
     if( u.is_mounted() ) {
         mount_type = u.mounted_creature->type->id;

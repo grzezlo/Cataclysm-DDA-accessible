@@ -16,6 +16,7 @@
 
 #include "activity_actor_definitions.h"
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "avatar.h"
 #include "bionics.h"
 #include "bodypart.h"
@@ -2632,7 +2633,7 @@ static std::vector<std::string> comparison_stat_rows( const std::vector<iteminfo
 
 bool game_menus::inv::compare_item_menu::show()
 {
-    const bool speaking = accessibility::is_available();
+    const bool speaking = accessibility::is_active();
     const std::vector<std::string> paired = speaking ? comparison_stat_rows( first_info,
                                             second_info, first.tname(), second.tname() ) :
                                             std::vector<std::string>();
@@ -2671,8 +2672,11 @@ bool game_menus::inv::compare_item_menu::show()
         accessibility::announce( accessibility::format_semantic_sequence( {
             accessibility::format_inventory_comparison_choice( first.tname(), second.tname() ),
             confirm_message,
-            string_format( _( "Use Up and Down for paired statistics, %s for full item details, Escape to return" ),
-                           ctxt.get_desc( "ACCESSIBILITY_DETAILS" ) ),
+            string_format( _( "Use %1$s and %2$s for paired statistics, %3$s for full item details, %4$s to return" ),
+                           accessibility::format_spoken_key( ctxt.get_desc( "UP", 1 ) ),
+                           accessibility::format_spoken_key( ctxt.get_desc( "DOWN", 1 ) ),
+                           accessibility::format_spoken_key( ctxt.get_desc( "ACCESSIBILITY_DETAILS", 1 ) ),
+                           accessibility::format_spoken_key( ctxt.get_desc( "QUIT", 1 ) ) ),
             paired.empty() ? _( "No shared numeric statistics" ) : paired.front()
         } ) );
     }
@@ -2692,7 +2696,10 @@ bool game_menus::inv::compare_item_menu::show()
                 accessibility::announce( accessibility::format_semantic_sequence( {
                     _( "Full item details" ),
                     first.tname(),
-                    _( "Use Left and Right to switch items, Escape to return to paired statistics" ),
+                    string_format( _( "Use %1$s and %2$s to switch items, %3$s to return to paired statistics" ),
+                                   accessibility::format_spoken_key( ctxt.get_desc( "LEFT", 1 ) ),
+                                   accessibility::format_spoken_key( ctxt.get_desc( "RIGHT", 1 ) ),
+                                   accessibility::format_spoken_key( ctxt.get_desc( "QUIT", 1 ) ) ),
                     first_details.empty() ? _( "No details available" ) : first_details[first_detail_index]
                 } ) );
             } else {

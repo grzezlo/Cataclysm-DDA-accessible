@@ -925,7 +925,6 @@ class game
         void list_items_monsters(); // Called when you invoke the `V`-menu
         void accessibility_situation_review();
         void accessibility_status_review();
-        std::vector<std::string> check_condition_transitions();
 
         enum class vmenu_ret : int {
             CHANGE_TAB,

@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_document_view.h"
 #include "color.h"
 #include "input_enums.h"
@@ -70,7 +71,7 @@ void iteminfo_window::execute()
         return;
     }
 
-    if( accessibility::is_available() ) {
+    if( accessibility::is_active() ) {
         const std::string raw_info = format_item_info( data.get_item_display(), data.get_item_compare() );
         const std::string clean_item_name = remove_color_tags( data.get_item_name() );
         const std::string clean_type_name = remove_color_tags( data.get_type_name() );

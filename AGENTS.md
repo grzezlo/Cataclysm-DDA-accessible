@@ -86,8 +86,19 @@ over upstream contribution policy or exact UI parity.
 ### Accessibility implementation map
 
 - `src/accessibility.h` and `src/accessibility.cpp` own the renderer-independent
-  accessibility service, announcement history, gameplay gating, and shared
-  deduplication policy.  They must not depend on game UI or map objects.
+  accessibility service, the screen reader mode (`SCREEN_READER_SPEECH` option,
+  automatic by default), announcement history, gameplay gating, and shared
+  deduplication policy.  They must not depend on game UI or map objects.  UI
+  code decides whether to use accessible behavior with
+  `accessibility::is_active()`, never by querying the screen reader directly.
+- `src/accessibility_format.h` and `src/accessibility_format.cpp` own the pure
+  semantic models and speech formatters.  Keep them free of game state so they
+  can be tested with fixed inputs; add new formatters here, not to the service
+  header.
+- `src/accessibility_gameplay.h` and `src/accessibility_gameplay.cpp` own the
+  gameplay views and descriptions: situation and status review, look-around
+  tile descriptions, threat and condition alerts, movement, and nearby-list
+  semantics.
 - `src/accessibility_nvda.cpp` is the only place for NVDA Controller Client and
   Windows desktop calls.  Other code must use the accessibility service.
 - `tests/accessibility_test.cpp` contains the capture backend and service-level
@@ -97,9 +108,9 @@ over upstream contribution policy or exact UI parity.
   `src/messages.cpp` are shared announcement integration points.  Extend a
   shared control only when the semantics are valid for every caller; otherwise
   keep the hook in the owning feature.
-- `src/game.cpp` currently owns gameplay lifecycle, movement, visible-threat,
-  look-around, and nearby-object integration.  Keep additions there narrow and
-  move reusable semantic formatting into the accessibility service.
+- `src/game.cpp` keeps only narrow calls into `accessibility_gameplay` from the
+  gameplay lifecycle, movement, visible-threat, look-around, and nearby-list
+  code.  Do not add accessibility logic bodies to `game.cpp`.
 - `data/raw/keybindings.json` owns default accessibility bindings.  New actions
   must also be discoverable through the in-game keybinding and help interfaces.
 - Before changing an integration point, inspect its current symbol and recent

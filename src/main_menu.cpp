@@ -23,6 +23,7 @@
 #endif
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "auto_pickup.h"
 #include "avatar.h"
 #include "cata_path.h"

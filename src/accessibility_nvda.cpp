@@ -5,6 +5,7 @@
 
 #if defined(_WIN32)
 #include <array>
+#include <chrono>
 #include <cwchar>
 
 #ifndef NOMINMAX
@@ -36,6 +37,14 @@ class nvda_backend final : public backend
         using speak_text_fn = unsigned long( __stdcall * )( const wchar_t * );
 
         bool is_default_desktop() const;
+        bool probe() const;
+
+        // Probing requires a desktop query and an RPC round trip, so rapid
+        // announcements reuse a recent result.
+        static constexpr std::chrono::milliseconds availability_ttl{ 1000 };
+        mutable std::chrono::steady_clock::time_point checked_at;
+        mutable bool cached_available = false;
+        mutable bool has_cached_result = false;
 
         HMODULE client = nullptr;
         test_if_running_fn test_if_running = nullptr;
@@ -111,9 +120,20 @@ bool nvda_backend::is_default_desktop() const
     return got_name && _wcsicmp( desktop_name.data(), L"Default" ) == 0;
 }
 
-bool nvda_backend::is_available() const
+bool nvda_backend::probe() const
 {
     return client != nullptr && is_default_desktop() && test_if_running() == 0;
+}
+
+bool nvda_backend::is_available() const
+{
+    const auto now = std::chrono::steady_clock::now();
+    if( !has_cached_result || now - checked_at >= availability_ttl ) {
+        cached_available = probe();
+        checked_at = now;
+        has_cached_result = true;
+    }
+    return cached_available;
 }
 
 bool nvda_backend::announce( const std::string &message )
@@ -123,7 +143,12 @@ bool nvda_backend::announce( const std::string &message )
     }
 
     const std::wstring wide_message = utf8_to_wstr( message );
-    return speak_text( wide_message.c_str() ) == 0;
+    if( speak_text( wide_message.c_str() ) != 0 ) {
+        // Recheck on the next announcement instead of trusting the cache.
+        has_cached_result = false;
+        return false;
+    }
+    return true;
 }
 
 #endif // _WIN32

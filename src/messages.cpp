@@ -12,6 +12,7 @@
 #include <unordered_set>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "catacharset.h"
@@ -198,19 +199,21 @@ class messages_impl
             refresh_cooldown( m, flags );
             hide_message_in_cooldown( m );
 
-            if( coalesce_messages( m ) ) {
-                return;
-            }
+            // A repeated message is coalesced into a visible count, so speak it
+            // again rather than letting the repetition pass silently.
+            const std::string spoken = accessibility::game_messages_enabled() && type != m_debug &&
+                                       !m.is_in_cooldown() ?
+                                       remove_color_tags( m.message ) : std::string();
 
-            unsigned int message_limit = get_option<int>( "MESSAGE_LIMIT" );
-            while( messages.size() > message_limit ) {
-                messages.pop_front();
-            }
+            if( !coalesce_messages( m ) ) {
+                unsigned int message_limit = get_option<int>( "MESSAGE_LIMIT" );
+                while( messages.size() > message_limit ) {
+                    messages.pop_front();
+                }
 
-            messages.emplace_back( m );
-            if( type != m_debug && !m.is_in_cooldown() ) {
-                accessibility::announce_game_message( remove_color_tags( m.message ) );
+                messages.emplace_back( m );
             }
+            accessibility::announce_game_message( spoken );
         }
 
         /** Check if the current message needs to be prevented (hidden) or not from being displayed in the side bar.
@@ -616,7 +619,7 @@ void Messages::dialog::init( ui_adaptor &ui )
     w = catacurses::newwin( w_height, w_width, point( w_x, w_y ) );
 
     if( first_init ) {
-        semantic_mode = accessibility::is_available();
+        semantic_mode = accessibility::is_active();
         ctxt = input_context( "MESSAGE_LOG" );
         ctxt.register_action( "UP", to_translation( "Scroll up" ) );
         ctxt.register_action( "DOWN", to_translation( "Scroll down" ) );

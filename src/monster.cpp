@@ -788,24 +788,31 @@ static std::pair<std::string, nc_color> hp_description( int cur_hp, int max_hp )
 {
     std::string damage_info;
     nc_color col;
-    if( cur_hp >= max_hp ) {
-        damage_info = _( "It is uninjured." );
-        col = c_green;
-    } else if( cur_hp >= max_hp * 0.8 ) {
-        damage_info = _( "It is lightly injured." );
-        col = c_light_green;
-    } else if( cur_hp >= max_hp * 0.6 ) {
-        damage_info = _( "It is moderately injured." );
-        col = c_yellow;
-    } else if( cur_hp >= max_hp * 0.3 ) {
-        damage_info = _( "It is heavily injured." );
-        col = c_yellow;
-    } else if( cur_hp >= max_hp * 0.1 ) {
-        damage_info = _( "It is severely injured." );
-        col = c_light_red;
-    } else {
-        damage_info = _( "It is nearly dead!" );
-        col = c_red;
+    switch( get_injury_tier( cur_hp, max_hp ) ) {
+        case injury_tier::uninjured:
+            damage_info = _( "It is uninjured." );
+            col = c_green;
+            break;
+        case injury_tier::lightly_injured:
+            damage_info = _( "It is lightly injured." );
+            col = c_light_green;
+            break;
+        case injury_tier::moderately_injured:
+            damage_info = _( "It is moderately injured." );
+            col = c_yellow;
+            break;
+        case injury_tier::heavily_injured:
+            damage_info = _( "It is heavily injured." );
+            col = c_yellow;
+            break;
+        case injury_tier::severely_injured:
+            damage_info = _( "It is severely injured." );
+            col = c_light_red;
+            break;
+        case injury_tier::nearly_dead:
+            damage_info = _( "It is nearly dead!" );
+            col = c_red;
+            break;
     }
 
     if( debug_mode ) {

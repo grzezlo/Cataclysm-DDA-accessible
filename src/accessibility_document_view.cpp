@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "cata_assert.h"
 #include "color.h"
 #include "cursesdef.h"

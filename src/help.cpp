@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_document_view.h"
 #include "action.h"
 #include "cata_path.h"
@@ -274,7 +275,8 @@ void help::display_help() const
         const std::string first_title = first_it != help_texts.end() ?
                                         first_it->second.first.translated() : std::string();
         accessibility::announce( accessibility::format_help_menu_open(
-                                     topic_orders.size(), first_hotkey, first_title ) );
+                                     topic_orders.size(), first_hotkey, first_title, ctxt.get_desc( "UP", 1 ),
+                                     ctxt.get_desc( "DOWN", 1 ), ctxt.get_desc( "CONFIRM", 1 ), ctxt.get_desc( "QUIT", 1 ) ) );
     }
 
     do {

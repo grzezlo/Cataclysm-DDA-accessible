@@ -5,6 +5,7 @@
 #include <memory>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "cached_options.h"
 #include "cata_imgui.h"
 #include "catacharset.h"

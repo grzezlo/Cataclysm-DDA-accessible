@@ -4,6 +4,7 @@
 #include <climits>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "cata_scope_helpers.h"
 #include "catacharset.h"
 #include "condition.h"
@@ -421,7 +422,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
     _canceled = false;
     _confirmed = false;
-    const bool announce_field = accessibility::is_available() && !draw_only;
+    const bool announce_field = accessibility::is_active() && !draw_only;
     const auto field_context = [&]() {
         return accessibility::format_text_input( remove_color_tags( _title ),
                 remove_color_tags( _description ), ret.str() );
@@ -481,7 +482,7 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
         const input_event ev = ctxt->get_raw_input();
         ch = ev.type == input_event_t::keyboard_char ? ev.get_first_input() : 0;
         _handled = true;
-        const std::string previous_value = ret.str();
+        const std::string previous_value = announce_field ? ret.str() : std::string();
         const int previous_position = _position;
 
         bool next_loop = false;

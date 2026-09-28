@@ -14,6 +14,7 @@
 #include <utility>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "action.h"
 #include "cata_imgui.h"
 #include "cata_utility.h"
@@ -1017,7 +1018,7 @@ action_id input_context::display_menu( bool permit_execute_action )
     kb_menu.filtered_registered_actions = org_registered_actions;
     kb_menu.hotkeys = ctxt.get_available_single_char_hotkeys( display_help_hotkeys );
     kb_menu.init();
-    const bool accessibility_navigation = accessibility::is_available();
+    const bool accessibility_navigation = accessibility::is_active();
     kb_menu.accessibility_focus = accessibility_navigation;
     std::string focused_action = org_registered_actions.empty() ? "" : org_registered_actions.front();
     std::string previous_filter;

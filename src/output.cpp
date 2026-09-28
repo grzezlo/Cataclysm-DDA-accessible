@@ -2802,6 +2802,22 @@ std::pair<std::string, nc_color> get_hp_bar( const int cur_hp, const int max_hp,
     return get_bar( cur_hp, max_hp, 5, !is_mon );
 }
 
+injury_tier get_injury_tier( const int cur_hp, const int max_hp )
+{
+    if( cur_hp >= max_hp ) {
+        return injury_tier::uninjured;
+    } else if( cur_hp >= max_hp * 0.8 ) {
+        return injury_tier::lightly_injured;
+    } else if( cur_hp >= max_hp * 0.6 ) {
+        return injury_tier::moderately_injured;
+    } else if( cur_hp >= max_hp * 0.3 ) {
+        return injury_tier::heavily_injured;
+    } else if( cur_hp >= max_hp * 0.1 ) {
+        return injury_tier::severely_injured;
+    }
+    return injury_tier::nearly_dead;
+}
+
 std::pair<std::string, nc_color> get_stamina_bar( int cur_stam, int max_stam )
 {
     if( cur_stam == 0 ) {

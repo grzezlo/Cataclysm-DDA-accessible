@@ -5,6 +5,8 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_catch.h"
@@ -21,6 +23,7 @@
 #include "map_helpers.h"
 #include "map_item_stack.h"
 #include "map_selector.h"
+#include "monster.h"
 #include "player_helpers.h"
 #include "point.h"
 #include "type_id.h"
@@ -69,6 +72,10 @@ class capture_inventory_selector final : public inventory_pick_selector
 
         void speak_focus() {
             announce_accessibility_focus();
+        }
+
+        static bool invlet_allowed_for( const std::string &action ) {
+            return action_allows_invlet( action );
         }
 };
 
@@ -168,7 +175,7 @@ TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessi
     capture_backend *capture_ptr = capture.get();
     accessibility::set_backend_for_testing( std::move( capture ) );
 
-    CHECK( accessibility::is_available() );
+    CHECK( accessibility::is_active() );
     CHECK_FALSE( accessibility::announce( "" ) );
     CHECK( capture_ptr->messages.empty() );
 
@@ -975,12 +982,24 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
     normal.pain_tier = "No pain";
     normal.weariness_tier = "Fresh";
 
-    CHECK_FALSE( accessibility::evaluate_threat_transition( {}, "Nothing" ) );
+    int descriptions_built = 0;
+    const auto describe = [&descriptions_built]( const std::string & text ) {
+        return [&descriptions_built, text]() {
+            ++descriptions_built;
+            return text;
+        };
+    };
+    CHECK_FALSE( accessibility::evaluate_threat_transition( {}, describe( "No threats in view" ) ) );
+    CHECK( descriptions_built == 0 );
     CHECK( accessibility::evaluate_condition_transitions( normal ).empty() );
 
     const std::optional<std::string> threat = accessibility::evaluate_threat_transition(
-    { "monster-1" }, "Zombie spotted!" );
+    { "monster-1" }, describe( "Zombie spotted!" ) );
     REQUIRE( threat );
+    CHECK( descriptions_built == 1 );
+    CHECK_FALSE( accessibility::evaluate_threat_transition( { "monster-1" },
+                 describe( "Unchanged threats are not described" ) ) );
+    CHECK( descriptions_built == 1 );
 
     accessibility::condition_tracker hungry = normal;
     hungry.hunger_tier = "Hungry";
@@ -996,7 +1015,8 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
 
     accessibility::reset_game_state();
     CHECK( accessibility::evaluate_condition_transitions( hungry ).empty() );
-    CHECK( accessibility::evaluate_threat_transition( { "monster-1" }, "Zombie spotted!" ) );
+    CHECK( accessibility::evaluate_threat_transition( { "monster-1" },
+            describe( "Zombie spotted!" ) ) );
 
     accessibility::reset_backend_after_testing();
 }
@@ -1083,9 +1103,11 @@ TEST_CASE( "accessible_status_summary_formats_semantic_state", "[accessibility][
 
 TEST_CASE( "help_topic_and_document_formatting", "[accessibility][nogame]" )
 {
-    CHECK( accessibility::format_help_menu_open( 23, "a", "Introduction" ) ==
+    CHECK( accessibility::format_help_menu_open( 23, "a", "Introduction", "Up", "Down",
+            "Enter", "Escape" ) ==
            "Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction" );
-    CHECK( accessibility::format_help_menu_open( 0, "", "" ) ==
+    CHECK( accessibility::format_help_menu_open( 0, "", "", "Up", "Down", "Enter",
+            "Escape" ) ==
            "Help. 0 topics. Escape to exit." );
 
     CHECK( accessibility::format_help_topic_focus( "b", "Movement" ) == "b: Movement" );
@@ -1133,7 +1155,9 @@ TEST_CASE( "help_browser_navigation_document_reading_and_repeat_last", "[accessi
     accessibility::set_backend_for_testing( std::move( capture ) );
 
     // 1. Open Help menu
-    accessibility::announce( accessibility::format_help_menu_open( 23, "a", "Introduction" ) );
+    accessibility::announce( accessibility::format_help_menu_open( 23, "a", "Introduction", "Up",
+                             "Down",
+                             "Enter", "Escape" ) );
 
     // 2. Linear navigation through topics across visual columns
     accessibility::announce( accessibility::format_help_topic_focus( "b", "Movement" ) );
@@ -1456,4 +1480,113 @@ TEST_CASE( "inventory_selector_names_column_and_focus_when_source_changes", "[ac
     CHECK( capture_ptr->messages.back().find( ground->tname() ) != std::string::npos );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "screen_reader_mode_controls_speech_and_latches_detection", "[accessibility][nogame]" )
+{
+    class toggled_backend final : public accessibility::backend
+    {
+        public:
+            bool is_available() const override {
+                return available;
+            }
+
+            bool announce( const std::string &message ) override {
+                messages.push_back( message );
+                return true;
+            }
+
+            bool available = false;
+            std::vector<std::string> messages;
+    };
+
+    auto backend = std::make_unique<toggled_backend>();
+    toggled_backend *backend_ptr = backend.get();
+    accessibility::set_backend_for_testing( std::move( backend ) );
+
+    // Automatic mode stays inactive while no screen reader is detected.
+    CHECK_FALSE( accessibility::is_active() );
+    CHECK_FALSE( accessibility::announce( "Silent" ) );
+    CHECK( backend_ptr->messages.empty() );
+
+    // Forced on works without a detected screen reader, e.g. for testing.
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::on );
+    CHECK( accessibility::is_active() );
+    CHECK( accessibility::announce( "Forced" ) );
+
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::off );
+    backend_ptr->available = true;
+    CHECK_FALSE( accessibility::is_active() );
+    CHECK_FALSE( accessibility::announce( "Disabled" ) );
+    CHECK_FALSE( accessibility::repeat_last_announcement() );
+
+    // Selecting automatic mode detects immediately and keeps the interface
+    // active if the screen reader later becomes unavailable.
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::automatic );
+    CHECK( accessibility::is_active() );
+    backend_ptr->available = false;
+    CHECK( accessibility::is_active() );
+
+    REQUIRE( backend_ptr->messages.size() == 1 );
+    CHECK( backend_ptr->messages[0] == "Forced" );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "semantic_sequences_respect_existing_sentence_ends", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_semantic_sequence( { "Loading the save…", "Please wait" } ) ==
+           "Loading the save… Please wait." );
+    CHECK( accessibility::format_semantic_sequence( { "  Wrapped\n  text\t here  " } ) ==
+           "Wrapped text here." );
+    CHECK( accessibility::normalize_status_announcement( "Saving [3/10]  25%", true ) == "Saving" );
+    CHECK( accessibility::format_threat_announcement( {}, 0 ) == "No threats in view" );
+    CHECK( accessibility::format_threat_description( "zombie", 1, "north" ) ==
+           "zombie 1 tile to the north" );
+    CHECK( accessibility::format_threat_announcement( { "zombie 2 tiles to the north" }, 2 ) ==
+           "zombie 2 tiles to the north and 2 others spotted!" );
+    CHECK( accessibility::format_game_arrival( true, "Ana", "field" ) ==
+           "Welcome back, Ana. Location: field" );
+}
+
+TEST_CASE( "threat_alerts_ignore_unrelated_creature_removal", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms origin = you.pos_bub();
+    monster &unrelated = spawn_test_monster( "mon_zombie", origin + tripoint_rel_ms( 4, 0, 0 ) );
+    monster &threat = spawn_test_monster( "mon_zombie", origin + tripoint_rel_ms( 0, 3, 0 ) );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    accessibility_gameplay::announce_turn_alerts( here, you, { &threat } );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages[0].find( "spotted!" ) != std::string::npos );
+
+    // Removing a creature earlier in the tracker must not re-announce the same threat.
+    g->remove_zombie( unrelated );
+    accessibility_gameplay::announce_turn_alerts( here, you, { &threat } );
+    CHECK( capture_ptr->messages.size() == 1 );
+
+    accessibility_gameplay::announce_turn_alerts( here, you, {} );
+    REQUIRE( capture_ptr->messages.size() == 2 );
+    CHECK( capture_ptr->messages[1] == "No threats in view." );
+
+    accessibility::reset_backend_after_testing();
+    clear_map();
+}
+
+TEST_CASE( "inventory_invlets_still_select_items_except_for_accessibility_shortcuts",
+           "[accessibility][nogame]" )
+{
+    CHECK( capture_inventory_selector::invlet_allowed_for( "ANY_INPUT" ) );
+    // An action that shares its key with an invlet keeps the upstream invlet behavior.
+    CHECK( capture_inventory_selector::invlet_allowed_for( "EXAMINE" ) );
+    CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_DETAILS" ) );
+    CHECK_FALSE( capture_inventory_selector::invlet_allowed_for( "ACCESSIBILITY_REPEAT_LAST" ) );
 }

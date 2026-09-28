@@ -10,6 +10,7 @@
 #include <sstream>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_document_view.h"
 #include "avatar.h"
 #include "cached_options.h" // IWYU pragma: keep
@@ -558,7 +559,7 @@ void uilist::filterlist()
     fentries.clear();
     fselected = -1;
     int f = 0;
-    const bool accessibility_navigation = accessibility::is_available();
+    const bool accessibility_navigation = accessibility::is_active();
     for( size_t i = 0; i < entries.size(); i++ ) {
         bool visible = true;
         if( !categories.empty() && !category_filter( entries[i], categories[current_category].first ) ) {
@@ -812,7 +813,7 @@ bool uilist::scrollby( const int scrollby )
         return false;
     }
 
-    const bool accessibility_navigation = accessibility::is_available();
+    const bool accessibility_navigation = accessibility::is_active();
     bool looparound = scrollby == -1 || scrollby == 1;
     bool backwards = scrollby < 0;
     int recmax = static_cast<int>( fentries.size() );
@@ -1074,7 +1075,7 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
                 const auto it = std::find( fentries.begin(), fentries.end(), iter->second );
                 if( it != fentries.end() ) {
                     const bool enabled = entries[*it].enabled;
-                    if( enabled || allow_disabled || hilight_disabled || accessibility::is_available() ) {
+                    if( enabled || allow_disabled || hilight_disabled || accessibility::is_active() ) {
                         // Change the selection to display correctly when this function
                         // is called again.
                         fselected = std::distance( fentries.begin(), it );

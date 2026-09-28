@@ -744,6 +744,8 @@ class inventory_selector
 
         inventory_input get_input();
         inventory_input process_input( const std::string &action, int ch );
+        /** Whether the key behind an action may also select an entry by its invlet. */
+        static bool action_allows_invlet( const std::string &action );
 
         /** Given an action from the input_context, try to act according to it.
         * Should handle all actions standard to derived classes. **/

@@ -3950,10 +3950,14 @@ void input_manager::pump_events()
     // Handle all events, but check for accessibility repeat shortcut before ignoring
     CheckMessages();
 
-    if( last_input.type == input_event_t::keyboard_code &&
-        last_input.modifiers == std::set<keymod_t> { keymod_t::alt } &&
-        last_input.get_first_input() == 'r' ) {
-        accessibility::repeat_last_announcement();
+    if( last_input.type != input_event_t::error ) {
+        // Honor the player's binding, which may differ from the default Alt+R.
+        for( const input_event &binding : get_input_for_action( "ACCESSIBILITY_REPEAT_LAST" ) ) {
+            if( binding == last_input ) {
+                accessibility::repeat_last_announcement();
+                break;
+            }
+        }
     }
 
     last_input = input_event();

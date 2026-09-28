@@ -666,6 +666,17 @@ std::pair<std::string, nc_color> get_bar( float cur, float max, int width = 5,
 
 std::pair<std::string, nc_color> get_hp_bar( int cur_hp, int max_hp, bool is_mon = false );
 
+/** Descriptive injury tiers shared by creature descriptions and accessibility speech. */
+enum class injury_tier : int {
+    uninjured,
+    lightly_injured,
+    moderately_injured,
+    heavily_injured,
+    severely_injured,
+    nearly_dead
+};
+injury_tier get_injury_tier( int cur_hp, int max_hp );
+
 std::pair<std::string, nc_color> get_stamina_bar( int cur_stam, int max_stam );
 
 std::pair<std::string, nc_color> get_light_level( float light );

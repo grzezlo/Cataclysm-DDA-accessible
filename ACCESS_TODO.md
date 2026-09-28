@@ -20,6 +20,101 @@ scenarios listed for the stage.  Each stage's possible automated tests are a
 hard gate: they must be implemented and passing before requesting human
 verification.
 
+## Stage 05A - Review 01 corrections
+
+**Outcome:** Correct the defects and inefficiencies found in the first code
+review of the fork (local `review01.md`, 2026-09-28) without changing accepted
+interactions, and make the accessible interface a player setting.
+
+**Selected interaction (2026-09-28):** A `SCREEN_READER_SPEECH` option on the
+Interface options page offers Automatic, On, and Off, with Automatic as the
+default.  Automatic detects NVDA at startup so a blind player never has to
+enable anything; if NVDA starts later, the game detects it within a few
+seconds.  Once detected, the accessible interface stays active for the session
+so it does not change when NVDA restarts or sleeps.  On forces the accessible
+interface without a screen reader (useful for sighted testing); Off disables
+all screen reader speech and accessible navigation.  It is separate from the
+upstream `SCREEN_READER_MODE` option, which only adjusts curses text layout.
+
+Speech priorities and turn batching from the same review are Stage 05B.
+
+**Code inventory:** `src/accessibility.*` (mode, service state),
+`src/accessibility_format.*` (formatters moved out of the service header),
+`src/accessibility_gameplay.*` (code moved out of `src/game.cpp`),
+`src/accessibility_nvda.cpp` (cached availability), `src/options.cpp`,
+`src/messages.cpp` (coalesced messages), `src/inventory_ui.cpp` (invlets),
+`src/sdltiles.cpp` (repeat binding during blocking work), `src/output.*` and
+`src/monster.cpp` (shared injury tiers), `src/help.cpp` and
+`src/game_inventory.cpp` (spoken bindings).
+
+**Success criteria:** Repeated game messages are spoken each time; unchanged
+threats are not re-announced when another creature is removed; invlets keep
+upstream behavior except for accessibility shortcuts; the repeat binding works
+during saves and loads after rebinding; spoken hints name the current
+bindings; per-turn alert work is skipped when the accessible interface is
+inactive.
+
+**Possible automated tests:** Screen reader mode and detection latching,
+sentence-end handling, lazy threat descriptions, threat identity across
+creature removal, and invlet selection with accessibility shortcuts.
+Coalesced-message speech cannot run in the test binary because it uses fake
+messages; verify it manually.
+
+**Required human verification:** With default options and NVDA running, start
+the game and confirm the main menu speaks without changing any setting.
+Attack and miss repeatedly and confirm each repeated message is spoken.
+Confirm threat alerts are not repeated when an unrelated monster dies.  Select
+items by letter in the inventory, and use Alt+D there.  Rebind repeat-last and
+use it while saving.  Set the option to Off and confirm silence, then back to
+Automatic.
+
+## Stage 05B - Speech priorities and turn batching
+
+**Outcome:** Speech keeps up with keyboard navigation, one turn produces one
+utterance, urgent gameplay alerts are not cut off, and repeat-last returns
+the last meaningful announcement.
+
+**Selected interaction (2026-09-28, variant 1 of 3):**
+
+- In lists, menus, the inventory, keybindings, documents, and other focus
+  views, a new focus announcement replaces the unfinished previous speech
+  (programmatic `nvdaController_cancelSpeech` before speaking the new focus).
+  There is still no player speech-cancel command.
+- During gameplay, game messages, threat alerts, and condition alerts of one
+  turn are collected and spoken as one utterance when the game waits for the
+  player's input.  Gameplay movement and routine speech never interrupt
+  queued speech, so alerts are not cut off by walking.
+- Repeat-last replays the last focus announcement or alert; routine speech
+  such as the tile name after a step does not replace it.
+- During auto-travel and other multi-step movement, per-step tile speech is
+  suppressed; interruption and arrival are still announced.
+- If a focus change in a menu cuts off an alert, the alert remains available
+  through repeat-last and the message log.
+- The visible UI is unchanged.
+
+**Code inventory:** `src/accessibility.*` (priorities, turn buffer, repeat
+buffer), `src/accessibility_nvda.cpp` (cancel call), `src/messages.cpp`,
+`src/accessibility_gameplay.cpp` (alerts, movement), the gameplay input wait in
+`src/do_turn.cpp` or `src/handle_action.cpp`, and the shared focus hooks in
+`src/uilist.cpp`, `src/inventory_ui.cpp`, `src/input_context.cpp`,
+`src/accessibility_document_view.cpp`, `src/main_menu.cpp`, and
+`src/popup.cpp`.
+
+**Success criteria:** Rapid list navigation speaks only the current entry; a
+turn with several messages and an alert is one utterance; walking does not
+cut off an alert; repeat-last after a step repeats the alert; auto-travel is
+quiet until it stops.
+
+**Possible automated tests:** Capture backend records cancel calls and
+priorities; focus announcements cancel, gameplay announcements queue; turn
+buffer flushes once in order with deduplication; routine speech does not
+change repeat-last; per-step movement speech is suppressed during auto-move.
+
+**Required human verification:** Hold Down in a long list and in the
+inventory; fight several monsters and listen to one combined turn; walk while
+an alert is spoken; use repeat-last after stepping; auto-travel to a
+destination; interrupt speech with Control and confirm nothing is requeued.
+
 ## Stage 06 - Inventory selector navigation and item information
 
 **Outcome:** Inventory selector navigation, categories, item details, and

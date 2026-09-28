@@ -7,6 +7,7 @@
 #include <limits>
 #include <stdexcept>
 
+#include "accessibility.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_utility.h"
@@ -1791,6 +1792,11 @@ void options_manager::add_options_interface()
          to_translation( "Switch language.  Each percentage is the fraction of strings translated "
                          "for that language." ),
          options_manager::get_lang_options(), "" );
+
+    add( "SCREEN_READER_SPEECH", "interface", to_translation( "Screen reader speech" ),
+         to_translation( "Automatic: enable screen reader speech and accessible navigation when a supported screen reader is detected.  On: always use the accessible interface.  Off: never speak through a screen reader." ),
+    { { "auto", to_translation( "Automatic" ) }, { "on", to_translation( "On" ) }, { "off", to_translation( "Off" ) } },
+    "auto" );
 
     add_empty_line();
 
@@ -4049,6 +4055,11 @@ void options_manager::update_options_cache()
     cata::options::mouse.enabled = ::get_option<bool>( "ENABLE_MOUSE" );
     cata::options::mouse.hidekb = ::get_option<std::string>( "HIDE_CURSOR" ) == "hidekb";
     use_pinyin_search = ::get_option<bool>( "USE_PINYIN_SEARCH" );
+
+    const std::string screen_reader_mode = ::get_option<std::string>( "SCREEN_READER_SPEECH" );
+    accessibility::set_screen_reader_mode( screen_reader_mode == "on" ?
+                                           accessibility::screen_reader_mode::on : screen_reader_mode == "off" ?
+                                           accessibility::screen_reader_mode::off : accessibility::screen_reader_mode::automatic );
 
     cata::options::damage_indicators.clear();
     for( int i = 0; i < 6; i++ ) {

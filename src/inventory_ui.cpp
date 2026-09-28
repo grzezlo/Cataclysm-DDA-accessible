@@ -8,6 +8,7 @@
 
 #include "activity_actor_definitions.h"
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "avatar_action.h"
 #include "basecamp.h"
 #include "cata_assert.h"
@@ -2985,7 +2986,7 @@ drop_location inventory_selector::get_only_choice() const
 
 inventory_input inventory_selector::get_input()
 {
-    if( accessibility::is_available() ) {
+    if( accessibility::is_active() ) {
         announce_accessibility_focus();
     }
     while( true ) {
@@ -3029,7 +3030,7 @@ accessibility::inventory_focus_entry inventory_selector::accessibility_entry(
 
 void inventory_selector::announce_accessibility_focus( const bool force, const std::string &event )
 {
-    if( !accessibility::is_available() ) {
+    if( !accessibility::is_active() ) {
         return;
     }
 
@@ -3104,6 +3105,12 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     accessibility_opening = false;
 }
 
+bool inventory_selector::action_allows_invlet( const std::string &action )
+{
+    // Accessibility shortcuts use Alt+letter; do not let the letter also pick an invlet.
+    return action != "ACCESSIBILITY_DETAILS" && action != "ACCESSIBILITY_REPEAT_LAST";
+}
+
 inventory_input inventory_selector::process_input( const std::string &action, int ch )
 {
     inventory_input res{ action, ch, nullptr };
@@ -3131,7 +3138,7 @@ inventory_input inventory_selector::process_input( const std::string &action, in
         }
     }
 
-    if( res.action != "ANY_INPUT" ) {
+    if( !action_allows_invlet( res.action ) ) {
         return res;
     }
     res.entry = find_entry_by_invlet( res.ch );

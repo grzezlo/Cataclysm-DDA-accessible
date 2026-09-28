@@ -215,6 +215,8 @@ std::string action_ident( action_id act )
         case ACTION_ACCESSIBILITY_STATUS:
             return "accessibility_status";
         case ACTION_ACCESSIBILITY_REPEAT_LAST:
+            // Upper case: this is the global binding shared by every input context,
+            // unlike the lower-case DEFAULTMODE-only gameplay actions above.
             return "ACCESSIBILITY_REPEAT_LAST";
         case ACTION_ZONES:
             return "zones";
