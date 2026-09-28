@@ -2,11 +2,13 @@
 
 #include <chrono>
 #include <cstdint>
+#include <cstdlib>
 #include <memory>
 #include <set>
 #include <utility>
 
 #include "accessibility_format.h"
+#include "debug.h"
 
 namespace accessibility
 {
@@ -77,14 +79,27 @@ void reset_detection()
  * Send speech to the backend.  Only the first focus speech after a key press
  * may replace unfinished speech; everything else queues behind it.
  */
+/** Set CATA_ACCESSIBILITY_TRACE to log every speech request to debug.log. */
+bool trace_enabled()
+{
+    static const bool enabled = std::getenv( "CATA_ACCESSIBILITY_TRACE" ) != nullptr;
+    return enabled;
+}
+
 bool speak( const std::string &message, const bool may_interrupt )
 {
     service_state &current = state();
-    if( may_interrupt && current.speech_generation != current.input_generation ) {
+    const bool interrupt = may_interrupt && current.speech_generation != current.input_generation;
+    if( interrupt ) {
         current.active_backend->cancel();
     }
     current.speech_generation = current.input_generation;
-    return current.active_backend->announce( message );
+    const bool spoken = current.active_backend->announce( message );
+    if( trace_enabled() ) {
+        DebugLog( D_INFO, DC_ALL ) << "accessibility speech" << ( interrupt ? " (interrupting)" : "" )
+                                   << ( spoken ? "" : " (not delivered)" ) << ": " << message;
+    }
+    return spoken;
 }
 
 } // namespace
@@ -170,6 +185,9 @@ void queue_gameplay_announcement( const std::string &message, const gameplay_spe
         return;
     }
     current.gameplay_queue.push_back( { message, kind } );
+    if( trace_enabled() ) {
+        DebugLog( D_INFO, DC_ALL ) << "accessibility queued: " << message;
+    }
 }
 
 bool flush_gameplay_announcements()

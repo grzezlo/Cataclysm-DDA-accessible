@@ -8,6 +8,7 @@
 #include "accessibility_format.h"
 #include "accessibility_gameplay.h"
 #include "avatar.h"
+#include "avatar_action.h"
 #include "calendar.h"
 #include "cata_catch.h"
 #include "cata_scope_helpers.h"
@@ -1663,4 +1664,66 @@ TEST_CASE( "focus_speech_interrupts_once_per_key_and_gameplay_speech_queues",
     CHECK_FALSE( accessibility::take_suppressed_movement() );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "walking_speaks_each_destination_tile_after_travel", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms start = you.pos_bub();
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    const auto step_east = [&]() {
+        you.set_moves( you.get_speed() );
+        REQUIRE( avatar_action::move( you, here, tripoint_rel_ms::east ) );
+        accessibility_gameplay::before_player_input( here, you );
+    };
+
+    step_east();
+    REQUIRE_FALSE( capture_ptr->messages.empty() );
+    const std::string tile = here.tername( you.pos_bub() );
+    CHECK( capture_ptr->messages.back().find( tile ) != std::string::npos );
+
+    // A finished travel route leaves the saved destination point behind; later
+    // manual steps must still be spoken.
+    you.set_destination( { you.pos_bub() + tripoint_rel_ms::east } );
+    CHECK( you.get_next_auto_move_direction() != ACTION_NULL );
+    CHECK_FALSE( you.has_destination() );
+    REQUIRE( you.is_auto_moving() );
+    const size_t before_travel_end = capture_ptr->messages.size();
+    step_east();
+    REQUIRE( capture_ptr->messages.size() == before_travel_end + 1 );
+    CHECK( capture_ptr->messages.back().find( tile ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "Gameplay" ) == std::string::npos );
+
+    const size_t before_manual = capture_ptr->messages.size();
+    step_east();
+    REQUIRE( capture_ptr->messages.size() == before_manual + 1 );
+    CHECK( capture_ptr->messages.back().find( tile ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "Gameplay" ) == std::string::npos );
+
+    // Steps with more route ahead are quiet, and the arrival step is spoken
+    // once without a separate position report.
+    you.set_destination( { you.pos_bub() + tripoint_rel_ms::east,
+                           you.pos_bub() + tripoint_rel_ms::east * 2 } );
+    CHECK( you.get_next_auto_move_direction() != ACTION_NULL );
+    const size_t before_route = capture_ptr->messages.size();
+    you.set_moves( you.get_speed() );
+    REQUIRE( avatar_action::move( you, here, tripoint_rel_ms::east ) );
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+    CHECK( you.get_next_auto_move_direction() != ACTION_NULL );
+    step_east();
+    REQUIRE( capture_ptr->messages.size() == before_route + 1 );
+    CHECK( capture_ptr->messages.back().find( "Gameplay" ) == std::string::npos );
+
+    you.clear_destination();
+    accessibility::reset_backend_after_testing();
+    you.setpos( here, start );
+    clear_map();
 }

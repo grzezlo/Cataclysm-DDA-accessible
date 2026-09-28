@@ -755,12 +755,17 @@ void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &vi
     if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
         return;
     }
-    if( viewer.is_auto_moving() ) {
-        // Per-step speech would flood auto-travel; the position is reported
-        // when the game next waits for the player.
+    // Only steps with more route ahead are skipped.  The route loses its step
+    // before the move, so the final step is spoken as the arrival.  The saved
+    // destination point is not used: it stays set after a finished route.
+    if( viewer.has_destination() ) {
+        // Per-step speech would flood auto-travel; if travel stops early the
+        // position is reported when the game next waits for the player.
         accessibility::note_suppressed_movement();
         return;
     }
+    // This step is spoken, so no separate position report is needed.
+    accessibility::take_suppressed_movement();
     const tripoint_bub_ms new_pos = viewer.pos_bub();
     const tripoint_abs_ms new_abs_pos = here.get_abs( new_pos );
     const std::string tile_name = here.has_furn( new_pos ) ? here.furn( new_pos ).obj().name() :
