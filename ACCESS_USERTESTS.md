@@ -152,3 +152,37 @@ plastic bag or other container on your tile; spawn a second backpack too.
   5".  Unmark: "Nothing selected".  `Alt+S` reads the purpose, weight and
   volume statistics, and the selection total.  Confirm the drop and hear
   the result message.
+
+## Stage 08: Directional and environmental interaction
+
+Stand next to a closed door and a piece of furniture, for example inside the
+starting shelter.  Spawning… > Spawn an item gives items to drop around you;
+Spawning… > Spawn a monster followed by killing it leaves a corpse.  Options >
+Interface > "Autoselect if exactly one valid target" controls auto-selection.
+
+- **Targets in the prompt.**  Press `o` (open) next to the closed door with
+  another direction also valid, and auto-selection off.  You hear "Open
+  where? Targets:", the door with its direction, then the input hint, in one
+  announcement.  Tiles with the same target are grouped.  `Alt+R` repeats it.
+- **Auto-selection.**  With auto-selection on and only one door, press `o`.
+  You hear "Auto-selected:", the door, and its direction, then the result
+  message.
+- **No valid target.**  Press `c` (close) where nothing can be closed.  The
+  failure message is spoken; with auto-selection off the prompt says "No
+  valid targets".
+- **Invalid direction.**  In the open prompt press a direction toward a
+  wall.  You hear the wall, its direction, and "not a valid target".
+- **Cancel.**  Open any direction prompt and press Escape: "Never mind." is
+  spoken once and gameplay continues.
+- **Examine.**  Press `e` next to furniture with items and a container such
+  as a fridge.  The prompt names each target with its item count; choose one
+  and the following menu or message is spoken.
+- **Grab and release.**  Press `G` next to a chair.  The prompt names the
+  furniture; choose it and hear the grab message; press `G` again to hear
+  the release.
+- **Smash.**  Press `s` next to a window and a corpse.  Both are listed as
+  targets; choose one and the result and any confirmation are spoken.
+- **Butcher.**  Stand on the corpse and press `B`.  The butcher menu is read
+  through the shared menu speech.
+- **Darkness.**  Map… > Change time to night, then open a prompt: tiles you
+  cannot see are named "unseen".

@@ -19,69 +19,6 @@ automated tests are implemented, `test_access.bat` passes, and
 `build_win_x64.bat` succeeds.  Its user-test scenarios then move to
 `ACCESS_USERTESTS.md` and do not block the next stage.
 
-## Stage 08 - Directional and environmental interaction
-
-**Outcome:** Direction selection and terrain/furniture interaction clearly expose
-the target, choices, warnings, and outcome.
-
-**Code inventory:** action dispatch in `src/handle_action.cpp`; adjacent-target
-helpers in `src/game.cpp`; terrain/furniture interactions in `src/iexamine.cpp`;
-shared prompts and lists.
-
-**Implementation hints:**
-
-- Examination dispatch: `game::examine(tripoint, bool)` in `src/game.cpp`
-  evaluates candidates in priority order: creatures → vehicles → partial
-  constructions → traps → computers → furniture → terrain → items.
-- Each terrain/furniture type can have an `examine` callback registered in its
-  JSON definition, dispatching to functions in `src/iexamine.cpp`.
-- `iexamine.cpp` is ~10,000 lines with dozens of handlers.  The accessibility
-  approach should be generic: hook announcements at the dispatch level in
-  `game::examine()` rather than per-handler.
-- Common patterns in iexamine: `uilist` choice dialogs (doors, elevators,
-  vending), `query_yn` prompts, and activity assignment.  These benefit from
-  Stage 05 shared control hooks.
-- Direction selection uses `choose_adjacent` which has directional input and
-  announces the target tile.
-- Smash: `ACTION_SMASH` in handle_action.cpp → `game::smash()`.
-- Butcher: `ACTION_BUTCHER` → `game::butcher()` which uses `uilist`.
-- Grab/release: `ACTION_GRAB` → `game::grab()`.
-
-**Selected interaction (option A, target list in the prompt):**
-
-- Keys are unchanged: one direction key commits, `.` selects the own tile,
-  `<`/`>` change level where allowed, and `Escape` cancels.  `Alt+R` repeats the
-  prompt.  Look-around remains the way to read full tile detail.
-- In screen-reader mode a direction prompt with a validity filter speaks the
-  prompt, then the valid targets as one utterance, grouped by identical target
-  in compass order (north clockwise, then own tile), for example
-  "Close where? Targets: wooden door, north; window, east, northeast.
-  (Direction button or mouse)".  Without a valid target it says
-  "No valid targets".  Prompts without a filter keep only the prompt, except
-  grab and smash, which get speech-only filters without changing highlighting
-  or selection.
-- Targets name the most salient visible thing: creature, vehicle part,
-  furniture, or terrain, plus a visible item count.  Tiles the player cannot
-  see are "unseen".
-- An auto-selected single target is announced ("Auto-selected: wooden door,
-  north").  An invalid direction names what is there and says it is not a
-  valid target.  Cancellation keeps the existing "Never mind." message.
-- Follow-up menus, confirmations, and results rely on the shared Stage 05
-  controls and game messages.
-
-**Success criteria:** Direction selection reports direction and normally visible
-target.  Examine, open/close, grab/release, haul, smash, butcher, and common
-terrain/furniture actions announce valid choices, disabled reasons, warnings,
-result, cancel, and restored gameplay context.
-
-**Possible automated tests:** Map fixtures for doors, furniture, appliances,
-containers, corpses, hazards, valid/invalid directions, nested choices,
-confirmation, cancellation, and completion.
-
-**User-test scenarios:** Examine and manipulate a door, container,
-furniture, appliance, hazard, and corpse; deliberately choose invalid directions
-and cancel nested prompts.
-
 ## Stage 08A - Auto-travel and pathfinding
 
 **Outcome:** A player can travel to distant tiles without step-by-step manual

@@ -622,3 +622,31 @@ Limitations:
 - Quantity prompts, destination menus, and failure popups rely on the
   Stage 05 controls without transfer-specific wording.
 - Page position ("page 1 of 3") is not spoken.
+
+## 2026-09-28 — Stage 08: Directional and environmental interaction
+
+- Selected design: option A (valid targets spoken in the direction prompt,
+  keys unchanged), recorded before implementation.
+- Direction prompts with a validity filter (open, close, examine, butcher,
+  pickup, and other highlighted prompts) speak the prompt, then the valid
+  adjacent targets grouped by identical target in compass order from north,
+  own tile last: "Close where? Targets: closed wood door, north. (Direction
+  button or mouse)", or "No valid targets".  Grab and smash get speech-only
+  filters (vehicles and furniture; bashable tiles and revivable corpses)
+  without changing highlighting or selection.
+- Targets name a visible creature, the displayed vehicle part, furniture, or
+  terrain, plus a visible item count; tiles the player cannot see are
+  "unseen".
+- An auto-selected single target is spoken ("Auto-selected: ..."), and an
+  invalid direction names what is there and says it is not a valid target.
+  `Alt+R` repeats the prompt.
+- Commit: `a0133c6734`.
+
+Limitations:
+
+- Prompts without a validity filter (unload, deploy, spray, dismount, and
+  similar item uses) speak only the prompt.
+- Examination handlers, door and vending menus, confirmations, butcher
+  choices, and results rely on the Stage 05 controls and game-message
+  speech; no handler-specific wording was added.
+- Vehicle targets name only the part, not the vehicle.
