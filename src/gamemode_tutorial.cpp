@@ -4,6 +4,8 @@
 #include <optional>
 #include <string>
 
+#include "accessibility.h"
+#include "accessibility_gameplay.h"
 #include "action.h"
 #include "avatar.h"
 #include "calendar.h"
@@ -188,6 +190,12 @@ bool tutorial_game::init()
 
     // This shifts the view to center the players pos
     g->update_map( player_character );
+
+    // The tutorial bypasses game::start_game(), which enables gameplay speech.
+    accessibility::reset_game_state();
+    accessibility::enable_game_messages( true );
+    accessibility::announce_status( accessibility_gameplay::arrival_announcement( get_map(),
+                                    player_character, false ) );
     return true;
 }
 

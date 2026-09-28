@@ -1197,8 +1197,9 @@ leave or resume safely.  This stage follows the gameplay, interface, and
 coverage stages because its exercises use their controls.
 
 **Code inventory:** tutorial launch in `src/main_menu.cpp`;
-`tutorial_game::init()`, `per_turn()`, `pre_action()`, `post_action()`, and
-`add_message()` in `src/gamemode_tutorial.cpp`; C++ lessons in
+`tutorial_game::init()` (which must enable gameplay speech itself because the
+tutorial bypasses `game::start_game()`), `per_turn()`, `pre_action()`,
+`post_action()`, and `add_message()` in `src/gamemode_tutorial.cpp`; C++ lessons in
 `data/mods/dda_tutorial/snippets.json`; trap lessons and map structure in
 `data/mods/dda_tutorial/traps.json` and `mapgen.json`.  The preliminary trigger,
 continuation, and exercise inventory is in `doc/tutorial_lesson_inventory.md`.
