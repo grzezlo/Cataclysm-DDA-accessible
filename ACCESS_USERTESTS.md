@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T117.
+Last assigned test ID: T122.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -658,3 +658,65 @@ Player… > Learn all melee styles and open the style picker with `_`.
   compatible weapons by category, with "(wielded)" and "(carried)" on
   weapons you have.  Escape returns and speaks the row once.  Press Enter
   on a style and hear the game's style message.
+
+## Stage 13A: Character sheet subscreens and armor layering
+
+From the character sheet (`@`) open the morale window with `m`, body status
+with `s`, and the proficiencies window with `p`.  In gameplay open the medical
+menu with `N`, body status with `{`, and sort armor with `+`.  Spawn items
+through Debug menu > Spawning… > Spawn an item and wear them from the
+inventory.  After a screen opened from the character sheet closes, the sheet
+speaks its focused row once.
+
+- **T118 - Morale document.**  Spawn and eat a comfort food such as chocolate,
+  then open the morale window.  Hear "Morale" and the total morale; Down reads
+  "Total positive morale, +N", each source with its percentage ("Ate something
+  tasty, 100%"), the negative sources, then the pain and sleepiness lines when
+  present and "Focus trends towards".  With no morale sources hear "Nothing
+  affects your morale".  Escape returns to the caller.  Interrupt speech with
+  Control; nothing is repeated automatically, and `Alt+R` repeats the last
+  line.
+- **T119 - Body status parts and nested graphs.**  Lower a body part's health
+  through Debug menu > Player… > Edit player/NPC.  Open body status and hear
+  "Body status", the part count, and the focused part once.  Up and Down speak
+  one part: its name, "health 7 of 10" at the bar's precision, and "has
+  details"; "Top" or "Bottom" on a wrap.  Page Up and Page Down scroll the
+  info pane silently.  Press Enter or Right on an arm and hear the arm's name,
+  its part count, and the focused part; Left or Escape returns and speaks
+  "Body status", the count, and the part.  Press `Alt+D` on the damaged part
+  and read health, wetness, temperature, effects with "good" or "bad", worn
+  items, coverage, encumbrance, and protection as "worst, median, best";
+  Escape speaks the part again.  `Alt+S` speaks the graph, position, and part.
+- **T120 - Medical columns, details, and apply.**  Use Debug menu > Player… >
+  Bleed self and spawn bandages.  Open the medical menu and hear "Medical",
+  the pain, hunger, thirst, and tiredness words shown in the title bar,
+  "HEALTH", its count, and the focused row.  Health rows speak the part,
+  "health N of 10", and conditions such as the bleeding intensity, "BROKEN",
+  or "SPLINTED, mending 2 of 5".  Left and Right switch to EFFECTS and STATS
+  with their counts and focused row; stats speak "Strength 8, base 8".  Press
+  `Alt+D` on the bleeding torso and read the bleeding description and the
+  torso stats; Escape speaks the row.  Press the apply key, choose the
+  bandage, and after the game's messages hear the focused row with the changed
+  state.  `Alt+S` speaks the statuses, column, position, and row.
+- **T121 - Proficiencies categories, filter, and details.**  Grant a
+  proficiency and progress in another through Debug menu > Player… > Edit
+  player/NPC.  Open the proficiencies window: hear "Proficiencies", "ALL", the
+  count, and the focused row.  Rows speak "known" or "learning, 40%".  Left
+  and Right speak the category, its count, and the first row.  Press `/`, type
+  `l:*`, and confirm: hear "Filter: l:*", the matching count, and the first
+  row.  `Alt+D` reads time to learn, progress, category, prerequisites, what
+  it leads to, and the description; `Alt+S` adds the category description.
+- **T122 - Sort armor conflicts and moving.**  Spawn and wear a hoodie and a
+  sweatshirt (they share a layer) over a long-sleeved shirt, then open sort
+  armor.  Hear "Sort Armor", "All", the count, and the focused row.  Left and
+  Right switch the body part filter; on the torso hear "Torso. 3 items."  and
+  the row.  The hoodie and sweatshirt rows say "layering conflict".  Press the
+  move key (`s`) on the outer one and hear "Moving sweatshirt"; each Up speaks
+  its new neighbours ("above hoodie, below long-sleeved shirt", "innermost,
+  above …"); press `s` again and hear "Placed" with the row.  Press `H` and
+  hear "Sprite hidden" and the row with "hidden"; `c` on a sided item asks and
+  speaks the row with its side; `S` sorts and says "Sorted into layer order".
+  `Alt+D` reads the item statistics and the encumbrance and warmth block with
+  "covered by this item"; `Alt+S` reads the filter's items in layer order with
+  encumbrance, conflicts, and the total encumbrance.  Interrupt speech with
+  Control during a move; `Alt+R` repeats the last position.

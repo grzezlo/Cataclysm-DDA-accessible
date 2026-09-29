@@ -1062,3 +1062,61 @@ Limitations:
   existing popup, targeting, and message speech.
 - Spells in the base game come mainly from mods; testing needs a world with
   Magiclysm, whose setup is accessible only after Stage 21.
+
+## 2026-09-30 — Stage 13A: Character sheet subscreens and armor layering
+
+- Implemented the selected interaction (option A) with conventions 1, 2, 3,
+  5, and 8; game keys are unchanged.  Every screen registers `Alt+D`,
+  `Alt+S`, and `Alt+R`.
+- Morale: the window opens directly in the document view: total morale,
+  total positive morale and each source with its percentage in the window's
+  order, the negative sources, pain and sleepiness levels, and the focus
+  trend.  The document and the window share the same line list
+  (`player_morale::build_window_lines()`).
+- Body status: opening and returning from a nested graph speak the graph
+  name ("Body status" or the part), part count, and focused part.  Rows
+  speak the name, "missing", health in tenths at the bar's precision
+  ("health 4 of 10", "under 1 of 10"), and "has details".  `Alt+D` reads the
+  info pane, with effects marked "good" or "bad" and protection as "worst,
+  median, best"; info-box scrolling stays silent.
+- Medical: HEALTH, EFFECTS, and STATS are panes; opening adds the title bar
+  pain, hunger, thirst, and sleepiness words.  Health rows speak part,
+  health or "mending N of 5", and conditions (bleeding intensity, BROKEN,
+  SPLINTED, BITTEN, SEPTIC); stats speak "Strength 8, base 8".  `Alt+D`
+  reads the description and detail text; apply and keybinding help return
+  to the focused row.
+- Proficiencies: categories are tabs; rows speak "known" or "learning,
+  40%"; filtering speaks the query, matching count, and first row; `Alt+D`
+  reads the details pane and `Alt+S` adds the category description.
+- Sort armor: filter changes speak the body part, count, and row.  Rows
+  speak name, side, "hidden", "layering conflict", and "out of order".  The
+  move key speaks "Moving …", Up and Down while moving speak the
+  neighbours ("above …, below …", "innermost", "outermost"), and the move
+  key again speaks "Placed" and the row.  Side change, sprite toggle, sort,
+  wear, take off, invlet assignment, and help speak the result or row.
+  `Alt+D` reads the item statistics and the encumbrance and warmth block
+  with "covered by this item"; `Alt+S` reads the filter's items with
+  encumbrance, conflicts, and the total.
+- Pure formatters in `accessibility_format`; speech helpers and test entry
+  points in the owning files (`bodygraph.h`, the new `medical_ui.h`,
+  `proficiency.h`, `outfit` in `character_attire.h`, `morale.h`,
+  `player_display.h`).
+- `test_access.bat` passed 1486 assertions in 87 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `7e3f4ba1ba`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the input loops have no input
+  injection in tests, so key handling is covered through speech helpers and
+  formatters.
+- Morale sources speak their percentage but not their bonus, because the
+  window shows only the percentage; the selection's example "+10, 25%" was
+  reduced to what the window displays.
+- Filter speech punctuates as "Torso. 3 items." rather than "Torso, 3
+  items".  Medical condition words and column names are spoken in the
+  window's capitals.
+- Body status speaks a precise temperature without its color band.
+- The sort armor right pane (items grouped by body part) is not navigable;
+  `Alt+S` covers the focused filter's part.  Integrated armor refusals are
+  spoken by the existing popup.
