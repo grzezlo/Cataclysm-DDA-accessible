@@ -658,7 +658,7 @@ std::string format_mutation_power_row( const mutation_power_row &row );
 /** Spell menu row. */
 struct spell_row {
     std::string name;
-    /** Translated spell class name; empty when the spell has no class. */
+    /** Translated spell class name, or "Classless" as the menu shows; omitted when empty. */
     std::string spell_class;
     /** Empty when the spell can be cast; otherwise why the menu disables it. */
     std::string unavailable_reason;

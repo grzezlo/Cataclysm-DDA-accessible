@@ -1015,9 +1015,9 @@ Limitations:
 - The spell menu opens with "Choose a Spell", "Ignore Distractions" when that
   is on, the category, its spell count, and the focused row.  Category
   changes speak "Favorites, 3 spells" and the focused row.  Rows speak name,
-  the spell class when it has one, "castable", the cost as a number with its
-  energy ("50 mana", "no cost"), the casting time, "cost impeded" or "time impeded" when encumbrance raises
-  them, and "favorite"; a disabled spell ends with "Unavailable: not enough
+  the spell class ("Classless" when it has none), "castable", the cost as a
+  number with its energy ("50 mana", "no cost"), the casting time, "cost
+  impeded" or "time impeded" when encumbrance raises them, and "favorite"; a disabled spell ends with "Unavailable: not enough
   mana" (or bionic power, stamina, health), "cannot speak", "missing
   components", or "cannot cast now", following `spell::can_cast()`.
   Toggling a favorite speaks the changed row; the distraction toggle speaks
@@ -1042,8 +1042,12 @@ Limitations:
 - Implementation commit: `d82965dd56`.
 - Follow-up commit "Speak spell class in spell menu rows" adds the
   translated class after the name ("Pew, Pew, Magus, castable, 50 mana,
-  100 moves"), as the success criterion required; classless spells omit it.
+  100 moves"), as the success criterion required.
   `test_access.bat` passed 1352 assertions in 81 cases.
+- Follow-up commit "Speak Classless for spells without a class" speaks the
+  menu's own translated "Classless" label for spells without a class, as the
+  class tabs and details pane show it.  `test_access.bat` passed 1352
+  assertions in 81 cases.
 
 Limitations:
 

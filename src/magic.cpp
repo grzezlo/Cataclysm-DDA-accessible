@@ -3217,9 +3217,9 @@ std::string spell_accessibility_row( const spell &sp, const Character &guy, cons
 {
     accessibility::spell_row row;
     row.name = sp.name();
-    if( sp.spell_class() != trait_NONE && sp.spell_class().is_valid() ) {
-        row.spell_class = sp.spell_class()->name();
-    }
+    // Same label as the menu's class tabs and details pane.
+    row.spell_class = sp.spell_class() != trait_NONE && sp.spell_class().is_valid() ?
+                      sp.spell_class()->name() : _( "Classless" );
     row.unavailable_reason = spell_unavailable_reason( sp, guy );
     row.cost = spell_cost_text( sp, guy );
     row.cost_impeded = sp.energy_cost_encumbered( guy );

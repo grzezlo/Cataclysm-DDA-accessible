@@ -631,7 +631,7 @@ Player… > Learn all melee styles and open the style picker with `_`.
 
 - **T115 - Spell list, tabs, and castability.**  Open the spell menu.  Hear
   "Choose a Spell", the category, its spell count, and the focused row once.
-  Rows speak name, class ("Magus"; omitted for a classless spell),
+  Rows speak name, class ("Magus", or "Classless" for a spell without one),
   "castable", cost ("20 mana"), and casting time; Up and
   Down speak one row, with "Top" or "Bottom" on a wrap.  Left and Right
   switch categories and speak "All", "Favorites", or a class name with its

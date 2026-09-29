@@ -3826,7 +3826,7 @@ TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibil
 
     you.magic->set_mana( 10000 );
     const std::string castable = spell_accessibility_row( sp, you, false );
-    CHECK( castable.rfind( "Pew, Pew, castable, ", 0 ) == 0 );
+    CHECK( castable.rfind( "Pew, Pew, Classless, castable, ", 0 ) == 0 );
     CHECK( castable.find( " mana, " ) != std::string::npos );
     CHECK( castable.find( "Unavailable" ) == std::string::npos );
     const std::string favorite = spell_accessibility_row( sp, you, true );
@@ -3836,7 +3836,7 @@ TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibil
     // Without mana the row says why the menu disables the spell.
     you.magic->set_mana( 0 );
     const std::string unavailable = spell_accessibility_row( sp, you, false );
-    CHECK( unavailable.rfind( "Pew, Pew, ", 0 ) == 0 );
+    CHECK( unavailable.rfind( "Pew, Pew, Classless, ", 0 ) == 0 );
     CHECK( unavailable.find( "castable" ) == std::string::npos );
     CHECK( unavailable.find( ". Unavailable: not enough mana." ) != std::string::npos );
 
