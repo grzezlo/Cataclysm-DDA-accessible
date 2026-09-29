@@ -444,6 +444,19 @@ independently usable.
 - `"SHOW_DESCRIPTION"` in the style uilist opens the details window via
   `show_ma_details_ui()`.
 
+**Selected interaction (conventions 2, 3, and 5):**
+
+- Keys are unchanged.  Spell categories ("all", "favorites", classes) behave
+  as tabs: "Favorites, 3 spells".
+- A spell row speaks name, castability, cost, and cast time: "Magic missile,
+  castable, 10 mana, 1 turn", or "Unavailable: not enough mana"; favorites
+  are marked with a word.
+- `Alt+D` opens the full spell details in the document view: class, range,
+  area, damage, duration, and requirements.
+- A style row speaks name and short description; the existing
+  `SHOW_DESCRIPTION` action opens techniques, buffs, and weapons in the
+  document view.
+
 **Success criteria:** Spell list reports name, class, can-cast, cost, and key
 detail on focus.  Spell details are available on demand.  Style picker reports
 name and description; style details show techniques, buffs, and weapon
@@ -475,6 +488,29 @@ dialogue without repeated rereading.
 - New dialogue lines: `dialogue_window::add_to_history()` handles incoming dialogue
   text.  Hook speech to announce new speaker text on topic transitions, and announce
   focused response option text on cursor movement.
+
+**Selected interaction (chat history with a response list, designed with the
+maintainer):**
+
+- In screen reader mode the dialogue has two levels.  This deliberately
+  overrides convention 1 for Up and Down on the conversation level; letter
+  hotkeys stay unchanged on both levels.
+- Conversation level: a chat-like history, one element per utterance
+  ("Rubik: Hello, stranger…", "You: Ask about the job"), newest at the
+  bottom, followed by a final element "Your response, 5 options".
+- A new NPC utterance is spoken once automatically and focus moves to "Your
+  response", so Up rereads the latest utterance and continues to older ones.
+- Enter on "Your response" opens the response list.  Up and Down speak the
+  hotkey and response ("a, Ask about the job"; "c, [LIE 50%] …, unavailable:
+  requires …").  The screen's extra actions (Look at, Size up stats, Assess
+  personality, Yell, Check opinion) follow the responses with their keys.
+  Enter confirms; Escape returns to the conversation level on "Your
+  response".  The visible response cursor follows the list.
+- Escape on the conversation level keeps the game behavior (the best quit
+  response).  Consequence confirmations use the Stage 05 controls.
+- `Alt+D` on an utterance opens it in the document view.  Computer terminals
+  and other non-conversation uses of this window follow the same model
+  without a speaker name.
 
 **Success criteria:** Speaker, newly presented text, focused response, visible
 consequence hints, unavailable reason, topic transition, confirmation, and exit
@@ -508,6 +544,20 @@ and item information used by trade.
   `format_money(npc_trading::trading_price(...))`.
 - Autobalance action: `trade_ui::autobalance()` in `src/trade_ui.cpp`.
 - Bank balance: `trade_ui::bank_balance()` in `src/trade_ui.cpp`.
+
+**Selected interaction (conventions 2, 3, 4, and 8 with the Stage 07 and 09
+selector speech):**
+
+- Keys are unchanged.  Switching panes speaks the party, item count, and
+  focused row ("Trader's goods, 24 items") without reading the other side.
+- A row speaks name, unit price, and marked count ("apple, 2.00 each, 3
+  marked"), plus ownership as in Stage 09.
+- Marking speaks the change, then the balance and acceptance ("Balance: you
+  owe 5.00, trader refuses"; "Balance: credit 3.00, acceptable") and
+  over-capacity words as in Stage 09.
+- `Alt+S` speaks the full balance, bank balance, acceptance, and capacity.
+  Confirmation and result use the shared controls, then focus returns to the
+  dialogue.
 
 **Success criteria:** Active party/pane, item, marks, quantity, unit/total price,
 running balance, capacity, acceptance state, ownership, invalid reason,
