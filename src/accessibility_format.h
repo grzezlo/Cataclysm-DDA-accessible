@@ -403,6 +403,72 @@ std::string format_travel_start( const std::string &destination, const std::stri
 std::string format_travel_arrival( const std::string &tile );
 std::string format_travel_stopped( const std::string &destination, const std::string &location );
 
+/** Predicted outcome of one aim level shown by the targeting panel. */
+struct target_aim_level {
+    std::string name;
+    /** Spoken key that fires with this aim level; empty when unbound. */
+    std::string key;
+    bool selected = false;
+    int moves = 0;
+    int hit_chance = 0;
+    /** Translated outcome labels and chances in panel order, ending with the miss chance. */
+    std::vector<std::pair<std::string, int>> outcomes;
+};
+std::string format_target_hit_chance( int chance );
+/** One aim level for the targeting details. */
+std::string format_target_aim_level( const target_aim_level &level );
+
+/** What the targeting cursor is on, with the problems the panel shows only by color. */
+struct target_focus {
+    /** Visible creature or vehicle; empty when the cursor is on a tile without one. */
+    std::string target;
+    std::string attitude;
+    /** Distance and direction, with the level difference when there is one. */
+    std::string location;
+    /** Look-around description of the tile, ending with its location. */
+    std::vector<std::string> tile;
+    /** Hit chance of the selected aim level; empty when the panel shows none. */
+    std::string hit;
+    bool invalid = false;
+    bool out_of_range = false;
+    bool out_of_ammo = false;
+    bool no_turret_in_range = false;
+    /** Visible obstacle on the line of fire. */
+    std::string blocked_by;
+    /** Visible creatures on the line of fire, nearest first. */
+    std::vector<std::string> in_line_of_fire;
+    bool in_area_of_effect = false;
+};
+/** Problems that forbid or endanger the attack; empty when there are none. */
+std::string format_target_problems( const target_focus &focus );
+/**
+ * Concise focus: the target with its attitude, location, and hit chance, or
+ * the look-around tile when `as_tile` is set or there is no target, then the
+ * problems.
+ */
+std::string format_target_focus( const target_focus &focus, bool as_tile );
+std::string format_target_count( size_t count );
+/** Ammunition as the panel shows it; `remaining` of zero omits the count. */
+std::string format_target_ammo( const std::string &ammo, int remaining, int capacity );
+/** Entering target mode: title, weapon state, target count, and focus. */
+std::string format_target_open( const std::string &title, const std::string &weapon,
+                                size_t target_count, const std::string &focus );
+/** Weapon state spoken on request in target mode. */
+struct target_status {
+    std::string firing_mode;
+    std::string aim_mode;
+    std::string ammo;
+    std::string recoil;
+    /** Percent steadiness of the fire key's aim; negative when the panel shows none. */
+    int steadiness = -1;
+    /** Zero when the cursor is on the player. */
+    int distance = 0;
+    int range = 0;
+    /** Further panel lines such as spell cost or turrets in range, already formatted. */
+    std::vector<std::string> extra;
+};
+std::string format_target_status( const target_status &status );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H

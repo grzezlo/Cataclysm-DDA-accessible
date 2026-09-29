@@ -2659,3 +2659,145 @@ TEST_CASE( "dropping_several_kinds_of_items_names_them", "[accessibility]" )
 
     accessibility::reset_backend_after_testing();
 }
+
+TEST_CASE( "targeting_formatters_speak_target_problems_and_aim_levels",
+           "[accessibility][nogame]" )
+{
+    accessibility::target_focus focus;
+    focus.target = "zombie";
+    focus.attitude = "Hostile";
+    focus.location = "5 tiles northeast";
+    focus.tile = { "Terrain: grass", "Creature: zombie", "5 tiles northeast" };
+    focus.hit = accessibility::format_target_hit_chance( 62 );
+    CHECK( accessibility::format_target_focus( focus, false ) ==
+           "zombie, Hostile, 5 tiles northeast, 62% hit." );
+    CHECK( accessibility::format_target_focus( focus, true ) ==
+           "Terrain: grass. Creature: zombie. 5 tiles northeast. 62% hit." );
+    CHECK( accessibility::format_target_problems( focus ).empty() );
+
+    focus.hit.clear();
+    focus.out_of_range = true;
+    focus.blocked_by = "brick wall";
+    focus.in_line_of_fire = { "dog", "cat" };
+    CHECK( accessibility::format_target_focus( focus, false ) ==
+           "zombie, Hostile, 5 tiles northeast. Out of range. No line of fire, blocked by brick wall. "
+           "In line of fire: dog, cat." );
+
+    accessibility::target_focus self;
+    self.tile = { "Terrain: grass", "here" };
+    self.invalid = true;
+    self.in_area_of_effect = true;
+    CHECK( accessibility::format_target_focus( self, false ) ==
+           "Terrain: grass. here. Not a valid target. You are in the area of effect." );
+    accessibility::target_focus empty_gun;
+    empty_gun.out_of_ammo = true;
+    CHECK( accessibility::format_target_problems( empty_gun ) == "Out of ammo." );
+
+    CHECK( accessibility::format_target_count( 0 ) == "No targets" );
+    CHECK( accessibility::format_target_count( 1 ) == "1 target" );
+    CHECK( accessibility::format_target_ammo( "9mm", 8, 15 ) == "Ammo: 9mm, 8 of 15" );
+    CHECK( accessibility::format_target_ammo( "9mm", 0, 15 ) == "Ammo: 9mm" );
+    CHECK( accessibility::format_target_open( "Firing pistol",
+            accessibility::format_target_ammo( "9mm", 8, 15 ), 2,
+            "zombie, Hostile, 5 tiles northeast, 62% hit." ) ==
+           "Firing pistol. Ammo: 9mm, 8 of 15. 2 targets. zombie, Hostile, 5 tiles northeast, 62% hit." );
+    CHECK( accessibility::format_target_open( "Throwing rock", "", 0, "Terrain: grass. here." ) ==
+           "Throwing rock. No targets. Terrain: grass. here." );
+
+    accessibility::target_status status;
+    status.firing_mode = "semi-auto (1)";
+    status.aim_mode = "Careful";
+    status.ammo = "Ammo: 9mm, 8 of 15";
+    status.recoil = "Low";
+    status.steadiness = 45;
+    status.distance = 5;
+    status.range = 30;
+    CHECK( accessibility::format_target_status( status ) ==
+           "Firing mode: semi-auto (1). Aim: Careful. Ammo: 9mm, 8 of 15. Recoil: Low. "
+           "Steadiness: 45%. Range: 5 of 30." );
+    accessibility::target_status throwing;
+    throwing.range = 10;
+    CHECK( accessibility::format_target_status( throwing ) == "Range: 10." );
+
+    accessibility::target_aim_level level;
+    level.name = "Careful";
+    level.key = "c";
+    level.selected = true;
+    level.moves = 120;
+    level.hit_chance = 62;
+    level.outcomes = { { "Great", 10 }, { "Normal", 30 }, { "Graze", 22 }, { "Miss", 38 } };
+    CHECK( accessibility::format_target_aim_level( level ) ==
+           "Careful aim, selected, key c: 62% hit. Great 10%, Normal 30%, Graze 22%, Miss 38%. "
+           "120 moves to fire." );
+    level.selected = false;
+    level.key.clear();
+    level.moves = 1;
+    CHECK( accessibility::format_target_aim_level( level ) ==
+           "Careful aim: 62% hit. Great 10%, Normal 30%, Graze 22%, Miss 38%. 1 move to fire." );
+}
+
+TEST_CASE( "target_focus_names_target_obstacle_and_creatures_in_line_of_fire",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    const time_point previous_time = calendar::turn;
+    const on_out_of_scope cleanup( [previous_time]() {
+        clear_avatar();
+        clear_map();
+        set_time( previous_time );
+    } );
+
+    set_time_to_day();
+    avatar &viewer = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms origin = viewer.pos_bub( here );
+    const tripoint_bub_ms target_pos = origin + tripoint( 4, 0, 0 );
+    const std::vector<tripoint_bub_ms> trajectory = {
+        origin + tripoint::east, origin + tripoint( 2, 0, 0 ), origin + tripoint( 3, 0, 0 ), target_pos
+    };
+    monster &target = spawn_test_monster( "mon_zombie", target_pos );
+    spawn_test_monster( "mon_zombie", origin + tripoint::east );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+
+    accessibility::target_focus focus = accessibility_gameplay::target_focus( here, viewer, origin,
+                                        target_pos, trajectory, &target, nullptr, true );
+    CHECK( focus.target == "zombie" );
+    CHECK( focus.attitude == "Hostile" );
+    CHECK( focus.location == "4 tiles east" );
+    CHECK( focus.tile.back() == "4 tiles east" );
+    CHECK( focus.blocked_by.empty() );
+    CHECK( focus.in_line_of_fire == std::vector<std::string> { "zombie" } );
+
+    const std::vector<std::string> details = accessibility_gameplay::target_details( here, viewer,
+            &target, nullptr );
+    REQUIRE( !details.empty() );
+    CHECK( details.front().rfind( "zombie. Attitude: Hostile.", 0 ) == 0 );
+
+    // A wall between the creature in line of fire and the target blocks the shot.
+    here.ter_set( origin + tripoint( 2, 0, 0 ), ter_str_id( "t_wall" ) );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    focus = accessibility_gameplay::target_focus( here, viewer, origin, target_pos, trajectory,
+            &target, nullptr, true );
+    CHECK( focus.blocked_by == here.tername( origin + tripoint( 2, 0, 0 ) ) );
+    CHECK( focus.in_line_of_fire.size() == 1 );
+
+    focus = accessibility_gameplay::target_focus( here, viewer, origin, target_pos, trajectory,
+            &target, nullptr, false );
+    CHECK( focus.blocked_by.empty() );
+    CHECK( focus.in_line_of_fire.empty() );
+
+    // Without a target, the cursor tile is described as look-around does.
+    focus = accessibility_gameplay::target_focus( here, viewer, origin, origin, {}, nullptr, nullptr,
+            false );
+    CHECK( focus.target.empty() );
+    CHECK( focus.tile.back() == "here" );
+
+    // The wall hides the target, which is then only sensed.
+    CHECK( accessibility_gameplay::target_focus( here, viewer, origin, target_pos, trajectory,
+            &target, nullptr, false ).target == "sensed creature" );
+    CHECK( accessibility_gameplay::target_details( here, viewer, &target, nullptr ) ==
+           std::vector<std::string> { "You sense a creature here, but cannot see it." } );
+}

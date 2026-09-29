@@ -14,6 +14,10 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "avatar.h"
 #include "ballistics.h"
@@ -462,6 +466,20 @@ class target_ui
         void panel_spell_info( int &text_y );
         void panel_target_info( int &text_y, bool fill_with_blank_if_no_target );
         void panel_turret_list( int &text_y );
+        // Colored recoil level shown by the recoil panel
+        std::string recoil_level() const;
+
+        // Screen reader speech
+        std::string accessibility_title() const;
+        std::vector<accessibility::target_aim_level> accessibility_aim_levels();
+        accessibility::target_focus accessibility_focus();
+        accessibility::target_status accessibility_status();
+        std::string accessibility_ammo() const;
+        void announce_accessibility_open( bool reentered );
+        void announce_accessibility_focus( bool as_tile, const std::string &change = {} );
+        void announce_accessibility_cursor( const std::string &action,
+                                            const tripoint_bub_ms &previous_dst );
+        void show_accessibility_details();
 
         // On-selected-as-target checks that act as if they are on-hit checks.
         // `harmful` is `false` if using a non-damaging spell
@@ -2136,9 +2154,9 @@ static bool pl_sees( const optional_vpart_position &ovp )
     return u.sees( here,  ovp.value().pos_bub( here ) );
 }
 
-static int print_aim( const target_ui &ui, Character &you, const catacurses::window &w,
-                      int line_number, input_context &ctxt, const item &weapon, const tripoint_bub_ms &pos,
-                      item_location &load_loc )
+static std::vector<aim_type_prediction> fire_aim_predictions( const target_ui &ui,
+        Character &you, const input_context &ctxt, const item &weapon, const tripoint_bub_ms &pos,
+        const item_location &load_loc )
 {
     // This is absolute accuracy for the player.
     // TODO: push the calculations duplicated from Creature::deal_projectile_attack() and
@@ -2156,18 +2174,25 @@ static int print_aim( const target_ui &ui, Character &you, const catacurses::win
         }
     };
 
-    const std::vector<aim_type_prediction> aim_chances = calculate_ranged_chances( ui, you,
-            target_ui::TargetMode::Fire, ctxt, weapon, dispersion, confidence_config,
-            Target_attributes( you.pos_bub(), pos ), pos, load_loc );
+    return calculate_ranged_chances( ui, you, target_ui::TargetMode::Fire, ctxt, weapon, dispersion,
+                                     confidence_config, Target_attributes( you.pos_bub(), pos ), pos, load_loc );
+}
+
+static int print_aim( const target_ui &ui, Character &you, const catacurses::window &w,
+                      int line_number, input_context &ctxt, const item &weapon, const tripoint_bub_ms &pos,
+                      item_location &load_loc )
+{
+    const std::vector<aim_type_prediction> aim_chances = fire_aim_predictions( ui, you, ctxt, weapon,
+            pos, load_loc );
 
     int time = RAS_time( you, load_loc );
 
     return print_ranged_chance( w, line_number, aim_chances, time );
 }
 
-static void draw_throw_aim( const target_ui &ui, const Character &you, const catacurses::window &w,
-                            int &text_y, input_context &ctxt, const item &weapon, const tripoint_bub_ms &target_pos,
-                            bool is_blind_throw )
+static std::vector<aim_type_prediction> throw_aim_predictions( const target_ui &ui,
+        const Character &you, const input_context &ctxt, const item &weapon,
+        const tripoint_bub_ms &target_pos, bool is_blind_throw )
 {
     const map &here = get_map();
 
@@ -2201,11 +2226,16 @@ static void draw_throw_aim( const target_ui &ui, const Character &you, const cat
                                   here.ambient_light_at( target_pos ),
                                   you.sees( here, target_pos ) );
 
-    const std::vector<aim_type_prediction> aim_chances = calculate_ranged_chances( ui, you,
-            throwing_target_mode, ctxt, weapon, dispersion, confidence_config, attributes, target_pos,
-            item_location() );
+    return calculate_ranged_chances( ui, you, throwing_target_mode, ctxt, weapon, dispersion,
+                                     confidence_config, attributes, target_pos, item_location() );
+}
 
-    text_y = print_ranged_chance( w, text_y, aim_chances, 0 );
+static void draw_throw_aim( const target_ui &ui, const Character &you, const catacurses::window &w,
+                            int &text_y, input_context &ctxt, const item &weapon, const tripoint_bub_ms &target_pos,
+                            bool is_blind_throw )
+{
+    text_y = print_ranged_chance( w, text_y, throw_aim_predictions( ui, you, ctxt, weapon,
+                                  target_pos, is_blind_throw ), 0 );
 }
 
 std::vector<aim_type> Character::get_aim_types( const item &gun ) const
@@ -2796,6 +2826,25 @@ target_handler::trajectory target_ui::run()
     ExitCode loop_exit_code;
     std::string timed_out_action;
     bool skip_redraw = false;
+    // The input context and aim modes exist only after the first redraw.
+    bool accessibility_open_pending = true;
+    // Speak why an attack action cannot start, which the panel shows only by color.
+    const auto announce_blocked = [this]() {
+        if( accessibility::is_active() ) {
+            accessibility::announce( accessibility::format_target_problems( accessibility_focus() ) );
+        }
+    };
+    // Speak the recoil after aiming and its consequence for the selected aim level.
+    const auto announce_aim_state = [this]() {
+        if( accessibility::is_active() ) {
+            const accessibility::target_focus focus = accessibility_focus();
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                //~ %s: recoil level such as "Low"
+                string_format( _( "Recoil: %s" ), remove_color_tags( recoil_level() ) ),
+                focus.hit, accessibility::format_target_problems( focus )
+            } ) );
+        }
+    };
     for( ;; action.clear() ) {
         if( !skip_redraw ) {
             g->invalidate_main_ui_adaptor();
@@ -2805,6 +2854,10 @@ target_handler::trajectory target_ui::run()
 
         // Wait for user input (or use value retrieved from activity)
         if( action.empty() ) {
+            if( accessibility_open_pending ) {
+                accessibility_open_pending = false;
+                announce_accessibility_open( reentered );
+            }
             int timeout = get_option<int>( "EDGE_SCROLL" );
             action = ctxt.handle_input( timeout );
         }
@@ -2815,20 +2868,43 @@ target_handler::trajectory target_ui::run()
         }
 
         // Handle received input
+        const tripoint_bub_ms previous_dst = dst;
         if( handle_cursor_movement( action, skip_redraw ) ) {
+            announce_accessibility_cursor( action, previous_dst );
             continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            show_accessibility_details();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            if( accessibility::is_active() ) {
+                accessibility::announce( accessibility::format_target_status( accessibility_status() ) );
+            }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
         } else if( action == "TOGGLE_UNLOAD_RAS_WEAPON" ) {
             unload_RAS_weapon = !unload_RAS_weapon;
             activity->should_unload_RAS = unload_RAS_weapon;
+            accessibility::announce( unload_RAS_weapon ?
+                                     //~ %s: reload-and-shoot weapon such as "bow"
+                                     string_format( _( "The %s will be unloaded after quitting." ),
+                                                    remove_color_tags( relevant->tname() ) ) :
+                                     //~ %s: reload-and-shoot weapon such as "bow"
+                                     string_format( _( "The %s will stay loaded after quitting." ),
+                                                    remove_color_tags( relevant->tname() ) ) );
         } else if( action == "TOGGLE_SNAP_TO_TARGET" ) {
             toggle_snap_to_target();
+            accessibility::announce( snap_to_target ? _( "Snap to target on." ) :
+                                     _( "Snap to target off." ) );
         } else if( action == "TOGGLE_TURRET_LINES" ) {
             draw_turret_lines = !draw_turret_lines;
+            accessibility::announce( draw_turret_lines ? _( "Lines of fire shown." ) :
+                                     _( "Lines of fire hidden." ) );
         } else if( action == "TOGGLE_MOVE_CURSOR_VIEW" ) {
             if( snap_to_target ) {
                 toggle_snap_to_target();
             }
             shifting_view = !shifting_view;
+            accessibility::announce( shifting_view ? _( "Directional keys shift the view." ) :
+                                     _( "Directional keys move the cursor." ) );
         } else if( action == "zoom_in" ) {
             g->zoom_in();
             g->mark_main_ui_adaptor_resize();
@@ -2836,20 +2912,44 @@ target_handler::trajectory target_ui::run()
             g->zoom_out();
             g->mark_main_ui_adaptor_resize();
         } else if( action == "QUIT" ) {
+            accessibility::announce( _( "Targeting canceled." ) );
             loop_exit_code = ExitCode::Abort;
             break;
         } else if( action == "SWITCH_MODE" ) {
+            const bool speak_change = accessibility::is_active() && mode != TargetMode::Reach;
+            const accessibility::target_status old_status = speak_change ? accessibility_status() :
+                    accessibility::target_status();
             if( action_switch_mode() ) {
                 loop_exit_code = ExitCode::Abort;
                 break;
+            }
+            if( speak_change ) {
+                // Speak only the changed value and its consequence for the target.
+                const accessibility::target_status new_status = accessibility_status();
+                announce_accessibility_focus( false, accessibility::format_semantic_sequence( {
+                    new_status.aim_mode == old_status.aim_mode ? std::string() :
+                    //~ %s: selected aim level such as "Careful"
+                    string_format( _( "Aim: %s" ), new_status.aim_mode ),
+                    new_status.firing_mode == old_status.firing_mode ? std::string() :
+                    //~ %s: gun firing mode such as "semi-auto (1)"
+                    string_format( _( "Firing mode: %s" ), new_status.firing_mode ),
+                    new_status.ammo == old_status.ammo ? std::string() : new_status.ammo
+                } ) );
             }
         } else if( action == "SWITCH_AMMO" ) {
             if( !action_switch_ammo() ) {
                 loop_exit_code = ExitCode::Reload;
                 break;
             }
+            if( accessibility::is_active() ) {
+                announce_accessibility_focus( false, accessibility::format_semantic_sequence( {
+                    //~ %d: maximum range
+                    accessibility_ammo(), string_format( _( "Range: %d" ), range )
+                } ) );
+            }
         } else if( action == "FIRE" ) {
             if( status != Status::Good ) {
+                announce_blocked();
                 continue;
             }
             bool can_skip_confirm = mode == TargetMode::Spell && casting->damage( player_character ) <= 0;
@@ -2861,6 +2961,7 @@ target_handler::trajectory target_ui::run()
             break;
         } else if( action == "AIM" ) {
             if( status != Status::Good ) {
+                announce_blocked();
                 continue;
             }
 
@@ -2882,14 +2983,18 @@ target_handler::trajectory target_ui::run()
                     activity->reload_loc = item_location();
                 }
             }
+            announce_aim_state();
         } else if( action == "STOPAIM" ) {
             if( status != Status::Good ) {
+                announce_blocked();
                 continue;
             }
 
             action_drop_aim();
+            announce_aim_state();
         } else if( action == "AIMED_SHOT" || action == "CAREFUL_SHOT" || action == "PRECISE_SHOT" ) {
             if( status != Status::Good ) {
+                announce_blocked();
                 continue;
             }
 
@@ -2997,6 +3102,9 @@ void target_ui::init_window_and_input()
     ctxt.register_action( "zoom_out" );
     ctxt.register_action( "zoom_in" );
     ctxt.register_action( "TOGGLE_MOVE_CURSOR_VIEW" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     if( fov_3d_z_range > 0 ) {
         ctxt.register_action( "LEVEL_UP" );
         ctxt.register_action( "LEVEL_DOWN" );
@@ -4180,22 +4288,24 @@ void target_ui::panel_gun_info( int &text_y )
     }
 }
 
-void target_ui::panel_recoil( int &text_y )
+std::string target_ui::recoil_level() const
 {
     const int val = you->recoil_total();
     const int min_recoil = relevant->sight_dispersion( *you ).second;
     const int recoil_range = MAX_RECOIL - min_recoil;
-    std::string str;
     if( val >= min_recoil + ( recoil_range * 2 / 3 ) ) {
-        str = pgettext( "amount of backward momentum", "<color_red>High</color>" );
+        return pgettext( "amount of backward momentum", "<color_red>High</color>" );
     } else if( val >= min_recoil + ( recoil_range / 2 ) ) {
-        str = pgettext( "amount of backward momentum", "<color_yellow>Medium</color>" );
+        return pgettext( "amount of backward momentum", "<color_yellow>Medium</color>" );
     } else if( val >= min_recoil + ( recoil_range / 4 ) ) {
-        str = pgettext( "amount of backward momentum", "<color_light_green>Low</color>" );
-    } else {
-        str = pgettext( "amount of backward momentum", "<color_cyan>None</color>" );
+        return pgettext( "amount of backward momentum", "<color_light_green>Low</color>" );
     }
-    str = string_format( _( "Recoil: %s" ), str );
+    return pgettext( "amount of backward momentum", "<color_cyan>None</color>" );
+}
+
+void target_ui::panel_recoil( int &text_y )
+{
+    const std::string str = string_format( _( "Recoil: %s" ), recoil_level() );
     nc_color clr = c_light_gray;
     print_colored_text( w_target, point( 1, text_y++ ), clr, clr, str );
 }
@@ -4318,6 +4428,233 @@ void target_ui::panel_turret_list( int &text_y )
         nc_color clr = c_white;
         print_colored_text( w_target, point( 1, text_y++ ), clr, clr, str );
     }
+}
+
+std::string target_ui::accessibility_title() const
+{
+    switch( mode ) {
+        case TargetMode::Reach:
+            if( relevant != nullptr ) {
+                //~ %s: weapon used for a reach attack
+                return string_format( _( "Reach attack with %s" ), remove_color_tags( relevant->tname() ) );
+            }
+            return _( "Reach attack" );
+        case TargetMode::Spell:
+            //~ %s: spell name
+            return string_format( _( "Casting %s" ), casting->name() );
+        case TargetMode::Turrets:
+            return _( "Firing turrets" );
+        default:
+            return remove_color_tags( uitext_title() );
+    }
+}
+
+std::vector<accessibility::target_aim_level> target_ui::accessibility_aim_levels()
+{
+    std::vector<aim_type_prediction> predictions;
+    if( status != Status::Good ) {
+        return {};
+    }
+    if( mode == TargetMode::Fire ) {
+        predictions = fire_aim_predictions( *this, *you, ctxt, *relevant->gun_current_mode(), dst,
+                                            activity->reload_loc );
+    } else if( mode == TargetMode::Throw || mode == TargetMode::ThrowBlind ) {
+        predictions = throw_aim_predictions( *this, *you, ctxt, *relevant, dst,
+                                             mode == TargetMode::ThrowBlind );
+    }
+    const aim_type selected = get_selected_aim_type();
+    std::vector<accessibility::target_aim_level> result;
+    result.reserve( predictions.size() );
+    for( const aim_type_prediction &prediction : predictions ) {
+        accessibility::target_aim_level level;
+        level.name = prediction.name;
+        level.key = accessibility::format_spoken_key( prediction.hotkey );
+        level.selected = selected.has_threshold ? prediction.name == selected.name :
+                         prediction.is_default;
+        level.moves = prediction.moves;
+        level.hit_chance = prediction.chance_to_hit;
+        for( size_t i = 0; i < prediction.chances.size(); ++i ) {
+            const aim_type_prediction::aim_confidence &chance = prediction.chances[i];
+            // Rating labels are translation markers; the final miss label is already translated.
+            const bool miss = i + 1 == prediction.chances.size();
+            level.outcomes.emplace_back( miss ? chance.label :
+                                         pgettext( "aim_confidence", chance.label.c_str() ), chance.chance );
+        }
+        result.push_back( level );
+    }
+    return result;
+}
+
+accessibility::target_focus target_ui::accessibility_focus()
+{
+    map &here = get_map();
+    accessibility::target_focus focus = accessibility_gameplay::target_focus( here, *you, src, dst,
+                                        traj, dst_critter, dst_veh, mode != TargetMode::Turrets && dst != src );
+    switch( status ) {
+        case Status::Good:
+            break;
+        case Status::BadTarget:
+            focus.invalid = true;
+            break;
+        case Status::OutOfAmmo:
+            focus.out_of_ammo = true;
+            break;
+        case Status::OutOfRange:
+            // Each turret has its own range, so the cursor itself is never out of range.
+            if( mode == TargetMode::Turrets ) {
+                focus.no_turret_in_range = true;
+            } else {
+                focus.out_of_range = true;
+            }
+            break;
+    }
+    for( const accessibility::target_aim_level &level : accessibility_aim_levels() ) {
+        if( level.selected ) {
+            focus.hit = accessibility::format_target_hit_chance( level.hit_chance );
+        }
+    }
+    focus.in_area_of_effect = mode == TargetMode::Spell && spell_aoe.count( src ) != 0;
+    return focus;
+}
+
+std::string target_ui::accessibility_ammo() const
+{
+    if( ( mode != TargetMode::Fire && mode != TargetMode::TurretManual ) ||
+        status == Status::OutOfAmmo || ammo == nullptr || ammo->ammo == nullptr ) {
+        return {};
+    }
+    const gun_mode m = relevant->gun_current_mode();
+    const int remaining = m->ammo_remaining();
+    return accessibility::format_target_ammo( remove_color_tags( ammo->nname( std::max( remaining,
+            1 ) ) ), remaining, m->ammo_capacity( ammo->ammo->type ) );
+}
+
+accessibility::target_status target_ui::accessibility_status()
+{
+    accessibility::target_status result;
+    if( mode == TargetMode::Fire || mode == TargetMode::TurretManual ) {
+        const gun_mode m = relevant->gun_current_mode();
+        std::string mode_name = m.tname();
+        if( m.target != relevant ) {
+            // Gun mode comes from a gunmod, not base gun.
+            mode_name = m->tname() + " " + mode_name;
+        }
+        result.firing_mode = remove_color_tags( string_format( "%s (%d)", mode_name, m.qty ) );
+        result.ammo = status == Status::OutOfAmmo ? _( "Out of ammo" ) : accessibility_ammo();
+        result.recoil = remove_color_tags( recoil_level() );
+    }
+    if( mode == TargetMode::Fire ) {
+        result.aim_mode = get_selected_aim_type().name;
+        if( status == Status::Good ) {
+            for( const aim_type_prediction &prediction : fire_aim_predictions( *this, *you, ctxt,
+                    *relevant->gun_current_mode(), dst, activity->reload_loc ) ) {
+                if( prediction.is_default ) {
+                    result.steadiness = static_cast<int>( 100.0 * prediction.steadiness );
+                }
+            }
+        }
+    }
+    result.distance = src == dst ? 0 : dist_fn( dst );
+    result.range = range;
+    if( mode == TargetMode::Turrets ) {
+        //~ %1$d: turrets that can reach the cursor; %2$d: all selected turrets
+        result.extra.push_back( string_format( _( "Turrets in range: %1$d of %2$d" ),
+                                               turrets_in_range.size(), vturrets->size() ) );
+    } else if( mode == TargetMode::Spell ) {
+        //~ %d: spell level
+        result.extra.push_back( string_format( _( "Level %d" ), casting->get_level() ) );
+        if( !no_mana || casting->energy_source() == magic_energy_type::none ) {
+            result.extra.push_back( string_format( _( "Cost: %s %s" ), casting->energy_cost_string( *you ),
+                                                   casting->energy_string() ) );
+        }
+        result.extra.push_back( no_fail ? _( "0.0 % Failure Chance" ) :
+                                remove_color_tags( casting->colorized_fail_percent( *you ) ) );
+        result.extra.push_back( string_format( _( "Damage: %s" ),
+                                               casting->damage_string( get_player_character() ) ) );
+    }
+    return result;
+}
+
+void target_ui::announce_accessibility_open( bool reentered )
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const std::string focus = accessibility::format_target_focus( accessibility_focus(), false );
+    if( reentered ) {
+        // Aiming continues from the previous turn; only the target and hit chance change.
+        accessibility::announce( focus );
+        return;
+    }
+    accessibility::announce( accessibility::format_target_open( accessibility_title(),
+                             accessibility_ammo(), targets.size(), focus ) );
+}
+
+void target_ui::announce_accessibility_focus( bool as_tile, const std::string &change )
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    accessibility::announce( accessibility::format_semantic_sequence( {
+        change, accessibility::format_target_focus( accessibility_focus(), as_tile )
+    } ) );
+}
+
+void target_ui::announce_accessibility_cursor( const std::string &action,
+        const tripoint_bub_ms &previous_dst )
+{
+    if( !accessibility::is_active() || action == "MOUSE_MOVE" || action == "TIMEOUT" ) {
+        return;
+    }
+    const bool cycling = action == "NEXT_TARGET" || action == "PREV_TARGET";
+    if( shifting_view && !cycling ) {
+        // Only the visual view moved.
+        return;
+    }
+    if( cycling ) {
+        if( targets.empty() ) {
+            accessibility::announce( accessibility::format_target_count( 0 ) );
+            return;
+        }
+        const auto index_of = [this]( const tripoint_bub_ms & p ) {
+            const auto found = std::find( targets.begin(), targets.end(), p );
+            return found == targets.end() ? -1 : static_cast<int>( std::distance( targets.begin(), found ) );
+        };
+        announce_accessibility_focus( false, accessibility::format_list_wrap( index_of( previous_dst ),
+                                      index_of( dst ), action == "NEXT_TARGET" ? 1 : -1 ) );
+        return;
+    }
+    if( dst == previous_dst && action != "CENTER" ) {
+        accessibility::announce( status == Status::OutOfAmmo ? _( "Out of ammo" ) :
+                                 _( "Edge of range" ) );
+        return;
+    }
+    announce_accessibility_focus( true );
+}
+
+void target_ui::show_accessibility_details()
+{
+    map &here = get_map();
+    const accessibility::target_focus focus = accessibility_focus();
+    std::vector<std::string> paragraphs = { accessibility::format_target_focus( focus, false ) };
+    if( !focus.target.empty() ) {
+        const std::vector<std::string> details = accessibility_gameplay::target_details( here, *you,
+                dst_critter, dst_veh );
+        paragraphs.insert( paragraphs.end(), details.begin(), details.end() );
+        paragraphs.push_back( accessibility::format_semantic_sequence( focus.tile ) );
+    }
+    paragraphs.push_back( accessibility::format_target_status( accessibility_status() ) );
+    for( const accessibility::target_aim_level &level : accessibility_aim_levels() ) {
+        paragraphs.push_back( accessibility::format_target_aim_level( level ) );
+    }
+    if( mode == TargetMode::Spell ) {
+        paragraphs.push_back( remove_color_tags( casting->description() ) );
+    }
+    const std::string title = accessibility_title();
+    //~ %s: targeting title such as "Firing pistol"
+    accessibility_ui::show_document( string_format( _( "Target details: %s" ), title ), title,
+                                     paragraphs, paragraphs );
+    announce_accessibility_focus( false );
 }
 
 void target_ui::on_target_accepted( bool harmful ) const

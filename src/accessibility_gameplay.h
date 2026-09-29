@@ -15,6 +15,7 @@ class avatar;
 class map;
 class map_item_stack;
 class uilist;
+class vehicle;
 struct item_info_data;
 struct visibility_variables;
 enum class content_newness;
@@ -81,6 +82,20 @@ accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
 accessibility::nearby_list_entry nearby_creature_entry( const map &here, const avatar &viewer,
         const Creature &creature, int result_index, int result_count, bool player_knows );
 std::string nearby_item_sort_change( list_item_sort_mode mode );
+
+/**
+ * Describe what the targeting cursor is on: the visible `critter` or `veh`
+ * with its attitude and location, the look-around tile, and, when
+ * `line_of_fire` is set, the visible obstacle and creatures along
+ * `trajectory`.  The caller adds the hit chance and status problems.
+ */
+accessibility::target_focus target_focus( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const tripoint_bub_ms &cursor,
+        const std::vector<tripoint_bub_ms> &trajectory, const Creature *critter, const vehicle *veh,
+        bool line_of_fire );
+/** Target description paragraphs for the targeting details view. */
+std::vector<std::string> target_details( map &here, const avatar &viewer,
+        const Creature *critter, const vehicle *veh );
 
 accessibility::item_action_availability item_action_availability( hint_rating rating );
 /**

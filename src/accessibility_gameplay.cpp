@@ -30,6 +30,7 @@
 #include "mapdata.h"
 #include "martialarts.h"
 #include "monster.h"
+#include "mtype.h"
 #include "move_mode.h"
 #include "npc.h"
 #include "omdata.h"
@@ -333,6 +334,12 @@ std::vector<std::string> condition_transitions( const Character &who )
  * Identify a threat by object identity.  Creature tracker indices shift when an
  * unrelated monster is removed, so they would cause false "spotted" repeats.
  */
+std::string creature_name( const Creature &creature )
+{
+    const monster *const mon = dynamic_cast<const monster *>( &creature );
+    return mon != nullptr ? mon->name() : creature.disp_name();
+}
+
 std::string threat_id( const Creature &threat )
 {
     if( const npc *person = dynamic_cast<const npc *>( &threat ) ) {
@@ -1012,7 +1019,7 @@ accessibility::nearby_list_entry nearby_creature_entry( const map &here, const a
     accessibility::nearby_list_entry result;
     const monster *const mon = dynamic_cast<const monster *>( &creature );
     const npc *const person = dynamic_cast<const npc *>( &creature );
-    result.name = mon != nullptr ? mon->name() : creature.disp_name();
+    result.name = creature_name( creature );
     result.location = situation_location( viewer.pos_bub(), creature.pos_bub() );
 
     if( player_knows ) {
@@ -1055,6 +1062,91 @@ std::string nearby_item_sort_change( const list_item_sort_mode mode )
             return _( "Sorted by category and name" );
     }
     return {};
+}
+
+accessibility::target_focus target_focus( map &here, const avatar &viewer,
+        const tripoint_bub_ms &origin, const tripoint_bub_ms &cursor,
+        const std::vector<tripoint_bub_ms> &trajectory, const Creature *critter, const vehicle *veh,
+        const bool line_of_fire )
+{
+    const visibility_variables &cache = here.get_visibility_variables_cache();
+    accessibility::target_focus result;
+    result.tile = look_parts( here, viewer, origin, cursor, cache );
+    result.location = relative_z_location( origin, cursor );
+    const std::string location = situation_location( origin, cursor );
+    result.location = result.location.empty() ? location :
+                      //~ %1$s: level difference such as "1 level above"; %2$s: distance and direction
+                      string_format( _( "%1$s, %2$s" ), result.location, location );
+    if( critter != nullptr ) {
+        if( viewer.sees( here, *critter ) ) {
+            result.target = creature_name( *critter );
+            if( !viewer.has_trait( trait_INATTENTIVE ) ) {
+                result.attitude = Creature::get_attitude_ui_data(
+                                      critter->attitude_to( viewer ) ).first.translated();
+            }
+        } else {
+            result.target = _( "sensed creature" );
+        }
+    } else if( veh != nullptr && viewer.sees( here, veh->pos_bub( here ) ) ) {
+        result.target = veh->name;
+    }
+
+    if( !line_of_fire ) {
+        return result;
+    }
+    creature_tracker &creatures = get_creature_tracker();
+    for( const tripoint_bub_ms &position : trajectory ) {
+        if( position == cursor ) {
+            break;
+        }
+        if( position == origin ||
+            tile_visibility( here, position, cache ) != visibility_type::CLEAR ) {
+            continue;
+        }
+        const Creature *in_line = creatures.creature_at( position, true );
+        if( in_line != nullptr && in_line != &viewer && viewer.sees( here, *in_line ) ) {
+            result.in_line_of_fire.push_back( creature_name( *in_line ) );
+        }
+        if( here.impassable( position ) ) {
+            const optional_vpart_position vp = here.veh_at( position );
+            std::optional<vpart_reference> part;
+            if( vp ) {
+                part = vp.part_displayed();
+            }
+            result.blocked_by = part ? part->part().name() : route_tile_name( here, position );
+            break;
+        }
+    }
+    return result;
+}
+
+std::vector<std::string> target_details( map &here, const avatar &viewer,
+        const Creature *critter, const vehicle *veh )
+{
+    std::vector<std::string> result;
+    if( critter != nullptr ) {
+        if( !viewer.sees( here, *critter ) ) {
+            result.emplace_back( _( "You sense a creature here, but cannot see it." ) );
+            return result;
+        }
+        const accessibility::nearby_list_entry entry = nearby_creature_entry( here, viewer, *critter,
+                0, 0, !viewer.has_trait( trait_INATTENTIVE ) );
+        std::vector<std::string> summary = { entry.name };
+        summary.insert( summary.end(), entry.details.begin(), entry.details.end() );
+        result.push_back( accessibility::format_semantic_sequence( summary ) );
+        if( const monster *const mon = dynamic_cast<const monster *>( critter ) ) {
+            const std::string effects = remove_color_tags( mon->get_effect_status() );
+            if( !effects.empty() ) {
+                //~ %s: effects on the target such as "stunned"
+                result.push_back( string_format( _( "Effects: %s" ), effects ) );
+            }
+            result.push_back( remove_color_tags( mon->type->get_description() ) );
+        }
+    } else if( veh != nullptr && viewer.sees( here, veh->pos_bub( here ) ) ) {
+        //~ %s: vehicle name
+        result.push_back( string_format( _( "Vehicle: %s" ), veh->name ) );
+    }
+    return result;
 }
 
 accessibility::item_action_availability item_action_availability( const hint_rating rating )

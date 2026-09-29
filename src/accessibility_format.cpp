@@ -1497,4 +1497,144 @@ std::string format_travel_stopped( const std::string &destination, const std::st
     return string_format( _( "Travel stopped: %1$s, %2$s." ), destination, location );
 }
 
+std::string format_target_hit_chance( const int chance )
+{
+    //~ %d: percent chance to hit the target in target mode
+    return string_format( _( "%d%% hit" ), chance );
+}
+
+std::string format_target_aim_level( const target_aim_level &level )
+{
+    //~ %s: aim level such as "Careful"
+    std::string name = string_format( _( "%s aim" ), level.name );
+    if( level.selected ) {
+        //~ %s: aim level name; the level used by the fire key
+        name = string_format( _( "%s, selected" ), name );
+    }
+    if( !level.key.empty() ) {
+        //~ %1$s: aim level name; %2$s: key that fires with this aim level
+        name = string_format( _( "%1$s, key %2$s" ), name, level.key );
+    }
+    std::vector<std::string> outcomes;
+    outcomes.reserve( level.outcomes.size() );
+    for( const std::pair<std::string, int> &outcome : level.outcomes ) {
+        //~ %1$s: hit outcome such as "Graze"; %2$d: its percent chance
+        outcomes.push_back( string_format( _( "%1$s %2$d%%" ), outcome.first, outcome.second ) );
+    }
+    //~ %d: moves needed to aim and fire
+    const std::string moves = string_format( n_gettext( "%d move to fire", "%d moves to fire",
+                              level.moves ), level.moves );
+    return format_semantic_sequence( {
+        //~ %1$s: aim level name; %2$s: hit chance such as "62% hit"
+        string_format( _( "%1$s: %2$s" ), name, format_target_hit_chance( level.hit_chance ) ),
+        string_join( outcomes, _( ", " ) ), moves
+    } );
+}
+
+std::string format_target_problems( const target_focus &focus )
+{
+    std::vector<std::string> parts;
+    if( focus.out_of_ammo ) {
+        parts.emplace_back( _( "Out of ammo" ) );
+    }
+    if( focus.no_turret_in_range ) {
+        parts.emplace_back( _( "No turret in range" ) );
+    }
+    if( focus.out_of_range ) {
+        parts.emplace_back( _( "Out of range" ) );
+    }
+    if( focus.invalid ) {
+        parts.emplace_back( _( "Not a valid target" ) );
+    }
+    if( !focus.blocked_by.empty() ) {
+        //~ %s: visible obstacle such as "brick wall" between the player and the target
+        parts.push_back( string_format( _( "No line of fire, blocked by %s" ), focus.blocked_by ) );
+    }
+    if( !focus.in_line_of_fire.empty() ) {
+        //~ %s: creatures standing between the player and the target
+        parts.push_back( string_format( _( "In line of fire: %s" ),
+                                        string_join( focus.in_line_of_fire, _( ", " ) ) ) );
+    }
+    if( focus.in_area_of_effect ) {
+        parts.emplace_back( _( "You are in the area of effect" ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_target_focus( const target_focus &focus, const bool as_tile )
+{
+    std::vector<std::string> parts;
+    if( as_tile || focus.target.empty() ) {
+        parts = focus.tile;
+        parts.push_back( focus.hit );
+    } else {
+        std::vector<std::string> fields;
+        for( const std::string &field : {
+                 focus.target, focus.attitude, focus.location, focus.hit
+             } ) {
+            if( !field.empty() ) {
+                fields.push_back( field );
+            }
+        }
+        parts.push_back( string_join( fields, _( ", " ) ) );
+    }
+    parts.push_back( format_target_problems( focus ) );
+    return format_semantic_sequence( parts );
+}
+
+std::string format_target_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No targets" );
+    }
+    const int targets = static_cast<int>( count );
+    return string_format( n_gettext( "%d target", "%d targets", targets ), targets );
+}
+
+std::string format_target_ammo( const std::string &ammo, const int remaining,
+                                const int capacity )
+{
+    if( remaining <= 0 ) {
+        //~ %s: ammunition name
+        return string_format( _( "Ammo: %s" ), ammo );
+    }
+    //~ %1$s: ammunition name; %2$d: loaded rounds; %3$d: capacity
+    return string_format( _( "Ammo: %1$s, %2$d of %3$d" ), ammo, remaining, capacity );
+}
+
+std::string format_target_open( const std::string &title, const std::string &weapon,
+                                const size_t target_count, const std::string &focus )
+{
+    return format_semantic_sequence( { title, weapon, format_target_count( target_count ), focus } );
+}
+
+std::string format_target_status( const target_status &status )
+{
+    std::vector<std::string> parts;
+    if( !status.firing_mode.empty() ) {
+        //~ %s: gun firing mode such as "semi-auto (1)"
+        parts.push_back( string_format( _( "Firing mode: %s" ), status.firing_mode ) );
+    }
+    if( !status.aim_mode.empty() ) {
+        //~ %s: selected aim level such as "Careful"
+        parts.push_back( string_format( _( "Aim: %s" ), status.aim_mode ) );
+    }
+    parts.push_back( status.ammo );
+    if( !status.recoil.empty() ) {
+        //~ %s: recoil level such as "Low"
+        parts.push_back( string_format( _( "Recoil: %s" ), status.recoil ) );
+    }
+    if( status.steadiness >= 0 ) {
+        //~ %d: percent steadiness of the aim
+        parts.push_back( string_format( _( "Steadiness: %d%%" ), status.steadiness ) );
+    }
+    parts.push_back( status.distance > 0 ?
+                     //~ %1$d: distance to the cursor; %2$d: maximum range
+                     string_format( _( "Range: %1$d of %2$d" ), status.distance, status.range ) :
+                     //~ %d: maximum range
+                     string_format( _( "Range: %d" ), status.range ) );
+    parts.insert( parts.end(), status.extra.begin(), status.extra.end() );
+    return format_semantic_sequence( parts );
+}
+
 } // namespace accessibility
