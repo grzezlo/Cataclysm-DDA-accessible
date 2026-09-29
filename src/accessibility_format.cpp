@@ -660,7 +660,15 @@ std::string format_uilist_open( const std::string &context, const size_t count,
                                 const std::string &focus, const std::string &details_binding,
                                 const bool has_details )
 {
-    return format_semantic_sequence( { context, format_list_count( count ),
+    return format_uilist_open( context, format_list_count( count ), focus, details_binding,
+                               has_details );
+}
+
+std::string format_uilist_open( const std::string &context, const std::string &count,
+                                const std::string &focus, const std::string &details_binding,
+                                const bool has_details )
+{
+    return format_semantic_sequence( { context, count,
                                        _( "Use arrow keys to choose" ),
                                        has_details ? string_format( _( "%s for details" ),
                                                format_spoken_key( details_binding ) ) : std::string(), focus } );
@@ -2090,6 +2098,57 @@ std::string format_mutation_power_row( const mutation_power_row &row )
         //~ %s: resources a mutation needs, such as "kcal and thirst"
         string_format( _( "Unavailable: not enough %s" ), resources.empty() ? _( "resources" ) : resources ) :
         std::string()
+    } );
+}
+
+std::string format_spell_row( const spell_row &row )
+{
+    const bool castable = row.unavailable_reason.empty();
+    std::vector<std::string> parts = { remove_color_tags( row.name ) };
+    if( castable ) {
+        parts.emplace_back( pgettext( "spell", "castable" ) );
+    }
+    if( !row.cost.empty() ) {
+        parts.push_back( row.cost );
+        if( row.cost_impeded ) {
+            parts.emplace_back( pgettext( "spell", "cost impeded" ) );
+        }
+    }
+    if( !row.casting_time.empty() ) {
+        parts.push_back( row.casting_time );
+        if( row.time_impeded ) {
+            parts.emplace_back( pgettext( "spell", "time impeded" ) );
+        }
+    }
+    if( row.favorite ) {
+        parts.emplace_back( pgettext( "spell", "favorite" ) );
+    }
+    return format_semantic_sequence( {
+        string_join( parts, _( ", " ) ),
+        castable ? std::string() : string_format( _( "Unavailable: %s" ), row.unavailable_reason )
+    } );
+}
+
+std::string format_spell_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No spells" );
+    }
+    return string_format( n_gettext( "%d spell", "%d spells", count ), static_cast<int>( count ) );
+}
+
+std::string format_martial_style_row( const std::string &name, const bool current,
+                                      const std::string &description )
+{
+    std::vector<std::string> parts = { remove_color_tags( name ) };
+    if( current ) {
+        parts.emplace_back( pgettext( "martial arts style", "current" ) );
+    }
+    const std::vector<std::string> sentences =
+        split_uilist_detail_sentences( remove_color_tags( description ) );
+    return format_semantic_sequence( {
+        string_join( parts, _( ", " ) ),
+        sentences.empty() ? std::string() : sentences.front()
     } );
 }
 

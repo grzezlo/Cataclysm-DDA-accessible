@@ -465,4 +465,10 @@ std::string martialart_difficulty( const matype_id &mstyle );
 std::vector<matype_id> all_martialart_types();
 std::vector<matype_id> autolearn_martialart_types();
 
+/**
+ * Screen reader document of the style details window: general info, buffs,
+ * techniques, and compatible weapons, naming carried weapons.
+ */
+std::vector<std::string> martial_art_accessibility_details( const matype_id &style );
+
 #endif // CATA_SRC_MARTIALARTS_H

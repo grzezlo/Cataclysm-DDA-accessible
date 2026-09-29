@@ -158,6 +158,10 @@ std::string format_uilist_focus( const std::string &label, const std::string &co
 std::string format_uilist_open( const std::string &context, size_t count,
                                 const std::string &focus, const std::string &details_binding,
                                 bool has_details );
+/** As above with a spoken count such as "3 spells". */
+std::string format_uilist_open( const std::string &context, const std::string &count,
+                                const std::string &focus, const std::string &details_binding,
+                                bool has_details );
 /** Whether an item action is possible, which the visual menu shows only by color. */
 enum class item_action_availability {
     available,
@@ -650,6 +654,31 @@ struct mutation_power_row {
 };
 /** "Night vision, on, 10 kcal, cooldown 5 minutes." */
 std::string format_mutation_power_row( const mutation_power_row &row );
+
+/** Spell menu row. */
+struct spell_row {
+    std::string name;
+    /** Empty when the spell can be cast; otherwise why the menu disables it. */
+    std::string unavailable_reason;
+    /** Energy cost such as "10 mana" or "no cost". */
+    std::string cost;
+    /** Encumbrance raises the cost or the casting time; the menu shows it by label or color. */
+    bool cost_impeded = false;
+    std::string casting_time;
+    bool time_impeded = false;
+    /** The menu marks favorites only with a star. */
+    bool favorite = false;
+};
+/**
+ * "Magic missile, castable, 10 mana, 100 moves, favorite." or
+ * "Magic missile, 10 mana, 100 moves. Unavailable: not enough mana."
+ */
+std::string format_spell_row( const spell_row &row );
+/** "3 spells" or "No spells". */
+std::string format_spell_count( size_t count );
+/** Martial arts style row: name, "current" for the style in use, and its first sentence. */
+std::string format_martial_style_row( const std::string &name, bool current,
+                                      const std::string &description );
 
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( const std::string &label, const std::string &duration,

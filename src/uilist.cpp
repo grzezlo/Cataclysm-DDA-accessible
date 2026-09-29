@@ -489,6 +489,7 @@ void uilist::init()
     footer_text.clear();   // takes precedence over per-entry descriptions.
     accessibility_context.clear();
     accessibility_details = nullptr;
+    accessibility_count = nullptr;
     border_color = c_magenta; // border color
     text_color = c_light_gray;  // text color
     title_color = c_green;  // title color
@@ -1020,7 +1021,9 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         const bool visible_entry_details = desc_enabled && footer_text.empty();
         const bool selected_has_details = selected_valid && visible_entry_details &&
                                           has_entry_details( entries[selected] );
-        if( selected_valid ) {
+        if( selected_valid && !entries[selected].accessibility_focus.empty() ) {
+            semantic_selection = entries[selected].accessibility_focus;
+        } else if( selected_valid ) {
             semantic_selection = accessibility::format_uilist_focus(
                                      entries[selected]._txt_nocolor(),
                                      entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
@@ -1035,9 +1038,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
                                                       fentries.size() ) : std::string();
         const std::string category_name = current_category < categories.size() ?
                                           remove_color_tags( categories[current_category].second ) : std::string();
+        const std::string semantic_count = accessibility_count ? accessibility_count( fentries.size() ) :
+                                           accessibility::format_list_count( fentries.size() );
         if( accessibility_open && current_category != accessibility_category ) {
             accessibility_pending = accessibility::format_semantic_sequence( {
-                category_name, accessibility::format_list_count( fentries.size() )
+                category_name, semantic_count
             } );
         }
         accessibility_category = current_category;
@@ -1051,7 +1056,7 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
                                      ( visible_entry_details &&
                                        std::any_of( entries.begin(), entries.end(), has_entry_details ) );
             accessibility::announce( accessibility::format_uilist_open(
-                                         semantic_context, fentries.size(), semantic_selection,
+                                         semantic_context, semantic_count, semantic_selection,
                                          ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
             accessibility_open = true;
             accessibility_selection = selection_key;
@@ -1168,6 +1173,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
     }
 
     return ui;
+}
+
+void uilist::accessibility_repeat_focus()
+{
+    accessibility_selection.clear();
 }
 
 ///@}

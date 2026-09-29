@@ -16,6 +16,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_gameplay.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
@@ -13764,7 +13765,15 @@ bool character_martial_arts::pick_style( const Character &you ) // Style selecti
         }
         kmenu.addentry_desc( i + STYLE_OFFSET, true, -1, entry_text,
                              wrap60( style.description.translated() ) );
+        kmenu.entries.back().accessibility_focus = accessibility::format_martial_style_row(
+                    style.name.translated(), selected, style.description.translated() );
     }
+    kmenu.accessibility_context = accessibility::format_semantic_sequence( {
+        _( "Select a style" ),
+        //~ %s: key that opens the details of a martial arts style
+        string_format( _( "%s for techniques, buffs, and compatible weapons" ),
+                       accessibility::format_spoken_key( ctxt.get_desc( "SHOW_DESCRIPTION" ) ) )
+    } );
 
     kmenu.query();
     int selection = kmenu.ret;

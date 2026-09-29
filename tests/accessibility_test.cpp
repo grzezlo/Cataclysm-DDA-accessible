@@ -31,10 +31,12 @@
 #include "inventory_ui.h"
 #include "item.h"
 #include "item_category.h"
+#include "magic.h"
 #include "map.h"
 #include "map_helpers.h"
 #include "map_item_stack.h"
 #include "map_selector.h"
+#include "martialarts.h"
 #include "monster.h"
 #include "pickup.h"
 #include "mutation.h"
@@ -3764,5 +3766,126 @@ TEST_CASE( "mutations_screen_speaks_columns_rows_resources_and_details", "[acces
     } ) );
     for( const std::string &line : details ) {
         CHECK( line.find( "<color" ) == std::string::npos );
+    }
+}
+
+TEST_CASE( "spell_and_style_formatters_speak_castability_cost_and_description",
+           "[accessibility][nogame]" )
+{
+    accessibility::spell_row missile;
+    missile.name = "<color_c_cyan>Magic missile</color>";
+    missile.cost = "10 mana";
+    missile.casting_time = "100 moves";
+    CHECK( accessibility::format_spell_row( missile ) ==
+           "Magic missile, castable, 10 mana, 100 moves." );
+    missile.favorite = true;
+    missile.cost_impeded = true;
+    missile.time_impeded = true;
+    CHECK( accessibility::format_spell_row( missile ) ==
+           "Magic missile, castable, 10 mana, cost impeded, 100 moves, time impeded, favorite." );
+    missile.favorite = false;
+    missile.cost_impeded = false;
+    missile.time_impeded = false;
+    missile.unavailable_reason = "not enough mana";
+    CHECK( accessibility::format_spell_row( missile ) ==
+           "Magic missile, 10 mana, 100 moves. Unavailable: not enough mana." );
+
+    CHECK( accessibility::format_spell_count( 0 ) == "No spells" );
+    CHECK( accessibility::format_spell_count( 1 ) == "1 spell" );
+    CHECK( accessibility::format_spell_count( 3 ) == "3 spells" );
+    CHECK( accessibility::format_uilist_open( "Choose a Spell. Favorites", "3 spells",
+            "Magic missile, castable, 10 mana, 100 moves.", "Alt+d", true ) ==
+           "Choose a Spell. Favorites. 3 spells. Use arrow keys to choose. Alt+d for details. "
+           "Magic missile, castable, 10 mana, 100 moves." );
+
+    CHECK( accessibility::format_martial_style_row( "<color_c_pink>Brawling</color>", true,
+            "You're used to hand-to-creature fighting.  You know how to fight." ) ==
+           "Brawling, current. You're used to hand-to-creature fighting." );
+    CHECK( accessibility::format_martial_style_row( "Karate", false, "" ) == "Karate." );
+}
+
+TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const spell_id pew( "test_spell_pew" );
+    you.magic->learn_spell( pew, you, true );
+    spell &sp = you.magic->get_spell( pew );
+
+    you.magic->set_mana( 10000 );
+    const std::string castable = spell_accessibility_row( sp, you, false );
+    CHECK( castable.rfind( "Pew, Pew, castable, ", 0 ) == 0 );
+    CHECK( castable.find( " mana, " ) != std::string::npos );
+    CHECK( castable.find( "Unavailable" ) == std::string::npos );
+    const std::string favorite = spell_accessibility_row( sp, you, true );
+    CHECK( favorite.size() > 11 );
+    CHECK( favorite.compare( favorite.size() - 11, 11, ", favorite." ) == 0 );
+
+    // Without mana the row says why the menu disables the spell.
+    you.magic->set_mana( 0 );
+    const std::string unavailable = spell_accessibility_row( sp, you, false );
+    CHECK( unavailable.rfind( "Pew, Pew, ", 0 ) == 0 );
+    CHECK( unavailable.find( "castable" ) == std::string::npos );
+    CHECK( unavailable.find( ". Unavailable: not enough mana." ) != std::string::npos );
+
+    const std::vector<std::string> details = spell_accessibility_details( sp, you, false, 'a' );
+    REQUIRE( details.size() >= 5 );
+    CHECK( details[0] == unavailable + " Key a." );
+    CHECK( details[1] == "Classless" );
+    CHECK( details[2] == "You aim your finger at your opponent and make 'Pew, pew' sounds." );
+    const auto has_line = [&details]( const std::string & prefix ) {
+        return std::any_of( details.begin(), details.end(), [&prefix]( const std::string & line ) {
+            return line.rfind( prefix, 0 ) == 0;
+        } );
+    };
+    CHECK( has_line( "Spell Level: " ) );
+    CHECK( has_line( "Not Enough mana: " ) );
+    CHECK( has_line( "Casting Time: " ) );
+    CHECK( has_line( "Valid Targets: " ) );
+    CHECK( has_line( "Range: " ) );
+    CHECK( has_line( "Damage: " ) );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+    }
+    CHECK( spell_accessibility_details( sp, you, false, 0 )[0] == unavailable + " No key." );
+}
+
+TEST_CASE( "martial_style_details_speak_buffs_techniques_and_weapons", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    item hammer( itype_id( "hammer" ) );
+    REQUIRE( you.wield( hammer ) );
+    you.wear_item( item( itype_id( "test_backpack" ) ), false, false );
+    // Carried weapons are shown only by color; the document names them.
+    you.i_add( item( itype_id( "test_weapon1" ) ) );
+    REQUIRE( you.get_wielded_item() );
+    REQUIRE( you.get_wielded_item()->typeId() == itype_id( "hammer" ) );
+
+    const std::vector<std::string> lines =
+        martial_art_accessibility_details( matype_id( "test_style_ma1" ) );
+    const auto has_line = [&lines]( const std::string & text ) {
+        return std::any_of( lines.begin(), lines.end(), [&text]( const std::string & line ) {
+            return line.find( text ) != std::string::npos;
+        } );
+    };
+    REQUIRE( !lines.empty() );
+    CHECK( lines[0] == "General info" );
+    CHECK( has_line( "This style can be used with all weapons." ) );
+    CHECK( has_line( "Buffs (" ) );
+    CHECK( has_line( "Miss buffs" ) );
+    CHECK( has_line( "Techniques (" ) );
+    CHECK( has_line( "Technique: " ) );
+    CHECK( has_line( "Weapons (" ) );
+    CHECK( has_line( "test melee weapon 1 (carried)" ) );
+    for( const std::string &line : lines ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+        CHECK( line.find( "</" ) == std::string::npos );
     }
 }

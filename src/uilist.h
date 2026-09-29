@@ -72,6 +72,8 @@ struct uilist_entry {
         std::string ctxt;           // second column text
         // Spoken after the entry when its state is shown only visually, e.g. by color.
         std::string accessibility_state;
+        // Spoken instead of the text, column, and state when set.
+        std::string accessibility_focus;
         nc_color hotkey_color;
         nc_color text_color;
         mvwzstr extratxt;
@@ -402,6 +404,8 @@ class uilist // NOLINT(cata-xy)
                                   &fun );
 
         void reset();
+        // Speak the focused entry again at the next redraw, e.g. after a callback's window closes.
+        void accessibility_repeat_focus();
 
 #if defined(TILES)
         void set_hide( bool val );
@@ -428,6 +432,8 @@ class uilist // NOLINT(cata-xy)
         std::string accessibility_context;
         // Opened by the details action for the whole list instead of entry descriptions.
         std::function<void()> accessibility_details;
+        // Speaks the number of listed entries, e.g. "3 spells"; defaults to items.
+        std::function<std::string( size_t )> accessibility_count;
         std::vector<uilist_entry> entries;
 
         std::string input_category;

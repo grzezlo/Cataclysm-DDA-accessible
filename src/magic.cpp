@@ -10,6 +10,10 @@
 #include <set>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
@@ -2732,12 +2736,18 @@ std::vector<spell> Character::spells_known_of_class( const trait_id &spell_class
 static void refresh_favorite( uilist *menu, std::vector<spell *> known_spells )
 {
     for( uilist_entry &entry : menu->entries ) {
-        if( get_player_character().magic->is_favorite( known_spells[entry.retval]->id() ) ) {
+        const bool favorite = get_player_character().magic->is_favorite(
+                                  known_spells[entry.retval]->id() );
+        if( favorite ) {
             entry.extratxt.left = 0;
             entry.extratxt.txt = _( "*" );
             entry.extratxt.color = c_white;
         } else {
             entry.extratxt.txt = "";
+        }
+        if( accessibility::is_active() ) {
+            entry.accessibility_focus = spell_accessibility_row( *known_spells[entry.retval],
+                                        get_player_character(), favorite );
         }
     }
 }
@@ -2761,6 +2771,8 @@ class spellcasting_callback : public uilist_callback
             const std::string &action = ctxt.input_to_action( event );
             if( action == "CAST_IGNORE" ) {
                 casting_ignore = !casting_ignore;
+                accessibility::announce( casting_ignore ? _( "Ignore Distractions" ) :
+                                         _( "Popup Distractions" ) );
                 return true;
             } else if( action == "CHOOSE_INVLET" ) {
                 int invlet = 0;
@@ -2786,6 +2798,7 @@ class spellcasting_callback : public uilist_callback
                     popup( _( "Hotkey removed." ) );
                     get_player_character().magic->rem_invlet( known_spells[entnum]->id() );
                 }
+                menu->accessibility_repeat_focus();
                 return true;
             } else if( action == "SCROLL_FAVORITE" ) {
                 get_player_character().magic->toggle_favorite( known_spells[entnum]->id() );
@@ -3147,6 +3160,229 @@ void spellcasting_callback::display_spell_info( size_t index )
     }
 }
 
+/** Why the spell menu disables a spell, in the order spell::can_cast() checks it. */
+static std::string spell_unavailable_reason( const spell &sp, const Character &guy )
+{
+    if( sp.can_cast( guy ) ) {
+        return std::string();
+    }
+    if( !guy.has_flag( json_flag_CANNOT_ATTACK ) && !sp.has_flag( spell_flag::NON_MAGICAL ) ) {
+        bool blocked = false;
+        if( sp.id()->magic_type.has_value() ) {
+            for( const std::string &flag : sp.id()->magic_type.value()->cannot_cast_flags ) {
+                blocked = blocked || guy.has_flag( json_character_flag( flag ) );
+            }
+        }
+        if( !blocked ) {
+            if( guy.is_mute() && !guy.has_flag( json_flag_SILENT_SPELL ) &&
+                sp.has_flag( spell_flag::VERBAL ) ) {
+                return pgettext( "spell unavailable", "cannot speak" );
+            }
+            if( sp.has_components() &&
+                !sp.components().can_make_with_inventory( guy.crafting_inventory( guy.pos_bub(), 0,
+                        false ), return_true<item> ) ) {
+                return pgettext( "spell unavailable", "missing components" );
+            }
+            if( !guy.magic->has_enough_energy( guy, sp ) ) {
+                switch( sp.energy_source() ) {
+                    case magic_energy_type::mana:
+                        return pgettext( "spell unavailable", "not enough mana" );
+                    case magic_energy_type::bionic:
+                        return pgettext( "spell unavailable", "not enough bionic power" );
+                    case magic_energy_type::stamina:
+                        return pgettext( "spell unavailable", "not enough stamina" );
+                    case magic_energy_type::hp:
+                        return pgettext( "spell unavailable", "not enough health" );
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    return pgettext( "spell unavailable", "cannot cast now" );
+}
+
+/** The energy cost as a number with its energy type, instead of the menu's bars. */
+static std::string spell_cost_text( const spell &sp, const Character &guy )
+{
+    if( sp.energy_source() == magic_energy_type::none ) {
+        return pgettext( "spell cost", "no cost" );
+    }
+    //~ %1$d: energy a spell costs, %2$s: energy type, such as "mana" or "kJ"
+    return string_format( pgettext( "spell cost", "%1$d %2$s" ), sp.energy_cost( guy ),
+                          sp.energy_string() );
+}
+
+std::string spell_accessibility_row( const spell &sp, const Character &guy, const bool favorite )
+{
+    accessibility::spell_row row;
+    row.name = sp.name();
+    row.unavailable_reason = spell_unavailable_reason( sp, guy );
+    row.cost = spell_cost_text( sp, guy );
+    row.cost_impeded = sp.energy_cost_encumbered( guy );
+    row.casting_time = moves_to_string( sp.casting_time( guy ) );
+    row.time_impeded = sp.casting_time_encumbered( guy );
+    row.favorite = favorite;
+    return accessibility::format_spell_row( row );
+}
+
+/** Area line of the spell information pane; empty when the pane shows none. */
+static std::string spell_area_text( const spell &sp, const Character &pc )
+{
+    const int aoe = sp.aoe( pc );
+    if( sp.effect() == "attack" && aoe > 0 ) {
+        if( sp.shape() == spell_shape::cone ) {
+            return string_format( "%s: %d %s", _( "Cone Arc" ), aoe, _( "degrees" ) );
+        } else if( sp.shape() == spell_shape::line ) {
+            return string_format( "%s: %d", _( "Line Width" ), aoe );
+        }
+        return string_format( "%s: %d", _( "Spell Radius" ), aoe );
+    } else if( sp.effect() == "short_range_teleport" && aoe > 0 ) {
+        return string_format( "%s: %d", _( "Variance" ), aoe );
+    } else if( sp.effect() == "summon" ) {
+        return string_format( "%s: %d", _( "Spell Radius" ), aoe );
+    } else if( sp.effect() == "ter_transform" ) {
+        return string_format( "%s: %s", _( "Spell Radius" ), sp.aoe_string( pc ) );
+    } else if( sp.effect() == "banishment" && aoe > 0 ) {
+        return string_format( _( "Spell Radius: %d" ), aoe );
+    }
+    return std::string();
+}
+
+/** Damage, healing, spawn, or summon line of the spell information pane. */
+static std::string spell_effect_text( const spell &sp, const Character &pc )
+{
+    const int damage = sp.damage( pc );
+    if( sp.effect() == "attack" ) {
+        if( damage > 0 ) {
+            std::string dot_string;
+            if( sp.damage_dot( pc ) != 0 ) {
+                dot_string = string_format( _( ", %d/sec" ), static_cast<int>( sp.damage_dot( pc ) ) );
+            }
+            return string_format( "%s: %s %s%s", _( "Damage" ), sp.damage_string( pc ),
+                                  sp.damage_type_string(), dot_string );
+        } else if( damage < 0 ) {
+            return string_format( "%s: %s", _( "Healing" ), sp.damage_string( pc ) );
+        }
+    } else if( sp.effect() == "spawn_item" ) {
+        if( sp.has_flag( spell_flag::SPAWN_GROUP ) ) {
+            return string_format( _( "Spawn item group %1$s %2$d times" ), sp.effect_data(), damage );
+        }
+        return string_format( "%s %d %s", _( "Spawn" ), damage,
+                              item::nname( itype_id( sp.effect_data() ), damage ) );
+    } else if( sp.effect() == "summon" ) {
+        std::string monster_name = "FIXME";
+        if( sp.has_flag( spell_flag::SPAWN_GROUP ) ) {
+            if( MonsterGroupManager::isValidMonsterGroup( mongroup_id( sp.effect_data() ) ) ) {
+                monster_name = "from " + sp.effect_data();
+            }
+        } else {
+            monster_name = monster( mtype_id( sp.effect_data() ) ).get_name();
+        }
+        return string_format( "%s %d %s", _( "Summon" ), damage, monster_name );
+    } else if( sp.effect() == "targeted_polymorph" ) {
+        std::string monster_name = sp.effect_data();
+        if( sp.has_flag( spell_flag::POLYMORPH_GROUP ) || monster_name.empty() ) {
+            monster_name = _( "random creature" );
+        } else {
+            monster_name = mtype_id( sp.effect_data() )->nname();
+        }
+        return string_format( _( "Targets under: %dhp become a %s" ), damage, monster_name );
+    } else if( sp.effect() == "banishment" ) {
+        return string_format( "%s: %s %s", _( "Damage" ), sp.damage_string( pc ),
+                              sp.damage_type_string() );
+    }
+    return std::string();
+}
+
+std::vector<std::string> spell_accessibility_details( const spell &sp, Character &pc,
+        const bool favorite, const int invlet )
+{
+    std::vector<std::string> lines;
+    const auto add = [&lines]( const std::string & line ) {
+        const std::string clean = trim( remove_color_tags( line ) );
+        if( !clean.empty() ) {
+            lines.push_back( clean );
+        }
+    };
+    add( accessibility::format_semantic_sequence( {
+        spell_accessibility_row( sp, pc, favorite ),
+        accessibility::format_assigned_key( invlet > 0 ? std::string( 1, static_cast<char>( invlet ) ) :
+                                            std::string( " " ) )
+    } ) );
+    add( sp.spell_class() == trait_NONE ? _( "Classless" ) : sp.spell_class()->name() );
+
+    std::string desc = sp.description();
+    parse_tags( desc, pc, pc );
+    for( const std::string &line : string_split( desc, '\n' ) ) {
+        add( line );
+    }
+    for( const std::string &line : string_split( sp.enumerate_spell_data( pc ), '\n' ) ) {
+        add( line );
+    }
+
+    const int temp_level_adjust = sp.get_temp_level_adjustment();
+    std::string temp_level_adjust_string;
+    if( temp_level_adjust < 0 ) {
+        temp_level_adjust_string = " (-" + std::to_string( -temp_level_adjust ) + ")";
+    } else if( temp_level_adjust > 0 ) {
+        temp_level_adjust_string = " (+" + std::to_string( temp_level_adjust ) + ")";
+    }
+    const bool is_psi = sp.has_flag( spell_flag::PSIONIC );
+    add( string_format( "%s: %d%s%s", is_psi ? _( "Power Level" ) : _( "Spell Level" ),
+                        sp.get_effective_level(), sp.is_max_level( pc ) ? _( " (MAX)" ) : "",
+                        temp_level_adjust_string ) );
+    add( string_format( "%s: %d", _( "Max Level" ), sp.get_max_level( pc ) ) );
+    add( sp.colorized_fail_percent( pc ) );
+    add( string_format( "%s: %d", _( "Difficulty" ), sp.get_difficulty( pc ) ) );
+    add( string_format( "%s: %d", _( "Current Exp" ), sp.xp() ) );
+    add( string_format( "%s: %d", _( "to Next Level" ), sp.exp_to_next_level() ) );
+
+    const bool cost_encumb = sp.energy_cost_encumbered( pc );
+    if( pc.magic->has_enough_energy( pc, sp ) ) {
+        const std::string cost_string = cost_encumb ? _( "Casting Cost (impeded)" ) :
+                                        _( "Casting Cost" );
+        const std::string psi_cost_string = cost_encumb ? _( "Channeling Cost (impeded)" ) :
+                                            _( "Channeling Cost" );
+        const std::string energy_cur = sp.energy_source() == magic_energy_type::hp ? "" :
+                                       string_format( _( " (%s current)" ), sp.energy_cur_string( pc ) );
+        add( string_format( "%s: %s %s%s", is_psi ? psi_cost_string : cost_string,
+                            sp.energy_cost_string( pc ), sp.energy_string(), energy_cur ) );
+    } else {
+        add( string_format( "%s %s: %s %s", _( "Not Enough" ), sp.energy_string(),
+                            sp.energy_cost_string( pc ), sp.energy_string() ) );
+    }
+    const bool c_t_encumb = sp.casting_time_encumbered( pc );
+    const std::string psi_cast_time = c_t_encumb ? _( "Channeling Time (impeded)" ) :
+                                      _( "Channeling Time" );
+    const std::string cast_time = c_t_encumb ? _( "Casting Time (impeded)" ) : _( "Casting Time" );
+    add( string_format( "%s: %s", is_psi ? psi_cast_time : cast_time,
+                        moves_to_string( sp.casting_time( pc ) ) ) );
+
+    add( string_format( "%s: %s", _( "Valid Targets" ),
+                        sp.is_valid_target( spell_target::none ) ? _( "self" ) : sp.enumerate_targets() ) );
+    const std::string target_ids = sp.list_targeted_monster_names();
+    if( !target_ids.empty() ) {
+        add( string_format( _( "Only affects the monsters: %s" ), target_ids ) );
+    }
+    add( string_format( "%s: %s", _( "Range" ),
+                        sp.range( pc ) <= 0 ? _( "self" ) : std::to_string( sp.range( pc ) ) ) );
+    add( spell_area_text( sp, pc ) );
+    add( spell_effect_text( sp, pc ) );
+    if( sp.duration( pc ) > 0 || sp.has_flag( spell_flag::PERMANENT ) ||
+        sp.has_flag( spell_flag::PERMANENT_ALL_LEVELS ) ) {
+        add( string_format( "%s: %s", _( "Duration" ), sp.duration_string( pc ) ) );
+    }
+    if( sp.has_components() ) {
+        for( const accessibility::requirement_group &group : accessibility_gameplay::requirement_groups(
+                 sp.components(), pc.crafting_inventory( pc.pos_bub(), 0, false ), return_true<item>, 1,
+                 true ) ) {
+            add( accessibility::format_requirement_group( group ) );
+        }
+    }
+    return lines;
+}
+
 bool known_magic::set_invlet( const spell_id &sp, int invlet )
 {
     if( invlets_to_spells.count( invlet ) ) {
@@ -3335,6 +3571,22 @@ spell &known_magic::select_spell( Character &guy )
                              get_invlet( known_spells_sorted[i]->id() ), known_spells_sorted[i]->name() );
     }
     refresh_favorite( &spell_menu, known_spells_sorted );
+    if( casting_ignore ) {
+        spell_menu.accessibility_context = accessibility::format_semantic_sequence( {
+            spell_menu.title, _( "Ignore Distractions" )
+        } );
+    }
+    spell_menu.accessibility_count = accessibility::format_spell_count;
+    spell_menu.accessibility_details = [&spell_menu, &known_spells_sorted, &guy, this]() {
+        if( spell_menu.selected < 0 ||
+            static_cast<size_t>( spell_menu.selected ) >= spell_menu.entries.size() ) {
+            return;
+        }
+        const spell &sp = *known_spells_sorted[spell_menu.entries[spell_menu.selected].retval];
+        const std::vector<std::string> lines = spell_accessibility_details( sp, guy,
+                                               is_favorite( sp.id() ), get_invlet( sp.id() ) );
+        accessibility_ui::show_document( sp.name(), sp.name(), lines, lines );
+    };
 
     spell_menu.query( true, 50, true );
 

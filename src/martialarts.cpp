@@ -10,6 +10,8 @@
 #include <string>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "bodypart.h"
 #include "cata_imgui.h"
 #include "cata_utility.h"
@@ -2213,7 +2215,21 @@ class ma_details_ui
         void draw_ma_details_ui( const matype_id &style_selected );
 };
 
-class ma_details_ui_impl : public cataimgui::window
+// Text of the style details window, shared with its screen reader document.
+struct ma_details_data {
+    std::vector<std::string> general_info_text;
+    std::map<std::string, std::vector<std::string>> buffs_text;
+    std::map<std::string, std::vector<std::string>> techniques_text;
+    std::map<std::string, std::string> weapons_text;
+    int buffs_total = 0;
+    int weapons_total = 0;
+
+    // `spoken` names carried weapons, which the window shows only by color.
+    void init( const matype_id &ma_style, bool spoken );
+    std::vector<std::string> document_lines() const;
+};
+
+class ma_details_ui_impl : public cataimgui::window, private ma_details_data
 {
     public:
         std::string last_action;
@@ -2237,12 +2253,6 @@ class ma_details_ui_impl : public cataimgui::window
         bool weapons_group_collapsed = false;
 
         matype_id ma_style;
-        std::vector<std::string> general_info_text;
-        std::map<std::string, std::vector<std::string>> buffs_text;
-        std::map<std::string, std::vector<std::string>> techniques_text;
-        std::map<std::string, std::string> weapons_text;
-        int buffs_total = 0;
-        int weapons_total = 0;
 
         cataimgui::scroll s = cataimgui::scroll::none;
 
@@ -2282,6 +2292,11 @@ void ma_details_ui::draw_ma_details_ui( const matype_id &style_selected )
 }
 
 void ma_details_ui_impl::init_data()
+{
+    init( ma_style, false );
+}
+
+void ma_details_data::init( const matype_id &ma_style, const bool spoken )
 {
     general_info_text.clear();
     buffs_text.clear();
@@ -2393,7 +2408,8 @@ void ma_details_ui_impl::init_data()
                 // Wielded weapon in cyan, weapons in player inventory in yellow
                 std::string wname = player.get_wielded_item() && player.get_wielded_item()->typeId() == w ?
                                     colorize( item::nname( w ) + _( " (wielded)" ), c_light_cyan ) :
-                                    carrying ? colorize( item::nname( w ), c_yellow ) : item::nname( w );
+                                    carrying ? colorize( spoken ? item::nname( w ) + _( " (carried)" ) : item::nname( w ),
+                                            c_yellow ) : item::nname( w );
                 bool cat_found = false;
                 for( const weapon_category_id &w_cat : w->weapon_category ) {
                     // If martial art does not define a weapon category, include all valid categories
@@ -2531,14 +2547,71 @@ void ma_details_ui_impl::draw_controls()
     draw_ma_details_text();
 }
 
+std::vector<std::string> ma_details_data::document_lines() const
+{
+    std::vector<std::string> lines;
+    const auto add = [&lines]( const std::string & line ) {
+        const std::string clean = trim( remove_color_tags( line ) );
+        if( !clean.empty() ) {
+            lines.push_back( clean );
+        }
+    };
+    if( !general_info_text.empty() ) {
+        add( _( "General info" ) );
+        for( const std::string &entry : general_info_text ) {
+            add( entry );
+        }
+    }
+    if( !buffs_text.empty() ) {
+        add( string_format( _( "Buffs (%d in %d categories)" ), buffs_total, buffs_text.size() ) );
+        for( const auto &entry : buffs_text ) {
+            add( entry.first );
+            for( const std::string &buff_line : entry.second ) {
+                add( buff_line );
+            }
+        }
+    }
+    if( !techniques_text.empty() ) {
+        add( string_format( _( "Techniques (%d)" ), techniques_text.size() ) );
+        for( const auto &entry : techniques_text ) {
+            add( _( "Technique: " ) + entry.first );
+            for( const std::string &technique_line : entry.second ) {
+                add( technique_line );
+            }
+        }
+    }
+    if( !weapons_text.empty() ) {
+        add( string_format( _( "Weapons (%d in %d categories)" ), weapons_total,
+                            weapons_text.size() ) );
+        for( const auto &entry : weapons_text ) {
+            add( string_format( "%s: %s", entry.first, entry.second ) );
+        }
+    }
+    return lines;
+}
+
+std::vector<std::string> martial_art_accessibility_details( const matype_id &style )
+{
+    ma_details_data data;
+    data.init( style, true );
+    return data.document_lines();
+}
+
 static void show_ma_details_ui( const matype_id &style_selected )
 {
+    if( accessibility::is_active() ) {
+        const std::vector<std::string> lines = martial_art_accessibility_details( style_selected );
+        const std::string title = string_format( _( "Martial art style details - %s" ),
+                                  style_selected.obj().name.translated() );
+        accessibility_ui::show_document( title, style_selected.obj().name.translated(), lines, lines );
+        return;
+    }
     ma_details_ui new_instance;
     new_instance.draw_ma_details_ui( style_selected );
 }
 
 bool ma_style_callback::key( const input_context &ctxt, const input_event &event, int entnum,
-                             uilist * )
+                             uilist *menu )
 {
     const std::string &action = ctxt.input_to_action( event );
     if( entnum < static_cast<int>( offset ) || action != "SHOW_DESCRIPTION" )  {
@@ -2552,6 +2625,9 @@ bool ma_style_callback::key( const input_context &ctxt, const input_event &event
     }
 
     show_ma_details_ui( style_selected );
+    if( menu != nullptr ) {
+        menu->accessibility_repeat_focus();
+    }
 
     return true;
 }
