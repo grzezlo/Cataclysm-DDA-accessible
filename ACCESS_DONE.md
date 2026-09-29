@@ -713,3 +713,35 @@ Limitations:
   The liquid-drop warning does not name the liquid.
 - Suppression of the per-item pickup messages is not covered by automated
   tests because the test binary uses fake messages.
+
+## 2026-09-29 — Stage 09A: List position speech unification
+
+- Applied interaction convention 2 to the lists completed before it, as
+  selected by the maintainer: the item count is spoken once on opening, no
+  position while focus moves, "Top" or "Bottom" before the row on a wrap,
+  and the position ("3 of 12") on request.
+- Position keys: `Alt+D` in uilist (appended to details or "No details
+  available"), the message log (same as `Enter`), and the keybinding list;
+  `Alt+S` in the inventory selector, advanced inventory, nearby item and
+  creature lists, the help topic menu, and the main menu.
+- uilist speaks its count on opening, the category name and count on a
+  category switch, and "Filter: …, N matching items" after filtering.  The
+  inventory selector speaks the active column's item count on opening and on
+  a column switch.  The keybinding list says "Keybindings, N actions"; main
+  menu tabs with a submenu add its item count.
+- Nearby items no longer say "Location x of y" or "x of y" on focus; an
+  item on several tiles says "N locations", and `Alt+S` gives both
+  positions.
+- New formatters `format_list_count`, `format_list_wrap`, and
+  `format_list_position` are shared by every list.
+- Commit: `53d01fccc7`.
+
+Limitations:
+
+- The message log and help topic menu clamp at their ends instead of
+  wrapping, so they never say "Top" or "Bottom"; reaching an end is silent,
+  as before.
+- Main menu tab switches (Left and Right) wrap without "Top" or "Bottom",
+  because tabs are not a vertical list.
+- The inventory count covers the active column's items, including disabled
+  ones that focus may skip.

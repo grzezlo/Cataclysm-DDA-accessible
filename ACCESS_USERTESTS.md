@@ -261,3 +261,50 @@ an anvil.
 - **Speech interruption.**  Press `Shift` while a marking or result sentence
   is spoken.  Speech stops and is not repeated; the next key speaks
   normally.
+
+## Stage 09A: List position speech
+
+In every list below, check that opening speaks the name and item count once,
+that moving with the arrow keys speaks only the row with no "3 of 12", and
+that `Alt+R` repeats the last row.
+
+- **Menu list.**  Press `Enter` in gameplay to open the action menu.  You
+  hear its title, "… items", the navigation hint, and the first row.  Press
+  Down several times quickly: each press speaks only the row.  Press Up on
+  the first row: you hear "Bottom." and the last row.  Press Down: you hear
+  "Top." and the first row.  Press `Alt+D`: the details (or "No details
+  available.") end with the position, for example "1 of 12".
+- **Menu categories and filter.**  In a list with category tabs, such as
+  Debug menu > Spawning… > Spawn an item, press Left or Right: you hear the
+  category name, its item count, and the focused row.  Press `/`, type a
+  filter, and confirm: you hear "Filter: …", the number of matching items,
+  and the focused row.
+- **Inventory.**  Press `i`.  You hear the title, the column name, "…
+  items", and the first item.  Move with Up and Down; wrap past both ends
+  and hear "Top." or "Bottom." before the item.  Press `Alt+S`: the summary
+  ends with the position.  Switch columns with Tab where available: the new
+  column's name and item count are spoken once.
+- **Advanced inventory.**  Press `/`.  Wrap past both ends of the source
+  pane and hear "Top." or "Bottom.".  Press `Alt+S`: the pane summary ends
+  with the position, for example "2 of 5".
+- **Nearby items and creatures.**  Spawn a few items and monsters nearby
+  through the debug menu, then press `V`.  Moving speaks the item without
+  "5 of 9" or "Location 1 of 3"; an item on several tiles says "3
+  locations".  Wrap past both ends and hear "Top." or "Bottom.".  Press
+  `Alt+S`: you hear the list name, the result count, the position, and for
+  items on several tiles "Location 2 of 3".  Repeat on the creature tab.
+- **Message log.**  Press `P`.  You hear "Message log" and the message
+  count once.  Moving speaks only the message.  `Alt+D` or `Enter` speaks
+  "Message 3 of 40" with the type and text.
+- **Help and keybindings.**  Press `?`.  The topic count is spoken once;
+  moving speaks only topics.  Press `Alt+S`: "Help, 23 topics, 4 of 23".
+  Then open the keybinding list with `?` in any menu: opening says
+  "Keybindings, … actions".  Wrap past both ends and hear "Top." or
+  "Bottom.".  `Alt+D` ends with the position.
+- **Main menu.**  On the New Game or World tab, press Left or Right to reach
+  it: the tab name and its item count are spoken once.  Press Up on the
+  first item to hear "Bottom.".  Press `Alt+S`: "Main menu, Tab …, 3 of 10,
+  Item 1 of 4".
+- **Speech interruption.**  Hold Down in a long list and press `Control`
+  while a row is spoken.  Speech stops and is not repeated; the next key
+  speaks only its row.

@@ -55,37 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 09A - List position speech unification
-
-**Outcome:** Lists completed before the interaction conventions follow
-convention 2: the item count once on opening, no position on focus moves,
-"top" or "bottom" on wrap, and the position on request.
-
-**Code inventory:** position formatters in `src/accessibility_format.cpp`
-("Message %d of %d" in the message log, "%1$d of %2$d" nearby-list results,
-"Location %1$d of %2$d" in nearby item stacks); `src/uilist.cpp`,
-`src/inventory_ui.cpp`, `src/advanced_inv.cpp`, `src/main_menu.cpp`, the help
-browser, and the keybinding list.  Inventory every list-focus announcement
-before changing it; counts that describe content rather than list position,
-such as "Selected 2 of 5" or capacity, stay.
-
-**Selected interaction:** Convention 2 as written, chosen by the maintainer on
-2026-09-29.  Position within a list moves to `Alt+S` or `Alt+D`, whichever
-the screen already uses for its summary or detail.
-
-**Success criteria:** Every list reached in Stages 03–09 announces its count
-once on opening, speaks no position on focus moves, signals wrap, and reports
-the position on request.  Repeat-last and filtered result counts still work.
-
-**Possible automated tests:** Capture opening, focus moves, wrap in both
-directions, filter result count, and position on request for uilist, the
-inventory selector, advanced inventory, the nearby lists, the message log,
-and the help and keybinding lists.
-
-**User-test scenarios:** Open each list, scroll through it quickly, wrap past
-both ends, and request the position; confirm that no position is spoken
-while scrolling and that the count is heard once.
-
 ## Stage 10 - Ranged and thrown targeting
 
 **Outcome:** A player can inspect targets, choose an aim action, and fire or throw
