@@ -270,6 +270,24 @@ turn-by-turn flooding.  Sleep, wait, and book reading are included.
   `set_last_announcement` with `get_progress_message()` for on-demand
   repeat (following the Stage 02A pattern), and announce completion/cancel
   via `announce_status`.
+- Real-time progress: `loading_ui` and `query_popup` progress from Stage 02A,
+  `input_manager::pump_events()`, and the activity loop in `do_turn()`.  The
+  interval option belongs with `SCREEN_READER_SPEECH` in `src/options.cpp`.
+
+**Selected interaction (option A, start and result, plus real-time progress):**
+
+- Keys are unchanged.  Conventions 7 and 8 apply.
+- Starting an activity speaks its name and, when the game shows one, the
+  estimated duration ("Crafting knife, about 2 hours").  Nothing is spoken in
+  game time while it runs; `Alt+R` speaks the current progress message.
+- Completion speaks one result ("Finished crafting knife", "You wake up");
+  cancel or failure speaks its reason.  Interruption queries name the reason
+  and use the Stage 05 multi-option popup speech.
+- Real-time progress extends Stage 02A: when a blocking operation (world
+  loading, saving) or a running activity has gone 5 real seconds without
+  speech, the current progress is spoken, then at most every 5 seconds and
+  only when its text changed.  A "Progress announcement interval" option next
+  to `SCREEN_READER_SPEECH` sets the seconds; 0 turns it off.
 
 **Success criteria:** Activities announce start, meaningful status on demand,
 interruption reason and choices, resume/cancel, failure, and completion without
@@ -322,6 +340,18 @@ providers it uses.
 - Info pane scrolling: `"SCROLL_INFOBOX_UP"` / `"SCROLL_INFOBOX_DOWN"` handled in
   `Character::disp_info()`.
 
+**Selected interaction (conventions 2, 3, and 5):**
+
+- Keys are unchanged.  The screen is the full character sheet; the Stage 04
+  `Alt+S` status review stays the quick in-game overview and is not changed.
+- Changing a tab speaks its name, item count, and focused row.  Rows are
+  concise: "Strength 10, base 8"; "Torso, encumbrance 12, layering 3, warmth
+  comfortable"; "Melee 3, 45%, training" with rust when present; effects,
+  traits, bionics, and proficiencies by name and state.  Entering a new skill
+  category speaks its name.
+- `Alt+D` opens the info pane, including the layering description, in the
+  document view.
+
 **Success criteria:** Tab/section identity and focused row are explicit.  Stats,
 body condition, encumbrance with layering detail, skills, traits, effects,
 morale, speed, needs, and proficiencies expose the values and explanations
@@ -363,6 +393,18 @@ owning data/state modules.
 - Active trait text: name + cost + resource + cooldown + active status in
   `avatar::power_mutations()`.
 - Description: `mutation_desc()` in `src/mutation_ui.cpp`.
+
+**Selected interaction (conventions 2, 3, 5, and 8; revisit after play):**
+
+- Keys are unchanged.  Switching a tab or column speaks its name, item count,
+  and focused row ("Active bionics, 4 items").
+- A row speaks name, state, and cost: "Night vision, on, 5 J per turn", or
+  "Unavailable: not enough power".  Mutations add resource and cooldown.
+- The activate/examine toggle speaks the new mode.  `Alt+D` opens the
+  description in the document view; `Alt+S` speaks power and fuel.
+  Activation results come from game messages.
+- The maintainer expects play testing may suggest a better design; treat
+  reported problems as a new review rather than a regression fix.
 
 **Success criteria:** Each screen reports tab/column, selection, active/passive
 state, cost, cooldown, description, and disabled reason.  Activation,
