@@ -678,3 +678,38 @@ Limitations:
   belongs to Stage 19.
 - The overmap cursor and path selection stay inaccessible until Stage 18.
 - A player-confirmed cancel does not repeat the remaining distance.
+
+## 2026-09-29 — Stage 09: Pickup, drop, and container transfers
+
+- Selected design: option A (inline capacity), recorded before
+  implementation.
+- Inventory selector rows whose item the player does not own say "Not
+  owned"; `Alt+D` adds "Owner: <faction>" and, in the pickup selector, the
+  predicted container ("Goes into: backpack").  Per-row fit warnings are the
+  existing denial reasons.
+- Marking in pickup, drop, and insert selectors adds the resulting weight
+  and volume against the limit, and "Over weight limit" or "Over volume
+  limit" when the screen shows the value in red.  The opening statistics and
+  `Alt+S` add the same warnings.
+- A pickup speaks one result in place of the per-item "You pick up" lines:
+  "Picked up: 2 hammers into backpack.  Not picked up: rock, no room."  The
+  closing "Some items were not picked up!" is logged but not spoken.  Auto
+  pickup reports only what it picked up, as before.
+- A deliberate drop of several kinds of items names them ("Dropped on grass:
+  2 hammers, rocks (2).") instead of "several items"; vehicle storage does
+  the same when everything fits.
+- The theft prompt speaks "Not owned: <item>" before its question.
+- New service helper `game_message_speech_suppression` keeps messages in the
+  log while a caller speaks a summary; `query_popup::accessibility_context`
+  adds speech-only context to a prompt.
+- Commit: `e76d09bcf2`.
+
+Limitations:
+
+- Stacks counted in charges that the game spreads over several pockets are
+  reported with the best pocket's container, not every container.
+- Insert keeps the per-item "You put your X into the Y" messages; spill,
+  liquid-drop, and unseal prompts rely on the Stage 05 controls unchanged.
+  The liquid-drop warning does not name the liquid.
+- Suppression of the per-item pickup messages is not covered by automated
+  tests because the test binary uses fake messages.

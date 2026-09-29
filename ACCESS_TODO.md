@@ -19,69 +19,6 @@ automated tests are implemented, `test_access.bat` passes, and
 `build_win_x64.bat` succeeds.  Its user-test scenarios then move to
 `ACCESS_USERTESTS.md` and do not block the next stage.
 
-## Stage 09 - Pickup, drop, and container transfers
-
-**Outcome:** Local item transfer workflows expose item, quantity, source,
-destination, capacity, ownership, and result.
-
-**Code inventory:** `src/pickup.cpp`, `src/game_inventory.cpp`
-(`game_menus::inv::pickup`, `game_menus::inv::multidrop`),
-`src/inventory_ui.cpp` (`pickup_selector`, `inventory_drop_selector`,
-`inventory_insert_selector`).
-
-**Implementation hints:**
-
-- Interactive pickup entry: `game_menus::inv::pickup()` in `src/game_inventory.cpp`
-  creates `pickup_selector` in `src/inventory_ui.cpp`.
-- `pickup_selector::execute()` in `src/inventory_ui.cpp` runs the multi-select
-  loop.  Additional actions: `"WEAR"` and `"WIELD"` for direct equip from ground.
-- Transfer execution: `Pickup::do_pickup()` in `src/pickup.cpp` processes
-  selected items, calling `pick_one_up()`.
-- Problematic pickup: `handle_problematic_pickup()` in `src/pickup.cpp` shows
-  spill/wield/cancel choices.
-- Ownership warning: `Pickup::query_thief()` in `src/pickup.cpp`.
-- Summary message: `show_pickup_message()` in `src/pickup.cpp` — already
-  reaches the live message system.
-- Drop: `game_menus::inv::multidrop()` in `src/game_inventory.cpp` uses
-  `inventory_drop_selector::execute()` in `src/inventory_ui.cpp`.
-- Insert into container: `game_menus::inv::holster()` in `src/game_inventory.cpp`
-  uses `inventory_insert_selector` in `src/inventory_ui.cpp`.
-- Pickup builds on Stage 06 `inventory_selector` hooks.
-
-**Selected interaction (option A, inline capacity):**
-
-- Keys are unchanged.  Pickup, drop, and insert selectors keep the Stage 07
-  row and marking speech.
-- A row whose item the player does not own adds "Not owned" to its concise
-  speech.  Per-row fit warnings are the existing denial reasons ("Too heavy
-  to pick up", "Does not fit in any pocket").
-- Marking or unmarking speaks the change and selection total, then the
-  resulting weight and volume against the limit shown on screen ("Weight 12.3
-  of 40.0 kg, volume 8.10 of 10.00 L"), then "Over weight limit" or "Over
-  volume limit" when the red on-screen value shows an overflow.  The opening
-  statistics and `Alt+S` add the same over-limit words.
-- `Alt+D` on a row adds the owner ("Owner: <faction>") and, in the pickup
-  selector, the predicted destination ("Goes into: backpack", or "No pocket
-  available").
-- A pickup speaks one result instead of the per-item "You pick up" lines:
-  "Picked up: 3 apples into backpack, knife into sheath.  Not picked up:
-  rock, too heavy."  A deliberate drop of several kinds of items names them:
-  "Dropped on grass: 3 apples, knife."  Insert keeps its per-item messages.
-- The theft prompt names the item it asks about in speech only.  Spill and
-  liquid prompts already name their item or context and are unchanged.
-- `Alt+R` repeats the last announcement, including the result.
-
-**Success criteria:** Single and multi-item pickup/drop, quantities, container
-choice, spill/unseal warnings, capacity, ownership/theft warnings, success, and
-failure are keyboard operable and announced.  Returning restores local context.
-
-**Possible automated tests:** Capture ground stacks, multiselect, quantities,
-container choice, insufficient capacity, ownership warning, cancel, and result
-using deterministic item/map fixtures.
-
-**User-test scenarios:** Pick up and drop single, stacked, and multiple
-items; transfer to/from a container; exercise capacity and ownership warnings.
-
 ## Stage 10 - Ranged and thrown targeting
 
 **Outcome:** A player can inspect targets, choose an aim action, and fire or throw

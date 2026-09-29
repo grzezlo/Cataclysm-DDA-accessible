@@ -222,3 +222,42 @@ dark.  Spawning… > Spawn a monster places a monster to interrupt travel.
 - **Speech interruption.**  Press `Shift` while the start summary is spoken.
   Speech stops and is not repeated; travel continues silently and the
   arrival is still spoken.
+
+## Stage 09: Pickup, drop, and container transfers
+
+Wear a backpack.  Debug menu > Spawning… > Spawn an item places items on
+your tile; spawn two hammers, a stack of rocks, and something bulky such as
+an anvil.
+
+- **Single pickup.**  Press `g` and choose your tile.  Mark one hammer.  You
+  hear the hammer, its selection state, the selection total, and "Weight …
+  of … kg, volume … of … L".  Press Enter.  After the pickup you hear one
+  sentence, "Picked up: hammer into backpack.", and no separate "You pick
+  up" line.  `Alt+R` repeats it.
+- **Stack and multiple items.**  Press `g`, mark the second hammer and the
+  rocks with a count (type a number, then mark), and confirm.  One sentence
+  names both items with their containers.
+- **Predicted container.**  In the pickup list, press `Alt+D` on a row.  The
+  details end with "Goes into:" and the container.
+- **Capacity warning.**  Spawn several anvils and mark them in the pickup
+  list.  Once the marked weight or volume passes the limit, the marking
+  speech ends with "Over weight limit" or "Over volume limit".  `Alt+S`
+  repeats the warning with the statistics.
+- **Left behind.**  Take off the backpack, then pick up a hammer.  You hear
+  "Not picked up: hammer, no room." once, without a second "Some items were
+  not picked up!".
+- **Drop several items.**  Press `d`, mark a hammer and the rocks, and
+  confirm.  You hear "Dropped on", the ground type, and both items instead
+  of "several items".
+- **Insert into a container.**  Open the inventory, choose the backpack,
+  pick Insert from its item menu, and mark an item.  Marking speaks the
+  backpack's weight and volume against its limits; the result is the game
+  message "You put your … into the backpack."
+- **Ownership.**  Debug menu > Map… > teleport to a refugee center or
+  another shop where items have an owner, stand next to a shelf, and press
+  `g`.  Owned rows say "Not owned", and `Alt+D` names the owner.  Mark one
+  and confirm: the theft question starts with "Not owned:" and the item
+  name, then offers its choices.
+- **Speech interruption.**  Press `Shift` while a marking or result sentence
+  is spoken.  Speech stops and is not repeated; the next key speaks
+  normally.
