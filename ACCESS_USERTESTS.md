@@ -429,9 +429,94 @@ window so both valid and invalid placement directions are available.
   "Construct where?" prompt lists valid neighboring tiles by name and
   direction.  Choose an invalid direction and hear the game's failure
   explanation.  Reopen the project, choose a valid direction, and hear
-  "Started constructing" with the project name.  Confirm the activity is
+  "Started: Constructing" with the project name.  Confirm the activity is
   present; progress and completion checks belong to Stage 12A.
 - **Repeat and interruption.**  Interrupt a project announcement and then
   a placement prompt with NVDA's Control key.  Neither requeues itself;
   `Alt+R` repeats the most recent meaningful announcement.  Escape from
   placement returns to gameplay with the cancellation message.
+
+## Stage 12A: Activities, interruptions, and long actions
+
+Use the Stage 12 construction setup, or Debug menu > Spawning… > Spawn an item
+to obtain the tools/components for a known long crafting recipe.  Debug menu >
+Player… > Change all skills can satisfy its requirements.  Choose activity
+commands through the action/keybinding menus; their original bindings remain.
+These checks use the existing keyboard interface and do not require Stage 13's
+full character sheet.
+
+- **Start, progress, and result.**  Start a long craft and then a construction.
+  Hear one start summary naming the work and its estimated duration.  Rapid
+  game-time progress must not produce turn-by-turn speech.  `Alt+R` during the
+  work reads current progress, including the percentage when the game supplies
+  it.  On completion hear one result containing the item/project and any
+  handler-reported skill gains or warnings, with no erroneous "Stopped" for a
+  successful craft.  `Alt+R` after completion repeats the result.
+- **Real-time interval and interruption of speech.**  In Options > Interface,
+  leave Progress announcement interval at 5.  While an activity runs for more
+  than five real seconds, changed progress may be spoken only after five
+  seconds without other speech and at most once per interval.  Silence one
+  update with Control or Shift: its unchanged text must not requeue itself.
+  `Alt+R` explicitly repeats the current snapshot.  Set the interval to 0 and
+  check that automatic progress stops while `Alt+R` still works; set it to 10
+  and check the longer delay, then restore 5.  Keyboard focus in Options must
+  read the option name, value, and explanation normally.
+- **Threat interruption and choices.**  Use Debug menu > Spawning… > Spawn a
+  monster to place a visible zombie near the work site; start long work and
+  let the interruption occur.  Hear the visible threat's reason and the stop
+  question once.  Navigate the shared popup choices with its shown keyboard
+  actions: stop, continue, ignore, and distraction manager.  Each focus speaks
+  its choice, `Alt+R` repeats the prompt, and redraws stay silent.  Stop and
+  hear the activity and reason.  Use Debug menu > Map… > Kill all monsters
+  in this test world to remove the zombie,
+  restart resumable work, and hear "Resumed" rather than a fresh unexplained
+  start.  Cancel another activity with the Pause action and its confirmation;
+  declining that confirmation continues it.  Silencing prompt speech must not
+  select a choice or cause an automatic repeat.
+- **Distraction manager.**  Open the manager from the interruption popup.
+  Hear its name, count, and first name/state row.  Up/Down browse in visible
+  order, including "Toggle all"; wrapping says "Top" or "Bottom" once.  Enter
+  or Left/Right toggles and speaks the new enabled/disabled state.  `Alt+S`
+  reports position, `Alt+D` opens the focused explanation with line/sentence
+  navigation, and Escape returns to the same row.  Escape closes the manager.
+  Restore the original distraction settings before continuing other checks.
+- **Stamina break.**  Use Debug menu > Player… > Edit player/NPC > Set stamina
+  to set a positive value below one third of the displayed maximum, then
+  perform tiring long work until "Keep trying?" appears.  Hear
+  the question and concise choices for a break, stopping, and finishing.
+  Choose a break: hear rest begin and the original task resume after stamina
+  recovers.  In another attempt choose to stop; do not hear completion for the
+  unfinished task.  The prompt's real keyboard labels and focus order remain
+  the standard shared list behavior.
+- **Wait and sleep.**  In a safe shelter use the Wait action and select a
+  duration.  Hear one start, use `Alt+R` to obtain remaining time, and hear one
+  finish.  Use Debug menu > Player… > Edit player/NPC > Set needs > Sleepiness
+  to raise sleepiness, then use Sleep.  Hear the attempt start, falling asleep
+  once, "Sleeping" on
+  `Alt+R`, and waking once; no hidden wake-time estimate is spoken.  For loaded
+  sleep, enable Autosave with a short turn interval and Real minutes between
+  autosaves set to 0 in Options > General.  Sleep until an autosave occurs.
+  On waking, use Debug menu > Game… > Quit to main menu and confirm quitting
+  without saving, then load the autosave if it contains the sleeping state.
+  Check that progress resumes without claiming a new fall-asleep event.
+  Restore the original autosave settings afterward.
+  Try sleeping while rested and check the keep-trying choices and the actual
+  failure explanation when the attempt ends.  Silence speech and repeat it
+  during both waiting and actual sleep.
+- **Reading, continuous work, and failure.**  Spawn a readable book through
+  Debug menu > Spawning… > Spawn an item, and a light if needed.  Read one
+  chapter: hear the book and duration on start, progress/remaining time on
+  `Alt+R`, and one final result.  Try continuous reading or repeated crafting;
+  chapters/batches must not each announce a new start, and the final result
+  preserves reported gains.  Turn off the reading light at night, or use Debug
+  menu > Player… > Edit player/NPC to make vision unsuitable before resuming.
+  Hear the game's actual inability-to-read reason, never a false completion.
+  Skill-reading prerequisites may require debug skill adjustment.
+- **Blocking loading and saving.**  Save and reload a world whose operation
+  lasts more than five real seconds (a large explored world or additional mods
+  may help).  Hear one start; changed progress respects the configured silence
+  interval.  `Alt+R` reads the latest context/step/counter while input is
+  otherwise blocked.  Interrupt an update with Control, check that unchanged
+  text stays silent, and verify that old loading/saving progress never returns
+  after the operation closes.  If an indivisible step does not pump events,
+  speech and repeat may wait for that step to return; record the step and delay.

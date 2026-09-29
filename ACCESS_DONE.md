@@ -870,3 +870,51 @@ Limitations:
   document navigation, placement, and interruption quality await blind NVDA
   verification in `ACCESS_USERTESTS.md`.
 - Activity progress, interruption, and completion are Stage 12A.
+
+## 2026-09-29 — Stage 12A: Activities, interruptions, and long actions
+
+- Implemented the selected start/result interaction, conventions 7 and 8,
+  and conventions 2, 4, and 5 for the distraction manager.  Starts and resumes
+  name the activity; crafting, construction, reading, and waiting include the
+  duration already available in their interfaces.  `Alt+R` reads live progress
+  during activities, sleep, loading, and saving.
+- Handler messages are collected and deduplicated into one final result.
+  Failures retain the game's explanation; interruption cancellations retain
+  the triggering reason.  Successful crafting cleanup does not announce a
+  cancellation, and continuous batches/chapters retain one start and final
+  result.  Sleep uses its existing effect messages for falling asleep and
+  waking, avoiding duplicate lifecycle speech; loaded sleep resumes progress.
+- Shared monotonic-clock progress reporters announce changed text after five
+  real seconds of silence, never interrupt speech, prioritize queued warnings,
+  and stop with their owning operation.  The Interface option **Progress
+  announcement interval** sits next to **Screen reader speech**; 0 disables
+  automatic updates while preserving repeat-last.  Prompts suspend automatic
+  progress until the operation updates it again.
+- The distraction manager speaks its list and focused name/state, changes,
+  wrapping, and position; `Alt+D` opens the description document, `Alt+S`
+  reviews the list, and returning restores row focus.  Interruption and stamina
+  prompts use the existing shared controls and keys.
+- Lifecycle coordination is in `accessibility_gameplay`, pure lifecycle
+  formatters in `accessibility_format`, and timers/message capture in the
+  service.  Narrow hooks cover player activities, craft completion, character
+  sleep/backlog, the turn/input loop, construction, and interruption queries.
+  Blocking progress uses loading/popups and `pump_events()` in `sdltiles.cpp`.
+- Capture tests cover timing, changed-text deduplication, priorities, disabled
+  and custom intervals, repeat, source teardown, real wait/read/sleep handlers,
+  failures, cancellation/resume, and continuous activity replacement.  An
+  opt-in observer in the test message stub exposes non-debug handler messages.
+  Activity formatters strip color markup from item names and progress/reasons.
+  `test_access.bat` passed 1035 assertions in 73 cases; the Windows x64 tiles
+  build and AStyle 3.1 checks passed.
+- Implementation commit: `259fa2c448`.
+- Completing commit: `c5296f9c09` (color-markup regression checks).
+
+Limitations:
+
+- NVDA interaction quality is unverified.  Keyboard input through live activity
+  and sleep loops, popup focus/choices, distraction settings, and blocking
+  progress await the scenarios in `ACCESS_USERTESTS.md`.
+- Automatic progress is polled at game turns and event-pump points.  Work that
+  does not return to either point cannot speak or process repeat until it
+  returns.  Unchanged progress stays silent, including sleeping without a
+  visible remaining-time estimate.
