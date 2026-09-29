@@ -282,6 +282,11 @@ class inventory_selector_preset
         virtual std::function<bool( const inventory_entry & )> get_filter( const std::string &filter )
         const;
 
+        /** Screen reader detail lines read after the row; empty to speak only the row. */
+        virtual std::vector<std::string> get_accessibility_details( const item_location & ) const {
+            return {};
+        }
+
         bool indent_entries() const {
             return _indent_entries;
         }

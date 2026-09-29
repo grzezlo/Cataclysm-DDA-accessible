@@ -469,6 +469,58 @@ struct target_status {
 };
 std::string format_target_status( const target_status &status );
 
+/** Whether one alternative of a recipe requirement group is available, shown only by color. */
+enum class requirement_state {
+    have,
+    /** Present, but not enough to serve as both a tool and a component. */
+    not_enough,
+    missing,
+    uses_favorite,
+    uses_filled_container,
+    uses_hallucinogen_or_poison
+};
+enum class requirement_kind {
+    tools,
+    components
+};
+struct requirement_option {
+    std::string name;
+    requirement_state state = requirement_state::missing;
+};
+/** One requirement group; any one of its alternatives satisfies it. */
+struct requirement_group {
+    requirement_kind kind = requirement_kind::tools;
+    std::vector<requirement_option> options;
+};
+std::string format_requirement_state( requirement_state state );
+bool requirement_group_met( const requirement_group &group );
+size_t count_missing_requirement_groups( const std::vector<requirement_group> &groups );
+/** One line per group, e.g. "Tools: hammer, have; or rock, missing." */
+std::string format_requirement_group( const requirement_group &group );
+/** "Craftable", the number of unmet requirements, or "Not craftable" when none can be named. */
+std::string format_recipe_availability( bool craftable, size_t missing );
+/** Semantic row of the crafting recipe list. */
+struct recipe_row {
+    std::string name;
+    bool craftable = false;
+    size_t missing = 0;
+    /** A nested recipe group that expands in place. */
+    bool group = false;
+    bool expanded = false;
+    bool favorite = false;
+    bool unread = false;
+    /** Words for states the list shows only by color, such as "uses rotten ingredients". */
+    std::vector<std::string> warnings;
+};
+std::string format_recipe_row( const recipe_row &row );
+std::string format_recipe_count( size_t count );
+/** List name with its recipe count, hidden recipes, and whether it has new recipes. */
+std::string format_recipe_list( const std::string &name, size_t count, size_t hidden,
+                                bool unread );
+/** A batch size row: "Batch size 3, 30 minutes, craftable." */
+std::string format_recipe_batch( int batch_size, const std::string &time,
+                                 const std::string &availability );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H

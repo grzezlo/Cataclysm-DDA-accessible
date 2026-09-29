@@ -26,6 +26,11 @@ class recipe_subset;
 std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &batch_size_out,
         const recipe_id &goto_recipe, Character *crafter, std::string filterstring = "",
         bool camp_crafting = false, inventory *inventory_override = nullptr );
+/** The recipe row as the crafting screen speaks it; a batch size above one speaks a batch row. */
+std::string recipe_accessibility_row( const recipe &recp, Character &crafter, int batch_size = 1 );
+/** The lines of the recipe document that the crafting screen's details key opens. */
+std::vector<std::string> recipe_accessibility_details( const recipe &recp, Character &crafter,
+        int batch_size = 1 );
 std::pair<std::vector<const recipe *>, bool> recipes_from_cat( const recipe_subset
         &available_recipes, const crafting_category_id &cat, const std::string &subcat );
 

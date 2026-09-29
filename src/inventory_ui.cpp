@@ -8,6 +8,7 @@
 
 #include "activity_actor_definitions.h"
 #include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "accessibility_format.h"
 #include "avatar_action.h"
 #include "basecamp.h"
@@ -3279,8 +3280,20 @@ void inventory_selector::on_input( const inventory_input &input )
     if( input.action == "ACCESSIBILITY_DETAILS" ) {
         const inventory_entry &entry = get_active_column().get_highlighted();
         if( entry.is_item() ) {
-            accessibility::announce( accessibility::format_inventory_focus(
-                                         accessibility_entry( entry ), true, true ) );
+            const accessibility::inventory_focus_entry semantic = accessibility_entry( entry );
+            const std::string row = accessibility::format_inventory_focus( semantic, true, true );
+            std::vector<std::string> details = accessibility::is_active() ?
+                                               preset.get_accessibility_details( entry.any_item() ) :
+                                               std::vector<std::string>();
+            if( details.empty() ) {
+                accessibility::announce( row );
+            } else {
+                details.insert( details.begin(), row );
+                accessibility_ui::show_document( string_format( _( "Details: %s" ), semantic.caption ),
+                                                 semantic.caption, details, details );
+                // Speak the row again after returning to the list.
+                accessibility_last_snapshot.clear();
+            }
         }
     } else if( input.action == "ACCESSIBILITY_STATUS" ) {
         accessibility::announce( accessibility_status() );

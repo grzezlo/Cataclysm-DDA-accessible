@@ -17,6 +17,7 @@
 #include "activity_actor_definitions.h"
 #include "accessibility.h"
 #include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "avatar.h"
 #include "bionics.h"
 #include "bodypart.h"
@@ -608,27 +609,11 @@ class disassemble_inventory_preset : public inventory_selector_preset
             check_components = true;
 
             append_cell( [ this ]( const item_location & loc ) {
-                const requirement_data &req = get_recipe( loc ).disassembly_requirements();
-                if( req.is_empty() ) {
-                    return std::string();
-                }
-                const item *i = loc.get_item();
-                std::vector<item_comp> components = i->get_uncraft_components();
-                std::sort( components.begin(), components.end() );
-                auto it = components.begin();
-                while( ( it = std::adjacent_find( it, components.end() ) ) != components.end() ) {
-                    ++( it->count );
-                    components.erase( std::next( it ) );
-                }
-                return enumerate_as_string( components.begin(), components.end(),
-                []( const decltype( components )::value_type & comps ) {
-                    return comps.to_string();
-                } );
+                return yield_text( loc );
             }, _( "YIELD" ) );
 
             append_cell( [ this ]( const item_location & loc ) {
-                return to_string_clipped( get_recipe( loc ).time_to_craft( get_player_character(),
-                                          recipe_time_flag::ignore_proficiencies ) );
+                return time_text( loc );
             }, _( "TIME" ) );
         }
 
@@ -644,12 +629,41 @@ class disassemble_inventory_preset : public inventory_selector_preset
             return std::string();
         }
 
+        std::vector<std::string> get_accessibility_details( const item_location &loc ) const override {
+            return accessibility_gameplay::disassembly_details( get_recipe( loc ),
+                    remove_color_tags( yield_text( loc ) ), time_text( loc ), inv );
+        }
+
     protected:
         const recipe &get_recipe( const item_location &loc ) const {
             return recipe_dictionary::get_uncraft( loc->typeId() );
         }
 
     private:
+        std::string yield_text( const item_location &loc ) const {
+            const requirement_data &req = get_recipe( loc ).disassembly_requirements();
+            if( req.is_empty() ) {
+                return std::string();
+            }
+            const item *i = loc.get_item();
+            std::vector<item_comp> components = i->get_uncraft_components();
+            std::sort( components.begin(), components.end() );
+            auto it = components.begin();
+            while( ( it = std::adjacent_find( it, components.end() ) ) != components.end() ) {
+                ++( it->count );
+                components.erase( std::next( it ) );
+            }
+            return enumerate_as_string( components.begin(), components.end(),
+            []( const decltype( components )::value_type & comps ) {
+                return comps.to_string();
+            } );
+        }
+
+        std::string time_text( const item_location &loc ) const {
+            return to_string_clipped( get_recipe( loc ).time_to_craft( get_player_character(),
+                                      recipe_time_flag::ignore_proficiencies ) );
+        }
+
         const Character &you;
         const inventory &inv;
 };

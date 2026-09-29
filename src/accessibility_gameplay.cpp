@@ -2,7 +2,9 @@
 
 #include <algorithm>
 #include <array>
+#include <climits>
 #include <cstdint>
+#include <functional>
 #include <map>
 #include <optional>
 #include <utility>
@@ -11,6 +13,7 @@
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
+#include "cata_utility.h"
 #include "character.h"
 #include "character_martial_arts.h"
 #include "creature.h"
@@ -21,10 +24,14 @@
 #include "field.h"
 #include "flag.h"
 #include "input_context.h"
+#include "inventory.h"
 #include "item.h"
 #include "item_category.h"
 #include "item_contents.h"
+#include "item_pocket.h"
+#include "itype.h"
 #include "line.h"
+#include "localized_comparator.h"
 #include "map.h"
 #include "map_item_stack.h"
 #include "mapdata.h"
@@ -36,6 +43,8 @@
 #include "omdata.h"
 #include "output.h"
 #include "overmapbuffer.h"
+#include "recipe.h"
+#include "requirements.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "trap.h"
@@ -52,6 +61,7 @@ static const efftype_id effect_infected( "infected" );
 
 static const flag_id json_flag_SPLINT( "SPLINT" );
 
+static const trait_id trait_DEBUG_HS( "DEBUG_HS" );
 static const trait_id trait_INATTENTIVE( "INATTENTIVE" );
 
 namespace accessibility_gameplay
@@ -1147,6 +1157,151 @@ std::vector<std::string> target_details( map &here, const avatar &viewer,
         result.push_back( string_format( _( "Vehicle: %s" ), veh->name ) );
     }
     return result;
+}
+
+namespace
+{
+
+bool requirement_option_available( const accessibility::requirement_option &option )
+{
+    return option.state != accessibility::requirement_state::missing &&
+           option.state != accessibility::requirement_state::not_enough;
+}
+
+/** Group alternatives as the requirement list does: available ones first, duplicates once. */
+template<typename T, typename NameFn, typename StateFn>
+void append_requirement_groups( std::vector<accessibility::requirement_group> &groups,
+                                const accessibility::requirement_kind kind,
+                                const std::vector<std::vector<T>> &objs, NameFn name_of, StateFn state_of )
+{
+    for( const std::vector<T> &alternatives : objs ) {
+        accessibility::requirement_group group;
+        group.kind = kind;
+        for( const T &alternative : alternatives ) {
+            accessibility::requirement_option option;
+            option.name = name_of( alternative );
+            option.state = state_of( alternative );
+            const bool duplicate = std::any_of( group.options.begin(), group.options.end(),
+            [&option]( const accessibility::requirement_option & other ) {
+                return other.name == option.name && other.state == option.state;
+            } );
+            if( !duplicate ) {
+                group.options.push_back( option );
+            }
+        }
+        if( group.options.empty() ) {
+            continue;
+        }
+        std::stable_sort( group.options.begin(), group.options.end(),
+                          []( const accessibility::requirement_option & a,
+        const accessibility::requirement_option & b ) {
+            const bool a_available = requirement_option_available( a );
+            const bool b_available = requirement_option_available( b );
+            if( a_available != b_available ) {
+                return a_available;
+            }
+            return localized_compare( a.name, b.name );
+        } );
+        groups.push_back( group );
+    }
+}
+
+std::string without_final_period( std::string text )
+{
+    while( !text.empty() && ( text.back() == '.' || text.back() == ' ' ) ) {
+        text.pop_back();
+    }
+    return text;
+}
+
+} // namespace
+
+std::vector<accessibility::requirement_group> requirement_groups( const requirement_data &req,
+        const inventory &inv, const std::function<bool( const item & )> &component_filter,
+        const int batch, const bool include_components )
+{
+    using accessibility::requirement_state;
+    std::vector<accessibility::requirement_group> groups;
+    const bool debug_hammerspace = get_player_character().has_trait( trait_DEBUG_HS );
+    // Refresh the cached availability that the visual requirement list colors by.
+    req.can_make_with_inventory( inv, return_true<item> );
+    append_requirement_groups( groups, accessibility::requirement_kind::tools, req.get_qualities(),
+    [batch]( const quality_requirement & quality ) {
+        return without_final_period( remove_color_tags( quality.to_string( batch ) ) );
+    }, [debug_hammerspace]( const quality_requirement & quality ) {
+        return debug_hammerspace || quality.available == available_status::a_true ?
+               requirement_state::have : requirement_state::missing;
+    } );
+    append_requirement_groups( groups, accessibility::requirement_kind::tools, req.get_tools(),
+    [batch]( const tool_comp & tool ) {
+        return remove_color_tags( tool.to_string( batch ) );
+    }, [&inv, batch]( const tool_comp & tool ) {
+        if( tool.available == available_status::a_insufficient ) {
+            return requirement_state::not_enough;
+        }
+        return tool.has( inv, return_true<item>, batch ) ? requirement_state::have :
+               requirement_state::missing;
+    } );
+    if( !include_components ) {
+        return groups;
+    }
+    req.can_make_with_inventory( inv, component_filter );
+    append_requirement_groups( groups, accessibility::requirement_kind::components,
+                               req.get_components(),
+    [&inv, &component_filter, batch]( const item_comp & component ) {
+        const int quantity = item::count_by_charges( component.type ) ?
+                             inv.charges_of( component.type, INT_MAX, component_filter ) :
+                             inv.amount_of( component.type, false, INT_MAX, component_filter );
+        return remove_color_tags( component.to_string( batch, quantity ) );
+    }, [&inv, &component_filter, batch]( const item_comp & component ) {
+        if( component.available == available_status::a_insufficient ) {
+            return requirement_state::not_enough;
+        }
+        if( !component.has( inv, component_filter, batch ) ) {
+            return requirement_state::missing;
+        }
+        const int used = component.count * batch;
+        const bool liquid_container = std::any_of( component.type->pockets.begin(),
+        component.type->pockets.end(), []( const pocket_data & pocket ) {
+            return pocket.type == pocket_type::CONTAINER && pocket.watertight;
+        } );
+        if( liquid_container && inv.must_use_liq_container( component.type, used ) ) {
+            return requirement_state::uses_filled_container;
+        }
+        if( inv.must_use_hallu_poison( component.type, used ) ) {
+            return requirement_state::uses_hallucinogen_or_poison;
+        }
+        if( !component.has( inv, [&component_filter]( const item & it ) {
+        return component_filter( it ) && !it.is_favorite;
+        }, batch ) ) {
+            return requirement_state::uses_favorite;
+        }
+        return requirement_state::have;
+    } );
+    return groups;
+}
+
+std::vector<std::string> disassembly_details( const recipe &uncraft, const std::string &yield,
+        const std::string &time, const inventory &inv )
+{
+    std::vector<std::string> lines;
+    if( !yield.empty() ) {
+        //~ %s: components returned by disassembly, such as "2 rags and 1 thread"
+        lines.push_back( accessibility::format_semantic_sequence( { string_format( _( "Returns: %s" ), yield ) } ) );
+    }
+    if( !time.empty() ) {
+        //~ %s: time needed to disassemble an item
+        lines.push_back( accessibility::format_semantic_sequence( { string_format( _( "Time: %s" ), time ) } ) );
+    }
+    const std::vector<accessibility::requirement_group> groups = requirement_groups(
+                uncraft.disassembly_requirements(), inv, uncraft.get_component_filter(), 1, false );
+    if( groups.empty() ) {
+        lines.push_back( accessibility::format_requirement_group( accessibility::requirement_group() ) );
+    }
+    for( const accessibility::requirement_group &group : groups ) {
+        lines.push_back( accessibility::format_requirement_group( group ) );
+    }
+    return lines;
 }
 
 accessibility::item_action_availability item_action_availability( const hint_rating rating )

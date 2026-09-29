@@ -15,6 +15,7 @@
 #include "avatar.h"
 #include "avatar_action.h"
 #include "calendar.h"
+#include "crafting_gui.h"
 #include "cata_catch.h"
 #include "cata_scope_helpers.h"
 #include "game.h"
@@ -32,6 +33,8 @@
 #include "monster.h"
 #include "pickup.h"
 #include "player_helpers.h"
+#include "recipe.h"
+#include "recipe_dictionary.h"
 #include "point.h"
 #include "string_formatter.h"
 #include "type_id.h"
@@ -2800,4 +2803,146 @@ TEST_CASE( "target_focus_names_target_obstacle_and_creatures_in_line_of_fire",
             &target, nullptr, false ).target == "sensed creature" );
     CHECK( accessibility_gameplay::target_details( here, viewer, &target, nullptr ) ==
            std::vector<std::string> { "You sense a creature here, but cannot see it." } );
+}
+
+TEST_CASE( "crafting_formatters_speak_requirements_and_recipe_rows", "[accessibility][nogame]" )
+{
+    using accessibility::requirement_state;
+    accessibility::requirement_group tools;
+    tools.kind = accessibility::requirement_kind::tools;
+    tools.options = { { "hammer", requirement_state::have }, { "rock", requirement_state::missing } };
+    CHECK( accessibility::format_requirement_group( tools ) ==
+           "Tools: hammer, have; or rock, missing." );
+    CHECK( accessibility::requirement_group_met( tools ) );
+
+    accessibility::requirement_group components;
+    components.kind = accessibility::requirement_kind::components;
+    components.options = {
+        { "2 rags (have 1)", requirement_state::missing },
+        { "1 thread", requirement_state::not_enough }
+    };
+    CHECK( accessibility::format_requirement_group( components ) ==
+           "Components: 2 rags (have 1), missing; or 1 thread, not enough." );
+    CHECK_FALSE( accessibility::requirement_group_met( components ) );
+    components.options.push_back( { "1 duct tape", requirement_state::uses_favorite } );
+    CHECK( accessibility::requirement_group_met( components ) );
+    CHECK( accessibility::format_requirement_state( requirement_state::uses_filled_container ) ==
+           "have, uses a filled container" );
+    CHECK( accessibility::format_requirement_group( accessibility::requirement_group() ) ==
+           "Tools: none." );
+
+    accessibility::requirement_group unmet = tools;
+    unmet.options = { { "saw", requirement_state::missing } };
+    CHECK( accessibility::count_missing_requirement_groups( { tools, unmet, unmet } ) == 2 );
+
+    CHECK( accessibility::format_recipe_availability( true, 3 ) == "craftable" );
+    CHECK( accessibility::format_recipe_availability( false, 2 ) == "2 missing" );
+    CHECK( accessibility::format_recipe_availability( false, 0 ) == "not craftable" );
+
+    accessibility::recipe_row row;
+    row.name = "knife";
+    row.missing = 2;
+    CHECK( accessibility::format_recipe_row( row ) == "knife, 2 missing." );
+    row.craftable = true;
+    row.favorite = true;
+    row.unread = true;
+    row.warnings = { "low skill" };
+    CHECK( accessibility::format_recipe_row( row ) == "knife, craftable, low skill, favorite, new." );
+    accessibility::recipe_row group;
+    group.name = "arrows";
+    group.group = true;
+    CHECK( accessibility::format_recipe_row( group ) ==
+           "arrows, group, collapsed, nothing craftable." );
+    group.expanded = true;
+    group.craftable = true;
+    CHECK( accessibility::format_recipe_row( group ) == "arrows, group, expanded, craftable." );
+
+    CHECK( accessibility::format_recipe_count( 0 ) == "No recipes" );
+    CHECK( accessibility::format_recipe_count( 1 ) == "1 recipe" );
+    CHECK( accessibility::format_recipe_list( "WEAPON", 12, 2, true ) ==
+           "WEAPON, 12 recipes, 2 hidden, new recipes" );
+    CHECK( accessibility::format_recipe_list( "BASHING", 0, 0, false ) == "BASHING, No recipes" );
+    CHECK( accessibility::format_recipe_batch( 3, "30 minutes", "craftable" ) ==
+           "Batch size 3, 30 minutes, craftable." );
+    CHECK( accessibility::format_recipe_batch( 2, "", "" ) == "Batch size 2." );
+}
+
+TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    const time_point previous_time = calendar::turn;
+    const on_out_of_scope cleanup( [previous_time]() {
+        clear_avatar();
+        clear_map();
+        set_time( previous_time );
+    } );
+    set_time_to_day();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const recipe &soldering_iron = recipe_id( "test_soldering_iron" ).obj();
+
+    you.invalidate_crafting_inventory();
+    std::vector<accessibility::requirement_group> groups = accessibility_gameplay::requirement_groups(
+                soldering_iron.simple_requirements(), you.crafting_inventory(),
+                soldering_iron.get_component_filter(), 1, true );
+    REQUIRE( groups.size() == 7 );
+    CHECK( accessibility::count_missing_requirement_groups( groups ) == 7 );
+    std::vector<std::string> lines;
+    for( const accessibility::requirement_group &group : groups ) {
+        lines.push_back( accessibility::format_requirement_group( group ) );
+    }
+    CHECK( lines[0] == "Tools: 1 tool with cutting of 2 or more, missing." );
+    CHECK( lines[1] == "Tools: 1 tool with screw driving of 1 or more, missing." );
+    CHECK( lines[4] == "Components: 1 scrap metal, missing." );
+    // Without the knowledge of the primary skill, the recipe lacks one more requirement.
+    CHECK( recipe_accessibility_row( soldering_iron, you ) == "TEST soldering iron, 7 missing." );
+
+    here.add_item( you.pos_bub( here ), item( itype_id( "scrap" ), calendar::turn, 1 ) );
+    here.add_item( you.pos_bub( here ), item( itype_id( "e_scrap" ) ) );
+    here.add_item( you.pos_bub( here ), item( itype_id( "e_scrap" ) ) );
+    you.invalidate_crafting_inventory();
+    groups = accessibility_gameplay::requirement_groups( soldering_iron.simple_requirements(),
+             you.crafting_inventory(), soldering_iron.get_component_filter(), 1, true );
+    REQUIRE( groups.size() == 7 );
+    CHECK( accessibility::count_missing_requirement_groups( groups ) == 5 );
+    // Available alternatives are listed first.
+    CHECK( accessibility::format_requirement_group( groups[2] ) ==
+           "Components: 2 electronic scraps (have 2), have; or 1 glow plug, missing." );
+    CHECK( accessibility::format_requirement_group( groups[4] ) ==
+           "Components: 1 scrap metal (have 1), have." );
+    // Twice the batch needs more scrap than the avatar has.
+    groups = accessibility_gameplay::requirement_groups( soldering_iron.simple_requirements(),
+             you.crafting_inventory(), soldering_iron.get_component_filter(), 2, true );
+    CHECK( accessibility::format_requirement_group( groups[4] ) ==
+           "Components: 2 scrap metal (have 1), missing." );
+    CHECK( recipe_accessibility_row( soldering_iron, you, 2 ).rfind( "Batch size 2, ", 0 ) == 0 );
+
+    const std::vector<std::string> details = recipe_accessibility_details( soldering_iron, you );
+    REQUIRE( !details.empty() );
+    CHECK( details.front() == "5 missing." );
+    const auto has_line = [&details]( const std::string & line ) {
+        return std::find( details.begin(), details.end(), line ) != details.end();
+    };
+    CHECK( has_line( "Tools: 1 tool with cutting of 2 or more, missing." ) );
+    CHECK( has_line( "Components: 1 scrap metal (have 1), have." ) );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Primary skill: ", 0 ) == 0;
+    } ) );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Time to complete: ", 0 ) == 0;
+    } ) );
+
+    // Disassembly lists what it returns and the tools it needs.
+    const recipe &uncraft = recipe_dictionary::get_uncraft( itype_id( "test_soldering_iron" ) );
+    REQUIRE( !uncraft.is_null() );
+    const std::vector<std::string> disassembly = accessibility_gameplay::disassembly_details(
+                uncraft, "2 electronic scrap", "20 minutes", you.crafting_inventory() );
+    REQUIRE( disassembly.size() >= 3 );
+    CHECK( disassembly[0] == "Returns: 2 electronic scrap." );
+    CHECK( disassembly[1] == "Time: 20 minutes." );
+    CHECK( disassembly[2] == "Tools: 1 tool with cutting of 2 or more, missing." );
+    CHECK( std::none_of( disassembly.begin(), disassembly.end(), []( const std::string & line ) {
+        return line.rfind( "Components:", 0 ) == 0;
+    } ) );
 }

@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_ACCESSIBILITY_GAMEPLAY_H
 #define CATA_SRC_ACCESSIBILITY_GAMEPLAY_H
 
+#include <functional>
 #include <optional>
 #include <string>
 #include <vector>
@@ -12,8 +13,12 @@
 class Character;
 class Creature;
 class avatar;
+class inventory;
+class item;
 class map;
 class map_item_stack;
+class recipe;
+struct requirement_data;
 class uilist;
 class vehicle;
 struct item_info_data;
@@ -96,6 +101,18 @@ accessibility::target_focus target_focus( map &here, const avatar &viewer,
 /** Target description paragraphs for the targeting details view. */
 std::vector<std::string> target_details( map &here, const avatar &viewer,
         const Creature *critter, const vehicle *veh );
+
+/**
+ * Requirement groups of `req` with the state of each alternative, as the
+ * crafting requirement list shows them by color: tool qualities and tools,
+ * then components when `include_components` is set.
+ */
+std::vector<accessibility::requirement_group> requirement_groups( const requirement_data &req,
+        const inventory &inv, const std::function<bool( const item & )> &component_filter,
+        int batch, bool include_components );
+/** Disassembly detail lines: returned components, time, and required tools. */
+std::vector<std::string> disassembly_details( const recipe &uncraft, const std::string &yield,
+        const std::string &time, const inventory &inv );
 
 accessibility::item_action_availability item_action_availability( hint_rating rating );
 /**

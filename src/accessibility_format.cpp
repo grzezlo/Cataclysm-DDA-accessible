@@ -1637,4 +1637,138 @@ std::string format_target_status( const target_status &status )
     return format_semantic_sequence( parts );
 }
 
+std::string format_requirement_state( const requirement_state state )
+{
+    switch( state ) {
+        case requirement_state::have:
+            return pgettext( "recipe requirement", "have" );
+        case requirement_state::not_enough:
+            return pgettext( "recipe requirement", "not enough" );
+        case requirement_state::missing:
+            break;
+        case requirement_state::uses_favorite:
+            return pgettext( "recipe requirement", "have, uses a favorite" );
+        case requirement_state::uses_filled_container:
+            return pgettext( "recipe requirement", "have, uses a filled container" );
+        case requirement_state::uses_hallucinogen_or_poison:
+            return pgettext( "recipe requirement", "have, hallucinogenic or poisonous" );
+    }
+    return pgettext( "recipe requirement", "missing" );
+}
+
+bool requirement_group_met( const requirement_group &group )
+{
+    return group.options.empty() ||
+    std::any_of( group.options.begin(), group.options.end(), []( const requirement_option & option ) {
+        return option.state != requirement_state::missing &&
+               option.state != requirement_state::not_enough;
+    } );
+}
+
+size_t count_missing_requirement_groups( const std::vector<requirement_group> &groups )
+{
+    return std::count_if( groups.begin(), groups.end(), []( const requirement_group & group ) {
+        return !requirement_group_met( group );
+    } );
+}
+
+std::string format_requirement_group( const requirement_group &group )
+{
+    std::vector<std::string> options;
+    options.reserve( group.options.size() );
+    for( const requirement_option &option : group.options ) {
+        //~ %1$s: tool or component such as "2 rags", %2$s: state such as "have" or "missing"
+        options.push_back( string_format( pgettext( "recipe requirement", "%1$s, %2$s" ),
+                                          option.name, format_requirement_state( option.state ) ) );
+    }
+    const std::string label = group.kind == requirement_kind::tools ?
+                              pgettext( "recipe requirement", "Tools" ) :
+                              pgettext( "recipe requirement", "Components" );
+    //~ %1$s: "Tools" or "Components", %2$s: alternatives with their states
+    return format_semantic_sequence( { string_format( pgettext( "recipe requirement", "%1$s: %2$s" ),
+                                       label, options.empty() ? pgettext( "recipe requirement", "none" ) :
+                                       //~ Separator between alternatives of one recipe requirement.
+                                       string_join( options, pgettext( "recipe requirement", "; or " ) ) )
+                                     } );
+}
+
+std::string format_recipe_availability( const bool craftable, const size_t missing )
+{
+    if( craftable ) {
+        return pgettext( "recipe", "craftable" );
+    }
+    if( missing > 0 ) {
+        //~ %d: number of unmet recipe requirements
+        return string_format( n_gettext( "%d missing", "%d missing", missing ),
+                              static_cast<int>( missing ) );
+    }
+    return pgettext( "recipe", "not craftable" );
+}
+
+std::string format_recipe_row( const recipe_row &row )
+{
+    std::vector<std::string> parts = { row.name };
+    if( row.group ) {
+        parts.emplace_back( pgettext( "recipe", "group" ) );
+        parts.emplace_back( row.expanded ? pgettext( "recipe group", "expanded" ) :
+                            pgettext( "recipe group", "collapsed" ) );
+        parts.emplace_back( row.craftable ? pgettext( "recipe", "craftable" ) :
+                            pgettext( "recipe group", "nothing craftable" ) );
+    } else {
+        parts.push_back( format_recipe_availability( row.craftable, row.missing ) );
+    }
+    parts.insert( parts.end(), row.warnings.begin(), row.warnings.end() );
+    if( row.favorite ) {
+        parts.emplace_back( pgettext( "recipe", "favorite" ) );
+    }
+    if( row.unread ) {
+        parts.emplace_back( pgettext( "recipe", "new" ) );
+    }
+    parts.erase( std::remove( parts.begin(), parts.end(), std::string() ), parts.end() );
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_recipe_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No recipes" );
+    }
+    return string_format( n_gettext( "%d recipe", "%d recipes", count ), static_cast<int>( count ) );
+}
+
+std::string format_recipe_list( const std::string &name, const size_t count, const size_t hidden,
+                                const bool unread )
+{
+    std::vector<std::string> parts;
+    if( !name.empty() ) {
+        parts.push_back( name );
+    }
+    parts.push_back( format_recipe_count( count ) );
+    if( hidden > 0 ) {
+        //~ %d: number of hidden recipes in the category
+        parts.push_back( string_format( n_gettext( "%d hidden", "%d hidden", hidden ),
+                                        static_cast<int>( hidden ) ) );
+    }
+    if( unread ) {
+        parts.emplace_back( _( "new recipes" ) );
+    }
+    return string_join( parts, _( ", " ) );
+}
+
+std::string format_recipe_batch( const int batch_size, const std::string &time,
+                                 const std::string &availability )
+{
+    std::vector<std::string> parts = {
+        //~ %d: number of recipe copies crafted together
+        string_format( _( "Batch size %d" ), batch_size )
+    };
+    if( !time.empty() ) {
+        parts.push_back( time );
+    }
+    if( !availability.empty() ) {
+        parts.push_back( availability );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
 } // namespace accessibility
