@@ -91,6 +91,27 @@ messages in `src/messages.cpp`.
   completed).  The safe-mode configuration UI (`src/safemode_ui.cpp`) is a
   rule editor owned by Stage 21A.
 
+**Selected interaction (option A, concise target with detail on request):**
+
+- Keys are unchanged.  Conventions 1, 2, 6, and 8 apply.
+- Entering target mode speaks the title, the weapon or item with its ammunition
+  as shown ("Firing pistol, 8 of 15 rounds"), the number of targets, then the
+  focused target.
+- Target cycling speaks the target name, distance, direction, and the hit
+  chance of the currently selected aim level ("zombie, 5 tiles northeast, 62%
+  hit").  Thrown, reach, and spell modes speak their own hit information in
+  the same place when the panel shows one.
+- Manual cursor movement speaks the tile as look-around does, followed by
+  "out of range", "no line of fire", or "not a valid target" when that
+  applies, since the panel shows these only by color.
+- `Alt+D` opens the full panel in the document view: target description and
+  health, weapon, mode, ammunition, recoil, and every aim level with its hit
+  chance and time.  `Alt+S` speaks the weapon status: mode, ammunition,
+  recoil, and range.
+- Mode, ammunition, and aim changes speak the new value.  Firing and throwing
+  results come from game messages; dangerous-action confirmations use the
+  Stage 05 controls.
+
 **Success criteria:** Target mode reports selected target, attitude, direction,
 distance, visible description, hit information, obstruction, ammunition, and aim
 mode when shown visually.  Target cycling, cursor movement, aim-mode selection,
@@ -104,6 +125,37 @@ fire/throw, result, cancel, visibility, and deterministic ordering.
 **User-test scenarios:** Use melee context, a firearm, and a thrown weapon
 against one and several targets, including obstruction and out-of-range cases.
 Confirm target choice is reliable under rapid navigation and interrupted speech.
+
+## Stage 10A - List position speech unification
+
+**Outcome:** Lists completed before the interaction conventions follow
+convention 2: the item count once on opening, no position on focus moves,
+"top" or "bottom" on wrap, and the position on request.
+
+**Code inventory:** position formatters in `src/accessibility_format.cpp`
+("Message %d of %d" in the message log, "%1$d of %2$d" nearby-list results,
+"Location %1$d of %2$d" in nearby item stacks); `src/uilist.cpp`,
+`src/inventory_ui.cpp`, `src/advanced_inv.cpp`, `src/main_menu.cpp`, the help
+browser, and the keybinding list.  Inventory every list-focus announcement
+before changing it; counts that describe content rather than list position,
+such as "Selected 2 of 5" or capacity, stay.
+
+**Selected interaction:** Convention 2 as written, chosen by the maintainer on
+2026-09-29.  Position within a list moves to `Alt+S` or `Alt+D`, whichever
+the screen already uses for its summary or detail.
+
+**Success criteria:** Every list reached in Stages 03–10 announces its count
+once on opening, speaks no position on focus moves, signals wrap, and reports
+the position on request.  Repeat-last and filtered result counts still work.
+
+**Possible automated tests:** Capture opening, focus moves, wrap in both
+directions, filter result count, and position on request for uilist, the
+inventory selector, advanced inventory, the nearby lists, the message log,
+and the help and keybinding lists.
+
+**User-test scenarios:** Open each list, scroll through it quickly, wrap past
+both ends, and request the position; confirm that no position is spoken
+while scrolling and that the count is heard once.
 
 ## Stage 11 - Crafting and disassembly
 
