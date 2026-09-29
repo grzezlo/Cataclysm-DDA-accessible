@@ -353,3 +353,53 @@ neutral case.
   away.  Nothing is repeated by itself; `Alt+R` repeats the last target.
 - **Reach and spells.**  Reach attacks and spell targeting use the same
   speech; spell casting is completed in Stage 14A, so skip spells until then.
+
+## Stage 11: Crafting and disassembly
+
+Debug menu > Spawning… > Spawn an item gives materials: for example a
+hammer, a knife, rags, and a 2x4.  Debug menu > Player… > Unlock all recipes
+makes more recipes available; Debug menu > Player… > Change all skills
+raises skills.
+
+- **Open crafting.**  Press `&`.  You hear once "Crafting", the category,
+  the recipe count, and the focused recipe with "craftable" or the number
+  of missing requirements ("knife, 2 missing").
+- **Browse.**  Press Down and Up quickly.  Each press speaks only the new
+  row, without a position.  Past the last recipe you hear "Top." before the
+  first; Up past the first says "Bottom.".  Favorite recipes say
+  "favorite", unread ones "new", and group rows "group, collapsed";
+  Enter on a group says "expanded".
+- **Categories.**  Press Tab and Shift+Tab: you hear the category name, its
+  recipe count, hidden count if any, and the focused recipe.  Left and Right
+  change the subcategory the same way.
+- **Missing requirements.**  Focus a recipe you cannot craft and press
+  `Alt+D`.  A document opens; the first line gives the availability and the
+  position ("2 missing. 3 of 12."), later lines give skills, time, and one
+  line per requirement group ("Tools: hammer, have; or rock, missing.").
+  Escape returns and repeats the recipe row.
+- **Result information.**  Press `Alt+S`: you hear the result item's
+  description and statistics.  `e` opens the same information in the
+  document view.
+- **Search.**  Press `/`, type a name, and press Enter: you hear "Filter:",
+  the text, the recipe count, and the focused recipe.  `r` says "Filter
+  cleared" and the category again.  Shift+L on a recipe opens related
+  recipes; choosing one speaks the filtered list.
+- **Batch.**  Press `b` on a craftable recipe: you hear "Batch size 1", the
+  time, and "craftable".  Down speaks the next batch size, its time, and
+  whether it is still craftable.  `b` again says "Batch off" and the
+  recipe.
+- **Craft.**  Press Enter on a craftable recipe.  Any component choice is a
+  normal list; the start, progress messages, failures, and the result are
+  spoken as game messages.  Enter on an uncraftable recipe says "Crafter
+  can't craft that!".
+- **Toggles.**  `*` says "Favorite" or "Not favorite", `v` "Marked as read"
+  or "Marked as unread", `u` the unread sorting, `c` opens the crafter list
+  and a new crafter is announced by name.
+- **Disassemble.**  Press `(`.  The item list speaks each item with its
+  yield and time, or why it cannot be disassembled.  `Alt+D` opens a
+  document with the returned components, the time, and the tools
+  ("Tools: 1 tool with cutting of 2 or more, have.").  Choosing an item
+  asks for confirmation through the normal question, and the result is a
+  game message.
+- **Interrupted speech.**  Press Down and silence NVDA with Control right
+  away.  Nothing is repeated by itself; `Alt+R` repeats the last row.

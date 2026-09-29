@@ -55,62 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 11 - Crafting and disassembly
-
-**Outcome:** Recipe selection, requirements, batch choices, crafting, and
-disassembly are independently usable.
-
-**Code inventory:** `src/crafting_gui.cpp`, crafting/disassembly selectors in
-`src/game_inventory.cpp`, and crafting state providers used by those screens.
-
-**Implementation hints:**
-
-- Entry point and main loop: `select_crafter_and_crafting_recipe()` in
-  `src/crafting_gui.cpp`.
-- Input context: `"CRAFTING"` initialized in
-  `select_crafter_and_crafting_recipe()`.
-- Category/subcategory tabs: drawn by `draw_recipe_tabs()` and
-  `draw_recipe_subtabs()` in `src/crafting_gui.cpp`.
-- Recipe list entry: `current[line]->result_name()` in
-  `select_crafter_and_crafting_recipe()`.
-- Detailed recipe info: `recipe_info()` in `src/crafting_gui.cpp` computes
-  all attributes — skill requirements, proficiencies, success/failure chance,
-  duration, exertion, light conditions, ingredients, tools, components.
-- Search: `filter_recipes()` in `src/crafting_gui.cpp`.
-- Batch cycling: `"CYCLE_BATCH"` action.
-- Related recipes: `"RELATED_RECIPES"` action.
-- Disassembly: `game_menus::inv::disassemble()` in `src/game_inventory.cpp` uses
-  `disassemble_inventory_preset`.
-
-**Selected interaction (option A with missing counts):**
-
-- Keys are unchanged.  Conventions 1, 2, 3, 4, 5, and 8 apply.
-- Changing a category or subcategory speaks its name, the recipe count, and
-  the focused recipe.  A recipe row speaks its name and availability:
-  "craftable", or the number of unmet requirement groups ("knife, 2
-  missing"); unread and favorite states are words.
-- `Alt+D` opens the recipe in the document view.  Each requirement group is
-  one line with its alternatives and a state word for each instead of color
-  ("Tools: hammer, have; or rock, missing").  Skills, proficiencies, time,
-  success chance, and batch information have their own lines.
-- `Alt+S` speaks the result item information.  `CYCLE_BATCH` speaks the new
-  batch size and time.  Related recipes, filter, crafter choice, and
-  confirmations use the shared controls.
-- Disassembly uses the Stage 06 inventory selector; its detail lists the
-  returned components and requirements the same way.
-
-**Success criteria:** Category, recipe, variant, availability, missing
-requirements, skill, time, batch size, related recipe, search, confirmation,
-start, failure, and result are announced.  Disassembly exposes target, returned
-components, requirements, confirmation, and result.
-
-**Possible automated tests:** Capture categories, filters, available/unavailable
-recipes, requirement detail, variant/batch changes, related recipes, start,
-failure, disassembly, and return focus using crafting fixtures.
-
-**User-test scenarios:** Craft single and batch recipes, inspect a recipe
-with missing requirements, search/filter, and disassemble an item with NVDA.
-
 ## Stage 12 - Construction and placement
 
 **Outcome:** Construction project selection and directional placement expose

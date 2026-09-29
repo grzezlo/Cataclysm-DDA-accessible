@@ -791,3 +791,56 @@ Limitations:
   the special-vision description is not spoken.
 - Moving the view in view-shift mode is silent, since only the display
   changes.
+
+## 2026-09-29 — Stage 11: Crafting and disassembly
+
+- Implemented the selected option A with missing counts in
+  `select_crafter_and_crafting_recipe()`; existing keys are unchanged.
+- Opening speaks "Crafting", the category (and subcategory unless it is
+  All), the recipe count, the hidden count, "new recipes" when the tab has
+  unread ones, and the focused recipe.  Category, subcategory, filter,
+  filter reset, and related-recipe searches speak the new list the same way.
+- A recipe row speaks its name and "craftable" or "N missing" (unmet
+  requirement groups, plus missing primary-skill knowledge, required
+  proficiencies, or practice skills; "not craftable" when none can be
+  named).  The states the list shows by color are words: low skill, uses
+  rotten ingredients, no skill gain, uses favorite items, too dark, too
+  slow; favorite and new also.  Groups say group, expanded or collapsed.
+  Moving focus says "Top" or "Bottom" on a wrap.
+- `Alt+D` opens the recipe document: availability and position, batch
+  size, crafting speed, skills, proficiencies, failure chances, time,
+  batch savings, activity, dark crafting, nearby count, warnings,
+  byproducts, one line per tool and component group with a state word for
+  each alternative ("have", "missing", "not enough", "have, uses a
+  favorite", …), and where the recipe is written down.  `Alt+S` speaks the
+  result item information (practice and group descriptions for those).
+- Batch mode rows speak "Batch size N", the time, and the availability;
+  leaving it says "Batch off".  Favorite, hide/show, read/unread, mark all
+  read, unread-first sorting, and crafter changes speak their new state.
+  Returning from details, comparison, related recipes, or the crafter menu
+  repeats the focused row.  Related recipes drop the tree drawing and speak
+  the favorite star as "favorite".
+- The disassembly selector's `Alt+D` opens a document with the row, the
+  returned components, the time, and the required tools and qualities with
+  their states, through a new `inventory_selector_preset` hook.
+- New formatters: `format_requirement_group`, `format_recipe_row`,
+  `format_recipe_list`, `format_recipe_batch`, and related helpers; gameplay
+  helpers `requirement_groups` and `disassembly_details`; test entry points
+  `recipe_accessibility_row` and `recipe_accessibility_details`.
+- Commit: `68ab2fe942`.
+
+Limitations:
+
+- The crafting loop has no input injection in tests; speech is covered
+  through the formatters and the row, detail, and disassembly helpers.
+- Craft start, component choice, failure, and result are spoken by the
+  existing game message and list speech; nothing crafting-specific was
+  added.  Long-action progress belongs to Stage 12A.
+- Related-recipe headings and multi-recipe group names are disabled list
+  entries, so they are spoken with "Unavailable".
+- Changing subcategory in batch or filter mode does nothing and stays
+  silent, as the visual screen does.
+- Requirement states mirror the visual list, including its batch-size-1
+  check for "not enough"; the "N missing" count uses the simple
+  requirements, so overlapping requirements can make it zero on a recipe
+  that is still not craftable.
