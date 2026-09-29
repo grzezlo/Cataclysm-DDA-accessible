@@ -15,6 +15,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_gameplay.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
@@ -7395,6 +7397,9 @@ void Character::wake_up()
     if( has_effect( effect_sleep ) ) {
         get_effect( effect_sleep ).set_duration( 0_turns );
         get_event_bus().send<event_type::character_wakes_up>( getID() );
+        if( is_avatar() ) {
+            accessibility_gameplay::sleep_finished( *as_avatar() );
+        }
     }
     remove_effect( effect_slept_through_alarm );
     remove_effect( effect_lying_down );
@@ -9053,6 +9058,8 @@ void Character::assign_activity( const player_activity &act )
     bool resuming = false;
     if( !backlog.empty() && backlog.front().can_resume_with( act, *this ) ) {
         resuming = true;
+        accessibility::game_message_speech_capture resume_speech(
+            is_avatar() && accessibility::is_active() );
         add_msg_if_player( _( "You resume your task." ) );
         activity = backlog.front();
         backlog.pop_front();
@@ -9123,6 +9130,9 @@ void Character::resume_backlog_activity()
         activity.auto_resume = false;
         activity.allow_distractions();
         backlog.pop_front();
+        if( is_avatar() ) {
+            accessibility_gameplay::activity_started( activity, *as_avatar(), true );
+        }
     }
 }
 
@@ -9176,6 +9186,9 @@ void Character::fall_asleep( const time_duration &duration )
     }
     add_effect( effect_sleep, duration );
     get_event_bus().send<event_type::character_falls_asleep>( getID(), to_seconds<int>( duration ) );
+    if( is_avatar() && has_effect( effect_sleep ) ) {
+        accessibility_gameplay::sleep_started( *as_avatar() );
+    }
 }
 
 void Character::migrate_items_to_storage( bool disintegrate )

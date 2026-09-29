@@ -1798,6 +1798,11 @@ void options_manager::add_options_interface()
     { { "auto", to_translation( "Automatic" ) }, { "on", to_translation( "On" ) }, { "off", to_translation( "Off" ) } },
     "auto" );
 
+    add( "SCREEN_READER_PROGRESS_INTERVAL", "interface",
+         to_translation( "Progress announcement interval" ),
+         to_translation( "Seconds of silence before announcing changed activity, loading, or saving progress.  0 disables automatic progress announcements; repeat-last still works." ),
+         0, 60, 5 );
+
     add_empty_line();
 
     add_option_group( "interface", Group( "measurement_unit", to_translation( "Measurement units" ),
@@ -4060,6 +4065,8 @@ void options_manager::update_options_cache()
     accessibility::set_screen_reader_mode( screen_reader_mode == "on" ?
                                            accessibility::screen_reader_mode::on : screen_reader_mode == "off" ?
                                            accessibility::screen_reader_mode::off : accessibility::screen_reader_mode::automatic );
+    accessibility::set_progress_announcement_interval(
+        ::get_option<int>( "SCREEN_READER_PROGRESS_INTERVAL" ) );
 
     cata::options::damage_indicators.clear();
     for( int i = 0; i < 6; i++ ) {

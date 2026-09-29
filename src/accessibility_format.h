@@ -526,6 +526,14 @@ std::string format_construction_row( const std::string &name, bool available,
                                      const std::string &unavailable_reason, size_t variants );
 std::string format_construction_list( const std::string &category, size_t count );
 
+/** Activity lifecycle speech, independent of handlers and game state. */
+std::string format_activity_start( const std::string &label, const std::string &duration,
+                                   bool resuming );
+std::string format_activity_result( const std::string &label, bool finished, bool canceled,
+                                    const std::string &reason, const std::vector<std::string> &messages );
+std::string format_activity_progress( const std::string &label, const std::string &progress,
+                                      const std::string &remaining );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H

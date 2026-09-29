@@ -1792,4 +1792,38 @@ std::string format_construction_list( const std::string &category, const size_t 
     return string_join( std::vector<std::string> { category, count_text }, _( ", " ) );
 }
 
+std::string format_activity_start( const std::string &label, const std::string &duration,
+                                   const bool resuming )
+{
+    return format_semantic_sequence( {
+        string_format( resuming ? _( "Resumed: %s" ) : _( "Started: %s" ), label ),
+        duration.empty() ? std::string() : string_format( _( "About %s" ), duration )
+    } );
+}
+
+std::string format_activity_result( const std::string &label, const bool finished,
+                                    const bool canceled, const std::string &reason,
+                                    const std::vector<std::string> &messages )
+{
+    std::vector<std::string> parts = messages;
+    if( !reason.empty() ) {
+        parts.push_back( reason );
+    }
+    if( parts.empty() || canceled ) {
+        parts.insert( parts.begin(), string_format( finished && !canceled ?
+                      _( "Finished: %s" ) : _( "Stopped: %s" ), label ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_activity_progress( const std::string &label, const std::string &progress,
+                                      const std::string &remaining )
+{
+    return format_semantic_sequence( {
+        label == normalize_status_announcement( progress, true ) ? progress :
+        format_semantic_sequence( { label, progress } ),
+        remaining.empty() ? std::string() : string_format( _( "About %s remaining" ), remaining )
+    } );
+}
+
 } // namespace accessibility

@@ -3,11 +3,15 @@
 #include <string>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "color.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "output.h"
 #include "point.h"
+#include "string_formatter.h"
 #include "translations.h"
 #include "uilist.h"
 #include "ui_manager.h"
@@ -84,6 +88,25 @@ void distraction_manager_gui::show()
     ctxt.register_action( "CONFIRM" );
     ctxt.register_leftright();
     ctxt.register_navigate_ui_list();
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+
+    const auto row = [&]() {
+        const configurable_distraction &entry = get_configurable_distractions()[currentLine];
+        return accessibility::format_semantic_sequence( {
+            _( entry.name.c_str() ), *entry.state ? _( "Enabled" ) : _( "Disabled" )
+        } );
+    };
+    const auto summary = [&]() {
+        return accessibility::format_semantic_sequence( {
+            string_format( _( "Distractions manager, %d items" ), number_of_distractions ),
+            accessibility::format_list_position( currentLine + 1, number_of_distractions ), row()
+        } );
+    };
+    accessibility::announce( accessibility::format_semantic_sequence( {
+        string_format( _( "Distractions manager, %d items" ), number_of_distractions ), row()
+    } ) );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         // Draw border
@@ -149,7 +172,27 @@ void distraction_manager_gui::show()
         }
 
         bool toggle_state;
+        const int previous_line = currentLine;
         if( navigate_ui_list( action, currentLine, 5, number_of_distractions, true ) ) {
+            if( currentLine != previous_line ) {
+                const int direction = action == "UP" || action == "PAGE_UP" ? -1 :
+                                      action == "DOWN" || action == "PAGE_DOWN" ? 1 : 0;
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_line, currentLine, direction ), row()
+                } ) );
+            }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( summary() );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() ) {
+                const std::vector<std::string> lines = {
+                    summary(), _( get_configurable_distractions()[currentLine].description.c_str() )
+                };
+                accessibility_ui::show_document( _( "Distraction" ), _( "Distraction" ), lines, lines );
+                accessibility::announce( row() );
+            }
         } else if( action == "CONFIRM" || action == "LEFT" || action == "RIGHT" ) {
             *( get_configurable_distractions()[currentLine].state ) ^= true;
             if( get_configurable_distractions()[currentLine].is_toggle ) {
@@ -170,6 +213,7 @@ void distraction_manager_gui::show()
                 uistate.distraction_oxygen = toggle_state;
                 uistate.distraction_withdrawal = toggle_state;
             }
+            accessibility::announce( row() );
         }
     }
 }

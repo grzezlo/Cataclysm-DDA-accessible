@@ -3,6 +3,7 @@
 #define CATA_SRC_ACCESSIBILITY_GAMEPLAY_H
 
 #include <functional>
+#include <memory>
 #include <optional>
 #include <string>
 #include <vector>
@@ -17,12 +18,17 @@ class inventory;
 class item;
 class map;
 class map_item_stack;
+class player_activity;
 class recipe;
 struct requirement_data;
 class uilist;
 class vehicle;
 struct item_info_data;
 struct visibility_variables;
+namespace accessibility
+{
+class game_message_speech_capture;
+}
 enum class content_newness;
 enum class hint_rating;
 enum class list_item_sort_mode : int;
@@ -31,6 +37,36 @@ enum class list_item_sort_mode : int;
 // keeps only narrow calls into this module to limit upstream merge conflicts.
 namespace accessibility_gameplay
 {
+
+void activity_started( const player_activity &act, const avatar &viewer, bool resuming );
+void activity_canceled( const avatar &viewer );
+/** Actors may use cancel_activity for cleanup after successful completion. */
+void activity_completed( const Character &viewer );
+void activity_interruption_reason( const std::string &reason );
+void sleep_started( const avatar &viewer );
+void sleep_finished( const avatar &viewer );
+void update_activity_progress( const avatar &viewer );
+void reset_activity_speech();
+
+/** Capture one handler turn; report its result only when the activity ends. */
+class activity_turn_speech
+{
+    public:
+        explicit activity_turn_speech( Character &viewer );
+        ~activity_turn_speech();
+        void finish_cycle() {
+            finished = true;
+        }
+        /** Call before clearing the old activity and resuming its backlog. */
+        void conclude();
+    private:
+        avatar *viewer = nullptr;
+        std::unique_ptr<accessibility::game_message_speech_capture> capture;
+        unsigned generation = 0;
+        bool finished = false;
+        bool concluded = false;
+        activity_turn_speech *previous = nullptr;
+};
 
 /** Describe a target position relative to an origin, e.g. "3 tiles north". */
 std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target );

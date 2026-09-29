@@ -169,13 +169,20 @@ void query_popup::set_message( const std::string &display_text, const std::strin
 
     const std::string announcement = accessibility::normalize_status_announcement(
                                          remove_color_tags( semantic_text ), progress );
-    const bool repeated_progress = progress && announcement == accessibility::last_announcement();
-    if( !announcement.empty() && announcement != last_static_announcement && !repeated_progress ) {
+    if( progress ) {
+        if( !speech_progress ) {
+            speech_progress = std::make_shared<accessibility::progress_reporter>();
+            if( !progress_start_suppressed ) {
+                accessibility::announce_status( announcement );
+            }
+        }
+        speech_progress->update( remove_color_tags( semantic_text ) );
+        return;
+    }
+    speech_progress.reset();
+    if( !announcement.empty() && announcement != last_static_announcement ) {
         accessibility::announce_status( announcement );
         last_static_announcement = announcement;
-    }
-    if( progress ) {
-        accessibility::set_last_announcement( remove_color_tags( semantic_text ) );
     }
 }
 

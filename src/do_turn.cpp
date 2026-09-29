@@ -18,6 +18,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_gameplay.h"
 #include "action.h"
 #include "activity_type.h"
 #include "avatar.h"
@@ -244,6 +245,10 @@ void handle_key_blocking_activity()
             if( u.activity.is_interruptible_with_kb() ) {
                 g->cancel_activity_query( _( "Confirm:" ) );
             }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility_gameplay::update_activity_progress( u );
+            accessibility::repeat_last_announcement();
+            refresh = false;
         } else if( action == "player_data" ) {
             u.disp_info( true );
         } else if( action == "messages" ) {
@@ -697,10 +702,19 @@ bool do_turn()
     accessibility::flush_gameplay_announcements();
 
     const bool player_is_sleeping = u.has_effect( effect_sleep );
+    accessibility_gameplay::update_activity_progress( u );
     bool wait_redraw = false;
     std::string wait_message;
     time_duration wait_refresh_rate;
     if( player_is_sleeping ) {
+        // Sleep has no player_activity, so it bypasses the normal activity
+        // keyboard polling above.  Keep repeat-last available while asleep.
+        static auto last_sleep_poll = std::chrono::steady_clock::now();
+        const auto now = std::chrono::steady_clock::now();
+        if( now - last_sleep_poll >= std::chrono::milliseconds( 100 ) ) {
+            inp_mngr.pump_events();
+            last_sleep_poll = now;
+        }
         wait_redraw = true;
         wait_message = _( "Wait till you wake up…" );
         wait_refresh_rate = 30_minutes;
@@ -729,6 +743,7 @@ bool do_turn()
             ui_adaptor dummy( ui_adaptor::disable_uis_below {} );
             if( !g->wait_popup ) {
                 g->wait_popup = std::make_unique<static_popup>();
+                g->wait_popup->suppress_progress_start();
             }
             g->wait_popup->on_top( true ).wait_message( "%s", wait_message );
             ui_manager::redraw();

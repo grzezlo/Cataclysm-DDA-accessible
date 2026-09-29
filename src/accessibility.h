@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_ACCESSIBILITY_H
 #define CATA_SRC_ACCESSIBILITY_H
 
+#include <chrono>
 #include <functional>
 #include <memory>
 #include <optional>
@@ -81,6 +82,47 @@ class game_message_speech_suppression
         game_message_speech_suppression &operator=( const game_message_speech_suppression & ) =
             delete;
 };
+
+/** Collect game messages from an activity handler into one semantic result. */
+class game_message_speech_capture
+{
+    public:
+        explicit game_message_speech_capture( bool enabled );
+        ~game_message_speech_capture();
+        game_message_speech_capture( const game_message_speech_capture & ) = delete;
+        game_message_speech_capture &operator=( const game_message_speech_capture & ) = delete;
+        const std::vector<std::string> &messages() const {
+            return collected;
+        }
+    private:
+        bool enabled;
+        std::vector<std::string> collected;
+        std::vector<std::string> *previous = nullptr;
+};
+
+/** Real-time progress source.  Destroying it stops automatic progress speech. */
+class progress_reporter
+{
+    public:
+        progress_reporter();
+        ~progress_reporter();
+        progress_reporter( const progress_reporter & ) = delete;
+        progress_reporter &operator=( const progress_reporter & ) = delete;
+        void update( const std::string &message );
+    private:
+        friend bool poll_progress();
+        friend bool announce( const std::string &message );
+        friend bool repeat_last_announcement();
+        friend void reset_game_state();
+        std::string message;
+        std::string last_spoken;
+        std::chrono::steady_clock::time_point started;
+};
+/** Poll the most recently updated live source; never interrupts speech. */
+bool poll_progress();
+void set_progress_announcement_interval( int seconds );
+/** Replace the monotonic clock for deterministic capture tests; empty restores it. */
+void set_clock_for_testing( std::function<std::chrono::steady_clock::time_point()> clock );
 /** Queue the destination tile, adding the direction only when it changes. */
 bool announce_movement( const std::string &direction, const std::string &tile );
 /** Remember that per-step movement speech was skipped during auto-move. */

@@ -21,6 +21,8 @@
 #include "accessibility.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
+
+#include "accessibility_gameplay.h"
 #include "activity_handlers.h"
 #include "advanced_inv.h"
 #include "avatar.h"
@@ -4279,6 +4281,7 @@ void craft_activity_actor::do_turn( player_activity &act, Character &crafter )
         craft_item.remove_item();
         // We need to cache this before we cancel the activity else we risk Use After Free
         const bool will_continue = is_long;
+        accessibility_gameplay::activity_completed( crafter );
         crafter.cancel_activity();
         crafter.complete_craft( craft_copy, location );
         if( will_continue ) {

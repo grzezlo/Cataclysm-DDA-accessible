@@ -3962,6 +3962,7 @@ void input_manager::pump_events()
 
     last_input = input_event();
     previously_pressed_key = 0;
+    accessibility::poll_progress();
 }
 
 // This is how we're actually going to handle input events, SDL getch

@@ -35,6 +35,7 @@ struct ui_state {
 #endif
     std::string context;
     std::string step;
+    std::unique_ptr<accessibility::progress_reporter> speech_progress;
 };
 
 static ui_state *gLUI = nullptr;
@@ -156,12 +157,16 @@ void loading_ui::show( const std::string &context, const std::string &step )
         return;
     }
     update_state( context, step );
+    if( !gLUI->speech_progress ) {
+        accessibility::announce_status( context.empty() ? step : context );
+        gLUI->speech_progress = std::make_unique<accessibility::progress_reporter>();
+    }
     if( !context.empty() && !step.empty() ) {
-        accessibility::set_last_announcement( string_format( "%s %s", context, step ) );
+        gLUI->speech_progress->update( string_format( "%s %s", context, step ) );
     } else if( !context.empty() ) {
-        accessibility::set_last_announcement( context );
+        gLUI->speech_progress->update( context );
     } else if( !step.empty() ) {
-        accessibility::set_last_announcement( step );
+        gLUI->speech_progress->update( step );
     }
     ui_manager::redraw();
     refresh_display();

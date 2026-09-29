@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <chrono>
 #include <memory>
 #include <string>
 #include <utility>
@@ -9,6 +10,7 @@
 #include "accessibility_gameplay.h"
 #include "action.h"
 #include "activity_handlers.h"
+#include "activity_actor_definitions.h"
 #include "advanced_inv.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_pane.h"
@@ -19,6 +21,7 @@
 #include "cata_catch.h"
 #include "cata_scope_helpers.h"
 #include "game.h"
+#include "fake_messages.h"
 #include "help.h"
 #include "input.h"
 #include "input_context.h"
@@ -32,6 +35,8 @@
 #include "map_selector.h"
 #include "monster.h"
 #include "pickup.h"
+#include "player_activity.h"
+#include "popup.h"
 #include "player_helpers.h"
 #include "recipe.h"
 #include "recipe_dictionary.h"
@@ -440,6 +445,411 @@ TEST_CASE( "accessibility_last_announcement_can_be_set_quietly_and_repeated",
     CHECK( capture_ptr->messages[1] == "Loading the save… Overmap" );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "activity_lifecycle_formatters_preserve_outcomes_and_reasons",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_activity_start( "Crafting knife", "2 hours", false ) ==
+           "Started: Crafting knife. About 2 hours." );
+    CHECK( accessibility::format_activity_start( "Reading book", "", true ) ==
+           "Resumed: Reading book." );
+    CHECK( accessibility::format_activity_result( "Waiting", true, false, "", {} ) ==
+           "Finished: Waiting." );
+    CHECK( accessibility::format_activity_result( "Reading book", false, true,
+            "Zombie spotted!", {} ) == "Stopped: Reading book. Zombie spotted!" );
+    CHECK( accessibility::format_activity_result( "Reading book", true, false, "",
+    { "It's too dark to read!" } ) == "It's too dark to read!" );
+    CHECK( accessibility::format_activity_result( "Crafting knife", true, false, "",
+    { "You craft a knife.", "Fabrication increased to 2." } ) ==
+    "You craft a knife. Fabrication increased to 2." );
+    CHECK( accessibility::format_activity_progress( "Waiting", "Waiting 20%", "1 hour" ) ==
+           "Waiting 20%. About 1 hour remaining." );
+}
+
+TEST_CASE( "real_time_progress_obeys_silence_interval_deduplication_and_repeat",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    auto now = std::chrono::steady_clock::time_point{};
+    accessibility::set_clock_for_testing( [&now]() {
+        return now;
+    } );
+    accessibility::announce_status( "Loading" );
+    accessibility::progress_reporter progress;
+    progress.update( "Loading 10%" );
+    now += std::chrono::milliseconds( 4999 );
+    CHECK_FALSE( accessibility::poll_progress() );
+    now += std::chrono::milliseconds( 1 );
+    CHECK( accessibility::poll_progress() );
+    REQUIRE( speech->messages.size() == 2 );
+    CHECK( speech->messages.back() == "Loading 10%" );
+    CHECK( speech->cancels == 0 );
+    now += std::chrono::seconds( 20 );
+    progress.update( "Loading 10%" );
+    CHECK( speech->messages.size() == 2 );
+    progress.update( "Loading 20%" );
+    REQUIRE( speech->messages.size() == 3 );
+    progress.update( "Loading 30%" );
+    now += std::chrono::seconds( 4 );
+    accessibility::note_player_input();
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( speech->messages.back() == "Loading 30%" );
+    const int cancels_after_repeat = speech->cancels;
+    // Silencing NVDA externally does not make the same text eligible again.
+    now += std::chrono::seconds( 30 );
+    CHECK_FALSE( accessibility::poll_progress() );
+    CHECK( speech->messages.size() == 4 );
+    progress.update( "Loading 40%" );
+    CHECK( speech->messages.size() == 5 );
+    CHECK( speech->cancels == cancels_after_repeat );
+
+    accessibility::announce_focus( "Stop loading? Yes" );
+    now += std::chrono::seconds( 30 );
+    CHECK_FALSE( accessibility::poll_progress() );
+    // A prompt suspends progress until the operation actually resumes.
+    progress.update( "Loading 50%" );
+    CHECK( speech->messages.back() == "Loading 50%" );
+    accessibility::set_progress_announcement_interval( 0 );
+    progress.update( "Loading 60%" );
+    now += std::chrono::hours( 1 );
+    CHECK_FALSE( accessibility::poll_progress() );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( speech->messages.back() == "Loading 60%" );
+}
+
+TEST_CASE( "progress_sources_end_with_their_owner_and_prioritize_warnings",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    auto now = std::chrono::steady_clock::time_point{};
+    accessibility::set_clock_for_testing( [&now]() {
+        return now;
+    } );
+    {
+        accessibility::progress_reporter progress;
+        progress.update( "Reading 10%" );
+        now += std::chrono::seconds( 5 );
+        accessibility::queue_gameplay_announcement( "Danger!",
+                accessibility::gameplay_speech::meaningful );
+        CHECK_FALSE( accessibility::poll_progress() );
+        REQUIRE( speech->messages.size() == 1 );
+        CHECK( speech->messages.back() == "Danger!" );
+        now += std::chrono::seconds( 5 );
+        CHECK( accessibility::poll_progress() );
+        accessibility::set_progress_announcement_interval( 10 );
+        progress.update( "Reading 20%" );
+        now += std::chrono::seconds( 9 );
+        CHECK_FALSE( accessibility::poll_progress() );
+        now += std::chrono::seconds( 1 );
+        CHECK( accessibility::poll_progress() );
+        accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::off );
+        progress.update( "Reading 30%" );
+        now += std::chrono::seconds( 10 );
+        CHECK_FALSE( accessibility::poll_progress() );
+    }
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::on );
+    CHECK_FALSE( accessibility::poll_progress() );
+    CHECK( speech->messages.size() == 3 );
+}
+
+TEST_CASE( "static_progress_popups_speak_one_start_and_rate_limited_updates",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    auto now = std::chrono::steady_clock::time_point{};
+    accessibility::set_clock_for_testing( [&now]() {
+        return now;
+    } );
+    {
+        static_popup saving;
+        saving.progress_message( "%s", "Saving 10%" );
+        saving.progress_message( "%s", "Saving 20%" );
+        REQUIRE( speech->messages.size() == 1 );
+        CHECK( speech->messages.back() == "Saving" );
+        CHECK( accessibility::last_announcement() == "Saving 20%" );
+        now += std::chrono::seconds( 5 );
+        CHECK( accessibility::poll_progress() );
+        CHECK( speech->messages.back() == "Saving 20%" );
+        saving.progress_message( "%s", "Saving 20%" );
+        CHECK( speech->messages.size() == 2 );
+    }
+    now += std::chrono::seconds( 5 );
+    CHECK_FALSE( accessibility::poll_progress() );
+}
+
+TEST_CASE( "activity_message_capture_keeps_results_without_turn_speech",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    {
+        accessibility::game_message_speech_capture result( true );
+        CHECK( accessibility::announce_game_message( "Finished waiting" ) );
+        CHECK( accessibility::announce_game_message( "Finished waiting" ) );
+        {
+            accessibility::game_message_speech_suppression quiet;
+            CHECK_FALSE( accessibility::announce_game_message( "Suppressed" ) );
+        }
+        CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+        CHECK( speech->messages.empty() );
+        CHECK( result.messages() == std::vector<std::string> { "Finished waiting" } );
+    }
+    CHECK( accessibility::announce_game_message( "Normal gameplay" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages == std::vector<std::string> { "Normal gameplay." } );
+}
+
+TEST_CASE( "activity_wait_start_progress_completion_and_cancel_are_batched", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    set_test_message_observer( []( const std::string & message ) {
+        accessibility::announce_game_message( message );
+    } );
+    accessibility_gameplay::reset_activity_speech();
+    on_out_of_scope restore( []() {
+        set_test_message_observer( {} );
+        accessibility_gameplay::reset_activity_speech();
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+    } );
+    accessibility::set_progress_announcement_interval( 0 );
+    you.assign_activity( activity_id( "ACT_WAIT" ), to_moves<int>( 2_minutes ) );
+    REQUIRE( speech->messages.size() == 1 );
+    CHECK( speech->messages[0].find( "Started: waiting" ) != std::string::npos );
+    CHECK( speech->messages[0].find( "2 minutes" ) != std::string::npos );
+    you.activity.have_fire = false;
+    you.set_moves( 100 );
+    you.activity.do_turn( you );
+    CHECK( speech->messages.size() == 1 );
+    CHECK( accessibility::last_announcement().find( "remaining" ) != std::string::npos );
+    CHECK( accessibility::repeat_last_announcement() );
+    REQUIRE( speech->messages.size() == 2 );
+    CHECK( speech->messages.back().find( "remaining" ) != std::string::npos );
+    you.activity.moves_left = 100;
+    you.set_moves( 100 );
+    you.activity.do_turn( you );
+    CHECK_FALSE( you.activity );
+    CHECK( speech->messages.size() == 2 );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    REQUIRE( speech->messages.size() == 3 );
+    CHECK( speech->messages.back() == "You finish waiting." );
+    CHECK( accessibility::last_announcement() == "You finish waiting." );
+
+    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    accessibility_gameplay::activity_interruption_reason( "Zombie spotted!" );
+    you.cancel_activity();
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages.back().find( "Stopped:" ) != std::string::npos );
+    CHECK( speech->messages.back().find( "Zombie spotted!" ) != std::string::npos );
+    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    CHECK( speech->messages.back().find( "Resumed:" ) != std::string::npos );
+
+    // Successful actor cleanup uses cancel_activity, as crafting does.
+    {
+        accessibility_gameplay::activity_turn_speech turn( you );
+        accessibility_gameplay::activity_completed( you );
+        you.cancel_activity();
+        accessibility::announce_game_message( "You craft a knife." );
+    }
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages.back() == "You craft a knife." );
+}
+
+TEST_CASE( "reading_failure_and_chapter_results_are_semantic_activity_outcomes", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    set_test_message_observer( []( const std::string & message ) {
+        accessibility::announce_game_message( message );
+    } );
+    accessibility_gameplay::reset_activity_speech();
+    on_out_of_scope restore( []() {
+        set_test_message_observer( {} );
+        accessibility_gameplay::reset_activity_speech();
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+    } );
+    accessibility::set_progress_announcement_interval( 0 );
+    item_location book = you.i_add( item( itype_id( "child_book" ) ) );
+    item_location ereader;
+    REQUIRE( book );
+    you.identify( *book );
+    read_activity_actor actor( 10_minutes, book, ereader );
+    you.assign_activity( actor );
+    REQUIRE( speech->messages.size() == 1 );
+    CHECK( speech->messages.back().find( book->tname() ) != std::string::npos );
+    CHECK( speech->messages.back().find( "10 minutes" ) != std::string::npos );
+
+    SECTION( "Reading stops with the actual vision failure" ) {
+        {
+            accessibility::game_message_speech_suppression setup;
+            you.add_effect( efftype_id( "blind" ), 1_hours );
+        }
+        you.set_moves( 100 );
+        you.activity.do_turn( you );
+        CHECK_FALSE( you.activity );
+        CHECK( accessibility::flush_gameplay_announcements() );
+        REQUIRE( speech->messages.size() == 2 );
+        CHECK( speech->messages.back() == "It's too dark to read!" );
+        CHECK( speech->messages.back().find( "Finished" ) == std::string::npos );
+    }
+    SECTION( "A chapter handler reports its final result once" ) {
+        {
+            accessibility_gameplay::activity_turn_speech turn( you );
+            turn.finish_cycle();
+            book->set_flag( flag_id( "CAN_USE_IN_DARK" ) );
+            actor.start( you.activity, you );
+            actor.finish( you.activity, you );
+        }
+        CHECK_FALSE( you.activity );
+        CHECK( accessibility::flush_gameplay_announcements() );
+        REQUIRE( speech->messages.size() == 2 );
+        CHECK( speech->messages.back().find( "You finish reading." ) != std::string::npos );
+        CHECK( speech->messages.back().find( "Stopped:" ) == std::string::npos );
+    }
+    SECTION( "Continuous chapter results wait until the activity ends" ) {
+        {
+            accessibility_gameplay::activity_turn_speech turn( you );
+            turn.finish_cycle();
+            accessibility::announce_game_message( "You learned a recipe." );
+        }
+        CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+        CHECK( speech->messages.size() == 1 );
+        {
+            accessibility_gameplay::activity_turn_speech turn( you );
+            turn.finish_cycle();
+            accessibility::announce_game_message( "You finish reading." );
+            you.activity.set_to_null();
+        }
+        CHECK( accessibility::flush_gameplay_announcements() );
+        CHECK( speech->messages.back() == "You learned a recipe. You finish reading." );
+    }
+}
+
+TEST_CASE( "sleep_start_repeat_wakeup_and_unsuccessful_attempt_are_announced", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    set_test_message_observer( []( const std::string & message ) {
+        accessibility::announce_game_message( message );
+    } );
+    accessibility_gameplay::reset_activity_speech();
+    on_out_of_scope restore( []() {
+        set_test_message_observer( {} );
+        accessibility_gameplay::reset_activity_speech();
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+    } );
+    accessibility::set_progress_announcement_interval( 0 );
+    you.assign_activity( try_sleep_activity_actor( 10_minutes ) );
+    REQUIRE( speech->messages.size() == 1 );
+    {
+        accessibility_gameplay::activity_turn_speech turn( you );
+        you.fall_asleep( 1_hours );
+    }
+    CHECK( accessibility::flush_gameplay_announcements() );
+    REQUIRE( speech->messages.size() == 2 );
+    CHECK( speech->messages.back().find( "You fall asleep." ) != std::string::npos );
+    CHECK( speech->messages.back().find( "You fall asleep.",
+                                         speech->messages.back().find( "You fall asleep." ) + 1 ) == std::string::npos );
+    accessibility_gameplay::update_activity_progress( you );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( speech->messages.back() == "Sleeping" );
+    you.wake_up();
+    you.wake_up();
+    you.remove_effect( efftype_id( "sleep" ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages.back().find( "You wake up." ) != std::string::npos );
+    CHECK( speech->messages.back().find( "You wake up.",
+                                         speech->messages.back().find( "You wake up." ) + 1 ) == std::string::npos );
+    CHECK( speech->messages.size() == 4 );
+    try_sleep_activity_actor attempt( 10_minutes );
+    you.assign_activity( attempt );
+    {
+        accessibility_gameplay::activity_turn_speech turn( you );
+        turn.finish_cycle();
+        attempt.finish( you.activity, you );
+    }
+    CHECK( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages.back().find( "You try to sleep, but can't." ) != std::string::npos );
+}
+
+TEST_CASE( "continuous_activity_actor_replacement_keeps_one_start_and_aggregates_results",
+           "[accessibility]" )
+{
+    clear_avatar();
+    avatar &you = get_avatar();
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    accessibility_gameplay::reset_activity_speech();
+    on_out_of_scope restore( []() {
+        accessibility_gameplay::reset_activity_speech();
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+    } );
+    accessibility::set_progress_announcement_interval( 0 );
+    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    REQUIRE( speech->messages.size() == 1 );
+    {
+        accessibility_gameplay::activity_turn_speech turn( you );
+        accessibility_gameplay::activity_completed( you );
+        you.cancel_activity();
+        accessibility::announce_game_message( "You craft the first knife." );
+        you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    }
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+    CHECK( speech->messages.size() == 1 );
+    {
+        accessibility_gameplay::activity_turn_speech turn( you );
+        accessibility_gameplay::activity_completed( you );
+        you.cancel_activity();
+        accessibility::announce_game_message( "You craft the second knife." );
+    }
+    CHECK( accessibility::flush_gameplay_announcements() );
+    REQUIRE( speech->messages.size() == 2 );
+    CHECK( speech->messages.back() == "You craft the first knife. You craft the second knife." );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( speech->messages.size() == 3 );
 }
 
 TEST_CASE( "semantic_accessibility_lists_have_stable_distance_ordering",

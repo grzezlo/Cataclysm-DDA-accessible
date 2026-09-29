@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <memory>
 
+#include "accessibility.h"
+#include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
 #include "activity_type.h"
@@ -160,7 +162,7 @@ std::optional<std::string> player_activity::get_progress_message( const avatar &
     }
 
     std::string extra_info;
-    if( type == ACT_READ ) {
+    if( type == ACT_READ && !targets.empty() ) {
         if( const item *book = targets.front().get_item() ) {
             if( const auto &reading = book->type->book ) {
                 const skill_id &skill = reading->skill;
@@ -221,6 +223,8 @@ std::optional<std::string> player_activity::get_progress_message( const avatar &
 
 void player_activity::start_or_resume( Character &who, bool resuming )
 {
+    accessibility::game_message_speech_capture speech(
+        who.is_avatar() && accessibility::is_active() );
     if( actor && !resuming ) {
         actor->start( *this, who );
     }
@@ -230,6 +234,15 @@ void player_activity::start_or_resume( Character &who, bool resuming )
     // last, as start function may have changed the type
     synchronize_type_with_actor();
     get_event_bus().send<event_type::character_starts_activity>( who.getID(), type, resuming );
+    if( who.is_avatar() && accessibility::is_active() ) {
+        if( *this && get_progress_message( *who.as_avatar() ) ) {
+            accessibility_gameplay::activity_started( *this, *who.as_avatar(), resuming );
+        } else {
+            accessibility::queue_gameplay_announcement(
+                accessibility::format_semantic_sequence( speech.messages() ),
+                accessibility::gameplay_speech::meaningful );
+        }
+    }
 }
 
 void player_activity::do_turn( Character &you )
@@ -243,6 +256,7 @@ void player_activity::do_turn( Character &you )
     }
     // first to ensure sync with actor
     synchronize_type_with_actor();
+    accessibility_gameplay::activity_turn_speech speech( you );
     // Should happen before activity or it may fail due to 0 moves
     if( *this && type->will_refuel_fires() && have_fire ) {
         have_fire = try_fuel_fire( *this, you );
@@ -392,6 +406,7 @@ void player_activity::do_turn( Character &you )
             }
         }
         get_event_bus().send<event_type::character_finished_activity>( you.getID(), type, false );
+        speech.finish_cycle();
         g->wait_popup_reset();
         if( actor ) {
             actor->finish( *this, you );
@@ -403,6 +418,7 @@ void player_activity::do_turn( Character &you )
         }
     }
     if( !*this ) {
+        speech.conclude();
         // Make sure data of previous activity is cleared
         you.activity = player_activity();
         you.resume_backlog_activity();
@@ -425,6 +441,9 @@ void player_activity::canceled( Character &who )
     activity_handlers::clean_may_activity_occupancy_items_var( who );
     get_event_bus().send<event_type::character_finished_activity>( who.getID(), type, true );
     g->wait_popup_reset();
+    if( who.is_avatar() && accessibility::is_active() ) {
+        accessibility_gameplay::activity_canceled( *who.as_avatar() );
+    }
 }
 
 float player_activity::exertion_level() const

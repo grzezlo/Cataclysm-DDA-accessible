@@ -15,6 +15,10 @@
 #include "point.h"
 
 class query_popup_impl;
+namespace accessibility
+{
+class progress_reporter;
+}
 
 /**
  * UI class for displaying messages or querying player input with popups.
@@ -38,6 +42,10 @@ class query_popup
 {
         friend class query_popup_impl;
     public:
+        /** The owning activity already announced its start. */
+        void suppress_progress_start() {
+            progress_start_suppressed = true;
+        }
         /**
          * Query result returned by `query_once` and `query`.
          *
@@ -228,8 +236,10 @@ class query_popup
         std::string spoken_context;
         std::string last_announced_text;
         std::string last_static_announcement;
+        std::shared_ptr<accessibility::progress_reporter> speech_progress;
         bool has_announced_text;
         bool static_announcements;
+        bool progress_start_suppressed = false;
         std::vector<query_option> options;
         size_t cur;
         nc_color default_text_color;

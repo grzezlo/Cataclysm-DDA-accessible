@@ -61,8 +61,16 @@ it says so.
 reasons and choices, resume/cancel, completion, and failure without
 turn-by-turn flooding.  Sleep, wait, and book reading are included.
 
-**Code inventory:** `src/player_activity.cpp`, `src/activity_actor.cpp`,
-`src/activity_handlers.cpp`, and `src/distraction_manager.cpp`.
+**Code inventory:** Lifecycle hooks in `src/player_activity.cpp`,
+`src/activity_actor.cpp`, `src/character.cpp`, and `src/do_turn.cpp`; wait
+handlers in `src/activity_handlers.cpp`; settings in
+`src/distraction_manager.cpp`.  Semantic lifecycle coordination lives in
+`src/accessibility_gameplay.cpp`, with pure formatters in
+`src/accessibility_format.cpp` and shared timers/capture in
+`src/accessibility.cpp`.  Progress also uses `src/loading_ui.cpp`,
+`src/popup.cpp`/`.h`, `src/options.cpp`, and `src/sdltiles.cpp` (the actual
+`input_manager::pump_events()` implementation); `src/game.cpp` and
+`src/construction.cpp` keep narrow owning-feature hooks.
 
 **Implementation hints:**
 
@@ -86,14 +94,18 @@ turn-by-turn flooding.  Sleep, wait, and book reading are included.
   hostile spotted, weather, etc.).
 - Distraction settings UI: `distraction_manager_gui::show()` in
   `src/distraction_manager.cpp`, context `"DISTRACTION_MANAGER"`.
-- Sleep/rest: `ACT_WAIT` and `ACT_WAIT_WEATHER` with finish handler
-  `activity_handlers::wait_finish()` in `src/activity_handlers.cpp`.
+- Wait: `ACT_WAIT` and `ACT_WAIT_WEATHER` use `wait_finish()` and
+  `wait_weather_finish()` in `src/activity_handlers.cpp`.  Trying to sleep
+  uses `try_sleep_activity_actor`; actual sleep is an effect, with hooks in
+  `Character::fall_asleep()`/`wake_up()` and polling in `src/do_turn.cpp`.
 - Book reading: dispatched through the modern `activity_actor` system;
   `read_activity_actor` handles chapter progress and skill gain.
-- Pattern: hook `start_or_resume` to announce activity start, use
-  `set_last_announcement` with `get_progress_message()` for on-demand
-  repeat (following the Stage 02A pattern), and announce completion/cancel
-  via `announce_status`.
+- Pattern: hook `start_or_resume` to announce activity start, keep a live
+  `progress_reporter` with `get_progress_message()` for on-demand repeat,
+  and collect handler messages into one queued completion/cancel result.
+  Successful crafting marks completion before its cleanup cancellation;
+  continuous batches and chapters share a start and final result.  Sleep
+  reuses the effect's existing apply/remove messages without duplicating them.
 - Real-time progress: `loading_ui` and `query_popup` progress from Stage 02A,
   `input_manager::pump_events()`, and the activity loop in `do_turn()`.  The
   interval option belongs with `SCREEN_READER_SPEECH` in `src/options.cpp`.
@@ -101,6 +113,8 @@ turn-by-turn flooding.  Sleep, wait, and book reading are included.
 **Selected interaction (option A, start and result, plus real-time progress):**
 
 - Keys are unchanged.  Conventions 7 and 8 apply.
+- The distraction manager also applies conventions 2, 4, and 5: concise
+  name/state rows, spoken toggles, and descriptions in the document view.
 - Starting an activity speaks its name and, when the game shows one, the
   estimated duration ("Crafting knife, about 2 hours").  Nothing is spoken in
   game time while it runs; `Alt+R` speaks the current progress message.

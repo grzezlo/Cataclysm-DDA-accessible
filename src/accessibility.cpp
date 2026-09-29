@@ -1,5 +1,6 @@
 #include "accessibility.h"
 
+#include <algorithm>
 #include <chrono>
 #include <cstdint>
 #include <cstdlib>
@@ -59,6 +60,12 @@ struct service_state {
     std::string last_game_message;
     uint64_t last_game_message_generation = 0;
     int game_message_suppressions = 0;
+    std::vector<std::string> *game_message_capture = nullptr;
+    std::vector<progress_reporter *> progress_sources;
+    int progress_interval = 5;
+    std::optional<std::chrono::steady_clock::time_point> last_speech;
+    std::string last_spoken_message;
+    std::function<std::chrono::steady_clock::time_point()> clock;
 };
 
 service_state &state()
@@ -77,6 +84,11 @@ void reset_detection()
 {
     state().detected = false;
     state().last_probe.reset();
+}
+
+std::chrono::steady_clock::time_point now()
+{
+    return state().clock ? state().clock() : std::chrono::steady_clock::now();
 }
 
 /**
@@ -99,6 +111,10 @@ bool speak( const std::string &message, const bool may_interrupt )
     }
     current.speech_generation = current.input_generation;
     const bool spoken = current.active_backend->announce( message );
+    if( spoken ) {
+        current.last_speech = now();
+        current.last_spoken_message = message;
+    }
     if( trace_enabled() ) {
         DebugLog( D_INFO, DC_ALL ) << "accessibility speech" << ( interrupt ? " (interrupting)" : "" )
                                    << ( spoken ? "" : " (not delivered)" ) << ": " << message;
@@ -161,6 +177,10 @@ bool announce( const std::string &message )
     // Keep chronological order: pending turn speech (such as the alert that
     // triggered a prompt) is spoken first and is not cut off by this focus.
     flush_gameplay_announcements();
+    // A prompt owns speech until its running operation updates progress again.
+    for( progress_reporter *source : state().progress_sources ) {
+        source->message.clear();
+    }
     state().last_message = message;
     return speak( message, true );
 }
@@ -225,6 +245,13 @@ bool announce_game_message( const std::string &message )
         current.game_message_suppressions > 0 ) {
         return false;
     }
+    if( current.game_message_capture ) {
+        auto &messages = *current.game_message_capture;
+        if( std::find( messages.begin(), messages.end(), message ) == messages.end() ) {
+            messages.push_back( message );
+        }
+        return is_active();
+    }
     // Repeat a message only in response to a new key press, such as another
     // attack.  Activities like smashing repeat it every turn without input.
     if( message == current.last_game_message &&
@@ -245,6 +272,84 @@ game_message_speech_suppression::game_message_speech_suppression()
 game_message_speech_suppression::~game_message_speech_suppression()
 {
     --state().game_message_suppressions;
+}
+
+game_message_speech_capture::game_message_speech_capture( const bool enabled ) : enabled( enabled )
+{
+    if( enabled ) {
+        previous = state().game_message_capture;
+        state().game_message_capture = &collected;
+    }
+}
+
+game_message_speech_capture::~game_message_speech_capture()
+{
+    if( enabled ) {
+        state().game_message_capture = previous;
+    }
+}
+
+progress_reporter::progress_reporter() : started( now() )
+{
+    state().progress_sources.push_back( this );
+}
+
+progress_reporter::~progress_reporter()
+{
+    auto &sources = state().progress_sources;
+    sources.erase( std::remove( sources.begin(), sources.end(), this ), sources.end() );
+}
+
+void progress_reporter::update( const std::string &text )
+{
+    if( text.empty() || !is_active() ) {
+        return;
+    }
+    message = text;
+    if( message == state().last_spoken_message ) {
+        last_spoken = message;
+    }
+    auto &sources = state().progress_sources;
+    sources.erase( std::remove( sources.begin(), sources.end(), this ), sources.end() );
+    sources.push_back( this );
+    set_last_announcement( text );
+    poll_progress();
+}
+
+bool poll_progress()
+{
+    service_state &current = state();
+    if( current.progress_interval <= 0 || current.progress_sources.empty() || !is_active() ) {
+        return false;
+    }
+    progress_reporter &source = *current.progress_sources.back();
+    const auto since = current.last_speech ? std::max( source.started, *current.last_speech ) :
+                       source.started;
+    if( source.message.empty() || source.message == source.last_spoken ||
+        now() - since < std::chrono::seconds( current.progress_interval ) ) {
+        return false;
+    }
+    // Pending warnings take precedence over automatic progress.
+    if( flush_gameplay_announcements() ) {
+        return false;
+    }
+    current.last_message = source.message;
+    if( speak( source.message, false ) ) {
+        source.last_spoken = source.message;
+        return true;
+    }
+    return false;
+}
+
+void set_progress_announcement_interval( const int seconds )
+{
+    state().progress_interval = std::max( 0, seconds );
+}
+
+void set_clock_for_testing( std::function<std::chrono::steady_clock::time_point()> clock )
+{
+    state().clock = std::move( clock );
+    state().last_speech.reset();
 }
 
 void note_suppressed_movement()
@@ -344,6 +449,11 @@ bool repeat_last_announcement()
         return false;
     }
 
+    for( progress_reporter *source : state().progress_sources ) {
+        if( source->message == message ) {
+            source->last_spoken = message;
+        }
+    }
     return speak( message, true );
 }
 
@@ -404,6 +514,10 @@ void reset_game_state()
     current.last_game_message.clear();
     current.movement_suppressed = false;
     current.travel_in_progress = false;
+    for( progress_reporter *source : current.progress_sources ) {
+        source->message.clear();
+        source->last_spoken.clear();
+    }
     reset_condition_tracker();
 }
 
@@ -417,6 +531,9 @@ void set_backend_for_testing( std::unique_ptr<backend> replacement )
     current.input_generation = 0;
     current.speech_generation = 0;
     current.last_message.clear();
+    current.last_speech.reset();
+    current.last_spoken_message.clear();
+    current.progress_interval = 5;
     reset_game_state();
 }
 
@@ -433,6 +550,10 @@ void reset_backend_after_testing()
     current.speech_generation = 0;
     current.last_message.clear();
     current.game_messages_enabled = false;
+    current.clock = {};
+    current.last_speech.reset();
+    current.last_spoken_message.clear();
+    current.progress_interval = 5;
     reset_game_state();
 }
 

@@ -10,12 +10,15 @@
 #include <utility>
 
 #include "accessibility.h"
+#include "activity_type.h"
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "character_martial_arts.h"
+#include "construction.h"
+#include "construction_group.h"
 #include "creature.h"
 #include "creature_tracker.h"
 #include "display.h"
@@ -43,6 +46,7 @@
 #include "omdata.h"
 #include "output.h"
 #include "overmapbuffer.h"
+#include "player_activity.h"
 #include "recipe.h"
 #include "requirements.h"
 #include "string_formatter.h"
@@ -66,6 +70,266 @@ static const trait_id trait_INATTENTIVE( "INATTENTIVE" );
 
 namespace accessibility_gameplay
 {
+
+namespace
+{
+struct activity_speech_state {
+    std::string id;
+    std::string label;
+    std::string reason;
+    std::vector<std::string> results;
+    std::unique_ptr<accessibility::progress_reporter> progress;
+    unsigned generation = 0;
+    int turns = 0;
+    bool canceled = false;
+    bool completed = false;
+};
+
+activity_speech_state &activity_state()
+{
+    // Construct after the service so reporters are destroyed before it at exit.
+    static activity_speech_state instance = []() {
+        accessibility::get_screen_reader_mode();
+        return activity_speech_state{};
+    }
+    ();
+    return instance;
+}
+activity_turn_speech *active_activity_turn = nullptr;
+
+std::string activity_label( const player_activity &act, const avatar &viewer )
+{
+    if( act.id().str() == "ACT_BUILD" ) {
+        const partial_con *pc = get_map().partial_con_at( get_map().get_bub( act.placement ) );
+        if( pc && pc->id.is_valid() ) {
+            return string_format( _( "Constructing %s" ), pc->id->group->name() );
+        }
+    }
+    if( act.id().str() == "ACT_READ" && !act.targets.empty() && act.targets.front() ) {
+        return string_format( _( "Reading %s" ), act.targets.front()->tname() );
+    }
+    return accessibility::normalize_status_announcement(
+               act.get_progress_message( viewer ).value_or( act.get_verb().translated() ), true );
+}
+
+void add_activity_results( const std::vector<std::string> &messages )
+{
+    for( const std::string &message : messages ) {
+        if( std::find( activity_state().results.begin(), activity_state().results.end(), message ) ==
+            activity_state().results.end() ) {
+            activity_state().results.push_back( message );
+        }
+    }
+}
+
+void end_activity_speech( const bool finished, const std::vector<std::string> &messages )
+{
+    add_activity_results( messages );
+    const std::string result = accessibility::format_activity_result( activity_state().label,
+                               finished, activity_state().canceled, activity_state().reason,
+                               activity_state().results );
+    activity_state().id.clear();
+    activity_state().progress.reset();
+    activity_state().reason.clear();
+    activity_state().results.clear();
+    activity_state().canceled = false;
+    activity_state().completed = false;
+    accessibility::queue_gameplay_announcement( result,
+            accessibility::gameplay_speech::meaningful );
+}
+} // namespace
+
+void reset_activity_speech()
+{
+    const unsigned next_generation = activity_state().generation + 1;
+    activity_state() = activity_speech_state{};
+    activity_state().generation = next_generation;
+}
+
+void activity_started( const player_activity &act, const avatar &viewer, const bool resuming )
+{
+    if( !accessibility::is_active() || !accessibility::game_messages_enabled() ||
+        !act.get_progress_message( viewer ) ) {
+        return;
+    }
+    // Construction assigns its placement after start_or_resume; its owning
+    // feature calls this hook once the selected project is available.
+    if( act.id().str() == "ACT_BUILD" && act.placement == tripoint_abs_ms::min ) {
+        return;
+    }
+    if( active_activity_turn && activity_state().turns > 0 ) {
+        if( activity_state().completed && activity_state().id == act.id().str() ) {
+            // Continuous crafting creates a new actor for every batch.  It is
+            // still the same long action, with one start and one final result.
+            activity_state().completed = false;
+            activity_state().canceled = false;
+            update_activity_progress( viewer );
+            return;
+        }
+        active_activity_turn->conclude();
+    }
+    reset_activity_speech();
+    activity_state().id = act.id().str();
+    activity_state().label = activity_label( act, viewer );
+    std::string duration;
+    // Only use durations shown by these interfaces; arbitrary move counts can
+    // represent counters rather than an estimate (crafting, stamina, etc.).
+    if( act.moves_left > 0 && ( act.id().str() == "ACT_WAIT" ||
+                                act.id().str() == "ACT_READ" || act.id().str() == "ACT_WAIT_WEATHER" ) ) {
+        duration = to_string_approx( time_duration::from_moves( act.moves_left ) );
+    }
+    if( act.id().str() == "ACT_BUILD" ) {
+        const partial_con *pc = get_map().partial_con_at( get_map().get_bub( act.placement ) );
+        if( pc && pc->id.is_valid() ) {
+            duration = to_string_approx( time_duration::from_moves( pc->id->adjusted_time() ) );
+        }
+    } else if( act.id().str() == "ACT_CRAFT" && !act.targets.empty() && act.targets.front() ) {
+        const item &craft = *act.targets.front();
+        if( craft.is_craft() ) {
+            duration = to_string_approx( time_duration::from_moves(
+                                             viewer.expected_time_to_craft( craft.get_making(), craft.get_making_batch_size() ) ) );
+        }
+    }
+    accessibility::queue_gameplay_announcement( accessibility::format_activity_start(
+                activity_state().label, duration, resuming ), accessibility::gameplay_speech::meaningful );
+    accessibility::flush_gameplay_announcements();
+    activity_state().progress = std::make_unique<accessibility::progress_reporter>();
+    update_activity_progress( viewer );
+}
+
+void activity_interruption_reason( const std::string &reason )
+{
+    activity_state().reason = reason;
+}
+
+void activity_canceled( const avatar &viewer )
+{
+    if( activity_state().id.empty() || activity_state().id != viewer.activity.id().str() ) {
+        return;
+    }
+    activity_state().canceled = !activity_state().completed;
+    if( activity_state().turns == 0 ) {
+        end_activity_speech( false, {} );
+    }
+}
+
+void activity_completed( const Character &viewer )
+{
+    if( viewer.is_avatar() && activity_state().id == viewer.activity.id().str() ) {
+        activity_state().completed = true;
+    }
+}
+
+void sleep_started( const avatar & )
+{
+    if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
+        return;
+    }
+    reset_activity_speech();
+    activity_state().id = "sleep";
+    activity_state().label = _( "Sleeping" );
+    // The sleep effect's apply message is the spoken start.  Do not duplicate
+    // it with a second lifecycle announcement.
+    activity_state().progress = std::make_unique<accessibility::progress_reporter>();
+    activity_state().progress->update( _( "Sleeping" ) );
+}
+
+void sleep_finished( const avatar & )
+{
+    if( activity_state().id != "sleep" ) {
+        return;
+    }
+    reset_activity_speech();
+    // The effect's remove message reports waking once it is actually removed.
+}
+
+void update_activity_progress( const avatar &viewer )
+{
+    if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
+        return;
+    }
+    if( viewer.has_effect( efftype_id( "sleep" ) ) &&
+        viewer.get_effect( efftype_id( "sleep" ) ).get_duration() > 0_turns &&
+        activity_state().id != "sleep" ) {
+        // Loading a sleeping character resumes its progress without claiming
+        // that it has just fallen asleep.
+        reset_activity_speech();
+        activity_state().id = "sleep";
+        activity_state().label = _( "Sleeping" );
+        accessibility::queue_gameplay_announcement( _( "Sleeping" ),
+                accessibility::gameplay_speech::meaningful );
+        activity_state().progress = std::make_unique<accessibility::progress_reporter>();
+    }
+    if( !activity_state().progress ) {
+        return;
+    }
+    if( activity_state().id == "sleep" ) {
+        // No remaining duration is visible while sleeping.
+        activity_state().progress->update( _( "Sleeping" ) );
+    } else if( const auto progress = viewer.activity.get_progress_message( viewer ) ) {
+        std::string remaining;
+        const player_activity &act = viewer.activity;
+        if( act.moves_left > 0 && ( act.id().str() == "ACT_WAIT" ||
+                                    act.id().str() == "ACT_READ" || act.id().str() == "ACT_WAIT_WEATHER" ) ) {
+            remaining = to_string_approx( time_duration::from_moves( act.moves_left ) );
+        }
+        activity_state().progress->update( accessibility::format_activity_progress(
+                                               activity_state().label, *progress, remaining ) );
+    }
+}
+
+activity_turn_speech::activity_turn_speech( Character &who )
+{
+    if( !who.is_avatar() || !accessibility::is_active() ||
+        !accessibility::game_messages_enabled() ||
+        !who.activity.get_progress_message( *who.as_avatar() ) ) {
+        return;
+    }
+    viewer = who.as_avatar();
+    if( activity_state().id != viewer->activity.id().str() ) {
+        activity_started( viewer->activity, *viewer, true );
+    }
+    generation = activity_state().generation;
+    ++activity_state().turns;
+    capture = std::make_unique<accessibility::game_message_speech_capture>( true );
+    previous = active_activity_turn;
+    active_activity_turn = this;
+}
+
+activity_turn_speech::~activity_turn_speech()
+{
+    conclude();
+    if( active_activity_turn == this ) {
+        active_activity_turn = previous;
+    }
+}
+
+void activity_turn_speech::conclude()
+{
+    if( concluded || !viewer ) {
+        return;
+    }
+    concluded = true;
+    if( generation != activity_state().generation ) {
+        if( activity_state().id == "sleep" ) {
+            // Falling asleep ends ACT_TRY_SLEEP inside its handler.  Preserve
+            // the effect's apply message and any warmth/comfort messages.
+            accessibility::queue_gameplay_announcement(
+                accessibility::format_semantic_sequence( capture->messages() ),
+                accessibility::gameplay_speech::meaningful );
+        }
+        return;
+    }
+    --activity_state().turns;
+    if( activity_state().canceled || viewer->activity.id().str() != activity_state().id ) {
+        end_activity_speech( finished || activity_state().completed, capture->messages() );
+    } else {
+        // Keep skill gains and other handler messages for the final result;
+        // repeated routine messages become one entry rather than turn speech.
+        add_activity_results( capture->messages() );
+        update_activity_progress( *viewer );
+    }
+}
 
 namespace
 {

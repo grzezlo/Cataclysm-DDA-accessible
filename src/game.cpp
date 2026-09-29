@@ -1181,6 +1181,7 @@ bool game::start_game()
         add_msg( m_good, _( "Debug character detected.  Quick setup applied, good luck on the testing!" ) );
     }
     accessibility::reset_game_state();
+    accessibility_gameplay::reset_activity_speech();
     accessibility::enable_game_messages( true );
     accessibility::announce_status( accessibility_gameplay::arrival_announcement( here, u, false ) );
     return true;
@@ -1634,6 +1635,7 @@ bool game::cancel_activity_or_ignore_query( const distraction_type type, const s
                                 .action;
 
     if( action == "YES" ) {
+        accessibility_gameplay::activity_interruption_reason( text );
         u.cancel_activity();
         return true;
     }
@@ -1644,6 +1646,7 @@ bool game::cancel_activity_or_ignore_query( const distraction_type type, const s
         }
     }
     if( action == "MANAGER" ) {
+        accessibility_gameplay::activity_interruption_reason( text );
         u.cancel_activity();
         get_distraction_manager().show();
         return true;
@@ -3410,6 +3413,7 @@ bool game::load( const save_t &name )
 
     loading_ui::done();
     accessibility::reset_game_state();
+    accessibility_gameplay::reset_activity_speech();
     accessibility::enable_game_messages( true );
     accessibility::announce_status( accessibility_gameplay::arrival_announcement( here, u, true ) );
     return true;

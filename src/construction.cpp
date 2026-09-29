@@ -1509,8 +1509,7 @@ void place_construction( std::vector<construction_group_str_id> const &groups )
     player_character.invalidate_weight_carried_cache();
     player_character.assign_activity( ACT_BUILD );
     player_character.activity.placement = here.get_abs( pnt );
-    accessibility::announce_status( string_format( _( "Started constructing %s" ),
-                                    con.group->name() ) );
+    accessibility_gameplay::activity_started( player_character.activity, get_avatar(), false );
 }
 
 void complete_construction( Character *you )
