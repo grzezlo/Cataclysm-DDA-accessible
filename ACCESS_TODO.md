@@ -841,6 +841,19 @@ logic.
   prompts confirmation, and sets `tabs.complete = true` in `set_description()`.
 - Template save/load: template management in `set_description()`.
 
+**Selected interaction (conventions 2, 3, 4, 5, and 8):**
+
+- Keys are unchanged.  Stats: Left and Right speak "Strength 10, 4 points
+  left"; `Alt+D` opens the derived effects in the document view.
+- Traits: changing a column speaks "Negative traits, 30 items"; a row speaks
+  name, cost, and state ("Fast learner, 2 points, selected", "locked by
+  profession", "conflicts with Slow learner").
+- Skills: a level change speaks the new level and point balance; entering a
+  category speaks its name.
+- Description: each field speaks its label and value; editing uses the Stage
+  05 text input.  Templates, validation errors, and the final confirmation
+  use the shared controls.
+
 **Success criteria:** Stats, traits, skills, description, start location,
 randomization, templates, naming, and final confirmation are complete and
 focus-stable.  Point totals and conflicts are announced on change.
@@ -889,6 +902,16 @@ but the screen still needs the Stage 21 interaction review and implementation.
   `worldfactory::show_worldgen_tab_modselection()`.
 - Category tabs: tabs in `worldfactory::show_worldgen_tab_modselection()`.
 
+**Selected interaction (conventions 2, 3, 5, and 8):**
+
+- Keys are unchanged.  A world row speaks its name and character count.  The
+  world-creation screens get focus speech, resolving the observed blocker.
+- In the mod manager the "Mod List" and "Load Order" columns behave as tabs.
+  A row speaks name, state, and category.  Add, remove, and move speak the
+  new position; missing dependencies speak their reason as words.
+- `Alt+D` opens mod information in the document view.  Copy, reset, and
+  delete confirmations use the Stage 05 controls.
+
 **Success criteria:** World selection/create/copy/reset/delete, naming, mod
 category/order/dependencies, and confirmation are announced.
 
@@ -927,6 +950,16 @@ and sidebar panel configuration are independently usable.
   visibility, reorder, activate layout.
 - Distraction settings: `distraction_manager_gui::show()` in
   `src/distraction_manager.cpp`, context `"DISTRACTION_MANAGER"`.
+
+**Selected interaction (conventions 2, 3, 4, and 8):**
+
+- Keys are unchanged.  Option pages behave as tabs.  A group header speaks
+  "expanded" or "collapsed"; an option row speaks name and value, and a
+  change speaks the new value.  `Alt+D` speaks the option tooltip.
+- Safe-mode, autopickup, and distraction rule lists use the shared list and
+  input speech for editing.
+- The panel manager's panel and layout columns behave as tabs; a row speaks
+  name and visibility, and moving a panel speaks its new position.
 
 **Success criteria:** Options pages, group expand/collapse, value editing,
 defaults, safe-mode/autopickup rules, panel configuration, and distraction
