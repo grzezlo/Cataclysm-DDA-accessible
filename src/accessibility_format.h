@@ -658,6 +658,8 @@ std::string format_mutation_power_row( const mutation_power_row &row );
 /** Spell menu row. */
 struct spell_row {
     std::string name;
+    /** Translated spell class name; empty when the spell has no class. */
+    std::string spell_class;
     /** Empty when the spell can be cast; otherwise why the menu disables it. */
     std::string unavailable_reason;
     /** Energy cost such as "10 mana" or "no cost". */
@@ -670,8 +672,8 @@ struct spell_row {
     bool favorite = false;
 };
 /**
- * "Magic missile, castable, 10 mana, 100 moves, favorite." or
- * "Magic missile, 10 mana, 100 moves. Unavailable: not enough mana."
+ * "Magic missile, Magus, castable, 10 mana, 100 moves, favorite." or
+ * "Magic missile, Magus, 10 mana, 100 moves. Unavailable: not enough mana."
  */
 std::string format_spell_row( const spell_row &row );
 /** "3 spells" or "No spells". */

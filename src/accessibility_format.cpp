@@ -2105,6 +2105,10 @@ std::string format_spell_row( const spell_row &row )
 {
     const bool castable = row.unavailable_reason.empty();
     std::vector<std::string> parts = { remove_color_tags( row.name ) };
+    std::string spell_class = remove_color_tags( row.spell_class );
+    if( !spell_class.empty() ) {
+        parts.push_back( std::move( spell_class ) );
+    }
     if( castable ) {
         parts.emplace_back( pgettext( "spell", "castable" ) );
     }

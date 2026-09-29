@@ -3789,6 +3789,15 @@ TEST_CASE( "spell_and_style_formatters_speak_castability_cost_and_description",
     missile.unavailable_reason = "not enough mana";
     CHECK( accessibility::format_spell_row( missile ) ==
            "Magic missile, 10 mana, 100 moves. Unavailable: not enough mana." );
+    missile.unavailable_reason.clear();
+    missile.spell_class = "<color_yellow>Magus</color>";
+    missile.favorite = true;
+    CHECK( accessibility::format_spell_row( missile ) ==
+           "Magic missile, Magus, castable, 10 mana, 100 moves, favorite." );
+    missile.favorite = false;
+    missile.unavailable_reason = "not enough mana";
+    CHECK( accessibility::format_spell_row( missile ) ==
+           "Magic missile, Magus, 10 mana, 100 moves. Unavailable: not enough mana." );
 
     CHECK( accessibility::format_spell_count( 0 ) == "No spells" );
     CHECK( accessibility::format_spell_count( 1 ) == "1 spell" );
