@@ -55,6 +55,37 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
+## Stage 09A - List position speech unification
+
+**Outcome:** Lists completed before the interaction conventions follow
+convention 2: the item count once on opening, no position on focus moves,
+"top" or "bottom" on wrap, and the position on request.
+
+**Code inventory:** position formatters in `src/accessibility_format.cpp`
+("Message %d of %d" in the message log, "%1$d of %2$d" nearby-list results,
+"Location %1$d of %2$d" in nearby item stacks); `src/uilist.cpp`,
+`src/inventory_ui.cpp`, `src/advanced_inv.cpp`, `src/main_menu.cpp`, the help
+browser, and the keybinding list.  Inventory every list-focus announcement
+before changing it; counts that describe content rather than list position,
+such as "Selected 2 of 5" or capacity, stay.
+
+**Selected interaction:** Convention 2 as written, chosen by the maintainer on
+2026-09-29.  Position within a list moves to `Alt+S` or `Alt+D`, whichever
+the screen already uses for its summary or detail.
+
+**Success criteria:** Every list reached in Stages 03–09 announces its count
+once on opening, speaks no position on focus moves, signals wrap, and reports
+the position on request.  Repeat-last and filtered result counts still work.
+
+**Possible automated tests:** Capture opening, focus moves, wrap in both
+directions, filter result count, and position on request for uilist, the
+inventory selector, advanced inventory, the nearby lists, the message log,
+and the help and keybinding lists.
+
+**User-test scenarios:** Open each list, scroll through it quickly, wrap past
+both ends, and request the position; confirm that no position is spoken
+while scrolling and that the count is heard once.
+
 ## Stage 10 - Ranged and thrown targeting
 
 **Outcome:** A player can inspect targets, choose an aim action, and fire or throw
@@ -126,37 +157,6 @@ fire/throw, result, cancel, visibility, and deterministic ordering.
 against one and several targets, including obstruction and out-of-range cases.
 Confirm target choice is reliable under rapid navigation and interrupted speech.
 
-## Stage 10A - List position speech unification
-
-**Outcome:** Lists completed before the interaction conventions follow
-convention 2: the item count once on opening, no position on focus moves,
-"top" or "bottom" on wrap, and the position on request.
-
-**Code inventory:** position formatters in `src/accessibility_format.cpp`
-("Message %d of %d" in the message log, "%1$d of %2$d" nearby-list results,
-"Location %1$d of %2$d" in nearby item stacks); `src/uilist.cpp`,
-`src/inventory_ui.cpp`, `src/advanced_inv.cpp`, `src/main_menu.cpp`, the help
-browser, and the keybinding list.  Inventory every list-focus announcement
-before changing it; counts that describe content rather than list position,
-such as "Selected 2 of 5" or capacity, stay.
-
-**Selected interaction:** Convention 2 as written, chosen by the maintainer on
-2026-09-29.  Position within a list moves to `Alt+S` or `Alt+D`, whichever
-the screen already uses for its summary or detail.
-
-**Success criteria:** Every list reached in Stages 03–10 announces its count
-once on opening, speaks no position on focus moves, signals wrap, and reports
-the position on request.  Repeat-last and filtered result counts still work.
-
-**Possible automated tests:** Capture opening, focus moves, wrap in both
-directions, filter result count, and position on request for uilist, the
-inventory selector, advanced inventory, the nearby lists, the message log,
-and the help and keybinding lists.
-
-**User-test scenarios:** Open each list, scroll through it quickly, wrap past
-both ends, and request the position; confirm that no position is spoken
-while scrolling and that the count is heard once.
-
 ## Stage 11 - Crafting and disassembly
 
 **Outcome:** Recipe selection, requirements, batch choices, crafting, and
@@ -183,6 +183,23 @@ disassembly are independently usable.
 - Related recipes: `"RELATED_RECIPES"` action.
 - Disassembly: `game_menus::inv::disassemble()` in `src/game_inventory.cpp` uses
   `disassemble_inventory_preset`.
+
+**Selected interaction (option A with missing counts):**
+
+- Keys are unchanged.  Conventions 1, 2, 3, 4, 5, and 8 apply.
+- Changing a category or subcategory speaks its name, the recipe count, and
+  the focused recipe.  A recipe row speaks its name and availability:
+  "craftable", or the number of unmet requirement groups ("knife, 2
+  missing"); unread and favorite states are words.
+- `Alt+D` opens the recipe in the document view.  Each requirement group is
+  one line with its alternatives and a state word for each instead of color
+  ("Tools: hammer, have; or rock, missing").  Skills, proficiencies, time,
+  success chance, and batch information have their own lines.
+- `Alt+S` speaks the result item information.  `CYCLE_BATCH` speaks the new
+  batch size and time.  Related recipes, filter, crafter choice, and
+  confirmations use the shared controls.
+- Disassembly uses the Stage 06 inventory selector; its detail lists the
+  returned components and requirements the same way.
 
 **Success criteria:** Category, recipe, variant, availability, missing
 requirements, skill, time, batch size, related recipe, search, confirmation,
@@ -223,6 +240,16 @@ validation); `src/handle_action.cpp` (action dispatch).
 - Validation: `can_construct()` in `src/construction.cpp`.
 - Failure reason: `con.explain_failure(pnt)`.
 - On confirm: starts `player_activity(ACT_BUILD)`.
+
+**Selected interaction (conventions and the Stage 08 direction prompt):**
+
+- Keys are unchanged.  Conventions 1, 2, 3, 5, and 8 apply to the
+  construction menu; `Alt+D` opens the requirements in the document view with
+  state words instead of color, as in Stage 11.
+- Placement passes the valid tiles from `valid_constructions_near_player()`
+  to the `choose_adjacent()` prompt so it speaks as the Stage 08 prompts do:
+  "Construct where? Targets: <target>, north. (Direction button)".  An
+  invalid choice speaks the existing failure explanation.
 
 **Success criteria:** Construction category/project, requirements, variants,
 placement direction, valid/invalid tile, and disabled reason are announced.
