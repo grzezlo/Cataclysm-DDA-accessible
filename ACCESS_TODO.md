@@ -55,6 +55,96 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
+## Stage 13A - Character sheet subscreens and armor layering
+
+**Outcome:** The morale window, body status graph, medical menu, proficiencies
+window, and sort armor screen, reached from the character sheet or directly
+from gameplay, are fully usable with speech, including reordering worn armor.
+
+**Code inventory:** `player_morale::display()` in `src/morale.cpp`;
+`bodygraph_display` and `display_bodygraph()` in `src/bodygraph.cpp`;
+`Character::disp_medical()` and its `medical_column` helpers in
+`src/medical_ui.cpp`; `show_proficiencies_window()` in
+`src/proficiency_ui.cpp`; `outfit::sort_armor()`, `draw_mid_pane()`,
+`get_item_penalties()`, and `items_cover_bp()` in `src/armor_layers.cpp`;
+callers in `src/player_display.cpp`, `src/handle_action.cpp`, and
+`src/game.cpp`.
+
+**Implementation hints:**
+
+- Morale lines are built as `morale_line` objects before drawing; share that
+  list with speech rather than re-deriving totals and percentages.
+- The body status part list is `bodygraph_display::partlist`; the info pane
+  text is `info_txt` from `prepare_infotext()`.  `CONFIRM`/`RIGHT` opens a
+  nested graph, `LEFT` returns from it.
+- Medical columns expose `description()` and `detail_str()` for the focused
+  row; `APPLY` hands off to the already accessible item use flow.
+- Sort armor stacking badness is shown only by color
+  (`item_penalties::color_for_stacking_badness()`); speech must use the
+  penalty data itself.  The mid pane and encumbrance block are drawn by
+  `draw_mid_pane()` and `Character::print_encumbrance()`.
+
+**Selected interaction (option A of three, chosen by the maintainer on
+2026-09-30):**  Conventions 1, 2, 3, 5, and 8 apply; game keys are
+unchanged.
+
+- Morale window: opens directly in the Stage 03C document view.  It starts
+  with the total morale, then positive and negative entries ordered by their
+  contribution, each as "Ate a good meal, +10, 25%", then the penalties and
+  focus lines the window shows.  Escape closes it and returns to the caller.
+- Body status: the part list follows convention 2.  A row speaks the part
+  name and its health at the precision the bar shows, plus "has details"
+  when Enter opens a nested graph.  Entering or leaving a nested graph speaks
+  the graph name, count, and focused row.  `Alt+D` opens the info pane text
+  without color tags in the document view.
+- Medical menu: the health, effects, and stats columns are panes under
+  convention 3; rows follow convention 2.  `Alt+D` opens the focused row's
+  description and detail text in the document view.
+- Proficiencies window: categories are tabs under convention 3.  A row
+  speaks the name and state ("known", "learning, 40%").  The filter behaves
+  as in other filtered lists.  `Alt+D` opens the description.
+- Sort armor: focus stays on the worn item list.  Left and Right switch the
+  body part filter and speak its name, item count, and focused row
+  ("Torso, 4 items").  A row speaks the item name and state in words:
+  "layering conflict" instead of color, "hidden" for a hidden sprite, and
+  the side when relevant.  The move key speaks "Moving <item>"; each Up or
+  Down while moving speaks the new neighbours ("above hoodie, below
+  T-shirt", or "innermost" / "outermost"); pressing the move key again
+  speaks "Placed".  Side change, sprite toggle, sort, wear, and take off
+  speak the result and the focused row.  `Alt+D` opens the mid pane item
+  statistics and the encumbrance and warmth changes in the document view.
+  `Alt+S` speaks the current body part filter with its items in layer order,
+  their encumbrance, conflicts, and the total encumbrance.
+- Returning from any of these screens to the character sheet speaks the
+  focused sheet row once, as Stage 13 already does.
+
+**Success criteria:** Each screen announces its name, focus, and state once;
+no information is conveyed only by color or bar symbols; armor reordering
+reports the new position in terms of neighbouring items; details are
+reachable through `Alt+D` and `Alt+S`; routine redraws and info-box scrolling
+stay silent.
+
+**Possible automated tests:** Formatter tests for morale lines, body part
+rows, medical rows, proficiency rows, armor rows with and without conflicts,
+move-position phrases at the innermost and outermost layers, and the armor
+summary; entry-point tests with a character wearing overlapping armor and
+with known and in-progress proficiencies.
+
+**User-test scenarios:**
+
+- Open the morale window from the character sheet after eating something
+  tasty (debug spawn a comfort food) and read the document.
+- Open the body status graph, move through parts, enter and leave a nested
+  graph, and read details for a damaged part (debug: hurt the player).
+- Open the medical menu, switch columns, read a bleeding effect's details
+  (debug: apply bleeding), and apply a bandage through the apply key.
+- Open the proficiencies window, switch categories, filter, and read a
+  proficiency being learned (debug: grant proficiency progress).
+- Wear two conflicting torso layers (debug spawn and wear), open sort armor,
+  hear the conflict, move the outer item inward and hear its neighbours,
+  place it, and confirm the conflict disappears; check `Alt+D`, `Alt+S`,
+  and `Alt+R`, and interrupt speech with Control during a move.
+
 ## Stage 15 - NPC dialogue
 
 **Outcome:** Conversation text and response selection support complete branching
@@ -838,7 +928,3 @@ instructions and revise the guide before accepting the stage.
   `test_access.bat` after each merge.
 - Translation catalog updates for accessibility strings are deferred to Stage 23
   packaging.
-- The morale window, body status graph, medical menu, proficiencies window,
-  and armor layering (sort armor) screen reached from the character sheet
-  have no accessible speech and no owning stage; they need an interaction
-  decision and a stage (Stage 13 limitation).
