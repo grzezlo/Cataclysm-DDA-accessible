@@ -95,6 +95,18 @@ class capture_inventory_selector final : public inventory_pick_selector
         static bool invlet_allowed_for( const std::string &action ) {
             return action_allows_invlet( action );
         }
+
+        // A focus move key followed by the resulting highlight.
+        bool move_to( const std::string &action, const item_location &target ) {
+            note_accessibility_move( action );
+            const bool found = highlight_one_of( { target } );
+            announce_accessibility_focus();
+            return found;
+        }
+
+        std::string status() const {
+            return accessibility_status();
+        }
 };
 
 class capture_drop_selector final : public inventory_drop_selector
@@ -474,8 +486,8 @@ TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place
                                      "Torso", "Bandaged", true );
     CHECK( disabled == "Torso. Bandaged. Unavailable." );
     const std::string open = accessibility::format_uilist_open(
-                                 "Treat which part?", disabled, "Alt+d", true );
-    CHECK( open == "Treat which part? List. Use arrow keys to choose. Alt+d for details. " +
+                                 "Treat which part?", 3, disabled, "Alt+d", true );
+    CHECK( open == "Treat which part? 3 items. Use arrow keys to choose. Alt+d for details. " +
            disabled );
     CHECK( accessibility::announce( open ) );
     const std::string short_details = "Light exercise comparable in intensity to walking.";
@@ -487,8 +499,8 @@ TEST_CASE( "uilist_announces_details_once_and_speaks_short_descriptions_in_place
 
     const std::string plain = accessibility::format_uilist_focus( "Moderate", "", false );
     CHECK( plain == "Moderate." );
-    CHECK( accessibility::format_uilist_open( "Choose intensity", plain, "Alt+d", false ) ==
-           "Choose intensity. List. Use arrow keys to choose. Moderate." );
+    CHECK( accessibility::format_uilist_open( "Choose intensity", 1, plain, "Alt+d", false ) ==
+           "Choose intensity. 1 item. Use arrow keys to choose. Moderate." );
     CHECK( accessibility::uilist_details_need_document( std::string( 161, 'x' ) ) );
     CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 160, 'x' ) ) );
     CHECK_FALSE( accessibility::uilist_details_need_document( std::string( 100, 'x' ) + "ó" ) );
@@ -596,9 +608,9 @@ TEST_CASE( "keybinding_focus_and_details_expose_scope_and_all_keys",
 
 TEST_CASE( "keybinding_open_and_filter_formatting", "[accessibility][nogame]" )
 {
-    CHECK( accessibility::format_keybinding_open( "Up", "Down", "Tab", "Enter", "Alt+d",
+    CHECK( accessibility::format_keybinding_open( "Up", "Down", "Tab", "Enter", "Alt+d", 42,
             "Move north. Key: Up. Global binding." ) ==
-           "Keybindings. Up and Down choose an action. Tab switches to the filter. Enter opens actions. Alt+d reads all keys. Move north. Key: Up. Global binding." );
+           "Keybindings. 42 actions. Up and Down choose an action. Tab switches to the filter. Enter opens actions. Alt+d reads all keys. Move north. Key: Up. Global binding." );
     CHECK( accessibility::format_keybinding_filter( "access", 2, "Tab", true ) ==
            "Filter. Type to search. Tab returns to the action list. Text: access. Results: 2." );
     CHECK( accessibility::format_keybinding_filter( "access", 2, "Tab", false ) ==
@@ -808,8 +820,12 @@ TEST_CASE( "nearby_list_semantics_report_mode_focus_stacks_and_empty_results",
     CHECK( accessibility::format_nearby_list_context( "Nearby creatures", 0 ) ==
            "Nearby creatures. No results." );
     CHECK( accessibility::format_nearby_list_entry( item_entry ) ==
-           "aspirin. Count: 6. Location 2 of 3. 4 tiles northeast. Category: drugs. "
-           "At this location: 2. High priority. 5 of 9." );
+           "aspirin. Count: 6. 3 locations. 4 tiles northeast. Category: drugs. "
+           "At this location: 2. High priority." );
+    CHECK( accessibility::format_nearby_list_summary( "Nearby items", 9, item_entry ) ==
+           "Nearby items. 9 results. 5 of 9. Location 2 of 3." );
+    CHECK( accessibility::format_nearby_list_summary( "Nearby creatures", 0, {} ) ==
+           "Nearby creatures. No results." );
 }
 
 TEST_CASE( "nearby_list_focus_announcements_cover_navigation_and_context_restoration",
@@ -853,19 +869,20 @@ TEST_CASE( "nearby_list_focus_announcements_cover_navigation_and_context_restora
 
     REQUIRE( capture_ptr->messages.size() == 8 );
     CHECK( capture_ptr->messages[0] ==
-           "Nearby items. 2 results. aspirin. Count: 2. Location 1 of 2. 2 tiles east. "
-           "Category: drugs. 1 of 2." );
+           "Nearby items. 2 results. aspirin. Count: 2. 2 locations. 2 tiles east. "
+           "Category: drugs." );
     CHECK( capture_ptr->messages[1] ==
-           "flashlight. Count: 1. 3 tiles south. Category: tools. 2 of 2." );
-    CHECK( capture_ptr->messages[2].find( "Location 2 of 2" ) != std::string::npos );
+           "flashlight. Count: 1. 3 tiles south. Category: tools." );
+    CHECK( capture_ptr->messages[2] ==
+           "aspirin. Count: 2. 2 locations. 4 tiles northeast. Category: drugs." );
     CHECK( capture_ptr->messages[3].find( "Filter: asp" ) != std::string::npos );
     CHECK( capture_ptr->messages[4].find( "Sorted by name" ) != std::string::npos );
     CHECK( capture_ptr->messages[5] ==
            "Nearby creatures. 1 result. zombie. 5 tiles northwest. Attitude: Hostile. "
-           "Behavior: Tracking. Health: lightly injured. 1 of 1." );
+           "Behavior: Tracking. Health: lightly injured." );
     CHECK( capture_ptr->messages[6] ==
            "zombie. 5 tiles northwest. Attitude: Hostile. Behavior: Tracking. "
-           "Health: lightly injured. 1 of 1." );
+           "Health: lightly injured." );
     CHECK( capture_ptr->messages[7] == "Gameplay. Current position: grass" );
 
     accessibility::reset_backend_after_testing();
@@ -1561,6 +1578,53 @@ TEST_CASE( "inventory_selector_names_column_and_focus_when_source_changes", "[ac
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "inventory_selector_speaks_count_once_wrap_and_position_on_request",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    const item_location hammer = you.i_add( item( itype_id( "hammer" ) ) );
+    const item_location rock = you.i_add( item( itype_id( "rock" ) ) );
+    REQUIRE( hammer );
+    REQUIRE( rock );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_inventory_selector selector( you );
+    selector.set_title( "Inventory" );
+    selector.add_character_items( you );
+    REQUIRE( selector.highlight_one_of( { hammer } ) );
+    const bool hammer_first = selector.status().find( "1 of 2" ) != std::string::npos;
+    const item_location &first = hammer_first ? hammer : rock;
+    const item_location &last = hammer_first ? rock : hammer;
+    REQUIRE( selector.highlight_one_of( { first } ) );
+    selector.speak_focus();
+    REQUIRE_FALSE( capture_ptr->messages.empty() );
+    CHECK( capture_ptr->messages.back().find( "2 items. " ) != std::string::npos );
+    CHECK( capture_ptr->messages.back().find( " of 2" ) == std::string::npos );
+
+    REQUIRE( selector.move_to( "DOWN", last ) );
+    CHECK( capture_ptr->messages.back().find( last->tname() ) != std::string::npos );
+    INFO( capture_ptr->messages.back() );
+    // The row's location may name the container's contents, but no list count precedes the row.
+    CHECK( capture_ptr->messages.back().find( "2 items. " ) == std::string::npos );
+    CHECK( capture_ptr->messages.back().find( "Top" ) == std::string::npos );
+    CHECK( selector.status().find( "2 of 2" ) != std::string::npos );
+
+    REQUIRE( selector.move_to( "DOWN", first ) );
+    CHECK( capture_ptr->messages.back().find( "Top. " ) == 0 );
+    REQUIRE( selector.move_to( "UP", last ) );
+    CHECK( capture_ptr->messages.back().find( "Bottom. " ) == 0 );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( capture_ptr->messages.back().find( "Bottom. " ) == 0 );
+
+    accessibility::reset_backend_after_testing();
+}
+
 TEST_CASE( "item_action_menu_speaks_state_shown_only_by_color", "[accessibility][nogame]" )
 {
     using accessibility::item_action_availability;
@@ -1587,9 +1651,9 @@ TEST_CASE( "item_action_menu_speaks_state_shown_only_by_color", "[accessibility]
 
     const std::string open = accessibility::format_uilist_open(
                                  accessibility::format_item_action_menu_context( "combat knife" ),
-                                 "activate.", "Alt+d", true );
+                                 12, "activate.", "Alt+d", true );
     CHECK( open ==
-           "Actions for combat knife. List. Use arrow keys to choose. Alt+d for details. activate." );
+           "Actions for combat knife. 12 items. Use arrow keys to choose. Alt+d for details. activate." );
 }
 
 TEST_CASE( "visual_hints_speak_fields_without_separator_symbols", "[accessibility][nogame]" )
@@ -2062,9 +2126,27 @@ TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
     CHECK( capture_ptr->messages.back().find( "Source: Directly below you" ) == 0 );
     CHECK( capture_ptr->messages.back().find( "Destination: Inventory" ) != std::string::npos );
     CHECK( capture_ptr->messages.back().find( "Weight" ) != std::string::npos );
+    // The position is heard only on request.
+    CHECK( capture_ptr->messages.back().find( "2 of 2" ) != std::string::npos );
     const size_t after_status = capture_ptr->messages.size();
     advinv.announce_accessibility();
     CHECK( capture_ptr->messages.size() == after_status );
+
+    // Wrapping past either end names the end before the row.
+    const std::string first_name = ground.items[0].items.front()->display_name();
+    advinv.process_action( "DOWN" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( "Top. " + first_name ) == 0 );
+    advinv.process_action( "UP" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( "Bottom. " + second_name ) == 0 );
+    advinv.process_action( "UP" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( first_name ) == 0 );
+    CHECK( capture_ptr->messages.back().find( " of " ) == std::string::npos );
+    advinv.process_action( "DOWN" );
+    advinv.announce_accessibility();
+    CHECK( capture_ptr->messages.back().find( second_name ) == 0 );
 
     // Switching panes names the new source once, without its capacity.
     advinv.process_action( "TOGGLE_TAB" );
@@ -2090,12 +2172,77 @@ TEST_CASE( "screen_status_binding_reaches_transfer_screens", "[accessibility]" )
 {
     const input_event alt_s( { keymod_t::alt }, 's', input_event_t::keyboard_code );
     for( const std::string category : {
-             "ADVANCED_INVENTORY", "INVENTORY"
+             "ADVANCED_INVENTORY", "INVENTORY", "LIST_ITEMS", "LIST_MONSTERS", "DISPLAY_HELP",
+             "MAIN_MENU"
          } ) {
         input_context ctxt( category, keyboard_mode::keycode );
         ctxt.register_action( "ACCESSIBILITY_STATUS" );
         CHECK( ctxt.input_to_action( alt_s ) == "ACCESSIBILITY_STATUS" );
     }
+    const input_event alt_d( { keymod_t::alt }, 'd', input_event_t::keyboard_code );
+    for( const std::string category : {
+             "MESSAGE_LOG", "UILIST"
+         } ) {
+        input_context ctxt( category, keyboard_mode::keycode );
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+        CHECK( ctxt.input_to_action( alt_d ) == "ACCESSIBILITY_DETAILS" );
+    }
+}
+
+TEST_CASE( "list_convention_speaks_count_wrap_and_position_on_request",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_list_count( 0 ) == "No items" );
+    CHECK( accessibility::format_list_count( 1 ) == "1 item" );
+    CHECK( accessibility::format_list_count( 12 ) == "12 items" );
+
+    // Moving down past the last row lands on top; moving up past the first lands on bottom.
+    CHECK( accessibility::format_list_wrap( 11, 0, 1 ) == "Top" );
+    CHECK( accessibility::format_list_wrap( 0, 11, -1 ) == "Bottom" );
+    CHECK( accessibility::format_list_wrap( 11, 0, 10 ) == "Top" );
+    CHECK( accessibility::format_list_wrap( 3, 4, 1 ).empty() );
+    CHECK( accessibility::format_list_wrap( 4, 3, -1 ).empty() );
+    // Home and End, filter changes, and unset rows are not wraps.
+    CHECK( accessibility::format_list_wrap( 11, 0, 0 ).empty() );
+    CHECK( accessibility::format_list_wrap( -1, 0, 1 ).empty() );
+    CHECK( accessibility::format_list_wrap( 5, -1, -1 ).empty() );
+
+    CHECK( accessibility::format_list_position( 3, 12 ) == "3 of 12" );
+    CHECK( accessibility::format_list_position( 0, 12 ).empty() );
+    CHECK( accessibility::format_list_position( 1, 0 ).empty() );
+
+    CHECK( accessibility::format_help_menu_summary( 23, 4 ) == "Help. 23 topics. 4 of 23." );
+    CHECK( accessibility::format_main_menu_position( "Load", 4, 10, 2, 5 ) ==
+           "Main menu. Tab Load, 4 of 10. Item 2 of 5." );
+    CHECK( accessibility::format_main_menu_position( "Tutorial Game", 6, 10, 0, 0 ) ==
+           "Main menu. Tab Tutorial Game, 6 of 10." );
+
+    // A focus move speaks only the row; a wrap prefixes it and repeat-last keeps it.
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    CHECK( accessibility::announce( accessibility::format_uilist_open( "Status", 3, "Health.",
+                                    "Alt+d", true ) ) );
+    CHECK( accessibility::announce( "Stamina." ) );
+    CHECK( accessibility::announce( "Needs." ) );
+    CHECK( accessibility::announce( accessibility::format_semantic_sequence( {
+        accessibility::format_list_wrap( 2, 0, 1 ), "Health."
+    } ) ) );
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( accessibility::announce( accessibility::format_semantic_sequence( {
+        "Light exercise.", accessibility::format_list_position( 1, 3 )
+    } ) ) );
+    REQUIRE( capture_ptr->messages.size() == 6 );
+    CHECK( capture_ptr->messages[0] ==
+           "Status. 3 items. Use arrow keys to choose. Alt+d for details. Health." );
+    CHECK( capture_ptr->messages[1] == "Stamina." );
+    CHECK( capture_ptr->messages[3] == "Top. Health." );
+    CHECK( capture_ptr->messages[4] == "Top. Health." );
+    CHECK( capture_ptr->messages[5] == "Light exercise. 1 of 3." );
+    for( size_t i = 1; i < capture_ptr->messages.size(); ++i ) {
+        CHECK( capture_ptr->messages[i].find( "items" ) == std::string::npos );
+    }
+    accessibility::reset_backend_after_testing();
 }
 
 TEST_CASE( "direction_prompt_speaks_grouped_targets_and_outcomes", "[accessibility][nogame]" )

@@ -240,6 +240,7 @@ void help::display_help() const
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
     // for mouse selection
     ctxt.register_action( "SELECT" );
     ctxt.register_action( "MOUSE_MOVE" );
@@ -357,6 +358,9 @@ void help::display_help() const
             }
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( accessibility::format_help_menu_summary( topic_orders.size(),
+                                     static_cast<size_t>( sel_index + 1 ) ) );
         } else if( action != "QUIT" ) {
             int target_topic_order = -1;
             for( size_t i = 0; i < topic_orders.size(); ++i ) {

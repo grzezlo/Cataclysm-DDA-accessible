@@ -9114,6 +9114,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
     bool refilter = true;
     bool announce_semantic_context = true;
     bool force_semantic_selection = false;
+    bool announce_semantic_summary = false;
     std::string semantic_change;
     int last_semantic_item_index = -1;
     int last_semantic_page = -1;
@@ -9143,11 +9144,16 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
     ctxt.register_action( "SORT" );
     ctxt.register_action( "TRAVEL_TO" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
 
     do {
         bool recalc_unread = false;
+        const int semantic_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
+                                            action == "UP" || action == "PAGE_UP" ? -1 : 0;
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            announce_semantic_summary = true;
         } else if( action == "COMPARE" && activeItem ) {
             game_menus::inv::compare( active_pos );
             recalc_unread = highlight_unread_items;
@@ -9437,7 +9443,8 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
 
         const bool selection_changed = selected_item_index != last_semantic_item_index ||
                                        page_num != last_semantic_page;
-        if( announce_semantic_context || force_semantic_selection || selection_changed ) {
+        if( announce_semantic_context || force_semantic_selection || selection_changed ||
+            announce_semantic_summary ) {
             accessibility::nearby_list_entry semantic_entry;
             if( activeItem != nullptr && selected_item_index >= 0 ) {
                 const int priority = selected_item_index < highPEnd ? 1 :
@@ -9460,9 +9467,16 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
                 }
                 announce_semantic_context = false;
                 semantic_change.clear();
+            } else if( announce_semantic_summary ) {
+                accessibility::announce( accessibility::format_nearby_list_summary(
+                                             _( "Nearby items" ), static_cast<int>( filtered_items.size() ),
+                                             semantic_entry ) );
             } else if( activeItem != nullptr ) {
-                accessibility::announce_nearby_list_focus( semantic_entry );
+                accessibility::announce_nearby_list_focus( semantic_entry,
+                        accessibility::format_list_wrap( last_semantic_item_index, selected_item_index,
+                                semantic_move_direction ) );
             }
+            announce_semantic_summary = false;
             last_semantic_item_index = selected_item_index;
             last_semantic_page = page_num;
             force_semantic_selection = false;
@@ -9549,6 +9563,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
     }
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
 
     // first integer is the row the attitude category string is printed in the menu
     std::map<int, Creature::Attitude> mSortCategory;
@@ -9758,11 +9773,16 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
     const int scroll_rate = recmax > 20 ? 10 : 3;
     bool announce_semantic_context = true;
     bool force_semantic_selection = false;
+    bool announce_semantic_summary = false;
     int last_semantic_creature_index = -1;
 
     do {
+        const int semantic_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
+                                            action == "UP" || action == "PAGE_UP" ? -1 : 0;
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            announce_semantic_summary = true;
         } else if( navigate_ui_list( action, iActive, scroll_rate, recmax, true ) ) {
         } else if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             u.view_offset = stored_view_offset;
@@ -9828,7 +9848,8 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
         }
 
         const bool selection_changed = iActive != last_semantic_creature_index;
-        if( announce_semantic_context || force_semantic_selection || selection_changed ) {
+        if( announce_semantic_context || force_semantic_selection || selection_changed ||
+            announce_semantic_summary ) {
             accessibility::nearby_list_entry semantic_entry;
             if( cCurMon != nullptr ) {
                 semantic_entry = accessibility_gameplay::nearby_creature_entry( here, u, *cCurMon, iActive + 1,
@@ -9851,9 +9872,15 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
                     accessibility::announce_focus( {}, context );
                 }
                 announce_semantic_context = false;
+            } else if( announce_semantic_summary ) {
+                accessibility::announce( accessibility::format_nearby_list_summary(
+                                             _( "Nearby creatures" ), recmax, semantic_entry ) );
             } else if( cCurMon != nullptr ) {
-                accessibility::announce_nearby_list_focus( semantic_entry );
+                accessibility::announce_nearby_list_focus( semantic_entry,
+                        accessibility::format_list_wrap( last_semantic_creature_index, iActive,
+                                semantic_move_direction ) );
             }
+            announce_semantic_summary = false;
             last_semantic_creature_index = iActive;
             force_semantic_selection = false;
         }

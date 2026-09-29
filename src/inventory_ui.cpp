@@ -2996,6 +2996,7 @@ inventory_input inventory_selector::get_input()
             accessibility::repeat_last_announcement();
             continue;
         }
+        note_accessibility_move( action );
         const int ch = ctxt.get_raw_input().get_first_input();
         return process_input( action, ch );
     }
@@ -3093,8 +3094,9 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
             }
         }
     }
-    if( ( ( accessibility_opening && !accessibility_context_spoken ) || column_changed ) &&
-        columns.size() > 1 ) {
+    const bool list_entered = ( accessibility_opening && !accessibility_context_spoken ) ||
+                              column_changed;
+    if( list_entered && columns.size() > 1 ) {
         if( &get_active_column() == &own_inv_column ) {
             context.push_back( _( "Inventory items" ) );
         } else if( &get_active_column() == &own_gear_column ) {
@@ -3105,11 +3107,19 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
             context.push_back( _( "Selected items" ) );
         }
     }
+    if( list_entered ) {
+        context.push_back( accessibility::format_list_count( accessibility_position().second ) );
+    } else if( !accessibility_opening && event.empty() ) {
+        context.push_back( accessibility::format_list_wrap( static_cast<int>( accessibility_last_row ),
+                           static_cast<int>( row ), accessibility_move_direction ) );
+    }
     context.push_back( event.empty() ? focus : event );
     accessibility::announce( accessibility::format_semantic_sequence( context ) );
 
     accessibility_last_snapshot = snapshot;
     accessibility_last_column = column;
+    accessibility_last_row = row;
+    accessibility_move_direction = 0;
     accessibility_last_category = semantic.category;
     accessibility_last_filter = filter;
     accessibility_last_mode = mode;
@@ -3131,7 +3141,24 @@ std::string inventory_selector::accessibility_status() const
     if( !filter.empty() ) {
         parts.push_back( string_format( _( "Filter: %s" ), filter ) );
     }
+    const std::pair<size_t, size_t> position = accessibility_position();
+    parts.push_back( accessibility::format_list_position( position.first, position.second ) );
     return accessibility::format_semantic_sequence( parts );
+}
+
+void inventory_selector::note_accessibility_move( const std::string &action )
+{
+    accessibility_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
+                                   action == "UP" || action == "PAGE_UP" ? -1 : 0;
+}
+
+std::pair<size_t, size_t> inventory_selector::accessibility_position() const
+{
+    const inventory_column &column = get_active_column();
+    const inventory_column::get_entries_t items = column.get_entries( return_item );
+    const auto found = std::find( items.begin(), items.end(), &column.get_highlighted() );
+    const size_t position = found == items.end() ? 0 : std::distance( items.begin(), found ) + 1;
+    return { position, items.size() };
 }
 
 std::string inventory_selector::accessibility_capacity( const bool include_values ) const

@@ -235,6 +235,8 @@ class advanced_inventory
         bool accessibility_opening = true;
         int accessibility_last_src = -1;
         int accessibility_last_index = -1;
+        /** Direction of the last focus move key, used to detect a wrap; 0 for other input. */
+        int accessibility_move_direction = 0;
         bool accessibility_last_category_mode = false;
         std::string accessibility_last_row;
         std::string accessibility_last_category;

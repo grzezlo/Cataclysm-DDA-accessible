@@ -886,7 +886,8 @@ static bool has_entry_details( const uilist_entry &entry )
     return description.find_first_not_of( " \t\r\n*" ) != std::string::npos;
 }
 
-static bool show_entry_details( uilist_entry &entry )
+/** Speak short details followed by the list position, or open a document for long ones. */
+static bool show_entry_details( uilist_entry &entry, const std::string &position )
 {
     std::vector<std::string> spoken_source_lines;
     std::istringstream stream( entry.desc );
@@ -903,7 +904,7 @@ static bool show_entry_details( uilist_entry &entry )
 
     const std::string spoken_details = string_join( spoken_paragraphs, " " );
     if( !accessibility::uilist_details_need_document( spoken_details ) ) {
-        accessibility::announce( spoken_details );
+        accessibility::announce( accessibility::format_semantic_sequence( { spoken_details, position } ) );
         return false;
     }
 
@@ -1008,6 +1009,9 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
     }
 #endif
 
+    // Spoken once before the next focused row: a wrap, filter result, or category switch.
+    std::string accessibility_pending;
+    size_t accessibility_category = current_category;
     do {
         ui_manager::redraw();
 
@@ -1024,47 +1028,79 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         } else {
             semantic_selection = _( "No matching entries" );
         }
+        const bool fselected_valid = fselected >= 0 &&
+                                     static_cast<size_t>( fselected ) < fentries.size();
+        const std::string semantic_position = fselected_valid ?
+                                              accessibility::format_list_position( static_cast<size_t>( fselected ) + 1,
+                                                      fentries.size() ) : std::string();
+        const std::string category_name = current_category < categories.size() ?
+                                          remove_color_tags( categories[current_category].second ) : std::string();
+        if( accessibility_open && current_category != accessibility_category ) {
+            accessibility_pending = accessibility::format_semantic_sequence( {
+                category_name, accessibility::format_list_count( fentries.size() )
+            } );
+        }
+        accessibility_category = current_category;
         const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
         if( !accessibility_open ) {
-            const std::string semantic_context = !accessibility_context.empty() ? accessibility_context :
-                                                 remove_color_tags( !title.empty() ? title : text );
+            const std::string semantic_context = accessibility::format_semantic_sequence( {
+                !accessibility_context.empty() ? accessibility_context :
+                remove_color_tags( !title.empty() ? title : text ), category_name
+            } );
             const bool any_details = accessibility_details ||
                                      ( visible_entry_details &&
                                        std::any_of( entries.begin(), entries.end(), has_entry_details ) );
             accessibility::announce( accessibility::format_uilist_open(
-                                         semantic_context, semantic_selection,
+                                         semantic_context, fentries.size(), semantic_selection,
                                          ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
             accessibility_open = true;
+            accessibility_selection = selection_key;
+        } else if( !accessibility_pending.empty() ) {
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                accessibility_pending, semantic_selection
+            } ) );
             accessibility_selection = selection_key;
         } else if( selection_key != accessibility_selection ) {
             accessibility::announce( semantic_selection );
             accessibility_selection = selection_key;
         }
+        accessibility_pending.clear();
 
         ret_act = ctxt.handle_input( timeout );
         const input_event event = ctxt.get_raw_input();
         ret_evt = event;
         const auto iter = keymap.find( ret_evt );
         recalc_start = false;
+        const int scroll_amount = scroll_amount_from_action( ret_act );
+        const int previous_fselected = fselected;
 
         if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
             if( accessibility_details ) {
                 accessibility_details();
-                accessibility::announce( semantic_selection );
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    semantic_selection, semantic_position
+                } ) );
             } else if( selected_has_details ) {
-                if( show_entry_details( entries[selected] ) ) {
-                    accessibility::announce( semantic_selection );
+                if( show_entry_details( entries[selected], semantic_position ) ) {
+                    accessibility::announce( accessibility::format_semantic_sequence( {
+                        semantic_selection, semantic_position
+                    } ) );
                 }
             } else {
-                accessibility::announce_status( _( "No details available." ) );
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    _( "No details available." ), semantic_position
+                } ) );
             }
-        } else if( scrollby( scroll_amount_from_action( ret_act ) ) ) {
+        } else if( scrollby( scroll_amount ) ) {
             need_to_scroll = true;
             recalc_start = true;
+            accessibility_pending = accessibility::format_list_wrap( previous_fselected, fselected,
+                                    scroll_amount );
         } else if( filtering && ret_act == "UILIST.FILTER" ) {
             inputfilter();
+            accessibility_pending = accessibility::format_inventory_filter( filter, fentries.size() );
         } else if( !categories.empty() && ( ret_act == "UILIST.LEFT" || ret_act == "UILIST.RIGHT" ) ) {
             int tmp = current_category + ( ret_act == "UILIST.LEFT" ? -1 : 1 );
             if( tmp < 0 ) {

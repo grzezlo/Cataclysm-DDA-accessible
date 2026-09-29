@@ -633,6 +633,7 @@ void Messages::dialog::init( ui_adaptor &ui )
         ctxt.register_action( "SCROLL_UP" );
         ctxt.register_action( "SCROLL_DOWN" );
         ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
         filter.custom_actions.emplace_back( "ACCESSIBILITY_REPEAT_LAST",
                                             to_translation( "Repeat last screen reader message" ) );
         filter.add_callback( "ACCESSIBILITY_REPEAT_LAST", []() {
@@ -940,7 +941,7 @@ void Messages::dialog::input()
         const std::string &action = ctxt.handle_input();
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
-        } else if( semantic_mode && action == "CONFIRM" ) {
+        } else if( semantic_mode && ( action == "CONFIRM" || action == "ACCESSIBILITY_DETAILS" ) ) {
             if( review.focused() ) {
                 accessibility::announce( accessibility::format_message_log_detail( *review.focused(),
                                          review.focused_position(), review.matches().size() ) );

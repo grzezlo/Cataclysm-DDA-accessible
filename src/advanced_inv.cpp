@@ -1930,14 +1930,19 @@ void advanced_inventory::process_action( const std::string &input_action )
     avatar &u = get_avatar();
 
     const std::string &action = is_processing() ? "MOVE_ALL_ITEMS" : input_action;
+    accessibility_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
+                                   action == "UP" || action == "PAGE_UP" ? -1 : 0;
     if( action == "ACCESSIBILITY_DETAILS" ) {
         if( sitem != nullptr ) {
             accessibility::announce( accessibility::format_transfer_row( accessibility_row( src ), true,
                                      true ) );
         }
     } else if( action == "ACCESSIBILITY_STATUS" ) {
-        accessibility::announce( accessibility::format_transfer_status( accessibility_pane( src ),
-                                 accessibility_pane( dest ) ) );
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            accessibility::format_transfer_status( accessibility_pane( src ), accessibility_pane( dest ) ),
+            sitem != nullptr ? accessibility::format_list_position(
+                static_cast<size_t>( spane.index ) + 1, spane.items.size() ) : std::string()
+        } ) );
     } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
         accessibility::repeat_last_announcement();
     } else if( action == "CATEGORY_SELECTION" ) {
@@ -2743,6 +2748,10 @@ void advanced_inventory::announce_accessibility()
         if( mode_changed ) {
             parts.emplace_back( inCategoryMode ? _( "Category navigation" ) : _( "Item navigation" ) );
         }
+        if( !src_changed && !area_changed && !filter_changed && !sort_changed ) {
+            parts.push_back( accessibility::format_list_wrap( accessibility_last_index, spane.index,
+                             accessibility_move_direction ) );
+        }
     }
     const bool include_category = spane.sortby == SORTBY_CATEGORY &&
                                   ( accessibility_opening || src_changed || area_changed ||
@@ -2753,6 +2762,7 @@ void advanced_inventory::announce_accessibility()
     accessibility_opening = false;
     accessibility_last_src = src;
     accessibility_last_index = spane.index;
+    accessibility_move_direction = 0;
     accessibility_last_category_mode = inCategoryMode;
     accessibility_last_row = row_text;
     accessibility_last_category = row.category;

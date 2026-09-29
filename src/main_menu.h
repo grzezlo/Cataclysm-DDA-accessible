@@ -57,7 +57,11 @@ class main_menu
 
         /** Announce the selected tab or submenu item through the accessibility service. */
         void announce_selection( bool include_menu_name, bool include_tab,
-                                 bool include_screen_info = false ) const;
+                                 bool include_screen_info = false, const std::string &wrap = {} ) const;
+        /** Speak the tab and submenu positions on request. */
+        void announce_position() const;
+        /** Number of submenu items in the selected tab; 0 for tabs without a submenu list. */
+        int sub_item_count() const;
         int current_text_line() const;
 
         // Play a sound *once* when an error occurs in the main menu or its tabs

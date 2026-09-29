@@ -1140,7 +1140,8 @@ action_id input_context::display_menu( bool permit_execute_action )
         accessibility::announce( accessibility::format_keybinding_open(
                                      ctxt.get_desc( "UP", 1 ), ctxt.get_desc( "DOWN", 1 ),
                                      ctxt.get_desc( "NEXT_TAB", 1 ), ctxt.get_desc( "TEXT.CONFIRM", 1 ),
-                                     ctxt.get_desc( "ACCESSIBILITY_DETAILS", 1 ), focus_text() ) );
+                                     ctxt.get_desc( "ACCESSIBILITY_DETAILS", 1 ),
+                                     kb_menu.filtered_registered_actions.size(), focus_text() ) );
     }
     int raw_input_char = 0;
     //const auto redraw = [&]( ui_adaptor & ui ) {
@@ -1210,7 +1211,9 @@ action_id input_context::display_menu( bool permit_execute_action )
                   action == "HOME" || action == "END" ) ) {
                 if( !kb_menu.filtered_registered_actions.empty() ) {
                     const int count = static_cast<int>( kb_menu.filtered_registered_actions.size() );
-                    int next = kb_menu.highlight_row_index;
+                    const int previous = kb_menu.highlight_row_index;
+                    int next = previous;
+                    int direction = 0;
                     if( action == "HOME" ) {
                         next = 0;
                     } else if( action == "END" ) {
@@ -1220,12 +1223,18 @@ action_id input_context::display_menu( bool permit_execute_action )
                     } else if( action == "PAGE_DOWN" ) {
                         next = std::min( count - 1, next + 10 );
                     } else {
-                        const int direction = action == "UP" ? -1 : 1;
+                        direction = action == "UP" ? -1 : 1;
                         next = ( next + count + direction ) % count;
                     }
                     focused_action = kb_menu.filtered_registered_actions[next];
                     sync_focus();
-                    announce_focus();
+                    const std::string wrap = accessibility::format_list_wrap( previous, next, direction );
+                    if( wrap.empty() ) {
+                        announce_focus();
+                    } else {
+                        accessibility::announce( accessibility::format_semantic_sequence( { wrap, focus_text() } ) );
+                        kb_menu.scroll_to_focused = true;
+                    }
                 }
                 continue;
             }
@@ -1239,9 +1248,14 @@ action_id input_context::display_menu( bool permit_execute_action )
                                                           category, &local );
                     const action_attributes &basic = inp_mngr.get_action_attributes( focused_action,
                                                      category, &basic_local, true );
-                    accessibility::announce( accessibility::format_keybinding_details(
-                                                 get_action_name( focused_action ), spoken_keys( focused_action ), local,
-                                                 local != basic_local || attributes.input_events != basic.input_events ) );
+                    accessibility::announce( accessibility::format_semantic_sequence( {
+                        accessibility::format_keybinding_details(
+                            get_action_name( focused_action ), spoken_keys( focused_action ), local,
+                            local != basic_local || attributes.input_events != basic.input_events ),
+                        accessibility::format_list_position(
+                            static_cast<size_t>( kb_menu.highlight_row_index + 1 ),
+                            kb_menu.filtered_registered_actions.size() )
+                    } ) );
                 }
                 continue;
             }

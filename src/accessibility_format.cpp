@@ -315,6 +315,37 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
     return groups;
 }
 
+std::string format_list_wrap( const int previous, const int current, const int direction )
+{
+    if( previous < 0 || current < 0 ) {
+        return std::string();
+    }
+    if( direction > 0 && current < previous ) {
+        return pgettext( "list wrap", "Top" );
+    }
+    if( direction < 0 && current > previous ) {
+        return pgettext( "list wrap", "Bottom" );
+    }
+    return std::string();
+}
+
+std::string format_list_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No items" );
+    }
+    return string_format( n_gettext( "%d item", "%d items", count ), static_cast<int>( count ) );
+}
+
+std::string format_list_position( const size_t position, const size_t count )
+{
+    if( position == 0 || count == 0 ) {
+        return std::string();
+    }
+    return string_format( pgettext( "list position", "%1$d of %2$d" ), static_cast<int>( position ),
+                          static_cast<int>( count ) );
+}
+
 std::string format_semantic_sequence( const std::vector<std::string> &parts )
 {
     //~ Sentence terminator added between spoken accessibility phrases that lack one.
@@ -355,6 +386,16 @@ std::string format_main_menu_focus( const std::string &menu_name, const std::str
                                     const std::string &version, const std::string &tip )
 {
     return format_semantic_sequence( { title, version, tip, menu_name, tab, focused } );
+}
+
+std::string format_main_menu_position( const std::string &tab, const int tab_position,
+                                       const int tab_count, const int item_position, const int item_count )
+{
+    return format_semantic_sequence( { _( "Main menu" ),
+                                       string_format( _( "Tab %1$s, %2$d of %3$d" ), tab, tab_position, tab_count ),
+                                       item_position > 0 && item_count > 0 ?
+                                       string_format( _( "Item %1$d of %2$d" ), item_position, item_count ) :
+                                       std::string() } );
 }
 
 std::vector<semantic_document_line> select_document_lines(
@@ -441,6 +482,14 @@ std::string format_help_menu_open( const size_t topic_count, const std::string &
                format_spoken_key( quit_binding ), topic_str );
 }
 
+std::string format_help_menu_summary( const size_t topic_count, const size_t position )
+{
+    return format_semantic_sequence( { _( "Help" ),
+                                       string_format( n_gettext( "%d topic", "%d topics", topic_count ),
+                                               static_cast<int>( topic_count ) ),
+                                       format_list_position( position, topic_count ) } );
+}
+
 std::string format_help_directions(
     const std::vector<std::pair<std::string, std::vector<std::string>>> &direction_bindings )
 {
@@ -511,15 +560,25 @@ std::string format_nearby_list_entry( const nearby_list_entry &entry )
     if( entry.count > 0 ) {
         parts.push_back( string_format( _( "Count: %d" ), entry.count ) );
     }
-    if( entry.position_count > 1 && entry.position_index > 0 ) {
-        parts.push_back( string_format( _( "Location %1$d of %2$d" ), entry.position_index,
-                                        entry.position_count ) );
+    if( entry.position_count > 1 ) {
+        parts.push_back( string_format( n_gettext( "%d location", "%d locations",
+                                        entry.position_count ), entry.position_count ) );
     }
     parts.push_back( entry.location );
     parts.insert( parts.end(), entry.details.begin(), entry.details.end() );
+    return format_semantic_sequence( parts );
+}
+
+std::string format_nearby_list_summary( const std::string &mode, const int result_count,
+                                        const nearby_list_entry &entry )
+{
+    std::vector<std::string> parts = { format_nearby_list_context( mode, result_count ) };
     if( entry.result_count > 0 && entry.result_index > 0 ) {
-        parts.push_back( string_format( _( "%1$d of %2$d" ), entry.result_index,
-                                        entry.result_count ) );
+        parts.push_back( format_list_position( entry.result_index, entry.result_count ) );
+    }
+    if( entry.position_count > 1 && entry.position_index > 0 ) {
+        parts.push_back( string_format( _( "Location %1$d of %2$d" ), entry.position_index,
+                                        entry.position_count ) );
     }
     return format_semantic_sequence( parts );
 }
@@ -597,10 +656,12 @@ std::string format_visual_hint( const std::string &hint )
     return format_semantic_sequence( fields );
 }
 
-std::string format_uilist_open( const std::string &context, const std::string &focus,
-                                const std::string &details_binding, const bool has_details )
+std::string format_uilist_open( const std::string &context, const size_t count,
+                                const std::string &focus, const std::string &details_binding,
+                                const bool has_details )
 {
-    return format_semantic_sequence( { context, _( "List. Use arrow keys to choose" ),
+    return format_semantic_sequence( { context, format_list_count( count ),
+                                       _( "Use arrow keys to choose" ),
                                        has_details ? string_format( _( "%s for details" ),
                                                format_spoken_key( details_binding ) ) : std::string(), focus } );
 }
@@ -791,10 +852,14 @@ std::string format_keybinding_details( const std::string &name,
 
 std::string format_keybinding_open( const std::string &up_binding, const std::string &down_binding,
                                     const std::string &tab_binding, const std::string &confirm_binding,
-                                    const std::string &details_binding, const std::string &focus )
+                                    const std::string &details_binding, const size_t action_count,
+                                    const std::string &focus )
 {
     return format_semantic_sequence( {
-        string_format( _( "Keybindings. %1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens actions. %5$s reads all keys." ),
+        _( "Keybindings" ),
+        string_format( n_gettext( "%d action", "%d actions", action_count ),
+                       static_cast<int>( action_count ) ),
+        string_format( _( "%1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens actions. %5$s reads all keys." ),
                        format_spoken_key( up_binding ), format_spoken_key( down_binding ),
                        format_spoken_key( tab_binding ), format_spoken_key( confirm_binding ),
                        format_spoken_key( details_binding ) ),

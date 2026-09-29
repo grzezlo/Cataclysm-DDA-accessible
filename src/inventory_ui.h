@@ -928,6 +928,10 @@ class inventory_selector
         virtual std::string accessibility_status() const;
         /** Weight and volume against their limits, or only over-limit warnings; empty without statistics. */
         std::string accessibility_capacity( bool include_values ) const;
+        /** One-based position of the highlighted item among the active column's items, and their count. */
+        std::pair<size_t, size_t> accessibility_position() const;
+        /** Remember the direction of a focus move key so the next focus announcement can report a wrap. */
+        void note_accessibility_move( const std::string &action );
         /** Predicted destination of the entry's item, spoken with the row details. */
         virtual std::string accessibility_destination( const inventory_entry & ) const {
             return {};
@@ -958,6 +962,9 @@ class inventory_selector
         std::string accessibility_last_category;
         std::string accessibility_last_filter;
         size_t accessibility_last_column = static_cast<size_t>( -1 );
+        size_t accessibility_last_row = 0;
+        /** Direction of the last focus move key, used to detect a wrap; 0 for other input. */
+        int accessibility_move_direction = 0;
         navigation_mode accessibility_last_mode = navigation_mode::ITEM;
         uimode accessibility_last_uimode = uimode::categories;
         bool accessibility_opening = true;

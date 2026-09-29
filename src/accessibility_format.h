@@ -89,11 +89,25 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
 
 /** Join parts into sentences, skipping empty parts and adding missing sentence ends. */
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
+
+/**
+ * "Top" when a move toward the end wrapped to the start, "Bottom" when a move
+ * toward the start wrapped to the end, spoken before the focused row.  Empty
+ * without a wrap, for a zero `direction`, or when either index is negative.
+ */
+std::string format_list_wrap( int previous, int current, int direction );
+/** Item count spoken once when a list opens or a pane is switched to. */
+std::string format_list_count( size_t count );
+/** One-based focus position, spoken only on request. */
+std::string format_list_position( size_t position, size_t count );
 /** Describe a main-menu world using its save count rather than visual parentheses. */
 std::string format_main_menu_world( const std::string &name, size_t save_count );
 std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
                                     const std::string &focused, const std::string &title = {},
                                     const std::string &version = {}, const std::string &tip = {} );
+/** Tab and submenu positions on request; a zero `item_position` omits the submenu. */
+std::string format_main_menu_position( const std::string &tab, int tab_position, int tab_count,
+                                       int item_position, int item_count );
 struct semantic_document_line {
     std::string text;
     size_t source_index;
@@ -121,6 +135,8 @@ std::string format_help_menu_open( size_t topic_count, const std::string &initia
                                    const std::string &initial_topic, const std::string &up_binding,
                                    const std::string &down_binding, const std::string &confirm_binding,
                                    const std::string &quit_binding );
+/** Topic count and the focused topic's position, spoken on request. */
+std::string format_help_menu_summary( size_t topic_count, size_t position );
 /** Format a menu topic with its hotkey and title. */
 std::string format_help_topic_focus( const std::string &hotkey, const std::string &topic_name );
 /** Format compass directions and bound keys semantically. */
@@ -132,11 +148,16 @@ std::string format_creature_health( int current, int maximum );
 std::string format_nearby_list_entry( const nearby_list_entry &entry );
 std::string format_nearby_list_context( const std::string &mode, int result_count,
                                         const std::string &change = {} );
+/** Mode, result count, and the focused row's result and location positions. */
+std::string format_nearby_list_summary( const std::string &mode, int result_count,
+                                        const nearby_list_entry &entry );
 /** Build concise list speech without reading the focused entry's description. */
 std::string format_uilist_focus( const std::string &label, const std::string &column,
                                  bool unavailable, const std::string &state = {} );
-std::string format_uilist_open( const std::string &context, const std::string &focus,
-                                const std::string &details_binding, bool has_details );
+/** Name, item count, navigation hint, and focused row, spoken once on opening. */
+std::string format_uilist_open( const std::string &context, size_t count,
+                                const std::string &focus, const std::string &details_binding,
+                                bool has_details );
 /** Whether an item action is possible, which the visual menu shows only by color. */
 enum class item_action_availability {
     available,
@@ -175,7 +196,8 @@ std::string format_keybinding_details( const std::string &name,
 /** Announce opening of the keybinding screen with basic navigation hints. */
 std::string format_keybinding_open( const std::string &up_binding, const std::string &down_binding,
                                     const std::string &tab_binding, const std::string &confirm_binding,
-                                    const std::string &details_binding, const std::string &focus );
+                                    const std::string &details_binding, size_t action_count,
+                                    const std::string &focus );
 /** Announce keybinding filter state and search results count. */
 std::string format_keybinding_filter( const std::string &query, int results_count,
                                       const std::string &tab_binding, bool include_hint );

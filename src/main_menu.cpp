@@ -140,8 +140,34 @@ int main_menu::current_text_line() const
     }
 }
 
+int main_menu::sub_item_count() const
+{
+    switch( static_cast<main_menu_opts>( sel1 ) ) {
+        case main_menu_opts::LOADCHAR:
+            return world_generator->get_all_worlds().size();
+        case main_menu_opts::WORLD:
+            // extra 1 = "Create New World"
+            return world_generator->get_all_worlds().size() + 1;
+        case main_menu_opts::NEWCHAR:
+            return vNewGameSubItems.size();
+        case main_menu_opts::SETTINGS:
+            return vSettingsSubItems.size();
+        default:
+            return 0;
+    }
+}
+
+void main_menu::announce_position() const
+{
+    const int count = sub_item_count();
+    accessibility::announce( accessibility::format_main_menu_position(
+                                 remove_color_tags( shortcut_text( c_white, vMenuItems[sel1] ) ),
+                                 sel1 + 1, static_cast<int>( vMenuItems.size() ),
+                                 count > 0 ? sel2 + 1 : 0, count ) );
+}
+
 void main_menu::announce_selection( const bool include_menu_name, const bool include_tab,
-                                    const bool include_screen_info ) const
+                                    const bool include_screen_info, const std::string &wrap ) const
 {
     const auto spoken_text = []( const std::string & text ) {
         return remove_color_tags( shortcut_text( c_white, text ) );
@@ -207,10 +233,18 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
             break;
     }
 
+    // Entering a tab names its submenu size once; moving within the submenu does not.
+    const int item_count = sub_item_count();
+    std::string spoken_tab;
+    if( include_tab && !focused_item.empty() ) {
+        spoken_tab = item_count > 0 ? accessibility::format_semantic_sequence( {
+            tab, accessibility::format_list_count( item_count )
+        } ) : tab;
+    }
+    const std::string spoken_focus = focused_item.empty() ? tab :
+                                     accessibility::format_semantic_sequence( { wrap, focused_item } );
     accessibility::announce( accessibility::format_main_menu_focus(
-                                 include_menu_name ? _( "Main menu" ) : "",
-                                 include_tab && !focused_item.empty() ? tab : "",
-                                 focused_item.empty() ? tab : focused_item,
+                                 include_menu_name ? _( "Main menu" ) : "", spoken_tab, spoken_focus,
                                  include_screen_info ? _( "Cataclysm: Dark Days Ahead" ) : "",
                                  include_screen_info ? main_menu_version_text() : "",
     include_screen_info ? accessibility::format_semantic_sequence( {
@@ -741,6 +775,7 @@ bool main_menu::opening_screen()
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
 
     // for mouse selection
     ctxt.register_action( "SELECT" );
@@ -803,6 +838,10 @@ bool main_menu::opening_screen()
 
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+            continue;
+        }
+        if( action == "ACCESSIBILITY_STATUS" ) {
+            announce_position();
             continue;
         }
 
@@ -908,7 +947,7 @@ bool main_menu::opening_screen()
         } else if( action == "UP" || action == "DOWN" ||
                    action == "PAGE_UP" || action == "PAGE_DOWN" ||
                    action == "SCROLL_UP" || action == "SCROLL_DOWN" ) {
-            int max_item_count = 0;
+            const int max_item_count = sub_item_count();
             int min_item_val = 0;
             main_menu_opts opt = static_cast<main_menu_opts>( sel1 );
             switch( opt ) {
@@ -930,40 +969,28 @@ bool main_menu::opening_screen()
                     }
                     break;
                 }
-                case main_menu_opts::LOADCHAR:
-                    max_item_count = world_generator->get_all_worlds().size();
-                    break;
-                case main_menu_opts::WORLD:
-                    // extra 1 = "Create New World"
-                    max_item_count = world_generator->get_all_worlds().size() + 1;
-                    break;
-                case main_menu_opts::NEWCHAR:
-                    max_item_count = vNewGameSubItems.size();
-                    break;
-                case main_menu_opts::SETTINGS:
-                    max_item_count = vSettingsSubItems.size();
-                    break;
-                case main_menu_opts::TUTORIAL:
-                case main_menu_opts::TIP:
-                case main_menu_opts::HELP:
-                case main_menu_opts::QUIT:
                 default:
                     break;
             }
             if( max_item_count > 0 ) {
+                const int previous = sel2;
+                int direction = 0;
                 if( action == "UP" || action == "PAGE_UP" || action == "SCROLL_UP" ) {
+                    direction = -1;
                     sel2--;
                     if( sel2 < min_item_val ) {
                         sel2 = max_item_count - 1;
                     }
                 } else if( action == "DOWN" || action == "PAGE_DOWN" || action == "SCROLL_DOWN" ) {
+                    direction = 1;
                     sel2++;
                     if( sel2 >= max_item_count ) {
                         sel2 = min_item_val;
                     }
                 }
                 on_move();
-                announce_selection( false, false );
+                announce_selection( false, false, false,
+                                    accessibility::format_list_wrap( previous, sel2, direction ) );
             }
         } else if( action == "CONFIRM" ) {
             switch( static_cast<main_menu_opts>( sel1 ) ) {
