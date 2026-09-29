@@ -1007,3 +1007,50 @@ Limitations:
   speech without bionic-specific additions.
 - The maintainer expects play testing may suggest a better design; reported
   problems are a new review rather than a regression fix.
+
+## 2026-09-30 — Stage 14A: Spells and martial arts
+
+- Implemented the selected interaction with conventions 2, 3, and 5; keys
+  are unchanged.
+- The spell menu opens with "Choose a Spell", "Ignore Distractions" when that
+  is on, the category, its spell count, and the focused row.  Category
+  changes speak "Favorites, 3 spells" and the focused row.  Rows speak name,
+  "castable", the cost as a number with its energy ("50 mana", "no cost"),
+  the casting time, "cost impeded" or "time impeded" when encumbrance raises
+  them, and "favorite"; a disabled spell ends with "Unavailable: not enough
+  mana" (or bionic power, stamina, health), "cannot speak", "missing
+  components", or "cannot cast now", following `spell::can_cast()`.
+  Toggling a favorite speaks the changed row; the distraction toggle speaks
+  its new state; returning from hotkey assignment repeats the row.
+- `Alt+D` opens the spell document: row and key, class, description,
+  properties, level, failure chance, difficulty, experience, cost, casting
+  time, targets, range, area, damage or effect, duration, and component
+  groups with state words.  Escape returns and speaks the row and position.
+- The style picker opens with "Select a style" and the details key.  Style
+  rows speak name, "current" for the style in use (shown only by color),
+  and the first description sentence; `Alt+D` keeps the full description.
+  The existing `SHOW_DESCRIPTION` key opens general info, buffs,
+  techniques, and weapons by category in the document view, naming wielded
+  and carried weapons; returning repeats the row.
+- `uilist` gained a per-entry spoken focus, a spoken count formatter, and
+  `accessibility_repeat_focus()`.  Pure formatters in `accessibility_format`;
+  spell speech and test entry points in `magic.cpp`/`magic.h`; the style
+  details text is shared between the window and the document in
+  `martialarts.cpp`.
+- `test_access.bat` passed 1350 assertions in 81 cases; the Windows x64 tiles
+  build and AStyle 3.1 checks passed.
+- Implementation commit: `d82965dd56`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the menu loops have no input
+  injection in tests.
+- The spell row omits the class and failure chance, as selected; both are in
+  the `Alt+D` document and the class tabs.  The spell document duplicates the
+  side panel's text logic rather than sharing it with the ImGui drawing.
+- The style picker's STR/DEX/PER/INT header is not spoken; the character
+  sheet has these values.  Style details ignore the window's collapsed groups.
+- Hotkey assignment popups, spell targeting, and cast results use the
+  existing popup, targeting, and message speech.
+- Spells in the base game come mainly from mods; testing needs a world with
+  Magiclysm, whose setup is accessible only after Stage 21.

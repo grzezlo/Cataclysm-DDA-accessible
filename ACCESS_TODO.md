@@ -55,58 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 14A - Spells and martial arts
-
-**Outcome:** Spell and martial-style selection, inspection, and activation are
-independently usable.
-
-**Code inventory:** `src/magic.cpp` (spell UI), `src/martialarts.cpp` and
-`src/character.cpp` (style picker), and their owning data modules.
-
-**Implementation hints:**
-
-- Spell selection: `known_magic::select_spell()` in `src/magic.cpp`
-  creates `uilist spell_menu` with category tabs.
-- Spell menu context: `"SPELL_MENU"` registered in `known_magic::select_spell()`.
-- Spell callback: `class spellcasting_callback` in `src/magic.cpp` handles the
-  side panel.
-- Spell details: `spellcasting_callback::display_spell_info()` in `src/magic.cpp`
-  — class, flags, cast time, targets, range, AoE, damage, duration, requirements.
-  Not currently spoken on selection change — add it.
-- Spell entry: `spell::name()`, hotkey, can-cast status, favorite marker.
-- Categories: "all", "favorites", and spell classes in `known_magic::select_spell()`.
-- Style picker: `character_martial_arts::pick_style()` in `src/character.cpp`
-  uses `uilist` with context `"MELEE_STYLE_PICKER"`.
-- Style details: `class ma_details_ui` / `class ma_details_ui_impl` in
-  `src/martialarts.cpp`, context `"MA_DETAILS_UI"`.  Shows general info, buffs,
-  techniques, and compatible weapons.
-- `"SHOW_DESCRIPTION"` in the style uilist opens the details window via
-  `show_ma_details_ui()`.
-
-**Selected interaction (conventions 2, 3, and 5):**
-
-- Keys are unchanged.  Spell categories ("all", "favorites", classes) behave
-  as tabs: "Favorites, 3 spells".
-- A spell row speaks name, castability, cost, and cast time: "Magic missile,
-  castable, 10 mana, 1 turn", or "Unavailable: not enough mana"; favorites
-  are marked with a word.
-- `Alt+D` opens the full spell details in the document view: class, range,
-  area, damage, duration, and requirements.
-- A style row speaks name and short description; the existing
-  `SHOW_DESCRIPTION` action opens techniques, buffs, and weapons in the
-  document view.
-
-**Success criteria:** Spell list reports name, class, can-cast, cost, and key
-detail on focus.  Spell details are available on demand.  Style picker reports
-name and description; style details show techniques, buffs, and weapon
-compatibility.  Activation, selection, and focus return are complete.
-
-**Possible automated tests:** Capture spell/style list entry, selection changes,
-detail access, category switching, can-cast/disabled states, and return.
-
-**User-test scenarios:** Inspect and cast a spell, select a martial
-style, and view its details with NVDA.
-
 ## Stage 15 - NPC dialogue
 
 **Outcome:** Conversation text and response selection support complete branching

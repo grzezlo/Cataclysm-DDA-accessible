@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T114.
+Last assigned test ID: T117.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -619,3 +619,41 @@ later to full from the same menu.
   key.  `Alt+S` speaks the mode, column, position, and key.  Interrupt speech
   with Control; nothing is repeated automatically, and `Alt+R` repeats the
   last announcement.
+
+## Stage 14A: Spells and martial arts
+
+Spell scenarios need a world with the Magiclysm mod; creating one depends on
+Stage 21 (world and mod management), so skip them or get sighted help with
+world creation until then.  Learn spells by spawning spell scrolls such as
+Scroll of Magic Missile (Debug menu > Spawn > Spawn item) and reading them.
+Open the spell menu with `]`.  Learn martial styles with Debug menu >
+Player… > Learn all melee styles and open the style picker with `_`.
+
+- **T115 - Spell list, tabs, and castability.**  Open the spell menu.  Hear
+  "Choose a Spell", the category, its spell count, and the focused row once.
+  Rows speak name, "castable", cost ("20 mana"), and casting time; Up and
+  Down speak one row, with "Top" or "Bottom" on a wrap.  Left and Right
+  switch categories and speak "All", "Favorites", or a class name with its
+  spell count and the focused row.  Press `*` and hear the row with
+  "favorite"; press it again to remove it.  Press `I` and hear "Ignore
+  Distractions" or "Popup Distractions".  Spend mana (or set it to zero
+  through Debug menu > Player… > Edit player/NPC) and hear "Unavailable: not
+  enough mana" on the row.
+- **T116 - Spell details, casting, and return.**  In the spell menu press
+  `Alt+D`: the document starts with the row and key, then class,
+  description, level, failure chance, cost, casting time, targets, range,
+  and damage.  Up and Down read lines; Escape returns and speaks the row and
+  position once.  Press `=`, assign a new letter, and hear the row again
+  after the popups.  Press Enter on a castable spell: targeting or the cast
+  result is spoken by the existing speech.  Interrupt speech with Control;
+  nothing is repeated automatically, and `Alt+R` repeats the last
+  announcement.
+- **T117 - Martial style picker and details.**  Open the style picker.  Hear
+  "Select a style", the details key, the item count, and the focused row.
+  Rows speak the style name, "current" for the style in use, and the first
+  sentence of its description; `Alt+D` reads the full description.  Press the
+  details key named on opening (`d` by default) on a style: the document
+  reads general info, buffs, techniques, and
+  compatible weapons by category, with "(wielded)" and "(carried)" on
+  weapons you have.  Escape returns and speaks the row once.  Press Enter
+  on a style and hear the game's style message.
