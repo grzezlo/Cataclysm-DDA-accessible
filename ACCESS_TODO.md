@@ -19,6 +19,42 @@ automated tests are implemented, `test_access.bat` passes, and
 `build_win_x64.bat` succeeds.  Its user-test scenarios then move to
 `ACCESS_USERTESTS.md` and do not block the next stage.
 
+## Interaction conventions
+
+Accepted by the maintainer on 2026-09-29.  A stage whose behavior these
+conventions fully cover needs no three-option review; its entry names the
+conventions it applies.  A stage's selected interaction overrides them where
+it says so.
+
+1. **Keys.**  Existing game keys are unchanged.  New accessibility actions use
+   `Alt+letter`, are added to `data/raw/keybindings.json`, and appear in the
+   keybinding help.  Shared actions: `Alt+R` repeats the last announcement,
+   `Alt+D` speaks details of the focused element, and `Alt+S` speaks the
+   screen summary.
+2. **Lists and selectors.**  Opening a list speaks its name and item count
+   once ("Inventory, 12 items") followed by the focused row.  Moving focus
+   speaks only the concise row: name and state, without a position.  Wrapping
+   past the end says "top" or "bottom" before the row.  The current position
+   is available through `Alt+S` or `Alt+D`.
+3. **Tabs, columns, and panes.**  Switching speaks the tab or pane name, its
+   item count, and the focused row, not the whole content.
+4. **Value changes.**  Adjusting a value (stats, quantities, options, points)
+   speaks the new value and its direct consequence ("Strength 10, 4 points
+   left") without rereading the row label when it is unchanged.
+5. **Long text.**  Descriptions, recipe details, and similar long content open
+   in the Stage 03C document view with sentence and line navigation instead of
+   being spoken in full on focus.
+6. **Map cursors.**  Targeting, placement, zone, and overmap cursors speak a
+   concise description with distance and direction, as look-around does;
+   details come on request.
+7. **Multi-step and long actions.**  One summary at start, silence while it
+   runs, and one aggregated result at the end.  Progress is available through
+   `Alt+R`.
+8. **Confirmations and warnings.**  Use the Stage 05 shared controls; the
+   spoken question names what it concerns.  State is never conveyed by color
+   or position alone: speak words such as "Over weight limit" or
+   "Unavailable: <reason>".
+
 ## Stage 10 - Ranged and thrown targeting
 
 **Outcome:** A player can inspect targets, choose an aim action, and fire or throw

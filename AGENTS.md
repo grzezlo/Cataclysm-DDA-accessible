@@ -67,6 +67,16 @@ over upstream contribution policy or exact UI parity.
 - A small regression fix that preserves an already accepted interaction design
   does not require a new three-option review.  Material changes to its controls,
   focus model, speech behavior, or information organization do.
+- An interaction may be selected in advance for any stage and recorded in
+  that stage in `ACCESS_TODO.md`.  A recorded selection authorizes
+  implementation without a new review.
+- A stage whose behavior is fully covered by the interaction conventions in
+  `ACCESS_TODO.md` needs no three-option review; record which conventions
+  apply.
+- If the code contradicts a recorded selection or makes it infeasible, or the
+  implementation would materially change its controls, focus model, speech,
+  or information organization, stop and ask the user instead of choosing an
+  alternative.
 
 ## Architecture
 
