@@ -1796,7 +1796,7 @@ std::string format_activity_start( const std::string &label, const std::string &
                                    const bool resuming )
 {
     return format_semantic_sequence( {
-        string_format( resuming ? _( "Resumed: %s" ) : _( "Started: %s" ), label ),
+        string_format( resuming ? _( "Resumed: %s" ) : _( "Started: %s" ), remove_color_tags( label ) ),
         duration.empty() ? std::string() : string_format( _( "About %s" ), duration )
     } );
 }
@@ -1805,13 +1805,16 @@ std::string format_activity_result( const std::string &label, const bool finishe
                                     const bool canceled, const std::string &reason,
                                     const std::vector<std::string> &messages )
 {
-    std::vector<std::string> parts = messages;
+    std::vector<std::string> parts;
+    for( const std::string &message : messages ) {
+        parts.push_back( remove_color_tags( message ) );
+    }
     if( !reason.empty() ) {
-        parts.push_back( reason );
+        parts.push_back( remove_color_tags( reason ) );
     }
     if( parts.empty() || canceled ) {
         parts.insert( parts.begin(), string_format( finished && !canceled ?
-                      _( "Finished: %s" ) : _( "Stopped: %s" ), label ) );
+                      _( "Finished: %s" ) : _( "Stopped: %s" ), remove_color_tags( label ) ) );
     }
     return format_semantic_sequence( parts );
 }
@@ -1819,9 +1822,11 @@ std::string format_activity_result( const std::string &label, const bool finishe
 std::string format_activity_progress( const std::string &label, const std::string &progress,
                                       const std::string &remaining )
 {
+    const std::string semantic_label = remove_color_tags( label );
+    const std::string semantic_progress = remove_color_tags( progress );
     return format_semantic_sequence( {
-        label == normalize_status_announcement( progress, true ) ? progress :
-        format_semantic_sequence( { label, progress } ),
+        semantic_label == normalize_status_announcement( semantic_progress, true ) ? semantic_progress :
+        format_semantic_sequence( { semantic_label, semantic_progress } ),
         remaining.empty() ? std::string() : string_format( _( "About %s remaining" ), remaining )
     } );
 }

@@ -465,6 +465,12 @@ TEST_CASE( "activity_lifecycle_formatters_preserve_outcomes_and_reasons",
     "You craft a knife. Fabrication increased to 2." );
     CHECK( accessibility::format_activity_progress( "Waiting", "Waiting 20%", "1 hour" ) ==
            "Waiting 20%. About 1 hour remaining." );
+    CHECK( accessibility::format_activity_start( "<color_red>Reading book</color>", "", false ) ==
+           "Started: Reading book." );
+    CHECK( accessibility::format_activity_result( "Reading book", false, true,
+            "<color_red>Zombie spotted!</color>", {} ) == "Stopped: Reading book. Zombie spotted!" );
+    CHECK( accessibility::format_activity_progress( "Waiting", "<color_white>Waiting 20%</color>",
+            "" ) == "Waiting 20%." );
 }
 
 TEST_CASE( "real_time_progress_obeys_silence_interval_deduplication_and_repeat",
