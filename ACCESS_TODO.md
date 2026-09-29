@@ -48,6 +48,29 @@ destination, capacity, ownership, and result.
   uses `inventory_insert_selector` in `src/inventory_ui.cpp`.
 - Pickup builds on Stage 06 `inventory_selector` hooks.
 
+**Selected interaction (option A, inline capacity):**
+
+- Keys are unchanged.  Pickup, drop, and insert selectors keep the Stage 07
+  row and marking speech.
+- A row whose item the player does not own adds "Not owned" to its concise
+  speech.  Per-row fit warnings are the existing denial reasons ("Too heavy
+  to pick up", "Does not fit in any pocket").
+- Marking or unmarking speaks the change and selection total, then the
+  resulting weight and volume against the limit shown on screen ("Weight 12.3
+  of 40.0 kg, volume 8.10 of 10.00 L"), then "Over weight limit" or "Over
+  volume limit" when the red on-screen value shows an overflow.  The opening
+  statistics and `Alt+S` add the same over-limit words.
+- `Alt+D` on a row adds the owner ("Owner: <faction>") and, in the pickup
+  selector, the predicted destination ("Goes into: backpack", or "No pocket
+  available").
+- A pickup speaks one result instead of the per-item "You pick up" lines:
+  "Picked up: 3 apples into backpack, knife into sheath.  Not picked up:
+  rock, too heavy."  A deliberate drop of several kinds of items names them:
+  "Dropped on grass: 3 apples, knife."  Insert keeps its per-item messages.
+- The theft prompt names the item it asks about in speech only.  Spill and
+  liquid prompts already name their item or context and are unchanged.
+- `Alt+R` repeats the last announcement, including the result.
+
 **Success criteria:** Single and multi-item pickup/drop, quantities, container
 choice, spill/unseal warnings, capacity, ownership/theft warnings, success, and
 failure are keyboard operable and announced.  Returning restores local context.
