@@ -35,12 +35,17 @@
 #include "map_selector.h"
 #include "monster.h"
 #include "pickup.h"
+#include "mutation.h"
 #include "player_activity.h"
+#include "player_display.h"
 #include "popup.h"
+#include "proficiency.h"
 #include "player_helpers.h"
 #include "recipe.h"
 #include "recipe_dictionary.h"
 #include "point.h"
+#include "skill.h"
+#include "skill_ui.h"
 #include "string_formatter.h"
 #include "type_id.h"
 
@@ -3373,4 +3378,186 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     CHECK( std::none_of( disassembly.begin(), disassembly.end(), []( const std::string & line ) {
         return line.rfind( "Components:", 0 ) == 0;
     } ) );
+}
+
+TEST_CASE( "character_sheet_formatters_speak_values_shown_by_color", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_character_stat( "Strength", 10, 8 ) == "Strength 10, base 8." );
+    CHECK( accessibility::format_character_value( "Weight", "<color_c_green>Normal</color>" ) ==
+           "Weight, Normal." );
+
+    accessibility::encumbrance_row torso;
+    torso.part = "Torso";
+    torso.encumbrance = 12;
+    torso.layering = 3;
+    torso.warmth = 50;
+    torso.warmth_state = accessibility::body_warmth::comfortable;
+    CHECK( accessibility::format_encumbrance_row( torso, false ) ==
+           "Torso, encumbrance 12, layering 3, warmth comfortable." );
+    CHECK( accessibility::format_encumbrance_row( torso, true ) ==
+           "Torso, encumbrance 12, layering 3, total 15, warmth 50, comfortable." );
+    accessibility::encumbrance_row eyes;
+    eyes.part = "Eyes";
+    eyes.warmth = 50;
+    CHECK( accessibility::format_encumbrance_row( eyes, false ) == "Eyes, encumbrance 0." );
+    CHECK( accessibility::format_encumbrance_row( eyes, true ) ==
+           "Eyes, encumbrance 0, layering 0, total 0, warmth 50." );
+    CHECK( accessibility::format_body_warmth( accessibility::body_warmth::very_cold ) ==
+           "very cold" );
+
+    CHECK( accessibility::format_speed_row( "Pain", true, -10, false ) == "Pain, speed -10." );
+    CHECK( accessibility::format_speed_row( "Encumbrance", false, 20, true ) ==
+           "Encumbrance, move cost +20%." );
+    CHECK( accessibility::format_speed_row( "Quick", true, 0, false ) == "Quick." );
+
+    accessibility::skill_row melee;
+    melee.name = "Melee";
+    melee.level = 3;
+    melee.exercise = 45;
+    CHECK( accessibility::format_skill_row( melee ) == "Melee 3, 45%, training." );
+    melee.rusty = true;
+    melee.training = false;
+    CHECK( accessibility::format_skill_row( melee ) == "Melee 3, 45%, rusty, not training." );
+    melee.set_by_bionic = true;
+    melee.level = 5;
+    CHECK( accessibility::format_skill_row( melee ) == "Melee 5, set by bionic." );
+    accessibility::skill_row dodge;
+    dodge.name = "Dodge";
+    dodge.level = 2;
+    dodge.exercise = -1;
+    dodge.effective = "4.5";
+    CHECK( accessibility::format_skill_row( dodge ) == "Dodge 2, 0%, effective 4.5, training." );
+
+    CHECK( accessibility::format_trait_row( "Good Hearing", accessibility::trait_kind::positive ) ==
+           "Good Hearing, positive." );
+    CHECK( accessibility::format_trait_row( "Survivor", accessibility::trait_kind::profession ) ==
+           "Survivor, profession." );
+    CHECK( accessibility::format_bionic_row( "Power Storage", 1 ) == "Power Storage." );
+    CHECK( accessibility::format_bionic_row( "Power Storage", 3 ) == "Power Storage, 3 installed." );
+    CHECK( accessibility::format_proficiency_row( "Basic Knapping", true, false, 0 ) ==
+           "Basic Knapping, known." );
+    CHECK( accessibility::format_proficiency_row( "Basic Knapping", false, true, 45 ) ==
+           "Basic Knapping, 45%, learning." );
+    CHECK( accessibility::format_proficiency_row( "Secret", false, false, 0 ) ==
+           "Secret, not known." );
+
+    CHECK( accessibility::format_character_tab( "Stats", {}, 9, "Strength 10, base 8." ) ==
+           "Stats. 9 items. Strength 10, base 8." );
+    CHECK( accessibility::format_character_tab( "Speed", { "Speed 90", "Move cost 110" }, 1,
+            "Pain, speed -10." ) == "Speed. Speed 90. Move cost 110. 1 item. Pain, speed -10." );
+    CHECK( accessibility::format_character_tab( "Effects", {}, 0, "" ) == "Effects. No items." );
+}
+
+TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const int stats = 0;
+    const int encumbrance = 1;
+    const int skills = 3;
+    const int traits = 4;
+    const int bionics = 5;
+    const int effects = 6;
+    const int proficiencies = 7;
+
+    you.str_max = 10;
+    you.set_str_bonus( -2 );
+    std::vector<std::string> rows = character_sheet_accessibility_rows( you, stats );
+    REQUIRE( rows.size() == 9 );
+    CHECK( rows[0] == "Strength 8, base 10." );
+    CHECK( rows[8].rfind( "Blood type, ", 0 ) == 0 );
+    CHECK( character_sheet_accessibility_tab( you, stats ) == "Stats. 9 items. Strength 8, base 10." );
+    const std::string summary = character_sheet_accessibility_summary( you, stats, 0 );
+    CHECK( summary.find( you.get_name() ) == 0 );
+    CHECK( summary.find( "Stats. 1 of 9. Strength 8, base 10." ) != std::string::npos );
+    std::vector<std::string> details = character_sheet_accessibility_details( you, stats, 0 );
+    REQUIRE( details.size() >= 3 );
+    CHECK( details[0] == "Strength 8, base 10. 1 of 9." );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Base HP: ", 0 ) == 0;
+    } ) );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+    }
+
+    // Encumbrance rows merge matching left and right parts as the sheet does.
+    rows = character_sheet_accessibility_rows( you, encumbrance );
+    const std::string torso_row = "torso, encumbrance 0, warmth comfortable.";
+    const auto torso = std::find( rows.begin(), rows.end(), torso_row );
+    REQUIRE( torso != rows.end() );
+    CHECK( std::any_of( rows.begin(), rows.end(), []( const std::string & row ) {
+        return row.rfind( "arms, encumbrance 0", 0 ) == 0;
+    } ) );
+    details = character_sheet_accessibility_details( you, encumbrance,
+              static_cast<unsigned>( torso - rows.begin() ) );
+    REQUIRE( !details.empty() );
+    CHECK( details[0].rfind( "torso, encumbrance 0, layering 0, total 0, warmth ", 0 ) == 0 );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.find( " score: " ) != std::string::npos;
+    } ) );
+
+    // Skill rows name their category when focus enters it; details read the skill.
+    const skill_id melee( "melee" );
+    you.set_skill_level( melee, 2 );
+    you.set_knowledge_level( melee, 3 );
+    const std::vector<HeaderSkill> headers = get_HeaderSkills( Skill::get_skills_sorted_by(
+    []( const Skill & a, const Skill & b ) {
+        return a.get_sort_rank() < b.get_sort_rank();
+    } ) );
+    rows = character_sheet_accessibility_rows( you, skills );
+    size_t row = 0;
+    bool category_start = false;
+    unsigned melee_line = 0;
+    for( unsigned line = 0; line < headers.size(); ++line ) {
+        if( headers[line].is_header ) {
+            category_start = true;
+            continue;
+        }
+        REQUIRE( row < rows.size() );
+        const std::string category = SkillDisplayType::get_skill_type(
+                                         headers[line].skill->display_category() ).display_string();
+        CHECK( ( rows[row].rfind( category + ". ", 0 ) == 0 ) == category_start );
+        if( headers[line].skill->ident() == melee ) {
+            CHECK( rows[row].find( "melee 3, 0%, rusty, training." ) != std::string::npos );
+            melee_line = line;
+        }
+        category_start = false;
+        ++row;
+    }
+    CHECK( row == rows.size() );
+    CHECK( character_sheet_accessibility_tab( you, skills ).rfind(
+               string_format( "Skills. %d items. ", static_cast<int>( rows.size() ) ), 0 ) == 0 );
+    REQUIRE( melee_line > 0 );
+    details = character_sheet_accessibility_details( you, skills, melee_line );
+    REQUIRE( !details.empty() );
+    CHECK( details[0].find( "melee 3, 0%, rusty, training." ) != std::string::npos );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Practical level: 2", 0 ) == 0;
+    } ) );
+
+    // Traits, proficiencies, and effects by name and state; empty tabs say so.
+    CHECK( character_sheet_accessibility_tab( you, traits ) == "Traits. No items." );
+    const trait_id good_hearing( "GOODHEARING" );
+    you.set_mutation( good_hearing );
+    rows = character_sheet_accessibility_rows( you, traits );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == string_format( "%s, positive.", good_hearing->name() ) );
+    details = character_sheet_accessibility_details( you, traits, 0 );
+    REQUIRE( details.size() >= 2 );
+    CHECK( details[0] == rows[0] + " 1 of 1." );
+
+    you.add_proficiency( proficiency_id( "prof_knapping" ), true );
+    rows = character_sheet_accessibility_rows( you, proficiencies );
+    CHECK( std::find( rows.begin(), rows.end(), "Basic Knapping, known." ) != rows.end() );
+
+    const std::string bionics_tab = character_sheet_accessibility_tab( you, bionics );
+    CHECK( bionics_tab.rfind( "Bionics. Power ", 0 ) == 0 );
+    CHECK( bionics_tab.find( "No items." ) != std::string::npos );
+
+    you.add_effect( efftype_id( "downed" ), 1_minutes );
+    rows = character_sheet_accessibility_rows( you, effects );
+    CHECK( std::find( rows.begin(), rows.end(), "Downed." ) != rows.end() );
 }

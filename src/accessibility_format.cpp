@@ -1792,6 +1792,182 @@ std::string format_construction_list( const std::string &category, const size_t 
     return string_join( std::vector<std::string> { category, count_text }, _( ", " ) );
 }
 
+std::string format_character_stat( const std::string &name, const int current, const int base )
+{
+    //~ Character sheet stat: %1$s: stat name, %2$d: current value, %3$d: base value
+    return format_semantic_sequence( { string_format( _( "%1$s %2$d, base %3$d" ), name, current,
+                                       base ) } );
+}
+
+std::string format_character_value( const std::string &label, const std::string &value )
+{
+    return format_semantic_sequence( { string_join( std::vector<std::string> {
+            label, remove_color_tags( value )
+        }, _( ", " ) )
+    } );
+}
+
+std::string format_body_warmth( const body_warmth warmth )
+{
+    switch( warmth ) {
+        case body_warmth::none:
+            return std::string();
+        case body_warmth::freezing:
+            return pgettext( "body warmth", "freezing" );
+        case body_warmth::very_cold:
+            return pgettext( "body warmth", "very cold" );
+        case body_warmth::chilly:
+            return pgettext( "body warmth", "chilly" );
+        case body_warmth::comfortable:
+            return pgettext( "body warmth", "comfortable" );
+        case body_warmth::warm:
+            return pgettext( "body warmth", "warm" );
+        case body_warmth::very_hot:
+            return pgettext( "body warmth", "very hot" );
+        case body_warmth::scorching:
+            return pgettext( "body warmth", "scorching" );
+    }
+    return std::string();
+}
+
+std::string format_encumbrance_row( const encumbrance_row &row, const bool detailed )
+{
+    std::vector<std::string> parts = {
+        row.part,
+        //~ %d: encumbrance of a body part without the layering penalty
+        string_format( _( "encumbrance %d" ), row.encumbrance )
+    };
+    if( row.layering != 0 || detailed ) {
+        //~ %d: extra encumbrance of a body part from layering clothing
+        parts.push_back( string_format( _( "layering %d" ), row.layering ) );
+    }
+    if( detailed ) {
+        //~ %d: total encumbrance of a body part
+        parts.push_back( string_format( _( "total %d" ), row.encumbrance + row.layering ) );
+    }
+    const std::string state = format_body_warmth( row.warmth_state );
+    if( detailed ) {
+        //~ %d: temperature number of a body part as the character sheet shows it
+        parts.push_back( string_format( _( "warmth %d" ), row.warmth ) );
+        if( !state.empty() ) {
+            parts.push_back( state );
+        }
+    } else if( !state.empty() ) {
+        //~ %s: warmth band of a body part, such as "comfortable"
+        parts.push_back( string_format( _( "warmth %s" ), state ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_speed_row( const std::string &cause, const bool speed, const int value,
+                              const bool percent )
+{
+    std::vector<std::string> parts = { remove_color_tags( cause ) };
+    if( value != 0 ) {
+        const std::string amount = percent ? string_format( "%+d%%", value ) :
+                                   string_format( "%+d", value );
+        //~ %s: signed change of speed, such as "+10" or "-5%"
+        parts.push_back( string_format( speed ? _( "speed %s" ) : _( "move cost %s" ), amount ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_skill_row( const skill_row &row )
+{
+    //~ Skill on the character sheet: %1$s: skill name, %2$d: level
+    std::vector<std::string> parts = { string_format( _( "%1$s %2$d" ), row.name, row.level ) };
+    if( row.set_by_bionic ) {
+        parts.emplace_back( _( "set by bionic" ) );
+    } else {
+        parts.push_back( string_format( "%d%%", std::max( row.exercise, 0 ) ) );
+    }
+    if( !row.effective.empty() ) {
+        //~ %s: effective dodge value
+        parts.push_back( string_format( _( "effective %s" ), row.effective ) );
+    }
+    if( !row.set_by_bionic ) {
+        if( row.rusty ) {
+            parts.emplace_back( _( "rusty" ) );
+        }
+        parts.emplace_back( row.training ? _( "training" ) : _( "not training" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_trait_row( const std::string &name, const trait_kind kind )
+{
+    std::string state;
+    switch( kind ) {
+        case trait_kind::positive:
+            state = pgettext( "trait kind", "positive" );
+            break;
+        case trait_kind::negative:
+            state = pgettext( "trait kind", "negative" );
+            break;
+        case trait_kind::neutral:
+            state = pgettext( "trait kind", "neutral" );
+            break;
+        case trait_kind::mixed:
+            state = pgettext( "trait kind", "mixed" );
+            break;
+        case trait_kind::threshold:
+            state = pgettext( "trait kind", "threshold" );
+            break;
+        case trait_kind::profession:
+            state = pgettext( "trait kind", "profession" );
+            break;
+        case trait_kind::attunement:
+            state = pgettext( "trait kind", "attunement" );
+            break;
+        case trait_kind::debug:
+            state = pgettext( "trait kind", "debug" );
+            break;
+    }
+    return format_semantic_sequence( { string_join( std::vector<std::string> {
+            remove_color_tags( name ), state
+        }, _( ", " ) )
+    } );
+}
+
+std::string format_bionic_row( const std::string &name, const int count )
+{
+    std::vector<std::string> parts = { name };
+    if( count > 1 ) {
+        //~ %d: number of installed bionics of one kind
+        parts.push_back( string_format( n_gettext( "%d installed", "%d installed", count ), count ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_proficiency_row( const std::string &name, const bool known,
+                                    const bool learning, const int progress )
+{
+    std::vector<std::string> parts = { remove_color_tags( name ) };
+    if( known ) {
+        parts.emplace_back( pgettext( "proficiency", "known" ) );
+    } else if( learning ) {
+        parts.push_back( string_format( "%d%%", progress ) );
+        parts.emplace_back( pgettext( "proficiency", "learning" ) );
+    } else {
+        parts.emplace_back( pgettext( "proficiency", "not known" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_character_tab( const std::string &tab, const std::vector<std::string> &header,
+                                  const size_t count, const std::string &focus )
+{
+    std::vector<std::string> parts = { tab };
+    for( const std::string &value : header ) {
+        parts.push_back( remove_color_tags( value ) );
+    }
+    parts.push_back( format_list_count( count ) );
+    if( count > 0 ) {
+        parts.push_back( focus );
+    }
+    return format_semantic_sequence( parts );
+}
+
 std::string format_activity_start( const std::string &label, const std::string &duration,
                                    const bool resuming )
 {

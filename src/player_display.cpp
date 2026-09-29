@@ -1,3 +1,5 @@
+#include "player_display.h"
+
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -13,6 +15,9 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "addiction.h"
 #include "avatar.h"
 #include "bionics.h"
@@ -363,28 +368,31 @@ static void draw_proficiencies_tab( ui_adaptor &ui, const catacurses::window &wi
     wnoutrefresh( win );
 }
 
+static std::string proficiency_info_text( const display_proficiency &cur )
+{
+    std::string progress;
+    if( cur.known ) {
+        progress = _( "You know this proficiency." );
+    } else {
+        progress = string_format( _( "You are %.2f%% of the way towards learning this proficiency." ),
+                                  cur.practice * 100 );
+        if( debug_mode ) {
+            progress += string_format( "\nYou have spent %s practicing this proficiency.",
+                                       to_string( cur.spent ) );
+        }
+    }
+    return colorize( cur.id->name(), cur.color )
+           + "\n" + colorize( progress, c_cyan )
+           + "\n" + colorize( cur.id->description(), c_white );
+}
+
 static void draw_proficiencies_info( const catacurses::window &w_info, const unsigned line,
                                      const Character &guy, const unsigned info_line )
 {
     werase( w_info );
     const std::vector<display_proficiency> profs = guy.display_proficiencies();
     if( line < profs.size() ) {
-        const display_proficiency &cur = profs[line];
-        std::string progress;
-        if( cur.known ) {
-            progress = _( "You know this proficiency." );
-        } else {
-            progress = string_format( _( "You are %.2f%% of the way towards learning this proficiency." ),
-                                      cur.practice * 100 );
-            if( debug_mode ) {
-                progress += string_format( "\nYou have spent %s practicing this proficiency.",
-                                           to_string( cur.spent ) );
-            }
-        }
-        std::string desc = colorize( cur.id->name(), cur.color )
-                           + "\n" + colorize( progress, c_cyan )
-                           + "\n" + colorize( cur.id->description(), c_white );
-        draw_x_info( w_info, desc, info_line );
+        draw_x_info( w_info, proficiency_info_text( profs[line] ), info_line );
     }
     wnoutrefresh( w_info );
 }
@@ -569,6 +577,76 @@ static void draw_stats_info( const catacurses::window &w_info, const Character &
     wnoutrefresh( w_info );
 }
 
+/** The stats info pane of draw_stats_info() as paragraphs for the details document. */
+static std::vector<std::string> stats_info_paragraphs( const Character &you, const unsigned line )
+{
+    switch( line ) {
+        case 0:
+            return {
+                _( "Strength affects your melee damage, the amount of weight you can carry, your total HP, "
+                   "your resistance to many diseases, and the effectiveness of actions which require brute force." ),
+                string_format( _( "Base HP: <color_white>%d</color>" ),
+                               you.get_part_hp_max( you.get_root_body_part() ) ),
+                string_format( _( "Carry weight (%s): <color_white>%.1f</color>" ), weight_units(),
+                               convert_weight( you.weight_capacity() ) ),
+                string_format( _( "Bash damage: <color_white>%.1f</color>" ), you.bonus_damage( false ) )
+            };
+        case 1:
+            return {
+                _( "Dexterity affects your chance to hit in melee combat, helps you steady your "
+                   "gun for ranged combat, and enhances many actions that require finesse." ),
+                string_format( _( "Melee to-hit bonus: <color_white>%+.1lf</color>" ), you.get_melee_hit_base() ),
+                string_format( _( "Ranged penalty: <color_white>%+d</color>" ),
+                               -std::abs( you.ranged_dex_mod() ) ),
+                string_format( _( "Throwing penalty per target's dodge: <color_white>%+d</color>" ),
+                               you.throw_dispersion_per_dodge( false ) )
+            };
+        case 2:
+            return {
+                _( "Intelligence is less important in most situations, but it is vital for more complex tasks like "
+                   "electronics crafting.  It also affects how much skill you can pick up from reading a book." ),
+                string_format( _( "Read times: <color_white>%d%%</color>" ), you.read_speed() ),
+                string_format( _( "Crafting bonus: <color_white>%d%%</color>" ), you.get_int() )
+            };
+        case 3: {
+            std::vector<std::string> paragraphs = {
+                _( "Perception is the most important stat for ranged combat.  It's also used for "
+                   "detecting traps and other things of interest." ),
+                string_format( _( "Trap detection level: <color_white>%d</color>" ), you.get_per() )
+            };
+            if( you.ranged_per_mod() > 0 ) {
+                paragraphs.push_back( string_format( _( "Aiming penalty: <color_white>%+d</color>" ),
+                                                     -you.ranged_per_mod() ) );
+            }
+            return paragraphs;
+        }
+        case 4:
+            return {
+                _( "Your weight is a general indicator of how much fat your body has stored up,"
+                   " which in turn shows how prepared you are to survive for a time without food."
+                   "  Having too much, or too little, can be unhealthy." ),
+                display::weight_long_description( you )
+            };
+        case 5:
+            return {
+                _( "How healthy you feel.  Exercise, vitamins, sleep and not ingesting poison will increase this over time." )
+            };
+        case 6:
+            return { _( "Your height.  Simply how tall you are." ), you.height_string() };
+        case 7:
+            return { _( "This is how old you are." ), you.age_string() };
+        case 8:
+            return {
+                _( "This is your blood type and Rh factor." ),
+                string_format( _( "Blood type: %s" ), io::enum_to_string( you.my_blood_type ) ),
+                string_format( _( "Rh factor: %s" ),
+                               you.blood_rh_factor ? _( "positive (+)" ) : _( "negative (-)" ) )
+            };
+        default:
+            return {};
+    }
+}
+
 static void draw_encumbrance_tab( ui_adaptor &ui, const catacurses::window &w_encumb,
                                   const Character &you, const unsigned line,
                                   const player_display_tab curtab, const input_context &ctxt )
@@ -642,21 +720,24 @@ static void draw_traits_tab( ui_adaptor &ui, const catacurses::window &w_traits,
     wnoutrefresh( w_traits );
 }
 
+static std::string trait_info_text( const Character &you, const trait_and_var &cur )
+{
+    std::string trait_desc = you.mutation_desc( cur.trait );
+    if( !you.purifiable( cur.trait ) ) {
+        trait_desc +=
+            _( "\n<color_yellow>This trait is an intrinsic part of you now, purifier won't be able to remove it.</color>" );
+    }
+    return string_format( "%s: %s", colorize( cur.name(), cur.trait->get_display_color() ),
+                          trait_desc );
+}
+
 static void draw_traits_info( const catacurses::window &w_info, const Character &you,
                               const unsigned line,
                               const std::vector<trait_and_var> &traitslist, const unsigned info_line )
 {
     werase( w_info );
     if( line < traitslist.size() ) {
-        const trait_and_var &cur = traitslist[line];
-        std::string trait_desc = you.mutation_desc( cur.trait );
-        if( !you.purifiable( cur.trait ) ) {
-            trait_desc +=
-                _( "\n<color_yellow>This trait is an intrinsic part of you now, purifier won't be able to remove it.</color>" );
-        }
-        const std::string desc =
-            string_format( "%s: %s", colorize( cur.name(), cur.trait->get_display_color() ), trait_desc );
-        draw_x_info( w_info, desc, info_line );
+        draw_x_info( w_info, trait_info_text( you, traitslist[line] ), info_line );
     }
     wnoutrefresh( w_info );
 }
@@ -666,6 +747,32 @@ struct bionic_grouping {
     const translation description;
     const int installed_count;
 };
+
+static std::vector<bionic_grouping> group_bionics( const Character &you )
+{
+    std::vector<bionic_grouping> bionicslist;
+    // count installed bionics by type and sort by localized name
+    const auto bio_comp = []( const bionic_data & lhs, const bionic_data & rhs ) {
+        return lhs.name.translated_lt( rhs.name );
+    };
+    std::map<const bionic_data, int, decltype( bio_comp )> bionics_map( bio_comp );
+    for( const bionic &bio : *you.my_bionics ) {
+        bionics_map[bio.info()]++;
+    }
+    for( const auto &pair : bionics_map ) {
+        bionicslist.push_back( { pair.first.name, pair.first.description, pair.second } );
+    }
+    return bionicslist;
+}
+
+static std::vector<HeaderSkill> sorted_header_skills()
+{
+    const std::vector<const Skill *> player_skill = Skill::get_skills_sorted_by(
+    [&]( const Skill & a, const Skill & b ) {
+        return a.get_sort_rank() < b.get_sort_rank();
+    } );
+    return get_HeaderSkills( player_skill );
+}
 
 static void draw_bionics_tab( ui_adaptor &ui, const catacurses::window &w_bionics,
                               const Character &you, const unsigned line,
@@ -879,6 +986,26 @@ struct speedlist_entry {
     bool percent;
 };
 
+static std::vector<std::string> speed_info_lines( const speedlist_entry &entry )
+{
+    if( entry.val == 0 ) {
+        return { entry.description };
+    }
+    return {
+        //~ One of a list of reasons speed or movecost are being changed
+        string_format( _( "Cause: %s" ), entry.description ),
+        entry.val < 0 ?
+        //~ speed or movecost reduced by a constant or percentage
+        string_format( _( "Effect: %1$s reduced by %2$d%3$c" ),
+                       entry.is_speed ? _( "Speed" ) : _( "Move Cost" ), std::abs( entry.val ),
+                       entry.percent ? '%' : ' ' ) :
+        //~ speed or movecost increased by a constant or percentage
+        string_format( _( "Effect: %1$s increased by %2$d%3$c" ),
+                       entry.is_speed ? _( "Speed" ) : _( "Move Cost" ), std::abs( entry.val ),
+                       entry.percent ? '%' : ' ' )
+    };
+}
+
 static void draw_speed_info( const catacurses::window &w_info,
                              unsigned int line,
                              const std::vector<speedlist_entry> &speedlist )
@@ -890,26 +1017,39 @@ static void draw_speed_info( const catacurses::window &w_info,
         return;
     }
 
-    if( speedlist[line].val != 0 ) {
-        // NOLINTNEXTLINE(cata-use-named-point-constants)
-        mvwprintz( w_info, point( 1, 0 ), c_light_gray,
-                   //~ One of a list of reasons speed or movecost are being changed
-                   _( "Cause: %s" ), speedlist[line].description );
-        // NOLINTNEXTLINE(cata-use-named-point-constants)
-        mvwprintz( w_info, point( 1, 1 ), c_light_gray,
-                   //~ speed or movecost reduced by a constant or percentage
-                   speedlist[line].val < 0 ? _( "Effect: %1$s reduced by %2$d%3$c" ) :
-                   //~ speed or movecost increased by a constant or percentage
-                   _( "Effect: %1$s increased by %2$d%3$c" ),
-                   speedlist[line].is_speed ? _( "Speed" ) : _( "Move Cost" ),
-                   std::abs( speedlist[line].val ),
-                   speedlist[line].percent ? '%' : ' ' );
-    } else {
-        // NOLINTNEXTLINE(cata-use-named-point-constants)
-        mvwprintz( w_info, point( 1, 0 ), c_light_gray, speedlist[line].description );
+    const std::vector<std::string> lines = speed_info_lines( speedlist[line] );
+    for( size_t i = 0; i < lines.size(); ++i ) {
+        mvwprintz( w_info, point( 1, i ), c_light_gray, "%s", lines[i] );
     }
 
     wnoutrefresh( w_info );
+}
+
+static std::string skill_info_text( const Character &you, const Skill &skill )
+{
+    const SkillLevel &level = you.get_skill_level_object( skill.ident() );
+    std::string info_text = skill.description();
+    info_text = string_format( _( "%s\n%s\n%s" ), info_text,
+                               skill.get_level_description( level.knowledgeLevel(), false ),
+                               skill.get_level_description( level.level(), true ) );
+    float level_gap = 100.0f * std::max( level.knowledgeLevel(), 1 ) / std::max( level.level(), 1 );
+    if( level.knowledgeLevel() == 1 && level.level() == 0 ) {
+        level_gap = 150.0f;
+    }
+    float learning_bonus = 100.0f * std::max( ( 1.0f + you.get_int() / 40.0f ) - 0.1f *
+                           level.exercise() / level.knowledgeExperience(), 1.0f );
+    if( level.isRusty() ) {
+        info_text = string_format( _( "%s\n\nPractical level: %d (%d%%) " ), info_text,
+                                   level.level(), level.exercise() );
+        if( level.knowledgeLevel() > level.level() ) {
+            info_text = string_format( _( "%s| Learning bonus: %.0f%%" ), info_text,
+                                       level_gap );
+        } else {
+            info_text = string_format( _( "%s| Learning bonus: %.0f%%" ), info_text,
+                                       learning_bonus );
+        }
+    }
+    return info_text;
 }
 
 static void draw_skills_info( const catacurses::window &w_info, const Character &you,
@@ -924,29 +1064,7 @@ static void draw_skills_info( const catacurses::window &w_info, const Character 
     }
 
     if( selectedSkill ) {
-        const SkillLevel &level = you.get_skill_level_object( selectedSkill->ident() );
-        std::string info_text = selectedSkill->description();
-        info_text = string_format( _( "%s\n%s\n%s" ), info_text,
-                                   selectedSkill->get_level_description( level.knowledgeLevel(), false ),
-                                   selectedSkill->get_level_description( level.level(), true ) );
-        float level_gap = 100.0f * std::max( level.knowledgeLevel(), 1 ) / std::max( level.level(), 1 );
-        if( level.knowledgeLevel() == 1 && level.level() == 0 ) {
-            level_gap = 150.0f;
-        }
-        float learning_bonus = 100.0f * std::max( ( 1.0f + you.get_int() / 40.0f ) - 0.1f *
-                               level.exercise() / level.knowledgeExperience(), 1.0f );
-        if( level.isRusty() ) {
-            info_text = string_format( _( "%s\n\nPractical level: %d (%d%%) " ), info_text,
-                                       level.level(), level.exercise() );
-            if( level.knowledgeLevel() > level.level() ) {
-                info_text = string_format( _( "%s| Learning bonus: %.0f%%" ), info_text,
-                                           level_gap );
-            } else {
-                info_text = string_format( _( "%s| Learning bonus: %.0f%%" ), info_text,
-                                           learning_bonus );
-            }
-        }
-        draw_x_info( w_info, info_text, info_line );
+        draw_x_info( w_info, skill_info_text( you, *selectedSkill ), info_line );
     }
 
     wnoutrefresh( w_info );
@@ -1230,6 +1348,505 @@ static int get_line_count( player_display_tab curtab,
     return 0;
 }
 
+namespace
+{
+/**
+ * Screen reader speech of the character sheet.  It reads the same lists as the
+ * visual tabs; states shown only by color are spoken as words.
+ */
+class character_sheet_speech
+{
+    public:
+        character_sheet_speech( const Character &you, const std::vector<speedlist_entry> &speedlist,
+                                const int move_cost, const std::vector<trait_and_var> &traitslist,
+                                const std::vector<bionic_grouping> &bionicslist,
+                                const std::vector<std::pair<std::string, std::string>> &effect_name_and_text,
+                                const std::vector<HeaderSkill> &skillslist ) :
+            you( you ), speedlist( speedlist ), move_cost( move_cost ), traitslist( traitslist ),
+            bionicslist( bionicslist ), effect_name_and_text( effect_name_and_text ),
+            skillslist( skillslist ) {}
+
+        static std::string tab_name( const player_display_tab tab ) {
+            switch( tab ) {
+                case player_display_tab::stats:
+                    return _( "Stats" );
+                case player_display_tab::encumbrance:
+                    return _( "Encumbrance and warmth" );
+                case player_display_tab::speed:
+                    return _( "Speed" );
+                case player_display_tab::skills:
+                    return _( "Skills" );
+                case player_display_tab::traits:
+                    return _( "Traits" );
+                case player_display_tab::bionics:
+                    return _( "Bionics" );
+                case player_display_tab::effects:
+                    return _( "Effects" );
+                case player_display_tab::proficiencies:
+                    return _( "Proficiencies" );
+                case player_display_tab::num_tabs:
+                    break;
+            }
+            return std::string();
+        }
+
+        /** Focusable rows; skill category headings are not counted. */
+        size_t count( const player_display_tab tab ) const {
+            switch( tab ) {
+                case player_display_tab::stats:
+                    return 9;
+                case player_display_tab::encumbrance:
+                    return list_and_combine_bps( you, nullptr ).size();
+                case player_display_tab::speed:
+                    return speedlist.size();
+                case player_display_tab::skills:
+                    return static_cast<size_t>( std::count_if( skillslist.begin(), skillslist.end(),
+                    []( const HeaderSkill & s ) {
+                        return !s.is_header;
+                    } ) );
+                case player_display_tab::traits:
+                    return traitslist.size();
+                case player_display_tab::bionics:
+                    return bionicslist.size();
+                case player_display_tab::effects:
+                    return effect_name_and_text.size();
+                case player_display_tab::proficiencies:
+                    return you.display_proficiencies().size();
+                case player_display_tab::num_tabs:
+                    break;
+            }
+            return 0;
+        }
+
+        /** One-based position among the focusable rows; zero without a focusable row. */
+        size_t position( const player_display_tab tab, const unsigned line ) const {
+            if( line >= count_lines( tab ) ) {
+                return 0;
+            }
+            if( tab != player_display_tab::skills ) {
+                return line + 1;
+            }
+            if( skillslist[line].is_header ) {
+                return 0;
+            }
+            return static_cast<size_t>( std::count_if( skillslist.begin(),
+            skillslist.begin() + line + 1, []( const HeaderSkill & s ) {
+                return !s.is_header;
+            } ) );
+        }
+
+        std::string row( const player_display_tab tab, const unsigned line,
+                         const bool detailed = false ) const {
+            if( line >= count_lines( tab ) ) {
+                return std::string();
+            }
+            switch( tab ) {
+                case player_display_tab::stats:
+                    return stat_row( line );
+                case player_display_tab::encumbrance:
+                    return encumbrance_row( line, detailed );
+                case player_display_tab::speed: {
+                    const speedlist_entry &entry = speedlist[line];
+                    return accessibility::format_speed_row( entry.description, entry.is_speed, entry.val,
+                                                            entry.percent );
+                }
+                case player_display_tab::skills:
+                    return skill_row( line );
+                case player_display_tab::traits:
+                    return trait_row( traitslist[line] );
+                case player_display_tab::bionics: {
+                    const bionic_grouping &group = bionicslist[line];
+                    return accessibility::format_bionic_row( group.name.translated( group.installed_count ),
+                            group.installed_count );
+                }
+                case player_display_tab::effects:
+                    return accessibility::format_semantic_sequence( {
+                        remove_color_tags( effect_name_and_text[line].first )
+                    } );
+                case player_display_tab::proficiencies: {
+                    const display_proficiency &cur = you.display_proficiencies()[line];
+                    return accessibility::format_proficiency_row( cur.id->name(), cur.known,
+                            !cur.known && cur.id->can_learn(), static_cast<int>( std::floor( cur.practice * 100 ) ) );
+                }
+                case player_display_tab::num_tabs:
+                    break;
+            }
+            return std::string();
+        }
+
+        /** The row after moving focus from `previous`, naming a newly entered skill category. */
+        std::string focus( const player_display_tab tab, const unsigned line,
+                           const std::optional<unsigned> previous ) const {
+            std::string category = skill_category( tab, line );
+            if( previous && skill_category( tab, *previous ) == category ) {
+                category.clear();
+            }
+            return accessibility::format_semantic_sequence( { category, row( tab, line ) } );
+        }
+
+        std::string tab_announcement( const player_display_tab tab, const unsigned line ) const {
+            std::vector<std::string> header;
+            if( tab == player_display_tab::speed ) {
+                //~ %d: character speed
+                header.push_back( string_format( _( "Speed %d" ), you.get_speed() ) );
+                //~ %d: move cost of the character
+                header.push_back( string_format( _( "Move cost %d" ), move_cost ) );
+            } else if( tab == player_display_tab::bionics ) {
+                header.push_back( power_text() );
+            }
+            return accessibility::format_character_tab( tab_name( tab ), header, count( tab ),
+                    focus( tab, line, std::nullopt ) );
+        }
+
+        std::string summary( const std::string &identity, const player_display_tab tab,
+                             const unsigned line ) const {
+            return accessibility::format_semantic_sequence( {
+                identity, tab_name( tab ),
+                accessibility::format_list_position( position( tab, line ), count( tab ) ),
+                focus( tab, line, std::nullopt )
+            } );
+        }
+
+        /** The focused row and its info pane text as paragraphs. */
+        std::vector<std::string> details( const player_display_tab tab, const unsigned line ) const {
+            std::vector<std::string> paragraphs;
+            if( line >= count_lines( tab ) ) {
+                return paragraphs;
+            }
+            paragraphs.push_back( accessibility::format_semantic_sequence( {
+                skill_category( tab, line ), row( tab, line, true ),
+                accessibility::format_list_position( position( tab, line ), count( tab ) )
+            } ) );
+            std::vector<std::string> info;
+            switch( tab ) {
+                case player_display_tab::stats:
+                    info = stats_info_paragraphs( you, line );
+                    break;
+                case player_display_tab::encumbrance:
+                    info = get_encumbrance_description( you, list_and_combine_bps( you, nullptr )[line].first );
+                    break;
+                case player_display_tab::speed:
+                    info = speed_info_lines( speedlist[line] );
+                    break;
+                case player_display_tab::skills:
+                    if( !skillslist[line].is_header ) {
+                        info = { skill_info_text( you, *skillslist[line].skill ) };
+                    }
+                    break;
+                case player_display_tab::traits:
+                    info = { trait_info_text( you, traitslist[line] ) };
+                    break;
+                case player_display_tab::bionics:
+                    info = { bionicslist[line].description.translated() };
+                    break;
+                case player_display_tab::effects:
+                    info = { effect_name_and_text[line].second };
+                    break;
+                case player_display_tab::proficiencies:
+                    info = { proficiency_info_text( you.display_proficiencies()[line] ) };
+                    break;
+                case player_display_tab::num_tabs:
+                    break;
+            }
+            for( const std::string &text : info ) {
+                for( const std::string &paragraph : string_split( remove_color_tags( text ), '\n' ) ) {
+                    const std::string spoken = accessibility::format_semantic_sequence( { paragraph } );
+                    if( !spoken.empty() ) {
+                        paragraphs.push_back( spoken );
+                    }
+                }
+            }
+            return paragraphs;
+        }
+
+    private:
+        const Character &you;
+        const std::vector<speedlist_entry> &speedlist;
+        int move_cost;
+        const std::vector<trait_and_var> &traitslist;
+        const std::vector<bionic_grouping> &bionicslist;
+        const std::vector<std::pair<std::string, std::string>> &effect_name_and_text;
+        const std::vector<HeaderSkill> &skillslist;
+
+        /** Visual line count, including skill category headings. */
+        size_t count_lines( const player_display_tab tab ) const {
+            return tab == player_display_tab::skills ? skillslist.size() : count( tab );
+        }
+
+        std::string skill_category( const player_display_tab tab, const unsigned line ) const {
+            if( tab != player_display_tab::skills || line >= skillslist.size() ) {
+                return std::string();
+            }
+            return SkillDisplayType::get_skill_type(
+                       skillslist[line].skill->display_category() ).display_string();
+        }
+
+        std::string stat_row( const unsigned line ) const {
+            switch( line ) {
+                case 0:
+                    return accessibility::format_character_stat( _( "Strength" ), you.get_str(),
+                            you.get_str_base() );
+                case 1:
+                    return accessibility::format_character_stat( _( "Dexterity" ), you.get_dex(),
+                            you.get_dex_base() );
+                case 2:
+                    return accessibility::format_character_stat( _( "Intelligence" ), you.get_int(),
+                            you.get_int_base() );
+                case 3:
+                    return accessibility::format_character_stat( _( "Perception" ), you.get_per(),
+                            you.get_per_base() );
+                case 4:
+                    return accessibility::format_character_value( _( "Weight" ),
+                            display::weight_string( you ) );
+                case 5:
+                    return accessibility::format_character_value( _( "Lifestyle" ),
+                            display::health_string( you ) );
+                case 6:
+                    return accessibility::format_character_value( _( "Height" ), you.height_string() );
+                case 7:
+                    return accessibility::format_character_value( _( "Age" ), you.age_string() );
+                case 8:
+                    return accessibility::format_character_value( _( "Blood type" ),
+                            //~ Blood type and Rh factor, e.g. "O, Rh positive"
+                            string_format( _( "%1$s, Rh %2$s" ), io::enum_to_string( you.my_blood_type ),
+                                           you.blood_rh_factor ? _( "positive" ) : _( "negative" ) ) );
+                default:
+                    return std::string();
+            }
+        }
+
+        std::string encumbrance_row( const unsigned line, const bool detailed ) const {
+            const std::vector<std::pair<bodypart_id, bool>> bps = list_and_combine_bps( you, nullptr );
+            const bodypart_id &bp = bps[line].first;
+            accessibility::encumbrance_row row;
+            row.part = body_part_name_as_heading( bp, bps[line].second ? 2 : 1 );
+            row.layering = you.get_part_layer_penalty( bp );
+            row.encumbrance = you.get_part_encumbrance( bp ) - row.layering;
+            const units::temperature temp = you.get_part_temp_conv( bp );
+            row.warmth = temperature_print_rescaling( temp );
+            // The same bands as display::bodytemp_color().
+            if( bp == body_part_eyes ) {
+                row.warmth_state = accessibility::body_warmth::none;
+            } else if( temp > BODYTEMP_SCORCHING ) {
+                row.warmth_state = accessibility::body_warmth::scorching;
+            } else if( temp > BODYTEMP_VERY_HOT ) {
+                row.warmth_state = accessibility::body_warmth::very_hot;
+            } else if( temp > BODYTEMP_HOT ) {
+                row.warmth_state = accessibility::body_warmth::warm;
+            } else if( temp > BODYTEMP_COLD ) {
+                row.warmth_state = accessibility::body_warmth::comfortable;
+            } else if( temp > BODYTEMP_VERY_COLD ) {
+                row.warmth_state = accessibility::body_warmth::chilly;
+            } else if( temp > BODYTEMP_FREEZING ) {
+                row.warmth_state = accessibility::body_warmth::very_cold;
+            } else {
+                row.warmth_state = accessibility::body_warmth::freezing;
+            }
+            return accessibility::format_encumbrance_row( row, detailed );
+        }
+
+        std::string skill_row( const unsigned line ) const {
+            if( skillslist[line].is_header ) {
+                return std::string();
+            }
+            // The same values and colors as draw_skills_tab().
+            const Skill *skill = skillslist[line].skill;
+            const SkillLevel &level = you.get_skill_level_object( skill->ident() );
+            accessibility::skill_row row;
+            row.name = skill->name();
+            row.level = level.knowledgeLevel();
+            row.exercise = level.knowledgeExperience();
+            row.rusty = level.knowledgeLevel() > level.level() ||
+                        level.knowledgeExperience() > level.exercise();
+            row.training = level.can_train();
+            if( you.has_active_bionic( bio_cqb ) && is_cqb_skill( skill->ident() ) ) {
+                row.level = 5;
+                row.exercise = 0;
+                row.set_by_bionic = true;
+            }
+            row.level = you.enchantment_cache->modify_value( skill->ident(), row.level );
+            if( skill->ident() == skill_dodge ) {
+                row.effective = string_format( "%.1f", you.get_dodge() );
+            }
+            return accessibility::format_skill_row( row );
+        }
+
+        static std::string trait_row( const trait_and_var &trait ) {
+            // The kinds that mutation_branch::get_display_color() distinguishes.
+            const nc_color color = trait.trait->get_display_color();
+            accessibility::trait_kind kind = accessibility::trait_kind::neutral;
+            if( color == c_green ) {
+                kind = accessibility::trait_kind::attunement;
+            } else if( color == c_white ) {
+                kind = trait.trait->threshold ? accessibility::trait_kind::threshold :
+                       accessibility::trait_kind::profession;
+            } else if( color == c_light_cyan ) {
+                kind = accessibility::trait_kind::debug;
+            } else if( color == c_pink ) {
+                kind = accessibility::trait_kind::mixed;
+            } else if( color == c_light_green ) {
+                kind = accessibility::trait_kind::positive;
+            } else if( color == c_light_red ) {
+                kind = accessibility::trait_kind::negative;
+            }
+            return accessibility::format_trait_row( trait.name(), kind );
+        }
+
+        std::string power_text() const {
+            // The same units as draw_bionics_tab().
+            int power_amount;
+            std::string power_unit;
+            if( you.get_power_level() < 1_J ) {
+                power_amount = units::to_millijoule( you.get_power_level() );
+                power_unit = pgettext( "energy unit: millijoule", "mJ" );
+            } else if( you.get_power_level() < 1_kJ ) {
+                power_amount = units::to_joule( you.get_power_level() );
+                power_unit = pgettext( "energy unit: joule", "J" );
+            } else {
+                power_amount = units::to_kilojoule( you.get_power_level() );
+                power_unit = pgettext( "energy unit: kilojoule", "kJ" );
+            }
+            //~ Bionic power: %1$d %2$s: current amount and unit, %3$d: maximum in kilojoules
+            return string_format( _( "Power %1$d %2$s of %3$d kJ" ), power_amount, power_unit,
+                                  units::to_kilojoule( you.get_max_power_level() ) );
+        }
+};
+} // namespace
+
+/** Name, gender, and profession or post-threshold race, as the sheet's title line. */
+static std::string character_sheet_identity( const Character &you, const std::string &race )
+{
+    std::vector<std::string> parts = { you.get_name(), you.male ? _( "Male" ) : _( "Female" ) };
+    const std::string detail = you.crossed_threshold() ? race : you.disp_profession();
+    if( !detail.empty() ) {
+        parts.push_back( detail );
+    }
+    return string_join( parts, _( ", " ) );
+}
+
+namespace
+{
+/** The sheet lists for test entry points; effect speed causes are not included. */
+struct character_sheet_test_lists {
+    std::vector<speedlist_entry> speedlist;
+    int move_cost = 100;
+    std::vector<trait_and_var> traitslist;
+    std::vector<bionic_grouping> bionicslist;
+    std::vector<std::pair<std::string, std::string>> effect_name_and_text;
+    std::vector<HeaderSkill> skillslist;
+
+    explicit character_sheet_test_lists( const Character &you ) :
+        traitslist( you.get_mutations_variants( false ) ), bionicslist( group_bionics( you ) ),
+        skillslist( sorted_header_skills() ) {
+        speedlist = get_speedlist_entries( you, move_cost, {} );
+        std::sort( traitslist.begin(), traitslist.end(), trait_var_display_sort );
+        for( const effect &eff : you.get_effects() ) {
+            effect_name_and_text.emplace_back( eff.disp_name(), eff.disp_desc() );
+        }
+    }
+    character_sheet_speech speech( const Character &you ) const {
+        return character_sheet_speech( you, speedlist, move_cost, traitslist, bionicslist,
+                                       effect_name_and_text, skillslist );
+    }
+};
+} // namespace
+
+std::string character_sheet_accessibility_tab( const Character &you, const int tab )
+{
+    const character_sheet_test_lists lists( you );
+    const player_display_tab sheet_tab = static_cast<player_display_tab>( tab );
+    const unsigned line = sheet_tab == player_display_tab::skills ? 1 : 0;
+    return lists.speech( you ).tab_announcement( sheet_tab, line );
+}
+
+std::vector<std::string> character_sheet_accessibility_rows( const Character &you, const int tab )
+{
+    const character_sheet_test_lists lists( you );
+    const character_sheet_speech speech = lists.speech( you );
+    const player_display_tab sheet_tab = static_cast<player_display_tab>( tab );
+    const size_t lines = sheet_tab == player_display_tab::skills ? lists.skillslist.size() :
+                         speech.count( sheet_tab );
+    std::vector<std::string> rows;
+    std::optional<unsigned> previous;
+    for( unsigned line = 0; line < lines; ++line ) {
+        if( sheet_tab == player_display_tab::skills && lists.skillslist[line].is_header ) {
+            continue;
+        }
+        rows.push_back( speech.focus( sheet_tab, line, previous ) );
+        previous = line;
+    }
+    return rows;
+}
+
+std::vector<std::string> character_sheet_accessibility_details( const Character &you,
+        const int tab, const unsigned line )
+{
+    const character_sheet_test_lists lists( you );
+    return lists.speech( you ).details( static_cast<player_display_tab>( tab ), line );
+}
+
+std::string character_sheet_accessibility_summary( const Character &you, const int tab,
+        const unsigned line )
+{
+    const character_sheet_test_lists lists( you );
+    return lists.speech( you ).summary( character_sheet_identity( you, std::string() ),
+                                        static_cast<player_display_tab>( tab ), line );
+}
+
+/** Speak the result of one character sheet action; `previous_*` are the state before it. */
+static void speak_player_display_action( const character_sheet_speech &speech, Character &you,
+        const std::string &identity, const std::string &action, const bool navigated,
+        const player_display_tab previous_tab, const unsigned previous_line,
+        const player_display_tab curtab, const unsigned line, const bool customize_character )
+{
+    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+        return;
+    }
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    static const std::vector<std::string> tab_actions = {
+        "LEFT", "RIGHT", "NEXT_TAB", "PREV_TAB", "SELECT_STATS_TAB", "SELECT_ENCUMBRANCE_TAB",
+        "SELECT_SKILLS_TAB", "SELECT_TRAITS_TAB", "SELECT_BIONICS_TAB", "SELECT_EFFECTS_TAB",
+        "SELECT_PROFICIENCIES_TAB"
+    };
+    // Actions that open another screen and return to the sheet.
+    static const std::vector<std::string> return_actions = {
+        "morale", "VIEW_BODYSTAT", "VIEW_PROFICIENCIES", "MEDICAL_MENU", "CHANGE_PROFESSION_NAME", "SELECT_TRAIT_VARIANT", "CHANGE_ARMOR_SPRITE", "HELP_KEYBINDINGS"
+    };
+    const auto is_one_of = []( const std::vector<std::string> &actions, const std::string & a ) {
+        return std::find( actions.begin(), actions.end(), a ) != actions.end();
+    };
+    if( navigated ) {
+        if( curtab == previous_tab && line != previous_line ) {
+            const int direction = action == "UP" || action == "PAGE_UP" || action == "SCROLL_UP" ? -1 :
+                                  action == "DOWN" || action == "PAGE_DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( previous_line, line, direction ),
+                speech.focus( curtab, line, previous_line )
+            } ) );
+        }
+    } else if( is_one_of( tab_actions, action ) ) {
+        accessibility::announce( speech.tab_announcement( curtab, line ) );
+    } else if( action == "ACCESSIBILITY_STATUS" ) {
+        accessibility::announce( speech.summary( identity, curtab, line ) );
+    } else if( action == "ACCESSIBILITY_DETAILS" ) {
+        const std::vector<std::string> paragraphs = speech.details( curtab, line );
+        if( !paragraphs.empty() ) {
+            const std::string title = character_sheet_speech::tab_name( curtab );
+            accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+            accessibility::announce( speech.focus( curtab, line, std::nullopt ) );
+        }
+    } else if( is_one_of( return_actions, action ) ||
+               ( action == "SWITCH_GENDER" && customize_character ) ||
+               ( action == "CONFIRM" && ( curtab == player_display_tab::proficiencies ||
+                                          ( curtab == player_display_tab::stats && line < 4 &&
+                                            get_option<bool>( "STATS_THROUGH_KILLS" ) && you.is_avatar() ) ) ) ) {
+        accessibility::announce( speech.focus( curtab, line, std::nullopt ) );
+    }
+}
+
 static bool handle_player_display_action( Character &you, unsigned int &line,
         unsigned int &info_line,
         player_display_tab &curtab, input_context &ctxt, const ui_adaptor &ui_tip,
@@ -1242,7 +1859,7 @@ static bool handle_player_display_action( Character &you, unsigned int &line,
         const std::vector<std::pair<std::string, std::string>> &effect_name_and_text,
         const std::vector<HeaderSkill> &skillslist, bool customize_character,
         const std::vector<catacurses::window *> &windows, const catacurses::window &w_tip,
-        int &tip_btn_selected )
+        int &tip_btn_selected, const character_sheet_speech &speech, const std::string &identity )
 {
     const auto invalidate_tab = [&]( const player_display_tab tab ) {
         switch( tab ) {
@@ -1289,8 +1906,11 @@ static bool handle_player_display_action( Character &you, unsigned int &line,
 
     bool done = false;
     const std::string action = ctxt.handle_input();
+    const player_display_tab previous_tab = curtab;
+    const unsigned int previous_line = line;
+    const bool navigated = navigate_ui_list( action, line, 3, line_count, true );
 
-    if( navigate_ui_list( action, line, 3, line_count, true ) ) {
+    if( navigated ) {
         if( tip_btn_selected != -1 ) {
             tip_btn_selected = -1;
             ui_tip.invalidate_ui();
@@ -1490,6 +2110,8 @@ static bool handle_player_display_action( Character &you, unsigned int &line,
     } else if( action == "CHANGE_ARMOR_SPRITE" ) {
         change_armor_sprite( you );
     }
+    speak_player_display_action( speech, you, identity, action, navigated, previous_tab,
+                                 previous_line, curtab, line, customize_character );
     return done;
 }
 
@@ -1629,28 +2251,10 @@ void Character::disp_info( bool customize_character )
     std::sort( traitslist.begin(), traitslist.end(), trait_var_display_sort );
     const unsigned int trait_win_size_y_max = 1 + traitslist.size();
 
-    std::vector<bionic_grouping> bionicslist;
-    {
-        // count installed bionics by type and sort by localized name
-        const auto bio_comp = []( const bionic_data & lhs, const bionic_data & rhs ) {
-            return lhs.name.translated_lt( rhs.name );
-        };
-        std::map<const bionic_data, int, decltype( bio_comp )> bionics_map( bio_comp );
-        for( const bionic &bio : *my_bionics ) {
-            bionics_map[bio.info()]++;
-        }
-        for( const auto &pair : bionics_map ) {
-            bionicslist.push_back( { pair.first.name, pair.first.description, pair.second } );
-        }
-    }
+    std::vector<bionic_grouping> bionicslist = group_bionics( *this );
     const unsigned int bionics_win_size_y_max = 2 + bionicslist.size();
 
-    const std::vector<const Skill *> player_skill = Skill::get_skills_sorted_by(
-    [&]( const Skill & a, const Skill & b ) {
-        return a.get_sort_rank() < b.get_sort_rank();
-    } );
-
-    std::vector<HeaderSkill> skillslist = get_HeaderSkills( player_skill );
+    std::vector<HeaderSkill> skillslist = sorted_header_skills();
     const unsigned int skill_win_size_y_max = 1 + skillslist.size();
     const unsigned int info_win_size_y = 6;
 
@@ -1701,6 +2305,9 @@ void Character::disp_info( bool customize_character )
     ctxt.register_action( "SELECT_BIONICS_TAB" );
     ctxt.register_action( "SELECT_EFFECTS_TAB" );
     ctxt.register_action( "SELECT_PROFICIENCIES_TAB" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     std::map<std::string, int> speed_effects;
     for( auto &elem : *effects ) {
@@ -1717,6 +2324,15 @@ void Character::disp_info( bool customize_character )
 
     int move_cost;
     std::vector<speedlist_entry> speedlist = get_speedlist_entries( *this, move_cost, speed_effects );
+
+    const character_sheet_speech speech( *this, speedlist, move_cost, traitslist, bionicslist,
+                                         effect_name_and_text, skillslist );
+    const std::string identity = character_sheet_identity( *this, race );
+    accessibility::announce( accessibility::format_semantic_sequence( {
+        //~ Opening the character sheet; %s: character name
+        string_format( _( "Character sheet, %s" ), get_name() ),
+        speech.tab_announcement( player_display_tab::stats, 0 )
+    } ) );
 
     border_helper borders;
 
@@ -1972,6 +2588,6 @@ void Character::disp_info( bool customize_character )
                                              ui_stats, ui_encumb, ui_speed, ui_traits, ui_bionics, ui_effects,
                                              ui_skills, ui_proficiencies, speedlist, traitslist, bionicslist,
                                              effect_name_and_text, skillslist, customize_character,
-                                             windows, w_tip, tip_btn_highlight );
+                                             windows, w_tip, tip_btn_highlight, speech, identity );
     } while( !done );
 }

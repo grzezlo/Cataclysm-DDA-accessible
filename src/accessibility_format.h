@@ -526,6 +526,74 @@ std::string format_construction_row( const std::string &name, bool available,
                                      const std::string &unavailable_reason, size_t variants );
 std::string format_construction_list( const std::string &category, size_t count );
 
+/** Character sheet rows; the sheet shows several of these states only by color. */
+/** A stat with its base value, e.g. "Strength 10, base 8." */
+std::string format_character_stat( const std::string &name, int current, int base );
+/** A labeled sheet value, e.g. "Weight, Normal." */
+std::string format_character_value( const std::string &label, const std::string &value );
+/** Body part warmth band, shown on the sheet only by the color of its temperature. */
+enum class body_warmth {
+    /** The part does not count towards warmth. */
+    none,
+    freezing,
+    very_cold,
+    chilly,
+    comfortable,
+    warm,
+    very_hot,
+    scorching
+};
+std::string format_body_warmth( body_warmth warmth );
+struct encumbrance_row {
+    std::string part;
+    /** Encumbrance without the layering penalty, as the sheet's first number. */
+    int encumbrance = 0;
+    int layering = 0;
+    /** The sheet's temperature number. */
+    int warmth = 0;
+    body_warmth warmth_state = body_warmth::none;
+};
+/**
+ * Concise: "Torso, encumbrance 12, layering 3, warmth comfortable."  Detailed
+ * adds the total and the temperature number.
+ */
+std::string format_encumbrance_row( const encumbrance_row &row, bool detailed );
+/** A cause of changed speed or move cost: "Pain, speed -10." */
+std::string format_speed_row( const std::string &cause, bool speed, int value, bool percent );
+struct skill_row {
+    std::string name;
+    int level = 0;
+    int exercise = 0;
+    /** Effective dodge for the dodge skill; empty otherwise. */
+    std::string effective;
+    /** Knowledge exceeds practical ability; the sheet shows it by color. */
+    bool rusty = false;
+    bool training = true;
+    /** An active bionic sets the level; the sheet shows it by color. */
+    bool set_by_bionic = false;
+};
+/** "Melee 3, 45%, training." */
+std::string format_skill_row( const skill_row &row );
+/** Trait kinds the sheet distinguishes only by color. */
+enum class trait_kind {
+    positive,
+    negative,
+    neutral,
+    mixed,
+    threshold,
+    profession,
+    attunement,
+    debug
+};
+std::string format_trait_row( const std::string &name, trait_kind kind );
+std::string format_bionic_row( const std::string &name, int count );
+/** Known, learning with progress, or not known when it cannot be learned by practice. */
+std::string format_proficiency_row( const std::string &name, bool known, bool learning,
+                                    int progress );
+/** Character sheet tab: its name, values it shows above the list, its count, and the focus. */
+std::string format_character_tab( const std::string &tab, const std::vector<std::string> &header,
+                                  size_t count, const std::string &focus );
+
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( const std::string &label, const std::string &duration,
                                    bool resuming );
