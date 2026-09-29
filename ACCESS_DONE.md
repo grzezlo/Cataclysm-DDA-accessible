@@ -650,3 +650,31 @@ Limitations:
   choices, and results rely on the Stage 05 controls and game-message
   speech; no handler-specific wording was added.
 - Vehicle targets name only the part, not the vehicle.
+
+## 2026-09-29 — Stage 08A: Auto-travel and pathfinding
+
+- Selected design: option B (route summary at start, silent steps), recorded
+  before implementation.
+- Travel started from look-around or the nearby item list (`Shift+t`) speaks
+  one summary: target, straight-line distance and direction, step count, and
+  up to four merged terrain segments ("Traveling to wooden door, 12 tiles
+  northeast, 14 steps: grass 6, dirt road 5, wooden floor 3.").  Tiles the
+  player cannot see are "unseen".  Overmap travel names overmap terrain and
+  distance in map tiles.
+- Steps are silent, including the end of each local route during overmap
+  travel.  Local arrival speaks "Arrived: <tile>."; overmap arrival keeps the
+  game message and the position report.
+- An early stop speaks "Travel stopped: <destination>, <remaining distance and
+  direction>." with the position at the next input prompt; the reason comes
+  from the game message or cancel query.  A player-confirmed cancel adds no
+  travel speech.
+- Commit: `5a05a885af`.
+
+Limitations:
+
+- `auto_travel_mode` keeps per-step movement speech: it moves one step per
+  key press, so there is no route to summarize.
+- Mouse-only travel and vehicle autodrive have no start summary; autodrive
+  belongs to Stage 19.
+- The overmap cursor and path selection stay inaccessible until Stage 18.
+- A player-confirmed cancel does not repeat the remaining distance.

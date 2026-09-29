@@ -186,3 +186,39 @@ Interface > "Autoselect if exactly one valid target" controls auto-selection.
   through the shared menu speech.
 - **Darkness.**  Map… > Change time to night, then open a prompt: tiles you
   cannot see are named "unseen".
+
+## Stage 08A: Auto-travel
+
+Start outdoors in daylight.  Debug menu > Map… > Change time helps if it is
+dark.  Spawning… > Spawn a monster places a monster to interrupt travel.
+
+- **Start summary.**  Press `x` (look around), move the cursor to a visible
+  tile about ten tiles away, and press `Shift+t`.  You hear one announcement:
+  "Traveling to", the target, its distance and direction, the step count, and
+  the terrain along the route with counts, for example "grass 6, dirt road
+  5".
+- **Silent steps and arrival.**  During the same travel no step is spoken.
+  On arrival you hear "Arrived:" and the tile name, once, and `Alt+R`
+  repeats it.
+- **Nearby item list.**  Press `V`, select an item a few tiles away, and
+  press `Shift+t`.  The start summary and arrival are spoken as above.
+- **Obstruction.**  Spawn a hostile monster on the route before starting.
+  When it blocks the way you hear "Monster in the way.  Auto move canceled."
+  followed by "Travel stopped:", the destination with its remaining distance
+  and direction, and your position.
+- **Danger query.**  Spawn a monster that comes into view during travel.  The
+  cancel question names the reason and is read with its choices.  Answer no
+  and travel continues silently; answer yes and you hear the cancel message
+  and your position, without "Travel stopped".
+- **Cancel with a key.**  During a long travel press `.` (pause) and answer
+  yes.  Only the cancel message and your position are spoken.
+- **Overmap travel.**  Press `m`, move the cursor a few map tiles away, press
+  `Shift+w` twice, and confirm.  You hear "Traveling to", the overmap
+  terrain, the distance in map tiles with direction, and the overmap terrain
+  along the path.  Steps and local route changes are silent, and arrival
+  speaks "You have reached your destination." and your position.  The
+  overmap itself is made accessible in Stage 18; until then, choose the
+  destination with sighted help or skip this scenario.
+- **Speech interruption.**  Press `Shift` while the start summary is spoken.
+  Speech stops and is not repeated; travel continues silently and the
+  arrival is still spoken.
