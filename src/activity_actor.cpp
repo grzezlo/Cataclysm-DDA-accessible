@@ -18,6 +18,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
@@ -2351,6 +2352,8 @@ void pickup_activity_actor::do_turn( player_activity &, Character &who )
     // Otherwise, we are done.
     if( !keep_going || target_items.empty() ) {
         if( !stash_successful && !autopickup ) {
+            // The spoken pickup result already names the items left behind.
+            accessibility::game_message_speech_suppression quiet;
             add_msg( m_bad, _( "Some items were not picked up!" ) );
         }
 
@@ -6919,7 +6922,7 @@ static bool check_stealing( Character &who, item &it )
     if( !it.is_owned_by( who, true ) ) {
         // Has the player given input on if stealing is ok?
         if( who.get_value( "THIEF_MODE" ).str() == "THIEF_ASK" ) {
-            Pickup::query_thief();
+            Pickup::query_thief( it.display_name() );
         }
         if( who.get_value( "THIEF_MODE" ).str() == "THIEF_HONEST" ) {
             if( who.get_value( "THIEF_MODE_KEEP" ).str() != "YES" ) {

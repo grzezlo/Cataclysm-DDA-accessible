@@ -14,6 +14,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_format.h"
 #include "activity_actor_definitions.h"
 #include "avatar.h"
 #include "calendar.h"
@@ -189,6 +191,37 @@ static bool same_type( const std::list<item> &items )
     } );
 }
 
+// Names and counts of dropped items for the spoken drop result, in drop order.
+static std::vector<std::string> spoken_drop_items( const std::list<item> &items )
+{
+    std::vector<std::pair<const item *, int>> groups;
+    for( const item &it : items ) {
+        const std::string name = it.tname();
+        const auto group = std::find_if( groups.begin(), groups.end(),
+        [&name]( const std::pair<const item *, int> &entry ) {
+            return entry.first->tname() == name;
+        } );
+        if( group == groups.end() ) {
+            groups.emplace_back( &it, it.count() );
+        } else {
+            group->second += it.count();
+        }
+    }
+    std::vector<std::string> names;
+    for( const std::pair<const item *, int> &group : groups ) {
+        if( group.first->count_by_charges() ) {
+            item stack( *group.first );
+            stack.charges = group.second;
+            names.push_back( stack.display_name( stack.charges ) );
+        } else {
+            names.push_back( group.second > 1 ?
+                             string_format( "%d %s", group.second, group.first->tname( group.second ) ) :
+                             group.first->tname() );
+        }
+    }
+    return names;
+}
+
 // Deprecated. See `contents_change_handler` and `Character::handle_contents_changed`
 // for contents handling with item_location.
 static bool handle_spillable_contents( Character &c, item &it, map &m )
@@ -319,13 +352,26 @@ static std::vector<item_location> try_to_put_into_vehicle( Character &c, item_dr
         }
     } else {
         switch( reason ) {
-            case item_drop_reason::deliberate:
+            case item_drop_reason::deliberate: {
+                // The spoken result names the items when all of them fit.
+                std::optional<accessibility::game_message_speech_suppression> quiet;
+                if( c.is_avatar() && items_did_not_fit_count == 0 ) {
+                    quiet.emplace();
+                }
                 c.add_msg_player_or_npc(
                     _( "You put several items in the %1$s's %2$s." ),
                     _( "<npcname> puts several items in the %1$s's %2$s." ),
                     veh.name, part_name
                 );
+                if( quiet ) {
+                    quiet.reset();
+                    //~ Vehicle part receiving dropped items: %1$s vehicle name, %2$s part name
+                    accessibility::announce_game_message( accessibility::format_drop_result(
+                            string_format( _( "%1$s's %2$s" ), veh.name, part_name ),
+                            spoken_drop_items( items ), false ) );
+                }
                 break;
+            }
             case item_drop_reason::too_large:
             case item_drop_reason::too_heavy:
             case item_drop_reason::tumbling:
@@ -412,7 +458,12 @@ std::vector<item_location> drop_on_map( Character &you, item_drop_reason reason,
         }
     } else {
         switch( reason ) {
-            case item_drop_reason::deliberate:
+            case item_drop_reason::deliberate: {
+                // The spoken result names the items instead of "several items".
+                std::optional<accessibility::game_message_speech_suppression> quiet;
+                if( you.is_avatar() ) {
+                    quiet.emplace();
+                }
                 if( can_move_there ) {
                     you.add_msg_player_or_npc(
                         _( "You drop several items on the %s." ),
@@ -426,7 +477,13 @@ std::vector<item_location> drop_on_map( Character &you, item_drop_reason reason,
                         ter_name
                     );
                 }
+                if( quiet ) {
+                    quiet.reset();
+                    accessibility::announce_game_message( accessibility::format_drop_result( ter_name,
+                                                          spoken_drop_items( items ), can_move_there ) );
+                }
                 break;
+            }
             case item_drop_reason::too_large:
             case item_drop_reason::too_heavy:
             case item_drop_reason::tumbling:

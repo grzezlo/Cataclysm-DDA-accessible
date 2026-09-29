@@ -3014,6 +3014,12 @@ accessibility::inventory_focus_entry inventory_selector::accessibility_entry(
         semantic.favorite = entry.any_item()->is_favorite;
         semantic.has_contents = entry.chevron;
         semantic.contents_collapsed = entry.collapsed;
+        const item &it = *entry.any_item();
+        semantic.not_owned = !it.is_owned_by( u, true );
+        if( semantic.not_owned ) {
+            semantic.owner = _( it.get_owner_name() );
+        }
+        semantic.destination = accessibility_destination( entry );
         if( semantic.denial.empty() ) {
             for( size_t i = 1; i < preset.get_cells_count(); ++i ) {
                 if( !preset.is_stub_cell( entry, i ) ) {
@@ -3067,6 +3073,7 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
                 for( const std::string &stat : get_stats() ) {
                     context.push_back( remove_color_tags( stat ) );
                 }
+                context.push_back( accessibility_capacity( false ) );
             }
         }
     } else {
@@ -3119,11 +3126,34 @@ std::string inventory_selector::accessibility_status() const
         for( const std::string &stat : get_stats() ) {
             parts.push_back( remove_color_tags( stat ) );
         }
+        parts.push_back( accessibility_capacity( false ) );
     }
     if( !filter.empty() ) {
         parts.push_back( string_format( _( "Filter: %s" ), filter ) );
     }
     return accessibility::format_semantic_sequence( parts );
+}
+
+std::string inventory_selector::accessibility_capacity( const bool include_values ) const
+{
+    if( !display_stats ) {
+        return {};
+    }
+    // The statistics mark an overflow only by coloring the carried value red.
+    const auto over_limit = []( const stat & value ) {
+        return value[1] == colorize( remove_color_tags( value[1] ), c_red );
+    };
+    const stats raw = get_raw_stats();
+    accessibility::inventory_capacity capacity;
+    capacity.weight = remove_color_tags( raw[0][1] );
+    capacity.weight_limit = remove_color_tags( raw[0][3] );
+    capacity.weight_unit = weight_units();
+    capacity.over_weight = over_limit( raw[0] );
+    capacity.volume = remove_color_tags( raw[1][1] );
+    capacity.volume_limit = remove_color_tags( raw[1][3] );
+    capacity.volume_unit = volume_units_abbr();
+    capacity.over_volume = over_limit( raw[1] );
+    return accessibility::format_inventory_capacity( capacity, include_values );
 }
 
 bool inventory_selector::action_allows_invlet( const std::string &action )
@@ -4222,10 +4252,13 @@ void inventory_multiselector::announce_accessibility_selection()
         return;
     }
     const inventory_entry &entry = get_active_column().get_highlighted();
-    announce_accessibility_focus( true, accessibility::format_inventory_selection_change(
-                                      entry.is_item() ? remove_color_tags( preset.get_cell_text( entry, 0 ) ) : std::string(),
-                                      accessibility_selection_state( entry ),
-                                      accessibility_selected_entries() ) );
+    announce_accessibility_focus( true, accessibility::format_semantic_sequence( {
+        accessibility::format_inventory_selection_change(
+            entry.is_item() ? remove_color_tags( preset.get_cell_text( entry, 0 ) ) : std::string(),
+            accessibility_selection_state( entry ),
+            accessibility_selected_entries() ),
+        accessibility_capacity( true )
+    } ) );
 }
 
 void inventory_multiselector::on_selection_input( const inventory_input &input )
@@ -4626,6 +4659,16 @@ void pickup_selector::reassign_custom_invlets()
         set_invlet_type( SELECTOR_INVLET_ALPHA );
     }
     inventory_selector::reassign_custom_invlets();
+}
+
+std::string pickup_selector::accessibility_destination( const inventory_entry &entry ) const
+{
+    if( !entry.is_item() || !preset.get_denial( entry ).empty() ) {
+        return {};
+    }
+    // Pickup stores items the same way, see Character::i_add.
+    const item_location container = u.best_pocket( *entry.any_item() ).first;
+    return container ? container->type_name() : std::string();
 }
 
 inventory_selector::stats pickup_selector::get_raw_stats() const

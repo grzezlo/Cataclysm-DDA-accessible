@@ -58,6 +58,7 @@ struct service_state {
     bool travel_in_progress = false;
     std::string last_game_message;
     uint64_t last_game_message_generation = 0;
+    int game_message_suppressions = 0;
 };
 
 service_state &state()
@@ -220,7 +221,8 @@ bool flush_gameplay_announcements()
 bool announce_game_message( const std::string &message )
 {
     service_state &current = state();
-    if( message.empty() || !current.game_messages_enabled ) {
+    if( message.empty() || !current.game_messages_enabled ||
+        current.game_message_suppressions > 0 ) {
         return false;
     }
     // Repeat a message only in response to a new key press, such as another
@@ -233,6 +235,16 @@ bool announce_game_message( const std::string &message )
     current.last_game_message_generation = current.input_generation;
     queue_gameplay_announcement( message, gameplay_speech::meaningful );
     return is_active();
+}
+
+game_message_speech_suppression::game_message_speech_suppression()
+{
+    ++state().game_message_suppressions;
+}
+
+game_message_speech_suppression::~game_message_speech_suppression()
+{
+    --state().game_message_suppressions;
 }
 
 void note_suppressed_movement()

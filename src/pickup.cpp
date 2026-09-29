@@ -11,6 +11,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_format.h"
 #include "activity_actor_definitions.h"
 #include "auto_pickup.h"
 #include "character.h"
@@ -67,6 +69,31 @@ static void show_pickup_message( const PickupMap &mapPickup )
     }
 }
 
+// What one Pickup::do_pickup call stored and left behind, spoken as one result.
+struct pickup_speech {
+    // Keyed like PickupMap.
+    std::map<std::string, std::string> destinations;
+    std::vector<accessibility::pickup_failure> failures;
+};
+
+static std::string pickup_speech_result( const PickupMap &mapPickup, const pickup_speech &speech )
+{
+    std::vector<accessibility::pickup_result_item> picked;
+    for( const auto &entry : mapPickup ) {
+        const item &it = entry.second.first;
+        const int count = entry.second.second;
+        accessibility::pickup_result_item result;
+        result.item = it.count_by_charges() || count <= 1 ? it.display_name( count ) :
+                      string_format( "%d %s", count, it.display_name( count ) );
+        const auto destination = speech.destinations.find( entry.first );
+        if( destination != speech.destinations.end() ) {
+            result.destination = destination->second;
+        }
+        picked.push_back( result );
+    }
+    return accessibility::format_pickup_result( picked, speech.failures );
+}
+
 struct pickup_count {
     bool pick = false;
     //count is 0 if the whole stack is being picked up, nonzero otherwise.
@@ -109,7 +136,7 @@ static pickup_answer handle_problematic_pickup( const item &it, const std::strin
     return static_cast<pickup_answer>( choice );
 }
 
-bool Pickup::query_thief()
+bool Pickup::query_thief( const std::string &item_name )
 {
     Character &u = get_player_character();
     const bool force_uc = get_option<bool>( "FORCE_CAPITAL_YN" );
@@ -119,6 +146,8 @@ bool Pickup::query_thief()
                          .preferred_keyboard_mode( keyboard_mode::keycode )
                          .allow_cancel( false )
                          .context( "YES_NO_ALWAYS_NEVER" )
+                         .accessibility_context( item_name.empty() ? std::string() :
+                                 string_format( _( "Not owned: %s" ), item_name ) )
                          .message( "%s", force_uc && !is_keycode_mode_supported()
                                    ? _( "Picking up this item will be considered stealing, continue?  (Case sensitive)" )
                                    : _( "Picking up this item will be considered stealing, continue?" ) )
@@ -180,7 +209,7 @@ static bool is_bulk_load( const Pickup::pick_info &lhs, const Pickup::pick_info 
 // Returns false if pickup caused a prompt and the player selected to cancel pickup
 static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool &got_gas,
                          PickupMap &mapPickup, bool autopickup, bool &stash_successful, bool &got_frozen_liquid,
-                         Pickup::pick_info &info )
+                         Pickup::pick_info &info, pickup_speech &speech )
 {
     Character &player_character = get_player_character();
     bool picked_up = false;
@@ -206,7 +235,7 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
     if( !newit.is_owned_by( player_character, true ) ) {
         // Has the player given input on if stealing is ok?
         if( player_character.get_value( "THIEF_MODE" ).str() == "THIEF_ASK" ) {
-            Pickup::query_thief();
+            Pickup::query_thief( newit.display_name() );
         }
         if( player_character.get_value( "THIEF_MODE" ).str() == "THIEF_HONEST" ) {
             return true; // Since we are honest, return no problem before picking up
@@ -256,6 +285,9 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
                !player_character.can_stash_partial( newit, false ) ) {
         option = CANCEL;
         stash_successful = false;
+        speech.failures.push_back( { newit.display_name(),
+                                     player_character.can_pickWeight_partial( newit, false ) ?
+                                     _( "no room" ) : _( "too heavy" ) } );
     } else {
         option = STASH;
     }
@@ -287,9 +319,13 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
             [[fallthrough]];
         case STASH: {
             int last_charges = newit.charges;
+            // Charges spread over pockets report no location; name the best pocket's container.
+            const item_location best_container = accessibility::is_active() ?
+                                                 player_character.best_pocket( newit ).first : item_location();
             ret_val<item_location> ret = player_character.i_add_or_fill( newit, true, nullptr, &it,
                                          /*allow_drop=*/false, /*allow_wield=*/false, false );
             item_location added_it = ret.value();
+            bool merged_back = false;
             if( ret.success() ) {
                 if( added_it == item_location::nowhere ) {
                     newit.charges = last_charges - newit.charges;
@@ -299,21 +335,30 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
                         entry.second += newit.charges;
                         entry.first = newit;
                         picked_up = true;
+                        if( best_container ) {
+                            speech.destinations[newit.tname()] = best_container->type_name();
+                        }
                     }
                 } else if( &*added_it == &it ) {
                     // merged to the original stack, restore original charges
                     it.charges = last_charges;
+                    merged_back = true;
                 } else {
                     // successfully added
                     auto &entry = mapPickup[newit.tname()];
                     entry.second += newit.count();
                     entry.first = newit;
                     picked_up = true;
+                    if( added_it.where() == item_location::type::container ) {
+                        speech.destinations[newit.tname()] = added_it.parent_item()->type_name();
+                    }
                 }
             }
             if( picked_up ) {
                 // Update info
                 info.set_dst( added_it );
+            } else if( !merged_back ) {
+                speech.failures.push_back( { newit.display_name(), _( "no room" ) } );
             }
             break;
         }
@@ -367,6 +412,7 @@ bool Pickup::do_pickup( std::vector<item_location> &targets, std::vector<int> &q
     // Map of items picked up so we can output them all at the end and
     // merge dropping items with the same name.
     PickupMap mapPickup;
+    pickup_speech speech;
 
     bool problem = false;
     while( !problem && player_character.get_moves() >= 0 && !targets.empty() ) {
@@ -382,16 +428,23 @@ bool Pickup::do_pickup( std::vector<item_location> &targets, std::vector<int> &q
             continue;
         }
         problem = !pick_one_up( target, quantity, got_water, got_gas, mapPickup, autopickup,
-                                stash_successful, got_frozen_liquid, info );
+                                stash_successful, got_frozen_liquid, info, speech );
         if( info.total_bulk_volume > 200_ml ) {
             // Bulk loading is not allowed beyond a certain volume
             info = Pickup::pick_info();
         }
     }
 
+    if( autopickup ) {
+        // Auto pickup leaves items behind without a message.
+        speech.failures.clear();
+    }
     if( !mapPickup.empty() ) {
+        // The spoken result replaces the per-item messages.
+        accessibility::game_message_speech_suppression quiet;
         show_pickup_message( mapPickup );
     }
+    accessibility::announce_game_message( pickup_speech_result( mapPickup, speech ) );
     if( got_frozen_liquid ) {
         add_msg( m_info, _( "Chunks of frozen liquid cannot be picked up without the correct tools." ) );
     }

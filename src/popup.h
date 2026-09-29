@@ -85,6 +85,11 @@ class query_popup
          **/
         query_popup &context( const std::string &cat );
         /**
+         * Speak `context` before the message, for example the item a question
+         * is about, without showing it.
+         **/
+        query_popup &accessibility_context( const std::string &context );
+        /**
          * Specify the query message.
          */
         template <typename ...Args>
@@ -220,6 +225,7 @@ class query_popup
 
         std::string category;
         std::string text;
+        std::string spoken_context;
         std::string last_announced_text;
         std::string last_static_announcement;
         bool has_announced_text;

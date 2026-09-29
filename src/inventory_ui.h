@@ -926,6 +926,12 @@ class inventory_selector
         }
         /** Purpose, carrying statistics, and filter, spoken on request. */
         virtual std::string accessibility_status() const;
+        /** Weight and volume against their limits, or only over-limit warnings; empty without statistics. */
+        std::string accessibility_capacity( bool include_values ) const;
+        /** Predicted destination of the entry's item, spoken with the row details. */
+        virtual std::string accessibility_destination( const inventory_entry & ) const {
+            return {};
+        }
 
         const navigation_mode_data &get_navigation_data( navigation_mode m ) const;
 
@@ -1125,6 +1131,7 @@ class pickup_selector : public inventory_multiselector
     protected:
         stats get_raw_stats() const override;
         void reassign_custom_invlets() override;
+        std::string accessibility_destination( const inventory_entry &entry ) const override;
     private:
         bool wield( int &count );
         bool wear();

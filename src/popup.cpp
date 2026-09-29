@@ -186,6 +186,12 @@ query_popup &query_popup::context( const std::string &cat )
     return *this;
 }
 
+query_popup &query_popup::accessibility_context( const std::string &context )
+{
+    spoken_context = context;
+    return *this;
+}
+
 query_popup &query_popup::option( const std::string &opt )
 {
     invalidate_ui();
@@ -320,7 +326,8 @@ query_popup::result query_popup::query_once()
     }
 
     const bool button_prompt = !options.empty();
-    const std::string semantic_text = remove_color_tags( text );
+    const std::string semantic_text = spoken_context.empty() ? remove_color_tags( text ) :
+                                      accessibility::format_semantic_sequence( { spoken_context, remove_color_tags( text ) } );
 
     std::shared_ptr<query_popup_impl> impl = create_or_get_impl();
 

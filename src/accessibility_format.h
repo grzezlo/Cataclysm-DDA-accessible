@@ -197,6 +197,11 @@ struct inventory_focus_entry {
     bool favorite = false;
     bool has_contents = false;
     bool contents_collapsed = false;
+    bool not_owned = false;
+    /** Owner name; spoken only with all cells. */
+    std::string owner;
+    /** Predicted destination of a transfer; spoken only with all cells. */
+    std::string destination;
 };
 std::string format_inventory_focus( const inventory_focus_entry &entry, bool include_context,
                                     bool include_all_cells );
@@ -208,6 +213,34 @@ std::string format_inventory_selection_change( const std::string &caption,
         const std::string &state, size_t selected_entries );
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second );
+/** Weight and volume against their limits, as shown by a selector's statistics. */
+struct inventory_capacity {
+    std::string weight;
+    std::string weight_limit;
+    std::string weight_unit;
+    std::string volume;
+    std::string volume_limit;
+    std::string volume_unit;
+    bool over_weight = false;
+    bool over_volume = false;
+};
+/** Values and warnings, or only the warnings; empty when only warnings are asked and none apply. */
+std::string format_inventory_capacity( const inventory_capacity &capacity, bool include_values );
+/** An item that a pickup stored, with the container it went into, if known. */
+struct pickup_result_item {
+    std::string item;
+    std::string destination;
+};
+/** An item that a pickup left behind, with the reason. */
+struct pickup_failure {
+    std::string item;
+    std::string reason;
+};
+std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
+                                  const std::vector<pickup_failure> &failed );
+/** Result of a deliberate drop; `onto` is false when the items went into furniture or a vehicle. */
+std::string format_drop_result( const std::string &destination,
+                                const std::vector<std::string> &items, bool onto );
 /** Semantic row of a two-pane item transfer screen. */
 struct transfer_row {
     std::string name;

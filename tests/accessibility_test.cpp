@@ -8,6 +8,7 @@
 #include "accessibility_format.h"
 #include "accessibility_gameplay.h"
 #include "action.h"
+#include "activity_handlers.h"
 #include "advanced_inv.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_pane.h"
@@ -29,8 +30,10 @@
 #include "map_item_stack.h"
 #include "map_selector.h"
 #include "monster.h"
+#include "pickup.h"
 #include "player_helpers.h"
 #include "point.h"
+#include "string_formatter.h"
 #include "type_id.h"
 
 namespace
@@ -111,6 +114,23 @@ class capture_drop_selector final : public inventory_drop_selector
 
         std::string status() const {
             return accessibility_status();
+        }
+};
+
+class capture_pickup_selector final : public pickup_selector
+{
+    public:
+        explicit capture_pickup_selector( Character &u ) : pickup_selector( u ) {}
+
+        std::string focus() const {
+            return accessibility::format_inventory_focus(
+                       accessibility_entry( get_active_column().get_highlighted() ), false, false );
+        }
+
+        // The row as ACCESSIBILITY_DETAILS reads it.
+        std::string details() const {
+            return accessibility::format_inventory_focus(
+                       accessibility_entry( get_active_column().get_highlighted() ), true, true );
         }
 };
 
@@ -2274,4 +2294,221 @@ TEST_CASE( "auto_travel_speaks_start_arrival_and_early_stop", "[accessibility]" 
         CHECK( capture_ptr->messages.back() ==
                "Traveling to unseen, 4 tiles east, 4 steps: unseen 4." );
     }
+}
+
+TEST_CASE( "pickup_and_drop_formatters_speak_capacity_ownership_and_result",
+           "[accessibility][nogame]" )
+{
+    accessibility::inventory_capacity capacity;
+    capacity.weight = "12.3";
+    capacity.weight_limit = "40.0";
+    capacity.weight_unit = "kg";
+    capacity.volume = "8.10";
+    capacity.volume_limit = "10.00";
+    capacity.volume_unit = "L";
+    CHECK( accessibility::format_inventory_capacity( capacity, true ) ==
+           "Weight 12.3 of 40.0 kg, volume 8.10 of 10.00 L." );
+    CHECK( accessibility::format_inventory_capacity( capacity, false ).empty() );
+    capacity.over_volume = true;
+    CHECK( accessibility::format_inventory_capacity( capacity, true ) ==
+           "Weight 12.3 of 40.0 kg, volume 8.10 of 10.00 L. Over volume limit." );
+    capacity.over_weight = true;
+    CHECK( accessibility::format_inventory_capacity( capacity, false ) ==
+           "Over weight limit. Over volume limit." );
+
+    accessibility::inventory_focus_entry entry;
+    entry.caption = "rock";
+    entry.selection = "Not selected";
+    entry.not_owned = true;
+    entry.owner = "The Free Merchants";
+    entry.destination = "backpack";
+    CHECK( accessibility::format_inventory_focus( entry, false, false ) ==
+           "rock. Not selected. Not owned." );
+    CHECK( accessibility::format_inventory_focus( entry, true, true ) ==
+           "rock. Not selected. Not owned. Owner: The Free Merchants. Goes into: backpack." );
+
+    CHECK( accessibility::format_pickup_result( {}, {} ).empty() );
+    CHECK( accessibility::format_pickup_result( { { "3 apples", "backpack" }, { "knife", "sheath" } },
+    { { "rock", "too heavy" } } ) ==
+    "Picked up: 3 apples into backpack, knife into sheath. Not picked up: rock, too heavy." );
+    CHECK( accessibility::format_pickup_result( { { "nails (20)", "" } }, {} ) ==
+    "Picked up: nails (20)." );
+    CHECK( accessibility::format_pickup_result( {}, { { "rock", "no room" }, { "pipe", "no room" } } )
+    ==
+    "Not picked up: rock, no room; pipe, no room." );
+
+    CHECK( accessibility::format_drop_result( "grass", { "3 apples", "knife" }, true ) ==
+           "Dropped on grass: 3 apples, knife." );
+    CHECK( accessibility::format_drop_result( "dresser", { "rock", "hammer" }, false ) ==
+           "Put in dresser: rock, hammer." );
+    CHECK( accessibility::format_drop_result( "grass", {}, true ).empty() );
+}
+
+TEST_CASE( "suppressed_game_messages_are_not_spoken", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    accessibility::note_player_input();
+    {
+        accessibility::game_message_speech_suppression quiet;
+        CHECK_FALSE( accessibility::announce_game_message( "You pick up: 1 rock" ) );
+        {
+            accessibility::game_message_speech_suppression nested;
+            CHECK_FALSE( accessibility::announce_game_message( "You pick up: 1 hammer" ) );
+        }
+        CHECK_FALSE( accessibility::announce_game_message( "You pick up: 1 pipe" ) );
+    }
+    CHECK( accessibility::announce_game_message( "Picked up: rock, hammer, pipe." ) );
+    CHECK( accessibility::flush_gameplay_announcements() );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages[0] == "Picked up: rock, hammer, pipe." );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "pickup_selector_rows_speak_ownership_and_destination", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    map &here = get_map();
+    const tripoint_bub_ms position = you.pos_bub();
+    item &own_rock = here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+    own_rock.set_owner( you );
+    item &merchant_hammer = here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
+    merchant_hammer.set_owner( faction_id( "free_merchants" ) );
+    const item_location rock_location( map_cursor( position ), &own_rock );
+    const item_location hammer_location( map_cursor( position ), &merchant_hammer );
+
+    capture_pickup_selector selector( you );
+    selector.set_title( "Pickup" );
+    selector.add_map_items( position );
+
+    REQUIRE( selector.highlight_one_of( { rock_location } ) );
+    CAPTURE( selector.details() );
+    CHECK( selector.focus().find( "Not owned" ) == std::string::npos );
+    CHECK( selector.focus().find( "Goes into" ) == std::string::npos );
+    CHECK( selector.details().find( "Goes into: backpack" ) != std::string::npos );
+
+    REQUIRE( selector.highlight_one_of( { hammer_location } ) );
+    CHECK( selector.focus().find( "Not owned" ) != std::string::npos );
+    CHECK( selector.focus().find( "Owner:" ) == std::string::npos );
+    CHECK( selector.details().find( "Owner: " ) != std::string::npos );
+}
+
+TEST_CASE( "multiselect_marking_speaks_resulting_capacity", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    const item_location rock = you.i_add( item( itype_id( "rock" ) ) );
+    REQUIRE( rock );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    capture_drop_selector selector( you );
+    selector.set_title( "Drop" );
+    selector.add_character_items( you );
+    REQUIRE( selector.highlight_one_of( { rock } ) );
+    selector.speak_focus();
+    selector.select_focused( 1 );
+    REQUIRE( !capture_ptr->messages.empty() );
+    const std::string &marked = capture_ptr->messages.back();
+    CHECK( marked.find( "1 entry selected. Weight " ) != std::string::npos );
+    CHECK( marked.find( ", volume " ) != std::string::npos );
+    CHECK( marked.find( "Over " ) == std::string::npos );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "pickup_speaks_one_result_with_destination_and_left_items", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms position = you.pos_bub();
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    const auto pick_up = [&]( const std::string & type, int count ) {
+        std::vector<item_location> targets;
+        std::vector<int> quantities;
+        item stack = item( itype_id( type ) );
+        if( stack.count_by_charges() ) {
+            stack.charges = count;
+            count = 1;
+        }
+        for( int i = 0; i < count; ++i ) {
+            item &placed = here.add_item( position, stack );
+            placed.set_owner( you );
+            targets.emplace_back( map_cursor( position ), &placed );
+            quantities.push_back( 0 );
+        }
+        you.set_moves( 1000 );
+        bool stash_successful = true;
+        Pickup::pick_info info;
+        accessibility::note_player_input();
+        Pickup::do_pickup( targets, quantities, false, stash_successful, info );
+        accessibility::flush_gameplay_announcements();
+    };
+
+    SECTION( "items without a pocket are named with the reason" ) {
+        pick_up( "hammer", 1 );
+        REQUIRE( !capture_ptr->messages.empty() );
+        CHECK( capture_ptr->messages.back() == "Not picked up: hammer, no room." );
+    }
+
+    SECTION( "stored items name their container" ) {
+        you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+        pick_up( "hammer", 2 );
+        REQUIRE( !capture_ptr->messages.empty() );
+        CHECK( capture_ptr->messages.back() == "Picked up: 2 hammers into backpack." );
+        CHECK( accessibility::repeat_last_announcement() );
+        CHECK( capture_ptr->messages.back() == "Picked up: 2 hammers into backpack." );
+    }
+
+    SECTION( "stacks counted in charges name the container" ) {
+        you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+        pick_up( "rock", 2 );
+        REQUIRE( !capture_ptr->messages.empty() );
+        CHECK( capture_ptr->messages.back() == "Picked up: rocks (2) into backpack." );
+    }
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "dropping_several_kinds_of_items_names_them", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    map &here = get_map();
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+
+    accessibility::note_player_input();
+    put_into_vehicle_or_drop( you, item_drop_reason::deliberate, {
+        item( itype_id( "hammer" ) ), item( itype_id( "rock" ) ), item( itype_id( "hammer" ) ),
+        item( itype_id( "rock" ) )
+    } );
+    accessibility::flush_gameplay_announcements();
+    REQUIRE( !capture_ptr->messages.empty() );
+    CHECK( capture_ptr->messages.back() ==
+           string_format( "Dropped on %s: 2 hammers, rocks (2).", here.name( you.pos_bub() ) ) );
+
+    accessibility::reset_backend_after_testing();
 }

@@ -68,6 +68,19 @@ void queue_gameplay_announcement( const std::string &message, gameplay_speech ki
 bool flush_gameplay_announcements();
 /** Queue a game log message for this turn's utterance. */
 bool announce_game_message( const std::string &message );
+/**
+ * While alive, game log messages are logged but not spoken.  Use it when the
+ * caller speaks one summary in place of several messages it adds.
+ */
+class game_message_speech_suppression
+{
+    public:
+        game_message_speech_suppression();
+        ~game_message_speech_suppression();
+        game_message_speech_suppression( const game_message_speech_suppression & ) = delete;
+        game_message_speech_suppression &operator=( const game_message_speech_suppression & ) =
+            delete;
+};
 /** Queue the destination tile, adding the direction only when it changes. */
 bool announce_movement( const std::string &direction, const std::string &tile );
 /** Remember that per-step movement speech was skipped during auto-move. */

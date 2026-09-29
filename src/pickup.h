@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_PICKUP_H
 #define CATA_SRC_PICKUP_H
 
+#include <string>
 #include <vector>
 
 #include "coordinates.h"
@@ -37,7 +38,8 @@ struct pick_info {
  */
 bool do_pickup( std::vector<item_location> &targets, std::vector<int> &quantities,
                 bool autopickup, bool &stash_successful, Pickup::pick_info &info );
-bool query_thief();
+/** Ask whether to steal; `item_name` names the item in speech only. */
+bool query_thief( const std::string &item_name = std::string() );
 
 enum from_where : int {
     from_cargo = 0,

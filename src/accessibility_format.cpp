@@ -906,6 +906,9 @@ std::string format_inventory_focus( const inventory_focus_entry &entry,
     if( !entry.selection.empty() ) {
         parts.push_back( entry.selection );
     }
+    if( entry.not_owned ) {
+        parts.push_back( _( "Not owned" ) );
+    }
     if( !entry.location.empty() ) {
         parts.push_back( string_format( _( "Location: %s" ), entry.location ) );
     }
@@ -927,6 +930,12 @@ std::string format_inventory_focus( const inventory_focus_entry &entry,
     }
     if( !entry.denial.empty() ) {
         parts.push_back( string_format( _( "Unavailable: %s" ), entry.denial ) );
+    }
+    if( include_all_cells && !entry.owner.empty() ) {
+        parts.push_back( string_format( _( "Owner: %s" ), entry.owner ) );
+    }
+    if( include_all_cells && !entry.destination.empty() ) {
+        parts.push_back( string_format( _( "Goes into: %s" ), entry.destination ) );
     }
     return format_semantic_sequence( parts );
 }
@@ -970,6 +979,63 @@ std::string format_inventory_selection_change( const std::string &caption,
 {
     return format_semantic_sequence( {
         caption, state, format_inventory_selection_total( selected_entries )
+    } );
+}
+
+std::string format_inventory_capacity( const inventory_capacity &capacity,
+                                       const bool include_values )
+{
+    std::vector<std::string> parts;
+    if( include_values ) {
+        //~ Spoken selector statistics: %1$s weight, %2$s weight limit, %3$s weight unit, %4$s volume, %5$s volume limit, %6$s volume unit
+        parts.push_back( string_format( _( "Weight %1$s of %2$s %3$s, volume %4$s of %5$s %6$s" ),
+                                        capacity.weight, capacity.weight_limit, capacity.weight_unit,
+                                        capacity.volume, capacity.volume_limit, capacity.volume_unit ) );
+    }
+    if( capacity.over_weight ) {
+        parts.push_back( _( "Over weight limit" ) );
+    }
+    if( capacity.over_volume ) {
+        parts.push_back( _( "Over volume limit" ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
+                                  const std::vector<pickup_failure> &failed )
+{
+    std::vector<std::string> parts;
+    if( !picked.empty() ) {
+        std::vector<std::string> items;
+        for( const pickup_result_item &entry : picked ) {
+            items.push_back( entry.destination.empty() ? entry.item :
+                             //~ Picked-up item and the container it went into
+                             string_format( _( "%1$s into %2$s" ), entry.item, entry.destination ) );
+        }
+        parts.push_back( string_format( _( "Picked up: %s" ), string_join( items, _( ", " ) ) ) );
+    }
+    if( !failed.empty() ) {
+        std::vector<std::string> items;
+        for( const pickup_failure &entry : failed ) {
+            items.push_back( entry.reason.empty() ? entry.item :
+                             //~ Item left behind and the reason
+                             string_format( _( "%1$s, %2$s" ), entry.item, entry.reason ) );
+        }
+        parts.push_back( string_format( _( "Not picked up: %s" ), string_join( items, _( "; " ) ) ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_drop_result( const std::string &destination,
+                                const std::vector<std::string> &items, const bool onto )
+{
+    if( items.empty() ) {
+        return std::string();
+    }
+    const std::string list = string_join( items, _( ", " ) );
+    return format_semantic_sequence( {
+        onto ? string_format( _( "Dropped on %1$s: %2$s" ), destination, list ) :
+        string_format( _( "Put in %1$s: %2$s" ), destination, list )
     } );
 }
 
