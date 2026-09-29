@@ -56,6 +56,27 @@ is Stage 18, but travel initiation is in scope here).
   terrain changes during travel (reuse `announce_movement`), announce
   interruption reason, announce arrival.
 
+**Selected interaction (option B, route summary at start):**
+
+- Keys are unchanged.  Travel starts from look-around (`TRAVEL_TO`), the
+  nearby item list (`TRAVEL_TO`), and overmap travel confirmation.
+- Starting travel speaks one summary: destination, straight-line distance and
+  direction, step count, and route segments with consecutive identical terrain
+  merged, for example "Traveling to wooden door, 12 tiles northeast, 14 steps:
+  grass 6, dirt road 5, wooden floor 3."  More than four segments end with "N
+  more".  Tiles the player cannot see are "unseen".  Overmap travel names
+  overmap terrain in map tiles ("Traveling to evac shelter, 12 map tiles
+  south: forest 4, road 8.").
+- Steps during travel are silent.  Arrival at the end of a local route speaks
+  "Arrived: <tile>."; overmap arrival keeps the game message and the position
+  report.
+- When travel stops early without the player confirming a cancel, the next
+  input prompt speaks "Travel stopped: <destination>, <distance direction>."
+  followed by the position.  The reason comes from the game message or the
+  cancel query that caused the stop.  A player-confirmed cancel adds no
+  travel speech.
+- `Alt+R` repeats the last announcement, including the start summary.
+
 **Success criteria:** Starting auto-travel announces destination and direction.
 Each meaningful terrain change during travel is announced without flooding.
 Obstruction and danger interruptions announce the reason and offer clear
