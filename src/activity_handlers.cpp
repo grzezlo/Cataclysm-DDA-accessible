@@ -16,6 +16,7 @@
 #include <unordered_set>
 #include <utility>
 
+#include "accessibility_gameplay.h"
 #include "activity_actor.h"
 #include "avatar.h"
 #include "avatar_action.h"
@@ -1623,6 +1624,9 @@ void activity_handlers::travel_do_turn( player_activity *act, Character *you )
         you->omt_path.pop_back();
         if( you->omt_path.empty() ) {
             you->add_msg_if_player( m_info, _( "You have reached your destination." ) );
+            if( you->is_avatar() ) {
+                accessibility_gameplay::travel_arrived();
+            }
             act->set_to_null();
             ui::omap::force_quit();
             return;
@@ -1651,6 +1655,9 @@ void activity_handlers::travel_do_turn( player_activity *act, Character *you )
         }
     } else {
         you->add_msg_if_player( m_info, _( "You have reached your destination." ) );
+        if( you->is_avatar() ) {
+            accessibility_gameplay::travel_arrived();
+        }
         ui::omap::force_quit();
     }
     act->set_to_null();

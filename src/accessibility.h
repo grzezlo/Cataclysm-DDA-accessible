@@ -74,6 +74,11 @@ bool announce_movement( const std::string &direction, const std::string &tile );
 void note_suppressed_movement();
 /** Return and clear whether movement speech was skipped since the last call. */
 bool take_suppressed_movement();
+/** Remember that announced auto-travel started; cleared with the game state. */
+void note_travel_started();
+/** Return and clear whether announced auto-travel is in progress. */
+bool take_travel_in_progress();
+bool travel_in_progress();
 /**
  * Update visible-threat state and return an announcement only when the set of
  * threats changed.  `describe` is called only when an announcement is needed.

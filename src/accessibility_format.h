@@ -332,6 +332,22 @@ std::string format_direction_prompt( const std::string &prompt,
 std::string format_direction_auto_selected( const direction_target &target );
 std::string format_direction_invalid( const direction_target &target );
 
+/** A run of consecutive route tiles with the same spoken name. */
+struct travel_segment {
+    std::string name;
+    int count = 0;
+};
+/** Merge consecutive identical tile names of a route into segments. */
+std::vector<travel_segment> merge_travel_segments( const std::vector<std::string> &names );
+/**
+ * Spoken travel start: destination, straight-line location such as "12 tiles
+ * northeast", the step count (omitted when zero), and at most four segments.
+ */
+std::string format_travel_start( const std::string &destination, const std::string &location,
+                                 int steps, const std::vector<travel_segment> &segments );
+std::string format_travel_arrival( const std::string &tile );
+std::string format_travel_stopped( const std::string &destination, const std::string &location );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H

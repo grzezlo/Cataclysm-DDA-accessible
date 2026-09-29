@@ -16,6 +16,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "all_enum_values.h"
 #include "avatar.h"
@@ -1918,6 +1919,8 @@ static bool try_travel_to_destination( avatar &player_character, const tripoint_
         } else {
             player_character.reset_move_mode();
             player_character.assign_activity( ACT_TRAVELLING );
+            accessibility_gameplay::announce_overmap_travel_start( player_character,
+                    player_character.omt_path );
         }
         return true;
     }

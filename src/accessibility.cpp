@@ -55,6 +55,7 @@ struct service_state {
     };
     std::vector<queued_speech> gameplay_queue;
     bool movement_suppressed = false;
+    bool travel_in_progress = false;
     std::string last_game_message;
     uint64_t last_game_message_generation = 0;
 };
@@ -246,6 +247,23 @@ bool take_suppressed_movement()
     return suppressed;
 }
 
+void note_travel_started()
+{
+    state().travel_in_progress = true;
+}
+
+bool take_travel_in_progress()
+{
+    const bool in_progress = state().travel_in_progress;
+    state().travel_in_progress = false;
+    return in_progress;
+}
+
+bool travel_in_progress()
+{
+    return state().travel_in_progress;
+}
+
 bool announce_movement( const std::string &direction, const std::string &tile )
 {
     service_state &current = state();
@@ -339,6 +357,7 @@ void enable_game_messages( const bool enabled )
         current.gameplay_queue.clear();
         current.last_game_message.clear();
         current.movement_suppressed = false;
+        current.travel_in_progress = false;
     }
     current.game_messages_enabled = enabled;
 }
@@ -372,6 +391,7 @@ void reset_game_state()
     current.gameplay_queue.clear();
     current.last_game_message.clear();
     current.movement_suppressed = false;
+    current.travel_in_progress = false;
     reset_condition_tracker();
 }
 

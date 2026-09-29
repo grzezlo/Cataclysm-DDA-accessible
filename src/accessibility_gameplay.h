@@ -64,6 +64,17 @@ void before_player_input( map &here, const avatar &viewer );
 void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &viewer,
                             const map &here );
 
+/** Summarize a local auto-travel route that the player just started. */
+void announce_travel_start( map &here, const avatar &viewer,
+                            const std::vector<tripoint_bub_ms> &route );
+/** Summarize an overmap travel path, stored destination first as in `omt_path`. */
+void announce_overmap_travel_start( const avatar &viewer,
+                                    const std::vector<tripoint_abs_omt> &path );
+/** The player confirmed cancelling auto-travel; the stop needs no travel speech. */
+void travel_canceled();
+/** Overmap travel reached its destination; the game message reports it. */
+void travel_arrived();
+
 accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
         const map_item_stack &stack, int page, int result_index, int result_count, int priority,
         std::optional<content_newness> newness );

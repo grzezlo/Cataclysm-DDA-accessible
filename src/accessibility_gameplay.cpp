@@ -32,7 +32,9 @@
 #include "monster.h"
 #include "move_mode.h"
 #include "npc.h"
+#include "omdata.h"
 #include "output.h"
+#include "overmapbuffer.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "trap.h"
@@ -76,6 +78,43 @@ struct semantic_tile_info {
     std::string creature;
     std::vector<std::string> items;
 };
+
+/** The announced auto-travel; valid while accessibility::travel_in_progress(). */
+struct travel_plan {
+    std::string destination;
+    tripoint_abs_ms target;
+    tripoint_abs_omt omt_target;
+    bool distant = false;
+    bool canceled = false;
+};
+travel_plan travel;
+
+std::string route_tile_name( const map &here, const tripoint_bub_ms &position )
+{
+    return here.has_furn( position ) ? here.furn( position ).obj().name() :
+           here.ter( position ).obj().name();
+}
+
+std::string overmap_location( const tripoint_abs_omt &origin, const tripoint_abs_omt &target )
+{
+    const int distance = rl_dist( origin.xy(), target.xy() );
+    if( distance == 0 ) {
+        return _( "here" );
+    }
+    const std::string direction = direction_name( direction_from( origin.xy().raw(),
+                                  target.xy().raw() ) );
+    return string_format( n_gettext( "%1$d map tile %2$s", "%1$d map tiles %2$s", distance ),
+                          distance, direction );
+}
+
+std::string overmap_tile_name( const tripoint_abs_omt &position )
+{
+    const om_vision_level vision = overmap_buffer.seen( position );
+    if( vision == om_vision_level::unseen ) {
+        return _( "unseen" );
+    }
+    return overmap_buffer.ter( position )->get_name( vision );
+}
 
 struct limb_conditions {
     std::vector<bodypart_id> bleeding;
@@ -812,6 +851,18 @@ void announce_turn_alerts( const map &here, const Character &viewer,
 
 void before_player_input( map &here, const avatar &viewer )
 {
+    // Waiting for a key means announced travel is over.  Arrival already ended
+    // it, so only an early stop reaches this point.
+    if( accessibility::take_travel_in_progress() && !travel.canceled ) {
+        std::string location;
+        if( travel.distant ) {
+            location = overmap_location( viewer.pos_abs_omt(), travel.omt_target );
+        } else {
+            location = situation_location( viewer.pos_bub(), here.get_bub( travel.target ) );
+        }
+        accessibility::queue_gameplay_announcement( accessibility::format_travel_stopped(
+                    travel.destination, location ), accessibility::gameplay_speech::meaningful );
+    }
     if( accessibility::take_suppressed_movement() ) {
         accessibility::queue_gameplay_announcement( gameplay_focus_description( here, viewer ),
                 accessibility::gameplay_speech::routine );
@@ -828,7 +879,10 @@ void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &vi
     // Only steps with more route ahead are skipped.  The route loses its step
     // before the move, so the final step is spoken as the arrival.  The saved
     // destination point is not used: it stays set after a finished route.
-    if( viewer.has_destination() ) {
+    // Overmap travel ends each local route and plans the next one, so only
+    // travel_arrived() ends it.
+    const bool travel_active = accessibility::travel_in_progress();
+    if( viewer.has_destination() || ( travel_active && travel.distant ) ) {
         // Per-step speech would flood auto-travel; if travel stops early the
         // position is reported when the game next waits for the player.
         accessibility::note_suppressed_movement();
@@ -838,10 +892,75 @@ void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &vi
     accessibility::take_suppressed_movement();
     const tripoint_bub_ms new_pos = viewer.pos_bub();
     const tripoint_abs_ms new_abs_pos = here.get_abs( new_pos );
-    const std::string tile_name = here.has_furn( new_pos ) ? here.furn( new_pos ).obj().name() :
-                                  here.ter( new_pos ).obj().name();
+    const std::string tile_name = route_tile_name( here, new_pos );
+    if( travel_active ) {
+        accessibility::take_travel_in_progress();
+        accessibility::queue_gameplay_announcement( accessibility::format_travel_arrival( tile_name ),
+                accessibility::gameplay_speech::meaningful );
+        return;
+    }
     accessibility::announce_movement(
         direction_name( direction_from( old_abs_pos.raw(), new_abs_pos.raw() ) ), tile_name );
+}
+
+void announce_travel_start( map &here, const avatar &viewer,
+                            const std::vector<tripoint_bub_ms> &route )
+{
+    if( !accessibility::is_active() || !accessibility::game_messages_enabled() || route.empty() ) {
+        return;
+    }
+    const tripoint_bub_ms origin = viewer.pos_bub();
+    const tripoint_bub_ms destination = route.back();
+    const visibility_variables &cache = here.get_visibility_variables_cache();
+    std::vector<std::string> names;
+    names.reserve( route.size() );
+    for( const tripoint_bub_ms &position : route ) {
+        names.push_back( tile_visibility( here, position, cache ) == visibility_type::CLEAR ?
+                         route_tile_name( here, position ) : _( "unseen" ) );
+    }
+    travel = travel_plan();
+    travel.destination = direction_target( here, viewer, origin, destination ).target;
+    travel.target = here.get_abs( destination );
+    accessibility::note_travel_started();
+    accessibility::queue_gameplay_announcement( accessibility::format_travel_start(
+                travel.destination, situation_location( origin, destination ),
+                static_cast<int>( route.size() ), accessibility::merge_travel_segments( names ) ),
+            accessibility::gameplay_speech::meaningful );
+}
+
+void announce_overmap_travel_start( const avatar &viewer,
+                                    const std::vector<tripoint_abs_omt> &path )
+{
+    if( !accessibility::is_active() || !accessibility::game_messages_enabled() || path.empty() ) {
+        return;
+    }
+    const tripoint_abs_omt origin = viewer.pos_abs_omt();
+    // The path is stored destination first and may end with the current tile.
+    std::vector<std::string> names;
+    for( auto position = path.rbegin(); position != path.rend(); ++position ) {
+        if( *position != origin ) {
+            names.push_back( overmap_tile_name( *position ) );
+        }
+    }
+    travel = travel_plan();
+    travel.distant = true;
+    travel.omt_target = path.front();
+    travel.destination = overmap_tile_name( travel.omt_target );
+    accessibility::note_travel_started();
+    accessibility::queue_gameplay_announcement( accessibility::format_travel_start(
+                travel.destination, overmap_location( origin, travel.omt_target ), 0,
+                accessibility::merge_travel_segments( names ) ),
+            accessibility::gameplay_speech::meaningful );
+}
+
+void travel_canceled()
+{
+    travel.canceled = true;
+}
+
+void travel_arrived()
+{
+    accessibility::take_travel_in_progress();
 }
 
 accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,

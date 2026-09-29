@@ -2147,3 +2147,131 @@ TEST_CASE( "direction_targets_name_visible_adjacent_things_in_compass_order", "[
     CHECK( accessibility_gameplay::direction_target( here, viewer, origin, table ).target ==
            "unseen" );
 }
+
+TEST_CASE( "travel_start_summarizes_merged_route_segments", "[accessibility][nogame]" )
+{
+    const std::vector<accessibility::travel_segment> segments =
+        accessibility::merge_travel_segments( { "grass", "grass", "dirt road", "grass" } );
+    REQUIRE( segments.size() == 3 );
+    CHECK( segments[0].name == "grass" );
+    CHECK( segments[0].count == 2 );
+    CHECK( segments[2].count == 1 );
+
+    CHECK( accessibility::format_travel_start( "wooden door", "12 tiles northeast", 14,
+    { { "grass", 6 }, { "dirt road", 5 }, { "wooden floor", 3 } } ) ==
+    "Traveling to wooden door, 12 tiles northeast, 14 steps: grass 6, dirt road 5, "
+    "wooden floor 3." );
+    CHECK( accessibility::format_travel_start( "rock", "1 tile east", 1, { { "grass", 1 } } ) ==
+    "Traveling to rock, 1 tile east, 1 step: grass 1." );
+    CHECK( accessibility::format_travel_start( "evac shelter", "12 map tiles south", 0,
+    { { "forest", 4 }, { "road", 8 } } ) ==
+    "Traveling to evac shelter, 12 map tiles south: forest 4, road 8." );
+    CHECK( accessibility::format_travel_start( "field", "2 map tiles west", 0,
+    { { "a", 1 }, { "b", 1 }, { "c", 1 }, { "d", 1 }, { "e", 1 }, { "f", 1 } } ) ==
+    "Traveling to field, 2 map tiles west: a 1, b 1, c 1, d 1, 2 more." );
+    CHECK( accessibility::format_travel_arrival( "grass" ) == "Arrived: grass." );
+    CHECK( accessibility::format_travel_stopped( "wooden door", "8 tiles north" ) ==
+           "Travel stopped: wooden door, 8 tiles north." );
+}
+
+TEST_CASE( "auto_travel_speaks_start_arrival_and_early_stop", "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    const time_point previous_time = calendar::turn;
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms start = you.pos_bub();
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope cleanup( [&]() {
+        you.clear_destination();
+        accessibility::reset_game_state();
+        accessibility::reset_backend_after_testing();
+        you.setpos( here, start );
+        clear_map();
+        set_time( previous_time );
+    } );
+    accessibility::reset_game_state();
+    accessibility::enable_game_messages( true );
+    set_time_to_day();
+
+    std::vector<tripoint_bub_ms> route;
+    for( int i = 1; i <= 4; ++i ) {
+        route.push_back( start + tripoint_rel_ms::east * i );
+    }
+    here.ter_set( route[2], ter_str_id( "t_floor" ) );
+    here.ter_set( route[3], ter_str_id( "t_floor" ) );
+    here.invalidate_map_cache( start.z() );
+    here.build_map_cache( start.z(), true );
+    const std::string ground = here.tername( route[0] );
+    const std::string floor = here.tername( route[3] );
+    REQUIRE( ground != floor );
+
+    const auto begin_travel = [&]( const std::vector<tripoint_bub_ms> &path ) {
+        you.set_destination( path );
+        accessibility_gameplay::announce_travel_start( here, you, path );
+        REQUIRE( accessibility::flush_gameplay_announcements() );
+    };
+    // One auto-move step as the game performs it: take the step, then move.
+    const auto travel_step = [&]() {
+        REQUIRE( you.get_next_auto_move_direction() != ACTION_NULL );
+        you.set_moves( you.get_speed() );
+        REQUIRE( avatar_action::move( you, here, tripoint_rel_ms::east ) );
+    };
+
+    SECTION( "start summary, silent steps, and one arrival" ) {
+        begin_travel( route );
+        CHECK( capture_ptr->messages.back() == "Traveling to " + floor + ", 4 tiles east, 4 steps: " +
+               ground + " 2, " + floor + " 2." );
+        CHECK( accessibility::last_announcement() == capture_ptr->messages.back() );
+        const size_t before_steps = capture_ptr->messages.size();
+        for( int i = 0; i < 3; ++i ) {
+            travel_step();
+            CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+        }
+        travel_step();
+        accessibility_gameplay::before_player_input( here, you );
+        REQUIRE( capture_ptr->messages.size() == before_steps + 1 );
+        CHECK( capture_ptr->messages.back() == "Arrived: " + floor + "." );
+        CHECK_FALSE( accessibility::travel_in_progress() );
+    }
+
+    SECTION( "an obstruction stop names the remaining distance, then the position" ) {
+        begin_travel( route );
+        travel_step();
+        // An obstacle aborts the route without a player-confirmed cancel.
+        you.abort_automove();
+        const size_t before_stop = capture_ptr->messages.size();
+        accessibility_gameplay::before_player_input( here, you );
+        REQUIRE( capture_ptr->messages.size() == before_stop + 1 );
+        CHECK( capture_ptr->messages.back().rfind( "Travel stopped: " + floor + ", 3 tiles east.",
+                0 ) == 0 );
+        CHECK( capture_ptr->messages.back().find( ground ) != std::string::npos );
+        // The stop is reported once.
+        accessibility_gameplay::before_player_input( here, you );
+        CHECK( capture_ptr->messages.size() == before_stop + 1 );
+    }
+
+    SECTION( "a confirmed cancel adds no travel speech" ) {
+        begin_travel( route );
+        travel_step();
+        you.abort_automove();
+        accessibility_gameplay::travel_canceled();
+        const size_t before_cancel = capture_ptr->messages.size();
+        accessibility_gameplay::before_player_input( here, you );
+        REQUIRE( capture_ptr->messages.size() == before_cancel + 1 );
+        CHECK( capture_ptr->messages.back().find( "Travel stopped" ) == std::string::npos );
+        CHECK_FALSE( accessibility::travel_in_progress() );
+    }
+
+    SECTION( "unseen route tiles are not named" ) {
+        player_wear_blindfold();
+        here.invalidate_map_cache( start.z() );
+        here.build_map_cache( start.z(), true );
+        begin_travel( route );
+        CHECK( capture_ptr->messages.back() ==
+               "Traveling to unseen, 4 tiles east, 4 steps: unseen 4." );
+    }
+}

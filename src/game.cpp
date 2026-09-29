@@ -1594,6 +1594,7 @@ static bool cancel_auto_move( Character &you, const std::string &text )
     if( query_yn( _( "%s Cancel auto move?" ), text ) )  {
         add_msg( m_warning, _( "%s Auto move canceled." ), text );
         you.abort_automove();
+        accessibility_gameplay::travel_canceled();
         return true;
     }
     return false;
@@ -8282,6 +8283,7 @@ look_around_result game::look_around(
             } );
             if( try_route.has_value() ) {
                 u.set_destination( *try_route );
+                accessibility_gameplay::announce_travel_start( here, u, *try_route );
                 continue;
             }
         } else if( action == "debug_hour_timer" ) {
@@ -9261,6 +9263,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
             recalc_unread = highlight_unread_items;
             if( try_route.has_value() ) {
                 u.set_destination( *try_route );
+                accessibility_gameplay::announce_travel_start( get_map(), u, *try_route );
                 break;
             }
         }

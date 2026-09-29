@@ -1314,4 +1314,56 @@ std::string format_direction_invalid( const direction_target &target )
                           target.direction );
 }
 
+std::vector<travel_segment> merge_travel_segments( const std::vector<std::string> &names )
+{
+    std::vector<travel_segment> segments;
+    for( const std::string &name : names ) {
+        if( segments.empty() || segments.back().name != name ) {
+            segments.push_back( { name, 0 } );
+        }
+        segments.back().count++;
+    }
+    return segments;
+}
+
+std::string format_travel_start( const std::string &destination, const std::string &location,
+                                 const int steps, const std::vector<travel_segment> &segments )
+{
+    constexpr size_t max_segments = 4;
+    //~ %1$s: destination such as "wooden door"; %2$s: distance and direction such as "12 tiles northeast"
+    std::string result = string_format( _( "Traveling to %1$s, %2$s" ), destination, location );
+    if( steps > 0 ) {
+        //~ %1$s: travel destination and distance; %2$d: number of steps along the route
+        result = string_format( n_gettext( "%1$s, %2$d step", "%1$s, %2$d steps", steps ), result,
+                                steps );
+    }
+    if( segments.empty() ) {
+        return result + _( "." );
+    }
+    std::vector<std::string> described;
+    for( size_t i = 0; i < segments.size() && i < max_segments; ++i ) {
+        //~ %1$s: terrain such as "grass"; %2$d: number of tiles of it along the route
+        described.push_back( string_format( _( "%1$s %2$d" ), segments[i].name, segments[i].count ) );
+    }
+    if( segments.size() > max_segments ) {
+        const int more = static_cast<int>( segments.size() - max_segments );
+        //~ %d: number of route segments not described
+        described.push_back( string_format( n_gettext( "%d more", "%d more", more ), more ) );
+    }
+    //~ %1$s: travel destination, distance, and steps; %2$s: route segments separated by commas
+    return string_format( _( "%1$s: %2$s." ), result, string_join( described, _( ", " ) ) );
+}
+
+std::string format_travel_arrival( const std::string &tile )
+{
+    //~ %s: terrain or furniture where auto-travel ended
+    return string_format( _( "Arrived: %s." ), tile );
+}
+
+std::string format_travel_stopped( const std::string &destination, const std::string &location )
+{
+    //~ %1$s: travel destination; %2$s: its distance and direction such as "8 tiles north"
+    return string_format( _( "Travel stopped: %1$s, %2$s." ), destination, location );
+}
+
 } // namespace accessibility
