@@ -1968,6 +1968,131 @@ std::string format_character_tab( const std::string &tab, const std::vector<std:
     return format_semantic_sequence( parts );
 }
 
+std::string format_power_menu_mode( const power_menu_mode mode )
+{
+    switch( mode ) {
+        case power_menu_mode::activating:
+            return format_semantic_sequence( { _( "Activating" ) } );
+        case power_menu_mode::examining:
+            return format_semantic_sequence( { _( "Examining" ) } );
+        case power_menu_mode::reassigning:
+            return format_semantic_sequence( { _( "Reassigning" ),
+                                               _( "Select an entry to assign a new letter" )
+                                         } );
+        case power_menu_mode::hiding:
+            return format_semantic_sequence( { _( "Hiding" ),
+                                               _( "Select an entry to hide or show its sprite" )
+                                         } );
+    }
+    return std::string();
+}
+
+std::string format_assigned_key( const std::string &key )
+{
+    const std::string spoken = format_spoken_key( key );
+    if( spoken.empty() ) {
+        return _( "No key" );
+    }
+    //~ %s: the letter that selects a bionic or mutation
+    return string_format( _( "Key %s" ), spoken );
+}
+
+std::string format_bionic_power_row( const bionic_power_row &row )
+{
+    std::vector<std::string> parts = { remove_color_tags( row.name ) };
+    if( row.powered ) {
+        parts.emplace_back( pgettext( "bionic state", "on" ) );
+    } else if( row.toggled ) {
+        parts.emplace_back( pgettext( "bionic state", "off" ) );
+    }
+    if( row.power_source ) {
+        parts.emplace_back( _( "power source" ) );
+    }
+    if( !row.activate.empty() ) {
+        //~ %s: energy used to activate a bionic, such as "50 kJ"
+        parts.push_back( string_format( _( "%s to activate" ), row.activate ) );
+    }
+    if( !row.deactivate.empty() ) {
+        //~ %s: energy used to deactivate a bionic
+        parts.push_back( string_format( _( "%s to deactivate" ), row.deactivate ) );
+    }
+    if( !row.trigger.empty() ) {
+        //~ %s: energy used each time a bionic triggers
+        parts.push_back( string_format( _( "%s per trigger" ), row.trigger ) );
+    }
+    if( !row.over_time.empty() ) {
+        parts.push_back( row.charge_turns <= 1 ?
+                         //~ %s: energy a running bionic uses each turn
+                         string_format( _( "%s per turn" ), row.over_time ) :
+                         //~ %1$s: energy a running bionic uses, %2$d: number of turns
+                         string_format( _( "%1$s per %2$d turns" ), row.over_time, row.charge_turns ) );
+    }
+    if( row.incapacitated ) {
+        parts.emplace_back( _( "incapacitated" ) );
+    }
+    if( row.sprite_hidden ) {
+        parts.emplace_back( _( "sprite hidden" ) );
+    }
+    if( row.fuel_saving >= 0 ) {
+        //~ %d: power percentage above which a bionic stops burning fuel
+        parts.push_back( string_format( _( "fuel saving above %d%%" ), row.fuel_saving ) );
+        if( row.fuel_saving_inactive ) {
+            parts.emplace_back( _( "fuel saving inactive" ) );
+        }
+    }
+    return format_semantic_sequence( {
+        string_join( parts, _( ", " ) ),
+        row.not_enough_power ? _( "Unavailable: not enough power" ) : std::string()
+    } );
+}
+
+std::string format_bionic_power( const std::string &current, const std::string &maximum,
+                                 const std::vector<std::string> &fuels )
+{
+    std::vector<std::string> fuel_parts;
+    for( const std::string &fuel : fuels ) {
+        fuel_parts.push_back( remove_color_tags( fuel ) );
+    }
+    return format_semantic_sequence( {
+        //~ %1$s: current bionic power, %2$s: maximum bionic power
+        string_format( _( "Bionic power %1$s of %2$s" ), current, maximum ),
+        fuel_parts.empty() ? std::string() :
+        //~ %s: list of fuels available to bionics with their amounts
+        string_format( _( "Available fuel: %s" ), string_join( fuel_parts, _( ", " ) ) )
+    } );
+}
+
+std::string format_mutation_power_row( const mutation_power_row &row )
+{
+    std::vector<std::string> parts = { remove_color_tags( row.name ) };
+    if( row.activated ) {
+        parts.emplace_back( row.powered ? pgettext( "mutation state", "on" ) :
+                            pgettext( "mutation state", "off" ) );
+    }
+    const std::string resources = enumerate_as_string( row.resources );
+    if( row.cost > 0 ) {
+        //~ %1$d: activation cost of a mutation, %2$s: resources, such as "kcal and thirst"
+        parts.push_back( string_format( _( "%1$d %2$s" ), row.cost, resources ) );
+    }
+    if( !row.cooldown.empty() ) {
+        //~ %s: cooldown of a mutation, such as "5 minutes"
+        parts.push_back( string_format( _( "cooldown %s" ), row.cooldown ) );
+    }
+    if( row.starting_trait ) {
+        parts.emplace_back( _( "starting trait" ) );
+    }
+    if( row.sprite_hidden ) {
+        parts.emplace_back( _( "sprite hidden" ) );
+    }
+    return format_semantic_sequence( {
+        string_join( parts, _( ", " ) ),
+        row.insufficient ?
+        //~ %s: resources a mutation needs, such as "kcal and thirst"
+        string_format( _( "Unavailable: not enough %s" ), resources.empty() ? _( "resources" ) : resources ) :
+        std::string()
+    } );
+}
+
 std::string format_activity_start( const std::string &label, const std::string &duration,
                                    const bool resuming )
 {

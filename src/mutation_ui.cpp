@@ -5,8 +5,14 @@
 #include <functional>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "avatar.h"
+#include "cata_scope_helpers.h"
+#include "cata_utility.h"
 #include "color.h"
 #include "cursesdef.h"
 #include "enums.h"
@@ -14,6 +20,7 @@
 #include "inventory.h"
 #include "magic.h"
 #include "mutation.h"
+#include "mutation_ui.h"
 #include "output.h"
 #include "popup.h"
 #include "string_formatter.h"
@@ -95,6 +102,214 @@ static void show_mutations_titlebar( const catacurses::window &window,
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     fold_and_print( window, point( 1, 0 ), getmaxx( window ) - 1, c_white, desc );
     wnoutrefresh( window );
+}
+
+// Whether the character has enough of the resources the mutation uses to activate it.
+static bool mutation_resources_available( const avatar &you, const mutation_branch &mut_data )
+{
+    return ( !mut_data.hunger || you.get_kcal_percent() >= 0.8f ) &&
+           ( !mut_data.thirst || you.get_thirst() <= 400 ) &&
+           ( !mut_data.sleepiness || you.get_sleepiness() <= 400 ) &&
+           ( !mut_data.mana || you.magic->available_mana() >= mut_data.cost );
+}
+
+// Screen reader speech for the mutations screen.  Rows speak in words what the
+// columns show by color: on or off, starting traits, and missing resources.
+static std::string mutation_accessibility_row( avatar &you, const trait_id &mut )
+{
+    const mutation_branch &md = mut.obj();
+    const Character::trait_data &td = you.cached_mutations[mut];
+    accessibility::mutation_power_row row;
+    row.name = you.mutation_name( mut );
+    row.activated = md.activated;
+    row.powered = td.powered;
+    row.starting_trait = you.has_base_trait( mut );
+    row.sprite_hidden = !td.show_sprite;
+    if( md.activated ) {
+        if( md.hunger ) {
+            row.resources.emplace_back( _( "kcal" ) );
+        }
+        if( md.thirst ) {
+            row.resources.emplace_back( _( "thirst" ) );
+        }
+        if( md.sleepiness ) {
+            row.resources.emplace_back( _( "sleepiness" ) );
+        }
+        if( md.mana ) {
+            row.resources.emplace_back( _( "mana" ) );
+        }
+        row.cost = md.cost;
+        if( md.cooldown > 0_turns ) {
+            row.cooldown = to_string_clipped( md.cooldown );
+        }
+        row.insufficient = !td.powered && !mutation_resources_available( you, md );
+    }
+    return accessibility::format_mutation_power_row( row );
+}
+
+static std::string mutation_column_name( const mutation_tab_mode tab )
+{
+    return tab == mutation_tab_mode::active ? _( "Active mutations" ) : _( "Passive mutations" );
+}
+
+static accessibility::power_menu_mode mutation_accessibility_mode( const mutation_menu_mode mode )
+{
+    switch( mode ) {
+        case mutation_menu_mode::activating:
+            return accessibility::power_menu_mode::activating;
+        case mutation_menu_mode::examining:
+            return accessibility::power_menu_mode::examining;
+        case mutation_menu_mode::reassigning:
+            return accessibility::power_menu_mode::reassigning;
+        case mutation_menu_mode::hiding:
+            return accessibility::power_menu_mode::hiding;
+    }
+    return accessibility::power_menu_mode::activating;
+}
+
+static const std::vector<trait_id> *mutation_column( const std::vector<trait_id> &active,
+        const std::vector<trait_id> &passive, const mutation_tab_mode tab )
+{
+    if( tab == mutation_tab_mode::active ) {
+        return &active;
+    }
+    if( tab == mutation_tab_mode::passive ) {
+        return &passive;
+    }
+    return nullptr;
+}
+
+static std::string mutation_accessibility_focus( avatar &you, const std::vector<trait_id> *column,
+        const int cursor )
+{
+    if( column == nullptr || cursor < 0 || static_cast<size_t>( cursor ) >= column->size() ) {
+        return std::string();
+    }
+    return mutation_accessibility_row( you, ( *column )[cursor] );
+}
+
+static std::string mutation_accessibility_tab( avatar &you, const std::vector<trait_id> *column,
+        const mutation_tab_mode tab, const int cursor )
+{
+    if( column == nullptr ) {
+        return accessibility::format_list_count( 0 );
+    }
+    return accessibility::format_character_tab( mutation_column_name( tab ), {}, column->size(),
+            mutation_accessibility_focus( you, column, cursor ) );
+}
+
+static std::string mutation_accessibility_key( avatar &you, const trait_id &mut )
+{
+    return accessibility::format_assigned_key( std::string( 1, you.cached_mutations[mut].key ) );
+}
+
+static std::string mutation_accessibility_summary( avatar &you,
+        const std::vector<trait_id> *column, const mutation_tab_mode tab, const int cursor,
+        const mutation_menu_mode mode )
+{
+    std::vector<std::string> parts = {
+        accessibility::format_power_menu_mode( mutation_accessibility_mode( mode ) )
+    };
+    if( column == nullptr ) {
+        parts.push_back( accessibility::format_list_count( 0 ) );
+    } else {
+        parts.push_back( mutation_column_name( tab ) );
+        if( cursor >= 0 && static_cast<size_t>( cursor ) < column->size() ) {
+            parts.push_back( accessibility::format_list_position( cursor + 1, column->size() ) );
+            parts.push_back( mutation_accessibility_key( you, ( *column )[cursor] ) );
+        }
+    }
+    return accessibility::format_semantic_sequence( parts );
+}
+
+// The row with its column position, then the examine pane text as paragraphs.
+static std::vector<std::string> mutation_accessibility_details( avatar &you,
+        const std::vector<trait_id> &active, const std::vector<trait_id> &passive,
+        const trait_id &mut )
+{
+    std::string position;
+    for( const std::vector<trait_id> *column : {
+             &active, &passive
+         } ) {
+        const auto found = std::find( column->begin(), column->end(), mut );
+        if( found != column->end() ) {
+            position = accessibility::format_semantic_sequence( {
+                mutation_column_name( column == &active ? mutation_tab_mode::active :
+                                      mutation_tab_mode::passive ),
+                accessibility::format_list_position( found - column->begin() + 1, column->size() )
+            } );
+        }
+    }
+    std::vector<std::string> paragraphs = { accessibility::format_semantic_sequence( {
+            mutation_accessibility_row( you, mut ), position, mutation_accessibility_key( you, mut )
+        } )
+    };
+    std::string description = you.mutation_desc( mut );
+    if( !you.purifiable( mut ) ) {
+        description +=
+            _( "\n<color_yellow>This trait is an intrinsic part of you now, purifier won't be able to remove it.</color>" );
+    }
+    for( const std::string &paragraph : string_split( remove_color_tags( description ), '\n' ) ) {
+        const std::string spoken = accessibility::format_semantic_sequence( { paragraph } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    }
+    return paragraphs;
+}
+
+// The columns as power_mutations() builds them, without assigning letters.
+static void mutation_accessibility_columns( avatar &you, std::vector<trait_id> &active,
+        std::vector<trait_id> &passive )
+{
+    for( const std::pair<const trait_id, Character::trait_data> &mut : you.cached_mutations ) {
+        if( mut.second.corrupted > 0 || !mut.first->player_display ) {
+            continue;
+        }
+        ( mut.first->activated ? active : passive ).push_back( mut.first );
+    }
+}
+
+std::string mutations_accessibility_tab( avatar &you, const bool active_column )
+{
+    std::vector<trait_id> active;
+    std::vector<trait_id> passive;
+    mutation_accessibility_columns( you, active, passive );
+    const mutation_tab_mode tab = active_column ? mutation_tab_mode::active :
+                                  mutation_tab_mode::passive;
+    return mutation_accessibility_tab( you, mutation_column( active, passive, tab ), tab, 0 );
+}
+
+std::vector<std::string> mutations_accessibility_rows( avatar &you, const bool active_column )
+{
+    std::vector<trait_id> active;
+    std::vector<trait_id> passive;
+    mutation_accessibility_columns( you, active, passive );
+    std::vector<std::string> rows;
+    for( const trait_id &mut : active_column ? active : passive ) {
+        rows.push_back( mutation_accessibility_row( you, mut ) );
+    }
+    return rows;
+}
+
+std::vector<std::string> mutations_accessibility_details( avatar &you, const trait_id &mut )
+{
+    std::vector<trait_id> active;
+    std::vector<trait_id> passive;
+    mutation_accessibility_columns( you, active, passive );
+    return mutation_accessibility_details( you, active, passive, mut );
+}
+
+std::string mutations_accessibility_summary( avatar &you, const bool active_column,
+        const int cursor, const bool examining )
+{
+    std::vector<trait_id> active;
+    std::vector<trait_id> passive;
+    mutation_accessibility_columns( you, active, passive );
+    const mutation_tab_mode tab = active_column ? mutation_tab_mode::active :
+                                  mutation_tab_mode::passive;
+    return mutation_accessibility_summary( you, mutation_column( active, passive, tab ), tab, cursor,
+                                           examining ? mutation_menu_mode::examining : mutation_menu_mode::activating );
 }
 
 void avatar::power_mutations()
@@ -227,6 +442,9 @@ void avatar::power_mutations()
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 #if defined(__ANDROID__)
     for( const auto &p : passive ) {
         ctxt.register_manual_key( cached_mutations[p].key, p.obj().name() );
@@ -237,6 +455,32 @@ void avatar::power_mutations()
 #endif
 
     std::optional<trait_id> examine_id;
+
+    const auto accessible_column = [&]() {
+        return mutation_column( active, passive, tab_mode );
+    };
+    const auto accessible_focus = [&]() {
+        return mutation_accessibility_focus( *this, accessible_column(), cursor );
+    };
+    const auto accessible_tab = [&]() {
+        return mutation_accessibility_tab( *this, accessible_column(), tab_mode, cursor );
+    };
+    const auto accessible_mode = [&]() {
+        return accessibility::format_power_menu_mode( mutation_accessibility_mode( menu_mode ) );
+    };
+    const auto accessible_reassigned = [&]( const trait_id & mut_id ) {
+        return accessibility::format_semantic_sequence( { accessible_mode(),
+                mutation_accessibility_row( *this, mut_id ), mutation_accessibility_key( *this, mut_id )
+                                                        } );
+    };
+    const auto accessible_sprite = [&]( const trait_id & mut_id ) {
+        return accessibility::format_semantic_sequence( {
+            cached_mutations[mut_id].show_sprite ? _( "Sprite shown" ) : _( "Sprite hidden" ),
+            mutation_accessibility_row( *this, mut_id )
+        } );
+    };
+    accessibility::announce( accessibility::format_semantic_sequence( { _( "Mutations" ),
+                             accessible_tab() } ) );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         werase( wBio );
@@ -385,6 +629,41 @@ void avatar::power_mutations()
         bool handled = false;
         const std::string action = ctxt.handle_input();
         const input_event evt = ctxt.get_raw_input();
+        // Screen reader speech for this key, spoken however the iteration ends.
+        std::string speech;
+        const on_out_of_scope speak_result( [&speech]() {
+            accessibility::announce( speech );
+        } );
+        const int previous_cursor = cursor;
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            speech = mutation_accessibility_summary( *this, accessible_column(), tab_mode, cursor,
+                     menu_mode );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() ) {
+                std::optional<trait_id> detail_id = examine_id;
+                if( menu_mode != mutation_menu_mode::examining || !detail_id.has_value() ) {
+                    detail_id = std::nullopt;
+                    const std::vector<trait_id> *column = accessible_column();
+                    if( column != nullptr && cursor >= 0 && static_cast<size_t>( cursor ) < column->size() ) {
+                        detail_id = ( *column )[cursor];
+                    }
+                }
+                if( detail_id.has_value() ) {
+                    const std::vector<std::string> paragraphs = mutation_accessibility_details( *this, active,
+                            passive, detail_id.value() );
+                    const std::string title = mutation_name( detail_id.value() );
+                    accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                    speech = mutation_accessibility_row( *this, detail_id.value() );
+                } else {
+                    speech = accessible_tab();
+                }
+            }
+            continue;
+        }
         if( evt.type == input_event_t::keyboard_char && !evt.sequence.empty() ) {
             const int ch = evt.get_first_input();
             if( ch == ' ' ) { //skip if space is pressed (space is used as an empty hotkey)
@@ -432,6 +711,7 @@ void avatar::power_mutations()
 
                         menu_mode = mutation_menu_mode::activating;
                         examine_id = std::nullopt;
+                        speech = accessible_reassigned( mut_id );
                         // TODO: show a message like when reassigning a key to an item?
                         break;
                     }
@@ -444,10 +724,7 @@ void avatar::power_mutations()
                                 deactivate_mutation( mut_id );
                                 // Action done, leave screen
                                 exit = true;
-                            } else if( ( !mut_data.hunger || get_kcal_percent() >= 0.8f ) &&
-                                       ( !mut_data.thirst || get_thirst() <= 400 ) &&
-                                       ( !mut_data.sleepiness || get_sleepiness() <= 400 ) &&
-                                       ( !mut_data.mana || magic->available_mana() >= mut_data.cost ) ) {
+                            } else if( mutation_resources_available( *this, mut_data ) ) {
                                 add_msg_if_player( m_neutral,
                                                    string_format( mut_data.activation_msg, mutation_name( mut_data.id ) ) );
                                 // Reset menu in advance
@@ -457,20 +734,24 @@ void avatar::power_mutations()
                                 exit = true;
                             } else {
                                 popup( _( "You don't have enough in you to activate your %s!" ), mutation_name( mut_data.id ) );
+                                speech = accessible_focus();
                             }
                         } else {
                             popup( _( "You cannot activate %1$s!  To read a description of "
                                       "%1$s, press '%2$s', then '%3$c'." ),
                                    mutation_name( mut_data.id ), ctxt.get_desc( "TOGGLE_EXAMINE" ), cached_mutations[mut_id].key );
+                            speech = accessible_focus();
                         }
                         break;
                     }
                     case mutation_menu_mode::examining:
                         // Describing mutations, not activating them!
                         examine_id = mut_id;
+                        speech = mutation_accessibility_row( *this, mut_id );
                         break;
                     case mutation_menu_mode::hiding:
                         cached_mutations[mut_id].show_sprite = !cached_mutations[mut_id].show_sprite;
+                        speech = accessible_sprite( mut_id );
                         break;
                 }
                 handled = true;
@@ -510,6 +791,9 @@ void avatar::power_mutations()
 
                 // Draw the description, shabby workaround
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
+                speech = accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
+                } );
 
             } else if( action == "UP" ) {
 
@@ -538,6 +822,9 @@ void avatar::power_mutations()
                 examine_pos = 0;
 
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
+                speech = accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
+                } );
             } else if( ( action == "SCROLL_TRAIT_INFO_UP" || action == "SCROLL_TRAIT_INFO_DOWN" ) &&
                        menu_mode == mutation_menu_mode::examining ) {
                 examine_pos += action == "SCROLL_TRAIT_INFO_UP" ? -1 : 1;
@@ -547,12 +834,15 @@ void avatar::power_mutations()
                 } else if( tab_mode == mutation_tab_mode::passive && !active.empty() ) {
                     tab_mode = mutation_tab_mode::active;
                 } else {
+                    // Nothing to switch to; the column stays.
+                    speech = accessible_tab();
                     continue;
                 }
                 scroll_position = 0;
                 examine_pos = 0;
                 cursor = 0;
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
+                speech = accessible_tab();
             } else if( action == "CONFIRM" ) {
                 trait_id mut_id;
                 if( tab_mode == mutation_tab_mode::active ) {
@@ -607,6 +897,7 @@ void avatar::power_mutations()
 
                             menu_mode = mutation_menu_mode::activating;
                             examine_id = std::nullopt;
+                            speech = accessible_reassigned( mut_id );
                             // TODO: show a message like when reassigning a key to an item?
                             break;
                         }
@@ -619,10 +910,7 @@ void avatar::power_mutations()
                                     deactivate_mutation( mut_id );
                                     // Action done, leave screen
                                     exit = true;
-                                } else if( ( !mut_data.hunger || get_kcal_percent() >= 0.8f ) &&
-                                           ( !mut_data.thirst || get_thirst() <= 400 ) &&
-                                           ( !mut_data.sleepiness || get_sleepiness() <= 400 ) &&
-                                           ( !mut_data.mana || magic->available_mana() >= mut_data.cost ) ) {
+                                } else if( mutation_resources_available( *this, mut_data ) ) {
                                     add_msg_if_player( m_neutral,
                                                        string_format( mut_data.activation_msg, mutation_name( mut_data.id ) ) );
                                     // Reset menu in advance
@@ -632,26 +920,31 @@ void avatar::power_mutations()
                                     exit = true;
                                 } else {
                                     popup( _( "You don't have enough in you to activate your %s!" ), mutation_name( mut_data.id ) );
+                                    speech = accessible_focus();
                                 }
                             } else {
                                 popup( _( "You cannot activate %1$s!  To read a description of "
                                           "%1$s, press '%2$s'." ),
                                        mutation_name( mut_data.id ), ctxt.get_desc( "TOGGLE_EXAMINE" ) );
+                                speech = accessible_focus();
                             }
                             break;
                         }
                         case mutation_menu_mode::examining:
                             // Describing mutations, not activating them!
                             examine_id = mut_id;
+                            speech = mutation_accessibility_row( *this, mut_id );
                             break;
                         case mutation_menu_mode::hiding:
                             cached_mutations[mut_id].show_sprite = !cached_mutations[mut_id].show_sprite;
+                            speech = accessible_sprite( mut_id );
                             break;
                     }
                 }
             } else if( action == "REASSIGN" ) {
                 menu_mode = mutation_menu_mode::reassigning;
                 examine_id = std::nullopt;
+                speech = accessible_mode();
             } else if( action == "TOGGLE_EXAMINE" ) {
                 // switches between activation and examination
                 menu_mode = menu_mode == mutation_menu_mode::activating ?
@@ -662,9 +955,11 @@ void avatar::power_mutations()
                     examine_id = std::nullopt;
                 }
                 examine_pos = 0;
+                speech = accessible_mode();
             } else if( action == "TOGGLE_SPRITE" ) {
                 menu_mode = mutation_menu_mode::hiding;
                 examine_id = std::nullopt;
+                speech = accessible_mode();
             } else if( action == "QUIT" ) {
                 exit = true;
             }

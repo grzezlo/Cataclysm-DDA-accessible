@@ -594,6 +594,63 @@ std::string format_proficiency_row( const std::string &name, bool known, bool le
 std::string format_character_tab( const std::string &tab, const std::vector<std::string> &header,
                                   size_t count, const std::string &focus );
 
+/** Bionics and mutations screens: what selecting a row does. */
+enum class power_menu_mode {
+    activating,
+    examining,
+    reassigning,
+    hiding
+};
+/** "Activating", "Examining"; reassigning and hiding say what selecting does. */
+std::string format_power_menu_mode( power_menu_mode mode );
+/** "Key a", "Key Shift+a", or "No key" for an unassigned letter. */
+std::string format_assigned_key( const std::string &key );
+struct bionic_power_row {
+    std::string name;
+    /** Toggled or charging bionics say on or off; others say on only while powered. */
+    bool toggled = false;
+    bool powered = false;
+    /** The screen shows power sources only by color. */
+    bool power_source = false;
+    /** Displayed energies; empty when the bionic has no such cost. */
+    std::string activate;
+    std::string deactivate;
+    std::string trigger;
+    std::string over_time;
+    /** Turns per `over_time` drain. */
+    int charge_turns = 1;
+    bool incapacitated = false;
+    bool sprite_hidden = false;
+    /** Fuel saving threshold in percent; negative when fuel saving is off. */
+    int fuel_saving = -1;
+    /** Fuel saving keeps the powered bionic from burning fuel now. */
+    bool fuel_saving_inactive = false;
+    /** Off and the current power is below the activation cost. */
+    bool not_enough_power = false;
+};
+/** "Night vision, on, 5 J per turn." or "Laser, off, 50 kJ to activate. Unavailable: not enough power." */
+std::string format_bionic_power_row( const bionic_power_row &row );
+/** "Bionic power 50.5 kJ of 100 kJ. Available fuel: battery 5." */
+std::string format_bionic_power( const std::string &current, const std::string &maximum,
+                                 const std::vector<std::string> &fuels );
+struct mutation_power_row {
+    std::string name;
+    bool activated = false;
+    bool powered = false;
+    /** A starting trait rather than a mutation; the screen shows it only by color. */
+    bool starting_trait = false;
+    bool sprite_hidden = false;
+    int cost = 0;
+    /** Resources the cost is paid in, such as "kcal" or "mana". */
+    std::vector<std::string> resources;
+    /** Displayed cooldown; empty when there is none. */
+    std::string cooldown;
+    /** Off and one of its resources is too low to activate it. */
+    bool insufficient = false;
+};
+/** "Night vision, on, 10 kcal, cooldown 5 minutes." */
+std::string format_mutation_power_row( const mutation_power_row &row );
+
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( const std::string &label, const std::string &duration,
                                    bool resuming );

@@ -10,10 +10,15 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "avatar.h"
 #include "bionics.h"
+#include "bionics_ui.h"
 #include "bodypart.h"
 #include "calendar.h"
+#include "cata_scope_helpers.h"
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "character.h"
@@ -209,17 +214,12 @@ char get_free_invlet( Character &p )
     return ' ';
 }
 
-static void draw_bionics_titlebar( const catacurses::window &window, avatar *p,
-                                   bionic_menu_mode mode )
+// Available fuels and their amounts, as the title bar lists them.
+static std::vector<std::pair<std::string, int64_t>> bionic_fuel_entries( avatar *p )
 {
     map &here = get_map();
 
-    input_context ctxt( "BIONICS", keyboard_mode::keychar );
-
-    werase( window );
-    std::string fuel_string;
-    bool found_fuel = false;
-    fuel_string = _( "Available Fuel: " );
+    std::vector<std::pair<std::string, int64_t>> entries;
     for( const bionic &bio : *p->my_bionics ) {
         for( const item *fuel_source : p->get_bionic_fuels( bio.id ) ) {
             const item *fuel;
@@ -228,29 +228,27 @@ static void draw_bionics_titlebar( const catacurses::window &window, avatar *p,
             } else {
                 fuel = *fuel_source->all_items_top().begin();
             }
-            found_fuel = true;
-            fuel_string += fuel->tname() + ": " + colorize( std::to_string( fuel->charges ), c_green ) + " ";
+            entries.emplace_back( fuel->tname(), fuel->charges );
         }
     }
     for( const item *ups : p->get_cable_ups() ) {
-        found_fuel = true;
         const item *fuel = &ups->first_ammo();
-        fuel_string += fuel->tname() + ": " + colorize( std::to_string( fuel->charges ), c_green ) + " ";
+        entries.emplace_back( fuel->tname(), fuel->charges );
     }
     for( vehicle *veh : p->get_cable_vehicle() ) {
         int64_t charges = veh->connected_battery_power_level( here ).first;
         if( charges > 0 ) {
-            found_fuel = true;
-            fuel_string += item( itype_battery ).tname() + ": " + colorize( std::to_string( charges ),
-                           c_green ) + " ";
+            entries.emplace_back( item( itype_battery ).tname(), charges );
         }
     }
+    return entries;
+}
 
-    if( !found_fuel ) {
-        fuel_string.clear();
-    }
+// Current power in kJ, J, or mJ; `unit_separator` goes between the number and the unit.
+static std::string bionic_power_string( const units::energy &curr_power,
+                                        const std::string &unit_separator )
+{
     std::string power_string;
-    const units::energy curr_power = p->get_power_level();
     const int kilo = units::to_kilojoule( curr_power );
     const int joule = units::to_joule( curr_power ) % units::to_joule( 1_kJ );
     const int milli = kilo > 0 ? units::to_millijoule( curr_power ) % units::to_millijoule( 1_J ) : 0;
@@ -259,16 +257,35 @@ static void draw_bionics_titlebar( const catacurses::window &window, avatar *p,
         if( joule > 0 ) {
             power_string += pgettext( "decimal separator", "." ) + std::to_string( joule );
         }
-        power_string += pgettext( "energy unit: kilojoule", "kJ" );
+        power_string += unit_separator + pgettext( "energy unit: kilojoule", "kJ" );
     } else if( joule > 0 ) {
         power_string = std::to_string( joule );
         if( milli > 0 ) {
             power_string += pgettext( "decimal separator", "." ) + std::to_string( milli );
         }
-        power_string += pgettext( "energy unit: joule", "J" );
+        power_string += unit_separator + pgettext( "energy unit: joule", "J" );
     } else {
-        power_string = std::to_string( milli ) + pgettext( "energy unit: millijoule", "mJ" );
+        power_string = std::to_string( milli ) + unit_separator +
+                       pgettext( "energy unit: millijoule", "mJ" );
     }
+    return power_string;
+}
+
+static void draw_bionics_titlebar( const catacurses::window &window, avatar *p,
+                                   bionic_menu_mode mode )
+{
+    input_context ctxt( "BIONICS", keyboard_mode::keychar );
+
+    werase( window );
+    std::string fuel_string;
+    const std::vector<std::pair<std::string, int64_t>> fuels = bionic_fuel_entries( p );
+    if( !fuels.empty() ) {
+        fuel_string = _( "Available Fuel: " );
+        for( const std::pair<std::string, int64_t> &fuel : fuels ) {
+            fuel_string += fuel.first + ": " + colorize( std::to_string( fuel.second ), c_green ) + " ";
+        }
+    }
+    const std::string power_string = bionic_power_string( p->get_power_level(), std::string() );
 
     const int pwr_str_pos = right_print( window, 1, 1, c_white,
                                          string_format( _( "Bionic Power: <color_light_blue>%s</color>/<color_light_blue>%ikJ</color>" ),
@@ -572,6 +589,168 @@ static nc_color get_bionic_text_color( const bionic &bio, const bool isHighlight
     return type;
 }
 
+// Screen reader speech for the bionics screen.  Rows speak in words what the
+// list shows by color: on or off, power sources, and not enough power.
+static std::string bionic_accessibility_row( const bionic &bio, const avatar &p )
+{
+    const bionic_data &bio_data = bio.id.obj();
+    accessibility::bionic_power_row row;
+    row.name = bio_data.name.translated();
+    row.toggled = bio_data.activated && ( bio_data.has_flag( STATIC( json_character_flag(
+            "BIONIC_TOGGLED" ) ) ) || bio_data.charge_time > 0_turns );
+    row.powered = bio_data.activated && bio.powered;
+    row.power_source = bio_data.has_flag( STATIC( json_character_flag( "BIONIC_POWER_SOURCE" ) ) );
+    if( bio_data.has_flag( json_flag_BIONIC_GUN ) && bio.get_weapon().get_gun_bionic_drain() > 0_kJ ) {
+        row.activate = units::display( bio.get_weapon().get_gun_bionic_drain() );
+    } else if( bio_data.power_activate > 0_kJ ) {
+        row.activate = units::display( bio_data.power_activate );
+    }
+    if( bio_data.power_deactivate > 0_kJ ) {
+        row.deactivate = units::display( bio_data.power_deactivate );
+    }
+    if( bio_data.power_trigger > 0_kJ ) {
+        row.trigger = units::display( bio_data.power_trigger );
+    }
+    if( bio_data.charge_time > 0_turns && bio_data.power_over_time > 0_kJ ) {
+        row.over_time = units::display( bio_data.power_over_time );
+        row.charge_turns = to_turns<int>( bio_data.charge_time );
+    }
+    row.incapacitated = bio.incapacitated_time > 0_turns;
+    row.sprite_hidden = !bio.show_sprite;
+    if( bio.is_safe_fuel_on() ) {
+        row.fuel_saving = static_cast<int>( bio.get_safe_fuel_thresh() * 100 );
+        row.fuel_saving_inactive = bio.powered &&
+                                   bio.get_safe_fuel_thresh() * p.get_max_power_level() - 1_kJ <= p.get_power_level();
+    }
+    row.not_enough_power = bio_data.activated && !bio.powered && !p.enough_power_for( bio.id );
+    return accessibility::format_bionic_power_row( row );
+}
+
+static std::string bionic_tab_name( const bionic_tab_mode tab )
+{
+    return tab == TAB_ACTIVE ? _( "Active bionics" ) : _( "Passive bionics" );
+}
+
+static accessibility::power_menu_mode bionic_accessibility_mode( const bionic_menu_mode mode )
+{
+    switch( mode ) {
+        case ACTIVATING:
+            return accessibility::power_menu_mode::activating;
+        case EXAMINING:
+            return accessibility::power_menu_mode::examining;
+        case REASSIGNING:
+            return accessibility::power_menu_mode::reassigning;
+    }
+    return accessibility::power_menu_mode::activating;
+}
+
+static std::string bionic_accessibility_focus( const sorted_bionics &list, const int cursor,
+        const avatar &p )
+{
+    if( cursor < 0 || static_cast<size_t>( cursor ) >= list.size() ) {
+        return std::string();
+    }
+    return bionic_accessibility_row( *list[cursor], p );
+}
+
+static std::string bionic_accessibility_tab( const sorted_bionics &list,
+        const bionic_tab_mode tab, const int cursor, const avatar &p )
+{
+    return accessibility::format_character_tab( bionic_tab_name( tab ), {}, list.size(),
+            bionic_accessibility_focus( list, cursor, p ) );
+}
+
+static std::string bionic_accessibility_summary( avatar &p, const sorted_bionics &list,
+        const bionic_tab_mode tab, const int cursor, const bionic_menu_mode mode )
+{
+    std::vector<std::string> fuels;
+    for( const std::pair<std::string, int64_t> &fuel : bionic_fuel_entries( &p ) ) {
+        //~ Fuel available to bionics: %1$s: fuel name, %2$d: amount
+        fuels.push_back( string_format( _( "%1$s %2$d" ), fuel.first, fuel.second ) );
+    }
+    const std::string maximum = std::to_string( units::to_kilojoule( p.get_max_power_level() ) ) +
+                                " " + pgettext( "energy unit: kilojoule", "kJ" );
+    std::vector<std::string> parts = {
+        accessibility::format_bionic_power( bionic_power_string( p.get_power_level(), " " ), maximum,
+                                            fuels ),
+        accessibility::format_power_menu_mode( bionic_accessibility_mode( mode ) ),
+        bionic_tab_name( tab )
+    };
+    if( cursor >= 0 && static_cast<size_t>( cursor ) < list.size() ) {
+        parts.push_back( accessibility::format_list_position( cursor + 1, list.size() ) );
+        parts.push_back( accessibility::format_assigned_key( std::string( 1, list[cursor]->invlet ) ) );
+    } else {
+        parts.push_back( accessibility::format_list_count( 0 ) );
+    }
+    return accessibility::format_semantic_sequence( parts );
+}
+
+// The examine pane of draw_description() as paragraphs, after the row and its position.
+static std::vector<std::string> bionic_accessibility_details( const sorted_bionics &list,
+        const int cursor, avatar &p )
+{
+    std::vector<std::string> paragraphs;
+    if( cursor < 0 || static_cast<size_t>( cursor ) >= list.size() ) {
+        return paragraphs;
+    }
+    const bionic &bio = *list[cursor];
+    paragraphs.push_back( accessibility::format_semantic_sequence( {
+        bionic_accessibility_row( bio, p ),
+        accessibility::format_list_position( cursor + 1, list.size() ),
+        accessibility::format_assigned_key( std::string( 1, bio.invlet ) )
+    } ) );
+    const std::string poweronly_string = build_bionic_poweronly_string( bio, &p );
+    std::string text;
+    if( !poweronly_string.empty() ) {
+        text += string_format( _( "Power usage: %s" ), poweronly_string ) + "\n";
+    }
+    text += bio.id->description.translated() + "\n";
+    if( get_option < bool >( "CBM_SLOTS_ENABLED" ) ) {
+        text += list_occupied_bps( bio.id, _( "This bionic occupies the following body parts:" ),
+                                   false ) + "\n";
+    }
+    if( bio.has_weapon() ) {
+        text += string_format( _( "Installed weapon: %s" ), bio.get_weapon().tname() );
+    }
+    for( const std::string &paragraph : string_split( remove_color_tags( text ), '\n' ) ) {
+        const std::string spoken = accessibility::format_semantic_sequence( { paragraph } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    }
+    return paragraphs;
+}
+
+std::string bionics_accessibility_tab( avatar &you, const bool active )
+{
+    const bionic_tab_mode tab = active ? TAB_ACTIVE : TAB_PASSIVE;
+    return bionic_accessibility_tab( filtered_bionics( *you.my_bionics, tab ), tab, 0, you );
+}
+
+std::vector<std::string> bionics_accessibility_rows( avatar &you, const bool active )
+{
+    std::vector<std::string> rows;
+    for( const bionic *bio : filtered_bionics( *you.my_bionics, active ? TAB_ACTIVE : TAB_PASSIVE ) ) {
+        rows.push_back( bionic_accessibility_row( *bio, you ) );
+    }
+    return rows;
+}
+
+std::vector<std::string> bionics_accessibility_details( avatar &you, const bool active,
+        const int cursor )
+{
+    return bionic_accessibility_details( filtered_bionics( *you.my_bionics,
+                                         active ? TAB_ACTIVE : TAB_PASSIVE ), cursor, you );
+}
+
+std::string bionics_accessibility_summary( avatar &you, const bool active, const int cursor,
+        const bool examining )
+{
+    const bionic_tab_mode tab = active ? TAB_ACTIVE : TAB_PASSIVE;
+    return bionic_accessibility_summary( you, filtered_bionics( *you.my_bionics, tab ), tab, cursor,
+                                         examining ? EXAMINING : ACTIVATING );
+}
+
 void avatar::power_bionics()
 {
     // Required because available power includes electricity via cables.
@@ -669,6 +848,24 @@ void avatar::power_bionics()
     ctxt.register_action( "TOGGLE_SAFE_FUEL" );
     ctxt.register_action( "TOGGLE_SPRITE" );
     ctxt.register_action( "SORT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+
+    const auto accessible_list = [&]() -> const sorted_bionics & {
+        return tab_mode == TAB_ACTIVE ? active : passive;
+    };
+    const auto accessible_focus = [&]() {
+        return bionic_accessibility_focus( accessible_list(), cursor, *this );
+    };
+    const auto accessible_tab = [&]() {
+        return bionic_accessibility_tab( accessible_list(), tab_mode, cursor, *this );
+    };
+    const auto accessible_mode = [&]() {
+        return accessibility::format_power_menu_mode( bionic_accessibility_mode( menu_mode ) );
+    };
+    accessibility::announce( accessibility::format_semantic_sequence( { _( "Bionics" ),
+                             accessible_tab() } ) );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         if( hide ) {
@@ -774,6 +971,34 @@ void avatar::power_bionics()
         const int ch = ctxt.get_raw_input().get_first_input();
         bionic *tmp = nullptr;
 
+        // Screen reader speech for this key, spoken however the iteration ends.
+        std::string speech;
+        const on_out_of_scope speak_result( [&speech]() {
+            accessibility::announce( speech );
+        } );
+        const int previous_cursor = cursor;
+        const bionic_tab_mode previous_tab = tab_mode;
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            speech = bionic_accessibility_summary( *this, accessible_list(), tab_mode, cursor, menu_mode );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() ) {
+                const std::vector<std::string> paragraphs = bionic_accessibility_details( accessible_list(),
+                        cursor, *this );
+                if( paragraphs.empty() ) {
+                    speech = accessible_tab();
+                } else {
+                    const std::string title = accessible_list()[cursor]->id->name.translated();
+                    accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                    speech = accessible_focus();
+                }
+            }
+            continue;
+        }
+
         if( action == "DOWN" ) {
             if( static_cast<size_t>( cursor ) < current_bionic_list->size() - 1 ) {
                 cursor++;
@@ -787,6 +1012,9 @@ void avatar::power_bionics()
             if( scroll_position > 0 && cursor - scroll_position < half_list_view_location ) {
                 scroll_position = std::max( cursor - half_list_view_location, 0 );
             }
+            speech = accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
+            } );
         } else if( action == "UP" ) {
             if( cursor > 0 ) {
                 cursor--;
@@ -802,6 +1030,9 @@ void avatar::power_bionics()
                     std::max( std::min<int>( current_bionic_list->size() - LIST_HEIGHT,
                                              cursor - half_list_view_location ), 0 );
             }
+            speech = accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
+            } );
         } else if( menu_mode == REASSIGNING ) {
             menu_mode = ACTIVATING;
 
@@ -811,6 +1042,17 @@ void avatar::power_bionics()
             } else {
                 tmp = bionic_by_invlet( ch );
             }
+
+            // The mode returns to activating; name the bionic and its letter.
+            speech = accessible_mode();
+            const on_out_of_scope reassign_speech( [&]() {
+                if( tmp != nullptr ) {
+                    speech = accessibility::format_semantic_sequence( { accessible_mode(),
+                             bionic_accessibility_row( *tmp, *this ),
+                             accessibility::format_assigned_key( std::string( 1, tmp->invlet ) )
+                                                                      } );
+                }
+            } );
 
             if( tmp == nullptr ) {
                 // Selected an non-existing bionic (or Escape, or ...)
@@ -845,6 +1087,7 @@ void avatar::power_bionics()
             } else {
                 tab_mode = TAB_ACTIVE;
             }
+            speech = accessible_tab();
         } else if( action == "PREV_TAB" ) {
             scroll_position = 0;
             cursor = 0;
@@ -853,11 +1096,14 @@ void avatar::power_bionics()
             } else {
                 tab_mode = TAB_PASSIVE;
             }
+            speech = accessible_tab();
         } else if( action == "REASSIGN" ) {
             menu_mode = REASSIGNING;
+            speech = accessible_mode();
         } else if( action == "TOGGLE_EXAMINE" ) {
             // switches between activation and examination
             menu_mode = menu_mode == ACTIVATING ? EXAMINING : ACTIVATING;
+            speech = accessible_mode();
         } else if( action == "TOGGLE_SAFE_FUEL" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( !current_bionic_list->empty() ) {
@@ -868,18 +1114,26 @@ void avatar::power_bionics()
                 } else {
                     popup( _( "You can't toggle fuel saving mode on a non-fueled CBM." ) );
                 }
+                speech = accessible_focus();
             }
         } else if( action == "TOGGLE_SPRITE" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( !current_bionic_list->empty() ) {
                 tmp = bio_list[cursor];
                 tmp->show_sprite = !tmp->show_sprite;
+                speech = accessibility::format_semantic_sequence( {
+                    tmp->show_sprite ? _( "Sprite shown" ) : _( "Sprite hidden" ), accessible_focus()
+                } );
             }
         } else if( action == "SORT" ) {
             uistate.bionic_sort_mode = pick_sort_mode();
             // FIXME: is there a better way to resort?
             active = filtered_bionics( *my_bionics, TAB_ACTIVE );
             passive = filtered_bionics( *my_bionics, TAB_PASSIVE );
+            speech = accessibility::format_semantic_sequence( {
+                string_format( _( "Sort: %s" ), sort_mode_str( uistate.bionic_sort_mode ) ),
+                accessible_focus()
+            } );
         } else if( action == "CONFIRM" || action == "ANY_INPUT" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( action == "CONFIRM" && !current_bionic_list->empty() ) {
@@ -1005,11 +1259,14 @@ void avatar::power_bionics()
                     if( moves < 0 ) {
                         return;
                     }
+                    // Game messages report the result; then the row speaks its new state.
+                    speech = accessible_focus();
                     continue;
                 } else {
                     popup( _( "You can not activate %s!\n"
                               "To read a description of %s, press '%s', then '%c'." ), bio_data.name,
                            bio_data.name, ctxt.get_desc( "TOGGLE_EXAMINE" ), tmp->invlet );
+                    speech = accessible_focus();
                 }
             } else if( menu_mode == EXAMINING ) {
                 // Describing bionics, allow user to jump to description key
@@ -1041,6 +1298,7 @@ void avatar::power_bionics()
                         }
                     }
                 }
+                speech = tab_mode != previous_tab ? accessible_tab() : accessible_focus();
             }
         } else if( action == "QUIT" ) {
             break;

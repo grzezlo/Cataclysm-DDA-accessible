@@ -19,6 +19,8 @@
 #include "calendar.h"
 #include "crafting_gui.h"
 #include "cata_catch.h"
+#include "bionics.h"
+#include "bionics_ui.h"
 #include "cata_scope_helpers.h"
 #include "game.h"
 #include "fake_messages.h"
@@ -36,6 +38,7 @@
 #include "monster.h"
 #include "pickup.h"
 #include "mutation.h"
+#include "mutation_ui.h"
 #include "player_activity.h"
 #include "player_display.h"
 #include "popup.h"
@@ -3560,4 +3563,206 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
     you.add_effect( efftype_id( "downed" ), 1_minutes );
     rows = character_sheet_accessibility_rows( you, effects );
     CHECK( std::find( rows.begin(), rows.end(), "Downed." ) != rows.end() );
+}
+
+TEST_CASE( "bionic_and_mutation_formatters_speak_state_cost_and_unavailable_reason",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_power_menu_mode( accessibility::power_menu_mode::activating ) ==
+           "Activating." );
+    CHECK( accessibility::format_power_menu_mode( accessibility::power_menu_mode::examining ) ==
+           "Examining." );
+    CHECK( accessibility::format_power_menu_mode( accessibility::power_menu_mode::reassigning ) ==
+           "Reassigning. Select an entry to assign a new letter." );
+    CHECK( accessibility::format_power_menu_mode( accessibility::power_menu_mode::hiding ) ==
+           "Hiding. Select an entry to hide or show its sprite." );
+    CHECK( accessibility::format_assigned_key( "a" ) == "Key a" );
+    CHECK( accessibility::format_assigned_key( "A" ) == "Key Shift+a" );
+    CHECK( accessibility::format_assigned_key( " " ) == "No key" );
+
+    accessibility::bionic_power_row night_vision;
+    night_vision.name = "Night vision";
+    night_vision.toggled = true;
+    night_vision.powered = true;
+    night_vision.over_time = "5 J";
+    CHECK( accessibility::format_bionic_power_row( night_vision ) ==
+           "Night vision, on, 5 J per turn." );
+    night_vision.powered = false;
+    night_vision.activate = "10 J";
+    night_vision.charge_turns = 3;
+    night_vision.not_enough_power = true;
+    CHECK( accessibility::format_bionic_power_row( night_vision ) ==
+           "Night vision, off, 10 J to activate, 5 J per 3 turns. Unavailable: not enough power." );
+
+    accessibility::bionic_power_row reactor;
+    reactor.name = "<color_c_red>Reactor</color>";
+    reactor.power_source = true;
+    reactor.deactivate = "1 kJ";
+    reactor.trigger = "2 kJ";
+    reactor.incapacitated = true;
+    reactor.sprite_hidden = true;
+    reactor.fuel_saving = 50;
+    reactor.fuel_saving_inactive = true;
+    CHECK( accessibility::format_bionic_power_row( reactor ) ==
+           "Reactor, power source, 1 kJ to deactivate, 2 kJ per trigger, incapacitated, "
+           "sprite hidden, fuel saving above 50%, fuel saving inactive." );
+
+    CHECK( accessibility::format_bionic_power( "50.5 kJ", "100 kJ", {} ) ==
+           "Bionic power 50.5 kJ of 100 kJ." );
+    CHECK( accessibility::format_bionic_power( "5 J", "100 kJ", { "battery 5", "gasoline 10" } ) ==
+           "Bionic power 5 J of 100 kJ. Available fuel: battery 5, gasoline 10." );
+
+    accessibility::mutation_power_row photophore;
+    photophore.name = "Photophore";
+    photophore.activated = true;
+    photophore.cost = 9;
+    photophore.resources = { "kcal" };
+    photophore.cooldown = "5 minutes";
+    CHECK( accessibility::format_mutation_power_row( photophore ) ==
+           "Photophore, off, 9 kcal, cooldown 5 minutes." );
+    photophore.powered = true;
+    CHECK( accessibility::format_mutation_power_row( photophore ) ==
+           "Photophore, on, 9 kcal, cooldown 5 minutes." );
+    photophore.powered = false;
+    photophore.resources = { "kcal", "thirst" };
+    photophore.insufficient = true;
+    CHECK( accessibility::format_mutation_power_row( photophore ) ==
+           "Photophore, off, 9 kcal and thirst, cooldown 5 minutes. "
+           "Unavailable: not enough kcal and thirst." );
+
+    accessibility::mutation_power_row hearing;
+    hearing.name = "Good Hearing";
+    hearing.starting_trait = true;
+    hearing.sprite_hidden = true;
+    CHECK( accessibility::format_mutation_power_row( hearing ) ==
+           "Good Hearing, starting trait, sprite hidden." );
+}
+
+TEST_CASE( "bionics_screen_speaks_tabs_rows_power_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+
+    CHECK( bionics_accessibility_tab( you, true ) == "Active bionics. No items." );
+    CHECK( bionics_accessibility_tab( you, false ) == "Passive bionics. No items." );
+
+    const bionic_id power_storage( "bio_power_storage" );
+    const bionic_id night_vision( "bio_night_vision" );
+    you.add_bionic( power_storage );
+    you.add_bionic( night_vision );
+    you.set_power_level( 0_kJ );
+
+    // Without power the activatable bionic says why it cannot be activated.
+    std::vector<std::string> rows = bionics_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == "Implanted Night Vision, off, 10 J to activate, 10 J per turn. "
+           "Unavailable: not enough power." );
+    CHECK( bionics_accessibility_tab( you, true ) == "Active bionics. 1 item. " + rows[0] );
+    rows = bionics_accessibility_rows( you, false );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == "Power Storage." );
+    CHECK( bionics_accessibility_tab( you, false ) == "Passive bionics. 1 item. Power Storage." );
+
+    you.set_power_level( 50_kJ );
+    rows = bionics_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == "Implanted Night Vision, off, 10 J to activate, 10 J per turn." );
+
+    // Activation and deactivation change the spoken state.
+    std::optional<bionic *> bio = you.find_bionic_by_type( night_vision );
+    REQUIRE( bio );
+    REQUIRE( you.activate_bionic( **bio ) );
+    rows = bionics_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == "Implanted Night Vision, on, 10 J to activate, 10 J per turn." );
+    REQUIRE( you.deactivate_bionic( **bio ) );
+    rows = bionics_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0].rfind( "Implanted Night Vision, off, ", 0 ) == 0 );
+
+    const std::string summary = bionics_accessibility_summary( you, true, 0, false );
+    CHECK( summary.rfind( "Bionic power ", 0 ) == 0 );
+    CHECK( summary.find( " of 100 kJ." ) != std::string::npos );
+    CHECK( summary.find( "Activating. Active bionics. 1 of 1. Key " ) != std::string::npos );
+    CHECK( bionics_accessibility_summary( you, false, 0, true ).find(
+               "Examining. Passive bionics. 1 of 1." ) != std::string::npos );
+
+    const std::vector<std::string> details = bionics_accessibility_details( you, true, 0 );
+    REQUIRE( details.size() >= 3 );
+    CHECK( details[0].rfind( rows[0] + " 1 of 1. Key ", 0 ) == 0 );
+    CHECK( details[1] == "Power usage: 10 J act, 10 J/turn, OFF." );
+    CHECK( details[2] == "When active, this bionic will amplify existing light, allowing you to "
+           "see in the dark." );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+    }
+    CHECK( bionics_accessibility_details( you, true, 1 ).empty() );
+}
+
+TEST_CASE( "mutations_screen_speaks_columns_rows_resources_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+
+    CHECK( mutations_accessibility_tab( you, true ) == "Active mutations. No items." );
+
+    const trait_id photophore( "BIOLUM1" );
+    const trait_id good_hearing( "GOODHEARING" );
+    you.set_mutation( photophore );
+    you.set_mutation( good_hearing );
+    you.set_stored_kcal( you.get_healthy_kcal() );
+
+    std::vector<std::string> rows = mutations_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    const std::string photophore_row = string_format( "%s, off, 9 kcal, cooldown ",
+                                       you.mutation_name( photophore ) );
+    CHECK( rows[0].rfind( photophore_row, 0 ) == 0 );
+    CHECK( rows[0].find( "Unavailable" ) == std::string::npos );
+    CHECK( mutations_accessibility_tab( you, true ) == "Active mutations. 1 item. " + rows[0] );
+    rows = mutations_accessibility_rows( you, false );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == string_format( "%s.", you.mutation_name( good_hearing ) ) );
+
+    // A starting trait and a hidden sprite are spoken, not shown only by color.
+    you.my_traits.insert( good_hearing );
+    you.cached_mutations[good_hearing].show_sprite = false;
+    rows = mutations_accessibility_rows( you, false );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0] == string_format( "%s, starting trait, sprite hidden.",
+                                     you.mutation_name( good_hearing ) ) );
+
+    // Too hungry to activate: the row names the missing resource.
+    you.set_stored_kcal( you.get_healthy_kcal() / 2 );
+    rows = mutations_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0].rfind( photophore_row, 0 ) == 0 );
+    CHECK( rows[0].find( ". Unavailable: not enough kcal." ) != std::string::npos );
+
+    you.cached_mutations[photophore].powered = true;
+    rows = mutations_accessibility_rows( you, true );
+    REQUIRE( rows.size() == 1 );
+    CHECK( rows[0].rfind( string_format( "%s, on, 9 kcal, cooldown ",
+                                         you.mutation_name( photophore ) ), 0 ) == 0 );
+    CHECK( rows[0].find( "Unavailable" ) == std::string::npos );
+
+    CHECK( mutations_accessibility_summary( you, true, 0, false ).rfind(
+               "Activating. Active mutations. 1 of 1. ", 0 ) == 0 );
+    CHECK( mutations_accessibility_summary( you, false, 0, true ) ==
+           "Examining. Passive mutations. 1 of 1. No key." );
+
+    const std::vector<std::string> details = mutations_accessibility_details( you, photophore );
+    REQUIRE( details.size() >= 2 );
+    CHECK( details[0].rfind( rows[0] + " Active mutations. 1 of 1. ", 0 ) == 0 );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.find( "A photophore has grown from your head" ) != std::string::npos;
+    } ) );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+    }
 }
