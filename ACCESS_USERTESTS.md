@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T105.
+Last assigned test ID: T110.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -532,3 +532,42 @@ full character sheet.
   text stays silent, and verify that old loading/saving progress never returns
   after the operation closes.  If an indivisible step does not pump events,
   speech and repeat may wait for that step to return; record the step and delay.
+
+## Stage 13: Character information and layering
+
+Open the character sheet with the game's character info key (`@` by default,
+listed in the keybinding help).  For a dense character use Debug menu >
+Player… > Edit player/NPC to edit skills, stats, and proficiencies, add an
+effect, mutate, and edit bionics; wear several clothing layers from Debug menu
+> Spawning… > Spawn an item.
+
+- **T106 - Open, tabs, and rows.**  Open the sheet.  Hear "Character sheet",
+  the name, "Stats", "9 items", and "Strength …, base …" once.  Press Down and
+  Up through the stats: each key speaks one concise row; wrapping says "Top"
+  or "Bottom" first.  Press Right/Left and Tab/Shift+Tab through all eight
+  tabs, then the direct tab keys shown in the tab titles.  Each change speaks
+  the tab name, its count ("No items" when empty), and the focused row; Speed
+  also speaks speed and move cost, Bionics the power.  Scrolling the info box
+  stays silent.
+- **T107 - Encumbrance and warmth.**  Wearing several layers, open the
+  Encumbrance tab.  Rows speak the body part, encumbrance, layering when
+  nonzero, and a warmth word such as "comfortable" or "chilly" (eyes have no
+  warmth word).  `Alt+D` reads the row with total and temperature number,
+  its position, the encumbrance effects, and the limb scores line by line;
+  Escape returns and speaks the row once.
+- **T108 - Skills and rust.**  Use Debug menu > Player… > Edit player/NPC >
+  Edit theoretical skill knowledge to raise one skill above its practical
+  level.  On the Skills tab, moving into a new category speaks the category
+  name before the row; moving within a category does not.  The raised skill
+  says "rusty"; `Alt+D` includes its practical level and learning bonus.
+- **T109 - Traits, bionics, effects, proficiencies.**  Rows speak trait names
+  with positive/negative/neutral/mixed kind, bionics with installed count,
+  effects by name, and proficiencies as known or learning with percent.
+  `Alt+D` reads each description; the trait document states when a purifier
+  cannot remove it.
+- **T110 - Summary, repeat, and return.**  Press `Alt+S` on any tab: hear the
+  name, gender, profession, tab, position, and row.  Interrupt speech with
+  Control; nothing is repeated automatically, and `Alt+R` repeats the last
+  announcement.  Open and close morale, body status, and the keybinding help;
+  on return the focused row is spoken once.  The morale, body status, and
+  medical screens themselves are not yet accessible.

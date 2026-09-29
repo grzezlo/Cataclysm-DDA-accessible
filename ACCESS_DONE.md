@@ -918,3 +918,48 @@ Limitations:
   does not return to either point cannot speak or process repeat until it
   returns.  Unchanged progress stays silent, including sleeping without a
   visible remaining-time estimate.
+
+## 2026-09-29 — Stage 13: Character information and layering
+
+- Implemented the selected interaction with conventions 2, 3, and 5; keys
+  are unchanged and the gameplay `Alt+S` status review is untouched.
+- Opening the sheet speaks "Character sheet", the name, the Stats tab, its
+  count, and the focused row.  Tab changes (Left/Right, Tab/Shift+Tab, and
+  the direct tab keys) speak the tab name, its count, and the focused row;
+  Speed adds speed and move cost, Bionics adds power.  Row movement speaks
+  the concise row, "Top" or "Bottom" on a wrap, and the skill category when
+  focus enters a new one.  Info-box scrolling stays silent.
+- Rows: stats with base ("Strength 10, base 8"); weight, lifestyle, height,
+  age, and blood type; body part, encumbrance, layering when nonzero, and the
+  warmth band that the sheet shows only by color; speed causes with signed
+  speed or move cost; skills with level, progress, effective dodge, "rusty",
+  "training"/"not training", or "set by bionic"; traits with their colored
+  kind (positive, negative, neutral, mixed, threshold, profession,
+  attunement, debug); bionics with installed counts; effects by name;
+  proficiencies as known, learning with progress, or not known.
+- `Alt+D` opens the info pane in the document view: the row (encumbrance
+  adds the total and the temperature number), its position, and the pane
+  text without color markup, including the encumbrance effects and limb
+  scores.  `Alt+S` speaks name, gender, profession, tab, position, and row.
+  Returning from Alt+D, morale, body status, medical, proficiencies,
+  customization, trait variant, sprite, profession name, keybinding help,
+  or a stat upgrade repeats the focused row.
+- Pure formatters in `accessibility_format`; the sheet speech and test entry
+  points (`src/player_display.h`) are in `player_display.cpp`, which now
+  shares its info-pane text helpers between drawing and speech.
+- `test_access.bat` passed 1148 assertions in 75 cases; the Windows x64 tiles
+  build and AStyle 3.1 checks passed.
+- Implementation commit: `728656c44b`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the sheet's input loop has no
+  input injection in tests, so key handling is covered through the speech
+  helpers and formatters.
+- The morale window, body status graph, medical menu, proficiencies window,
+  and the armor layering (sort armor) screen reached from the sheet are not
+  made accessible by this stage; no roadmap stage currently owns them.
+- Test entry points omit speed causes from effects, which need the
+  character's protected effect map.
+- Body part names and skill names are spoken as the sheet shows them,
+  including lowercase names from the game data.

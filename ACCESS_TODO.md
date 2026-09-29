@@ -55,71 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 13 - Character information and layering
-
-**Outcome:** All read-only character information presented in tabs, rows, colors,
-and detail panes is semantically reviewable, including the encumbrance and
-clothing layering view.
-
-**Code inventory:** `src/player_display.cpp` and the character/body/morale/skill
-providers it uses.
-
-**Implementation hints:**
-
-- Entry point: `Character::disp_info()` in `src/player_display.cpp`.
-- Input context: `"PLAYER_INFO"` in `Character::disp_info()`.
-- Tab enum: `enum class player_display_tab` in `src/player_display.cpp` — `stats`,
-  `encumbrance`, `speed`, `skills`, `traits`, `bionics`, `effects`,
-  `proficiencies` (8 tabs).
-- Tab switching: `"LEFT"` / `"RIGHT"` / `"NEXT_TAB"` / `"PREV_TAB"` and direct
-  jump actions (`"SELECT_STATS_TAB"`, etc.) handled in `Character::disp_info()`.
-- Row navigation: `navigate_ui_list()` in `Character::disp_info()`.  Skills tab
-  skips category headers via `skip_skill_headers`.
-- Per-tab semantic text:
-  - Stats: `display_stat` lambda inside `Character::disp_info()` — current vs base.
-    Info pane: `draw_stats_info()`.
-  - Encumbrance: body part name, base + layer penalty, temperature in
-    `draw_encumbrance_tab()`.  Info pane: `get_encumbrance_description()` — this
-    is the layering review screen.
-  - Speed: `get_speedlist_entries()` — cause, type (S/M), signed value.
-  - Skills: `Character::get_HeaderSkills()` / `disp_skills_tab()` — category
-    headers, name, level, exercise %, rust, training status.
-  - Traits: `Character::get_mutations_variants()` — name, description,
-    purifier status.
-  - Bionics: `struct bionic_grouping` / `disp_bionics_tab()` — name, count,
-    power.
-  - Effects: `effect_name_and_text` gathered in `Character::disp_info()`.
-  - Proficiencies: `Character::display_proficiencies()` / `disp_proficiencies_tab()`
-    — name, progress %.
-- Info pane scrolling: `"SCROLL_INFOBOX_UP"` / `"SCROLL_INFOBOX_DOWN"` handled in
-  `Character::disp_info()`.
-
-**Selected interaction (conventions 2, 3, and 5):**
-
-- Keys are unchanged.  The screen is the full character sheet; the Stage 04
-  `Alt+S` status review stays the quick in-game overview and is not changed.
-- Changing a tab speaks its name, item count, and focused row.  Rows are
-  concise: "Strength 10, base 8"; "Torso, encumbrance 12, layering 3, warmth
-  comfortable"; "Melee 3, 45%, training" with rust when present; effects,
-  traits, bionics, and proficiencies by name and state.  Entering a new skill
-  category speaks its name.
-- `Alt+D` opens the info pane, including the layering description, in the
-  document view.
-
-**Success criteria:** Tab/section identity and focused row are explicit.  Stats,
-body condition, encumbrance with layering detail, skills, traits, effects,
-morale, speed, needs, and proficiencies expose the values and explanations
-visible in the standard UI.  Scrolling and tab changes preserve focus and do not
-reread unchanged content.
-
-**Possible automated tests:** Snapshot representative healthy, injured,
-encumbered, effect-heavy, skilled, and morale states; capture tab, row, detail,
-scroll, and return-focus changes.
-
-**User-test scenarios:** Navigate every character-information tab in
-simple and information-dense characters and find specified values without visual
-assistance.
-
 ## Stage 14 - Bionics and mutations
 
 **Outcome:** Bionic and mutation capabilities can be inspected, activated, and
@@ -1005,3 +940,7 @@ instructions and revise the guide before accepting the stage.
   `test_access.bat` after each merge.
 - Translation catalog updates for accessibility strings are deferred to Stage 23
   packaging.
+- The morale window, body status graph, medical menu, proficiencies window,
+  and armor layering (sort armor) screen reached from the character sheet
+  have no accessible speech and no owning stage; they need an interaction
+  decision and a stage (Stage 13 limitation).
