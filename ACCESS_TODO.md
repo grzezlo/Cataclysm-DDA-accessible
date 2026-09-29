@@ -682,6 +682,20 @@ accessible through speech.
   using `print_speed_gauge` and `print_fuel_indicators` data for on-demand
   status readout during driving.
 
+**Selected interaction (option A, changes spoken, status on request):**
+
+- Keys are unchanged.  Conventions 1 and 8 apply; vehicle menus use the
+  shared list speech.
+- Each control change speaks the new state: cruise speed, heading, engine
+  on or off, handbrake.
+- A newly visible obstacle on the current heading within a few tiles is
+  announced once, like a threat transition ("wall ahead, 4 tiles"), and again
+  only after it leaves and re-enters the path.  Collisions and warnings come
+  from game messages.
+- The terrain under the vehicle is not spoken per step.
+- `Alt+S` while driving speaks actual and cruise speed, heading, engine
+  state, fuel and power with estimated time, and handbrake.
+
 **Success criteria:** Entry position, control focus, speed, heading,
 turn/movement result, cruise state, fuel/power, and warnings are announced.
 Movement feedback distinguishes character movement from vehicle motion.
@@ -722,6 +736,19 @@ screen, part grid, task handlers).
 - Requirements format: `veh_interact::format_reqs()`.
 - Accessibility hooks: on `veh_interact::move_cursor()` announce tile position
   and parts summary; on task selection announce available action and requirements.
+
+**Selected interaction (option B, part list instead of the grid):**
+
+- Keys are unchanged; the part list is added.  Conventions 2, 5, and 8
+  apply.
+- Entering the screen opens a flat list of all parts grouped by location:
+  "headlight, front left, damaged 40%".  `FILTER` narrows it by name.
+- Enter on a part moves the grid cursor to its tile and opens a menu of the
+  available tasks (repair, remove, install here, and others) with blocked
+  tasks and their reasons as words.  Requirements open in the document view.
+- The grid cursor stays available with the existing keys and speaks the
+  tile's location and parts summary when moved.  `Alt+S` speaks the vehicle
+  statistics.
 
 **Success criteria:** Part selection, status, install/remove/repair choices,
 disabled reasons, skill/tool requirements, and results are announced.  The
@@ -764,6 +791,17 @@ branch changes rendered content but does not provide semantic announcements.
 - All tabs support `"FILTER"`, `"SORT"`, and `"RANDOMIZE"`.
 - Announce tab identity on switch, entry name + point cost on selection change,
   detail text on demand.
+
+**Selected interaction (conventions 2, 3, 4, and 5):**
+
+- Keys are unchanged.  Changing a tab speaks its name, item count, and focused
+  row ("Profession, 42 items").
+- A row speaks name and point cost ("Evacuee, 0 points"), or unavailability
+  with its reason ("Unavailable: conflicts with scenario").  Selecting speaks
+  the new point balance.
+- `Alt+D` opens the description in the document view.  Filter, sort, and
+  randomize speak their result.
+- The Points tab's existing screen reader branch gains normal focus speech.
 
 **Success criteria:** Each tab reports identity, focus, selection, point costs,
 conflicts, and detail.  Scenario, profession, and background selection,
