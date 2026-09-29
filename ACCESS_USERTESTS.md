@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T110.
+Last assigned test ID: T114.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -571,3 +571,51 @@ effect, mutate, and edit bionics; wear several clothing layers from Debug menu
   announcement.  Open and close morale, body status, and the keybinding help;
   on return the focused row is spoken once.  The morale, body status, and
   medical screens themselves are not yet accessible.
+
+## Stage 14: Bionics and mutations
+
+Open the bionics screen with `p` and the mutations screen with `[` (both
+listed in the keybinding help).  Install bionics through Debug menu >
+Player… > Edit player/NPC > edit bionics: at least one Power Storage, a
+toggled bionic such as Implanted Night Vision, and a power source.  Add
+mutations from the same editor, including an active one with a cost, such as
+Weak Photophore, and a passive one.  Set the bionic power level to zero and
+later to full from the same menu.
+
+- **T111 - Bionics tabs, rows, and power.**  Open the bionics screen.  Hear
+  "Bionics", "Active bionics", the item count, and the focused row once.
+  Rows speak name, on or off, and costs such as "10 J to activate, 10 J per
+  turn"; power sources say "power source".  With zero power an inactive
+  bionic adds "Unavailable: not enough power".  Down and Up speak one row;
+  wrapping says "Top" or "Bottom" first.  Tab and Shift+Tab speak "Passive
+  bionics", its count ("No items" when empty), and the focused row.  `Alt+S`
+  speaks the power, the available fuel, the mode, the tab, the position, and
+  the letter.
+- **T112 - Bionic activation, examine, and details.**  With power, press Enter
+  on Implanted Night Vision: hear the game's activation message, then the row
+  with "on".  Press Enter again to hear it turn off.  Press `!`: hear
+  "Examining"; press it again: "Activating".  `Alt+D` opens the description
+  document with the row, position, letter, power usage, description, and
+  occupied body parts; Escape returns and speaks the row once.  Press Enter
+  on a passive bionic in Activating mode: the popup explains why, and the row
+  is spoken once after closing it.  Toggle fuel saving (`S`) and sprite
+  visibility (`H`) and hear the changed row.
+- **T113 - Mutation columns, rows, and activation.**  Open the mutations
+  screen.  Hear "Mutations", the column name, its count, and the focused
+  row.  Active rows speak name, on or off, cost with its resource, and
+  cooldown ("9 kcal, cooldown …"); passive rows speak the name, "starting
+  trait" for traits chosen at character creation, and "sprite hidden".  Tab
+  switches columns and speaks the column; with only one column the current
+  one is repeated.  Starve the character (Debug menu > Player… > Edit
+  player/NPC, or set hunger) and hear "Unavailable: not enough kcal" on
+  Weak Photophore; Enter shows the game's popup and speaks the row after it.
+  With enough food, Enter activates it, closes the screen, and the game
+  message is spoken.
+- **T114 - Mutation modes, details, repeat, and return.**  Press `!`, `=`,
+  and `,`: hear "Examining", "Reassigning, select an entry to assign a new
+  letter", and "Hiding, select an entry to hide or show its sprite".  In
+  Examining mode press a mutation's letter: its row is spoken, and `Alt+D`
+  opens its description.  Reassign a letter and hear the mode, row, and new
+  key.  `Alt+S` speaks the mode, column, position, and key.  Interrupt speech
+  with Control; nothing is repeated automatically, and `Alt+R` repeats the
+  last announcement.

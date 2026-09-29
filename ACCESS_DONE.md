@@ -963,3 +963,47 @@ Limitations:
   character's protected effect map.
 - Body part names and skill names are spoken as the sheet shows them,
   including lowercase names from the game data.
+
+## 2026-09-30 — Stage 14: Bionics and mutations
+
+- Implemented the selected interaction with conventions 2, 3, 5, and 8; keys
+  are unchanged.
+- Opening speaks "Bionics" or "Mutations", the tab or column name, its count,
+  and the focused row.  Tab changes speak the new tab or column the same way;
+  the mutations screen repeats the current column when the other one is
+  empty.  Row movement speaks the concise row, "Top" or "Bottom" on a wrap.
+- Bionic rows: name, on or off (toggled and charging bionics; others only
+  while on), "power source", energy to activate, deactivate, per trigger,
+  and per turn, incapacitated, sprite hidden, fuel saving threshold and
+  inactive state, and "Unavailable: not enough power".  Mutation rows: name,
+  on or off, cost with its resources, cooldown, "starting trait", sprite
+  hidden, and "Unavailable: not enough <resources>" using the game's own
+  activation check (now shared as `mutation_resources_available()`).
+- The examine toggle, reassign, and hide modes speak their new mode.
+  Reassigning speaks the mode, row, and new key.  Sprite, fuel-saving, and
+  sort changes speak the changed state and row.  Returning from activation
+  (game messages first), popups, the sort menu, or the document repeats the
+  row.  Screens closed by activation leave speech to the game messages.
+- `Alt+D` opens the document view: row, position, key, then the examine-pane
+  text (bionic power usage, description, occupied body parts, installed
+  weapon; mutation description and purifier note).  `Alt+S` speaks power and
+  fuel (bionics), mode, tab, position, and key.
+- Pure formatters in `accessibility_format`; speech helpers and test entry
+  points (`src/bionics_ui.h`, `src/mutation_ui.h`) in the owning UI files.
+  The bionics title bar shares its power and fuel helpers with speech.
+- `test_access.bat` passed 1215 assertions in 78 cases; the Windows x64 tiles
+  build and AStyle 3.1 checks passed.
+- Implementation commit: `72d046f544`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the input loops have no input
+  injection in tests, so key handling is covered through the speech helpers
+  and formatters.
+- Row letters are spoken only in `Alt+S`, `Alt+D`, and after reassigning.
+- "Not enough power" reflects only the activation cost check; fuel and spell
+  failures are reported by game messages after an attempt.
+- The weapon install/uninstall menus and popups use the shared list and popup
+  speech without bionic-specific additions.
+- The maintainer expects play testing may suggest a better design; reported
+  problems are a new review rather than a regression fix.

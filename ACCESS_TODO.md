@@ -55,56 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 14 - Bionics and mutations
-
-**Outcome:** Bionic and mutation capabilities can be inspected, activated, and
-configured without relying on layout or color.
-
-**Code inventory:** `src/bionics_ui.cpp`, `src/mutation_ui.cpp`, and their
-owning data/state modules.
-
-**Implementation hints:**
-
-- Bionics entry: `avatar::power_bionics()` in `src/bionics_ui.cpp`.
-  Context: `"BIONICS"`.
-- Bionic tabs: `TAB_ACTIVE` / `TAB_PASSIVE` with counts in
-  `avatar::power_bionics()`.
-- Bionic entry text: `build_bionic_powerdesc_string()` in `src/bionics_ui.cpp`
-  — name, power cost, per-turn drain, ON/OFF status.
-- Power display: `draw_bionics_titlebar()` in `src/bionics_ui.cpp` — current
-  power in kJ/J/mJ vs max, available fuels.
-- Examine mode: `"TOGGLE_EXAMINE"` switches between activating and examining;
-  `draw_description()` in `src/bionics_ui.cpp` renders detail.
-- Mutations entry: `avatar::power_mutations()` in `src/mutation_ui.cpp`.
-  Context: `"MUTATIONS"`.
-- Two columns: `"Passive:"` and `"Active:"` switched via `"NEXT_TAB"` / `"PREV_TAB"`
-  in `avatar::power_mutations()`.
-- Active trait text: name + cost + resource + cooldown + active status in
-  `avatar::power_mutations()`.
-- Description: `mutation_desc()` in `src/mutation_ui.cpp`.
-
-**Selected interaction (conventions 2, 3, 5, and 8; revisit after play):**
-
-- Keys are unchanged.  Switching a tab or column speaks its name, item count,
-  and focused row ("Active bionics, 4 items").
-- A row speaks name, state, and cost: "Night vision, on, 5 J per turn", or
-  "Unavailable: not enough power".  Mutations add resource and cooldown.
-- The activate/examine toggle speaks the new mode.  `Alt+D` opens the
-  description in the document view; `Alt+S` speaks power and fuel.
-  Activation results come from game messages.
-- The maintainer expects play testing may suggest a better design; treat
-  reported problems as a new review rather than a regression fix.
-
-**Success criteria:** Each screen reports tab/column, selection, active/passive
-state, cost, cooldown, description, and disabled reason.  Activation,
-deactivation, examine toggle, and focus return are complete.
-
-**Possible automated tests:** Capture screen entry, tab/column changes,
-selection/detail, activation/deactivation, insufficient-resource, and return.
-
-**User-test scenarios:** Inspect and operate at least one bionic and
-mutation, including a disabled or insufficient-resource case.
-
 ## Stage 14A - Spells and martial arts
 
 **Outcome:** Spell and martial-style selection, inspection, and activation are
