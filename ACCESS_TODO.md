@@ -593,6 +593,15 @@ in `src/npctalk.cpp`.  Stage 18 owns the later overmap handoff.
   `m->get_target()`.
 - Confirmation: `"CONFIRM"` sets tracked mission.
 
+**Selected interaction (conventions 2, 3, and 5):**
+
+- Keys are unchanged.  Tabs speak "Active, 3 missions" and the focused row.
+- A row speaks title, tracked state, and deadline: "Reach Refugee Center,
+  current objective, deadline in 2 days".
+- `Alt+D` opens the description in the document view: giver, objective,
+  reward, and a known location with distance and direction.
+- `CONFIRM` sets the tracked mission as before; the map handoff is Stage 18.
+
 **Success criteria:** Mission category/state, title, giver, objective, deadline,
 reward, tracked state, normally known location, success/failure, and focus return
 are announced.  The mission screen exposes a clear map action, but its semantic
@@ -636,6 +645,25 @@ understandable without revealing unexplored information.
 - Hook: on cursor movement announce terrain, note, distance from player,
   and direction.
 
+**Selected interaction (option B, known-places list with the cursor):**
+
+- Keys are unchanged; `Alt+L` is added to the overmap context.  Conventions
+  2, 6, and 8 apply.
+- `Alt+L` opens a list of known places sorted by distance from the player:
+  seen cities and named locations, notes, mission targets, and the current
+  route destination.  A row speaks name, distance in map tiles, direction,
+  and markers ("evac shelter, 12 map tiles south, noted").  `FILTER`
+  narrows it by name.  Only information the player has discovered appears.
+- Enter moves the overmap cursor to the place and speaks it; Escape returns
+  to the cursor unchanged.  Route selection and travel then use the existing
+  keys, and starting travel speaks the Stage 08A summary.
+- Cursor movement speaks the tile: terrain, "unexplored", note, mission
+  marker, and distance and direction from the player ("forest, 3 north 2
+  east").  Consecutive identical terrain speaks only the name.  Z-level
+  changes speak the level.
+- Search results, notes, and the note editor use the shared list and text
+  input speech.
+
 **Success criteria:** Cursor movement reports relative direction/distance,
 z-level, known terrain, notes, mission markers, and route state.  Search, notes,
 route selection/travel, and return are keyboard operable.  Unknown map content
@@ -672,6 +700,15 @@ independently usable.
   then queries type, options, and name in `game::zones_manager()`.
 - Zone editing: `zone_data::set_name()`, `zone_data::set_type()`, and
   `zone_data::set_enabled()` in `src/clzones.cpp`.
+
+**Selected interaction (conventions 2, 6, and 8):**
+
+- Keys are unchanged.  A zone row speaks name, type, enabled state, and
+  distance and direction ("Loot: food, enabled, 5 tiles north").
+- Creation selects the corners with the Stage 02 look-around speech, then
+  speaks the size ("Zone 4 by 3").  Type and options use the shared list
+  speech; the name uses the Stage 05 text input.
+- Reorder, enable or disable, and delete speak the new position or state.
 
 **Success criteria:** Zone list reports name, type, enabled state, and distance.
 Creation walks through placement, type selection, options, and naming.
