@@ -165,10 +165,15 @@ over upstream contribution policy or exact UI parity.
   release, for beta testers.  Write each scenario for a player: what to do,
   how to reach the situation, and what should be heard.  Scenarios must cover
   keyboard operation, focus order, announcement count, concise and detailed
-  output, repeat-last, and behavior after speech interruption.  Remove a
-  scenario once a blind screen-reader user confirms it; mention confirmed
-  results briefly in the stage's `ACCESS_DONE.md` entry.  A reported problem
-  becomes a fix on `access`, and the scenario stays until it is confirmed.
+  output, repeat-last, and behavior after speech interruption.  Give every
+  scenario a permanent sequential ID (`T1`, `T2`, and so on).  Append new tests
+  at the end of the file and update its last assigned ID; never renumber tests
+  or reuse IDs.  Remove a scenario after a blind screen-reader user reports a
+  complete result; partial or skipped tests stay.  Mention passes by ID briefly
+  in the stage's `ACCESS_DONE.md` entry.  Record failures by ID with reproduction
+  details as fixes in `ACCESS_TODO.md`, implement them on `access`, and append
+  a retest with a new ID referring to the original test after the fix.  Remove
+  empty stage sections.
 - Reach hard-to-reach scenarios through the in-game debug menu (for example
   spawning monsters or items, bleeding, or changing time) instead of
   progressing through normal play, and give the route in the scenario.  Debug
