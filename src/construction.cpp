@@ -10,6 +10,10 @@
 #include <utility>
 
 #include "action.h"
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "avatar.h"
 #include "build_reqs.h"
 #include "calendar.h"
@@ -477,6 +481,113 @@ static shared_ptr_fast<game::draw_callback_t> construction_preview_callback(
     } );
 }
 
+static std::string construction_accessibility_row( const construction_group_str_id &group,
+        avatar &you, const inventory &inv )
+{
+    const std::vector<construction *> variants = constructions_by_group( group );
+    bool has_buildable_variant = false;
+    bool has_usable_variant = false;
+    bool has_matching_skill = false;
+    for( const construction *con : variants ) {
+        has_matching_skill |= you.meets_skill_requirements( *con );
+        if( player_can_build( you, inv, *con, true ) ) {
+            has_usable_variant = true;
+            has_buildable_variant |= can_construct( *con );
+        }
+    }
+    const bool visible = player_can_see_to_build( you, group );
+    std::string reason;
+    if( has_buildable_variant && !visible ) {
+        reason = _( "too dark" );
+    } else if( !has_buildable_variant ) {
+        if( !has_matching_skill && !you.has_trait( trait_DEBUG_HS ) ) {
+            reason = _( "missing skills" );
+        } else if( !has_usable_variant ) {
+            reason = _( "missing tools or components" );
+        } else {
+            reason = _( "no valid adjacent tile" );
+        }
+    }
+    return accessibility::format_construction_row( group->name(), reason.empty(), reason,
+            variants.size() );
+}
+
+static std::vector<std::string> construction_accessibility_details(
+    const construction_group_str_id &group, avatar &you, const inventory &inv,
+    const int position, const int count )
+{
+    const std::vector<construction *> variants = constructions_by_group( group );
+    std::vector<std::string> lines = {
+        accessibility::format_semantic_sequence( {
+            construction_accessibility_row( group, you, inv ),
+            accessibility::format_list_position( position, count )
+        } )
+    };
+    int variant_number = 0;
+    for( const construction *con : variants ) {
+        ++variant_number;
+        if( variants.size() > 1 ) {
+            lines.push_back( string_format( _( "Variant %d" ), variant_number ) );
+        }
+        if( !con->post_terrain.empty() ) {
+            const std::string result = con->post_is_furniture ?
+                                       furn_str_id( con->post_terrain )->name() :
+                                       ter_str_id( con->post_terrain )->name();
+            lines.push_back( string_format( _( "Result: %s" ), result ) );
+            const std::string description = con->post_is_furniture ?
+                                            furn_str_id( con->post_terrain )->description.translated() :
+                                            ter_str_id( con->post_terrain )->description.translated();
+            if( !description.empty() ) {
+                lines.push_back( description );
+            }
+        }
+        if( con->required_skills.empty() ) {
+            lines.emplace_back( _( "Required skills: none" ) );
+        } else {
+            for( const auto &skill : con->required_skills ) {
+                const int current = you.get_skill_level( skill.first );
+                lines.push_back( string_format( _( "Required skill: %1$s %2$d, you have %3$d, %4$s" ),
+                                                skill.first.obj().name(), skill.second, current,
+                                                current >= skill.second ? _( "met" ) : _( "missing" ) ) );
+            }
+        }
+        if( !con->pre_terrain.empty() ) {
+            std::vector<std::string> names;
+            for( const std::string &id : con->pre_terrain ) {
+                names.push_back( con->pre_is_furniture ? furn_str_id( id )->name() :
+                                 ter_str_id( id )->name() );
+            }
+            lines.push_back( string_format( _( "Requires terrain: %1$s, %2$s" ),
+                                            enumerate_as_string( names, enumeration_conjunction::or_ ),
+                                            has_pre_terrain( *con ) ? _( "nearby" ) : _( "not nearby" ) ) );
+        }
+        if( !con->pre_note.empty() ) {
+            lines.push_back( string_format( _( "Annotation: %s" ), con->pre_note.translated() ) );
+        }
+        lines.push_back( string_format( _( "Time to complete: %s" ),
+                                        to_string( time_duration::from_moves( con->adjusted_time() ) ) ) );
+        const std::vector<accessibility::requirement_group> requirements =
+            accessibility_gameplay::requirement_groups( *con->requirements, inv,
+                    is_crafting_component, 1, true );
+        bool has_tools = false;
+        bool has_components = false;
+        for( const accessibility::requirement_group &requirement : requirements ) {
+            has_tools |= requirement.kind == accessibility::requirement_kind::tools;
+            has_components |= requirement.kind == accessibility::requirement_kind::components;
+            lines.push_back( accessibility::format_requirement_group( requirement ) );
+        }
+        if( !has_tools ) {
+            lines.emplace_back( _( "Tools: none" ) );
+        }
+        if( !has_components ) {
+            lines.emplace_back( _( "Components: none" ) );
+        }
+        lines.push_back( can_construct( *con ) ? _( "Placement: adjacent tile available" ) :
+                         _( "Placement: no valid adjacent tile" ) );
+    }
+    return lines;
+}
+
 construction_id construction_menu( const bool blueprint )
 {
     if( !finalized ) {
@@ -541,6 +652,9 @@ construction_id construction_menu( const bool blueprint )
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "FILTER" );
     ctxt.register_action( "RESET_FILTER" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.set_timeout( get_option<int>( "BLINK_SPEED" ) );
 
     const std::vector<construction_category> &construct_cat = construction_categories::get_all();
@@ -913,6 +1027,12 @@ construction_id construction_menu( const bool blueprint )
     std::map<tripoint_bub_ms, const construction *> con_preview;
     const std::optional<tripoint_bub_ms> mouse_pos; // dummy
     bool blink = true;
+    bool acc_list_changed = true;
+    bool acc_force_focus = false;
+    int acc_last_tab = -1;
+    int acc_last_select = -1;
+    std::string acc_event;
+    std::string acc_wrap;
     shared_ptr_fast<game::draw_callback_t> draw_preview = construction_preview_callback(
                 con_preview, mouse_pos, blink );
     g->add_draw_callback( draw_preview );
@@ -1002,6 +1122,28 @@ construction_id construction_menu( const bool blueprint )
             }
         }
 
+        if( accessibility::is_active() && ( acc_list_changed || acc_force_focus ||
+                                            acc_last_select != select || acc_last_tab != tabindex ) ) {
+            const bool announce_list = acc_list_changed || acc_last_tab != tabindex;
+            const std::string category = category_id == construction_category_FILTER ?
+                                         string_format( _( "Filter: %s" ), filter ) :
+                                         construct_cat[tabindex].name();
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                acc_last_tab == -1 ? _( "Construction" ) : std::string(),
+                acc_event,
+                announce_list ? accessibility::format_construction_list( category, constructs.size() ) :
+                std::string(), acc_wrap,
+                constructs.empty() ? std::string() :
+                construction_accessibility_row( constructs[select], player_character, total_inv )
+            } ) );
+        }
+        acc_last_tab = tabindex;
+        acc_last_select = select;
+        acc_list_changed = false;
+        acc_force_focus = false;
+        acc_event.clear();
+        acc_wrap.clear();
+
         g->invalidate_main_ui_adaptor();
         ui_manager::redraw();
 
@@ -1029,6 +1171,9 @@ construction_id construction_menu( const bool blueprint )
                 update_info = true;
                 update_cat = true;
                 tabindex = tabcount - 1;
+                acc_list_changed = true;
+            } else {
+                acc_force_focus = true;
             }
         } else if( action == "RESET_FILTER" ) {
             if( tabindex == tabcount - 1 && !filter.empty() ) {
@@ -1036,16 +1181,44 @@ construction_id construction_menu( const bool blueprint )
                 uistate.construction_filter.clear();
                 update_info = true;
                 update_cat = true;
+                acc_list_changed = true;
             }
         } else if( navigate_ui_list( action, select, scroll_rate, recmax, true ) ) {
             update_info = true;
+            const int direction = action == "UP" || action == "PAGE_UP" ? -1 : 1;
+            acc_wrap = accessibility::format_list_wrap( acc_last_select, select, direction );
         } else if( action == "LEFT" || action == "PREV_TAB" || action == "RIGHT" || action == "NEXT_TAB" ) {
             update_info = true;
             update_cat = true;
             tabindex = inc_clamp_wrap( tabindex, action == "RIGHT" || action == "NEXT_TAB", tabcount );
+            acc_list_changed = true;
         } else if( action == "SCROLL_STAGE_UP" || action == "SCROLL_STAGE_DOWN" ) {
             current_construct_breakpoint = inc_clamp( current_construct_breakpoint,
                                            action == "SCROLL_STAGE_DOWN", total_project_breakpoints - 1 );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() && !constructs.empty() ) {
+                const std::vector<std::string> lines = construction_accessibility_details(
+                        constructs[select], player_character, total_inv, select + 1, constructs.size() );
+                accessibility_ui::show_document( _( "Construction requirements" ),
+                                                 constructs[select]->name(), lines, lines );
+                acc_force_focus = true;
+            }
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            if( accessibility::is_active() ) {
+                const std::string category = category_id == construction_category_FILTER ?
+                                             string_format( _( "Filter: %s" ), filter ) :
+                                             construct_cat[tabindex].name();
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_construction_list( category,
+                            constructs.size() ),
+                    constructs.empty() ? std::string() :
+                    accessibility::format_list_position( select + 1, constructs.size() ),
+                    hide_unconstructable ? _( "Unavailable projects hidden" ) :
+                    _( "Unavailable projects shown" )
+                } ) );
+            }
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
         } else if( action == "QUIT" ) {
             exit = true;
         } else if( action == "TOGGLE_UNAVAILABLE_CONSTRUCTIONS" ) {
@@ -1054,6 +1227,9 @@ construction_id construction_menu( const bool blueprint )
             hide_unconstructable = !hide_unconstructable;
             offset = 0;
             load_available_constructions( available, cat_available, hide_unconstructable );
+            acc_list_changed = true;
+            acc_event = hide_unconstructable ? _( "Unavailable projects hidden" ) :
+                        _( "Unavailable projects shown" );
         } else if( action == "CONFIRM" ) {
             if( constructs.empty() || select >= static_cast<int>( constructs.size() ) ) {
                 // Nothing to be done here
@@ -1078,6 +1254,7 @@ construction_id construction_menu( const bool blueprint )
                 } else {
                     popup( _( "You can't build that!" ) );
                     update_info = true;
+                    acc_force_focus = true;
                 }
             } else {
                 // get the index of the overall constructions list from current_group
@@ -1258,9 +1435,12 @@ void place_construction( std::vector<construction_group_str_id> const &groups )
     g->add_draw_callback( draw_preview );
 
     const tripoint_bub_ms &loc = player_character.pos_bub();
-    const std::optional<tripoint_bub_ms> pnt_ = choose_adjacent(
+    const std::optional<tripoint_bub_ms> pnt_ = choose_adjacent_described(
                 loc, _( "Construct where?" ),
                 /*allow_vertical=*/false, /*timeout=*/get_option<int>( "BLINK_SPEED" ),
+    [&valid]( const tripoint_bub_ms & p ) {
+        return valid.find( p ) != valid.end();
+    },
     [&]( const input_context & ctxt, const std::string & action ) {
         if( action == "TIMEOUT" ) {
             blink = !blink;
@@ -1329,6 +1509,8 @@ void place_construction( std::vector<construction_group_str_id> const &groups )
     player_character.invalidate_weight_carried_cache();
     player_character.assign_activity( ACT_BUILD );
     player_character.activity.placement = here.get_abs( pnt );
+    accessibility::announce_status( string_format( _( "Started constructing %s" ),
+                                    con.group->name() ) );
 }
 
 void complete_construction( Character *you )

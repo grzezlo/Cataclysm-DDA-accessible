@@ -1771,4 +1771,25 @@ std::string format_recipe_batch( const int batch_size, const std::string &time,
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
+std::string format_construction_row( const std::string &name, const bool available,
+                                     const std::string &unavailable_reason, const size_t variants )
+{
+    std::vector<std::string> parts = { name };
+    parts.push_back( available ? _( "available" ) :
+                     string_format( _( "Unavailable: %s" ), unavailable_reason ) );
+    if( variants > 1 ) {
+        parts.push_back( string_format( n_gettext( "%d variant", "%d variants", variants ),
+                                        static_cast<int>( variants ) ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_construction_list( const std::string &category, const size_t count )
+{
+    const std::string count_text = count == 0 ? _( "No projects" ) :
+                                   string_format( n_gettext( "%d project", "%d projects", count ),
+                                           static_cast<int>( count ) );
+    return string_join( std::vector<std::string> { category, count_text }, _( ", " ) );
+}
+
 } // namespace accessibility

@@ -2867,6 +2867,18 @@ TEST_CASE( "crafting_formatters_speak_requirements_and_recipe_rows", "[accessibi
     CHECK( accessibility::format_recipe_batch( 2, "", "" ) == "Batch size 2." );
 }
 
+TEST_CASE( "construction_catalog_speaks_availability_and_variants", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_construction_list( "Walls", 0 ) == "Walls, No projects" );
+    CHECK( accessibility::format_construction_list( "Walls", 1 ) == "Walls, 1 project" );
+    CHECK( accessibility::format_construction_list( "Walls", 3 ) == "Walls, 3 projects" );
+    CHECK( accessibility::format_construction_row( "Board up window", true, "", 1 ) ==
+           "Board up window, available." );
+    CHECK( accessibility::format_construction_row( "Dig pit", false,
+            "no valid adjacent tile", 2 ) ==
+           "Dig pit, Unavailable: no valid adjacent tile, 2 variants." );
+}
+
 TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "[accessibility]" )
 {
     clear_avatar();

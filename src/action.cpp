@@ -1253,6 +1253,26 @@ std::optional<tripoint_bub_ms> choose_adjacent( const tripoint_bub_ms &pos,
     return choose_adjacent_impl( pos, message, std::nullopt, allow_vertical, timeout, action_cb );
 }
 
+std::optional<tripoint_bub_ms> choose_adjacent_described( const tripoint_bub_ms &pos,
+        const std::string &message, const bool allow_vertical, const int timeout,
+        const std::function<bool( const tripoint_bub_ms & )> &spoken_target,
+        const adjacent_callback &action_cb )
+{
+    std::optional<std::vector<accessibility::direction_target>> targets;
+    if( accessibility::is_active() ) {
+        map &here = get_map();
+        avatar &you = get_avatar();
+        std::vector<tripoint_bub_ms> described;
+        for( const tripoint_bub_ms &p : here.points_in_radius( pos, 1 ) ) {
+            if( p != pos && spoken_target( p ) ) {
+                described.push_back( p );
+            }
+        }
+        targets = accessibility_gameplay::direction_targets( here, you, pos, described );
+    }
+    return choose_adjacent_impl( pos, message, targets, allow_vertical, timeout, action_cb );
+}
+
 std::optional<tripoint_bub_ms> choose_adjacent_described( const std::string &message,
         const bool allow_vertical, const std::function<bool( const tripoint_bub_ms & )> &spoken_target )
 {

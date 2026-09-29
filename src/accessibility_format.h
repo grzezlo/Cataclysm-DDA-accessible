@@ -521,6 +521,11 @@ std::string format_recipe_list( const std::string &name, size_t count, size_t hi
 std::string format_recipe_batch( int batch_size, const std::string &time,
                                  const std::string &availability );
 
+/** Construction catalog focus and category summary. */
+std::string format_construction_row( const std::string &name, bool available,
+                                     const std::string &unavailable_reason, size_t variants );
+std::string format_construction_list( const std::string &category, size_t count );
+
 } // namespace accessibility
 
 #endif // CATA_SRC_ACCESSIBILITY_FORMAT_H
