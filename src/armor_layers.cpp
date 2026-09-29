@@ -11,6 +11,9 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "catacharset.h"
@@ -34,6 +37,7 @@
 #include "output.h"
 #include "pimpl.h"
 #include "player_activity.h"
+#include "player_display.h"
 #include "point.h"
 #include "string_formatter.h"
 #include "translation.h"
@@ -99,16 +103,10 @@ struct mid_pane_status {
     int offset;
 };
 
-mid_pane_status draw_mid_pane( const catacurses::window &w_sort_middle,
-                               std::list<item>::const_iterator const worn_item_it,
-                               Character &c, const bodypart_id &bp,
-                               mid_pane_status &status )
+/** The item statistics of the middle pane below the item name, folded to `win_width`. */
+std::vector<std::string> mid_pane_lines( std::list<item>::const_iterator const worn_item_it,
+        Character &c, const bodypart_id &bp, const int win_width )
 {
-    const int win_width = getmaxx( w_sort_middle );
-    const size_t win_height = static_cast<size_t>( getmaxy( w_sort_middle ) );
-    // NOLINTNEXTLINE(cata-use-named-point-constants)
-    status.header_lines = fold_and_print( w_sort_middle, point( 0, 0 ), win_width - 1, c_white,
-                                          worn_item_it->type_name( 1 ) ) - 1;
     const item_penalties penalties = c.worn.get_item_penalties( worn_item_it, c, bp );
     std::vector<std::string> mid_pane_text;
     mid_pane_text.reserve(
@@ -201,6 +199,20 @@ mid_pane_status draw_mid_pane( const catacurses::window &w_sort_middle,
     mid_pane_text.insert( mid_pane_text.end(), temp_text.begin(), temp_text.end() );
     temp_text = clothing_protection( *worn_item_it, win_width - 1, bp );
     mid_pane_text.insert( mid_pane_text.end(), temp_text.begin(), temp_text.end() );
+    return mid_pane_text;
+}
+
+mid_pane_status draw_mid_pane( const catacurses::window &w_sort_middle,
+                               std::list<item>::const_iterator const worn_item_it,
+                               Character &c, const bodypart_id &bp,
+                               mid_pane_status &status )
+{
+    const int win_width = getmaxx( w_sort_middle );
+    const size_t win_height = static_cast<size_t>( getmaxy( w_sort_middle ) );
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    status.header_lines = fold_and_print( w_sort_middle, point( 0, 0 ), win_width - 1, c_white,
+                                          worn_item_it->type_name( 1 ) ) - 1;
+    const std::vector<std::string> mid_pane_text = mid_pane_lines( worn_item_it, c, bp, win_width );
 
     status.size = mid_pane_text.size();
 
@@ -602,6 +614,160 @@ static void draw_grid( const catacurses::window &w, int left_pane_w, int mid_pan
     wnoutrefresh( w );
 }
 
+// Screen reader speech for the sort armor screen.
+namespace
+{
+
+using worn_list = std::vector<std::list<item>::iterator>;
+
+/** The left list for a body part filter, innermost first; the null part lists everything. */
+worn_list worn_items_for( std::list<item> &worn, const bodypart_id &bp )
+{
+    worn_list items;
+    for( auto it = worn.begin(); it != worn.end(); ++it ) {
+        if( bp == bodypart_str_id::NULL_ID() || it->covers( bp ) ) {
+            items.push_back( it );
+        }
+    }
+    return items;
+}
+
+std::string armor_filter_name( const bodypart_id &bp )
+{
+    return bp == bodypart_str_id::NULL_ID() ? _( "All" ) : body_part_name_as_heading( bp, 1 );
+}
+
+accessibility::armor_row armor_accessibility_row( outfit &clothes, const Character &guy,
+        const std::list<item>::iterator &it, const bodypart_id &bp, const bool with_encumbrance )
+{
+    accessibility::armor_row row;
+    row.name = it->tname();
+    if( it->is_sided() ) {
+        if( it->get_side() == side::LEFT ) {
+            row.side = _( "left" );
+        } else if( it->get_side() == side::RIGHT ) {
+            row.side = _( "right" );
+        }
+    }
+    row.hidden = it->has_flag( json_flag_HIDDEN );
+    // The list shows these penalties only by the color of the name.
+    const item_penalties penalties = clothes.get_item_penalties( it, guy, bp );
+    row.stacking_conflict = !penalties.body_parts_with_stacking_penalty.empty();
+    row.out_of_order = !penalties.body_parts_with_out_of_order_penalty.empty();
+    if( with_encumbrance && bp != bodypart_str_id::NULL_ID() ) {
+        row.encumbrance = it->get_encumber( guy, bp );
+    }
+    return row;
+}
+
+std::string armor_row_speech( outfit &clothes, const Character &guy, const worn_list &items,
+                              const int index, const bodypart_id &bp )
+{
+    if( index < 0 || index >= static_cast<int>( items.size() ) ) {
+        return std::string();
+    }
+    return accessibility::format_armor_row( armor_accessibility_row( clothes, guy, items[index], bp,
+                                            false ) );
+}
+
+std::string armor_tab_speech( outfit &clothes, const Character &guy, const worn_list &items,
+                              const int index, const bodypart_id &bp )
+{
+    return accessibility::format_character_tab( armor_filter_name( bp ), {}, items.size(),
+            armor_row_speech( clothes, guy, items, index, bp ) );
+}
+
+/** The moving item's neighbours: the list runs from innermost to outermost. */
+std::string armor_position_speech( const worn_list &items, const int index )
+{
+    if( index < 0 || index >= static_cast<int>( items.size() ) ) {
+        return std::string();
+    }
+    return accessibility::format_armor_position(
+               index > 0 ? items[index - 1]->tname() : std::string(),
+               index + 1 < static_cast<int>( items.size() ) ? items[index + 1]->tname() : std::string() );
+}
+
+std::string armor_summary( outfit &clothes, const Character &guy, const worn_list &items,
+                           const bodypart_id &bp )
+{
+    std::vector<accessibility::armor_row> rows;
+    rows.reserve( items.size() );
+    for( const std::list<item>::iterator &it : items ) {
+        rows.push_back( armor_accessibility_row( clothes, guy, it, bp, true ) );
+    }
+    const bool part = bp != bodypart_str_id::NULL_ID();
+    return accessibility::format_armor_summary( armor_filter_name( bp ), rows,
+            part ? guy.get_part_encumbrance( bp ) : -1, part ? guy.get_part_layer_penalty( bp ) : 0 );
+}
+
+std::vector<std::string> armor_details( outfit &clothes, Character &guy, const worn_list &items,
+                                        const int index, const bodypart_id &bp )
+{
+    std::vector<std::string> paragraphs;
+    if( index < 0 || index >= static_cast<int>( items.size() ) ) {
+        return paragraphs;
+    }
+    paragraphs.push_back( accessibility::format_semantic_sequence( {
+        armor_row_speech( clothes, guy, items, index, bp ),
+        accessibility::format_list_position( index + 1, items.size() )
+    } ) );
+    const auto add = [&paragraphs]( const std::string & line ) {
+        // Speech collapses the padding that aligns names and values in the pane.
+        const std::string spoken = accessibility::format_semantic_sequence( {
+            remove_color_tags( line )
+        } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    };
+    add( items[index]->type_name( 1 ) );
+    // A wide pane keeps each sentence and value on one line.
+    for( const std::string &line : mid_pane_lines( items[index], guy, bp, 1000 ) ) {
+        add( line );
+    }
+    add( _( "Encumbrance and Warmth" ) );
+    for( const std::string &row : encumbrance_accessibility_rows( guy, &*items[index] ) ) {
+        paragraphs.push_back( row );
+    }
+    return paragraphs;
+}
+
+} // namespace
+
+std::vector<std::string> outfit::sort_armor_accessibility_rows( Character &guy,
+        const bodypart_id &filter )
+{
+    const worn_list items = worn_items_for( worn, filter );
+    std::vector<std::string> rows;
+    for( int i = 0; i < static_cast<int>( items.size() ); ++i ) {
+        rows.push_back( armor_row_speech( *this, guy, items, i, filter ) );
+    }
+    return rows;
+}
+
+std::string outfit::sort_armor_accessibility_tab( Character &guy, const bodypart_id &filter )
+{
+    return armor_tab_speech( *this, guy, worn_items_for( worn, filter ), 0, filter );
+}
+
+std::string outfit::sort_armor_accessibility_position( const bodypart_id &filter,
+        const int index )
+{
+    return armor_position_speech( worn_items_for( worn, filter ), index );
+}
+
+std::string outfit::sort_armor_accessibility_summary( Character &guy, const bodypart_id &filter )
+{
+    return armor_summary( *this, guy, worn_items_for( worn, filter ), filter );
+}
+
+std::vector<std::string> outfit::sort_armor_accessibility_details( Character &guy,
+        const bodypart_id &filter, const int index )
+{
+    return armor_details( *this, guy, worn_items_for( worn, filter ), index, filter );
+}
+
 void outfit::sort_armor( Character &guy )
 {
     // FIXME: get_all_body_parts() doesn't return a sorted list
@@ -691,6 +857,9 @@ void outfit::sort_armor( Character &guy )
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "SCROLL_ITEM_INFO_UP" );
     ctxt.register_action( "SCROLL_ITEM_INFO_DOWN" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     Character &player_character = get_player_character();
     auto do_return_entry = [&player_character]() {
@@ -926,6 +1095,74 @@ void outfit::sort_armor( Character &guy )
         wnoutrefresh( w_encumb );
     } );
 
+    // Screen reader speech reads a fresh list, as the drawn one is rebuilt on redraw.
+    bool announced = false;
+    const auto accessible_list = [&]() {
+        return worn_items_for( worn, armor_cat[tabindex] );
+    };
+    const auto accessible_index = [&]( const worn_list & items ) {
+        return std::min( leftListIndex, std::max( 0, static_cast<int>( items.size() ) - 1 ) );
+    };
+    const auto accessible_row = [&]() {
+        const worn_list items = accessible_list();
+        return armor_row_speech( *this, guy, items, accessible_index( items ), armor_cat[tabindex] );
+    };
+    const auto accessible_tab = [&]() {
+        const worn_list items = accessible_list();
+        return armor_tab_speech( *this, guy, items, accessible_index( items ), armor_cat[tabindex] );
+    };
+    const auto armor_action_speech = [&]( const std::string & action, const int previous_index,
+    const int previous_selected ) -> std::string {
+        const worn_list items = accessible_list();
+        if( items.empty() )
+        {
+            return action == "UP" || action == "DOWN" || action == "MOVE_ARMOR" ||
+            action == "CHANGE_SIDE" || action == "TOGGLE_CLOTH" ? std::string() : accessible_tab();
+        }
+        const int index = accessible_index( items );
+        const std::string row = armor_row_speech( *this, guy, items, index, armor_cat[tabindex] );
+        if( action == "UP" || action == "DOWN" )
+        {
+            if( leftListIndex == previous_index ) {
+                // Refused, as when sorting under integrated armor; the popup said why.
+                return std::string();
+            }
+            if( previous_selected >= 0 && selected >= 0 ) {
+                return armor_position_speech( items, index );
+            }
+            return accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( previous_index, leftListIndex, action == "DOWN" ? 1 : -1 ),
+                row
+            } );
+        } else if( action == "LEFT" || action == "RIGHT" || action == "PREV_TAB" ||
+                   action == "NEXT_TAB" || action == "EQUIP_ARMOR" || action == "EQUIP_ARMOR_HERE" ||
+                   action == "REMOVE_ARMOR" )
+        {
+            return accessible_tab();
+        } else if( action == "MOVE_ARMOR" )
+        {
+            if( previous_selected < 0 && selected >= 0 ) {
+                return accessibility::format_armor_moving( items[index]->tname() );
+            } else if( previous_selected >= 0 && selected < 0 ) {
+                return accessibility::format_armor_placed( row );
+            }
+        } else if( action == "CHANGE_SIDE" )
+        {
+            return items[index]->is_sided() ? row : std::string();
+        } else if( action == "TOGGLE_CLOTH" )
+        {
+            return accessibility::format_armor_sprite( items[index]->has_flag( json_flag_HIDDEN ), row );
+        } else if( action == "SORT_ARMOR" )
+        {
+            return accessibility::format_semantic_sequence( { _( "Sorted into layer order" ), row } );
+        } else if( action == "ASSIGN_INVLETS" || action == "USAGE_HELP" ||
+                   action == "HELP_KEYBINDINGS" )
+        {
+            return row;
+        }
+        return std::string();
+    };
+
     bool exit = false;
     while( !exit ) {
         if( guy.is_avatar() ) {
@@ -946,12 +1183,40 @@ void outfit::sort_armor( Character &guy )
             }
         }
 
+        if( !announced ) {
+            announced = true;
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                _( "Sort Armor" ), accessible_tab()
+            } ) );
+        }
+
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
         if( guy.is_npc() && action == "ASSIGN_INVLETS" ) {
             // It doesn't make sense to assign invlets to NPC items
             continue;
         }
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( armor_summary( *this, guy, accessible_list(),
+                                                    armor_cat[tabindex] ) );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            const worn_list items = accessible_list();
+            const std::vector<std::string> paragraphs = armor_details( *this, guy, items,
+                    accessible_index( items ), armor_cat[tabindex] );
+            if( accessibility::is_active() && !paragraphs.empty() ) {
+                const std::string title = items[accessible_index( items )]->tname();
+                accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                accessibility::announce( accessible_row() );
+            }
+            continue;
+        }
+        // Screen reader speech for this key comes from the state after it is handled.
+        const int previous_index = leftListIndex;
+        const int previous_selected = selected;
 
         // Helper function for moving items in the list
         auto shift_selected_item = [&]() {
@@ -1224,6 +1489,9 @@ void outfit::sort_armor( Character &guy )
             scrollable_text( new_win, _( "Sort armor help" ), assembled_string );
         } else if( action == "QUIT" ) {
             exit = true;
+        }
+        if( !exit ) {
+            accessibility::announce( armor_action_speech( action, previous_index, previous_selected ) );
         }
     }
 }

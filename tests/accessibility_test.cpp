@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <chrono>
+#include <cmath>
 #include <memory>
 #include <string>
 #include <utility>
@@ -21,6 +22,8 @@
 #include "cata_catch.h"
 #include "bionics.h"
 #include "bionics_ui.h"
+#include "bodygraph.h"
+#include "bodypart.h"
 #include "cata_scope_helpers.h"
 #include "game.h"
 #include "fake_messages.h"
@@ -37,10 +40,14 @@
 #include "map_item_stack.h"
 #include "map_selector.h"
 #include "martialarts.h"
+#include "medical_ui.h"
 #include "monster.h"
+#include "morale.h"
+#include "morale_types.h"
 #include "pickup.h"
 #include "mutation.h"
 #include "mutation_ui.h"
+#include "output.h"
 #include "player_activity.h"
 #include "player_display.h"
 #include "popup.h"
@@ -3896,5 +3903,272 @@ TEST_CASE( "martial_style_details_speak_buffs_techniques_and_weapons", "[accessi
     for( const std::string &line : lines ) {
         CHECK( line.find( "<color" ) == std::string::npos );
         CHECK( line.find( "</" ) == std::string::npos );
+    }
+}
+
+TEST_CASE( "character_subscreen_formatters_speak_health_state_and_layering",
+           "[accessibility][nogame]" )
+{
+    // Morale lines keep the window's label and value; a dash total is zero.
+    CHECK( accessibility::format_morale_line( "Total morale:", "+12" ) == "Total morale: +12." );
+    CHECK( accessibility::format_morale_line( "Total morale:", "-" ) == "Total morale: 0." );
+    CHECK( accessibility::format_morale_line( "<color_c_green>Ate a good meal</color>", "25%" ) ==
+           "Ate a good meal, 25%." );
+    CHECK( accessibility::format_morale_line( "Nothing affects your morale", "" ) ==
+           "Nothing affects your morale." );
+
+    // Health bars in tenths, at the bar's own precision.
+    CHECK( accessibility::format_health_bar( "|||||" ) == "health 10 of 10" );
+    CHECK( accessibility::format_health_bar( "<color_c_yellow>||\\</color>" ) == "health 5 of 10" );
+    CHECK( accessibility::format_health_bar( "\\" ) == "health 1 of 10" );
+    CHECK( accessibility::format_health_bar( ":" ) == "health under 1 of 10" );
+    CHECK( accessibility::format_health_bar( "-----" ) == "health 0 of 10" );
+    CHECK( accessibility::format_mending_bar( 2 ) == "mending 2 of 5" );
+
+    CHECK( accessibility::format_body_part_row( "Head", "health 10 of 10", false, true ) ==
+           "Head, health 10 of 10, has details." );
+    CHECK( accessibility::format_body_part_row( "Left arm", "", true, false ) ==
+           "Left arm, missing." );
+    CHECK( accessibility::format_medical_health_row( "Torso", "health 5 of 10", { "BROKEN", "Bleeding" } )
+           == "Torso, health 5 of 10, BROKEN, Bleeding." );
+    CHECK( accessibility::format_proficiency_window_row( "Knapping", true, 100 ) ==
+           "Knapping, known." );
+    CHECK( accessibility::format_proficiency_window_row( "Tailoring", false, 40 ) ==
+           "Tailoring, learning, 40%." );
+
+    // Armor rows speak what the list shows by color and letter.
+    accessibility::armor_row hoodie;
+    hoodie.name = "hoodie";
+    CHECK( accessibility::format_armor_row( hoodie ) == "hoodie." );
+    hoodie.side = "left";
+    hoodie.hidden = true;
+    hoodie.stacking_conflict = true;
+    hoodie.out_of_order = true;
+    CHECK( accessibility::format_armor_row( hoodie ) ==
+           "hoodie, left, hidden, layering conflict, out of order." );
+
+    // Moving speaks the neighbours; the list runs from innermost to outermost.
+    CHECK( accessibility::format_armor_position( "", "hoodie" ) == "innermost, above hoodie." );
+    CHECK( accessibility::format_armor_position( "T-shirt", "" ) == "outermost, below T-shirt." );
+    CHECK( accessibility::format_armor_position( "T-shirt", "hoodie" ) ==
+           "above hoodie, below T-shirt." );
+    CHECK( accessibility::format_armor_position( "", "" ) == "only item." );
+    CHECK( accessibility::format_armor_moving( "hoodie" ) == "Moving hoodie." );
+    CHECK( accessibility::format_armor_placed( "hoodie." ) == "Placed. hoodie." );
+    CHECK( accessibility::format_armor_sprite( true, "hoodie, hidden." ) ==
+           "Sprite hidden. hoodie, hidden." );
+    CHECK( accessibility::format_armor_sprite( false, "hoodie." ) == "Sprite shown. hoodie." );
+
+    accessibility::armor_row shirt;
+    shirt.name = "T-shirt";
+    shirt.encumbrance = 4;
+    hoodie = accessibility::armor_row();
+    hoodie.name = "hoodie";
+    hoodie.encumbrance = 8;
+    hoodie.stacking_conflict = true;
+    CHECK( accessibility::format_armor_summary( "Torso", { shirt, hoodie }, 14, 2 ) ==
+           "Torso, 2 items. T-shirt, encumbrance 4. hoodie, encumbrance 8, layering conflict. "
+           "Total encumbrance 14, layering 2." );
+    CHECK( accessibility::format_armor_summary( "All", {}, -1, 0 ) == "All, No items." );
+
+    accessibility::encumbrance_row torso;
+    torso.part = "Torso";
+    torso.encumbrance = 12;
+    torso.layering = 2;
+    torso.covered = true;
+    CHECK( accessibility::format_encumbrance_row( torso, false ) ==
+           "Torso, encumbrance 12, layering 2, covered by this item." );
+}
+
+TEST_CASE( "morale_window_reads_total_sources_and_focus_as_a_document", "[accessibility]" )
+{
+    player_morale morale;
+    std::vector<std::string> document = morale.accessibility_document( 10, 0, 0 );
+    REQUIRE( document.size() == 3 );
+    CHECK( document[0] == "Total morale: 0." );
+    CHECK( document[1] == "Nothing affects your morale." );
+    CHECK( document[2] == "Focus trends towards: 10." );
+
+    morale.add( morale_type( "morale_food_good" ), 20 );
+    morale.add( morale_type( "morale_food_bad" ), -10 );
+    document = morale.accessibility_document( 50, 5, 0 );
+    REQUIRE( document.size() >= 6 );
+    CHECK( document[0].rfind( "Total morale: +", 0 ) == 0 );
+    CHECK( document[1] == "Total positive morale, +20." );
+    CHECK( document[2].find( ", 100%." ) != std::string::npos );
+    CHECK( document[3] == "Total negative morale, -10." );
+    CHECK( document[4].find( ", 100%." ) != std::string::npos );
+    CHECK( document[5] == "Pain level: -5." );
+    CHECK( document.back() == "Focus trends towards: 50." );
+}
+
+TEST_CASE( "body_status_speaks_parts_health_nested_graphs_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const bodypart_id torso( "torso" );
+    you.set_part_hp_cur( torso, you.get_part_hp_max( torso ) / 2 );
+    // Speech keeps the bar's precision: half health may show as four tenths.
+    const std::string health = accessibility::format_health_bar( get_hp_bar(
+                                   you.get_part_hp_cur( torso ), you.get_part_hp_max( torso ) ).first );
+    CHECK( ( health == "health 4 of 10" || health == "health 5 of 10" ) );
+
+    const std::vector<std::string> rows = bodygraph_accessibility_rows( you );
+    REQUIRE( !rows.empty() );
+    const std::string torso_name = uppercase_first_letter( torso->name.translated() );
+    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( const std::string & row ) {
+        return row.rfind( torso_name + ",", 0 ) == 0;
+    } );
+    REQUIRE( torso_row != rows.end() );
+    CHECK( *torso_row == torso_name + ", " + health + ", has details." );
+    CHECK( std::count_if( rows.begin(), rows.end(), []( const std::string & row ) {
+        return row.find( "health 10 of 10, has details." ) != std::string::npos;
+    } ) > 0 );
+    CHECK( bodygraph_accessibility_open( you ).rfind( string_format( "Body status. %d items. ",
+            static_cast<int>( rows.size() ) ), 0 ) == 0 );
+
+    // A nested graph is named after its body part.
+    const bodypart_id arm_l( "arm_l" );
+    const std::string nested = bodygraph_accessibility_open( you, bodygraph_id( "arm_l" ) );
+    CHECK( nested.rfind( uppercase_first_letter( arm_l->name.translated() ) + ". ", 0 ) == 0 );
+
+    const std::vector<std::string> details = bodygraph_accessibility_details( you,
+            bodygraph_id::NULL_ID(), static_cast<int>( torso_row - rows.begin() ) );
+    REQUIRE( details.size() >= 4 );
+    CHECK( details[0].rfind( *torso_row + " ", 0 ) == 0 );
+    CHECK( std::find( details.begin(), details.end(), "Health: " + health + "." ) != details.end() );
+    CHECK( std::find( details.begin(), details.end(), "Encumbrance: 0." ) != details.end() );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
+    }
+}
+
+TEST_CASE( "medical_menu_speaks_columns_conditions_stats_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const bodypart_id torso( "torso" );
+
+    const std::string open = medical_accessibility_open( you );
+    CHECK( open.rfind( "Medical. ", 0 ) == 0 );
+    CHECK( open.find( "HEALTH. " ) != std::string::npos );
+    CHECK( medical_accessibility_column( you, 1 ) == "EFFECTS. 1 item. None." );
+
+    you.add_effect( efftype_id( "bleed" ), 10_minutes, torso );
+    std::vector<std::string> rows = medical_accessibility_rows( you, 0 );
+    const std::string torso_name = uppercase_first_letter( body_part_name( torso, 1 ) );
+    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( const std::string & row ) {
+        return row.rfind( torso_name + ",", 0 ) == 0;
+    } );
+    REQUIRE( torso_row != rows.end() );
+    CHECK( torso_row->rfind( torso_name + ", health 10 of 10, ", 0 ) == 0 );
+    CHECK( torso_row->find( "<color" ) == std::string::npos );
+    CHECK( torso_row->find( '[' ) == std::string::npos );
+
+    const int torso_index = static_cast<int>( torso_row - rows.begin() );
+    const std::vector<std::string> details = medical_accessibility_details( you, 0, torso_index );
+    REQUIRE( details.size() >= 3 );
+    CHECK( details[0].find( string_format( "%d of %d", torso_index + 1,
+                                           static_cast<int>( rows.size() ) ) ) != std::string::npos );
+    CHECK( std::find( details.begin(), details.end(),
+                      to_upper_case( torso_name ) + " STATS." ) != details.end() );
+
+    rows = medical_accessibility_rows( you, 2 );
+    REQUIRE( rows.size() == 6 );
+    CHECK( rows[2] == string_format( "Strength %d, base %d.", you.get_str(), you.get_str_base() ) );
+    CHECK( rows[0].rfind( "Base Move Cost: ", 0 ) == 0 );
+}
+
+TEST_CASE( "proficiencies_window_speaks_categories_progress_filter_and_details",
+           "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const proficiency_id knapping( "prof_knapping" );
+    const proficiency_id leather( "prof_leatherworking_basic" );
+    you.add_proficiency( knapping, true );
+    you.set_proficiency_practice( leather, leather->time_to_learn() / 2 );
+
+    const std::vector<std::string> rows = proficiencies_window_accessibility_rows( you, 0 );
+    REQUIRE( rows.size() == 2 );
+    CHECK( rows[0] == knapping->name() + ", known." );
+    CHECK( rows[1] == string_format( "%s, learning, %d%%.", leather->name(),
+                                     static_cast<int>( std::floor( you.get_proficiency_practice( leather ) * 100 ) ) ) );
+    CHECK( proficiencies_window_accessibility_tab( you, 0 ) == "ALL. 2 items. " + rows[0] );
+
+    const std::vector<std::string> details = proficiencies_window_accessibility_details( you, 0, 1 );
+    REQUIRE( details.size() >= 6 );
+    CHECK( details[0] == rows[1] + " 2 of 2." );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Progress: ", 0 ) == 0;
+    } ) );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Description: ", 0 ) == 0;
+    } ) );
+
+    CHECK( proficiencies_window_accessibility_filter( you, "l:*" ) ==
+           "Filter: l:*. 1 matching item. " + rows[0] );
+}
+
+TEST_CASE( "sort_armor_speaks_conflicts_neighbours_summary_and_details", "[accessibility]" )
+{
+    clear_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    const bodypart_id torso( "torso" );
+    you.wear_item( item( itype_id( "longshirt" ) ), false );
+    you.wear_item( item( itype_id( "hoodie" ) ), false );
+    you.wear_item( item( itype_id( "sweatshirt" ) ), false );
+
+    // The hoodie and sweatshirt share a layer; the list shows it only by color.
+    const std::vector<std::string> rows = you.worn.sort_armor_accessibility_rows( you, torso );
+    REQUIRE( rows.size() == 3 );
+    CHECK( rows[0].find( "layering conflict" ) == std::string::npos );
+    CHECK( rows[1].find( "layering conflict" ) != std::string::npos );
+    CHECK( rows[2].find( "layering conflict" ) != std::string::npos );
+    CHECK( you.worn.sort_armor_accessibility_tab( you, torso ).find( ". 3 items. " + rows[0] ) !=
+           std::string::npos );
+    CHECK( you.worn.sort_armor_accessibility_tab( you, bodypart_str_id::NULL_ID() ).rfind(
+               "All. 3 items. ", 0 ) == 0 );
+
+    // Moving reports the neighbouring items at each end and in the middle.
+    CHECK( you.worn.sort_armor_accessibility_position( torso, 0 ).rfind( "innermost, above ",
+            0 ) == 0 );
+    CHECK( you.worn.sort_armor_accessibility_position( torso, 1 ).rfind( "above ", 0 ) == 0 );
+    CHECK( you.worn.sort_armor_accessibility_position( torso, 2 ).rfind( "outermost, below ",
+            0 ) == 0 );
+
+    const std::string summary = you.worn.sort_armor_accessibility_summary( you, torso );
+    CHECK( summary.find( "3 items. " ) != std::string::npos );
+    CHECK( summary.find( "encumbrance " ) != std::string::npos );
+    CHECK( summary.find( "layering conflict" ) != std::string::npos );
+    CHECK( summary.find( string_format( "Total encumbrance %d, layering %d.",
+                                        you.get_part_encumbrance( torso ), you.get_part_layer_penalty( torso ) ) ) !=
+           std::string::npos );
+
+    const std::vector<std::string> details = you.worn.sort_armor_accessibility_details( you, torso,
+            1 );
+    REQUIRE( details.size() > 3 );
+    CHECK( details[0] == rows[1] + " 2 of 3." );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.find( "Wearing multiple items" ) != std::string::npos;
+    } ) );
+    CHECK( std::find( details.begin(), details.end(), "Encumbrance and Warmth." ) != details.end() );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.find( "covered by this item" ) != std::string::npos;
+    } ) );
+    for( const std::string &line : details ) {
+        CHECK( line.find( "<color" ) == std::string::npos );
     }
 }

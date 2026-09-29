@@ -1864,6 +1864,10 @@ std::string format_encumbrance_row( const encumbrance_row &row, const bool detai
         //~ %s: warmth band of a body part, such as "comfortable"
         parts.push_back( string_format( _( "warmth %s" ), state ) );
     }
+    if( row.covered ) {
+        //~ Sort armor encumbrance block: the body part is covered by the focused item
+        parts.emplace_back( _( "covered by this item" ) );
+    }
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
@@ -2154,6 +2158,179 @@ std::string format_martial_style_row( const std::string &name, const bool curren
         string_join( parts, _( ", " ) ),
         sentences.empty() ? std::string() : sentences.front()
     } );
+}
+
+std::string format_morale_line( const std::string &label, const std::string &value )
+{
+    const std::string plain_label = trim( remove_color_tags( label ) );
+    std::string plain_value = trim( remove_color_tags( value ) );
+    if( plain_value == "-" ) {
+        // The window shows a zero total as a dash.
+        plain_value = "0";
+    }
+    if( plain_value.empty() ) {
+        return format_semantic_sequence( { plain_label } );
+    }
+    if( plain_label.empty() ) {
+        return format_semantic_sequence( { plain_value } );
+    }
+    if( plain_label.back() == ':' ) {
+        return format_semantic_sequence( { plain_label + " " + plain_value } );
+    }
+    return format_semantic_sequence( { string_join( std::vector<std::string> {
+            plain_label, plain_value
+        }, _( ", " ) )
+    } );
+}
+
+std::string format_health_bar( const std::string &bar )
+{
+    const std::string plain = remove_color_tags( bar );
+    int tenths = 0;
+    bool under_one = false;
+    for( const char c : plain ) {
+        if( c == '|' ) {
+            tenths += 2;
+        } else if( c == '\\' ) {
+            tenths += 1;
+        } else if( c == ':' ) {
+            under_one = true;
+        }
+    }
+    if( under_one && tenths == 0 ) {
+        //~ Health bar with less than one tenth of its length left
+        return _( "health under 1 of 10" );
+    }
+    //~ Health bar in tenths as the five-character bar shows it: %d: tenths left
+    return string_format( _( "health %d of 10" ), std::min( tenths, 10 ) );
+}
+
+std::string format_mending_bar( const int filled )
+{
+    //~ Splinted limb in the medical menu; %d: filled fifths of the mending bar
+    return string_format( _( "mending %d of 5" ), std::clamp( filled, 0, 5 ) );
+}
+
+std::string format_body_part_row( const std::string &name, const std::string &health,
+                                  const bool missing, const bool has_details )
+{
+    std::vector<std::string> parts = { name };
+    if( missing ) {
+        parts.emplace_back( pgettext( "body part", "missing" ) );
+    } else if( !health.empty() ) {
+        parts.push_back( health );
+    }
+    if( has_details ) {
+        parts.emplace_back( pgettext( "body status", "has details" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_medical_health_row( const std::string &part, const std::string &health,
+                                       const std::vector<std::string> &conditions )
+{
+    std::vector<std::string> parts = { remove_color_tags( part ) };
+    if( !health.empty() ) {
+        parts.push_back( remove_color_tags( health ) );
+    }
+    for( const std::string &condition : conditions ) {
+        if( !condition.empty() ) {
+            parts.push_back( remove_color_tags( condition ) );
+        }
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_proficiency_window_row( const std::string &name, const bool known,
+        const int progress )
+{
+    std::vector<std::string> parts = { remove_color_tags( name ) };
+    if( known ) {
+        parts.emplace_back( pgettext( "proficiency", "known" ) );
+    } else {
+        parts.emplace_back( pgettext( "proficiency", "learning" ) );
+        parts.push_back( string_format( "%d%%", progress ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_armor_row( const armor_row &row )
+{
+    std::vector<std::string> parts = { remove_color_tags( row.name ) };
+    if( !row.side.empty() ) {
+        parts.push_back( row.side );
+    }
+    if( row.encumbrance >= 0 ) {
+        //~ %d: encumbrance of a worn item on a body part
+        parts.push_back( string_format( _( "encumbrance %d" ), row.encumbrance ) );
+    }
+    if( row.hidden ) {
+        parts.emplace_back( pgettext( "armor sprite", "hidden" ) );
+    }
+    if( row.stacking_conflict ) {
+        parts.emplace_back( _( "layering conflict" ) );
+    }
+    if( row.out_of_order ) {
+        parts.emplace_back( _( "out of order" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_armor_position( const std::string &inner, const std::string &outer )
+{
+    const std::string plain_inner = remove_color_tags( inner );
+    const std::string plain_outer = remove_color_tags( outer );
+    std::vector<std::string> parts;
+    if( plain_inner.empty() && plain_outer.empty() ) {
+        parts.emplace_back( _( "only item" ) );
+    } else if( plain_inner.empty() ) {
+        parts.emplace_back( _( "innermost" ) );
+        //~ Armor position while moving: %s: the next item outwards
+        parts.push_back( string_format( _( "above %s" ), plain_outer ) );
+    } else if( plain_outer.empty() ) {
+        parts.emplace_back( _( "outermost" ) );
+        //~ Armor position while moving: %s: the next item inwards
+        parts.push_back( string_format( _( "below %s" ), plain_inner ) );
+    } else {
+        parts.push_back( string_format( _( "above %s" ), plain_outer ) );
+        parts.push_back( string_format( _( "below %s" ), plain_inner ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_armor_moving( const std::string &name )
+{
+    //~ Sort armor: an item was picked up to change its layer; %s: item name
+    return format_semantic_sequence( { string_format( _( "Moving %s" ), remove_color_tags( name ) ) } );
+}
+
+std::string format_armor_placed( const std::string &row )
+{
+    //~ Sort armor: the moved item was put down at its new layer
+    return format_semantic_sequence( { pgettext( "armor", "Placed" ), row } );
+}
+
+std::string format_armor_sprite( const bool hidden, const std::string &row )
+{
+    return format_semantic_sequence( { hidden ? _( "Sprite hidden" ) : _( "Sprite shown" ), row } );
+}
+
+std::string format_armor_summary( const std::string &filter, const std::vector<armor_row> &rows,
+                                  const int total, const int layering )
+{
+    std::vector<std::string> parts = { string_join( std::vector<std::string> {
+            filter, format_list_count( rows.size() )
+        }, _( ", " ) )
+    };
+    for( const armor_row &row : rows ) {
+        parts.push_back( format_armor_row( row ) );
+    }
+    if( total >= 0 ) {
+        //~ Sort armor summary: %1$d: total encumbrance of the body part, %2$d: its layering penalty
+        parts.push_back( string_format( _( "Total encumbrance %1$d, layering %2$d" ), total,
+                                        layering ) );
+    }
+    return format_semantic_sequence( parts );
 }
 
 std::string format_activity_start( const std::string &label, const std::string &duration,

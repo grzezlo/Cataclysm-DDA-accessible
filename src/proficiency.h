@@ -226,4 +226,18 @@ class book_proficiency_bonuses
 void show_proficiencies_window( const Character &u,
                                 std::optional<proficiency_id> default_selection = std::nullopt );
 
+// Test entry points for the proficiencies window's screen reader speech.
+// `category` is the window's category index; 0 is all proficiencies.
+/** Category speech: its name, count, and first row. */
+std::string proficiencies_window_accessibility_tab( const Character &u, int category );
+/** Focus speech of each row in the category. */
+std::vector<std::string> proficiencies_window_accessibility_rows( const Character &u,
+        int category );
+/** The Alt+D document of the row: the row, its position, then the details pane. */
+std::vector<std::string> proficiencies_window_accessibility_details( const Character &u,
+        int category, int row );
+/** Speech after confirming a filter: the query, the matching count, and the first row. */
+std::string proficiencies_window_accessibility_filter( const Character &u,
+        const std::string &filter );
+
 #endif // CATA_SRC_PROFICIENCY_H

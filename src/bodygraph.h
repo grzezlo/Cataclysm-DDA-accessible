@@ -74,6 +74,17 @@ struct bodygraph {
 // Draws the bodygraph UI for the given character and bodygraph (defaults to Full Body graph)
 void display_bodygraph( const Character &u, const bodygraph_id &id = bodygraph_id::NULL_ID() );
 
+// Test entry points for the body status screen's screen reader speech.
+/** Opening speech: the graph name, its part count, and the first part. */
+std::string bodygraph_accessibility_open( const Character &u,
+        const bodygraph_id &id = bodygraph_id::NULL_ID() );
+/** Focus speech of each part row in list order. */
+std::vector<std::string> bodygraph_accessibility_rows( const Character &u,
+        const bodygraph_id &id = bodygraph_id::NULL_ID() );
+/** The Alt+D document of the part at `part`: the row, its position, then the info pane. */
+std::vector<std::string> bodygraph_accessibility_details( const Character &u,
+        const bodygraph_id &id, int part );
+
 using bodygraph_callback =
     std::function<std::string( const bodygraph_part *, std::string )>;
 

@@ -1,3 +1,5 @@
+#include "medical_ui.h"
+
 #include <algorithm>
 #include <array>
 #include <cstdlib>
@@ -8,10 +10,15 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "addiction.h"
 #include "avatar_action.h"
 #include "bodypart.h"
 #include "calendar.h"
+#include "cata_scope_helpers.h"
+#include "cata_utility.h"
 #include "catacharset.h"
 #include "character.h"
 #include "character_modifier.h"
@@ -59,7 +66,9 @@ class selection_line
     public:
         selection_line() = default;
         selection_line( const std::string &text, const std::string &desc_str, const int max_width )
-            : desc_str( desc_str ) {
+            : desc_str( desc_str ), spoken_str( accessibility::format_semantic_sequence( {
+            trim( remove_color_tags( text ) )
+        } ) ) {
             std::vector<std::string> textformatted = foldstring( text, max_width,
                     ']' );
             row_count = textformatted.size();
@@ -98,6 +107,15 @@ class selection_line
             return detail_str;
         }
 
+        /** Screen reader speech of the row; by default its text without color. */
+        const std::string &spoken() const {
+            return spoken_str;
+        }
+
+        void set_spoken( const std::string &spoken ) {
+            spoken_str = spoken;
+        }
+
         int get_row_count() const {
             return row_count;
         }
@@ -114,6 +132,7 @@ class selection_line
         std::string header_str;
         std::string desc_str;
         std::pair<std::string, std::string> detail_str;
+        std::string spoken_str;
         int row_count;
         bool highlight_line = false;
 };
@@ -187,6 +206,14 @@ class medical_column
 
         bool empty() {
             return column_lines.empty();
+        }
+
+        const std::vector<selection_line> &lines() const {
+            return column_lines;
+        }
+
+        void set_spoken( const size_t index, const std::string &spoken ) {
+            column_lines[index].set_spoken( spoken );
         }
 
         bool current_column( const int selected_id ) const {
@@ -361,6 +388,9 @@ static medical_column draw_health_summary( const int column_count, Character &yo
         std::string hp_str; // Bodypart HP
         std::string detail;
         std::string description;
+        // Screen reader speech: the bar in words and the bracketed conditions.
+        std::string spoken_health;
+        std::vector<std::string> spoken_conditions;
 
         const int bleed_intensity = you.get_effect_int( effect_bleed, part );
         const bool bleeding = bleed_intensity > 0;
@@ -374,6 +404,7 @@ static medical_column draw_health_summary( const int column_count, Character &yo
 
         if( limb_is_mending ) {
             detail += string_format( _( "[ %s ]" ), colorize( _( "SPLINTED" ), c_yellow ) );
+            spoken_conditions.emplace_back( _( "SPLINTED" ) );
             if( no_feeling ) {
                 hp_str = colorize( "==%==", c_blue );
             } else {
@@ -382,9 +413,11 @@ static medical_column draw_health_summary( const int column_count, Character &yo
 
                 const int num = mend_perc / 20;
                 hp_str = colorize( std::string( num, '#' ) + std::string( 5 - num, '=' ), c_blue );
+                spoken_health = accessibility::format_mending_bar( num );
             }
         } else if( limb_is_broken ) {
             detail += string_format( _( "[ %s ]" ), colorize( _( "BROKEN" ), c_red ) );
+            spoken_conditions.emplace_back( _( "BROKEN" ) );
             hp_str = "==%==";
         } else if( no_feeling ) {
             const float cur_hp_pcnt = current_hp / static_cast<float>( maximal_hp );
@@ -403,6 +436,10 @@ static medical_column draw_health_summary( const int column_count, Character &yo
             std::pair<std::string, nc_color> h_bar = get_hp_bar( current_hp, maximal_hp, false );
             hp_str = colorize( h_bar.first, h_bar.second ) +
                      colorize( std::string( 5 - utf8_width( h_bar.first ), '.' ), c_white );
+            spoken_health = accessibility::format_health_bar( h_bar.first );
+        }
+        if( no_feeling && !limb_is_mending && !limb_is_broken ) {
+            spoken_health = remove_color_tags( hp_str );
         }
         const std::string bp_name = uppercase_first_letter( body_part_name( part, 1 ) );
         header += colorize( bp_name,
@@ -414,6 +451,8 @@ static medical_column draw_health_summary( const int column_count, Character &yo
             const effect bleed_effect = you.get_effect( effect_bleed, part );
             const nc_color bleeding_color = colorize_bleeding_intensity( bleed_intensity );
             detail += string_format( _( "[ %s ]" ), colorize( _( "BLEEDING" ), bleeding_color ) );
+            // The tag's color shows the intensity; speak the effect's intensity name.
+            spoken_conditions.push_back( remove_color_tags( bleed_effect.get_speed_name() ) );
             description += string_format( "[ %s ] - %s\n",
                                           colorize( bleed_effect.get_speed_name(),  bleeding_color ),
                                           bleed_effect.disp_short_desc() );
@@ -423,6 +462,7 @@ static medical_column draw_health_summary( const int column_count, Character &yo
         if( bitten ) {
             const effect bite_effect = you.get_effect( effect_bite, part );
             detail += string_format( _( "[ %s ]" ), colorize( _( "BITTEN" ), c_yellow ) );
+            spoken_conditions.emplace_back( _( "BITTEN" ) );
             description += string_format( "[ %s ] - %s\n",
                                           colorize( bite_effect.get_speed_name(), c_yellow ),
                                           bite_effect.disp_short_desc() );
@@ -432,6 +472,7 @@ static medical_column draw_health_summary( const int column_count, Character &yo
         if( infected ) {
             const effect infected_effect = you.get_effect( effect_infected, part );
             detail += string_format( _( "[ %s ]" ), colorize( _( "SEPTIC" ), c_pink ) );
+            spoken_conditions.emplace_back( _( "SEPTIC" ) );
             description += string_format( "[ %s ] - %s\n",
                                           colorize( infected_effect.get_speed_name(), c_pink ),
                                           infected_effect.disp_short_desc() );
@@ -443,6 +484,8 @@ static medical_column draw_health_summary( const int column_count, Character &yo
         } else {
             line = selection_line( string_format( "[%s]", header ), description, max_width );
         }
+        line.set_spoken( accessibility::format_medical_health_row( bp_name, spoken_health,
+                         spoken_conditions ) );
 
         const bodypart *bp = you.get_part( part );
         std::string detail_str;
@@ -704,7 +747,154 @@ static medical_column draw_stats_summary( const int column_count, Character &you
                            "detecting traps and other things of interest." ),
                         max_width ) );
 
+    // The column shows the current value against the base only by color.
+    stats_column.set_spoken( 2, accessibility::format_character_stat( _( "Strength" ), you.get_str(),
+                             you.get_str_base() ) );
+    stats_column.set_spoken( 3, accessibility::format_character_stat( _( "Dexterity" ),
+                             you.get_dex(), you.get_dex_base() ) );
+    stats_column.set_spoken( 4, accessibility::format_character_stat( _( "Intelligence" ),
+                             you.get_int(), you.get_int_base() ) );
+    stats_column.set_spoken( 5, accessibility::format_character_stat( _( "Perception" ),
+                             you.get_per(), you.get_per_base() ) );
     return stats_column;
+}
+
+// Screen reader speech.  The columns are rebuilt from the character as the
+// window does on each redraw; positions do not matter for speech.
+static std::array<medical_column, 3> medical_accessibility_columns( Character &you )
+{
+    const std::pair<int, int> bounds( 200, 200 );
+    return { {
+            draw_health_summary( 0, you, point::zero, bounds ),
+            draw_effects_summary( 1, you, point::zero, bounds ),
+            draw_stats_summary( 2, you, point::zero, bounds )
+        }
+    };
+}
+
+static std::string medical_column_name( const int column )
+{
+    switch( column ) {
+        case 0:
+            return _( "HEALTH" );
+        case 1:
+            return _( "EFFECTS" );
+        default:
+            return _( "STATS" );
+    }
+}
+
+static std::string medical_row_speech( const std::array<medical_column, 3> &columns,
+                                       const point &cursor )
+{
+    const std::vector<selection_line> &lines = columns[cursor.x].lines();
+    if( cursor.y < 0 || cursor.y >= static_cast<int>( lines.size() ) ) {
+        return std::string();
+    }
+    return lines[cursor.y].spoken();
+}
+
+static std::string medical_column_speech( const std::array<medical_column, 3> &columns,
+        const point &cursor )
+{
+    return accessibility::format_character_tab( medical_column_name( cursor.x ), {},
+            columns[cursor.x].lines().size(), medical_row_speech( columns, cursor ) );
+}
+
+/** The title bar statuses: pain, hunger, thirst, and sleepiness. */
+static std::vector<std::string> medical_status_speech( Character &you )
+{
+    std::vector<std::string> parts;
+    const std::string pain = display::pain_text_color( you ).first;
+    if( !pain.empty() ) {
+        parts.push_back( string_format( _( "In %s" ), pain ) );
+    }
+    parts.push_back( display::hunger_text_color( you ).first );
+    parts.push_back( display::thirst_text_color( you ).first );
+    parts.push_back( display::sleepiness_text_color( you ).first );
+    for( std::string &part : parts ) {
+        part = remove_color_tags( part );
+    }
+    return parts;
+}
+
+static std::string medical_open_speech( Character &you,
+                                        const std::array<medical_column, 3> &columns,
+                                        const point &cursor )
+{
+    std::vector<std::string> parts = { _( "Medical" ) };
+    for( const std::string &status : medical_status_speech( you ) ) {
+        parts.push_back( status );
+    }
+    parts.push_back( medical_column_speech( columns, cursor ) );
+    return accessibility::format_semantic_sequence( parts );
+}
+
+static std::string medical_summary( Character &you, const std::array<medical_column, 3> &columns,
+                                    const point &cursor )
+{
+    std::vector<std::string> parts = { _( "Medical" ) };
+    for( const std::string &status : medical_status_speech( you ) ) {
+        parts.push_back( status );
+    }
+    parts.push_back( medical_column_name( cursor.x ) );
+    parts.push_back( accessibility::format_list_position( cursor.y + 1,
+                     columns[cursor.x].lines().size() ) );
+    parts.push_back( medical_row_speech( columns, cursor ) );
+    return accessibility::format_semantic_sequence( parts );
+}
+
+static std::vector<std::string> medical_details( std::array<medical_column, 3> &columns,
+        const point &cursor )
+{
+    std::vector<std::string> paragraphs;
+    const std::vector<selection_line> &lines = columns[cursor.x].lines();
+    if( cursor.y < 0 || cursor.y >= static_cast<int>( lines.size() ) ) {
+        return paragraphs;
+    }
+    selection_line line = lines[cursor.y];
+    paragraphs.push_back( accessibility::format_semantic_sequence( {
+        line.spoken(), accessibility::format_list_position( cursor.y + 1, lines.size() )
+    } ) );
+    const std::pair<std::string, std::string> detail = line.get_detail();
+    std::string text = line.description();
+    if( !detail.first.empty() ) {
+        text += "\n" + detail.first + "\n" + detail.second;
+    }
+    for( const std::string &paragraph : string_split( remove_color_tags( text ), '\n' ) ) {
+        const std::string spoken = accessibility::format_semantic_sequence( { trim( paragraph ) } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    }
+    return paragraphs;
+}
+
+std::string medical_accessibility_open( Character &you )
+{
+    return medical_open_speech( you, medical_accessibility_columns( you ), point::zero );
+}
+
+std::string medical_accessibility_column( Character &you, const int column )
+{
+    return medical_column_speech( medical_accessibility_columns( you ), point( column, 0 ) );
+}
+
+std::vector<std::string> medical_accessibility_rows( Character &you, const int column )
+{
+    const std::array<medical_column, 3> columns = medical_accessibility_columns( you );
+    std::vector<std::string> rows;
+    for( const selection_line &line : columns[column].lines() ) {
+        rows.push_back( line.spoken() );
+    }
+    return rows;
+}
+
+std::vector<std::string> medical_accessibility_details( Character &you, const int column,
+        const int row )
+{
+    std::array<medical_column, 3> columns = medical_accessibility_columns( you );
+    return medical_details( columns, point( column, row ) );
 }
 
 void Character::disp_medical()
@@ -942,12 +1132,39 @@ void Character::disp_medical()
     ctxt.register_action( "SCROLL_INFOBOX_UP", to_translation( "Scroll up" ) );
     ctxt.register_action( "SCROLL_INFOBOX_DOWN", to_translation( "Scroll down" ) );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+
+    accessibility::announce( medical_open_speech( *this, medical_accessibility_columns( *this ),
+                             cursor ) );
 
     for( ;; ) {
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
+        const point previous_cursor = cursor;
+        // Screen reader speech for this key, spoken however the iteration ends.
+        std::string speech;
+        const on_out_of_scope speak_result( [&speech]() {
+            accessibility::announce( speech );
+        } );
+        const auto columns = [this]() {
+            return medical_accessibility_columns( *this );
+        };
 
-        if( action == "DOWN" || action == "UP" ) {
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            speech = medical_summary( *this, columns(), cursor );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            std::array<medical_column, 3> current = columns();
+            const std::vector<std::string> paragraphs = medical_details( current, cursor );
+            if( accessibility::is_active() && !paragraphs.empty() ) {
+                const std::string title = medical_column_name( cursor.x );
+                accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                speech = medical_row_speech( current, cursor );
+            }
+        } else if( action == "DOWN" || action == "UP" ) {
             const int step = cursor.y + ( action == "DOWN" ? 1 : -1 );
             const int limit = cursor_bounds[cursor.x] - 1;
 
@@ -965,6 +1182,12 @@ void Character::disp_medical()
                 scroll_position = std::max( 0, std::min( scroll_overflow, cursor.y - half_list ) );
             }
             info_scroll_position = 0;
+            if( cursor.y != previous_cursor.y ) {
+                speech = accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_cursor.y, cursor.y, action == "DOWN" ? 1 : -1 ),
+                    medical_row_speech( columns(), cursor )
+                } );
+            }
         } else if( action == "RIGHT" || action == "LEFT" ) {
             const int step = cursor.x + ( action == "RIGHT" ? 1 : -1 );
             const int limit = 2;
@@ -988,6 +1211,7 @@ void Character::disp_medical()
                 scroll_position = 0;
             }
             info_scroll_position = 0;
+            speech = medical_column_speech( columns(), cursor );
         } else if( action == "APPLY" ) {
             avatar *a = this->as_avatar();
             if( a ) {
@@ -995,6 +1219,12 @@ void Character::disp_medical()
             } else {
                 popup( _( "Applying not implemented for NPCs." ) );
             }
+            // Back in the menu after the item's own messages; rows may have changed.
+            const std::array<medical_column, 3> current = columns();
+            cursor.y = std::min<int>( cursor.y, std::max<int>( 0, current[cursor.x].lines().size() - 1 ) );
+            speech = medical_row_speech( current, cursor );
+        } else if( action == "HELP_KEYBINDINGS" ) {
+            speech = medical_row_speech( columns(), cursor );
         } else if( action == "SCROLL_INFOBOX_UP" || action == "SCROLL_INFOBOX_DOWN" ) {
             const int scroll_overflow = info_lines - INFO_SCROLL_POINT - 1;
             if( scroll_overflow > 0 ) {

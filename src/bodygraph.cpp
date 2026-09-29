@@ -7,6 +7,9 @@
 #include <set>
 #include <tuple>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "bodypart.h"
 #include "cata_utility.h"
 #include "catacharset.h"
@@ -283,6 +286,13 @@ struct bodygraph_display {
     void draw_graph();
     void draw_info();
     void display();
+
+    // Screen reader speech.
+    std::string graph_name() const;
+    std::string part_row( int index ) const;
+    std::string open_speech() const;
+    std::string summary() const;
+    std::vector<std::string> accessibility_details() const;
 };
 
 bodygraph_display::bodygraph_display( const Character *u, const bodygraph_id &id ) :
@@ -300,6 +310,9 @@ bodygraph_display::bodygraph_display( const Character *u, const bodygraph_id &id
     ctxt.register_action( "PAGE_DOWN" );
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 }
 
 void bodygraph_display::init_ui_windows()
@@ -468,25 +481,23 @@ void bodygraph_display::prepare_partlist()
     } );
 }
 
-void bodygraph_display::prepare_infolist()
+/** The info pane data of one part; empty when the character lacks the part. */
+static bodygraph_info collect_part_info( const Character &u, const part_tuple &part )
 {
-    // reset info for a new read
-    info = bodygraph_info();
-    info_txt.clear();
-
+    bodygraph_info info;
     // if character doesn't have this part, don't generate info
-    if( !std::get<3>( partlist[sel_part] ) ) {
-        return;
+    if( !std::get<3>( part ) ) {
+        return info;
     }
 
-    const bodypart_id &bp = std::get<0>( partlist[sel_part] );
+    const bodypart_id &bp = std::get<0>( part );
 
     // sbps will either be a group for a body part and we'll need to do averages OR a single sub part
     std::set<sub_bodypart_id> sub_parts;
 
     // this might be null need to test for nullbp as this all continues
-    if( std::get<1>( partlist[sel_part] ) != nullptr ) {
-        sub_parts.emplace( std::get<1>( partlist[sel_part] )->id );
+    if( std::get<1>( part ) != nullptr ) {
+        sub_parts.emplace( std::get<1>( part )->id );
     } else {
         for( const sub_bodypart_str_id &sbp : bp->sub_parts ) {
             // don't worry about secondary sub parts would just make things confusing
@@ -496,10 +507,134 @@ void bodygraph_display::prepare_infolist()
         }
     }
 
-    u->worn.prepare_bodymap_info( info, bp, sub_parts, *u );
+    u.worn.prepare_bodymap_info( info, bp, sub_parts, u );
+    return info;
+}
+
+void bodygraph_display::prepare_infolist()
+{
+    // reset info for a new read
+    info_txt.clear();
+    info = collect_part_info( *u, partlist[sel_part] );
+
+    // if character doesn't have this part, don't generate info
+    if( !std::get<3>( partlist[sel_part] ) ) {
+        return;
+    }
 
     // update info text cache
     prepare_infotext( true );
+}
+
+std::string bodygraph_display::graph_name() const
+{
+    if( id->parent_bp.has_value() ) {
+        return uppercase_first_letter( id->parent_bp.value()->name.translated() );
+    }
+    return _( "Body status" );
+}
+
+std::string bodygraph_display::part_row( const int index ) const
+{
+    const part_tuple &part = partlist[index];
+    const std::string name = uppercase_first_letter( !std::get<1>( part ) ?
+                             std::get<0>( part )->name.translated() : std::get<1>( part )->name.translated() );
+    const bool has_details = std::get<2>( part ) != nullptr &&
+                             !std::get<2>( part )->nested_graph.is_null();
+    std::string health;
+    if( std::get<3>( part ) ) {
+        // The same bar the info pane shows, at its precision.
+        const bodygraph_info part_info = index == sel_part ? info : collect_part_info( *u, part );
+        health = accessibility::format_health_bar( get_hp_bar( part_info.part_hp_cur,
+                 part_info.part_hp_max ).first );
+    }
+    return accessibility::format_body_part_row( name, health, !std::get<3>( part ), has_details );
+}
+
+std::string bodygraph_display::open_speech() const
+{
+    return accessibility::format_character_tab( graph_name(), {}, partlist.size(),
+            partlist.empty() ? std::string() : part_row( sel_part ) );
+}
+
+std::string bodygraph_display::summary() const
+{
+    return accessibility::format_semantic_sequence( {
+        graph_name(),
+        accessibility::format_list_position( sel_part + 1, partlist.size() ),
+        partlist.empty() ? std::string() : part_row( sel_part )
+    } );
+}
+
+std::vector<std::string> bodygraph_display::accessibility_details() const
+{
+    std::vector<std::string> paragraphs;
+    if( partlist.empty() ) {
+        return paragraphs;
+    }
+    const auto add = [&paragraphs]( const std::string & text ) {
+        const std::string spoken = accessibility::format_semantic_sequence( {
+            trim( remove_color_tags( text ) )
+        } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    };
+    paragraphs.push_back( accessibility::format_semantic_sequence( {
+        part_row( sel_part ),
+        accessibility::format_list_position( sel_part + 1, partlist.size() )
+    } ) );
+    if( !std::get<3>( partlist[sel_part] ) ) {
+        return paragraphs;
+    }
+    if( info.specific_sublimb ) {
+        add( string_format( "%s: %s", _( "Sub part of" ), info.parent_bp_name ) );
+    }
+    add( string_format( "%s: %s", _( "Health" ), accessibility::format_health_bar(
+                            get_hp_bar( info.part_hp_cur, info.part_hp_max ).first ) ) );
+    add( string_format( "%s: %d%%", _( "Wetness" ), static_cast<int>( info.wetness * 100.0f ) ) );
+    const bool temp_precise = u->cache_has_item_with( STATIC( flag_id( "THERMOMETER" ) ) ) ||
+                              u->has_flag( STATIC( json_character_flag( "THERMOMETER" ) ) );
+    const units::temperature temp = units::from_fahrenheit( info.temperature.first / 50.0 );
+    add( string_format( "%s: %s", _( "Body temp" ),
+                        temp_precise ? print_temperature( temp ) : info.temp_approx ) );
+    // The pane shows whether an effect is good or bad only by color.
+    std::vector<std::string> effects;
+    for( const effect &eff : info.effects ) {
+        if( eff.get_id()->is_show_in_info() ) {
+            const game_message_type rt = eff.get_id()->get_rating( eff.get_intensity() );
+            std::string name = remove_color_tags( eff.disp_name() );
+            if( rt == m_good ) {
+                name = string_format( _( "%s, good" ), name );
+            } else if( rt == m_bad ) {
+                name = string_format( _( "%s, bad" ), name );
+            }
+            effects.push_back( name );
+        }
+    }
+    add( string_format( "%s: %s", _( "Effects" ), effects.empty() ? pgettext( "effects", "none" ) :
+                        string_join( effects, "; " ) ) );
+    add( string_format( "%s: %s", _( "Worn" ), info.worn_names.empty() ? pgettext( "worn", "nothing" ) :
+                        string_join( info.worn_names, ", " ) ) );
+    add( string_format( "%s: %d%%", info.specific_sublimb ? _( "Coverage" ) : _( "Coverage (Avg.)" ),
+                        info.avg_coverage ) );
+    add( string_format( "%s: %d", _( "Encumbrance" ), info.total_encumbrance ) );
+    add( string_format( "%s:", info.specific_sublimb ? _( "Protection" ) : _( "Protection (Avg.)" ) ) );
+    // The pane shows worst, median, and best values in columns under a colored legend.
+    for( const damage_type &dt : damage_type::get_all() ) {
+        if( info.best_case.type_resist( dt.id ) > 1 ) {
+            const std::string name = uppercase_first_letter( dt.name.translated() );
+            if( dt.env ) {
+                add( string_format( "%s: %.2f", name, info.best_case.type_resist( dt.id ) ) );
+            } else {
+                //~ Body status protection; %1$s: damage type, %2$.2f, %3$.2f, %4$.2f: worst, median, and best resistance
+                add( string_format( _( "%1$s: worst %2$.2f, median %3$.2f, best %4$.2f" ), name,
+                                    info.worst_case.type_resist( dt.id ), info.median_case.type_resist( dt.id ),
+                                    info.best_case.type_resist( dt.id ) ) );
+            }
+        }
+    }
+    return paragraphs;
 }
 
 void bodygraph_display::prepare_infotext( bool reset_pos )
@@ -607,11 +742,13 @@ void bodygraph_display::display()
     shared_ptr_fast<ui_adaptor> current_ui = create_or_get_ui_adaptor();
     prepare_partlist();
     prepare_infolist();
+    accessibility::announce( open_speech() );
 
     bool done = false;
     while( !done ) {
         ui_manager::redraw();
         std::string action = ctxt.handle_input();
+        const int previous_part = sel_part;
         if( action == "QUIT" || ( action == "LEFT" && id != bodygraph_full_body ) ) {
             done = true;
         } else if( action == "CONFIRM" || action == "RIGHT" ) {
@@ -620,14 +757,35 @@ void bodygraph_display::display()
                 if( !nextgraph.is_null() ) {
                     display_bodygraph( *u, nextgraph );
                     prepare_infolist();
+                    // Back in this graph: name it again with its focused part.
+                    accessibility::announce( open_speech() );
                 }
             }
         } else if( action == "SCROLL_INFOBOX_UP" || action == "PAGE_UP" ) {
             top_info--;
         } else if( action == "SCROLL_INFOBOX_DOWN" || action == "PAGE_DOWN" ) {
             top_info++;
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( summary() );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() && !partlist.empty() ) {
+                const std::vector<std::string> paragraphs = accessibility_details();
+                const std::string title = graph_name();
+                accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                accessibility::announce( part_row( sel_part ) );
+            }
         } else if( navigate_ui_list( action, sel_part, 3, partlist.size(), true ) ) {
             prepare_infolist();
+            if( sel_part != previous_part ) {
+                const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
+                                      action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_part, sel_part, direction ),
+                    part_row( sel_part )
+                } ) );
+            }
         }
         if( static_cast<int>( info_txt.size() ) >= all_height - 2 ) {
             top_info = clamp( top_info, 0, static_cast<int>( info_txt.size() ) - ( all_height - 2 ) );
@@ -646,6 +804,40 @@ void display_bodygraph( const Character &u, const bodygraph_id &id )
 {
     bodygraph_display bgd( &u, id );
     bgd.display();
+}
+
+std::string bodygraph_accessibility_open( const Character &u, const bodygraph_id &id )
+{
+    bodygraph_display bgd( &u, id );
+    bgd.prepare_partlist();
+    bgd.prepare_infolist();
+    return bgd.open_speech();
+}
+
+std::vector<std::string> bodygraph_accessibility_rows( const Character &u, const bodygraph_id &id )
+{
+    bodygraph_display bgd( &u, id );
+    bgd.prepare_partlist();
+    std::vector<std::string> rows;
+    for( int i = 0; i < static_cast<int>( bgd.partlist.size() ); ++i ) {
+        bgd.sel_part = i;
+        bgd.prepare_infolist();
+        rows.push_back( bgd.part_row( i ) );
+    }
+    return rows;
+}
+
+std::vector<std::string> bodygraph_accessibility_details( const Character &u,
+        const bodygraph_id &id, const int part )
+{
+    bodygraph_display bgd( &u, id );
+    bgd.prepare_partlist();
+    if( part < 0 || part >= static_cast<int>( bgd.partlist.size() ) ) {
+        return {};
+    }
+    bgd.sel_part = part;
+    bgd.prepare_infolist();
+    return bgd.accessibility_details();
 }
 
 std::vector<std::string> get_bodygraph_lines( const Character &u,

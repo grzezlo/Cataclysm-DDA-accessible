@@ -8,6 +8,9 @@
 #include <string>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "cata_utility.h"
@@ -513,113 +516,141 @@ void player_morale::decay( const time_duration &ticks )
     invalidate();
 }
 
-void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_penalty )
+namespace
+{
+
+constexpr int morale_left_padding = 2; // including border
+constexpr int morale_right_padding = 2; // including border
+constexpr int morale_middle_padding_min = 2;
+constexpr int morale_middle_padding_max = 12;
+
+} // namespace
+
+class player_morale::morale_line
+{
+    public:
+        enum class number_format : int {
+            normal,
+            signed_or_dash,
+            percent,
+        };
+
+        enum class line_color : int {
+            normal,
+            green_gray_red,
+            red_gray_green,
+        };
+
+        struct separation_line {};
+
+    private:
+        bool sep_line = false;
+        std::string left;
+        std::string right;
+        nc_color color;
+
+    public:
+        morale_line() = default;
+        explicit morale_line( const separation_line ) : sep_line( true ) {}
+        morale_line( const std::string &text, const nc_color &color )
+            : left( text ), color( color ) {}
+        morale_line( const std::string &left, const std::string &right,
+                     const nc_color &color )
+            : left( left ), right( right ), color( color ) {}
+        morale_line( const std::string &text, const int num,
+                     const number_format num_fmt, const line_color col )
+            : left( text ) {
+            switch( num_fmt ) {
+                case number_format::normal:
+                    right = string_format( "%d", num );
+                    break;
+                case number_format::signed_or_dash:
+                    if( num == 0 ) {
+                        right = "-";
+                    } else {
+                        right = string_format( "%+d", num );
+                    }
+                    break;
+                case number_format::percent:
+                    right = string_format( "%d%%", num );
+                    break;
+            }
+            switch( col ) {
+                case line_color::normal:
+                    color = c_white;
+                    break;
+                case line_color::green_gray_red:
+                case line_color::red_gray_green:
+                    if( num == 0 ) {
+                        color = c_dark_gray;
+                    } else if( ( num > 0 ) ^ ( col == line_color::red_gray_green ) ) {
+                        color = c_green;
+                    } else {
+                        color = c_light_red;
+                    }
+                    break;
+            }
+        }
+
+        /** The line as screen reader speech; empty for blank and separator lines. */
+        std::string spoken() const {
+            if( sep_line ) {
+                return std::string();
+            }
+            return accessibility::format_morale_line( left, right );
+        }
+
+        int max_width() const {
+            if( sep_line ) {
+                return 0;
+            } else if( right.empty() ) {
+                return morale_left_padding + utf8_width( left ) + morale_right_padding;
+            } else {
+                return morale_left_padding + utf8_width( left ) + morale_middle_padding_max
+                       + utf8_width( right ) + morale_right_padding;
+            }
+        }
+
+        void draw( catacurses::window &w, const int posy ) const {
+            int width = getmaxx( w );
+            if( sep_line ) {
+                wattron( w, BORDER_COLOR );
+                mvwhline( w, point( 0, posy ), LINE_XXXO, 1 );
+                mvwhline( w, point( 1, posy ), 0, width - 2 );
+                mvwhline( w, point( width - 1, posy ), LINE_XOXX, 1 );
+                wattroff( w, BORDER_COLOR );
+            } else {
+                int text_width = width - morale_left_padding - morale_right_padding;
+                if( !right.empty() ) {
+                    right_print( w, posy, morale_right_padding, color, right );
+                    text_width -= morale_middle_padding_min + utf8_width( right );
+                }
+                trim_and_print( w, point( morale_left_padding, posy ), text_width, color, left );
+            }
+        }
+};
+
+struct player_morale::window_lines {
+    struct middle_morale_line {
+        bool is_caption;
+        morale_line ml;
+
+        middle_morale_line( const bool is_caption, const morale_line &ml )
+            : is_caption( is_caption ), ml( ml ) {}
+    };
+
+    std::vector<morale_line> top;
+    std::vector<middle_morale_line> middle;
+    std::vector<morale_line> bottom;
+};
+
+player_morale::window_lines player_morale::build_window_lines( const int focus_eq,
+        const int pain_penalty, const int sleepiness_penalty )
 {
     /*calculates the percent contributions of the morale points,
      * must be done before anything else in this method
      */
     calculate_percentage();
-
-    constexpr int left_padding = 2; // including border
-    constexpr int right_padding = 2; // including border
-    constexpr int middle_padding_min = 2;
-    constexpr int middle_padding_max = 12;
-
-    class morale_line
-    {
-        public:
-            enum class number_format : int {
-                normal,
-                signed_or_dash,
-                percent,
-            };
-
-            enum class line_color : int {
-                normal,
-                green_gray_red,
-                red_gray_green,
-            };
-
-            struct separation_line {};
-
-        private:
-            bool sep_line = false;
-            std::string left;
-            std::string right;
-            nc_color color;
-
-        public:
-            morale_line() = default;
-            explicit morale_line( const separation_line ) : sep_line( true ) {}
-            morale_line( const std::string &text, const nc_color &color )
-                : left( text ), color( color ) {}
-            morale_line( const std::string &left, const std::string &right,
-                         const nc_color &color )
-                : left( left ), right( right ), color( color ) {}
-            morale_line( const std::string &text, const int num,
-                         const number_format num_fmt, const line_color col )
-                : left( text ) {
-                switch( num_fmt ) {
-                    case number_format::normal:
-                        right = string_format( "%d", num );
-                        break;
-                    case number_format::signed_or_dash:
-                        if( num == 0 ) {
-                            right = "-";
-                        } else {
-                            right = string_format( "%+d", num );
-                        }
-                        break;
-                    case number_format::percent:
-                        right = string_format( "%d%%", num );
-                        break;
-                }
-                switch( col ) {
-                    case line_color::normal:
-                        color = c_white;
-                        break;
-                    case line_color::green_gray_red:
-                    case line_color::red_gray_green:
-                        if( num == 0 ) {
-                            color = c_dark_gray;
-                        } else if( ( num > 0 ) ^ ( col == line_color::red_gray_green ) ) {
-                            color = c_green;
-                        } else {
-                            color = c_light_red;
-                        }
-                        break;
-                }
-            }
-
-            int max_width() const {
-                if( sep_line ) {
-                    return 0;
-                } else if( right.empty() ) {
-                    return left_padding + utf8_width( left ) + right_padding;
-                } else {
-                    return left_padding + utf8_width( left ) + middle_padding_max
-                           + utf8_width( right ) + right_padding;
-                }
-            }
-
-            void draw( catacurses::window &w, const int posy ) const {
-                int width = getmaxx( w );
-                if( sep_line ) {
-                    wattron( w, BORDER_COLOR );
-                    mvwhline( w, point( 0, posy ), LINE_XXXO, 1 );
-                    mvwhline( w, point( 1, posy ), 0, width - 2 );
-                    mvwhline( w, point( width - 1, posy ), LINE_XOXX, 1 );
-                    wattroff( w, BORDER_COLOR );
-                } else {
-                    int text_width = width - left_padding - right_padding;
-                    if( !right.empty() ) {
-                        right_print( w, posy, right_padding, color, right );
-                        text_width -= middle_padding_min + utf8_width( right );
-                    }
-                    trim_and_print( w, point( left_padding, posy ), text_width, color, left );
-                }
-            }
-    };
 
     // Separate and sort positive and negative morale
     const morale_mult mult = get_temper_mult();
@@ -643,8 +674,9 @@ void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_pena
     std::sort( positive_morale.begin(), positive_morale.end(), sort_morale );
     std::sort( negative_morale.begin(), negative_morale.end(), sort_morale );
 
+    window_lines lines;
     // Initialize lines
-    const std::vector<morale_line> top_lines {
+    lines.top = {
         {},
         { _( "Morale" ), c_white },
         morale_line{ morale_line::separation_line {} },
@@ -654,15 +686,7 @@ void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_pena
         morale_line( _( "Source" ), _( "Value" ), c_light_gray ),
     };
 
-    struct middle_morale_line {
-        bool is_caption;
-        morale_line ml;
-
-        middle_morale_line( const bool is_caption, const morale_line &ml )
-            : is_caption( is_caption ), ml( ml ) {}
-    };
-
-    std::vector<middle_morale_line> middle_lines;
+    std::vector<window_lines::middle_morale_line> &middle_lines = lines.middle;
     if( !positive_morale.empty() || !negative_morale.empty() ) {
         middle_lines.emplace_back( true, morale_line(
                                        _( "Total positive morale" ), get_total_positive_value(),
@@ -691,7 +715,7 @@ void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_pena
         }
     }
 
-    std::vector<morale_line> bottom_lines;
+    std::vector<morale_line> &bottom_lines = lines.bottom;
     bottom_lines.reserve( 3 ); // We need at least 3 lines.
     bottom_lines.emplace_back( morale_line::separation_line {} );
     bottom_lines.emplace_back(
@@ -719,7 +743,50 @@ void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_pena
         morale_line::line_color::normal
     );
     bottom_lines.emplace_back();
+    return lines;
+}
 
+std::vector<std::string> player_morale::accessibility_document( const int focus_eq,
+        const int pain_penalty, const int sleepiness_penalty )
+{
+    const window_lines lines = build_window_lines( focus_eq, pain_penalty, sleepiness_penalty );
+    std::vector<std::string> paragraphs;
+    const auto add = [&paragraphs]( const morale_line & ml ) {
+        const std::string spoken = ml.spoken();
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    };
+    // The total morale comes first; it is the first non-separator bottom line.
+    add( lines.bottom[1] );
+    if( lines.middle.empty() ) {
+        // "Nothing affects your morale"; the other top lines are the title and the column header.
+        add( lines.top.back() );
+    }
+    for( const window_lines::middle_morale_line &ml : lines.middle ) {
+        add( ml.ml );
+    }
+    for( size_t i = 2; i < lines.bottom.size(); ++i ) {
+        add( lines.bottom[i] );
+    }
+    return paragraphs;
+}
+
+void player_morale::display( int focus_eq, int pain_penalty, int sleepiness_penalty )
+{
+    if( accessibility::is_active() ) {
+        // The screen reader reads the window as a document; Escape returns to the caller.
+        const std::vector<std::string> paragraphs = accessibility_document( focus_eq, pain_penalty,
+                sleepiness_penalty );
+        accessibility_ui::show_document( _( "Morale" ), _( "Morale" ), paragraphs, paragraphs );
+        return;
+    }
+
+    window_lines lines = build_window_lines( focus_eq, pain_penalty, sleepiness_penalty );
+    const std::vector<morale_line> &top_lines = lines.top;
+    const std::vector<window_lines::middle_morale_line> &middle_lines = lines.middle;
+    const std::vector<morale_line> &bottom_lines = lines.bottom;
+    using middle_morale_line = window_lines::middle_morale_line;
     const auto calc_max_width = []( const int width, const morale_line & ml ) -> int {
         return std::max( width, ml.max_width() );
     };

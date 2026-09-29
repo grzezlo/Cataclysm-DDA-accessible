@@ -556,6 +556,8 @@ struct encumbrance_row {
     /** The sheet's temperature number. */
     int warmth = 0;
     body_warmth warmth_state = body_warmth::none;
+    /** Sort armor highlights parts covered by the focused item only by color. */
+    bool covered = false;
 };
 /**
  * Concise: "Torso, encumbrance 12, layering 3, warmth comfortable."  Detailed
@@ -681,6 +683,62 @@ std::string format_spell_count( size_t count );
 /** Martial arts style row: name, "current" for the style in use, and its first sentence. */
 std::string format_martial_style_row( const std::string &name, bool current,
                                       const std::string &description );
+
+/**
+ * A morale window line: "Total morale: +12." or "Ate a good meal, 25%."  A
+ * label ending with a colon is followed by the value without a comma.
+ */
+std::string format_morale_line( const std::string &label, const std::string &value );
+/**
+ * A five-character health bar in words at the bar's own precision, where each
+ * '|' is two tenths and '\' one: "health 7 of 10".  A bar of dashes is zero and
+ * ':' is under one tenth.
+ */
+std::string format_health_bar( const std::string &bar );
+/** A splinted limb's mending bar in fifths: "mending 2 of 5". */
+std::string format_mending_bar( int filled );
+/** Body status part: "Head, health 10 of 10, has details." or "Left arm, missing." */
+std::string format_body_part_row( const std::string &name, const std::string &health,
+                                  bool missing, bool has_details );
+/** Medical health row: part, health in words, then conditions such as "broken". */
+std::string format_medical_health_row( const std::string &part, const std::string &health,
+                                       const std::vector<std::string> &conditions );
+/** Proficiencies window row: "Knapping, known." or "Tailoring, learning, 40%." */
+std::string format_proficiency_window_row( const std::string &name, bool known, int progress );
+/** Worn item in the sort armor list; the list shows conflicts only by color. */
+struct armor_row {
+    std::string name;
+    /** "left" or "right" for an item worn on one side; empty otherwise. */
+    std::string side;
+    /** Hidden from the character sprite. */
+    bool hidden = false;
+    /** Several items share a layer on a body part. */
+    bool stacking_conflict = false;
+    /** Worn over items that normally go outside it. */
+    bool out_of_order = false;
+    /** Encumbrance on the filtered body part; negative to omit. */
+    int encumbrance = -1;
+};
+/** "Hoodie, left, hidden, layering conflict, out of order." */
+std::string format_armor_row( const armor_row &row );
+/**
+ * The moving item's neighbours in the list, which runs from innermost to
+ * outermost: "above hoodie, below T-shirt", "innermost, above hoodie",
+ * "outermost, below T-shirt", or "only item".
+ */
+std::string format_armor_position( const std::string &inner, const std::string &outer );
+/** Starting to move a worn item: "Moving hoodie." */
+std::string format_armor_moving( const std::string &name );
+/** Finishing a move: "Placed." and the row at its new position. */
+std::string format_armor_placed( const std::string &row );
+/** Toggling the sprite: "Sprite hidden." or "Sprite shown." and the row. */
+std::string format_armor_sprite( bool hidden, const std::string &row );
+/**
+ * Sort armor summary: the filter with its count, each item with encumbrance and
+ * conflicts in layer order, then the total when `total` is not negative.
+ */
+std::string format_armor_summary( const std::string &filter, const std::vector<armor_row> &rows,
+                                  int total, int layering );
 
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( const std::string &label, const std::string &duration,

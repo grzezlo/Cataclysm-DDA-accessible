@@ -132,6 +132,49 @@ static std::vector<std::pair<bodypart_id, bool>> list_and_combine_bps( const Cha
     return bps;
 }
 
+/** One row of the encumbrance block as screen reader speech. */
+static std::string encumbrance_accessibility_row( const Character &you, const bodypart_id &bp,
+        const bool combined, const bool detailed, const bool covered )
+{
+    accessibility::encumbrance_row row;
+    row.part = body_part_name_as_heading( bp, combined ? 2 : 1 );
+    row.layering = you.get_part_layer_penalty( bp );
+    row.encumbrance = you.get_part_encumbrance( bp ) - row.layering;
+    row.covered = covered;
+    const units::temperature temp = you.get_part_temp_conv( bp );
+    row.warmth = temperature_print_rescaling( temp );
+    // The same bands as display::bodytemp_color().
+    if( bp == body_part_eyes ) {
+        row.warmth_state = accessibility::body_warmth::none;
+    } else if( temp > BODYTEMP_SCORCHING ) {
+        row.warmth_state = accessibility::body_warmth::scorching;
+    } else if( temp > BODYTEMP_VERY_HOT ) {
+        row.warmth_state = accessibility::body_warmth::very_hot;
+    } else if( temp > BODYTEMP_HOT ) {
+        row.warmth_state = accessibility::body_warmth::warm;
+    } else if( temp > BODYTEMP_COLD ) {
+        row.warmth_state = accessibility::body_warmth::comfortable;
+    } else if( temp > BODYTEMP_VERY_COLD ) {
+        row.warmth_state = accessibility::body_warmth::chilly;
+    } else if( temp > BODYTEMP_FREEZING ) {
+        row.warmth_state = accessibility::body_warmth::very_cold;
+    } else {
+        row.warmth_state = accessibility::body_warmth::freezing;
+    }
+    return accessibility::format_encumbrance_row( row, detailed );
+}
+
+std::vector<std::string> encumbrance_accessibility_rows( const Character &you,
+        const item *selected_clothing )
+{
+    std::vector<std::string> rows;
+    for( const std::pair<bodypart_id, bool> &bp : list_and_combine_bps( you, selected_clothing ) ) {
+        rows.push_back( encumbrance_accessibility_row( you, bp.first, bp.second, true,
+                        selected_clothing != nullptr && selected_clothing->covers( bp.first ) ) );
+    }
+    return rows;
+}
+
 void Character::print_encumbrance( ui_adaptor &ui, const catacurses::window &win,
                                    const int line, const item *const selected_clothing ) const
 {
@@ -1617,32 +1660,8 @@ class character_sheet_speech
 
         std::string encumbrance_row( const unsigned line, const bool detailed ) const {
             const std::vector<std::pair<bodypart_id, bool>> bps = list_and_combine_bps( you, nullptr );
-            const bodypart_id &bp = bps[line].first;
-            accessibility::encumbrance_row row;
-            row.part = body_part_name_as_heading( bp, bps[line].second ? 2 : 1 );
-            row.layering = you.get_part_layer_penalty( bp );
-            row.encumbrance = you.get_part_encumbrance( bp ) - row.layering;
-            const units::temperature temp = you.get_part_temp_conv( bp );
-            row.warmth = temperature_print_rescaling( temp );
-            // The same bands as display::bodytemp_color().
-            if( bp == body_part_eyes ) {
-                row.warmth_state = accessibility::body_warmth::none;
-            } else if( temp > BODYTEMP_SCORCHING ) {
-                row.warmth_state = accessibility::body_warmth::scorching;
-            } else if( temp > BODYTEMP_VERY_HOT ) {
-                row.warmth_state = accessibility::body_warmth::very_hot;
-            } else if( temp > BODYTEMP_HOT ) {
-                row.warmth_state = accessibility::body_warmth::warm;
-            } else if( temp > BODYTEMP_COLD ) {
-                row.warmth_state = accessibility::body_warmth::comfortable;
-            } else if( temp > BODYTEMP_VERY_COLD ) {
-                row.warmth_state = accessibility::body_warmth::chilly;
-            } else if( temp > BODYTEMP_FREEZING ) {
-                row.warmth_state = accessibility::body_warmth::very_cold;
-            } else {
-                row.warmth_state = accessibility::body_warmth::freezing;
-            }
-            return accessibility::format_encumbrance_row( row, detailed );
+            return encumbrance_accessibility_row( you, bps[line].first, bps[line].second, detailed,
+                                                  false );
         }
 
         std::string skill_row( const unsigned line ) const {

@@ -203,6 +203,20 @@ class outfit
                             std::list<item> &worn_remains, bool &armor_destroyed );
         /** Draws the UI and handles player input for the armor re-ordering window */
         void sort_armor( Character &guy );
+        // Screen reader speech of the sort armor screen, also its test entry points.
+        // `filter` is the left list's body part, or the null part for all items.
+        /** Each row of the left list, innermost first. */
+        std::vector<std::string> sort_armor_accessibility_rows( Character &guy,
+                const bodypart_id &filter );
+        /** The filter speech: its name, item count, and first row. */
+        std::string sort_armor_accessibility_tab( Character &guy, const bodypart_id &filter );
+        /** The neighbours of the row at `index`, as spoken while moving it. */
+        std::string sort_armor_accessibility_position( const bodypart_id &filter, int index );
+        /** The Alt+S summary: items in layer order with encumbrance and conflicts, then the total. */
+        std::string sort_armor_accessibility_summary( Character &guy, const bodypart_id &filter );
+        /** The Alt+D document: the row, the item statistics, and the encumbrance block. */
+        std::vector<std::string> sort_armor_accessibility_details( Character &guy,
+                const bodypart_id &filter, int index );
         /*
          * when you break out of a grab you have a chance to lose some things from your pockets
          * that are hanging off your character

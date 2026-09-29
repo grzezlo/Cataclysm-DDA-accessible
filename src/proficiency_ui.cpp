@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 #include <map>
 #include <memory>
 #include <optional>
@@ -9,6 +10,9 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "calendar.h"
 #include "cata_utility.h"
 #include "character.h"
@@ -83,7 +87,96 @@ struct prof_window {
     void draw_profs();
     void draw_details();
     void run( std::optional<proficiency_id> default_selection = std::nullopt );
+
+    // Screen reader speech.
+    std::string category_name();
+    std::string row_speech( int row );
+    std::string tab_speech();
+    std::string summary();
+    std::vector<std::string> accessibility_details();
 };
+
+std::string prof_window::category_name()
+{
+    return !filter_str.empty() ? _( "FILTERED" ) :
+           ( current_cat == 0 ) ? _( "ALL" ) : cats[current_cat]->_name.translated();
+}
+
+std::string prof_window::row_speech( const int row )
+{
+    std::vector<display_prof_deps *> &cur_set = get_current_set();
+    if( row < 0 || row >= static_cast<int>( cur_set.size() ) ) {
+        return std::string();
+    }
+    const display_proficiency &p = cur_set[row]->first;
+    // The list shows known and learning only by color; the details pane shows progress.
+    return accessibility::format_proficiency_window_row( p.id->name(), p.known,
+            static_cast<int>( std::floor( p.practice * 100.0f ) ) );
+}
+
+std::string prof_window::tab_speech()
+{
+    return accessibility::format_character_tab( category_name(), {}, get_current_set().size(),
+            row_speech( sel_prof ) );
+}
+
+std::string prof_window::summary()
+{
+    std::vector<std::string> parts = { _( "Proficiencies" ), category_name() };
+    if( !filter_str.empty() ) {
+        parts.push_back( string_format( _( "Filter: %s" ), filter_str ) );
+    } else if( current_cat != 0 ) {
+        parts.push_back( remove_color_tags( cats[current_cat]->_description.translated() ) );
+    }
+    const size_t count = get_current_set().size();
+    if( count == 0 ) {
+        parts.push_back( accessibility::format_list_count( 0 ) );
+    } else {
+        parts.push_back( accessibility::format_list_position( sel_prof + 1, count ) );
+        parts.push_back( row_speech( sel_prof ) );
+    }
+    return accessibility::format_semantic_sequence( parts );
+}
+
+std::vector<std::string> prof_window::accessibility_details()
+{
+    std::vector<std::string> paragraphs;
+    std::vector<display_prof_deps *> &cur_set = get_current_set();
+    if( cur_set.empty() ) {
+        return paragraphs;
+    }
+    const display_prof_deps *p = cur_set[sel_prof];
+    const auto add = [&paragraphs]( const std::string & text ) {
+        const std::string spoken = accessibility::format_semantic_sequence( {
+            trim( remove_color_tags( text ) )
+        } );
+        if( !spoken.empty() ) {
+            paragraphs.push_back( spoken );
+        }
+    };
+    paragraphs.push_back( accessibility::format_semantic_sequence( {
+        row_speech( sel_prof ), accessibility::format_list_position( sel_prof + 1, cur_set.size() )
+    } ) );
+    // The same values as draw_details().
+    add( string_format( "%s: %s", _( "Time to learn" ), !p->first.id->can_learn() ?
+                        _( "Can't learn" ) : to_string( p->first.id->time_to_learn() ) ) );
+    add( string_format( "%s: %.2f%%", _( "Progress" ), p->first.practice * 100.0f ) );
+    add( string_format( "%s: %s", _( "Category" ),
+                        p->first.id->prof_category()->_name.translated() ) );
+    const auto names = []( const auto & ids ) {
+        return enumerate_as_string( ids, []( const proficiency_id & pid ) {
+            return pid->name();
+        }, enumeration_conjunction::and_ );
+    };
+    add( string_format( "%s: %s", _( "Pre-requisites" ),
+                        names( p->first.id->required_proficiencies() ) ) );
+    add( string_format( "%s: %s", _( "Leads to" ), names( p->second ) ) );
+    for( const std::string &line : string_split( remove_color_tags( string_format( "%s: %s",
+            _( "Description" ), p->first.id->description() ) ), '\n' ) ) {
+        add( line );
+    }
+    return paragraphs;
+}
 
 std::vector<display_prof_deps *> &prof_window::get_current_set()
 {
@@ -344,6 +437,9 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
     ctxt.register_action( "NEXT_CATEGORY" );
     ctxt.register_action( "FILTER" );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     populate_categories();
     shared_ptr_fast<ui_adaptor> current_ui = create_or_get_ui_adaptor();
@@ -358,12 +454,34 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
         }
     }
 
+    accessibility::announce( accessibility::format_semantic_sequence( { _( "Proficiencies" ), tab_speech() } ) );
+
     bool done = false;
     while( !done ) {
         ui_manager::redraw();
         std::string action = ctxt.handle_input();
         std::vector<display_prof_deps *> &cur_set = get_current_set();
-        if( navigate_ui_list( action, sel_prof, 10, cur_set.size(), true ) ) {
+        const int previous_prof = sel_prof;
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( summary() );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            const std::vector<std::string> paragraphs = accessibility_details();
+            if( accessibility::is_active() && !paragraphs.empty() ) {
+                const std::string title = cur_set[sel_prof]->first.id->name();
+                accessibility_ui::show_document( title, title, paragraphs, paragraphs );
+                accessibility::announce( row_speech( sel_prof ) );
+            }
+        } else if( navigate_ui_list( action, sel_prof, 10, cur_set.size(), true ) ) {
+            if( sel_prof != previous_prof ) {
+                const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
+                                      action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_prof, sel_prof, direction ),
+                    row_speech( sel_prof )
+                } ) );
+            }
         } else if( filter_str.empty() && ( action == "LEFT" || action == "PREV_CATEGORY" ||
                                            action == "PREV_TAB" ||
                                            action == "RIGHT" || action == "NEXT_CATEGORY" || action == "NEXT_TAB" ) ) {
@@ -371,6 +489,7 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
                                           action == "RIGHT" || action == "NEXT_CATEGORY" || action == "NEXT_TAB", cats.size() );
             sel_prof = 0;
             top_prof = 0;
+            accessibility::announce( tab_speech() );
         } else if( action == "FILTER" ) {
             //~ Refers to single-character search prefixes, like p: or s:
             std::string desc( _( "Available prefixes:" ) );
@@ -402,7 +521,15 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
                 top_prof = 0;
                 current_cat = 0;
                 filter();
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_inventory_filter( filter_str, get_current_set().size() ),
+                    row_speech( sel_prof )
+                } ) );
+            } else {
+                accessibility::announce( tab_speech() );
             }
+        } else if( action == "HELP_KEYBINDINGS" ) {
+            accessibility::announce( row_speech( sel_prof ) );
         } else if( action == "QUIT" ) {
             done = true;
         }
@@ -424,4 +551,48 @@ void show_proficiencies_window( const Character &u,
 {
     prof_window w( &u );
     w.run( default_selection );
+}
+
+std::string proficiencies_window_accessibility_tab( const Character &u, const int category )
+{
+    prof_window w( &u );
+    w.populate_categories();
+    w.current_cat = category;
+    return w.tab_speech();
+}
+
+std::vector<std::string> proficiencies_window_accessibility_rows( const Character &u,
+        const int category )
+{
+    prof_window w( &u );
+    w.populate_categories();
+    w.current_cat = category;
+    std::vector<std::string> rows;
+    for( int i = 0; i < static_cast<int>( w.get_current_set().size() ); ++i ) {
+        rows.push_back( w.row_speech( i ) );
+    }
+    return rows;
+}
+
+std::vector<std::string> proficiencies_window_accessibility_details( const Character &u,
+        const int category, const int row )
+{
+    prof_window w( &u );
+    w.populate_categories();
+    w.current_cat = category;
+    w.sel_prof = row;
+    return w.accessibility_details();
+}
+
+std::string proficiencies_window_accessibility_filter( const Character &u,
+        const std::string &filter )
+{
+    prof_window w( &u );
+    w.populate_categories();
+    w.filter_str = filter;
+    w.filter();
+    return accessibility::format_semantic_sequence( {
+        accessibility::format_inventory_filter( w.filter_str, w.get_current_set().size() ),
+        w.row_speech( 0 )
+    } );
 }

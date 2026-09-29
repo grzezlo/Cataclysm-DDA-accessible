@@ -45,6 +45,12 @@ class player_morale
         void decay( const time_duration &ticks = 1_turns );
         /** Displays morale screen */
         void display( int focus_eq, int pain_penalty, int sleepiness_penalty );
+        /**
+         * The morale window as screen reader paragraphs: the total morale, the
+         * positive and negative sources, then the penalties and focus.
+         */
+        std::vector<std::string> accessibility_document( int focus_eq, int pain_penalty,
+                int sleepiness_penalty );
         /** Returns false whether morale is inconsistent with the argument.
          *  Only permanent morale is checked */
         bool consistent_with( const player_morale &morale ) const;
@@ -159,6 +165,11 @@ class player_morale
         void update_constrained_penalty();
 
     private:
+        /** The morale window's lines, shared by drawing and screen reader speech. */
+        class morale_line;
+        struct window_lines;
+        window_lines build_window_lines( int focus_eq, int pain_penalty, int sleepiness_penalty );
+
         std::vector<morale_point> points;
 
         struct body_part_data {
