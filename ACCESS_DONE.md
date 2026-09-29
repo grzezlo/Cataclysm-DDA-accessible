@@ -745,3 +745,49 @@ Limitations:
   because tabs are not a vertical list.
 - The inventory count covers the active column's items, including disabled
   ones that focus may skip.
+
+## 2026-09-29 — Stage 10: Ranged and thrown targeting
+
+- Implemented the selected option A (concise target, detail on request) in
+  `target_ui` for firing, throwing, blind throwing, reach, manual turrets,
+  vehicle turrets, and spell targeting.
+- Entering target mode speaks the title, the ammunition with its count, the
+  target count, and the focused target: name, attitude, distance and
+  direction (with the level difference), and the hit chance of the aim
+  level the fire key uses.  Re-entering after a multi-turn aim speaks only
+  the focus.
+- Target cycling speaks the target and says "Top" or "Bottom" on a wrap;
+  manual cursor movement speaks the look-around tile description.  Pushing
+  past the range says "Edge of range".
+- Problems the panel shows only by color or drawing are spoken: out of
+  range, out of ammo, not a valid target, no turret in range, the first
+  visible obstacle on the line of fire, visible creatures in the line of
+  fire, and a spell area that covers the player.  Fire and aim keys that do
+  nothing say why.
+- `Alt+D` opens the document view with the target description and health,
+  the tile, the weapon status, and every aim level with its key, hit
+  chance, outcome chances, and moves (and the spell description).  `Alt+S`
+  speaks firing mode, aim, ammunition, recoil, steadiness, and range, or the
+  spell cost, failure chance, and damage.
+- Mode and aim selection speak only the changed value and the new hit
+  chance; ammunition changes speak the ammunition and range; aiming speaks
+  the new recoil and hit chance; the snap, view-shift, turret-line, and
+  unload toggles speak their state; Escape says "Targeting canceled."
+- Hit chances come from the same predictions as the panel; `print_aim` and
+  `draw_throw_aim` now share `fire_aim_predictions` and
+  `throw_aim_predictions`.  New formatters: `format_target_focus`,
+  `format_target_problems`, `format_target_open`, `format_target_status`,
+  `format_target_aim_level`; gameplay helpers `target_focus` and
+  `target_details`.
+- Commit: `6a5481d569`.
+
+Limitations:
+
+- The targeting loop has no input injection in tests; its speech is covered
+  through the formatters and the gameplay helpers, not by driving the UI.
+- The line-of-fire obstacle is the first visible impassable tile, so a
+  window is reported as blocking although a bullet may break through it.
+- A creature seen only through special senses is called "sensed creature";
+  the special-vision description is not spoken.
+- Moving the view in view-shift mode is silent, since only the display
+  changes.

@@ -308,3 +308,48 @@ that `Alt+R` repeats the last row.
 - **Speech interruption.**  Hold Down in a long list and press `Control`
   while a row is spoken.  Speech stops and is not repeated; the next key
   speaks only its row.
+
+## Stage 10: Ranged and thrown targeting
+
+Debug menu > Spawning… > Spawn an item gives a pistol with a loaded
+magazine and rocks; wield the pistol.  Debug menu > Spawning… > Spawn
+monster places zombies; put two or three at different distances, one behind
+a wall or window.  Debug menu > Spawning… > Spawn NPC adds an NPC for the
+neutral case.
+
+- **Enter target mode.**  Press `f`.  You hear once "Firing pistol", the
+  ammunition with its count ("Ammo: …, 8 of 15"), the number of targets,
+  and the focused target with its attitude, distance, direction, and hit
+  chance ("zombie, Hostile, 5 tiles northeast, 62% hit").
+- **Cycle targets.**  Press Tab repeatedly, quickly.  Each press speaks only
+  the next target and its hit chance.  Past the farthest target you hear
+  "Top." before the nearest; Shift+Tab past the nearest says "Bottom.".
+  With no visible target, Tab says "No targets".
+- **Manual cursor.**  Move the cursor with the direction keys.  Each step
+  speaks the tile as look-around does, ending with the distance and
+  direction.  Pushing past the maximum range says "Edge of range".  `0`
+  returns the cursor to you and says "Not a valid target".
+- **Obstruction.**  Aim at the zombie behind the wall.  The focus ends with
+  "No line of fire, blocked by" and the wall.  With a creature between you
+  and the target, you hear "In line of fire:" and its name.
+- **Details and status.**  Press `Alt+D`.  A document opens with the
+  target, its description and health, the weapon status, and one line per
+  aim level with its key, hit chance, outcomes, and moves.  Escape returns
+  and repeats the focus.  `Alt+S` speaks firing mode, aim, ammunition,
+  recoil, steadiness, and range.
+- **Aim and mode changes.**  Press `.` to aim: you hear the new recoil and
+  hit chance.  Press `s` and pick another aim or firing mode: you hear only
+  what changed and the new hit chance.  `,` resets the aim and says
+  "Recoil: High".
+- **Fire, confirm, cancel.**  Press `f` to fire; the result is the game's
+  messages.  Target the neutral NPC and fire: the question names the NPC.
+  Press Escape in target mode: you hear "Targeting canceled.".
+- **Blocked fire.**  Press `0` to put the cursor on yourself, then `f`: you
+  hear "Not a valid target." instead of silence.
+- **Throwing.**  Wield or select a rock with `t`.  You hear "Throwing rock",
+  the target count, and the target with its hit chance.  On an empty tile
+  the hit chance is for hitting the spot.
+- **Interrupted speech.**  Press Tab and silence NVDA with Control right
+  away.  Nothing is repeated by itself; `Alt+R` repeats the last target.
+- **Reach and spells.**  Reach attacks and spell targeting use the same
+  speech; spell casting is completed in Stage 14A, so skip spells until then.
