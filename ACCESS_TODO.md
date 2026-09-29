@@ -1,4 +1,4 @@
-﻿# Accessibility roadmap
+# Accessibility roadmap
 
 This file is the authoritative plan for unfinished accessibility work.  Stable
 architecture, workflow, and completion rules are in `AGENTS.md`; completed work
@@ -54,55 +54,6 @@ it says so.
    spoken question names what it concerns.  State is never conveyed by color
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
-
-## Stage 12 - Construction and placement
-
-**Outcome:** Construction project selection and directional placement expose
-category, requirements, placement validity, and activity start.
-
-**Code inventory:** `src/construction.cpp` (catalog UI, placement cursor,
-validation); `src/handle_action.cpp` (action dispatch).
-
-**Implementation hints:**
-
-- Entry point and main loop: `construction_menu()` in `src/construction.cpp`.
-- Input context: `"CONSTRUCTION"` in `construction_menu()`.
-- Category tabs: `construct_cat[tabindex].name()`.
-- Project name: `group->name()`.
-- Requirement details computed in `recalc_buffer` lambda inside
-  `construction_menu()`:
-  - Stage title and resulting terrain.
-  - Skill requirements.
-  - Precursor terrain.
-  - Duration: `current_con->get_folded_time_string()`.
-  - Tools: `current_con->requirements->get_folded_tools_list()`.
-  - Components: `current_con->requirements->get_folded_components_list()`.
-- Placement: `place_construction()` in `src/construction.cpp` uses
-  `choose_adjacent()` for directional cursor.
-- Validation: `can_construct()` in `src/construction.cpp`.
-- Failure reason: `con.explain_failure(pnt)`.
-- On confirm: starts `player_activity(ACT_BUILD)`.
-
-**Selected interaction (conventions and the Stage 08 direction prompt):**
-
-- Keys are unchanged.  Conventions 1, 2, 3, 5, and 8 apply to the
-  construction menu; `Alt+D` opens the requirements in the document view with
-  state words instead of color, as in Stage 11.
-- Placement passes the valid tiles from `valid_constructions_near_player()`
-  to the `choose_adjacent()` prompt so it speaks as the Stage 08 prompts do:
-  "Construct where? Targets: <target>, north. (Direction button)".  An
-  invalid choice speaks the existing failure explanation.
-
-**Success criteria:** Construction category/project, requirements, variants,
-placement direction, valid/invalid tile, and disabled reason are announced.
-Selecting a project and placing it starts the activity with confirmation.
-
-**Possible automated tests:** Capture project focus, category switching,
-missing requirements, placement cursor, invalid tile, activity start, and
-return focus.
-
-**User-test scenarios:** Browse construction projects, attempt an
-invalid placement, complete a valid placement, and confirm the activity starts.
 
 ## Stage 12A - Activities, interruptions, and long actions
 

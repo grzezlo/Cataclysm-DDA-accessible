@@ -403,3 +403,35 @@ raises skills.
   game message.
 - **Interrupted speech.**  Press Down and silence NVDA with Control right
   away.  Nothing is repeated by itself; `Alt+R` repeats the last row.
+
+## Stage 12: Construction and placement
+
+Use Debug menu > Spawning… > Spawn an item to provide boards, nails, and a
+hammer.  Use Debug menu > Player… > Change all skills if a selected project
+needs a skill you lack.  Stand beside open ground and a suitable wall or
+window so both valid and invalid placement directions are available.
+
+- **Open and browse.**  Open the construction menu using its binding in the
+  keybinding help.  Hear "Construction", the category, project count, and one
+  focused project.  Press Down and Up rapidly: each movement speaks one row
+  with "available" or "Unavailable" and its reason.  Wrapping says "Top" or
+  "Bottom" before the row; routine redraws stay silent.
+- **Categories and filters.**  Switch categories with Left and Right, search
+  for a project, clear the search, and toggle unavailable projects.  Each
+  change speaks the new category or filter, count, and focused row.  `Alt+S`
+  gives the position and whether unavailable projects are hidden.
+- **Requirements and variants.**  Focus a project with multiple variants and
+  press `Alt+D`.  The document names each variant, result, required skill and
+  current level, precursor terrain, time, tools, components, and their
+  "have" or "missing" states.  Navigate by Down and Up; Escape returns to
+  the same project and speaks its concise row once.
+- **Invalid and valid placement.**  Select a buildable project.  The
+  "Construct where?" prompt lists valid neighboring tiles by name and
+  direction.  Choose an invalid direction and hear the game's failure
+  explanation.  Reopen the project, choose a valid direction, and hear
+  "Started constructing" with the project name.  Confirm the activity is
+  present; progress and completion checks belong to Stage 12A.
+- **Repeat and interruption.**  Interrupt a project announcement and then
+  a placement prompt with NVDA's Control key.  Neither requeues itself;
+  `Alt+R` repeats the most recent meaningful announcement.  Escape from
+  placement returns to gameplay with the cancellation message.

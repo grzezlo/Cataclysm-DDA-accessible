@@ -844,3 +844,29 @@ Limitations:
   check for "not enough"; the "N missing" count uses the simple
   requirements, so overlapping requirements can make it zero on a recipe
   that is still not craftable.
+
+## 2026-09-29 — Stage 12: Construction and placement
+
+- The construction catalog announces its name, category, project count, and
+  focused project once on entry.  Row movement speaks the project and its
+  availability, disabled reason, and variant count; category, filter, and
+  unavailable-project changes speak their new list.  `Alt+S` reviews the
+  category, position, and whether unavailable projects are hidden.  `Alt+R`
+  repeats the last announcement.
+- `Alt+D` opens a navigable requirements document for every variant: result,
+  description, skills with current levels, precursor terrain, annotation,
+  duration, tools and components with explicit availability words, and
+  adjacent placement validity.  Closing it restores project focus.
+- Directional placement speaks the valid neighboring tiles through the Stage
+  08 prompt.  Invalid choices retain their existing failure explanation;
+  starting a build announces the selected project.
+- Added pure catalog formatters and capture-suite assertions.  `test_access.bat`
+  passed 915 assertions in 64 cases; `build_win_x64.bat` passed.
+- Implementation commit: `43e45cf49e`.
+
+Limitations:
+
+- The interactive construction loop has no input injection in tests; focus,
+  document navigation, placement, and interruption quality await blind NVDA
+  verification in `ACCESS_USERTESTS.md`.
+- Activity progress, interruption, and completion are Stage 12A.
