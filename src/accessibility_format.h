@@ -426,6 +426,48 @@ std::string format_character_tab_summary( const std::string &tab, size_t positio
         const std::vector<std::string> &current, const std::string &balance,
         const std::string &difficulty );
 /**
+ * A character creation tab with panes, or a pane switch when `tab` is empty:
+ * "Traits. Negative traits, 30 items. <row>".
+ */
+std::string format_character_creation_pane( const std::string &tab, const std::string &pane,
+        size_t count, const std::string &focus, bool opening );
+/** "Strength 8, average human." followed by a limit or cost note such as "Increasing ... costs 2 points". */
+std::string format_character_stat_row( const std::string &stat, int value,
+                                       const std::string &level, const std::string &note );
+/**
+ * Spoken after a stat or skill changes: "Strength 10, 4 points left." or
+ * "Level 2, 3 points over budget.", followed by an optional note.
+ */
+std::string format_character_value_change( const std::string &value, const std::string &balance,
+        const std::string &note );
+/** A trait row in character creation. */
+struct character_trait_row {
+    std::string name;
+    /** Point cost; a negative cost earns points. */
+    int points = 0;
+    /** False when the point pool does not show costs. */
+    bool show_points = true;
+    bool selected = false;
+    /** What prevents removing the trait: "scenario", "profession", or "background". */
+    std::string locked_by;
+    /** Chosen traits that prevent taking this one. */
+    std::vector<std::string> conflicts;
+    /** What prevents taking the trait: "scenario" or "profession". */
+    std::string forbidden_by;
+};
+/** "Fast Learner, 3 points, selected, locked by profession" or "..., conflicts with Slow Learner". */
+std::string format_character_trait_row( const character_trait_row &row );
+/** "Melee, level 2" or "Melee, level 3, 1 from profession". */
+std::string format_character_skill_row( const std::string &skill, int level,
+                                        int from_profession );
+/** A Description tab field: "Name: Ada". */
+std::string format_character_description_field( const std::string &label,
+        const std::string &value );
+/** "O positive" or "AB negative". */
+std::string format_blood_type( const std::string &type, bool rh_positive );
+/** "Shelter, 3 variants" or "Random location, 5 variants"; one variant omits the count. */
+std::string format_character_start_location( const std::string &name, int variants );
+/**
  * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
  * below", or "here".  `dy` grows southwards and `dz` upwards.
  */

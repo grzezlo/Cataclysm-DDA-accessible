@@ -330,6 +330,12 @@ accessibility::character_choice_row character_profession_row( const profession &
 /** A background is unavailable when its traits conflict with a chosen background's. */
 accessibility::character_choice_row character_background_row( const profession &hobby,
         const avatar &you, bool show_points, int points_left );
+/**
+ * A trait row with the locks, conflicts, and prohibitions that the trait list
+ * shows by color or reports only after Enter.
+ */
+accessibility::character_trait_row character_trait_row( const trait_id &trait, const avatar &you,
+        bool show_points );
 
 } // namespace accessibility_gameplay
 

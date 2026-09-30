@@ -1474,6 +1474,106 @@ std::string format_character_tab_summary( const std::string &tab, const size_t p
     } );
 }
 
+std::string format_character_creation_pane( const std::string &tab, const std::string &pane,
+        const size_t count, const std::string &focus, const bool opening )
+{
+    return format_semantic_sequence( {
+        opening ? std::string( _( "Character creation" ) ) : std::string(),
+        tab,
+        string_join( std::vector<std::string> { pane, format_list_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_character_stat_row( const std::string &stat, const int value,
+                                       const std::string &level, const std::string &note )
+{
+    //~ A character stat and its value, such as "Strength 8".
+    std::string row = string_format( _( "%1$s %2$d" ), stat, value );
+    if( !level.empty() ) {
+        row = string_join( std::vector<std::string> { row, level }, _( ", " ) );
+    }
+    return format_semantic_sequence( { row, note } );
+}
+
+std::string format_character_value_change( const std::string &value, const std::string &balance,
+        const std::string &note )
+{
+    std::vector<std::string> parts = { value };
+    if( !balance.empty() ) {
+        parts.push_back( balance );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ), note } );
+}
+
+std::string format_character_trait_row( const character_trait_row &row )
+{
+    std::vector<std::string> parts = { collapse_whitespace( row.name ) };
+    if( row.show_points ) {
+        if( row.points < 0 ) {
+            parts.push_back( string_format( n_gettext( "earns %d point", "earns %d points", -row.points ),
+                                            -row.points ) );
+        } else {
+            parts.push_back( string_format( n_gettext( "%d point", "%d points", row.points ),
+                                            row.points ) );
+        }
+    }
+    if( row.selected ) {
+        parts.emplace_back( _( "selected" ) );
+    }
+    if( !row.locked_by.empty() ) {
+        //~ A trait that cannot be removed, such as "locked by profession".
+        parts.push_back( string_format( _( "locked by %s" ), row.locked_by ) );
+    }
+    if( !row.conflicts.empty() ) {
+        //~ A trait that cannot be taken with chosen traits, such as "conflicts with Slow Learner".
+        parts.push_back( string_format( _( "conflicts with %s" ), enumerate_as_string( row.conflicts ) ) );
+    }
+    if( !row.forbidden_by.empty() ) {
+        //~ A trait that cannot be taken, such as "forbidden by scenario".
+        parts.push_back( string_format( _( "forbidden by %s" ), row.forbidden_by ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_character_skill_row( const std::string &skill, const int level,
+                                        const int from_profession )
+{
+    std::vector<std::string> parts = {
+        skill,
+        //~ A skill level in character creation, such as "level 2".
+        string_format( _( "level %d" ), level )
+    };
+    if( from_profession > 0 ) {
+        //~ Skill levels granted by the chosen profession.
+        parts.push_back( string_format( _( "%d from profession" ), from_profession ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_character_description_field( const std::string &label,
+        const std::string &value )
+{
+    //~ A character description field and its value, such as "Name: Ada".
+    return format_semantic_sequence( { string_format( _( "%1$s: %2$s" ), label, value ) } );
+}
+
+std::string format_blood_type( const std::string &type, const bool rh_positive )
+{
+    //~ A blood type with its Rh factor, such as "O positive".
+    return string_format( rh_positive ? _( "%s positive" ) : _( "%s negative" ), type );
+}
+
+std::string format_character_start_location( const std::string &name, const int variants )
+{
+    if( variants <= 1 ) {
+        return name;
+    }
+    return string_join( std::vector<std::string> {
+        name, string_format( n_gettext( "%d variant", "%d variants", variants ), variants )
+    }, _( ", " ) );
+}
+
 std::string format_overmap_offset( const int dx, const int dy, const int dz )
 {
     std::vector<std::string> horizontal;

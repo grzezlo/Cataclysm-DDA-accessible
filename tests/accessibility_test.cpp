@@ -5903,3 +5903,137 @@ TEST_CASE( "character_creation_rows_speak_selection_availability_and_conflicts",
         }
     }
 }
+
+TEST_CASE( "character_creation_stat_trait_skill_and_description_formatters",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_character_creation_pane( "Traits", "Positive traits", 40,
+            "Fast Learner, 3 points.", true ) ==
+           "Character creation. Traits. Positive traits, 40 items. Fast Learner, 3 points." );
+    CHECK( accessibility::format_character_creation_pane( "", "Negative traits", 30,
+            "Slow Learner, earns 3 points.", false ) ==
+           "Negative traits, 30 items. Slow Learner, earns 3 points." );
+
+    CHECK( accessibility::format_character_stat_row( "Strength", 8, "average human", "" ) ==
+           "Strength 8, average human." );
+    CHECK( accessibility::format_character_stat_row( "Strength", 14, "extraordinary",
+            "Increasing Strength further costs 2 points" ) ==
+           "Strength 14, extraordinary. Increasing Strength further costs 2 points." );
+    CHECK( accessibility::format_character_value_change( "Strength 10", "4 points left", "" ) ==
+           "Strength 10, 4 points left." );
+    CHECK( accessibility::format_character_value_change( "Strength 4", "",
+            "Strength cannot be further decreased" ) ==
+           "Strength 4. Strength cannot be further decreased." );
+    CHECK( accessibility::format_character_value_change( "Level 2", "3 points over budget", "" ) ==
+           "Level 2, 3 points over budget." );
+
+    accessibility::character_trait_row trait;
+    trait.name = "Fast Learner";
+    trait.points = 3;
+    trait.selected = true;
+    CHECK( accessibility::format_character_trait_row( trait ) == "Fast Learner, 3 points, selected." );
+    trait.locked_by = "profession";
+    CHECK( accessibility::format_character_trait_row( trait ) ==
+           "Fast Learner, 3 points, selected, locked by profession." );
+    trait = accessibility::character_trait_row();
+    trait.name = "Slow Learner";
+    trait.points = -3;
+    trait.conflicts = { "Fast Learner" };
+    CHECK( accessibility::format_character_trait_row( trait ) ==
+           "Slow Learner, earns 3 points, conflicts with Fast Learner." );
+    trait.conflicts.clear();
+    trait.forbidden_by = "scenario";
+    trait.show_points = false;
+    CHECK( accessibility::format_character_trait_row( trait ) ==
+           "Slow Learner, forbidden by scenario." );
+
+    CHECK( accessibility::format_character_skill_row( "Melee", 0, 0 ) == "Melee, level 0." );
+    CHECK( accessibility::format_character_skill_row( "Melee", 3, 1 ) ==
+           "Melee, level 3, 1 from profession." );
+
+    CHECK( accessibility::format_character_description_field( "Name", "Ada" ) == "Name: Ada." );
+    CHECK( accessibility::format_blood_type( "AB", false ) == "AB negative" );
+    CHECK( accessibility::format_blood_type( "O", true ) == "O positive" );
+    CHECK( accessibility::format_character_start_location( "Shelter", 3 ) == "Shelter, 3 variants" );
+    CHECK( accessibility::format_character_start_location( "Shelter", 1 ) == "Shelter" );
+    CHECK( accessibility::format_character_description_field( "Starting location",
+            accessibility::format_character_start_location( "Random location", 5 ) ) ==
+           "Starting location: Random location, 5 variants." );
+}
+
+TEST_CASE( "character_creation_trait_rows_speak_locks_conflicts_and_prohibitions",
+           "[accessibility]" )
+{
+    static const string_id<scenario> scenario_evacuee( "evacuee" );
+    static const string_id<scenario> scenario_medieval( "medieval" );
+    static const profession_id profession_doctor( "doctor" );
+    static const trait_id trait_FASTLEARNER( "FASTLEARNER" );
+    static const trait_id trait_SLOWLEARNER( "SLOWLEARNER" );
+    static const trait_id trait_FASTREADER( "FASTREADER" );
+    static const trait_id trait_PROF_MED( "PROF_MED" );
+    avatar &you = get_avatar();
+    clear_avatar();
+    const scenario *previous_scenario = get_scenario();
+    const profession *previous_profession = you.prof;
+    const on_out_of_scope cleanup( [&you, previous_scenario, previous_profession]() {
+        set_scenario( previous_scenario );
+        you.prof = previous_profession;
+        clear_avatar();
+    } );
+    set_scenario( &scenario_evacuee.obj() );
+    you.prof = profession::generic();
+
+    CHECK( accessibility::format_character_trait_row( accessibility_gameplay::character_trait_row(
+                trait_FASTLEARNER, you, true ) ) == "Fast Learner, 3 points." );
+    you.toggle_trait_deps( trait_FASTLEARNER );
+    REQUIRE( you.has_trait( trait_FASTLEARNER ) );
+    CHECK( accessibility::format_character_trait_row( accessibility_gameplay::character_trait_row(
+                trait_FASTLEARNER, you, true ) ) == "Fast Learner, 3 points, selected." );
+    // The list shows a conflicting trait only in gray.
+    CHECK( accessibility::format_character_trait_row( accessibility_gameplay::character_trait_row(
+                trait_SLOWLEARNER, you, true ) ) ==
+           "Slow Learner, earns 3 points, conflicts with Fast Learner." );
+    CHECK( accessibility::format_character_trait_row( accessibility_gameplay::character_trait_row(
+                trait_SLOWLEARNER, you, false ) ) == "Slow Learner, conflicts with Fast Learner." );
+
+    // Removing a profession trait is refused only after Enter; the row says so first.
+    you.prof = &profession_doctor.obj();
+    you.toggle_trait_deps( trait_PROF_MED );
+    REQUIRE( you.has_trait( trait_PROF_MED ) );
+    const accessibility::character_trait_row locked = accessibility_gameplay::character_trait_row(
+                trait_PROF_MED, you, true );
+    CHECK( locked.selected );
+    CHECK( locked.locked_by == "profession" );
+
+    set_scenario( &scenario_medieval.obj() );
+    const accessibility::character_trait_row forbidden = accessibility_gameplay::character_trait_row(
+                trait_FASTREADER, you, true );
+    CHECK_FALSE( forbidden.selected );
+    CHECK( forbidden.forbidden_by == "scenario" );
+
+    // The shared accessibility keys reach the remaining tabs without replacing their keys.
+    for( const std::string category : {
+             "NEW_CHAR_STATS", "NEW_CHAR_TRAITS", "NEW_CHAR_SKILLS", "NEW_CHAR_DESCRIPTION"
+         } ) {
+        CAPTURE( category );
+        input_context ctxt( category, keyboard_mode::keycode );
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+        ctxt.register_action( "ACCESSIBILITY_STATUS" );
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        ctxt.register_action( "SORT" );
+        ctxt.register_action( "RANDOMIZE_CHAR_NAME" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'd',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_DETAILS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 's',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'r',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_REPEAT_LAST" );
+        if( category == "NEW_CHAR_TRAITS" ) {
+            CHECK( ctxt.input_to_action( input_event( {}, 's', input_event_t::keyboard_code ) ) == "SORT" );
+        }
+        if( category == "NEW_CHAR_DESCRIPTION" ) {
+            CHECK( ctxt.input_to_action( input_event( {}, 'n', input_event_t::keyboard_code ) ) ==
+                   "RANDOMIZE_CHAR_NAME" );
+        }
+    }
+}

@@ -2690,4 +2690,39 @@ accessibility::character_choice_row character_background_row( const profession &
     return row;
 }
 
+accessibility::character_trait_row character_trait_row( const trait_id &trait, const avatar &you,
+        const bool show_points )
+{
+    accessibility::character_trait_row row;
+    row.name = trait->name();
+    row.points = trait->points;
+    row.show_points = show_points;
+    row.selected = you.has_trait( trait );
+    if( row.selected ) {
+        // The same order in which removing the trait reports what locks it.
+        if( get_scenario()->is_locked_trait( trait ) ) {
+            row.locked_by = _( "scenario" );
+        } else if( you.prof->is_locked_trait( trait ) ) {
+            row.locked_by = _( "profession" );
+        } else {
+            for( const profession *hobby : you.hobbies ) {
+                if( hobby->is_locked_trait( trait ) ) {
+                    row.locked_by = _( "background" );
+                }
+            }
+        }
+        return row;
+    }
+    for( const trait_id &conflict : you.get_conflicting_traits( trait ) ) {
+        row.conflicts.push_back( you.mutation_name( conflict ) );
+    }
+    std::sort( row.conflicts.begin(), row.conflicts.end(), localized_compare );
+    if( get_scenario()->is_forbidden_trait( trait ) ) {
+        row.forbidden_by = _( "scenario" );
+    } else if( you.prof->is_forbidden_trait( trait ) ) {
+        row.forbidden_by = _( "profession" );
+    }
+    return row;
+}
+
 } // namespace accessibility_gameplay

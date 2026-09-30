@@ -37,6 +37,7 @@
 #include "cursesdef.h"
 #include "debug.h"
 #include "enum_conversions.h"
+#include "filesystem.h"
 #include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "input_context.h"
@@ -269,6 +270,14 @@ class choice_tab_speech
             pending = event::result;
             message = text;
         }
+        /** A pane spoken on entry between the tab and the count, such as a trait column. */
+        void set_pane( std::function<std::string()> name ) {
+            pane = std::move( name );
+        }
+        /** A group spoken before the row when it changes, such as a skill category. */
+        void set_section( std::function<std::string()> name ) {
+            section = std::move( name );
+        }
 
         /** Speak the tab on entry, or what the last action changed. */
         void speak( const size_t count, const int cur_id, const std::function<std::string()> &row ) {
@@ -277,12 +286,26 @@ class choice_tab_speech
                 return;
             }
             const auto focused_row = [&]() {
-                return count > 0 && cur_id >= 0 ? row() : std::string();
+                if( count == 0 || cur_id < 0 ) {
+                    return std::string();
+                }
+                std::string group;
+                if( section ) {
+                    group = section();
+                    if( group == last_section ) {
+                        group.clear();
+                    } else {
+                        last_section = group;
+                    }
+                }
+                return accessibility::format_semantic_sequence( { group, row() } );
             };
             std::string speech;
             if( !entered ) {
-                speech = accessibility::format_character_creation_tab( tab, count, focused_row(),
-                         !tabs.accessibility_opened );
+                speech = pane ? accessibility::format_character_creation_pane( tab, pane(), count,
+                         focused_row(), !tabs.accessibility_opened ) :
+                         accessibility::format_character_creation_tab( tab, count, focused_row(),
+                                 !tabs.accessibility_opened );
                 entered = true;
                 tabs.accessibility_opened = true;
             } else {
@@ -356,6 +379,9 @@ class choice_tab_speech
         std::string filter_text;
         bool sort_by_name = false;
         std::string message;
+        std::function<std::string()> pane;
+        std::function<std::string()> section;
+        std::string last_section;
 };
 
 } // namespace
@@ -1832,13 +1858,56 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
         details.draw( COL_STAT_NEUTRAL );
     } );
 
+    choice_tab_speech::register_actions( ctxt );
+    choice_tab_speech speech( tabs, _( "Stats" ) );
+    // The limit or cost note the header shows for the stat.
+    const auto accessibility_stat_note = [&]( const int i ) {
+        if( *stats[i] <= min_stat_points ) {
+            return string_format( _( "%s cannot be further decreased" ), stat_labels[i].translated() );
+        } else if( *stats[i] >= max_stat_points ) {
+            return string_format( _( "%s cannot be further increased" ), stat_labels[i].translated() );
+        } else if( *stats[i] >= HIGH_STAT && pool != pool_type::FREEFORM ) {
+            return string_format( _( "Increasing %s further costs 2 points" ),
+                                  stat_labels[i].translated() );
+        }
+        return std::string();
+    };
+    const auto accessibility_row = [&]() {
+        return accessibility::format_character_stat_row( stat_labels[sel].translated(), *stats[sel],
+                stat_level_description( *stats[sel] ), accessibility_stat_note( sel ) );
+    };
+    const auto accessibility_change = [&]() {
+        //~ A character stat and its value, such as "Strength 8".
+        return accessibility::format_character_value_change( string_format( _( "%1$s %2$d" ),
+                stat_labels[sel].translated(), *stats[sel] ), accessibility_point_balance( u, pool ),
+                accessibility_stat_note( sel ) );
+    };
+    const auto accessibility_details = [&]() {
+        return std::make_pair( stat_labels[sel].translated(),
+                               accessibility::format_semantic_sequence( { accessibility_row() } ) + "\n" +
+                               assemble_stat_details( u, sel ) );
+    };
+    const auto accessibility_summary = [&]() {
+        std::vector<std::string> current;
+        for( int i = 0; i < 4; i++ ) {
+            current.push_back( string_format( _( "%1$s %2$d" ), stat_labels[i].translated(), *stats[i] ) );
+        }
+        return accessibility::format_character_tab_summary( _( "Stats" ), sel + 1, 4, current,
+                accessibility_point_balance( u, pool ), accessibility_difficulty( u ) );
+    };
+
     do {
+        speech.speak( 4, sel, accessibility_row );
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
         const int id_for_curr_description = sel;
+        speech.before_action( action, sel );
 
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
+        } else if( speech.handle_shared_action( action, accessibility_details,
+                                                accessibility_summary ) ) {
+            // Spoken by the shared action
         } else if( details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, sel, 1, 4, true ) ) {
             // NO FURTHER ACTION REQUIRED
@@ -1847,12 +1916,15 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
                 ( *stats[sel] )--;
                 details_recalc = true;
             }
+            speech.result( accessibility_change() );
         } else if( action == "RIGHT" ) {
             if( *stats[sel] < max_stat_points ) {
                 ( *stats[sel] )++;
                 details_recalc = true;
             }
+            speech.result( accessibility_change() );
         }
+        speech.after_action( tabs.quit );
         if( sel != id_for_curr_description ) {
             details_recalc = true;
         }
@@ -2085,6 +2157,53 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "SORT" );
     ctxt.register_action( "RANDOMIZE" );
+    choice_tab_speech::register_actions( ctxt );
+
+    choice_tab_speech speech( tabs, _( "Traits" ) );
+    const auto accessibility_column = [&]() {
+        switch( iCurWorkingPage ) {
+            case 0:
+                return std::string( _( "Positive traits" ) );
+            case 1:
+                return std::string( _( "Negative traits" ) );
+            default:
+                return std::string( _( "Neutral traits" ) );
+        }
+    };
+    speech.set_pane( accessibility_column );
+    const auto accessibility_trait = [&]() -> const trait_id & {
+        return *sorted_traits[iCurWorkingPage][iCurrentLine[iCurWorkingPage]];
+    };
+    const auto accessibility_row = [&]() {
+        return accessibility::format_character_trait_row( accessibility_gameplay::character_trait_row(
+                    accessibility_trait(), u, pool != pool_type::FREEFORM ) );
+    };
+    const auto accessibility_column_change = [&]() {
+        return accessibility::format_character_creation_pane( std::string(), accessibility_column(),
+                sorted_traits[iCurWorkingPage].size(), std::string(), false );
+    };
+    const auto accessibility_details = [&]() {
+        return std::make_pair( accessibility_trait()->name(),
+                               accessibility_row() + "\n" + accessibility_trait()->desc() );
+    };
+    const auto accessibility_summary = [&]() {
+        std::vector<std::string> current;
+        for( const trait_and_var &tr : u.get_mutations_variants() ) {
+            current.push_back( tr.name() );
+        }
+        std::sort( current.begin(), current.end(), localized_compare );
+        std::string balance = accessibility_point_balance( u, pool );
+        if( pool != pool_type::FREEFORM ) {
+            const std::string limits = string_format(
+                                           //~ Trait points taken against the limit: positive, negative, and the limit.
+                                           _( "Positive traits %1$d of %3$d points, negative traits %2$d of %3$d points" ),
+                                           num_good, -num_bad, max_trait_points );
+            balance = accessibility::format_semantic_sequence( { balance, limits } );
+        }
+        return accessibility::format_character_tab_summary( accessibility_column(),
+                iCurrentLine[iCurWorkingPage] + 1, sorted_traits[iCurWorkingPage].size(), current, balance,
+                accessibility_difficulty( u ) );
+    };
 
     ui.on_redraw( [&]( ui_adaptor & ui ) {
         werase( w );
@@ -2250,6 +2369,8 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
         details.draw( COL_TR_NEUT );
     } );
 
+    // The filter result is spoken once the lists are filtered.
+    bool accessibility_filter = false;
     do {
         if( recalc_traits ) {
             for( int i = 0; i < 3; i++ ) {
@@ -2277,6 +2398,7 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
                 sorted_traits[2].empty() ) {
                 popup( _( "Nothing found." ) ); // another case of black box in tiles
                 filterstring.clear();
+                accessibility_filter = true;
                 continue;
             }
 
@@ -2305,12 +2427,23 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
             recalc_traits = false;
         }
 
+        if( accessibility_filter ) {
+            accessibility_filter = false;
+            speech.changed( accessibility::format_semantic_sequence( {
+                accessibility::format_character_choice_filter( filterstring,
+                        sorted_traits[0].size() + sorted_traits[1].size() + sorted_traits[2].size(), std::string() ),
+                accessibility_column_change()
+            } ) );
+        }
+        speech.speak( sorted_traits[iCurWorkingPage].size(), iCurrentLine[iCurWorkingPage],
+                      accessibility_row );
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
         std::array< int, 3> cur_sb_pos = iStartPos;
         bool scrollbar_handled = false;
         const int iPrevWorkingPage = iCurWorkingPage;
         const int iPrevLine = iCurrentLine[iCurWorkingPage];
+        speech.before_action( action, iPrevLine );
         for( int i = 0; i < static_cast<int>( trait_sbs.size() ); ++i ) {
             if( trait_sbs[i].handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
                                               cur_sb_pos[i] ) ) {
@@ -2324,8 +2457,12 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
 
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
+        } else if( speech.handle_shared_action( action, accessibility_details,
+                                                accessibility_summary ) ) {
+            // Spoken by the shared action
         } else if( action == "LEFT" || action == "RIGHT" ) {
             iCurWorkingPage = next_avail_page( action == "LEFT" );
+            speech.changed( accessibility_column_change() );
         } else if( scrollbar_handled
                    || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, iCurrentLine[iCurWorkingPage], 10,
@@ -2427,10 +2564,17 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
                 } else {
                     num_bad += mdata.points * inc_type;
                 }
+                speech.result( accessibility::format_character_choice_selected( cur_trait->name(),
+                               inc_type > 0, accessibility_point_balance( u, pool ) ) );
+            } else {
+                // A refusal popup or the variant menu has been spoken; return to the row.
+                speech.focus();
             }
         } else if( action == "SORT" ) {
             traits_sorter.sort_by_points = !traits_sorter.sort_by_points;
             recalc_traits = true;
+            speech.changed( traits_sorter.sort_by_points ? _( "Sorted by points" ) :
+                            _( "Sorted by name" ) );
         } else if( action == "FILTER" ) {
             string_input_popup()
             .title( _( "Search:" ) )
@@ -2438,14 +2582,18 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
             .description( _( "Search by trait name." ) )
             .edit( filterstring );
             recalc_traits = true;
+            accessibility_filter = true;
         } else if( action == "RESET_FILTER" ) {
             if( !filterstring.empty() ) {
                 filterstring.clear();
                 recalc_traits = true;
+                accessibility_filter = true;
             }
         } else if( action == "RANDOMIZE" ) {
             iCurrentLine[iCurWorkingPage] = rng( 0, traits_size[iCurWorkingPage] - 1 );
+            speech.focus();
         }
+        speech.after_action( tabs.quit );
         if( iCurWorkingPage != iPrevWorkingPage || iCurrentLine[iCurWorkingPage] != iPrevLine ) {
             details_recalc = true;
         }
@@ -3582,6 +3730,87 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
 
     const int remaining_points_length = utf8_width( pools_to_string( u, pool ), true );
 
+    choice_tab_speech::register_actions( ctxt );
+    choice_tab_speech speech( tabs, _( "Skills" ) );
+    speech.set_section( [&]() {
+        return skill_list[cur_pos].skill->display_category()->display_string();
+    } );
+    const auto accessibility_profession_level = [&]( const Skill * skill ) {
+        for( const auto &prof_skill : u.prof->skills() ) {
+            if( prof_skill.first == skill->ident() ) {
+                return prof_skill.second;
+            }
+        }
+        return 0;
+    };
+    const auto accessibility_level = [&]() {
+        return static_cast<int>( u.get_skill_level( currentSkill->ident() ) ) +
+               accessibility_profession_level( currentSkill );
+    };
+    const auto accessibility_row = [&]() {
+        return accessibility::format_character_skill_row( currentSkill->name(), accessibility_level(),
+                accessibility_profession_level( currentSkill ) );
+    };
+    // The upgrade cost hint from the header.
+    const auto accessibility_cost = [&]() {
+        if( pool == pool_type::FREEFORM ) {
+            return std::string();
+        }
+        const int cost = skill_increment_cost( u, currentSkill->ident() );
+        const int upgrade_levels = u.get_skill_level( currentSkill->ident() ) == 0 ? 2 : 1;
+        const std::string upgrade_levels_s = string_format(
+                //~ levels here are skill levels at character creation time
+                n_gettext( "%d level", "%d levels", upgrade_levels ), upgrade_levels );
+        std::string cost_text = string_format(
+                                    //~ Second string is e.g. "1 level" or "2 levels"
+                                    n_gettext( "Upgrading %s by %s costs %d point",
+                                               "Upgrading %s by %s costs %d points", cost ),
+                                    currentSkill->name(), upgrade_levels_s, cost );
+        if( skill_points_left( u, pool ) < cost ) {
+            cost_text = accessibility::format_semantic_sequence( { cost_text, _( "Not enough points" ) } );
+        }
+        return cost_text;
+    };
+    const int accessibility_count = std::count_if( skill_list.begin(), skill_list.end(),
+    []( const HeaderSkill & entry ) {
+        return !entry.is_header;
+    } );
+    const auto accessibility_details = [&]() {
+        return std::make_pair( currentSkill->name(), accessibility::format_semantic_sequence( {
+            accessibility_row(), accessibility_cost()
+        } ) + "\n" + assemble_skill_details( u, prof_skills, currentSkill ) );
+    };
+    const auto accessibility_summary = [&]() {
+        std::vector<std::string> current;
+        int position = 0;
+        int index = 0;
+        for( int i = 0; i < num_skills; ++i ) {
+            if( skill_list[i].is_header ) {
+                continue;
+            }
+            ++index;
+            if( i == cur_pos ) {
+                position = index;
+            }
+            const Skill *skill = skill_list[i].skill;
+            const int level = static_cast<int>( u.get_skill_level( skill->ident() ) ) +
+                              accessibility_profession_level( skill );
+            if( level > 0 ) {
+                //~ A skill and its level, such as "Melee 2".
+                current.push_back( string_format( _( "%1$s %2$d" ), skill->name(), level ) );
+            }
+        }
+        return accessibility::format_character_tab_summary( _( "Skills" ), position,
+        accessibility_count, current, accessibility::format_semantic_sequence( {
+            accessibility_cost(), accessibility_point_balance( u, pool )
+        } ), accessibility_difficulty( u ) );
+    };
+    const auto accessibility_change = [&]() {
+        //~ A skill level after a change in character creation.
+        return accessibility::format_character_value_change( string_format( _( "Level %d" ),
+                accessibility_level() ), accessibility_point_balance( u, pool ), std::string() );
+    };
+
     ui.on_redraw( [&]( ui_adaptor & ui ) {
         std::string cur_skill_text;
         const std::string help_text = assemble_skill_help( ctxt );
@@ -3687,13 +3916,18 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
     } );
 
     do {
+        speech.speak( accessibility_count, cur_pos, accessibility_row );
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
         const int pos_for_curr_description = cur_pos;
         int scrollbar_pos = cur_offset;
+        speech.before_action( action, cur_pos );
 
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
+        } else if( speech.handle_shared_action( action, accessibility_details,
+                                                accessibility_summary ) ) {
+            // Spoken by the shared action
         } else if( details.handle_navigation( action, ctxt ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( list_sb.handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
@@ -3721,6 +3955,7 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
                 u.set_knowledge_level( skill_id, static_cast<int>( u.get_skill_level( skill_id ) ) );
             }
             details_recalc = true;
+            speech.result( accessibility_change() );
         } else if( action == "RIGHT" ) {
             const skill_id &skill_id = currentSkill->ident();
             const int level = u.get_skill_level( skill_id );
@@ -3731,7 +3966,9 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
                 u.set_knowledge_level( skill_id, static_cast<int>( u.get_skill_level( skill_id ) ) );
             }
             details_recalc = true;
+            speech.result( accessibility_change() );
         }
+        speech.after_action( tabs.quit );
         if( cur_pos != pos_for_curr_description ) {
             details_recalc = true;
         }
@@ -4372,6 +4609,163 @@ static std::string assemble_description_help( const input_context &ctxt, const b
     return help_text;
 }
 
+/**
+ * The skill level and experience percentage the Description tab shows,
+ * including profession skills and background experience.
+ */
+static std::pair<int, int> description_skill_level( const avatar &you, const Skill &skill,
+        const pool_type pool )
+{
+    int level = you.get_skill_level( skill.ident() );
+
+    // Handle skills from professions
+    if( pool != pool_type::TRANSFER ) {
+        for( const auto &prof_skill : you.prof->skills() ) {
+            if( prof_skill.first == skill.ident() ) {
+                level += prof_skill.second;
+                break;
+            }
+        }
+    }
+
+    // Handle skills from hobbies
+    int leftover_exp = 0;
+    int exp_to_level = 10000 * ( level + 1 ) * ( level + 1 );
+    for( const profession *profession : you.hobbies ) {
+        for( const auto &hobby_skill : profession->skills() ) {
+            if( hobby_skill.first == skill.ident() ) {
+                int skill_exp_bonus = leftover_exp + calculate_cumulative_experience( hobby_skill.second );
+                // Calculate Level up to find final level and remaining exp
+                while( skill_exp_bonus >= exp_to_level ) {
+                    level++;
+                    skill_exp_bonus -= exp_to_level;
+                    exp_to_level = 10000 * ( level + 1 ) * ( level + 1 );
+                }
+                leftover_exp = skill_exp_bonus;
+                break;
+            }
+        }
+    }
+    return { level, 100 * leftover_exp / exp_to_level };
+}
+
+/** Everything the Description tab shows outside its editable fields, one line per group. */
+static std::string accessibility_character_summary( const avatar &you, const pool_type pool )
+{
+    const auto listing = []( const std::vector<std::string> &items ) {
+        return items.empty() ? std::string( _( "none" ) ) : string_join( items, _( ", " ) );
+    };
+    std::vector<std::string> lines;
+    lines.push_back( string_format( _( "Scenario: %s" ),
+                                    get_scenario()->gender_appropriate_name( you.male ) ) );
+    lines.push_back( string_format( _( "Profession: %s" ),
+                                    you.prof->gender_appropriate_name( you.male ) ) );
+    std::vector<std::string> items;
+    for( const profession *hobby : you.hobbies ) {
+        items.push_back( hobby->gender_appropriate_name( you.male ) );
+    }
+    lines.push_back( string_format( _( "Background: %s" ), listing( items ) ) );
+    lines.push_back( string_format(
+                         _( "Stats: Strength %1$d, Dexterity %2$d, Intelligence %3$d, Perception %4$d" ),
+                         you.str_max, you.dex_max, you.int_max, you.per_max ) );
+
+    std::vector<trait_and_var> current_traits = you.get_mutations_variants();
+    std::sort( current_traits.begin(), current_traits.end(), trait_var_display_sort );
+    items.clear();
+    for( const trait_and_var &trait : current_traits ) {
+        items.push_back( trait.name() );
+    }
+    lines.push_back( string_format( _( "Traits: %s" ), listing( items ) ) );
+
+    std::vector<const Skill *> skills = Skill::get_skills_sorted_by( []( const Skill & a,
+    const Skill & b ) {
+        return localized_compare( a.name(), b.name() );
+    } );
+    std::vector<std::pair<int, std::string>> skill_levels;
+    for( const Skill *skill : skills ) {
+        const auto [level, exp_percent] = description_skill_level( you, *skill, pool );
+        if( level > 0 ) {
+            //~ A skill in the character summary: name, level, and experience toward the next level.
+            skill_levels.emplace_back( -level, string_format( _( "%1$s %2$d, %3$d%%" ), skill->name(),
+                                       level, exp_percent ) );
+        }
+    }
+    std::stable_sort( skill_levels.begin(), skill_levels.end(), []( const auto & a, const auto & b ) {
+        return a.first < b.first;
+    } );
+    items.clear();
+    for( const std::pair<int, std::string> &skill : skill_levels ) {
+        items.push_back( skill.second );
+    }
+    lines.push_back( string_format( _( "Skills: %s" ), listing( items ) ) );
+
+    items.clear();
+    std::vector<proficiency_id> proficiencies = you.prof->proficiencies();
+    for( const proficiency_id &known : you._proficiencies->known_profs() ) {
+        proficiencies.push_back( known );
+    }
+    for( const profession *hobby : you.hobbies ) {
+        for( const proficiency_id &proficiency : hobby->proficiencies() ) {
+            proficiencies.push_back( proficiency );
+        }
+    }
+    for( const proficiency_id &proficiency : proficiencies ) {
+        if( std::find( items.begin(), items.end(), proficiency->name() ) == items.end() ) {
+            items.push_back( proficiency->name() );
+        }
+    }
+    lines.push_back( string_format( _( "Proficiencies: %s" ), listing( items ) ) );
+
+    items.clear();
+    for( const bionic_id &bid : you.prof->CBMs() ) {
+        if( bid->activated && bid->has_flag( json_flag_BIONIC_TOGGLED ) ) {
+            items.push_back( string_format( _( "%s (toggled)" ), bid->name.translated() ) );
+        } else if( bid->activated ) {
+            items.push_back( string_format( _( "%s (activated)" ), bid->name.translated() ) );
+        } else {
+            items.push_back( bid->name.translated() );
+        }
+    }
+    lines.push_back( string_format( _( "Bionics: %s" ), listing( items ) ) );
+
+    items.clear();
+    std::vector<addiction> addictions = you.prof->addictions();
+    for( const profession *hobby : you.hobbies ) {
+        for( const addiction &add : hobby->addictions() ) {
+            addictions.push_back( add );
+        }
+    }
+    for( const addiction &add : addictions ) {
+        //~ A starting addiction and its intensity, such as "Nicotine, intensity 5".
+        items.push_back( string_format( _( "%1$s, intensity %2$d" ), add.type->get_name().translated(),
+                                        add.intensity ) );
+    }
+    lines.push_back( string_format( _( "Starting addictions: %s" ), string_join( items.empty() ?
+                                    std::vector<std::string> { _( "none" ) } : items, _( "; " ) ) ) );
+
+    const vproto_id scen_veh = get_scenario()->vehicle();
+    const vproto_id prof_veh = you.prof->vehicle();
+    if( scen_veh ) {
+        lines.push_back( string_format( _( "Starting vehicle (scenario): %s" ),
+                                        scen_veh->name.translated() ) );
+    } else if( prof_veh ) {
+        lines.push_back( string_format( _( "Starting vehicle (profession): %s" ),
+                                        prof_veh->name.translated() ) );
+    } else {
+        lines.push_back( string_format( _( "Starting vehicle: %s" ), _( "none" ) ) );
+    }
+    lines.push_back( string_format( _( "Start of cataclysm: %s" ),
+                                    to_string( get_scenario()->start_of_cataclysm() ) ) );
+    lines.push_back( string_format( _( "Start of game: %s" ),
+                                    to_string( get_scenario()->start_of_game() ) ) );
+    const std::string balance = accessibility_point_balance( you, pool );
+    if( !balance.empty() ) {
+        lines.push_back( balance );
+    }
+    lines.push_back( accessibility_difficulty( you ) );
+    return string_join( lines, "\n" );
+}
+
 // NOLINTNEXTLINE(readability-function-size)
 void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
                       pool_type pool )
@@ -4526,6 +4920,62 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
     char_creation::description_selector current_selector = char_creation::NAME;
 
     bool no_name_entered = false;
+
+    choice_tab_speech::register_actions( ctxt );
+    choice_tab_speech speech( tabs, _( "Description" ) );
+    // The field value as the screen shows it, without the label.
+    const auto accessibility_value = [&]( const char_creation::description_selector field ) {
+        switch( field ) {
+            case char_creation::NAME:
+                if( no_name_entered ) {
+                    return std::string( _( "no name entered" ) );
+                }
+                return you.name.empty() ? std::string( _( "random name" ) ) : you.name;
+            case char_creation::GENDER:
+                return std::string( you.male ? _( "Male" ) : _( "Female" ) );
+            case char_creation::OUTFIT:
+                return std::string( outfit ? _( "Male" ) : _( "Female" ) );
+            case char_creation::HEIGHT:
+                return you.height_string();
+            case char_creation::AGE:
+                return you.age_string( get_scenario()->start_of_game() );
+            case char_creation::BLOOD:
+                return accessibility::format_blood_type( io::enum_to_string( you.my_blood_type ),
+                        you.blood_rh_factor );
+            case char_creation::LOCATION:
+                if( !you.random_start_location ) {
+                    return accessibility::format_character_start_location( you.start_location.obj().name(),
+                            you.start_location.obj().targets_count() );
+                } else if( get_scenario()->start_location_targets_count() == 1 ) {
+                    return get_scenario()->start_location().obj().name();
+                }
+                return accessibility::format_character_start_location( _( "Random location" ),
+                        get_scenario()->start_location_targets_count() );
+        }
+        return std::string();
+    };
+    const auto accessibility_field = [&]( const char_creation::description_selector field ) {
+        static const std::array<translation, 7> labels = {
+            to_translation( "Name" ), to_translation( "Gender" ), to_translation( "Outfit" ),
+            to_translation( "Height" ), to_translation( "Age" ), to_translation( "Blood type" ),
+            to_translation( "Starting location" )
+        };
+        return accessibility::format_character_description_field( labels[field].translated(),
+                accessibility_value( field ) );
+    };
+    const auto accessibility_row = [&]() {
+        return accessibility_field( current_selector );
+    };
+    const auto accessibility_details = [&]() {
+        return std::make_pair( std::string( _( "Character summary" ) ),
+                               accessibility_character_summary( you, pool ) );
+    };
+    const auto accessibility_summary = [&]() {
+        return accessibility::format_character_tab_summary( _( "Description" ), current_selector + 1, 7, {
+            get_scenario()->gender_appropriate_name( you.male ),
+            you.prof->gender_appropriate_name( you.male )
+        }, accessibility_point_balance( you, pool ), accessibility_difficulty( you ) );
+    };
     ui.on_redraw( [&]( ui_adaptor & ui ) {
         const std::string help_text = assemble_description_help( ctxt, allow_reroll );
         const int new_iHelpHeight = foldstring( help_text, getmaxx( w ) - 4 ).size();
@@ -4595,47 +5045,11 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
 
             int line = 1;
             bool has_skills = false;
-            profession::StartingSkillList list_skills = you.prof->skills();
 
             for( const Skill *&elem : skillslist ) {
-                int level = you.get_skill_level( elem->ident() );
-
-                // Handle skills from professions
-                if( pool != pool_type::TRANSFER ) {
-                    profession::StartingSkillList::iterator i = list_skills.begin();
-                    while( i != list_skills.end() ) {
-                        if( i->first == elem->ident() ) {
-                            level += i->second;
-                            break;
-                        }
-                        ++i;
-                    }
-                }
-
-                // Handle skills from hobbies
-                int leftover_exp = 0;
-                int exp_to_level = 10000 * ( level + 1 ) * ( level + 1 );
-                for( const profession *profession : you.hobbies ) {
-                    profession::StartingSkillList hobby_skills = profession->skills();
-                    profession::StartingSkillList::iterator i = hobby_skills.begin();
-                    while( i != hobby_skills.end() ) {
-                        if( i->first == elem->ident() ) {
-                            int skill_exp_bonus = leftover_exp + calculate_cumulative_experience( i->second );
-                            // Calculate Level up to find final level and remaining exp
-                            while( skill_exp_bonus >= exp_to_level ) {
-                                level++;
-                                skill_exp_bonus -= exp_to_level;
-                                exp_to_level = 10000 * ( level + 1 ) * ( level + 1 );
-                            }
-                            leftover_exp = skill_exp_bonus;
-                            break;
-                        }
-                        ++i;
-                    }
-                }
+                const auto [level, exp_percent] = description_skill_level( you, *elem, pool );
 
                 if( level > 0 ) {
-                    const int exp_percent = 100 * leftover_exp / exp_to_level;
                     mvwprintz( w_skills, point( 0, line ), c_light_gray,
                                elem->name() + ":" );
                     right_print( w_skills, line, 1, c_light_gray, string_format( "%d(%2d%%)", level, exp_percent ) );
@@ -4828,9 +5242,13 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
     int max_allowed_height = Character::max_height();
 
     do {
+        speech.speak( 7, current_selector, accessibility_row );
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
+        speech.before_action( action, current_selector );
         if( action == "NEXT_TAB" ) {
+            // A refusal or a declined confirmation returns to the focused field.
+            speech.focus();
             if( pool == pool_type::ONE_POOL ) {
                 if( points_used_total( you ) > point_pool_total() ) {
                     popup( _( "Too many points allocated, change some features and try again." ) );
@@ -4873,6 +5291,9 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
             continue;
         } else if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
+        } else if( speech.handle_shared_action( action, accessibility_details,
+                                                accessibility_summary ) ) {
+            // Spoken by the shared action
         } else if( action == "DOWN" ) {
             switch( current_selector ) {
                 case char_creation::NAME:
@@ -4956,6 +5377,9 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
                 default:
                     break;
             }
+            if( current_selector != char_creation::NAME && current_selector != char_creation::LOCATION ) {
+                speech.result( accessibility_value( current_selector ) );
+            }
         } else if( action == "LEFT" ) {
             switch( current_selector ) {
                 case char_creation::HEIGHT:
@@ -4991,22 +5415,34 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
                 default:
                     break;
             }
+            if( current_selector != char_creation::NAME && current_selector != char_creation::LOCATION ) {
+                speech.result( accessibility_value( current_selector ) );
+            }
         } else if( action == "REROLL_CHARACTER" && allow_reroll ) {
             you.randomize( false );
+            // The tab speaks its fields again when it is re-entered.
+            accessibility::announce( _( "Character randomized" ) );
             // Re-enter this tab again, but it forces a complete redrawing of it.
             break;
         } else if( action == "REROLL_CHARACTER_WITH_SCENARIO" && allow_reroll ) {
             you.randomize( true );
+            accessibility::announce( _( "Character and scenario randomized" ) );
             // Re-enter this tab again, but it forces a complete redrawing of it.
             break;
         } else if( action == "SAVE_TEMPLATE" ) {
             if( const auto name = query_for_template_name() ) {
                 you.save_template( *name, pool );
+                speech.result( file_exist( PATH_INFO::templatedir() + *name + ".template" ) ?
+                               string_format( _( "Saved template %s" ), *name ) :
+                               string_format( _( "Template %s was not saved" ), *name ) );
+            } else {
+                speech.focus();
             }
         } else if( action == "RANDOMIZE_CHAR_NAME" ) {
             if( !MAP_SHARING::isSharing() ) { // Don't allow random names when sharing maps. We don't need to check at the top as you won't be able to edit the name
                 you.pick_name();
                 no_name_entered = you.name.empty();
+                speech.result( accessibility_field( char_creation::NAME ) );
             }
         } else if( action == "RANDOMIZE_CHAR_DESCRIPTION" ) {
             bool gender_selection = one_in( 2 );
@@ -5024,20 +5460,27 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
             you.randomize_height();
             you.randomize_blood();
             you.randomize_heartrate();
+            speech.changed( _( "Description randomized" ) );
         } else if( action == "CHANGE_OUTFIT" ) {
             outfit = !outfit;
+            speech.result( accessibility_field( char_creation::OUTFIT ) );
         } else if( action == "CHANGE_GENDER" ) {
             you.male = !you.male;
+            speech.result( accessibility_field( char_creation::GENDER ) );
         } else if( action == "CHANGE_START_OF_CATACLYSM" ) {
             const scenario *scen = get_scenario();
             scen->change_start_of_cataclysm( calendar_ui::select_time_point( scen->start_of_cataclysm(),
                                              _( "Select cataclysm start date" ), calendar_ui::granularity::hour ) );
+            speech.result( string_format( _( "Start of cataclysm: %s" ),
+                                          to_string( scen->start_of_cataclysm() ) ) );
         } else if( action == "CHANGE_START_OF_GAME" ) {
             const scenario *scen = get_scenario();
             scen->change_start_of_game( calendar_ui::select_time_point( scen->start_of_game(),
                                         _( "Select game start date" ), calendar_ui::granularity::hour ) );
+            speech.result( string_format( _( "Start of game: %s" ), to_string( scen->start_of_game() ) ) );
         } else if( action == "RESET_CALENDAR" ) {
             get_scenario()->reset_calendar();
+            speech.result( _( "Calendar reset" ) );
         } else if( action == "CHOOSE_CITY" ) {
             std::vector<city> cities( city::get_all() );
             const auto cities_cmp_population = []( const city & a, const city & b ) {
@@ -5050,6 +5493,9 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
             if( c.has_value() ) {
                 you.starting_city = c;
                 you.world_origin = c->pos_om;
+                speech.result( string_format( _( "Starting city: %s" ), c->name ) );
+            } else {
+                speech.focus();
             }
         } else if( action == "CHOOSE_LOCATION" ) {
             select_location.query();
@@ -5064,9 +5510,12 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
                     }
                 }
             }
+            speech.result( accessibility_field( char_creation::LOCATION ) );
         } else if( action == "CONFIRM" &&
                    // Don't edit names when sharing maps
                    !MAP_SHARING::isSharing() ) {
+            // The edited field speaks its new value once the prompt closes.
+            speech.focus();
 
             string_input_popup popup;
             switch( current_selector ) {
@@ -5158,6 +5607,7 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
                 }
             }
         }
+        speech.after_action( tabs.quit );
     } while( true );
 }
 
