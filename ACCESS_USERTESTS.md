@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T122.
+Last assigned test ID: T127.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -720,3 +720,46 @@ speaks its focused row once.
   "covered by this item"; `Alt+S` reads the filter's items in layer order with
   encumbrance, conflicts, and the total encumbrance.  Interrupt speech with
   Control during a move; `Alt+R` repeats the last position.
+
+## Stage 15: NPC dialogue
+
+Spawn an NPC next to you through Debug menu > Spawning… > Spawn NPC and talk
+to it with `C` and its direction.  Show a specific topic with Debug menu >
+Dialogue… > Display talk topic, choosing the NPC and then the topic.
+
+- **T123 - Conversation entry and history.**  Talk to the NPC.  Hear its
+  name and first line once, followed by "Your response, N options".  Up
+  reads the newest line, then older lines including your own ("You: …");
+  Up at the oldest line reads it again.  Down returns to "Your response";
+  Home and End jump to the oldest line and the prompt.  `Alt+S` speaks
+  "Dialogue: <name>" and the position ("Conversation. 2 of 3").  `Alt+D` on
+  a long line opens it in the document view by sentence; Escape speaks the
+  line again.  Interrupt speech with Control; nothing is repeated
+  automatically, and `Alt+R` repeats the last announcement.
+- **T124 - Response list, branching, and return to gameplay.**  Press Enter
+  on "Your response" and hear the prompt and the focused row ("a, …").  Up
+  and Down speak one row with its key; after the responses hear "Shift+l,
+  Look at", "Shift+s, Size up stats", and the other screen actions; a wrap
+  says "Top" or "Bottom".  Escape returns to "Your response".  Enter on a
+  response continues the conversation: hear only the NPC's new line and the
+  new prompt, not your own choice.  Enter on "Shift+l, Look at" speaks the
+  description.  Letter hotkeys choose a response from either level.  Choose
+  a goodbye response and check the game returns to the map without extra
+  dialogue speech.
+- **T125 - Unavailable response.**  Display the topic
+  `TALK_TEST_SHOW_ALWAYS2`.  Open the response list and hear "a, You should
+  see this response … because. Unavailable: zero isn't greater than one."
+  Press Enter or `a` on it; the row is spoken again and the conversation
+  stays open.  `b` ("All done") ends it.
+- **T126 - Consequence hint and confirmation.**  Display the topic
+  `TALK_TEST_EFFECTS` and move to the multi-effect response: its row ends
+  with "May provoke an attack".  Choose it; the confirmation asks "You may
+  be attacked!  Proceed?".  Answer no and hear the focused response row
+  again and stay in the response list.  Every response of this test topic
+  has effects, so use a fresh NPC afterwards.
+- **T127 - Non-conversation dialogue.**  Examine a slot machine, which
+  opens this window without a speaker.  Place one next to you with Debug
+  menu > Map… > Map editor (the map editor may need sighted help until its
+  own stage), or find one in a casino.  Its text is spoken without a
+  speaker name and the prompt says "Your choice, N options".  Up, Down,
+  Enter, and Escape behave as in T123 and T124, without the screen actions.

@@ -55,61 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 15 - NPC dialogue
-
-**Outcome:** Conversation text and response selection support complete branching
-dialogue without repeated rereading.
-
-**Code inventory:** dialogue rendering, response input, and nested menus in
-`src/npctalk.cpp`/`src/npctalk.h`; shared lists and popups where actually used.
-
-**Implementation hints:**
-
-- Entry / response loop: `dialogue::gen_responses()` in `src/npctalk.cpp`.
-- Input context: `"DIALOGUE_CHOOSE_RESPONSE"` initialized in `dialogue::gen_responses()`.
-- History scrolling: `dialogue_window::set_up_scrolling()` registers scrolling actions.
-- Speaker name: `actor(true)->disp_name()`.
-- Responses: `response_lines` generated via `talk_response::create_option_line()`
-  with hotkey `evt` and text `td.text`.  Currently selected response is
-  `d_win.sel_response`.
-- New dialogue lines: `dialogue_window::add_to_history()` handles incoming dialogue
-  text.  Hook speech to announce new speaker text on topic transitions, and announce
-  focused response option text on cursor movement.
-
-**Selected interaction (chat history with a response list, designed with the
-maintainer):**
-
-- In screen reader mode the dialogue has two levels.  This deliberately
-  overrides convention 1 for Up and Down on the conversation level; letter
-  hotkeys stay unchanged on both levels.
-- Conversation level: a chat-like history, one element per utterance
-  ("Rubik: Hello, stranger…", "You: Ask about the job"), newest at the
-  bottom, followed by a final element "Your response, 5 options".
-- A new NPC utterance is spoken once automatically and focus moves to "Your
-  response", so Up rereads the latest utterance and continues to older ones.
-- Enter on "Your response" opens the response list.  Up and Down speak the
-  hotkey and response ("a, Ask about the job"; "c, [LIE 50%] …, unavailable:
-  requires …").  The screen's extra actions (Look at, Size up stats, Assess
-  personality, Yell, Check opinion) follow the responses with their keys.
-  Enter confirms; Escape returns to the conversation level on "Your
-  response".  The visible response cursor follows the list.
-- Escape on the conversation level keeps the game behavior (the best quit
-  response).  Consequence confirmations use the Stage 05 controls.
-- `Alt+D` on an utterance opens it in the document view.  Computer terminals
-  and other non-conversation uses of this window follow the same model
-  without a speaker name.
-
-**Success criteria:** Speaker, newly presented text, focused response, visible
-consequence hints, unavailable reason, topic transition, confirmation, and exit
-are announced once.  Scrolling history and nested menus retain dialogue context.
-
-**Possible automated tests:** Reuse NPC talk fixtures to capture entry, response
-movement, disabled response, topic transition, repeated redraw, history scroll,
-nested menu, confirmation, and exit.
-
-**User-test scenarios:** Complete a branching conversation with a
-disabled response, nested choice, long text, and clean return to gameplay.
-
 ## Stage 16 - Trading
 
 **Outcome:** Buying, selling, quantity selection, balance, and capacity are clear

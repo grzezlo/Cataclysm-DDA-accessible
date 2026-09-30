@@ -1120,3 +1120,57 @@ Limitations:
 - The sort armor right pane (items grouped by body part) is not navigable;
   `Alt+S` covers the focused filter's part.  Integrated armor refusals are
   spoken by the existing popup.
+
+## 2026-09-30 — Stage 15: NPC dialogue
+
+- Implemented the selected interaction (chat history with a response list)
+  with conventions 2, 5, 7, and 8; letter hotkeys and the screen action keys
+  are unchanged.  The dialogue registers `Alt+D`, `Alt+S`, and `Alt+R`.
+- Conversation level: the history holds one element per utterance ("Rubik:
+  "Hello"", "You: Ask about the job", NPC actions and terminal lines
+  without a speaker) and ends in "Your response, 5 options" ("Your input"
+  on terminals, "Your choice" for non-conversation uses).  Each topic speaks
+  its new lines once, never the player's own choice, and focuses the
+  prompt.  Up and Down move through the history without wrapping; Home,
+  End, Page Up, and Page Down jump.  Enter on an utterance rereads it;
+  Escape keeps the game's best quit response.
+- Response list: Enter on the prompt speaks the prompt and the focused row.
+  Rows speak the hotkey and text with the trial ("c, [LIE 50%] …"), what
+  the color shows ("May provoke an attack", "Leaves you helpless",
+  "Action"), and "Unavailable: <reason>".  Look at, Size up stats, Assess
+  personality, Yell, and Check opinion follow the responses with their
+  keys.  Up and Down wrap with "Top" and "Bottom"; the visible cursor
+  follows the responses.  Enter confirms; Escape returns to the prompt.
+  Choosing an unavailable response speaks its row; declining a hostile or
+  helpless confirmation speaks the focused row again.
+- `Alt+D` opens the utterance or row in the document view by sentence and
+  speaks the focus on return; `Alt+S` speaks the dialogue title, level, and
+  position.
+- The pure `dialogue_speech_model` and formatters are in
+  `accessibility_format`; `dialogue_window` feeds it from
+  `add_to_history()` and `set_responses()`; `npctalk.cpp` has four narrow
+  calls and builds the spoken row in `talk_response::create_option_line()`.
+  Tags in the response and reason are now parsed before coloring, which
+  leaves the displayed text unchanged.  An unknown hotkey no longer reads
+  past the response condition list.
+- A closing quote after a sentence end now ends the sentence in
+  `format_semantic_sequence()`, so quoted lines are not followed by an extra
+  period.
+- `test_access.bat` passed 1567 assertions in 90 cases and `[npc_talk]`
+  passed 551 assertions in 35 cases; the Windows x64 tiles build and AStyle
+  3.1 checks passed.
+- Implementation commit: `f55952560d`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the dialogue loop has no input
+  injection in tests, so key handling is covered through the speech model
+  and the spoken rows of real talk topics.
+- History scrolling with `<` and `>` and mouse input still move only the
+  visible views; the accessible history focus does not scroll the window.
+- Escape on the conversation level stays silent when the game finds no
+  safe quit response, as the visible dialogue does.
+- Effects of a chosen response (items, messages, the farewell line) are
+  spoken through the existing message speech, not by the dialogue.
+- Nested menus opened by responses (trading, missions, training choices)
+  use their own screens; trading and missions are Stages 16 and 17.
