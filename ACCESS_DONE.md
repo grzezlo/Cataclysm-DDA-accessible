@@ -1224,3 +1224,49 @@ Limitations:
   counted.
 - The "Trade complete" result is not asserted in tests because the trade
   loop needs real input.
+
+## 2026-09-30 — Stage 17: Missions
+
+- Implemented the selected interaction (conventions 2, 3, and 5); mission
+  screen keys are unchanged.
+- Opening speaks "Your missions", the tab with its count, and the focused
+  row ("Your missions. Active, 3 missions. Reach Refugee Center, current
+  objective, deadline in about 2 days.").  Left, Right, Tab, and Shift+Tab
+  speak only the new tab ("Failed, no missions.").
+- Rows speak the title, "current objective", and "deadline in <time>" or
+  "deadline passed" for active missions, or "completed <time> ago" and
+  "failed <time> ago" on the other tabs.  Times use the same watch-based
+  precision as the screen.
+- Enter on an active mission speaks "Current objective: <title>"; on the
+  other tabs or an empty tab it speaks "Unavailable: <reason>".
+- `Alt+D` opens the document view: row with category and position, giver
+  and faction, giver location and target as distance in map tiles,
+  direction, and approximate meters ("Target: 5 map tiles north, 120 m"),
+  the description split into sentences starting with "Objective:", and the
+  deadline or end time lines; "No known location." when there is no
+  target.  Closing it speaks the focused row again.  `Alt+S` speaks the tab,
+  count, position, and current objective; `Alt+R` repeats.
+- The description parser moved into a shared helper so the screen and the
+  document view read the same expanded snippets.
+- Mission acceptance, completion, and failure need no new hook: the Stage 15
+  dialogue speaks the giver's offer and responses, and the existing game
+  log messages ("Mission "<title>" is successfully completed.", "... is
+  failed.") are spoken as gameplay messages.
+- `test_access.bat` passed 1668 assertions in 94 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `c413e5259c`.
+
+Limitations:
+
+- NVDA interaction quality is unverified.  The ImGui mission loop has no
+  input injection in tests, so opening, tab, confirm, and focus speech are
+  covered through the formatters and the row and detail builders.
+- The missions screen has no map action; the selected interaction left the
+  map handoff to Stage 18, whose known-places list includes mission
+  targets.
+- The screen shows no separate reward field; the reward is spoken where the
+  mission description states it.
+- The list does not wrap, so Up or Down at either end repeats the row
+  instead of saying "Top" or "Bottom".
+- Distances mirror the screen, which assumes targets on z=0; the direction
+  is horizontal only.

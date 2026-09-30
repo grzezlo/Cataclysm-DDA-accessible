@@ -55,50 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 17 - Missions
-
-**Outcome:** Mission discovery, acceptance, tracking, details, and completion are
-usable without visual tabs or map markers alone.
-
-**Code inventory:** `src/mission_ui.cpp`, `src/mission.cpp`, and mission dialogue
-in `src/npctalk.cpp`.  Stage 18 owns the later overmap handoff.
-
-**Implementation hints:**
-
-- Entry point: `mission_ui::draw_mission_ui()` in `src/mission_ui.cpp`.
-- Input context: `ctxt` in `mission_ui::draw_mission_ui()` with actions
-  `register_navigate_ui_list()`, `"NEXT_TAB"`, `"PREV_TAB"`, `"CONFIRM"` ("Set
-  selected mission as current objective"), `"QUIT"`.
-- Tabs: `ACTIVE`, `COMPLETED`, `FAILED` (`enum class mission_ui_tab_enum` in
-  `src/mission_ui.cpp`).
-- Missions list: `get_avatar().get_active_missions()`,
-  `get_completed_missions()`, `get_failed_missions()`.
-- Mission attributes: title `m->get_type().name()`, description
-  `m->get_description()`, deadline `m->get_deadline()`, target location
-  `m->get_target()`.
-- Confirmation: `"CONFIRM"` sets tracked mission.
-
-**Selected interaction (conventions 2, 3, and 5):**
-
-- Keys are unchanged.  Tabs speak "Active, 3 missions" and the focused row.
-- A row speaks title, tracked state, and deadline: "Reach Refugee Center,
-  current objective, deadline in 2 days".
-- `Alt+D` opens the description in the document view: giver, objective,
-  reward, and a known location with distance and direction.
-- `CONFIRM` sets the tracked mission as before; the map handoff is Stage 18.
-
-**Success criteria:** Mission category/state, title, giver, objective, deadline,
-reward, tracked state, normally known location, success/failure, and focus return
-are announced.  The mission screen exposes a clear map action, but its semantic
-map handoff is completed and accepted in Stage 18.
-
-**Possible automated tests:** Reuse mission fixtures to capture categories,
-selection/details, accept, track/untrack, known/unknown locations, deadline,
-completion/failure, and invocation of the map action.
-
-**User-test scenarios:** Accept, review, track, locate, complete, and turn
-in a mission; inspect one mission without a known location and one failed state.
-
 ## Stage 18 - Overmap navigation
 
 **Outcome:** Known-world exploration and route planning are spatially
@@ -129,6 +85,10 @@ understandable without revealing unexplored information.
   `try_travel_to_destination()` initiates travel.
 - Hook: on cursor movement announce terrain, note, distance from player,
   and direction.
+- Mission handoff: Stage 17 added no map action to the missions screen
+  (`src/mission_ui.cpp`); mission targets reach the map through the
+  known-places list.  Its formatter `format_mission_location()` speaks
+  distance and direction to a target.
 
 **Selected interaction (option B, known-places list with the cursor):**
 

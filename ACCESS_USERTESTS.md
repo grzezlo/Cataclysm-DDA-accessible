@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T131.
+Last assigned test ID: T135.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -804,3 +804,40 @@ the trade.
   `CAPITALISM` external option (the default), hear "Your promises of
   digital payment mean nothing here."  With it enabled by a mod, hear the
   new balance and "Bank balance: $…".
+
+## Stage 17: Missions
+
+Spawn an NPC next to you through Debug menu > Spawning… > Spawn NPC.  Give it
+a mission through Debug menu > Player… > Edit player/NPC, choosing the NPC,
+then "Add mission" and a type such as "Find a Book".  Talk to it with `C`,
+ask about its missions, and accept.  Missions can be failed or completed
+through Debug menu > Player… > Edit player/NPC, choosing yourself, then
+"Edit missions (WARNING: Unstable!)", the mission, and "Fail mission" or
+"Mark as complete".  Open the missions screen with `M`.
+
+- **T132 - Opening, rows, and tabs.**  With two active missions open the
+  missions screen.  Hear "Your missions. Active, 2 missions." and the
+  focused row once: the title, "current objective" on the tracked one, and
+  "deadline in <time>" when it has a deadline.  Up and Down speak one row;
+  at either end the row repeats.  Right or Tab speaks "Completed", the
+  count, and the focused row, or "no missions"; Left or Shift+Tab goes back.
+  `Alt+S` speaks the tab, count, position ("2 of 2"), and the current
+  objective.  Interrupt speech with Control; nothing is repeated
+  automatically, and `Alt+R` repeats the last announcement.
+- **T133 - Tracking a mission.**  On the active mission that is not the
+  current objective press Enter and hear "Current objective: <title>".
+  Move to the other mission and back; the new one says "current
+  objective" and the other does not.  On the Completed or Failed tab press
+  Enter and hear "Unavailable: only an active mission can be the current
+  objective."
+- **T134 - Details and location.**  Press `Alt+D` on an accepted mission.
+  Hear the row with "Active" and its position; Down reads "Given by:" with
+  the faction, the giver location in map tiles and direction, the
+  description sentence by sentence starting with "Objective:", the
+  deadline, and "Target: N map tiles <direction>, <meters>" or "No known
+  location."  Escape returns and speaks the focused row again.
+- **T135 - Completion and failure.**  Fail one mission and complete another
+  through the debug route above; hear "Mission "<title>" is failed." and
+  "... is successfully completed." as messages.  Open the missions screen:
+  the Failed and Completed tabs list them with "failed <time> ago" and
+  "completed <time> ago", and `Alt+D` reads the end time.
