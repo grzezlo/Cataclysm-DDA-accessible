@@ -55,56 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 21A - Options, rules, and panel configuration
-
-**Outcome:** Global and world options, safe-mode and autopickup rule editors,
-and sidebar panel configuration are independently usable.
-
-**Code inventory:** `src/options.cpp`, `src/safemode_ui.cpp`,
-`src/auto_pickup.cpp`, `src/panels.cpp` (sidebar admin), and
-`src/distraction_manager.cpp`.
-
-**Implementation hints:**
-
-- Options screen: `options_manager::show()` in `src/options.cpp`, context
-  `"OPTIONS"`.
-- Option tabs/pages: `pages_[i].name_` ("General", "Interface", "Graphics",
-  "Sound", etc.) in `options_manager::show()`.
-- Option entry text: `fmt_name_value` lambda in `options_manager::show()` — group
-  header or option name + value.
-- Tooltip: `curr_item.fmt_tooltip()`.
-- Value editing: `on_select_option` lambda in `options_manager::show()` —
-  LEFT/RIGHT cycles, CONFIRM opens input for numeric types.
-- Note: the curses options screen does not have search/filter — options are
-  organized by pages and collapsible groups.
-- Safe-mode rules: `src/safemode_ui.cpp` — rule list with add/edit/delete.
-- Autopickup rules: `src/auto_pickup.cpp` — similar rule editor pattern.
-- Panel admin: `panel_manager::show_adm()` in `src/panels.cpp`, context
-  `"PANEL_MGMT"`.  Two columns: panel list and layout list.  Toggle panel
-  visibility, reorder, activate layout.
-- Distraction settings: `distraction_manager_gui::show()` in
-  `src/distraction_manager.cpp`, context `"DISTRACTION_MANAGER"`.
-
-**Selected interaction (conventions 2, 3, 4, and 8):**
-
-- Keys are unchanged.  Option pages behave as tabs.  A group header speaks
-  "expanded" or "collapsed"; an option row speaks name and value, and a
-  change speaks the new value.  `Alt+D` speaks the option tooltip.
-- Safe-mode, autopickup, and distraction rule lists use the shared list and
-  input speech for editing.
-- The panel manager's panel and layout columns behave as tabs; a row speaks
-  name and visibility, and moving a panel speaks its new position.
-
-**Success criteria:** Options pages, group expand/collapse, value editing,
-defaults, safe-mode/autopickup rules, panel configuration, and distraction
-settings are announced without relying on columns or color.
-
-**Possible automated tests:** Capture option search/value/reset, rule editing,
-panel changes, save/cancel, and return focus.
-
-**User-test scenarios:** Change and restore options, add/edit rules,
-configure panels, and confirm all value changes are announced.
-
 ## Stage 22 - Coverage and announcement-policy audit
 
 **Outcome:** Every keyboard-reachable interface is classified and tested, speech

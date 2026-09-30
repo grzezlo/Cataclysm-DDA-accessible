@@ -1638,3 +1638,58 @@ Limitations:
   checks as the visual +/- marks.
 - Character to Template from the manage-world menu has no added result
   speech; its load list uses the shared uilist.
+
+## 2026-09-30 — Stage 21A: Options, rules, and panel configuration
+
+- Implemented the selected interaction (conventions 2, 3, 4, and 8);
+  existing keys are unchanged.
+- Options: opening speaks "Options: General", the count of selectable rows,
+  and the focused row; pages behave as tabs.  Group headers speak
+  "Graphics, collapsed, 12 options"; Enter, Left, or Right speak "Expanded,
+  12 options" or "Collapsed".  Option rows speak "Use tiles: True", with
+  "Unavailable: requires <option>" for the prerequisite shown only in gray;
+  value changes speak only the new value, and a refused change returns to
+  the row after its popup.  With a screen reader, int and float options use
+  the Stage 05 text input instead of the silent ImGui number input ("Not a
+  number" on invalid input).  `Alt+D` speaks the tooltip with its default
+  and the in-game world options note; `Alt+S` speaks position and page.
+  The Create World "World Options" tab and "Advanced world options" use the
+  same speech, resolving the Stage 21 limitation.  The save question names
+  "Options", and "Options saved" or "Option changes discarded" follows.
+- Safe mode and autopickup managers: Global and Character behave as tabs.
+  Safe mode rows speak "zombie, Blacklist, Category: Hostile, Attitude:
+  Hostile, Distance: 5, Mode: Both", omitting columns the rule does not use;
+  autopickup rows speak "wooden arrow, Include".  Left and Right speak the
+  focused column; editing speaks only the new value.  Add, default ruleset,
+  remove, copy, move to the other tab, enable, disable, reorder ("Position
+  3 of 5" or "Cannot move up: already last"), and the manager's enable
+  switch speak their result.  The autopickup rule input uses the Stage 05
+  text input with a screen reader.  `Alt+D` opens the rule fields and the
+  wildcard examples; `Alt+S` speaks position, manager state, and column.
+  Rule test lists speak their title and matches (`match_list_speech`).
+  Save questions name the manager, and the result is spoken.
+- Sidebar options: the panel and layout columns behave as tabs.  Rows speak
+  "Stats, shown" or "hidden" and "Classic, active"; toggling speaks "Shown"
+  or "Hidden".  Moving speaks "Moving Stats, position 3 of 20", then each
+  target "Position 4 of 20", then "Moved Stats to position 4 of 20".
+  `Alt+D` opens the description and key hints.
+- The distraction manager already met the selected interaction through
+  Stage 12A and was not changed.
+- `query_yn_about()` in `src/output.cpp` adds the spoken context to a
+  yes/no question without showing it.
+- `test_access.bat` passed 2246 assertions in 114 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `1ef09f6797`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T171–T175 are in
+  `ACCESS_USERTESTS.md`.  Automated tests cover formatters, the rule test
+  list speech, and key resolution, not the interactive loops.
+- Options changed by Left or Right on an int option still wrap from the
+  maximum to the minimum as upstream does; speech gives only the new value.
+  An out-of-range typed value falls back to the default, and the spoken
+  value reflects that without an explanation.
+- The safe mode "move up" key moves a rule toward the end of the list, as
+  upstream does; speech reports the resulting position.
+- Mouse movement over these screens is silent.

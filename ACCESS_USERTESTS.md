@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T170.
+Last assigned test ID: T175.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1199,3 +1199,86 @@ Change terrain, or drive toward a building.
   focus, Yes speaks "Reset world <name>; its saves were removed."  Choose
   Delete World and answer Yes: hear "Deleted world <name>." and then the
   main menu focus on "Create World".
+
+## Stage 21A: Options, rules, and panel configuration
+
+- **T171 - Global options, groups, and values.**  From the main menu choose
+  Settings > Options.  Hear "Options: General", the number of selectable rows,
+  and the first row once.  Use the next- and previous-tab keys to visit other
+  pages; each switch speaks the page, count, and focused row.  On Graphics,
+  focus a collapsed group and hear its name, "collapsed", and option count;
+  press Enter to hear "Expanded" and move through its options with Up and
+  Down.  Focus an option with an unmet prerequisite and hear "Unavailable:
+  requires <option>"; attempting to change it gives the popup and then the
+  same row.  Change a Boolean or choice option with Left or Right and hear
+  only the new value.  On a numeric option press Enter, enter an invalid
+  value, and hear "Not a number" and the unchanged value; enter a valid
+  value and hear it once.  `Alt+D` speaks the focused option's tooltip and
+  default; `Alt+S` speaks the page and position.  Interrupt a row with
+  Control: nothing is requeued, and `Alt+R` repeats that row.  Restore the
+  original values, change one option again, leave the screen, answer No to
+  the question naming Options, and hear "Option changes discarded".  Reopen,
+  make one change, answer Yes, and hear "Options saved"; restore it afterward.
+- **T172 - World and advanced options.**  From the main menu choose World >
+  Create World and switch to the World Options tab (T166).  Hear "World
+  Options", the count, and the focused row; expand a group, move through
+  options, change a value, and use `Alt+D` and `Alt+S` as in T171.  Return to
+  the Create World screen and hear its focused row.  Press Shift+S there to
+  open Advanced world options; hear that title, count, and first row once.
+  Change and restore a value, then Escape and confirm that Create World
+  speaks its focused row again.  In a loaded world open Options through the
+  action menu, switch to Current world, and check that `Alt+D` includes the
+  warning about changing world options.  Changing a world option and
+  declining the save question leaves its original value intact.
+- **T173 - Safe mode rules.**  From the main menu choose Settings > Safe
+  Mode.  Global opens with its rule count and focused row; Character says
+  to load a character first.  Load a character, open Safe mode manager from
+  the action menu, and switch between Global and Character.  Each tab
+  speaks its name, count, and first row.  Press `~` on an empty Global tab
+  to add the default ruleset and hear its count and row.  Press `a` to add
+  a rule; edit its text and each applicable column with Left, Right, and
+  Enter.  The concise row names its rule, blacklist or whitelist, category,
+  relevant attitude and distance, mode, and disabled state.  `Alt+D` opens
+  the fields and wildcard examples; Escape returns to the same row.
+  `Alt+S` speaks position, manager state, and column.  Use `c`, `d`, `e`,
+  `=`, `-`, `m`, and `r` to copy, disable, enable, reorder, move between tabs,
+  and remove rules; hear one result after each action, including the reason
+  when a rule cannot move.  Press `s` to toggle safe mode and hear its state.
+  Set a rule such as `*zombie*` and test it with `t`: the list of monster
+  types matching the rule speaks its title, count, focused creature, and
+  position on `Alt+S`.  Leave after a change and
+  answer No to the named save question; reopen to confirm it was discarded.
+  Interrupt speech with Control and use `Alt+R` to repeat the last result.
+- **T174 - Auto pickup rules.**  From the main menu choose Settings > Auto
+  pickup, then also open the manager from a loaded game's action menu to
+  reach Character.  Switch Global and Character tabs and hear each tab's
+  count and focused rule.  Press `a`, enter a rule such as `*arrow*`, and
+  hear "Rule added" with the count
+  and row.  Left and Right speak "Rule" or "Include or exclude"; Enter on
+  the second column speaks only its new value.  Edit the text through the
+  speaking input, and press `Alt+D` for the rule and wildcard examples;
+  Escape returns to the row.  `Alt+S` speaks position, manager state, and
+  column.  Use `c`, `d`, `e`, `=`, `-`, `m`, and `r` to copy, disable, enable,
+  reorder, move to the other tab, and remove the rule, hearing one result
+  for each action.  Press `s` to toggle auto pickup and hear its state.
+  Test a matching rule with `t`; navigate the spoken match list and return
+  to the same rule.  Leave after a change, answer Yes to the named save
+  question, hear "Changes saved", reopen to check the rule, then remove it.
+  Interrupt a result with Control; `Alt+R` repeats it without automatic
+  requeue.
+- **T175 - Sidebar panels and distractions.**  In a loaded game open
+  Sidebar options from the action menu, or bind that action in keybindings.
+  Hear "Sidebar options", "Panels", the count, and the first panel's name
+  and shown or hidden state once.  Up and Down speak one row, with "top" or
+  "bottom" on wrap; Tab toggles the focused panel and speaks only "Shown"
+  or "Hidden".  Press Enter to select a panel for moving, use Up or Down
+  to hear each target position, then Enter to place it and hear its new
+  position.  Left or Right switches to Layouts, speaking its count and
+  focused layout; activate another layout with Enter and hear its state.
+  `Alt+D` opens the description and key hints, Escape returns to the row,
+  and `Alt+S` gives column, position, and active layout.  Restore the
+  previous layout and panel order.  Open the Distractions manager through
+  the action menu; its rows speak their names and enabled or disabled
+  states, Enter speaks a changed state, and `Alt+D` gives the description.
+  Return to gameplay using only the keyboard.  Interrupt a row with Control
+  and check that `Alt+R` repeats it without an automatic replay.
