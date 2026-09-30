@@ -252,6 +252,53 @@ struct inventory_capacity {
 };
 /** Values and warnings, or only the warnings; empty when only warnings are asked and none apply. */
 std::string format_inventory_capacity( const inventory_capacity &capacity, bool include_values );
+/** A row of a trade pane: the inventory row with its unit price and marked count. */
+struct trade_row {
+    inventory_focus_entry item;
+    /** Formatted price of one unit; empty when the row cannot be traded. */
+    std::string unit_price;
+    size_t marked = 0;
+    size_t available = 0;
+};
+/** "Marked" or "3 marked"; empty when nothing of the row is marked. */
+std::string format_trade_marked( size_t marked, size_t available );
+/** Name, unit price, marks, and refusal; details add location, state, and owner. */
+std::string format_trade_row( const trade_row &row, bool include_context, bool include_details );
+/** The row after marking: its name and the new marked count, or "Unmarked". */
+std::string format_trade_mark_change( const std::string &caption, size_t marked,
+                                      size_t available );
+/** Running balance of a trade and whether the trader accepts it. */
+struct trade_balance {
+    /** The trader exchanges items freely, without a balance. */
+    bool exchange = false;
+    /** The player owes the trader the amount. */
+    bool debt = false;
+    std::string amount;
+    bool acceptable = true;
+};
+/** "Balance: you owe $5.00, trader refuses" or "Balance: credit $3.00, acceptable". */
+std::string format_trade_balance( const trade_balance &balance );
+/** Name of a trade pane: the player's goods or the trader's goods. */
+std::string format_trade_pane_label( bool yours );
+/** Trade purpose, trader, and balance, spoken when the trade opens. */
+std::string format_trade_opening( const std::string &title, const std::string &trader,
+                                  const trade_balance &balance );
+/** The whole trade state spoken on request. */
+struct trade_summary {
+    std::string title;
+    std::string trader;
+    trade_balance balance;
+    /** Value of the marked goods of each side; empty to omit. */
+    std::string buying;
+    std::string selling;
+    /** Bank balance; empty when banking is unavailable. */
+    std::string bank;
+};
+std::string format_trade_summary( const trade_summary &summary );
+/** Balance after moving it to or from the bank account. */
+std::string format_trade_bank_change( const trade_balance &balance, const std::string &bank );
+/** Spoken when the trade window closes. */
+std::string format_trade_result( bool traded );
 /** An item that a pickup stored, with the container it went into, if known. */
 struct pickup_result_item {
     std::string item;

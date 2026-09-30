@@ -27,6 +27,11 @@
 class npc;
 class trade_ui;
 
+namespace accessibility
+{
+struct trade_balance;
+} // namespace accessibility
+
 class trade_selector : public inventory_drop_selector
 {
     public:
@@ -44,11 +49,20 @@ class trade_selector : public inventory_drop_selector
         shared_ptr_fast<ui_adaptor> get_ui() const;
         input_context const *get_ctxt() const;
 
+        std::string accessibility_row( const inventory_entry &entry, bool include_context,
+                                       bool include_all_cells ) const override;
+        std::string accessibility_status() const override;
+
         static constexpr char const *ACTION_AUTOBALANCE = "AUTO_BALANCE";
         static constexpr char const *ACTION_BANKBALANCE = "BANK_BALANCE";
         static constexpr char const *ACTION_SWITCH_PANES = "SWITCH_LISTS";
         static constexpr char const *ACTION_TRADE_OK = "CONFIRM";
         static constexpr char const *ACTION_TRADE_CANCEL = "QUIT";
+
+    protected:
+        std::vector<std::string> accessibility_opening_context() const override;
+        std::string accessibility_column_label() const override;
+        std::string accessibility_selection_event( const inventory_entry &entry ) const override;
 
     private:
         trade_ui *_parent;
@@ -98,6 +112,18 @@ class trade_ui
         void autobalance();
         void bank_balance();
         void resize();
+        /** Handle the events queued by the active pane. */
+        void process_events();
+        pane_t &get_active_pane();
+
+        /** Balance and whether the trader accepts it. */
+        std::string accessibility_balance() const;
+        /** Purpose, trader, balance, marked values, and bank balance. */
+        std::string accessibility_summary() const;
+        /** Name of a pane: the player's or the trader's goods. */
+        std::string accessibility_pane_label( pane_t const &pane ) const;
+        /** Trader and balance for the first pane shown; empty afterwards. */
+        std::string accessibility_take_opening();
 
         constexpr static int header_size = 5;
 
@@ -118,6 +144,7 @@ class trade_ui
         panecont_t::size_type _cpane = 0;
         bool _exit = true;
         bool _traded = false;
+        bool _accessibility_opened = false;
         currency_t _cost = 0;
         currency_t _balance = 0;
         currency_t _bank = 0;
@@ -129,6 +156,7 @@ class trade_ui
         void _process( event const &ev );
         bool _confirm_trade() const;
         void _draw_header();
+        accessibility::trade_balance _accessibility_balance() const;
 };
 
 #endif // CATA_SRC_TRADE_UI_H

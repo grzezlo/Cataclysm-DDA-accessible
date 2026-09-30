@@ -51,6 +51,7 @@
 #include "mutation.h"
 #include "mutation_ui.h"
 #include "npc.h"
+#include "npc_opinion.h"
 #include "output.h"
 #include "player_activity.h"
 #include "player_display.h"
@@ -63,6 +64,7 @@
 #include "skill.h"
 #include "skill_ui.h"
 #include "string_formatter.h"
+#include "trade_ui.h"
 #include "type_id.h"
 
 namespace
@@ -4395,4 +4397,184 @@ TEST_CASE( "dialogue_response_rows_speak_key_consequence_and_unavailable_reason"
     CHECK( d.responses[12].create_option_line( d,
             input_event( 'm', input_event_t::keyboard_char ) ).spoken ==
            "m, This is a multi-effect response. May provoke an attack." );
+}
+
+TEST_CASE( "trade_formatters_speak_price_marks_balance_and_result", "[accessibility][nogame]" )
+{
+    accessibility::trade_row row;
+    row.item.caption = "apple";
+    row.item.category = "FOOD";
+    row.item.location = "on the floor";
+    row.unit_price = "$2.00";
+    row.available = 5;
+    CHECK( accessibility::format_trade_row( row, false, false ) == "apple. $2.00 each." );
+    row.marked = 3;
+    CHECK( accessibility::format_trade_row( row, true, false ) ==
+           "FOOD. apple. $2.00 each. 3 marked." );
+    CHECK( accessibility::format_trade_row( row, false, true ) ==
+           "apple. $2.00 each. 3 marked. Location: on the floor." );
+    row.available = 1;
+    row.marked = 1;
+    CHECK( accessibility::format_trade_row( row, false, false ) == "apple. $2.00 each. Marked." );
+    row.unit_price.clear();
+    row.marked = 0;
+    row.item.denial = "Won't sell their own equipment";
+    row.item.not_owned = true;
+    row.item.owner = "Hell's Raiders";
+    CHECK( accessibility::format_trade_row( row, false, false ) ==
+           "apple. Not owned. Unavailable: Won't sell their own equipment." );
+    CHECK( accessibility::format_trade_row( row, false, true ).find( "Owner: Hell's Raiders" ) !=
+           std::string::npos );
+
+    CHECK( accessibility::format_trade_marked( 0, 4 ).empty() );
+    CHECK( accessibility::format_trade_mark_change( "apple", 2, 4 ) == "apple. 2 marked." );
+    CHECK( accessibility::format_trade_mark_change( "apple", 0, 4 ) == "apple. Unmarked." );
+
+    accessibility::trade_balance balance;
+    balance.amount = "$3.00";
+    CHECK( accessibility::format_trade_balance( balance ) == "Balance: credit $3.00, acceptable" );
+    balance.debt = true;
+    balance.amount = "$5.00";
+    balance.acceptable = false;
+    CHECK( accessibility::format_trade_balance( balance ) ==
+           "Balance: you owe $5.00, trader refuses" );
+    accessibility::trade_balance exchange;
+    exchange.exchange = true;
+    CHECK( accessibility::format_trade_balance( exchange ) == "Free exchange, acceptable" );
+
+    CHECK( accessibility::format_trade_pane_label( false ) == "Trader's goods" );
+    CHECK( accessibility::format_trade_pane_label( true ) == "Your goods" );
+    CHECK( accessibility::format_trade_opening( "Pay:", "Rubik", balance ) ==
+           "Pay: Rubik. Balance: you owe $5.00, trader refuses." );
+    CHECK( accessibility::format_trade_opening( "Trade", "Rubik", exchange ) ==
+           "Trade: Rubik. Free exchange, acceptable." );
+
+    accessibility::trade_summary summary;
+    summary.title = "Trade";
+    summary.trader = "Rubik";
+    summary.balance = balance;
+    summary.buying = "$6.00";
+    summary.selling = "$1.00";
+    CHECK( accessibility::format_trade_summary( summary ) ==
+           "Trade: Rubik. Balance: you owe $5.00, trader refuses. Buying: $6.00. Selling: $1.00." );
+    summary.bank = "$100.00";
+    CHECK( accessibility::format_trade_summary( summary ).find( "Bank balance: $100.00." ) !=
+           std::string::npos );
+    CHECK( accessibility::format_trade_bank_change( balance, "$95.00" ) ==
+           "Balance: you owe $5.00, trader refuses. Bank balance: $95.00." );
+
+    CHECK( accessibility::format_trade_result( true ) == "Trade complete" );
+    CHECK( accessibility::format_trade_result( false ) == "Trade cancelled" );
+}
+
+TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibility]" )
+{
+    map &here = get_map();
+    clear_avatar();
+    clear_map();
+    const on_out_of_scope cleanup( []() {
+        clear_map();
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    you.setpos( here, tripoint_bub_ms( 15, 15, 0 ) );
+    g->faction_manager_ptr->create_if_needed();
+    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    item_location own_hammer = you.i_add( item( itype_id( "hammer" ) ) );
+    REQUIRE( own_hammer );
+    own_hammer->set_owner( you );
+
+    npc &trader = spawn_npc( you.pos_bub().xy() + point::east, "thug" );
+    clear_character( trader );
+    trader.set_attitude( NPCATT_NULL );
+    trader.op_of_u = npc_opinion();
+    trader.personality.altruism = 0;
+    REQUIRE( !trader.will_exchange_items_freely() );
+    REQUIRE( trader.max_credit_extended() == 0 );
+    const tripoint_bub_ms trader_pos = trader.pos_bub();
+    item &goods = here.add_item( trader_pos, item( itype_id( "hammer" ) ) );
+    goods.set_owner( trader );
+    const item_location goods_loc( map_cursor( trader_pos ), &goods );
+
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    trade_ui trade( you, trader );
+    // Lay the panes out like the other test selectors instead of at half the screen size.
+    trade.get_active_pane().resize( point( -1, -1 ), point( -1, -1 ) );
+    trade_selector &trader_pane = trade.get_active_pane();
+    REQUIRE( trader_pane.highlight_one_of( { goods_loc } ) );
+    trader_pane.announce_accessibility_focus();
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    const std::string opening = capture_ptr->messages.back();
+    CAPTURE( opening );
+    CHECK( opening.find( "Trade: " + trader.get_name() + ". Balance: credit $0.00, acceptable." ) ==
+           0 );
+    CHECK( opening.find( "Trader's goods. 1 item." ) != std::string::npos );
+    CHECK( opening.find( "hammer" ) != std::string::npos );
+    CHECK( opening.find( " each." ) != std::string::npos );
+    CHECK( opening.find( "Your goods" ) == std::string::npos );
+
+    // A redraw without input stays silent.
+    trader_pane.announce_accessibility_focus();
+    CHECK( capture_ptr->messages.size() == 1 );
+
+    trader_pane.toggle_entry( trader_pane.get_active_column().get_highlighted(), 1 );
+    trader_pane.announce_accessibility_selection();
+    REQUIRE( capture_ptr->messages.size() == 2 );
+    const std::string marked = capture_ptr->messages.back();
+    CAPTURE( marked );
+    CHECK( marked.find( "hammer" ) == 0 );
+    CHECK( marked.find( "Marked. Balance: you owe $" ) != std::string::npos );
+    CHECK( marked.find( ", trader refuses." ) != std::string::npos );
+
+    const std::string status = trader_pane.accessibility_status();
+    CAPTURE( status );
+    CHECK( status.find( "Trade: " ) == 0 );
+    CHECK( status.find( "trader refuses. Buying: $" ) != std::string::npos );
+    CHECK( status.find( "Selling: $0.00." ) != std::string::npos );
+    CHECK( status.find( "Trader's goods." ) != std::string::npos );
+    CHECK( status.find( "1 entry selected" ) != std::string::npos );
+    CHECK( status.find( "1 of 1" ) != std::string::npos );
+
+    trade.pushevent( trade_ui::event::SWITCH );
+    trade.process_events();
+    trade_selector &your_pane = trade.get_active_pane();
+    your_pane.resize( point( -1, -1 ), point( -1, -1 ) );
+    REQUIRE( &your_pane != &trader_pane );
+    REQUIRE( your_pane.highlight_one_of( { own_hammer } ) );
+    your_pane.announce_accessibility_focus();
+    REQUIRE( capture_ptr->messages.size() == 3 );
+    const std::string switched = capture_ptr->messages.back();
+    CAPTURE( switched );
+    CHECK( switched.find( "Your goods." ) == 0 );
+    CHECK( switched.find( "Trader's goods" ) == std::string::npos );
+    CHECK( switched.find( "Balance" ) == std::string::npos );
+    CHECK( switched.find( "hammer" ) != std::string::npos );
+
+    your_pane.toggle_entry( your_pane.get_active_column().get_highlighted(), 1 );
+    your_pane.announce_accessibility_selection();
+    REQUIRE( capture_ptr->messages.size() == 4 );
+    CHECK( capture_ptr->messages.back().find( "Marked. Balance: " ) != std::string::npos );
+    your_pane.toggle_entry( your_pane.get_active_column().get_highlighted(), 0 );
+    your_pane.announce_accessibility_selection();
+    CHECK( capture_ptr->messages.back().find( "hammer. Unmarked. Balance: you owe $" ) == 0 );
+
+    // Switching back names the trader's pane again without the opening summary.
+    trade.pushevent( trade_ui::event::SWITCH );
+    trade.process_events();
+    REQUIRE( &trade.get_active_pane() == &trader_pane );
+    const size_t before_return = capture_ptr->messages.size();
+    trader_pane.announce_accessibility_focus();
+    REQUIRE( capture_ptr->messages.size() == before_return + 1 );
+    const std::string returned = capture_ptr->messages.back();
+    CAPTURE( returned );
+    CHECK( returned.find( "Trader's goods. 1 item." ) == 0 );
+    CHECK( returned.find( "Marked" ) != std::string::npos );
+
+    CHECK( accessibility::repeat_last_announcement() );
+    CHECK( capture_ptr->messages.back() == returned );
+
+    accessibility::reset_backend_after_testing();
 }

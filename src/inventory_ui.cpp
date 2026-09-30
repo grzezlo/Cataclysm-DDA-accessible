@@ -3043,12 +3043,12 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
         return;
     }
 
-    const accessibility::inventory_focus_entry semantic =
-        accessibility_entry( get_active_column().get_highlighted() );
+    const inventory_entry &highlighted = get_active_column().get_highlighted();
+    const accessibility::inventory_focus_entry semantic = accessibility_entry( highlighted );
 
     const size_t column = active_column_index;
     const size_t row = get_active_column().get_highlighted_index();
-    const std::string full_focus = accessibility::format_inventory_focus( semantic, true, true );
+    const std::string full_focus = accessibility_row( highlighted, true, true );
     const std::string snapshot = string_format( "%zu:%zu:%d:%d:%s:%s", column, row,
                                  static_cast<int>( mode ), static_cast<int>( _uimode ),
                                  filter, full_focus );
@@ -3060,23 +3060,14 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     const bool category_changed = semantic.category != accessibility_last_category;
     const bool filter_changed = filter != accessibility_last_filter;
     const bool mode_changed = mode != accessibility_last_mode || _uimode != accessibility_last_uimode;
-    const std::string focus = accessibility::format_inventory_focus( semantic,
+    const std::string focus = accessibility_row( highlighted,
                               accessibility_opening || column_changed || category_changed, false );
 
     std::vector<std::string> context;
     if( accessibility_opening ) {
         // Reopening after an item action returns to the same list; speak only the focus.
         if( !accessibility_context_spoken ) {
-            context.push_back( remove_color_tags( title ) );
-            if( !hint.empty() ) {
-                context.push_back( accessibility::format_visual_hint( remove_color_tags( hint ) ) );
-            }
-            if( display_stats ) {
-                for( const std::string &stat : get_stats() ) {
-                    context.push_back( remove_color_tags( stat ) );
-                }
-                context.push_back( accessibility_capacity( false ) );
-            }
+            context = accessibility_opening_context();
         }
     } else {
         if( filter_changed ) {
@@ -3097,18 +3088,8 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     }
     const bool list_entered = ( accessibility_opening && !accessibility_context_spoken ) ||
                               column_changed;
-    if( list_entered && columns.size() > 1 ) {
-        if( &get_active_column() == &own_inv_column ) {
-            context.push_back( _( "Inventory items" ) );
-        } else if( &get_active_column() == &own_gear_column ) {
-            context.push_back( _( "Worn and wielded items" ) );
-        } else if( &get_active_column() == &map_column ) {
-            context.push_back( _( "Nearby items" ) );
-        } else {
-            context.push_back( _( "Selected items" ) );
-        }
-    }
     if( list_entered ) {
+        context.push_back( accessibility_column_label() );
         context.push_back( accessibility::format_list_count( accessibility_position().second ) );
     } else if( !accessibility_opening && event.empty() ) {
         context.push_back( accessibility::format_list_wrap( static_cast<int>( accessibility_last_row ),
@@ -3127,6 +3108,52 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
     accessibility_last_uimode = _uimode;
     accessibility_opening = false;
     accessibility_context_spoken = true;
+}
+
+std::string inventory_selector::accessibility_row( const inventory_entry &entry,
+        const bool include_context, const bool include_all_cells ) const
+{
+    return accessibility::format_inventory_focus( accessibility_entry( entry ), include_context,
+            include_all_cells );
+}
+
+void inventory_selector::reset_accessibility_focus( const bool list_entered )
+{
+    accessibility_last_snapshot.clear();
+    if( list_entered ) {
+        accessibility_last_column = static_cast<size_t>( -1 );
+    }
+}
+
+std::vector<std::string> inventory_selector::accessibility_opening_context() const
+{
+    std::vector<std::string> context;
+    context.push_back( remove_color_tags( title ) );
+    if( !hint.empty() ) {
+        context.push_back( accessibility::format_visual_hint( remove_color_tags( hint ) ) );
+    }
+    if( display_stats ) {
+        for( const std::string &stat : get_stats() ) {
+            context.push_back( remove_color_tags( stat ) );
+        }
+        context.push_back( accessibility_capacity( false ) );
+    }
+    return context;
+}
+
+std::string inventory_selector::accessibility_column_label() const
+{
+    if( columns.size() <= 1 ) {
+        return {};
+    }
+    if( &get_active_column() == &own_inv_column ) {
+        return _( "Inventory items" );
+    } else if( &get_active_column() == &own_gear_column ) {
+        return _( "Worn and wielded items" );
+    } else if( &get_active_column() == &map_column ) {
+        return _( "Nearby items" );
+    }
+    return _( "Selected items" );
 }
 
 std::string inventory_selector::accessibility_status() const
@@ -3281,7 +3308,7 @@ void inventory_selector::on_input( const inventory_input &input )
         const inventory_entry &entry = get_active_column().get_highlighted();
         if( entry.is_item() ) {
             const accessibility::inventory_focus_entry semantic = accessibility_entry( entry );
-            const std::string row = accessibility::format_inventory_focus( semantic, true, true );
+            const std::string row = accessibility_row( entry, true, true );
             std::vector<std::string> details = accessibility::is_active() ?
                                                preset.get_accessibility_details( entry.any_item() ) :
                                                std::vector<std::string>();
@@ -4291,14 +4318,20 @@ void inventory_multiselector::announce_accessibility_selection()
     if( !accessibility::is_active() ) {
         return;
     }
-    const inventory_entry &entry = get_active_column().get_highlighted();
-    announce_accessibility_focus( true, accessibility::format_semantic_sequence( {
+    announce_accessibility_focus( true,
+                                  accessibility_selection_event( get_active_column().get_highlighted() ) );
+}
+
+std::string inventory_multiselector::accessibility_selection_event(
+    const inventory_entry &entry ) const
+{
+    return accessibility::format_semantic_sequence( {
         accessibility::format_inventory_selection_change(
             entry.is_item() ? remove_color_tags( preset.get_cell_text( entry, 0 ) ) : std::string(),
             accessibility_selection_state( entry ),
             accessibility_selected_entries() ),
         accessibility_capacity( true )
-    } ) );
+    } );
 }
 
 void inventory_multiselector::on_selection_input( const inventory_input &input )
@@ -4966,6 +4999,7 @@ void trade_selector::execute()
     while( !exit ) {
         _ui->invalidate_ui();
         ui_manager::redraw_invalidated();
+        announce_accessibility_focus();
         std::string const &action = _ctxt_trade.handle_input();
         if( action == ACTION_SWITCH_PANES ) {
             _parent->pushevent( trade_ui::event::SWITCH );
@@ -4978,16 +5012,28 @@ void trade_selector::execute()
             _parent->pushevent( trade_ui::event::TRADECANCEL );
             exit = true;
         } else if( action == ACTION_AUTOBALANCE ) {
+            const select_t before = to_use;
             _parent->autobalance();
+            if( to_use != before ) {
+                announce_accessibility_selection();
+            } else {
+                accessibility::announce( _parent->accessibility_balance() );
+            }
         } else if( action == ACTION_BANKBALANCE ) {
             _parent->bank_balance();
         } else {
             input_event const iev = _ctxt_trade.get_raw_input();
             inventory_input const input =
                 process_input( ctxt.input_to_action( iev ), iev.get_first_input() );
+            if( input.action == "ACCESSIBILITY_REPEAT_LAST" ) {
+                accessibility::repeat_last_announcement();
+                continue;
+            }
+            note_accessibility_move( input.action );
             inventory_drop_selector::on_input( input );
             if( input.action == "HELP_KEYBINDINGS" ) {
                 ctxt.display_menu();
+                reset_accessibility_focus( false );
             }
         }
     }
@@ -4996,6 +5042,63 @@ void trade_selector::execute()
 void trade_selector::on_toggle()
 {
     _parent->recalc_values_cpane();
+}
+
+std::string trade_selector::accessibility_row( const inventory_entry &entry,
+        const bool include_context, const bool include_all_cells ) const
+{
+    if( !entry.is_item() ) {
+        return inventory_drop_selector::accessibility_row( entry, include_context, include_all_cells );
+    }
+    accessibility::trade_row row;
+    row.item = accessibility_entry( entry );
+    // The only cell after the name is the unit price; refused rows show none.
+    if( row.item.denial.empty() && !row.item.cells.empty() ) {
+        row.unit_price = row.item.cells.front().second;
+    }
+    row.marked = entry.chosen_count;
+    row.available = entry.get_available_count();
+    return accessibility::format_trade_row( row, include_context, include_all_cells );
+}
+
+std::string trade_selector::accessibility_status() const
+{
+    return accessibility::format_semantic_sequence( {
+        _parent->accessibility_summary(),
+        _parent->accessibility_pane_label( *this ),
+        inventory_drop_selector::accessibility_status()
+    } );
+}
+
+std::vector<std::string> trade_selector::accessibility_opening_context() const
+{
+    // The first pane shown introduces the trade; the other pane is entered by switching.
+    return { _parent->accessibility_take_opening() };
+}
+
+std::string trade_selector::accessibility_column_label() const
+{
+    std::vector<std::string> parts = { _parent->accessibility_pane_label( *this ) };
+    const std::vector<inventory_column *> &all_columns = get_all_columns();
+    const size_t item_columns = std::count_if( all_columns.begin(), all_columns.end(),
+    []( const inventory_column * col ) {
+        return col->allows_selecting() && col->activatable();
+    } );
+    if( item_columns > 1 ) {
+        parts.push_back( inventory_drop_selector::accessibility_column_label() );
+    }
+    return accessibility::format_semantic_sequence( parts );
+}
+
+std::string trade_selector::accessibility_selection_event( const inventory_entry &entry ) const
+{
+    return accessibility::format_semantic_sequence( {
+        entry.is_item() ? accessibility::format_trade_mark_change(
+            remove_color_tags( preset.get_cell_text( entry, 0 ) ), entry.chosen_count,
+            entry.get_available_count() ) : std::string(),
+        _parent->accessibility_balance(),
+        accessibility_capacity( false )
+    } );
 }
 
 void trade_selector::resize( point const &size, point const &origin )

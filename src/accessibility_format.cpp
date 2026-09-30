@@ -1081,6 +1081,128 @@ std::string format_inventory_capacity( const inventory_capacity &capacity,
     return format_semantic_sequence( parts );
 }
 
+std::string format_trade_marked( const size_t marked, const size_t available )
+{
+    if( marked == 0 ) {
+        return {};
+    }
+    if( available <= 1 ) {
+        return _( "Marked" );
+    }
+    //~ Number of units of a trade row marked for the trade
+    return string_format( n_gettext( "%d marked", "%d marked", marked ), static_cast<int>( marked ) );
+}
+
+std::string format_trade_row( const trade_row &row, const bool include_context,
+                              const bool include_details )
+{
+    const inventory_focus_entry &item = row.item;
+    std::vector<std::string> parts;
+    if( include_context && !item.category.empty() ) {
+        parts.push_back( item.category );
+    }
+    parts.push_back( item.caption );
+    if( !row.unit_price.empty() ) {
+        //~ Price of one unit of a trade row
+        parts.push_back( string_format( _( "%s each" ), row.unit_price ) );
+    }
+    parts.push_back( format_trade_marked( row.marked, row.available ) );
+    if( item.not_owned ) {
+        parts.push_back( _( "Not owned" ) );
+    }
+    if( !item.denial.empty() ) {
+        parts.push_back( string_format( _( "Unavailable: %s" ), item.denial ) );
+    }
+    if( include_details ) {
+        if( !item.location.empty() ) {
+            parts.push_back( string_format( _( "Location: %s" ), item.location ) );
+        }
+        if( item.favorite ) {
+            parts.push_back( _( "Favorite" ) );
+        }
+        if( item.has_contents ) {
+            parts.push_back( item.contents_collapsed ? _( "Contents collapsed" ) :
+                             _( "Contents expanded" ) );
+        }
+        if( !item.owner.empty() ) {
+            parts.push_back( string_format( _( "Owner: %s" ), item.owner ) );
+        }
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_trade_mark_change( const std::string &caption, const size_t marked,
+                                      const size_t available )
+{
+    return format_semantic_sequence( {
+        caption, marked == 0 ? _( "Unmarked" ) : format_trade_marked( marked, available )
+    } );
+}
+
+std::string format_trade_balance( const trade_balance &balance )
+{
+    std::string amount;
+    if( balance.exchange ) {
+        amount = _( "Free exchange" );
+    } else if( balance.debt ) {
+        amount = string_format( _( "Balance: you owe %s" ), balance.amount );
+    } else {
+        amount = string_format( _( "Balance: credit %s" ), balance.amount );
+    }
+    //~ Trade balance and whether the trader accepts it, e.g. "Balance: credit $3.00, acceptable"
+    return string_format( _( "%1$s, %2$s" ), amount,
+                          balance.acceptable ? _( "acceptable" ) : _( "trader refuses" ) );
+}
+
+std::string format_trade_pane_label( const bool yours )
+{
+    return yours ? _( "Your goods" ) : _( "Trader's goods" );
+}
+
+std::string format_trade_opening( const std::string &title, const std::string &trader,
+                                  const trade_balance &balance )
+{
+    std::string purpose = collapse_whitespace( title );
+    while( !purpose.empty() && ( purpose.back() == ':' || purpose.back() == ' ' ) ) {
+        purpose.pop_back();
+    }
+    //~ Trade window purpose and the trader's name, e.g. "Trade: Rubik"
+    const std::string heading = purpose.empty() ? trader :
+                                string_format( _( "%1$s: %2$s" ), purpose, trader );
+    return format_semantic_sequence( { heading, format_trade_balance( balance ) } );
+}
+
+std::string format_trade_summary( const trade_summary &summary )
+{
+    std::vector<std::string> parts = {
+        format_trade_opening( summary.title, summary.trader, summary.balance )
+    };
+    if( !summary.buying.empty() ) {
+        //~ Value of the trader's goods marked for the trade
+        parts.push_back( string_format( _( "Buying: %s" ), summary.buying ) );
+    }
+    if( !summary.selling.empty() ) {
+        //~ Value of the player's goods marked for the trade
+        parts.push_back( string_format( _( "Selling: %s" ), summary.selling ) );
+    }
+    if( !summary.bank.empty() ) {
+        parts.push_back( string_format( _( "Bank balance: %s" ), summary.bank ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_trade_bank_change( const trade_balance &balance, const std::string &bank )
+{
+    return format_semantic_sequence( {
+        format_trade_balance( balance ), string_format( _( "Bank balance: %s" ), bank )
+    } );
+}
+
+std::string format_trade_result( const bool traded )
+{
+    return traded ? _( "Trade complete" ) : _( "Trade cancelled" );
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {

@@ -8,6 +8,8 @@
 #include <memory>
 #include <unordered_set>
 
+#include "accessibility.h"
+#include "accessibility_format.h"
 #include "character.h"
 #include "clzones.h"
 #include "color.h"
@@ -176,13 +178,9 @@ trade_ui::trade_result_t trade_ui::perform_trade()
 
     while( !_exit ) {
         _panes[_cpane]->execute();
-
-        while( !_queue.empty() ) {
-            event const ev = _queue.front();
-            _queue.pop();
-            _process( ev );
-        }
+        process_events();
     }
+    accessibility::announce( accessibility::format_trade_result( _traded ) );
 
     if( _traded ) {
         return { _traded,
@@ -195,6 +193,65 @@ trade_ui::trade_result_t trade_ui::perform_trade()
     }
 
     return { false, 0, 0, 0, 0, {}, {} };
+}
+
+void trade_ui::process_events()
+{
+    while( !_queue.empty() ) {
+        event const ev = _queue.front();
+        _queue.pop();
+        _process( ev );
+    }
+}
+
+trade_ui::pane_t &trade_ui::get_active_pane()
+{
+    return *_panes[_cpane];
+}
+
+accessibility::trade_balance trade_ui::_accessibility_balance() const
+{
+    npc const &np = *_parties[_trader]->as_npc();
+    accessibility::trade_balance balance;
+    balance.exchange = np.will_exchange_items_freely();
+    balance.debt = _balance < 0;
+    balance.amount = format_money( std::abs( _balance ) );
+    balance.acceptable = npc_trading::npc_will_accept_trade( np, _balance );
+    return balance;
+}
+
+std::string trade_ui::accessibility_balance() const
+{
+    return accessibility::format_trade_balance( _accessibility_balance() );
+}
+
+std::string trade_ui::accessibility_summary() const
+{
+    accessibility::trade_summary summary;
+    summary.title = _title;
+    summary.trader = _parties[_trader]->get_name();
+    summary.balance = _accessibility_balance();
+    summary.buying = format_money( _trade_values[_trader] );
+    summary.selling = format_money( _trade_values[_you] );
+    if( get_option<bool>( "CAPITALISM" ) ) {
+        summary.bank = format_money( _bank );
+    }
+    return accessibility::format_trade_summary( summary );
+}
+
+std::string trade_ui::accessibility_pane_label( pane_t const &pane ) const
+{
+    return accessibility::format_trade_pane_label( &pane == _panes[_you].get() );
+}
+
+std::string trade_ui::accessibility_take_opening()
+{
+    if( _accessibility_opened ) {
+        return {};
+    }
+    _accessibility_opened = true;
+    return accessibility::format_trade_opening( _title, _parties[_trader]->get_name(),
+            _accessibility_balance() );
 }
 
 void trade_ui::recalc_values_cpane()
@@ -241,6 +298,8 @@ void trade_ui::bank_balance()
     }
     _bank -= _delta_bank;
     recalc_values_cpane();
+    accessibility::announce( accessibility::format_trade_bank_change( _accessibility_balance(),
+                             format_money( _bank ) ) );
 }
 
 void trade_ui::resize()
@@ -260,11 +319,16 @@ void trade_ui::_process( event const &ev )
         case event::TRADEOK: {
             _traded = _confirm_trade();
             _exit = _traded;
+            if( !_traded ) {
+                // The refusal or declined confirmation was spoken; return to the focused row.
+                _panes[_cpane]->reset_accessibility_focus( false );
+            }
             break;
         }
         case event::SWITCH: {
             _panes[_cpane]->get_ui()->invalidate_ui();
             _cpane = -_cpane + 1;
+            _panes[_cpane]->reset_accessibility_focus( true );
             break;
         }
         case event::NEVENTS: {

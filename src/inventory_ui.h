@@ -925,7 +925,14 @@ class inventory_selector
         void toggle_navigation_mode();
 
         accessibility::inventory_focus_entry accessibility_entry( const inventory_entry &entry ) const;
+        /** Spoken row of an entry: concise, or everything that ACCESSIBILITY_DETAILS reads. */
+        virtual std::string accessibility_row( const inventory_entry &entry, bool include_context,
+                                               bool include_all_cells ) const;
+    public:
         void announce_accessibility_focus( bool force = false, const std::string &event = {} );
+        /** Speak the focus again on the next announcement, optionally as a newly entered list. */
+        void reset_accessibility_focus( bool list_entered );
+    protected:
         virtual std::string accessibility_selection_state( const inventory_entry & ) const {
             return {};
         }
@@ -941,6 +948,10 @@ class inventory_selector
         virtual std::string accessibility_destination( const inventory_entry & ) const {
             return {};
         }
+        /** Purpose, hint, and statistics spoken once when the selector opens. */
+        virtual std::vector<std::string> accessibility_opening_context() const;
+        /** Name of the active column, spoken when it is entered; empty with a single column. */
+        virtual std::string accessibility_column_label() const;
 
         const navigation_mode_data &get_navigation_data( navigation_mode m ) const;
 
@@ -1066,7 +1077,11 @@ class inventory_multiselector : public inventory_selector
         virtual void on_toggle() {};
         void on_input( const inventory_input &input );
         void on_selection_input( const inventory_input &input );
+    public:
         void announce_accessibility_selection();
+    protected:
+        /** Speech after the marks change: the focused row's new state and its consequences. */
+        virtual std::string accessibility_selection_event( const inventory_entry &entry ) const;
         size_t accessibility_selected_entries() const;
         int count = 0;
         stats get_raw_stats() const override;
