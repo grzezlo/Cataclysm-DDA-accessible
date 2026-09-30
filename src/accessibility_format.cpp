@@ -75,6 +75,13 @@ bool ends_sentence( const std::string &text, const bool allow_clause_end )
     if( text.empty() ) {
         return false;
     }
+    // A closing quote after the terminator, as in quoted dialogue, still ends the sentence.
+    if( text.size() > 1 && text.back() == '"' ) {
+        const char quoted = text[text.size() - 2];
+        if( quoted == '.' || quoted == '!' || quoted == '?' ) {
+            return true;
+        }
+    }
     const char last = text.back();
     if( last == '.' || last == '!' || last == '?' ) {
         return true;
@@ -2331,6 +2338,228 @@ std::string format_armor_summary( const std::string &filter, const std::vector<a
                                         layering ) );
     }
     return format_semantic_sequence( parts );
+}
+
+std::string format_dialogue_utterance( const std::string &speaker, const std::string &text )
+{
+    const std::string spoken_text = remove_color_tags( text );
+    if( speaker.empty() ) {
+        return spoken_text;
+    }
+    //~ Dialogue history element: %1$s: speaker name, %2$s: what they said or did
+    return string_format( pgettext( "dialogue utterance", "%1$s: %2$s" ),
+                          remove_color_tags( speaker ), spoken_text );
+}
+
+std::string format_dialogue_response( const dialogue_response_row &row )
+{
+    const std::string text = remove_color_tags( row.text );
+    std::string hint;
+    switch( row.hint ) {
+        case dialogue_response_hint::none:
+            break;
+        case dialogue_response_hint::action:
+            hint = _( "Action" );
+            break;
+        case dialogue_response_hint::helpless:
+            hint = _( "Leaves you helpless" );
+            break;
+        case dialogue_response_hint::hostile:
+            hint = _( "May provoke an attack" );
+            break;
+    }
+    std::string unavailable;
+    if( row.unavailable ) {
+        unavailable = row.reason.empty() ? _( "Unavailable" ) :
+                      string_format( _( "Unavailable: %s" ), remove_color_tags( row.reason ) );
+    }
+    return format_semantic_sequence( {
+        //~ Dialogue response row: %1$s: hotkey, %2$s: response text
+        row.key.empty() ? text : string_format( pgettext( "dialogue response", "%1$s, %2$s" ),
+                                                format_spoken_key( row.key ), text ),
+        hint, unavailable
+    } );
+}
+
+std::string format_dialogue_prompt( const std::string &label, const size_t count )
+{
+    //~ Dialogue response prompt: %1$s: label such as "Your response", %2$d: number of responses
+    return format_semantic_sequence( { string_format( n_gettext( "%1$s, %2$d option",
+                                       "%1$s, %2$d options", count ), label, static_cast<int>( count ) )
+                                     } );
+}
+
+void dialogue_speech_model::set_title( const std::string &new_title )
+{
+    title = new_title;
+}
+
+void dialogue_speech_model::set_prompt_label( const std::string &label )
+{
+    prompt_label = label;
+}
+
+void dialogue_speech_model::add_utterance( const std::string &text, const bool own )
+{
+    const std::string spoken = format_semantic_sequence( { remove_color_tags( text ) } );
+    if( !spoken.empty() ) {
+        history.emplace_back( spoken, own );
+    }
+}
+
+void dialogue_speech_model::set_options( const std::vector<option> &new_options,
+        const size_t responses, const int cursor )
+{
+    options = new_options;
+    response_count = std::min( responses, options.size() );
+    option_focus = options.empty() ? 0 : std::clamp( cursor, 0,
+                   static_cast<int>( options.size() ) - 1 );
+}
+
+std::string dialogue_speech_model::prompt() const
+{
+    return format_dialogue_prompt( prompt_label, response_count );
+}
+
+std::string dialogue_speech_model::focus() const
+{
+    if( responses_open ) {
+        return option_row( option_focus );
+    }
+    return history_focus < history.size() ? history[history_focus].first : prompt();
+}
+
+std::string dialogue_speech_model::option_row( const size_t index ) const
+{
+    return index < options.size() ? options[index].spoken : std::string();
+}
+
+std::string dialogue_speech_model::summary() const
+{
+    if( responses_open ) {
+        return format_semantic_sequence( { title, prompt_label,
+                                           format_list_position( option_focus + 1, options.size() )
+                                         } );
+    }
+    if( history_focus < history.size() ) {
+        return format_semantic_sequence( { title, _( "Conversation" ),
+                                           format_list_position( history_focus + 1, history.size() )
+                                         } );
+    }
+    return format_semantic_sequence( { title, prompt() } );
+}
+
+std::string dialogue_speech_model::begin_topic()
+{
+    std::vector<std::string> parts;
+    for( size_t i = first_unspoken; i < history.size(); ++i ) {
+        if( !history[i].second ) {
+            parts.push_back( history[i].first );
+        }
+    }
+    first_unspoken = history.size();
+    history_focus = history.size();
+    responses_open = false;
+    parts.push_back( prompt() );
+    return format_semantic_sequence( parts );
+}
+
+dialogue_speech_model::result dialogue_speech_model::handle( const std::string &action )
+{
+    result res;
+    res.consumed = true;
+    if( action == "ACCESSIBILITY_STATUS" ) {
+        res.speech = summary();
+        return res;
+    }
+    if( !responses_open ) {
+        const int last = static_cast<int>( history.size() );
+        const auto move_to = [&]( const int target ) {
+            history_focus = std::clamp( target, 0, last );
+            res.speech = focus();
+        };
+        const int current = static_cast<int>( history_focus );
+        if( action == "UP" ) {
+            move_to( current - 1 );
+        } else if( action == "DOWN" ) {
+            move_to( current + 1 );
+        } else if( action == "PAGE_UP" ) {
+            move_to( current - 10 );
+        } else if( action == "PAGE_DOWN" ) {
+            move_to( current + 10 );
+        } else if( action == "HOME" ) {
+            move_to( 0 );
+        } else if( action == "END" ) {
+            move_to( last );
+        } else if( action == "CONFIRM" ) {
+            if( history_focus < history.size() || options.empty() ) {
+                res.speech = focus();
+            } else {
+                responses_open = true;
+                res.speech = format_semantic_sequence( { prompt(), focus() } );
+                if( option_focus < static_cast<int>( response_count ) ) {
+                    res.response_cursor = option_focus;
+                }
+            }
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( history_focus < history.size() ) {
+                res.document = history[history_focus].first;
+            } else {
+                res.speech = prompt();
+            }
+        } else {
+            res.consumed = false;
+            res.action = action;
+        }
+        return res;
+    }
+
+    const int count = static_cast<int>( options.size() );
+    const auto move_to = [&]( const int target, const int direction, const bool wrap ) {
+        if( count == 0 ) {
+            return;
+        }
+        const int previous = option_focus;
+        option_focus = wrap ? ( target % count + count ) % count : std::clamp( target, 0, count - 1 );
+        res.speech = format_semantic_sequence( {
+            wrap ? format_list_wrap( previous, option_focus, direction ) : std::string(),
+            focus()
+        } );
+        if( option_focus < static_cast<int>( response_count ) ) {
+            res.response_cursor = option_focus;
+        }
+    };
+    if( action == "UP" ) {
+        move_to( option_focus - 1, -1, true );
+    } else if( action == "DOWN" ) {
+        move_to( option_focus + 1, 1, true );
+    } else if( action == "PAGE_UP" ) {
+        move_to( option_focus - 5, -1, false );
+    } else if( action == "PAGE_DOWN" ) {
+        move_to( option_focus + 5, 1, false );
+    } else if( action == "HOME" ) {
+        move_to( 0, -1, false );
+    } else if( action == "END" ) {
+        move_to( count - 1, 1, false );
+    } else if( action == "QUIT" ) {
+        responses_open = false;
+        history_focus = history.size();
+        res.speech = prompt();
+    } else if( action == "ACCESSIBILITY_DETAILS" ) {
+        res.document = focus();
+    } else if( action == "CONFIRM" && option_focus < count ) {
+        res.consumed = false;
+        if( option_focus < static_cast<int>( response_count ) ) {
+            res.action = action;
+            res.response_cursor = option_focus;
+        } else {
+            res.action = options[option_focus].action;
+        }
+    } else {
+        res.consumed = false;
+        res.action = action;
+    }
+    return res;
 }
 
 std::string format_activity_start( const std::string &label, const std::string &duration,

@@ -19,6 +19,9 @@
 #include "avatar_action.h"
 #include "calendar.h"
 #include "crafting_gui.h"
+#include "dialogue.h"
+#include "dialogue_win.h"
+#include "faction.h"
 #include "cata_catch.h"
 #include "bionics.h"
 #include "bionics_ui.h"
@@ -47,6 +50,7 @@
 #include "pickup.h"
 #include "mutation.h"
 #include "mutation_ui.h"
+#include "npc.h"
 #include "output.h"
 #include "player_activity.h"
 #include "player_display.h"
@@ -4171,4 +4175,224 @@ TEST_CASE( "sort_armor_speaks_conflicts_neighbours_summary_and_details", "[acces
     for( const std::string &line : details ) {
         CHECK( line.find( "<color" ) == std::string::npos );
     }
+}
+
+TEST_CASE( "dialogue_formatters_speak_speaker_key_consequence_and_unavailable_reason",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_dialogue_utterance( "Rubik", "\"Hello, stranger.\"" ) ==
+           "Rubik: \"Hello, stranger.\"" );
+    CHECK( accessibility::format_dialogue_utterance( "", "<color_green>Access granted.</color>" ) ==
+           "Access granted." );
+
+    accessibility::dialogue_response_row row;
+    row.key = "a";
+    row.text = "Ask about the job";
+    CHECK( accessibility::format_dialogue_response( row ) == "a, Ask about the job." );
+    row.key = "L";
+    row.text = "Look at";
+    CHECK( accessibility::format_dialogue_response( row ) == "Shift+l, Look at." );
+    row.key = "c";
+    row.text = "[LIE 50%] I'm a doctor";
+    row.unavailable = true;
+    row.reason = "requires a lab coat.";
+    CHECK( accessibility::format_dialogue_response( row ) ==
+           "c, [LIE 50%] I'm a doctor. Unavailable: requires a lab coat." );
+    row.reason.clear();
+    CHECK( accessibility::format_dialogue_response( row ) ==
+           "c, [LIE 50%] I'm a doctor. Unavailable." );
+    row.unavailable = false;
+    row.hint = accessibility::dialogue_response_hint::hostile;
+    row.text = "Attack";
+    CHECK( accessibility::format_dialogue_response( row ) == "c, Attack. May provoke an attack." );
+    row.hint = accessibility::dialogue_response_hint::helpless;
+    row.text = "Let them tie you up";
+    CHECK( accessibility::format_dialogue_response( row ) ==
+           "c, Let them tie you up. Leaves you helpless." );
+    row.hint = accessibility::dialogue_response_hint::action;
+    row.text = "Hand over the radio";
+    CHECK( accessibility::format_dialogue_response( row ) ==
+           "c, Hand over the radio. Action." );
+
+    CHECK( accessibility::format_dialogue_prompt( "Your response", 1 ) == "Your response, 1 option." );
+    CHECK( accessibility::format_dialogue_prompt( "Your response", 5 ) ==
+           "Your response, 5 options." );
+}
+
+TEST_CASE( "dialogue_speech_model_navigates_history_and_responses", "[accessibility][nogame]" )
+{
+    using model = accessibility::dialogue_speech_model;
+    const auto response = []( const std::string & key, const std::string & text ) {
+        accessibility::dialogue_response_row row;
+        row.key = key;
+        row.text = text;
+        return accessibility::format_dialogue_response( row );
+    };
+    accessibility::dialogue_response_row lie;
+    lie.key = "b";
+    lie.text = "[LIE 50%] I'm a doctor";
+    lie.unavailable = true;
+    lie.reason = "requires a lab coat.";
+    const std::string lie_row = accessibility::format_dialogue_response( lie );
+
+    model m;
+    m.set_title( "Dialogue: Rubik" );
+    m.set_prompt_label( "Your response" );
+    m.add_utterance( accessibility::format_dialogue_utterance( "Rubik", "\"Hello, stranger.\"" ),
+                     false );
+    m.set_options( {
+        { response( "a", "Ask about the job" ), "" },
+        { lie_row, "" },
+        { response( "c", "Bye" ), "" },
+        { response( "L", "Look at" ), "LOOK_AT" }
+    }, 3, 0 );
+
+    // Entry speaks the new utterance once and focuses the prompt.
+    CHECK( m.begin_topic() == "Rubik: \"Hello, stranger.\" Your response, 3 options." );
+    CHECK_FALSE( m.in_response_list() );
+
+    // Up rereads the utterance and stops at the oldest one.
+    model::result r = m.handle( "UP" );
+    CHECK( r.consumed );
+    CHECK( r.speech == "Rubik: \"Hello, stranger.\"" );
+    CHECK( r.response_cursor == -1 );
+    CHECK( m.handle( "UP" ).speech == "Rubik: \"Hello, stranger.\"" );
+    r = m.handle( "ACCESSIBILITY_DETAILS" );
+    CHECK( r.consumed );
+    CHECK( r.document == "Rubik: \"Hello, stranger.\"" );
+    CHECK( m.handle( "ACCESSIBILITY_STATUS" ).speech == "Dialogue: Rubik. Conversation. 1 of 1." );
+    // Enter on an utterance only rereads it.
+    CHECK( m.handle( "CONFIRM" ).speech == "Rubik: \"Hello, stranger.\"" );
+    CHECK( m.handle( "DOWN" ).speech == "Your response, 3 options." );
+    CHECK( m.handle( "DOWN" ).speech == "Your response, 3 options." );
+    CHECK( m.handle( "ACCESSIBILITY_STATUS" ).speech ==
+           "Dialogue: Rubik. Your response, 3 options." );
+
+    // Letter hotkeys and Escape keep the game behavior on the conversation level.
+    r = m.handle( "ANY_INPUT" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "ANY_INPUT" );
+    CHECK( r.speech.empty() );
+    r = m.handle( "QUIT" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "QUIT" );
+
+    // Enter on the prompt opens the response list at the visible cursor.
+    r = m.handle( "CONFIRM" );
+    CHECK( r.consumed );
+    CHECK( m.in_response_list() );
+    CHECK( r.speech == "Your response, 3 options. a, Ask about the job." );
+    CHECK( r.response_cursor == 0 );
+    r = m.handle( "DOWN" );
+    CHECK( r.consumed );
+    CHECK( r.speech == lie_row );
+    CHECK( r.response_cursor == 1 );
+    CHECK( m.focus() == lie_row );
+    CHECK( m.option_row( 1 ) == lie_row );
+    CHECK( m.handle( "DOWN" ).speech == "c, Bye." );
+    // Extra actions follow the responses; the visible cursor stays on the responses.
+    r = m.handle( "DOWN" );
+    CHECK( r.speech == "Shift+l, Look at." );
+    CHECK( r.response_cursor == -1 );
+    CHECK( m.handle( "ACCESSIBILITY_STATUS" ).speech == "Dialogue: Rubik. Your response. 4 of 4." );
+    CHECK( m.handle( "ACCESSIBILITY_DETAILS" ).document == "Shift+l, Look at." );
+    r = m.handle( "CONFIRM" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "LOOK_AT" );
+    // Wrapping says top or bottom before the row.
+    CHECK( m.handle( "DOWN" ).speech == "Top. a, Ask about the job." );
+    CHECK( m.handle( "UP" ).speech == "Bottom. Shift+l, Look at." );
+    CHECK( m.handle( "HOME" ).speech == "a, Ask about the job." );
+    CHECK( m.handle( "END" ).speech == "Shift+l, Look at." );
+    r = m.handle( "ANY_INPUT" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "ANY_INPUT" );
+
+    // Escape returns to the prompt instead of leaving the conversation.
+    r = m.handle( "QUIT" );
+    CHECK( r.consumed );
+    CHECK( r.speech == "Your response, 3 options." );
+    CHECK_FALSE( m.in_response_list() );
+
+    // Reopening keeps the list position; Enter on a response confirms it.
+    CHECK( m.handle( "CONFIRM" ).speech == "Your response, 3 options. Shift+l, Look at." );
+    m.handle( "HOME" );
+    m.handle( "DOWN" );
+    r = m.handle( "CONFIRM" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "CONFIRM" );
+    CHECK( r.response_cursor == 1 );
+
+    // A topic transition speaks only the new line, not the player's own choice.
+    m.add_utterance( accessibility::format_dialogue_utterance( "You", "Ask about the job" ), true );
+    m.add_utterance( accessibility::format_dialogue_utterance( "Rubik", "We need supplies." ), false );
+    m.set_options( { { response( "a", "Sure" ), "" }, { response( "b", "No" ), "" } }, 2, 0 );
+    CHECK( m.begin_topic() == "Rubik: We need supplies. Your response, 2 options." );
+    CHECK_FALSE( m.in_response_list() );
+    // A repeated prompt without new lines speaks only the prompt.
+    CHECK( m.begin_topic() == "Your response, 2 options." );
+    CHECK( m.handle( "UP" ).speech == "Rubik: We need supplies." );
+    CHECK( m.handle( "UP" ).speech == "You: Ask about the job." );
+    CHECK( m.handle( "ACCESSIBILITY_STATUS" ).speech == "Dialogue: Rubik. Conversation. 2 of 3." );
+    CHECK( m.handle( "HOME" ).speech == "Rubik: \"Hello, stranger.\"" );
+    CHECK( m.handle( "END" ).speech == "Your response, 2 options." );
+    CHECK( m.handle( "PAGE_UP" ).speech == "Rubik: \"Hello, stranger.\"" );
+    CHECK( m.handle( "PAGE_DOWN" ).speech == "Your response, 2 options." );
+    // Alt+D on the prompt repeats it.
+    r = m.handle( "ACCESSIBILITY_DETAILS" );
+    CHECK( r.document.empty() );
+    CHECK( r.speech == "Your response, 2 options." );
+    // Unrelated actions pass through untouched.
+    r = m.handle( "SCROLL_INFOBOX_UP" );
+    CHECK_FALSE( r.consumed );
+    CHECK( r.action == "SCROLL_INFOBOX_UP" );
+
+    // Computer terminals follow the same model without a speaker.
+    model terminal;
+    terminal.set_prompt_label( "Your input" );
+    terminal.add_utterance( accessibility::format_dialogue_utterance( "", "Enter password." ), false );
+    terminal.set_options( { { response( "a", "Log out" ), "" } }, 1, 0 );
+    CHECK( terminal.begin_topic() == "Enter password. Your input, 1 option." );
+    CHECK( terminal.handle( "CONFIRM" ).speech == "Your input, 1 option. a, Log out." );
+}
+
+TEST_CASE( "dialogue_response_rows_speak_key_consequence_and_unavailable_reason",
+           "[accessibility]" )
+{
+    map &here = get_map();
+    clear_avatar();
+    clear_map();
+    const on_out_of_scope cleanup( []() {
+        clear_map();
+        clear_avatar();
+    } );
+    avatar &you = get_avatar();
+    you.setpos( here, tripoint_bub_ms( 15, 15, 0 ) );
+    g->faction_manager_ptr->create_if_needed();
+    const character_id npc_id = here.place_npc( point_bub_ms( 25, 25 ),
+                                string_id<npc_template>( "test_talker" ) );
+    g->load_npcs();
+    npc *beta = g->find_npc( npc_id );
+    REQUIRE( beta != nullptr );
+
+    dialogue d( get_talker_for( you ), get_talker_for( *beta ) );
+    d.add_topic( "TALK_TEST_SHOW_ALWAYS2" );
+    d.gen_responses( d.topic_stack.back() );
+    REQUIRE( d.responses.size() == 2 );
+    const talk_data disabled = d.responses[0].create_option_line( d,
+                               input_event( 'a', input_event_t::keyboard_char ) );
+    CHECK( disabled.spoken == "a, You should see this response but not be able to select it "
+           "(except in debug mode) because. Unavailable: zero isn't greater than one." );
+    // The displayed row keeps the reason after the text.
+    CHECK( remove_color_tags( disabled.text ).find( " -- [zero isn't greater than one.]" ) !=
+           std::string::npos );
+    CHECK( d.responses[1].create_option_line( d,
+            input_event( 'b', input_event_t::keyboard_char ) ).spoken == "b, All done." );
+
+    d.add_topic( "TALK_TEST_EFFECTS" );
+    d.gen_responses( d.topic_stack.back() );
+    REQUIRE( d.responses.size() == 19 );
+    CHECK( d.responses[12].create_option_line( d,
+            input_event( 'm', input_event_t::keyboard_char ) ).spoken ==
+           "m, This is a multi-effect response. May provoke an attack." );
 }

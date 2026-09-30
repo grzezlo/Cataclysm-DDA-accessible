@@ -7,6 +7,7 @@
 #include <tuple>
 #include <vector>
 
+#include "accessibility_format.h"
 #include "color.h"
 #include "cursesdef.h"
 #include "output.h"
@@ -18,6 +19,8 @@ struct talk_data {
     nc_color color;
     std::string hotkey_desc;
     std::string text;
+    /** Screen reader row with the hotkey and what the color shows. */
+    std::string spoken;
     multiline_list_entry get_entry() const;
 };
 
@@ -37,7 +40,7 @@ class dialogue_window
         void add_to_history( const std::string &text );
         /** Adds a message to the conversation history for a given speaker. */
         void add_to_history( const std::string &text, const std::string &speaker_name,
-                             nc_color speaker_color );
+                             nc_color speaker_color, bool own = false );
         /** Adds a separator to the conversation history. */
         void add_history_separator();
 
@@ -47,6 +50,18 @@ class dialogue_window
 
         /** sets debug info to draw for a response */
         void set_responses_debug( const std::vector<std::string> &responses );
+
+        /** Screen reader: speak the new utterances and focus the response prompt. */
+        void announce_topic( const std::string &npc_name );
+        /**
+         * Screen reader navigation of the conversation and the response list.
+         * Rewrites `action` to what the dialogue must handle, or clears it.
+         */
+        void handle_accessible_input( std::string &action );
+        /** Screen reader: speak the focused element again. */
+        void announce_accessible_focus() const;
+        /** Screen reader: speak why a chosen response cannot be used. */
+        void announce_unavailable_response( size_t index ) const;
 
         /** Unhighlights all messages. */
         void clear_history_highlights();
@@ -73,6 +88,8 @@ class dialogue_window
         };
 
         void add_to_history( const std::string &text, nc_color color );
+
+        accessibility::dialogue_speech_model speech;
 
         /**
          * This contains the exchanged words, it is basically like the global message log.

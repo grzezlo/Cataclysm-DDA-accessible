@@ -2,8 +2,12 @@
 
 #include <array>
 #include <string>
+#include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "catacharset.h"
 #include "debug.h"
 #include "input_context.h"
@@ -129,18 +133,23 @@ void dialogue_window::set_up_scrolling( input_context &ctxt ) const
     }
     history_view->set_up_navigation( ctxt, scrolling_key_scheme::angle_bracket_scroll );
     responses_list->set_up_navigation( ctxt );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 }
 
 void dialogue_window::add_to_history( const std::string &text, const std::string &speaker_name,
-                                      nc_color speaker_color )
+                                      nc_color speaker_color, const bool own )
 {
     add_to_history( speaker_name, speaker_color );
-    add_to_history( text );
+    add_to_history( text, default_color() );
+    speech.add_utterance( accessibility::format_dialogue_utterance( speaker_name, text ), own );
 }
 
 void dialogue_window::add_to_history( const std::string &text )
 {
     add_to_history( text, default_color() );
+    speech.add_utterance( text, false );
 }
 
 void dialogue_window::add_to_history( const std::string &text, nc_color color )
@@ -207,6 +216,79 @@ void dialogue_window::print_header( const std::string &name ) const
 void dialogue_window::set_responses( const std::vector<talk_data> &responses )
 {
     responses_list->create_entries( responses );
+
+    std::vector<accessibility::dialogue_speech_model::option> options;
+    for( const talk_data &response : responses ) {
+        options.push_back( { response.spoken, std::string() } );
+    }
+    if( !is_computer && !is_not_conversation ) {
+        // The extra screen actions drawn beside the responses, in the same order.
+        input_context ctxt( "DIALOGUE_CHOOSE_RESPONSE" );
+        const std::vector<std::pair<std::string, std::string>> actions = {
+            { "LOOK_AT", _( "Look at" ) },
+            { "SIZE_UP_STATS", _( "Size up stats" ) },
+            { "ASSESS_PERSONALITY", _( "Assess personality" ) },
+            { "YELL", _( "Yell" ) },
+            { "CHECK_OPINION", _( "Check opinion" ) },
+        };
+        for( const std::pair<std::string, std::string> &action : actions ) {
+            accessibility::dialogue_response_row row;
+            row.key = ctxt.get_desc( action.first, 1 );
+            row.text = action.second;
+            options.push_back( { accessibility::format_dialogue_response( row ), action.first } );
+        }
+    }
+    speech.set_options( options, responses.size(), responses_list->get_entry_pos() );
+}
+
+void dialogue_window::announce_topic( const std::string &npc_name )
+{
+    if( is_computer ) {
+        speech.set_title( string_format( _( "Interaction: %s" ), npc_name ) );
+        speech.set_prompt_label( _( "Your input" ) );
+    } else if( is_not_conversation ) {
+        speech.set_title( std::string() );
+        speech.set_prompt_label( _( "Your choice" ) );
+    } else {
+        speech.set_title( string_format( _( "Dialogue: %s" ), npc_name ) );
+        speech.set_prompt_label( _( "Your response" ) );
+    }
+    accessibility::announce( speech.begin_topic() );
+}
+
+void dialogue_window::handle_accessible_input( std::string &action )
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+        action.clear();
+        return;
+    }
+    const accessibility::dialogue_speech_model::result result = speech.handle( action );
+    if( result.response_cursor >= 0 ) {
+        responses_list->set_entry_pos( result.response_cursor, false );
+    }
+    accessibility::announce( result.speech );
+    if( !result.document.empty() ) {
+        const std::string title = speech.in_response_list() ? _( "Response" ) : _( "Message" );
+        const std::vector<std::string> sentences =
+            accessibility::split_uilist_detail_sentences( result.document );
+        accessibility_ui::show_document( title, title, sentences, sentences );
+        accessibility::announce( speech.focus() );
+    }
+    action = result.consumed ? std::string() : result.action;
+}
+
+void dialogue_window::announce_accessible_focus() const
+{
+    accessibility::announce( speech.focus() );
+}
+
+void dialogue_window::announce_unavailable_response( const size_t index ) const
+{
+    accessibility::announce( speech.option_row( index ) );
 }
 
 void dialogue_window::set_responses_debug( const std::vector<std::string> &responses )

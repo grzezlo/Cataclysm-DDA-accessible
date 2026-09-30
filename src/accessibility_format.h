@@ -740,6 +740,99 @@ std::string format_armor_sprite( bool hidden, const std::string &row );
 std::string format_armor_summary( const std::string &filter, const std::vector<armor_row> &rows,
                                   int total, int layering );
 
+/** Dialogue history element: "Rubik: Hello." or the text alone without a speaker. */
+std::string format_dialogue_utterance( const std::string &speaker, const std::string &text );
+/** What a response does, which the dialogue window shows only by color. */
+enum class dialogue_response_hint {
+    none,
+    /** Performs an action rather than saying something. */
+    action,
+    /** Leaves the player helpless. */
+    helpless,
+    /** May make the other side attack. */
+    hostile
+};
+struct dialogue_response_row {
+    /** Displayed hotkey, such as "a" or "L". */
+    std::string key;
+    /** Response text including any trial, such as "[LIE 50%] …". */
+    std::string text;
+    dialogue_response_hint hint = dialogue_response_hint::none;
+    /** Shown but its condition is not met. */
+    bool unavailable = false;
+    std::string reason;
+};
+/** "a, Ask about the job." or "c, [LIE 50%] Lie. Unavailable: requires charm." */
+std::string format_dialogue_response( const dialogue_response_row &row );
+/** Final conversation element: "Your response, 5 options." */
+std::string format_dialogue_prompt( const std::string &label, size_t count );
+
+/**
+ * Screen reader model of the dialogue window.  The conversation level is a
+ * history of utterances ending in the response prompt; Enter on the prompt
+ * opens the response list, and Escape returns to the prompt.
+ */
+class dialogue_speech_model
+{
+    public:
+        struct option {
+            /** Row spoken on focus. */
+            std::string spoken;
+            /** Input action of an extra screen action; empty for a response. */
+            std::string action;
+        };
+        struct result {
+            /** The window must ignore the action. */
+            bool consumed = false;
+            /** Action the window handles instead of the input, when not consumed. */
+            std::string action;
+            std::string speech;
+            /** Response the visible cursor moves to; negative to leave it. */
+            int response_cursor = -1;
+            /** Text to open in the document view. */
+            std::string document;
+        };
+
+        /** Window name for the summary, such as "Dialogue: Rubik". */
+        void set_title( const std::string &title );
+        /** Prompt label, such as "Your response". */
+        void set_prompt_label( const std::string &label );
+        /** Add a history element; the player's own lines are not spoken automatically. */
+        void add_utterance( const std::string &text, bool own );
+        /**
+         * Replace the response list.  The first `response_count` options are
+         * responses; the rest are extra actions.  `cursor` is the visible response.
+         */
+        void set_options( const std::vector<option> &options, size_t response_count, int cursor );
+        /**
+         * Speech for a newly presented topic: the utterances not yet spoken,
+         * then the prompt, which receives focus on the conversation level.
+         */
+        std::string begin_topic();
+        result handle( const std::string &action );
+        /** The focused element, spoken again after a declined confirmation. */
+        std::string focus() const;
+        /** The row of a response that cannot be chosen. */
+        std::string option_row( size_t index ) const;
+        bool in_response_list() const {
+            return responses_open;
+        }
+
+    private:
+        std::string prompt() const;
+        std::string summary() const;
+        std::string title;
+        std::string prompt_label;
+        std::vector<std::pair<std::string, bool>> history;
+        size_t first_unspoken = 0;
+        std::vector<option> options;
+        size_t response_count = 0;
+        /** History index; history.size() is the prompt. */
+        size_t history_focus = 0;
+        int option_focus = 0;
+        bool responses_open = false;
+};
+
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( const std::string &label, const std::string &duration,
                                    bool resuming );

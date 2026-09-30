@@ -21,6 +21,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility_format.h"
 #include "achievement.h"
 #include "action.h"
 #include "auto_pickup.h"
@@ -2812,30 +2813,56 @@ talk_data talk_response::create_option_line( dialogue &d, const input_event &hot
                                trial.name(), trial.calc_chance( d ), text );
     }
 
+    // Tags are parsed before coloring; parse_tags() skips color tags, so the
+    // displayed text is unchanged and the screen reader row gets the same text.
+    std::string reason = ignore_conditionals ? show_reason : std::string();
+    const auto parse_option_tags = [&]( std::string & phrase ) {
+        if( d.actor( true )->get_npc() ) {
+            parse_tags( phrase, *d.actor( false )->get_character(), *d.actor( true )->get_npc(), d,
+                        success.next_topic.item_type );
+        } else {
+            parse_tags( phrase, *d.actor( false )->get_character(), *d.actor( false )->get_character(), d,
+                        success.next_topic.item_type );
+        }
+    };
+    parse_option_tags( ftext );
+    if( !reason.empty() ) {
+        parse_option_tags( reason );
+    }
+    accessibility::dialogue_response_row row;
+    row.key = hotkey.short_description();
+    row.text = ftext;
+    if( !row.text.empty() && ( row.text[0] == '*' || row.text[0] == '&' ) ) {
+        row.text.erase( 0, 1 );
+    }
+    row.unavailable = ignore_conditionals;
+    row.reason = reason;
+
     if( ignore_conditionals ) {
         ftext = colorize( ftext, c_dark_gray );
-        if( !show_reason.empty() ) {
-            ftext += colorize( " -- [" + show_reason + "]", c_light_red );
+        if( !reason.empty() ) {
+            ftext += colorize( " -- [" + reason + "]", c_light_red );
         }
-    }
-
-    if( d.actor( true )->get_npc() ) {
-        parse_tags( ftext, *d.actor( false )->get_character(), *d.actor( true )->get_npc(), d,
-                    success.next_topic.item_type );
-    } else {
-        parse_tags( ftext, *d.actor( false )->get_character(), *d.actor( false )->get_character(), d,
-                    success.next_topic.item_type );
     }
 
     nc_color color;
     std::set<dialogue_consequence> consequences = get_consequences( d );
     if( consequences.count( dialogue_consequence::hostile ) > 0 ) {
         color = c_red;
-    } else if( text[0] == '*' || consequences.count( dialogue_consequence::helpless ) > 0 ) {
+        row.hint = accessibility::dialogue_response_hint::hostile;
+    } else if( consequences.count( dialogue_consequence::helpless ) > 0 ) {
         color = c_light_red;
+        row.hint = accessibility::dialogue_response_hint::helpless;
+    } else if( text[0] == '*' ) {
+        color = c_light_red;
+        row.hint = accessibility::dialogue_response_hint::action;
     } else if( text[0] == '&' || consequences.count( dialogue_consequence::action ) > 0 ||
                is_computer ) {
         color = c_green;
+        // Every computer response is green; only real actions say so.
+        if( text[0] == '&' || consequences.count( dialogue_consequence::action ) > 0 ) {
+            row.hint = accessibility::dialogue_response_hint::action;
+        }
     } else {
         color = c_white;
     }
@@ -2843,6 +2870,7 @@ talk_data talk_response::create_option_line( dialogue &d, const input_event &hot
     results.color = color;
     results.hotkey_desc = right_justify( hotkey.short_description(), 2 );
     results.text = ftext;
+    results.spoken = accessibility::format_dialogue_response( row );
     return results;
 }
 
@@ -2983,6 +3011,7 @@ talk_topic dialogue::opt( dialogue_window &d_win, const talk_topic &topic )
         d_win.set_responses( response_lines );
     };
     generate_response_lines();
+    d_win.announce_topic( actor( true )->disp_name() );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         d_win.draw( d_win.is_not_conversation ? "" : actor( true )->disp_name() );
@@ -3001,6 +3030,7 @@ talk_topic dialogue::opt( dialogue_window &d_win, const talk_topic &topic )
             input_event evt;
             action = ctxt.handle_input();
             evt = ctxt.get_raw_input();
+            d_win.handle_accessible_input( action );
             d_win.handle_scrolling( action, ctxt );
             talk_topic st = special_talk( action );
             if( st.id != "TALK_NONE" ) {
@@ -3015,6 +3045,7 @@ talk_topic dialogue::opt( dialogue_window &d_win, const talk_topic &topic )
                 if( response_condition_exists[response_ind] && ( !response_condition_eval[response_ind] &&
                         !debug_mode ) ) {
                     action = "NONE";
+                    d_win.announce_unavailable_response( response_ind );
                 }
             } else if( action == "DEBUG_DIALOGUE_DL_CONDITIONAL" ) {
                 d_win.show_dynamic_line_conditionals = !d_win.show_dynamic_line_conditionals;
@@ -3036,9 +3067,10 @@ talk_topic dialogue::opt( dialogue_window &d_win, const talk_topic &topic )
                 const auto hotkey_it = std::find( response_hotkeys.begin(),
                                                   response_hotkeys.end(), evt );
                 response_ind = std::distance( response_hotkeys.begin(), hotkey_it );
-                if( response_condition_exists[response_ind] && ( !response_condition_eval[response_ind] &&
-                        !debug_mode ) ) {
+                if( response_ind < response_hotkeys.size() && response_condition_exists[response_ind] &&
+                    !response_condition_eval[response_ind] && !debug_mode ) {
                     action = "NONE";
+                    d_win.announce_unavailable_response( response_ind );
                 }
             } else if( action == "QUIT" ) {
                 response_ind = get_best_quit_response();
@@ -3052,10 +3084,13 @@ talk_topic dialogue::opt( dialogue_window &d_win, const talk_topic &topic )
         } else if( consequences.count( dialogue_consequence::helpless ) > 0 ) {
             okay = query_yn( _( "You'll be helpless!  Proceed?" ) );
         }
+        if( !okay ) {
+            d_win.announce_accessible_focus();
+        }
     } while( !okay );
 
     d_win.add_history_separator();
-    d_win.add_to_history( response_lines[response_ind].text, _( "You" ), c_light_blue );
+    d_win.add_to_history( response_lines[response_ind].text, _( "You" ), c_light_blue, true );
 
     talk_response chosen = responses[response_ind];
     if( chosen.mission_selected != nullptr ) {
