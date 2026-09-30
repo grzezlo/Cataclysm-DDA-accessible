@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T152.
+Last assigned test ID: T156.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1003,3 +1003,44 @@ Change terrain, or drive toward a building.
   details; the original log entry must still be present.  Escape returns to
   gameplay.  Completing the rest of the tutorial is a separate Stage 22A
   acceptance test.
+
+## Stage 19A: Vehicle examination and maintenance
+
+- **T153 - Part list and details.**  Spawn a car next to you with the debug
+  menu (Map, Spawn a vehicle) and examine it with `e`, choosing the vehicle
+  examination.  Hear "Parts of <car>", the part count, and the first front
+  part only, for example "headlight, front left".  Down and Up speak only the
+  next row with its location and condition; wrapping says "top" or
+  "bottom".  Press `/`, type "wheel", and hear the match count and first
+  wheel.  `Alt+D` opens the part details document (row and column, fuel or
+  cargo, description); Escape returns and speaks the part again.  Interrupt
+  a row with Control; nothing is requeued, and `Alt+R` repeats it.
+- **T154 - Task menu, blocked task, and requirements.**  Smash one of the
+  car's doors or headlights a few times (`s`) until it is damaged, then
+  examine the car.  In the part list hear "damaged N%" on that part and
+  press Enter: hear "Tasks for <part>, <location>", the task count, and
+  "Repair" with "Unavailable: <n> requirements missing" when you lack the
+  tools.  `Alt+D` opens the requirements: time, skills with "have" or
+  "missing", and tools with their states.  Press Enter on the unavailable
+  Repair: hear "Repair <part>. Unavailable: ..." once, and focus stays on
+  Repair.  Escape returns to the part list with the same part focused, and
+  only that row is spoken.
+- **T155 - Perform a part action.**  With the debug menu, give yourself a
+  wrench, hacksaw, and screwdriver set (or turn on the Debug Hammerspace
+  mutation) and mechanics skill 3.  Examine the car, choose an undamaged
+  seat or headlight, press Enter, and choose Remove.  The examination
+  screen closes and the removal activity starts; after it completes hear
+  the game's result message once.  Examine again and verify that the part
+  is gone from the list and the count is one lower.
+- **T156 - Grid cursor, statistics, and install list.**  Examine the car,
+  press Escape in the part list, and hear "Vehicle grid" with the tile's
+  location and parts.  Move the cursor with the arrow keys: each move
+  speaks the new tile ("front left: frame; headlight"), and moving past the
+  front speaks "outside, front: no parts".  `Alt+S` speaks the vehicle
+  name, speeds, mass, cargo, status, and fuel.  `Alt+D` opens the tile's
+  exact row and column.  Press `i` on a tile beside the car: hear "Install
+  at outside, ..." and the installable part count; Left and Right switch
+  categories and speak the category and count.  `Alt+D` on a part opens
+  its requirements and description; Escape in the install list returns to
+  the grid and speaks the tile.  `Alt+L` reopens the part list.  Escape in
+  the grid leaves the screen.

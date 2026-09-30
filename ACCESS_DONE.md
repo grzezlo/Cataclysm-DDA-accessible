@@ -1445,3 +1445,55 @@ Limitations:
   keyboard input or a full tutorial walkthrough.
 - Stage 22A still owns complete tutorial acceptance and any corrections to
   the exercises and continuation guidance.
+
+## 2026-09-30 — Stage 19A: Vehicle examination and maintenance
+
+- Implemented the selected interaction (option B, part list instead of the
+  grid; conventions 2, 5, and 8).  Existing keys are unchanged.
+- With a screen reader active, examining a vehicle opens "Parts of <vehicle>"
+  with its part count: every part, front to rear, left to right, and as
+  stacked on each tile, spoken as "headlight, front left, damaged 40%"
+  (broken and leaking in words).  Locations are thirds of the vehicle
+  ("front left", "center", "rear right").  The shared list filter narrows it
+  by name; `Alt+D` opens part details (exact row and column, fuel or cargo,
+  faults, label, description) in the document view.
+- Enter on a part moves the grid cursor to its tile and opens "Tasks for
+  <part>, <location>": Repair, Mend (with faults), Remove, Install here,
+  Refill, Siphon, Assign crew, Change shape (with variants), and Label.
+  Unavailable tasks stay listed as "Remove. Unavailable: <reason>";
+  choosing one speaks "Remove frame. Unavailable: ..." and keeps focus.
+  `Alt+D` on a task opens its requirements document: time, skills with
+  have/missing, tools and components with their states, lifting, removal
+  yield, extra engine or axle skills, and blocking reasons.  Escape returns
+  to the part list; Escape there returns to the grid ("Vehicle grid. <tile>")
+  and `Alt+L` (new `ACCESSIBILITY_PART_LIST` binding) reopens the list.
+- The grid cursor speaks the tile location, its parts with condition, and
+  its label, or "outside, front: no parts, obstructed" beyond the vehicle.
+  `Alt+D` opens the tile details, `Alt+S` speaks the vehicle statistics
+  (speeds, mass, cargo, status, wheels, most damaged and needs-repair parts,
+  fuels, drag, offroad, draft).  Grid task keys use the same accessible
+  lists: repair and remove choose among the tile's parts, install opens an
+  install list with the part categories as uilist categories, and the
+  overview-based tasks (mend, refill, siphon, crew) and
+  `veh_interact::select_part()` open a part list.  Task messages or the
+  cursor tile are spoken after each grid action.
+- Shared change: `uilist::accessibility_resume()` reopens a list silently
+  after the caller spoke why the chosen entry cannot be used.
+- `test_access.bat` passed 2007 assertions in 105 cases; `[vehicle]` tests,
+  the Windows x64 tiles build, and AStyle 3.1 checks passed.
+- Implementation commit: `ab75f6ef86`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T153–T156 are in
+  `ACCESS_USERTESTS.md`.  Automated tests cover formatters, part list order,
+  tile speech, task availability and requirement lines, and statistics, not
+  the interactive menus or keyboard input.
+- The part list closes after a task starts the vehicle activity; its
+  progress and result use the existing activity messages.
+- Unload solid fuel and Rename vehicle are reachable only by their grid keys,
+  and the grid `CHANGE_SHAPE` key still opens the unconverted map-cursor
+  shape tool; the part task menu's Change shape uses the cosmetic variant
+  list instead.
+- The install list marks parts the visual list grays out as "requirements
+  not met"; the exact missing count is computed on `Alt+D` or selection.

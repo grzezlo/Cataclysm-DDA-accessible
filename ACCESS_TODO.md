@@ -55,60 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 19A - Vehicle examination and maintenance
-
-**Outcome:** Vehicle part inspection, installation, repair, and removal are
-accessible through the examination grid interface.
-
-**Code inventory:** `src/veh_interact.cpp`/`src/veh_interact.h` (examination
-screen, part grid, task handlers).
-
-**Implementation hints:**
-
-- Entry: `veh_interact::run()` in `src/veh_interact.cpp` instantiates the screen
-  and calls `veh_interact::do_main_loop()`.
-- Input context: `"VEH_INTERACT"` registered in `veh_interact::do_main_loop()`.
-- Cursor movement: `veh_interact::move_cursor()` shifts tile, recalculates
-  `parts_here`, `cpart`, and repair/mount status.
-- Part list at tile: `vehicle::print_part_list()` in `src/vehicle_display.cpp`.
-- Part descriptions: `vehicle::print_vparts_descs()` in `src/vehicle_display.cpp`.
-- Vehicle stats: `veh_interact::display_stats()` in `src/veh_interact.cpp` —
-  speeds, mass, cargo volume, durability, most damaged parts.
-- Action bar: `veh_interact::display_mode()` in `src/veh_interact.cpp` —
-  enabled/disabled tasks with reasons via `veh_interact::cant_do()` and
-  `veh_act_desc()`.
-- Task sub-loops in `src/veh_interact.cpp`:
-  - Install: `veh_interact::do_install()` — tabs/categories, installable parts.
-  - Repair: `veh_interact::do_repair()` — parts on tile.
-  - Remove: `veh_interact::do_remove()`.
-  - Overview: `veh_interact::overview()`.
-- Requirements format: `veh_interact::format_reqs()`.
-- Accessibility hooks: on `veh_interact::move_cursor()` announce tile position
-  and parts summary; on task selection announce available action and requirements.
-
-**Selected interaction (option B, part list instead of the grid):**
-
-- Keys are unchanged; the part list is added.  Conventions 2, 5, and 8
-  apply.
-- Entering the screen opens a flat list of all parts grouped by location:
-  "headlight, front left, damaged 40%".  `FILTER` narrows it by name.
-- Enter on a part moves the grid cursor to its tile and opens a menu of the
-  available tasks (repair, remove, install here, and others) with blocked
-  tasks and their reasons as words.  Requirements open in the document view.
-- The grid cursor stays available with the existing keys and speaks the
-  tile's location and parts summary when moved.  `Alt+S` speaks the vehicle
-  statistics.
-
-**Success criteria:** Part selection, status, install/remove/repair choices,
-disabled reasons, skill/tool requirements, and results are announced.  The
-tile cursor and task sub-screens are keyboard operable.
-
-**Possible automated tests:** Capture cursor movement, parts at tile, install
-tab/part selection, repair part selection, invalid action, and return focus.
-
-**User-test scenarios:** Inspect a vehicle, navigate parts, and
-perform one part action (repair or remove); exercise an invalid/blocked case.
-
 ## Stage 20 - Character creation: scenario and profession
 
 **Outcome:** The first four character creation tabs (points, scenario, profession,
