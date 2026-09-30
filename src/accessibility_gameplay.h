@@ -26,6 +26,7 @@ class recipe;
 struct requirement_data;
 class uilist;
 class vehicle;
+struct vehicle_part;
 class zone_data;
 struct item_info_data;
 struct visibility_variables;
@@ -249,6 +250,24 @@ class vehicle_control_speech
         int cruise = 0;
         double turn_degrees = 0.0;
 };
+
+/** The examination grid position of `mount` within the bounds of `veh`. */
+accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
+        const point_rel_ms &mount );
+/** Part list row of `part`, a part of `veh`, with its location. */
+accessibility::vehicle_part_row vehicle_part_row( const vehicle &veh, const vehicle_part &part );
+/**
+ * Indices of the parts of `veh` in part list order: front to rear, left to
+ * right, and as stacked on each tile.
+ */
+std::vector<int> vehicle_part_list( const vehicle &veh );
+/** Grid cursor speech for the tile at `mount`: location, parts, and label. */
+std::string vehicle_tile_description( const vehicle &veh, const point_rel_ms &mount,
+                                      bool obstructed );
+/** Grid tile details: exact position, then each part with its contents. */
+std::vector<std::string> vehicle_tile_details( const vehicle &veh, const point_rel_ms &mount );
+/** Part details: row, exact position, contents, faults, label, and description. */
+std::vector<std::string> vehicle_part_details( const vehicle &veh, const vehicle_part &part );
 
 /** The player confirmed cancelling auto-travel; the stop needs no travel speech. */
 void travel_canceled();

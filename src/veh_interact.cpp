@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <array>
+#include <cctype>
 #include <cmath>
 #include <cstdlib>
 #include <functional>
@@ -17,6 +18,10 @@
 #include <unordered_set>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "activity_handlers.h"
 #include "avatar.h"
 #include "calendar.h"
@@ -298,6 +303,10 @@ veh_interact::veh_interact( map &here, vehicle &veh, const point_rel_ms &p )
     main_context.register_action( "HELP_KEYBINDINGS" );
     main_context.register_action( "FILTER" );
     main_context.register_action( "ANY_INPUT" );
+    main_context.register_action( "ACCESSIBILITY_PART_LIST" );
+    main_context.register_action( "ACCESSIBILITY_STATUS" );
+    main_context.register_action( "ACCESSIBILITY_DETAILS" );
+    main_context.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     count_durability();
     cache_tool_availability();
@@ -357,7 +366,8 @@ void veh_interact::allocate_windows()
 }
 
 bool veh_interact::format_reqs( std::string &msg, const requirement_data &reqs,
-                                const std::map<skill_id, int> &skills, time_duration time ) const
+                                const std::map<skill_id, int> &skills, time_duration time,
+                                task_speech *speech ) const
 {
     Character &player_character = get_player_character();
     const inventory &inv = player_character.crafting_inventory();
@@ -389,6 +399,24 @@ bool veh_interact::format_reqs( std::string &msg, const requirement_data &reqs,
     auto tools = reqs.get_folded_tools_list( getmaxx( w_msg ) - 2, c_white, inv );
     for( const std::string &line : tools ) {
         msg += line + "\n";
+    }
+
+    if( speech != nullptr ) {
+        speech->requirements.push_back( accessibility::format_vehicle_task_time(
+                                            to_string_approx( time ) ) );
+        std::vector<accessibility::vehicle_skill_requirement> levels;
+        for( const auto &e : skills ) {
+            const bool met = player_character.get_knowledge_level( e.first ) >= e.second;
+            levels.push_back( { e.first.obj().name(), e.second, met } );
+            speech->missing += met ? 0 : 1;
+        }
+        speech->requirements.push_back( accessibility::format_vehicle_skills( levels ) );
+        const std::vector<accessibility::requirement_group> groups =
+            accessibility_gameplay::requirement_groups( reqs, inv, is_crafting_component, 1, true );
+        for( const accessibility::requirement_group &group : groups ) {
+            speech->requirements.push_back( accessibility::format_requirement_group( group ) );
+        }
+        speech->missing += accessibility::count_missing_requirement_groups( groups );
     }
 
     return ok;
@@ -497,7 +525,7 @@ void veh_interact::do_main_loop( map &here )
 {
     bool finish = false;
     Character &player_character = get_player_character();
-    const bool owned_by_player = veh->handle_potential_theft( player_character, true );
+    owned_by_player = veh->handle_potential_theft( player_character, true );
     faction *owner_fac;
     if( veh->has_owner() ) {
         owner_fac = g->faction_manager_ptr->get( veh->get_owner() );
@@ -506,6 +534,12 @@ void veh_interact::do_main_loop( map &here )
     }
 
     shared_ptr_fast<ui_adaptor> current_ui = create_or_get_ui_adaptor( here );
+    if( accessibility::is_active() ) {
+        finish = accessible_part_list( here );
+        if( !finish ) {
+            speak_grid();
+        }
+    }
 
     while( !finish ) {
         calc_overview( here );
@@ -513,7 +547,10 @@ void veh_interact::do_main_loop( map &here )
         const int description_scroll_lines = catacurses::getmaxy( w_parts ) - 4;
         const std::string action = main_context.handle_input();
         msg.reset();
-        if( const std::optional<tripoint_rel_ms> vec = main_context.get_direction_rel_ms( action ) ) {
+        if( accessibility::is_active() && accessible_grid_action( here, action, finish ) ) {
+            // Handled by the screen reader interface.
+        } else if( const std::optional<tripoint_rel_ms> vec = main_context.get_direction_rel_ms(
+                       action ) ) {
             move_cursor( here, vec->xy() );
         } else if( action == "QUIT" ) {
             finish = true;
@@ -598,6 +635,9 @@ void veh_interact::do_main_loop( map &here )
         }
         if( sel_cmd != ' ' ) {
             finish = true;
+        }
+        if( !finish && accessibility::is_active() ) {
+            accessible_after_action( here, action );
         }
     }
 }
@@ -789,38 +829,42 @@ bool veh_interact::can_self_jack( map &here )
     return false;
 }
 
-bool veh_interact::update_part_requirements( map &here )
+bool veh_interact::update_part_requirements( map &here, task_speech *speech )
 {
     if( sel_vpart_info == nullptr ) {
         return false;
     }
+    // Shows why nothing can be installed regardless of tools and skills.
+    const auto block = [&]( const std::string & reason ) {
+        msg = reason;
+        if( speech != nullptr ) {
+            speech->blocked = remove_color_tags( reason );
+        }
+        return false;
+    };
 
     if( std::any_of( parts_here.begin(), parts_here.end(), [&]( const int e ) {
     return veh->part( e ).has_flag( vp_flag::carried_flag );
     } ) ) {
-        msg = _( "Unracking is required before installing any parts here." );
-        return false;
+        return block( _( "Unracking is required before installing any parts here." ) );
     }
 
     if( const std::optional<std::string> conflict = veh->has_engine_conflict( *sel_vpart_info ) ) {
         //~ %1$s is fuel_type
-        msg = string_format( _( "Only one %1$s powered engine can be installed." ), conflict.value() );
-        return false;
+        return block( string_format( _( "Only one %1$s powered engine can be installed." ),
+                                     conflict.value() ) );
     }
     if( veh->has_part( "NO_MODIFY_VEHICLE" ) && !sel_vpart_info->has_flag( "SIMPLE_PART" ) ) {
-        msg = _( "This vehicle cannot be modified in this way.\n" );
-        return false;
+        return block( _( "This vehicle cannot be modified in this way.\n" ) );
     } else if( sel_vpart_info->has_flag( "NO_INSTALL_PLAYER" ) ) {
-        msg = _( "This part cannot be installed.\n" );
-        return false;
+        return block( _( "This part cannot be installed.\n" ) );
     }
 
     if( sel_vpart_info->has_flag( "FUNNEL" ) ) {
         if( std::none_of( parts_here.begin(), parts_here.end(), [&]( const int e ) {
         return veh->part( e ).is_tank();
         } ) ) {
-            msg = _( "Funnels need to be installed over a tank." );
-            return false;
+            return block( _( "Funnels need to be installed over a tank." ) );
         }
     }
 
@@ -828,8 +872,7 @@ bool veh_interact::update_part_requirements( map &here )
         if( std::any_of( parts_here.begin(), parts_here.end(), [&]( const int e ) {
         return veh->part( e ).is_turret();
         } ) ) {
-            msg = _( "Can't install turret on another turret." );
-            return false;
+            return block( _( "Can't install turret on another turret." ) );
         }
     }
 
@@ -869,15 +912,30 @@ bool veh_interact::update_part_requirements( map &here )
     avatar &player_character = get_avatar();
     std::string nmsg;
     bool ok = format_reqs( nmsg, reqs, sel_vpart_info->install_skills,
-                           sel_vpart_info->install_time( player_character ) );
+                           sel_vpart_info->install_time( player_character ), speech );
 
     nmsg += _( "<color_white>Additional requirements:</color>\n" );
 
     bool allow_more_eng = engines < 2 || player_character.has_trait( trait_DEBUG_HS );
+    // An additional skill level, spoken with its state instead of its color.
+    const auto speak_extra_skill = [&]( const std::string & purpose, const int level ) {
+        if( speech == nullptr ) {
+            return;
+        }
+        const bool met = player_character.get_knowledge_level( skill_mechanics ) >= level;
+        speech->requirements.push_back( accessibility::format_vehicle_extra_skill(
+                                            skill_mechanics.obj().name(), level, met, purpose ) );
+        speech->missing += met ? 0 : 1;
+    };
 
     if( dif_eng > 0 ) {
         if( !allow_more_eng || player_character.get_knowledge_level( skill_mechanics ) < dif_eng ) {
             ok = false;
+        }
+        if( !allow_more_eng && speech != nullptr ) {
+            speech->blocked = _( "You cannot install any more engines on this vehicle." );
+        } else {
+            speak_extra_skill( _( "for extra engines" ), dif_eng );
         }
         if( allow_more_eng ) {
             //~ %1$s represents the internal color name which shouldn't be translated, %2$s is skill name, and %3$i is skill level
@@ -894,13 +952,14 @@ bool veh_interact::update_part_requirements( map &here )
         if( player_character.get_knowledge_level( skill_mechanics ) < dif_steering ) {
             ok = false;
         }
+        speak_extra_skill( _( "for extra steering axles" ), dif_steering );
         //~ %1$s represents the internal color name which shouldn't be translated, %2$s is skill name, and %3$i is skill level
         nmsg += string_format( _( "> %1$s%2$s %3$i</color> for extra steering axles." ),
                                status_color( player_character.get_knowledge_level( skill_mechanics ) >= dif_steering ),
                                skill_mechanics.obj().name(), dif_steering ) + "\n";
     }
 
-    std::pair<bool, std::string> res = calc_lift_requirements( here, *sel_vpart_info );
+    std::pair<bool, std::string> res = calc_lift_requirements( here, *sel_vpart_info, speech );
     if( !res.first ) {
         ok = res.first;
     }
@@ -911,6 +970,9 @@ bool veh_interact::update_part_requirements( map &here )
         ok = false;
         nmsg += _( "<color_white>Cannot install due to:</color>\n> " ) +
                 colorize( can_mount.str(), c_red ) + "\n";
+        if( speech != nullptr ) {
+            speech->blocked = remove_color_tags( can_mount.str() );
+        }
     }
 
     sel_vpart_info->format_description( nmsg, c_light_gray, getmaxx( w_msg ) - 4 );
@@ -972,6 +1034,10 @@ void veh_interact::do_install( map &here )
 
     if( reason == task_reason::INVALID_TARGET ) {
         msg = _( "Cannot install any part here." );
+        return;
+    }
+    if( accessibility::is_active() ) {
+        accessible_install( here );
         return;
     }
 
@@ -1119,6 +1185,63 @@ bool veh_interact::move_in_list( int &pos, const std::string &action, const int 
     return true;
 }
 
+bool veh_interact::repair_requirements( map &here, vehicle_part &pt, std::string &nmsg,
+                                        task_speech *speech )
+{
+    avatar &player_character = get_avatar();
+    const vpart_info &vp = pt.info();
+    const auto block = [&]( const std::string & reason, const nc_color color ) {
+        nmsg += colorize( reason, color );
+        if( speech != nullptr ) {
+            speech->blocked = remove_color_tags( reason );
+        }
+        return false;
+    };
+    bool ok = true;
+    if( pt.is_broken() ) {
+        ok = format_reqs( nmsg, vp.install_requirements(), vp.install_skills,
+                          vp.install_time( player_character ), speech );
+
+        if( pt.info().has_flag( "NEEDS_JACKING" ) ) {
+
+            nmsg += _( "<color_white>Additional requirements:</color>\n" );
+            std::pair<bool, std::string> res = calc_lift_requirements( here, pt.info(), speech );
+            if( !res.first ) {
+                ok = false;
+            }
+            nmsg += res.second;
+        }
+        if( pt.has_flag( vp_flag::carried_flag ) ) {
+            ok = block( _( "\nUnracking is required before replacing this part.\n" ), c_red );
+        }
+
+    } else {
+        if( !pt.is_repairable() ) {
+            ok = block( _( "This part cannot be repaired.\n" ), c_light_red );
+        } else if( veh->has_part( "NO_MODIFY_VEHICLE" ) && !vp.has_flag( "SIMPLE_PART" ) ) {
+            ok = block( _( "This vehicle cannot be repaired.\n" ), c_light_red );
+        } else {
+            const int levels = pt.base.repairable_levels();
+            ok = format_reqs( nmsg, vp.repair_requirements() * levels, vp.repair_skills,
+                              vp.repair_time( player_character ) * levels, speech );
+        }
+    }
+
+    if( veh->would_repair_prevent_flyable( pt, player_character ) &&
+        !player_character.has_proficiency( proficiency_prof_aircraft_mechanic ) ) {
+        const std::string warning = string_format(
+                                        _( "\n<color_yellow>You require the \"%s\" proficiency to repair this part safely!</color>\n\n" ),
+                                        proficiency_prof_aircraft_mechanic->name() );
+        nmsg += warning;
+        if( speech != nullptr ) {
+            speech->requirements.push_back( accessibility::format_semantic_sequence( {
+                remove_color_tags( warning )
+            } ) );
+        }
+    }
+    return ok;
+}
+
 void veh_interact::do_repair( map &here )
 {
     task_reason reason = cant_do( here,  'r' );
@@ -1154,6 +1277,14 @@ void veh_interact::do_repair( map &here )
     if( !can_repair() ) {
         return;
     }
+    if( accessibility::is_active() ) {
+        std::vector<int> parts;
+        for( const int index : need_repair ) {
+            parts.push_back( parts_here[index] );
+        }
+        accessible_choose_part( here, access_task::repair, parts );
+        return;
+    }
 
     restore_on_out_of_scope prev_title( title );
     title = _( "Choose a part here to repair:" );
@@ -1170,49 +1301,8 @@ void veh_interact::do_repair( map &here )
         const vpart_info &vp = pt.info();
 
         std::string nmsg;
-
-        // this will always be set, but the gcc thinks that sometimes it won't be
-        bool ok = true;
-        if( pt.is_broken() ) {
-            ok = format_reqs( nmsg, vp.install_requirements(), vp.install_skills,
-                              vp.install_time( player_character ) );
-
-            if( pt.info().has_flag( "NEEDS_JACKING" ) ) {
-
-                nmsg += _( "<color_white>Additional requirements:</color>\n" );
-                std::pair<bool, std::string> res = calc_lift_requirements( here, pt.info() );
-                if( !res.first ) {
-                    ok = false;
-                }
-                nmsg += res.second;
-            }
-            if( pt.has_flag( vp_flag::carried_flag ) ) {
-                nmsg += colorize( _( "\nUnracking is required before replacing this part.\n" ),
-                                  c_red );
-                ok = false;
-            }
-
-        } else {
-            if( !pt.is_repairable() ) {
-                nmsg += colorize( _( "This part cannot be repaired.\n" ), c_light_red );
-                ok = false;
-            } else if( veh->has_part( "NO_MODIFY_VEHICLE" ) && !vp.has_flag( "SIMPLE_PART" ) ) {
-                nmsg += colorize( _( "This vehicle cannot be repaired.\n" ), c_light_red );
-                ok = false;
-            } else {
-                const int levels = pt.base.repairable_levels();
-                ok = format_reqs( nmsg, vp.repair_requirements() * levels, vp.repair_skills,
-                                  vp.repair_time( player_character ) * levels );
-            }
-        }
-
+        bool ok = repair_requirements( here, pt, nmsg );
         bool would_prevent_flying = veh->would_repair_prevent_flyable( pt, player_character );
-        if( would_prevent_flying &&
-            !player_character.has_proficiency( proficiency_prof_aircraft_mechanic ) ) {
-            nmsg += string_format(
-                        _( "\n<color_yellow>You require the \"%s\" proficiency to repair this part safely!</color>\n\n" ),
-                        proficiency_prof_aircraft_mechanic->name() );
-        }
 
         const nc_color desc_color = pt.is_broken() ? c_dark_gray : c_light_gray;
         vp.format_description( nmsg, desc_color, getmaxx( w_msg ) - 4 );
@@ -1636,6 +1726,10 @@ void veh_interact::overview( map &here,
     restore_on_out_of_scope prev_overview_action( overview_action );
     overview_enable = enable;
     overview_action = action;
+    if( accessibility::is_active() && action ) {
+        accessible_overview( here );
+        return;
+    }
 
     restore_on_out_of_scope prev_overview_pos( overview_pos );
 
@@ -1744,50 +1838,82 @@ vehicle_part *veh_interact::get_most_repairable_part() const
     return veh_utils::most_repairable_part( *veh, get_player_character() );
 }
 
-bool veh_interact::can_remove_part( map &here, int idx, const Character &you )
+bool veh_interact::can_remove_part( map &here, int idx, const Character &you,
+                                    task_speech *speech )
 {
     sel_vehicle_part = &veh->part( idx );
     sel_vpart_info = &sel_vehicle_part->info();
     std::string nmsg;
     bool smash_remove = sel_vpart_info->has_flag( "SMASH_REMOVE" );
+    const auto block = [&]( const std::string & reason ) {
+        msg = reason;
+        if( speech != nullptr ) {
+            speech->blocked = remove_color_tags( reason );
+        }
+        return false;
+    };
 
     if( veh->has_part( "NO_MODIFY_VEHICLE" ) && !sel_vpart_info->has_flag( "SIMPLE_PART" ) &&
         !smash_remove ) {
-        msg = _( "This vehicle cannot be modified in this way.\n" );
-        return false;
+        return block( _( "This vehicle cannot be modified in this way.\n" ) );
     } else if( sel_vpart_info->has_flag( "NO_UNINSTALL" ) ) {
-        msg = _( "This part cannot be uninstalled.\n" );
-        return false;
+        return block( _( "This part cannot be uninstalled.\n" ) );
     }
 
+    // What the removal returns; speech names the part without its durability symbol.
+    std::vector<std::string> yield;
+    std::function<std::string( const std::string & )> removal_text;
     if( sel_vehicle_part->is_broken() ) {
-        nmsg += string_format(
-                    _( "<color_white>Removing the broken %1$s may yield some fragments.</color>\n" ),
-                    sel_vehicle_part->name() );
+        removal_text = []( const std::string & part_name ) {
+            return string_format(
+                       _( "<color_white>Removing the broken %1$s may yield some fragments.</color>\n" ),
+                       part_name );
+        };
     } else if( smash_remove ) {
         std::set<std::string> removed_names;
         for( const item &it : sel_vehicle_part->pieces_for_broken_part() ) {
             removed_names.insert( it.tname() );
         }
-        nmsg += string_format( _( "<color_white>Removing the %1$s may yield:</color>\n> %2$s\n" ),
-                               sel_vehicle_part->name(), enumerate_as_string( removed_names ) );
+        removal_text = [removed = enumerate_as_string( removed_names )]( const std::string & part_name ) {
+            return string_format( _( "<color_white>Removing the %1$s may yield:</color>\n> %2$s\n" ),
+                                  part_name, removed );
+        };
     } else {
         item result_of_removal = veh->part_to_item( here, *sel_vehicle_part );
-        nmsg += string_format(
-                    _( "<color_white>Removing the %1$s will yield:</color>\n> %2$s\n" ),
-                    sel_vehicle_part->name(), result_of_removal.display_name() );
+        removal_text = [result = result_of_removal.display_name()]( const std::string & part_name ) {
+            return string_format(
+                       _( "<color_white>Removing the %1$s will yield:</color>\n> %2$s\n" ),
+                       part_name, result );
+        };
+    }
+    nmsg += removal_text( sel_vehicle_part->name() );
+    yield.push_back( removal_text( sel_vehicle_part->name( false ) ) );
+    if( !sel_vehicle_part->is_broken() && !smash_remove ) {
         for( const item &it : sel_vehicle_part->get_salvageable() ) {
             nmsg += "> " + it.display_name() + "\n";
+            yield.push_back( it.display_name() );
         }
+    }
+    if( speech != nullptr ) {
+        for( std::string &line : yield ) {
+            line = remove_color_tags( line );
+            line.erase( std::remove( line.begin(), line.end(), '>' ), line.end() );
+            while( !line.empty() && std::isspace( static_cast<unsigned char>( line.back() ) ) ) {
+                line.pop_back();
+            }
+        }
+        speech->requirements.push_back( accessibility::format_semantic_sequence( {
+            string_join( yield, _( ", " ) )
+        } ) );
     }
 
     const requirement_data reqs = sel_vpart_info->removal_requirements();
     bool ok = format_reqs( nmsg, reqs, sel_vpart_info->removal_skills,
-                           sel_vpart_info->removal_time( you ) );
+                           sel_vpart_info->removal_time( you ), speech );
 
     nmsg += _( "<color_white>Additional requirements:</color>\n" );
 
-    std::pair<bool, std::string> res = calc_lift_requirements( here, *sel_vpart_info );
+    std::pair<bool, std::string> res = calc_lift_requirements( here, *sel_vpart_info, speech );
     if( !res.first ) {
         ok = res.first;
     }
@@ -1798,6 +1924,9 @@ bool veh_interact::can_remove_part( map &here, int idx, const Character &you )
         //~ %1$s represents the internal color name which shouldn't be translated, %2$s is pre-translated reason
         nmsg += string_format( _( "> %1$s%2$s</color>" ), status_color( false ), unmount.str() ) + "\n";
         ok = false;
+        if( speech != nullptr ) {
+            speech->blocked = remove_color_tags( unmount.str() );
+        }
     }
     const nc_color desc_color = sel_vehicle_part->is_broken() ? c_dark_gray : c_light_gray;
     sel_vehicle_part->info().format_description( nmsg, desc_color, getmaxx( w_msg ) - 4 );
@@ -1812,6 +1941,10 @@ void veh_interact::do_remove( map &here )
 
     if( reason == task_reason::INVALID_TARGET ) {
         msg = _( "No parts here." );
+        return;
+    }
+    if( accessibility::is_active() ) {
+        accessible_choose_part( here, access_task::remove, parts_here );
         return;
     }
 
@@ -2073,7 +2206,7 @@ void veh_interact::do_relabel( const map &here )
 }
 
 std::pair<bool, std::string> veh_interact::calc_lift_requirements( map &here, const vpart_info
-        &sel_vpart_info )
+        &sel_vpart_info, task_speech *speech )
 {
     int lvl = 0;
     int str = 0;
@@ -2092,6 +2225,12 @@ std::pair<bool, std::string> veh_interact::calc_lift_requirements( map &here, co
             nmsg += "> " + wrap_badter[0] + "\n";
             for( size_t i = 1; i < wrap_badter.size(); i++ ) {
                 nmsg += "  " + wrap_badter[i] + "\n";
+            }
+            if( speech != nullptr ) {
+                speech->requirements.push_back( accessibility::format_semantic_sequence( {
+                    remove_color_tags( _( "<color_red>Unsuitable terrain</color> for working on part that requires jacking." ) )
+                } ) );
+                speech->missing++;
             }
             return std::pair<bool, std::string> ( false, nmsg );
         }
@@ -2150,6 +2289,15 @@ std::pair<bool, std::string> veh_interact::calc_lift_requirements( map &here, co
     nmsg += string_format( _( "> %1$s <color_white>OR</color> %2$s" ),
                            colorize( aid_string, aid_color ),
                            colorize( str_string, str_color ) ) + "\n";
+    if( speech != nullptr ) {
+        std::string spoken_strength = str_string;
+        while( !spoken_strength.empty() && spoken_strength.back() == ' ' ) {
+            spoken_strength.pop_back();
+        }
+        speech->requirements.push_back( accessibility::format_vehicle_lift_requirement( aid_string,
+                                        use_aid, spoken_strength, use_str ) );
+        speech->missing += ok ? 0 : 1;
+    }
 
     std::pair<bool, std::string> result( ok, nmsg );
     return result;
@@ -2217,6 +2365,7 @@ void veh_interact::move_cursor( map &here, const point_rel_ms &d, int dstart_at 
     if( ovp && &ovp->vehicle() != veh ) {
         obstruct = true;
     }
+    cursor_obstructed = obstruct;
 
     can_mount.clear();
     if( !obstruct ) {
@@ -3392,4 +3541,717 @@ void veh_interact::complete_vehicle( map &here, Character &you )
     }
     you.invalidate_crafting_inventory();
     you.invalidate_weight_carried_cache();
+}
+
+static std::string access_task_name( const int task )
+{
+    static const std::array<translation, 9> names = { {
+            to_translation( "vehicle task", "Repair" ),
+            to_translation( "vehicle task", "Mend" ),
+            to_translation( "vehicle task", "Remove" ),
+            to_translation( "vehicle task", "Install here" ),
+            to_translation( "vehicle task", "Refill" ),
+            to_translation( "vehicle task", "Siphon" ),
+            to_translation( "vehicle task", "Assign crew" ),
+            to_translation( "vehicle task", "Change shape" ),
+            to_translation( "vehicle task", "Label" )
+        }
+    };
+    return names.at( task ).translated();
+}
+
+/** Why a vehicle task cannot start, in words, or empty for reasons the caller names. */
+static std::string task_reason_text( const task_reason reason )
+{
+    switch( reason ) {
+        case task_reason::MOVING_VEHICLE:
+            return _( "the vehicle is moving" );
+        case task_reason::LOW_MORALE:
+            return _( "your morale is too low" );
+        case task_reason::LOW_LIGHT:
+            return _( "it is too dark to see what you are doing" );
+        case task_reason::LACK_TOOLS:
+            return _( "you lack the tools" );
+        case task_reason::NOT_FREE:
+            return _( "something is attached to it" );
+        case task_reason::LACK_SKILL:
+            return _( "your skill is too low" );
+        default:
+            break;
+    }
+    return std::string();
+}
+
+/** Unmet requirements in words: what blocks the task, or how many are missing. */
+static std::string requirement_reason( const std::string &blocked, const size_t missing )
+{
+    return blocked.empty() ? accessibility::format_vehicle_missing_requirements( missing ) : blocked;
+}
+
+/** The description of a part type as spoken sentences, one per source line. */
+static std::vector<std::string> description_lines( const vpart_info &info )
+{
+    std::string description;
+    info.format_description( description, c_light_gray, 0 );
+    std::vector<std::string> lines;
+    std::istringstream stream( remove_color_tags( description ) );
+    std::string line;
+    while( std::getline( stream, line ) ) {
+        const std::string sentence = accessibility::format_semantic_sequence( { line } );
+        if( !sentence.empty() ) {
+            lines.push_back( sentence );
+        }
+    }
+    return lines;
+}
+
+void veh_interact::focus_part( map &here, const int part )
+{
+    move_cursor( here, ( veh->part( part ).mount.raw() + dd ).rotate( 3 ) );
+}
+
+std::string veh_interact::cursor_description() const
+{
+    return accessibility_gameplay::vehicle_tile_description( *veh, -dd, cursor_obstructed );
+}
+
+void veh_interact::speak_grid()
+{
+    accessibility::announce( accessibility::format_semantic_sequence( {
+        _( "Vehicle grid" ), cursor_description()
+    } ) );
+}
+
+void veh_interact::show_requirements( const std::string &title, const std::string &reason,
+                                      const task_speech &speech ) const
+{
+    std::vector<std::string> lines;
+    if( !reason.empty() ) {
+        lines.push_back( accessibility::format_semantic_sequence( {
+            string_format( _( "Unavailable: %s" ), reason )
+        } ) );
+    }
+    lines.insert( lines.end(), speech.requirements.begin(), speech.requirements.end() );
+    if( lines.empty() ) {
+        lines.emplace_back( _( "No requirements." ) );
+    }
+    accessibility_ui::show_document( title, title, lines, lines );
+}
+
+std::string veh_interact::task_unavailable( map &here, const access_task task, const int part,
+        task_speech &speech )
+{
+    avatar &you = get_avatar();
+    vehicle_part &pt = veh->part( part );
+    // Reasons that apply to the whole vehicle; the caller names an invalid target.
+    const auto mode_reason = [&]( const char mode ) {
+        const task_reason reason = cant_do( here, mode );
+        return reason == task_reason::INVALID_TARGET ? std::string() : task_reason_text( reason );
+    };
+    //~ Why a vehicle task is unavailable: %s is the owner of the vehicle.
+    const std::string not_owned = string_format( _( "owned by %s" ), veh->get_owner_name() );
+    std::string reason;
+    switch( task ) {
+        case access_task::repair: {
+            if( !pt.is_repairable() && !pt.is_broken() ) {
+                return pt.damage_percent() > 0 ? _( "this part cannot be repaired" ) : _( "not damaged" );
+            }
+            reason = mode_reason( 'r' );
+            std::string nmsg;
+            if( !repair_requirements( here, pt, nmsg, &speech ) && reason.empty() ) {
+                reason = requirement_reason( speech.blocked, speech.missing );
+            }
+            break;
+        }
+        case access_task::mend:
+            reason = mode_reason( 'm' );
+            break;
+        case access_task::remove: {
+            reason = mode_reason( 'o' );
+            const bool ok = can_remove_part( here, part, you, &speech );
+            if( !ok && reason.empty() ) {
+                reason = requirement_reason( speech.blocked, speech.missing );
+            }
+            break;
+        }
+        case access_task::install: {
+            const task_reason install = cant_do( here, 'i' );
+            reason = install == task_reason::INVALID_TARGET ? _( "nothing can be installed here" ) :
+                     task_reason_text( install );
+            break;
+        }
+        case access_task::refill:
+            reason = mode_reason( 'f' );
+            break;
+        case access_task::siphon: {
+            const task_reason siphon = cant_do( here, 's' );
+            reason = siphon == task_reason::LACK_TOOLS ? _( "you need a hose" ) : mode_reason( 's' );
+            break;
+        }
+        case access_task::crew:
+            if( !owned_by_player ) {
+                reason = not_owned;
+            } else if( cant_do( here, 'w' ) != task_reason::CAN_DO ) {
+                reason = _( "you have no allies to assign" );
+            }
+            break;
+        case access_task::shape:
+            break;
+        case access_task::label:
+            if( !owned_by_player ) {
+                reason = not_owned;
+            }
+            break;
+    }
+    msg.reset();
+    return reason;
+}
+
+std::vector<veh_interact::access_option> veh_interact::part_tasks( map &here, const int part )
+{
+    const vehicle_part &pt = veh->part( part );
+    const bool debug_faults = get_avatar().has_trait( trait_DEBUG_HS );
+    std::vector<access_task> tasks = { access_task::repair };
+    if( pt.is_available() && ( debug_faults ? !pt.faults_potential().empty() :
+                               !pt.faults().empty() ) ) {
+        tasks.push_back( access_task::mend );
+    }
+    tasks.push_back( access_task::remove );
+    tasks.push_back( access_task::install );
+    if( can_refill( here, pt ) ) {
+        tasks.push_back( access_task::refill );
+    }
+    if( pt.is_tank() && !pt.base.empty() && pt.base.only_item().made_of( phase_id::LIQUID ) ) {
+        tasks.push_back( access_task::siphon );
+    }
+    if( pt.is_seat() ) {
+        tasks.push_back( access_task::crew );
+    }
+    if( pt.info().variants.size() > 1 ) {
+        tasks.push_back( access_task::shape );
+    }
+    tasks.push_back( access_task::label );
+    std::vector<access_option> options;
+    options.reserve( tasks.size() );
+    for( const access_task task : tasks ) {
+        options.push_back( { task, part, access_task_name( static_cast<int>( task ) ) } );
+    }
+    return options;
+}
+
+void veh_interact::evaluate_tasks( map &here, const std::vector<access_option> &options,
+                                   std::vector<std::string> &reasons, std::vector<task_speech> &speech )
+{
+    reasons.clear();
+    speech.assign( options.size(), task_speech() );
+    for( size_t i = 0; i < options.size(); ++i ) {
+        focus_part( here, options[i].part );
+        reasons.push_back( task_unavailable( here, options[i].task, options[i].part, speech[i] ) );
+    }
+}
+
+int veh_interact::accessible_task_menu( map &here, const std::string &title,
+                                        const std::vector<access_option> &options, const bool reopen )
+{
+    if( options.empty() ) {
+        return -1;
+    }
+    std::vector<std::string> reasons;
+    std::vector<task_speech> speech;
+    evaluate_tasks( here, options, reasons, speech );
+    const auto option_title = [&]( const size_t index ) {
+        //~ Vehicle task requirement document: %1$s is the task, %2$s the part.
+        return string_format( _( "%1$s %2$s" ), access_task_name( static_cast<int>( options[index].task ) ),
+                              veh->part( options[index].part ).name( false ) );
+    };
+
+    uilist menu;
+    menu.title = title;
+    menu.allow_disabled = true;
+    for( size_t i = 0; i < options.size(); ++i ) {
+        menu.addentry_col( static_cast<int>( i ), reasons[i].empty(), MENU_AUTOASSIGN, options[i].label,
+                           reasons[i] );
+        menu.entries.back().accessibility_focus = accessibility::format_vehicle_task( options[i].label,
+                reasons[i] );
+    }
+    menu.accessibility_details = [&]() {
+        if( menu.selected < 0 || static_cast<size_t>( menu.selected ) >= menu.entries.size() ) {
+            return;
+        }
+        const size_t index = static_cast<size_t>( menu.entries[menu.selected].retval );
+        show_requirements( option_title( index ), reasons[index], speech[index] );
+    };
+    if( reopen ) {
+        menu.accessibility_reopen();
+    }
+    while( true ) {
+        menu.query();
+        if( menu.ret < 0 || static_cast<size_t>( menu.ret ) >= options.size() ) {
+            return -1;
+        }
+        const size_t chosen = static_cast<size_t>( menu.ret );
+        if( reasons[chosen].empty() ) {
+            focus_part( here, options[chosen].part );
+            return menu.ret;
+        }
+        accessibility::announce( accessibility::format_vehicle_task_blocked(
+                                     access_task_name( static_cast<int>( options[chosen].task ) ),
+                                     veh->part( options[chosen].part ).name( false ), reasons[chosen] ) );
+        menu.accessibility_resume();
+    }
+}
+
+bool veh_interact::run_task( map &here, const access_task task, const int part )
+{
+    Character &you = get_player_character();
+    focus_part( here, part );
+    vehicle_part &pt = veh->part( part );
+    const auto announce_helpers = [&you]() {
+        for( const Character *helper : you.get_crafting_helpers() ) {
+            add_msg( m_info, _( "%s helps with this task…" ), helper->get_name() );
+        }
+    };
+    switch( task ) {
+        case access_task::repair:
+            // Modifying a vehicle with rotors will make it not flightworthy.
+            if( veh->would_repair_prevent_flyable( pt, you ) ) {
+                if( !query_yn(
+                        _( "Repairing this part will mean that this vehicle is no longer flightworthy.  Continue?" ) ) ) {
+                    break;
+                }
+                veh->set_flyable( false );
+            }
+            announce_helpers();
+            sel_vehicle_part = &pt;
+            sel_vpart_info = &pt.info();
+            sel_cmd = 'r';
+            break;
+        case access_task::remove:
+            if( veh->would_removal_prevent_flyable( pt, you ) ) {
+                if( !query_yn(
+                        _( "Removing this part will mean that this vehicle is no longer flightworthy.  Continue?" ) ) ) {
+                    break;
+                }
+                veh->set_flyable( false );
+            }
+            announce_helpers();
+            sel_vehicle_part = &pt;
+            sel_vpart_info = &pt.info();
+            sel_cmd = 'o';
+            veh->recalculate_enchantment_cache();
+            break;
+        case access_task::install:
+            do_install( here );
+            break;
+        case access_task::mend:
+            preselected_part = part;
+            do_mend( here );
+            break;
+        case access_task::refill:
+            preselected_part = part;
+            do_refill( here );
+            break;
+        case access_task::siphon:
+            preselected_part = part;
+            do_siphon( here );
+            break;
+        case access_task::crew:
+            preselected_part = part;
+            do_assign_crew( here );
+            break;
+        case access_task::shape:
+            do_change_shape_menu( pt );
+            break;
+        case access_task::label:
+            do_relabel( here );
+            break;
+    }
+    preselected_part = -1;
+    if( msg ) {
+        accessibility::announce( accessibility::format_semantic_sequence( { remove_color_tags( *msg ) } ) );
+        msg.reset();
+    }
+    if( task == access_task::siphon ) {
+        // Siphoning may have started an activity that continues after the screen closes.
+        if( !you.activity.is_null() ) {
+            return true;
+        }
+        cache_tool_availability();
+    }
+    return sel_cmd != ' ';
+}
+
+void veh_interact::accessible_choose_part( map &here, const access_task task,
+        const std::vector<int> &parts )
+{
+    std::vector<access_option> options;
+    options.reserve( parts.size() );
+    for( const int part : parts ) {
+        options.push_back( { task, part, accessibility::format_vehicle_tile_part(
+                                 accessibility_gameplay::vehicle_part_row( *veh, veh->part( part ) ) )
+                           } );
+    }
+    const std::string menu_title = task == access_task::repair ? _( "Choose a part here to repair:" ) :
+                                   _( "Choose a part here to remove:" );
+    const int choice = accessible_task_menu( here, menu_title, options, false );
+    if( choice >= 0 ) {
+        run_task( here, task, options[choice].part );
+    }
+}
+
+bool veh_interact::accessible_part_tasks( map &here, const int part )
+{
+    Character &you = get_player_character();
+    bool reopen = false;
+    while( true ) {
+        focus_part( here, part );
+        const std::vector<access_option> options = part_tasks( here, part );
+        const accessibility::vehicle_part_row row = accessibility_gameplay::vehicle_part_row( *veh,
+                veh->part( part ) );
+        //~ Task menu of a vehicle part: %1$s is the part, %2$s its location such as "front left".
+        const std::string menu_title = string_format( _( "Tasks for %1$s, %2$s" ), row.name,
+                                       row.location );
+        const int choice = accessible_task_menu( here, menu_title, options, reopen );
+        if( choice < 0 ) {
+            return false;
+        }
+        reopen = true;
+        const access_task task = options[choice].task;
+        const bool theft_check = task != access_task::crew && task != access_task::shape &&
+                                 task != access_task::label;
+        if( theft_check && !veh->handle_potential_theft( you ) ) {
+            continue;
+        }
+        if( run_task( here, task, part ) ) {
+            return true;
+        }
+    }
+}
+
+bool veh_interact::accessible_part_list( map &here )
+{
+    int focused = -1;
+    bool reopen = false;
+    while( true ) {
+        const std::vector<int> parts = accessibility_gameplay::vehicle_part_list( *veh );
+        if( parts.empty() ) {
+            return false;
+        }
+        uilist menu;
+        //~ Accessible list of the parts of the examined vehicle: %s is its name.
+        menu.title = string_format( _( "Parts of %s" ), veh->name );
+        menu.accessibility_count = []( const size_t count ) {
+            return accessibility::format_vehicle_part_count( count );
+        };
+        for( size_t i = 0; i < parts.size(); ++i ) {
+            const accessibility::vehicle_part_row row = accessibility_gameplay::vehicle_part_row( *veh,
+                    veh->part( parts[i] ) );
+            menu.addentry_col( static_cast<int>( i ), true, std::nullopt, row.name, row.location );
+            menu.entries.back().accessibility_focus = accessibility::format_vehicle_part_row( row );
+            if( parts[i] == focused ) {
+                menu.selected = static_cast<int>( i );
+            }
+        }
+        menu.accessibility_details = [&]() {
+            if( menu.selected < 0 || static_cast<size_t>( menu.selected ) >= menu.entries.size() ) {
+                return;
+            }
+            const vehicle_part &pt = veh->part( parts[menu.entries[menu.selected].retval] );
+            const std::string name = pt.name( false );
+            const std::vector<std::string> lines = accessibility_gameplay::vehicle_part_details( *veh, pt );
+            accessibility_ui::show_document( name, name, lines, lines );
+        };
+        if( reopen ) {
+            menu.accessibility_reopen();
+        }
+        menu.query();
+        if( menu.ret < 0 || static_cast<size_t>( menu.ret ) >= parts.size() ) {
+            return false;
+        }
+        focused = parts[menu.ret];
+        if( accessible_part_tasks( here, focused ) ) {
+            return true;
+        }
+        reopen = true;
+    }
+}
+
+void veh_interact::accessible_install( map &here )
+{
+    avatar &player_character = get_avatar();
+    const std::string location = accessibility::format_vehicle_location(
+                                     accessibility_gameplay::vehicle_grid_position( *veh, -dd ) );
+    uilist menu;
+    menu.title = _( "Choose new part to install here:" );
+    //~ Accessible install list: %s is the location on the vehicle, such as "front left".
+    menu.accessibility_context = string_format( _( "Install at %s" ), location );
+    menu.allow_disabled = true;
+    menu.accessibility_count = []( const size_t count ) {
+        return accessibility::format_vehicle_install_count( count );
+    };
+    for( const vpart_category &cat : vpart_category::all() ) {
+        if( cat.get_id() != "_filter" ) {
+            menu.add_category( cat.get_id(), cat.name() );
+        }
+    }
+    menu.set_category_filter( [this]( const uilist_entry & entry, const std::string & key ) {
+        return key == "_all" || can_mount[entry.retval]->has_category( key );
+    } );
+    for( size_t i = 0; i < can_mount.size(); ++i ) {
+        const vpart_info &info = *can_mount[i];
+        // The visual list grays out parts whose requirements are not met.
+        const bool potential = can_potentially_install( info );
+        menu.addentry( static_cast<int>( i ), potential, std::nullopt, info.name() );
+        menu.entries.back().accessibility_focus = accessibility::format_vehicle_task( info.name(),
+                potential ? std::string() : accessibility::format_vehicle_missing_requirements( 0 ) );
+    }
+    const auto requirements = [&]( const int index, task_speech & speech ) {
+        sel_vpart_info = can_mount[index];
+        const bool ok = update_part_requirements( here, &speech );
+        msg.reset();
+        return ok;
+    };
+    menu.accessibility_details = [&]() {
+        if( menu.selected < 0 || static_cast<size_t>( menu.selected ) >= menu.entries.size() ) {
+            return;
+        }
+        const int index = menu.entries[menu.selected].retval;
+        task_speech speech;
+        const bool ok = requirements( index, speech );
+        const std::vector<std::string> description = description_lines( *can_mount[index] );
+        speech.requirements.insert( speech.requirements.end(), description.begin(), description.end() );
+        //~ Install requirement document: %s is the part.
+        show_requirements( string_format( _( "Install %s" ), can_mount[index]->name() ),
+                           ok ? std::string() : requirement_reason( speech.blocked, speech.missing ), speech );
+    };
+    while( true ) {
+        menu.query();
+        if( menu.ret < 0 || static_cast<size_t>( menu.ret ) >= can_mount.size() ) {
+            sel_vpart_info = nullptr;
+            return;
+        }
+        task_speech speech;
+        if( requirements( menu.ret, speech ) ) {
+            break;
+        }
+        accessibility::announce( accessibility::format_vehicle_task_blocked(
+                                     pgettext( "vehicle task", "Install" ), sel_vpart_info->name(),
+                                     requirement_reason( speech.blocked, speech.missing ) ) );
+        menu.accessibility_resume();
+    }
+    switch( cant_do( here, 'i' ) ) {
+        case task_reason::LOW_MORALE:
+            msg = _( "Your morale is too low to construct…" );
+            return;
+        case task_reason::LOW_LIGHT:
+            msg = _( "It's too dark to see what you are doing…" );
+            return;
+        case task_reason::MOVING_VEHICLE:
+            msg = _( "You can't install parts while driving." );
+            return;
+        default:
+            break;
+    }
+    // Modifying a vehicle with rotors will make it not flightworthy.
+    if( veh->would_install_prevent_flyable( *sel_vpart_info, player_character ) ) {
+        if( !query_yn( _( "Installing this part will mean that this vehicle is no longer "
+                          "flightworthy.  Continue?" ) ) ) {
+            return;
+        }
+        veh->set_flyable( false );
+    }
+    if( veh->is_foldable() && !sel_vpart_info->folded_volume &&
+        !query_yn( _( "Installing this part will make the vehicle unfoldable. "
+                      " Continue?" ) ) ) {
+        return;
+    }
+    sel_cmd = 'i';
+}
+
+void veh_interact::accessible_overview( map &here )
+{
+    if( preselected_part >= 0 ) {
+        vehicle_part &pt = veh->part( preselected_part );
+        if( overview_enable( here, pt ) ) {
+            overview_action( here, pt );
+        }
+        return;
+    }
+    calc_overview( here );
+    std::vector<vehicle_part *> parts;
+    for( const part_option &option : overview_opts ) {
+        if( option.selectable ) {
+            parts.push_back( option.part );
+        }
+    }
+    if( parts.empty() ) {
+        return;
+    }
+    uilist menu;
+    menu.title = title.value_or( _( "Select part" ) );
+    menu.accessibility_count = []( const size_t count ) {
+        return accessibility::format_vehicle_part_count( count );
+    };
+    for( size_t i = 0; i < parts.size(); ++i ) {
+        const accessibility::vehicle_part_row row = accessibility_gameplay::vehicle_part_row( *veh,
+                *parts[i] );
+        menu.addentry_col( static_cast<int>( i ), true, MENU_AUTOASSIGN, row.name, row.location );
+        menu.entries.back().accessibility_focus = accessibility::format_vehicle_part_row( row );
+    }
+    menu.accessibility_details = [&]() {
+        if( menu.selected < 0 || static_cast<size_t>( menu.selected ) >= menu.entries.size() ) {
+            return;
+        }
+        const vehicle_part &pt = *parts[menu.entries[menu.selected].retval];
+        const std::string name = pt.name( false );
+        const std::vector<std::string> lines = accessibility_gameplay::vehicle_part_details( *veh, pt );
+        accessibility_ui::show_document( name, name, lines, lines );
+    };
+    menu.query();
+    if( menu.ret >= 0 && static_cast<size_t>( menu.ret ) < parts.size() ) {
+        vehicle_part &pt = *parts[menu.ret];
+        focus_part( here, veh->index_of_part( &pt ) );
+        overview_action( here, pt );
+    }
+}
+
+bool veh_interact::accessible_grid_action( map &here, const std::string &action, bool &finish )
+{
+    if( action == "ACCESSIBILITY_PART_LIST" ) {
+        finish = accessible_part_list( here );
+        if( !finish ) {
+            speak_grid();
+        }
+    } else if( action == "ACCESSIBILITY_STATUS" ) {
+        accessibility::announce( accessible_stats( here ) );
+    } else if( action == "ACCESSIBILITY_DETAILS" ) {
+        const std::string location = accessibility::format_vehicle_location(
+                                         accessibility_gameplay::vehicle_grid_position( *veh, -dd ) );
+        const std::vector<std::string> lines = accessibility_gameplay::vehicle_tile_details( *veh, -dd );
+        accessibility_ui::show_document( location, location, lines, lines );
+        accessibility::announce( cursor_description() );
+    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+    } else {
+        return false;
+    }
+    return true;
+}
+
+void veh_interact::accessible_after_action( map &, const std::string &action )
+{
+    static const std::set<std::string> task_actions = {
+        "INSTALL", "REPAIR", "MEND", "REFILL", "REMOVE", "SIPHON", "UNLOAD", "ASSIGN_CREW",
+        "RELABEL", "RENAME"
+    };
+    if( !main_context.get_direction_rel_ms( action ) && task_actions.count( action ) == 0 ) {
+        return;
+    }
+    if( msg ) {
+        accessibility::announce( accessibility::format_semantic_sequence( { remove_color_tags( *msg ) } ) );
+    } else {
+        accessibility::announce( cursor_description() );
+    }
+}
+
+std::string veh_interact::accessible_stats( map &here ) const
+{
+    accessibility::vehicle_workshop_stats stats;
+    stats.name = veh->name;
+    if( !veh->is_owned_by( get_player_character(), true ) ) {
+        stats.owner = veh->get_owner_name();
+    }
+    stats.units = velocity_units( VU_VEHICLE );
+    const auto vel_to_int = []( const double vel ) {
+        return static_cast<int>( convert_velocity( vel, VU_VEHICLE ) );
+    };
+    const bool is_boat = !veh->floating.empty();
+    const bool is_ground = !veh->wheelcache.empty() || !is_boat;
+    if( veh->is_rotorcraft( here ) && veh->is_flying_in_air() ) {
+        stats.speeds.push_back( { _( "In the air" ), vel_to_int( veh->safe_rotor_velocity( here, false ) ),
+                                  vel_to_int( veh->max_rotor_velocity( here, false ) ),
+                                  vel_to_int( veh->rotor_acceleration( here, false ) )
+                                } );
+    } else {
+        if( is_ground ) {
+            stats.speeds.push_back( { std::string(), vel_to_int( veh->safe_ground_velocity( here, false ) ),
+                                      vel_to_int( veh->max_ground_velocity( here, false ) ),
+                                      vel_to_int( veh->ground_acceleration( here, false ) )
+                                    } );
+        }
+        if( is_boat ) {
+            stats.speeds.push_back( { _( "On water" ), vel_to_int( veh->safe_water_velocity( here, false ) ),
+                                      vel_to_int( veh->max_water_velocity( here, false ) ),
+                                      vel_to_int( veh->water_acceleration( here, false ) )
+                                    } );
+        }
+    }
+    stats.mass = string_format( "%.0f %s", convert_weight( veh->total_mass( here ) ), weight_units() );
+    units::volume total_cargo = 0_ml;
+    units::volume free_cargo = 0_ml;
+    for( const vpart_reference &vpr : veh->get_any_parts( VPFLAG_CARGO ) ) {
+        const vehicle_stack vs = vpr.items();
+        total_cargo += vs.max_volume();
+        free_cargo += vs.free_volume();
+    }
+    stats.cargo_used = string_format( "%s %s", format_volume( total_cargo - free_cargo ),
+                                      volume_units_abbr() );
+    stats.cargo_total = string_format( "%s %s", format_volume( total_cargo ), volume_units_abbr() );
+    stats.status = remove_color_tags( total_durability_text );
+    stats.wheels = remove_color_tags( wheel_state_description( here, *veh ) );
+    vehicle_part *most_damaged = get_most_damaged_part();
+    vehicle_part *most_repairable = get_most_repairable_part();
+    if( most_damaged && most_damaged->damage_percent() ) {
+        stats.most_damaged = most_damaged->name( false );
+        stats.most_damaged_repairable = most_damaged == most_repairable;
+    }
+    if( most_repairable && most_repairable != most_damaged ) {
+        stats.needs_repair = most_repairable->name( false );
+    }
+    stats.fuels = accessibility_gameplay::vehicle_status( here, *veh ).fuels;
+    stats.air_drag = veh->coeff_air_drag();
+    stats.has_water_drag = is_boat;
+    stats.water_drag = is_boat ? veh->coeff_water_drag( here ) : 0.0;
+    stats.has_rolling_drag = is_ground;
+    stats.rolling_drag = is_ground ? veh->coeff_rolling_drag( here ) : 0.0;
+    stats.static_drag = units::to_watt( veh->static_drag( false ) );
+    stats.offroad = static_cast<int>( veh->k_traction( here, veh->wheel_area() *
+                                      veh->average_offroad_rating() ) * 100 );
+    if( is_boat ) {
+        stats.has_draft = true;
+        stats.draft = veh->water_draft( here );
+        stats.clearance = veh->water_hull_height( here ) - veh->water_draft( here );
+    }
+    return accessibility::format_vehicle_workshop_stats( stats );
+}
+
+std::vector<std::pair<std::string, std::vector<std::string>>>
+veh_interact::accessible_tasks_for_testing( map &here, vehicle &veh, const int part )
+{
+    veh_interact vehint( here, veh );
+    vehint.owned_by_player = veh.handle_potential_theft( get_player_character(), true );
+    const std::vector<access_option> options = vehint.part_tasks( here, part );
+    std::vector<std::string> reasons;
+    std::vector<task_speech> speech;
+    vehint.evaluate_tasks( here, options, reasons, speech );
+    std::vector<std::pair<std::string, std::vector<std::string>>> result;
+    result.reserve( options.size() );
+    for( size_t i = 0; i < options.size(); ++i ) {
+        result.emplace_back( accessibility::format_vehicle_task( options[i].label, reasons[i] ),
+                             speech[i].requirements );
+    }
+    return result;
+}
+
+std::string veh_interact::accessible_tile_for_testing( map &here, vehicle &veh, const int part )
+{
+    veh_interact vehint( here, veh );
+    vehint.focus_part( here, part );
+    return vehint.cursor_description();
+}
+
+std::string veh_interact::accessible_stats_for_testing( map &here, vehicle &veh )
+{
+    veh_interact vehint( here, veh );
+    return vehint.accessible_stats( here );
 }

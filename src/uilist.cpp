@@ -1047,6 +1047,11 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         }
         accessibility_category = current_category;
         const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
+        if( accessibility_silent ) {
+            accessibility_silent = false;
+            accessibility_open = true;
+            accessibility_selection = selection_key;
+        }
         if( !accessibility_open ) {
             const std::string semantic_context = accessibility::format_semantic_sequence( {
                 !accessibility_context.empty() ? accessibility_context :
@@ -1184,6 +1189,11 @@ void uilist::accessibility_reopen()
 {
     accessibility_open = true;
     accessibility_selection.clear();
+}
+
+void uilist::accessibility_resume()
+{
+    accessibility_silent = true;
 }
 
 ///@}

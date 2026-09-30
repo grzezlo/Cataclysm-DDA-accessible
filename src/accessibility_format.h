@@ -563,6 +563,107 @@ std::string format_vehicle_obstacle( const std::string &name, int distance, bool
 std::string format_vehicle_engine_row( const std::string &engine, const std::string &fuel,
                                        bool active );
 
+/**
+ * A tile of the vehicle examination grid in vehicle coordinates: x grows
+ * toward the front and y toward the right.  The bounds are the vehicle's.
+ */
+struct vehicle_grid_position {
+    int x = 0;
+    int y = 0;
+    int min_x = 0;
+    int max_x = 0;
+    int min_y = 0;
+    int max_y = 0;
+};
+/** "front left", "rear", "center"; "outside, front" beyond the vehicle. */
+std::string format_vehicle_location( const vehicle_grid_position &position );
+/**
+ * Exact position: "Row 2 of 5 from the front, column 1 of 3 from the left."
+ * Beyond the vehicle: "1 tile in front of the vehicle, column 2 of 3 from the left."
+ */
+std::string format_vehicle_position_details( const vehicle_grid_position &position );
+/** "broken", "damaged 40%", or empty for an undamaged part. */
+std::string format_vehicle_part_condition( bool broken, int damage_percent );
+/** One vehicle part in the examination part list. */
+struct vehicle_part_row {
+    std::string name;
+    std::string location;
+    bool broken = false;
+    int damage_percent = 0;
+    /** Words for states shown by symbols or color, such as "leaking". */
+    std::vector<std::string> states;
+};
+/** "headlight, front left, damaged 40%" */
+std::string format_vehicle_part_row( const vehicle_part_row &row );
+/** "headlight, damaged 40%": the row without its location, for a tile summary. */
+std::string format_vehicle_tile_part( const vehicle_part_row &row );
+/** Grid cursor: "front left: frame; door, damaged 10%." or "outside, front: no parts, obstructed." */
+std::string format_vehicle_tile( const std::string &location, const std::vector<std::string> &parts,
+                                 bool obstructed );
+/** "12 parts" or "No parts" */
+std::string format_vehicle_part_count( size_t count );
+/** "5 installable parts" or "No installable parts", for the install list. */
+std::string format_vehicle_install_count( size_t count );
+/** Task menu or part chooser row: "Repair" or "Remove. Unavailable: something is attached." */
+std::string format_vehicle_task( const std::string &task, const std::string &unavailable_reason );
+/** A chosen task that cannot start: "Repair headlight. Unavailable: 2 requirements missing." */
+std::string format_vehicle_task_blocked( const std::string &task, const std::string &part,
+        const std::string &reason );
+/** "2 requirements missing" or "requirements not met" when none can be named. */
+std::string format_vehicle_missing_requirements( size_t missing );
+/** A skill level a vehicle task requires. */
+struct vehicle_skill_requirement {
+    std::string skill;
+    int level = 0;
+    bool met = false;
+};
+/** "Skills required: mechanics 2, have; electronics 1, missing." or "Skills required: none." */
+std::string format_vehicle_skills( const std::vector<vehicle_skill_requirement> &skills );
+/** "mechanics 5 for extra engines, missing." */
+std::string format_vehicle_extra_skill( const std::string &skill, int level, bool met,
+                                        const std::string &purpose );
+/** "Time required: 30 minutes." */
+std::string format_vehicle_task_time( const std::string &time );
+/** "Lifting: 1 tool with jacking 3, have; or strength 12, missing." */
+std::string format_vehicle_lift_requirement( const std::string &tool, bool tool_met,
+        const std::string &strength, bool strength_met );
+/** Speed figures of one medium in the examination statistics. */
+struct vehicle_speed_stats {
+    /** Empty for ground, or "On water" or "In the air". */
+    std::string medium;
+    int safe = 0;
+    int top = 0;
+    int acceleration = 0;
+};
+/** Vehicle statistics shown at the bottom of the examination screen. */
+struct vehicle_workshop_stats {
+    std::string name;
+    std::string owner;
+    /** Speed unit such as "mph". */
+    std::string units;
+    std::vector<vehicle_speed_stats> speeds;
+    std::string mass;
+    std::string cargo_used;
+    std::string cargo_total;
+    std::string status;
+    std::string wheels;
+    std::string most_damaged;
+    bool most_damaged_repairable = true;
+    std::string needs_repair;
+    std::vector<vehicle_fuel_gauge> fuels;
+    double air_drag = 0.0;
+    bool has_water_drag = false;
+    double water_drag = 0.0;
+    bool has_rolling_drag = false;
+    double rolling_drag = 0.0;
+    int static_drag = 0;
+    int offroad = 0;
+    bool has_draft = false;
+    double draft = 0.0;
+    double clearance = 0.0;
+};
+std::string format_vehicle_workshop_stats( const vehicle_workshop_stats &stats );
+
 /** An item that a pickup stored, with the container it went into, if known. */
 struct pickup_result_item {
     std::string item;

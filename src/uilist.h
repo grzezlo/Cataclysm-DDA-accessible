@@ -409,6 +409,9 @@ class uilist // NOLINT(cata-xy)
         // Speak only the focused entry when the list opens, e.g. when a menu
         // reopens after an action that kept it open.
         void accessibility_reopen();
+        // Speak nothing when the list opens again until focus moves, e.g. after
+        // the caller spoke why the chosen entry cannot be used.
+        void accessibility_resume();
 
 #if defined(TILES)
         void set_hide( bool val );
@@ -510,6 +513,7 @@ class uilist // NOLINT(cata-xy)
         bool clicked = false;
         bool need_to_scroll = false;
         bool accessibility_open = false;
+        bool accessibility_silent = false;
         std::string accessibility_selection;
         std::vector<std::pair<std::string, std::string>> categories;
         std::function<bool( const uilist_entry &, const std::string & )> category_filter;

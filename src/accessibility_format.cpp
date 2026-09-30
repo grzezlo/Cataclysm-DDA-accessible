@@ -1884,6 +1884,288 @@ std::string format_vehicle_engine_row( const std::string &engine, const std::str
                           active ? pgettext( "engine", "on" ) : pgettext( "engine", "off" ) );
 }
 
+namespace
+{
+/**
+ * Third of a vehicle dimension: 0 for the rear or left, 1 for the middle, 2
+ * for the front or right, or -1 when the vehicle is one tile long there.
+ */
+int vehicle_section( const int value, const int min, const int max )
+{
+    const int length = max - min + 1;
+    if( length <= 1 ) {
+        return -1;
+    }
+    const int offset = std::clamp( value, min, max ) - min;
+    if( length == 2 ) {
+        return offset == 0 ? 0 : 2;
+    }
+    // Symmetric thirds, so both ends of a vehicle get the same number of rows.
+    return ( offset * 3 + 1 ) / length;
+}
+
+std::string without_empty_joined( const std::vector<std::string> &parts,
+                                  const std::string &separator )
+{
+    std::vector<std::string> present;
+    for( const std::string &part : parts ) {
+        if( !part.empty() ) {
+            present.push_back( part );
+        }
+    }
+    return string_join( present, separator );
+}
+} // namespace
+
+std::string format_vehicle_location( const vehicle_grid_position &position )
+{
+    const int along = vehicle_section( position.x, position.min_x, position.max_x );
+    const int across = vehicle_section( position.y, position.min_y, position.max_y );
+    std::string location;
+    if( along == 2 || along == 0 ) {
+        if( across == 0 ) {
+            location = along == 2 ? pgettext( "vehicle location", "front left" ) :
+                       pgettext( "vehicle location", "rear left" );
+        } else if( across == 2 ) {
+            location = along == 2 ? pgettext( "vehicle location", "front right" ) :
+                       pgettext( "vehicle location", "rear right" );
+        } else {
+            location = along == 2 ? pgettext( "vehicle location", "front" ) :
+                       pgettext( "vehicle location", "rear" );
+        }
+    } else if( across == 0 ) {
+        location = pgettext( "vehicle location", "left" );
+    } else if( across == 2 ) {
+        location = pgettext( "vehicle location", "right" );
+    } else {
+        location = pgettext( "vehicle location", "center" );
+    }
+    const bool outside = position.x < position.min_x || position.x > position.max_x ||
+                         position.y < position.min_y || position.y > position.max_y;
+    if( outside ) {
+        //~ Grid tile beyond a vehicle: %s is the nearest location on the vehicle, such as "front left".
+        return string_format( pgettext( "vehicle location", "outside, %s" ), location );
+    }
+    return location;
+}
+
+std::string format_vehicle_position_details( const vehicle_grid_position &position )
+{
+    std::string along;
+    if( position.x > position.max_x ) {
+        const int distance = position.x - position.max_x;
+        along = string_format( n_gettext( "%d tile in front of the vehicle",
+                                          "%d tiles in front of the vehicle", distance ), distance );
+    } else if( position.x < position.min_x ) {
+        const int distance = position.min_x - position.x;
+        along = string_format( n_gettext( "%d tile behind the vehicle",
+                                          "%d tiles behind the vehicle", distance ), distance );
+    } else {
+        //~ Row of a vehicle grid tile: %1$d is the row counted from the front, %2$d the number of rows.
+        along = string_format( _( "row %1$d of %2$d from the front" ),
+                               position.max_x - position.x + 1, position.max_x - position.min_x + 1 );
+    }
+    std::string across;
+    if( position.y < position.min_y ) {
+        const int distance = position.min_y - position.y;
+        across = string_format( n_gettext( "%d tile left of the vehicle",
+                                           "%d tiles left of the vehicle", distance ), distance );
+    } else if( position.y > position.max_y ) {
+        const int distance = position.y - position.max_y;
+        across = string_format( n_gettext( "%d tile right of the vehicle",
+                                           "%d tiles right of the vehicle", distance ), distance );
+    } else {
+        //~ Column of a vehicle grid tile: %1$d is the column counted from the left, %2$d the number of columns.
+        across = string_format( _( "column %1$d of %2$d from the left" ),
+                                position.y - position.min_y + 1, position.max_y - position.min_y + 1 );
+    }
+    std::string result = string_join( std::vector<std::string> { along, across }, _( ", " ) );
+    result[0] = static_cast<char>( std::toupper( static_cast<unsigned char>( result[0] ) ) );
+    return format_semantic_sequence( { result } );
+}
+
+std::string format_vehicle_part_condition( const bool broken, const int damage_percent )
+{
+    if( broken ) {
+        return pgettext( "vehicle part", "broken" );
+    }
+    if( damage_percent > 0 ) {
+        //~ Damage of a vehicle part: %d is the percentage of its durability lost.
+        return string_format( pgettext( "vehicle part", "damaged %d%%" ), damage_percent );
+    }
+    return std::string();
+}
+
+std::string format_vehicle_part_row( const vehicle_part_row &row )
+{
+    std::vector<std::string> parts = { row.name, row.location,
+                                       format_vehicle_part_condition( row.broken, row.damage_percent )
+                                     };
+    parts.insert( parts.end(), row.states.begin(), row.states.end() );
+    return without_empty_joined( parts, _( ", " ) );
+}
+
+std::string format_vehicle_tile_part( const vehicle_part_row &row )
+{
+    vehicle_part_row without_location = row;
+    without_location.location.clear();
+    return format_vehicle_part_row( without_location );
+}
+
+std::string format_vehicle_tile( const std::string &location, const std::vector<std::string> &parts,
+                                 const bool obstructed )
+{
+    std::string contents = parts.empty() ? pgettext( "vehicle tile", "no parts" ) :
+                           //~ Separator between the parts on one vehicle tile.
+                           string_join( parts, pgettext( "vehicle tile", "; " ) );
+    if( obstructed ) {
+        //~ A vehicle grid tile where nothing can be installed because terrain or another vehicle is in the way.
+        contents += pgettext( "vehicle tile", ", obstructed" );
+    }
+    //~ Vehicle grid tile: %1$s is its location, such as "front left", %2$s the parts on it.
+    return format_semantic_sequence( { string_format( pgettext( "vehicle tile", "%1$s: %2$s" ),
+                                       location, contents )
+                                     } );
+}
+
+std::string format_vehicle_part_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No parts" );
+    }
+    return string_format( n_gettext( "%d part", "%d parts", count ), static_cast<int>( count ) );
+}
+
+std::string format_vehicle_install_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "No installable parts" );
+    }
+    return string_format( n_gettext( "%d installable part", "%d installable parts", count ),
+                          static_cast<int>( count ) );
+}
+
+std::string format_vehicle_task( const std::string &task, const std::string &unavailable_reason )
+{
+    return format_semantic_sequence( { task, unavailable_reason.empty() ? std::string() :
+                                       string_format( _( "Unavailable: %s" ), unavailable_reason )
+                                     } );
+}
+
+std::string format_vehicle_task_blocked( const std::string &task, const std::string &part,
+        const std::string &reason )
+{
+    return format_semantic_sequence( { without_empty_joined( { task, part }, " " ),
+                                       string_format( _( "Unavailable: %s" ), reason )
+                                     } );
+}
+
+std::string format_vehicle_missing_requirements( const size_t missing )
+{
+    if( missing == 0 ) {
+        return _( "requirements not met" );
+    }
+    //~ %d: number of unmet requirements of a vehicle task
+    return string_format( n_gettext( "%d requirement missing", "%d requirements missing", missing ),
+                          static_cast<int>( missing ) );
+}
+
+std::string format_vehicle_skills( const std::vector<vehicle_skill_requirement> &skills )
+{
+    std::vector<std::string> levels;
+    for( const vehicle_skill_requirement &skill : skills ) {
+        //~ Skill a vehicle task requires: %1$s is the skill, %2$d its level, %3$s "have" or "missing".
+        levels.push_back( string_format( _( "%1$s %2$d, %3$s" ), skill.skill, skill.level,
+                                         format_requirement_state( skill.met ? requirement_state::have :
+                                                 requirement_state::missing ) ) );
+    }
+    //~ %s: skills with their levels and states, or "none"
+    return format_semantic_sequence( { string_format( _( "Skills required: %s" ),
+                                       levels.empty() ? pgettext( "recipe requirement", "none" ) :
+                                       string_join( levels, pgettext( "recipe requirement", "; " ) ) )
+                                     } );
+}
+
+std::string format_vehicle_extra_skill( const std::string &skill, const int level, const bool met,
+                                        const std::string &purpose )
+{
+    //~ Additional skill a vehicle installation needs: %1$s is the skill, %2$d its level, %3$s its purpose such as "for extra engines", %4$s "have" or "missing".
+    return format_semantic_sequence( { string_format( _( "%1$s %2$d %3$s, %4$s" ), skill, level,
+                                       purpose, format_requirement_state( met ? requirement_state::have :
+                                               requirement_state::missing ) )
+                                     } );
+}
+
+std::string format_vehicle_task_time( const std::string &time )
+{
+    //~ %s: time needed for a vehicle task
+    return format_semantic_sequence( { string_format( _( "Time required: %s" ), time ) } );
+}
+
+std::string format_vehicle_lift_requirement( const std::string &tool, const bool tool_met,
+        const std::string &strength, const bool strength_met )
+{
+    const auto state = []( const bool met ) {
+        return format_requirement_state( met ? requirement_state::have : requirement_state::missing );
+    };
+    //~ Lifting a vehicle part: %1$s is a lifting tool, %2$s its state, %3$s the strength needed instead, %4$s its state.
+    return format_semantic_sequence( { string_format( _( "Lifting: %1$s, %2$s; or %3$s, %4$s" ),
+                                       tool, state( tool_met ), strength, state( strength_met ) )
+                                     } );
+}
+
+std::string format_vehicle_workshop_stats( const vehicle_workshop_stats &stats )
+{
+    std::vector<std::string> parts;
+    parts.push_back( stats.owner.empty() ? stats.name :
+                     //~ Examined vehicle: %1$s is its name, %2$s its owner.
+                     string_format( _( "%1$s, owned by %2$s" ), stats.name, stats.owner ) );
+    for( const vehicle_speed_stats &speed : stats.speeds ) {
+        //~ Vehicle speeds: %1$d safe speed, %2$d top speed, %3$d acceleration per second, %4$s speed unit.
+        std::string figures = string_format( _( "safe speed %1$d %4$s, top speed %2$d %4$s, "
+                                                "acceleration %3$d %4$s per second" ),
+                                             speed.safe, speed.top, speed.acceleration, stats.units );
+        if( speed.medium.empty() ) {
+            figures[0] = static_cast<char>( std::toupper( static_cast<unsigned char>( figures[0] ) ) );
+        } else {
+            //~ %1$s: "On water" or "In the air", %2$s: vehicle speeds there
+            figures = string_format( _( "%1$s: %2$s" ), speed.medium, figures );
+        }
+        parts.push_back( figures );
+    }
+    parts.push_back( string_format( _( "Mass: %s" ), stats.mass ) );
+    //~ Vehicle cargo: %1$s is the used volume, %2$s the total volume, both with units.
+    parts.push_back( string_format( _( "Cargo: %1$s of %2$s" ), stats.cargo_used, stats.cargo_total ) );
+    parts.push_back( string_format( _( "Status: %s" ), stats.status ) );
+    parts.push_back( stats.wheels );
+    if( !stats.most_damaged.empty() ) {
+        parts.push_back( stats.most_damaged_repairable ?
+                         string_format( _( "Most damaged: %s" ), stats.most_damaged ) :
+                         string_format( _( "Most damaged, can't repair: %s" ), stats.most_damaged ) );
+    }
+    if( !stats.needs_repair.empty() ) {
+        parts.push_back( string_format( _( "Needs repair: %s" ), stats.needs_repair ) );
+    }
+    for( const vehicle_fuel_gauge &fuel : stats.fuels ) {
+        parts.push_back( format_vehicle_fuel( fuel ) );
+    }
+    parts.push_back( string_format( _( "Air drag %.2f" ), stats.air_drag ) );
+    if( stats.has_water_drag ) {
+        parts.push_back( string_format( _( "Water drag %.2f" ), stats.water_drag ) );
+    }
+    if( stats.has_rolling_drag ) {
+        parts.push_back( string_format( _( "Rolling drag %.2f" ), stats.rolling_drag ) );
+    }
+    parts.push_back( string_format( _( "Static drag %d" ), stats.static_drag ) );
+    parts.push_back( string_format( _( "Offroad %d%%" ), stats.offroad ) );
+    if( stats.has_draft ) {
+        //~ Boat draft and clearance in meters.
+        parts.push_back( string_format( _( "Draft %1$.2f meters, clearance %2$.2f meters" ),
+                                        stats.draft, stats.clearance ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {

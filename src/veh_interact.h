@@ -66,6 +66,17 @@ class veh_interact
 
         static void complete_vehicle( map &here, Character &you );
 
+        /**
+         * Screen reader task menu of @p part for tests: each row as spoken, with
+         * the lines of its requirement document.
+         */
+        static std::vector<std::pair<std::string, std::vector<std::string>>> accessible_tasks_for_testing(
+            map &here, vehicle &veh, int part );
+        /** Grid cursor speech on the tile of @p part, for tests. */
+        static std::string accessible_tile_for_testing( map &here, vehicle &veh, int part );
+        /** Vehicle statistics speech, for tests. */
+        static std::string accessible_stats_for_testing( map &here, vehicle &veh );
+
     private:
         explicit veh_interact( map &here, vehicle &veh, const point_rel_ms &p = point_rel_ms::zero );
         ~veh_interact();
@@ -142,9 +153,20 @@ class veh_interact
 
         player_activity serialize_activity( map &here );
 
+        /** Requirement speech of a task for the screen reader interface. */
+        struct task_speech {
+            /** Requirement document lines with the state of each requirement in words. */
+            std::vector<std::string> requirements;
+            /** Number of unmet requirements. */
+            size_t missing = 0;
+            /** Why the task is impossible regardless of tools, e.g. "This part cannot be uninstalled". */
+            std::string blocked;
+        };
+
         /** Format list of requirements returning true if all are met */
         bool format_reqs( std::string &msg, const requirement_data &reqs,
-                          const std::map<skill_id, int> &skills, time_duration time ) const;
+                          const std::map<skill_id, int> &skills, time_duration time,
+                          task_speech *speech = nullptr ) const;
 
         int part_at( const point_rel_ms &d );
         void move_cursor( map &here, const point_rel_ms &d, int dstart_at = 0 );
@@ -188,7 +210,79 @@ class veh_interact
         * @return bool true if lift requirements are fulfilled
         * @return string msg for the ui to show the lift requirements
         */
-        std::pair<bool, std::string> calc_lift_requirements( map &here, const vpart_info &sel_vpart_info );
+        std::pair<bool, std::string> calc_lift_requirements( map &here, const vpart_info &sel_vpart_info,
+                task_speech *speech = nullptr );
+        /** Repair requirements of @p pt written to @p nmsg; true when they are met. */
+        bool repair_requirements( map &here, vehicle_part &pt, std::string &nmsg,
+                                  task_speech *speech = nullptr );
+
+        /**
+         * @name Screen reader interface
+         *
+         * A flat part list opens with the screen; each part has a task menu.
+         * The task handlers use accessible lists in place of their grid loops.
+         */
+        /*@{*/
+        enum class access_task : int {
+            repair,
+            mend,
+            remove,
+            install,
+            refill,
+            siphon,
+            crew,
+            shape,
+            label
+        };
+        /** A task on one part, offered in an accessible task list. */
+        struct access_option {
+            access_task task;
+            int part;
+            /** Spoken and shown row name. */
+            std::string label;
+        };
+        bool owned_by_player = true;
+        /** Whether terrain or another vehicle occupies the cursor tile. */
+        bool cursor_obstructed = false;
+        /** Part that the overview selects without asking, or -1. */
+        int preselected_part = -1;
+        /** Open the part list; returns true when a task closes the screen. */
+        bool accessible_part_list( map &here );
+        /** Open the task menu of @p part; returns true when a task closes the screen. */
+        bool accessible_part_tasks( map &here, int part );
+        /** Choose one of @p parts on the cursor tile for @p task and start it. */
+        void accessible_choose_part( map &here, access_task task, const std::vector<int> &parts );
+        /**
+         * Choose one of @p options; unavailable ones say why and stay open.
+         * @return the chosen index, or -1 when cancelled.
+         */
+        int accessible_task_menu( map &here, const std::string &title,
+                                  const std::vector<access_option> &options, bool reopen );
+        /** Availability and requirements of each of @p options. */
+        void evaluate_tasks( map &here, const std::vector<access_option> &options,
+                             std::vector<std::string> &reasons, std::vector<task_speech> &speech );
+        /** Tasks offered for @p part. */
+        std::vector<access_option> part_tasks( map &here, int part );
+        /** Choose a part to install on the cursor tile. */
+        void accessible_install( map &here );
+        /** Choose among the parts the current overview selector enables. */
+        void accessible_overview( map &here );
+        /** Handle an accessibility action on the grid; returns false for other actions. */
+        bool accessible_grid_action( map &here, const std::string &action, bool &finish );
+        /** Speak the result of a grid action: its message or the cursor tile. */
+        void accessible_after_action( map &here, const std::string &action );
+        /** Move the grid cursor to the tile of @p part. */
+        void focus_part( map &here, int part );
+        /** Why @p task cannot be done on @p part now, or empty; fills @p speech. */
+        std::string task_unavailable( map &here, access_task task, int part, task_speech &speech );
+        /** Start @p task on @p part; returns true when the screen should close. */
+        bool run_task( map &here, access_task task, int part );
+        std::string cursor_description() const;
+        void speak_grid();
+        std::string accessible_stats( map &here ) const;
+        void show_requirements( const std::string &title, const std::string &reason,
+                                const task_speech &speech ) const;
+        /*@}*/
 
         void display_grid();
         void display_veh( map &here );
@@ -262,9 +356,9 @@ class veh_interact
         vehicle_part *get_most_repairable_part() const;
 
         //do_remove supporting operation, writes requirements to ui
-        bool can_remove_part( map &here, int idx, const Character &you );
+        bool can_remove_part( map &here, int idx, const Character &you, task_speech *speech = nullptr );
         //do install support, writes requirements to ui
-        bool update_part_requirements( map &here );
+        bool update_part_requirements( map &here, task_speech *speech = nullptr );
 
         /* Vector of all vpart TYPES that can be mounted in the current square.
          * Can be converted to a vector<vpart_info>.

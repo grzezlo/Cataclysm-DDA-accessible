@@ -10,6 +10,7 @@
 #include <map>
 #include <optional>
 #include <set>
+#include <sstream>
 #include <tuple>
 #include <utility>
 
@@ -32,6 +33,7 @@
 #include "display.h"
 #include "effect.h"
 #include "enums.h"
+#include "fault.h"
 #include "field.h"
 #include "flag.h"
 #include "input_context.h"
@@ -71,6 +73,8 @@
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+
+static const ammotype ammo_battery( "battery" );
 
 static const efftype_id effect_bite( "bite" );
 static const efftype_id effect_bleed( "bleed" );
@@ -1694,6 +1698,209 @@ void vehicle_control_speech::finish( const int acceleration ) const
     accessibility::queue_gameplay_announcement( accessibility::format_vehicle_cruise(
                 vehicle_speed( veh.cruise_velocity ), vehicle_speed_units(), above_safe, at_limit ),
             accessibility::gameplay_speech::meaningful );
+}
+
+accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
+        const point_rel_ms &mount )
+{
+    accessibility::vehicle_grid_position result;
+    result.x = mount.x();
+    result.y = mount.y();
+    bool first = true;
+    for( const vpart_reference &vp : veh.get_all_parts() ) {
+        if( vp.part().removed ) {
+            continue;
+        }
+        const point_rel_ms &part_mount = vp.part().mount;
+        if( first ) {
+            result.min_x = result.max_x = part_mount.x();
+            result.min_y = result.max_y = part_mount.y();
+            first = false;
+            continue;
+        }
+        result.min_x = std::min( result.min_x, part_mount.x() );
+        result.max_x = std::max( result.max_x, part_mount.x() );
+        result.min_y = std::min( result.min_y, part_mount.y() );
+        result.max_y = std::max( result.max_y, part_mount.y() );
+    }
+    return result;
+}
+
+accessibility::vehicle_part_row vehicle_part_row( const vehicle &veh, const vehicle_part &part )
+{
+    accessibility::vehicle_part_row row;
+    row.name = remove_color_tags( part.name( false ) );
+    row.location = accessibility::format_vehicle_location( vehicle_grid_position( veh, part.mount ) );
+    row.broken = part.is_broken();
+    row.damage_percent = static_cast<int>( std::lround( part.damage_percent() * 100 ) );
+    if( part.is_leaking() ) {
+        // The screens mark leaking tanks and batteries with red asterisks.
+        row.states.emplace_back( pgettext( "vehicle part", "leaking" ) );
+    }
+    return row;
+}
+
+std::vector<int> vehicle_part_list( const vehicle &veh )
+{
+    struct listed_part {
+        int index;
+        int x;
+        int y;
+        int stack;
+    };
+    std::vector<listed_part> parts;
+    std::map<std::pair<int, int>, std::vector<int>> tiles;
+    for( const vpart_reference &vp : veh.get_all_parts() ) {
+        const vehicle_part &part = vp.part();
+        if( part.removed || !part.is_real_or_active_fake() ) {
+            continue;
+        }
+        const std::pair<int, int> key( part.mount.x(), part.mount.y() );
+        auto tile = tiles.find( key );
+        if( tile == tiles.end() ) {
+            tile = tiles.emplace( key, veh.parts_at_relative( part.mount, true ) ).first;
+        }
+        const auto stacked = std::find( tile->second.begin(), tile->second.end(),
+                                        static_cast<int>( vp.part_index() ) );
+        parts.push_back( { static_cast<int>( vp.part_index() ), part.mount.x(), part.mount.y(),
+                           static_cast<int>( std::distance( tile->second.begin(), stacked ) )
+                         } );
+    }
+    std::sort( parts.begin(), parts.end(), []( const listed_part & a, const listed_part & b ) {
+        return std::make_tuple( -a.x, a.y, a.stack, a.index ) <
+               std::make_tuple( -b.x, b.y, b.stack, b.index );
+    } );
+    std::vector<int> result;
+    result.reserve( parts.size() );
+    for( const listed_part &part : parts ) {
+        result.push_back( part.index );
+    }
+    return result;
+}
+
+namespace
+{
+std::vector<int> vehicle_tile_parts( const vehicle &veh, const point_rel_ms &mount )
+{
+    std::vector<int> result;
+    for( const int index : veh.parts_at_relative( mount, true ) ) {
+        const vehicle_part &part = veh.part( index );
+        if( !part.removed && part.is_real_or_active_fake() ) {
+            result.push_back( index );
+        }
+    }
+    return result;
+}
+
+std::string vehicle_tile_label( const vehicle &veh, const std::vector<int> &parts )
+{
+    if( parts.empty() ) {
+        return std::string();
+    }
+    const std::optional<std::string> label = vpart_position( const_cast<vehicle &>( veh ),
+            parts.front() ).get_label();
+    return label && !label->empty() ? string_format( _( "Label: %s" ), *label ) : std::string();
+}
+
+/** Fuel or cargo contents as the part list shows them in detail. */
+std::string vehicle_part_contents( const vehicle &veh, const vehicle_part &part )
+{
+    std::vector<std::string> contents;
+    if( part.is_fuel_store() && !part.ammo_current().is_null() ) {
+        if( part.ammo_current() == itype_battery ) {
+            //~ Battery charge of a vehicle part: %1$d is the charge, %2$d the capacity.
+            contents.push_back( string_format( _( "Charge %1$d of %2$d" ), part.ammo_remaining(),
+                                               part.ammo_capacity( ammo_battery ) ) );
+        } else if( part.ammo_current()->stack_size > 0 ) {
+            const units::volume stack = 250_ml / part.ammo_current()->stack_size;
+            //~ Fuel in a vehicle part: %1$.1f is the amount in liters, %2$s the fuel.
+            contents.push_back( string_format( _( "%1$.1f liters of %2$s" ),
+                                               round_up( units::to_liter( part.ammo_remaining() * stack ), 1 ),
+                                               item::nname( part.ammo_current() ) ) );
+        }
+    }
+    if( part.info().has_flag( VPFLAG_CARGO ) ) {
+        const vehicle_stack stack = veh.get_items( part );
+        //~ Cargo of a vehicle part: %1$s is the used volume, %2$s the capacity, %3$s the volume unit.
+        contents.push_back( string_format( _( "Cargo: %1$s of %2$s %3$s" ),
+                                           format_volume( stack.stored_volume() ), format_volume( stack.max_volume() ),
+                                           volume_units_abbr() ) );
+    }
+    return string_join( contents, _( ", " ) );
+}
+} // namespace
+
+std::string vehicle_tile_description( const vehicle &veh, const point_rel_ms &mount,
+                                      const bool obstructed )
+{
+    const std::vector<int> indices = vehicle_tile_parts( veh, mount );
+    std::vector<std::string> parts;
+    parts.reserve( indices.size() );
+    for( const int index : indices ) {
+        parts.push_back( accessibility::format_vehicle_tile_part( vehicle_part_row( veh,
+                         veh.part( index ) ) ) );
+    }
+    return accessibility::format_semantic_sequence( {
+        accessibility::format_vehicle_tile( accessibility::format_vehicle_location(
+                                                vehicle_grid_position( veh, mount ) ), parts, obstructed ),
+        vehicle_tile_label( veh, indices )
+    } );
+}
+
+std::vector<std::string> vehicle_tile_details( const vehicle &veh, const point_rel_ms &mount )
+{
+    const std::vector<int> indices = vehicle_tile_parts( veh, mount );
+    std::vector<std::string> lines = {
+        accessibility::format_vehicle_position_details( vehicle_grid_position( veh, mount ) )
+    };
+    for( const int index : indices ) {
+        const vehicle_part &part = veh.part( index );
+        lines.push_back( accessibility::format_semantic_sequence( {
+            accessibility::format_vehicle_tile_part( vehicle_part_row( veh, part ) ),
+            vehicle_part_contents( veh, part )
+        } ) );
+    }
+    if( indices.empty() ) {
+        lines.push_back( accessibility::format_vehicle_part_count( 0 ) );
+    }
+    const std::string label = vehicle_tile_label( veh, indices );
+    if( !label.empty() ) {
+        lines.push_back( accessibility::format_semantic_sequence( { label } ) );
+    }
+    return lines;
+}
+
+std::vector<std::string> vehicle_part_details( const vehicle &veh, const vehicle_part &part )
+{
+    std::vector<std::string> lines = {
+        accessibility::format_semantic_sequence( { accessibility::format_vehicle_part_row( vehicle_part_row( veh, part ) ) } ),
+        accessibility::format_vehicle_position_details( vehicle_grid_position( veh, part.mount ) )
+    };
+    const std::string contents = vehicle_part_contents( veh, part );
+    if( !contents.empty() ) {
+        lines.push_back( accessibility::format_semantic_sequence( { contents } ) );
+    }
+    for( const fault_id &fault : part.faults() ) {
+        lines.push_back( accessibility::format_semantic_sequence( {
+            //~ %1$s: fault of a vehicle part, %2$s: its description
+            string_format( _( "Fault: %1$s" ), fault->name() ), fault->description()
+        } ) );
+    }
+    const std::string label = vehicle_tile_label( veh, vehicle_tile_parts( veh, part.mount ) );
+    if( !label.empty() ) {
+        lines.push_back( accessibility::format_semantic_sequence( { label } ) );
+    }
+    std::string description;
+    part.info().format_description( description, c_light_gray, 1000 );
+    std::istringstream stream( remove_color_tags( description ) );
+    std::string line;
+    while( std::getline( stream, line ) ) {
+        const std::string sentence = accessibility::format_semantic_sequence( { line } );
+        if( !sentence.empty() ) {
+            lines.push_back( sentence );
+        }
+    }
+    return lines;
 }
 
 void travel_canceled()

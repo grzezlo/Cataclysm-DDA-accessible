@@ -77,6 +77,8 @@
 #include "trade_ui.h"
 #include "units_utility.h"
 #include "type_id.h"
+#include "veh_interact.h"
+#include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
@@ -5538,4 +5540,227 @@ TEST_CASE( "driving_speaks_entry_controls_obstacles_and_status", "[accessibility
     here.update_visibility_cache( origin.z() );
     you.controlling_vehicle = true;
     CHECK_FALSE( accessibility_gameplay::vehicle_obstacle_transition( here, you ).has_value() );
+}
+
+TEST_CASE( "vehicle_workshop_formatters_speak_location_condition_and_requirements",
+           "[accessibility][nogame]" )
+{
+    accessibility::vehicle_grid_position position;
+    position.min_x = -1;
+    position.max_x = 1;
+    position.min_y = -1;
+    position.max_y = 1;
+    position.x = 1;
+    position.y = -1;
+    CHECK( accessibility::format_vehicle_location( position ) == "front left" );
+    CHECK( accessibility::format_vehicle_position_details( position ) ==
+           "Row 1 of 3 from the front, column 1 of 3 from the left." );
+    position.x = 0;
+    position.y = 0;
+    CHECK( accessibility::format_vehicle_location( position ) == "center" );
+    position.y = 1;
+    CHECK( accessibility::format_vehicle_location( position ) == "right" );
+    position.x = -1;
+    position.y = 0;
+    CHECK( accessibility::format_vehicle_location( position ) == "rear" );
+    position.x = 3;
+    CHECK( accessibility::format_vehicle_location( position ) == "outside, front" );
+    CHECK( accessibility::format_vehicle_position_details( position ) ==
+           "2 tiles in front of the vehicle, column 2 of 3 from the left." );
+    // A vehicle one tile wide has no left or right side.
+    position.min_y = 0;
+    position.max_y = 0;
+    position.x = 1;
+    CHECK( accessibility::format_vehicle_location( position ) == "front" );
+
+    CHECK( accessibility::format_vehicle_part_condition( false, 0 ).empty() );
+    CHECK( accessibility::format_vehicle_part_condition( false, 40 ) == "damaged 40%" );
+    CHECK( accessibility::format_vehicle_part_condition( true, 100 ) == "broken" );
+    accessibility::vehicle_part_row row;
+    row.name = "headlight";
+    row.location = "front left";
+    row.damage_percent = 40;
+    CHECK( accessibility::format_vehicle_part_row( row ) == "headlight, front left, damaged 40%" );
+    CHECK( accessibility::format_vehicle_tile_part( row ) == "headlight, damaged 40%" );
+    row.name = "tank";
+    row.damage_percent = 0;
+    row.states = { "leaking" };
+    CHECK( accessibility::format_vehicle_part_row( row ) == "tank, front left, leaking" );
+    CHECK( accessibility::format_vehicle_tile( "front left", { "frame", "door, damaged 10%" },
+            false ) == "front left: frame; door, damaged 10%." );
+    CHECK( accessibility::format_vehicle_tile( "outside, front", {}, true ) ==
+           "outside, front: no parts, obstructed." );
+    CHECK( accessibility::format_vehicle_part_count( 12 ) == "12 parts" );
+    CHECK( accessibility::format_vehicle_part_count( 0 ) == "No parts" );
+    CHECK( accessibility::format_vehicle_install_count( 1 ) == "1 installable part" );
+
+    CHECK( accessibility::format_vehicle_task( "Repair", "" ) == "Repair." );
+    CHECK( accessibility::format_vehicle_task( "Remove", "something is attached to it" ) ==
+           "Remove. Unavailable: something is attached to it." );
+    CHECK( accessibility::format_vehicle_task_blocked( "Repair", "headlight",
+            accessibility::format_vehicle_missing_requirements( 2 ) ) ==
+           "Repair headlight. Unavailable: 2 requirements missing." );
+    CHECK( accessibility::format_vehicle_missing_requirements( 0 ) == "requirements not met" );
+    CHECK( accessibility::format_vehicle_skills( {} ) == "Skills required: none." );
+    CHECK( accessibility::format_vehicle_skills( { { "mechanics", 2, true }, { "electronics", 1, false } } )
+    ==
+    "Skills required: mechanics 2, have; electronics 1, missing." );
+    CHECK( accessibility::format_vehicle_extra_skill( "mechanics", 5, false, "for extra engines" ) ==
+           "mechanics 5 for extra engines, missing." );
+    CHECK( accessibility::format_vehicle_task_time( "30 minutes" ) == "Time required: 30 minutes." );
+    CHECK( accessibility::format_vehicle_lift_requirement( "1 tool with jacking 3", true,
+            "strength 12", false ) ==
+           "Lifting: 1 tool with jacking 3, have; or strength 12, missing." );
+
+    accessibility::vehicle_workshop_stats stats;
+    stats.name = "Car";
+    stats.units = "mph";
+    stats.speeds = { { "", 30, 60, 10 }, { "On water", 5, 8, 2 } };
+    stats.mass = "1200 kg";
+    stats.cargo_used = "10 L";
+    stats.cargo_total = "200 L";
+    stats.status = "good";
+    stats.wheels = "Wheels: enough";
+    stats.most_damaged = "headlight";
+    accessibility::vehicle_fuel_gauge gasoline;
+    gasoline.fuel = "gasoline";
+    gasoline.percent = 45;
+    stats.fuels = { gasoline };
+    stats.air_drag = 0.5;
+    stats.has_rolling_drag = true;
+    stats.rolling_drag = 1.25;
+    stats.static_drag = 300;
+    stats.offroad = 60;
+    CHECK( accessibility::format_vehicle_workshop_stats( stats ) ==
+           "Car. Safe speed 30 mph, top speed 60 mph, acceleration 10 mph per second. On water: safe "
+           "speed 5 mph, top speed 8 mph, acceleration 2 mph per second. Mass: 1200 kg. Cargo: 10 L of "
+           "200 L. Status: good. Wheels: enough. Most damaged: headlight. gasoline 45%. Air drag 0.50. "
+           "Rolling drag 1.25. Static drag 300. Offroad 60%." );
+    stats.owner = "the Old Guard";
+    stats.speeds.clear();
+    stats.most_damaged_repairable = false;
+    stats.needs_repair = "door";
+    stats.fuels.clear();
+    stats.has_rolling_drag = false;
+    CHECK( accessibility::format_vehicle_workshop_stats( stats ) ==
+           "Car, owned by the Old Guard. Mass: 1200 kg. Cargo: 10 L of 200 L. Status: good. Wheels: "
+           "enough. Most damaged, can't repair: headlight. Needs repair: door. Air drag 0.50. Static "
+           "drag 300. Offroad 60%." );
+}
+
+TEST_CASE( "vehicle_examination_speaks_part_list_tiles_tasks_and_stats", "[accessibility]" )
+{
+    static const vproto_id vehicle_prototype_car( "car" );
+    map &here = get_map();
+    clear_avatar();
+    clear_map();
+    clear_vehicles();
+    const time_point previous_time = calendar::turn;
+    const on_out_of_scope cleanup( [&]() {
+        clear_vehicles();
+        clear_map();
+        clear_avatar();
+        set_time( previous_time );
+    } );
+    set_time_to_day();
+
+    const tripoint_bub_ms origin( 60, 60, 0 );
+    vehicle *veh_ptr = here.add_vehicle( vehicle_prototype_car, origin, 0_degrees, 100, 0 );
+    REQUIRE( veh_ptr != nullptr );
+    vehicle &veh = *veh_ptr;
+    get_avatar().setpos( here, origin + tripoint_rel_ms( 0, -4, 0 ) );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+
+    // The part list runs from the front to the rear.
+    const std::vector<int> parts = accessibility_gameplay::vehicle_part_list( veh );
+    REQUIRE( parts.size() > 2 );
+    for( size_t i = 1; i < parts.size(); ++i ) {
+        CHECK( veh.part( parts[i - 1] ).mount.x() >= veh.part( parts[i] ).mount.x() );
+    }
+    const accessibility::vehicle_grid_position front =
+        accessibility_gameplay::vehicle_grid_position( veh, veh.part( parts.front() ).mount );
+    CHECK( front.x == front.max_x );
+
+    std::vector<int> repairable;
+    for( const int index : parts ) {
+        if( veh.part( index ).info().is_repairable() && veh.part( index ).damage_percent() == 0 ) {
+            repairable.push_back( index );
+        }
+    }
+    REQUIRE( repairable.size() >= 2 );
+    const int damaged = repairable[0];
+    const int intact = repairable[1];
+    vehicle_part &damaged_part = veh.part( damaged );
+    veh.set_hp( damaged_part, damaged_part.info().durability / 2, true );
+    const std::string damage = "damaged " + std::to_string( static_cast<int>( std::lround(
+                                   damaged_part.damage_percent() * 100 ) ) ) + "%";
+    REQUIRE( damaged_part.damage_percent() > 0 );
+    REQUIRE_FALSE( damaged_part.is_broken() );
+
+    // Rows name the part, its location, and its damage in words.
+    const std::string name = damaged_part.name( false );
+    const std::string location = accessibility::format_vehicle_location(
+                                     accessibility_gameplay::vehicle_grid_position( veh, damaged_part.mount ) );
+    const std::string row = accessibility::format_vehicle_part_row(
+                                accessibility_gameplay::vehicle_part_row( veh, damaged_part ) );
+    CHECK( row == name + ", " + location + ", " + damage );
+
+    // Moving the grid cursor to the part's tile speaks the location and all parts there.
+    const std::string tile = veh_interact::accessible_tile_for_testing( here, veh, damaged );
+    CHECK( tile == accessibility_gameplay::vehicle_tile_description( veh, damaged_part.mount,
+            false ) );
+    CHECK( tile.rfind( location + ": ", 0 ) == 0 );
+    CHECK( tile.find( name + ", " + damage ) != std::string::npos );
+    const std::vector<std::string> details = accessibility_gameplay::vehicle_part_details( veh,
+            damaged_part );
+    REQUIRE( details.size() >= 2 );
+    CHECK( details[0] == row + "." );
+    CHECK( details[1].rfind( "Row ", 0 ) == 0 );
+
+    // The task menu offers repair with its unmet requirements and the reason in words.
+    const std::vector<std::pair<std::string, std::vector<std::string>>> tasks =
+        veh_interact::accessible_tasks_for_testing( here, veh, damaged );
+    REQUIRE( tasks.size() >= 4 );
+    CHECK( tasks[0].first.rfind( "Repair. Unavailable: ", 0 ) == 0 );
+    CHECK( tasks[0].first.find( "missing" ) != std::string::npos );
+    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( const std::string & line ) {
+        return line.rfind( "Time required: ", 0 ) == 0;
+    } ) );
+    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( const std::string & line ) {
+        return line.rfind( "Skills required: ", 0 ) == 0;
+    } ) );
+    CHECK( tasks[1].first.rfind( "Remove", 0 ) == 0 );
+    CHECK( std::any_of( tasks[1].second.begin(), tasks[1].second.end(), [&name]( const std::string &
+    line ) {
+        return line.find( "Removing the " + name ) != std::string::npos;
+    } ) );
+    CHECK( tasks[2].first == "Install here." );
+    CHECK( tasks.back().first == "Label." );
+    CHECK( tasks.back().second.empty() );
+
+    // An intact part cannot be repaired, and the reason says so.
+    const std::vector<std::pair<std::string, std::vector<std::string>>> intact_tasks =
+        veh_interact::accessible_tasks_for_testing( here, veh, intact );
+    REQUIRE_FALSE( intact_tasks.empty() );
+    CHECK( intact_tasks[0].first == "Repair. Unavailable: not damaged." );
+
+    // Alt+S speaks the vehicle statistics in words.
+    const std::string stats = veh_interact::accessible_stats_for_testing( here, veh );
+    CHECK( stats.rfind( veh.name + ". Safe speed ", 0 ) == 0 );
+    CHECK( stats.find( "Mass: " ) != std::string::npos );
+    CHECK( stats.find( "Status: " ) != std::string::npos );
+    CHECK( stats.find( ": " + name + "." ) != std::string::npos );
+
+    // The part list has its own key in the examination screen.
+    input_context workshop( "VEH_INTERACT", keyboard_mode::keycode );
+    workshop.register_action( "ACCESSIBILITY_PART_LIST" );
+    workshop.register_action( "ACCESSIBILITY_STATUS" );
+    workshop.register_action( "RELABEL" );
+    CHECK( workshop.input_to_action( input_event( { keymod_t::alt }, 'l',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_PART_LIST" );
+    CHECK( workshop.input_to_action( input_event( { keymod_t::alt }, 's',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
+    CHECK( workshop.input_to_action( input_event( {}, 'a', input_event_t::keyboard_code ) ) ==
+           "RELABEL" );
 }
