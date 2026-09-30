@@ -55,50 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 18A - Zone management
-
-**Outcome:** Zone listing, creation, placement, editing, and deletion are
-independently usable.
-
-**Code inventory:** `src/clzones.cpp` (zone types, options, queries),
-`src/game.cpp` (`game::zones_manager`).
-
-**Implementation hints:**
-
-- Zone manager entry and main loop: `game::zones_manager()` in `src/game.cpp`.
-- Input context: `"ZONES_MANAGER"` in `game::zones_manager()`.
-- Zone list row text: enabled status `[X]`/`[ ]`, displayed marker, name,
-  distance, type rendered in `game::zones_manager()`.
-- Zone type selector: `zone_manager::query_type()` in `src/clzones.cpp` uses
-  `uilist` — benefits from existing hooks.
-- Zone name: `zone_manager::query_name()` in `src/clzones.cpp` uses
-  `string_input_popup`.
-- Zone options descriptions: `zone_options::get_descriptions()` in
-  `src/clzones.cpp` — construct type, filter, seed, unload settings.
-- Zone creation sub-flow: calls `game::look_around()` twice for start/end points,
-  then queries type, options, and name in `game::zones_manager()`.
-- Zone editing: `zone_data::set_name()`, `zone_data::set_type()`, and
-  `zone_data::set_enabled()` in `src/clzones.cpp`.
-
-**Selected interaction (conventions 2, 6, and 8):**
-
-- Keys are unchanged.  A zone row speaks name, type, enabled state, and
-  distance and direction ("Loot: food, enabled, 5 tiles north").
-- Creation selects the corners with the Stage 02 look-around speech, then
-  speaks the size ("Zone 4 by 3").  Type and options use the shared list
-  speech; the name uses the Stage 05 text input.
-- Reorder, enable or disable, and delete speak the new position or state.
-
-**Success criteria:** Zone list reports name, type, enabled state, and distance.
-Creation walks through placement, type selection, options, and naming.
-Editing, reordering, enabling/disabling, and deletion are announced.
-
-**Possible automated tests:** Capture zone list focus, creation flow, edit,
-reorder, enable/disable, delete, and return focus.
-
-**User-test scenarios:** Create a zone with placement and options,
-edit its name and type, reorder, disable, and delete a zone.
-
 ## Stage 19 - Vehicle controls, driving, and status
 
 **Outcome:** Vehicle entry, controls, driving feedback, and status readouts are

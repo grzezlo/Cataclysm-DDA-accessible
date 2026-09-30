@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T141.
+Last assigned test ID: T145.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -887,3 +887,46 @@ the editor with Escape and open the map again with `m`.
   `W` again, answer the travel question, and hear the Stage 08A travel
   summary.  On an unexplored tile, `W` says "No route to unexplored."  With
   no route, `g` and `c` say "No route selected."
+
+## Stage 18A: Zone management
+
+Open the zones manager with `Y`.  Zones need a faction base or nearby
+storage in normal play; any start works for these tests.
+
+- **T142 - Opening and focus.**  With no zones, press `Y` and hear "Zones
+  manager, no zones." once.  After creating zones (T143), `Y` speaks "Zones
+  manager", the zone count, and the first row: name, type when it differs
+  from the name, "personal" or "vehicle" when it applies, "enabled" or
+  "disabled", and the distance and direction ("Pantry, Loot: Food, enabled,
+  5 tiles north").  Up and Down speak one row; wrapping says "Top" or
+  "Bottom".  `Alt+S` speaks the filter and position ("2 of 3"); `Alt+D`
+  adds the size, map display, and options.  Interrupt with Control; nothing
+  is repeated automatically, and `Alt+R` repeats the last announcement.
+- **T143 - Creation.**  Press `a`.  The zone type list speaks its title,
+  count, and focused type; `Alt+D` reads the type description.  Choose
+  "Loot: Custom", type a filter such as "apple" in the text input, and
+  confirm the suggested name.  Hear "Select first point." and the tile under
+  the cursor; each cursor move speaks the tile with its distance from you,
+  as in look-around.  Press Enter, hear "Select second point.", move three
+  tiles east and two south, and press Enter.  Hear "Zone 4 by 3." and the
+  new zone's row.  Repeat with `p` for a personal zone; its row says
+  "personal".  Press `a` and Escape in the type list: focus returns to the
+  zone row.
+- **T144 - Editing.**  On a zone press Enter; the "What do you want to
+  change" list speaks its options.  "Edit name": type a new name and hear
+  the row with it.  "Edit type": choose another type and hear the row with
+  it.  "Edit filter" on a custom loot zone: hear the row and "Options:
+  Filter: <text>".  "Edit position": select two corners as in T143 and hear
+  the new size.  "Move position": hear "Moving zone." and the tile at the
+  zone center; move and press Enter, then hear "Zone moved." and the row
+  with the new distance.
+- **T145 - Order, state, filter, and removal.**  With three zones, press
+  `+` and `-`: hear the zone name and its new position ("Pantry, 1 of 3").
+  Press `d` and `e`: hear "<name> disabled." and "<name> enabled."  Press
+  `t`: hear "<name> shown on map.", then `t` again for "hidden from map."
+  With a personal zone, `x` and `z` speak how many personal zones were
+  disabled or enabled.  `s` speaks "Showing all zones" or "Hiding distant
+  zones" with the count and row.  `m` opens the zone on the overmap; Escape
+  returns and speaks the row.  `r` speaks "Removed <name>." and the new
+  focused row, or "No zones" after the last one.  Escape asks "Save
+  changes?" with the Stage 05 prompt; cancel it and hear the row again.

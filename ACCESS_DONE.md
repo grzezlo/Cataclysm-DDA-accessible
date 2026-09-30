@@ -1325,3 +1325,46 @@ Limitations:
   the next key press speaks the new position.
 - The overmap sidebar does not show the `Alt+L` hint; it is listed in the
   keybinding help.
+
+## 2026-09-30 — Stage 18A: Zone management
+
+- Implemented the selected interaction (conventions 2, 6, and 8).  Zones
+  manager keys are unchanged; `Alt+D`, `Alt+S`, and `Alt+R` work in it.
+- Opening speaks "Zones manager", the zone count, and the focused row.  Rows
+  speak the name, the type when it differs from the name, "personal" or
+  "vehicle", "enabled" or "disabled", and the distance and direction from
+  the player with any level difference ("Pantry, Loot: Food, enabled, 5
+  tiles north").  Focus moves speak the row with "Top"/"Bottom" on wrap.
+- Zone corner selection, position edits, and zone moves speak the cursor
+  tile with the Stage 02 look-around description; the existing "Select
+  first point." and "Moving zone." popups name the step.  The hook in
+  `game::look_around()` covers every zone-selecting caller.
+- Creation speaks "Zone 4 by 3." (with levels when it spans several) and the
+  new row; type, options, and name use the shared list, prompt, and text
+  input speech.  Edits speak the new row, the row with "Options: ..." after
+  an options change, the new size after a position edit, or "Zone moved."
+  after a move.  Reorder speaks "<name>, 2 of 5"; enable, disable, map
+  display, personal zone toggles, the distance filter, the debug faction
+  filter, and removal ("Removed <name>." and the new focus) speak the new
+  state.  Focus returns to the row after a canceled dialog, the overmap,
+  keybinding help, or a canceled close.
+- `Alt+D` speaks the row, position, size, map display, and options; `Alt+S`
+  speaks the filter, faction when not the player's, and position.
+- `zones_manager_speech` in `accessibility_gameplay` compares the state
+  before and after each action, so `game::zones_manager()` has only an open,
+  a before, and an after call.
+- `test_access.bat` passed 1802 assertions in 98 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `88592116ea`.
+
+Limitations:
+
+- NVDA interaction quality is unverified.  The manager and look-around loops
+  need real input, so tests drive the speech state with direct zone changes
+  and do not cover the corner-selection cursor speech.
+- The second corner does not speak the growing size while the cursor moves;
+  the size is spoken once the zone is created or its position changed.
+- Row distances are horizontal, rounded as the screen shows them; the
+  screen's own distance also counts the level difference.
+- Temporarily disabled zones are reset when the manager opens, so no
+  temporary state is spoken.
