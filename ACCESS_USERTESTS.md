@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T127.
+Last assigned test ID: T131.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -763,3 +763,44 @@ Dialogue… > Display talk topic, choosing the NPC and then the topic.
   own stage), or find one in a casino.  Its text is spoken without a
   speaker name and the prompt says "Your choice, N options".  Up, Down,
   Enter, and Escape behave as in T123 and T124, without the screen actions.
+
+## Stage 16: Trading
+
+Spawn an NPC next to you through Debug menu > Spawning… > Spawn NPC, talk to
+it with `C` and its direction, and choose "Care to trade?" when it is
+offered, or show the topic `TALK_TEST_FACTION_TRUST` through Debug menu >
+Dialogue… > Display talk topic and choose "Start trade.".  Give yourself
+goods to sell, including a stack such as several batteries, through Debug
+menu > Spawning… > Spawn item.  These responses end the conversation after
+the trade.
+
+- **T128 - Opening, rows, and pane switching.**  Open the trade.  Hear
+  "Trade: <name>. Balance: credit $0.00, acceptable. Trader's goods. N
+  items." and the focused row once.  Up and Down speak one row: name, price
+  ("$2.00 each"), and "Unavailable: <reason>" on goods the trader keeps; a
+  wrap says "Top" or "Bottom".  Tab speaks "Your goods", the item count, and
+  your focused row, without the trader's goods; Tab again speaks the
+  trader's pane the same way.  `Alt+D` reads the row with its location.
+  `Alt+S` speaks the trader, balance, "Buying", "Selling", and the pane
+  position.  Interrupt speech with Control; nothing is repeated
+  automatically, and `Alt+R` repeats the last announcement.
+- **T129 - Marking single and stacked goods.**  On a trader's item press
+  Right and hear "<name>. Marked. Balance: you owe $…, trader refuses."
+  Press Right again and hear "Unmarked" with the new balance.  On your
+  stack, type a number such as 3 and Enter, or use `=` and `-`, and hear
+  "3 marked" and a balance that moves toward credit.  Mark enough of your
+  goods to reach a credit and hear "acceptable".  Press `F1` on a row to
+  auto balance and hear the new marks and balance, or only the balance
+  when nothing changes.  Mark more than you can carry and hear "Over
+  weight limit" when the pane statistics show it.
+- **T130 - Correcting, accepting, and cancelling.**  With the trader
+  refusing, press Enter and hear the trader's refusal; after closing it,
+  the focused row is spoken again.  Correct the balance and press Enter:
+  hear "Looks like a deal!  Accept this trade?".  Answer no and hear the
+  focused row again; press Enter and answer yes, then hear "Trade
+  complete" and the game return to the map.  Open a new trade and press
+  Escape: hear "Trade cancelled".
+- **T131 - Bank balance.**  Press `F2` in the trade.  Without the
+  `CAPITALISM` external option (the default), hear "Your promises of
+  digital payment mean nothing here."  With it enabled by a mod, hear the
+  new balance and "Bank balance: $…".

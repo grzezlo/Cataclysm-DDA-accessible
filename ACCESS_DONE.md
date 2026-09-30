@@ -1174,3 +1174,53 @@ Limitations:
   spoken through the existing message speech, not by the dialogue.
 - Nested menus opened by responses (trading, missions, training choices)
   use their own screens; trading and missions are Stages 16 and 17.
+
+## 2026-09-30 — Stage 16: Trading
+
+- Implemented the selected interaction (conventions 2, 3, 4, and 8 with the
+  Stage 07 and 09 selector speech); trade keys are unchanged.
+- Opening speaks the purpose, trader, and balance once ("Trade: Rubik.
+  Balance: credit $0.00, acceptable."), then "Trader's goods", the item
+  count, and the focused row.  Tab speaks only the new pane ("Your goods,
+  N items") and its focused row, never the other side.
+- Rows speak name, unit price ("$2.00 each"), marked count ("Marked", "3
+  marked"), "Not owned" when it applies, and "Unavailable: <reason>";
+  `Alt+D` adds location, favorite, contents state, and owner.
+- Marking, count changes, and auto balance (`F1`) speak the row's new
+  state ("Unmarked" when cleared), then "Balance: you owe $5.00, trader
+  refuses" or "Balance: credit $3.00, acceptable" ("Free exchange,
+  acceptable" with followers), and "Over weight limit" or "Over volume
+  limit" from the pane statistics.  Auto balance with nothing to change
+  speaks the balance.  Bank balancing (`F2`) speaks the balance and the
+  bank balance.
+- `Alt+S` speaks the purpose, trader, balance and acceptance, the value of
+  the marked goods on each side ("Buying", "Selling"), the bank balance
+  when banking is enabled, and the pane status with statistics, selection
+  total, and position.
+- Refusals and the confirmation use the existing popups; afterwards the
+  focused row is spoken again.  Closing speaks "Trade complete" or "Trade
+  cancelled" before the dialogue continues.
+- The inventory selector gained narrow virtual hooks (`accessibility_row`,
+  `accessibility_opening_context`, `accessibility_column_label`,
+  `accessibility_selection_event`) that `trade_selector` overrides; the
+  trade loop now announces focus, handles `Alt+R`, and reports wraps.
+- `test_access.bat` passed 1627 assertions in 92 cases; `[trade]`,
+  `[inventory]`, and `[npc_talk]` passed 776 assertions in 45 cases; the
+  Windows x64 tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `c6504e1278`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; the trade loop has no input
+  injection in tests, so pane switching, marking, and status are covered
+  through the panes and the trade state directly.
+- The standard "Care to trade?" responses lead to `TALK_DONE`, so the game
+  ends the conversation after the trade; the dialogue continues only for
+  trades started from other topics.
+- The trader's pocket check happens only on confirmation, as on screen; its
+  refusal is spoken by the popup.
+- Pane statistics describe each party's own load after giving away the
+  marked goods, as the visible statistics do; incoming goods are not
+  counted.
+- The "Trade complete" result is not asserted in tests because the trade
+  loop needs real input.

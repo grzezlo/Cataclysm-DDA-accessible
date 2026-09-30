@@ -55,53 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 16 - Trading
-
-**Outcome:** Buying, selling, quantity selection, balance, and capacity are clear
-in the two-party trade interface.
-
-**Code inventory:** `src/trade_ui.cpp`, `src/npctrade.cpp`, inventory selectors,
-and item information used by trade.
-
-**Implementation hints:**
-
-- Two panes: `_panes[_you]` and `_panes[_trader]` in `class trade_ui` in
-  `src/trade_ui.cpp` (derived from `inventory_multiselector`).
-- Active pane switching: `_cpane = -_cpane + 1` in `trade_ui::_process()`.
-- Balance & Acceptance: `_balance`, `cost_str` ("Credit %s" / "Debt %s"),
-  evaluated by `npc_trading::npc_will_accept_trade()` in `src/npctrade.cpp`.
-- Confirmation check: `trade_ui::_confirm_trade()` validates credit limits,
-  pocket capacity, and prompts `query_yn()`.
-- Unit price: `trade_preset` in `src/trade_ui.cpp` formats price via
-  `format_money(npc_trading::trading_price(...))`.
-- Autobalance action: `trade_ui::autobalance()` in `src/trade_ui.cpp`.
-- Bank balance: `trade_ui::bank_balance()` in `src/trade_ui.cpp`.
-
-**Selected interaction (conventions 2, 3, 4, and 8 with the Stage 07 and 09
-selector speech):**
-
-- Keys are unchanged.  Switching panes speaks the party, item count, and
-  focused row ("Trader's goods, 24 items") without reading the other side.
-- A row speaks name, unit price, and marked count ("apple, 2.00 each, 3
-  marked"), plus ownership as in Stage 09.
-- Marking speaks the change, then the balance and acceptance ("Balance: you
-  owe 5.00, trader refuses"; "Balance: credit 3.00, acceptable") and
-  over-capacity words as in Stage 09.
-- `Alt+S` speaks the full balance, bank balance, acceptance, and capacity.
-  Confirmation and result use the shared controls, then focus returns to the
-  dialogue.
-
-**Success criteria:** Active party/pane, item, marks, quantity, unit/total price,
-running balance, capacity, acceptance state, ownership, invalid reason,
-confirmation, and result are announced.  Pane changes do not reread both sides.
-
-**Possible automated tests:** Deterministic fixtures for pane/item movement,
-marking, stack quantity, balance updates, insufficient funds/capacity, acceptance,
-cancel, result, and restored dialogue focus.
-
-**User-test scenarios:** Buy and sell single and stacked items, inspect
-details, correct an unfavorable/invalid trade, accept it, and return to dialogue.
-
 ## Stage 17 - Missions
 
 **Outcome:** Mission discovery, acceptance, tracking, details, and completion are
