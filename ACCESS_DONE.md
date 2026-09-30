@@ -1270,3 +1270,58 @@ Limitations:
   instead of saying "Top" or "Bottom".
 - Distances mirror the screen, which assumes targets on z=0; the direction
   is horizontal only.
+
+## 2026-09-30 — Stage 18: Overmap navigation
+
+- Implemented the selected interaction (option B, known-places list with the
+  cursor; conventions 2, 6, and 8).  Existing overmap keys are unchanged;
+  `Alt+L` ("List known places", `OVERMAP` context) is new, and `Alt+D`,
+  `Alt+S`, and `Alt+R` work on the overmap.
+- Opening speaks the prompt or "Overmap" and the cursor tile.  Cursor moves
+  speak the known terrain or "unexplored", "note: <text>", danger marks,
+  "mission target: <title>", "route destination" or "on route", and the
+  offset from the player ("forest, 3 north 2 east", "here").  A one-tile
+  step onto the same terrain speaks the terrain and markers without the
+  offset; a jump speaks the whole tile.  Level changes speak "Level -1."
+  before the tile, and off-level tiles add "1 level below".
+- `Alt+L` opens "Known places" as a shared list sorted by distance: seen
+  cities and camps, notes on every level, active mission targets with
+  "current objective", and the route destination, merged per position.
+  Rows speak name, distance in map tiles, direction, level difference, and
+  markers ("evac shelter, 12 map tiles south, note: supplies").  The shared
+  list filter narrows it.  Enter moves the cursor and speaks the tile;
+  Escape speaks the unchanged cursor tile.
+- The first route-selection press speaks "Route to <tile>, N map tiles
+  <direction>.  M map tiles of travel.  Press <key> again to travel." or
+  "No route to <tile>." (with the same-level reason); the second press uses
+  the existing confirmation and Stage 08A travel summary.  Travel and
+  center-on-destination without a route speak "No route selected."
+- Search results speak "Search results, N results" and the tile, then each
+  result with "Top"/"Bottom" on wrap; `Alt+S` speaks "Result 2 of 5".  Note
+  list rows speak the note, distance, direction, danger, and terrain.
+  Creating, editing, deleting, or marking a note speaks the tile again;
+  toggling explored speaks "Marked explored/unexplored".
+- `Alt+D` speaks the tile, the sidebar description with the nearest known
+  city, the vision level, the current objective's distance from the cursor,
+  visible weather, explored state, and level.  `Alt+S` speaks the cursor
+  tile, level, and route.
+- `test_access.bat` passed 1740 assertions in 96 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `5b2c0bf4e5`.
+
+Limitations:
+
+- NVDA interaction quality is unverified.  The overmap loop needs real input,
+  so tests cover the formatters, tile and place builders, the speech state,
+  and route speech rather than key-driven sessions.
+- The known-places list covers cities and camps within five overmaps of the
+  player and notes and missions everywhere loaded.  Seen specials without a
+  note, NPCs, and hordes shown on the map are not listed.
+- Overlay toggles other than explored (notes, hordes, city labels, fast
+  travel, and so on) are not spoken; they change only the drawn map.
+- Starting autodrive has no travel summary; vehicle travel belongs to
+  Stage 19.
+- The NPC path animation and mouse edge scrolling move the cursor silently;
+  the next key press speaks the new position.
+- The overmap sidebar does not show the `Alt+L` hint; it is listed in the
+  keybinding help.

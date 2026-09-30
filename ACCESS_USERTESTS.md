@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T135.
+Last assigned test ID: T141.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -841,3 +841,49 @@ through Debug menu > Player… > Edit player/NPC, choosing yourself, then
   "... is successfully completed." as messages.  Open the missions screen:
   the Failed and Completed tabs list them with "failed <time> ago" and
   "completed <time> ago", and `Alt+D` reads the end time.
+
+## Stage 18: Overmap navigation
+
+Open the map with `m`.  To see more of the world, reveal it through Debug
+menu > Map… > Overmap editor, press `r`, and choose a vision level; close
+the editor with Escape and open the map again with `m`.
+
+- **T136 - Opening and cursor movement.**  Open the map.  Hear "Overmap"
+  and your tile ending in "here" once.  Move the cursor with the movement
+  keys: each step speaks the terrain and its offset from you ("forest, 1
+  north"); a step onto the same terrain speaks only its name; an unrevealed
+  tile says "unexplored" and nothing about what is there.  `0` returns the
+  cursor to you.  `Alt+S` speaks the cursor tile, level, and route;
+  `Alt+D` adds the nearby city, vision level, and weather when the weather
+  overlay is on.  Interrupt with Control; nothing is repeated
+  automatically, and `Alt+R` repeats the last announcement.
+- **T137 - Levels.**  Press `>` and `<`.  Each press speaks "Level -1." (or
+  the new level) and the tile, including "1 level below" when it is not
+  your level.  Return to your level and press `0`.
+- **T138 - Notes.**  On a tile press `N`, type "B:Base", and confirm; hear
+  the tile again with "note: Base".  Press `R` to mark it dangerous with a
+  radius of 2 and hear "dangerous area, radius 2".  Press `L`: the notes
+  list speaks "Map notes", the count, and rows such as "Base, 3 map tiles
+  east, dangerous area, radius 2, field".  Enter moves the cursor to the
+  note; Escape speaks the unchanged cursor tile.  Press `D` on the note,
+  confirm, and hear the tile without the note.
+- **T139 - Known places.**  With a note and a revealed town, press `Alt+L`.
+  Hear "Known places", the count, and the nearest row with name, map tiles,
+  direction, and markers such as "city" or "note: Base".  Up and Down speak
+  one row; wrapping says "Top" or "Bottom".  Press `/`, type part of a name,
+  and hear the filtered count.  Enter moves the cursor there and speaks the
+  tile; `Alt+L` then Escape speaks the unchanged cursor.  An unrevealed town
+  is not listed.
+- **T140 - Mission location.**  Accept a mission with a target through the
+  Stage 17 debug route (T132 setup).  Open the map and press `Alt+L`: the
+  target row says "mission target: <title>, current objective".  Enter moves
+  the cursor there and the tile says "mission target: <title>".
+- **T141 - Search and routes.**  Press `/`, type "forest", and confirm.  Hear
+  "Search results, N results" and the nearest match; Tab and Shift+Tab
+  speak the next and previous result with "Top" or "Bottom" on wrap;
+  `Alt+S` speaks "Result 2 of N"; Enter keeps the cursor there.  Press `W`
+  on a revealed tile on your level and hear "Route to <tile>, N map tiles
+  <direction>" with the travel length and "Press W again to travel".  Press
+  `W` again, answer the travel question, and hear the Stage 08A travel
+  summary.  On an unexplored tile, `W` says "No route to unexplored."  With
+  no route, `g` and `c` say "No route selected."
