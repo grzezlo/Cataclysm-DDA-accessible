@@ -406,6 +406,9 @@ class uilist // NOLINT(cata-xy)
         void reset();
         // Speak the focused entry again at the next redraw, e.g. after a callback's window closes.
         void accessibility_repeat_focus();
+        // Speak only the focused entry when the list opens, e.g. when a menu
+        // reopens after an action that kept it open.
+        void accessibility_reopen();
 
 #if defined(TILES)
         void set_hide( bool val );

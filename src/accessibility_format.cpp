@@ -1761,6 +1761,119 @@ std::string format_zones_manager_summary( const std::string &filter, const std::
     } );
 }
 
+std::string format_vehicle_speed( const int speed, const std::string &units )
+{
+    if( speed < 0 ) {
+        //~ Vehicle speed while reversing: %1$d is the speed, %2$s the unit such as "mph".
+        return string_format( _( "%1$d %2$s reverse" ), -speed, units );
+    }
+    //~ Vehicle speed: %1$d is the speed, %2$s the unit such as "mph".
+    return string_format( _( "%1$d %2$s" ), speed, units );
+}
+
+std::string format_vehicle_heading( const std::string &compass, const int degrees )
+{
+    //~ Vehicle heading: %1$s is a compass direction, %2$d degrees from north.
+    return format_semantic_sequence( { string_format( _( "Heading %1$s, %2$d degrees" ), compass,
+                                       degrees )
+                                     } );
+}
+
+std::string format_vehicle_cruise( const int cruise, const std::string &units,
+                                   const bool above_safe, const bool at_limit )
+{
+    //~ Vehicle cruise control target speed, such as "20 mph".
+    std::string result = string_format( _( "Cruise %s" ), format_vehicle_speed( cruise, units ) );
+    if( above_safe ) {
+        result += _( ", above safe speed" );
+    }
+    if( at_limit ) {
+        result += _( ", maximum" );
+    }
+    return format_semantic_sequence( { result } );
+}
+
+std::string format_vehicle_strain( const vehicle_strain strain )
+{
+    switch( strain ) {
+        case vehicle_strain::none:
+            break;
+        case vehicle_strain::light:
+            return _( "light engine strain" );
+        case vehicle_strain::heavy:
+            return _( "heavy engine strain" );
+        case vehicle_strain::severe:
+            return _( "severe engine strain" );
+    }
+    return std::string();
+}
+
+std::string format_vehicle_fuel( const vehicle_fuel_gauge &gauge )
+{
+    //~ Vehicle fuel gauge: %1$s is the fuel, %2$d the percentage of the tank.
+    std::string result = string_format( _( "%1$s %2$d%%" ), gauge.fuel, gauge.percent );
+    if( !gauge.estimate.empty() ) {
+        result += gauge.filling ?
+                  //~ Time until a vehicle tank or battery is full.
+                  string_format( _( ", %s until full" ), gauge.estimate ) :
+                  //~ Time until a vehicle tank or battery is empty.
+                  string_format( _( ", %s until empty" ), gauge.estimate );
+    }
+    return format_semantic_sequence( { result } );
+}
+
+std::string format_vehicle_status( const vehicle_status &status )
+{
+    //~ Actual and cruise speed of the driven vehicle.
+    std::string speed = string_format( _( "Speed %1$s, cruise %2$s" ),
+                                       format_vehicle_speed( status.speed, status.units ),
+                                       format_vehicle_speed( status.cruise, status.units ) );
+    const std::string strain = format_vehicle_strain( status.strain );
+    if( !strain.empty() ) {
+        speed += ", " + strain;
+    }
+    //~ Vehicle heading: %1$s is a compass direction, %2$d degrees from north.
+    std::string heading = string_format( _( "Heading %1$s, %2$d degrees" ), status.compass,
+                                         status.heading );
+    if( status.turning ) {
+        //~ Steering target of a turning vehicle: %1$s is a compass direction, %2$d degrees.
+        heading += string_format( _( ", turning to %1$s, %2$d degrees" ), status.steering_compass,
+                                  status.steering );
+    }
+    std::vector<std::string> parts = {
+        status.name, speed, heading,
+        status.engine_on ? _( "Engine on" ) : _( "Engine off" )
+    };
+    for( const vehicle_fuel_gauge &gauge : status.fuels ) {
+        parts.push_back( format_vehicle_fuel( gauge ) );
+    }
+    if( status.skidding ) {
+        parts.emplace_back( _( "Skidding" ) );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_vehicle_obstacle( const std::string &name, const int distance,
+                                     const bool reversing )
+{
+    return format_semantic_sequence( { reversing ?
+                                       //~ Obstacle in the path of a reversing vehicle: %1$s is its name, %2$d the distance.
+                                       string_format( n_gettext( "%1$s behind, %2$d tile", "%1$s behind, %2$d tiles", distance ),
+                                               name, distance ) :
+                                       //~ Obstacle in the path of a vehicle: %1$s is its name, %2$d the distance.
+                                       string_format( n_gettext( "%1$s ahead, %2$d tile", "%1$s ahead, %2$d tiles", distance ),
+                                               name, distance )
+                                     } );
+}
+
+std::string format_vehicle_engine_row( const std::string &engine, const std::string &fuel,
+                                       const bool active )
+{
+    //~ Engine selection row: %1$s is the engine, %2$s its fuel, %3$s "on" or "off".
+    return string_format( _( "%1$s, %2$s, %3$s" ), engine, fuel,
+                          active ? pgettext( "engine", "on" ) : pgettext( "engine", "off" ) );
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {

@@ -223,6 +223,33 @@ class zones_manager_speech
         std::vector<std::pair<std::string, std::string>> previous_options;
 };
 
+/** Driving state of `veh` for the driving summary. */
+accessibility::vehicle_status vehicle_status( map &here, const vehicle &veh );
+/**
+ * When the viewer controls a vehicle, speak its driving summary and return
+ * true; otherwise return false so the caller opens the status review.
+ */
+bool announce_driving_status( map &here, const avatar &viewer );
+/**
+ * The nearest newly visible obstacle on the path of the vehicle the viewer
+ * controls, as speech.  Each obstacle is spoken once until it leaves the path.
+ */
+std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar &viewer );
+
+/** Speaks the cruise speed and steering heading changed by one driving input. */
+class vehicle_control_speech
+{
+    public:
+        vehicle_control_speech( map &here, const vehicle &veh );
+        /** Queue the changes; `acceleration` is the requested change, negative to speed up. */
+        void finish( int acceleration ) const;
+    private:
+        map &here;
+        const vehicle &veh;
+        int cruise = 0;
+        double turn_degrees = 0.0;
+};
+
 /** The player confirmed cancelling auto-travel; the stop needs no travel speech. */
 void travel_canceled();
 /** Overmap travel reached its destination; the game message reports it. */

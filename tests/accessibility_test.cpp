@@ -1,8 +1,10 @@
 #include <algorithm>
 #include <chrono>
+#include <climits>
 #include <cmath>
 #include <functional>
 #include <memory>
+#include <optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -57,6 +59,7 @@
 #include "npc.h"
 #include "npc_opinion.h"
 #include "omdata.h"
+#include "options.h"
 #include "output.h"
 #include "overmap.h"
 #include "overmapbuffer.h"
@@ -72,7 +75,11 @@
 #include "skill_ui.h"
 #include "string_formatter.h"
 #include "trade_ui.h"
+#include "units_utility.h"
 #include "type_id.h"
+#include "vehicle.h"
+#include "vpart_position.h"
+#include "vpart_range.h"
 
 namespace
 {
@@ -5245,4 +5252,225 @@ TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessib
     CHECK( capture_ptr->messages.back() == "Zones manager. Showing all zones. No zones." );
     act( "DOWN", nothing );
     CHECK( capture_ptr->messages.back() == "Zones manager, no zones." );
+}
+
+TEST_CASE( "vehicle_formatters_speak_speed_heading_fuel_and_obstacles", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_vehicle_speed( 20, "mph" ) == "20 mph" );
+    CHECK( accessibility::format_vehicle_speed( -5, "km/h" ) == "5 km/h reverse" );
+    CHECK( accessibility::format_vehicle_heading( "northeast", 45 ) ==
+           "Heading northeast, 45 degrees." );
+    CHECK( accessibility::format_vehicle_cruise( 20, "mph", false, false ) == "Cruise 20 mph." );
+    CHECK( accessibility::format_vehicle_cruise( 60, "mph", true, false ) ==
+           "Cruise 60 mph, above safe speed." );
+    CHECK( accessibility::format_vehicle_cruise( 80, "mph", true, true ) ==
+           "Cruise 80 mph, above safe speed, maximum." );
+    CHECK( accessibility::format_vehicle_cruise( -10, "mph", false, true ) ==
+           "Cruise 10 mph reverse, maximum." );
+    CHECK( accessibility::format_vehicle_strain( accessibility::vehicle_strain::none ).empty() );
+    CHECK( accessibility::format_vehicle_strain( accessibility::vehicle_strain::light ) ==
+           "light engine strain" );
+    CHECK( accessibility::format_vehicle_strain( accessibility::vehicle_strain::severe ) ==
+           "severe engine strain" );
+
+    accessibility::vehicle_fuel_gauge gasoline;
+    gasoline.fuel = "gasoline";
+    gasoline.percent = 45;
+    gasoline.estimate = "2 hours";
+    CHECK( accessibility::format_vehicle_fuel( gasoline ) == "gasoline 45%, 2 hours until empty." );
+    accessibility::vehicle_fuel_gauge battery;
+    battery.fuel = "battery";
+    battery.percent = 80;
+    battery.estimate = "3 hours";
+    battery.filling = true;
+    CHECK( accessibility::format_vehicle_fuel( battery ) == "battery 80%, 3 hours until full." );
+    accessibility::vehicle_fuel_gauge diesel;
+    diesel.fuel = "diesel";
+    diesel.percent = 100;
+    CHECK( accessibility::format_vehicle_fuel( diesel ) == "diesel 100%." );
+
+    accessibility::vehicle_status status;
+    status.name = "Car";
+    status.units = "mph";
+    status.speed = 20;
+    status.cruise = 30;
+    status.strain = accessibility::vehicle_strain::heavy;
+    status.heading = 0;
+    status.compass = "north";
+    status.engine_on = true;
+    status.fuels = { gasoline, battery };
+    CHECK( accessibility::format_vehicle_status( status ) ==
+           "Car. Speed 20 mph, cruise 30 mph, heavy engine strain. Heading north, 0 degrees. "
+           "Engine on. gasoline 45%, 2 hours until empty. battery 80%, 3 hours until full." );
+    status.speed = -5;
+    status.cruise = -10;
+    status.strain = accessibility::vehicle_strain::none;
+    status.turning = true;
+    status.steering = 45;
+    status.steering_compass = "northeast";
+    status.engine_on = false;
+    status.skidding = true;
+    status.fuels.clear();
+    CHECK( accessibility::format_vehicle_status( status ) ==
+           "Car. Speed 5 mph reverse, cruise 10 mph reverse. Heading north, 0 degrees, turning to "
+           "northeast, 45 degrees. Engine off. Skidding." );
+
+    CHECK( accessibility::format_vehicle_obstacle( "wall", 4, false ) == "wall ahead, 4 tiles." );
+    CHECK( accessibility::format_vehicle_obstacle( "tree", 1, true ) == "tree behind, 1 tile." );
+    CHECK( accessibility::format_vehicle_engine_row( "V8 engine", "gasoline", true ) ==
+           "V8 engine, gasoline, on" );
+    CHECK( accessibility::format_vehicle_engine_row( "V8 engine", "gasoline", false ) ==
+           "V8 engine, gasoline, off" );
+}
+
+TEST_CASE( "driving_speaks_entry_controls_obstacles_and_status", "[accessibility]" )
+{
+    static const vproto_id vehicle_prototype_car( "car" );
+    static const ter_str_id ter_t_wall( "t_wall" );
+    avatar &you = get_avatar();
+    map &here = get_map();
+    clear_avatar();
+    clear_map();
+    clear_vehicles();
+    const time_point previous_time = calendar::turn;
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope cleanup( [&]() {
+        you.controlling_vehicle = false;
+        if( you.in_vehicle ) {
+            here.unboard_vehicle( you.pos_bub() );
+        }
+        accessibility::reset_game_state();
+        accessibility::reset_backend_after_testing();
+        clear_vehicles();
+        clear_map();
+        clear_avatar();
+        set_time( previous_time );
+    } );
+    accessibility::reset_game_state();
+    accessibility::enable_game_messages( true );
+    set_time_to_day();
+
+    const tripoint_bub_ms origin( 60, 60, 0 );
+    vehicle *veh_ptr = here.add_vehicle( vehicle_prototype_car, origin, 0_degrees, 100, 0 );
+    REQUIRE( veh_ptr != nullptr );
+    vehicle &veh = *veh_ptr;
+    std::optional<tripoint_bub_ms> controls;
+    for( const vpart_reference &vp : veh.get_avail_parts( "CONTROLS" ) ) {
+        controls = vp.pos_bub( here );
+        break;
+    }
+    REQUIRE( controls.has_value() );
+    int front = INT_MIN;
+    int back = INT_MAX;
+    for( const tripoint_abs_ms &point : veh.get_points() ) {
+        front = std::max( front, here.get_bub( point ).x() );
+        back = std::min( back, here.get_bub( point ).x() );
+    }
+
+    // Stepping onto the controls names the vehicle and the controls.
+    const tripoint_abs_ms outside = here.get_abs( *controls + tripoint_rel_ms( 0, -5, 0 ) );
+    you.setpos( here, *controls );
+    accessibility_gameplay::announce_avatar_moved( outside, you, here );
+    REQUIRE( accessibility::flush_gameplay_announcements() );
+    CHECK( capture_ptr->messages.back().rfind( veh.name + ", ", 0 ) == 0 );
+    CHECK( capture_ptr->messages.back().find( "controls" ) != std::string::npos );
+    here.board_vehicle( *controls, &you );
+    REQUIRE( you.in_vehicle );
+    you.controlling_vehicle = true;
+    veh.engine_on = true;
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+
+    const std::string units = get_option<std::string>( "USE_METRIC_SPEEDS" );
+    const auto speed = []( int velocity ) {
+        return static_cast<int>( convert_velocity( velocity, VU_VEHICLE ) );
+    };
+
+    // Alt+S while driving speaks the driving state instead of opening the review.
+    REQUIRE( accessibility_gameplay::announce_driving_status( here, you ) );
+    const std::string status = capture_ptr->messages.back();
+    CHECK( status == accessibility::format_vehicle_status(
+               accessibility_gameplay::vehicle_status( here, veh ) ) );
+    CHECK( status.rfind( veh.name + ". Speed 0 " + units + ", cruise 0 " + units +
+                         ". Heading east, 90 degrees. Engine on.", 0 ) == 0 );
+    CHECK( status.find( '%' ) != std::string::npos );
+    CHECK( accessibility::last_announcement() == status );
+
+    // Control changes speak the new cruise speed and steering heading.
+    {
+        const accessibility_gameplay::vehicle_control_speech speech( here, veh );
+        veh.cruise_thrust( here, 400 );
+        speech.finish( -1 );
+    }
+    REQUIRE( accessibility::flush_gameplay_announcements() );
+    CHECK( capture_ptr->messages.back() == "Cruise " + std::to_string( speed(
+                veh.cruise_velocity ) ) + " " + units + "." );
+    {
+        const accessibility_gameplay::vehicle_control_speech speech( here, veh );
+        veh.turn( 15_degrees );
+        speech.finish( 0 );
+    }
+    REQUIRE( accessibility::flush_gameplay_announcements() );
+    CHECK( capture_ptr->messages.back() == "Heading east, 105 degrees." );
+    {
+        // A request past the limit says the cruise speed is at its maximum.
+        veh.cruise_velocity = veh.max_velocity( here );
+        const accessibility_gameplay::vehicle_control_speech speech( here, veh );
+        veh.cruise_thrust( here, 400 );
+        speech.finish( -1 );
+    }
+    REQUIRE( accessibility::flush_gameplay_announcements() );
+    CHECK( capture_ptr->messages.back() == "Cruise " + std::to_string( speed(
+                veh.max_velocity( here ) ) ) + " " + units + ", above safe speed, maximum." );
+    {
+        // Nothing changed: nothing is spoken.
+        const accessibility_gameplay::vehicle_control_speech speech( here, veh );
+        speech.finish( 0 );
+    }
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+    veh.cruise_velocity = 0;
+    veh.turn_dir = veh.face.dir();
+
+    // A visible obstacle on the path is spoken once, and again after it re-enters.
+    const tripoint_bub_ms ahead( front + 3, controls->y(), 0 );
+    here.ter_set( ahead, ter_t_wall );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+    const std::string wall = here.tername( ahead );
+    size_t spoken = capture_ptr->messages.size();
+    accessibility_gameplay::before_player_input( here, you );
+    REQUIRE( capture_ptr->messages.size() == spoken + 1 );
+    CHECK( capture_ptr->messages.back() == wall + " ahead, 3 tiles." );
+    CHECK( accessibility::last_announcement() == capture_ptr->messages.back() );
+    spoken = capture_ptr->messages.size();
+    accessibility_gameplay::before_player_input( here, you );
+    CHECK( capture_ptr->messages.size() == spoken );
+
+    // Reversing looks behind the vehicle; the wall ahead re-enters the path later.
+    const tripoint_bub_ms behind( back - 2, controls->y(), 0 );
+    here.ter_set( behind, ter_t_wall );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+    veh.cruise_velocity = -400;
+    CHECK( accessibility_gameplay::vehicle_obstacle_transition( here, you ) ==
+           wall + " behind, 2 tiles." );
+    veh.cruise_velocity = 0;
+    CHECK( accessibility_gameplay::vehicle_obstacle_transition( here, you ) ==
+           wall + " ahead, 3 tiles." );
+
+    // Letting go of the controls ends the checks; an unseen obstacle is not spoken.
+    you.controlling_vehicle = false;
+    CHECK_FALSE( accessibility_gameplay::vehicle_obstacle_transition( here, you ).has_value() );
+    CHECK_FALSE( accessibility_gameplay::announce_driving_status( here, you ) );
+    player_wear_blindfold();
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+    you.controlling_vehicle = true;
+    CHECK_FALSE( accessibility_gameplay::vehicle_obstacle_transition( here, you ).has_value() );
 }

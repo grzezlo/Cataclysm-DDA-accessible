@@ -1180,6 +1180,12 @@ void uilist::accessibility_repeat_focus()
     accessibility_selection.clear();
 }
 
+void uilist::accessibility_reopen()
+{
+    accessibility_open = true;
+    accessibility_selection.clear();
+}
+
 ///@}
 #if defined(TILES)
 void uilist::set_hide( bool val )

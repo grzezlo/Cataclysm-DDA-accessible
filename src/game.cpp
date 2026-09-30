@@ -8779,6 +8779,9 @@ void game::accessibility_situation_review()
 
 void game::accessibility_status_review()
 {
+    if( accessibility_gameplay::announce_driving_status( get_map(), u ) ) {
+        return;
+    }
     accessibility::safe_mode_state semantic_safe_mode = accessibility::safe_mode_state::off;
     if( safe_mode == SAFE_MODE_ON ) {
         semantic_safe_mode = accessibility::safe_mode_state::on;

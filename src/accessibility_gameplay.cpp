@@ -3,11 +3,13 @@
 #include <algorithm>
 #include <array>
 #include <climits>
+#include <cmath>
 #include <cstdlib>
 #include <cstdint>
 #include <functional>
 #include <map>
 #include <optional>
+#include <set>
 #include <tuple>
 #include <utility>
 
@@ -50,6 +52,7 @@
 #include "mtype.h"
 #include "move_mode.h"
 #include "npc.h"
+#include "options.h"
 #include "omdata.h"
 #include "output.h"
 #include "overmap_ui.h"
@@ -58,6 +61,7 @@
 #include "recipe.h"
 #include "requirements.h"
 #include "string_formatter.h"
+#include "tileray.h"
 #include "translations.h"
 #include "trap.h"
 #include "ui_iteminfo.h"
@@ -74,6 +78,8 @@ static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_infected( "infected" );
 
 static const flag_id json_flag_SPLINT( "SPLINT" );
+
+static const itype_id itype_battery( "battery" );
 
 static const trait_id trait_DEBUG_HS( "DEBUG_HS" );
 static const trait_id trait_INATTENTIVE( "INATTENTIVE" );
@@ -378,6 +384,27 @@ std::string route_tile_name( const map &here, const tripoint_bub_ms &position )
 {
     return here.has_furn( position ) ? here.furn( position ).obj().name() :
            here.ter( position ).obj().name();
+}
+
+/** A tile the player stepped onto: the vehicle and its part when there is one. */
+std::string movement_tile_name( const map &here, const tripoint_bub_ms &position )
+{
+    const optional_vpart_position vp = here.veh_at( position );
+    if( !vp ) {
+        return route_tile_name( here, position );
+    }
+    std::vector<std::string> parts = { vp->vehicle().name };
+    const std::optional<vpart_reference> displayed = vp.part_displayed();
+    if( displayed ) {
+        parts.push_back( displayed->part().name() );
+    }
+    // The displayed part may hide the controls, which decide where to drive from.
+    if( vp.part_with_feature( "CONTROLS", true ) &&
+        ( !displayed || !displayed->info().has_flag( "CONTROLS" ) ) ) {
+        parts.emplace_back( _( "controls" ) );
+    }
+    //~ Separator between a vehicle name and its parts on one tile.
+    return string_join( parts, _( ", " ) );
 }
 
 std::string overmap_location( const tripoint_abs_omt &origin, const tripoint_abs_omt &target )
@@ -1158,6 +1185,10 @@ void before_player_input( map &here, const avatar &viewer )
         accessibility::queue_gameplay_announcement( gameplay_focus_description( here, viewer ),
                 accessibility::gameplay_speech::routine );
     }
+    if( const std::optional<std::string> obstacle = vehicle_obstacle_transition( here, viewer ) ) {
+        accessibility::queue_gameplay_announcement( *obstacle,
+                accessibility::gameplay_speech::meaningful );
+    }
     accessibility::flush_gameplay_announcements();
 }
 
@@ -1183,7 +1214,7 @@ void announce_avatar_moved( const tripoint_abs_ms &old_abs_pos, const avatar &vi
     accessibility::take_suppressed_movement();
     const tripoint_bub_ms new_pos = viewer.pos_bub();
     const tripoint_abs_ms new_abs_pos = here.get_abs( new_pos );
-    const std::string tile_name = route_tile_name( here, new_pos );
+    const std::string tile_name = movement_tile_name( here, new_pos );
     if( travel_active ) {
         accessibility::take_travel_in_progress();
         accessibility::queue_gameplay_announcement( accessibility::format_travel_arrival( tile_name ),
@@ -1457,6 +1488,212 @@ void zones_manager_speech::after( const std::string &action, const bool closing 
     if( !speech.empty() ) {
         accessibility::announce( speech );
     }
+}
+
+namespace
+{
+/** Degrees from north, as the vehicle azimuth widget shows a vehicle angle. */
+int azimuth_degrees( const units::angle direction )
+{
+    return static_cast<int>( std::lround( units::to_degrees( normalize( direction ) +
+                                          90_degrees ) ) % 360 );
+}
+
+std::string compass_name( const int azimuth )
+{
+    static const std::array<point, 8> compass_points = {
+        point::north, point::north_east, point::east, point::south_east,
+        point::south, point::south_west, point::west, point::north_west
+    };
+    return direction_name( direction_from( compass_points[( ( azimuth + 22 ) / 45 ) % 8] ) );
+}
+
+int vehicle_speed( const int velocity )
+{
+    return static_cast<int>( convert_velocity( velocity, VU_VEHICLE ) );
+}
+
+std::string vehicle_speed_units()
+{
+    return get_option<std::string>( "USE_METRIC_SPEEDS" );
+}
+
+/** Obstacle keys in the path of the controlled vehicle at the last check. */
+std::set<std::string> &vehicle_obstacles_in_path()
+{
+    static std::set<std::string> keys;
+    return keys;
+}
+} // namespace
+
+accessibility::vehicle_status vehicle_status( map &here, const vehicle &veh )
+{
+    accessibility::vehicle_status result;
+    result.name = veh.name;
+    result.units = vehicle_speed_units();
+    result.speed = vehicle_speed( veh.velocity );
+    result.cruise = vehicle_speed( veh.cruise_velocity );
+    // The same thresholds as the speed gauge colors.
+    const float strain = veh.strain( here );
+    if( strain > 0.4f ) {
+        result.strain = accessibility::vehicle_strain::severe;
+    } else if( strain > 0.2f ) {
+        result.strain = accessibility::vehicle_strain::heavy;
+    } else if( strain > 0.0f ) {
+        result.strain = accessibility::vehicle_strain::light;
+    }
+    result.heading = azimuth_degrees( veh.face.dir() );
+    result.compass = compass_name( result.heading );
+    const int steering = azimuth_degrees( veh.turn_dir );
+    if( steering != result.heading ) {
+        result.turning = true;
+        result.steering = steering;
+        result.steering_compass = compass_name( steering );
+    }
+    result.engine_on = veh.engine_on;
+    result.skidding = veh.skidding;
+    // The fuel gauges as the full-size vehicle indicators compute them.
+    for( const itype_id &fuel : veh.get_printable_fuel_types( here ) ) {
+        const int capacity = veh.fuel_capacity( here, fuel );
+        if( capacity <= 0 ) {
+            continue;
+        }
+        const int64_t left = veh.fuel_left( here, fuel );
+        accessibility::vehicle_fuel_gauge gauge;
+        gauge.fuel = item::nname( fuel );
+        gauge.percent = static_cast<int>( left * 100 / capacity );
+        int64_t rate = 0;
+        const auto usage = veh.fuel_used_last_turn.find( fuel );
+        if( usage != veh.fuel_used_last_turn.end() ) {
+            rate = veh.consumption_per_hour( fuel, usage->second );
+        }
+        if( fuel == itype_battery ) {
+            const units::energy hourly = veh.net_battery_charge_rate( here, true ) * 1_hours;
+            rate += std::lround( units::to_millijoule( hourly ) / 1000000.0 );
+        }
+        const int64_t remaining = rate > 0 ? capacity - left : left;
+        if( rate != 0 && remaining > 0 ) {
+            gauge.filling = rate > 0;
+            gauge.estimate = to_string_clipped( time_duration::from_turns(
+                                                    to_turns<double>( 60_minutes ) * remaining / std::abs( rate ) ) );
+        }
+        result.fuels.push_back( gauge );
+    }
+    return result;
+}
+
+bool announce_driving_status( map &here, const avatar &viewer )
+{
+    if( !accessibility::is_active() || !viewer.controlling_vehicle ) {
+        return false;
+    }
+    const vehicle *veh = display::vehicle_driven( viewer );
+    if( veh == nullptr ) {
+        return false;
+    }
+    accessibility::announce( accessibility::format_vehicle_status( vehicle_status( here, *veh ) ) );
+    return true;
+}
+
+std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar &viewer )
+{
+    std::set<std::string> &previous = vehicle_obstacles_in_path();
+    const vehicle *veh = accessibility::is_active() && viewer.controlling_vehicle ?
+                         display::vehicle_driven( viewer ) : nullptr;
+    if( veh == nullptr ) {
+        previous.clear();
+        return std::nullopt;
+    }
+    const bool reversing = veh->velocity < 0 || ( veh->velocity == 0 && veh->cruise_velocity < 0 );
+    // Warn a few tiles beyond the distance the vehicle covers in one turn.
+    constexpr int warning_tiles = 5;
+    const int range = std::min( MAX_VIEW_DISTANCE, warning_tiles + static_cast<int>( std::ceil(
+                                    std::abs( veh->velocity ) / vehicles::vmiph_per_tile ) ) );
+    const std::set<tripoint_abs_ms> &own = veh->get_points();
+    const visibility_variables &cache = here.get_visibility_variables_cache();
+
+    struct obstacle {
+        int distance;
+        std::string key;
+        std::string name;
+    };
+    std::vector<obstacle> obstacles;
+    std::set<std::string> current;
+    tileray ray( reversing ? veh->face.dir() + 180_degrees : veh->face.dir() );
+    tripoint_rel_ms offset = tripoint_rel_ms::zero;
+    for( int distance = 1; distance <= range; ++distance ) {
+        ray.advance();
+        offset += tripoint_rel_ms( ray.dx(), ray.dy(), 0 );
+        for( const tripoint_abs_ms &part_position : own ) {
+            const tripoint_abs_ms target = part_position + offset;
+            if( own.count( target ) != 0 ) {
+                continue;
+            }
+            const tripoint_bub_ms position = here.get_bub( target );
+            if( tile_visibility( here, position, cache ) != visibility_type::CLEAR ) {
+                continue;
+            }
+            std::string name;
+            if( const optional_vpart_position vp = here.veh_at( position ) ) {
+                if( &vp->vehicle() == veh ) {
+                    continue;
+                }
+                name = vp->vehicle().name;
+            } else if( here.impassable( position ) ) {
+                name = route_tile_name( here, position );
+            } else {
+                continue;
+            }
+            std::string key = target.to_string() + ":" + name;
+            if( current.insert( key ).second ) {
+                obstacles.push_back( { distance, std::move( key ), name } );
+            }
+        }
+    }
+
+    std::optional<std::string> result;
+    // Obstacles are found nearest first.
+    for( const obstacle &found : obstacles ) {
+        if( previous.count( found.key ) == 0 ) {
+            result = accessibility::format_vehicle_obstacle( found.name, found.distance, reversing );
+            break;
+        }
+    }
+    previous = std::move( current );
+    return result;
+}
+
+vehicle_control_speech::vehicle_control_speech( map &here, const vehicle &veh ) :
+    here( here ), veh( veh ), cruise( veh.cruise_velocity ),
+    turn_degrees( units::to_degrees( veh.turn_dir ) )
+{
+}
+
+void vehicle_control_speech::finish( const int acceleration ) const
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    if( units::to_degrees( veh.turn_dir ) != turn_degrees ) {
+        const int heading = azimuth_degrees( veh.turn_dir );
+        accessibility::queue_gameplay_announcement( accessibility::format_vehicle_heading(
+                    compass_name( heading ), heading ), accessibility::gameplay_speech::meaningful );
+    }
+    if( acceleration == 0 ) {
+        return;
+    }
+    // A request past the limit leaves the cruise speed unchanged; say why.
+    const int limit = acceleration < 0 ?
+                      ( veh.autopilot_on ? veh.safe_velocity( here ) : veh.max_velocity( here ) ) :
+                      veh.max_reverse_velocity( here );
+    const bool at_limit = veh.cruise_velocity == cruise && cruise == limit;
+    if( veh.cruise_velocity == cruise && !at_limit ) {
+        return;
+    }
+    const bool above_safe = veh.engine_on && veh.cruise_velocity > veh.safe_velocity( here );
+    accessibility::queue_gameplay_announcement( accessibility::format_vehicle_cruise(
+                vehicle_speed( veh.cruise_velocity ), vehicle_speed_units(), above_safe, at_limit ),
+            accessibility::gameplay_speech::meaningful );
 }
 
 void travel_canceled()

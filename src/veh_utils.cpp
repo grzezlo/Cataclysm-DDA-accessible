@@ -10,6 +10,7 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility_format.h"
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_imgui.h"
@@ -282,6 +283,12 @@ veh_menu_item &veh_menu_item::location( const std::optional<tripoint> &location 
     return *this;
 }
 
+veh_menu_item &veh_menu_item::accessibility_focus( const std::string &focus )
+{
+    this->_accessibility_focus = focus;
+    return *this;
+}
+
 veh_menu::veh_menu( vehicle &veh, const std::string &title ): veh( veh )
 {
     this->title = title;
@@ -363,6 +370,10 @@ std::vector<uilist_entry> veh_menu::get_uilist_entries() const
                 entry.desc += "\n";
             }
             entry.desc += _( "Vehicle is locked." );
+        }
+        if( !it._accessibility_focus.empty() ) {
+            entry.accessibility_focus = accessibility::format_uilist_focus( it._accessibility_focus, {},
+                                        !entry.enabled, {} );
         }
 
         entries.push_back( entry );
@@ -464,6 +475,9 @@ bool veh_menu::query()
     }
 
     if( last_selected.has_value() ) { // have selection from previous query
+        // The menu reopens after an action that keeps it open; speak only the
+        // action's messages and the focused row, not the menu name again.
+        menu.accessibility_reopen();
         menu.selected = std::min( static_cast<int>( items.size() ), last_selected.value() );
     } else { // find first element with select enabled
         for( menu.selected = 0; menu.selected < static_cast<int>( items.size() ); menu.selected++ ) {

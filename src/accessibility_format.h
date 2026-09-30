@@ -503,6 +503,64 @@ std::string format_zone_options( const std::vector<std::pair<std::string, std::s
 /** "Zones manager. Showing all zones. Faction: x. 2 of 5. <row>" */
 std::string format_zones_manager_summary( const std::string &filter, const std::string &faction,
         size_t position, size_t count, const std::string &focus );
+
+/** Engine strain beyond the safe speed, shown by the speed gauge color. */
+enum class vehicle_strain {
+    none,
+    light,
+    heavy,
+    severe
+};
+/** One fuel or power gauge of a driven vehicle. */
+struct vehicle_fuel_gauge {
+    std::string fuel;
+    int percent = 0;
+    /** Time until the tank is empty, or full when `filling`; empty when steady. */
+    std::string estimate;
+    bool filling = false;
+};
+/** Driving state of a vehicle, as the sidebar and gauges show it. */
+struct vehicle_status {
+    std::string name;
+    /** Speed unit such as "mph". */
+    std::string units;
+    /** Actual and cruise speed in `units`; negative when reversing. */
+    int speed = 0;
+    int cruise = 0;
+    vehicle_strain strain = vehicle_strain::none;
+    /** Facing in degrees from north, with its compass direction. */
+    int heading = 0;
+    std::string compass;
+    /** Steering target when it differs from the facing. */
+    bool turning = false;
+    int steering = 0;
+    std::string steering_compass;
+    bool engine_on = false;
+    bool skidding = false;
+    std::vector<vehicle_fuel_gauge> fuels;
+};
+/** "20 mph" or "5 mph reverse". */
+std::string format_vehicle_speed( int speed, const std::string &units );
+/** "Heading northeast, 45 degrees." */
+std::string format_vehicle_heading( const std::string &compass, int degrees );
+/** "Cruise 60 mph, above safe speed." or "Cruise 80 mph, maximum." */
+std::string format_vehicle_cruise( int cruise, const std::string &units, bool above_safe,
+                                   bool at_limit );
+/** "heavy engine strain", or empty without strain. */
+std::string format_vehicle_strain( vehicle_strain strain );
+/** "gasoline 45%, 2 hours until empty." */
+std::string format_vehicle_fuel( const vehicle_fuel_gauge &gauge );
+/**
+ * "Car. Speed 20 mph, cruise 30 mph. Heading north, 0 degrees. Engine on.
+ * gasoline 45%, 2 hours until empty."
+ */
+std::string format_vehicle_status( const vehicle_status &status );
+/** "wall ahead, 4 tiles." or "tree behind, 1 tile." */
+std::string format_vehicle_obstacle( const std::string &name, int distance, bool reversing );
+/** Engine selection row: "V8 engine, gasoline, on". */
+std::string format_vehicle_engine_row( const std::string &engine, const std::string &fuel,
+                                       bool active );
+
 /** An item that a pickup stored, with the container it went into, if known. */
 struct pickup_result_item {
     std::string item;

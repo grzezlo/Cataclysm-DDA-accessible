@@ -52,6 +52,8 @@ struct veh_menu_item {
     std::optional<std::string> _hotkey_action = std::nullopt;
     std::function<void()> _on_submit;
     std::function<void()> _on_select;
+    // Spoken instead of the text when the text shows state by symbols.
+    std::string _accessibility_focus;
 
     veh_menu_item &text( const std::string &text );
     veh_menu_item &text_color( nc_color text_color );
@@ -69,6 +71,7 @@ struct veh_menu_item {
     veh_menu_item &on_select( const std::function<void()> &on_select );
     veh_menu_item &keep_menu_open( bool keep_menu_open = true );
     veh_menu_item &location( const std::optional<tripoint> &location );
+    veh_menu_item &accessibility_focus( const std::string &focus );
 };
 
 class veh_menu

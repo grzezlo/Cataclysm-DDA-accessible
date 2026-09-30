@@ -576,7 +576,9 @@ static void pldrive( const tripoint_rel_ms &p )
             return;
         }
     }
+    const accessibility_gameplay::vehicle_control_speech control_speech( here, *veh );
     veh->pldrive( here, get_avatar(), p.x(), p.y(), p.z() );
+    control_speech.finish( p.y() );
 }
 
 static void pldrive( point_rel_ms d )

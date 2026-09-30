@@ -9,6 +9,7 @@
 #include <string>
 #include <tuple>
 
+#include "accessibility_format.h"
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
@@ -394,6 +395,8 @@ void vehicle::control_engines( map &here )
                 const bool is_active = vp.enabled && vp.fuel_current() == fuel_type;
                 const bool has_fuel = is_perpetual_type( vp ) || fuel_left( here, fuel_type );
                 menu.add( string_format( "[%s] %s %s", is_active ? "x" : " ", vp.name(), fuel_type->nname( 1 ) ) )
+                .accessibility_focus( accessibility::format_vehicle_engine_row( vp.name(),
+                                      fuel_type->nname( 1 ), is_active ) )
                 .enable( vp.is_available() && has_fuel )
                 .keep_menu_open()
                 .on_submit( [this, engine_idx, fuel_type, &dirty] {
