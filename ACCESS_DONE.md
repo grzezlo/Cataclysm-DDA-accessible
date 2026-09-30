@@ -1535,3 +1535,50 @@ Limitations:
 - The difficulty summary in `Alt+S` is the header text with colors removed
   and may read awkwardly.  Scrolling the visual detail pane is silent;
   `Alt+D` is the accessible route.  The Stats tab onward is Stage 20A.
+
+## 2026-09-30 — Stage 20A: Character creation - stats, traits, skills, and finish
+
+- Implemented the selected interaction (conventions 2, 3, 4, 5, and 8);
+  existing keys are unchanged.  Each tab speaks its name, item count, and
+  focused row on entry, reusing Stage 20's `choice_tab_speech`, which now
+  supports a pane (trait column) and a section (skill category).
+- Stats: rows speak "Strength 8, average human" plus the header's limit or
+  cost note; Left and Right speak "Strength 10, 4 points left".  `Alt+D`
+  opens the derived effects in the document view.
+- Traits: the tab and Left or Right speak "Negative traits, 30 items" and
+  the row.  Rows speak cost, "selected", "locked by scenario/profession/
+  background", "conflicts with <traits>", and "forbidden by scenario" or
+  "profession".  Enter speaks "Selected" or "Removed" with the balance;
+  refusal popups and the variant menu return to the row.  Filter, reset
+  filter, sort ("Sorted by points" or "by name"), and randomize speak
+  their result.
+- Skills: entering a category speaks its name before the row ("Melee,
+  level 3, 1 from profession"); Left and Right speak "Level 2" with the
+  balance.  `Alt+S` adds the next upgrade cost.
+- Description: fields speak "Name: Ada", "Blood type: O positive", and the
+  start location with its variant count; value changes speak only the new
+  value.  Name, gender, randomize, reroll ("Character randomized", then
+  the re-entered tab), template save ("Saved template <name>"), city,
+  location, and calendar keys speak their result.  Edits use the Stage 05
+  text input and uilists; validation popups and the final confirmations
+  use the Stage 05 controls and return to the field when declined.
+  `Alt+D` opens a character summary of everything the tab shows outside
+  its fields.
+- The Description tab's skill-level calculation moved into
+  `description_skill_level()` so the drawing and the summary share it.
+- `test_access.bat` passed 2089 assertions in 109 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `a91cee218d`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T161–T165 are in
+  `ACCESS_USERTESTS.md`.  Automated tests cover formatters, trait rows
+  with game data, and key resolution, not the interactive tab loops.
+- Trait rows do not speak profession bionics that block a trait; the popup
+  after Enter names them.
+- A loaded template has no separate announcement: character creation opens
+  on the Description tab and speaks it.  Template saving reports success
+  when the template file exists afterwards.
+- Visual detail-pane scrolling and scrollbar dragging remain silent;
+  `Alt+D` is the accessible route.

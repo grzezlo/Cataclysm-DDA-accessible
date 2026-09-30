@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T160.
+Last assigned test ID: T165.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1081,4 +1081,63 @@ Change terrain, or drive toward a building.
   background Book Hating"; Enter shows the conflict popup and does not add
   it.  Press Enter on Book Hating again and hear "Removed Book Hating".
   `Alt+S` lists the chosen backgrounds after "Current:".  Press Tab to reach
-  the Stats tab; that tab's speech belongs to Stage 20A and may be silent.
+  the Stats tab and hear "Stats" with its item count and the focused stat.
+
+## Stage 20A: Character creation - stats, traits, skills, and finish
+
+- **T161 - Stats tab.**  In Custom Character, choose a legacy point pool on
+  the Points tab so costs apply, then press Tab until the Stats tab.  Hear
+  "Stats, 4 items" and "Strength 8, average human" once.  Down and Up speak
+  only the next stat; wrapping says "top" or "bottom".  Right speaks
+  "Strength 9" and the point balance, without repeating other text; raise
+  it past 14 and hear "Increasing Strength further costs 2 points".  Lower
+  it to 4 and hear "Strength cannot be further decreased".  `Alt+D` opens
+  the derived effects (HP, carry weight, and the affected actions) in the
+  document view; Escape returns and speaks the stat again.  `Alt+S` speaks
+  all four stats, the balance, and the difficulty summary.  Interrupt a
+  change with Control; nothing is requeued, and `Alt+R` repeats it.
+- **T162 - Traits tab and conflicts.**  Press Tab to the Traits tab and
+  hear "Traits. Positive traits" with the count and the focused trait with
+  its cost.  Right and Left speak "Negative traits" or "Neutral traits",
+  the count, and the focused row.  Select "Fast Learner" with Enter and
+  hear "Selected Fast Learner" and the balance.  Move to "Slow Learner" on
+  the negative column and hear "conflicts with Fast Learner"; Enter speaks
+  the conflict popup, and after it closes the row is spoken again.  With a
+  profession that grants a trait (for example Doctor, whose trait is "MD"),
+  find that trait and hear "selected, locked by profession"; Enter speaks
+  the refusal popup.  Press `/`, type "learn", Enter: hear "Filter learn",
+  the match count, the column, and the row.  Press `s` and hear "Sorted by
+  points".  `Alt+S` speaks the column, position, chosen traits, balance,
+  and the positive and negative trait point limits.
+- **T163 - Skills tab.**  Press Tab to the Skills tab and hear "Skills",
+  the count, "Melee skills", and the first skill with its level once.
+  Down within a category speaks only the skill; moving into the next
+  category speaks its name first ("Ranged skills").  Right speaks "Level 2"
+  and the balance, and Left lowers it again.  With a profession that grants
+  a skill, hear "level 3, 1 from profession" on that row.  `Alt+S` speaks
+  the position, skills with levels, the next upgrade cost, and the balance;
+  `Alt+D` opens the skill description and recipes in the document view.
+- **T164 - Description fields, templates, and randomizing.**  Press Tab to
+  the Description tab and hear "Description, 7 items. Name: random name"
+  (or the name).  Down speaks each field: gender, outfit, height, age,
+  blood type ("O positive"), and starting location with its variants.  On
+  Height, Right speaks only the new height; on Gender, Right speaks "Male"
+  or "Female".  Press Enter on Name, type a name in the text input, and
+  hear "Name: <name>" after it closes.  Press `/` and pick a location; hear
+  "Starting location: <location>".  Press `n` and hear the new name; `*`
+  speaks "Description randomized" and the focused field.  Press `!`, type a
+  template name, and hear "Saved template <name>"; Escape in that prompt
+  speaks the field again.  `Alt+D` opens the character summary (scenario,
+  profession, background, stats, traits, skills, proficiencies, bionics,
+  addictions, vehicle, and dates); `Alt+S` speaks the position, scenario,
+  profession, balance, and difficulty.  Load that template later from the
+  main menu's template list and hear "Character creation. Description" and
+  the name.
+- **T165 - Validation and finishing.**  In a legacy pool, overspend points
+  on the Stats tab, go to the Description tab, and press Tab: the popup
+  says too many points were allocated, and after it closes the field is
+  spoken again.  Fix the points, leave some unspent, and press Tab: hear
+  the question about discarding remaining points; answer No and hear the
+  field.  Clear the name, press Tab, answer Yes to the unspent-points
+  question, and hear "Are you SURE you're finished?  Your name will be
+  randomly generated."  Answer Yes and the game starts.

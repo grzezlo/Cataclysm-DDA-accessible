@@ -55,59 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 20A - Character creation: stats, traits, skills, and finish
-
-**Outcome:** The remaining character creation tabs and the final confirmation
-flow are independently usable.
-
-**Code inventory:** `src/newcharacter.cpp` tabs 4–7; template and validation
-logic.
-
-**Implementation hints:**
-
-- Tab 4 (Stats): `set_stats()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_STATS"`.  Four stats with LEFT/RIGHT to adjust values.  Detail
-  pane: `assemble_stat_details()` shows derived effects (HP, carry, damage,
-  throw distance, etc.).
-- Tab 5 (Traits): `set_traits()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_TRAITS"`.  2–3 columns (positive, negative, neutral).  Locked
-  traits by scenario/profession/hobby.  Conflict highlighting.
-- Tab 6 (Skills): `set_skills()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_SKILLS"`.  Skills grouped under category headers.  LEFT/RIGHT
-  adjusts level.
-- Tab 7 (Description): `set_description()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_DESCRIPTION"`.  Name, gender, height, age, blood type,
-  start location, vehicle.  Actions: `"SAVE_TEMPLATE"`, `"REROLL_CHARACTER"`,
-  `"CHOOSE_LOCATION"`.
-- Final confirmation: `"NEXT_TAB"` on Description tab validates points,
-  prompts confirmation, and sets `tabs.complete = true` in `set_description()`.
-- Template save/load: template management in `set_description()`.
-
-**Selected interaction (conventions 2, 3, 4, 5, and 8):**
-
-- Keys are unchanged.  Stats: Left and Right speak "Strength 10, 4 points
-  left"; `Alt+D` opens the derived effects in the document view.
-- Traits: changing a column speaks "Negative traits, 30 items"; a row speaks
-  name, cost, and state ("Fast learner, 2 points, selected", "locked by
-  profession", "conflicts with Slow learner").
-- Skills: a level change speaks the new level and point balance; entering a
-  category speaks its name.
-- Description: each field speaks its label and value; editing uses the Stage
-  05 text input.  Templates, validation errors, and the final confirmation
-  use the shared controls.
-
-**Success criteria:** Stats, traits, skills, description, start location,
-randomization, templates, naming, and final confirmation are complete and
-focus-stable.  Point totals and conflicts are announced on change.
-
-**Possible automated tests:** Capture stat adjustment, trait selection/conflict,
-skill level change, description fields, template save/load, validation errors,
-and final confirmation.
-
-**User-test scenarios:** Complete character creation using every
-remaining tab, correct point/conflict errors, save/load a template, and start
-a new game.
-
 ## Stage 21 - World and mod management
 
 **Outcome:** World selection, creation, copying, deletion, and mod configuration
