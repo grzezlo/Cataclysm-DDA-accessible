@@ -8,6 +8,7 @@
 #include <stdexcept>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_utility.h"
@@ -3403,6 +3404,9 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
     ctxt.register_action( "MOUSE_MOVE" );
     ctxt.register_action( "SCROLL_UP" );
     ctxt.register_action( "SCROLL_DOWN" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     const int iWorldOffset = world_options_only ? 2 : 0;
     int iMinScreenWidth = 0;
@@ -3646,6 +3650,75 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
         wnoutrefresh( w_options );
     } );
 
+    // Screen reader speech: pages behave as tabs; rows speak group state or option value.
+    const auto access_options = [&]() -> options_container & {
+        return ( ingame || world_options_only ) && iCurrentPage == iWorldOptPage ?
+        ACTIVE_WORLD_OPTIONS : OPTIONS;
+    };
+    const auto access_item = [&]() -> const PageItem & {
+        return pages_[iCurrentPage].items_[iCurrentLine];
+    };
+    const auto access_group_size = [&]( const std::string & group ) {
+        const std::vector<PageItem> &items = pages_[iCurrentPage].items_;
+        return static_cast<size_t>( std::count_if( items.begin(), items.end(),
+        [&group]( const PageItem & it ) {
+            return it.type == ItemType::Option && it.group == group;
+        } ) );
+    };
+    // One-based position of the focused row among the selectable rows, and their count.
+    const auto access_position = [&]() {
+        size_t position = 0;
+        size_t count = 0;
+        const std::vector<PageItem> &items = pages_[iCurrentPage].items_;
+        for( int i = 0; i < static_cast<int>( items.size() ); ++i ) {
+            const PageItem &it = items[i];
+            if( it.type == ItemType::GroupHeader || ( it.type == ItemType::Option &&
+                    groups_state[it.group] ) ) {
+                ++count;
+                if( i == iCurrentLine ) {
+                    position = count;
+                }
+            }
+        }
+        return std::make_pair( position, count );
+    };
+    const auto access_value = [&]() -> std::string {
+        const PageItem &it = access_item();
+        return it.type == ItemType::Option ? access_options().find( it.data )->second.getValueName() :
+        std::string();
+    };
+    const auto access_row = [&]() -> std::string {
+        const PageItem &it = access_item();
+        if( it.type == ItemType::GroupHeader )
+        {
+            return accessibility::format_option_group_row( find_group( it.group ).name_.translated(),
+                    groups_state[it.group], access_group_size( it.group ) );
+        }
+        if( it.type != ItemType::Option )
+        {
+            return std::string();
+        }
+        const cOpt &opt = access_options().find( it.data )->second;
+        const std::string unavailable = opt.hasPrerequisite() && !opt.checkPrerequisite() ?
+        get_options().get_option( opt.getPrerequisite() ).getMenuText() : std::string();
+        return accessibility::format_option_row( opt.getMenuText(), opt.getValueName(), unavailable );
+    };
+    const auto access_page_name = [&]() -> std::string {
+        if( world_options_only )
+        {
+            return with_tabs ? _( "World Options" ) : _( "Advanced world options" );
+        }
+        return ingame && iCurrentPage == iWorldOptPage ? _( "Current world" ) :
+        pages_[iCurrentPage].name_.translated();
+    };
+    const auto access_open = [&]( const std::string & name ) {
+        return accessibility::format_list_open( name, access_position().second, access_row() );
+    };
+    if( accessibility::is_active() ) {
+        accessibility::announce( access_open( world_options_only ? access_page_name() :
+                                              accessibility::format_screen_page( _( "Options" ), access_page_name() ) ) );
+    }
+
     while( true ) {
         ui_manager::redraw();
 
@@ -3663,7 +3736,32 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
             return action;
         }
 
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            const std::pair<size_t, size_t> position = access_position();
+            accessibility::announce( accessibility::format_options_summary(
+                                         world_options_only ? access_page_name() :
+                                         accessibility::format_screen_page( _( "Options" ), access_page_name() ),
+                                         position.first, position.second, iCurrentPage + 1,
+                                         world_options_only ? 1 : pages_.size() ) );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            const PageItem &it = access_item();
+            const std::string note = ingame && iCurrentPage == iWorldOptPage ?
+                                     std::string( _( "Note: " ) ) +
+                                     _( "Some of these options may produce unexpected results if changed." ) :
+                                     std::string();
+            accessibility::announce( accessibility::format_option_tooltip(
+                                         remove_color_tags( it.fmt_tooltip( it.group, access_options() ) ), note ) );
+            continue;
+        }
+
         const PageItem &curr_item = page_items[iCurrentLine];
+        // Speech after the option handler: the row after a refusal, feedback before the value.
+        bool access_refused = false;
+        std::string access_feedback;
 
         const auto on_select_option = [&]() {
             cOpt &current_opt = cOPTIONS[curr_item.data];
@@ -3681,6 +3779,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
             if( hasPrerequisite && !hasPrerequisiteFulfilled ) {
                 popup( _( "Prerequisite for this option not met!\n(%s)" ),
                        get_options().get_option( current_opt.getPrerequisite() ).getMenuText() );
+                access_refused = true;
                 return;
             }
 
@@ -3694,7 +3793,35 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
                     current_opt.setNext();
                 } else {
                     const bool is_int = current_opt.getType() == "int";
-                    if( is_int ) {
+                    if( accessibility::is_active() ) {
+                        // The graphical number input does not speak; use the Stage 05 text input.
+                        string_input_popup popup;
+                        popup.title( current_opt.getMenuText() )
+                        .description( current_opt.getDefaultText() )
+                        .text( is_int ? std::to_string( current_opt.value_as<int>() ) : current_opt.getValue( true ) );
+                        const std::string text = popup.query_string();
+                        if( popup.canceled() ) {
+                            return;
+                        }
+                        if( is_int ) {
+                            const ret_val<int> value = try_parse_integer<int>( text, false );
+                            if( value.success() ) {
+                                current_opt.setValue( value.value() );
+                            } else {
+                                access_feedback = _( "Not a number" );
+                            }
+                        } else {
+                            std::istringstream stream( text );
+                            stream.imbue( std::locale::classic() );
+                            float value = 0.0f;
+                            stream >> value;
+                            if( stream ) {
+                                current_opt.setValue( value );
+                            } else {
+                                access_feedback = _( "Not a number" );
+                            }
+                        }
+                    } else if( is_int ) {
                         number_input_popup<int> popup( 0, current_opt.value_as<int>() );
                         popup.set_label( current_opt.getMenuText() );
                         int num = popup.query();
@@ -3773,6 +3900,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
 
         const int recmax = static_cast<int>( page_items.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
+        const int access_previous_line = iCurrentLine;
 
         if( action == "DOWN" || action == "SCROLL_DOWN" ) {
             do {
@@ -3854,6 +3982,31 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
         } else if( action == "QUIT" ) {
             break;
         }
+
+        if( !accessibility::is_active() ) {
+            continue;
+        }
+        const int access_direction = action == "DOWN" || action == "SCROLL_DOWN" ||
+                                     action == "PAGE_DOWN" ? 1 : action == "UP" || action == "SCROLL_UP" ||
+                                     action == "PAGE_UP" ? -1 : 0;
+        if( access_direction != 0 ) {
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( access_previous_line, iCurrentLine, access_direction ),
+                access_row()
+            } ) );
+        } else if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
+            accessibility::announce( access_open( access_page_name() ) );
+        } else if( action == "RIGHT" || action == "LEFT" || action == "CONFIRM" ) {
+            const PageItem &it = access_item();
+            if( it.type == ItemType::GroupHeader ) {
+                accessibility::announce( accessibility::format_option_group_toggled( groups_state[it.group],
+                                         access_group_size( it.group ) ) );
+            } else if( it.type == ItemType::Option ) {
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    access_feedback, access_refused ? access_row() : access_value()
+                } ) );
+            }
+        }
     }
 
     //Look for changes
@@ -3898,7 +4051,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
     }
 
     if( options_changed ) {
-        if( query_yn( _( "Save changes?" ) ) ) {
+        if( query_yn_about( _( "Options" ), _( "Save changes?" ) ) ) {
             static_popup popup;
             popup.message( "%s", _( "Please wait…\nApplying option changes…" ) );
             ui_manager::redraw();
@@ -3910,6 +4063,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
                 world_generator->active_world->save();
             }
             g->on_options_changed();
+            accessibility::announce( _( "Options saved" ) );
         } else {
             lang_changed = false;
             terminal_size_changed = false;
@@ -3919,6 +4073,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
             if( ingame && world_options_changed ) {
                 ACTIVE_WORLD_OPTIONS = WOPTIONS_OLD;
             }
+            accessibility::announce( _( "Option changes discarded" ) );
         }
     }
 

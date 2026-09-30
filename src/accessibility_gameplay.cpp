@@ -2830,4 +2830,45 @@ std::string mod_move_refusal( mod_ui &mods, const size_t selection,
     return string_format( _( "%s depends on it" ), mod_display_name( active[selection + 1] ) );
 }
 
+int list_move_direction( const std::string &action )
+{
+    if( action == "UP" || action == "SCROLL_UP" || action == "PAGE_UP" || action == "HOME" ) {
+        return -1;
+    }
+    if( action == "DOWN" || action == "SCROLL_DOWN" || action == "PAGE_DOWN" || action == "END" ) {
+        return 1;
+    }
+    return 0;
+}
+
+void match_list_speech( input_context &ctxt, const std::string &title, const std::string &note,
+                        const std::vector<std::string> &matches, const int line, const std::string &action,
+                        const int previous_line )
+{
+    if( action.empty() ) {
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+        ctxt.register_action( "ACCESSIBILITY_STATUS" );
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            title, matches.empty() ? std::string() : matches.front()
+        } ) );
+        return;
+    }
+    const int direction = list_move_direction( action );
+    if( direction != 0 && !matches.empty() && line >= 0 &&
+        static_cast<size_t>( line ) < matches.size() ) {
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            accessibility::format_list_wrap( previous_line, line, direction ), matches[line]
+        } ) );
+    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+    } else if( action == "ACCESSIBILITY_STATUS" ) {
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            title, accessibility::format_list_position( line + 1, matches.size() )
+        } ) );
+    } else if( action == "ACCESSIBILITY_DETAILS" ) {
+        accessibility::announce( note );
+    }
+}
+
 } // namespace accessibility_gameplay

@@ -509,13 +509,81 @@ std::string format_mod_removed( const std::string &name, size_t count,
                                 const std::vector<std::string> &also_removed );
 /** "Cannot add Magiclysm: <reason>." */
 std::string format_mod_not_added( const std::string &name, const std::string &reason );
-/** "Position 3 of 5." after a mod moves in the load order. */
+/** "Position 3 of 5." after a mod, rule, or panel moves. */
 std::string format_mod_moved( size_t position, size_t count );
 /** "Cannot move up: <reason>." */
 std::string format_mod_not_moved( bool up, const std::string &reason );
 /** Mod manager pane, position, load order size, and filter on request. */
 std::string format_mod_manager_summary( const std::string &pane, size_t position, size_t count,
                                         size_t active_count, const std::string &filter );
+/** A screen and its page, tab, or column: "Options: General". */
+std::string format_screen_page( const std::string &screen, const std::string &page );
+/** A list change and the new item count: "Rule added, 3 items" or "Rule removed, No items". */
+std::string format_list_change( const std::string &change, size_t count );
+/** A shortcut-marked label without its markup: "[<Global>]" becomes "Global". */
+std::string format_shortcut_label( const std::string &label );
+/**
+ * An option row: "Use tiles: True".  `unavailable` names the unmet
+ * prerequisite shown only in gray: "Font blending: False, Unavailable: requires Use tiles".
+ */
+std::string format_option_row( const std::string &name, const std::string &value,
+                               const std::string &unavailable );
+/** An option group header: "Graphics, collapsed, 12 options" or "Graphics, expanded, 12 options". */
+std::string format_option_group_row( const std::string &name, bool expanded, size_t option_count );
+/** After a group header is toggled: "Expanded, 12 options" or "Collapsed". */
+std::string format_option_group_toggled( bool expanded, size_t option_count );
+/**
+ * The option tooltip requested with Alt+D.  The visual tooltip separates the
+ * description from its default with " #"; the parts become sentences, and
+ * `note` (such as the world options warning) follows them.
+ */
+std::string format_option_tooltip( const std::string &tooltip, const std::string &note );
+/** Options screen summary: "Options: General, 3 of 20.  Page 1 of 8." */
+std::string format_options_summary( const std::string &page, size_t position, size_t count,
+                                    size_t page_number, size_t page_count );
+/** A safe mode rule with its columns as words rather than positions. */
+struct safemode_rule_row {
+    std::string rule;
+    bool active = true;
+    bool whitelist = false;
+    /** Sound rule; otherwise a hostile-spotted rule. */
+    bool sound = false;
+    /** Attitude name; only hostile-spotted rules use it. */
+    std::string attitude;
+    int proximity = 0;
+    /** Walking, driving, or both. */
+    std::string mode;
+};
+/** Whether a safe mode rule uses its attitude and distance columns. */
+bool safemode_rule_uses_attitude( const safemode_rule_row &row );
+bool safemode_rule_uses_distance( const safemode_rule_row &row );
+/**
+ * The six safe mode column values in visual order, spoken after a change:
+ * "zombie", "Hostile", "5", "Blacklist", "Hostile", "Both".  An unused
+ * column says "not applicable".
+ */
+std::vector<std::string> format_safemode_rule_values( const safemode_rule_row &row );
+/**
+ * The six safe mode columns in visual order, spoken as the focused column:
+ * "Rule: zombie", "Attitude: Hostile", "Distance: 5", "Blacklist",
+ * "Category: Hostile", "Mode: Both".  An unused column says "not applicable".
+ */
+std::vector<std::string> format_safemode_rule_fields( const safemode_rule_row &row );
+/** "zombie, Blacklist, Category: Hostile, Attitude: Hostile, Distance: 5, Mode: Both, disabled." */
+std::string format_safemode_rule_row( const safemode_rule_row &row );
+/** "wooden arrow, Include." or "*, Exclude, disabled." */
+std::string format_autopickup_rule_row( const std::string &rule, bool exclude, bool active );
+/** Rule manager summary: "Safe mode manager: Global, 2 of 5.  Safe mode enabled.  Column: Rule." */
+std::string format_rule_manager_summary( const std::string &screen, size_t position, size_t count,
+        const std::string &state, const std::string &column );
+/** A sidebar panel row: "Stats, shown" or "Location, hidden". */
+std::string format_panel_row( const std::string &name, bool shown );
+/** A sidebar layout row: "Classic, active" or "Labels". */
+std::string format_layout_row( const std::string &name, bool active );
+/** Moving a sidebar panel: "Moving Stats, position 3 of 20" at the start. */
+std::string format_panel_move_start( const std::string &name, size_t position, size_t count );
+/** "Moved Stats to position 5 of 20." */
+std::string format_panel_moved( const std::string &name, size_t position, size_t count );
 /**
  * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
  * below", or "here".  `dy` grows southwards and `dz` upwards.

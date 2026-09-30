@@ -11,6 +11,9 @@
 #include <tuple>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "avatar.h"
 #include "cached_options.h"
 #include "cata_imgui.h"  // IWYU pragma: keep
@@ -719,6 +722,9 @@ void panel_manager::show_adm()
     ctxt.register_action( "RIGHT" );
     ctxt.register_action( "MOVE_PANEL" );
     ctxt.register_action( "TOGGLE_PANEL" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     const std::vector<int> column_widths = { 25, 37, 17 };
 
@@ -779,6 +785,63 @@ void panel_manager::show_adm()
                          current_col == 0 );
     } );
 
+    // Screen reader speech: the panel and layout columns behave as tabs.
+    const auto access_panel = [&]() -> const window_panel * {
+        const auto found = row_indices.find( current_row );
+        return found == row_indices.end() ? nullptr :&get_current_layout().panels()[found->second];
+    };
+    const auto access_row = [&]() -> std::string {
+        if( current_col == 0 )
+        {
+            const window_panel *panel = access_panel();
+            return panel == nullptr ? accessibility::format_list_count( 0 ) :
+            accessibility::format_panel_row( panel->get_name(), panel->toggle );
+        }
+        if( current_row >= layouts.size() )
+        {
+            return std::string();
+        }
+        const auto layout = std::next( layouts.begin(), current_row );
+        return accessibility::format_layout_row( layout->second.name(),
+                layout->first == current_layout_id );
+    };
+    const auto access_column_name = [&]() -> std::string {
+        return current_col == 0 ? _( "Panels" ) : _( "Layouts" );
+    };
+    const auto access_column_size = [&]() {
+        return current_col == 0 ? row_indices.size() : layouts.size();
+    };
+    const auto access_column_open = [&]() {
+        return accessibility::format_list_open( access_column_name(), access_column_size(),
+                                                access_row() );
+    };
+    const auto access_details = [&]() {
+        std::string description;
+        if( current_col == 0 ) {
+            const window_panel *panel = access_panel();
+            if( panel != nullptr ) {
+                for( const widget &wgt : widget::get_all() ) {
+                    if( wgt.getId() == panel->get_widget() ) {
+                        description = _( wgt._description );
+                        break;
+                    }
+                }
+            }
+        } else if( current_row < layouts.size() ) {
+            const widget *sidebar = get_sidebar( std::next( layouts.begin(), current_row )->second.name() );
+            if( sidebar != nullptr ) {
+                description = _( sidebar->_description );
+            }
+        }
+        return string_join( std::vector<std::string> {
+            access_row(), description,
+            string_format( "%s: %s", ctxt.get_desc( "TOGGLE_PANEL" ), _( "Toggle panels on/off" ) ),
+            string_format( "%s: %s", ctxt.get_desc( "MOVE_PANEL" ), _( "Change display order" ) ),
+            string_format( "%s: %s", ctxt.get_desc( "QUIT" ), _( "Exit" ) )
+        }, "\n" );
+    };
+    bool access_opened = false;
+
     while( !exit ) {
         auto &panels = get_current_layout().panels();
 
@@ -802,10 +865,40 @@ void panel_manager::show_adm()
         if( current_row < start ) {
             start = current_row > popup_height - 3 ? current_row - ( popup_height - 3 ) : 0;
         }
+        if( !access_opened ) {
+            access_opened = true;
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                _( "Sidebar options" ), access_column_open()
+            } ) );
+        }
 
         ui_manager::redraw();
 
         const std::string action = ctxt.handle_input();
+        const size_t access_previous_row = current_row;
+        const bool access_was_swapping = swapping;
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            const auto layout = layouts.find( current_layout_id );
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                string_join( std::vector<std::string> {
+                    accessibility::format_screen_page( _( "Sidebar options" ), access_column_name() ),
+                    accessibility::format_list_position( current_row + 1, access_column_size() )
+                }, _( ", " ) ),
+                layout == layouts.end() ? std::string() : string_format( _( "Layout: %s" ), layout->second.name() ),
+                swapping ? string_format( _( "Moving %s" ),
+                                          get_current_layout().panels()[source_index].get_name() ) : std::string()
+            } ) );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() ) {
+                accessibility_ui::show_text_document( _( "Sidebar options" ), access_details() );
+                accessibility::announce( access_row() );
+            }
+            continue;
+        }
         if( action == "UP" ) {
             if( current_row > 0 ) {
                 current_row -= 1;
@@ -873,6 +966,38 @@ void panel_manager::show_adm()
         } else if( action == "QUIT" ) {
             exit = true;
             save();
+        }
+
+        if( !accessibility::is_active() || exit ) {
+            continue;
+        }
+        if( action == "UP" || action == "DOWN" ) {
+            accessibility::announce( swapping ?
+                                     accessibility::format_mod_moved( current_row + 1, row_indices.size() ) :
+            accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( static_cast<int>( access_previous_row ),
+                                                 static_cast<int>( current_row ), action == "DOWN" ? 1 : -1 ),
+                access_row()
+            } ) );
+        } else if( action == "MOVE_PANEL" && current_col == 0 ) {
+            const std::string name = panels[swapping ? source_index : row_indices[current_row]].get_name();
+            accessibility::announce( swapping ?
+                                     accessibility::format_panel_move_start( name, current_row + 1, row_indices.size() ) :
+                                     accessibility::format_panel_moved( name, current_row + 1, row_indices.size() ) );
+        } else if( action == "MOVE_PANEL" && current_col == 2 ) {
+            accessibility::announce( access_row() );
+        } else if( action == "RIGHT" || action == "LEFT" ) {
+            if( access_was_swapping ) {
+                //~ %s is the key that places a sidebar panel being moved.
+                accessibility::announce( string_format( _( "Press %s to place the panel" ),
+                                                        ctxt.get_desc( "MOVE_PANEL" ) ) );
+            } else {
+                current_row = clamp<size_t>( current_row, 0, access_column_size() - 1 );
+                accessibility::announce( access_column_open() );
+            }
+        } else if( action == "TOGGLE_PANEL" && current_col == 0 && !access_was_swapping ) {
+            accessibility::announce( panels[row_indices[current_row]].toggle ? _( "Shown" ) :
+                                     _( "Hidden" ) );
         }
     }
 

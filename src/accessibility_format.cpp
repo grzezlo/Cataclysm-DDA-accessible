@@ -1693,6 +1693,206 @@ std::string format_mod_manager_summary( const std::string &pane, const size_t po
     } );
 }
 
+std::string format_screen_page( const std::string &screen, const std::string &page )
+{
+    if( page.empty() ) {
+        return screen;
+    }
+    //~ A screen and its page, tab, or column, such as "Options: General".
+    return string_format( _( "%1$s: %2$s" ), screen, page );
+}
+
+std::string format_list_change( const std::string &change, const size_t count )
+{
+    return string_join( std::vector<std::string> { change, format_list_count( count ) }, _( ", " ) );
+}
+
+std::string format_shortcut_label( const std::string &label )
+{
+    std::string result;
+    result.reserve( label.size() );
+    for( const char c : label ) {
+        if( c != '<' && c != '>' ) {
+            result += c;
+        }
+    }
+    if( result.size() >= 2 && result.front() == '[' && result.back() == ']' ) {
+        result = result.substr( 1, result.size() - 2 );
+    }
+    return result;
+}
+
+std::string format_option_row( const std::string &name, const std::string &value,
+                               const std::string &unavailable )
+{
+    //~ An option and its value, such as "Use tiles: True".
+    std::string row = string_format( _( "%1$s: %2$s" ), name, value );
+    if( !unavailable.empty() ) {
+        //~ An option whose prerequisite is not met, such as "Unavailable: requires Use tiles".
+        row = string_join( std::vector<std::string> { row, string_format( _( "Unavailable: requires %s" ), unavailable ) },
+                           _( ", " ) );
+    }
+    return row;
+}
+
+static std::string option_count_text( const size_t count )
+{
+    return string_format( n_gettext( "%d option", "%d options", count ), static_cast<int>( count ) );
+}
+
+std::string format_option_group_row( const std::string &name, const bool expanded,
+                                     const size_t option_count )
+{
+    return string_join( std::vector<std::string> {
+        name, expanded ? _( "expanded" ) : _( "collapsed" ), option_count_text( option_count )
+    }, _( ", " ) );
+}
+
+std::string format_option_group_toggled( const bool expanded, const size_t option_count )
+{
+    if( !expanded ) {
+        return _( "Collapsed" );
+    }
+    return string_join( std::vector<std::string> { _( "Expanded" ), option_count_text( option_count ) },
+                        _( ", " ) );
+}
+
+std::string format_option_tooltip( const std::string &tooltip, const std::string &note )
+{
+    std::vector<std::string> parts;
+    const size_t separator = tooltip.rfind( " #" );
+    if( separator == std::string::npos ) {
+        parts.push_back( tooltip );
+    } else {
+        parts.push_back( tooltip.substr( 0, separator ) );
+        parts.push_back( tooltip.substr( separator + 2 ) );
+    }
+    parts.push_back( note );
+    return format_semantic_sequence( parts );
+}
+
+std::string format_options_summary( const std::string &page, const size_t position,
+                                    const size_t count, const size_t page_number, const size_t page_count )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> {
+            page, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
+        }, _( ", " ) ),
+        page_count > 1 ? string_format( _( "Page %s" ), format_list_position( page_number, page_count ) ) :
+        std::string()
+    } );
+}
+
+bool safemode_rule_uses_attitude( const safemode_rule_row &row )
+{
+    return !row.sound;
+}
+
+bool safemode_rule_uses_distance( const safemode_rule_row &row )
+{
+    return row.sound || !row.whitelist;
+}
+
+std::vector<std::string> format_safemode_rule_values( const safemode_rule_row &row )
+{
+    const std::string not_applicable = _( "not applicable" );
+    return {
+        row.rule.empty() ? std::string( _( "empty rule" ) ) : row.rule,
+        safemode_rule_uses_attitude( row ) ? row.attitude : not_applicable,
+        safemode_rule_uses_distance( row ) ? std::to_string( row.proximity ) : not_applicable,
+        row.whitelist ? _( "Whitelist" ) : _( "Blacklist" ),
+        row.sound ? _( "Sound" ) : _( "Hostile" ),
+        row.mode
+    };
+}
+
+std::vector<std::string> format_safemode_rule_fields( const safemode_rule_row &row )
+{
+    std::vector<std::string> fields = format_safemode_rule_values( row );
+    const std::vector<std::string> labels {
+        _( "Rule" ), _( "Attitude" ), _( "Distance" ), std::string(), _( "Category" ), _( "Mode" )
+    };
+    for( size_t i = 0; i < fields.size(); ++i ) {
+        if( !labels[i].empty() ) {
+            //~ A safe mode rule column and its value, such as "Attitude: Hostile".
+            fields[i] = string_format( _( "%1$s: %2$s" ), labels[i], fields[i] );
+        }
+    }
+    return fields;
+}
+
+std::string format_safemode_rule_row( const safemode_rule_row &row )
+{
+    const std::vector<std::string> fields = format_safemode_rule_fields( row );
+    std::vector<std::string> parts {
+        format_safemode_rule_values( row )[0], fields[3], fields[4]
+    };
+    if( safemode_rule_uses_attitude( row ) ) {
+        parts.push_back( fields[1] );
+    }
+    if( safemode_rule_uses_distance( row ) ) {
+        parts.push_back( fields[2] );
+    }
+    parts.push_back( fields[5] );
+    if( !row.active ) {
+        parts.emplace_back( _( "disabled" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_autopickup_rule_row( const std::string &rule, const bool exclude,
+                                        const bool active )
+{
+    std::vector<std::string> parts {
+        rule.empty() ? std::string( _( "empty rule" ) ) : rule,
+        exclude ? _( "Exclude" ) : _( "Include" )
+    };
+    if( !active ) {
+        parts.emplace_back( _( "disabled" ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_rule_manager_summary( const std::string &screen, const size_t position,
+        const size_t count, const std::string &state, const std::string &column )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> {
+            screen, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
+        }, _( ", " ) ),
+        state,
+        column.empty() ? std::string() : string_format( _( "Column: %s" ), column )
+    } );
+}
+
+std::string format_panel_row( const std::string &name, const bool shown )
+{
+    return string_join( std::vector<std::string> { name, shown ? _( "shown" ) : _( "hidden" ) },
+                        _( ", " ) );
+}
+
+std::string format_layout_row( const std::string &name, const bool active )
+{
+    return active ? string_join( std::vector<std::string> { name, _( "active" ) }, _( ", " ) ) : name;
+}
+
+std::string format_panel_move_start( const std::string &name, const size_t position,
+                                     const size_t count )
+{
+    //~ A sidebar panel picked up for moving: "Moving Stats, position 3 of 20".
+    return string_format( _( "Moving %1$s, position %2$s" ), name,
+                          format_list_position( position, count ) );
+}
+
+std::string format_panel_moved( const std::string &name, const size_t position,
+                                const size_t count )
+{
+    return format_semantic_sequence( {
+        //~ A sidebar panel dropped at its new place: "Moved Stats to position 5 of 20".
+        string_format( _( "Moved %1$s to position %2$s" ), name, format_list_position( position, count ) )
+    } );
+}
+
 std::string format_overmap_offset( const int dx, const int dy, const int dz )
 {
     std::vector<std::string> horizontal;

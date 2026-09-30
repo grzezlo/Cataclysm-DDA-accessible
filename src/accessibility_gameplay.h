@@ -17,6 +17,7 @@
 class Character;
 class Creature;
 class avatar;
+class input_context;
 class inventory;
 class item;
 class map;
@@ -354,6 +355,19 @@ std::string mod_move_refusal( mod_ui &mods, size_t selection, const std::vector<
                               bool up );
 /** Spoken mod name: the display name, or the id of a mod that is not installed. */
 std::string mod_display_name( const mod_id &mod );
+
+/** -1 for list moves toward the start, 1 toward the end, 0 for other actions. */
+int list_move_direction( const std::string &action );
+/**
+ * Speech for a read-only match list such as a rule test result.  Call once
+ * with an empty action after creating `ctxt`: it registers the shared keys and
+ * speaks the title with the first match.  Then call after every action with
+ * the line before it; moves speak the match, Alt+S the position, and Alt+D
+ * the note under the list.
+ */
+void match_list_speech( input_context &ctxt, const std::string &title, const std::string &note,
+                        const std::vector<std::string> &matches, int line, const std::string &action,
+                        int previous_line );
 
 } // namespace accessibility_gameplay
 

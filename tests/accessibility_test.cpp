@@ -3,6 +3,7 @@
 #include <climits>
 #include <cmath>
 #include <functional>
+#include <map>
 #include <memory>
 #include <optional>
 #include <string>
@@ -6196,4 +6197,163 @@ TEST_CASE( "mod_manager_rows_speak_state_dependencies_and_load_order", "[accessi
     text_ctxt.register_action( "ANY_INPUT" );
     CHECK( text_ctxt.input_to_action( input_event( '*', input_event_t::keyboard_char ) ) ==
            "PICK_RANDOM_WORLDNAME" );
+}
+
+TEST_CASE( "options_rule_and_panel_formatters_speak_rows_changes_and_summaries",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_screen_page( "Options", "General" ) == "Options: General" );
+    CHECK( accessibility::format_screen_page( "Pickup rules for Ada", "" ) == "Pickup rules for Ada" );
+    CHECK( accessibility::format_list_change( "Rule added", 3 ) == "Rule added, 3 items" );
+    CHECK( accessibility::format_list_change( "Rule removed", 0 ) == "Rule removed, No items" );
+    CHECK( accessibility::format_shortcut_label( "[<Global>]" ) == "Global" );
+    CHECK( accessibility::format_shortcut_label( "[<Character>]" ) == "Character" );
+    CHECK( accessibility::format_shortcut_label( "Ada" ) == "Ada" );
+
+    // Options: rows, group state, value changes, tooltip, and summary.
+    CHECK( accessibility::format_option_row( "Use tiles", "True", "" ) == "Use tiles: True" );
+    CHECK( accessibility::format_option_row( "Font blending", "False", "Use tiles" ) ==
+           "Font blending: False, Unavailable: requires Use tiles" );
+    CHECK( accessibility::format_option_group_row( "Graphics", false, 12 ) ==
+           "Graphics, collapsed, 12 options" );
+    CHECK( accessibility::format_option_group_row( "Sound", true, 1 ) == "Sound, expanded, 1 option" );
+    CHECK( accessibility::format_option_group_toggled( true, 12 ) == "Expanded, 12 options" );
+    CHECK( accessibility::format_option_group_toggled( false, 12 ) == "Collapsed" );
+    CHECK( accessibility::format_list_open( "Options: General", 4,
+                                            accessibility::format_option_row( "Use tiles", "True", "" ) ) ==
+           "Options: General, 4 items. Use tiles: True." );
+    CHECK( accessibility::format_option_tooltip( "Show tiles. #Default: True", "" ) ==
+           "Show tiles. Default: True." );
+    CHECK( accessibility::format_option_tooltip( "World size #Default: 5 - Min: 1, Max: 10",
+            "Note: Some of these options may produce unexpected results if changed." ) ==
+           "World size. Default: 5 - Min: 1, Max: 10. "
+           "Note: Some of these options may produce unexpected results if changed." );
+    CHECK( accessibility::format_options_summary( "Options: Graphics", 3, 20, 3, 6 ) ==
+           "Options: Graphics, 3 of 20. Page 3 of 6." );
+    CHECK( accessibility::format_options_summary( "World Options", 1, 8, 4, 1 ) ==
+           "World Options, 1 of 8." );
+
+    // Safe mode rules: columns are spoken as words; unused columns are left out of the row.
+    accessibility::safemode_rule_row rule;
+    rule.rule = "zombie";
+    rule.attitude = "Hostile";
+    rule.proximity = 5;
+    rule.mode = "Both";
+    CHECK( accessibility::format_safemode_rule_row( rule ) ==
+           "zombie, Blacklist, Category: Hostile, Attitude: Hostile, Distance: 5, Mode: Both." );
+    rule.whitelist = true;
+    rule.active = false;
+    CHECK( accessibility::format_safemode_rule_row( rule ) ==
+           "zombie, Whitelist, Category: Hostile, Attitude: Hostile, Mode: Both, disabled." );
+    CHECK( accessibility::format_safemode_rule_fields( rule ) == std::vector<std::string> {
+        "Rule: zombie", "Attitude: Hostile", "Distance: not applicable", "Whitelist",
+        "Category: Hostile", "Mode: Both"
+    } );
+    rule = accessibility::safemode_rule_row();
+    rule.sound = true;
+    rule.whitelist = true;
+    rule.attitude = "Hostile";
+    rule.proximity = 0;
+    rule.mode = "Driving";
+    CHECK( accessibility::format_safemode_rule_row( rule ) ==
+           "empty rule, Whitelist, Category: Sound, Distance: 0, Mode: Driving." );
+    CHECK( accessibility::format_safemode_rule_values( rule ) == std::vector<std::string> {
+        "empty rule", "not applicable", "0", "Whitelist", "Sound", "Driving"
+    } );
+
+    // Autopickup rules and the shared rule manager summary.
+    CHECK( accessibility::format_autopickup_rule_row( "wooden arrow", false, true ) ==
+           "wooden arrow, Include." );
+    CHECK( accessibility::format_autopickup_rule_row( "*", true, false ) == "*, Exclude, disabled." );
+    CHECK( accessibility::format_autopickup_rule_row( "", false, true ) == "empty rule, Include." );
+    CHECK( accessibility::format_rule_manager_summary( "Safe mode manager: Global", 2, 5,
+            "Safe mode enabled", "Rule" ) ==
+           "Safe mode manager: Global, 2 of 5. Safe mode enabled. Column: Rule." );
+    CHECK( accessibility::format_rule_manager_summary( "Auto pickup manager: Character", 1, 0,
+            "Auto pickup disabled", "" ) ==
+           "Auto pickup manager: Character, No items. Auto pickup disabled." );
+    CHECK( accessibility::format_mod_moved( 2, 5 ) == "Position 2 of 5." );
+
+    // Sidebar panels and layouts.
+    CHECK( accessibility::format_panel_row( "Stats", true ) == "Stats, shown" );
+    CHECK( accessibility::format_panel_row( "Location", false ) == "Location, hidden" );
+    CHECK( accessibility::format_layout_row( "Classic", true ) == "Classic, active" );
+    CHECK( accessibility::format_layout_row( "Labels", false ) == "Labels" );
+    CHECK( accessibility::format_list_open( "Panels", 20, "Stats, shown" ) ==
+           "Panels, 20 items. Stats, shown." );
+    CHECK( accessibility::format_panel_move_start( "Stats", 3, 20 ) ==
+           "Moving Stats, position 3 of 20" );
+    CHECK( accessibility::format_panel_moved( "Stats", 5, 20 ) ==
+           "Moved Stats to position 5 of 20." );
+}
+
+TEST_CASE( "rule_test_lists_speak_title_matches_and_position", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    input_context ctxt( "AUTO_PICKUP_TEST", keyboard_mode::keycode );
+    ctxt.register_navigate_ui_list();
+    const std::vector<std::string> matches { "arrow", "wooden arrow" };
+    const std::string title = "2 items match: *arrow";
+    const std::string note = "Won't display content or suffix matches";
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 0, std::string(), 0 );
+    CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 's',
+                                 input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 1, "DOWN", 0 );
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 0, "DOWN", 1 );
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 0, "ACCESSIBILITY_STATUS",
+            0 );
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 0, "ACCESSIBILITY_DETAILS",
+            0 );
+    // Other keys stay silent.
+    accessibility_gameplay::match_list_speech( ctxt, title, note, matches, 0, "HELP_KEYBINDINGS", 0 );
+
+    REQUIRE( capture_ptr->messages.size() == 5 );
+    CHECK( capture_ptr->messages[0] == "2 items match: *arrow. arrow." );
+    CHECK( capture_ptr->messages[1] == "wooden arrow." );
+    CHECK( capture_ptr->messages[2] == "Top. arrow." );
+    CHECK( capture_ptr->messages[3] == "2 items match: *arrow. 1 of 2." );
+    CHECK( capture_ptr->messages[4] == "Won't display content or suffix matches" );
+
+    accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "options_rule_and_panel_screens_keep_their_keys_with_accessibility_keys",
+           "[accessibility]" )
+{
+    const std::map<std::string, std::vector<std::pair<char, std::string>>> contexts {
+        { "OPTIONS", {} },
+        { "SAFEMODE", { { 's', "SWITCH_SAFEMODE_OPTION" }, { 'd', "DISABLE_RULE" }, { 'e', "ENABLE_RULE" } } },
+        { "AUTO_PICKUP", { { 's', "SWITCH_AUTO_PICKUP_OPTION" }, { 'd', "DISABLE_RULE" }, { 't', "TEST_RULE" } } },
+        { "PANEL_MGMT", { { 's', "MOVE_PANEL" } } },
+        { "SAFEMODE_TEST", {} },
+        { "AUTO_PICKUP_TEST", {} }
+    };
+    for( const auto &context : contexts ) {
+        CAPTURE( context.first );
+        for( const keyboard_mode mode : {
+                 keyboard_mode::keycode, keyboard_mode::keychar
+             } ) {
+            input_context ctxt( context.first, mode );
+            ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+            ctxt.register_action( "ACCESSIBILITY_STATUS" );
+            ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+            for( const std::pair<char, std::string> &key : context.second ) {
+                ctxt.register_action( key.second );
+            }
+            const input_event_t type = mode == keyboard_mode::keycode ? input_event_t::keyboard_code :
+                                       input_event_t::keyboard_char;
+            CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'd', type ) ) ==
+                   "ACCESSIBILITY_DETAILS" );
+            CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 's', type ) ) ==
+                   "ACCESSIBILITY_STATUS" );
+            CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'r', type ) ) ==
+                   "ACCESSIBILITY_REPEAT_LAST" );
+            for( const std::pair<char, std::string> &key : context.second ) {
+                CHECK( ctxt.input_to_action( input_event( key.first, type ) ) == key.second );
+            }
+        }
+    }
 }

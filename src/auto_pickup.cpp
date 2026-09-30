@@ -11,6 +11,10 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "cata_path.h"
 #include "cata_utility.h"
 #include "character.h"
@@ -37,6 +41,7 @@
 #include "path_info.h"
 #include "point.h"
 #include "string_formatter.h"
+#include "string_input_popup.h"
 #include "translations.h"
 #include "type_id.h"
 #include "uilist.h"
@@ -293,6 +298,25 @@ drop_locations auto_pickup::select_items(
     return result;
 }
 
+/** Wildcard and material examples for pickup rules. */
+static std::string rule_help_text()
+{
+    return _(
+               "* is used as a Wildcard.  A few Examples:\n"
+               "\n"
+               "wooden arrow    matches the itemname exactly\n"
+               "wooden ar*      matches items beginning with wood ar\n"
+               "*rrow           matches items ending with rrow\n"
+               "*avy fle*fi*arrow     multiple * are allowed\n"
+               "heAVY*woOD*arrOW      case insensitive search\n"
+               "\n"
+               "Pickup based on item materials:\n"
+               "m:kevlar        matches items made of Kevlar\n"
+               "M:copper        matches items made purely of copper\n"
+               "M:steel,iron    multiple materials allowed (OR search)"
+           );
+}
+
 void user_interface::show()
 {
     if( tabs.empty() ) {
@@ -354,6 +378,9 @@ void user_interface::show()
     if( allow_swapping ) {
         ctxt.register_action( "SWAP_RULE_GLOBAL_CHAR" );
     }
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         // Redraw the border
@@ -447,6 +474,45 @@ void user_interface::show()
         wnoutrefresh( w );
     } );
 
+    // Screen reader speech: tabs speak their rules; the two columns are spoken as words.
+    const auto access_tab_name = [&]() {
+        return accessibility::format_shortcut_label( tabs[iTab].title );
+    };
+    const auto access_screen = [&]() {
+        return accessibility::format_screen_page( title, tabs.size() > 1 ? access_tab_name() :
+                std::string() );
+    };
+    const auto access_row = [&]() -> std::string {
+        const rule_list &rules = tabs[iTab].new_rules;
+        if( iLine < 0 || static_cast<size_t>( iLine ) >= rules.size() )
+        {
+            return accessibility::format_list_count( 0 );
+        }
+        return accessibility::format_autopickup_rule_row( rules[iLine].sRule, rules[iLine].bExclude,
+                rules[iLine].bActive );
+    };
+    const auto access_column = [&]() -> std::string {
+        const rule_list &rules = tabs[iTab].new_rules;
+        if( iLine < 0 || static_cast<size_t>( iLine ) >= rules.size() )
+        {
+            return bLeftColumn ? _( "Rule" ) : _( "Include or exclude" );
+        }
+        if( !bLeftColumn )
+        {
+            return rules[iLine].bExclude ? _( "Exclude" ) : _( "Include" );
+        }
+        //~ The focused pickup rule column: "Rule: wooden arrow".
+        return string_format( _( "Rule: %s" ), rules[iLine].sRule.empty() ?
+                              std::string( _( "empty rule" ) ) : rules[iLine].sRule );
+    };
+    const auto access_change = [&]( const std::string & change ) {
+        return accessibility::format_semantic_sequence( {
+            accessibility::format_list_change( change, tabs[iTab].new_rules.size() ), access_row()
+        } );
+    };
+    accessibility::announce( accessibility::format_list_open( access_screen(),
+                             tabs[iTab].new_rules.size(), access_row() ) );
+
     while( true ) {
         rule_list &cur_rules = tabs[iTab].new_rules;
 
@@ -457,6 +523,27 @@ void user_interface::show()
         const int recmax = static_cast<int>( cur_rules.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
         const std::string action = ctxt.handle_input();
+        const int access_previous_line = iLine;
+        const size_t access_previous_tab = iTab;
+
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( accessibility::format_rule_manager_summary( access_screen(),
+                                     iLine + 1, cur_rules.size(),
+                                     get_option<bool>( "AUTO_PICKUP" ) ? _( "Auto pickup enabled" ) : _( "Auto pickup disabled" ),
+                                     bLeftColumn ? _( "Rule" ) : _( "Include or exclude" ) ) );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() ) {
+                accessibility_ui::show_text_document( _( "Pickup rules" ), string_join( std::vector<std::string> {
+                    access_row(), rule_help_text()
+                }, "\n" ) );
+                accessibility::announce( access_row() );
+            }
+            continue;
+        }
 
         if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             iTab = inc_clamp_wrap( iTab, action == "NEXT_TAB", tabs.size() );
@@ -492,24 +579,23 @@ void user_interface::show()
             ui_manager::redraw();
 
             if( bLeftColumn || action == "ADD_RULE" ) {
-                string_input_popup_imgui popup( 60, cur_rules[iLine].sRule );
-                popup.set_label( _( "Pickup Rule:" ) );
-                std::string description = _(
-                                              "* is used as a Wildcard.  A few Examples:\n"
-                                              "\n"
-                                              "wooden arrow    matches the itemname exactly\n"
-                                              "wooden ar*      matches items beginning with wood ar\n"
-                                              "*rrow           matches items ending with rrow\n"
-                                              "*avy fle*fi*arrow     multiple * are allowed\n"
-                                              "heAVY*woOD*arrOW      case insensitive search\n"
-                                              "\n"
-                                              "Pickup based on item materials:\n"
-                                              "m:kevlar        matches items made of Kevlar\n"
-                                              "M:copper        matches items made purely of copper\n"
-                                              "M:steel,iron    multiple materials allowed (OR search)"
-                                          );
-                popup.set_description( description, c_white, true );
-                const std::string r = popup.query();
+                std::string r;
+                if( accessibility::is_active() ) {
+                    // The graphical input does not speak; Alt+D in the rule list gives the examples.
+                    string_input_popup popup;
+                    popup.title( _( "Pickup Rule:" ) )
+                    .width( 60 )
+                    .text( cur_rules[iLine].sRule );
+                    r = popup.query_string();
+                    if( popup.canceled() ) {
+                        r.clear();
+                    }
+                } else {
+                    string_input_popup_imgui popup( 60, cur_rules[iLine].sRule );
+                    popup.set_label( _( "Pickup Rule:" ) );
+                    popup.set_description( rule_help_text(), c_white, true );
+                    r = popup.query();
+                }
                 // If r is empty, then either (1) The player ESC'ed from the window (changed their mind), or
                 // (2) Explicitly entered an empty rule- which isn't allowed since "*" should be used
                 // to include/exclude everything
@@ -550,19 +636,69 @@ void user_interface::show()
             get_options().get_option( "AUTO_PICKUP" ).setNext();
             get_options().save();
         }
+
+        if( !accessibility::is_active() ) {
+            continue;
+        }
+        const size_t access_count = tabs[iTab].new_rules.size();
+        if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
+            accessibility::announce( accessibility::format_list_open( access_tab_name(), access_count,
+                                     access_row() ) );
+        } else if( accessibility_gameplay::list_move_direction( action ) != 0 ) {
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( access_previous_line, iLine,
+                                                 accessibility_gameplay::list_move_direction( action ) ),
+                access_row()
+            } ) );
+        } else if( action == "ADD_RULE" ) {
+            accessibility::announce( access_count > static_cast<size_t>( recmax ) ?
+                                     access_change( _( "Rule added" ) ) : std::string( _( "No rule added" ) ) );
+        } else if( action == "LEFT" || action == "RIGHT" ) {
+            accessibility::announce( access_column() );
+        } else if( action == "SWITCH_AUTO_PICKUP_OPTION" ) {
+            accessibility::announce( get_option<bool>( "AUTO_PICKUP" ) ? _( "Auto pickup enabled" ) :
+                                     _( "Auto pickup disabled" ) );
+        } else if( !currentPageNonEmpty ) {
+            if( action == "REMOVE_RULE" || action == "COPY_RULE" || action == "SWAP_RULE_GLOBAL_CHAR" ||
+                action == "CONFIRM" || action == "ENABLE_RULE" || action == "DISABLE_RULE" ||
+                action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" || action == "TEST_RULE" ) {
+                accessibility::announce( access_row() );
+            }
+        } else if( action == "REMOVE_RULE" ) {
+            accessibility::announce( access_change( _( "Rule removed" ) ) );
+        } else if( action == "COPY_RULE" ) {
+            accessibility::announce( access_change( _( "Rule copied" ) ) );
+        } else if( action == "SWAP_RULE_GLOBAL_CHAR" && iTab != access_previous_tab ) {
+            accessibility::announce( access_change( string_format( _( "Rule moved to %s" ),
+                                                    access_tab_name() ) ) );
+        } else if( action == "CONFIRM" ) {
+            accessibility::announce( access_column() );
+        } else if( action == "ENABLE_RULE" || action == "DISABLE_RULE" ) {
+            accessibility::announce( action == "ENABLE_RULE" ? _( "Enabled" ) : _( "Disabled" ) );
+        } else if( action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {
+            accessibility::announce( iLine != access_previous_line ?
+                                     accessibility::format_mod_moved( iLine + 1, access_count ) :
+                                     accessibility::format_mod_not_moved( action == "MOVE_RULE_UP",
+                                             action == "MOVE_RULE_UP" ? _( "already last" ) : _( "already first" ) ) );
+        } else if( action == "TEST_RULE" ) {
+            accessibility::announce( player_character.name.empty() ?
+                                     std::string( _( "Unavailable: load a character first" ) ) : access_row() );
+        }
     }
 
     if( !bStuffChanged ) {
         return;
     }
 
-    if( !query_yn( _( "Save changes?" ) ) ) {
+    if( !query_yn_about( title, _( "Save changes?" ) ) ) {
+        accessibility::announce( _( "Changes discarded" ) );
         return;
     }
 
     for( tab &t : tabs ) {
         t.rules.get() = t.new_rules;
     }
+    accessibility::announce( _( "Changes saved" ) );
 }
 
 void player_settings::show()
@@ -680,16 +816,23 @@ void rule::test_pattern() const
         wnoutrefresh( w_test_rule_content );
     } );
 
+    const std::string access_note = _( "Won't display content or suffix matches" );
+    accessibility_gameplay::match_list_speech( ctxt, buf, access_note, vMatchingItems, iLine,
+            std::string(), 0 );
+
     while( true ) {
         ui_manager::redraw();
 
         const int recmax = static_cast<int>( vMatchingItems.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
         const std::string action = ctxt.handle_input();
+        const int previous_line = iLine;
         if( navigate_ui_list( action, iLine, scroll_rate, recmax, true ) ) {
         } else if( action == "QUIT" ) {
             break;
         }
+        accessibility_gameplay::match_list_speech( ctxt, buf, access_note, vMatchingItems, iLine,
+                action, previous_line );
     }
 }
 

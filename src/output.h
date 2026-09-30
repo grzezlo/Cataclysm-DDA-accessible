@@ -457,6 +457,11 @@ std::vector<size_t> get_tag_positions( std::string_view s );
 std::vector<std::string> split_by_color( std::string_view s );
 
 bool query_yn( const std::string &text );
+/**
+ * query_yn() whose spoken question is preceded by what it concerns, such as
+ * "Safe mode manager", without showing it.
+ */
+bool query_yn_about( const std::string &spoken_context, const std::string &text );
 template<typename ...Args>
 inline bool query_yn( const char *const msg, Args &&... args )
 {

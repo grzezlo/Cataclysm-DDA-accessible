@@ -8,6 +8,10 @@
 #include <string>
 #include <utility>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
+#include "accessibility_gameplay.h"
 #include "cata_path.h"
 #include "cata_utility.h"
 #include "catacharset.h"
@@ -49,6 +53,30 @@ std::string safemode::npc_type_name()
 {
     static std::string name = "human";
     return name;
+}
+
+/** Wildcard examples for a rule of the hostile-spotted or sound category. */
+static std::string rule_help_text( const bool sound )
+{
+    if( sound ) {
+        return _(
+                   "* is used as a Wildcard.  A few Examples:\n"
+                   "\n"
+                   "footsteps      matches the sound name exactly\n"
+                   "a loud ba*     matches sounds beginning with 'a loud ba'\n"
+                   "*losion!       matches sounds ending with 'losion!'\n"
+                   "a *oud*ba*     multiple * are allowed\n"
+                   "*LoU*bA*       case insensitive search" );
+    }
+    return _(
+               "* is used as a Wildcard.  A few Examples:\n"
+               "\n"
+               "human          matches every NPC\n"
+               "zombie         matches the monster name exactly\n"
+               "acidic zo*     matches monsters beginning with 'acidic zo'\n"
+               "*mbie          matches monsters ending with 'mbie'\n"
+               "*cid*zo*ie     multiple * are allowed\n"
+               "AcI*zO*iE      case insensitive search" );
 }
 
 void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
@@ -117,6 +145,9 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         ctxt.register_action( "SWITCH_SAFEMODE_OPTION" );
         ctxt.register_action( "SWAP_RULE_GLOBAL_CHAR" );
     }
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     Character &player_character = get_player_character();
     ui.on_redraw( [&]( const ui_adaptor & ) {
@@ -266,6 +297,67 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         wnoutrefresh( w );
     } );
 
+    // Screen reader speech: Global and Character behave as tabs; columns are spoken as words.
+    const auto access_rules = [&]() -> std::vector<rules_class>& {
+        return tab == GLOBAL_TAB ? global_rules : character_rules;
+    };
+    const auto access_tab_name = [&]() {
+        return accessibility::format_shortcut_label( tab == GLOBAL_TAB ? _( "[<Global>]" ) :
+                _( "[<Character>]" ) );
+    };
+    const auto access_no_character = [&]() {
+        return tab == CHARACTER_TAB && player_character.name.empty();
+    };
+    const auto access_rule = [&]() {
+        accessibility::safemode_rule_row row;
+        const std::vector<rules_class> &rules = access_rules();
+        if( line < 0 || static_cast<size_t>( line ) >= rules.size() ) {
+            return row;
+        }
+        const rules_class &rule = rules[line];
+        row.rule = rule.rule;
+        row.active = rule.active;
+        row.whitelist = rule.whitelist;
+        row.sound = rule.category == Categories::SOUND;
+        row.attitude = Creature::get_attitude_ui_data( rule.attitude ).first.translated();
+        row.proximity = rule.proximity;
+        row.mode = rule.movement_mode == MovementModes::WALKING ? _( "Walking" ) :
+                   rule.movement_mode == MovementModes::DRIVING ? _( "Driving" ) : _( "Both" );
+        return row;
+    };
+    const auto access_row = [&]() -> std::string {
+        if( access_no_character() )
+        {
+            return _( "Please load a character first to use this page!" );
+        }
+        if( access_rules().empty() )
+        {
+            return accessibility::format_list_count( 0 );
+        }
+        return accessibility::format_safemode_rule_row( access_rule() );
+    };
+    const auto access_tab_open = [&]( const std::string & name ) {
+        if( access_no_character() ) {
+            return accessibility::format_semantic_sequence( { name, access_row() } );
+        }
+        return accessibility::format_semantic_sequence( {
+            accessibility::format_list_open( name, access_rules().size(), access_row() ),
+            empty() ? std::string( _( "Safe mode manager is currently inactive." ) ) : std::string(),
+            empty() ? std::string( _( "Default rules are used.  Add a rule to activate." ) ) : std::string(),
+            empty() ? std::string( _( "Press ~ to add a default ruleset to get started." ) ) : std::string()
+        } );
+    };
+    const auto access_change = [&]( const std::string & change ) {
+        return accessibility::format_semantic_sequence( {
+            accessibility::format_list_change( change, access_rules().size() ), access_row()
+        } );
+    };
+    const std::vector<std::string> access_column_names {
+        _( "Rule" ), _( "Attitude" ), _( "Distance" ), _( "Blacklist or whitelist" ), _( "Category" ), _( "Mode" )
+    };
+    accessibility::announce( access_tab_open( accessibility::format_screen_page( custom_name_in,
+                             access_tab_name() ) ) );
+
     while( true ) {
         auto &current_tab = tab == GLOBAL_TAB ? global_rules : character_rules;
 
@@ -274,6 +366,32 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         const std::string action = ctxt.handle_input();
         const int recmax = static_cast<int>( current_tab.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
+        const int access_previous_line = line;
+        const int access_previous_tab = tab;
+
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+            continue;
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( accessibility::format_rule_manager_summary(
+                                         accessibility::format_screen_page( custom_name_in, access_tab_name() ),
+                                         access_no_character() ? 0 : line + 1, access_no_character() ? 0 : current_tab.size(),
+                                         get_option<bool>( "SAFEMODE" ) ? _( "Safe mode enabled" ) : _( "Safe mode disabled" ),
+                                         access_column_names[column] ) );
+            continue;
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            if( accessibility::is_active() && !access_no_character() && !current_tab.empty() ) {
+                const accessibility::safemode_rule_row row = access_rule();
+                std::vector<std::string> lines = accessibility::format_safemode_rule_fields( row );
+                lines.emplace_back( row.active ? _( "Enabled" ) : _( "Disabled" ) );
+                lines.push_back( rule_help_text( row.sound ) );
+                accessibility_ui::show_text_document( _( "Safe mode rule" ), string_join( lines, "\n" ) );
+                accessibility::announce( access_row() );
+            } else {
+                accessibility::announce( access_row() );
+            }
+            continue;
+        }
 
         if( action == "NEXT_TAB" ) {
             tab++;
@@ -350,37 +468,9 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
                 help_ui.on_screen_resize( init_help_window );
 
                 help_ui.on_redraw( [&]( const ui_adaptor & ) {
-                    switch( current_tab[line].category ) {
-                        case Categories::HOSTILE_SPOTTED:
-                            // NOLINTNEXTLINE(cata-use-named-point-constants)
-                            fold_and_print( w_help, point( 1, 1 ), 999, c_white,
-                                            _(
-                                                "* is used as a Wildcard.  A few Examples:\n"
-                                                "\n"
-                                                "human          matches every NPC\n"
-                                                "zombie         matches the monster name exactly\n"
-                                                "acidic zo*     matches monsters beginning with 'acidic zo'\n"
-                                                "*mbie          matches monsters ending with 'mbie'\n"
-                                                "*cid*zo*ie     multiple * are allowed\n"
-                                                "AcI*zO*iE      case insensitive search" )
-                                          );
-                            break;
-                        case Categories::SOUND:
-                            // NOLINTNEXTLINE(cata-use-named-point-constants)
-                            fold_and_print( w_help, point( 1, 1 ), 999, c_white,
-                                            _(
-                                                "* is used as a Wildcard.  A few Examples:\n"
-                                                "\n"
-                                                "footsteps      matches the sound name exactly\n"
-                                                "a loud ba*     matches sounds beginning with 'a loud ba'\n"
-                                                "*losion!       matches sounds ending with 'losion!'\n"
-                                                "a *oud*ba*     multiple * are allowed\n"
-                                                "*LoU*bA*       case insensitive search" )
-                                          );
-                            break;
-                        default:
-                            break;
-                    }
+                    // NOLINTNEXTLINE(cata-use-named-point-constants)
+                    fold_and_print( w_help, point( 1, 1 ), 999, c_white,
+                                    rule_help_text( current_tab[line].category == Categories::SOUND ) );
                     draw_border( w_help );
                     wnoutrefresh( w_help );
                 } );
@@ -475,13 +565,68 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
             get_options().get_option( "SAFEMODE" ).setNext();
             get_options().save();
         }
+
+        if( !accessibility::is_active() ) {
+            continue;
+        }
+        const bool access_has_rules = recmax > 0;
+        if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
+            accessibility::announce( access_tab_open( access_tab_name() ) );
+        } else if( access_no_character() ) {
+            accessibility::announce( access_row() );
+        } else if( accessibility_gameplay::list_move_direction( action ) != 0 ) {
+            accessibility::announce( accessibility::format_semantic_sequence( {
+                accessibility::format_list_wrap( access_previous_line, line,
+                                                 accessibility_gameplay::list_move_direction( action ) ),
+                access_row()
+            } ) );
+        } else if( action == "ADD_DEFAULT_RULESET" ) {
+            accessibility::announce( access_change( _( "Default rules added" ) ) );
+        } else if( action == "ADD_RULE" ) {
+            accessibility::announce( access_change( _( "Rule added" ) ) );
+        } else if( action == "LEFT" || action == "RIGHT" ) {
+            accessibility::announce( access_rules().empty() ? access_column_names[column] :
+                                     accessibility::format_safemode_rule_fields( access_rule() )[column] );
+        } else if( action == "SWITCH_SAFEMODE_OPTION" ) {
+            accessibility::announce( get_option<bool>( "SAFEMODE" ) ? _( "Safe mode enabled" ) :
+                                     _( "Safe mode disabled" ) );
+        } else if( !access_has_rules ) {
+            if( action == "REMOVE_RULE" || action == "COPY_RULE" || action == "SWAP_RULE_GLOBAL_CHAR" ||
+                action == "CONFIRM" || action == "ENABLE_RULE" || action == "DISABLE_RULE" ||
+                action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" || action == "TEST_RULE" ) {
+                accessibility::announce( access_row() );
+            }
+        } else if( action == "REMOVE_RULE" ) {
+            accessibility::announce( access_change( _( "Rule removed" ) ) );
+        } else if( action == "COPY_RULE" ) {
+            accessibility::announce( access_change( _( "Rule copied" ) ) );
+        } else if( action == "SWAP_RULE_GLOBAL_CHAR" ) {
+            accessibility::announce( tab != access_previous_tab ?
+                                     access_change( string_format( _( "Rule moved to %s" ), access_tab_name() ) ) :
+                                     std::string( _( "Unavailable: load a character first" ) ) );
+        } else if( action == "CONFIRM" ) {
+            const accessibility::safemode_rule_row row = access_rule();
+            accessibility::announce( column == COLUMN_PROXIMITY &&
+                                     !accessibility::safemode_rule_uses_distance( row ) ?
+                                     accessibility::format_safemode_rule_fields( row )[column] :
+                                     accessibility::format_safemode_rule_values( row )[column] );
+        } else if( action == "ENABLE_RULE" || action == "DISABLE_RULE" ) {
+            accessibility::announce( action == "ENABLE_RULE" ? _( "Enabled" ) : _( "Disabled" ) );
+        } else if( action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {
+            accessibility::announce( line != access_previous_line ?
+                                     accessibility::format_mod_moved( line + 1, current_tab.size() ) :
+                                     accessibility::format_mod_not_moved( action == "MOVE_RULE_UP",
+                                             action == "MOVE_RULE_UP" ? _( "already last" ) : _( "already first" ) ) );
+        } else if( action == "TEST_RULE" ) {
+            accessibility::announce( access_row() );
+        }
     }
 
     if( !changes_made ) {
         return;
     }
 
-    if( query_yn( _( "Save changes?" ) ) ) {
+    if( query_yn_about( custom_name_in, _( "Save changes?" ) ) ) {
         if( is_safemode_in ) {
             save_global();
             if( !player_character.name.empty() ) {
@@ -490,9 +635,11 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         } else {
             create_rules();
         }
+        accessibility::announce( _( "Changes saved" ) );
     } else {
         global_rules = global_rules_old;
         character_rules = character_rules_old;
+        accessibility::announce( _( "Changes discarded" ) );
     }
 }
 
@@ -589,16 +736,23 @@ void safemode::test_pattern( const int tab_in, const int row_in )
         wnoutrefresh( w_test_rule_content );
     } );
 
+    const std::string access_note = _( "Lists monsters regardless of their attitude." );
+    accessibility_gameplay::match_list_speech( ctxt, buf, access_note, creature_list, line,
+            std::string(), 0 );
+
     while( true ) {
         ui_manager::redraw();
 
         const int recmax = static_cast<int>( creature_list.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
         const std::string action = ctxt.handle_input();
+        const int previous_line = line;
         if( navigate_ui_list( action, line, scroll_rate, recmax, true ) ) {
         } else if( action == "QUIT" ) {
             break;
         }
+        accessibility_gameplay::match_list_speech( ctxt, buf, access_note, creature_list, line, action,
+                previous_line );
     }
 }
 

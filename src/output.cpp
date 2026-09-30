@@ -862,6 +862,11 @@ bool query_yn( const std::string &text )
         return result;
     }
 #endif // defined(__ANDROID__)
+    return query_yn_about( std::string(), text );
+}
+
+bool query_yn_about( const std::string &spoken_context, const std::string &text )
+{
     const bool force_uc = get_option<bool>( "FORCE_CAPITAL_YN" );
     const auto &allow_key = force_uc ? input_context::disallow_lower_case_or_non_modified_letters
                             : input_context::allow_all_keys;
@@ -869,6 +874,7 @@ bool query_yn( const std::string &text )
     return query_popup()
            .preferred_keyboard_mode( keyboard_mode::keycode )
            .context( "YESNO" )
+           .accessibility_context( spoken_context )
            .message( force_uc && !is_keycode_mode_supported() ?
                      pgettext( "query_yn", "%s (Case Sensitive)" ) :
                      pgettext( "query_yn", "%s" ), text )
