@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T156.
+Last assigned test ID: T160.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1044,3 +1044,41 @@ Change terrain, or drive toward a building.
   its requirements and description; Escape in the install list returns to
   the grid and speaks the tile.  `Alt+L` reopens the part list.  Escape in
   the grid leaves the screen.
+
+## Stage 20: Character creation - scenario and profession
+
+- **T157 - Opening and the Points tab.**  From the main menu choose New
+  Game, then Custom Character.  Hear "Character creation. Points" with the
+  item count and the focused pool once, for example "Survivor, selected".
+  Down and Up speak only the next pool name; wrapping says "top" or
+  "bottom".  Press Enter on another pool and hear "Selected <pool>" with the
+  point balance (none for Survivor).  `Alt+D` opens the pool description in
+  the document view; Escape returns and speaks the pool again.  `Alt+S`
+  speaks the tab, position, current pool, balance, and difficulty summary.
+  Press Escape and answer No to "Return to main menu?": the focused pool is
+  spoken again.  Interrupt a row with Control; nothing is requeued, and
+  `Alt+R` repeats it.
+- **T158 - Scenario tab.**  Press Tab to reach the Scenario tab and hear
+  "Scenario", the item count, and the focused scenario with its point cost
+  (costs are omitted in the Survivor pool; choose a legacy pool on the Points
+  tab to hear them).  Move to another scenario and press Enter: hear
+  "Selected <scenario>" and the point balance.  In a world with city size 0,
+  or with a locked scenario, hear "Unavailable: <reason>".  Press `*` to
+  randomize and hear the new row.  Press `#` to change the cataclysm date
+  and hear "Start of cataclysm: <date>" after the calendar closes.  `Alt+D`
+  opens the scenario story, locations, and professions as a document.
+- **T159 - Profession filter, sort, and identity.**  On the Profession tab,
+  press `/`, type "doc", and press Enter: hear "Filter doc", the match count,
+  and the focused profession.  Press `r` (reset filter) and hear "Filter
+  cleared" with the full count.  Press `s` twice and hear "Sorted by name"
+  and then "Default sort order", each with the focused row.  Press `@` and
+  hear "Identity: female" or "male" with the row name in that form.  Choose
+  a profession with Enter and hear "Selected <profession>" and the balance
+  once, after any trait-removal popup.
+- **T160 - Backgrounds and conflicts.**  On the Background tab, select
+  "Book Hating" with Enter and hear "Selected Book Hating" and the balance.
+  Move to "Reading" and hear "Unavailable: Bookworm conflicts with
+  background Book Hating"; Enter shows the conflict popup and does not add
+  it.  Press Enter on Book Hating again and hear "Removed Book Hating".
+  `Alt+S` lists the chosen backgrounds after "Current:".  Press Tab to reach
+  the Stats tab; that tab's speech belongs to Stage 20A and may be silent.

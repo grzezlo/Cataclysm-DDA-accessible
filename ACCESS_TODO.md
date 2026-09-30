@@ -55,59 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 20 - Character creation: scenario and profession
-
-**Outcome:** The first four character creation tabs (points, scenario, profession,
-background/hobbies) are independently usable.
-
-**NVDA observation (2026-09-26):** After entering Custom Character, the Points
-tab did not announce arrow-key focus changes.  Its existing screen-reader-mode
-branch changes rendered content but does not provide semantic announcements.
-
-**Code inventory:** `src/newcharacter.cpp` tabs 0–3; main-menu entry in
-`src/main_menu.cpp`.
-
-**Implementation hints:**
-
-- Tab manager: `class tab_manager` in `src/newcharacter.cpp` tracks position,
-  handles `"PREV_TAB"`, `"NEXT_TAB"`, `"SELECT"`, `"QUIT"`.
-- Tabs declared in `avatar::create()` in `src/newcharacter.cpp`: POINTS (0),
-  SCENARIO (1), PROFESSION (2), BACKGROUND (3), STATS (4), TRAITS (5),
-  SKILLS (6), DESCRIPTION (7).
-- Tab 0 (Points): `set_points()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_POINTS"`.  Already has `screen_reader_mode` branch — extend it.
-- Tab 1 (Scenario): `set_scenario()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_SCENARIOS"`.  Left pane: scenario list with point costs.  Right
-  pane: `scrolling_text_view details` with description, locations, missions.
-- Tab 2 (Profession): `set_profession()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_PROFESSIONS"`.  Same left/right layout.
-- Tab 3 (Background): `set_hobbies()` in `src/newcharacter.cpp`, context
-  `"NEW_CHAR_PROFESSIONS"`.  Same layout.
-- All tabs support `"FILTER"`, `"SORT"`, and `"RANDOMIZE"`.
-- Announce tab identity on switch, entry name + point cost on selection change,
-  detail text on demand.
-
-**Selected interaction (conventions 2, 3, 4, and 5):**
-
-- Keys are unchanged.  Changing a tab speaks its name, item count, and focused
-  row ("Profession, 42 items").
-- A row speaks name and point cost ("Evacuee, 0 points"), or unavailability
-  with its reason ("Unavailable: conflicts with scenario").  Selecting speaks
-  the new point balance.
-- `Alt+D` opens the description in the document view.  Filter, sort, and
-  randomize speak their result.
-- The Points tab's existing screen reader branch gains normal focus speech.
-
-**Success criteria:** Each tab reports identity, focus, selection, point costs,
-conflicts, and detail.  Scenario, profession, and background selection,
-filtering, sorting, and randomization are announced and focus-stable.
-
-**Possible automated tests:** Capture every tab entry, selection changes, point
-updates, filter, sort, and return focus using character fixtures.
-
-**User-test scenarios:** Create a character using each of the first four
-tabs, use filter and sort, randomize, and confirm tab transitions work smoothly.
-
 ## Stage 20A - Character creation: stats, traits, skills, and finish
 
 **Outcome:** The remaining character creation tabs and the final confirmation

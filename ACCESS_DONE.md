@@ -1497,3 +1497,41 @@ Limitations:
   list instead.
 - The install list marks parts the visual list grays out as "requirements
   not met"; the exact missing count is computed on `Alt+D` or selection.
+
+## 2026-09-30 — Stage 20: Character creation - scenario and profession
+
+- Implemented the selected interaction (conventions 2, 3, 4, and 5).
+  Existing keys are unchanged; the scenario tab now registers its existing
+  `RANDOMIZE` binding (`*`), which upstream handled but never registered.
+- Entering the Points, Scenario, Profession, or Background tab speaks the
+  tab, item count, and focused row; the first tab adds "Character creation".
+  Rows speak "Evacuee, 0 points, selected", "earns 1 point", "Unavailable:
+  <reason>" (achievement requirement, world city size, background trait
+  conflict), and "Not enough points" where the list shows these by color.
+  Moves speak only the row, with "Top" or "Bottom" on wrap.
+- Enter speaks "Selected <choice>" (backgrounds also "Removed <choice>")
+  and the new point balance: "4 points left", "3 points over budget", or
+  the legacy multi-pool breakdown.  Filter, reset filter, sort, randomize,
+  identity, outfit, and the scenario calendar keys speak their result; a
+  declined quit speaks the row again.  `Alt+D` opens the focused
+  description in the document view; `Alt+S` speaks the tab, position,
+  current choices, balance, and difficulty summary.
+- Formatters are in `accessibility_format`, row builders in
+  `accessibility_gameplay`, and the per-tab speech state
+  (`choice_tab_speech`) in `src/newcharacter.cpp`.
+- `test_access.bat` passed 2046 assertions in 107 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `704cbb929b`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T157–T160 are in
+  `ACCESS_USERTESTS.md`.  Automated tests cover formatters, row builders
+  with game data, and key resolution, not the interactive tab loops.
+- In the Survivor (freeform) pool rows omit point costs and selection
+  speaks no balance, matching the screen, which shows neither.
+- "Not enough points" mirrors the visual header color; for backgrounds it
+  inherits upstream's comparison against the profession cost.
+- The difficulty summary in `Alt+S` is the header text with colors removed
+  and may read awkwardly.  Scrolling the visual detail pane is silent;
+  `Alt+D` is the accessible route.  The Stats tab onward is Stage 20A.
