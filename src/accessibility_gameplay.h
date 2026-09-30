@@ -6,10 +6,12 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "accessibility_format.h"
 #include "coords_fwd.h"
+#include "point.h"
 
 class Character;
 class Creature;
@@ -112,6 +114,59 @@ void announce_travel_start( map &here, const avatar &viewer,
 /** Summarize an overmap travel path, stored destination first as in `omt_path`. */
 void announce_overmap_travel_start( const avatar &viewer,
                                     const std::vector<tripoint_abs_omt> &path );
+/** An overmap tile as the viewer knows it, with its offset from the viewer. */
+accessibility::overmap_tile overmap_tile( const avatar &viewer, const tripoint_abs_omt &position );
+/**
+ * Detail sentences for the overmap cursor: description with the nearest known
+ * city, vision level, note, danger, missions, current objective distance,
+ * `weather` when visible, explored state, level, and offset.
+ */
+std::vector<std::string> overmap_tile_details( const avatar &viewer,
+        const tripoint_abs_omt &position, const std::string &weather );
+/** "Route: <destination>, <location>." or "No route selected." */
+std::string overmap_route_state( const avatar &viewer );
+
+/**
+ * Places the viewer knows about, nearest first: seen cities and camps, map
+ * notes, active mission targets, and the route destination.  Places at one
+ * position are merged into one row.
+ */
+std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> known_overmap_places(
+            const avatar &viewer );
+/** Open the known-places list; return the chosen place, or nothing on cancel. */
+std::optional<tripoint_abs_omt> choose_known_overmap_place( const avatar &viewer );
+/**
+ * Speak the route after CHOOSE_DESTINATION previewed a new route to
+ * `destination`, or why there is none.
+ */
+void announce_overmap_route( const avatar &viewer, const tripoint_abs_omt &destination,
+                             const std::string &confirm_key );
+/** Row speech for a map note in the notes list. */
+std::string overmap_note_row( const avatar &viewer, const tripoint_abs_omt &position );
+
+/** Speech state of one overmap session. */
+class overmap_speech
+{
+    public:
+        /** Speak the prompt or "Overmap" and the cursor tile. */
+        void open( const avatar &viewer, const std::string &prompt, const tripoint_abs_omt &cursor );
+        /**
+         * Speak the cursor when it moved.  One step onto the same terrain speaks
+         * only the terrain and markers; a level change speaks the level first.
+         */
+        void update( const avatar &viewer, const tripoint_abs_omt &cursor );
+        /** Speak the cursor tile in full, for example after its note changed. */
+        void announce( const avatar &viewer, const tripoint_abs_omt &cursor );
+        /** Remember the cursor without speaking; it was already spoken elsewhere. */
+        void sync( const avatar &viewer, const tripoint_abs_omt &cursor );
+        /** Speak the prompt, cursor tile, level, and route. */
+        void summary( const avatar &viewer, const tripoint_abs_omt &cursor ) const;
+    private:
+        std::string prompt;
+        tripoint spoken = tripoint::invalid;
+        std::string terrain;
+};
+
 /** The player confirmed cancelling auto-travel; the stop needs no travel speech. */
 void travel_canceled();
 /** Overmap travel reached its destination; the game message reports it. */

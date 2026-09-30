@@ -1363,6 +1363,214 @@ std::string format_mission_track_unavailable( const mission_category category,
     return std::string();
 }
 
+std::string format_overmap_offset( const int dx, const int dy, const int dz )
+{
+    std::vector<std::string> horizontal;
+    if( dy != 0 ) {
+        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( dy ),
+                                             dy < 0 ? pgettext( "map offset", "north" ) : pgettext( "map offset", "south" ) ) );
+    }
+    if( dx != 0 ) {
+        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( dx ),
+                                             dx < 0 ? pgettext( "map offset", "west" ) : pgettext( "map offset", "east" ) ) );
+    }
+    std::vector<std::string> parts;
+    if( !horizontal.empty() ) {
+        //~ Separator between the north-south and east-west parts of "3 north 2 east".
+        parts.push_back( string_join( horizontal, pgettext( "map offset", " " ) ) );
+    }
+    if( dz != 0 ) {
+        const int levels = std::abs( dz );
+        parts.push_back( dz > 0 ?
+                         string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
+                         string_format( n_gettext( "%d level below", "%d levels below", levels ), levels ) );
+    }
+    if( parts.empty() ) {
+        return _( "here" );
+    }
+    return string_join( parts, _( ", " ) );
+}
+
+std::string format_overmap_level( const int z )
+{
+    //~ Overmap z-level, such as "Level -1"; 0 is the ground.
+    return string_format( _( "Level %d" ), z );
+}
+
+namespace
+{
+
+std::string overmap_danger_marker( const int danger_radius, const bool in_dangerous_area )
+{
+    if( danger_radius >= 0 ) {
+        //~ A map note marked dangerous with its radius in map tiles.
+        return string_format( _( "dangerous area, radius %d" ), danger_radius );
+    }
+    if( in_dangerous_area ) {
+        return _( "in dangerous area" );
+    }
+    return std::string();
+}
+
+void add_part( std::vector<std::string> &parts, const std::string &part )
+{
+    if( !part.empty() ) {
+        parts.push_back( part );
+    }
+}
+
+} // namespace
+
+std::string format_overmap_tile( const overmap_tile &tile, const bool terrain_repeated )
+{
+    std::vector<std::string> parts = {
+        tile.terrain.empty() ? std::string( _( "unexplored" ) ) : collapse_whitespace( tile.terrain )
+    };
+    if( !tile.note.empty() ) {
+        //~ A map note at the overmap cursor.
+        parts.push_back( string_format( _( "note: %s" ), collapse_whitespace( tile.note ) ) );
+    }
+    add_part( parts, overmap_danger_marker( tile.danger_radius, tile.in_dangerous_area ) );
+    for( const std::string &mission : tile.missions ) {
+        //~ An active mission whose target is at the overmap cursor.
+        parts.push_back( string_format( _( "mission target: %s" ), collapse_whitespace( mission ) ) );
+    }
+    if( tile.route_destination ) {
+        parts.emplace_back( _( "route destination" ) );
+    } else if( tile.on_route ) {
+        parts.emplace_back( _( "on route" ) );
+    }
+    if( !terrain_repeated ) {
+        parts.push_back( format_overmap_offset( tile.dx, tile.dy, tile.dz ) );
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_overmap_opening( const std::string &prompt, const std::string &tile )
+{
+    return format_semantic_sequence( {
+        prompt.empty() ? std::string( _( "Overmap" ) ) : remove_color_tags( prompt ), tile
+    } );
+}
+
+std::string format_overmap_level_change( const int z, const std::string &tile )
+{
+    return format_semantic_sequence( { format_overmap_level( z ), tile } );
+}
+
+std::string format_known_place_row( const known_place &place )
+{
+    std::vector<std::string> parts = { collapse_whitespace( place.name ) };
+    std::string location;
+    if( place.distance <= 0 ) {
+        location = _( "here" );
+    } else {
+        location = string_format( n_gettext( "%1$d map tile %2$s", "%1$d map tiles %2$s",
+                                             place.distance ), place.distance, place.direction );
+    }
+    if( place.dz != 0 ) {
+        location = string_join( std::vector<std::string> { location, format_overmap_offset( 0, 0, place.dz ) },
+                                _( ", " ) );
+    }
+    parts.push_back( location );
+    if( place.city ) {
+        parts.emplace_back( _( "city" ) );
+    }
+    if( place.camp ) {
+        parts.emplace_back( _( "camp" ) );
+    }
+    if( !place.note.empty() ) {
+        parts.push_back( string_format( _( "note: %s" ), collapse_whitespace( place.note ) ) );
+    }
+    add_part( parts, overmap_danger_marker( place.danger_radius, place.in_dangerous_area ) );
+    for( const std::string &mission : place.missions ) {
+        parts.push_back( string_format( _( "mission target: %s" ), collapse_whitespace( mission ) ) );
+    }
+    if( place.current_objective ) {
+        parts.emplace_back( _( "current objective" ) );
+    }
+    if( place.route_destination ) {
+        parts.emplace_back( _( "route destination" ) );
+    }
+    return string_join( parts, _( ", " ) );
+}
+
+std::string format_known_place_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "no places" );
+    }
+    return string_format( n_gettext( "%d place", "%d places", count ), static_cast<int>( count ) );
+}
+
+std::string format_overmap_route_preview( const std::string &destination,
+        const std::string &location, const int length, const std::string &confirm_key )
+{
+    return format_semantic_sequence( {
+        //~ %1$s: route destination; %2$s: its distance and direction such as "8 map tiles north"
+        string_format( _( "Route to %1$s, %2$s" ), destination, location ),
+        string_format( n_gettext( "%d map tile of travel", "%d map tiles of travel", length ), length ),
+        //~ %s: key that starts travel along the previewed route
+        string_format( _( "Press %s again to travel" ), confirm_key )
+    } );
+}
+
+std::string format_overmap_no_route( const std::string &destination, const bool different_level )
+{
+    return format_semantic_sequence( {
+        string_format( _( "No route to %s" ), destination ),
+        different_level ? std::string( _( "Travel needs the destination on your level" ) ) : std::string()
+    } );
+}
+
+std::string format_overmap_no_route_selected()
+{
+    return format_semantic_sequence( { _( "No route selected" ) } );
+}
+
+std::string format_overmap_route_state( const std::string &destination,
+                                        const std::string &location )
+{
+    if( destination.empty() ) {
+        return format_overmap_no_route_selected();
+    }
+    return format_semantic_sequence( {
+        //~ %1$s: route destination; %2$s: its distance and direction from the player
+        string_format( _( "Route: %1$s, %2$s" ), destination, location )
+    } );
+}
+
+std::string format_overmap_summary( const std::string &prompt, const std::string &tile,
+                                    const int z, const std::string &route )
+{
+    return format_semantic_sequence( {
+        prompt.empty() ? std::string( _( "Overmap" ) ) : remove_color_tags( prompt ),
+        string_format( _( "Cursor: %s" ), tile ), format_overmap_level( z ), route
+    } );
+}
+
+std::string format_overmap_search_results( const size_t count, const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_format( n_gettext( "Search results, %d result", "Search results, %d results", count ),
+                       static_cast<int>( count ) ),
+        focus
+    } );
+}
+
+std::string format_overmap_search_position( const size_t position, const size_t count,
+        const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_format( _( "Result %s" ), format_list_position( position, count ) ), focus
+    } );
+}
+
+std::string format_overmap_explored( const bool explored )
+{
+    return format_semantic_sequence( { explored ? _( "Marked explored" ) : _( "Marked unexplored" ) } );
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {

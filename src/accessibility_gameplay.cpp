@@ -3,22 +3,27 @@
 #include <algorithm>
 #include <array>
 #include <climits>
+#include <cstdlib>
 #include <cstdint>
 #include <functional>
 #include <map>
 #include <optional>
+#include <tuple>
 #include <utility>
 
 #include "accessibility.h"
 #include "activity_type.h"
 #include "avatar.h"
+#include "basecamp.h"
 #include "bodypart.h"
 #include "calendar.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "character_martial_arts.h"
+#include "city.h"
 #include "construction.h"
 #include "construction_group.h"
+#include "coordinates.h"
 #include "creature.h"
 #include "creature_tracker.h"
 #include "display.h"
@@ -39,12 +44,14 @@
 #include "map_item_stack.h"
 #include "mapdata.h"
 #include "martialarts.h"
+#include "mission.h"
 #include "monster.h"
 #include "mtype.h"
 #include "move_mode.h"
 #include "npc.h"
 #include "omdata.h"
 #include "output.h"
+#include "overmap_ui.h"
 #include "overmapbuffer.h"
 #include "player_activity.h"
 #include "recipe.h"
@@ -54,6 +61,8 @@
 #include "trap.h"
 #include "ui_iteminfo.h"
 #include "uilist.h"
+#include "units.h"
+#include "units_utility.h"
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
@@ -1593,6 +1602,347 @@ void describe_item_action_menu( uilist &menu, const std::string &item_name,
         iteminfo_window window( document, point( -1, -1 ), TERMX / 2, TERMY );
         window.execute();
     };
+}
+
+namespace
+{
+
+/** Terrain name as the viewer knows it, or empty when the tile is unexplored. */
+std::string overmap_known_terrain( const tripoint_abs_omt &position )
+{
+    const om_vision_level vision = overmap_buffer.seen( position );
+    if( vision == om_vision_level::unseen ) {
+        return std::string();
+    }
+    const oter_id &ter = overmap_buffer.ter( position );
+    if( ter->blends_adjacent( vision ) ) {
+        return oter_vision::get_blended_omt_info( position, vision ).name;
+    }
+    return ter->get_name( vision );
+}
+
+/** Note text without its glyph and color prefix. */
+std::string overmap_note_text( const tripoint_abs_omt &position )
+{
+    if( !overmap_buffer.has_note( position ) ) {
+        return std::string();
+    }
+    const std::string &note = overmap_buffer.note( position );
+    return note.substr( std::min( note.size(), std::get<2>( overmap_ui::get_note_display_info(
+                                      note ) ) ) );
+}
+
+std::vector<std::string> overmap_mission_targets( const avatar &viewer,
+        const tripoint_abs_omt &position )
+{
+    std::vector<std::string> titles;
+    for( const mission *miss : viewer.get_active_missions() ) {
+        if( miss->has_target() && miss->get_target() == position ) {
+            titles.push_back( miss->name() );
+        }
+    }
+    return titles;
+}
+
+const std::string &overmap_vision_text( const om_vision_level vision )
+{
+    static const std::string none;
+    static const std::string vague = _( "You can only make out vague details of what's here." );
+    static const std::string outlines = _( "You can only make out outlines of what's here." );
+    static const std::string details = _( "You can make out some details of what's here." );
+    switch( vision ) {
+        case om_vision_level::vague:
+            return vague;
+        case om_vision_level::outlines:
+            return outlines;
+        case om_vision_level::details:
+            return details;
+        default:
+            return none;
+    }
+}
+
+} // namespace
+
+accessibility::overmap_tile overmap_tile( const avatar &viewer, const tripoint_abs_omt &position )
+{
+    accessibility::overmap_tile tile;
+    tile.terrain = overmap_known_terrain( position );
+    tile.note = overmap_note_text( position );
+    tile.danger_radius = overmap_buffer.note_danger_radius( position );
+    tile.in_dangerous_area = tile.danger_radius < 0 && overmap_buffer.is_marked_dangerous( position );
+    tile.missions = overmap_mission_targets( viewer, position );
+    const std::vector<tripoint_abs_omt> &path = viewer.omt_path;
+    tile.route_destination = !path.empty() && path.front() == position;
+    tile.on_route = std::find( path.begin(), path.end(), position ) != path.end();
+    const tripoint_abs_omt origin = viewer.pos_abs_omt();
+    tile.dx = position.x() - origin.x();
+    tile.dy = position.y() - origin.y();
+    tile.dz = position.z() - origin.z();
+    return tile;
+}
+
+std::vector<std::string> overmap_tile_details( const avatar &viewer,
+        const tripoint_abs_omt &position, const std::string &weather )
+{
+    std::vector<std::string> lines = {
+        accessibility::format_overmap_tile( overmap_tile( viewer, position ), false )
+    };
+    const om_vision_level vision = overmap_buffer.seen( position );
+    if( vision != om_vision_level::unseen ) {
+        // The description names the nearest known city, or else the terrain's origin.
+        const std::string description = remove_color_tags( overmap_buffer.get_description_at(
+                                            project_to<coords::sm>( position ) ) );
+        for( const std::string &line : string_split( description, '\n' ) ) {
+            lines.push_back( accessibility::format_semantic_sequence( { line } ) );
+        }
+        lines.push_back( overmap_vision_text( vision ) );
+    }
+    const tripoint_abs_omt target = viewer.get_active_mission_target();
+    if( !target.is_invalid() ) {
+        const int distance = rl_dist( position, target );
+        std::string location = accessibility::format_mission_location(
+                                   _( "Current objective from the cursor" ), distance,
+                                   direction_name( direction_from( position.xy().raw(), target.xy().raw() ) ),
+                                   // One map tile is 24 meters across.
+                                   length_to_string_approx( distance * 24_meter ) );
+        if( target.z() != position.z() ) {
+            location = accessibility::format_semantic_sequence( {
+                location, accessibility::format_overmap_offset( 0, 0, target.z() - position.z() )
+            } );
+        }
+        lines.push_back( location );
+    }
+    lines.push_back( weather );
+    if( overmap_buffer.is_explored( position ) ) {
+        lines.push_back( accessibility::format_overmap_explored( true ) );
+    }
+    lines.push_back( accessibility::format_semantic_sequence( {
+        accessibility::format_overmap_level( position.z() )
+    } ) );
+    lines.erase( std::remove( lines.begin(), lines.end(), std::string() ), lines.end() );
+    return lines;
+}
+
+std::string overmap_route_state( const avatar &viewer )
+{
+    if( viewer.omt_path.empty() ) {
+        return accessibility::format_overmap_route_state( std::string(), std::string() );
+    }
+    const tripoint_abs_omt &destination = viewer.omt_path.front();
+    const std::string terrain = overmap_known_terrain( destination );
+    return accessibility::format_overmap_route_state(
+               terrain.empty() ? std::string( _( "unexplored" ) ) : terrain,
+               overmap_location( viewer.pos_abs_omt(), destination ) );
+}
+
+std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> known_overmap_places(
+            const avatar &viewer )
+{
+    std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> places;
+    const auto place_at = [&places]( const tripoint_abs_omt & position ) ->
+    accessibility::known_place & {
+        const auto found = std::find_if( places.begin(), places.end(),
+                                         [&position]( const std::pair<tripoint_abs_omt, accessibility::known_place> &place )
+        {
+            return place.first == position;
+        } );
+        if( found != places.end() )
+        {
+            return found->second;
+        }
+        places.emplace_back( position, accessibility::known_place() );
+        return places.back().second;
+    };
+    const tripoint_abs_omt origin = viewer.pos_abs_omt();
+    const tripoint_abs_sm center = project_to<coords::sm>( origin );
+    // Five overmaps in each direction, like the overmap search; two submaps per map tile.
+    const int radius = 2 * OMAPX * 5;
+    for( const city_reference &ref : overmap_buffer.get_cities_near( center, radius ) ) {
+        const tripoint_abs_omt position( project_to<coords::omt>( ref.abs_sm_pos.xy() ), 0 );
+        // The overmap labels only cities whose center has been seen.
+        if( overmap_buffer.seen_more_than( position, om_vision_level::outlines ) ) {
+            accessibility::known_place &place = place_at( position );
+            place.city = true;
+            place.name = ref.city->name;
+        }
+    }
+    for( const camp_reference &ref : overmap_buffer.get_camps_near( center, radius ) ) {
+        const tripoint_abs_omt position = ref.camp->camp_omt_pos();
+        if( overmap_buffer.seen_more_than( position, om_vision_level::outlines ) ) {
+            accessibility::known_place &place = place_at( position );
+            place.camp = true;
+            place.name = ref.camp->camp_name();
+        }
+    }
+    for( int z = -OVERMAP_DEPTH; z <= OVERMAP_HEIGHT; ++z ) {
+        for( const overmapbuffer::t_point_with_note &note : overmap_buffer.get_all_notes( z ) ) {
+            const tripoint_abs_omt position( note.first, z );
+            accessibility::known_place &place = place_at( position );
+            place.note = overmap_note_text( position );
+            place.danger_radius = overmap_buffer.note_danger_radius( position );
+            place.in_dangerous_area = place.danger_radius < 0 &&
+                                      overmap_buffer.is_marked_dangerous( position );
+        }
+    }
+    const mission *objective = viewer.get_active_mission();
+    for( const mission *miss : viewer.get_active_missions() ) {
+        if( miss->has_target() ) {
+            accessibility::known_place &place = place_at( miss->get_target() );
+            place.missions.push_back( miss->name() );
+            place.current_objective = place.current_objective || miss == objective;
+        }
+    }
+    if( !viewer.omt_path.empty() ) {
+        place_at( viewer.omt_path.front() ).route_destination = true;
+    }
+    for( std::pair<tripoint_abs_omt, accessibility::known_place> &entry : places ) {
+        accessibility::known_place &place = entry.second;
+        if( place.name.empty() ) {
+            place.name = overmap_known_terrain( entry.first );
+            if( place.name.empty() ) {
+                place.name = _( "unexplored" );
+            }
+        }
+        place.distance = rl_dist( origin.xy(), entry.first.xy() );
+        place.direction = direction_name( direction_from( origin.xy().raw(), entry.first.xy().raw() ) );
+        place.dz = entry.first.z() - origin.z();
+    }
+    std::stable_sort( places.begin(), places.end(), []( const auto & lhs, const auto & rhs ) {
+        return std::make_tuple( lhs.second.distance, std::abs( lhs.second.dz ) ) <
+               std::make_tuple( rhs.second.distance, std::abs( rhs.second.dz ) );
+    } );
+    return places;
+}
+
+std::optional<tripoint_abs_omt> choose_known_overmap_place( const avatar &viewer )
+{
+    const std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> places =
+                known_overmap_places( viewer );
+    const std::string title = _( "Known places" );
+    if( places.empty() ) {
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            string_join( std::vector<std::string> { title, accessibility::format_known_place_count( 0 ) },
+            _( ", " ) )
+        } ) );
+        return std::nullopt;
+    }
+    uilist menu;
+    menu.title = title;
+    menu.accessibility_count = []( const size_t count ) {
+        return accessibility::format_known_place_count( count );
+    };
+    for( size_t index = 0; index < places.size(); ++index ) {
+        const std::string row = accessibility::format_known_place_row( places[index].second );
+        menu.addentry( static_cast<int>( index ), true, 0, row );
+        menu.entries.back().accessibility_focus = accessibility::format_semantic_sequence( { row } );
+    }
+    menu.query();
+    if( menu.ret >= 0 && static_cast<size_t>( menu.ret ) < places.size() ) {
+        return places[menu.ret].first;
+    }
+    return std::nullopt;
+}
+
+void announce_overmap_route( const avatar &viewer, const tripoint_abs_omt &destination,
+                             const std::string &confirm_key )
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const std::string terrain = overmap_known_terrain( destination );
+    const std::string name = terrain.empty() ? std::string( _( "unexplored" ) ) : terrain;
+    if( viewer.omt_path.empty() ) {
+        accessibility::announce( accessibility::format_overmap_no_route( name,
+                                 destination.z() != viewer.posz() ) );
+        return;
+    }
+    // The path is stored destination first and may end with the current tile.
+    int length = static_cast<int>( viewer.omt_path.size() );
+    if( viewer.omt_path.back() == viewer.pos_abs_omt() ) {
+        --length;
+    }
+    accessibility::announce( accessibility::format_overmap_route_preview( name,
+                             overmap_location( viewer.pos_abs_omt(), destination ), length, confirm_key ) );
+}
+
+std::string overmap_note_row( const avatar &viewer, const tripoint_abs_omt &position )
+{
+    accessibility::known_place place;
+    place.name = overmap_note_text( position );
+    const tripoint_abs_omt origin = viewer.pos_abs_omt();
+    place.distance = rl_dist( origin.xy(), position.xy() );
+    place.direction = direction_name( direction_from( origin.xy().raw(), position.xy().raw() ) );
+    place.dz = position.z() - origin.z();
+    place.danger_radius = overmap_buffer.note_danger_radius( position );
+    place.in_dangerous_area = place.danger_radius < 0 && overmap_buffer.is_marked_dangerous( position );
+    const std::string terrain = overmap_known_terrain( position );
+    return accessibility::format_semantic_sequence( {
+        string_join( std::vector<std::string> {
+            accessibility::format_known_place_row( place ),
+            terrain.empty() ? std::string( _( "unexplored" ) ) : terrain
+        }, _( ", " ) )
+    } );
+}
+
+void overmap_speech::open( const avatar &viewer, const std::string &opening_prompt,
+                           const tripoint_abs_omt &cursor )
+{
+    prompt = opening_prompt;
+    sync( viewer, cursor );
+    if( accessibility::is_active() ) {
+        accessibility::announce( accessibility::format_overmap_opening( prompt,
+                                 accessibility::format_overmap_tile( overmap_tile( viewer, cursor ), false ) ) );
+    }
+}
+
+void overmap_speech::update( const avatar &viewer, const tripoint_abs_omt &cursor )
+{
+    if( cursor.raw() == spoken ) {
+        return;
+    }
+    const tripoint previous = spoken;
+    const std::string previous_terrain = terrain;
+    sync( viewer, cursor );
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const accessibility::overmap_tile tile = overmap_tile( viewer, cursor );
+    if( !previous.is_invalid() && previous.z != cursor.z() ) {
+        accessibility::announce( accessibility::format_overmap_level_change( cursor.z(),
+                                 accessibility::format_overmap_tile( tile, false ) ) );
+        return;
+    }
+    const bool one_step = !previous.is_invalid() &&
+                          std::abs( previous.x - cursor.x() ) <= 1 && std::abs( previous.y - cursor.y() ) <= 1;
+    accessibility::announce( accessibility::format_overmap_tile( tile, one_step &&
+                             previous_terrain == terrain ) );
+}
+
+void overmap_speech::announce( const avatar &viewer, const tripoint_abs_omt &cursor )
+{
+    const bool level_changed = !spoken.is_invalid() && spoken.z != cursor.z();
+    sync( viewer, cursor );
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const std::string tile = accessibility::format_overmap_tile( overmap_tile( viewer, cursor ),
+                             false );
+    accessibility::announce( level_changed ? accessibility::format_overmap_level_change( cursor.z(),
+                             tile ) : tile );
+}
+
+void overmap_speech::sync( const avatar &, const tripoint_abs_omt &cursor )
+{
+    spoken = cursor.raw();
+    terrain = overmap_known_terrain( cursor );
+}
+
+void overmap_speech::summary( const avatar &viewer, const tripoint_abs_omt &cursor ) const
+{
+    accessibility::announce( accessibility::format_overmap_summary( prompt,
+                             accessibility::format_overmap_tile( overmap_tile( viewer, cursor ), false ), cursor.z(),
+                             overmap_route_state( viewer ) ) );
 }
 
 } // namespace accessibility_gameplay

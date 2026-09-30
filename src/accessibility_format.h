@@ -367,6 +367,83 @@ std::string format_mission_summary( mission_category category, size_t position, 
 std::string format_mission_tracked( const std::string &title );
 /** Spoken when CONFIRM cannot set the current objective. */
 std::string format_mission_track_unavailable( mission_category category, size_t count );
+/**
+ * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
+ * below", or "here".  `dy` grows southwards and `dz` upwards.
+ */
+std::string format_overmap_offset( int dx, int dy, int dz );
+/** "Level -1" for an overmap z-level. */
+std::string format_overmap_level( int z );
+/** One overmap tile as the map cursor speaks it. */
+struct overmap_tile {
+    /** Known terrain name, or empty when the tile is unexplored. */
+    std::string terrain;
+    /** Note text without its glyph and color prefix; empty without a note. */
+    std::string note;
+    /** Danger radius of the note, or -1 when it is not marked dangerous. */
+    int danger_radius = -1;
+    /** Inside the radius of another dangerous note. */
+    bool in_dangerous_area = false;
+    /** Titles of active missions that target this tile. */
+    std::vector<std::string> missions;
+    bool route_destination = false;
+    bool on_route = false;
+    /** Offset from the player in map tiles. */
+    int dx = 0;
+    int dy = 0;
+    int dz = 0;
+};
+/**
+ * "forest, note: Base, mission target: Find a book, 3 north 2 east." or, when
+ * `terrain_repeated`, the terrain and markers without the offset.
+ */
+std::string format_overmap_tile( const overmap_tile &tile, bool terrain_repeated );
+/** Spoken when the overmap opens: its title (or prompt) and the cursor tile. */
+std::string format_overmap_opening( const std::string &prompt, const std::string &tile );
+/** Spoken after a z-level change: "Level -1. <tile>" */
+std::string format_overmap_level_change( int z, const std::string &tile );
+/** A known place in the known-places list. */
+struct known_place {
+    std::string name;
+    int distance = 0;
+    /** Compass direction from the player; ignored when `distance` is 0. */
+    std::string direction;
+    /** Level difference from the player; positive is above. */
+    int dz = 0;
+    bool city = false;
+    bool camp = false;
+    /** Note text; empty when the place has no note. */
+    std::string note;
+    int danger_radius = -1;
+    bool in_dangerous_area = false;
+    std::vector<std::string> missions;
+    bool current_objective = false;
+    bool route_destination = false;
+};
+/** "evac shelter, 12 map tiles south, note: supplies" without a final period. */
+std::string format_known_place_row( const known_place &place );
+/** "12 places" or "no places". */
+std::string format_known_place_count( size_t count );
+/** Route preview after the first CHOOSE_DESTINATION press. */
+std::string format_overmap_route_preview( const std::string &destination,
+        const std::string &location, int length, const std::string &confirm_key );
+/** Spoken when no route to the cursor can be found. */
+std::string format_overmap_no_route( const std::string &destination, bool different_level );
+/** Spoken when a route command needs a route and none is selected. */
+std::string format_overmap_no_route_selected();
+/** Current route for the summary: "Route: <destination>, <location>." or "No route." */
+std::string format_overmap_route_state( const std::string &destination,
+                                        const std::string &location );
+/** Overmap summary: prompt, cursor tile, level, and route. */
+std::string format_overmap_summary( const std::string &prompt, const std::string &tile, int z,
+                                    const std::string &route );
+/** "Search results, 5 results. <focus>" */
+std::string format_overmap_search_results( size_t count, const std::string &focus );
+/** "Result 2 of 5. <focus>" */
+std::string format_overmap_search_position( size_t position, size_t count,
+        const std::string &focus );
+/** Spoken after TOGGLE_EXPLORED: "Marked explored" or "Marked unexplored". */
+std::string format_overmap_explored( bool explored );
 /** An item that a pickup stored, with the container it went into, if known. */
 struct pickup_result_item {
     std::string item;

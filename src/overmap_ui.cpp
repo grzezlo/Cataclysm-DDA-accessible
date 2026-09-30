@@ -16,6 +16,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "all_enum_values.h"
@@ -526,6 +528,10 @@ static point_abs_omt draw_notes( const tripoint_abs_omt &origin )
             nmenu.entries[row].ctxt =
                 string_format( _( "<color_light_gray>Distance: </color><color_white>%d</color>" ),
                                distance_player );
+            if( accessibility::is_active() ) {
+                nmenu.entries[row].accessibility_focus = accessibility_gameplay::overmap_note_row(
+                            get_avatar(), tripoint_abs_omt( p, origin.z() ) );
+            }
             row++;
         }
         map_notes_callback cb( notes, origin.z() );
@@ -1438,6 +1444,8 @@ static bool search( const ui_adaptor &om_ui, tripoint_abs_omt &curs, const tripo
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.register_action( "ANY_INPUT" );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
@@ -1484,16 +1492,40 @@ static bool search( const ui_adaptor &om_ui, tripoint_abs_omt &curs, const tripo
     } );
 
     std::string action;
+    int spoken_result = -1;
+    int previous_result = -1;
+    const auto result_focus = [&curs]() {
+        return accessibility::format_overmap_tile( accessibility_gameplay::overmap_tile( get_avatar(),
+                curs ), false );
+    };
     do {
         curs.x() = locations[i].x();
         curs.y() = locations[i].y();
         om_ui.invalidate_ui();
         ui_manager::redraw();
+        if( accessibility::is_active() && spoken_result != i ) {
+            if( spoken_result < 0 ) {
+                accessibility::announce( accessibility::format_overmap_search_results( locations.size(),
+                                         result_focus() ) );
+            } else {
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_result, i, action == "NEXT_TAB" ? 1 : -1 ),
+                    result_focus()
+                } ) );
+            }
+            spoken_result = i;
+        }
         action = ctxt.handle_input( get_option<int>( "BLINK_SPEED" ) );
+        previous_result = i;
         if( uistate.overmap_blinking ) {
             uistate.overmap_show_overlays = !uistate.overmap_show_overlays;
         }
-        if( action == "NEXT_TAB" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
+            accessibility::announce( accessibility::format_overmap_search_position( i + 1,
+                                     locations.size(), result_focus() ) );
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( action == "NEXT_TAB" ) {
             i = ( i + 1 ) % locations.size();
         } else if( action == "PREV_TAB" ) {
             i = ( i + locations.size() - 1 ) % locations.size();
@@ -1930,6 +1962,22 @@ static bool try_travel_to_destination( avatar &player_character, const tripoint_
     return false;
 }
 
+/** Weather at the cursor as the sidebar shows it, or empty when weather is not shown. */
+static std::string accessibility_weather_at( const tripoint_abs_omt &pos )
+{
+    if( !uistate.overmap_debug_weather && !uistate.overmap_visible_weather ) {
+        return std::string();
+    }
+    avatar &player_character = get_avatar();
+    const int sight_points = !player_character.has_trait( trait_DEBUG_NIGHTVISION ) ?
+                             player_character.overmap_modified_sight_range( g->light_level( player_character.posz() ) ) :
+                             100;
+    if( uistate.overmap_debug_weather || player_character.overmap_los( pos, sight_points * 2 ) ) {
+        return string_format( _( "Weather: %s" ), get_weather_at_point( pos )->name.translated() );
+    }
+    return _( "Weather unknown" );
+}
+
 static tripoint_abs_omt display()
 {
     map &here = get_map();
@@ -2016,6 +2064,10 @@ static tripoint_abs_omt display()
     ictxt.register_action( "TOGGLE_FOREST_TRAILS" );
     ictxt.register_action( "TOGGLE_FAST_TRAVEL" );
     ictxt.register_action( "MISSIONS" );
+    ictxt.register_action( "ACCESSIBILITY_KNOWN_PLACES" );
+    ictxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ictxt.register_action( "ACCESSIBILITY_STATUS" );
+    ictxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
     if( data.debug_editor ) {
         ictxt.register_action( "PLACE_TERRAIN" );
@@ -2041,6 +2093,8 @@ static tripoint_abs_omt display()
         draw( g->overmap_data );
     } );
 
+    accessibility_gameplay::overmap_speech speech;
+    speech.open( get_avatar(), data.message, curs );
     do {
         ui_manager::redraw();
 #if (defined TILES || defined _WIN32 || defined WINDOWS )
@@ -2112,11 +2166,16 @@ static tripoint_abs_omt display()
             ret = tripoint_abs_omt::invalid;
         } else if( action == "CREATE_NOTE" ) {
             create_note( curs );
+            speech.announce( get_avatar(), curs );
         } else if( action == "DELETE_NOTE" ) {
             if( overmap_buffer.has_note( curs ) && query_yn( _( "Really delete note?" ) ) ) {
                 overmap_buffer.delete_note( curs );
             }
+            speech.announce( get_avatar(), curs );
         } else if( action == "MARK_DANGER" ) {
+            on_out_of_scope speak_note( [&]() {
+                speech.announce( get_avatar(), curs );
+            } );
             const int danger_radius = overmap_buffer.note_danger_radius( curs );
             if( danger_radius >= 0 &&
                 query_yn( _( "Remove dangerous mark?" ) ) ) {
@@ -2141,9 +2200,28 @@ static tripoint_abs_omt display()
             if( !p.is_invalid() ) {
                 curs.x() = p.x();
                 curs.y() = p.y();
+            } else {
+                speech.announce( get_avatar(), curs );
             }
+        } else if( action == "ACCESSIBILITY_KNOWN_PLACES" ) {
+            if( const std::optional<tripoint_abs_omt> place =
+                    accessibility_gameplay::choose_known_overmap_place( get_avatar() ) ) {
+                curs = *place;
+            }
+            speech.announce( get_avatar(), curs );
+        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+            accessibility::announce( accessibility::format_semantic_sequence(
+                                         accessibility_gameplay::overmap_tile_details( get_avatar(), curs,
+                                                 accessibility_weather_at( curs ) ) ) );
+        } else if( action == "ACCESSIBILITY_STATUS" ) {
+            speech.summary( get_avatar(), curs );
+        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
         } else if( action == "GO_TO_DESTINATION" ) {
             avatar &player_character = get_avatar();
+            if( player_character.omt_path.empty() && accessibility::is_active() ) {
+                accessibility::announce( accessibility::format_overmap_no_route_selected() );
+            }
             if( !player_character.omt_path.empty() ) {
                 const bool driving = player_character.in_vehicle && player_character.controlling_vehicle;
                 if( try_travel_to_destination( player_character, curs, player_character.omt_path.front(),
@@ -2156,6 +2234,9 @@ static tripoint_abs_omt display()
             }
         } else if( action == "CENTER_ON_DESTINATION" ) {
             avatar &player_character = get_avatar();
+            if( player_character.omt_path.empty() && accessibility::is_active() ) {
+                accessibility::announce( accessibility::format_overmap_no_route_selected() );
+            }
             if( !player_character.omt_path.empty() ) {
                 tripoint_abs_omt p = player_character.omt_path[0];
                 curs.x() = p.x();
@@ -2178,6 +2259,9 @@ static tripoint_abs_omt display()
                         keep_overmap_ui = true;
                     }
                 }
+            } else {
+                accessibility_gameplay::announce_overmap_route( player_character, curs,
+                        ictxt.get_desc( "CHOOSE_DESTINATION", 1 ) );
             }
         } else if( action == "TOGGLE_BLINKING" ) {
             uistate.overmap_blinking = !uistate.overmap_blinking;
@@ -2209,6 +2293,10 @@ static tripoint_abs_omt display()
             uistate.overmap_show_revealed_omts = !uistate.overmap_show_revealed_omts;
         } else if( action == "TOGGLE_EXPLORED" ) {
             overmap_buffer.toggle_explored( curs );
+            if( accessibility::is_active() ) {
+                accessibility::announce( accessibility::format_overmap_explored(
+                                             overmap_buffer.is_explored( curs ) ) );
+            }
         } else if( action == "TOGGLE_OVERMAP_WEATHER" ) {
             if( here.is_outside( get_player_character().pos_bub() ) ) {
                 uistate.overmap_visible_weather = !uistate.overmap_visible_weather;
@@ -2220,7 +2308,10 @@ static tripoint_abs_omt display()
         } else if( action == "TOGGLE_FAST_TRAVEL" ) {
             uistate.overmap_fast_travel = !uistate.overmap_fast_travel;
         } else if( action == "SEARCH" ) {
-            if( !search( *ui, curs, orig ) ) {
+            const bool found = search( *ui, curs, orig );
+            // Search results speak their own tiles.
+            speech.sync( get_avatar(), curs );
+            if( !found ) {
                 continue;
             }
         } else if( action == "PLACE_TERRAIN" || action == "PLACE_SPECIAL" ) {
@@ -2237,6 +2328,10 @@ static tripoint_abs_omt display()
             debug_menu::prompt_map_reveal( curs );
         } else if( action == "MISSIONS" ) {
             g->list_missions();
+        }
+        // Speak cursor moves caused by keys, but not the NPC path animation or edge scrolling.
+        if( action != "TIMEOUT" && display_path.empty() ) {
+            speech.update( get_avatar(), curs );
         }
 
         std::chrono::time_point<std::chrono::steady_clock> now = std::chrono::steady_clock::now();

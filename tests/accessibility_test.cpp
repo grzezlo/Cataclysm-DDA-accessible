@@ -28,6 +28,7 @@
 #include "bodygraph.h"
 #include "bodypart.h"
 #include "cata_scope_helpers.h"
+#include "coordinates.h"
 #include "game.h"
 #include "fake_messages.h"
 #include "help.h"
@@ -53,7 +54,10 @@
 #include "mutation_ui.h"
 #include "npc.h"
 #include "npc_opinion.h"
+#include "omdata.h"
 #include "output.h"
+#include "overmap.h"
+#include "overmapbuffer.h"
 #include "player_activity.h"
 #include "player_display.h"
 #include "popup.h"
@@ -262,6 +266,14 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     CHECK( list.input_to_action( alt_d_char ) == "ACCESSIBILITY_DETAILS" );
     CHECK( list.input_to_action( altgr_d ) != "ACCESSIBILITY_DETAILS" );
     CHECK( gameplay.input_to_action( alt_d ) != "ACCESSIBILITY_DETAILS" );
+
+    input_context overmap( "OVERMAP", keyboard_mode::keycode );
+    overmap.register_action( "LIST_NOTES" );
+    overmap.register_action( "ACCESSIBILITY_KNOWN_PLACES" );
+    const input_event alt_l( { keymod_t::alt }, 'l', input_event_t::keyboard_code );
+    const input_event shift_l( { keymod_t::shift }, 'l', input_event_t::keyboard_code );
+    CHECK( overmap.input_to_action( alt_l ) == "ACCESSIBILITY_KNOWN_PLACES" );
+    CHECK( overmap.input_to_action( shift_l ) == "LIST_NOTES" );
 
     input_context yes_no( "YESNO", keyboard_mode::keycode );
     yes_no.register_action( "YES" );
@@ -4739,4 +4751,250 @@ TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[acce
     CHECK( mission_accessibility_row( *first, mission_category::completed ) == completed );
     CHECK( mission_accessibility_details( *first, mission_category::completed, 1,
                                           1 )[0] == completed + " Completed. 1 of 1." );
+}
+
+TEST_CASE( "overmap_formatters_speak_offset_markers_places_and_routes",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_overmap_offset( 2, -3, 0 ) == "3 north 2 east" );
+    CHECK( accessibility::format_overmap_offset( 0, 0, 0 ) == "here" );
+    CHECK( accessibility::format_overmap_offset( -5, 0, -1 ) == "5 west, 1 level below" );
+    CHECK( accessibility::format_overmap_offset( 0, 4, 2 ) == "4 south, 2 levels above" );
+    CHECK( accessibility::format_overmap_level( -1 ) == "Level -1" );
+
+    accessibility::overmap_tile tile;
+    tile.terrain = "forest";
+    tile.dx = 2;
+    tile.dy = -3;
+    CHECK( accessibility::format_overmap_tile( tile, false ) == "forest, 3 north 2 east." );
+    CHECK( accessibility::format_overmap_tile( tile, true ) == "forest." );
+    tile.note = "Base";
+    tile.danger_radius = 3;
+    tile.missions = { "Find a book" };
+    tile.route_destination = true;
+    tile.on_route = true;
+    CHECK( accessibility::format_overmap_tile( tile, false ) ==
+           "forest, note: Base, dangerous area, radius 3, mission target: Find a book, "
+           "route destination, 3 north 2 east." );
+    // Identical terrain drops only the offset; markers stay.
+    CHECK( accessibility::format_overmap_tile( tile, true ) ==
+           "forest, note: Base, dangerous area, radius 3, mission target: Find a book, "
+           "route destination." );
+    accessibility::overmap_tile unknown;
+    unknown.in_dangerous_area = true;
+    unknown.on_route = true;
+    unknown.dy = 1;
+    CHECK( accessibility::format_overmap_tile( unknown, false ) ==
+           "unexplored, in dangerous area, on route, 1 south." );
+
+    CHECK( accessibility::format_overmap_opening( "", "forest, here." ) ==
+           "Overmap. forest, here." );
+    CHECK( accessibility::format_overmap_opening( "<color_white>Select a camp</color>",
+            "forest, here." ) == "Select a camp. forest, here." );
+    CHECK( accessibility::format_overmap_level_change( -1, "basement, here." ) ==
+           "Level -1. basement, here." );
+
+    accessibility::known_place place;
+    place.name = "evac shelter";
+    place.distance = 12;
+    place.direction = "south";
+    place.note = "supplies";
+    CHECK( accessibility::format_known_place_row( place ) ==
+           "evac shelter, 12 map tiles south, note: supplies" );
+    accessibility::known_place city;
+    city.name = "Townsville";
+    city.distance = 1;
+    city.direction = "north";
+    city.city = true;
+    CHECK( accessibility::format_known_place_row( city ) == "Townsville, 1 map tile north, city" );
+    accessibility::known_place target;
+    target.name = "unexplored";
+    target.dz = -1;
+    target.missions = { "Find a book" };
+    target.current_objective = true;
+    target.route_destination = true;
+    target.in_dangerous_area = true;
+    CHECK( accessibility::format_known_place_row( target ) ==
+           "unexplored, here, 1 level below, in dangerous area, mission target: Find a book, "
+           "current objective, route destination" );
+    CHECK( accessibility::format_known_place_count( 0 ) == "no places" );
+    CHECK( accessibility::format_known_place_count( 1 ) == "1 place" );
+    CHECK( accessibility::format_known_place_count( 12 ) == "12 places" );
+
+    CHECK( accessibility::format_overmap_route_preview( "field", "8 map tiles north", 9, "Enter" ) ==
+           "Route to field, 8 map tiles north. 9 map tiles of travel. Press Enter again to travel." );
+    CHECK( accessibility::format_overmap_no_route( "forest", false ) == "No route to forest." );
+    CHECK( accessibility::format_overmap_no_route( "forest", true ) ==
+           "No route to forest. Travel needs the destination on your level." );
+    CHECK( accessibility::format_overmap_no_route_selected() == "No route selected." );
+    CHECK( accessibility::format_overmap_route_state( "", "" ) == "No route selected." );
+    CHECK( accessibility::format_overmap_route_state( "field", "8 map tiles north" ) ==
+           "Route: field, 8 map tiles north." );
+    CHECK( accessibility::format_overmap_summary( "", "forest, here.", 0, "No route selected." ) ==
+           "Overmap. Cursor: forest, here. Level 0. No route selected." );
+    CHECK( accessibility::format_overmap_search_results( 5, "forest, 3 north." ) ==
+           "Search results, 5 results. forest, 3 north." );
+    CHECK( accessibility::format_overmap_search_results( 1, "forest, 3 north." ) ==
+           "Search results, 1 result. forest, 3 north." );
+    CHECK( accessibility::format_overmap_search_position( 2, 5, "forest, 3 north." ) ==
+           "Result 2 of 5. forest, 3 north." );
+    CHECK( accessibility::format_semantic_sequence( {
+        accessibility::format_list_wrap( 4, 0, 1 ), "forest, 3 north."
+    } ) == "Top. forest, 3 north." );
+    CHECK( accessibility::format_overmap_explored( true ) == "Marked explored." );
+    CHECK( accessibility::format_overmap_explored( false ) == "Marked unexplored." );
+}
+
+TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibility]" )
+{
+    static const mission_type_id test_mission( "TEST_MISSION_GOAL_CONDITION2" );
+    static const oter_str_id oter_field( "field" );
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+
+    avatar &you = get_avatar();
+    clear_avatar();
+    you.reset_all_missions();
+    mission::clear_all();
+    const tripoint_abs_omt origin = you.pos_abs_omt();
+    const tripoint_abs_omt north = origin + tripoint_rel_omt( 0, -1, 0 );
+    const tripoint_abs_omt north2 = origin + tripoint_rel_omt( 0, -2, 0 );
+    const tripoint_abs_omt hidden = origin + tripoint_rel_omt( 3, 0, 0 );
+    const tripoint_abs_omt below = hidden + tripoint_rel_omt( 0, 0, -1 );
+    const std::vector<tripoint_abs_omt> changed = { north, north2, hidden };
+    std::vector<std::pair<oter_id, om_vision_level>> previous;
+    previous.reserve( changed.size() );
+    for( const tripoint_abs_omt &pos : changed ) {
+        previous.emplace_back( overmap_buffer.ter( pos ), overmap_buffer.seen( pos ) );
+    }
+    const on_out_of_scope cleanup( [&]() {
+        overmap_buffer.delete_note( hidden );
+        for( size_t index = 0; index < changed.size(); ++index ) {
+            overmap_buffer.ter_set( changed[index], previous[index].first );
+            overmap_buffer.set_seen( changed[index], previous[index].second );
+        }
+        you.omt_path.clear();
+        you.reset_all_missions();
+        mission::clear_all();
+        clear_avatar();
+        accessibility::reset_backend_after_testing();
+    } );
+    overmap_buffer.ter_set( north, oter_field.id() );
+    overmap_buffer.ter_set( north2, oter_field.id() );
+    overmap_buffer.set_seen( north, om_vision_level::full );
+    overmap_buffer.set_seen( north2, om_vision_level::full );
+    overmap_buffer.set_seen( hidden, om_vision_level::unseen );
+    overmap_buffer.add_note( hidden, "B:Base" );
+    overmap_buffer.mark_note_dangerous( hidden, 2, true );
+
+    // Unexplored terrain stays hidden; the player's own note is known.
+    const accessibility::overmap_tile unseen = accessibility_gameplay::overmap_tile( you, hidden );
+    CHECK( unseen.terrain.empty() );
+    CHECK( unseen.note == "Base" );
+    CHECK( unseen.danger_radius == 2 );
+    CHECK( unseen.dx == 3 );
+    const std::string field = accessibility_gameplay::overmap_tile( you, north ).terrain;
+    REQUIRE_FALSE( field.empty() );
+
+    accessibility_gameplay::overmap_speech speech;
+    speech.open( you, "", origin );
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages.back().rfind( "Overmap. ", 0 ) == 0 );
+    CHECK( capture_ptr->messages.back().find( ", here." ) != std::string::npos );
+    speech.update( you, north );
+    CHECK( capture_ptr->messages.back() == field + ", 1 north." );
+    speech.update( you, north2 );
+    CHECK( capture_ptr->messages.back() == field + "." );
+    // An unchanged cursor speaks nothing.
+    speech.update( you, north2 );
+    CHECK( capture_ptr->messages.size() == 3 );
+    speech.update( you, hidden );
+    CHECK( capture_ptr->messages.back() ==
+           "unexplored, note: Base, dangerous area, radius 2, 3 east." );
+    speech.update( you, below );
+    CHECK( capture_ptr->messages.back().rfind( "Level " + std::to_string( below.z() ) + ". ",
+            0 ) == 0 );
+    CHECK( capture_ptr->messages.back().find( "3 east, 1 level below." ) != std::string::npos );
+    speech.announce( you, hidden );
+    CHECK( capture_ptr->messages.back().rfind( "Level " + std::to_string( hidden.z() ) + ". ",
+            0 ) == 0 );
+    speech.announce( you, hidden );
+    CHECK( capture_ptr->messages.back() ==
+           "unexplored, note: Base, dangerous area, radius 2, 3 east." );
+    // A position spoken elsewhere, such as a search result, is not repeated.
+    const size_t spoken = capture_ptr->messages.size();
+    speech.sync( you, north );
+    speech.update( you, north );
+    CHECK( capture_ptr->messages.size() == spoken );
+    CHECK( accessibility_gameplay::overmap_note_row( you, hidden ) ==
+           "Base, 3 map tiles east, dangerous area, radius 2, unexplored." );
+
+    // Mission targets and the route are markers on the tile and in the places list.
+    mission *miss = mission::reserve_new( test_mission, character_id() );
+    if( miss->get_assigned_player_id() == you.getID() ) {
+        miss->set_assigned_player_id( character_id( -2 ) );
+    }
+    miss->assign( you );
+    miss->set_target( north );
+    CHECK( accessibility_gameplay::overmap_tile( you, north ).missions ==
+           std::vector<std::string> { miss->name() } );
+    you.omt_path = { north2, north, origin };
+    CHECK( accessibility_gameplay::overmap_tile( you, north2 ).route_destination );
+    CHECK( accessibility_gameplay::overmap_tile( you, north ).on_route );
+    accessibility_gameplay::announce_overmap_route( you, north2, "Enter" );
+    CHECK( capture_ptr->messages.back() == "Route to " + field +
+           ", 2 map tiles north. 2 map tiles of travel. Press Enter again to travel." );
+    CHECK( accessibility_gameplay::overmap_route_state( you ) ==
+           "Route: " + field + ", 2 map tiles north." );
+    speech.summary( you, north2 );
+    CHECK( capture_ptr->messages.back() == "Overmap. Cursor: " + field +
+           ", route destination, 2 north. Level " + std::to_string( north2.z() ) +
+           ". Route: " + field + ", 2 map tiles north." );
+
+    const std::vector<std::string> details = accessibility_gameplay::overmap_tile_details( you,
+            north, "Weather: sunny" );
+    REQUIRE( details.size() >= 4 );
+    CHECK( details.front() == field + ", mission target: " + miss->name() +
+           ", on route, 1 north." );
+    CHECK( std::find( details.begin(), details.end(),
+                      "Current objective from the cursor: here." ) != details.end() );
+    CHECK( std::find( details.begin(), details.end(), "Weather: sunny" ) != details.end() );
+    CHECK( details.back() == "Level " + std::to_string( north.z() ) + "." );
+    const std::vector<std::string> hidden_details = accessibility_gameplay::overmap_tile_details(
+                you, hidden, "" );
+    // Unexplored tiles describe no terrain beyond the cursor line.
+    CHECK( hidden_details.front() == "unexplored, note: Base, dangerous area, radius 2, 3 east." );
+    CHECK( std::none_of( hidden_details.begin(), hidden_details.end(), []( const std::string & line ) {
+        return line.find( "make out" ) != std::string::npos;
+    } ) );
+
+    const std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> places =
+                accessibility_gameplay::known_overmap_places( you );
+    const auto row_at = [&places]( const tripoint_abs_omt & pos ) {
+        for( const auto &entry : places ) {
+            if( entry.first == pos ) {
+                return accessibility::format_known_place_row( entry.second );
+            }
+        }
+        return std::string();
+    };
+    CHECK( row_at( hidden ) == "unexplored, 3 map tiles east, note: Base, dangerous area, radius 2" );
+    CHECK( row_at( north ) == field + ", 1 map tile north, mission target: " + miss->name() +
+           ", current objective" );
+    CHECK( row_at( north2 ) == field + ", 2 map tiles north, route destination" );
+    for( size_t index = 1; index < places.size(); ++index ) {
+        CHECK( places[index - 1].second.distance <= places[index].second.distance );
+    }
+    for( const auto &entry : places ) {
+        if( entry.second.city || entry.second.camp ) {
+            // Only cities and camps the player has seen are listed.
+            CHECK( overmap_buffer.seen_more_than( entry.first, om_vision_level::outlines ) );
+        }
+    }
+
+    you.omt_path.clear();
+    accessibility_gameplay::announce_overmap_route( you, hidden, "Enter" );
+    CHECK( capture_ptr->messages.back() == "No route to unexplored." );
+    CHECK( accessibility_gameplay::overmap_route_state( you ) == "No route selected." );
 }
