@@ -7311,6 +7311,9 @@ void game::zones_manager()
     ctxt.register_action( "DISABLE_PERSONAL_ZONES" );
     ctxt.register_action( "SHOW_ALL_ZONES" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     if( debug_mode ) {
         ctxt.register_action( "CHANGE_FACTION" );
     }
@@ -7358,6 +7361,8 @@ void game::zones_manager()
     };
 
     auto zones = get_zones();
+    accessibility_gameplay::zones_manager_speech zone_speech( u, zones, active_index,
+            show_all_zones, zones_faction );
 
     auto zones_manager_options = [&]() {
         werase( w_zones_options );
@@ -7562,6 +7567,7 @@ void game::zones_manager()
     bool save = false;
     zones_manager_open = true;
     zone_manager::get_manager().save_zones( "zmgr-temp" );
+    zone_speech.open();
     while( !quit ) {
         if( zone_cnt > 0 ) {
             blink = !blink;
@@ -7585,6 +7591,7 @@ void game::zones_manager()
 
         //Wait for input
         const std::string action = ctxt.handle_input();
+        zone_speech.before();
 
         if( action == "ADD_ZONE" ) {
             do { // not a loop, just for quick bailing out if canceled
@@ -7905,6 +7912,7 @@ void game::zones_manager()
                 stuff_changed = zones_changed;
             }
         }
+        zone_speech.after( action, quit );
     }
     zones_manager_open = false;
     ctxt.reset_timeout();
@@ -8100,6 +8108,9 @@ look_around_result game::look_around(
     const visibility_variables &cache = here.get_visibility_variables_cache();
 
     const bool semantic_look = show_window && !select_zone && !is_moving_zone;
+    // Zone corners and zone moves speak the cursor tile; the caller's popup names the step.
+    const bool semantic_zone = ( select_zone || is_moving_zone ) && accessibility::is_active();
+    const bool semantic_cursor = semantic_look || semantic_zone;
     const tripoint_bub_ms semantic_origin = accessibility_origin.value_or( u.pos_bub( here ) );
     const auto describe_peek_action = [&]( const std::string & action_id ) {
         const std::string action_name = ctxt.get_action_name( action_id );
@@ -8109,11 +8120,11 @@ look_around_result game::look_around(
                string_format( _( "Available peek action: %1$s (%2$s)" ), action_name, binding );
     };
     const auto announce_cursor = [&]( const bool entering ) {
-        if( !semantic_look ) {
+        if( !semantic_cursor ) {
             return;
         }
         std::vector<std::string> parts;
-        if( entering ) {
+        if( entering && semantic_look ) {
             parts.push_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
             parts.push_back( _( "Cursor origin: character position" ) );
             if( peeking ) {
@@ -8349,8 +8360,8 @@ look_around_result game::look_around(
             zoom_out();
             mark_main_ui_adaptor_resize();
         }
-        if( semantic_look && ( lp != last_announced_position || action == "EXTENDED_DESCRIPTION" ||
-                               action == "LIST_ITEMS" ) ) {
+        if( semantic_cursor && ( lp != last_announced_position || action == "EXTENDED_DESCRIPTION" ||
+                                 action == "LIST_ITEMS" ) ) {
             announce_cursor( false );
             last_announced_position = lp;
         }

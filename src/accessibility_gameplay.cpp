@@ -21,6 +21,7 @@
 #include "character.h"
 #include "character_martial_arts.h"
 #include "city.h"
+#include "clzones.h"
 #include "construction.h"
 #include "construction_group.h"
 #include "coordinates.h"
@@ -1241,6 +1242,221 @@ void announce_overmap_travel_start( const avatar &viewer,
                 travel.destination, overmap_location( origin, travel.omt_target ), 0,
                 accessibility::merge_travel_segments( names ) ),
             accessibility::gameplay_speech::meaningful );
+}
+
+
+accessibility::zone_row zone_row( const avatar &viewer, const zone_data &zone )
+{
+    accessibility::zone_row row;
+    row.name = zone.get_name();
+    row.type = zone_manager::get_manager().get_name_from_type( zone.get_type() );
+    row.enabled = zone.get_enabled();
+    row.personal = zone.get_is_personal();
+    row.vehicle = zone.get_is_vehicle();
+    const tripoint_abs_ms origin = viewer.pos_abs();
+    const tripoint_abs_ms center = zone.get_center_point();
+    if( origin.xy() != center.xy() ) {
+        // The zones manager shows the same rounded distance.
+        row.distance = std::max( static_cast<int>( trig_dist( origin.xy(), center.xy() ) ), 1 );
+        row.direction = direction_name( direction_from( origin.xy().raw(), center.xy().raw() ) );
+    }
+    row.dz = center.z() - origin.z();
+    return row;
+}
+
+accessibility::zone_details zone_details( const avatar &viewer, const zone_data &zone,
+        const size_t position, const size_t count )
+{
+    accessibility::zone_details details;
+    details.row = zone_row( viewer, zone );
+    details.position = position;
+    details.count = count;
+    details.displayed = zone.get_is_displayed();
+    const tripoint_abs_ms start = zone.get_start_point();
+    const tripoint_abs_ms end = zone.get_end_point();
+    details.width = std::abs( end.x() - start.x() ) + 1;
+    details.height = std::abs( end.y() - start.y() ) + 1;
+    details.levels = std::abs( end.z() - start.z() ) + 1;
+    if( zone.has_options() ) {
+        details.options = zone.get_options().get_descriptions();
+    }
+    return details;
+}
+
+zones_manager_speech::zones_manager_speech( const avatar &viewer,
+        const std::vector<std::reference_wrapper<zone_data>> &zones, const int &index,
+        const bool &show_all, const faction_id &faction ) : viewer( viewer ), zones( zones ),
+    index( index ), show_all( show_all ), faction( faction )
+{
+}
+
+const zone_data *zones_manager_speech::focused() const
+{
+    if( index < 0 || static_cast<size_t>( index ) >= zones.size() ) {
+        return nullptr;
+    }
+    return &zones[index].get();
+}
+
+std::string zones_manager_speech::focus_row() const
+{
+    const zone_data *zone = focused();
+    return zone ? accessibility::format_zone_row( zone_row( viewer, *zone ) ) : std::string();
+}
+
+size_t zones_manager_speech::enabled_personal_zones() const
+{
+    return static_cast<size_t>( std::count_if( zones.begin(), zones.end(),
+    []( const std::reference_wrapper<zone_data> &zone ) {
+        return zone.get().get_is_personal() && zone.get().get_enabled();
+    } ) );
+}
+
+void zones_manager_speech::open()
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    accessibility::announce( accessibility::format_zones_manager_opening( zones.size(),
+                             focus_row() ) );
+}
+
+void zones_manager_speech::before()
+{
+    previous_index = index;
+    previous_count = zones.size();
+    previous_personal_enabled = enabled_personal_zones();
+    const zone_data *zone = focused();
+    had_focus = zone != nullptr;
+    previous_options.clear();
+    if( !zone ) {
+        return;
+    }
+    previous_name = zone->get_name();
+    previous_start = zone->get_start_point().raw();
+    previous_end = zone->get_end_point().raw();
+    if( zone->has_options() ) {
+        previous_options = zone->get_options().get_descriptions();
+    }
+}
+
+std::string zones_manager_speech::summary() const
+{
+    return accessibility::format_zones_manager_summary( accessibility::format_zone_filter( show_all ),
+            faction == your_fac ? std::string() : faction.str(),
+            focused() ? index + 1 : 0, zones.size(), focus_row() );
+}
+
+std::string zones_manager_speech::details() const
+{
+    const zone_data *zone = focused();
+    if( !zone ) {
+        return accessibility::format_zones_manager_opening( 0, std::string() );
+    }
+    return accessibility::format_zone_details( zone_details( viewer, *zone, index + 1,
+            zones.size() ) );
+}
+
+std::string zones_manager_speech::result( const std::string &action ) const
+{
+    const zone_data *zone = focused();
+    const std::string row = focus_row();
+    const std::string empty = accessibility::format_zones_manager_opening( 0, std::string() );
+    const std::string focus_or_empty = zone ? row : empty;
+    if( action == "ACCESSIBILITY_STATUS" ) {
+        return summary();
+    }
+    if( action == "ACCESSIBILITY_DETAILS" ) {
+        return details();
+    }
+    if( action == "UP" || action == "SCROLL_UP" || action == "DOWN" || action == "SCROLL_DOWN" ||
+        action == "PAGE_UP" || action == "PAGE_DOWN" || action == "HOME" || action == "END" ) {
+        const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
+                              action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
+        return zone ? accessibility::format_semantic_sequence( {
+            accessibility::format_list_wrap( previous_index, index, direction ), row
+        } ) : empty;
+    }
+    if( action == "ADD_ZONE" || action == "ADD_PERSONAL_ZONE" ) {
+        if( zone && zones.size() > previous_count ) {
+            const accessibility::zone_details size = zone_details( viewer, *zone, 0, 0 );
+            return accessibility::format_semantic_sequence( {
+                accessibility::format_zone_size( size.width, size.height, size.levels ), row
+            } );
+        }
+        return focus_or_empty;
+    }
+    if( action == "REMOVE_ZONE" ) {
+        return had_focus && zones.size() < previous_count ?
+               accessibility::format_zone_removed( previous_name, row ) : focus_or_empty;
+    }
+    if( action == "MOVE_ZONE_UP" || action == "MOVE_ZONE_DOWN" ) {
+        return zone ? accessibility::format_zone_moved( zone->get_name(),
+                static_cast<size_t>( index ) + 1, zones.size() ) : empty;
+    }
+    if( action == "ENABLE_ZONE" || action == "DISABLE_ZONE" ) {
+        return zone ? accessibility::format_zone_enabled( zone->get_name(),
+                zone->get_enabled() ) : empty;
+    }
+    if( action == "TOGGLE_ZONE_DISPLAY" ) {
+        return zone ? accessibility::format_zone_displayed( zone->get_name(),
+                zone->get_is_displayed() ) : empty;
+    }
+    if( action == "ENABLE_PERSONAL_ZONES" || action == "DISABLE_PERSONAL_ZONES" ) {
+        const size_t now = enabled_personal_zones();
+        const size_t changed = now > previous_personal_enabled ? now - previous_personal_enabled :
+                               previous_personal_enabled - now;
+        return zones.empty() ? empty : accessibility::format_personal_zones_changed(
+                   action == "ENABLE_PERSONAL_ZONES", changed );
+    }
+    if( action == "SHOW_ALL_ZONES" || action == "CHANGE_FACTION" ) {
+        //~ Faction whose zones the zones manager shows.
+        const std::string filter = action == "CHANGE_FACTION" ?
+                                   string_format( _( "Faction: %s" ), faction.str() ) :
+                                   accessibility::format_zone_filter( show_all );
+        return accessibility::format_zone_list_change( filter, zones.size(), row );
+    }
+    if( action == "CONFIRM" ) {
+        if( !zone || !had_focus || index != previous_index ) {
+            return focus_or_empty;
+        }
+        const accessibility::zone_details now = zone_details( viewer, *zone, 0, 0 );
+        const tripoint start = zone->get_start_point().raw();
+        const tripoint end = zone->get_end_point().raw();
+        if( start != previous_start || end != previous_end ) {
+            const bool resized = end - start != previous_end - previous_start;
+            return accessibility::format_semantic_sequence( {
+                resized ? accessibility::format_zone_size( now.width, now.height, now.levels ) :
+                std::string( _( "Zone moved" ) ), row
+            } );
+        }
+        if( zone->get_name() == previous_name && now.options != previous_options ) {
+            return accessibility::format_semantic_sequence( {
+                row, accessibility::format_zone_options( now.options )
+            } );
+        }
+        return row;
+    }
+    if( action == "QUIT" || action == "SHOW_ZONE_ON_MAP" || action == "HELP_KEYBINDINGS" ) {
+        // Focus returns to the list after a dialog, the map, or a canceled close.
+        return focus_or_empty;
+    }
+    return std::string();
+}
+
+void zones_manager_speech::after( const std::string &action, const bool closing )
+{
+    if( !accessibility::is_active() || action == "TIMEOUT" || closing ) {
+        return;
+    }
+    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+        accessibility::repeat_last_announcement();
+        return;
+    }
+    const std::string speech = result( action );
+    if( !speech.empty() ) {
+        accessibility::announce( speech );
+    }
 }
 
 void travel_canceled()

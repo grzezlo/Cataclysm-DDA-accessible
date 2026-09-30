@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <functional>
 #include <memory>
 #include <string>
 #include <utility>
@@ -28,6 +29,7 @@
 #include "bodygraph.h"
 #include "bodypart.h"
 #include "cata_scope_helpers.h"
+#include "clzones.h"
 #include "coordinates.h"
 #include "game.h"
 #include "fake_messages.h"
@@ -4997,4 +4999,250 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
     accessibility_gameplay::announce_overmap_route( you, hidden, "Enter" );
     CHECK( capture_ptr->messages.back() == "No route to unexplored." );
     CHECK( accessibility_gameplay::overmap_route_state( you ) == "No route selected." );
+}
+
+TEST_CASE( "zone_formatters_speak_row_size_state_and_details", "[accessibility][nogame]" )
+{
+    accessibility::zone_row row;
+    row.name = "Loot: Food";
+    row.type = "Loot: Food";
+    row.distance = 5;
+    row.direction = "north";
+    // A name equal to the type is spoken once.
+    CHECK( accessibility::format_zone_row( row ) == "Loot: Food, enabled, 5 tiles north." );
+    row.name = "Pantry";
+    row.enabled = false;
+    row.personal = true;
+    row.dz = -1;
+    CHECK( accessibility::format_zone_row( row ) ==
+           "Pantry, Loot: Food, personal, disabled, 5 tiles north, 1 level below." );
+    row.personal = false;
+    row.vehicle = true;
+    row.distance = 0;
+    row.dz = 0;
+    CHECK( accessibility::format_zone_row( row ) == "Pantry, Loot: Food, vehicle, disabled, here." );
+    row.distance = 1;
+    row.direction = "east";
+    CHECK( accessibility::format_zone_row( row ) ==
+           "Pantry, Loot: Food, vehicle, disabled, 1 tile east." );
+
+    CHECK( accessibility::format_zone_count( 0 ) == "no zones" );
+    CHECK( accessibility::format_zone_count( 1 ) == "1 zone" );
+    CHECK( accessibility::format_zones_manager_opening( 0, "" ) == "Zones manager, no zones." );
+    CHECK( accessibility::format_zones_manager_opening( 2, "Den, enabled, here." ) ==
+           "Zones manager, 2 zones. Den, enabled, here." );
+    CHECK( accessibility::format_zone_size( 4, 3, 1 ) == "Zone 4 by 3." );
+    CHECK( accessibility::format_zone_size( 4, 3, 2 ) == "Zone 4 by 3, 2 levels." );
+    CHECK( accessibility::format_zone_enabled( "Pantry", true ) == "Pantry enabled." );
+    CHECK( accessibility::format_zone_enabled( "Pantry", false ) == "Pantry disabled." );
+    CHECK( accessibility::format_zone_displayed( "Pantry", true ) == "Pantry shown on map." );
+    CHECK( accessibility::format_zone_displayed( "Pantry", false ) == "Pantry hidden from map." );
+    CHECK( accessibility::format_zone_moved( "Pantry", 2, 5 ) == "Pantry, 2 of 5." );
+    CHECK( accessibility::format_zone_removed( "Pantry", "Den, enabled, here." ) ==
+           "Removed Pantry. Den, enabled, here." );
+    CHECK( accessibility::format_zone_removed( "Pantry", "" ) == "Removed Pantry. No zones." );
+    CHECK( accessibility::format_personal_zones_changed( true, 2 ) ==
+           "2 personal zones enabled." );
+    CHECK( accessibility::format_personal_zones_changed( false, 1 ) ==
+           "1 personal zone disabled." );
+    CHECK( accessibility::format_personal_zones_changed( true, 0 ) ==
+           "No personal zones changed." );
+    CHECK( accessibility::format_zone_list_change( accessibility::format_zone_filter( true ), 3,
+            "Den, enabled, here." ) == "Showing all zones, 3 zones. Den, enabled, here." );
+    CHECK( accessibility::format_zone_list_change( accessibility::format_zone_filter( false ), 0,
+            "" ) == "Hiding distant zones, no zones." );
+    CHECK( accessibility::format_zone_options( {} ).empty() );
+    CHECK( accessibility::format_zone_options( { { "Filter: ", "apple" } } ) ==
+    "Options: Filter: apple." );
+    CHECK( accessibility::format_zone_options( { { "Unload: ", "mods ignore stacks over 20, " } } ) ==
+    "Options: Unload: mods ignore stacks over 20." );
+
+    accessibility::zone_details details;
+    details.row = row;
+    details.position = 2;
+    details.count = 5;
+    details.displayed = true;
+    details.width = 4;
+    details.height = 3;
+    details.options = { { "Filter: ", "apple" } };
+    CHECK( accessibility::format_zone_details( details ) ==
+           "Pantry, Loot: Food, vehicle, disabled, 1 tile east. 2 of 5. Zone 4 by 3. Shown on map. "
+           "Options: Filter: apple." );
+    CHECK( accessibility::format_zones_manager_summary( "Showing all zones", "", 2, 5,
+            "Den, enabled, here." ) == "Zones manager. Showing all zones. 2 of 5. Den, enabled, here." );
+    CHECK( accessibility::format_zones_manager_summary( "Hiding distant zones", "hells_raiders", 0,
+            0, "" ) == "Zones manager. Hiding distant zones. Faction: hells_raiders. No zones." );
+}
+
+TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessibility]" )
+{
+    static const zone_type_id zone_food( "LOOT_FOOD" );
+    static const zone_type_id zone_unsorted( "LOOT_UNSORTED" );
+    static const zone_type_id zone_custom( "LOOT_CUSTOM" );
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    clear_map();
+    clear_avatar();
+    clear_zones();
+    const on_out_of_scope cleanup( []() {
+        clear_zones();
+        accessibility::reset_backend_after_testing();
+    } );
+
+    avatar &you = get_avatar();
+    zone_manager &mgr = zone_manager::get_manager();
+    const tripoint_abs_ms origin = you.pos_abs();
+    const faction_id fac = you.get_faction()->id;
+    mgr.add( "Pantry", zone_food, fac, false, true, origin + tripoint_rel_ms( -1, -6, 0 ),
+             origin + tripoint_rel_ms( 1, -4, 0 ), nullptr, true );
+    mgr.add( "Sorting", zone_unsorted, fac, false, true, origin, origin, nullptr, true );
+
+    faction_id faction = your_fac;
+    REQUIRE( faction == fac );
+    std::vector<zone_manager::ref_zone_data> zones = mgr.get_zones( faction );
+    REQUIRE( zones.size() == 2 );
+    REQUIRE( zones[0].get().get_name() == "Pantry" );
+    int index = 0;
+    bool show_all = false;
+    accessibility_gameplay::zones_manager_speech speech( you, zones, index, show_all, faction );
+    const auto act = [&]( const std::string & action, const std::function<void()> &change ) {
+        speech.before();
+        change();
+        speech.after( action, false );
+    };
+    const auto nothing = []() {};
+
+    const std::string pantry = "Pantry, " + mgr.get_name_from_type( zone_food ) +
+                               ", enabled, 5 tiles north.";
+    const std::string sorting = "Sorting, " + mgr.get_name_from_type( zone_unsorted ) +
+                                ", enabled, here.";
+    CHECK( accessibility::format_zone_row( accessibility_gameplay::zone_row( you,
+                                           zones[0].get() ) ) == pantry );
+    speech.open();
+    REQUIRE( capture_ptr->messages.size() == 1 );
+    CHECK( capture_ptr->messages.back() == "Zones manager, 2 zones. " + pantry );
+
+    // Focus moves speak the row; a wrap says where focus went.
+    act( "DOWN", [&]() {
+        index = 1;
+    } );
+    CHECK( capture_ptr->messages.back() == sorting );
+    act( "DOWN", [&]() {
+        index = 0;
+    } );
+    CHECK( capture_ptr->messages.back() == "Top. " + pantry );
+    act( "UP", [&]() {
+        index = 1;
+    } );
+    CHECK( capture_ptr->messages.back() == "Bottom. " + sorting );
+
+    // Blink timeouts and closing are silent; a canceled close returns focus.
+    const size_t spoken = capture_ptr->messages.size();
+    act( "TIMEOUT", nothing );
+    speech.before();
+    speech.after( "QUIT", true );
+    CHECK( capture_ptr->messages.size() == spoken );
+    act( "QUIT", nothing );
+    CHECK( capture_ptr->messages.back() == sorting );
+    act( "HELP_KEYBINDINGS", nothing );
+    CHECK( capture_ptr->messages.size() == spoken + 2 );
+
+    // State changes speak the new state.
+    act( "DISABLE_ZONE", [&]() {
+        zones[1].get().set_enabled( false );
+    } );
+    CHECK( capture_ptr->messages.back() == "Sorting disabled." );
+    act( "ENABLE_ZONE", [&]() {
+        zones[1].get().set_enabled( true );
+    } );
+    CHECK( capture_ptr->messages.back() == "Sorting enabled." );
+    act( "TOGGLE_ZONE_DISPLAY", [&]() {
+        zones[1].get().toggle_display();
+    } );
+    CHECK( capture_ptr->messages.back() == "Sorting shown on map." );
+    act( "TOGGLE_ZONE_DISPLAY", [&]() {
+        zones[1].get().toggle_display();
+    } );
+    CHECK( capture_ptr->messages.back() == "Sorting hidden from map." );
+    act( "ENABLE_PERSONAL_ZONES", nothing );
+    CHECK( capture_ptr->messages.back() == "No personal zones changed." );
+
+    // Reordering speaks the new position.
+    act( "MOVE_ZONE_UP", [&]() {
+        mgr.swap( zones[1], zones[0] );
+        zones = mgr.get_zones( faction );
+        index = 0;
+    } );
+    CHECK( capture_ptr->messages.back() == "Sorting, 1 of 2." );
+    REQUIRE( zones[1].get().get_name() == "Pantry" );
+
+    // A new zone speaks its size and row; canceled creation returns focus.
+    act( "ADD_ZONE", [&]() {
+        shared_ptr_fast<zone_options> options = zone_options::create( zone_custom );
+        dynamic_cast<loot_options &>( *options ).set_mark( "apple" );
+        mgr.add( "Apples", zone_custom, fac, false, true, origin + tripoint_rel_ms( 2, -1, 0 ),
+                 origin + tripoint_rel_ms( 6, 1, 0 ), options, true );
+        zones = mgr.get_zones( faction );
+        index = 2;
+    } );
+    REQUIRE( zones.size() == 3 );
+    const std::string apples = "Apples, " + mgr.get_name_from_type( zone_custom ) +
+                               ", enabled, 4 tiles east.";
+    CHECK( capture_ptr->messages.back() == "Zone 5 by 3. " + apples );
+    act( "ADD_ZONE", nothing );
+    CHECK( capture_ptr->messages.back() == apples );
+
+    // Edits speak the changed options, size, or position.
+    act( "CONFIRM", [&]() {
+        dynamic_cast<loot_options &>( zones[2].get().get_options() ).set_mark( "pear" );
+    } );
+    CHECK( capture_ptr->messages.back() == apples + " Options: Filter: pear." );
+    act( "CONFIRM", [&]() {
+        zones[2].get().set_position( { origin + tripoint_rel_ms( 3, 0, 0 ), origin + tripoint_rel_ms( 5, 0, 0 ) } );
+    } );
+    CHECK( capture_ptr->messages.back() == "Zone 3 by 1. " + apples );
+    act( "CONFIRM", [&]() {
+        zones[2].get().set_position( { origin + tripoint_rel_ms( 3, 1, 0 ), origin + tripoint_rel_ms( 5, 1, 0 ) } );
+    } );
+    CHECK( capture_ptr->messages.back().rfind( "Zone moved. Apples, ", 0 ) == 0 );
+    act( "CONFIRM", nothing );
+    CHECK( capture_ptr->messages.back().rfind( "Apples, ", 0 ) == 0 );
+
+    // Details and the summary are available on request.
+    act( "ACCESSIBILITY_DETAILS", nothing );
+    CHECK( capture_ptr->messages.back().find( " 3 of 3. Zone 3 by 1. Not shown on map. "
+            "Options: Filter: pear." ) != std::string::npos );
+    act( "ACCESSIBILITY_STATUS", nothing );
+    CHECK( capture_ptr->messages.back().rfind( "Zones manager. Hiding distant zones. 3 of 3. Apples, ",
+            0 ) == 0 );
+    const std::string summary = capture_ptr->messages.back();
+    act( "ACCESSIBILITY_REPEAT_LAST", nothing );
+    CHECK( capture_ptr->messages.back() == summary );
+
+    // Changing the filter speaks the filter, count, and row.
+    act( "SHOW_ALL_ZONES", [&]() {
+        show_all = true;
+        index = 0;
+    } );
+    CHECK( capture_ptr->messages.back() == "Showing all zones, 3 zones. " + sorting );
+
+    // Removal names the removed zone and the new focus.
+    act( "REMOVE_ZONE", [&]() {
+        mgr.remove( zones[0] );
+        zones = mgr.get_zones( faction );
+        index = 0;
+    } );
+    CHECK( capture_ptr->messages.back() == "Removed Sorting. " + pantry );
+    act( "REMOVE_ZONE", [&]() {
+        mgr.remove( zones[1] );
+        mgr.remove( zones[0] );
+        zones = mgr.get_zones( faction );
+        index = 0;
+    } );
+    CHECK( capture_ptr->messages.back() == "Removed Pantry. No zones." );
+    act( "ACCESSIBILITY_STATUS", nothing );
+    CHECK( capture_ptr->messages.back() == "Zones manager. Showing all zones. No zones." );
+    act( "DOWN", nothing );
+    CHECK( capture_ptr->messages.back() == "Zones manager, no zones." );
 }

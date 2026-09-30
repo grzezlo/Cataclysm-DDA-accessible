@@ -12,6 +12,7 @@
 #include "accessibility_format.h"
 #include "coords_fwd.h"
 #include "point.h"
+#include "type_id.h"
 
 class Character;
 class Creature;
@@ -25,6 +26,7 @@ class recipe;
 struct requirement_data;
 class uilist;
 class vehicle;
+class zone_data;
 struct item_info_data;
 struct visibility_variables;
 namespace accessibility
@@ -165,6 +167,60 @@ class overmap_speech
         std::string prompt;
         tripoint spoken = tripoint::invalid;
         std::string terrain;
+};
+
+/** Row speech model for one zone in the zones manager. */
+accessibility::zone_row zone_row( const avatar &viewer, const zone_data &zone );
+/** Details of one zone at one-based `position` of `count`. */
+accessibility::zone_details zone_details( const avatar &viewer, const zone_data &zone,
+        size_t position, size_t count );
+
+/**
+ * Speech for one zones manager session.  It keeps references to the manager's
+ * list, focus, and filter so game.cpp needs only a call before and after each
+ * action; it compares the two to speak the result of the action.
+ */
+class zones_manager_speech
+{
+    public:
+        zones_manager_speech( const avatar &viewer,
+                              const std::vector<std::reference_wrapper<zone_data>> &zones, const int &index,
+                              const bool &show_all, const faction_id &faction );
+        /** Speak the screen name, zone count, and focused zone. */
+        void open();
+        /** Remember the state before the action is handled. */
+        void before();
+        /** Speak the result of `action`; `closing` is set when the manager closes. */
+        void after( const std::string &action, bool closing );
+        /** Screen summary for ACCESSIBILITY_STATUS. */
+        std::string summary() const;
+        /** Focused zone details for ACCESSIBILITY_DETAILS. */
+        std::string details() const;
+        /**
+         * Speech for the result of `action` since before(), or empty.  Actions
+         * that return focus from a dialog speak the focused zone.
+         */
+        std::string result( const std::string &action ) const;
+    private:
+        std::string focus_row() const;
+        const zone_data *focused() const;
+        size_t enabled_personal_zones() const;
+
+        const avatar &viewer;
+        const std::vector<std::reference_wrapper<zone_data>> &zones;
+        const int &index;
+        const bool &show_all;
+        const faction_id &faction;
+
+        // State before the current action.
+        int previous_index = 0;
+        size_t previous_count = 0;
+        size_t previous_personal_enabled = 0;
+        bool had_focus = false;
+        std::string previous_name;
+        tripoint previous_start;
+        tripoint previous_end;
+        std::vector<std::pair<std::string, std::string>> previous_options;
 };
 
 /** The player confirmed cancelling auto-travel; the stop needs no travel speech. */

@@ -1571,6 +1571,196 @@ std::string format_overmap_explored( const bool explored )
     return format_semantic_sequence( { explored ? _( "Marked explored" ) : _( "Marked unexplored" ) } );
 }
 
+namespace
+{
+
+std::string zone_row_parts( const zone_row &row )
+{
+    const std::string name = collapse_whitespace( row.name );
+    std::vector<std::string> parts = { name };
+    const std::string type = collapse_whitespace( row.type );
+    if( !type.empty() && type != name ) {
+        parts.push_back( type );
+    }
+    if( row.personal ) {
+        parts.emplace_back( _( "personal" ) );
+    }
+    if( row.vehicle ) {
+        parts.emplace_back( _( "vehicle" ) );
+    }
+    parts.emplace_back( row.enabled ? _( "enabled" ) : _( "disabled" ) );
+    if( row.distance > 0 ) {
+        //~ Distance and compass direction from the player to a zone, such as "5 tiles north".
+        parts.push_back( string_format( n_gettext( "%1$d tile %2$s", "%1$d tiles %2$s", row.distance ),
+                                        row.distance, row.direction ) );
+    } else if( row.dz == 0 ) {
+        parts.emplace_back( _( "here" ) );
+    }
+    if( row.dz != 0 ) {
+        const int levels = std::abs( row.dz );
+        parts.push_back( row.dz > 0 ?
+                         string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
+                         string_format( n_gettext( "%d level below", "%d levels below", levels ), levels ) );
+    }
+    return string_join( parts, _( ", " ) );
+}
+
+/** Trim spaces and trailing separators left by the options pane layout. */
+std::string trim_zone_option_text( const std::string &text )
+{
+    std::string result = collapse_whitespace( text );
+    while( !result.empty() && ( result.back() == ' ' || result.back() == ',' ) ) {
+        result.pop_back();
+    }
+    size_t start = 0;
+    while( start < result.size() && result[start] == ' ' ) {
+        ++start;
+    }
+    return result.substr( start );
+}
+
+} // namespace
+
+std::string format_zone_row( const zone_row &row )
+{
+    return format_semantic_sequence( { zone_row_parts( row ) } );
+}
+
+std::string format_zone_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "no zones" );
+    }
+    return string_format( n_gettext( "%d zone", "%d zones", count ), static_cast<int>( count ) );
+}
+
+std::string format_zones_manager_opening( const size_t count, const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { _( "Zones manager" ), format_zone_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_zone_size( const int width, const int height, const int levels )
+{
+    //~ Size of a zone in tiles, such as "Zone 4 by 3".
+    std::string size = string_format( _( "Zone %1$d by %2$d" ), width, height );
+    if( levels > 1 ) {
+        size = string_join( std::vector<std::string> { size,
+                            string_format( n_gettext( "%d level", "%d levels", levels ), levels )
+                                                     }, _( ", " ) );
+    }
+    return format_semantic_sequence( { size } );
+}
+
+std::string format_zone_enabled( const std::string &name, const bool enabled )
+{
+    //~ A zone was enabled or disabled: %s is the zone name.
+    return format_semantic_sequence( { string_format( enabled ? _( "%s enabled" ) :
+                                       _( "%s disabled" ), collapse_whitespace( name ) )
+                                     } );
+}
+
+std::string format_zone_displayed( const std::string &name, const bool displayed )
+{
+    //~ A zone's map display was toggled: %s is the zone name.
+    return format_semantic_sequence( { string_format( displayed ? _( "%s shown on map" ) :
+                                       _( "%s hidden from map" ), collapse_whitespace( name ) )
+                                     } );
+}
+
+std::string format_zone_moved( const std::string &name, const size_t position, const size_t count )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { collapse_whitespace( name ), format_list_position( position, count ) },
+        _( ", " ) )
+    } );
+}
+
+std::string format_zone_removed( const std::string &name, const std::string &focus )
+{
+    //~ A zone was removed: %s is the zone name.
+    return format_semantic_sequence( {
+        string_format( _( "Removed %s" ), collapse_whitespace( name ) ),
+        focus.empty() ? std::string( _( "No zones" ) ) : focus
+    } );
+}
+
+std::string format_personal_zones_changed( const bool enabled, const size_t changed )
+{
+    if( changed == 0 ) {
+        return format_semantic_sequence( { _( "No personal zones changed" ) } );
+    }
+    const int count = static_cast<int>( changed );
+    return format_semantic_sequence( { enabled ?
+                                       string_format( n_gettext( "%d personal zone enabled", "%d personal zones enabled", count ), count ) :
+                                       string_format( n_gettext( "%d personal zone disabled", "%d personal zones disabled", count ), count )
+                                     } );
+}
+
+std::string format_zone_filter( const bool show_all )
+{
+    return show_all ? _( "Showing all zones" ) : _( "Hiding distant zones" );
+}
+
+std::string format_zone_list_change( const std::string &filter, const size_t count,
+                                     const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { filter, format_zone_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_zone_options( const std::vector<std::pair<std::string, std::string>> &options )
+{
+    std::vector<std::string> values;
+    for( const std::pair<std::string, std::string> &option : options ) {
+        std::string label = trim_zone_option_text( option.first );
+        const std::string value = trim_zone_option_text( option.second );
+        if( !label.empty() && label.back() == ':' ) {
+            label.pop_back();
+        }
+        if( label.empty() ) {
+            values.push_back( value );
+        } else {
+            //~ A zone option and its value, such as "Filter: food".
+            values.push_back( string_format( _( "%1$s: %2$s" ), label, value ) );
+        }
+    }
+    if( values.empty() ) {
+        return std::string();
+    }
+    //~ Options of a zone, such as "Options: Filter: food".
+    return format_semantic_sequence( { string_format( _( "Options: %s" ),
+                                       string_join( values, _( ", " ) ) )
+                                     } );
+}
+
+std::string format_zone_details( const zone_details &details )
+{
+    return format_semantic_sequence( {
+        zone_row_parts( details.row ),
+        format_list_position( details.position, details.count ),
+        format_zone_size( details.width, details.height, details.levels ),
+        details.displayed ? _( "Shown on map" ) : _( "Not shown on map" ),
+        format_zone_options( details.options )
+    } );
+}
+
+std::string format_zones_manager_summary( const std::string &filter, const std::string &faction,
+        const size_t position, const size_t count, const std::string &focus )
+{
+    return format_semantic_sequence( {
+        _( "Zones manager" ), filter,
+        //~ Faction whose zones the zones manager shows.
+        faction.empty() ? std::string() : string_format( _( "Faction: %s" ), faction ),
+        count == 0 ? std::string( _( "No zones" ) ) : format_list_position( position, count ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {
