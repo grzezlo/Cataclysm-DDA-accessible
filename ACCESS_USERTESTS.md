@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T145.
+Last assigned test ID: T150.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -930,3 +930,44 @@ storage in normal play; any start works for these tests.
   returns and speaks the row.  `r` speaks "Removed <name>." and the new
   focused row, or "No zones" after the last one.  Escape asks "Save
   changes?" with the Stage 05 prompt; cancel it and hear the row again.
+
+## Stage 19: Vehicle controls, driving, and status
+
+Spawn a car on an open road with Debug menu > Spawning… > Spawn a vehicle
+("Car"), fully fueled and undamaged.  Spawn walls with Debug menu > Map… >
+Change terrain, or drive toward a building.
+
+- **T146 - Entry and controls.**  Walk into the car and onto the driver's
+  seat.  Each step inside speaks the vehicle, the part, and "controls" on
+  the driver's tile ("Car, seat, controls").  Press `^` (vehicle controls)
+  or `e` on the controls: the menu speaks its title, count, and focused row
+  once.  Choose "Turn on the engine" and hear the engine starting message
+  after the start time.  In "Control individual engines" the rows speak
+  "<engine>, <fuel>, on" or "off"; toggling one speaks only the row with its
+  new state, not the menu title again.
+- **T147 - Speed and steering.**  While in control, press Up (numpad 8)
+  and hear "Cruise <n> mph."; keep pressing until you hear "above safe
+  speed" and finally "maximum".  Press Down to slow and reverse ("Cruise 5
+  mph reverse.").  Press Left or Right and hear "Heading <direction>, <n>
+  degrees."  Walking steps are spoken, but the vehicle moving you is
+  silent: the terrain under the car is not named each turn.
+- **T148 - Driving status.**  While in control and moving, press `Alt+S`
+  and hear the vehicle name, speed and cruise speed, any engine strain,
+  heading (and "turning to" while the car turns), "Engine on", each fuel
+  and the battery with its percentage and time until empty or full, and
+  "Skidding" when it skids.  `Alt+R` repeats it.  Let go of the controls
+  and `Alt+S` opens the normal status review again.
+- **T149 - Obstacle ahead.**  Drive slowly toward a wall.  When it becomes
+  visible on your path, hear "wall ahead, <n> tiles" once; it is not
+  repeated each turn.  Turn away so it leaves the path and back so it
+  re-enters: it is spoken again.  Reverse toward an obstacle and hear
+  "<name> behind, <n> tiles".  A wall you cannot see (at night without
+  headlights, or blindfolded) is not announced.  Collisions are reported
+  by the game messages.
+- **T150 - Electronics and handbrake.**  In the vehicle controls open
+  "Control electronics", toggle the headlights, and hear "Turned on
+  headlights." followed only by the focused row ("Turn off headlights").
+  While moving, press `s` (smash, the handbrake while driving) and hear "You
+  pull a handbrake."; `Alt+S` then speaks cruise 0.  Choose "Stop driving"
+  and hear the engine-off message.  Interrupt any of these with Control;
+  nothing is repeated automatically.

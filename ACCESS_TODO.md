@@ -55,63 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 19 - Vehicle controls, driving, and status
-
-**Outcome:** Vehicle entry, controls, driving feedback, and status readouts are
-accessible through speech.
-
-**Code inventory:** `src/vehicle_use.cpp` (controls, electronics, interact menu),
-`src/vehicle_display.cpp` (fuel gauges, speed gauge), vehicle movement in
-`src/vehicle_move.cpp`, and vehicle action dispatch in `src/game.cpp`.
-
-**Implementation hints:**
-
-- Vehicle interaction entry: `vehicle::interact_with()` in `src/vehicle_use.cpp`
-  builds and queries a `veh_menu` (wraps `uilist`).
-- `veh_menu::query()` in `src/veh_utils.cpp` creates `uilist` with context
-  `"VEHICLE"`.  Existing uilist hooks provide basic focus announcements.
-- Electronics menu: `vehicle::build_electronics_menu()` in `src/vehicle_use.cpp`
-  — toggles for lights, stereo, climate, kitchen.  State changes via
-  `add_electronic_toggle()`.
-- Handbrake: `handbrake()` in `src/vehicle_use.cpp` zeroes cruise velocity.
-- Engine control: `vehicle::control_engines()` in `src/vehicle_use.cpp`.
-- Start/stop: `vehicle::start_engines()` / `vehicle::stop_engines()` in
-  `src/vehicle_use.cpp`.
-- Driving: `pldrive()` in `src/handle_action.cpp` calls `vehicle::pldrive()`
-  in `src/vehicle_move.cpp`.
-- Cruise control: `vehicle::cruise_change()` in `src/vehicle_move.cpp`.
-- Speed gauge: `vehicle::print_speed_gauge()` in `src/vehicle_display.cpp` —
-  cruise target, actual speed, strain coloration (normal/yellow/red).
-- Fuel gauge: `vehicle::print_fuel_indicator()` in `src/vehicle_display.cpp` —
-  percentage, fuel name, rate, estimated time remaining.
-- For accessibility: create `vehicle::get_accessibility_status_summary()`
-  using `print_speed_gauge` and `print_fuel_indicators` data for on-demand
-  status readout during driving.
-
-**Selected interaction (option A, changes spoken, status on request):**
-
-- Keys are unchanged.  Conventions 1 and 8 apply; vehicle menus use the
-  shared list speech.
-- Each control change speaks the new state: cruise speed, heading, engine
-  on or off, handbrake.
-- A newly visible obstacle on the current heading within a few tiles is
-  announced once, like a threat transition ("wall ahead, 4 tiles"), and again
-  only after it leaves and re-enters the path.  Collisions and warnings come
-  from game messages.
-- The terrain under the vehicle is not spoken per step.
-- `Alt+S` while driving speaks actual and cruise speed, heading, engine
-  state, fuel and power with estimated time, and handbrake.
-
-**Success criteria:** Entry position, control focus, speed, heading,
-turn/movement result, cruise state, fuel/power, and warnings are announced.
-Movement feedback distinguishes character movement from vehicle motion.
-
-**Possible automated tests:** Reuse vehicle fixtures for entry/control, start,
-speed/heading change, blocked motion, cruise, fuel/power, and exit.
-
-**User-test scenarios:** Enter, start, steer, accelerate, stop, and
-leave a vehicle; toggle electronics; exercise a warning and blocked case.
-
 ## Stage 19A - Vehicle examination and maintenance
 
 **Outcome:** Vehicle part inspection, installation, repair, and removal are

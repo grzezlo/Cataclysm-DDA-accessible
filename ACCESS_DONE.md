@@ -1368,3 +1368,45 @@ Limitations:
   screen's own distance also counts the level difference.
 - Temporarily disabled zones are reset when the manager opens, so no
   temporary state is spoken.
+
+## 2026-09-30 — Stage 19: Vehicle controls, driving, and status
+
+- Implemented the selected interaction (option A, changes spoken, status on
+  request; conventions 1 and 8).  Keys are unchanged; vehicle menus use the
+  shared list speech.
+- Driving inputs speak the new cruise speed ("Cruise 20 mph."), with "above
+  safe speed" when the running engine would strain and "maximum" when the
+  request is past the limit, and the new steering target ("Heading east, 105
+  degrees.").  Engine start and stop, handbrake, electronics, and collision
+  results keep their existing game messages.
+- Before each input while the player controls a vehicle, the nearest newly
+  visible obstacle on the vehicle's swept path (impassable terrain or
+  furniture, or another vehicle) is spoken once ("wall ahead, 3 tiles"),
+  looking behind when reversing, until it leaves the path.  The lookahead
+  is five tiles beyond the distance covered in one turn at the current speed.
+- Vehicle motion is silent; walking onto a vehicle tile names the vehicle,
+  the displayed part, and "controls" when present.
+- `Alt+S` while controlling a vehicle speaks name, speed, cruise, engine
+  strain (the speed gauge colors), heading with the steering target while
+  turning, engine state, each fuel and the battery with percentage and time
+  until empty or full, and skidding.  The keybinding name says so.
+- Vehicle menus that reopen after a kept-open action speak only the queued
+  result and the focused row (`uilist::accessibility_reopen()`).  Engine
+  selection rows speak "<engine>, <fuel>, on/off" instead of "[x]".
+- `test_access.bat` passed 1848 assertions in 100 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `2075dfa1dd`.
+
+Limitations:
+
+- NVDA interaction quality is unverified.  Tests drive the speech with
+  direct vehicle changes; the menu reopen speech and the full `pldrive`
+  input path are not covered by automated tests.
+- There is no persistent handbrake state in the game, so `Alt+S` does not
+  report one; the handbrake message and the zero cruise speed describe it.
+- While controlling a vehicle, `Alt+S` no longer opens the status review;
+  let go of the controls to reach it.
+- Creatures on the path are not obstacle announcements; hostile ones use
+  the threat alerts.  Passable but damaging terrain is not announced.
+- Remote-controlled vehicles get the same speech; obstacles are judged from
+  the player's own view.
