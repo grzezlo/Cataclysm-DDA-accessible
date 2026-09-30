@@ -379,13 +379,13 @@ std::string format_semantic_sequence( const std::vector<std::string> &parts )
     return result;
 }
 
-std::string format_main_menu_world( const std::string &name, const size_t save_count )
+std::string format_world_row( const std::string &name, const size_t character_count )
 {
-    return format_semantic_sequence( {
-        name,
-        string_format( n_gettext( "%d save", "%d saves", save_count ),
-                       static_cast<int>( save_count ) )
-    } );
+    //~ The number of characters saved in a world.
+    const std::string characters = character_count == 0 ? std::string( _( "no characters" ) ) :
+                                   string_format( n_gettext( "%d character", "%d characters", character_count ),
+                                           static_cast<int>( character_count ) );
+    return string_join( std::vector<std::string> { name, characters }, _( ", " ) );
 }
 
 std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
@@ -1572,6 +1572,125 @@ std::string format_character_start_location( const std::string &name, const int 
     return string_join( std::vector<std::string> {
         name, string_format( n_gettext( "%d variant", "%d variants", variants ), variants )
     }, _( ", " ) );
+}
+
+std::string format_list_open( const std::string &name, const size_t count,
+                              const std::string &focus )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { name, format_list_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_world_setting( const std::string &label, const std::string &value )
+{
+    //~ A world creation setting and its value, such as "Population density: High".
+    return string_format( _( "%1$s: %2$s" ), label, value );
+}
+
+std::string format_world_creation_summary( const size_t position, const size_t count,
+        const std::vector<std::string> &settings, const bool custom_options, const size_t mod_count )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { _( "Create World" ), format_list_position( position, count ) },
+        _( ", " ) ),
+        string_join( settings, _( ", " ) ),
+        custom_options ? _( "Advanced options customized" ) : std::string(),
+        string_format( n_gettext( "%d mod in load order", "%d mods in load order", mod_count ),
+                       static_cast<int>( mod_count ) )
+    } );
+}
+
+std::string format_world_mod_row( const world_mod_row &row )
+{
+    std::vector<std::string> parts { row.name };
+    if( row.missing ) {
+        parts.emplace_back( _( "not installed" ) );
+    }
+    if( row.active ) {
+        parts.emplace_back( _( "active" ) );
+    }
+    if( row.obsolete ) {
+        parts.emplace_back( _( "obsolete" ) );
+    }
+    if( row.incompatible ) {
+        parts.emplace_back( _( "incompatible with an active mod" ) );
+    }
+    if( !row.unavailable.empty() ) {
+        //~ Why a mod cannot be activated, such as "Unavailable: missing dependency aftershock".
+        parts.push_back( string_format( _( "Unavailable: %s" ), row.unavailable ) );
+    }
+    parts.push_back( row.category );
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_mod_list_pane( const std::string &pane, const std::string &tab )
+{
+    //~ The mod list pane and its category tab, such as "Mod List: Default".
+    return string_format( _( "%1$s: %2$s" ), pane, tab );
+}
+
+std::string format_mod_added( const std::string &name, const size_t position, const size_t count,
+                              const std::vector<std::string> &also_added,
+                              const std::vector<std::string> &also_removed )
+{
+    return format_semantic_sequence( {
+        //~ A mod added to the load order: "Added Magiclysm, position 5 of 5".
+        string_format( _( "Added %1$s, position %2$s" ), name, format_list_position( position, count ) ),
+        also_added.empty() ? std::string() :
+        string_format( _( "Also added: %s" ), enumerate_as_string( also_added ) ),
+        also_removed.empty() ? std::string() :
+        string_format( _( "Also removed: %s" ), enumerate_as_string( also_removed ) )
+    } );
+}
+
+std::string format_mod_removed( const std::string &name, const size_t count,
+                                const std::vector<std::string> &also_removed )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> {
+            string_format( _( "Removed %s" ), name ),
+            string_format( n_gettext( "%d mod in load order", "%d mods in load order", count ),
+                           static_cast<int>( count ) )
+        }, _( ", " ) ),
+        also_removed.empty() ? std::string() :
+        string_format( _( "Also removed: %s" ), enumerate_as_string( also_removed ) )
+    } );
+}
+
+std::string format_mod_not_added( const std::string &name, const std::string &reason )
+{
+    //~ A mod that cannot be activated and why: "Cannot add Magiclysm: already in the load order".
+    return format_semantic_sequence( { string_format( _( "Cannot add %1$s: %2$s" ), name, reason ) } );
+}
+
+std::string format_mod_moved( const size_t position, const size_t count )
+{
+    return format_semantic_sequence( {
+        //~ A mod's new place in the load order: "Position 3 of 5".
+        string_format( _( "Position %s" ), format_list_position( position, count ) )
+    } );
+}
+
+std::string format_mod_not_moved( const bool up, const std::string &reason )
+{
+    return format_semantic_sequence( {
+        string_format( up ? _( "Cannot move up: %s" ) : _( "Cannot move down: %s" ), reason )
+    } );
+}
+
+std::string format_mod_manager_summary( const std::string &pane, const size_t position,
+                                        const size_t count, const size_t active_count, const std::string &filter )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> {
+            pane, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
+        }, _( ", " ) ),
+        string_format( n_gettext( "%d mod in load order", "%d mods in load order", active_count ),
+                       static_cast<int>( active_count ) ),
+        filter.empty() ? std::string() : string_format( _( "Filter: %s" ), filter )
+    } );
 }
 
 std::string format_overmap_offset( const int dx, const int dy, const int dz )

@@ -39,6 +39,7 @@
 #include "gamemode.h"
 #include "help.h"
 #include "imgui_demo.h"
+#include "input.h"
 #include "localized_comparator.h"
 #include "mapbuffer.h"
 #include "mapsharing.h"
@@ -209,7 +210,7 @@ void main_menu::announce_selection( const bool include_menu_name, const bool inc
                                     ( static_cast<main_menu_opts>( sel1 ) == main_menu_opts::WORLD ? 1 : 0 );
             if( world_index >= 0 && static_cast<size_t>( world_index ) < worlds.size() ) {
                 WORLD *world = world_generator->get_world( worlds[world_index] );
-                focused_item = world ? accessibility::format_main_menu_world(
+                focused_item = world ? accessibility::format_world_row(
                                    worlds[world_index], world->world_saves.size() ) : worlds[world_index];
             } else if( static_cast<main_menu_opts>( sel1 ) == main_menu_opts::LOADCHAR ) {
                 focused_item = _( "No worlds to load." );
@@ -1329,11 +1330,45 @@ bool main_menu::load_character_tab( const std::string &worldname )
     return main_menu::load_game( worldname, savegames[opt_val] );
 }
 
+/** A yes/no confirmation that names the world it concerns when spoken. */
+static bool query_world_yn( const std::string &worldname, const std::string &question )
+{
+    const bool force_uc = get_option<bool>( "FORCE_CAPITAL_YN" );
+    const auto &allow_key = force_uc ? input_context::disallow_lower_case_or_non_modified_letters
+                            : input_context::allow_all_keys;
+    return query_popup()
+           .preferred_keyboard_mode( keyboard_mode::keycode )
+           .context( "YESNO" )
+           //~ Spoken before a confirmation about a world, such as "World Survival".
+           .accessibility_context( string_format( _( "World %s" ), worldname ) )
+           .message( force_uc && !is_keycode_mode_supported() ?
+                     pgettext( "query_yn", "%s (Case Sensitive)" ) :
+                     pgettext( "query_yn", "%s" ), question )
+           .option( "YES", allow_key )
+           .option( "NO", allow_key )
+           .cursor( 1 )
+           .default_color( c_light_red )
+           .query()
+           .action == "YES";
+}
+
+/** Speak the result of a world management action before the main menu speaks its focus. */
+static void announce_world_result( const std::string &format, const std::string &worldname )
+{
+    if( accessibility::is_active() ) {
+        accessibility::announce( string_format( format, worldname ) );
+    }
+}
+
 void main_menu::world_tab( const std::string &worldname )
 {
     // Create world
     if( sel2 == 0 ) {
         WORLD *world = world_generator->make_new_world();
+        if( world != nullptr ) {
+            //~ Spoken after world creation; %s is the world name.
+            announce_world_result( _( "Created world %s." ), world->world_name );
+        }
         // NOLINTNEXTLINE(cata-use-localized-sorting)
         if( world != nullptr && world->world_name < world_generator->all_worldnames()[last_world_pos] ) {
             last_world_pos++;
@@ -1376,9 +1411,13 @@ void main_menu::world_tab( const std::string &worldname )
             world_generator->show_active_world_mods(
                 world_generator->get_world( worldname )->active_mod_order );
             break;
-        case 1: // Copy World settings
-            world_generator->make_new_world( true, worldname );
+        case 1: { // Copy World settings
+            const WORLD *copy = world_generator->make_new_world( true, worldname );
+            if( copy != nullptr ) {
+                announce_world_result( _( "Created world %s." ), copy->world_name );
+            }
             break;
+        }
         case 2: // Character to Template
             if( load_character_tab( worldname ) ) {
                 avatar &pc = get_avatar();
@@ -1393,23 +1432,31 @@ void main_menu::world_tab( const std::string &worldname )
             break;
         case 3: // Toggle save compression
             if( world_generator->get_world( worldname )->has_compression_enabled() ) {
-                if( query_yn( _( "Disable save compression?" ) ) ) {
-                    world_generator->get_world( worldname )->set_compression_enabled( false );
+                if( query_world_yn( worldname, _( "Disable save compression?" ) ) &&
+                    world_generator->get_world( worldname )->set_compression_enabled( false ) ) {
+                    //~ %s is the world name.
+                    announce_world_result( _( "Save compression disabled for %s." ), worldname );
                 }
             } else {
-                if( query_yn( _( "Enable save compression?" ) ) ) {
-                    world_generator->get_world( worldname )->set_compression_enabled( true );
+                if( query_world_yn( worldname, _( "Enable save compression?" ) ) &&
+                    world_generator->get_world( worldname )->set_compression_enabled( true ) ) {
+                    //~ %s is the world name.
+                    announce_world_result( _( "Save compression enabled for %s." ), worldname );
                 }
             }
             break;
         case 4: // Delete World
-            if( query_yn( _( "Delete the world and all saves within?" ) ) ) {
+            if( query_world_yn( worldname, _( "Delete the world and all saves within?" ) ) ) {
                 clear_world( true );
+                //~ %s is the world name.
+                announce_world_result( _( "Deleted world %s." ), worldname );
             }
             break;
         case 5: // Reset World
-            if( query_yn( _( "Remove all saves and regenerate world?" ) ) ) {
+            if( query_world_yn( worldname, _( "Remove all saves and regenerate world?" ) ) ) {
                 clear_world( false );
+                //~ %s is the world name.
+                announce_world_result( _( "Reset world %s; its saves were removed." ), worldname );
             }
             break;
         default:

@@ -21,6 +21,7 @@ class inventory;
 class item;
 class map;
 class map_item_stack;
+class mod_ui;
 class player_activity;
 class profession;
 class recipe;
@@ -336,6 +337,23 @@ accessibility::character_choice_row character_background_row( const profession &
  */
 accessibility::character_trait_row character_trait_row( const trait_id &trait, const avatar &you,
         bool show_points );
+
+/**
+ * A mod row as the mod manager shows it: category header, name color, and the
+ * incompatibility mark.  `in_mod_list` adds whether the mod is active; the
+ * load order itself holds only active mods.
+ */
+accessibility::world_mod_row world_mod_row( mod_ui &mods, const mod_id &mod,
+        const std::vector<mod_id> &active, bool in_mod_list );
+/** Why a mod cannot be activated (missing dependencies); empty when it can. */
+std::string mod_unavailable_reason( mod_ui &mods, const mod_id &mod );
+/** Why Enter cannot add a mod the incompatibility popup does not report; empty when it can. */
+std::string mod_add_refusal( mod_ui &mods, const mod_id &mod, const std::vector<mod_id> &active );
+/** Why a load order entry cannot move one step; empty when it can. */
+std::string mod_move_refusal( mod_ui &mods, size_t selection, const std::vector<mod_id> &active,
+                              bool up );
+/** Spoken mod name: the display name, or the id of a mod that is not installed. */
+std::string mod_display_name( const mod_id &mod );
 
 } // namespace accessibility_gameplay
 

@@ -100,8 +100,11 @@ std::string format_list_wrap( int previous, int current, int direction );
 std::string format_list_count( size_t count );
 /** One-based focus position, spoken only on request. */
 std::string format_list_position( size_t position, size_t count );
-/** Describe a main-menu world using its save count rather than visual parentheses. */
-std::string format_main_menu_world( const std::string &name, size_t save_count );
+/**
+ * Describe a world by its character count rather than visual parentheses:
+ * "Survival, 3 characters" or "Survival, no characters".
+ */
+std::string format_world_row( const std::string &name, size_t character_count );
 std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
                                     const std::string &focused, const std::string &title = {},
                                     const std::string &version = {}, const std::string &tip = {} );
@@ -467,6 +470,52 @@ std::string format_character_description_field( const std::string &label,
 std::string format_blood_type( const std::string &type, bool rh_positive );
 /** "Shelter, 3 variants" or "Random location, 5 variants"; one variant omits the count. */
 std::string format_character_start_location( const std::string &name, int variants );
+/**
+ * A list, pane, or screen that just opened: "World selection, 4 items. <row>".
+ * An empty list speaks "No items" without a row.
+ */
+std::string format_list_open( const std::string &name, size_t count, const std::string &focus );
+/** A labeled setting: "World name: Survival" or "Population density: High". */
+std::string format_world_setting( const std::string &label, const std::string &value );
+/** Create World summary: position, name, settings, and the load order size. */
+std::string format_world_creation_summary( size_t position, size_t count,
+        const std::vector<std::string> &settings, bool custom_options, size_t mod_count );
+/** A mod row in the mod manager or the active world mods list. */
+struct world_mod_row {
+    /** Display name, or the mod id when the mod is not installed. */
+    std::string name;
+    /** Mod category, such as "Content"; the list groups rows under it. */
+    std::string category;
+    /** The mod is in the world's load order; spoken only in the mod list. */
+    bool active = false;
+    /** The mod is not installed. */
+    bool missing = false;
+    bool obsolete = false;
+    /** A mod in the load order conflicts with this mod. */
+    bool incompatible = false;
+    /** Why the mod cannot be activated, such as a missing dependency; empty when it can. */
+    std::string unavailable;
+};
+/** "Magiclysm, active, Content." or "Old mod, obsolete, Obsolete mods." */
+std::string format_world_mod_row( const world_mod_row &row );
+/** The mod list pane with its category tab: "Mod List: Default". */
+std::string format_mod_list_pane( const std::string &pane, const std::string &tab );
+/** "Added Magiclysm, position 5 of 5.  Also added: Aftershock." */
+std::string format_mod_added( const std::string &name, size_t position, size_t count,
+                              const std::vector<std::string> &also_added,
+                              const std::vector<std::string> &also_removed );
+/** "Removed Magiclysm, 4 mods in load order.  Also removed: <dependents>." */
+std::string format_mod_removed( const std::string &name, size_t count,
+                                const std::vector<std::string> &also_removed );
+/** "Cannot add Magiclysm: <reason>." */
+std::string format_mod_not_added( const std::string &name, const std::string &reason );
+/** "Position 3 of 5." after a mod moves in the load order. */
+std::string format_mod_moved( size_t position, size_t count );
+/** "Cannot move up: <reason>." */
+std::string format_mod_not_moved( bool up, const std::string &reason );
+/** Mod manager pane, position, load order size, and filter on request. */
+std::string format_mod_manager_summary( const std::string &pane, size_t position, size_t count,
+                                        size_t active_count, const std::string &filter );
 /**
  * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
  * below", or "here".  `dy` grows southwards and `dz` upwards.

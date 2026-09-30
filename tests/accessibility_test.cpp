@@ -50,6 +50,7 @@
 #include "martialarts.h"
 #include "medical_ui.h"
 #include "mission.h"
+#include "mod_manager.h"
 #include "monster.h"
 #include "morale.h"
 #include "morale_types.h"
@@ -84,6 +85,7 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
+#include "worldfactory.h"
 
 namespace
 {
@@ -1191,9 +1193,9 @@ TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibili
     accessibility::announce( accessibility::format_main_menu_focus(
                                  "", "Tip of the day", "Find shelter. Bugs? Use MOTD to report them" ) );
     accessibility::announce( accessibility::format_main_menu_focus(
-                                 "", "Load", accessibility::format_main_menu_world( "Empty", 0 ) ) );
+                                 "", "Load", accessibility::format_world_row( "Empty", 0 ) ) );
     accessibility::announce( accessibility::format_main_menu_focus(
-                                 "", "World", accessibility::format_main_menu_world( "Survival", 3 ) ) );
+                                 "", "World", accessibility::format_world_row( "Survival", 3 ) ) );
     accessibility::announce( accessibility::format_main_menu_focus(
                                  "", "Load", "No worlds to load" ) );
 
@@ -1219,7 +1221,7 @@ TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibili
     const auto credits = accessibility::select_document_lines( { "Author: Ada", "Author: Bea" } );
     accessibility::announce( accessibility::format_main_menu_focus( "", "Credits", credits[0].text ) );
     accessibility::announce( accessibility::format_main_menu_focus(
-                                 "Main menu", "World", accessibility::format_main_menu_world( "Survival", 3 ) ) );
+                                 "Main menu", "World", accessibility::format_world_row( "Survival", 3 ) ) );
 
     REQUIRE( capture_ptr->messages.size() == 11 );
     CHECK( capture_ptr->messages[0] == "Cataclysm: Dark Days Ahead. Version: 0.I. "
@@ -1229,14 +1231,14 @@ TEST_CASE( "main_menu_information_follows_focus_and_source_lines", "[accessibili
     CHECK( capture_ptr->messages[1] == "Preset Character. Choose a template." );
     CHECK( capture_ptr->messages[2] ==
            "Tip of the day. Find shelter. Bugs? Use MOTD to report them." );
-    CHECK( capture_ptr->messages[3] == "Load. Empty. 0 saves." );
-    CHECK( capture_ptr->messages[4] == "World. Survival. 3 saves." );
+    CHECK( capture_ptr->messages[3] == "Load. Empty, no characters." );
+    CHECK( capture_ptr->messages[4] == "World. Survival, 3 characters." );
     CHECK( capture_ptr->messages[5] == "Load. No worlds to load." );
     CHECK( capture_ptr->messages[6] == "MOTD. First MOTD line." );
     CHECK( capture_ptr->messages[7] == long_line );
     CHECK( capture_ptr->messages[8] == long_line );
     CHECK( capture_ptr->messages[9] == "Credits. Author: Ada." );
-    CHECK( capture_ptr->messages[10] == "Main menu. World. Survival. 3 saves." );
+    CHECK( capture_ptr->messages[10] == "Main menu. World. Survival, 3 characters." );
 
     accessibility::reset_backend_after_testing();
 }
@@ -6036,4 +6038,162 @@ TEST_CASE( "character_creation_trait_rows_speak_locks_conflicts_and_prohibitions
                    "RANDOMIZE_CHAR_NAME" );
         }
     }
+}
+
+TEST_CASE( "world_and_mod_formatters_speak_rows_changes_and_summaries",
+           "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_world_row( "Survival", 0 ) == "Survival, no characters" );
+    CHECK( accessibility::format_world_row( "Survival", 1 ) == "Survival, 1 character" );
+    CHECK( accessibility::format_world_row( "Survival", 3 ) == "Survival, 3 characters" );
+    CHECK( accessibility::format_list_open( "World selection", 4, "Survival, 3 characters" ) ==
+           "World selection, 4 items. Survival, 3 characters." );
+    CHECK( accessibility::format_list_open( "Mod Load Order", 0, "ignored" ) ==
+           "Mod Load Order, No items." );
+    CHECK( accessibility::format_world_setting( "World name", "Survival" ) == "World name: Survival" );
+    CHECK( accessibility::format_world_creation_summary( 3, 8, {
+        "World name: Survival", "Population density: High", "Monster evolution: Custom"
+    }, true, 2 ) == "Create World, 3 of 8. World name: Survival, Population density: High, "
+    "Monster evolution: Custom. Advanced options customized. 2 mods in load order." );
+
+    accessibility::world_mod_row row;
+    row.name = "Magiclysm";
+    row.category = "Content";
+    CHECK( accessibility::format_world_mod_row( row ) == "Magiclysm, Content." );
+    row.active = true;
+    CHECK( accessibility::format_world_mod_row( row ) == "Magiclysm, active, Content." );
+    row = accessibility::world_mod_row();
+    row.name = "Backrooms";
+    row.category = "Content";
+    row.incompatible = true;
+    row.unavailable = "missing dependency extra";
+    CHECK( accessibility::format_world_mod_row( row ) ==
+           "Backrooms, incompatible with an active mod, Unavailable: missing dependency extra, Content." );
+    row = accessibility::world_mod_row();
+    row.name = "old_mod";
+    row.category = "MISSING MODS";
+    row.missing = true;
+    CHECK( accessibility::format_world_mod_row( row ) == "old_mod, not installed, MISSING MODS." );
+    row.missing = false;
+    row.obsolete = true;
+    row.category = "OBSOLETE MODS";
+    CHECK( accessibility::format_world_mod_row( row ) == "old_mod, obsolete, OBSOLETE MODS." );
+
+    CHECK( accessibility::format_mod_list_pane( "Mod List", "Default" ) == "Mod List: Default" );
+    CHECK( accessibility::format_mod_added( "Magiclysm", 2, 2, { "Dark Days Ahead" }, {} ) ==
+           "Added Magiclysm, position 2 of 2. Also added: Dark Days Ahead." );
+    CHECK( accessibility::format_mod_added( "Aftershock", 3, 3, {}, {} ) ==
+           "Added Aftershock, position 3 of 3." );
+    CHECK( accessibility::format_mod_added( "Other core", 1, 1, {}, { "Dark Days Ahead", "Magiclysm" } )
+           ==
+           "Added Other core, position 1 of 1. Also removed: Dark Days Ahead and Magiclysm." );
+    CHECK( accessibility::format_mod_removed( "Dark Days Ahead", 0, { "Magiclysm" } ) ==
+           "Removed Dark Days Ahead, 0 mods in load order. Also removed: Magiclysm." );
+    CHECK( accessibility::format_mod_removed( "Magiclysm", 1, {} ) ==
+           "Removed Magiclysm, 1 mod in load order." );
+    CHECK( accessibility::format_mod_not_added( "Magiclysm", "already in the load order" ) ==
+           "Cannot add Magiclysm: already in the load order." );
+    CHECK( accessibility::format_mod_moved( 2, 3 ) == "Position 2 of 3." );
+    CHECK( accessibility::format_mod_not_moved( true, "Dark Days Ahead loads first" ) ==
+           "Cannot move up: Dark Days Ahead loads first." );
+    CHECK( accessibility::format_mod_not_moved( false, "already last" ) ==
+           "Cannot move down: already last." );
+    CHECK( accessibility::format_mod_manager_summary( "Mod List: Default", 4, 40, 2, "" ) ==
+           "Mod List: Default, 4 of 40. 2 mods in load order." );
+    CHECK( accessibility::format_mod_manager_summary( "Mod List: Balance", 0, 0, 1, "magic" ) ==
+           "Mod List: Balance, No items. 1 mod in load order. Filter: magic." );
+}
+
+TEST_CASE( "mod_manager_rows_speak_state_dependencies_and_load_order", "[accessibility]" )
+{
+    mod_ui mods( world_generator->get_mod_manager() );
+    const mod_id dda( "dda" );
+    const mod_id magiclysm( "magiclysm" );
+    const mod_id aftershock( "aftershock" );
+    const mod_id exoplanet( "aftershock_exoplanet" );
+    const mod_id mind_over_matter( "mindovermatter" );
+    const mod_id missing( "accessibility_missing_mod" );
+    REQUIRE( dda.is_valid() );
+    REQUIRE( magiclysm.is_valid() );
+    REQUIRE( aftershock.is_valid() );
+    REQUIRE( exoplanet.is_valid() );
+    REQUIRE( mind_over_matter.is_valid() );
+    const std::string content = magiclysm->category.second.translated();
+
+    // Adding a mod also adds its dependencies; the speech names both.
+    std::vector<mod_id> active;
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, magiclysm, active ).empty() );
+    mods.try_add( magiclysm, active );
+    REQUIRE( active == std::vector<mod_id> { dda, magiclysm } );
+    CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
+            magiclysm, active, true ) ) == "Magiclysm, active, " + content + "." );
+    CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
+            magiclysm, active, false ) ) == "Magiclysm, " + content + "." );
+    CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
+            aftershock, active, true ) ) == "Aftershock, obsolete, OBSOLETE MODS." );
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, magiclysm, active ) ==
+           "already in the load order" );
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, missing, active ) == "not installed" );
+    CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
+            missing, active, false ) ) == "accessibility_missing_mod, not installed, MISSING MODS." );
+    CHECK( accessibility_gameplay::mod_unavailable_reason( mods, magiclysm ).empty() );
+
+    // Moves are refused with the reason the visual +/- marks only imply.
+    CHECK( accessibility_gameplay::mod_move_refusal( mods, 0, active, true ) == "already first" );
+    CHECK( accessibility_gameplay::mod_move_refusal( mods, 0, active, false ) ==
+           "the core mod loads first" );
+    CHECK( accessibility_gameplay::mod_move_refusal( mods, 1, active, true ) ==
+           "Dark Days Ahead loads first" );
+    CHECK( accessibility_gameplay::mod_move_refusal( mods, 1, active, false ) == "already last" );
+    mods.try_add( aftershock, active );
+    REQUIRE( active == std::vector<mod_id> { dda, magiclysm, aftershock } );
+    CHECK( accessibility_gameplay::mod_move_refusal( mods, 2, active, true ).empty() );
+    size_t selection = 2;
+    mods.try_shift( '-', selection, active );
+    CHECK( selection == 1 );
+    CHECK( accessibility::format_mod_moved( selection + 1, active.size() ) == "Position 2 of 3." );
+
+    // A mod conflicting with the load order is marked like the visual list.
+    const std::vector<mod_id> conflicting { dda, exoplanet };
+    CHECK( accessibility_gameplay::world_mod_row( mods, mind_over_matter, conflicting,
+            true ).incompatible );
+    CHECK_FALSE( accessibility_gameplay::world_mod_row( mods, mind_over_matter, active,
+                 true ).incompatible );
+
+    // Removing the core mod also removes its dependents.
+    std::vector<mod_id> removal = active;
+    mods.try_rem( 0, removal );
+    CHECK( removal.empty() );
+
+    // The shared accessibility keys reach the world screens without replacing their keys.
+    for( const std::string category : {
+             "PICK_WORLD_DIALOG", "WORLDGEN_CONFIRM_DIALOG", "MODMANAGER_DIALOG", "DEFAULT"
+         } ) {
+        CAPTURE( category );
+        input_context ctxt( category, keyboard_mode::keycode );
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+        ctxt.register_action( "ACCESSIBILITY_STATUS" );
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        ctxt.register_action( "ADVANCED_SETTINGS" );
+        ctxt.register_action( "RESET" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'd',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_DETAILS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 's',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'r',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_REPEAT_LAST" );
+        if( category == "WORLDGEN_CONFIRM_DIALOG" ) {
+            CHECK( ctxt.input_to_action( input_event( { keymod_t::shift }, 's',
+                                         input_event_t::keyboard_code ) ) == "ADVANCED_SETTINGS" );
+            CHECK( ctxt.input_to_action( input_event( { keymod_t::shift }, 'r',
+                                         input_event_t::keyboard_code ) ) == "RESET" );
+        }
+    }
+    // The accessible world name input keeps the randomize key.
+    input_context text_ctxt( "STRING_INPUT", keyboard_mode::keychar );
+    text_ctxt.register_action( "TEXT.CONFIRM" );
+    text_ctxt.register_action( "PICK_RANDOM_WORLDNAME" );
+    text_ctxt.register_action( "ANY_INPUT" );
+    CHECK( text_ctxt.input_to_action( input_event( '*', input_event_t::keyboard_char ) ) ==
+           "PICK_RANDOM_WORLDNAME" );
 }

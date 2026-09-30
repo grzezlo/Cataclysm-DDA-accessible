@@ -31,6 +31,7 @@
 #include "coordinates.h"
 #include "creature.h"
 #include "creature_tracker.h"
+#include "dependency_tree.h"
 #include "display.h"
 #include "effect.h"
 #include "enums.h"
@@ -51,6 +52,7 @@
 #include "mapdata.h"
 #include "martialarts.h"
 #include "mission.h"
+#include "mod_manager.h"
 #include "monster.h"
 #include "mtype.h"
 #include "move_mode.h"
@@ -2723,6 +2725,109 @@ accessibility::character_trait_row character_trait_row( const trait_id &trait, c
         row.forbidden_by = _( "profession" );
     }
     return row;
+}
+
+std::string mod_display_name( const mod_id &mod )
+{
+    return mod.is_valid() ? mod->name() : mod.str();
+}
+
+std::string mod_unavailable_reason( mod_ui &mods, const mod_id &mod )
+{
+    dependency_node *node = mods.mm_tree.get_node( mod );
+    if( node == nullptr || node->is_available() ) {
+        return std::string();
+    }
+    std::vector<std::string> reasons;
+    for( const std::pair<const NODE_ERROR_TYPE, std::vector<std::string>> &error : node->errors() ) {
+        if( error.second.empty() ) {
+            continue;
+        }
+        if( error.first == DEPENDENCY ) {
+            std::vector<std::string> missing;
+            for( const std::string &entry : error.second ) {
+                // The tree records a missing dependency as "<id>".
+                std::string id = entry;
+                if( id.size() >= 2 && id.front() == '<' && id.back() == '>' ) {
+                    id = id.substr( 1, id.size() - 2 );
+                }
+                missing.push_back( mod_display_name( mod_id( id ) ) );
+            }
+            //~ A mod that needs mods which are not installed.
+            reasons.push_back( string_format( n_gettext( "missing dependency %s", "missing dependencies %s",
+                                              missing.size() ), enumerate_as_string( missing ) ) );
+        } else if( error.first == CYCLIC ) {
+            reasons.emplace_back( _( "circular dependency" ) );
+        } else {
+            reasons.push_back( enumerate_as_string( error.second ) );
+        }
+    }
+    return string_join( reasons, _( ", " ) );
+}
+
+accessibility::world_mod_row world_mod_row( mod_ui &mods, const mod_id &mod,
+        const std::vector<mod_id> &active, const bool in_mod_list )
+{
+    accessibility::world_mod_row row;
+    row.name = mod_display_name( mod );
+    if( !mod.is_valid() ) {
+        row.missing = true;
+        row.category = _( "MISSING MODS" );
+        return row;
+    }
+    row.obsolete = mod->obsolete;
+    row.category = mod->obsolete ? _( "OBSOLETE MODS" ) : mod->category.second.translated();
+    row.active = in_mod_list && std::find( active.begin(), active.end(), mod ) != active.end();
+    row.incompatible = !mods.confirm_mod_compatibility( mod, active );
+    if( !row.active && in_mod_list ) {
+        row.unavailable = mod_unavailable_reason( mods, mod );
+    }
+    return row;
+}
+
+std::string mod_add_refusal( mod_ui &mods, const mod_id &mod, const std::vector<mod_id> &active )
+{
+    if( std::find( active.begin(), active.end(), mod ) != active.end() ) {
+        return _( "already in the load order" );
+    }
+    if( !mod.is_valid() || mods.mm_tree.get_node( mod ) == nullptr ) {
+        return _( "not installed" );
+    }
+    return mod_unavailable_reason( mods, mod );
+}
+
+std::string mod_move_refusal( mod_ui &mods, const size_t selection,
+                              const std::vector<mod_id> &active, const bool up )
+{
+    if( selection >= active.size() ) {
+        return std::string();
+    }
+    if( up ) {
+        if( mods.can_shift_up( selection, active ) ) {
+            return std::string();
+        }
+        if( selection == 0 ) {
+            return _( "already first" );
+        }
+        const mod_id &previous = active[selection - 1];
+        if( previous.is_valid() && previous->core ) {
+            //~ A mod cannot move above the core mod, such as "Dark Days Ahead loads first".
+            return string_format( _( "%s loads first" ), mod_display_name( previous ) );
+        }
+        //~ A mod cannot move above a mod it needs.
+        return string_format( _( "depends on %s" ), mod_display_name( previous ) );
+    }
+    if( mods.can_shift_down( selection, active ) ) {
+        return std::string();
+    }
+    if( selection + 1 == active.size() ) {
+        return _( "already last" );
+    }
+    if( active[selection].is_valid() && active[selection]->core ) {
+        return _( "the core mod loads first" );
+    }
+    //~ A mod cannot move below a mod that needs it.
+    return string_format( _( "%s depends on it" ), mod_display_name( active[selection + 1] ) );
 }
 
 } // namespace accessibility_gameplay
