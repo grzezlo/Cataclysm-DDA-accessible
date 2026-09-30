@@ -1410,3 +1410,38 @@ Limitations:
   the threat alerts.  Passable but damaging terrain is not announced.
 - Remote-controlled vehicles get the same speech; obstacles are judged from
   the player's own view.
+
+## 2026-09-30 — Stage 19B: Tutorial lesson documents
+
+- Implemented option A, selected by the maintainer on 2026-09-30: C++ lessons
+  and all 14 map EOC lessons automatically open the shared document reader
+  when accessibility is active.  The original popups remain in inactive mode.
+- Entry speaks "Tutorial" and the first fragment.  Up/Down, Page Up/Page Down,
+  Home/End, and Alt+R provide line/sentence reading and repetition; Enter or
+  Escape closes the lesson.  Keybinding help is available and returns to the
+  same fragment with a focus announcement.  NVDA interruption does not requeue
+  speech.  No lesson archive or reopen command was added.
+- Kept C++ seen flags, EOC conditions, trap removal, lesson text, and EOC
+  message-log entries.  Logging an EOC lesson no longer rereads its entire text
+  after the document closes.  The introductory close instruction uses the
+  document's actual keybinding before expansion.
+- Added the opt-in translated EOC field `popup_document_title`, its JSON
+  documentation and translation extraction, and shared semantic text splitting
+  that also preserves existing item-info formatting.
+- Corrected `doc/tutorial_lesson_inventory.md`: trap activation removes its
+  tile, so another tile with the same trap is required for repeat delivery.
+- `test_access.bat` passed 1867 assertions in 103 cases; loading `dda_tutorial`
+  and running the three new tutorial tests passed 19 assertions.  The Windows
+  x64 tiles build, AStyle 3.1, JSON formatting, translation extraction, and
+  `git diff --check` passed.  A data comparison confirmed that only document
+  opt-in changed in the tutorial traps.
+- Implementation commit: `3d1d43acae`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T151–T152 are in
+  `ACCESS_USERTESTS.md`.  Automated tests cover semantic formatting, bindings,
+  cursor boundaries, repeat-last, and speech suppression, not actual document
+  keyboard input or a full tutorial walkthrough.
+- Stage 22A still owns complete tutorial acceptance and any corrections to
+  the exercises and continuation guidance.
