@@ -22,7 +22,9 @@ class item;
 class map;
 class map_item_stack;
 class player_activity;
+class profession;
 class recipe;
+class scenario;
 struct requirement_data;
 class uilist;
 class vehicle;
@@ -314,6 +316,20 @@ accessibility::item_action_availability item_action_availability( hint_rating ra
  */
 void describe_item_action_menu( uilist &menu, const std::string &item_name,
                                 const item_info_data &info );
+
+/**
+ * Character creation rows as the list shows them by color: the current
+ * choice, unavailability, and unaffordable costs.  `points_left` is the point
+ * balance the header uses for affordability; `show_points` is false for a
+ * pool without limits.
+ */
+accessibility::character_choice_row character_scenario_row( const scenario &scen,
+        const avatar &you, bool cities_enabled, bool show_points, int points_left );
+accessibility::character_choice_row character_profession_row( const profession &prof,
+        const avatar &you, bool show_points, int points_left );
+/** A background is unavailable when its traits conflict with a chosen background's. */
+accessibility::character_choice_row character_background_row( const profession &hobby,
+        const avatar &you, bool show_points, int points_left );
 
 } // namespace accessibility_gameplay
 

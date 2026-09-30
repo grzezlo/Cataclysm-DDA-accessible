@@ -67,9 +67,11 @@
 #include "player_display.h"
 #include "popup.h"
 #include "proficiency.h"
+#include "profession.h"
 #include "player_helpers.h"
 #include "recipe.h"
 #include "recipe_dictionary.h"
+#include "scenario.h"
 #include "point.h"
 #include "skill.h"
 #include "skill_ui.h"
@@ -5763,4 +5765,141 @@ TEST_CASE( "vehicle_examination_speaks_part_list_tiles_tasks_and_stats", "[acces
                                      input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
     CHECK( workshop.input_to_action( input_event( {}, 'a', input_event_t::keyboard_code ) ) ==
            "RELABEL" );
+}
+
+TEST_CASE( "character_creation_formatters_speak_rows_points_tabs_and_results",
+           "[accessibility][nogame]" )
+{
+    accessibility::character_choice_row row;
+    row.name = "Evacuee";
+    row.selected = true;
+    CHECK( accessibility::format_character_choice_row( row ) == "Evacuee, 0 points, selected." );
+    row.name = "Lab Patient";
+    row.points = 2;
+    row.selected = false;
+    row.unavailable = "requires achievement Escaped";
+    CHECK( accessibility::format_character_choice_row( row ) ==
+           "Lab Patient, 2 points. Unavailable: requires achievement Escaped." );
+    row.unavailable.clear();
+    row.short_of_points = true;
+    CHECK( accessibility::format_character_choice_row( row ) ==
+           "Lab Patient, 2 points. Not enough points." );
+    row.name = "Book Hating";
+    row.points = -1;
+    row.short_of_points = false;
+    CHECK( accessibility::format_character_choice_row( row ) == "Book Hating, earns 1 point." );
+    row.show_points = false;
+    CHECK( accessibility::format_character_choice_row( row ) == "Book Hating." );
+
+    accessibility::character_point_balance balance;
+    CHECK( accessibility::format_character_point_balance( balance ).empty() );
+    balance.pool = accessibility::character_point_pool::one_pool;
+    balance.total = 4;
+    CHECK( accessibility::format_character_point_balance( balance ) == "4 points left" );
+    balance.total = -3;
+    CHECK( accessibility::format_character_point_balance( balance ) == "3 points over budget" );
+    balance.pool = accessibility::character_point_pool::multi_pool;
+    balance.stat_points = 2;
+    balance.trait_points = 3;
+    balance.skill_points = -1;
+    balance.total = 4;
+    CHECK( accessibility::format_character_point_balance( balance ) ==
+           "4 points left: stats 2, traits 3, skills -1" );
+    balance.valid = false;
+    CHECK( accessibility::format_character_point_balance( balance ) ==
+           "4 points left: stats 2, traits 3, skills -1. Over budget." );
+
+    CHECK( accessibility::format_character_creation_tab( "Points", 3, "Survivor, selected.", true ) ==
+           "Character creation. Points, 3 items. Survivor, selected." );
+    CHECK( accessibility::format_character_creation_tab( "Profession", 42, "Unemployed, 0 points.",
+            false ) ==
+           "Profession, 42 items. Unemployed, 0 points." );
+    CHECK( accessibility::format_character_choice_selected( "Evacuee", true, "4 points left" ) ==
+           "Selected Evacuee. 4 points left." );
+    CHECK( accessibility::format_character_choice_selected( "Reading", false, "" ) ==
+           "Removed Reading." );
+    CHECK( accessibility::format_character_choice_filter( "doc", 3, "Doctor, 2 points." ) ==
+           "Filter doc, 3 items. Doctor, 2 points." );
+    CHECK( accessibility::format_character_choice_filter( "", 42, "Unemployed, 0 points." ) ==
+           "Filter cleared, 42 items. Unemployed, 0 points." );
+    CHECK( accessibility::format_character_choice_sort( true, "Bandit, 0 points." ) ==
+           "Sorted by name. Bandit, 0 points." );
+    CHECK( accessibility::format_character_choice_sort( false, "Unemployed, 0 points." ) ==
+           "Default sort order. Unemployed, 0 points." );
+    CHECK( accessibility::format_character_tab_summary( "Background", 5, 60, { "Reading", "Swimming" },
+            "4 points left", "Summary: Lifestyle: average" ) ==
+           "Background, 60 items. 5 of 60. Current: Reading, Swimming. 4 points left. "
+           "Summary: Lifestyle: average." );
+    CHECK( accessibility::format_character_tab_summary( "Background", 1, 60, {}, "", "" ) ==
+           "Background, 60 items. 1 of 60. Current: none." );
+}
+
+TEST_CASE( "character_creation_rows_speak_selection_availability_and_conflicts",
+           "[accessibility]" )
+{
+    static const string_id<scenario> scenario_evacuee( "evacuee" );
+    static const profession_id profession_unemployed( "unemployed" );
+    static const profession_id hobby_hates_books( "hates_books" );
+    static const profession_id hobby_loves_books( "loves_books" );
+    static const trait_id trait_HATES_BOOKS( "HATES_BOOKS" );
+    avatar &you = get_avatar();
+    clear_avatar();
+    const scenario *previous_scenario = get_scenario();
+    const profession *previous_profession = you.prof;
+    const on_out_of_scope cleanup( [&you, previous_scenario, previous_profession]() {
+        set_scenario( previous_scenario );
+        you.prof = previous_profession;
+        you.hobbies.clear();
+        clear_avatar();
+    } );
+    you.male = true;
+    set_scenario( &scenario_evacuee.obj() );
+
+    // The CITY_START scenario is unavailable without cities; the list shows it only by color.
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_scenario_row(
+                scenario_evacuee.obj(), you, true, true, 0 ) ) == "Evacuee, 0 points, selected." );
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_scenario_row(
+                scenario_evacuee.obj(), you, false, false, 0 ) ) ==
+           "Evacuee, selected. Unavailable: not available with this world's city size." );
+
+    you.prof = &profession_unemployed.obj();
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_profession_row(
+                profession_unemployed.obj(), you, true, 0 ) ) ==
+           profession_unemployed->gender_appropriate_name( true ) + ", 0 points, selected." );
+
+    // A background whose trait conflicts with a chosen background cannot be picked.
+    you.hobbies.clear();
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
+                hobby_loves_books.obj(), you, true, 10 ) ) == "Reading, 1 point." );
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
+                hobby_loves_books.obj(), you, true, -5 ) ) == "Reading, 1 point. Not enough points." );
+    you.hobbies.insert( &hobby_hates_books.obj() );
+    you.toggle_trait_deps( trait_HATES_BOOKS );
+    REQUIRE( you.has_trait( trait_HATES_BOOKS ) );
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
+                hobby_loves_books.obj(), you, false, 0 ) ) ==
+           "Reading. Unavailable: Bookworm conflicts with background Book Hating." );
+    CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
+                hobby_hates_books.obj(), you, true, 0 ) ) == "Book Hating, earns 1 point, selected." );
+
+    // The shared accessibility keys reach the character creation lists without replacing sort.
+    for( const std::string category : {
+             "NEW_CHAR_POINTS", "NEW_CHAR_SCENARIOS", "NEW_CHAR_PROFESSIONS"
+         } ) {
+        CAPTURE( category );
+        input_context ctxt( category, keyboard_mode::keycode );
+        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+        ctxt.register_action( "ACCESSIBILITY_STATUS" );
+        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        ctxt.register_action( "SORT" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'd',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_DETAILS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 's',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_STATUS" );
+        CHECK( ctxt.input_to_action( input_event( { keymod_t::alt }, 'r',
+                                     input_event_t::keyboard_code ) ) == "ACCESSIBILITY_REPEAT_LAST" );
+        if( category != "NEW_CHAR_POINTS" ) {
+            CHECK( ctxt.input_to_action( input_event( {}, 's', input_event_t::keyboard_code ) ) == "SORT" );
+        }
+    }
 }

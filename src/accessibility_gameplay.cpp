@@ -15,6 +15,7 @@
 #include <utility>
 
 #include "accessibility.h"
+#include "achievement.h"
 #include "activity_type.h"
 #include "avatar.h"
 #include "basecamp.h"
@@ -53,6 +54,7 @@
 #include "monster.h"
 #include "mtype.h"
 #include "move_mode.h"
+#include "mutation.h"
 #include "npc.h"
 #include "options.h"
 #include "omdata.h"
@@ -60,8 +62,11 @@
 #include "overmap_ui.h"
 #include "overmapbuffer.h"
 #include "player_activity.h"
+#include "profession.h"
 #include "recipe.h"
 #include "requirements.h"
+#include "ret_val.h"
+#include "scenario.h"
 #include "string_formatter.h"
 #include "tileray.h"
 #include "translations.h"
@@ -2603,6 +2608,86 @@ void overmap_speech::summary( const avatar &viewer, const tripoint_abs_omt &curs
     accessibility::announce( accessibility::format_overmap_summary( prompt,
                              accessibility::format_overmap_tile( overmap_tile( viewer, cursor ), false ), cursor.z(),
                              overmap_route_state( viewer ) ) );
+}
+
+namespace
+{
+
+/** A short reason for a failed achievement requirement; the details keep the full text. */
+std::string requirement_reason( const std::optional<achievement_id> &requirement,
+                                const ret_val<void> &can_pick )
+{
+    if( requirement.has_value() ) {
+        //~ Why a scenario or profession cannot be picked, such as "requires achievement Escaped".
+        return string_format( _( "requires achievement %s" ), requirement.value()->name().translated() );
+    }
+    return can_pick.str();
+}
+
+} // namespace
+
+accessibility::character_choice_row character_scenario_row( const scenario &scen,
+        const avatar &you, const bool cities_enabled, const bool show_points, const int points_left )
+{
+    accessibility::character_choice_row row;
+    row.name = scen.gender_appropriate_name( you.male );
+    row.points = scen.point_cost();
+    row.show_points = show_points;
+    row.selected = get_scenario() == &scen;
+    const ret_val<void> can_pick = scen.can_pick();
+    if( scen.has_flag( "CITY_START" ) && !cities_enabled ) {
+        row.unavailable = _( "not available with this world's city size" );
+    } else if( !can_pick.success() ) {
+        row.unavailable = requirement_reason( scen.get_requirement(), can_pick );
+    }
+    row.short_of_points = show_points && !row.selected &&
+                          !scen.can_afford( *get_scenario(), points_left ).success();
+    return row;
+}
+
+accessibility::character_choice_row character_profession_row( const profession &prof,
+        const avatar &you, const bool show_points, const int points_left )
+{
+    accessibility::character_choice_row row;
+    row.name = prof.gender_appropriate_name( you.male );
+    row.points = prof.point_cost();
+    row.show_points = show_points;
+    row.selected = you.prof == &prof;
+    const ret_val<void> can_pick = prof.can_pick();
+    if( !can_pick.success() ) {
+        row.unavailable = requirement_reason( prof.get_requirement(), can_pick );
+    }
+    row.short_of_points = show_points && !row.selected &&
+                          !prof.can_afford( you, points_left ).success();
+    return row;
+}
+
+accessibility::character_choice_row character_background_row( const profession &hobby,
+        const avatar &you, const bool show_points, const int points_left )
+{
+    accessibility::character_choice_row row;
+    row.name = hobby.gender_appropriate_name( you.male );
+    row.points = hobby.point_cost();
+    row.show_points = show_points;
+    row.selected = you.hobbies.count( &hobby ) != 0;
+    // The same check that blocks selecting the background.
+    for( const trait_and_var &new_trait : hobby.get_locked_traits() ) {
+        if( !row.unavailable.empty() || !you.has_conflicting_trait( new_trait.trait ) ) {
+            continue;
+        }
+        for( const profession *chosen : you.hobbies ) {
+            for( const trait_and_var &suspect : chosen->get_locked_traits() ) {
+                if( row.unavailable.empty() && are_conflicting_traits( new_trait.trait, suspect.trait ) ) {
+                    //~ A background whose trait conflicts with a chosen background's trait.
+                    row.unavailable = string_format( _( "%1$s conflicts with background %2$s" ),
+                                                     new_trait.name(), chosen->gender_appropriate_name( you.male ) );
+                }
+            }
+        }
+    }
+    row.short_of_points = show_points && !row.selected &&
+                          !hobby.can_afford( you, points_left ).success();
+    return row;
 }
 
 } // namespace accessibility_gameplay

@@ -1373,6 +1373,107 @@ std::string format_mission_track_unavailable( const mission_category category,
     return std::string();
 }
 
+std::string format_character_choice_row( const character_choice_row &row )
+{
+    std::vector<std::string> parts = { collapse_whitespace( row.name ) };
+    if( row.show_points ) {
+        if( row.points < 0 ) {
+            //~ A character creation choice that adds points, such as "earns 2 points".
+            parts.push_back( string_format( n_gettext( "earns %d point", "earns %d points", -row.points ),
+                                            -row.points ) );
+        } else {
+            //~ The point cost of a character creation choice, such as "2 points".
+            parts.push_back( string_format( n_gettext( "%d point", "%d points", row.points ),
+                                            row.points ) );
+        }
+    }
+    if( row.selected ) {
+        parts.emplace_back( _( "selected" ) );
+    }
+    return format_semantic_sequence( {
+        string_join( parts, _( ", " ) ),
+        row.unavailable.empty() ? std::string() : string_format( _( "Unavailable: %s" ), row.unavailable ),
+        row.short_of_points ? std::string( _( "Not enough points" ) ) : std::string()
+    } );
+}
+
+std::string format_character_point_balance( const character_point_balance &balance )
+{
+    switch( balance.pool ) {
+        case character_point_pool::freeform:
+        case character_point_pool::transfer:
+            return std::string();
+        case character_point_pool::one_pool:
+            if( balance.total < 0 ) {
+                return string_format( n_gettext( "%d point over budget", "%d points over budget",
+                                                 -balance.total ), -balance.total );
+            }
+            return string_format( n_gettext( "%d point left", "%d points left", balance.total ),
+                                  balance.total );
+        case character_point_pool::multi_pool:
+            break;
+    }
+    //~ Points left in the legacy multiple pools: %1$d total, then stat, trait, and skill points.
+    std::string result = string_format( _( "%1$d points left: stats %2$d, traits %3$d, skills %4$d" ),
+                                        balance.total, balance.stat_points, balance.trait_points, balance.skill_points );
+    if( !balance.valid ) {
+        result = format_semantic_sequence( { result, _( "Over budget" ) } );
+    }
+    return result;
+}
+
+std::string format_character_creation_tab( const std::string &tab, const size_t count,
+        const std::string &focus, const bool opening )
+{
+    return format_semantic_sequence( {
+        opening ? std::string( _( "Character creation" ) ) : std::string(),
+        string_join( std::vector<std::string> { tab, format_list_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_character_choice_selected( const std::string &name, const bool added,
+        const std::string &balance )
+{
+    return format_semantic_sequence( {
+        string_format( added ? _( "Selected %s" ) : _( "Removed %s" ), collapse_whitespace( name ) ),
+        balance
+    } );
+}
+
+std::string format_character_choice_filter( const std::string &filter, const size_t count,
+        const std::string &focus )
+{
+    const std::string label = filter.empty() ? std::string( _( "Filter cleared" ) ) :
+                              //~ Character creation list filter, such as "Filter doc".
+                              string_format( _( "Filter %s" ), filter );
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { label, format_list_count( count ) }, _( ", " ) ),
+        count > 0 ? focus : std::string()
+    } );
+}
+
+std::string format_character_choice_sort( const bool by_name, const std::string &focus )
+{
+    return format_semantic_sequence( {
+        by_name ? _( "Sorted by name" ) : _( "Default sort order" ), focus
+    } );
+}
+
+std::string format_character_tab_summary( const std::string &tab, const size_t position,
+        const size_t count, const std::vector<std::string> &current, const std::string &balance,
+        const std::string &difficulty )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { tab, format_list_count( count ) }, _( ", " ) ),
+        format_list_position( position, count ),
+        current.empty() ? std::string( _( "Current: none" ) ) :
+        string_format( _( "Current: %s" ), string_join( current, _( ", " ) ) ),
+        balance,
+        difficulty
+    } );
+}
+
 std::string format_overmap_offset( const int dx, const int dy, const int dz )
 {
     std::vector<std::string> horizontal;

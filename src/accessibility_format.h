@@ -369,6 +369,62 @@ std::string format_mission_summary( mission_category category, size_t position, 
 std::string format_mission_tracked( const std::string &title );
 /** Spoken when CONFIRM cannot set the current objective. */
 std::string format_mission_track_unavailable( mission_category category, size_t count );
+/** A scenario, profession, background, or point pool row in character creation. */
+struct character_choice_row {
+    std::string name;
+    /** Point cost; a negative cost earns points. */
+    int points = 0;
+    /** False when the point pool does not show costs. */
+    bool show_points = true;
+    /** The choice is the character's current one. */
+    bool selected = false;
+    /** Why the choice cannot be picked; empty when it can. */
+    std::string unavailable;
+    /** The visual list marks the cost as unaffordable. */
+    bool short_of_points = false;
+};
+/** "Evacuee, 0 points, selected." or "Lab patient, 2 points. Unavailable: <reason>." */
+std::string format_character_choice_row( const character_choice_row &row );
+/** Point pools as the character creation header shows them. */
+enum class character_point_pool : int {
+    /** Survivor: no point limits. */
+    freeform,
+    one_pool,
+    multi_pool,
+    transfer
+};
+struct character_point_balance {
+    character_point_pool pool = character_point_pool::freeform;
+    /** Unspent points of each pool, without borrowing. */
+    int stat_points = 0;
+    int trait_points = 0;
+    int skill_points = 0;
+    /** Points left in total. */
+    int total = 0;
+    /** No pool is overspent. */
+    bool valid = true;
+};
+/** "4 points left", the multi-pool breakdown, or empty for a pool without limits. */
+std::string format_character_point_balance( const character_point_balance &balance );
+/**
+ * A character creation tab: "Profession, 42 items. <row>".  `opening` adds the
+ * screen name when character creation starts.
+ */
+std::string format_character_creation_tab( const std::string &tab, size_t count,
+        const std::string &focus,
+        bool opening );
+/** Spoken after CONFIRM picks or toggles a choice, followed by the point balance. */
+std::string format_character_choice_selected( const std::string &name, bool added,
+        const std::string &balance );
+/** Spoken after the filter changes: "Filter doc, 3 items. <row>" or "Filter cleared, ...". */
+std::string format_character_choice_filter( const std::string &filter, size_t count,
+        const std::string &focus );
+/** Spoken after the sort order changes. */
+std::string format_character_choice_sort( bool by_name, const std::string &focus );
+/** Tab, count, position, current choices, point balance, and difficulty on request. */
+std::string format_character_tab_summary( const std::string &tab, size_t position, size_t count,
+        const std::vector<std::string> &current, const std::string &balance,
+        const std::string &difficulty );
 /**
  * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
  * below", or "here".  `dy` grows southwards and `dz` upwards.
