@@ -5,6 +5,7 @@
 #include <string>
 
 #include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "accessibility_gameplay.h"
 #include "action.h"
 #include "avatar.h"
@@ -390,6 +391,14 @@ void tutorial_game::add_message( tut_lesson lesson )
     g->invalidate_main_ui_adaptor();
     std::string translated_lesson = SNIPPET.get_snippet_by_id( snippet_id(
                                         io::enum_to_string<tut_lesson>( lesson ) ) ).value_or( translation() ).translated();
+    if( accessibility::is_active() ) {
+        translated_lesson = string_replace( translated_lesson, "<keybind:POPUP_WAIT:QUIT>",
+                                            "<keybind:HELP_DOCUMENT:QUIT>" );
+    }
     replace_keybind_tag( translated_lesson );
-    popup( translated_lesson, PF_ON_TOP );
+    if( accessibility::is_active() ) {
+        accessibility_ui::show_text_document( _( "Tutorial" ), translated_lesson );
+    } else {
+        popup( translated_lesson, PF_ON_TOP );
+    }
 }

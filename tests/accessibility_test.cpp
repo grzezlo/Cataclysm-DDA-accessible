@@ -1661,6 +1661,71 @@ TEST_CASE( "accessible_status_summary_formats_semantic_state", "[accessibility][
                accessibility::safe_mode_state::off, true, 1 ) == "Off; auto-safe in 1 turn" );
 }
 
+TEST_CASE( "tutorial_document_preserves_instruction_lines_and_sentences",
+           "[accessibility][nogame]" )
+{
+    const auto fragments = accessibility::format_document_paragraphs(
+                               "Welcome!  Read this lesson at your own pace.\n\n"
+                               "Movement Controls:\nNorth: <color_yellow>8</color>\nSouth: 2\n"
+                               "A stack weighs 1.5 kg.  Keep its weight < 5 kg.\n\n"
+                               "To continue, move east." );
+    const std::vector<std::string> expected = {
+        "Welcome!", "Read this lesson at your own pace.", "Movement Controls:",
+        "North: 8", "South: 2", "A stack weighs 1.5 kg.", "Keep its weight < 5 kg.",
+        "To continue, move east."
+    };
+    CHECK( fragments == expected );
+    CHECK( accessibility::format_document_paragraphs( "\n  \n<color_red></color>" ).empty() );
+    CHECK( accessibility::move_document_cursor( 0, fragments.size(), -1 ) == 0 );
+    CHECK( accessibility::move_document_cursor( 0, fragments.size(), 3 ) == 3 );
+    CHECK( accessibility::move_document_cursor( 3, fragments.size(), -3 ) == 0 );
+    CHECK( accessibility::move_document_cursor( 3, fragments.size(), 100 ) == 7 );
+}
+
+TEST_CASE( "tutorial_document_expands_current_close_and_gameplay_bindings", "[accessibility]" )
+{
+    std::string lesson = "Press <keybind:HELP_DOCUMENT:QUIT> to close this lesson.\n"
+                         "Move east with <keybind:RIGHT>.";
+    replace_keybind_tag( lesson );
+    CHECK( lesson.find( "<keybind:" ) == std::string::npos );
+    const auto fragments = accessibility::format_document_paragraphs( lesson );
+    REQUIRE( fragments.size() == 2 );
+    input_context document( "HELP_DOCUMENT" );
+    const auto close_keys = document.keys_bound_to( "QUIT", -1, false, false );
+    REQUIRE_FALSE( close_keys.empty() );
+    CHECK( fragments.front().find( close_keys.front().long_description() ) != std::string::npos );
+    CHECK( fragments.back().find( "Move east with " ) == 0 );
+}
+
+TEST_CASE( "tutorial_document_repeat_and_log_do_not_reread_the_entire_lesson",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *capture_ptr = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    accessibility::enable_game_messages( true );
+    const std::string lesson = "First instruction.\nSecond instruction.\nMove east to continue.";
+    const auto fragments = accessibility::format_document_paragraphs( lesson );
+    REQUIRE( fragments.size() == 3 );
+    accessibility::announce( accessibility::format_document_focus( "Tutorial", fragments.front() ) );
+    accessibility::announce( fragments.back() );
+    CHECK( accessibility::repeat_last_announcement() );
+    {
+        accessibility::game_message_speech_suppression quiet;
+        CHECK_FALSE( accessibility::announce_game_message( lesson ) );
+    }
+    CHECK_FALSE( accessibility::flush_gameplay_announcements() );
+    CHECK( accessibility::last_announcement() == fragments.back() );
+    CHECK( accessibility::repeat_last_announcement() );
+    const std::vector<std::string> expected = {
+        "Tutorial. First instruction.", "Move east to continue.",
+        "Move east to continue.", "Move east to continue."
+    };
+    CHECK( capture_ptr->messages == expected );
+    CHECK( capture_ptr->cancels == 0 );
+    accessibility::reset_backend_after_testing();
+}
+
 TEST_CASE( "help_topic_and_document_formatting", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_help_menu_open( 23, "a", "Introduction", "Up", "Down",

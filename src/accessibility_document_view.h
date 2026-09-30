@@ -13,6 +13,9 @@ void show_document( const std::string &window_title, const std::string &spoken_t
                     const std::vector<std::string> &visual_paragraphs,
                     const std::vector<std::string> &spoken_paragraphs );
 
+/** Read a formatted message by source line and sentence, without retaining it after closure. */
+void show_text_document( const std::string &title, const std::string &text );
+
 } // namespace accessibility_ui
 
 #endif // CATA_SRC_ACCESSIBILITY_DOCUMENT_VIEW_H

@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T150.
+Last assigned test ID: T152.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -971,3 +971,35 @@ Change terrain, or drive toward a building.
   pull a handbrake."; `Alt+S` then speaks cruise 0.  Choose "Stop driving"
   and hear the engine-off message.  Interrupt any of these with Control;
   nothing is repeated automatically.
+
+## Stage 19B: Tutorial lesson documents
+
+- **T151 - Opening C++ lessons.**  From the main menu choose Tutorial with
+  NVDA running.  The welcome lesson should open a document and speak
+  "Tutorial" and only its first sentence, not the entire lesson.  Use
+  Down/Up to read and revisit fragments in source order; Page Down/Page Up
+  move three fragments, and Home/End select the first/last fragment.  In the
+  movement lesson each direction and its current keys should be a separate
+  fragment.  The initial close instruction must name the document's current
+  close binding.  Interrupt a fragment with Control, wait, and verify it is
+  not requeued; Alt+R should repeat it on request without changing focus.
+  Enter or Escape closes each document, returning to the next pending
+  lesson or gameplay.  Wait a turn: the introductory lessons must not open
+  again.  There should be no extra full-lesson announcement after closure
+  and no new command for reopening them.
+  In an open lesson press `?` for keybinding help, verify that document
+  navigation and Alt+R are listed, and press Escape: hear the fragment you
+  were reading and continue from the same position.
+- **T152 - Map lesson, log, and consumed trigger.**  Start a fresh tutorial
+  and close the welcome and movement documents.  Move east two tiles from
+  the starting position to trigger the Look Around map lesson.  Hear
+  "Tutorial" and its first sentence; use Down for the keyboard alternative
+  to mouse viewing.  Repeat with Alt+R, interrupt NVDA with Control, and
+  verify that only requested fragments are spoken and none is automatically
+  requeued.  Escape closes the document without rereading the complete
+  lesson from the log.  Move west one tile and east one tile: the consumed
+  trigger must not reopen the lesson.  Open View message log (default
+  Shift+P), find the Look Around lesson, and use Enter or Alt+D to read its
+  details; the original log entry must still be present.  Escape returns to
+  gameplay.  Completing the rest of the tutorial is a separate Stage 22A
+  acceptance test.

@@ -8,7 +8,10 @@ with NVDA after those controls are implemented.
 ## C++ snippet lessons
 
 `tutorial_game::add_message()` shows a lesson only once per tutorial session.
-It expands keybinding tags before opening a popup.  The following groups cover
+It expands keybinding tags before opening a popup, or the shared document
+reader when accessibility is active (Stage 19B, option A).  The initial close
+instruction uses the document's binding in that mode.  Closing a document
+does not allow the C++ lesson to be reopened.  The following groups cover
 all 35 entries in `snippets.json`.
 
 - Every turn: `LESSON_INTRO` explains the tutorial and popup dismissal;
@@ -42,10 +45,17 @@ all 35 entries in `snippets.json`.
 ## Map trap lessons
 
 All numbered traps are placed in `mapgen.json`; traps 9 and 10 are in the
-underground map.  A trap EOC shows its message as a popup.  `parse_tags()`
-resolves keybinding tags before that popup.  Traps 3, 4, and 11 guard against
-repeat delivery with EOC state; the other message traps can fire again on
-reentry.
+underground map.  A trap EOC shows its message as a popup, or the shared
+document reader when accessibility is active, using `popup_document_title`.
+`parse_tags()` resolves keybinding tags before either view.  The EOC message
+is also retained in the normal message log; document delivery suppresses only
+its duplicate speech after closure.
+
+`trapfunc::eocs()` removes the triggered trap after activation, even when its
+EOC condition fails.  Reentering that same tile therefore does not replay a
+lesson.  Another tile with the same trap can deliver it again.  Traps 3, 4,
+and 11 additionally guard against repeat delivery with character EOC state.
+These rules are unchanged by the document reader.
 
 - 1, look around: use Look Around; no explicit route instruction.
 - 2, movement modes: inspect or change mode, then reach the corridor end.

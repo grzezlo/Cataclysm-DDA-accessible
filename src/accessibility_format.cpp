@@ -947,7 +947,17 @@ std::vector<std::string> format_item_info_paragraphs( const std::string &type_na
         paragraphs.push_back( clean_type );
     }
 
-    const std::string clean_info = std::regex_replace( raw_info, markup_tags, "" );
+    for( std::string &paragraph : format_document_paragraphs( raw_info ) ) {
+        paragraphs.push_back( std::move( paragraph ) );
+    }
+    return paragraphs;
+}
+
+std::vector<std::string> format_document_paragraphs( const std::string &text )
+{
+    static const std::regex markup_tags( R"(<[^<>\s][^<>]*>)" );
+    const std::string clean_info = std::regex_replace( text, markup_tags, "" );
+    std::vector<std::string> paragraphs;
 
     size_t start = 0;
     while( start <= clean_info.size() ) {

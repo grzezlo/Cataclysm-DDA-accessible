@@ -20,6 +20,10 @@ def parse_effect(effects, origin, comment=""):
                                          comment="Nickname for creature '{}' "
                                          "in {}".format(eff["u_buy_monster"],
                                                         comment))
+            if "popup_document_title" in eff:
+                write_text(eff["popup_document_title"], origin,
+                           comment="Accessible message document title in {}"
+                           .format(comment))
             if "snippet" not in eff or eff["snippet"] is False:
                 if "message" in eff:
                     write_translation_or_var(eff["message"], origin,

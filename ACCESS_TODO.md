@@ -55,6 +55,45 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
+## Stage 19B - Tutorial lesson documents
+
+**Outcome:** Both C++ and map-triggered tutorial lessons use the existing
+document reader when accessibility is active.  This independently runnable
+delivery change was requested ahead of the complete Stage 22A walkthrough.
+
+**Code inventory:** `tutorial_game::add_message()` in
+`src/gamemode_tutorial.cpp`; `talk_effect_fun::f_message()` in
+`src/npctalk.cpp`; lesson opt-in in `data/mods/dda_tutorial/traps.json`;
+`src/accessibility_document_view.cpp`; shared text splitting in
+`src/accessibility_format.cpp`; EOC field documentation in
+`doc/JSON/EFFECT_ON_CONDITION.md` and title extraction in
+`lang/string_extractor/parsers/effect.py`.
+
+**Selected interaction (option A, accepted 2026-09-30):** Conventions 1 and 5
+apply.  A lesson automatically opens a visible modal document, speaking
+"Tutorial" and its first semantic fragment.  Up/Down navigate source lines
+and sentences, Page Up/Page Down move three fragments, Home/End select the
+first/last fragment, and Alt+R repeats the last fragment.  Enter or Escape
+closes the document and resumes the existing tutorial flow.  NVDA interruption
+does not cause automatic repetition.  There is no lesson archive or reopen
+command.  Existing C++ seen flags, EOC conditions, trap removal, and EOC log
+entries are preserved.  Logged lessons do not repeat their full text after
+document closure.  With accessibility inactive, the original popups remain.
+The existing keybinding-help action remains available inside the lesson;
+returning from it speaks the current fragment without resetting the cursor.
+
+**Success criteria:** Both lesson sources use the same reader and preserve
+text, expanded bindings, triggers, and post-close availability.  Instructions
+for closing the initial lesson name the document's actual close binding.
+
+**Possible automated tests:** Fixed multiline lesson formatting, source order,
+markup removal, keybinding expansion, reader cursor boundaries, first-fragment
+speech and repeat-last, and suppression of duplicate log speech.
+
+**User-test scenarios:** Read opening C++ lessons and a map lesson, navigate
+and repeat fragments after interrupting NVDA, close them and check their
+original post-close availability.  Confirm inactive-mode popup behavior.
+
 ## Stage 19A - Vehicle examination and maintenance
 
 **Outcome:** Vehicle part inspection, installation, repair, and removal are
@@ -366,12 +405,19 @@ tutorial bypasses `game::start_game()`), `per_turn()`, `pre_action()`,
 `data/mods/dda_tutorial/traps.json` and `mapgen.json`.  The preliminary trigger,
 continuation, and exercise inventory is in `doc/tutorial_lesson_inventory.md`.
 
+**Selected lesson delivery (option A, accepted 2026-09-30):** Stage 19B's
+document delivery applies to both lesson sources.  Opening speaks the title
+and first fragment; navigation and repeat-last work within the open lesson.
+Closure preserves the original seen flags, EOC conditions, trap removal, and
+message-log availability.  No lesson archive or reopen command is added.
+
 **Implementation hints:**
 
-- Current C++ and EOC lessons already speak their full popup text through the
-  shared popup path.  Reassess the actual NVDA experience after the exercised
+- C++ and EOC lessons use the shared document reader when accessibility is
+  active (Stage 19B, option A); inactive mode keeps the original popups.
+  Reassess the actual NVDA experience after the exercised
   controls are accessible, including interruption, repetition, and speech from
-  triggers that can fire again on reentry.
+  another tile with the same lesson trap (the original trap is removed).
 - Recheck every lesson trigger, map route, continuation instruction, and required
   action against the then-current game.  Update the inventory if upstream data
   or integration points have changed.

@@ -212,6 +212,8 @@ std::vector<std::string> split_uilist_detail_sentences( const std::string &detai
 /** Split formatted item details into clean semantic lines and sentences for document reading. */
 std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
         const std::string &raw_info );
+/** Split formatted text into source lines and sentences, independent of visual wrapping. */
+std::vector<std::string> format_document_paragraphs( const std::string &text );
 /** Semantic inventory row, independent of item and renderer types. */
 struct inventory_focus_entry {
     std::string caption;

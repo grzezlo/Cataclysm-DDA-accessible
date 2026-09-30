@@ -21,6 +21,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
 #include "accessibility_format.h"
 #include "achievement.h"
 #include "action.h"
@@ -5360,6 +5362,8 @@ talk_effect_fun_t::func f_message( const JsonObject &jo, std::string_view member
     const bool store_in_lore = jo.get_bool( "store_in_lore", false );
     const bool sound = jo.get_bool( "sound", false );
     const bool popup_msg = jo.get_bool( "popup", false );
+    translation popup_document_title;
+    jo.read( "popup_document_title", popup_document_title );
     const bool popup_w_interrupt_query_msg = jo.get_bool( "popup_w_interrupt_query", false );
     const PopupFlags popup_flag = jo.has_member( "popup_flag" ) ?
                                   popup_flag_from_string( jo.get_string( "popup_flag" ) ) : PF_NONE;
@@ -5377,7 +5381,8 @@ talk_effect_fun_t::func f_message( const JsonObject &jo, std::string_view member
         type_string.str_val = "neutral";
     }
     return [snip_id, message, outdoor_only, sound, snippet, same_snippet, type_string, popup_msg,
-                     popup_w_interrupt_query_msg, popup_flag, interrupt_type, global, store_in_lore, is_npc]
+                     popup_document_title, popup_w_interrupt_query_msg, popup_flag, interrupt_type, global,
+                     store_in_lore, is_npc]
     ( dialogue const & d ) {
         Character *target;
         if( global ) {
@@ -5459,8 +5464,14 @@ talk_effect_fun_t::func f_message( const JsonObject &jo, std::string_view member
                 return;
             }
         }
+        const std::string document_title = popup_document_title.translated();
+        const bool document_popup = popup_msg && !document_title.empty() && accessibility::is_active();
         if( popup_msg ) {
-            popup( translated_message, popup_flag );
+            if( document_popup ) {
+                accessibility_ui::show_text_document( document_title, translated_message );
+            } else {
+                popup( translated_message, popup_flag );
+            }
             g->cancel_activity_or_ignore_query( distraction_type::eoc, "" );
         }
         if( popup_w_interrupt_query_msg ) {
@@ -5476,6 +5487,10 @@ talk_effect_fun_t::func f_message( const JsonObject &jo, std::string_view member
             //}
             // I leave this to contributors who might actually wish to implement such interrupts,
             // so as to not overcomplicate the code.
+        } else if( document_popup ) {
+            // Keep the original log entry without rereading the entire closed document.
+            accessibility::game_message_speech_suppression quiet;
+            target->add_msg_if_player( type, translated_message );
         } else {
             target->add_msg_if_player( type, translated_message );
         }

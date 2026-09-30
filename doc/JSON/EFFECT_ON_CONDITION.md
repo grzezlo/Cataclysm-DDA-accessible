@@ -4147,6 +4147,7 @@ Display a text message in the log. `u_message` and `npc_message` display a mess
 | "store_in_lore" | optional | boolean | default false; if true, and message is snippet, the snippet would be stored in lore tab | 
 | "same_snippet" | optional | boolean | default false; if true, and `snippet` is true, it will connect the talker and snippet, and will always provide the same snippet, if used by this talker; require snippets to have id's set | 
 | "popup" | optional | boolean | default false; if true, the message would generate a popup with `u_message` | 
+| "popup_document_title" | optional | translated string | With `popup: true` and accessibility active, a nonempty title opens the message in the shared document reader instead of a popup. Existing log entries and interruption behavior are preserved, but the log entry does not repeat the document's full text aloud after closure. With accessibility inactive, the original popup and its flags are used. |
 | "popup_flag" | optional | string | default PF_NONE; if specified, the popup is modified by the specified flag, for allowed values see below | 
 | "popup_w_interrupt_query" | optional | boolean | default false; if true, and `popup` is true, the popup will interrupt any activity to send a message | 
 | "interrupt_type" | optional | boolean | default is "neutral"; `distraction_type`, that would be used to interrupt, one that used in distraction manager; full list exist inactivity_type.cpp | 

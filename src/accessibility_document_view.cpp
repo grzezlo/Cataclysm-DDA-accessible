@@ -17,6 +17,12 @@
 namespace accessibility_ui
 {
 
+void show_text_document( const std::string &title, const std::string &text )
+{
+    const std::vector<std::string> paragraphs = accessibility::format_document_paragraphs( text );
+    show_document( title, title, paragraphs, paragraphs );
+}
+
 void show_document( const std::string &window_title, const std::string &spoken_title,
                     const std::vector<std::string> &visual_paragraphs,
                     const std::vector<std::string> &spoken_paragraphs )
@@ -91,6 +97,7 @@ void show_document( const std::string &window_title, const std::string &spoken_t
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "SCROLL_UP" );
     ctxt.register_action( "SCROLL_DOWN" );
 
@@ -132,6 +139,8 @@ void show_document( const std::string &window_title, const std::string &spoken_t
             move_by( num_paragraphs - 1 - current_para );
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
+        } else if( action == "HELP_KEYBINDINGS" && num_paragraphs > 0 ) {
+            accessibility::announce( spoken_paragraphs[current_para] );
         }
     } while( action != "CONFIRM" && action != "QUIT" );
 }
