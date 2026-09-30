@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T165.
+Last assigned test ID: T170.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -40,7 +40,8 @@ Last assigned test ID: T165.
 ## Stage 03A: Main menu
 
 - **T1 - World save counts.**  Create worlds with no save and with two saves, then
-  browse the World and Load tabs.  Each world names its number of saves.
+  browse the World and Load tabs.  Each world names its number of characters
+  ("Survival, no characters", "Survival, 2 characters").
 
 ## Stage 05: Popups
 
@@ -1141,3 +1142,60 @@ Change terrain, or drive toward a building.
   field.  Clear the name, press Tab, answer Yes to the unspent-points
   question, and hear "Are you SURE you're finished?  Your name will be
   randomly generated."  Answer Yes and the game starts.
+
+## Stage 21: World and mod management
+
+- **T166 - Create World screen.**  On the main menu, go to the World tab and
+  press Enter on "Create World".  Hear "Create World", the item count, and
+  "World name: <name>" once.  Down and Up speak each slider as
+  "<setting>: <level>" and then Finish; wrapping says "top" or "bottom".  On
+  a slider, Right and Left speak only the new level.  On Finish, Right and
+  Left move to Reset and Randomize and speak them.  Press `*` and hear the
+  new world name.  Press Enter on World name: the text input speaks the
+  prompt, the randomize hint, and the value; type a name, press Enter, and
+  hear "World name: <name>".  Press Shift+A and hear "Settings randomized"
+  and "Randomize".  `Alt+D` on a slider opens its level description, and on
+  other rows the screen's key hints; Escape returns and speaks the row.
+  `Alt+S` speaks the position, every setting, and the load order size.
+  Press Shift+F, answer No and hear the row again; answer Yes and hear
+  "Created world <name>." followed by the main menu focus.
+- **T167 - Blocker: first world from Random Character.**  Delete every world
+  (see T170), then choose New Game > Random Character.  The Create World
+  screen speaks "Create World" and the world name as in T166; Shift+F and
+  Yes continue to character creation.
+- **T168 - Mod manager and load order.**  On Create World press Shift+M.
+  Hear "Mod manager. Mod List: Default", the count, and the focused mod,
+  such as "Magiclysm, CORE CONTENT PACKS".  Down speaks only rows; a mod in
+  the load order says "active", a conflicting one "incompatible with an
+  active mod", and one needing an absent mod "Unavailable: missing
+  dependency <id>".  Press Enter on Magiclysm: hear "Added Magiclysm,
+  position 2 of 2".  Enter again: "Cannot add Magiclysm: already in the
+  load order".  Press `>` and hear the next category tab with its count
+  and row.  Press Right and hear "Mod Load Order, 2 items" and the row.
+  Press the move-up key on Magiclysm and hear "Cannot move up: Dark Days
+  Ahead loads first"; add a second mod and move it up to hear "Position 2
+  of 3".  Enter on a load order row speaks "Removed <mod>", the remaining
+  count, and any dependents also removed.  Press `/`, type "magic", Enter:
+  hear "Filter magic", the count, and the row.  `Alt+D` opens the mod's
+  authors, dependencies, version, and description in the document view;
+  `Alt+S` speaks the pane, position, load order size, and filter.  Escape
+  returns to Create World, which speaks "Create World" and the row.
+- **T169 - World selection and active mods.**  With at least two worlds,
+  choose New Game > Custom Character.  Hear "World selection, <count>
+  items" and "<world>, <n> characters".  Down and Up speak rows with wrap
+  words.  `Alt+D` opens the world's characters and mod load order; `Alt+S`
+  speaks the position.  Escape returns to the main menu.  Then on the World
+  tab press Enter on a world, choose Active World Mods, and hear "Active
+  world mods", the count, and the first mod; Down speaks each mod and
+  `Alt+D` opens its information.
+- **T170 - Copy, compression, reset, and delete.**  On the World tab press
+  Enter on a world and choose Copy World Settings.  Hear "World Mods. Mod
+  List: Default" and the row; press the next-tab key to World Options
+  (Stage 21A covers its speech) and continue until the name prompt, which
+  speaks its label and value.  Confirm and hear "Created world <name>."
+  Manage the copy and toggle save compression: the question starts with
+  "World <name>"; Yes speaks "Save compression enabled for <name>."  Choose
+  Reset World: the question names the world; No returns to the main menu
+  focus, Yes speaks "Reset world <name>; its saves were removed."  Choose
+  Delete World and answer Yes: hear "Deleted world <name>." and then the
+  main menu focus on "Create World".

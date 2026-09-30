@@ -55,61 +55,6 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 21 - World and mod management
-
-**Outcome:** World selection, creation, copying, deletion, and mod configuration
-are independently usable.
-
-**Observed blocker (2026-09-26):** After the last world was deleted, selecting
-Random Character opened the basic world-creation screen without an NVDA
-announcement.  Its default name and Finish shortcut allow keyboard completion,
-but the screen still needs the Stage 21 interaction review and implementation.
-
-**Code inventory:** `src/worldfactory.cpp` (world selection, creation, deletion),
-`src/mod_manager_ui.cpp` (mod list logic), and main-menu world management in
-`src/main_menu.cpp`.
-
-**Implementation hints:**
-
-- World selection: `worldfactory::pick_world()` in `src/worldfactory.cpp`,
-  context `"PICK_WORLD_DIALOG"`.
-- World creation basic: `worldfactory::show_worldgen_basic()` in
-  `src/worldfactory.cpp`, context `"WORLDGEN_CONFIRM_DIALOG"`.
-- World name: `prompt_world_name()` in `src/worldfactory.cpp`.
-- World deletion and reset: `main_menu::world_tab()` in `src/main_menu.cpp` —
-  manage world menu with delete/reset confirmation popups.
-- Mod selection: `worldfactory::show_worldgen_tab_modselection()` in
-  `src/worldfactory.cpp`.
-- Mod list drawing: `worldfactory::draw_mod_list()` in `src/worldfactory.cpp`.
-- Mod manager context: `"MODMANAGER_DIALOG"` registered in
-  `worldfactory::show_worldgen_tab_modselection()`.
-- Mod info: `mod_ui::get_information()` in `src/mod_manager_ui.cpp` —
-  authors, dependencies, version, description.
-- Mod actions: `mod_ui::try_add()`, `mod_ui::try_rem()`, and `mod_ui::try_shift()`
-  in `src/mod_manager_ui.cpp`.
-- Two columns: "Mod List" (available) and "Mod Load Order" (active) in
-  `worldfactory::show_worldgen_tab_modselection()`.
-- Category tabs: tabs in `worldfactory::show_worldgen_tab_modselection()`.
-
-**Selected interaction (conventions 2, 3, 5, and 8):**
-
-- Keys are unchanged.  A world row speaks its name and character count.  The
-  world-creation screens get focus speech, resolving the observed blocker.
-- In the mod manager the "Mod List" and "Load Order" columns behave as tabs.
-  A row speaks name, state, and category.  Add, remove, and move speak the
-  new position; missing dependencies speak their reason as words.
-- `Alt+D` opens mod information in the document view.  Copy, reset, and
-  delete confirmations use the Stage 05 controls.
-
-**Success criteria:** World selection/create/copy/reset/delete, naming, mod
-category/order/dependencies, and confirmation are announced.
-
-**Possible automated tests:** Capture world and mod focus/reorder/dependency
-errors, destructive confirmation, save/cancel, and return focus.
-
-**User-test scenarios:** Create a configured world, alter mod order,
-and safely exercise copy, reset, and delete confirmations.
-
 ## Stage 21A - Options, rules, and panel configuration
 
 **Outcome:** Global and world options, safe-mode and autopickup rule editors,

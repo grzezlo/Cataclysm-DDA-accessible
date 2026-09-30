@@ -1582,3 +1582,59 @@ Limitations:
   when the template file exists afterwards.
 - Visual detail-pane scrolling and scrollbar dragging remain silent;
   `Alt+D` is the accessible route.
+
+## 2026-09-30 — Stage 21: World and mod management
+
+- Implemented the selected interaction (conventions 2, 3, 5, and 8);
+  existing keys are unchanged.
+- World selection speaks "World selection, 4 items" and rows such as
+  "Survival, 3 characters"; page keys speak the page, `Alt+D` opens the
+  world's characters and load order, and `Alt+S` speaks the position.  The
+  main menu's World and Load rows now use the same character wording
+  (`format_world_row`, formerly `format_main_menu_world` with "saves").
+- Create World speaks its name, item count, and focused row on entry,
+  resolving the silent screen reached from Random Character after the last
+  world was deleted.  Rows speak "World name: <name>", "<slider>:
+  <level>", Finish, Reset, and Randomize; slider changes speak only the new
+  level.  Reset, randomize, the random-name key, declined confirmations,
+  and returning from the mod manager or advanced options speak their
+  result and the row.  `Alt+D` opens the slider level description or the
+  screen's key hints; `Alt+S` speaks every setting and the load order size.
+- With a screen reader, `prompt_world_name()` uses the Stage 05 text input
+  instead of the silent ImGui input, keeping the randomize key and the
+  cancel behavior (cancel keeps the previous name).
+- The mod manager treats Mod List (with its category tab) and Mod Load
+  Order as tabs.  Rows speak name, state (active, not installed, obsolete,
+  incompatible with an active mod, or "Unavailable: missing dependency
+  <id>"), and category.  Add speaks the load order position and any
+  dependencies added or core mod replaced; refusals speak their reason.
+  Remove speaks the remaining count and removed dependents; moves speak
+  "Position 2 of 3" or why the mod cannot move.  Category tabs, filter,
+  save default, and the description popup speak their result; `Alt+D`
+  opens mod information in the document view.  The active world mods list
+  speaks the same rows.
+- Main menu delete, reset, and compression confirmations name the world
+  through the popup's spoken context; create, copy, delete, reset, and
+  compression changes speak their result before the main menu focus.
+- Formatters are in `accessibility_format`, mod row and refusal builders in
+  `accessibility_gameplay`, and the screen hooks in `src/worldfactory.cpp`
+  and `src/main_menu.cpp`.
+- `test_access.bat` passed 2153 assertions in 111 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `3d49cf1158`.
+
+Limitations:
+
+- NVDA interaction quality is unverified; T166–T170 are in
+  `ACCESS_USERTESTS.md`, and T1 now expects the character wording.
+  Automated tests cover formatters, mod rows and refusals with game data,
+  and key resolution, not the interactive loops.
+- The World Options tab and the Advanced options screen are Stage 21A.
+- Mouse movement over the lists is silent.  Typing in the mod filter speaks
+  each character but not the live match count; the count is spoken when
+  the filter closes.
+- Mod categories are spoken as the list headers show them, in capitals
+  ("CORE CONTENT PACKS").  "Cannot move" reasons are derived from the same
+  checks as the visual +/- marks.
+- Character to Template from the manage-world menu has no added result
+  speech; its load list uses the shared uilist.
