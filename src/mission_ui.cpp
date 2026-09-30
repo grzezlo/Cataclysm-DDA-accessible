@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+#include "accessibility.h"
+#include "accessibility_document_view.h"
+#include "accessibility_format.h"
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_imgui.h"
@@ -14,6 +17,7 @@
 #include "game_constants.h"
 #include "imgui/imgui.h"
 #include "input_context.h"
+#include "line.h"
 #include "mission.h"
 #include "npc.h"
 #include "faction.h"
@@ -51,6 +55,140 @@ static mission_ui_tab_enum &operator--( mission_ui_tab_enum &c )
     return c;
 }
 
+static accessibility::mission_category mission_category_of( const mission_ui_tab_enum tab )
+{
+    switch( tab ) {
+        case mission_ui_tab_enum::COMPLETED:
+            return accessibility::mission_category::completed;
+        case mission_ui_tab_enum::FAILED:
+            return accessibility::mission_category::failed;
+        default:
+            return accessibility::mission_category::active;
+    }
+}
+
+/** The description with tags expanded, kept while it is unchanged so snippets stay stable. */
+static const std::string &mission_description_text( const mission &miss )
+{
+    static std::string raw_description;
+    static std::string parsed_description;
+    // Avoid replacing expanded snippets with other valid snippet text on redraw
+    if( raw_description != miss.get_description() ) {
+        raw_description = miss.get_description();
+        parsed_description = raw_description;
+        // Handles(example)  <reward_count:item>   in description
+        // Not handled in parse_tags for some reason!
+        dialogue d( get_talker_for( get_avatar() ), nullptr, {} );
+        const talk_effect_fun_t::likely_rewards_t &rewards = miss.get_likely_rewards();
+        for( const auto &reward : rewards ) {
+            std::string token = "<reward_count:" + itype_id( reward.second.evaluate( d ) ).str() + ">";
+            parsed_description = string_replace( parsed_description, token, string_format( "%g",
+                                                 reward.first.evaluate( d ) ) );
+        }
+        parse_tags( parsed_description, get_player_character(), get_player_character() );
+    }
+    return parsed_description;
+}
+
+/** A duration as precise as the player's watch allows. */
+static std::string mission_duration_text( const time_duration &duration )
+{
+    return get_player_character().has_watch() ? to_string( duration ) : to_string_approx( duration );
+}
+
+static std::string mission_location_text( const std::string &label,
+        const tripoint_abs_omt &target )
+{
+    const tripoint_abs_omt pos = get_player_character().pos_abs_omt();
+    const int omt_distance = rl_dist( pos, target );
+    // One OMT is 24 tiles across, at 1x1 meters each.
+    return accessibility::format_mission_location( label, omt_distance,
+            direction_name( direction_from( pos.xy().raw(), target.xy().raw() ) ),
+            length_to_string_approx( omt_distance * 24_meter ) );
+}
+
+std::vector<mission *> mission_accessibility_list( const accessibility::mission_category category )
+{
+    switch( category ) {
+        case accessibility::mission_category::completed:
+            return get_avatar().get_completed_missions();
+        case accessibility::mission_category::failed:
+            return get_avatar().get_failed_missions();
+        case accessibility::mission_category::active:
+            break;
+    }
+    return get_avatar().get_active_missions();
+}
+
+static accessibility::mission_row mission_row_of( const mission &miss,
+        const accessibility::mission_category category )
+{
+    accessibility::mission_row row;
+    row.title = miss.name();
+    row.category = category;
+    row.tracked = category == accessibility::mission_category::active &&
+                  get_avatar().get_active_mission() == &miss;
+    if( miss.has_deadline() ) {
+        const time_point deadline = miss.get_deadline();
+        if( category == accessibility::mission_category::active ) {
+            const time_duration remaining = deadline - calendar::turn;
+            if( remaining <= 0_turns ) {
+                row.deadline_passed = true;
+            } else {
+                row.time = mission_duration_text( remaining );
+            }
+        } else if( deadline != calendar::turn_zero ) {
+            row.time = mission_duration_text( calendar::turn - deadline );
+        }
+    }
+    return row;
+}
+
+std::string mission_accessibility_row( const mission &miss,
+                                       const accessibility::mission_category category )
+{
+    return accessibility::format_mission_row( mission_row_of( miss, category ) );
+}
+
+std::vector<std::string> mission_accessibility_details( const mission &miss,
+        const accessibility::mission_category category, const size_t position, const size_t count )
+{
+    accessibility::mission_details details;
+    details.row = mission_row_of( miss, category );
+    details.position = position;
+    details.count = count;
+    if( miss.get_npc_id().is_valid() ) {
+        if( const npc *guy = g->find_npc( miss.get_npc_id() ) ) {
+            details.giver = guy->disp_name();
+            if( guy->get_faction() ) {
+                details.faction = guy->get_faction()->name;
+            }
+            details.giver_location = mission_location_text( _( "Giver location" ),
+                                     guy->pos_abs_omt() );
+        }
+    }
+    details.description = mission_description_text( miss );
+    if( miss.has_deadline() ) {
+        const time_point deadline = miss.get_deadline();
+        if( category == accessibility::mission_category::active ) {
+            details.time_lines.push_back( string_format( _( "Deadline: %s" ), to_string( deadline ) ) );
+            const time_duration remaining = deadline - calendar::turn;
+            details.time_lines.push_back( string_format( _( "Time remaining: %s" ),
+                                          remaining <= 0_turns ? _( "None!" ) : mission_duration_text( remaining ) ) );
+        } else if( deadline != calendar::turn_zero ) {
+            details.time_lines.push_back( string_format( category ==
+                                          accessibility::mission_category::completed ? _( "Completed: %s" ) : _( "Failed at: %s" ),
+                                          to_string( deadline ) ) );
+            details.time_lines.push_back( string_format( _( "%s ago" ),
+                                          mission_duration_text( calendar::turn - deadline ) ) );
+        }
+    }
+    if( miss.has_target() ) {
+        details.location = mission_location_text( _( "Target" ), miss.get_target() );
+    }
+    return accessibility::format_mission_details( details );
+}
+
 class mission_ui
 {
         friend class mission_ui_impl;
@@ -66,10 +204,26 @@ class mission_ui_impl : public cataimgui::window
                     ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoNav ) {
         }
 
+        /** Speak the tab, position, and current objective. */
+        void accessibility_summary() const;
+        /** Open the focused mission's description in the document view. */
+        void accessibility_details() const;
+
     private:
         void draw_mission_names( std::vector<mission *> missions, int &selected_mission,
                                  bool &need_adjust ) const;
         void draw_selected_description( std::vector<mission *> missions, int &selected_mission );
+        /** Speak the screen, tab, focus, or objective change caused by the last action. */
+        void update_accessibility( const std::vector<mission *> &missions, int selected_mission,
+                                   bool confirmed );
+        std::string accessibility_focus_row() const;
+
+        // The state last shown, for screen reader speech between frames.
+        std::vector<mission *> accessible_missions;
+        int accessible_index = 0;
+        bool accessibility_opened = false;
+        mission_ui_tab_enum spoken_tab = mission_ui_tab_enum::ACTIVE;
+        const mission *spoken_mission = nullptr;
 
         mission_ui_tab_enum selected_tab = mission_ui_tab_enum::ACTIVE;
         mission_ui_tab_enum switch_tab = mission_ui_tab_enum::num_tabs;
@@ -104,6 +258,9 @@ void mission_ui::draw_mission_ui()
     //ctxt.register_action( "DOUBLE_CLICK", to_translation( "Set selected mission as current objective" ) );
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "QUIT" );
+    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
+    ctxt.register_action( "ACCESSIBILITY_STATUS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     // Smooths out our handling, makes tabs load immediately after input instead of waiting for next.
     ctxt.set_timeout( 10 );
 
@@ -116,7 +273,89 @@ void mission_ui::draw_mission_ui()
         if( p_impl.last_action == "QUIT" || !p_impl.get_is_open() ) {
             break;
         }
+        if( p_impl.last_action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            accessibility::repeat_last_announcement();
+        } else if( p_impl.last_action == "ACCESSIBILITY_STATUS" ) {
+            p_impl.accessibility_summary();
+        } else if( p_impl.last_action == "ACCESSIBILITY_DETAILS" ) {
+            p_impl.accessibility_details();
+        }
     }
+}
+
+std::string mission_ui_impl::accessibility_focus_row() const
+{
+    if( accessible_missions.empty() ) {
+        return std::string();
+    }
+    return mission_accessibility_row( *accessible_missions[accessible_index],
+                                      mission_category_of( spoken_tab ) );
+}
+
+void mission_ui_impl::accessibility_summary() const
+{
+    const mission *objective = get_avatar().get_active_mission();
+    accessibility::announce( accessibility::format_mission_summary(
+                                 mission_category_of( spoken_tab ),
+                                 accessible_missions.empty() ? 0 : accessible_index + 1, accessible_missions.size(),
+                                 objective ? objective->name() : std::string() ) );
+}
+
+void mission_ui_impl::accessibility_details() const
+{
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    if( accessible_missions.empty() ) {
+        accessibility::announce( accessibility::format_mission_tab( mission_category_of( spoken_tab ),
+                                 0, std::string() ) );
+        return;
+    }
+    const mission &miss = *accessible_missions[accessible_index];
+    const std::vector<std::string> paragraphs = mission_accessibility_details( miss,
+            mission_category_of( spoken_tab ), accessible_index + 1, accessible_missions.size() );
+    const std::string title = miss.name();
+    accessibility_ui::show_document( string_format( _( "Mission: %s" ), title ), title, paragraphs,
+                                     paragraphs );
+    accessibility::announce( accessibility_focus_row() );
+}
+
+void mission_ui_impl::update_accessibility( const std::vector<mission *> &missions,
+        const int selected_mission, const bool confirmed )
+{
+    accessible_missions = missions;
+    accessible_index = missions.empty() ? 0 : selected_mission;
+    if( !accessibility::is_active() ) {
+        return;
+    }
+    const mission *focused = missions.empty() ? nullptr : missions[accessible_index];
+    const accessibility::mission_category category = mission_category_of( selected_tab );
+    const bool tab_changed = spoken_tab != selected_tab;
+    spoken_tab = selected_tab;
+    std::string speech;
+    if( !accessibility_opened || tab_changed ) {
+        speech = accessibility::format_mission_tab( category, missions.size(),
+                 accessibility_focus_row() );
+        if( !accessibility_opened ) {
+            speech = accessibility::format_mission_screen_opening( speech );
+            accessibility_opened = true;
+        }
+    } else if( confirmed ) {
+        speech = accessibility::format_mission_track_unavailable( category, missions.size() );
+        if( speech.empty() && focused ) {
+            speech = accessibility::format_mission_tracked( focused->name() );
+        }
+    } else if( last_action == "NEXT_TAB" || last_action == "PREV_TAB" || last_action == "LEFT" ||
+               last_action == "RIGHT" ) {
+        // The tab switch takes effect in a later frame, which speaks the new tab.
+        return;
+    } else if( focused && ( last_action == "UP" || last_action == "DOWN" ||
+                            focused != spoken_mission ) ) {
+        // A move at either end repeats the row, since the list does not wrap.
+        speech = accessibility_focus_row();
+    }
+    spoken_mission = focused;
+    accessibility::announce( speech );
 }
 
 void mission_ui_impl::draw_controls()
@@ -206,6 +445,7 @@ void mission_ui_impl::draw_controls()
         selected_tab == mission_ui_tab_enum::ACTIVE ) {
         get_avatar().set_active_mission( *umissions[selected_mission] );
     }
+    update_accessibility( umissions, selected_mission, last_action == "CONFIRM" );
 
     if( umissions.empty() ) {
         static const std::map< mission_ui_tab_enum, std::string > nope = {
@@ -287,24 +527,8 @@ void mission_ui_impl::draw_selected_description( std::vector<mission *> missions
         }
     }
     ImGui::Separator();
-    static std::string raw_description;
-    static std::string parsed_description;
-    // Avoid replacing expanded snippets with other valid snippet text on redraw
-    if( raw_description != miss->get_description() ) {
-        raw_description = miss->get_description();
-        parsed_description = raw_description;
-        // Handles(example)  <reward_count:item>   in description
-        // Not handled in parse_tags for some reason!
-        dialogue d( get_talker_for( get_avatar() ), nullptr, {} );
-        const talk_effect_fun_t::likely_rewards_t &rewards = miss->get_likely_rewards();
-        for( const auto &reward : rewards ) {
-            std::string token = "<reward_count:" + itype_id( reward.second.evaluate( d ) ).str() + ">";
-            parsed_description = string_replace( parsed_description, token, string_format( "%g",
-                                                 reward.first.evaluate( d ) ) );
-        }
-        parse_tags( parsed_description, get_player_character(), get_player_character() );
-    }
-    cataimgui::draw_colored_text( parsed_description, c_unset, table_column_width * 1.15 );
+    cataimgui::draw_colored_text( mission_description_text( *miss ), c_unset,
+                                  table_column_width * 1.15 );
     if( miss->has_deadline() ) {
         const time_point deadline = miss->get_deadline();
         if( selected_tab == mission_ui_tab_enum::ACTIVE ) {

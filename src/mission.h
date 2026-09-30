@@ -465,4 +465,18 @@ struct enum_traits<mission::mission_status> {
     static constexpr mission::mission_status last = mission::mission_status::num_mission_status;
 };
 
+namespace accessibility
+{
+enum class mission_category : int;
+} // namespace accessibility
+
+/** Missions of the player in a missions screen tab. */
+std::vector<mission *> mission_accessibility_list( accessibility::mission_category category );
+/** Screen reader row of a mission in the missions screen. */
+std::string mission_accessibility_row( const mission &miss,
+                                       accessibility::mission_category category );
+/** Document view paragraphs of the mission description pane. */
+std::vector<std::string> mission_accessibility_details( const mission &miss,
+        accessibility::mission_category category, size_t position, size_t count );
+
 #endif // CATA_SRC_MISSION_H

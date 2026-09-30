@@ -1203,6 +1203,166 @@ std::string format_trade_result( const bool traded )
     return traded ? _( "Trade complete" ) : _( "Trade cancelled" );
 }
 
+std::string format_mission_category( const mission_category category )
+{
+    switch( category ) {
+        case mission_category::active:
+            return pgettext( "missions tab", "Active" );
+        case mission_category::completed:
+            return pgettext( "missions tab", "Completed" );
+        case mission_category::failed:
+            return pgettext( "missions tab", "Failed" );
+    }
+    return std::string();
+}
+
+std::string format_mission_count( const size_t count )
+{
+    if( count == 0 ) {
+        return _( "no missions" );
+    }
+    return string_format( n_gettext( "%d mission", "%d missions", count ),
+                          static_cast<int>( count ) );
+}
+
+std::string format_mission_row( const mission_row &row )
+{
+    std::vector<std::string> parts = { collapse_whitespace( row.title ) };
+    if( row.tracked ) {
+        parts.emplace_back( _( "current objective" ) );
+    }
+    switch( row.category ) {
+        case mission_category::active:
+            if( row.deadline_passed ) {
+                parts.emplace_back( _( "deadline passed" ) );
+            } else if( !row.time.empty() ) {
+                //~ Time left until an active mission fails, such as "deadline in 2 days".
+                parts.push_back( string_format( _( "deadline in %s" ), row.time ) );
+            }
+            break;
+        case mission_category::completed:
+            if( !row.time.empty() ) {
+                //~ Time since a mission was completed, such as "completed 3 hours ago".
+                parts.push_back( string_format( _( "completed %s ago" ), row.time ) );
+            }
+            break;
+        case mission_category::failed:
+            if( !row.time.empty() ) {
+                //~ Time since a mission failed, such as "failed 3 hours ago".
+                parts.push_back( string_format( _( "failed %s ago" ), row.time ) );
+            }
+            break;
+    }
+    return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
+}
+
+std::string format_mission_tab( const mission_category category, const size_t count,
+                                const std::string &focus )
+{
+    std::vector<std::string> parts = {
+        string_join( std::vector<std::string> { format_mission_category( category ), format_mission_count( count ) },
+        _( ", " ) )
+    };
+    if( count > 0 ) {
+        parts.push_back( focus );
+    }
+    return format_semantic_sequence( parts );
+}
+
+std::string format_mission_screen_opening( const std::string &tab )
+{
+    return format_semantic_sequence( { _( "Your missions" ), tab } );
+}
+
+std::string format_mission_location( const std::string &label, const int omt_distance,
+                                     const std::string &direction, const std::string &length )
+{
+    if( omt_distance <= 0 ) {
+        //~ A mission location that is on the player's map tile, such as "Target: here".
+        return format_semantic_sequence( { string_format( _( "%s: here" ), label ) } );
+    }
+    //~ Distance to a mission location: %1$s is its kind, %2$d the number of map tiles,
+    //~ %3$s a compass direction, %4$s the approximate real distance.
+    return format_semantic_sequence( { string_format( n_gettext( "%1$s: %2$d map tile %3$s, %4$s",
+                                       "%1$s: %2$d map tiles %3$s, %4$s", omt_distance ), label, omt_distance,
+                                       direction, length )
+                                     } );
+}
+
+std::string format_mission_no_location()
+{
+    return _( "No known location." );
+}
+
+std::vector<std::string> format_mission_details( const mission_details &details )
+{
+    std::vector<std::string> paragraphs;
+    paragraphs.push_back( format_semantic_sequence( {
+        format_mission_row( details.row ),
+        format_mission_category( details.row.category ),
+        format_list_position( details.position, details.count )
+    } ) );
+    if( !details.giver.empty() ) {
+        std::vector<std::string> giver = { string_format( _( "Given by: %s" ), details.giver ) };
+        if( !details.faction.empty() ) {
+            giver.push_back( string_format( _( "Faction: %s" ), details.faction ) );
+        }
+        paragraphs.push_back( format_semantic_sequence( giver ) );
+        if( !details.giver_location.empty() ) {
+            paragraphs.push_back( details.giver_location );
+        }
+    }
+    bool first_line = true;
+    for( const std::string &line : string_split( remove_color_tags( details.description ), '\n' ) ) {
+        for( std::string &sentence : split_uilist_detail_sentences( line ) ) {
+            if( sentence.empty() ) {
+                continue;
+            }
+            if( first_line ) {
+                //~ Start of a mission description, which states its objective and reward.
+                sentence = string_format( _( "Objective: %s" ), sentence );
+                first_line = false;
+            }
+            paragraphs.push_back( std::move( sentence ) );
+        }
+    }
+    for( const std::string &line : details.time_lines ) {
+        paragraphs.push_back( format_semantic_sequence( { remove_color_tags( line ) } ) );
+    }
+    paragraphs.push_back( details.location.empty() ? format_mission_no_location() :
+                          details.location );
+    return paragraphs;
+}
+
+std::string format_mission_summary( const mission_category category, const size_t position,
+                                    const size_t count, const std::string &current_objective )
+{
+    return format_semantic_sequence( {
+        string_join( std::vector<std::string> { _( "Your missions" ), format_mission_category( category ), format_mission_count( count ) },
+        _( ", " ) ),
+        format_list_position( position, count ),
+        current_objective.empty() ? std::string( _( "No current objective" ) ) :
+        string_format( _( "Current objective: %s" ), current_objective )
+    } );
+}
+
+std::string format_mission_tracked( const std::string &title )
+{
+    return format_semantic_sequence( { string_format( _( "Current objective: %s" ), title ) } );
+}
+
+std::string format_mission_track_unavailable( const mission_category category,
+        const size_t count )
+{
+    if( count == 0 ) {
+        return format_semantic_sequence( { _( "Unavailable: no mission selected" ) } );
+    }
+    if( category != mission_category::active ) {
+        return format_semantic_sequence( { _( "Unavailable: only an active mission can be the current objective" ) } );
+    }
+    return std::string();
+}
+
 std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
                                   const std::vector<pickup_failure> &failed )
 {

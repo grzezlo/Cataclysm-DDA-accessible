@@ -44,6 +44,7 @@
 #include "map_selector.h"
 #include "martialarts.h"
 #include "medical_ui.h"
+#include "mission.h"
 #include "monster.h"
 #include "morale.h"
 #include "morale_types.h"
@@ -4577,4 +4578,165 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     CHECK( capture_ptr->messages.back() == returned );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "mission_formatters_speak_state_deadline_location_and_objective",
+           "[accessibility][nogame]" )
+{
+    using accessibility::mission_category;
+    accessibility::mission_row row;
+    row.title = "Reach Refugee Center";
+    row.tracked = true;
+    row.time = "2 days";
+    CHECK( accessibility::format_mission_row( row ) ==
+           "Reach Refugee Center, current objective, deadline in 2 days." );
+    row.tracked = false;
+    row.deadline_passed = true;
+    CHECK( accessibility::format_mission_row( row ) == "Reach Refugee Center, deadline passed." );
+    row.deadline_passed = false;
+    row.time.clear();
+    CHECK( accessibility::format_mission_row( row ) == "Reach Refugee Center." );
+    row.category = mission_category::completed;
+    row.time = "3 hours";
+    CHECK( accessibility::format_mission_row( row ) == "Reach Refugee Center, completed 3 hours ago." );
+    row.category = mission_category::failed;
+    CHECK( accessibility::format_mission_row( row ) == "Reach Refugee Center, failed 3 hours ago." );
+
+    CHECK( accessibility::format_mission_tab( mission_category::active, 3, "Find a book." ) ==
+           "Active, 3 missions. Find a book." );
+    CHECK( accessibility::format_mission_tab( mission_category::failed, 0, "" ) ==
+           "Failed, no missions." );
+    CHECK( accessibility::format_mission_screen_opening(
+               accessibility::format_mission_tab( mission_category::completed, 1, "Find a book." ) ) ==
+           "Your missions. Completed, 1 mission. Find a book." );
+    CHECK( accessibility::format_mission_summary( mission_category::active, 2, 3, "Find a book" ) ==
+           "Your missions, Active, 3 missions. 2 of 3. Current objective: Find a book." );
+    CHECK( accessibility::format_mission_summary( mission_category::failed, 0, 0, "" ) ==
+           "Your missions, Failed, no missions. No current objective." );
+    CHECK( accessibility::format_mission_tracked( "Find a book" ) ==
+           "Current objective: Find a book." );
+    CHECK( accessibility::format_mission_track_unavailable( mission_category::active, 2 ).empty() );
+    CHECK( accessibility::format_mission_track_unavailable( mission_category::completed, 2 ) ==
+           "Unavailable: only an active mission can be the current objective." );
+    CHECK( accessibility::format_mission_track_unavailable( mission_category::active, 0 ) ==
+           "Unavailable: no mission selected." );
+
+    CHECK( accessibility::format_mission_location( "Target", 12, "northeast", "about 288 m" ) ==
+           "Target: 12 map tiles northeast, about 288 m." );
+    CHECK( accessibility::format_mission_location( "Target", 1, "south", "24 m" ) ==
+           "Target: 1 map tile south, 24 m." );
+    CHECK( accessibility::format_mission_location( "Giver location", 0, "", "" ) ==
+           "Giver location: here." );
+
+    accessibility::mission_details details;
+    details.row.title = "Find a book";
+    details.row.tracked = true;
+    details.position = 1;
+    details.count = 2;
+    details.giver = "Hector";
+    details.faction = "Free Merchants";
+    details.giver_location = "Giver location: here.";
+    details.description = "Bring me a <color_white>book</color>.  I will pay $100.\nHurry up!";
+    details.time_lines = { "Deadline: Day 3", "Time remaining: 2 days" };
+    details.location = "Target: 3 map tiles west, 72 m.";
+    const std::vector<std::string> paragraphs = accessibility::format_mission_details( details );
+    const std::vector<std::string> expected = {
+        "Find a book, current objective. Active. 1 of 2.",
+        "Given by: Hector. Faction: Free Merchants.",
+        "Giver location: here.",
+        "Objective: Bring me a book.",
+        "I will pay $100.",
+        "Hurry up!",
+        "Deadline: Day 3.",
+        "Time remaining: 2 days.",
+        "Target: 3 map tiles west, 72 m."
+    };
+    CHECK( paragraphs == expected );
+    details.giver.clear();
+    details.location.clear();
+    const std::vector<std::string> unknown = accessibility::format_mission_details( details );
+    CHECK( unknown[1] == "Objective: Bring me a book." );
+    CHECK( unknown.back() == "No known location." );
+}
+
+TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[accessibility]" )
+{
+    using accessibility::mission_category;
+    static const mission_type_id test_mission( "TEST_MISSION_GOAL_CONDITION2" );
+    avatar &you = get_avatar();
+    clear_avatar();
+    clear_npcs();
+    you.reset_all_missions();
+    mission::clear_all();
+    const time_point previous_turn = calendar::turn;
+    calendar::turn = calendar::turn_zero + 3_days;
+    const on_out_of_scope cleanup( [&you, previous_turn]() {
+        calendar::turn = previous_turn;
+        you.reset_all_missions();
+        mission::clear_all();
+        clear_avatar();
+    } );
+    const auto assign = [&you]() {
+        mission *miss = mission::reserve_new( test_mission, character_id() );
+        if( miss->get_assigned_player_id() == you.getID() ) {
+            // See mission_test.cpp: optimized builds can give the avatar this id.
+            miss->set_assigned_player_id( character_id( -2 ) );
+        }
+        miss->assign( you );
+        return miss;
+    };
+    mission *first = assign();
+    mission *second = assign();
+    const std::string name = first->name();
+    first->set_deadline( calendar::turn + 2_days );
+    first->set_target( you.pos_abs_omt() + tripoint_rel_omt( 0, -5, 0 ) );
+
+    REQUIRE( mission_accessibility_list( mission_category::active ).size() == 2 );
+    REQUIRE( you.get_active_mission() == second );
+    const std::string deadline = to_string_approx( 2_days );
+    CHECK( mission_accessibility_row( *first, mission_category::active ) ==
+           name + ", deadline in " + deadline + "." );
+    CHECK( mission_accessibility_row( *second, mission_category::active ) ==
+           name + ", current objective." );
+
+    // Setting the current objective moves the tracked state.
+    you.set_active_mission( *first );
+    CHECK( mission_accessibility_row( *first, mission_category::active ) ==
+           name + ", current objective, deadline in " + deadline + "." );
+    CHECK( mission_accessibility_row( *second, mission_category::active ) == name + "." );
+
+    const std::vector<std::string> details = mission_accessibility_details( *first,
+            mission_category::active, 1, 2 );
+    REQUIRE( details.size() >= 4 );
+    CHECK( details[0] == name + ", current objective, deadline in " + deadline +
+           ". Active. 1 of 2." );
+    CHECK( details[1] == "Objective: Checks to see if the player has a specific item." );
+    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+        return line.rfind( "Deadline: ", 0 ) == 0;
+    } ) );
+    CHECK( std::any_of( details.begin(), details.end(), [&deadline]( const std::string & line ) {
+        return line == "Time remaining: " + deadline + ".";
+    } ) );
+    CHECK( details.back().rfind( "Target: 5 map tiles north, ", 0 ) == 0 );
+    CHECK( mission_accessibility_details( *second, mission_category::active, 2,
+                                          2 ).back() == "No known location." );
+
+    // A failed mission moves to the failed tab with the time since it failed.
+    second->fail();
+    CHECK( mission_accessibility_list( mission_category::active ).size() == 1 );
+    REQUIRE( mission_accessibility_list( mission_category::failed ).size() == 1 );
+    CHECK( mission_accessibility_row( *second, mission_category::failed ).rfind(
+               name + ", failed ", 0 ) == 0 );
+    CHECK( mission_accessibility_details( *second, mission_category::failed, 1,
+                                          1 )[0].rfind( name + ", failed ", 0 ) == 0 );
+
+    // A completed mission speaks the time since it was completed.
+    first->wrap_up();
+    calendar::turn += 1_hours;
+    CHECK( mission_accessibility_list( mission_category::active ).empty() );
+    REQUIRE( mission_accessibility_list( mission_category::completed ).size() == 1 );
+    const std::string completed = name + ", completed " + to_string_approx( 1_hours ) + " ago.";
+    CHECK( mission_accessibility_row( *first, mission_category::completed ) == completed );
+    CHECK( mission_accessibility_details( *first, mission_category::completed, 1,
+                                          1 )[0] == completed + " Completed. 1 of 1." );
 }

@@ -299,6 +299,74 @@ std::string format_trade_summary( const trade_summary &summary );
 std::string format_trade_bank_change( const trade_balance &balance, const std::string &bank );
 /** Spoken when the trade window closes. */
 std::string format_trade_result( bool traded );
+/** Tabs of the missions screen. */
+enum class mission_category : int {
+    active,
+    completed,
+    failed
+};
+/** "Active", "Completed", or "Failed". */
+std::string format_mission_category( mission_category category );
+/** "3 missions" or "no missions". */
+std::string format_mission_count( size_t count );
+/** A mission row as the missions screen shows it. */
+struct mission_row {
+    std::string title;
+    mission_category category = mission_category::active;
+    /** The mission is the current objective. */
+    bool tracked = false;
+    /**
+     * Remaining time of an active mission, or the time since an inactive one
+     * ended; empty when the screen shows none.
+     */
+    std::string time;
+    /** An active mission whose deadline has passed. */
+    bool deadline_passed = false;
+};
+/**
+ * "Reach Refugee Center, current objective, deadline in 2 days." or
+ * "Find a book, failed 3 hours ago."
+ */
+std::string format_mission_row( const mission_row &row );
+/** "Active, 3 missions. <row>" or "Failed, no missions." */
+std::string format_mission_tab( mission_category category, size_t count,
+                                const std::string &focus );
+/** Screen name followed by the tab, spoken when the missions screen opens. */
+std::string format_mission_screen_opening( const std::string &tab );
+/**
+ * A known map location: "Target: 12 map tiles northeast, about 288 m." or
+ * "Target: here."  `label` is the translated kind of location.
+ */
+std::string format_mission_location( const std::string &label, int omt_distance,
+                                     const std::string &direction, const std::string &length );
+/** Spoken when a mission shows no target location. */
+std::string format_mission_no_location();
+/** Everything the mission description pane shows. */
+struct mission_details {
+    mission_row row;
+    size_t position = 0;
+    size_t count = 0;
+    /** Empty when the giver is unknown or not nearby. */
+    std::string giver;
+    std::string faction;
+    /** Formatted giver location; empty when the giver is unknown. */
+    std::string giver_location;
+    /** Description with tags expanded; it states the objective and reward. */
+    std::string description;
+    /** Deadline or end time lines as the screen shows them. */
+    std::vector<std::string> time_lines;
+    /** Formatted target location; empty when the mission has no target. */
+    std::string location;
+};
+/** Paragraphs for the document view: status, giver, objective, time, and location. */
+std::vector<std::string> format_mission_details( const mission_details &details );
+/** Tab, position, and the current objective, spoken on request. */
+std::string format_mission_summary( mission_category category, size_t position, size_t count,
+                                    const std::string &current_objective );
+/** Spoken after CONFIRM sets the current objective. */
+std::string format_mission_tracked( const std::string &title );
+/** Spoken when CONFIRM cannot set the current objective. */
+std::string format_mission_track_unavailable( mission_category category, size_t count );
 /** An item that a pickup stored, with the container it went into, if known. */
 struct pickup_result_item {
     std::string item;
