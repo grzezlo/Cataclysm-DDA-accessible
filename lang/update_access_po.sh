@@ -5,7 +5,8 @@
 # Usage: lang/update_access_po.sh [--base <revision>] [language...]
 #
 # The fork template contains every string extracted from this tree that the
-# upstream base lacks.  The base is the merge base of HEAD and 0.I-branch
+# upstream base lacks.  The base is the merge base of HEAD and the first
+# existing branch of 0.I-branch, upstream/0.I-branch, and origin/0.I-branch,
 # unless --base names another revision.  Its template is cached in lang/po
 # by commit.  Without languages, every existing lang/access catalog is
 # updated.  Upstream catalogs in lang/po are left unchanged.
@@ -25,7 +26,7 @@ then
     fi
 fi
 
-base_ref="0.I-branch"
+base_ref=""
 if [ "${1:-}" = "--base" ]
 then
     if [ $# -lt 2 ]
@@ -35,6 +36,22 @@ then
     fi
     base_ref="$2"
     shift 2
+fi
+if [ -z "$base_ref" ]
+then
+    for candidate in 0.I-branch upstream/0.I-branch origin/0.I-branch
+    do
+        if git rev-parse --verify --quiet "$candidate^{commit}" >/dev/null
+        then
+            base_ref="$candidate"
+            break
+        fi
+    done
+    if [ -z "$base_ref" ]
+    then
+        echo "Error: No 0.I-branch found; fetch upstream or pass --base."
+        exit 1
+    fi
 fi
 
 # The extraction scripts need Python 3 with polib.  Use uv for a temporary
