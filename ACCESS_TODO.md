@@ -188,8 +188,11 @@ This stage does not block the Stage 23 release and can run independently.
 
 - `lang/access/<language>.po` holds every translation of strings added by the
   fork, whatever their source.  AI may draft them; a human reviews and corrects
-  them there.  AI drafts are marked fuzzy until reviewed, so only reviewed
-  entries reach the game.
+  them there.  AI drafts reach the game immediately so beta testers can report
+  language problems found in play.  A draft carries the translator comment
+  `# AI draft`, which the reviewer removes; the fuzzy flag keeps its gettext
+  meaning (a stale translation of a changed source string) and stays out of the
+  game.
 - `lang/po/<language>.po` stays identical to upstream.
 - `lang/machine/<language>.po` holds AI translations of upstream strings that
   neither `lang/po` nor `lang/access` translates.  The file is the provenance
@@ -228,7 +231,9 @@ This stage does not block the Stage 23 release and can run independently.
 
 **Success criteria:** Compiled catalogs follow the precedence above; an
 upstream translation replaces a machine entry after the next update; fuzzy and
-untranslated entries never reach the game; every machine and access catalog
+untranslated entries never reach the game while `# AI draft` entries do; the
+update script reports how many drafts await review; every machine and access
+catalog
 passes the validation below; and the README and release notes state which
 translations are machine-made and how to add a language.
 
