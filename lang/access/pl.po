@@ -1,0 +1,4774 @@
+# Translations of the access fork's own strings for pl.
+# Upstream strings are translated in lang/po.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-01 23:28+0200\n"
+"PO-Revision-Date: 2026-10-01 23:28+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Message %d of %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d message"
+msgid_plural "%d messages"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Message log"
+msgstr ""
+
+#: src/accessibility_format.cpp src/crafting_gui.cpp src/game.cpp
+msgid "Filter cleared"
+msgstr ""
+
+#. ~ %s: recipe search query
+#: src/accessibility_format.cpp src/construction.cpp src/crafting_gui.cpp
+#: src/game.cpp src/inventory_ui.cpp src/proficiency_ui.cpp
+#, c-format
+msgid "Filter: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp src/messages.cpp
+msgid "No matching messages"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Message log filter"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Current query: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Search text or use type:text"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Types: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Enter to apply, Escape to cancel"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Filter text empty"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Filter text: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Unknown message type: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "list wrap"
+msgid "Top"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "list wrap"
+msgid "Bottom"
+msgstr ""
+
+#: src/accessibility_format.cpp src/advanced_inv.cpp
+msgid "No items"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "list position"
+msgid "%1$d of %2$d"
+msgstr ""
+
+#. ~ Sentence terminator added between spoken accessibility phrases that lack
+#. one.
+#: src/accessibility_format.cpp
+msgctxt "accessibility sentence end"
+msgid "."
+msgstr ""
+
+#. ~ Separator between spoken accessibility sentences.
+#: src/accessibility_format.cpp
+msgctxt "accessibility sentence separator"
+msgid " "
+msgstr ""
+
+#. ~ The number of characters saved in a world.
+#: src/accessibility_format.cpp
+msgid "no characters"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d character"
+msgid_plural "%d characters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Tab %1$s, %2$d of %3$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Item %1$d of %2$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Help. 0 topics. %s to exit."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid ""
+"Help. %1$d topics. Use %2$s and %3$s to browse, hotkey or %4$s to open, %5$s "
+"to exit. %6$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d topic"
+msgid_plural "%d topics"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "unbound"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Movement keys: "
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: uninjured"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: lightly injured"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: moderately injured"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: heavily injured"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: severely injured"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health: nearly dead"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Count: %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d location"
+msgid_plural "%d locations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Location %1$d of %2$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No results"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d result"
+msgid_plural "%d results"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Unavailable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Actions for %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not possible now"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not applicable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No rule"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Rule set"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Use arrow keys to choose"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s for details"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s selected"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Choices: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Choose with %1$s or %2$s; confirm with %3$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Value: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Space"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Minus"
+msgstr ""
+
+#: src/accessibility_format.cpp src/string_input_popup.cpp
+msgid "End of field"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "key modifier"
+msgid "Ctrl"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "key modifier"
+msgid "Alt"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "key modifier"
+msgid "Shift"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Key: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Unbound"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Global binding"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Local binding"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Keys: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Customized"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Keybindings"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d action"
+msgid_plural "%d actions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid ""
+"%1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens "
+"actions. %5$s reads all keys."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Filter. Type to search. %s returns to the action list."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Text: %1$s. Results: %2$d."
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not owned"
+msgstr ""
+
+#: src/accessibility_format.cpp src/crafting_gui.cpp
+msgid "Favorite"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Contents collapsed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Contents expanded"
+msgstr ""
+
+#. ~ Why a mod cannot be activated, such as "Unavailable: missing dependency
+#. aftershock".
+#: src/accessibility_format.cpp src/veh_interact.cpp
+#, c-format
+msgid "Unavailable: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Goes into: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d matching item"
+msgid_plural "%d matching items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Not selected"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Selected"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Selected all %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Selected %1$d of %2$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Nothing selected"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d entry selected"
+msgid_plural "%d entries selected"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Spoken selector statistics: %1$s weight, %2$s weight limit, %3$s weight
+#. unit, %4$s volume, %5$s volume limit, %6$s volume unit
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Weight %1$s of %2$s %3$s, volume %4$s of %5$s %6$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Over weight limit"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Over volume limit"
+msgstr ""
+
+#. ~ Number of units of a trade row marked for the trade
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d marked"
+msgid_plural "%d marked"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Price of one unit of a trade row
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s each"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Unmarked"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Free exchange"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Balance: you owe %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Balance: credit %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "acceptable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "trader refuses"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Trader's goods"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Your goods"
+msgstr ""
+
+#. ~ A character description field and its value, such as "Name: Ada".
+#. ~ A world creation setting and its value, such as "Population density:
+#. High".
+#. ~ The mod list pane and its category tab, such as "Mod List: Default".
+#. ~ A screen and its page, tab, or column, such as "Options: General".
+#. ~ An option and its value, such as "Use tiles: True".
+#. ~ A safe mode rule column and its value, such as "Attitude: Hostile".
+#. ~ A zone option and its value, such as "Filter: food".
+#. ~ %1$s: "On water" or "In the air", %2$s: vehicle speeds there
+#. ~ %1$s: aim level name; %2$s: hit chance such as "62% hit"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#. ~ Value of the trader's goods marked for the trade
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Buying: %s"
+msgstr ""
+
+#. ~ Value of the player's goods marked for the trade
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Selling: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Bank balance: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Trade cancelled"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Trade complete"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "missions tab"
+msgid "Active"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "missions tab"
+msgid "Completed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "missions tab"
+msgid "Failed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "no missions"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d mission"
+msgid_plural "%d missions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "current objective"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "deadline passed"
+msgstr ""
+
+#. ~ Time left until an active mission fails, such as "deadline in 2 days".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "deadline in %s"
+msgstr ""
+
+#. ~ Time since a mission was completed, such as "completed 3 hours ago".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "completed %s ago"
+msgstr ""
+
+#. ~ Time since a mission failed, such as "failed 3 hours ago".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "failed %s ago"
+msgstr ""
+
+#. ~ A mission location that is on the player's map tile, such as "Target:
+#. here".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s: here"
+msgstr ""
+
+#. ~ Distance to a mission location: %1$s is its kind, %2$d the number of map
+#. tiles,
+#. ~ %3$s a compass direction, %4$s the approximate real distance.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s: %2$d map tile %3$s, %4$s"
+msgid_plural "%1$s: %2$d map tiles %3$s, %4$s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "No known location."
+msgstr ""
+
+#. ~ Start of a mission description, which states its objective and reward.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Objective: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No current objective"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Unavailable: no mission selected"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Unavailable: only an active mission can be the current objective"
+msgstr ""
+
+#. ~ A character creation choice that adds points, such as "earns 2 points".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "earns %d point"
+msgid_plural "earns %d points"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ The point cost of a character creation choice, such as "2 points".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d point"
+msgid_plural "%d points"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "selected"
+msgstr ""
+
+#: src/accessibility_format.cpp src/newcharacter.cpp
+msgid "Not enough points"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d point over budget"
+msgid_plural "%d points over budget"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d point left"
+msgid_plural "%d points left"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Points left in the legacy multiple pools: %1$d total, then stat, trait,
+#. and skill points.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$d points left: stats %2$d, traits %3$d, skills %4$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Over budget"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Character creation"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Removed %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Selected %s"
+msgstr ""
+
+#. ~ Character creation list filter, such as "Filter doc".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Filter %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Default sort order"
+msgstr ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#: src/newcharacter.cpp
+msgid "Sorted by name"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Current: none"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Current: %s"
+msgstr ""
+
+#. ~ A character stat and its value, such as "Strength 8".
+#. ~ %1$s: terrain such as "grass"; %2$d: number of tiles of it along the
+#. route
+#. ~ Skill on the character sheet: %1$s: skill name, %2$d: level
+#. ~ Fuel available to bionics: %1$s: fuel name, %2$d: amount
+#. ~ A character stat and its value, such as "Strength 8".
+#. ~ A skill and its level, such as "Melee 2".
+#: src/accessibility_format.cpp src/bionics_ui.cpp src/newcharacter.cpp
+#, c-format
+msgid "%1$s %2$d"
+msgstr ""
+
+#. ~ A trait that cannot be removed, such as "locked by profession".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "locked by %s"
+msgstr ""
+
+#. ~ A trait that cannot be taken with chosen traits, such as "conflicts with
+#. Slow Learner".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "conflicts with %s"
+msgstr ""
+
+#. ~ A trait that cannot be taken, such as "forbidden by scenario".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "forbidden by %s"
+msgstr ""
+
+#. ~ A skill level in character creation, such as "level 2".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "level %d"
+msgstr ""
+
+#. ~ Skill levels granted by the chosen profession.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d from profession"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s negative"
+msgstr ""
+
+#. ~ A blood type with its Rh factor, such as "O positive".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s positive"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d variant"
+msgid_plural "%d variants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Advanced options customized"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d mod in load order"
+msgid_plural "%d mods in load order"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+msgid "not installed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "obsolete"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "incompatible with an active mod"
+msgstr ""
+
+#. ~ A mod added to the load order: "Added Magiclysm, position 5 of 5".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Added %1$s, position %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Also added: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Also removed: %s"
+msgstr ""
+
+#. ~ A mod that cannot be activated and why: "Cannot add Magiclysm: already in
+#. the load order".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cannot add %1$s: %2$s"
+msgstr ""
+
+#. ~ A mod's new place in the load order: "Position 3 of 5".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Position %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cannot move down: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cannot move up: %s"
+msgstr ""
+
+#. ~ An option whose prerequisite is not met, such as "Unavailable: requires
+#. Use tiles".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Unavailable: requires %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d option"
+msgid_plural "%d options"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "collapsed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "expanded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Collapsed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Expanded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Page %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "not applicable"
+msgstr ""
+
+#: src/accessibility_format.cpp src/auto_pickup.cpp
+msgid "empty rule"
+msgstr ""
+
+#: src/accessibility_format.cpp src/safemode_ui.cpp
+msgid "Distance"
+msgstr ""
+
+#: src/accessibility_format.cpp src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Rule"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Column: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "hidden"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "shown"
+msgstr ""
+
+#. ~ A sidebar panel picked up for moving: "Moving Stats, position 3 of 20".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moving %1$s, position %2$s"
+msgstr ""
+
+#. ~ A sidebar panel dropped at its new place: "Moved Stats to position 5 of
+#. 20".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$s to position %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "map offset"
+msgid "%1$d %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "map offset"
+msgid "north"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "map offset"
+msgid "south"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "map offset"
+msgid "east"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "map offset"
+msgid "west"
+msgstr ""
+
+#. ~ Separator between the north-south and east-west parts of "3 north 2
+#. east".
+#: src/accessibility_format.cpp
+msgctxt "map offset"
+msgid " "
+msgstr ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#, c-format
+msgid "%d level above"
+msgid_plural "%d levels above"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#, c-format
+msgid "%d level below"
+msgid_plural "%d levels below"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+msgid "here"
+msgstr ""
+
+#. ~ Overmap z-level, such as "Level -1"; 0 is the ground.
+#. ~ A skill level after a change in character creation.
+#. ~ %d: spell level
+#: src/accessibility_format.cpp src/newcharacter.cpp src/ranged.cpp
+#, c-format
+msgid "Level %d"
+msgstr ""
+
+#. ~ A map note marked dangerous with its radius in map tiles.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "dangerous area, radius %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "in dangerous area"
+msgstr ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+msgid "unexplored"
+msgstr ""
+
+#. ~ A map note at the overmap cursor.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "note: %s"
+msgstr ""
+
+#. ~ An active mission whose target is at the overmap cursor.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "mission target: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "route destination"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "on route"
+msgstr ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$d map tile %2$s"
+msgid_plural "%1$d map tiles %2$s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "no places"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d place"
+msgid_plural "%d places"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %1$s: route destination; %2$s: its distance and direction such as "8 map
+#. tiles north"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Route to %1$s, %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d map tile of travel"
+msgid_plural "%d map tiles of travel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %s: key that starts travel along the previewed route
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Press %s again to travel"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "No route to %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Travel needs the destination on your level"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No route selected"
+msgstr ""
+
+#. ~ %1$s: route destination; %2$s: its distance and direction from the player
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Route: %1$s, %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cursor: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Search results, %d result"
+msgid_plural "Search results, %d results"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Result %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Marked explored"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Marked unexplored"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "personal"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "vehicle"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "enabled"
+msgstr ""
+
+#. ~ Distance and compass direction from the player to a zone, such as "5
+#. tiles north".
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$d tile %2$s"
+msgid_plural "%1$d tiles %2$s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "no zones"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d zone"
+msgid_plural "%d zones"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Size of a zone in tiles, such as "Zone 4 by 3".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Zone %1$d by %2$d"
+msgstr ""
+
+#. ~ A zone was enabled or disabled: %s is the zone name.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s enabled"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s disabled"
+msgstr ""
+
+#. ~ A zone's map display was toggled: %s is the zone name.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s shown on map"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s hidden from map"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No zones"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No personal zones changed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d personal zone enabled"
+msgid_plural "%d personal zones enabled"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d personal zone disabled"
+msgid_plural "%d personal zones disabled"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Hiding distant zones"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Showing all zones"
+msgstr ""
+
+#. ~ Options of a zone, such as "Options: Filter: food".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Options: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not shown on map"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Shown on map"
+msgstr ""
+
+#. ~ Vehicle speed while reversing: %1$d is the speed, %2$s the unit such as
+#. "mph".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$d %2$s reverse"
+msgstr ""
+
+#. ~ Vehicle speed: %1$d is the speed, %2$s the unit such as "mph".
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "vehicle speed"
+msgid "%1$d %2$s"
+msgstr ""
+
+#. ~ Vehicle heading: %1$s is a compass direction, %2$d degrees from north.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Heading %1$s, %2$d degrees"
+msgstr ""
+
+#. ~ Vehicle cruise control target speed, such as "20 mph".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cruise %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid ", above safe speed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid ", maximum"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "light engine strain"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "heavy engine strain"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "severe engine strain"
+msgstr ""
+
+#. ~ Vehicle fuel gauge: %1$s is the fuel, %2$d the percentage of the tank.
+#. ~ %1$s: hit outcome such as "Graze"; %2$d: its percent chance
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s %2$d%%"
+msgstr ""
+
+#. ~ Time until a vehicle tank or battery is full.
+#: src/accessibility_format.cpp
+#, c-format
+msgid ", %s until full"
+msgstr ""
+
+#. ~ Time until a vehicle tank or battery is empty.
+#: src/accessibility_format.cpp
+#, c-format
+msgid ", %s until empty"
+msgstr ""
+
+#. ~ Actual and cruise speed of the driven vehicle.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Speed %1$s, cruise %2$s"
+msgstr ""
+
+#. ~ Steering target of a turning vehicle: %1$s is a compass direction, %2$d
+#. degrees.
+#: src/accessibility_format.cpp
+#, c-format
+msgid ", turning to %1$s, %2$d degrees"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Engine off"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Engine on"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Skidding"
+msgstr ""
+
+#. ~ Obstacle in the path of a reversing vehicle: %1$s is its name, %2$d the
+#. distance.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s behind, %2$d tile"
+msgid_plural "%1$s behind, %2$d tiles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Obstacle in the path of a vehicle: %1$s is its name, %2$d the distance.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s ahead, %2$d tile"
+msgid_plural "%1$s ahead, %2$d tiles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Engine selection row: %1$s is the engine, %2$s its fuel, %3$s "on" or
+#. "off".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, %2$s, %3$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "engine"
+msgid "off"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "engine"
+msgid "on"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "front left"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "rear left"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "front right"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "rear right"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "front"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "rear"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "left"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "right"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle location"
+msgid "center"
+msgstr ""
+
+#. ~ Grid tile beyond a vehicle: %s is the nearest location on the vehicle,
+#. such as "front left".
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "vehicle location"
+msgid "outside, %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d tile in front of the vehicle"
+msgid_plural "%d tiles in front of the vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d tile behind the vehicle"
+msgid_plural "%d tiles behind the vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Row of a vehicle grid tile: %1$d is the row counted from the front, %2$d
+#. the number of rows.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "row %1$d of %2$d from the front"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d tile left of the vehicle"
+msgid_plural "%d tiles left of the vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d tile right of the vehicle"
+msgid_plural "%d tiles right of the vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Column of a vehicle grid tile: %1$d is the column counted from the left,
+#. %2$d the number of columns.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "column %1$d of %2$d from the left"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle part"
+msgid "broken"
+msgstr ""
+
+#. ~ Damage of a vehicle part: %d is the percentage of its durability lost.
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "vehicle part"
+msgid "damaged %d%%"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "vehicle tile"
+msgid "no parts"
+msgstr ""
+
+#. ~ Separator between the parts on one vehicle tile.
+#: src/accessibility_format.cpp
+msgctxt "vehicle tile"
+msgid "; "
+msgstr ""
+
+#. ~ A vehicle grid tile where nothing can be installed because terrain or
+#. another vehicle is in the way.
+#: src/accessibility_format.cpp
+msgctxt "vehicle tile"
+msgid ", obstructed"
+msgstr ""
+
+#. ~ Vehicle grid tile: %1$s is its location, such as "front left", %2$s the
+#. parts on it.
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "vehicle tile"
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No parts"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d part"
+msgid_plural "%d parts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "No installable parts"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d installable part"
+msgid_plural "%d installable parts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "requirements not met"
+msgstr ""
+
+#. ~ %d: number of unmet requirements of a vehicle task
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d requirement missing"
+msgid_plural "%d requirements missing"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Skill a vehicle task requires: %1$s is the skill, %2$d its level, %3$s
+#. "have" or "missing".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s %2$d, %3$s"
+msgstr ""
+
+#. ~ %s: skills with their levels and states, or "none"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Skills required: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "none"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "; "
+msgstr ""
+
+#. ~ Additional skill a vehicle installation needs: %1$s is the skill, %2$d
+#. its level, %3$s its purpose such as "for extra engines", %4$s "have" or
+#. "missing".
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s %2$d %3$s, %4$s"
+msgstr ""
+
+#. ~ %s: time needed for a vehicle task
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Time required: %s"
+msgstr ""
+
+#. ~ Lifting a vehicle part: %1$s is a lifting tool, %2$s its state, %3$s the
+#. strength needed instead, %4$s its state.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Lifting: %1$s, %2$s; or %3$s, %4$s"
+msgstr ""
+
+#. ~ Examined vehicle: %1$s is its name, %2$s its owner.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, owned by %2$s"
+msgstr ""
+
+#. ~ Vehicle speeds: %1$d safe speed, %2$d top speed, %3$d acceleration per
+#. second, %4$s speed unit.
+#: src/accessibility_format.cpp
+#, c-format
+msgid ""
+"safe speed %1$d %4$s, top speed %2$d %4$s, acceleration %3$d %4$s per second"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Mass: %s"
+msgstr ""
+
+#. ~ Vehicle cargo: %1$s is the used volume, %2$s the total volume, both with
+#. units.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Cargo: %1$s of %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Status: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Most damaged: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Most damaged, can't repair: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Needs repair: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Air drag %.2f"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Water drag %.2f"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Rolling drag %.2f"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Static drag %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Offroad %d%%"
+msgstr ""
+
+#. ~ Boat draft and clearance in meters.
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Draft %1$.2f meters, clearance %2$.2f meters"
+msgstr ""
+
+#. ~ Picked-up item and the container it went into
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s into %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Picked up: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp src/newcharacter.cpp
+msgid "; "
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Not picked up: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Dropped on %1$s: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Put in %1$s: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, %2$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "From: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Open in the other pane"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Destination: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Source: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp src/advanced_inv.cpp src/bionics_ui.cpp
+#, c-format
+msgid "Sort: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$d stack to %2$s."
+msgid_plural "Moved %1$d stacks to %2$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$d of %2$d stack to %3$s."
+msgid_plural "Moved %1$d of %2$d stacks to %3$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$s to %2$s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$s, %2$d, to %3$s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Moved %1$d of %2$d %3$s to %4$s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Second comparison item: %s. First comparison item: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "First is better"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Second is better"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Equal"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "First, %s: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Second, %s: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Bleeding: %s!"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Stopped bleeding: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Broken limb: %s!"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Stamina critical!"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Pain: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Hunger: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Thirst: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Sleepiness: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Weariness: %s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Stopped by threat"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Off; auto-safe pending"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Off; auto-safe in %d turn"
+msgid_plural "Off; auto-safe in %d turns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Bleeding!"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Broken limb!"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Health & Pain"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Stamina & Condition"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Stamina: %1$d%%, Focus: %2$d, %3$s: %4$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Hunger: %1$s, Thirst: %2$s, Sleepiness: %3$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Body: %1$s, Env: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d effect"
+msgid_plural "%d effects"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "Temperature & Effects"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Wielded weapon"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Movement & Safety"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Mode: %1$s, Speed: %2$d, Safe mode: %3$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Time & Environment"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d tile"
+msgid_plural "%d tiles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "No threats in view"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "threat count"
+msgid "%d other"
+msgid_plural "%d others"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Welcome back, %1$s. Location: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Welcome, %1$s. Location: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No valid targets."
+msgstr ""
+
+#. ~ %s: valid targets of a direction prompt separated by semicolons
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Targets: %s."
+msgstr ""
+
+#. ~ %1$s: target such as "wooden door"; %2$s: direction such as "north"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Auto-selected: %1$s, %2$s."
+msgstr ""
+
+#. ~ %1$s: what is in the chosen direction; %2$s: direction such as "north"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, %2$s: not a valid target."
+msgstr ""
+
+#. ~ %1$s: destination such as "wooden door"; %2$s: distance and direction
+#. such as "12 tiles northeast"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Traveling to %1$s, %2$s"
+msgstr ""
+
+#. ~ %1$s: travel destination and distance; %2$d: number of steps along the
+#. route
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, %2$d step"
+msgid_plural "%1$s, %2$d steps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %d: number of route segments not described
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d more"
+msgid_plural "%d more"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %1$s: travel destination, distance, and steps; %2$s: route segments
+#. separated by commas
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s: %2$s."
+msgstr ""
+
+#. ~ %s: terrain or furniture where auto-travel ended
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Arrived: %s."
+msgstr ""
+
+#. ~ %1$s: travel destination; %2$s: its distance and direction such as "8
+#. tiles north"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Travel stopped: %1$s, %2$s."
+msgstr ""
+
+#. ~ %d: percent chance to hit the target in target mode
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d%% hit"
+msgstr ""
+
+#. ~ %s: aim level such as "Careful"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s aim"
+msgstr ""
+
+#. ~ %s: aim level name; the level used by the fire key
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s, selected"
+msgstr ""
+
+#. ~ %1$s: aim level name; %2$s: key that fires with this aim level
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, key %2$s"
+msgstr ""
+
+#. ~ %d: moves needed to aim and fire
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d move to fire"
+msgid_plural "%d moves to fire"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp src/ranged.cpp
+msgid "Out of ammo"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No turret in range"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Out of range"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not a valid target"
+msgstr ""
+
+#. ~ %s: visible obstacle such as "brick wall" between the player and the
+#. target
+#: src/accessibility_format.cpp
+#, c-format
+msgid "No line of fire, blocked by %s"
+msgstr ""
+
+#. ~ %s: creatures standing between the player and the target
+#: src/accessibility_format.cpp
+#, c-format
+msgid "In line of fire: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "You are in the area of effect"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No targets"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d target"
+msgid_plural "%d targets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %s: ammunition name
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Ammo: %s"
+msgstr ""
+
+#. ~ %1$s: ammunition name; %2$d: loaded rounds; %3$d: capacity
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Ammo: %1$s, %2$d of %3$d"
+msgstr ""
+
+#. ~ %s: gun firing mode such as "semi-auto (1)"
+#: src/accessibility_format.cpp src/ranged.cpp
+#, c-format
+msgid "Firing mode: %s"
+msgstr ""
+
+#. ~ %s: selected aim level such as "Careful"
+#: src/accessibility_format.cpp src/ranged.cpp
+#, c-format
+msgid "Aim: %s"
+msgstr ""
+
+#. ~ %d: percent steadiness of the aim
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Steadiness: %d%%"
+msgstr ""
+
+#. ~ %1$d: distance to the cursor; %2$d: maximum range
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Range: %1$d of %2$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "have"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "not enough"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "have, uses a favorite"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "have, uses a filled container"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "have, hallucinogenic or poisonous"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "missing"
+msgstr ""
+
+#. ~ %1$s: tool or component such as "2 rags", %2$s: state such as "have" or
+#. "missing"
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "recipe requirement"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "Tools"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "Components"
+msgstr ""
+
+#. ~ %1$s: "Tools" or "Components", %2$s: alternatives with their states
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "recipe requirement"
+msgid "%1$s: %2$s"
+msgstr ""
+
+#. ~ Separator between alternatives of one recipe requirement.
+#: src/accessibility_format.cpp
+msgctxt "recipe requirement"
+msgid "; or "
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe"
+msgid "craftable"
+msgstr ""
+
+#. ~ %d: number of unmet recipe requirements
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d missing"
+msgid_plural "%d missing"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe"
+msgid "not craftable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe"
+msgid "group"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe group"
+msgid "expanded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe group"
+msgid "collapsed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe group"
+msgid "nothing craftable"
+msgstr ""
+
+#: src/accessibility_format.cpp src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "favorite"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "recipe"
+msgid "new"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No recipes"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d recipe"
+msgid_plural "%d recipes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ %d: number of hidden recipes in the category
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d hidden"
+msgid_plural "%d hidden"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgid "new recipes"
+msgstr ""
+
+#. ~ %d: number of recipe copies crafted together
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Batch size %d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "available"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No projects"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d project"
+msgid_plural "%d projects"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Character sheet stat: %1$s: stat name, %2$d: current value, %3$d: base
+#. value
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s %2$d, base %3$d"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "freezing"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "very cold"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "chilly"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "comfortable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "warm"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "very hot"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body warmth"
+msgid "scorching"
+msgstr ""
+
+#. ~ %d: encumbrance of a body part without the layering penalty
+#. ~ %d: encumbrance of a worn item on a body part
+#: src/accessibility_format.cpp
+#, c-format
+msgid "encumbrance %d"
+msgstr ""
+
+#. ~ %d: extra encumbrance of a body part from layering clothing
+#: src/accessibility_format.cpp
+#, c-format
+msgid "layering %d"
+msgstr ""
+
+#. ~ %d: total encumbrance of a body part
+#: src/accessibility_format.cpp
+#, c-format
+msgid "total %d"
+msgstr ""
+
+#. ~ %d: temperature number of a body part as the character sheet shows it
+#: src/accessibility_format.cpp
+#, c-format
+msgid "warmth %d"
+msgstr ""
+
+#. ~ %s: warmth band of a body part, such as "comfortable"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "warmth %s"
+msgstr ""
+
+#. ~ Sort armor encumbrance block: the body part is covered by the focused
+#. item
+#: src/accessibility_format.cpp
+msgid "covered by this item"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "move cost %s"
+msgstr ""
+
+#. ~ %s: signed change of speed, such as "+10" or "-5%"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "speed %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "set by bionic"
+msgstr ""
+
+#. ~ %s: effective dodge value
+#: src/accessibility_format.cpp
+#, c-format
+msgid "effective %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "rusty"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "not training"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "positive"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "negative"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "neutral"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "mixed"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "threshold"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "profession"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "attunement"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "trait kind"
+msgid "debug"
+msgstr ""
+
+#. ~ %d: number of installed bionics of one kind
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d installed"
+msgid_plural "%d installed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgctxt "proficiency"
+msgid "known"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "proficiency"
+msgid "learning"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "proficiency"
+msgid "not known"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Reassigning"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Select an entry to assign a new letter"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Select an entry to hide or show its sprite"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No key"
+msgstr ""
+
+#. ~ %s: the letter that selects a bionic or mutation
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Key %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "bionic state"
+msgid "on"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "bionic state"
+msgid "off"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "power source"
+msgstr ""
+
+#. ~ %s: energy used to activate a bionic, such as "50 kJ"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s to activate"
+msgstr ""
+
+#. ~ %s: energy used to deactivate a bionic
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s to deactivate"
+msgstr ""
+
+#. ~ %s: energy used each time a bionic triggers
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s per trigger"
+msgstr ""
+
+#. ~ %s: energy a running bionic uses each turn
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%s per turn"
+msgstr ""
+
+#. ~ %1$s: energy a running bionic uses, %2$d: number of turns
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s per %2$d turns"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "sprite hidden"
+msgstr ""
+
+#. ~ %d: power percentage above which a bionic stops burning fuel
+#: src/accessibility_format.cpp
+#, c-format
+msgid "fuel saving above %d%%"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "fuel saving inactive"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Unavailable: not enough power"
+msgstr ""
+
+#. ~ %1$s: current bionic power, %2$s: maximum bionic power
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Bionic power %1$s of %2$s"
+msgstr ""
+
+#. ~ %s: list of fuels available to bionics with their amounts
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Available fuel: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "mutation state"
+msgid "on"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "mutation state"
+msgid "off"
+msgstr ""
+
+#. ~ %1$d: activation cost of a mutation, %2$s: resources, such as "kcal and
+#. thirst"
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "mutation activation cost"
+msgid "%1$d %2$s"
+msgstr ""
+
+#. ~ %s: cooldown of a mutation, such as "5 minutes"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "cooldown %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "starting trait"
+msgstr ""
+
+#. ~ %s: resources a mutation needs, such as "kcal and thirst"
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Unavailable: not enough %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "resources"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "spell"
+msgid "castable"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "spell"
+msgid "cost impeded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "spell"
+msgid "time impeded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "spell"
+msgid "favorite"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No spells"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d spell"
+msgid_plural "%d spells"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+msgctxt "martial arts style"
+msgid "current"
+msgstr ""
+
+#. ~ Health bar with less than one tenth of its length left
+#: src/accessibility_format.cpp
+msgid "health under 1 of 10"
+msgstr ""
+
+#. ~ Health bar in tenths as the five-character bar shows it: %d: tenths left
+#: src/accessibility_format.cpp
+#, c-format
+msgid "health %d of 10"
+msgstr ""
+
+#. ~ Splinted limb in the medical menu; %d: filled fifths of the mending bar
+#: src/accessibility_format.cpp
+#, c-format
+msgid "mending %d of 5"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body part"
+msgid "missing"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "body status"
+msgid "has details"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgctxt "armor sprite"
+msgid "hidden"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "layering conflict"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "out of order"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "only item"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "innermost"
+msgstr ""
+
+#. ~ Armor position while moving: %s: the next item outwards
+#: src/accessibility_format.cpp
+#, c-format
+msgid "above %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "outermost"
+msgstr ""
+
+#. ~ Armor position while moving: %s: the next item inwards
+#: src/accessibility_format.cpp
+#, c-format
+msgid "below %s"
+msgstr ""
+
+#. ~ Sort armor: an item was picked up to change its layer; %s: item name
+#: src/accessibility_format.cpp src/panels.cpp
+#, c-format
+msgid "Moving %s"
+msgstr ""
+
+#. ~ Sort armor: the moved item was put down at its new layer
+#: src/accessibility_format.cpp
+msgctxt "armor"
+msgid "Placed"
+msgstr ""
+
+#: src/accessibility_format.cpp src/bionics_ui.cpp src/mutation_ui.cpp
+msgid "Sprite hidden"
+msgstr ""
+
+#: src/accessibility_format.cpp src/bionics_ui.cpp src/mutation_ui.cpp
+msgid "Sprite shown"
+msgstr ""
+
+#. ~ Sort armor summary: %1$d: total encumbrance of the body part, %2$d: its
+#. layering penalty
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Total encumbrance %1$d, layering %2$d"
+msgstr ""
+
+#. ~ Dialogue history element: %1$s: speaker name, %2$s: what they said or did
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "dialogue utterance"
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Action"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Leaves you helpless"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "May provoke an attack"
+msgstr ""
+
+#. ~ Dialogue response row: %1$s: hotkey, %2$s: response text
+#: src/accessibility_format.cpp
+#, c-format
+msgctxt "dialogue response"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. ~ Dialogue response prompt: %1$s: label such as "Your response", %2$d:
+#. number of responses
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%1$s, %2$d option"
+msgid_plural "%1$s, %2$d options"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Resumed: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Started: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Finished: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "Stopped: %s"
+msgstr ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "About %s remaining"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Constructing %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "unseen"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Terrain: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Furniture: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Trap: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Hazard: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Field: %s"
+msgstr ""
+
+#. ~ %s: vehicle name
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Vehicle: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Creature: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Items: contents are not visible"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Items: something is here, but it is not visible"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s (%2$d)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Item: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Without hunger"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s/%2$s: navigate"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s or %2$s: return to status list"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s: view details.  %2$s: return to game"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s.  %2$s.  %3$s: repeat."
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "A bright pink blur"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "A pink blur"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Darkness"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Bright light"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Unseen"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Gameplay. Current position: %s"
+msgstr ""
+
+#. ~ %1$s: target such as "table"; %2$d: number of items on it
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s with %2$d item"
+msgid_plural "%1$s with %2$d items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Current position: %1$s. Movement: %2$s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Passable"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Exit: %1$s. %2$s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Obstacle: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$d connected tile; nearest: %2$s"
+msgid_plural "%1$d connected tiles; nearest: %2$s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Situation review"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s or %2$s: return to game.  %3$s: repeat the last announcement."
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Status review"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Health & Pain details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Splinted"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Bleeding (intensity %d)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Bitten"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Lifestyle health"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s (level %2$d)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Stamina & Condition details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$d / %2$d (%3$d%%)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Weariness penalty"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Activity level"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Needs details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Weight category"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Weight description"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Temperature & Effects details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Body temperature feel"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Environment temperature"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Wielded weapon details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Wielded item"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Ammunition"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Attack mode"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Standard"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Martial style"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Movement & Safety details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Movement mode"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Move counter & mode"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Time & Environment details"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Time of day"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Zone moved"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgctxt "vehicle part"
+msgid "leaking"
+msgstr ""
+
+#. ~ Battery charge of a vehicle part: %1$d is the charge, %2$d the capacity.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Charge %1$d of %2$d"
+msgstr ""
+
+#. ~ Fuel in a vehicle part: %1$.1f is the amount in liters, %2$s the fuel.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$.1f liters of %2$s"
+msgstr ""
+
+#. ~ Cargo of a vehicle part: %1$s is the used volume, %2$s the capacity, %3$s
+#. the volume unit.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Cargo: %1$s of %2$s %3$s"
+msgstr ""
+
+#. ~ %1$s: fault of a vehicle part, %2$s: its description
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Fault: %1$s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Category: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "At this location: %d"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "High priority"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Low priority"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "New"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "May hide contents"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Behavior: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Sees you"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Sorted by distance"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Sorted by category and distance"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Sorted by category and name"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "sensed creature"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "You sense a creature here, but cannot see it."
+msgstr ""
+
+#. ~ %s: effects on the target such as "stunned"
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Effects: %s"
+msgstr ""
+
+#. ~ %s: components returned by disassembly, such as "2 rags and 1 thread"
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Returns: %s"
+msgstr ""
+
+#. ~ %s: time needed to disassemble an item
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Time: %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Current objective from the cursor"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Known places"
+msgstr ""
+
+#. ~ Why a scenario or profession cannot be picked, such as "requires
+#. achievement Escaped".
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "requires achievement %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "not available with this world's city size"
+msgstr ""
+
+#. ~ A background whose trait conflicts with a chosen background's trait.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%1$s conflicts with background %2$s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "scenario"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "profession"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "background"
+msgstr ""
+
+#. ~ A mod that needs mods which are not installed.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "missing dependency %s"
+msgid_plural "missing dependencies %s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_gameplay.cpp
+msgid "circular dependency"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "already in the load order"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "already first"
+msgstr ""
+
+#. ~ A mod cannot move above the core mod, such as "Dark Days Ahead loads
+#. first".
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%s loads first"
+msgstr ""
+
+#. ~ A mod cannot move above a mod it needs.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "depends on %s"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "already last"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "the core mod loads first"
+msgstr ""
+
+#. ~ A mod cannot move below a mod that needs it.
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "%s depends on it"
+msgstr ""
+
+#: src/action.cpp
+msgid "Accessibility"
+msgstr ""
+
+#: src/action.cpp
+msgid "(Direction button or mouse)"
+msgstr ""
+
+#: src/action.cpp
+msgid "(Direction button)"
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "%1$s's %2$s"
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "Container: %s"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "your hands"
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "Weight %1$s of %2$s, volume %3$s of %4$s"
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "Weight %1$s, volume %2$s"
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "Weight %1$s, volume %2$s of %3$s"
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "Item limit %1$d of %2$d"
+msgstr ""
+
+#: src/advanced_inv.cpp src/inventory_ui.cpp
+msgid "No matching items"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "Advanced inventory"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "Category navigation"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "Item navigation"
+msgstr ""
+
+#: src/armor_layers.cpp
+msgid "Sorted into layer order"
+msgstr ""
+
+#: src/auto_pickup.cpp
+msgid "Include or exclude"
+msgstr ""
+
+#. ~ The focused pickup rule column: "Rule: wooden arrow".
+#: src/auto_pickup.cpp
+#, c-format
+msgid "Rule: %s"
+msgstr ""
+
+#: src/auto_pickup.cpp
+msgid "Auto pickup disabled"
+msgstr ""
+
+#: src/auto_pickup.cpp
+msgid "Pickup rules"
+msgstr ""
+
+#: src/auto_pickup.cpp
+msgid "No rule added"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Rule added"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Rule removed"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Rule copied"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+#, c-format
+msgid "Rule moved to %s"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Unavailable: load a character first"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Changes discarded"
+msgstr ""
+
+#: src/auto_pickup.cpp src/safemode_ui.cpp
+msgid "Changes saved"
+msgstr ""
+
+#: src/bionics_ui.cpp
+msgid "Active bionics"
+msgstr ""
+
+#: src/bionics_ui.cpp
+msgid "Passive bionics"
+msgstr ""
+
+#: src/bodygraph.cpp
+#, c-format
+msgid "%s, good"
+msgstr ""
+
+#: src/bodygraph.cpp
+#, c-format
+msgid "%s, bad"
+msgstr ""
+
+#: src/bodygraph.cpp
+msgctxt "effects"
+msgid "none"
+msgstr ""
+
+#: src/bodygraph.cpp
+msgctxt "worn"
+msgid "nothing"
+msgstr ""
+
+#. ~ Body status protection; %1$s: damage type, %2$.2f, %3$.2f, %4$.2f: worst,
+#. median, and best resistance
+#: src/bodygraph.cpp
+#, c-format
+msgid "%1$s: worst %2$.2f, median %3$.2f, best %4$.2f"
+msgstr ""
+
+#: src/character.cpp
+msgid "Select a style"
+msgstr ""
+
+#. ~ %s: key that opens the details of a martial arts style
+#: src/character.cpp
+#, c-format
+msgid "%s for techniques, buffs, and compatible weapons"
+msgstr ""
+
+#: src/construction.cpp
+msgid "too dark"
+msgstr ""
+
+#: src/construction.cpp
+msgid "missing skills"
+msgstr ""
+
+#: src/construction.cpp
+msgid "missing tools or components"
+msgstr ""
+
+#: src/construction.cpp
+msgid "no valid adjacent tile"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Variant %d"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Result: %s"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Required skills: none"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Required skill: %1$s %2$d, you have %3$d, %4$s"
+msgstr ""
+
+#: src/construction.cpp
+msgid "met"
+msgstr ""
+
+#: src/construction.cpp
+msgid "missing"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Requires terrain: %1$s, %2$s"
+msgstr ""
+
+#: src/construction.cpp
+msgid "nearby"
+msgstr ""
+
+#: src/construction.cpp
+msgid "not nearby"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Annotation: %s"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid "Time to complete: %s"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Tools: none"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Components: none"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Placement: adjacent tile available"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Placement: no valid adjacent tile"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Construction"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Construction requirements"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Unavailable projects hidden"
+msgstr ""
+
+#: src/construction.cpp
+msgid "Unavailable projects shown"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "low skill"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "uses rotten ingredients"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "no skill gain"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "uses favorite items"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "too dark"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgctxt "recipe"
+msgid "too slow"
+msgstr ""
+
+#. ~ %s: name of the recipe result
+#: src/crafting_gui.cpp
+#, c-format
+msgid "Recipe: %s"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Batch off"
+msgstr ""
+
+#. ~ %s: name of the character who will craft
+#: src/crafting_gui.cpp
+#, c-format
+msgid "Crafter: %s"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Not favorite"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Recipe shown"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Recipe hidden"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Marked as read"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Marked as unread"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Unread recipes first"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "Unread recipes in normal order"
+msgstr ""
+
+#: src/debug.cpp
+msgid ""
+"Press <color_white>D</color> (or <color_white>d</color>) to hear the full "
+"error report."
+msgstr ""
+
+#: src/debug.cpp
+#, c-format
+msgid "Press <color_white>%s</color> to repeat the last announcement."
+msgstr ""
+
+#: src/debug.cpp
+#, c-format
+msgid ""
+"An error has occurred: %1$s. Press space to continue, I to ignore this "
+"message in the future, D for the full report, or %2$s to repeat this "
+"announcement."
+msgstr ""
+
+#: src/debug.cpp
+msgid "Press C to copy the report."
+msgstr ""
+
+#: src/dialogue_win.cpp
+msgid "Your input"
+msgstr ""
+
+#: src/dialogue_win.cpp
+msgid "Your choice"
+msgstr ""
+
+#: src/dialogue_win.cpp
+msgid "Your response"
+msgstr ""
+
+#: src/dialogue_win.cpp
+msgid "Message"
+msgstr ""
+
+#: src/dialogue_win.cpp
+msgid "Response"
+msgstr ""
+
+#: src/distraction_manager.cpp
+#, c-format
+msgid "Distractions manager, %d items"
+msgstr ""
+
+#: src/distraction_manager.cpp
+msgid "Distraction"
+msgstr ""
+
+#: src/game.cpp
+msgid "Peek canceled."
+msgstr ""
+
+#: src/game.cpp
+msgid "You cannot peek in that direction."
+msgstr ""
+
+#: src/game.cpp
+msgid "Peek"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Observation origin: %s"
+msgstr ""
+
+#: src/game.cpp
+msgid "Time cost: two seconds"
+msgstr ""
+
+#: src/game.cpp
+msgid "Returned from peeking to the unchanged character position"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Movement: %s"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Available peek action: %s (unbound)"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Available peek action: %1$s (%2$s)"
+msgstr ""
+
+#: src/game.cpp
+msgid "Peek look-around"
+msgstr ""
+
+#: src/game.cpp
+msgid "Cursor origin: character position"
+msgstr ""
+
+#: src/game.cpp
+msgid "Filter nearby items"
+msgstr ""
+
+#: src/game.cpp
+msgid "Current filter: none"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Current filter: %s"
+msgstr ""
+
+#: src/game.cpp
+msgid "Enter filter text, then confirm or cancel"
+msgstr ""
+
+#: src/game.cpp
+msgid "Set the high priority item filter, then confirm or cancel."
+msgstr ""
+
+#: src/game.cpp
+msgid "High priority filter cleared"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "High priority filter: %s"
+msgstr ""
+
+#: src/game.cpp
+msgid "Set the low priority item filter, then confirm or cancel."
+msgstr ""
+
+#: src/game.cpp
+msgid "Low priority filter cleared"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Low priority filter: %s"
+msgstr ""
+
+#: src/game.cpp src/inventory_ui.cpp
+msgid "Nearby items"
+msgstr ""
+
+#: src/game.cpp
+msgid "Safe mode blacklist: listed"
+msgstr ""
+
+#: src/game.cpp
+msgid "Safe mode blacklist: not listed"
+msgstr ""
+
+#: src/game.cpp
+msgid "Nearby creatures"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "No details available"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "No shared numeric statistics"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid ""
+"Use %1$s and %2$s for paired statistics, %3$s for full item details, %4$s to "
+"return"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Full item details"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Use %1$s and %2$s to switch items, %3$s to return to paired statistics"
+msgstr ""
+
+#: src/help.cpp
+#, c-format
+msgid "Help: %s"
+msgstr ""
+
+#: src/input_context.cpp
+#, c-format
+msgid "Press %s to switch between filter and action list."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "No matching actions."
+msgstr ""
+
+#: src/input_context.cpp
+#, c-format
+msgid "Keybindings for %s"
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Add local binding"
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Assign a key that applies only on this screen."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Add global binding"
+msgstr ""
+
+#: src/input_context.cpp
+msgid ""
+"Local bindings are already defined. Remove them before adding a global "
+"binding."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Assign a key that applies globally across all screens."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Remove binding"
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Reset this action to inherit global bindings."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Action has no bindings to remove."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Clear the assigned keys for this action."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Reset binding"
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Restore this action to its default keybindings."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Action is already using its default keybindings."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Execute action"
+msgstr ""
+
+#: src/input_context.cpp
+msgid "Execute this action immediately and close the menu."
+msgstr ""
+
+#: src/input_context.cpp
+msgid "This action cannot be executed from this menu."
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "No available choices"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Item selection mode"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Category view"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Hierarchy view"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Inventory items"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Worn and wielded items"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Selected items"
+msgstr ""
+
+#: src/inventory_ui.cpp src/uilist.cpp
+#, c-format
+msgid "Details: %s"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Selected as first comparison item"
+msgstr ""
+
+#: src/inventory_ui.cpp
+msgid "Selected as second comparison item"
+msgstr ""
+
+#: src/inventory_ui.cpp
+#, c-format
+msgid "%s deselected for comparison"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "cannot speak"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "missing components"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "not enough mana"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "not enough bionic power"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "not enough stamina"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "not enough health"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell unavailable"
+msgid "cannot cast now"
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "spell cost"
+msgid "no cost"
+msgstr ""
+
+#. ~ %1$d: energy a spell costs, %2$s: energy type, such as "mana" or "kJ"
+#: src/magic.cpp
+#, c-format
+msgctxt "spell cost"
+msgid "%1$d %2$s"
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "No worlds to load."
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "Tip of the day"
+msgstr ""
+
+#: src/main_menu.cpp
+msgctxt "Main Menu"
+msgid "T<i|I>p of the day"
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "No tip available."
+msgstr ""
+
+#. ~ Spoken before a confirmation about a world, such as "World Survival".
+#: src/main_menu.cpp
+#, c-format
+msgid "World %s"
+msgstr ""
+
+#. ~ Spoken after world creation; %s is the world name.
+#: src/main_menu.cpp
+#, c-format
+msgid "Created world %s."
+msgstr ""
+
+#. ~ %s is the world name.
+#: src/main_menu.cpp
+#, c-format
+msgid "Save compression disabled for %s."
+msgstr ""
+
+#. ~ %s is the world name.
+#: src/main_menu.cpp
+#, c-format
+msgid "Save compression enabled for %s."
+msgstr ""
+
+#. ~ %s is the world name.
+#: src/main_menu.cpp
+#, c-format
+msgid "Deleted world %s."
+msgstr ""
+
+#. ~ %s is the world name.
+#: src/main_menu.cpp
+#, c-format
+msgid "Reset world %s; its saves were removed."
+msgstr ""
+
+#: src/martialarts.cpp
+msgid " (carried)"
+msgstr ""
+
+#: src/messages.cpp
+msgctxt "message type"
+msgid "headshot"
+msgstr ""
+
+#: src/messages.cpp
+msgctxt "message type"
+msgid "critical hit"
+msgstr ""
+
+#: src/messages.cpp
+msgctxt "message type"
+msgid "grazing hit"
+msgstr ""
+
+#. ~ Key binding name
+#: src/messages.cpp data/raw/keybindings.json
+msgid "Repeat last screen reader message"
+msgstr ""
+
+#: src/messages.cpp
+msgid "Now"
+msgstr ""
+
+#: src/messages.cpp
+msgid "Filter canceled"
+msgstr ""
+
+#: src/mission_ui.cpp
+msgid "Giver location"
+msgstr ""
+
+#: src/mission_ui.cpp
+msgid "Target"
+msgstr ""
+
+#: src/mutation_ui.cpp
+msgid "kcal"
+msgstr ""
+
+#: src/mutation_ui.cpp
+msgid "Active mutations"
+msgstr ""
+
+#: src/mutation_ui.cpp
+msgid "Passive mutations"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Points"
+msgstr ""
+
+#: src/newcharacter.cpp src/player_display.cpp
+msgid "Traits"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Positive traits"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Negative traits"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Neutral traits"
+msgstr ""
+
+#. ~ Trait points taken against the limit: positive, negative, and the limit.
+#: src/newcharacter.cpp
+#, c-format
+msgid ""
+"Positive traits %1$d of %3$d points, negative traits %2$d of %3$d points"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Sorted by points"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Profession"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Outfit: female"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Outfit: male"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Identity: female"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Identity: male"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Background"
+msgstr ""
+
+#: src/newcharacter.cpp src/player_display.cpp
+msgid "Skills"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Scenario"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Start of cataclysm: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Start of game: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Calendar reset"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Scenario: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Profession: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Background: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid ""
+"Stats: Strength %1$d, Dexterity %2$d, Intelligence %3$d, Perception %4$d"
+msgstr ""
+
+#. ~ A skill in the character summary: name, level, and experience toward the
+#. next level.
+#: src/newcharacter.cpp
+#, c-format
+msgid "%1$s %2$d, %3$d%%"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Skills: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Proficiencies: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Bionics: %s"
+msgstr ""
+
+#. ~ A starting addiction and its intensity, such as "Nicotine, intensity 5".
+#: src/newcharacter.cpp
+#, c-format
+msgid "%1$s, intensity %2$d"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Starting addictions: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Starting vehicle (scenario): %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Starting vehicle (profession): %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Starting vehicle: %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "no name entered"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "random name"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Random location"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Gender"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Outfit"
+msgstr ""
+
+#: src/newcharacter.cpp src/player_display.cpp
+msgid "Age"
+msgstr ""
+
+#: src/newcharacter.cpp src/player_display.cpp
+msgid "Blood type"
+msgstr ""
+
+#: src/newcharacter.cpp src/player_display.cpp
+msgid "Height"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Starting location"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Character summary"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Character randomized"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Character and scenario randomized"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Saved template %s"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Template %s was not saved"
+msgstr ""
+
+#: src/newcharacter.cpp
+msgid "Description randomized"
+msgstr ""
+
+#: src/newcharacter.cpp
+#, c-format
+msgid "Starting city: %s"
+msgstr ""
+
+#: src/options.cpp
+msgid "Screen reader speech"
+msgstr ""
+
+#: src/options.cpp
+msgid ""
+"Automatic: enable screen reader speech and accessible navigation when a "
+"supported screen reader is detected.  On: always use the accessible "
+"interface.  Off: never speak through a screen reader."
+msgstr ""
+
+#: src/options.cpp
+msgid "Automatic"
+msgstr ""
+
+#: src/options.cpp
+msgid "Progress announcement interval"
+msgstr ""
+
+#: src/options.cpp
+msgid ""
+"Seconds of silence before announcing changed activity, loading, or saving "
+"progress.  0 disables automatic progress announcements; repeat-last still "
+"works."
+msgstr ""
+
+#: src/options.cpp
+msgid "Advanced world options"
+msgstr ""
+
+#: src/options.cpp
+msgid "Not a number"
+msgstr ""
+
+#: src/options.cpp
+msgid "Options saved"
+msgstr ""
+
+#: src/options.cpp
+msgid "Option changes discarded"
+msgstr ""
+
+#: src/overmap_ui.cpp
+#, c-format
+msgid "Weather: %s"
+msgstr ""
+
+#: src/overmap_ui.cpp
+msgid "Weather unknown"
+msgstr ""
+
+#: src/panels.cpp
+msgid "Layouts"
+msgstr ""
+
+#: src/panels.cpp
+msgid "Panels"
+msgstr ""
+
+#: src/panels.cpp
+#, c-format
+msgid "Layout: %s"
+msgstr ""
+
+#. ~ %s is the key that places a sidebar panel being moved.
+#: src/panels.cpp
+#, c-format
+msgid "Press %s to place the panel"
+msgstr ""
+
+#: src/panels.cpp
+msgid "Shown"
+msgstr ""
+
+#: src/panels.cpp
+msgid "Hidden"
+msgstr ""
+
+#: src/pickup.cpp
+#, c-format
+msgid "Not owned: %s"
+msgstr ""
+
+#: src/pickup.cpp
+msgid "no room"
+msgstr ""
+
+#: src/pickup.cpp
+msgid "too heavy"
+msgstr ""
+
+#: src/player_display.cpp
+msgid "Encumbrance and warmth"
+msgstr ""
+
+#. ~ %d: character speed
+#: src/player_display.cpp
+#, c-format
+msgid "Speed %d"
+msgstr ""
+
+#. ~ %d: move cost of the character
+#: src/player_display.cpp
+#, c-format
+msgid "Move cost %d"
+msgstr ""
+
+#. ~ Blood type and Rh factor, e.g. "O, Rh positive"
+#: src/player_display.cpp
+#, c-format
+msgid "%1$s, Rh %2$s"
+msgstr ""
+
+#. ~ Bionic power: %1$d %2$s: current amount and unit, %3$d: maximum in
+#. kilojoules
+#: src/player_display.cpp
+#, c-format
+msgid "Power %1$d %2$s of %3$d kJ"
+msgstr ""
+
+#. ~ Opening the character sheet; %s: character name
+#: src/player_display.cpp
+#, c-format
+msgid "Character sheet, %s"
+msgstr ""
+
+#. ~ %s: reload-and-shoot weapon such as "bow"
+#: src/ranged.cpp
+#, c-format
+msgid "The %s will be unloaded after quitting."
+msgstr ""
+
+#. ~ %s: reload-and-shoot weapon such as "bow"
+#: src/ranged.cpp
+#, c-format
+msgid "The %s will stay loaded after quitting."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Snap to target on."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Snap to target off."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Lines of fire shown."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Lines of fire hidden."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Directional keys shift the view."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Directional keys move the cursor."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Targeting canceled."
+msgstr ""
+
+#. ~ %s: weapon used for a reach attack
+#: src/ranged.cpp
+#, c-format
+msgid "Reach attack with %s"
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Reach attack"
+msgstr ""
+
+#. ~ %s: spell name
+#: src/ranged.cpp
+#, c-format
+msgid "Casting %s"
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Firing turrets"
+msgstr ""
+
+#. ~ %1$d: turrets that can reach the cursor; %2$d: all selected turrets
+#: src/ranged.cpp
+#, c-format
+msgid "Turrets in range: %1$d of %2$d"
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Edge of range"
+msgstr ""
+
+#. ~ %s: targeting title such as "Firing pistol"
+#: src/ranged.cpp
+#, c-format
+msgid "Target details: %s"
+msgstr ""
+
+#: src/safemode_ui.cpp
+msgid "Blacklist or whitelist"
+msgstr ""
+
+#: src/safemode_ui.cpp
+msgid "Safe mode disabled"
+msgstr ""
+
+#: src/safemode_ui.cpp
+msgid "Safe mode enabled"
+msgstr ""
+
+#: src/safemode_ui.cpp
+msgid "Safe mode rule"
+msgstr ""
+
+#: src/safemode_ui.cpp
+msgid "Default rules added"
+msgstr ""
+
+#: src/string_input_popup.cpp
+msgid "Start of field"
+msgstr ""
+
+#: src/string_input_popup.cpp
+msgid "Cleared"
+msgstr ""
+
+#: src/string_input_popup.cpp
+msgid "Input not accepted"
+msgstr ""
+
+#: src/ui_extended_description.cpp
+msgid "Creature"
+msgstr ""
+
+#: src/ui_extended_description.cpp
+msgid "Vehicle/Appliance"
+msgstr ""
+
+#: src/ui_extended_description.cpp
+msgid "Extended description"
+msgstr ""
+
+#: src/ui_iteminfo.cpp src/uilist.cpp
+msgid "No details available."
+msgstr ""
+
+#: src/ui_iteminfo.cpp
+#, c-format
+msgid "Item info: %s"
+msgstr ""
+
+#: src/uilist.cpp
+msgid "List is empty"
+msgstr ""
+
+#: src/uilist.cpp
+msgid "No matching entries"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "You cannot install any more engines on this vehicle."
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "for extra engines"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "for extra steering axles"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Repair"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Mend"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Remove"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Install here"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Refill"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Siphon"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Assign crew"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Change shape"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Label"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "the vehicle is moving"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "your morale is too low"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "it is too dark to see what you are doing"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "you lack the tools"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "something is attached to it"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "your skill is too low"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "Vehicle grid"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "No requirements."
+msgstr ""
+
+#. ~ Why a vehicle task is unavailable: %s is the owner of the vehicle.
+#: src/veh_interact.cpp
+#, c-format
+msgid "owned by %s"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "not damaged"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "this part cannot be repaired"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "nothing can be installed here"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "you need a hose"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "you have no allies to assign"
+msgstr ""
+
+#. ~ Task menu of a vehicle part: %1$s is the part, %2$s its location such as
+#. "front left".
+#: src/veh_interact.cpp
+#, c-format
+msgid "Tasks for %1$s, %2$s"
+msgstr ""
+
+#. ~ Accessible list of the parts of the examined vehicle: %s is its name.
+#: src/veh_interact.cpp
+#, c-format
+msgid "Parts of %s"
+msgstr ""
+
+#. ~ Accessible install list: %s is the location on the vehicle, such as
+#. "front left".
+#: src/veh_interact.cpp
+#, c-format
+msgid "Install at %s"
+msgstr ""
+
+#. ~ Install requirement document: %s is the part.
+#: src/veh_interact.cpp
+#, c-format
+msgid "Install %s"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgctxt "vehicle task"
+msgid "Install"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "In the air"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "On water"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Characters: %s"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Mod load order: %s"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "No active mods"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "Category tabs change only the mod list"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "not available"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "Only the load order can be reordered"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "Mod manager"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "World name"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "World settings and mods reset"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "Settings randomized"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "World options reset to defaults"
+msgstr ""
+
+#. ~ Help message in menu "Viewing"
+#: data/core/help.json
+msgid ""
+"When a list announces a details key, use it to read the selected entry's "
+"description.  Find the current binding in the keybindings menu.  Short "
+"descriptions are read in the list.  Longer descriptions open a document: use "
+"the arrow keys to read its parts, then Escape to return to the same list "
+"entry.  If an entry has no description, the game says 'No details available.'"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Accessibility details"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Speak screen status summary"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Review current situation"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Review player condition and status, or vehicle status while driving"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "List known places"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "List vehicle parts"
+msgstr ""

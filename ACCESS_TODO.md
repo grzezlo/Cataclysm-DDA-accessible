@@ -153,15 +153,16 @@ Windows x64 tiles build without assembling development dependencies.
 
 **Code inventory:** repository Windows build/package scripts;
 `src/accessibility_nvda.cpp` runtime lookup; `README.md`, `doc/`, release notes,
-licenses, translations, and distribution contents.
+licenses, `lang/access` translations, and distribution contents.
 
 **Success criteria:** A reproducible clean package contains the matching NVDA
 Controller Client DLL and LGPL 2.1 license, preserves upstream attribution,
 starts safely with NVDA running or absent, and provides accessible first-run,
 command, limitation, diagnostic, AI-development, and defect-reporting guidance.
 All accessibility source strings are wrapped in `_()` / `pgettext()` and the
-Polish catalog (the tested locale) includes translations for critical
-accessibility strings.
+Polish fork catalog `lang/access/pl.po` (the tested locale) includes
+translations for critical accessibility strings, and the package's `lang/mo` is
+built with `compile_translations_win_x64.bat`.
 
 **Possible automated tests:** Validate package contents, architecture, licenses,
 version, clean configuration, missing-DLL fallback, smoke launch, focused/full
@@ -269,5 +270,5 @@ instructions and revise the guide before accepting the stage.
   semantic model from Stage 22.
 - Upstream synchronization should occur between stages, re-verifying
   `test_access.bat` after each merge.
-- Translation catalog updates for accessibility strings are deferred to Stage 23
-  packaging.
+- `lang/access/pl.po` holds the fork's own strings without translations yet.
+  Translating them and adding catalogs for other languages is pending Stage 23.

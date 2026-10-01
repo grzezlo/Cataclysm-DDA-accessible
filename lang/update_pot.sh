@@ -79,11 +79,14 @@ fi
 
 # Final compilation check
 echo "> Testing to compile translation template"
-if ! msgfmt -c -o /dev/null lang/po/cataclysm-dda.pot
+check_mo=$(mktemp)
+if ! msgfmt -c -o "$check_mo" lang/po/cataclysm-dda.pot
 then
+    rm -f "$check_mo"
     echo "Translation template cannot be compiled. Aborting."
     exit 1
 fi
+rm -f "$check_mo"
 
 # Check for broken Unicode symbols
 echo "> Checking for wrong Unicode symbols"

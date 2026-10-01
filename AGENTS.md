@@ -225,6 +225,10 @@ over upstream contribution policy or exact UI parity.
 - Run `build_win_x64.bat` for the tiles game and
   `build_tests_win_x64.bat` for the test executable.  Run `test_access.bat`
   for the focused accessibility suite and `test_all.bat` for the full suite.
+- Keep `lang/po` identical to upstream.  Translations of strings added by the
+  fork belong in `lang/access/<language>.po`; refresh them with
+  `update_translations_win_x64.bat` and build `lang/mo` with
+  `compile_translations_win_x64.bat`.
 - Use AStyle 3.1 directly on Windows instead of the Makefile targets, whose
   checks require a POSIX shell and can report success without running.  Format
   changed C and C++ files with
