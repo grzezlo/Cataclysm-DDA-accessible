@@ -61,7 +61,7 @@ void reset_activity_speech();
 class activity_turn_speech
 {
     public:
-        explicit activity_turn_speech( Character &viewer );
+        explicit activity_turn_speech( Character &who );
         ~activity_turn_speech();
         void finish_cycle() {
             finished = true;
@@ -196,7 +196,7 @@ class zones_manager_speech
         /** Remember the state before the action is handled. */
         void before();
         /** Speak the result of `action`; `closing` is set when the manager closes. */
-        void after( const std::string &action, bool closing );
+        void after( const std::string &action, bool closing ) const;
         /** Screen summary for ACCESSIBILITY_STATUS. */
         std::string summary() const;
         /** Focused zone details for ACCESSIBILITY_DETAILS. */

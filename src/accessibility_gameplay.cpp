@@ -323,6 +323,8 @@ activity_turn_speech::activity_turn_speech( Character &who )
     active_activity_turn = this;
 }
 
+// A failed activity update is fatal; do not discard its final speech silently.
+// NOLINTNEXTLINE(bugprone-exception-escape)
 activity_turn_speech::~activity_turn_speech()
 {
     conclude();
@@ -562,9 +564,9 @@ semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
     if( here.sees_some_items( position, viewer ) ) {
         if( here.has_flag( ter_furn_flag::TFLAG_CONTAINER, position ) &&
             !here.could_see_items( position, viewer ) ) {
-            result.items.push_back( _( "Items: contents are not visible" ) );
+            result.items.emplace_back( _( "Items: contents are not visible" ) );
         } else if( viewer.has_effect( effect_blind ) || viewer.worn_with_flag( flag_BLIND ) ) {
-            result.items.push_back( _( "Items: something is here, but it is not visible" ) );
+            result.items.emplace_back( _( "Items: something is here, but it is not visible" ) );
         } else {
             std::map<std::string, int> items_here;
             for( const item &it : here.i_at( position ) ) {
@@ -727,19 +729,19 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
             break;
         }
         case visibility_type::BOOMER:
-            parts.push_back( _( "A bright pink blur" ) );
+            parts.emplace_back( _( "A bright pink blur" ) );
             break;
         case visibility_type::BOOMER_DARK:
-            parts.push_back( _( "A pink blur" ) );
+            parts.emplace_back( _( "A pink blur" ) );
             break;
         case visibility_type::DARK:
-            parts.push_back( _( "Darkness" ) );
+            parts.emplace_back( _( "Darkness" ) );
             break;
         case visibility_type::LIT:
-            parts.push_back( _( "Bright light" ) );
+            parts.emplace_back( _( "Bright light" ) );
             break;
         case visibility_type::HIDDEN:
-            parts.push_back( _( "Unseen" ) );
+            parts.emplace_back( _( "Unseen" ) );
             break;
     }
     parts.push_back( relative_z_location( origin, position ) );
@@ -1486,7 +1488,7 @@ std::string zones_manager_speech::result( const std::string &action ) const
     return std::string();
 }
 
-void zones_manager_speech::after( const std::string &action, const bool closing )
+void zones_manager_speech::after( const std::string &action, const bool closing ) const
 {
     if( !accessibility::is_active() || action == "TIMEOUT" || closing ) {
         return;
@@ -1941,17 +1943,17 @@ accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
         result.details.push_back( string_format( _( "At this location: %d" ), group.count ) );
     }
     if( priority > 0 ) {
-        result.details.push_back( _( "High priority" ) );
+        result.details.emplace_back( _( "High priority" ) );
     } else if( priority < 0 ) {
-        result.details.push_back( _( "Low priority" ) );
+        result.details.emplace_back( _( "Low priority" ) );
     }
     if( newness ) {
         switch( *newness ) {
             case content_newness::NEW:
-                result.details.push_back( _( "New" ) );
+                result.details.emplace_back( _( "New" ) );
                 break;
             case content_newness::MIGHT_BE_HIDDEN:
-                result.details.push_back( _( "May hide contents" ) );
+                result.details.emplace_back( _( "May hide contents" ) );
                 break;
             case content_newness::SEEN:
                 break;
@@ -1986,7 +1988,7 @@ accessibility::nearby_list_entry nearby_creature_entry( const map &here, const a
             result.details.push_back( string_format( _( "Behavior: %s" ), behavior ) );
         }
         if( creature.sees( here, viewer ) ) {
-            result.details.push_back( _( "Sees you" ) );
+            result.details.emplace_back( _( "Sees you" ) );
         }
     } else {
         result.details.push_back( accessibility::format_creature_attitude( _( "unknown" ) ) );

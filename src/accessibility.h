@@ -108,7 +108,7 @@ class progress_reporter
         ~progress_reporter();
         progress_reporter( const progress_reporter & ) = delete;
         progress_reporter &operator=( const progress_reporter & ) = delete;
-        void update( const std::string &message );
+        void update( const std::string &text );
     private:
         friend bool poll_progress();
         friend bool announce( const std::string &message );

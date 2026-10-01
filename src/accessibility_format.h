@@ -1430,7 +1430,7 @@ class dialogue_speech_model
          * Replace the response list.  The first `response_count` options are
          * responses; the rest are extra actions.  `cursor` is the visible response.
          */
-        void set_options( const std::vector<option> &options, size_t response_count, int cursor );
+        void set_options( const std::vector<option> &new_options, size_t responses, int cursor );
         /**
          * Speech for a newly presented topic: the utterances not yet spoken,
          * then the prompt, which receives focus on the conversation level.

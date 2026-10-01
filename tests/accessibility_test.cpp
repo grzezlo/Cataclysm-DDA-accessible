@@ -1551,6 +1551,8 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
 
     int descriptions_built = 0;
     const auto describe = [&descriptions_built]( const std::string & text ) {
+        // The test intentionally returns a string copy from this callback.
+        // NOLINTNEXTLINE(bugprone-exception-escape)
         return [&descriptions_built, text]() {
             ++descriptions_built;
             return text;
@@ -3434,6 +3436,7 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     REQUIRE( groups.size() == 7 );
     CHECK( accessibility::count_missing_requirement_groups( groups ) == 7 );
     std::vector<std::string> lines;
+    lines.reserve( groups.size() );
     for( const accessibility::requirement_group &group : groups ) {
         lines.push_back( accessibility::format_requirement_group( group ) );
     }

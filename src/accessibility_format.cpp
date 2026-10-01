@@ -595,7 +595,7 @@ std::string format_nearby_list_context( const std::string &mode, const int resul
 {
     std::vector<std::string> parts = { mode, change };
     if( result_count == 0 ) {
-        parts.push_back( _( "No results" ) );
+        parts.emplace_back( _( "No results" ) );
     } else {
         parts.push_back( string_format( n_gettext( "%d result", "%d results", result_count ),
                                         result_count ) );
@@ -826,13 +826,13 @@ std::string format_spoken_key( const std::string &raw_key )
 
     std::vector<std::string> parts;
     if( has_ctrl ) {
-        parts.push_back( pgettext( "key modifier", "Ctrl" ) );
+        parts.emplace_back( pgettext( "key modifier", "Ctrl" ) );
     }
     if( has_alt ) {
-        parts.push_back( pgettext( "key modifier", "Alt" ) );
+        parts.emplace_back( pgettext( "key modifier", "Alt" ) );
     }
     if( has_shift ) {
-        parts.push_back( pgettext( "key modifier", "Shift" ) );
+        parts.emplace_back( pgettext( "key modifier", "Shift" ) );
     }
     if( !key.empty() ) {
         parts.push_back( key );
@@ -997,17 +997,17 @@ std::string format_inventory_focus( const inventory_focus_entry &entry,
         parts.push_back( entry.selection );
     }
     if( entry.not_owned ) {
-        parts.push_back( _( "Not owned" ) );
+        parts.emplace_back( _( "Not owned" ) );
     }
     if( !entry.location.empty() ) {
         parts.push_back( string_format( _( "Location: %s" ), entry.location ) );
     }
     if( entry.favorite ) {
-        parts.push_back( _( "Favorite" ) );
+        parts.emplace_back( _( "Favorite" ) );
     }
     if( entry.has_contents ) {
-        parts.push_back( entry.contents_collapsed ? _( "Contents collapsed" ) :
-                         _( "Contents expanded" ) );
+        parts.emplace_back( entry.contents_collapsed ? _( "Contents collapsed" ) :
+                            _( "Contents expanded" ) );
     }
     const size_t cell_count = include_all_cells ? entry.cells.size() :
                               std::min<size_t>( entry.cells.size(), 2 );
@@ -1083,10 +1083,10 @@ std::string format_inventory_capacity( const inventory_capacity &capacity,
                                         capacity.volume, capacity.volume_limit, capacity.volume_unit ) );
     }
     if( capacity.over_weight ) {
-        parts.push_back( _( "Over weight limit" ) );
+        parts.emplace_back( _( "Over weight limit" ) );
     }
     if( capacity.over_volume ) {
-        parts.push_back( _( "Over volume limit" ) );
+        parts.emplace_back( _( "Over volume limit" ) );
     }
     return format_semantic_sequence( parts );
 }
@@ -1118,7 +1118,7 @@ std::string format_trade_row( const trade_row &row, const bool include_context,
     }
     parts.push_back( format_trade_marked( row.marked, row.available ) );
     if( item.not_owned ) {
-        parts.push_back( _( "Not owned" ) );
+        parts.emplace_back( _( "Not owned" ) );
     }
     if( !item.denial.empty() ) {
         parts.push_back( string_format( _( "Unavailable: %s" ), item.denial ) );
@@ -1128,11 +1128,11 @@ std::string format_trade_row( const trade_row &row, const bool include_context,
             parts.push_back( string_format( _( "Location: %s" ), item.location ) );
         }
         if( item.favorite ) {
-            parts.push_back( _( "Favorite" ) );
+            parts.emplace_back( _( "Favorite" ) );
         }
         if( item.has_contents ) {
-            parts.push_back( item.contents_collapsed ? _( "Contents collapsed" ) :
-                             _( "Contents expanded" ) );
+            parts.emplace_back( item.contents_collapsed ? _( "Contents collapsed" ) :
+                                _( "Contents expanded" ) );
         }
         if( !item.owner.empty() ) {
             parts.push_back( string_format( _( "Owner: %s" ), item.owner ) );
@@ -2298,7 +2298,7 @@ std::string format_vehicle_speed( const int speed, const std::string &units )
         return string_format( _( "%1$d %2$s reverse" ), -speed, units );
     }
     //~ Vehicle speed: %1$d is the speed, %2$s the unit such as "mph".
-    return string_format( _( "%1$d %2$s" ), speed, units );
+    return string_format( pgettext( "vehicle speed", "%1$d %2$s" ), speed, units );
 }
 
 std::string format_vehicle_heading( const std::string &compass, const int degrees )
@@ -2593,6 +2593,7 @@ std::string format_vehicle_missing_requirements( const size_t missing )
 std::string format_vehicle_skills( const std::vector<vehicle_skill_requirement> &skills )
 {
     std::vector<std::string> levels;
+    levels.reserve( skills.size() );
     for( const vehicle_skill_requirement &skill : skills ) {
         //~ Skill a vehicle task requires: %1$s is the skill, %2$d its level, %3$s "have" or "missing".
         levels.push_back( string_format( _( "%1$s %2$d, %3$s" ), skill.skill, skill.level,
@@ -2692,6 +2693,7 @@ std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
     std::vector<std::string> parts;
     if( !picked.empty() ) {
         std::vector<std::string> items;
+        items.reserve( picked.size() );
         for( const pickup_result_item &entry : picked ) {
             items.push_back( entry.destination.empty() ? entry.item :
                              //~ Picked-up item and the container it went into
@@ -2701,6 +2703,7 @@ std::string format_pickup_result( const std::vector<pickup_result_item> &picked,
     }
     if( !failed.empty() ) {
         std::vector<std::string> items;
+        items.reserve( failed.size() );
         for( const pickup_failure &entry : failed ) {
             items.push_back( entry.reason.empty() ? entry.item :
                              //~ Item left behind and the reason
@@ -2734,7 +2737,7 @@ std::string format_transfer_row( const transfer_row &row, const bool include_cat
     parts.push_back( row.count > 1 ? string_format( _( "%1$s, %2$d" ), row.name, row.count ) :
                      row.name );
     if( row.not_owned ) {
-        parts.push_back( _( "Not owned" ) );
+        parts.emplace_back( _( "Not owned" ) );
     }
     parts.push_back( row.weight );
     parts.push_back( row.volume );
@@ -2743,10 +2746,10 @@ std::string format_transfer_row( const transfer_row &row, const bool include_cat
             parts.push_back( string_format( _( "From: %s" ), row.source_area ) );
         }
         if( row.auto_pickup ) {
-            parts.push_back( _( "Auto pickup" ) );
+            parts.emplace_back( _( "Auto pickup" ) );
         }
         if( row.open_in_other_pane ) {
-            parts.push_back( _( "Open in the other pane" ) );
+            parts.emplace_back( _( "Open in the other pane" ) );
         }
     }
     return format_semantic_sequence( parts );
@@ -2894,7 +2897,7 @@ std::vector<std::string> evaluate_condition_transitions( condition_tracker &trac
     }
 
     if( current.stamina_critical && !tracker.stamina_critical ) {
-        alerts.push_back( _( "Stamina critical!" ) );
+        alerts.emplace_back( _( "Stamina critical!" ) );
     }
 
     const auto tier_changed = [&]( const std::string & previous, const std::string & now,
@@ -2998,7 +3001,7 @@ std::string format_threat_announcement( const std::vector<std::string> &descript
     }
     std::vector<std::string> parts = descriptions;
     if( others > 0 ) {
-        parts.push_back( string_format( n_gettext( "%d other", "%d others", others ),
+        parts.push_back( string_format( npgettext( "threat count", "%d other", "%d others", others ),
                                         static_cast<int>( others ) ) );
     }
     return string_format( _( "%s spotted!" ), enumerate_as_string( parts ) );
@@ -3674,6 +3677,7 @@ std::string format_bionic_power( const std::string &current, const std::string &
                                  const std::vector<std::string> &fuels )
 {
     std::vector<std::string> fuel_parts;
+    fuel_parts.reserve( fuels.size() );
     for( const std::string &fuel : fuels ) {
         fuel_parts.push_back( remove_color_tags( fuel ) );
     }
@@ -3696,7 +3700,8 @@ std::string format_mutation_power_row( const mutation_power_row &row )
     const std::string resources = enumerate_as_string( row.resources );
     if( row.cost > 0 ) {
         //~ %1$d: activation cost of a mutation, %2$s: resources, such as "kcal and thirst"
-        parts.push_back( string_format( _( "%1$d %2$s" ), row.cost, resources ) );
+        parts.push_back( string_format( pgettext( "mutation activation cost", "%1$d %2$s" ),
+                                        row.cost, resources ) );
     }
     if( !row.cooldown.empty() ) {
         //~ %s: cooldown of a mutation, such as "5 minutes"
@@ -4181,6 +4186,7 @@ std::string format_activity_result( const std::string &label, const bool finishe
                                     const std::vector<std::string> &messages )
 {
     std::vector<std::string> parts;
+    parts.reserve( messages.size() + ( reason.empty() ? 0 : 1 ) );
     for( const std::string &message : messages ) {
         parts.push_back( remove_color_tags( message ) );
     }

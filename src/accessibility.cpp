@@ -269,6 +269,8 @@ game_message_speech_suppression::game_message_speech_suppression()
     ++state().game_message_suppressions;
 }
 
+// The constructor initializes the service state before this destructor runs.
+// NOLINTNEXTLINE(bugprone-exception-escape)
 game_message_speech_suppression::~game_message_speech_suppression()
 {
     --state().game_message_suppressions;
@@ -282,6 +284,8 @@ game_message_speech_capture::game_message_speech_capture( const bool enabled ) :
     }
 }
 
+// The constructor initializes the service state before this destructor runs.
+// NOLINTNEXTLINE(bugprone-exception-escape)
 game_message_speech_capture::~game_message_speech_capture()
 {
     if( enabled ) {
@@ -294,6 +298,8 @@ progress_reporter::progress_reporter() : started( now() )
     state().progress_sources.push_back( this );
 }
 
+// The constructor initializes the service state before this destructor runs.
+// NOLINTNEXTLINE(bugprone-exception-escape)
 progress_reporter::~progress_reporter()
 {
     auto &sources = state().progress_sources;
