@@ -11,7 +11,8 @@ implementation discovers a better integration point.
 
 Stages 06–10 establish the minimum independent survival and combat loop.  Stages 11–21A
 cover the major progression, management, and setup interfaces.  Stages 22, 22A, and 23
-are native release gates: coverage, the complete tutorial, and packaging.  Stage 24
+are native release gates: coverage, the complete tutorial, and packaging.  Stage 23A
+adds machine translations and does not block a release.  Stage 24
 starts only after the native semantic model is stable.
 
 Unless a stage lists an exception, a stage is complete when its possible
@@ -175,6 +176,75 @@ through `ACCESS_USERTESTS.md`; it must be empty or every remaining scenario
 must be accepted as a known limitation in the release notes.  Record the
 commit and artifact version; this is the native release gate.
 
+## Stage 23A - Machine translation layer
+
+**Outcome:** Players of any language can use AI translations of upstream strings
+that the upstream catalog lacks, while every human translation takes precedence
+and machine translations retire automatically when upstream translates a string.
+Contributors from other countries can add their language with the same tools.
+This stage does not block the Stage 23 release and can run independently.
+
+**Selected catalog layout (accepted 2026-10-02):**
+
+- `lang/access/<language>.po` holds every translation of strings added by the
+  fork, whatever their source.  AI may draft them; a human reviews and corrects
+  them there.  AI drafts are marked fuzzy until reviewed, so only reviewed
+  entries reach the game.
+- `lang/po/<language>.po` stays identical to upstream.
+- `lang/machine/<language>.po` holds AI translations of upstream strings that
+  neither `lang/po` nor `lang/access` translates.  The file is the provenance
+  marker; entries carry no special flags.  Machine translations are never
+  submitted to Transifex.
+- Compilation takes translated, non-fuzzy entries in the order `lang/access`,
+  `lang/po`, `lang/machine` (`msgcat --use-first`).  Untranslated entries of
+  every layer are removed first so they cannot hide a lower layer.  A
+  `--no-machine` option and a missing machine catalog produce the current
+  result.
+
+**Code inventory:** `lang/update_access_po.sh`, `lang/compile_access_mo.sh`,
+`lang/access_catalog.py`, `update_translations_win_x64.bat`,
+`compile_translations_win_x64.bat`, `tools/check_po_printf_format.py`,
+`lang/notes/`, `README.md`, and release notes.
+
+**Implementation hints:**
+
+- Add a gap step to the update script: from the full template of the current
+  tree, write the entries translated by neither `lang/po` nor `lang/access` to
+  an ignored `lang/po/gaps-<language>.pot`, then `msgmerge` the machine
+  catalog with it and drop obsolete entries.  An upstream translation then
+  removes its machine entry without manual work; changed source strings return
+  as fuzzy and stay out of the game until translated again.
+- Keep the repository independent of an AI provider.  The scripts export empty
+  entries and validate the result; any tool or agent may fill them in batches.
+- Give the translator `msgctxt`, extracted `#.` comments, source files, the
+  existing translations of the language as translation memory, and a glossary
+  in `lang/notes/<language>.txt`.
+- Translate in player-visible order: `src/` interface strings, then items and
+  monsters, then snippets and NPC dialogue.
+- Update the machine layer rarely, for example once per release, because each
+  full refresh of a catalog of about 50,000 entries grows the history.
+  Reassess keeping it as a release asset instead if the repository grows too
+  much.
+
+**Success criteria:** Compiled catalogs follow the precedence above; an
+upstream translation replaces a machine entry after the next update; fuzzy and
+untranslated entries never reach the game; every machine and access catalog
+passes the validation below; and the README and release notes state which
+translations are machine-made and how to add a language.
+
+**Possible automated tests:** Fixture catalogs for the three layers verify
+precedence, removal of untranslated and fuzzy entries, retirement of a machine
+entry after an upstream translation, and `--no-machine`.  Validation runs
+`msgfmt -c`, `tools/check_po_printf_format.py`, and a check that every
+translation keeps the original's tags (`<color_*>`, `</color>`, `<npcname>`,
+`<num>`, `<good>`, `<bad>`, and similar); an entry that fails stays empty.
+
+**User-test scenarios:** A Polish NVDA user starts a game with the machine
+layer enabled and checks that menus, item descriptions, and fork announcements
+are spoken in Polish without tag fragments or broken placeholders, that
+reviewed fork translations are used, and that a build with `--no-machine`
+falls back to English for the same untranslated upstream strings.
+
 ## Stage 24 - Browser backend and web acceptance
 
 **Outcome:** The Emscripten build exposes the stable semantic event model through
@@ -271,4 +341,5 @@ instructions and revise the guide before accepting the stage.
 - Upstream synchronization should occur between stages, re-verifying
   `test_access.bat` after each merge.
 - `lang/access/pl.po` holds the fork's own strings without translations yet.
-  Translating them and adding catalogs for other languages is pending Stage 23.
+  Translating them is pending Stage 23; AI drafts and their human review follow
+  the Stage 23A catalog layout.
