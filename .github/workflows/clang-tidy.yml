@@ -12,6 +12,9 @@ on:
     - access
     types: [opened, reopened, synchronize, ready_for_review]
 
+  # A manual run analyzes every file.
+  workflow_dispatch:
+
 # We only care about the latest revision of a PR, so cancel all previous instances.
 concurrency:
   group: clang-tidy-build-${{ github.event.pull_request.number || github.ref_name }}
@@ -76,6 +79,10 @@ jobs:
         ]
 
     runs-on: ubuntu-24.04
+    permissions:
+        actions: read
+        contents: read
+        pull-requests: read
     env:
         COMPILER: clang++-18
         CATA_CLANG_TIDY: clang-tidy-18
@@ -115,6 +122,54 @@ jobs:
             console.log(path);
           }
           fs.writeFileSync("files_changed", files.join('\n') + '\n');
+    - name: determine files changed since the last complete analysis
+      # A push has no file list, so clang-tidy-run.sh would analyze every file
+      # for hours.  Compare with the newest run on this branch whose analysis
+      # jobs all succeeded; without one, analyze everything.
+      if: ${{ github.event_name == 'push' }}
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const { owner, repo } = context.repo;
+          const branch = context.ref.replace('refs/heads/', '');
+          const runs = await github.rest.actions.listWorkflowRuns({
+            owner, repo, workflow_id: 'clang-tidy.yml', branch,
+            event: 'push', status: 'success', per_page: 30,
+          });
+          let base = null;
+          for (const run of runs.data.workflow_runs) {
+            if (run.head_sha === context.sha) {
+              continue;
+            }
+            const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun,
+              { owner, repo, run_id: run.id, per_page: 100 });
+            const analysis = jobs.filter(job => job.name.startsWith('run-clang-tidy'));
+            // Runs skipped by skip-duplicates also succeed; they analyzed nothing.
+            if (analysis.length > 0 && analysis.every(job => job.conclusion === 'success')) {
+              base = run.head_sha;
+              break;
+            }
+          }
+          if (!base) {
+            core.info('No complete analysis on this branch; analyzing all files.');
+            return;
+          }
+          const comparison = await github.rest.repos.compareCommitsWithBasehead({
+            owner, repo, basehead: `${base}...${context.sha}`, per_page: 300,
+          });
+          const files = comparison.data.files || [];
+          if (comparison.data.status !== 'ahead' || files.length >= 300) {
+            core.info(`Cannot list the changes since ${base} (${comparison.data.status}, ` +
+                      `${files.length} files); analyzing all files.`);
+            return;
+          }
+          core.info(`Files changed since the complete analysis of ${base}:`);
+          const names = files.map(file => file.filename);
+          for (const name of names) {
+            core.info(name);
+          }
+          fs.writeFileSync('files_changed', names.join('\n') + '\n');
     - uses: ammaraskar/gcc-problem-matcher@master
     - name: run clang-tidy
       run: bash ./build-scripts/clang-tidy-run.sh
