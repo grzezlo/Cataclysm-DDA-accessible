@@ -37,7 +37,7 @@ struct visibility_variables;
 namespace accessibility
 {
 class game_message_speech_capture;
-}
+} // namespace accessibility
 enum class content_newness;
 enum class hint_rating;
 enum class list_item_sort_mode : int;

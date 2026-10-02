@@ -45,7 +45,7 @@ template <typename E> struct enum_traits;
 namespace accessibility
 {
 struct inventory_focus_entry;
-}
+} // namespace accessibility
 
 enum class navigation_mode : int {
     ITEM = 0,
