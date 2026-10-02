@@ -1512,6 +1512,156 @@ std::vector<std::string> recipe_accessibility_details( const recipe &recp, Chara
                                          crafter.get_group_available_recipes(), std::string() );
 }
 
+namespace
+{
+
+/** The list change spoken before the focused row of the crafting screen. */
+enum class crafting_list_change {
+    none,
+    open,
+    category,
+    subcategory,
+    filter
+};
+
+/**
+ * Screen reader speech of the crafting screen: a list change or event is spoken
+ * once before the focused row.  It refers to the state that
+ * select_crafter_and_crafting_recipe keeps, so the speech stays out of that
+ * function's control flow.
+ */
+struct crafting_speech {
+    const bool &batch;
+    const bool &show_hidden;
+    const size_t &num_hidden;
+    const std::string &filterstring;
+    const bool &is_filtered_unread;
+    const tab_list &tab;
+    const tab_list &subtab;
+    std::map<std::string, bool> &is_cat_unread;
+    std::map<std::string, std::map<std::string, bool>> &is_subcat_unread;
+    const std::vector<const recipe *> &current;
+    const std::vector<availability> &available;
+    const int &line;
+    Character *const &crafter;
+    const int &crafter_i;
+    const std::vector<Character *> &crafting_group;
+    const recipe_subset &available_recipes;
+    // Pending speech, set while handling input and cleared once spoken.
+    std::string event;
+    std::string wrap;
+    crafting_list_change list_change = crafting_list_change::open;
+    bool force_focus = false;
+    // The focus last spoken, to speak it again only when it changes.
+    std::string focus_key;
+
+    std::string list_text( crafting_list_change change ) const;
+    std::string focus_text( bool unread ) const;
+    /** Speak the pending change and the focused row when something changed. */
+    void announce( bool focus_unread );
+    /** Open the recipe details document; false when nothing was shown. */
+    bool show_details();
+    /** Speak the result information of the focused recipe. */
+    void speak_status( recipe_result_info_cache &result_info, int &scroll_pos,
+                       const catacurses::window &w ) const;
+};
+
+std::string crafting_speech::list_text( const crafting_list_change change ) const
+{
+    if( batch || change == crafting_list_change::none ) {
+        return std::string();
+    }
+    const size_t hidden = show_hidden ? 0 : num_hidden;
+    if( !filterstring.empty() ) {
+        //~ %s: recipe search query
+        return accessibility::format_recipe_list( string_format( _( "Filter: %s" ), filterstring ),
+                current.size(), hidden, is_filtered_unread );
+    }
+    const std::string category = _( get_cat_unprefixed( tab.cur() ) );
+    const std::string subcategory = _( get_subcat_unprefixed( tab.cur(), subtab.cur() ) );
+    if( change == crafting_list_change::subcategory ) {
+        return accessibility::format_recipe_list( subcategory, current.size(), hidden,
+                is_subcat_unread[tab.cur()][subtab.cur()] );
+    }
+    const std::string name = subtab.cur() == "CSC_ALL" ? category :
+                             string_format( _( "%1$s, %2$s" ), category, subcategory );
+    return accessibility::format_recipe_list( name, current.size(), hidden,
+            is_cat_unread[tab.cur()] );
+}
+
+std::string crafting_speech::focus_text( const bool unread ) const
+{
+    if( current.empty() ) {
+        return std::string();
+    }
+    if( batch ) {
+        return accessibility_batch_row( *current[line], available[line], *crafter, line + 1 );
+    }
+    return accessibility::format_recipe_row( accessibility_recipe_row( *current[line],
+            available[line], *crafter, 1, unread ) );
+}
+
+void crafting_speech::announce( const bool focus_unread )
+{
+    const std::string key = string_format( "%d:%d:%d:%s", batch ? 1 : 0, line,
+                                           crafter_i, current.empty() ? std::string() : current[line]->ident().str() );
+    const bool speak_focus = force_focus || key != focus_key ||
+                             list_change != crafting_list_change::none;
+    if( accessibility::is_active() && ( speak_focus || !event.empty() ) ) {
+        std::string list = list_text( list_change );
+        if( list_change == crafting_list_change::open ) {
+            list = accessibility::format_semantic_sequence( { _( "Crafting" ), list } );
+        }
+        accessibility::announce( accessibility::format_semantic_sequence( {
+            event, list, wrap, speak_focus ? focus_text( focus_unread ) : std::string()
+        } ) );
+    }
+    focus_key = key;
+    list_change = crafting_list_change::none;
+    event.clear();
+    wrap.clear();
+    force_focus = false;
+}
+
+bool crafting_speech::show_details()
+{
+    if( current.empty() ) {
+        accessibility::announce( accessibility::format_recipe_count( 0 ) );
+        return false;
+    }
+    if( !accessibility::is_active() ) {
+        return false;
+    }
+    uistate.read_recipes.insert( current[line]->ident() );
+    const std::string name = current[line]->result_name();
+    const std::vector<std::string> lines = accessibility_recipe_details( *current[line],
+                                           available[line], *crafter, batch ? line + 1 : 1, batch, crafting_group,
+                                           available_recipes, batch ? std::string() :
+                                           accessibility::format_list_position( line + 1, current.size() ) );
+    //~ %s: name of the recipe result
+    accessibility_ui::show_document( string_format( _( "Recipe: %s" ), name ), name, lines,
+                                     lines );
+    force_focus = true;
+    return true;
+}
+
+void crafting_speech::speak_status( recipe_result_info_cache &result_info, int &scroll_pos,
+                                    const catacurses::window &w ) const
+{
+    if( current.empty() ) {
+        accessibility::announce( accessibility::format_recipe_count( 0 ) );
+    } else if( accessibility::is_active() ) {
+        accessibility::announce( accessibility_result_info( *current[line], *crafter, result_info,
+                                 batch ? line + 1 : 1, scroll_pos, w, available_recipes ) );
+    }
+}
+
+} // namespace
+
+// Upstream's version of this function is already at the statement limit (798 of
+// 800 with clang-tidy 19); the speech logic lives in crafting_speech and only
+// narrow hooks remain here.
+// NOLINTNEXTLINE(readability-function-size)
 std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &batch_size_out,
         const recipe_id &goto_recipe, Character *crafter, std::string filterstring, bool camp_crafting,
         inventory *inventory_override )
@@ -1872,69 +2022,10 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
     } );
 
     // Screen reader speech: a list change or event is spoken once before the focused row.
-    enum class accessibility_list_change {
-        none,
-        open,
-        category,
-        subcategory,
-        filter
-    };
-    accessibility_list_change acc_list_change = accessibility_list_change::open;
-    std::string acc_event;
-    std::string acc_wrap;
-    std::string acc_focus_key;
-    bool acc_force_focus = false;
-    const auto accessibility_list_text = [&]( const accessibility_list_change change ) {
-        if( batch || change == accessibility_list_change::none ) {
-            return std::string();
-        }
-        const size_t hidden = show_hidden ? 0 : num_hidden;
-        if( !filterstring.empty() ) {
-            //~ %s: recipe search query
-            return accessibility::format_recipe_list( string_format( _( "Filter: %s" ), filterstring ),
-                    current.size(), hidden, is_filtered_unread );
-        }
-        const std::string category = _( get_cat_unprefixed( tab.cur() ) );
-        const std::string subcategory = _( get_subcat_unprefixed( tab.cur(), subtab.cur() ) );
-        if( change == accessibility_list_change::subcategory ) {
-            return accessibility::format_recipe_list( subcategory, current.size(), hidden,
-                    is_subcat_unread[tab.cur()][subtab.cur()] );
-        }
-        const std::string name = subtab.cur() == "CSC_ALL" ? category :
-                                 string_format( _( "%1$s, %2$s" ), category, subcategory );
-        return accessibility::format_recipe_list( name, current.size(), hidden,
-                is_cat_unread[tab.cur()] );
-    };
-    const auto accessibility_focus = [&]( const bool unread ) {
-        if( current.empty() ) {
-            return std::string();
-        }
-        if( batch ) {
-            return accessibility_batch_row( *current[line], available[line], *crafter, line + 1 );
-        }
-        return accessibility::format_recipe_row( accessibility_recipe_row( *current[line],
-                available[line], *crafter, 1, unread ) );
-    };
-    const auto announce_accessibility = [&]( const bool focus_unread ) {
-        const std::string focus_key = string_format( "%d:%d:%d:%s", batch ? 1 : 0, line,
-                                      crafter_i, current.empty() ? std::string() : current[line]->ident().str() );
-        const bool speak_focus = acc_force_focus || focus_key != acc_focus_key ||
-                                 acc_list_change != accessibility_list_change::none;
-        if( accessibility::is_active() && ( speak_focus || !acc_event.empty() ) ) {
-            std::string list = accessibility_list_text( acc_list_change );
-            if( acc_list_change == accessibility_list_change::open ) {
-                list = accessibility::format_semantic_sequence( { _( "Crafting" ), list } );
-            }
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                acc_event, list, acc_wrap, speak_focus ? accessibility_focus( focus_unread ) : std::string()
-            } ) );
-        }
-        acc_focus_key = focus_key;
-        acc_list_change = accessibility_list_change::none;
-        acc_event.clear();
-        acc_wrap.clear();
-        acc_force_focus = false;
-    };
+    crafting_speech acc_speech{ batch, show_hidden, num_hidden, filterstring, is_filtered_unread,
+                                tab, subtab, is_cat_unread, is_subcat_unread, current, available, line, crafter,
+                                crafter_i, crafting_group, available_recipes, std::string(),
+                                std::string(), crafting_list_change::open, false, std::string() };
 
     do {
         if( recalc ) {
@@ -2091,7 +2182,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
         const bool previously_toggled_unread = just_toggled_unread;
         just_toggled_unread = false;
         ui_manager::redraw();
-        announce_accessibility( acc_focus_unread );
+        acc_speech.announce( acc_focus_unread );
         const int scroll_item_info_lines = catacurses::getmaxy( w_iteminfo ) - 4;
         std::string action = ctxt.handle_input();
         const int recmax = static_cast<int>( current.size() );
@@ -2146,33 +2237,17 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                     }
                 }
                 if( recalc ) {
-                    acc_list_change = handled ? accessibility_list_change::category :
-                                      accessibility_list_change::subcategory;
+                    acc_speech.list_change = handled ? crafting_list_change::category :
+                                             crafting_list_change::subcategory;
                 }
             }
         } else if( action == "ACCESSIBILITY_DETAILS" ) {
-            if( current.empty() ) {
-                accessibility::announce( accessibility::format_recipe_count( 0 ) );
-            } else if( accessibility::is_active() ) {
-                uistate.read_recipes.insert( current[line]->ident() );
+            if( acc_speech.show_details() ) {
+                // Opening the details marks the recipe as read.
                 recalc_unread = highlight_unread_recipes;
-                const std::string name = current[line]->result_name();
-                const std::vector<std::string> lines = accessibility_recipe_details( *current[line],
-                                                       available[line], *crafter, batch ? line + 1 : 1, batch, crafting_group,
-                                                       available_recipes, batch ? std::string() :
-                                                       accessibility::format_list_position( line + 1, current.size() ) );
-                //~ %s: name of the recipe result
-                accessibility_ui::show_document( string_format( _( "Recipe: %s" ), name ), name, lines,
-                                                 lines );
-                acc_force_focus = true;
             }
         } else if( action == "ACCESSIBILITY_STATUS" ) {
-            if( current.empty() ) {
-                accessibility::announce( accessibility::format_recipe_count( 0 ) );
-            } else if( accessibility::is_active() ) {
-                accessibility::announce( accessibility_result_info( *current[line], *crafter, result_info,
-                                         batch ? line + 1 : 1, line_item_info, w_iteminfo, available_recipes ) );
-            }
+            acc_speech.speak_status( result_info, line_item_info, w_iteminfo );
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "SCROLL_RECIPE_INFO_UP" ) {
@@ -2194,7 +2269,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                      available_recipes.empty_category( crafting_category_id( tab.cur() ),
                              subtab.cur() != "CSC_ALL" ? subtab.cur() : "" ) );
             recalc = true;
-            acc_list_change = accessibility_list_change::subcategory;
+            acc_speech.list_change = crafting_list_change::subcategory;
         } else if( action == "SCROLL_ITEM_INFO_UP" ) {
             line_item_info -= scroll_item_info_lines;
         } else if( action == "SCROLL_UP" && mouse_in_window( coord, w_iteminfo ) ) {
@@ -2209,7 +2284,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
             // Default ALL
             subtab = tab_list( crafting_category_id( tab.cur() )->subcategories );
             recalc = true;
-            acc_list_change = accessibility_list_change::category;
+            acc_speech.list_change = crafting_list_change::category;
         } else if( action == "RIGHT" || ( action == "SCROLL_DOWN" &&
                                           mouse_in_window( coord, w_subhead ) ) ) {
             if( batch || !filterstring.empty() ) {
@@ -2222,14 +2297,14 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                      available_recipes.empty_category( crafting_category_id( tab.cur() ),
                              subtab.cur() != "CSC_ALL" ? subtab.cur() : "" ) );
             recalc = true;
-            acc_list_change = accessibility_list_change::subcategory;
+            acc_speech.list_change = crafting_list_change::subcategory;
         } else if( action == "NEXT_TAB" || ( action == "SCROLL_DOWN" &&
                                              mouse_in_window( coord, w_head_tabs ) ) ) {
             tab.next();
             // Default ALL
             subtab = tab_list( crafting_category_id( tab.cur() )->subcategories );
             recalc = true;
-            acc_list_change = accessibility_list_change::category;
+            acc_speech.list_change = crafting_list_change::category;
         } else if( action == "DOWN" ) {
             if( !previously_toggled_unread ) {
                 last_line = line;
@@ -2259,7 +2334,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                 popup( _( "Nothing selected!" ) );
             } else if( current[line]->is_nested() ) {
                 nested_toggle( current[line]->ident(), recalc, keepline );
-                acc_force_focus = true;
+                acc_speech.force_focus = true;
             } else if( !available[line].can_craft ||
                        !available[line].crafter_has_primary_skill ) {
                 popup( _( "Crafter can't craft that!" ) );
@@ -2288,7 +2363,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
             iteminfo_window info_window( data, point( ( TERMX - info_width ) / 2, ( TERMY - info_height ) / 2 ),
                                          info_width, info_height );
             info_window.execute();
-            acc_force_focus = true;
+            acc_speech.force_focus = true;
         } else if( action == "FILTER" ) {
             int max_example_length = 0;
             for( const auto &prefix : prefixes ) {
@@ -2342,9 +2417,9 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                     batch = false;
                     line = batch_line;
                 }
-                acc_list_change = accessibility_list_change::filter;
+                acc_speech.list_change = crafting_list_change::filter;
             } else {
-                acc_force_focus = true;
+                acc_speech.force_focus = true;
             }
         } else if( action == "QUIT" ) {
             chosen = nullptr;
@@ -2353,8 +2428,8 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
             filterstring.clear();
             recalc = true;
             recalc_unread = highlight_unread_recipes;
-            acc_event = _( "Filter cleared" );
-            acc_list_change = accessibility_list_change::category;
+            acc_speech.event = _( "Filter cleared" );
+            acc_speech.list_change = crafting_list_change::category;
         } else if( action == "CYCLE_BATCH" && selection_ok( current, line, false ) ) {
             batch = !batch;
             if( batch ) {
@@ -2364,7 +2439,7 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                 recalc_unread = highlight_unread_recipes;
             } else {
                 keepline = true;
-                acc_event = _( "Batch off" );
+                acc_speech.event = _( "Batch off" );
             }
             recalc = true;
         } else if( action == "CHOOSE_CRAFTER" ) {
@@ -2380,10 +2455,10 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                 recalc = true;
                 keepline = true;
                 //~ %s: name of the character who will craft
-                acc_event = string_format( _( "Crafter: %s" ),
-                                           remove_color_tags( crafter->name_and_maybe_activity() ) );
+                acc_speech.event = string_format( _( "Crafter: %s" ),
+                                                  remove_color_tags( crafter->name_and_maybe_activity() ) );
             }
-            acc_force_focus = true;
+            acc_speech.force_focus = true;
         } else if( action == "TOGGLE_FAVORITE" && selection_ok( current, line, true ) ) {
             const recipe_id favorite_id = current[line]->ident();
             keepline = true;
@@ -2402,16 +2477,16 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                 uistate.read_recipes.insert( current[line]->ident() );
             }
             recalc_unread = highlight_unread_recipes;
-            acc_event = uistate.favorite_recipes.count( favorite_id ) ? _( "Favorite" ) :
-                        _( "Not favorite" );
+            acc_speech.event = uistate.favorite_recipes.count( favorite_id ) ? _( "Favorite" ) :
+                               _( "Not favorite" );
         } else if( action == "HIDE_SHOW_RECIPE" && selection_ok( current, line, true ) ) {
             if( show_hidden ) {
                 uistate.hidden_recipes.erase( current[line]->ident() );
-                acc_event = _( "Recipe shown" );
+                acc_speech.event = _( "Recipe shown" );
             } else {
                 uistate.hidden_recipes.insert( current[line]->ident() );
                 uistate.read_recipes.insert( current[line]->ident() );
-                acc_event = _( "Recipe hidden" );
+                acc_speech.event = _( "Recipe hidden" );
             }
 
             recalc = true;
@@ -2437,8 +2512,8 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
             }
             recalc_unread = highlight_unread_recipes;
             just_toggled_unread = true;
-            acc_event = uistate.read_recipes.count( rcp ) ? _( "Marked as read" ) :
-                        _( "Marked as unread" );
+            acc_speech.event = uistate.read_recipes.count( rcp ) ? _( "Marked as read" ) :
+                               _( "Marked as unread" );
         } else if( action == "MARK_ALL_RECIPES_READ" ) {
             bool current_list_has_unread = false;
             for( const recipe *const rcp : current ) {
@@ -2486,18 +2561,18 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                         uistate.read_recipes.insert( rcp->ident() );
                     }
                 }
-                acc_event = _( "Marked as read" );
+                acc_speech.event = _( "Marked as read" );
             } else {
-                acc_force_focus = true;
+                acc_speech.force_focus = true;
             }
             recalc_unread = highlight_unread_recipes;
         } else if( action == "TOGGLE_UNREAD_RECIPES_FIRST" ) {
             unread_recipes_first = !unread_recipes_first;
             recalc = true;
             keepline = true;
-            acc_event = unread_recipes_first ? _( "Unread recipes first" ) :
-                        _( "Unread recipes in normal order" );
-            acc_force_focus = true;
+            acc_speech.event = unread_recipes_first ? _( "Unread recipes first" ) :
+                               _( "Unread recipes in normal order" );
+            acc_speech.force_focus = true;
         } else if( action == "RELATED_RECIPES" && selection_ok( current, line, false ) ) {
             uistate.read_recipes.insert( current[line]->ident() );
             recalc_unread = highlight_unread_recipes;
@@ -2508,25 +2583,25 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
                 filterstring = recipe_name;
                 recalc = true;
                 recalc_unread = highlight_unread_recipes;
-                acc_list_change = accessibility_list_change::filter;
+                acc_speech.list_change = crafting_list_change::filter;
             } else {
-                acc_force_focus = true;
+                acc_speech.force_focus = true;
             }
         } else if( action == "COMPARE" && selection_ok( current, line, false ) ) {
             const item recipe_result = get_recipe_result_item( *current[line], *crafter );
             compare_recipe_with_item( recipe_result, *crafter );
-            acc_force_focus = true;
+            acc_speech.force_focus = true;
         } else if( action == "HELP_KEYBINDINGS" ) {
             // Regenerate keybinding tips
             ui.mark_resize();
-            acc_force_focus = true;
+            acc_speech.force_focus = true;
         }
         if( line < 0 ) {
             line = current.size() - 1;
         } else if( line >= static_cast<int>( current.size() ) ) {
             line = 0;
         }
-        acc_wrap = accessibility::format_list_wrap( acc_move_from, line, acc_move_direction );
+        acc_speech.wrap = accessibility::format_list_wrap( acc_move_from, line, acc_move_direction );
     } while( !done );
 
     return { crafter, chosen };
