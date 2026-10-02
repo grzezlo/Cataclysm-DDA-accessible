@@ -2632,6 +2632,15 @@ TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
     capture_backend *capture_ptr = capture.get();
     accessibility::set_backend_for_testing( std::move( capture ) );
 
+    // A transfer from an earlier test waits for the next advanced inventory
+    // announcement; consume it so this test starts without a result.
+    {
+        advanced_inventory stale;
+        stale.init();
+        stale.announce_accessibility();
+    }
+    capture_ptr->messages.clear();
+
     advanced_inventory advinv;
     advinv.init();
     set_transfer_panes( advinv, "ITEMS_CE", AIM_CENTER, "ITEMS_INVENTORY", AIM_INVENTORY );
@@ -2641,6 +2650,7 @@ TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
     advinv.announce_accessibility();
     REQUIRE( !capture_ptr->messages.empty() );
     const std::string opening = capture_ptr->messages.back();
+    INFO( opening );
     CHECK( opening.find( "Advanced inventory. Source: Directly below you" ) == 0 );
     CHECK( opening.find( "2 items" ) != std::string::npos );
     CHECK( opening.find( "Destination: Inventory" ) != std::string::npos );
@@ -4201,16 +4211,24 @@ TEST_CASE( "proficiencies_window_speaks_categories_progress_filter_and_details",
     you.add_proficiency( knapping, true );
     you.set_proficiency_practice( leather, leather->time_to_learn() / 2 );
 
+    // clear_avatar() keeps proficiencies practiced by earlier tests in the
+    // learning list at zero progress, so locate the rows this test adds.
     const std::vector<std::string> rows = proficiencies_window_accessibility_rows( you, 0 );
-    REQUIRE( rows.size() == 2 );
+    const std::string leather_row = string_format( "%s, learning, %d%%.", leather->name(),
+                                    static_cast<int>( std::floor( you.get_proficiency_practice( leather ) * 100 ) ) );
+    const auto leather_it = std::find( rows.begin(), rows.end(), leather_row );
+    REQUIRE( leather_it != rows.end() );
+    const int leather_index = static_cast<int>( leather_it - rows.begin() );
+    // Known proficiencies are listed first.
     CHECK( rows[0] == knapping->name() + ", known." );
-    CHECK( rows[1] == string_format( "%s, learning, %d%%.", leather->name(),
-                                     static_cast<int>( std::floor( you.get_proficiency_practice( leather ) * 100 ) ) ) );
-    CHECK( proficiencies_window_accessibility_tab( you, 0 ) == "ALL. 2 items. " + rows[0] );
+    CHECK( proficiencies_window_accessibility_tab( you, 0 ) ==
+           string_format( "ALL. %d items. ", static_cast<int>( rows.size() ) ) + rows[0] );
 
-    const std::vector<std::string> details = proficiencies_window_accessibility_details( you, 0, 1 );
+    const std::vector<std::string> details = proficiencies_window_accessibility_details( you, 0,
+            leather_index );
     REQUIRE( details.size() >= 6 );
-    CHECK( details[0] == rows[1] + " 2 of 2." );
+    CHECK( details[0] == string_format( "%s %d of %d.", leather_row, leather_index + 1,
+                                        static_cast<int>( rows.size() ) ) );
     CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
         return line.rfind( "Progress: ", 0 ) == 0;
     } ) );
@@ -4947,6 +4965,12 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
     const tripoint_abs_omt hidden = origin + tripoint_rel_omt( 3, 0, 0 );
     const tripoint_abs_omt below = hidden + tripoint_rel_omt( 0, 0, -1 );
     const std::vector<tripoint_abs_omt> changed = { north, north2, hidden };
+    // overmapbuffer::set_seen never lowers vision, and earlier tests may have
+    // revealed these tiles.
+    const auto force_seen = []( const tripoint_abs_omt & pos, const om_vision_level vision ) {
+        const overmap_with_local_coords om_loc = overmap_buffer.get_om_global( pos );
+        om_loc.om->set_seen( om_loc.local, vision, true );
+    };
     std::vector<std::pair<oter_id, om_vision_level>> previous;
     previous.reserve( changed.size() );
     for( const tripoint_abs_omt &pos : changed ) {
@@ -4956,7 +4980,7 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
         overmap_buffer.delete_note( hidden );
         for( size_t index = 0; index < changed.size(); ++index ) {
             overmap_buffer.ter_set( changed[index], previous[index].first );
-            overmap_buffer.set_seen( changed[index], previous[index].second );
+            force_seen( changed[index], previous[index].second );
         }
         you.omt_path.clear();
         you.reset_all_missions();
@@ -4966,9 +4990,9 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
     } );
     overmap_buffer.ter_set( north, oter_field.id() );
     overmap_buffer.ter_set( north2, oter_field.id() );
-    overmap_buffer.set_seen( north, om_vision_level::full );
-    overmap_buffer.set_seen( north2, om_vision_level::full );
-    overmap_buffer.set_seen( hidden, om_vision_level::unseen );
+    force_seen( north, om_vision_level::full );
+    force_seen( north2, om_vision_level::full );
+    force_seen( hidden, om_vision_level::unseen );
     overmap_buffer.add_note( hidden, "B:Base" );
     overmap_buffer.mark_note_dangerous( hidden, 2, true );
 
