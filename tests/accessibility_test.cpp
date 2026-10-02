@@ -914,11 +914,11 @@ TEST_CASE( "semantic_accessibility_lists_have_stable_distance_ordering",
            "[accessibility][nogame]" )
 {
     std::vector<accessibility::semantic_list_entry> entries = {
-        { 2, 0, 0, 2, 0, "far east", "2 tiles east" },
-        { 1, 0, 1, 0, 1, "south item", "1 tile south" },
-        { 1, 0, -1, 0, 2, "north obstacle", "1 tile north" },
-        { 0, 0, 0, 0, 0, "current position", "here" },
-        { 1, 0, -1, 0, 1, "north hazard", "1 tile north" },
+        { 2, tripoint( 2, 0, 0 ), 0, "far east", "2 tiles east" },
+        { 1, tripoint::south, 1, "south item", "1 tile south" },
+        { 1, tripoint::north, 2, "north obstacle", "1 tile north" },
+        { 0, tripoint::zero, 0, "current position", "here" },
+        { 1, tripoint::north, 1, "north hazard", "1 tile north" },
     };
 
     accessibility::sort_semantic_list_entries( entries );
@@ -1416,13 +1416,13 @@ TEST_CASE( "semantic_accessibility_lists_group_connected_matching_regions",
            "[accessibility][nogame]" )
 {
     std::vector<accessibility::semantic_list_entry> entries = {
-        { 3, 0, 0, 3, 1, "wall", "3 tiles east" },
-        { 1, 0, 0, 1, 1, "wall", "1 tile east" },
-        { 2, 0, 1, 2, 1, "wall", "2 tiles southeast" },
-        { 5, 0, 0, -5, 1, "wall", "5 tiles west" },
-        { 2, 0, 0, 2, 2, "deep water", "2 tiles east" },
-        { 3, 0, 1, 3, 2, "deep water", "3 tiles southeast" },
-        { 4, 1, 1, 3, 1, "wall", "above" },
+        { 3, tripoint( 3, 0, 0 ), 1, "wall", "3 tiles east" },
+        { 1, tripoint( 1, 0, 0 ), 1, "wall", "1 tile east" },
+        { 2, tripoint( 2, 1, 0 ), 1, "wall", "2 tiles southeast" },
+        { 5, tripoint( -5, 0, 0 ), 1, "wall", "5 tiles west" },
+        { 2, tripoint( 2, 0, 0 ), 2, "deep water", "2 tiles east" },
+        { 3, tripoint( 3, 1, 0 ), 2, "deep water", "3 tiles southeast" },
+        { 4, tripoint( 3, 1, 1 ), 1, "wall", "above" },
     };
 
     const std::vector<accessibility::connected_semantic_list_group> groups =
@@ -4858,16 +4858,15 @@ TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[acce
 TEST_CASE( "overmap_formatters_speak_offset_markers_places_and_routes",
            "[accessibility][nogame]" )
 {
-    CHECK( accessibility::format_overmap_offset( 2, -3, 0 ) == "3 north 2 east" );
-    CHECK( accessibility::format_overmap_offset( 0, 0, 0 ) == "here" );
-    CHECK( accessibility::format_overmap_offset( -5, 0, -1 ) == "5 west, 1 level below" );
-    CHECK( accessibility::format_overmap_offset( 0, 4, 2 ) == "4 south, 2 levels above" );
+    CHECK( accessibility::format_overmap_offset( tripoint( 2, -3, 0 ) ) == "3 north 2 east" );
+    CHECK( accessibility::format_overmap_offset( tripoint::zero ) == "here" );
+    CHECK( accessibility::format_overmap_offset( tripoint( -5, 0, -1 ) ) == "5 west, 1 level below" );
+    CHECK( accessibility::format_overmap_offset( tripoint( 0, 4, 2 ) ) == "4 south, 2 levels above" );
     CHECK( accessibility::format_overmap_level( -1 ) == "Level -1" );
 
     accessibility::overmap_tile tile;
     tile.terrain = "forest";
-    tile.dx = 2;
-    tile.dy = -3;
+    tile.offset = tripoint( 2, -3, 0 );
     CHECK( accessibility::format_overmap_tile( tile, false ) == "forest, 3 north 2 east." );
     CHECK( accessibility::format_overmap_tile( tile, true ) == "forest." );
     tile.note = "Base";
@@ -4885,7 +4884,7 @@ TEST_CASE( "overmap_formatters_speak_offset_markers_places_and_routes",
     accessibility::overmap_tile unknown;
     unknown.in_dangerous_area = true;
     unknown.on_route = true;
-    unknown.dy = 1;
+    unknown.offset = tripoint::south;
     CHECK( accessibility::format_overmap_tile( unknown, false ) ==
            "unexplored, in dangerous area, on route, 1 south." );
 
@@ -5001,7 +5000,7 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
     CHECK( unseen.terrain.empty() );
     CHECK( unseen.note == "Base" );
     CHECK( unseen.danger_radius == 2 );
-    CHECK( unseen.dx == 3 );
+    CHECK( unseen.offset.x == 3 );
     const std::string field = accessibility_gameplay::overmap_tile( you, north ).terrain;
     REQUIRE_FALSE( field.empty() );
 
@@ -5578,31 +5577,31 @@ TEST_CASE( "vehicle_workshop_formatters_speak_location_condition_and_requirement
            "[accessibility][nogame]" )
 {
     accessibility::vehicle_grid_position position;
-    position.min_x = -1;
-    position.max_x = 1;
-    position.min_y = -1;
-    position.max_y = 1;
-    position.x = 1;
-    position.y = -1;
+    position.min.x = -1;
+    position.max.x = 1;
+    position.min.y = -1;
+    position.max.y = 1;
+    position.tile.x = 1;
+    position.tile.y = -1;
     CHECK( accessibility::format_vehicle_location( position ) == "front left" );
     CHECK( accessibility::format_vehicle_position_details( position ) ==
            "Row 1 of 3 from the front, column 1 of 3 from the left." );
-    position.x = 0;
-    position.y = 0;
+    position.tile.x = 0;
+    position.tile.y = 0;
     CHECK( accessibility::format_vehicle_location( position ) == "center" );
-    position.y = 1;
+    position.tile.y = 1;
     CHECK( accessibility::format_vehicle_location( position ) == "right" );
-    position.x = -1;
-    position.y = 0;
+    position.tile.x = -1;
+    position.tile.y = 0;
     CHECK( accessibility::format_vehicle_location( position ) == "rear" );
-    position.x = 3;
+    position.tile.x = 3;
     CHECK( accessibility::format_vehicle_location( position ) == "outside, front" );
     CHECK( accessibility::format_vehicle_position_details( position ) ==
            "2 tiles in front of the vehicle, column 2 of 3 from the left." );
     // A vehicle one tile wide has no left or right side.
-    position.min_y = 0;
-    position.max_y = 0;
-    position.x = 1;
+    position.min.y = 0;
+    position.max.y = 0;
+    position.tile.x = 1;
     CHECK( accessibility::format_vehicle_location( position ) == "front" );
 
     CHECK( accessibility::format_vehicle_part_condition( false, 0 ).empty() );
@@ -5712,7 +5711,7 @@ TEST_CASE( "vehicle_examination_speaks_part_list_tiles_tasks_and_stats", "[acces
     }
     const accessibility::vehicle_grid_position front =
         accessibility_gameplay::vehicle_grid_position( veh, veh.part( parts.front() ).mount );
-    CHECK( front.x == front.max_x );
+    CHECK( front.tile.x == front.max.x );
 
     std::vector<int> repairable;
     for( const int index : parts ) {

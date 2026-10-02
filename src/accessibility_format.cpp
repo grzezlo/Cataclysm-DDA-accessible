@@ -268,8 +268,10 @@ void sort_semantic_list_entries( std::vector<semantic_list_entry> &entries )
 {
     std::sort( entries.begin(), entries.end(),
     []( const semantic_list_entry & lhs, const semantic_list_entry & rhs ) {
-        return std::tie( lhs.distance, lhs.z, lhs.y, lhs.x, lhs.kind, lhs.label ) <
-               std::tie( rhs.distance, rhs.z, rhs.y, rhs.x, rhs.kind, rhs.label );
+        return std::tie( lhs.distance, lhs.offset.z, lhs.offset.y, lhs.offset.x, lhs.kind,
+                         lhs.label ) <
+               std::tie( rhs.distance, rhs.offset.z, rhs.offset.y, rhs.offset.x, rhs.kind,
+                         rhs.label );
     } );
 }
 
@@ -282,7 +284,8 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
     std::map<entry_key, size_t> entries_by_position;
     for( size_t index = 0; index < entries.size(); ++index ) {
         const semantic_list_entry &entry = entries[index];
-        entries_by_position.emplace( entry_key( entry.z, entry.y, entry.x, entry.kind, entry.label ),
+        entries_by_position.emplace( entry_key( entry.offset.z, entry.offset.y, entry.offset.x, entry.kind,
+                                                entry.label ),
                                      index );
     }
 
@@ -307,8 +310,8 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
                     if( x_offset == 0 && y_offset == 0 ) {
                         continue;
                     }
-                    const entry_key neighbor_key( current.z, current.y + y_offset,
-                                                  current.x + x_offset, current.kind, current.label );
+                    const entry_key neighbor_key( current.offset.z, current.offset.y + y_offset,
+                                                  current.offset.x + x_offset, current.kind, current.label );
                     const auto neighbor = entries_by_position.find( neighbor_key );
                     if( neighbor != entries_by_position.end() && !visited[neighbor->second] ) {
                         visited[neighbor->second] = true;
@@ -1893,8 +1896,11 @@ std::string format_panel_moved( const std::string &name, const size_t position,
     } );
 }
 
-std::string format_overmap_offset( const int dx, const int dy, const int dz )
+std::string format_overmap_offset( const tripoint &offset )
 {
+    const int dx = offset.x;
+    const int dy = offset.y;
+    const int dz = offset.z;
     std::vector<std::string> horizontal;
     if( dy != 0 ) {
         horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( dy ),
@@ -1971,7 +1977,7 @@ std::string format_overmap_tile( const overmap_tile &tile, const bool terrain_re
         parts.emplace_back( _( "on route" ) );
     }
     if( !terrain_repeated ) {
-        parts.push_back( format_overmap_offset( tile.dx, tile.dy, tile.dz ) );
+        parts.push_back( format_overmap_offset( tile.offset ) );
     }
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
@@ -1999,7 +2005,7 @@ std::string format_known_place_row( const known_place &place )
                                              place.distance ), place.distance, place.direction );
     }
     if( place.dz != 0 ) {
-        location = string_join( std::vector<std::string> { location, format_overmap_offset( 0, 0, place.dz ) },
+        location = string_join( std::vector<std::string> { location, format_overmap_offset( tripoint( 0, 0, place.dz ) ) },
                                 _( ", " ) );
     }
     parts.push_back( location );
@@ -2439,8 +2445,8 @@ std::string without_empty_joined( const std::vector<std::string> &parts,
 
 std::string format_vehicle_location( const vehicle_grid_position &position )
 {
-    const int along = vehicle_section( position.x, position.min_x, position.max_x );
-    const int across = vehicle_section( position.y, position.min_y, position.max_y );
+    const int along = vehicle_section( position.tile.x, position.min.x, position.max.x );
+    const int across = vehicle_section( position.tile.y, position.min.y, position.max.y );
     std::string location;
     if( along == 2 || along == 0 ) {
         if( across == 0 ) {
@@ -2460,8 +2466,8 @@ std::string format_vehicle_location( const vehicle_grid_position &position )
     } else {
         location = pgettext( "vehicle location", "center" );
     }
-    const bool outside = position.x < position.min_x || position.x > position.max_x ||
-                         position.y < position.min_y || position.y > position.max_y;
+    const bool outside = position.tile.x < position.min.x || position.tile.x > position.max.x ||
+                         position.tile.y < position.min.y || position.tile.y > position.max.y;
     if( outside ) {
         //~ Grid tile beyond a vehicle: %s is the nearest location on the vehicle, such as "front left".
         return string_format( pgettext( "vehicle location", "outside, %s" ), location );
@@ -2472,32 +2478,32 @@ std::string format_vehicle_location( const vehicle_grid_position &position )
 std::string format_vehicle_position_details( const vehicle_grid_position &position )
 {
     std::string along;
-    if( position.x > position.max_x ) {
-        const int distance = position.x - position.max_x;
+    if( position.tile.x > position.max.x ) {
+        const int distance = position.tile.x - position.max.x;
         along = string_format( n_gettext( "%d tile in front of the vehicle",
                                           "%d tiles in front of the vehicle", distance ), distance );
-    } else if( position.x < position.min_x ) {
-        const int distance = position.min_x - position.x;
+    } else if( position.tile.x < position.min.x ) {
+        const int distance = position.min.x - position.tile.x;
         along = string_format( n_gettext( "%d tile behind the vehicle",
                                           "%d tiles behind the vehicle", distance ), distance );
     } else {
         //~ Row of a vehicle grid tile: %1$d is the row counted from the front, %2$d the number of rows.
         along = string_format( _( "row %1$d of %2$d from the front" ),
-                               position.max_x - position.x + 1, position.max_x - position.min_x + 1 );
+                               position.max.x - position.tile.x + 1, position.max.x - position.min.x + 1 );
     }
     std::string across;
-    if( position.y < position.min_y ) {
-        const int distance = position.min_y - position.y;
+    if( position.tile.y < position.min.y ) {
+        const int distance = position.min.y - position.tile.y;
         across = string_format( n_gettext( "%d tile left of the vehicle",
                                            "%d tiles left of the vehicle", distance ), distance );
-    } else if( position.y > position.max_y ) {
-        const int distance = position.y - position.max_y;
+    } else if( position.tile.y > position.max.y ) {
+        const int distance = position.tile.y - position.max.y;
         across = string_format( n_gettext( "%d tile right of the vehicle",
                                            "%d tiles right of the vehicle", distance ), distance );
     } else {
         //~ Column of a vehicle grid tile: %1$d is the column counted from the left, %2$d the number of columns.
         across = string_format( _( "column %1$d of %2$d from the left" ),
-                                position.y - position.min_y + 1, position.max_y - position.min_y + 1 );
+                                position.tile.y - position.min.y + 1, position.max.y - position.min.y + 1 );
     }
     std::string result = string_join( std::vector<std::string> { along, across }, _( ", " ) );
     result[0] = static_cast<char>( std::toupper( static_cast<unsigned char>( result[0] ) ) );

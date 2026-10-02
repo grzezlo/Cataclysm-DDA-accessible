@@ -589,7 +589,7 @@ void add_situation_entry( std::vector<accessibility::semantic_list_entry> &entri
                           const std::string &label )
 {
     const tripoint_rel_ms offset = position - origin;
-    entries.push_back( { rl_dist( origin.xy(), position.xy() ), offset.z(), offset.y(), offset.x(),
+    entries.push_back( { rl_dist( origin.xy(), position.xy() ), offset.raw(),
                          static_cast<int>( kind ), label, situation_location( origin, position ) } );
 }
 
@@ -1713,8 +1713,7 @@ accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
         const point_rel_ms &mount )
 {
     accessibility::vehicle_grid_position result;
-    result.x = mount.x();
-    result.y = mount.y();
+    result.tile = mount.raw();
     bool first = true;
     for( const vpart_reference &vp : veh.get_all_parts() ) {
         if( vp.part().removed ) {
@@ -1722,15 +1721,14 @@ accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
         }
         const point_rel_ms &part_mount = vp.part().mount;
         if( first ) {
-            result.min_x = result.max_x = part_mount.x();
-            result.min_y = result.max_y = part_mount.y();
+            result.min = result.max = part_mount.raw();
             first = false;
             continue;
         }
-        result.min_x = std::min( result.min_x, part_mount.x() );
-        result.max_x = std::max( result.max_x, part_mount.x() );
-        result.min_y = std::min( result.min_y, part_mount.y() );
-        result.max_y = std::max( result.max_y, part_mount.y() );
+        result.min.x = std::min( result.min.x, part_mount.x() );
+        result.max.x = std::max( result.max.x, part_mount.x() );
+        result.min.y = std::min( result.min.y, part_mount.y() );
+        result.max.y = std::max( result.max.y, part_mount.y() );
     }
     return result;
 }
@@ -1753,8 +1751,7 @@ std::vector<int> vehicle_part_list( const vehicle &veh )
 {
     struct listed_part {
         int index;
-        int x;
-        int y;
+        point_rel_ms mount;
         int stack;
     };
     std::vector<listed_part> parts;
@@ -1771,13 +1768,13 @@ std::vector<int> vehicle_part_list( const vehicle &veh )
         }
         const auto stacked = std::find( tile->second.begin(), tile->second.end(),
                                         static_cast<int>( vp.part_index() ) );
-        parts.push_back( { static_cast<int>( vp.part_index() ), part.mount.x(), part.mount.y(),
+        parts.push_back( { static_cast<int>( vp.part_index() ), part.mount,
                            static_cast<int>( std::distance( tile->second.begin(), stacked ) )
                          } );
     }
     std::sort( parts.begin(), parts.end(), []( const listed_part & a, const listed_part & b ) {
-        return std::make_tuple( -a.x, a.y, a.stack, a.index ) <
-               std::make_tuple( -b.x, b.y, b.stack, b.index );
+        return std::make_tuple( -a.mount.x(), a.mount.y(), a.stack, a.index ) <
+               std::make_tuple( -b.mount.x(), b.mount.y(), b.stack, b.index );
     } );
     std::vector<int> result;
     result.reserve( parts.size() );
@@ -2345,9 +2342,7 @@ accessibility::overmap_tile overmap_tile( const avatar &viewer, const tripoint_a
     tile.route_destination = !path.empty() && path.front() == position;
     tile.on_route = std::find( path.begin(), path.end(), position ) != path.end();
     const tripoint_abs_omt origin = viewer.pos_abs_omt();
-    tile.dx = position.x() - origin.x();
-    tile.dy = position.y() - origin.y();
-    tile.dz = position.z() - origin.z();
+    tile.offset = ( position - origin ).raw();
     return tile;
 }
 
@@ -2377,7 +2372,7 @@ std::vector<std::string> overmap_tile_details( const avatar &viewer,
                                    length_to_string_approx( distance * 24_meter ) );
         if( target.z() != position.z() ) {
             location = accessibility::format_semantic_sequence( {
-                location, accessibility::format_overmap_offset( 0, 0, target.z() - position.z() )
+                location, accessibility::format_overmap_offset( tripoint( 0, 0, target.z() - position.z() ) )
             } );
         }
         lines.push_back( location );

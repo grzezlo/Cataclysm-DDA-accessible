@@ -7,6 +7,8 @@
 #include <utility>
 #include <vector>
 
+#include "point.h"
+
 // Renderer-independent semantic models and speech formatters.  Everything here
 // is a pure function of its inputs so it can be tested without a backend.
 namespace accessibility
@@ -14,9 +16,8 @@ namespace accessibility
 
 struct semantic_list_entry {
     int distance;
-    int z;
-    int y;
-    int x;
+    /** Offset from the player. */
+    tripoint offset;
     int kind;
     std::string label;
     std::string context;
@@ -586,9 +587,9 @@ std::string format_panel_move_start( const std::string &name, size_t position, s
 std::string format_panel_moved( const std::string &name, size_t position, size_t count );
 /**
  * Offset of a map tile from the player: "3 north 2 east", "5 west, 1 level
- * below", or "here".  `dy` grows southwards and `dz` upwards.
+ * below", or "here".  `y` grows southwards and `z` upwards.
  */
-std::string format_overmap_offset( int dx, int dy, int dz );
+std::string format_overmap_offset( const tripoint &offset );
 /** "Level -1" for an overmap z-level. */
 std::string format_overmap_level( int z );
 /** One overmap tile as the map cursor speaks it. */
@@ -606,9 +607,7 @@ struct overmap_tile {
     bool route_destination = false;
     bool on_route = false;
     /** Offset from the player in map tiles. */
-    int dx = 0;
-    int dy = 0;
-    int dz = 0;
+    tripoint offset = tripoint::zero;
 };
 /**
  * "forest, note: Base, mission target: Find a book, 3 north 2 east." or, when
@@ -783,12 +782,11 @@ std::string format_vehicle_engine_row( const std::string &engine, const std::str
  * toward the front and y toward the right.  The bounds are the vehicle's.
  */
 struct vehicle_grid_position {
-    int x = 0;
-    int y = 0;
-    int min_x = 0;
-    int max_x = 0;
-    int min_y = 0;
-    int max_y = 0;
+    point tile = point::zero;
+    /** Smallest x and y of the vehicle's parts. */
+    point min = point::zero;
+    /** Largest x and y of the vehicle's parts. */
+    point max = point::zero;
 };
 /** "front left", "rear", "center"; "outside, front" beyond the vehicle. */
 std::string format_vehicle_location( const vehicle_grid_position &position );
