@@ -5,9 +5,8 @@
 # Usage: lang/update_access_po.sh [--base <revision>] [language...]
 #
 # The fork template contains every string extracted from this tree that the
-# upstream base lacks.  The base is the merge base of HEAD and the first
-# existing branch of 0.I-branch, upstream/0.I-branch, and origin/0.I-branch,
-# unless --base names another revision.  Its template is cached in lang/po
+# upstream base lacks.  The base is the merge base of HEAD and upstream-base
+# (or origin/upstream-base in a clone) unless --base names another revision.  Its template is cached in lang/po
 # by commit.  Without languages, every existing lang/access catalog is
 # updated.  Upstream catalogs in lang/po are left unchanged.
 
@@ -39,7 +38,7 @@ then
 fi
 if [ -z "$base_ref" ]
 then
-    for candidate in 0.I-branch upstream/0.I-branch origin/0.I-branch
+    for candidate in upstream-base origin/upstream-base
     do
         if git rev-parse --verify --quiet "$candidate^{commit}" >/dev/null
         then
@@ -49,7 +48,7 @@ then
     done
     if [ -z "$base_ref" ]
     then
-        echo "Error: No 0.I-branch found; fetch upstream or pass --base."
+        echo "Error: No upstream-base branch found; fetch it or pass --base."
         exit 1
     fi
 fi

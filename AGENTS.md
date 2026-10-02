@@ -190,8 +190,24 @@ over upstream contribution policy or exact UI parity.
 
 - Use `access` as the public fork's primary development and release branch, and
   configure it as the default branch on GitHub.
-- Base `access` on the latest maintained upstream `0.I-branch`, not upstream
-  `master`.
+- Base `access` on the latest maintained upstream release branch (currently
+  `0.I-branch`), not upstream `master`.
+- `upstream-base` is a clean copy of the upstream commit that `access` is
+  based on.  Never commit to it.  Within one upstream release, fast-forward it
+  to the release branch.  When moving to a new upstream release, tag the old
+  base (for example `upstream-base-0.I`) and force-push `upstream-base` to the
+  new release branch, because upstream release branches do not descend from
+  each other.  Scripts refer to `upstream-base`, never to a release name.
+- Synchronize `access` only by merging `upstream-base` into it; never rebase
+  published `access` history.  `ACCESS_DONE.md` and `ACCESS_USERTESTS.md`
+  refer to its commit hashes.  The merge commit must pass `test_access.bat`
+  and build the Windows x64 tiles game like any other commit.  Use
+  `git log --first-parent access` to review fork work without upstream
+  history.
+- Upstream release-branch names trigger upstream workflows, such as the
+  release workflow, so do not push them to the fork.  Keep upstream workflow
+  files unchanged unless the fork needs them; disable the unwanted ones in the
+  GitHub repository settings instead of deleting them.
 - Keep upstream tracking branches clean.  Commit routine accessibility work
   directly to `access` in small, focused commits; the roadmap is sequential,
   so per-feature branches add no value.  Every commit on `access` must pass
