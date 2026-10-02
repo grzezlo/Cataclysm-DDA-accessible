@@ -7,6 +7,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -87,6 +88,95 @@
 #include "vpart_position.h"
 #include "vpart_range.h"
 #include "worldfactory.h"
+
+// Expected speech strings mirror the spoken output, which uses single spaces after sentences.
+// NOLINTBEGIN(cata-text-style)
+
+static const activity_id ACT_HACKSAW( "ACT_HACKSAW" );
+static const activity_id ACT_WAIT( "ACT_WAIT" );
+
+static const bionic_id bio_night_vision( "bio_night_vision" );
+static const bionic_id bio_power_storage( "bio_power_storage" );
+
+static const bodygraph_id bodygraph_arm_l( "arm_l" );
+
+static const efftype_id effect_bleed( "bleed" );
+static const efftype_id effect_blind( "blind" );
+static const efftype_id effect_downed( "downed" );
+static const efftype_id effect_sleep( "sleep" );
+
+static const faction_id faction_free_merchants( "free_merchants" );
+
+static const flag_id json_flag_CAN_USE_IN_DARK( "CAN_USE_IN_DARK" );
+
+static const furn_str_id furn_f_table( "f_table" );
+
+static const itype_id itype_2x4( "2x4" );
+static const itype_id itype_backpack( "backpack" );
+static const itype_id itype_child_book( "child_book" );
+static const itype_id itype_e_scrap( "e_scrap" );
+static const itype_id itype_hammer( "hammer" );
+static const itype_id itype_hoodie( "hoodie" );
+static const itype_id itype_longshirt( "longshirt" );
+static const itype_id itype_rock( "rock" );
+static const itype_id itype_scrap( "scrap" );
+static const itype_id itype_sweatshirt( "sweatshirt" );
+static const itype_id itype_test_backpack( "test_backpack" );
+static const itype_id itype_test_soldering_iron( "test_soldering_iron" );
+static const itype_id itype_test_weapon1( "test_weapon1" );
+
+static const matype_id test_style_ma1( "test_style_ma1" );
+
+static const mission_type_id mission_TEST_MISSION_GOAL_CONDITION2( "TEST_MISSION_GOAL_CONDITION2" );
+
+static const mod_id MOD_INFORMATION_accessibility_missing_mod( "accessibility_missing_mod" );
+static const mod_id MOD_INFORMATION_aftershock( "aftershock" );
+static const mod_id MOD_INFORMATION_aftershock_exoplanet( "aftershock_exoplanet" );
+static const mod_id MOD_INFORMATION_dda( "dda" );
+static const mod_id MOD_INFORMATION_magiclysm( "magiclysm" );
+static const mod_id MOD_INFORMATION_mindovermatter( "mindovermatter" );
+
+static const morale_type morale_food_bad( "morale_food_bad" );
+static const morale_type morale_food_good( "morale_food_good" );
+
+static const oter_str_id oter_field( "field" );
+
+static const proficiency_id proficiency_prof_knapping( "prof_knapping" );
+static const proficiency_id proficiency_prof_leatherworking_basic( "prof_leatherworking_basic" );
+
+static const profession_id profession_doctor( "doctor" );
+static const profession_id profession_hates_books( "hates_books" );
+static const profession_id profession_loves_books( "loves_books" );
+static const profession_id profession_unemployed( "unemployed" );
+
+static const recipe_id recipe_test_soldering_iron( "test_soldering_iron" );
+
+static const skill_id skill_melee( "melee" );
+
+static const spell_id spell_test_spell_pew( "test_spell_pew" );
+
+static const string_id<npc_template> npc_template_test_talker( "test_talker" );
+
+static const string_id<scenario> scenario_evacuee( "evacuee" );
+static const string_id<scenario> scenario_medieval( "medieval" );
+
+static const ter_str_id ter_t_door_c( "t_door_c" );
+static const ter_str_id ter_t_floor( "t_floor" );
+static const ter_str_id ter_t_wall( "t_wall" );
+
+static const trait_id trait_BIOLUM1( "BIOLUM1" );
+static const trait_id trait_FASTLEARNER( "FASTLEARNER" );
+static const trait_id trait_FASTREADER( "FASTREADER" );
+static const trait_id trait_GOODHEARING( "GOODHEARING" );
+static const trait_id trait_HATES_BOOKS( "HATES_BOOKS" );
+static const trait_id trait_PROF_MED( "PROF_MED" );
+static const trait_id trait_SLOWLEARNER( "SLOWLEARNER" );
+
+static const vproto_id vehicle_prototype_car( "car" );
+
+static const zone_type_id zone_type_LOOT_CUSTOM( "LOOT_CUSTOM" );
+static const zone_type_id zone_type_LOOT_FOOD( "LOOT_FOOD" );
+static const zone_type_id zone_type_LOOT_UNSORTED( "LOOT_UNSORTED" );
 
 namespace
 {
@@ -534,7 +624,7 @@ TEST_CASE( "real_time_progress_obeys_silence_interval_deduplication_and_repeat",
     on_out_of_scope restore( []() {
         accessibility::reset_backend_after_testing();
     } );
-    auto now = std::chrono::steady_clock::time_point{};
+    std::chrono::steady_clock::time_point now{};
     accessibility::set_clock_for_testing( [&now]() {
         return now;
     } );
@@ -591,7 +681,7 @@ TEST_CASE( "progress_sources_end_with_their_owner_and_prioritize_warnings",
     on_out_of_scope restore( []() {
         accessibility::reset_backend_after_testing();
     } );
-    auto now = std::chrono::steady_clock::time_point{};
+    std::chrono::steady_clock::time_point now{};
     accessibility::set_clock_for_testing( [&now]() {
         return now;
     } );
@@ -631,7 +721,7 @@ TEST_CASE( "static_progress_popups_speak_one_start_and_rate_limited_updates",
     on_out_of_scope restore( []() {
         accessibility::reset_backend_after_testing();
     } );
-    auto now = std::chrono::steady_clock::time_point{};
+    std::chrono::steady_clock::time_point now{};
     accessibility::set_clock_for_testing( [&now]() {
         return now;
     } );
@@ -699,7 +789,7 @@ TEST_CASE( "activity_wait_start_progress_completion_and_cancel_are_batched", "[a
         clear_avatar();
     } );
     accessibility::set_progress_announcement_interval( 0 );
-    you.assign_activity( activity_id( "ACT_WAIT" ), to_moves<int>( 2_minutes ) );
+    you.assign_activity( ACT_WAIT, to_moves<int>( 2_minutes ) );
     REQUIRE( speech->messages.size() == 1 );
     CHECK( speech->messages[0].find( "Started: waiting" ) != std::string::npos );
     CHECK( speech->messages[0].find( "2 minutes" ) != std::string::npos );
@@ -721,13 +811,13 @@ TEST_CASE( "activity_wait_start_progress_completion_and_cancel_are_batched", "[a
     CHECK( speech->messages.back() == "You finish waiting." );
     CHECK( accessibility::last_announcement() == "You finish waiting." );
 
-    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    you.assign_activity( ACT_HACKSAW, to_moves<int>( 1_hours ) );
     accessibility_gameplay::activity_interruption_reason( "Zombie spotted!" );
     you.cancel_activity();
     CHECK( accessibility::flush_gameplay_announcements() );
     CHECK( speech->messages.back().find( "Stopped:" ) != std::string::npos );
     CHECK( speech->messages.back().find( "Zombie spotted!" ) != std::string::npos );
-    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    you.assign_activity( ACT_HACKSAW, to_moves<int>( 1_hours ) );
     CHECK( speech->messages.back().find( "Resumed:" ) != std::string::npos );
 
     // Successful actor cleanup uses cancel_activity, as crafting does.
@@ -761,7 +851,7 @@ TEST_CASE( "reading_failure_and_chapter_results_are_semantic_activity_outcomes",
         clear_avatar();
     } );
     accessibility::set_progress_announcement_interval( 0 );
-    item_location book = you.i_add( item( itype_id( "child_book" ) ) );
+    item_location book = you.i_add( item( itype_child_book ) );
     item_location ereader;
     REQUIRE( book );
     you.identify( *book );
@@ -774,7 +864,7 @@ TEST_CASE( "reading_failure_and_chapter_results_are_semantic_activity_outcomes",
     SECTION( "Reading stops with the actual vision failure" ) {
         {
             accessibility::game_message_speech_suppression setup;
-            you.add_effect( efftype_id( "blind" ), 1_hours );
+            you.add_effect( effect_blind, 1_hours );
         }
         you.set_moves( 100 );
         you.activity.do_turn( you );
@@ -788,7 +878,7 @@ TEST_CASE( "reading_failure_and_chapter_results_are_semantic_activity_outcomes",
         {
             accessibility_gameplay::activity_turn_speech turn( you );
             turn.finish_cycle();
-            book->set_flag( flag_id( "CAN_USE_IN_DARK" ) );
+            book->set_flag( json_flag_CAN_USE_IN_DARK );
             actor.start( you.activity, you );
             actor.finish( you.activity, you );
         }
@@ -853,7 +943,7 @@ TEST_CASE( "sleep_start_repeat_wakeup_and_unsuccessful_attempt_are_announced", "
     CHECK( speech->messages.back() == "Sleeping" );
     you.wake_up();
     you.wake_up();
-    you.remove_effect( efftype_id( "sleep" ) );
+    you.remove_effect( effect_sleep );
     CHECK( accessibility::flush_gameplay_announcements() );
     CHECK( speech->messages.back().find( "You wake up." ) != std::string::npos );
     CHECK( speech->messages.back().find( "You wake up.",
@@ -886,14 +976,14 @@ TEST_CASE( "continuous_activity_actor_replacement_keeps_one_start_and_aggregates
         clear_avatar();
     } );
     accessibility::set_progress_announcement_interval( 0 );
-    you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+    you.assign_activity( ACT_HACKSAW, to_moves<int>( 1_hours ) );
     REQUIRE( speech->messages.size() == 1 );
     {
         accessibility_gameplay::activity_turn_speech turn( you );
         accessibility_gameplay::activity_completed( you );
         you.cancel_activity();
         accessibility::announce_game_message( "You craft the first knife." );
-        you.assign_activity( activity_id( "ACT_HACKSAW" ), to_moves<int>( 1_hours ) );
+        you.assign_activity( ACT_HACKSAW, to_moves<int>( 1_hours ) );
     }
     CHECK_FALSE( accessibility::flush_gameplay_announcements() );
     CHECK( speech->messages.size() == 1 );
@@ -1375,8 +1465,7 @@ TEST_CASE( "nearby_item_collection_groups_visible_positions_and_respects_blindne
     avatar &viewer = get_avatar();
     map &here = get_map();
     const tripoint_bub_ms origin = viewer.pos_bub( here );
-    const itype_id rock_type( "rock" );
-    const item rock( rock_type, calendar::turn );
+    const item rock( itype_rock, calendar::turn );
     here.add_item_or_charges( origin + tripoint::east, rock );
     here.add_item_or_charges( origin + tripoint::south, rock );
     here.invalidate_map_cache( origin.z() );
@@ -1385,7 +1474,7 @@ TEST_CASE( "nearby_item_collection_groups_visible_positions_and_respects_blindne
     const std::vector<map_item_stack> visible_items = g->find_nearby_items( 10 );
     const auto rock_stack = std::find_if( visible_items.begin(), visible_items.end(),
     [&]( const map_item_stack & stack ) {
-        return stack.example != nullptr && stack.example->typeId() == rock_type;
+        return stack.example != nullptr && stack.example->typeId() == itype_rock;
     } );
     REQUIRE( rock_stack != visible_items.end() );
     CHECK( rock_stack->totalcount == 2 );
@@ -2002,8 +2091,8 @@ TEST_CASE( "comparison_selector_announces_first_mark_and_focus_revisit", "[acces
     avatar &you = get_avatar();
     map &here = get_map();
     const tripoint_bub_ms position = you.pos_bub();
-    item &first_item = here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
-    item &second_item = here.add_item_or_charges( position, item( itype_id( "2x4" ) ) );
+    item &first_item = here.add_item_or_charges( position, item( itype_hammer ) );
+    item &second_item = here.add_item_or_charges( position, item( itype_2x4 ) );
     const item_location first( map_cursor( position ), &first_item );
     const item_location second( map_cursor( position ), &second_item );
     REQUIRE( first );
@@ -2089,11 +2178,11 @@ TEST_CASE( "inventory_selector_names_column_and_focus_when_source_changes", "[ac
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    const item_location held = you.i_add( item( itype_id( "hammer" ) ) );
+    const item_location held = you.i_add( item( itype_hammer ) );
     REQUIRE( held );
     map &here = get_map();
     const tripoint_bub_ms position = you.pos_bub();
-    item &ground_item = here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+    item &ground_item = here.add_item_or_charges( position, item( itype_rock ) );
     const item_location ground( map_cursor( position ), &ground_item );
 
     auto capture = std::make_unique<capture_backend>();
@@ -2122,9 +2211,9 @@ TEST_CASE( "inventory_selector_speaks_count_once_wrap_and_position_on_request",
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
-    const item_location hammer = you.i_add( item( itype_id( "hammer" ) ) );
-    const item_location rock = you.i_add( item( itype_id( "rock" ) ) );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
+    const item_location hammer = you.i_add( item( itype_hammer ) );
+    const item_location rock = you.i_add( item( itype_rock ) );
     REQUIRE( hammer );
     REQUIRE( rock );
 
@@ -2210,7 +2299,7 @@ TEST_CASE( "inventory_selector_reopened_after_item_action_speaks_only_focus",
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    const item_location held = you.i_add( item( itype_id( "hammer" ) ) );
+    const item_location held = you.i_add( item( itype_hammer ) );
     REQUIRE( held );
 
     auto capture = std::make_unique<capture_backend>();
@@ -2575,10 +2664,10 @@ TEST_CASE( "multiselect_speaks_selection_state_totals_and_status", "[accessibili
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
     item_location rock;
     for( int i = 0; i < 3; ++i ) {
-        rock = you.i_add( item( itype_id( "rock" ) ) );
+        rock = you.i_add( item( itype_rock ) );
     }
     REQUIRE( rock );
 
@@ -2622,11 +2711,11 @@ TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
     map &here = get_map();
     const tripoint_bub_ms position = you.pos_bub();
-    here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
-    here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+    here.add_item_or_charges( position, item( itype_hammer ) );
+    here.add_item_or_charges( position, item( itype_rock ) );
 
     auto capture = std::make_unique<capture_backend>();
     capture_backend *capture_ptr = capture.get();
@@ -2828,9 +2917,9 @@ TEST_CASE( "direction_targets_name_visible_adjacent_things_in_compass_order", "[
     const tripoint_bub_ms origin = viewer.pos_bub( here );
     const tripoint_bub_ms door = origin + tripoint::north;
     const tripoint_bub_ms table = origin + tripoint::east;
-    here.ter_set( door, ter_str_id( "t_door_c" ) );
-    here.furn_set( table, furn_str_id( "f_table" ) );
-    here.add_item_or_charges( table, item( itype_id( "rock" ), calendar::turn ) );
+    here.ter_set( door, ter_t_door_c );
+    here.furn_set( table, furn_f_table );
+    here.add_item_or_charges( table, item( itype_rock, calendar::turn ) );
     here.invalidate_map_cache( origin.z() );
     here.build_map_cache( origin.z(), true );
 
@@ -2916,8 +3005,8 @@ TEST_CASE( "auto_travel_speaks_start_arrival_and_early_stop", "[accessibility]" 
     for( int i = 1; i <= 4; ++i ) {
         route.push_back( start + tripoint_rel_ms::east * i );
     }
-    here.ter_set( route[2], ter_str_id( "t_floor" ) );
-    here.ter_set( route[3], ter_str_id( "t_floor" ) );
+    here.ter_set( route[2], ter_t_floor );
+    here.ter_set( route[3], ter_t_floor );
     here.invalidate_map_cache( start.z() );
     here.build_map_cache( start.z(), true );
     const std::string ground = here.tername( route[0] );
@@ -3069,13 +3158,13 @@ TEST_CASE( "pickup_selector_rows_speak_ownership_and_destination", "[accessibili
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
     map &here = get_map();
     const tripoint_bub_ms position = you.pos_bub();
-    item &own_rock = here.add_item_or_charges( position, item( itype_id( "rock" ) ) );
+    item &own_rock = here.add_item_or_charges( position, item( itype_rock ) );
     own_rock.set_owner( you );
-    item &merchant_hammer = here.add_item_or_charges( position, item( itype_id( "hammer" ) ) );
-    merchant_hammer.set_owner( faction_id( "free_merchants" ) );
+    item &merchant_hammer = here.add_item_or_charges( position, item( itype_hammer ) );
+    merchant_hammer.set_owner( faction_free_merchants );
     const item_location rock_location( map_cursor( position ), &own_rock );
     const item_location hammer_location( map_cursor( position ), &merchant_hammer );
 
@@ -3100,8 +3189,8 @@ TEST_CASE( "multiselect_marking_speaks_resulting_capacity", "[accessibility]" )
     clear_avatar();
     clear_map();
     avatar &you = get_avatar();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
-    const item_location rock = you.i_add( item( itype_id( "rock" ) ) );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
+    const item_location rock = you.i_add( item( itype_rock ) );
     REQUIRE( rock );
 
     auto capture = std::make_unique<capture_backend>();
@@ -3165,7 +3254,7 @@ TEST_CASE( "pickup_speaks_one_result_with_destination_and_left_items", "[accessi
     }
 
     SECTION( "stored items name their container" ) {
-        you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+        you.worn.wear_item( you, item( itype_backpack ), false, false );
         pick_up( "hammer", 2 );
         REQUIRE( !capture_ptr->messages.empty() );
         CHECK( capture_ptr->messages.back() == "Picked up: 2 hammers into backpack." );
@@ -3174,7 +3263,7 @@ TEST_CASE( "pickup_speaks_one_result_with_destination_and_left_items", "[accessi
     }
 
     SECTION( "stacks counted in charges name the container" ) {
-        you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
+        you.worn.wear_item( you, item( itype_backpack ), false, false );
         pick_up( "rock", 2 );
         REQUIRE( !capture_ptr->messages.empty() );
         CHECK( capture_ptr->messages.back() == "Picked up: rocks (2) into backpack." );
@@ -3197,8 +3286,8 @@ TEST_CASE( "dropping_several_kinds_of_items_names_them", "[accessibility]" )
 
     accessibility::note_player_input();
     put_into_vehicle_or_drop( you, item_drop_reason::deliberate, {
-        item( itype_id( "hammer" ) ), item( itype_id( "rock" ) ), item( itype_id( "hammer" ) ),
-        item( itype_id( "rock" ) )
+        item( itype_hammer ), item( itype_rock ), item( itype_hammer ),
+        item( itype_rock )
     } );
     accessibility::flush_gameplay_announcements();
     REQUIRE( !capture_ptr->messages.empty() );
@@ -3324,7 +3413,7 @@ TEST_CASE( "target_focus_names_target_obstacle_and_creatures_in_line_of_fire",
     CHECK( details.front().rfind( "zombie. Attitude: Hostile.", 0 ) == 0 );
 
     // A wall between the creature in line of fire and the target blocks the shot.
-    here.ter_set( origin + tripoint( 2, 0, 0 ), ter_str_id( "t_wall" ) );
+    here.ter_set( origin + tripoint( 2, 0, 0 ), ter_t_wall );
     here.invalidate_map_cache( origin.z() );
     here.build_map_cache( origin.z(), true );
     focus = accessibility_gameplay::target_focus( here, viewer, origin, target_pos, trajectory,
@@ -3437,7 +3526,7 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     set_time_to_day();
     avatar &you = get_avatar();
     map &here = get_map();
-    const recipe &soldering_iron = recipe_id( "test_soldering_iron" ).obj();
+    const recipe &soldering_iron = recipe_test_soldering_iron.obj();
 
     you.invalidate_crafting_inventory();
     std::vector<accessibility::requirement_group> groups = accessibility_gameplay::requirement_groups(
@@ -3456,9 +3545,9 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     // Without the knowledge of the primary skill, the recipe lacks one more requirement.
     CHECK( recipe_accessibility_row( soldering_iron, you ) == "TEST soldering iron, 7 missing." );
 
-    here.add_item( you.pos_bub( here ), item( itype_id( "scrap" ), calendar::turn, 1 ) );
-    here.add_item( you.pos_bub( here ), item( itype_id( "e_scrap" ) ) );
-    here.add_item( you.pos_bub( here ), item( itype_id( "e_scrap" ) ) );
+    here.add_item( you.pos_bub( here ), item( itype_scrap, calendar::turn, 1 ) );
+    here.add_item( you.pos_bub( here ), item( itype_e_scrap ) );
+    here.add_item( you.pos_bub( here ), item( itype_e_scrap ) );
     you.invalidate_crafting_inventory();
     groups = accessibility_gameplay::requirement_groups( soldering_iron.simple_requirements(),
              you.crafting_inventory(), soldering_iron.get_component_filter(), 1, true );
@@ -3484,15 +3573,15 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     };
     CHECK( has_line( "Tools: 1 tool with cutting of 2 or more, missing." ) );
     CHECK( has_line( "Components: 1 scrap metal (have 1), have." ) );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Primary skill: ", 0 ) == 0;
     } ) );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Time to complete: ", 0 ) == 0;
     } ) );
 
     // Disassembly lists what it returns and the tools it needs.
-    const recipe &uncraft = recipe_dictionary::get_uncraft( itype_id( "test_soldering_iron" ) );
+    const recipe &uncraft = recipe_dictionary::get_uncraft( itype_test_soldering_iron );
     REQUIRE( !uncraft.is_null() );
     const std::vector<std::string> disassembly = accessibility_gameplay::disassembly_details(
                 uncraft, "2 electronic scrap", "20 minutes", you.crafting_inventory() );
@@ -3500,7 +3589,7 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     CHECK( disassembly[0] == "Returns: 2 electronic scrap." );
     CHECK( disassembly[1] == "Time: 20 minutes." );
     CHECK( disassembly[2] == "Tools: 1 tool with cutting of 2 or more, missing." );
-    CHECK( std::none_of( disassembly.begin(), disassembly.end(), []( const std::string & line ) {
+    CHECK( std::none_of( disassembly.begin(), disassembly.end(), []( std::string_view line ) {
         return line.rfind( "Components:", 0 ) == 0;
     } ) );
 }
@@ -3601,7 +3690,7 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
     std::vector<std::string> details = character_sheet_accessibility_details( you, stats, 0 );
     REQUIRE( details.size() >= 3 );
     CHECK( details[0] == "Strength 8, base 10. 1 of 9." );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Base HP: ", 0 ) == 0;
     } ) );
     for( const std::string &line : details ) {
@@ -3613,21 +3702,20 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
     const std::string torso_row = "torso, encumbrance 0, warmth comfortable.";
     const auto torso = std::find( rows.begin(), rows.end(), torso_row );
     REQUIRE( torso != rows.end() );
-    CHECK( std::any_of( rows.begin(), rows.end(), []( const std::string & row ) {
+    CHECK( std::any_of( rows.begin(), rows.end(), []( std::string_view row ) {
         return row.rfind( "arms, encumbrance 0", 0 ) == 0;
     } ) );
     details = character_sheet_accessibility_details( you, encumbrance,
               static_cast<unsigned>( torso - rows.begin() ) );
     REQUIRE( !details.empty() );
     CHECK( details[0].rfind( "torso, encumbrance 0, layering 0, total 0, warmth ", 0 ) == 0 );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.find( " score: " ) != std::string::npos;
     } ) );
 
     // Skill rows name their category when focus enters it; details read the skill.
-    const skill_id melee( "melee" );
-    you.set_skill_level( melee, 2 );
-    you.set_knowledge_level( melee, 3 );
+    you.set_skill_level( skill_melee, 2 );
+    you.set_knowledge_level( skill_melee, 3 );
     const std::vector<HeaderSkill> headers = get_HeaderSkills( Skill::get_skills_sorted_by(
     []( const Skill & a, const Skill & b ) {
         return a.get_sort_rank() < b.get_sort_rank();
@@ -3645,7 +3733,7 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
         const std::string category = SkillDisplayType::get_skill_type(
                                          headers[line].skill->display_category() ).display_string();
         CHECK( ( rows[row].rfind( category + ". ", 0 ) == 0 ) == category_start );
-        if( headers[line].skill->ident() == melee ) {
+        if( headers[line].skill->ident() == skill_melee ) {
             CHECK( rows[row].find( "melee 3, 0%, rusty, training." ) != std::string::npos );
             melee_line = line;
         }
@@ -3659,22 +3747,21 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
     details = character_sheet_accessibility_details( you, skills, melee_line );
     REQUIRE( !details.empty() );
     CHECK( details[0].find( "melee 3, 0%, rusty, training." ) != std::string::npos );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Practical level: 2", 0 ) == 0;
     } ) );
 
     // Traits, proficiencies, and effects by name and state; empty tabs say so.
     CHECK( character_sheet_accessibility_tab( you, traits ) == "Traits. No items." );
-    const trait_id good_hearing( "GOODHEARING" );
-    you.set_mutation( good_hearing );
+    you.set_mutation( trait_GOODHEARING );
     rows = character_sheet_accessibility_rows( you, traits );
     REQUIRE( rows.size() == 1 );
-    CHECK( rows[0] == string_format( "%s, positive.", good_hearing->name() ) );
+    CHECK( rows[0] == string_format( "%s, positive.", trait_GOODHEARING->name() ) );
     details = character_sheet_accessibility_details( you, traits, 0 );
     REQUIRE( details.size() >= 2 );
     CHECK( details[0] == rows[0] + " 1 of 1." );
 
-    you.add_proficiency( proficiency_id( "prof_knapping" ), true );
+    you.add_proficiency( proficiency_prof_knapping, true );
     rows = character_sheet_accessibility_rows( you, proficiencies );
     CHECK( std::find( rows.begin(), rows.end(), "Basic Knapping, known." ) != rows.end() );
 
@@ -3682,7 +3769,7 @@ TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessib
     CHECK( bionics_tab.rfind( "Bionics. Power ", 0 ) == 0 );
     CHECK( bionics_tab.find( "No items." ) != std::string::npos );
 
-    you.add_effect( efftype_id( "downed" ), 1_minutes );
+    you.add_effect( effect_downed, 1_minutes );
     rows = character_sheet_accessibility_rows( you, effects );
     CHECK( std::find( rows.begin(), rows.end(), "Downed." ) != rows.end() );
 }
@@ -3771,10 +3858,8 @@ TEST_CASE( "bionics_screen_speaks_tabs_rows_power_and_details", "[accessibility]
     CHECK( bionics_accessibility_tab( you, true ) == "Active bionics. No items." );
     CHECK( bionics_accessibility_tab( you, false ) == "Passive bionics. No items." );
 
-    const bionic_id power_storage( "bio_power_storage" );
-    const bionic_id night_vision( "bio_night_vision" );
-    you.add_bionic( power_storage );
-    you.add_bionic( night_vision );
+    you.add_bionic( bio_power_storage );
+    you.add_bionic( bio_night_vision );
     you.set_power_level( 0_kJ );
 
     // Without power the activatable bionic says why it cannot be activated.
@@ -3794,7 +3879,7 @@ TEST_CASE( "bionics_screen_speaks_tabs_rows_power_and_details", "[accessibility]
     CHECK( rows[0] == "Implanted Night Vision, off, 10 J to activate, 10 J per turn." );
 
     // Activation and deactivation change the spoken state.
-    std::optional<bionic *> bio = you.find_bionic_by_type( night_vision );
+    std::optional<bionic *> bio = you.find_bionic_by_type( bio_night_vision );
     REQUIRE( bio );
     REQUIRE( you.activate_bionic( **bio ) );
     rows = bionics_accessibility_rows( you, true );
@@ -3834,30 +3919,28 @@ TEST_CASE( "mutations_screen_speaks_columns_rows_resources_and_details", "[acces
 
     CHECK( mutations_accessibility_tab( you, true ) == "Active mutations. No items." );
 
-    const trait_id photophore( "BIOLUM1" );
-    const trait_id good_hearing( "GOODHEARING" );
-    you.set_mutation( photophore );
-    you.set_mutation( good_hearing );
+    you.set_mutation( trait_BIOLUM1 );
+    you.set_mutation( trait_GOODHEARING );
     you.set_stored_kcal( you.get_healthy_kcal() );
 
     std::vector<std::string> rows = mutations_accessibility_rows( you, true );
     REQUIRE( rows.size() == 1 );
     const std::string photophore_row = string_format( "%s, off, 9 kcal, cooldown ",
-                                       you.mutation_name( photophore ) );
+                                       you.mutation_name( trait_BIOLUM1 ) );
     CHECK( rows[0].rfind( photophore_row, 0 ) == 0 );
     CHECK( rows[0].find( "Unavailable" ) == std::string::npos );
     CHECK( mutations_accessibility_tab( you, true ) == "Active mutations. 1 item. " + rows[0] );
     rows = mutations_accessibility_rows( you, false );
     REQUIRE( rows.size() == 1 );
-    CHECK( rows[0] == string_format( "%s.", you.mutation_name( good_hearing ) ) );
+    CHECK( rows[0] == string_format( "%s.", you.mutation_name( trait_GOODHEARING ) ) );
 
     // A starting trait and a hidden sprite are spoken, not shown only by color.
-    you.my_traits.insert( good_hearing );
-    you.cached_mutations[good_hearing].show_sprite = false;
+    you.my_traits.insert( trait_GOODHEARING );
+    you.cached_mutations[trait_GOODHEARING].show_sprite = false;
     rows = mutations_accessibility_rows( you, false );
     REQUIRE( rows.size() == 1 );
     CHECK( rows[0] == string_format( "%s, starting trait, sprite hidden.",
-                                     you.mutation_name( good_hearing ) ) );
+                                     you.mutation_name( trait_GOODHEARING ) ) );
 
     // Too hungry to activate: the row names the missing resource.
     you.set_stored_kcal( you.get_healthy_kcal() / 2 );
@@ -3866,11 +3949,11 @@ TEST_CASE( "mutations_screen_speaks_columns_rows_resources_and_details", "[acces
     CHECK( rows[0].rfind( photophore_row, 0 ) == 0 );
     CHECK( rows[0].find( ". Unavailable: not enough kcal." ) != std::string::npos );
 
-    you.cached_mutations[photophore].powered = true;
+    you.cached_mutations[trait_BIOLUM1].powered = true;
     rows = mutations_accessibility_rows( you, true );
     REQUIRE( rows.size() == 1 );
     CHECK( rows[0].rfind( string_format( "%s, on, 9 kcal, cooldown ",
-                                         you.mutation_name( photophore ) ), 0 ) == 0 );
+                                         you.mutation_name( trait_BIOLUM1 ) ), 0 ) == 0 );
     CHECK( rows[0].find( "Unavailable" ) == std::string::npos );
 
     CHECK( mutations_accessibility_summary( you, true, 0, false ).rfind(
@@ -3878,10 +3961,10 @@ TEST_CASE( "mutations_screen_speaks_columns_rows_resources_and_details", "[acces
     CHECK( mutations_accessibility_summary( you, false, 0, true ) ==
            "Examining. Passive mutations. 1 of 1. No key." );
 
-    const std::vector<std::string> details = mutations_accessibility_details( you, photophore );
+    const std::vector<std::string> details = mutations_accessibility_details( you, trait_BIOLUM1 );
     REQUIRE( details.size() >= 2 );
     CHECK( details[0].rfind( rows[0] + " Active mutations. 1 of 1. ", 0 ) == 0 );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.find( "A photophore has grown from your head" ) != std::string::npos;
     } ) );
     for( const std::string &line : details ) {
@@ -3940,9 +4023,8 @@ TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibil
         clear_avatar();
     } );
     avatar &you = get_avatar();
-    const spell_id pew( "test_spell_pew" );
-    you.magic->learn_spell( pew, you, true );
-    spell &sp = you.magic->get_spell( pew );
+    you.magic->learn_spell( spell_test_spell_pew, you, true );
+    spell &sp = you.magic->get_spell( spell_test_spell_pew );
 
     you.magic->set_mana( 10000 );
     const std::string castable = spell_accessibility_row( sp, you, false );
@@ -3966,7 +4048,7 @@ TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibil
     CHECK( details[1] == "Classless" );
     CHECK( details[2] == "You aim your finger at your opponent and make 'Pew, pew' sounds." );
     const auto has_line = [&details]( const std::string & prefix ) {
-        return std::any_of( details.begin(), details.end(), [&prefix]( const std::string & line ) {
+        return std::any_of( details.begin(), details.end(), [&prefix]( std::string_view line ) {
             return line.rfind( prefix, 0 ) == 0;
         } );
     };
@@ -3989,18 +4071,18 @@ TEST_CASE( "martial_style_details_speak_buffs_techniques_and_weapons", "[accessi
         clear_avatar();
     } );
     avatar &you = get_avatar();
-    item hammer( itype_id( "hammer" ) );
+    item hammer( itype_hammer );
     REQUIRE( you.wield( hammer ) );
-    you.wear_item( item( itype_id( "test_backpack" ) ), false, false );
+    you.wear_item( item( itype_test_backpack ), false, false );
     // Carried weapons are shown only by color; the document names them.
-    you.i_add( item( itype_id( "test_weapon1" ) ) );
+    you.i_add( item( itype_test_weapon1 ) );
     REQUIRE( you.get_wielded_item() );
-    REQUIRE( you.get_wielded_item()->typeId() == itype_id( "hammer" ) );
+    REQUIRE( you.get_wielded_item()->typeId() == itype_hammer );
 
     const std::vector<std::string> lines =
-        martial_art_accessibility_details( matype_id( "test_style_ma1" ) );
+        martial_art_accessibility_details( test_style_ma1 );
     const auto has_line = [&lines]( const std::string & text ) {
-        return std::any_of( lines.begin(), lines.end(), [&text]( const std::string & line ) {
+        return std::any_of( lines.begin(), lines.end(), [&text]( std::string_view line ) {
             return line.find( text ) != std::string::npos;
         } );
     };
@@ -4102,8 +4184,8 @@ TEST_CASE( "morale_window_reads_total_sources_and_focus_as_a_document", "[access
     CHECK( document[1] == "Nothing affects your morale." );
     CHECK( document[2] == "Focus trends towards: 10." );
 
-    morale.add( morale_type( "morale_food_good" ), 20 );
-    morale.add( morale_type( "morale_food_bad" ), -10 );
+    morale.add( morale_food_good, 20 );
+    morale.add( morale_food_bad, -10 );
     document = morale.accessibility_document( 50, 5, 0 );
     REQUIRE( document.size() >= 6 );
     CHECK( document[0].rfind( "Total morale: +", 0 ) == 0 );
@@ -4132,12 +4214,12 @@ TEST_CASE( "body_status_speaks_parts_health_nested_graphs_and_details", "[access
     const std::vector<std::string> rows = bodygraph_accessibility_rows( you );
     REQUIRE( !rows.empty() );
     const std::string torso_name = uppercase_first_letter( torso->name.translated() );
-    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( const std::string & row ) {
+    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( std::string_view row ) {
         return row.rfind( torso_name + ",", 0 ) == 0;
     } );
     REQUIRE( torso_row != rows.end() );
     CHECK( *torso_row == torso_name + ", " + health + ", has details." );
-    CHECK( std::count_if( rows.begin(), rows.end(), []( const std::string & row ) {
+    CHECK( std::count_if( rows.begin(), rows.end(), []( std::string_view row ) {
         return row.find( "health 10 of 10, has details." ) != std::string::npos;
     } ) > 0 );
     CHECK( bodygraph_accessibility_open( you ).rfind( string_format( "Body status. %d items. ",
@@ -4145,7 +4227,7 @@ TEST_CASE( "body_status_speaks_parts_health_nested_graphs_and_details", "[access
 
     // A nested graph is named after its body part.
     const bodypart_id arm_l( "arm_l" );
-    const std::string nested = bodygraph_accessibility_open( you, bodygraph_id( "arm_l" ) );
+    const std::string nested = bodygraph_accessibility_open( you, bodygraph_arm_l );
     CHECK( nested.rfind( uppercase_first_letter( arm_l->name.translated() ) + ". ", 0 ) == 0 );
 
     const std::vector<std::string> details = bodygraph_accessibility_details( you,
@@ -4173,10 +4255,10 @@ TEST_CASE( "medical_menu_speaks_columns_conditions_stats_and_details", "[accessi
     CHECK( open.find( "HEALTH. " ) != std::string::npos );
     CHECK( medical_accessibility_column( you, 1 ) == "EFFECTS. 1 item. None." );
 
-    you.add_effect( efftype_id( "bleed" ), 10_minutes, torso );
+    you.add_effect( effect_bleed, 10_minutes, torso );
     std::vector<std::string> rows = medical_accessibility_rows( you, 0 );
     const std::string torso_name = uppercase_first_letter( body_part_name( torso, 1 ) );
-    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( const std::string & row ) {
+    const auto torso_row = std::find_if( rows.begin(), rows.end(), [&]( std::string_view row ) {
         return row.rfind( torso_name + ",", 0 ) == 0;
     } );
     REQUIRE( torso_row != rows.end() );
@@ -4206,21 +4288,22 @@ TEST_CASE( "proficiencies_window_speaks_categories_progress_filter_and_details",
         clear_avatar();
     } );
     avatar &you = get_avatar();
-    const proficiency_id knapping( "prof_knapping" );
-    const proficiency_id leather( "prof_leatherworking_basic" );
-    you.add_proficiency( knapping, true );
-    you.set_proficiency_practice( leather, leather->time_to_learn() / 2 );
+    you.add_proficiency( proficiency_prof_knapping, true );
+    you.set_proficiency_practice( proficiency_prof_leatherworking_basic,
+                                  proficiency_prof_leatherworking_basic->time_to_learn() / 2 );
 
     // clear_avatar() keeps proficiencies practiced by earlier tests in the
     // learning list at zero progress, so locate the rows this test adds.
     const std::vector<std::string> rows = proficiencies_window_accessibility_rows( you, 0 );
-    const std::string leather_row = string_format( "%s, learning, %d%%.", leather->name(),
-                                    static_cast<int>( std::floor( you.get_proficiency_practice( leather ) * 100 ) ) );
+    const std::string leather_row = string_format( "%s, learning, %d%%.",
+                                    proficiency_prof_leatherworking_basic->name(),
+                                    static_cast<int>( std::floor( you.get_proficiency_practice( proficiency_prof_leatherworking_basic )
+                                            * 100 ) ) );
     const auto leather_it = std::find( rows.begin(), rows.end(), leather_row );
     REQUIRE( leather_it != rows.end() );
     const int leather_index = static_cast<int>( leather_it - rows.begin() );
     // Known proficiencies are listed first.
-    CHECK( rows[0] == knapping->name() + ", known." );
+    CHECK( rows[0] == proficiency_prof_knapping->name() + ", known." );
     CHECK( proficiencies_window_accessibility_tab( you, 0 ) ==
            string_format( "ALL. %d items. ", static_cast<int>( rows.size() ) ) + rows[0] );
 
@@ -4229,10 +4312,10 @@ TEST_CASE( "proficiencies_window_speaks_categories_progress_filter_and_details",
     REQUIRE( details.size() >= 6 );
     CHECK( details[0] == string_format( "%s %d of %d.", leather_row, leather_index + 1,
                                         static_cast<int>( rows.size() ) ) );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Progress: ", 0 ) == 0;
     } ) );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Description: ", 0 ) == 0;
     } ) );
 
@@ -4248,9 +4331,9 @@ TEST_CASE( "sort_armor_speaks_conflicts_neighbours_summary_and_details", "[acces
     } );
     avatar &you = get_avatar();
     const bodypart_id torso( "torso" );
-    you.wear_item( item( itype_id( "longshirt" ) ), false );
-    you.wear_item( item( itype_id( "hoodie" ) ), false );
-    you.wear_item( item( itype_id( "sweatshirt" ) ), false );
+    you.wear_item( item( itype_longshirt ), false );
+    you.wear_item( item( itype_hoodie ), false );
+    you.wear_item( item( itype_sweatshirt ), false );
 
     // The hoodie and sweatshirt share a layer; the list shows it only by color.
     const std::vector<std::string> rows = you.worn.sort_armor_accessibility_rows( you, torso );
@@ -4282,11 +4365,11 @@ TEST_CASE( "sort_armor_speaks_conflicts_neighbours_summary_and_details", "[acces
             1 );
     REQUIRE( details.size() > 3 );
     CHECK( details[0] == rows[1] + " 2 of 3." );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.find( "Wearing multiple items" ) != std::string::npos;
     } ) );
     CHECK( std::find( details.begin(), details.end(), "Encumbrance and Warmth." ) != details.end() );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.find( "covered by this item" ) != std::string::npos;
     } ) );
     for( const std::string &line : details ) {
@@ -4487,7 +4570,7 @@ TEST_CASE( "dialogue_response_rows_speak_key_consequence_and_unavailable_reason"
     you.setpos( here, tripoint_bub_ms( 15, 15, 0 ) );
     g->faction_manager_ptr->create_if_needed();
     const character_id npc_id = here.place_npc( point_bub_ms( 25, 25 ),
-                                string_id<npc_template>( "test_talker" ) );
+                                npc_template_test_talker );
     g->load_npcs();
     npc *beta = g->find_npc( npc_id );
     REQUIRE( beta != nullptr );
@@ -4594,8 +4677,8 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     avatar &you = get_avatar();
     you.setpos( here, tripoint_bub_ms( 15, 15, 0 ) );
     g->faction_manager_ptr->create_if_needed();
-    you.worn.wear_item( you, item( itype_id( "backpack" ) ), false, false );
-    item_location own_hammer = you.i_add( item( itype_id( "hammer" ) ) );
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
+    item_location own_hammer = you.i_add( item( itype_hammer ) );
     REQUIRE( own_hammer );
     own_hammer->set_owner( you );
 
@@ -4607,7 +4690,7 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     REQUIRE( !trader.will_exchange_items_freely() );
     REQUIRE( trader.max_credit_extended() == 0 );
     const tripoint_bub_ms trader_pos = trader.pos_bub();
-    item &goods = here.add_item( trader_pos, item( itype_id( "hammer" ) ) );
+    item &goods = here.add_item( trader_pos, item( itype_hammer ) );
     goods.set_owner( trader );
     const item_location goods_loc( map_cursor( trader_pos ), &goods );
 
@@ -4617,7 +4700,7 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
 
     trade_ui trade( you, trader );
     // Lay the panes out like the other test selectors instead of at half the screen size.
-    trade.get_active_pane().resize( point( -1, -1 ), point( -1, -1 ) );
+    trade.get_active_pane().resize( point::north_west, point::north_west );
     trade_selector &trader_pane = trade.get_active_pane();
     REQUIRE( trader_pane.highlight_one_of( { goods_loc } ) );
     trader_pane.announce_accessibility_focus();
@@ -4656,7 +4739,7 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     trade.pushevent( trade_ui::event::SWITCH );
     trade.process_events();
     trade_selector &your_pane = trade.get_active_pane();
-    your_pane.resize( point( -1, -1 ), point( -1, -1 ) );
+    your_pane.resize( point::north_west, point::north_west );
     REQUIRE( &your_pane != &trader_pane );
     REQUIRE( your_pane.highlight_one_of( { own_hammer } ) );
     your_pane.announce_accessibility_focus();
@@ -4776,7 +4859,6 @@ TEST_CASE( "mission_formatters_speak_state_deadline_location_and_objective",
 TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[accessibility]" )
 {
     using accessibility::mission_category;
-    static const mission_type_id test_mission( "TEST_MISSION_GOAL_CONDITION2" );
     avatar &you = get_avatar();
     clear_avatar();
     clear_npcs();
@@ -4791,7 +4873,7 @@ TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[acce
         clear_avatar();
     } );
     const auto assign = [&you]() {
-        mission *miss = mission::reserve_new( test_mission, character_id() );
+        mission *miss = mission::reserve_new( mission_TEST_MISSION_GOAL_CONDITION2, character_id() );
         if( miss->get_assigned_player_id() == you.getID() ) {
             // See mission_test.cpp: optimized builds can give the avatar this id.
             miss->set_assigned_player_id( character_id( -2 ) );
@@ -4825,7 +4907,7 @@ TEST_CASE( "missions_screen_speaks_categories_rows_tracking_and_details", "[acce
     CHECK( details[0] == name + ", current objective, deadline in " + deadline +
            ". Active. 1 of 2." );
     CHECK( details[1] == "Objective: Checks to see if the player has a specific item." );
-    CHECK( std::any_of( details.begin(), details.end(), []( const std::string & line ) {
+    CHECK( std::any_of( details.begin(), details.end(), []( std::string_view line ) {
         return line.rfind( "Deadline: ", 0 ) == 0;
     } ) );
     CHECK( std::any_of( details.begin(), details.end(), [&deadline]( const std::string & line ) {
@@ -4948,8 +5030,6 @@ TEST_CASE( "overmap_formatters_speak_offset_markers_places_and_routes",
 
 TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibility]" )
 {
-    static const mission_type_id test_mission( "TEST_MISSION_GOAL_CONDITION2" );
-    static const oter_str_id oter_field( "field" );
     auto capture = std::make_unique<capture_backend>();
     capture_backend *capture_ptr = capture.get();
     accessibility::set_backend_for_testing( std::move( capture ) );
@@ -4973,7 +5053,9 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
     std::vector<std::pair<oter_id, om_vision_level>> previous;
     previous.reserve( changed.size() );
     for( const tripoint_abs_omt &pos : changed ) {
-        previous.emplace_back( overmap_buffer.ter( pos ), overmap_buffer.seen( pos ) );
+        const oter_id previous_ter = overmap_buffer.ter( pos );
+        const om_vision_level previous_vision = overmap_buffer.seen( pos );
+        previous.emplace_back( previous_ter, previous_vision );
     }
     const on_out_of_scope cleanup( [&]() {
         overmap_buffer.delete_note( hidden );
@@ -5038,7 +5120,7 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
            "Base, 3 map tiles east, dangerous area, radius 2, unexplored." );
 
     // Mission targets and the route are markers on the tile and in the places list.
-    mission *miss = mission::reserve_new( test_mission, character_id() );
+    mission *miss = mission::reserve_new( mission_TEST_MISSION_GOAL_CONDITION2, character_id() );
     if( miss->get_assigned_player_id() == you.getID() ) {
         miss->set_assigned_player_id( character_id( -2 ) );
     }
@@ -5072,7 +5154,7 @@ TEST_CASE( "overmap_cursor_speaks_known_tiles_places_and_routes", "[accessibilit
                 you, hidden, "" );
     // Unexplored tiles describe no terrain beyond the cursor line.
     CHECK( hidden_details.front() == "unexplored, note: Base, dangerous area, radius 2, 3 east." );
-    CHECK( std::none_of( hidden_details.begin(), hidden_details.end(), []( const std::string & line ) {
+    CHECK( std::none_of( hidden_details.begin(), hidden_details.end(), []( std::string_view line ) {
         return line.find( "make out" ) != std::string::npos;
     } ) );
 
@@ -5181,9 +5263,6 @@ TEST_CASE( "zone_formatters_speak_row_size_state_and_details", "[accessibility][
 
 TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessibility]" )
 {
-    static const zone_type_id zone_food( "LOOT_FOOD" );
-    static const zone_type_id zone_unsorted( "LOOT_UNSORTED" );
-    static const zone_type_id zone_custom( "LOOT_CUSTOM" );
     auto capture = std::make_unique<capture_backend>();
     capture_backend *capture_ptr = capture.get();
     accessibility::set_backend_for_testing( std::move( capture ) );
@@ -5199,9 +5278,9 @@ TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessib
     zone_manager &mgr = zone_manager::get_manager();
     const tripoint_abs_ms origin = you.pos_abs();
     const faction_id fac = you.get_faction()->id;
-    mgr.add( "Pantry", zone_food, fac, false, true, origin + tripoint_rel_ms( -1, -6, 0 ),
+    mgr.add( "Pantry", zone_type_LOOT_FOOD, fac, false, true, origin + tripoint_rel_ms( -1, -6, 0 ),
              origin + tripoint_rel_ms( 1, -4, 0 ), nullptr, true );
-    mgr.add( "Sorting", zone_unsorted, fac, false, true, origin, origin, nullptr, true );
+    mgr.add( "Sorting", zone_type_LOOT_UNSORTED, fac, false, true, origin, origin, nullptr, true );
 
     faction_id faction = your_fac;
     REQUIRE( faction == fac );
@@ -5218,9 +5297,9 @@ TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessib
     };
     const auto nothing = []() {};
 
-    const std::string pantry = "Pantry, " + mgr.get_name_from_type( zone_food ) +
+    const std::string pantry = "Pantry, " + mgr.get_name_from_type( zone_type_LOOT_FOOD ) +
                                ", enabled, 5 tiles north.";
-    const std::string sorting = "Sorting, " + mgr.get_name_from_type( zone_unsorted ) +
+    const std::string sorting = "Sorting, " + mgr.get_name_from_type( zone_type_LOOT_UNSORTED ) +
                                 ", enabled, here.";
     CHECK( accessibility::format_zone_row( accessibility_gameplay::zone_row( you,
                                            zones[0].get() ) ) == pantry );
@@ -5284,15 +5363,15 @@ TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessib
 
     // A new zone speaks its size and row; canceled creation returns focus.
     act( "ADD_ZONE", [&]() {
-        shared_ptr_fast<zone_options> options = zone_options::create( zone_custom );
+        shared_ptr_fast<zone_options> options = zone_options::create( zone_type_LOOT_CUSTOM );
         dynamic_cast<loot_options &>( *options ).set_mark( "apple" );
-        mgr.add( "Apples", zone_custom, fac, false, true, origin + tripoint_rel_ms( 2, -1, 0 ),
+        mgr.add( "Apples", zone_type_LOOT_CUSTOM, fac, false, true, origin + tripoint_rel_ms( 2, -1, 0 ),
                  origin + tripoint_rel_ms( 6, 1, 0 ), options, true );
         zones = mgr.get_zones( faction );
         index = 2;
     } );
     REQUIRE( zones.size() == 3 );
-    const std::string apples = "Apples, " + mgr.get_name_from_type( zone_custom ) +
+    const std::string apples = "Apples, " + mgr.get_name_from_type( zone_type_LOOT_CUSTOM ) +
                                ", enabled, 4 tiles east.";
     CHECK( capture_ptr->messages.back() == "Zone 5 by 3. " + apples );
     act( "ADD_ZONE", nothing );
@@ -5423,8 +5502,6 @@ TEST_CASE( "vehicle_formatters_speak_speed_heading_fuel_and_obstacles", "[access
 
 TEST_CASE( "driving_speaks_entry_controls_obstacles_and_status", "[accessibility]" )
 {
-    static const vproto_id vehicle_prototype_car( "car" );
-    static const ter_str_id ter_t_wall( "t_wall" );
     avatar &you = get_avatar();
     map &here = get_map();
     clear_avatar();
@@ -5681,7 +5758,6 @@ TEST_CASE( "vehicle_workshop_formatters_speak_location_condition_and_requirement
 
 TEST_CASE( "vehicle_examination_speaks_part_list_tiles_tasks_and_stats", "[accessibility]" )
 {
-    static const vproto_id vehicle_prototype_car( "car" );
     map &here = get_map();
     clear_avatar();
     clear_map();
@@ -5755,15 +5831,15 @@ TEST_CASE( "vehicle_examination_speaks_part_list_tiles_tasks_and_stats", "[acces
     REQUIRE( tasks.size() >= 4 );
     CHECK( tasks[0].first.rfind( "Repair. Unavailable: ", 0 ) == 0 );
     CHECK( tasks[0].first.find( "missing" ) != std::string::npos );
-    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( const std::string & line ) {
+    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( std::string_view line ) {
         return line.rfind( "Time required: ", 0 ) == 0;
     } ) );
-    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( const std::string & line ) {
+    CHECK( std::any_of( tasks[0].second.begin(), tasks[0].second.end(), []( std::string_view line ) {
         return line.rfind( "Skills required: ", 0 ) == 0;
     } ) );
     CHECK( tasks[1].first.rfind( "Remove", 0 ) == 0 );
-    CHECK( std::any_of( tasks[1].second.begin(), tasks[1].second.end(), [&name]( const std::string &
-    line ) {
+    CHECK( std::any_of( tasks[1].second.begin(),
+    tasks[1].second.end(), [&name]( std::string_view line ) {
         return line.find( "Removing the " + name ) != std::string::npos;
     } ) );
     CHECK( tasks[2].first == "Install here." );
@@ -5866,11 +5942,6 @@ TEST_CASE( "character_creation_formatters_speak_rows_points_tabs_and_results",
 TEST_CASE( "character_creation_rows_speak_selection_availability_and_conflicts",
            "[accessibility]" )
 {
-    static const string_id<scenario> scenario_evacuee( "evacuee" );
-    static const profession_id profession_unemployed( "unemployed" );
-    static const profession_id hobby_hates_books( "hates_books" );
-    static const profession_id hobby_loves_books( "loves_books" );
-    static const trait_id trait_HATES_BOOKS( "HATES_BOOKS" );
     avatar &you = get_avatar();
     clear_avatar();
     const scenario *previous_scenario = get_scenario();
@@ -5899,17 +5970,17 @@ TEST_CASE( "character_creation_rows_speak_selection_availability_and_conflicts",
     // A background whose trait conflicts with a chosen background cannot be picked.
     you.hobbies.clear();
     CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
-                hobby_loves_books.obj(), you, true, 10 ) ) == "Reading, 1 point." );
+                profession_loves_books.obj(), you, true, 10 ) ) == "Reading, 1 point." );
     CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
-                hobby_loves_books.obj(), you, true, -5 ) ) == "Reading, 1 point. Not enough points." );
-    you.hobbies.insert( &hobby_hates_books.obj() );
+                profession_loves_books.obj(), you, true, -5 ) ) == "Reading, 1 point. Not enough points." );
+    you.hobbies.insert( &profession_hates_books.obj() );
     you.toggle_trait_deps( trait_HATES_BOOKS );
     REQUIRE( you.has_trait( trait_HATES_BOOKS ) );
     CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
-                hobby_loves_books.obj(), you, false, 0 ) ) ==
+                profession_loves_books.obj(), you, false, 0 ) ) ==
            "Reading. Unavailable: Bookworm conflicts with background Book Hating." );
     CHECK( accessibility::format_character_choice_row( accessibility_gameplay::character_background_row(
-                hobby_hates_books.obj(), you, true, 0 ) ) == "Book Hating, earns 1 point, selected." );
+                profession_hates_books.obj(), you, true, 0 ) ) == "Book Hating, earns 1 point, selected." );
 
     // The shared accessibility keys reach the character creation lists without replacing sort.
     for( const std::string category : {
@@ -5993,13 +6064,6 @@ TEST_CASE( "character_creation_stat_trait_skill_and_description_formatters",
 TEST_CASE( "character_creation_trait_rows_speak_locks_conflicts_and_prohibitions",
            "[accessibility]" )
 {
-    static const string_id<scenario> scenario_evacuee( "evacuee" );
-    static const string_id<scenario> scenario_medieval( "medieval" );
-    static const profession_id profession_doctor( "doctor" );
-    static const trait_id trait_FASTLEARNER( "FASTLEARNER" );
-    static const trait_id trait_SLOWLEARNER( "SLOWLEARNER" );
-    static const trait_id trait_FASTREADER( "FASTREADER" );
-    static const trait_id trait_PROF_MED( "PROF_MED" );
     avatar &you = get_avatar();
     clear_avatar();
     const scenario *previous_scenario = get_scenario();
@@ -6134,36 +6198,32 @@ TEST_CASE( "world_and_mod_formatters_speak_rows_changes_and_summaries",
 TEST_CASE( "mod_manager_rows_speak_state_dependencies_and_load_order", "[accessibility]" )
 {
     mod_ui mods( world_generator->get_mod_manager() );
-    const mod_id dda( "dda" );
-    const mod_id magiclysm( "magiclysm" );
-    const mod_id aftershock( "aftershock" );
-    const mod_id exoplanet( "aftershock_exoplanet" );
-    const mod_id mind_over_matter( "mindovermatter" );
-    const mod_id missing( "accessibility_missing_mod" );
-    REQUIRE( dda.is_valid() );
-    REQUIRE( magiclysm.is_valid() );
-    REQUIRE( aftershock.is_valid() );
-    REQUIRE( exoplanet.is_valid() );
-    REQUIRE( mind_over_matter.is_valid() );
-    const std::string content = magiclysm->category.second.translated();
+    REQUIRE( MOD_INFORMATION_dda.is_valid() );
+    REQUIRE( MOD_INFORMATION_magiclysm.is_valid() );
+    REQUIRE( MOD_INFORMATION_aftershock.is_valid() );
+    REQUIRE( MOD_INFORMATION_aftershock_exoplanet.is_valid() );
+    REQUIRE( MOD_INFORMATION_mindovermatter.is_valid() );
+    const std::string content = MOD_INFORMATION_magiclysm->category.second.translated();
 
     // Adding a mod also adds its dependencies; the speech names both.
     std::vector<mod_id> active;
-    CHECK( accessibility_gameplay::mod_add_refusal( mods, magiclysm, active ).empty() );
-    mods.try_add( magiclysm, active );
-    REQUIRE( active == std::vector<mod_id> { dda, magiclysm } );
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, MOD_INFORMATION_magiclysm, active ).empty() );
+    mods.try_add( MOD_INFORMATION_magiclysm, active );
+    REQUIRE( active == std::vector<mod_id> { MOD_INFORMATION_dda, MOD_INFORMATION_magiclysm } );
     CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
-            magiclysm, active, true ) ) == "Magiclysm, active, " + content + "." );
+            MOD_INFORMATION_magiclysm, active, true ) ) == "Magiclysm, active, " + content + "." );
     CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
-            magiclysm, active, false ) ) == "Magiclysm, " + content + "." );
+            MOD_INFORMATION_magiclysm, active, false ) ) == "Magiclysm, " + content + "." );
     CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
-            aftershock, active, true ) ) == "Aftershock, obsolete, OBSOLETE MODS." );
-    CHECK( accessibility_gameplay::mod_add_refusal( mods, magiclysm, active ) ==
+            MOD_INFORMATION_aftershock, active, true ) ) == "Aftershock, obsolete, OBSOLETE MODS." );
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, MOD_INFORMATION_magiclysm, active ) ==
            "already in the load order" );
-    CHECK( accessibility_gameplay::mod_add_refusal( mods, missing, active ) == "not installed" );
+    CHECK( accessibility_gameplay::mod_add_refusal( mods, MOD_INFORMATION_accessibility_missing_mod,
+            active ) == "not installed" );
     CHECK( accessibility::format_world_mod_row( accessibility_gameplay::world_mod_row( mods,
-            missing, active, false ) ) == "accessibility_missing_mod, not installed, MISSING MODS." );
-    CHECK( accessibility_gameplay::mod_unavailable_reason( mods, magiclysm ).empty() );
+            MOD_INFORMATION_accessibility_missing_mod, active,
+            false ) ) == "accessibility_missing_mod, not installed, MISSING MODS." );
+    CHECK( accessibility_gameplay::mod_unavailable_reason( mods, MOD_INFORMATION_magiclysm ).empty() );
 
     // Moves are refused with the reason the visual +/- marks only imply.
     CHECK( accessibility_gameplay::mod_move_refusal( mods, 0, active, true ) == "already first" );
@@ -6172,8 +6232,8 @@ TEST_CASE( "mod_manager_rows_speak_state_dependencies_and_load_order", "[accessi
     CHECK( accessibility_gameplay::mod_move_refusal( mods, 1, active, true ) ==
            "Dark Days Ahead loads first" );
     CHECK( accessibility_gameplay::mod_move_refusal( mods, 1, active, false ) == "already last" );
-    mods.try_add( aftershock, active );
-    REQUIRE( active == std::vector<mod_id> { dda, magiclysm, aftershock } );
+    mods.try_add( MOD_INFORMATION_aftershock, active );
+    REQUIRE( active == std::vector<mod_id> { MOD_INFORMATION_dda, MOD_INFORMATION_magiclysm, MOD_INFORMATION_aftershock } );
     CHECK( accessibility_gameplay::mod_move_refusal( mods, 2, active, true ).empty() );
     size_t selection = 2;
     mods.try_shift( '-', selection, active );
@@ -6181,10 +6241,10 @@ TEST_CASE( "mod_manager_rows_speak_state_dependencies_and_load_order", "[accessi
     CHECK( accessibility::format_mod_moved( selection + 1, active.size() ) == "Position 2 of 3." );
 
     // A mod conflicting with the load order is marked like the visual list.
-    const std::vector<mod_id> conflicting { dda, exoplanet };
-    CHECK( accessibility_gameplay::world_mod_row( mods, mind_over_matter, conflicting,
+    const std::vector<mod_id> conflicting { MOD_INFORMATION_dda, MOD_INFORMATION_aftershock_exoplanet };
+    CHECK( accessibility_gameplay::world_mod_row( mods, MOD_INFORMATION_mindovermatter, conflicting,
             true ).incompatible );
-    CHECK_FALSE( accessibility_gameplay::world_mod_row( mods, mind_over_matter, active,
+    CHECK_FALSE( accessibility_gameplay::world_mod_row( mods, MOD_INFORMATION_mindovermatter, active,
                  true ).incompatible );
 
     // Removing the core mod also removes its dependents.
@@ -6383,3 +6443,5 @@ TEST_CASE( "options_rule_and_panel_screens_keep_their_keys_with_accessibility_ke
         }
     }
 }
+
+// NOLINTEND(cata-text-style)
