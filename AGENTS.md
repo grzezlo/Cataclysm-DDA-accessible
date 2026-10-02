@@ -212,6 +212,11 @@ over upstream contribution policy or exact UI parity.
   directly to `access` in small, focused commits; the roadmap is sequential,
   so per-feature branches add no value.  Every commit on `access` must pass
   `test_access.bat` and build the Windows x64 tiles game.
+- Before pushing `access` or opening a pull request, run `test_all.bat`
+  without arguments and make it pass.  It runs the full suite in lexical
+  order with a random seed and a fresh user directory, as the Windows CI does,
+  and catches tests that depend on state left by other tests; the focused
+  `test_access.bat` cannot.
 - Use a separate branch derived from `access` only for experimental work or
   work that may be abandoned.  After verifying that such a branch has been
   merged into `access`, delete it locally.  Keep unmerged branches and
@@ -241,6 +246,9 @@ over upstream contribution policy or exact UI parity.
 - Run `build_win_x64.bat` for the tiles game and
   `build_tests_win_x64.bat` for the test executable.  Run `test_access.bat`
   for the focused accessibility suite and `test_all.bat` for the full suite.
+  Write tests that pass in any order: reset or locate the state they assert
+  on, because shared test helpers such as `clear_avatar()` do not reset all
+  game state.
 - Keep `lang/po` identical to upstream.  Translations of strings added by the
   fork belong in `lang/access/<language>.po`; refresh them with
   `update_translations_win_x64.bat` and build `lang/mo` with
