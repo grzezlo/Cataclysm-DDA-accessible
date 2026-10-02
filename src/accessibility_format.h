@@ -4,6 +4,7 @@
 
 #include <cstddef>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -177,7 +178,7 @@ std::string format_item_action_menu_context( const std::string &item_name );
 std::string format_item_action_availability( item_action_availability availability );
 std::string format_auto_pickup_rule_state( bool has_rule );
 /** Speak a visual hint whose fields are separated by line breaks or box-drawing lines. */
-std::string format_visual_hint( const std::string &hint );
+std::string format_visual_hint( std::string_view hint );
 /** Describe the focused button in an option-bearing query popup. */
 std::string format_popup_option_focus( const std::string &option );
 /** Describe a button query; lists choices on opening when there are at least three. */
@@ -210,7 +211,7 @@ std::string format_keybinding_open( const std::string &up_binding, const std::st
 std::string format_keybinding_filter( const std::string &query, int results_count,
                                       const std::string &tab_binding, bool include_hint );
 /** Use the document reader when spoken list details exceed a concise announcement. */
-bool uilist_details_need_document( const std::string &details );
+bool uilist_details_need_document( std::string_view details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */
 std::vector<std::string> split_uilist_detail_sentences( const std::string &details );
 /** Split formatted item details into clean semantic lines and sentences for document reading. */
@@ -522,7 +523,7 @@ std::string format_screen_page( const std::string &screen, const std::string &pa
 /** A list change and the new item count: "Rule added, 3 items" or "Rule removed, No items". */
 std::string format_list_change( const std::string &change, size_t count );
 /** A shortcut-marked label without its markup: "[<Global>]" becomes "Global". */
-std::string format_shortcut_label( const std::string &label );
+std::string format_shortcut_label( std::string_view label );
 /**
  * An option row: "Use tiles: True".  `unavailable` names the unmet
  * prerequisite shown only in gray: "Font blending: False, Unavailable: requires Use tiles".
@@ -615,7 +616,7 @@ struct overmap_tile {
  */
 std::string format_overmap_tile( const overmap_tile &tile, bool terrain_repeated );
 /** Spoken when the overmap opens: its title (or prompt) and the cursor tile. */
-std::string format_overmap_opening( const std::string &prompt, const std::string &tile );
+std::string format_overmap_opening( std::string_view prompt, const std::string &tile );
 /** Spoken after a z-level change: "Level -1. <tile>" */
 std::string format_overmap_level_change( int z, const std::string &tile );
 /** A known place in the known-places list. */
@@ -651,7 +652,7 @@ std::string format_overmap_no_route_selected();
 std::string format_overmap_route_state( const std::string &destination,
                                         const std::string &location );
 /** Overmap summary: prompt, cursor tile, level, and route. */
-std::string format_overmap_summary( const std::string &prompt, const std::string &tile, int z,
+std::string format_overmap_summary( std::string_view prompt, const std::string &tile, int z,
                                     const std::string &route );
 /** "Search results, 5 results. <focus>" */
 std::string format_overmap_search_results( size_t count, const std::string &focus );
@@ -1011,8 +1012,8 @@ struct direction_target {
  * target in the given order, then the input hint.  Empty `targets` says that
  * there is no valid target.
  */
-std::string format_direction_prompt( const std::string &prompt,
-                                     const std::vector<direction_target> &targets, const std::string &hint );
+std::string format_direction_prompt( std::string_view prompt,
+                                     const std::vector<direction_target> &targets, std::string_view hint );
 std::string format_direction_auto_selected( const direction_target &target );
 std::string format_direction_invalid( const direction_target &target );
 
@@ -1190,7 +1191,7 @@ struct encumbrance_row {
  */
 std::string format_encumbrance_row( const encumbrance_row &row, bool detailed );
 /** A cause of changed speed or move cost: "Pain, speed -10." */
-std::string format_speed_row( const std::string &cause, bool speed, int value, bool percent );
+std::string format_speed_row( std::string_view cause, bool speed, int value, bool percent );
 struct skill_row {
     std::string name;
     int level = 0;
@@ -1216,10 +1217,10 @@ enum class trait_kind {
     attunement,
     debug
 };
-std::string format_trait_row( const std::string &name, trait_kind kind );
+std::string format_trait_row( std::string_view name, trait_kind kind );
 std::string format_bionic_row( const std::string &name, int count );
 /** Known, learning with progress, or not known when it cannot be learned by practice. */
-std::string format_proficiency_row( const std::string &name, bool known, bool learning,
+std::string format_proficiency_row( std::string_view name, bool known, bool learning,
                                     int progress );
 /** Character sheet tab: its name, values it shows above the list, its count, and the focus. */
 std::string format_character_tab( const std::string &tab, const std::vector<std::string> &header,
@@ -1306,30 +1307,30 @@ std::string format_spell_row( const spell_row &row );
 /** "3 spells" or "No spells". */
 std::string format_spell_count( size_t count );
 /** Martial arts style row: name, "current" for the style in use, and its first sentence. */
-std::string format_martial_style_row( const std::string &name, bool current,
-                                      const std::string &description );
+std::string format_martial_style_row( std::string_view name, bool current,
+                                      std::string_view description );
 
 /**
  * A morale window line: "Total morale: +12." or "Ate a good meal, 25%."  A
  * label ending with a colon is followed by the value without a comma.
  */
-std::string format_morale_line( const std::string &label, const std::string &value );
+std::string format_morale_line( std::string_view label, std::string_view value );
 /**
  * A five-character health bar in words at the bar's own precision, where each
  * '|' is two tenths and '\' one: "health 7 of 10".  A bar of dashes is zero and
  * ':' is under one tenth.
  */
-std::string format_health_bar( const std::string &bar );
+std::string format_health_bar( std::string_view bar );
 /** A splinted limb's mending bar in fifths: "mending 2 of 5". */
 std::string format_mending_bar( int filled );
 /** Body status part: "Head, health 10 of 10, has details." or "Left arm, missing." */
 std::string format_body_part_row( const std::string &name, const std::string &health,
                                   bool missing, bool has_details );
 /** Medical health row: part, health in words, then conditions such as "broken". */
-std::string format_medical_health_row( const std::string &part, const std::string &health,
+std::string format_medical_health_row( std::string_view part, std::string_view health,
                                        const std::vector<std::string> &conditions );
 /** Proficiencies window row: "Knapping, known." or "Tailoring, learning, 40%." */
-std::string format_proficiency_window_row( const std::string &name, bool known, int progress );
+std::string format_proficiency_window_row( std::string_view name, bool known, int progress );
 /** Worn item in the sort armor list; the list shows conflicts only by color. */
 struct armor_row {
     std::string name;
@@ -1351,9 +1352,9 @@ std::string format_armor_row( const armor_row &row );
  * outermost: "above hoodie, below T-shirt", "innermost, above hoodie",
  * "outermost, below T-shirt", or "only item".
  */
-std::string format_armor_position( const std::string &inner, const std::string &outer );
+std::string format_armor_position( std::string_view inner, std::string_view outer );
 /** Starting to move a worn item: "Moving hoodie." */
-std::string format_armor_moving( const std::string &name );
+std::string format_armor_moving( std::string_view name );
 /** Finishing a move: "Placed." and the row at its new position. */
 std::string format_armor_placed( const std::string &row );
 /** Toggling the sprite: "Sprite hidden." or "Sprite shown." and the row. */
@@ -1366,7 +1367,7 @@ std::string format_armor_summary( const std::string &filter, const std::vector<a
                                   int total, int layering );
 
 /** Dialogue history element: "Rubik: Hello." or the text alone without a speaker. */
-std::string format_dialogue_utterance( const std::string &speaker, const std::string &text );
+std::string format_dialogue_utterance( std::string_view speaker, std::string_view text );
 /** What a response does, which the dialogue window shows only by color. */
 enum class dialogue_response_hint {
     none,
@@ -1423,7 +1424,7 @@ class dialogue_speech_model
         /** Prompt label, such as "Your response". */
         void set_prompt_label( const std::string &label );
         /** Add a history element; the player's own lines are not spoken automatically. */
-        void add_utterance( const std::string &text, bool own );
+        void add_utterance( std::string_view text, bool own );
         /**
          * Replace the response list.  The first `response_count` options are
          * responses; the rest are extra actions.  `cursor` is the visible response.
@@ -1459,11 +1460,11 @@ class dialogue_speech_model
 };
 
 /** Activity lifecycle speech, independent of handlers and game state. */
-std::string format_activity_start( const std::string &label, const std::string &duration,
+std::string format_activity_start( std::string_view label, const std::string &duration,
                                    bool resuming );
-std::string format_activity_result( const std::string &label, bool finished, bool canceled,
-                                    const std::string &reason, const std::vector<std::string> &messages );
-std::string format_activity_progress( const std::string &label, const std::string &progress,
+std::string format_activity_result( std::string_view label, bool finished, bool canceled,
+                                    std::string_view reason, const std::vector<std::string> &messages );
+std::string format_activity_progress( std::string_view label, std::string_view progress,
                                       const std::string &remaining );
 
 } // namespace accessibility

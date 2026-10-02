@@ -3037,7 +3037,8 @@ accessibility::inventory_focus_entry inventory_selector::accessibility_entry(
     return semantic;
 }
 
-void inventory_selector::announce_accessibility_focus( const bool force, const std::string &event )
+void inventory_selector::announce_accessibility_focus( const bool force,
+        const std::string_view event )
 {
     if( !accessibility::is_active() ) {
         return;
@@ -3078,11 +3079,11 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
             context.push_back( accessibility::format_inventory_filter( filter, count ) );
         }
         if( mode_changed ) {
-            context.push_back( mode == navigation_mode::CATEGORY ?
-                               _( "Category selection mode" ) : _( "Item selection mode" ) );
+            context.emplace_back( mode == navigation_mode::CATEGORY ?
+                                  _( "Category selection mode" ) : _( "Item selection mode" ) );
             if( _uimode != accessibility_last_uimode ) {
-                context.push_back( _uimode == uimode::hierarchy ?
-                                   _( "Hierarchy view" ) : _( "Category view" ) );
+                context.emplace_back( _uimode == uimode::hierarchy ?
+                                      _( "Hierarchy view" ) : _( "Category view" ) );
             }
         }
     }
@@ -3095,7 +3096,7 @@ void inventory_selector::announce_accessibility_focus( const bool force, const s
         context.push_back( accessibility::format_list_wrap( static_cast<int>( accessibility_last_row ),
                            static_cast<int>( row ), accessibility_move_direction ) );
     }
-    context.push_back( event.empty() ? focus : event );
+    context.push_back( event.empty() ? focus : std::string( event ) );
     accessibility::announce( accessibility::format_semantic_sequence( context ) );
 
     accessibility_last_snapshot = snapshot;

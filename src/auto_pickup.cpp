@@ -653,7 +653,9 @@ void user_interface::show()
         } else if( action == "ADD_RULE" ) {
             accessibility::announce( access_count > static_cast<size_t>( recmax ) ?
                                      access_change( _( "Rule added" ) ) : std::string( _( "No rule added" ) ) );
-        } else if( action == "LEFT" || action == "RIGHT" ) {
+        } else if( action == "LEFT" || action == "RIGHT" ||
+                   ( action == "CONFIRM" && currentPageNonEmpty ) ) {
+            // Confirming on a rule edits the focused column.
             accessibility::announce( access_column() );
         } else if( action == "SWITCH_AUTO_PICKUP_OPTION" ) {
             accessibility::announce( get_option<bool>( "AUTO_PICKUP" ) ? _( "Auto pickup enabled" ) :
@@ -671,8 +673,6 @@ void user_interface::show()
         } else if( action == "SWAP_RULE_GLOBAL_CHAR" && iTab != access_previous_tab ) {
             accessibility::announce( access_change( string_format( _( "Rule moved to %s" ),
                                                     access_tab_name() ) ) );
-        } else if( action == "CONFIRM" ) {
-            accessibility::announce( access_column() );
         } else if( action == "ENABLE_RULE" || action == "DISABLE_RULE" ) {
             accessibility::announce( action == "ENABLE_RULE" ? _( "Enabled" ) : _( "Disabled" ) );
         } else if( action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {

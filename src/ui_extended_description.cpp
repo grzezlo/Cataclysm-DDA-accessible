@@ -265,14 +265,16 @@ void extended_description_window::announce_current_tab() const
     if( cur_target == description_target::furniture ) {
         const std::string signage = get_map().get_signage( p );
         if( !signage.empty() ) {
-            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ? _( "Sign: ???" ) :
-                             string_format( _( "Sign: %s" ), signage ) );
+            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ?
+                             // NOLINTNEXTLINE(cata-text-style): the question mark does not end a sentence
+                             _( "Sign: ???" ) : string_format( _( "Sign: %s" ), signage ) );
         }
     } else if( cur_target == description_target::terrain ) {
         const std::string graffiti = get_map().graffiti_at( p );
         if( !graffiti.empty() ) {
-            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ? _( "Inscription: ???" ) :
-                             string_format( _( "Inscription: %s" ), graffiti ) );
+            parts.push_back( viewer.has_trait( trait_ILLITERATE ) ?
+                             // NOLINTNEXTLINE(cata-text-style): the question mark does not end a sentence
+                             _( "Inscription: ???" ) : string_format( _( "Inscription: %s" ), graffiti ) );
         }
     }
     accessibility::announce_semantic_sequence( parts );

@@ -8125,8 +8125,8 @@ look_around_result game::look_around(
         }
         std::vector<std::string> parts;
         if( entering && semantic_look ) {
-            parts.push_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
-            parts.push_back( _( "Cursor origin: character position" ) );
+            parts.emplace_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
+            parts.emplace_back( _( "Cursor origin: character position" ) );
             if( peeking ) {
                 parts.push_back( describe_peek_action( "throw_blind" ) );
                 parts.push_back( describe_peek_action( "throw_blind_wielded" ) );
@@ -9876,7 +9876,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
                 if( !get_safemode().empty() ) {
                     const monster *const mon = dynamic_cast<const monster *>( cCurMon );
                     const std::string rule_name = mon != nullptr ? mon->name() : "human";
-                    semantic_entry.details.push_back(
+                    semantic_entry.details.emplace_back(
                         get_safemode().has_rule( rule_name, Creature::Attitude::ANY ) ?
                         _( "Safe mode blacklist: listed" ) : _( "Safe mode blacklist: not listed" ) );
                 }

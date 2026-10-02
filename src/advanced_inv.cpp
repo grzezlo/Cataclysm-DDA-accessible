@@ -1243,6 +1243,7 @@ bool advanced_inventory::move_all_items()
 
     if( accessibility::is_active() ) {
         std::vector<item_location> moving;
+        moving.reserve( pane_items.size() );
         for( const drop_or_stash_item_info &drop : pane_items ) {
             moving.push_back( drop.loc() );
         }

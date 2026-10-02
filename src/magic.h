@@ -980,7 +980,7 @@ struct area_expander {
 /** Focus speech of a spell menu row: name, castability, cost, and casting time. */
 std::string spell_accessibility_row( const spell &sp, const Character &guy, bool favorite );
 /** The details document: the row and its key, then the spell information pane. */
-std::vector<std::string> spell_accessibility_details( const spell &sp, Character &guy,
+std::vector<std::string> spell_accessibility_details( const spell &sp, Character &pc,
         bool favorite, int invlet );
 
 #endif // CATA_SRC_MAGIC_H

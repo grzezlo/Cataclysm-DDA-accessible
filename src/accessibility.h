@@ -25,6 +25,12 @@ class backend
         virtual void cancel() {}
 };
 
+/**
+ * The screen reader backend of this platform, or null when there is none.
+ * Implemented in accessibility_nvda.cpp; the service calls it internally.
+ */
+std::unique_ptr<backend> make_platform_backend();
+
 /** Player-selected screen reader mode; see the SCREEN_READER_SPEECH option. */
 enum class screen_reader_mode {
     automatic,

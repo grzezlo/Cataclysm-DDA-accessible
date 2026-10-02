@@ -1277,7 +1277,7 @@ static bool selection_ok( const std::vector<const recipe *> &list, const int cur
 // this state only by color, so each state is spoken as a word.
 
 /** Source lines of visual text, without colors, list bullets, or blank lines. */
-static std::vector<std::string> accessibility_text_lines( const std::string &text )
+static std::vector<std::string> accessibility_text_lines( const std::string_view text )
 {
     std::vector<std::string> lines;
     for( std::string line : string_split( remove_color_tags( text ), '\n' ) ) {

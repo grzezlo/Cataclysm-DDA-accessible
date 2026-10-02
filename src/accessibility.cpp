@@ -14,8 +14,6 @@
 namespace accessibility
 {
 
-std::unique_ptr<backend> make_platform_backend();
-
 namespace
 {
 
@@ -159,7 +157,7 @@ bool is_active()
     if( current.detected ) {
         return true;
     }
-    const auto now = std::chrono::steady_clock::now();
+    const std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
     if( current.last_probe && now - *current.last_probe < automatic_probe_interval ) {
         return false;
     }

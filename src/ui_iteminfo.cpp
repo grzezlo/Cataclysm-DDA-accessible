@@ -82,7 +82,7 @@ void iteminfo_window::execute()
         std::vector<std::string> paragraphs =
             accessibility::format_item_info_paragraphs( type_name, raw_info );
         if( paragraphs.empty() ) {
-            paragraphs.push_back( _( "No details available." ) );
+            paragraphs.emplace_back( _( "No details available." ) );
         }
         accessibility_ui::show_document( string_format( _( "Item info: %s" ), clean_item_name ),
                                          clean_item_name, paragraphs, paragraphs );

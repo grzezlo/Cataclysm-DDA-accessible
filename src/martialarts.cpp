@@ -8,6 +8,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <utility>
 
 #include "accessibility.h"
@@ -2550,7 +2551,7 @@ void ma_details_ui_impl::draw_controls()
 std::vector<std::string> ma_details_data::document_lines() const
 {
     std::vector<std::string> lines;
-    const auto add = [&lines]( const std::string & line ) {
+    const auto add = [&lines]( const std::string_view line ) {
         const std::string clean = trim( remove_color_tags( line ) );
         if( !clean.empty() ) {
             lines.push_back( clean );

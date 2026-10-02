@@ -1073,7 +1073,7 @@ action_id input_context::display_menu( bool permit_execute_action )
             accessibility::announce_status( _( "No matching actions." ) );
             return false;
         }
-        const std::string action_id = focused_action;
+        const std::string &action_id = focused_action;
         const std::string name = get_action_name( action_id );
         bool is_local = false;
         const action_attributes &attributes = inp_mngr.get_action_attributes( action_id, category,
@@ -1090,7 +1090,7 @@ action_id input_context::display_menu( bool permit_execute_action )
                                _( "Assign a key that applies only on this screen." ) );
         actions.addentry_desc( 1, !is_local, MENU_AUTOASSIGN, _( "Add global binding" ),
                                is_local
-                               ? _( "Local bindings are already defined. Remove them before adding a global binding." )
+                               ? _( "Local bindings are already defined.  Remove them before adding a global binding." )
                                : _( "Assign a key that applies globally across all screens." ) );
         actions.addentry_desc( 2, is_local || !empty, MENU_AUTOASSIGN, _( "Remove binding" ),
                                is_local && empty
@@ -1253,7 +1253,7 @@ action_id input_context::display_menu( bool permit_execute_action )
                             get_action_name( focused_action ), spoken_keys( focused_action ), local,
                             local != basic_local || attributes.input_events != basic.input_events ),
                         accessibility::format_list_position(
-                            static_cast<size_t>( kb_menu.highlight_row_index + 1 ),
+                            static_cast<size_t>( kb_menu.highlight_row_index ) + 1,
                             kb_menu.filtered_registered_actions.size() )
                     } ) );
                 }

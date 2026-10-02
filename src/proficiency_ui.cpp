@@ -7,6 +7,7 @@
 #include <set>
 #include <stdexcept>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -146,7 +147,7 @@ std::vector<std::string> prof_window::accessibility_details()
         return paragraphs;
     }
     const display_prof_deps *p = cur_set[sel_prof];
-    const auto add = [&paragraphs]( const std::string & text ) {
+    const auto add = [&paragraphs]( const std::string_view text ) {
         const std::string spoken = accessibility::format_semantic_sequence( {
             trim( remove_color_tags( text ) )
         } );
@@ -568,6 +569,7 @@ std::vector<std::string> proficiencies_window_accessibility_rows( const Characte
     w.populate_categories();
     w.current_cat = category;
     std::vector<std::string> rows;
+    rows.reserve( w.get_current_set().size() );
     for( int i = 0; i < static_cast<int>( w.get_current_set().size() ); ++i ) {
         rows.push_back( w.row_speech( i ) );
     }

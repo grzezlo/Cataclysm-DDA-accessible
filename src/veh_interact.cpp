@@ -1279,6 +1279,7 @@ void veh_interact::do_repair( map &here )
     }
     if( accessibility::is_active() ) {
         std::vector<int> parts;
+        parts.reserve( need_repair.size() );
         for( const int index : need_repair ) {
             parts.push_back( parts_here[index] );
         }

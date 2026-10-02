@@ -87,6 +87,7 @@ static const efftype_id effect_bite( "bite" );
 static const efftype_id effect_bleed( "bleed" );
 static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_infected( "infected" );
+static const efftype_id effect_sleep( "sleep" );
 
 static const flag_id json_flag_SPLINT( "SPLINT" );
 
@@ -275,8 +276,8 @@ void update_activity_progress( const avatar &viewer )
     if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
         return;
     }
-    if( viewer.has_effect( efftype_id( "sleep" ) ) &&
-        viewer.get_effect( efftype_id( "sleep" ) ).get_duration() > 0_turns &&
+    if( viewer.has_effect( effect_sleep ) &&
+        viewer.get_effect( effect_sleep ).get_duration() > 0_turns &&
         activity_state().id != "sleep" ) {
         // Loading a sleeping character resumes its progress without claiming
         // that it has just fallen asleep.
@@ -751,7 +752,7 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
 
 std::string gameplay_focus_description( map &here, const avatar &viewer )
 {
-    return string_format( _( "Gameplay. Current position: %s" ),
+    return string_format( _( "Gameplay.  Current position: %s" ),
                           current_tile_name( here, viewer.pos_bub( here ) ) );
 }
 
@@ -1454,8 +1455,8 @@ std::string zones_manager_speech::result( const std::string &action ) const
                    action == "ENABLE_PERSONAL_ZONES", changed );
     }
     if( action == "SHOW_ALL_ZONES" || action == "CHANGE_FACTION" ) {
-        //~ Faction whose zones the zones manager shows.
         const std::string filter = action == "CHANGE_FACTION" ?
+                                   //~ Faction whose zones the zones manager shows.
                                    string_format( _( "Faction: %s" ), faction.str() ) :
                                    accessibility::format_zone_filter( show_all );
         return accessibility::format_zone_list_change( filter, zones.size(), row );
@@ -2256,7 +2257,7 @@ accessibility::item_action_availability item_action_availability( const hint_rat
     return accessibility::item_action_availability::available;
 }
 
-void describe_item_action_menu( uilist &menu, const std::string &item_name,
+void describe_item_action_menu( uilist &menu, const std::string_view item_name,
                                 const item_info_data &info )
 {
     menu.accessibility_context = accessibility::format_item_action_menu_context(
@@ -2265,7 +2266,7 @@ void describe_item_action_menu( uilist &menu, const std::string &item_name,
         item_info_data document = info;
         document.without_getch = false;
         document.handle_scrolling = true;
-        iteminfo_window window( document, point( -1, -1 ), TERMX / 2, TERMY );
+        iteminfo_window window( document, point::north_west, TERMX / 2, TERMY );
         window.execute();
     };
 }
@@ -2310,21 +2311,17 @@ std::vector<std::string> overmap_mission_targets( const avatar &viewer,
     return titles;
 }
 
-const std::string &overmap_vision_text( const om_vision_level vision )
+std::string overmap_vision_text( const om_vision_level vision )
 {
-    static const std::string none;
-    static const std::string vague = _( "You can only make out vague details of what's here." );
-    static const std::string outlines = _( "You can only make out outlines of what's here." );
-    static const std::string details = _( "You can make out some details of what's here." );
     switch( vision ) {
         case om_vision_level::vague:
-            return vague;
+            return _( "You can only make out vague details of what's here." );
         case om_vision_level::outlines:
-            return outlines;
+            return _( "You can only make out outlines of what's here." );
         case om_vision_level::details:
-            return details;
+            return _( "You can make out some details of what's here." );
         default:
-            return none;
+            return std::string();
     }
 }
 

@@ -8,6 +8,7 @@
 #include <optional>
 #include <set>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -712,7 +713,7 @@ std::vector<std::string> armor_details( outfit &clothes, Character &guy, const w
         armor_row_speech( clothes, guy, items, index, bp ),
         accessibility::format_list_position( index + 1, items.size() )
     } ) );
-    const auto add = [&paragraphs]( const std::string & line ) {
+    const auto add = [&paragraphs]( const std::string_view line ) {
         // Speech collapses the padding that aligns names and values in the pane.
         const std::string spoken = accessibility::format_semantic_sequence( {
             remove_color_tags( line )
@@ -740,6 +741,7 @@ std::vector<std::string> outfit::sort_armor_accessibility_rows( Character &guy,
 {
     const worn_list items = worn_items_for( worn, filter );
     std::vector<std::string> rows;
+    rows.reserve( items.size() );
     for( int i = 0; i < static_cast<int>( items.size() ); ++i ) {
         rows.push_back( armor_row_speech( *this, guy, items, i, filter ) );
     }

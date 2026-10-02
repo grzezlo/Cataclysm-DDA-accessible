@@ -365,8 +365,8 @@ static std::vector<item_location> try_to_put_into_vehicle( Character &c, item_dr
                 );
                 if( quiet ) {
                     quiet.reset();
-                    //~ Vehicle part receiving dropped items: %1$s vehicle name, %2$s part name
                     accessibility::announce_game_message( accessibility::format_drop_result(
+                            //~ Vehicle part receiving dropped items: %1$s vehicle name, %2$s part name
                             string_format( _( "%1$s's %2$s" ), veh.name, part_name ),
                             spoken_drop_items( items ), false ) );
                 }

@@ -17,6 +17,7 @@
 #include <optional>
 #include <sstream>
 #include <string>
+#include <string_view>
 
 #if defined(EMSCRIPTEN)
 #include <emscripten.h>
@@ -1353,7 +1354,7 @@ static bool query_world_yn( const std::string &worldname, const std::string &que
 }
 
 /** Speak the result of a world management action before the main menu speaks its focus. */
-static void announce_world_result( const std::string &format, const std::string &worldname )
+static void announce_world_result( const std::string_view format, const std::string &worldname )
 {
     if( accessibility::is_active() ) {
         accessibility::announce( string_format( format, worldname ) );

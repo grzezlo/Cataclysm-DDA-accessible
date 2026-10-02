@@ -5,6 +5,7 @@
 #include <initializer_list>
 #include <memory>
 #include <set>
+#include <string_view>
 #include <tuple>
 
 #include "accessibility.h"
@@ -572,7 +573,7 @@ std::vector<std::string> bodygraph_display::accessibility_details() const
     if( partlist.empty() ) {
         return paragraphs;
     }
-    const auto add = [&paragraphs]( const std::string & text ) {
+    const auto add = [&paragraphs]( const std::string_view text ) {
         const std::string spoken = accessibility::format_semantic_sequence( {
             trim( remove_color_tags( text ) )
         } );

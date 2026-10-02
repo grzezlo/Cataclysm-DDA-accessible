@@ -1739,10 +1739,10 @@ TEST_CASE( "help_topic_and_document_formatting", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_help_menu_open( 23, "a", "Introduction", "Up", "Down",
             "Enter", "Escape" ) ==
-           "Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction" );
+           "Help.  23 topics.  Use Up and Down to browse, hotkey or Enter to open, Escape to exit.  a: Introduction" );
     CHECK( accessibility::format_help_menu_open( 0, "", "", "Up", "Down", "Enter",
             "Escape" ) ==
-           "Help. 0 topics. Escape to exit." );
+           "Help.  0 topics.  Escape to exit." );
 
     CHECK( accessibility::format_help_topic_focus( "b", "Movement" ) == "b: Movement" );
     CHECK( accessibility::format_help_topic_focus( "", "Movement" ) == "Movement" );
@@ -1841,7 +1841,7 @@ TEST_CASE( "help_browser_navigation_document_reading_and_repeat_last", "[accessi
 
     REQUIRE( capture_ptr->messages.size() == 13 );
     CHECK( capture_ptr->messages[0] ==
-           "Help. 23 topics. Use Up and Down to browse, hotkey or Enter to open, Escape to exit. a: Introduction" );
+           "Help.  23 topics.  Use Up and Down to browse, hotkey or Enter to open, Escape to exit.  a: Introduction" );
     CHECK( capture_ptr->messages[1] == "b: Movement" );
     CHECK( capture_ptr->messages[2] == "c: Viewing" );
     CHECK( capture_ptr->messages[3] == "n: Combat" );

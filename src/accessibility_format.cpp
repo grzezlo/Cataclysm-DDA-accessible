@@ -44,7 +44,7 @@ std::string trim_ascii( const std::string_view text )
 }
 
 /** Collapse runs of ASCII whitespace into single spaces and trim both ends. */
-std::string collapse_whitespace( const std::string &text )
+std::string collapse_whitespace( const std::string_view text )
 {
     std::string result;
     result.reserve( text.size() );
@@ -63,7 +63,7 @@ std::string collapse_whitespace( const std::string &text )
     return result;
 }
 
-bool ends_with( const std::string &text, const std::string &suffix )
+bool ends_with( const std::string_view text, const std::string_view suffix )
 {
     return text.size() >= suffix.size() &&
            text.compare( text.size() - suffix.size(), suffix.size(), suffix ) == 0;
@@ -411,14 +411,16 @@ std::string format_main_menu_position( const std::string &tab, const int tab_pos
 std::vector<semantic_document_line> select_document_lines(
     const std::vector<std::string> &source_lines )
 {
+    // Character literals keep tab and carriage return out of string literals.
+    const std::string blank_chars{ ' ', '\t', '\r' };
     std::vector<semantic_document_line> lines;
     for( size_t index = 0; index < source_lines.size(); ++index ) {
         const std::string &source = source_lines[index];
-        const size_t first = source.find_first_not_of( " \t\r" );
+        const size_t first = source.find_first_not_of( blank_chars );
         if( first == std::string::npos ) {
             continue;
         }
-        const size_t last = source.find_last_not_of( " \t\r" );
+        const size_t last = source.find_last_not_of( blank_chars );
         const std::string text = source.substr( first, last - first + 1 );
         if( text.find_first_not_of( '*' ) != std::string::npos ) {
             lines.push_back( { text, index } );
@@ -482,11 +484,11 @@ std::string format_help_menu_open( const size_t topic_count, const std::string &
                                    const std::string &quit_binding )
 {
     if( topic_count == 0 ) {
-        return string_format( _( "Help. 0 topics. %s to exit." ), format_spoken_key( quit_binding ) );
+        return string_format( _( "Help.  0 topics.  %s to exit." ), format_spoken_key( quit_binding ) );
     }
     const std::string topic_str = format_help_topic_focus( initial_hotkey, initial_topic );
     return string_format(
-               _( "Help. %1$d topics. Use %2$s and %3$s to browse, hotkey or %4$s to open, %5$s to exit. %6$s" ),
+               _( "Help.  %1$d topics.  Use %2$s and %3$s to browse, hotkey or %4$s to open, %5$s to exit.  %6$s" ),
                static_cast<int>( topic_count ), format_spoken_key( up_binding ),
                format_spoken_key( down_binding ), format_spoken_key( confirm_binding ),
                format_spoken_key( quit_binding ), topic_str );
@@ -636,7 +638,7 @@ std::string format_auto_pickup_rule_state( const bool has_rule )
     return has_rule ? _( "Rule set" ) : _( "No rule" );
 }
 
-std::string format_visual_hint( const std::string &hint )
+std::string format_visual_hint( const std::string_view hint )
 {
     // Visual hints separate fields with box-drawing lines and line breaks;
     // speak each field as its own phrase instead of naming the symbols.
@@ -769,7 +771,7 @@ std::string format_spoken_key( const std::string &raw_key )
     bool has_alt = false;
     bool has_shift = false;
 
-    auto strip_prefix = []( std::string & str, const std::string & prefix ) -> bool {
+    auto strip_prefix = []( std::string & str, const std::string_view prefix ) -> bool {
         if( prefix.empty() || str.size() < prefix.size() )
         {
             return false;
@@ -877,7 +879,7 @@ std::string format_keybinding_open( const std::string &up_binding, const std::st
         _( "Keybindings" ),
         string_format( n_gettext( "%d action", "%d actions", action_count ),
                        static_cast<int>( action_count ) ),
-        string_format( _( "%1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens actions. %5$s reads all keys." ),
+        string_format( _( "%1$s and %2$s choose an action.  %3$s switches to the filter.  %4$s opens actions.  %5$s reads all keys." ),
                        format_spoken_key( up_binding ), format_spoken_key( down_binding ),
                        format_spoken_key( tab_binding ), format_spoken_key( confirm_binding ),
                        format_spoken_key( details_binding ) ),
@@ -889,7 +891,7 @@ std::string format_keybinding_filter( const std::string &query, const int result
                                       const std::string &tab_binding, const bool include_hint )
 {
     const std::string hint = include_hint
-                             ? string_format( _( "Filter. Type to search. %s returns to the action list." ),
+                             ? string_format( _( "Filter.  Type to search.  %s returns to the action list." ),
                                      format_spoken_key( tab_binding ) )
                              : std::string();
     const std::string query_text = query.empty() ? _( "empty" ) : query;
@@ -898,7 +900,7 @@ std::string format_keybinding_filter( const std::string &query, const int result
     return format_semantic_sequence( { hint, results } );
 }
 
-bool uilist_details_need_document( const std::string &details )
+bool uilist_details_need_document( const std::string_view details )
 {
     return utf8_width( details ) > 160;
 }
@@ -1179,8 +1181,8 @@ std::string format_trade_opening( const std::string &title, const std::string &t
     while( !purpose.empty() && ( purpose.back() == ':' || purpose.back() == ' ' ) ) {
         purpose.pop_back();
     }
-    //~ Trade window purpose and the trader's name, e.g. "Trade: Rubik"
     const std::string heading = purpose.empty() ? trader :
+                                //~ Trade window purpose and the trader's name, e.g. "Trade: Rubik"
                                 string_format( _( "%1$s: %2$s" ), purpose, trader );
     return format_semantic_sequence( { heading, format_trade_balance( balance ) } );
 }
@@ -1710,7 +1712,7 @@ std::string format_list_change( const std::string &change, const size_t count )
     return string_join( std::vector<std::string> { change, format_list_count( count ) }, _( ", " ) );
 }
 
-std::string format_shortcut_label( const std::string &label )
+std::string format_shortcut_label( const std::string_view label )
 {
     std::string result;
     result.reserve( label.size() );
@@ -1982,7 +1984,7 @@ std::string format_overmap_tile( const overmap_tile &tile, const bool terrain_re
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_overmap_opening( const std::string &prompt, const std::string &tile )
+std::string format_overmap_opening( const std::string_view prompt, const std::string &tile )
 {
     return format_semantic_sequence( {
         prompt.empty() ? std::string( _( "Overmap" ) ) : remove_color_tags( prompt ), tile
@@ -2076,7 +2078,7 @@ std::string format_overmap_route_state( const std::string &destination,
     } );
 }
 
-std::string format_overmap_summary( const std::string &prompt, const std::string &tile,
+std::string format_overmap_summary( const std::string_view prompt, const std::string &tile,
                                     const int z, const std::string &route )
 {
     return format_semantic_sequence( {
@@ -2216,8 +2218,8 @@ std::string format_zone_moved( const std::string &name, const size_t position, c
 
 std::string format_zone_removed( const std::string &name, const std::string &focus )
 {
-    //~ A zone was removed: %s is the zone name.
     return format_semantic_sequence( {
+        //~ A zone was removed: %s is the zone name.
         string_format( _( "Removed %s" ), collapse_whitespace( name ) ),
         focus.empty() ? std::string( _( "No zones" ) ) : focus
     } );
@@ -2506,7 +2508,7 @@ std::string format_vehicle_position_details( const vehicle_grid_position &positi
                                 position.tile.y - position.min.y + 1, position.max.y - position.min.y + 1 );
     }
     std::string result = string_join( std::vector<std::string> { along, across }, _( ", " ) );
-    result[0] = static_cast<char>( std::toupper( static_cast<unsigned char>( result[0] ) ) );
+    result = uppercase_first_letter( result );
     return format_semantic_sequence( { result } );
 }
 
@@ -2653,7 +2655,7 @@ std::string format_vehicle_workshop_stats( const vehicle_workshop_stats &stats )
                                                 "acceleration %3$d %4$s per second" ),
                                              speed.safe, speed.top, speed.acceleration, stats.units );
         if( speed.medium.empty() ) {
-            figures[0] = static_cast<char>( std::toupper( static_cast<unsigned char>( figures[0] ) ) );
+            figures = uppercase_first_letter( figures );
         } else {
             //~ %1$s: "On water" or "In the air", %2$s: vehicle speeds there
             figures = string_format( _( "%1$s: %2$s" ), speed.medium, figures );
@@ -3021,8 +3023,8 @@ std::string format_game_arrival( const bool loaded, const std::string &name,
            string_format( _( "Welcome, %1$s. Location: %2$s" ), name, location );
 }
 
-std::string format_direction_prompt( const std::string &prompt,
-                                     const std::vector<direction_target> &targets, const std::string &hint )
+std::string format_direction_prompt( const std::string_view prompt,
+                                     const std::vector<direction_target> &targets, const std::string_view hint )
 {
     std::vector<std::pair<std::string, std::vector<std::string>>> groups;
     for( const direction_target &entry : targets ) {
@@ -3492,7 +3494,7 @@ std::string format_encumbrance_row( const encumbrance_row &row, const bool detai
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_speed_row( const std::string &cause, const bool speed, const int value,
+std::string format_speed_row( const std::string_view cause, const bool speed, const int value,
                               const bool percent )
 {
     std::vector<std::string> parts = { remove_color_tags( cause ) };
@@ -3527,7 +3529,7 @@ std::string format_skill_row( const skill_row &row )
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_trait_row( const std::string &name, const trait_kind kind )
+std::string format_trait_row( const std::string_view name, const trait_kind kind )
 {
     std::string state;
     switch( kind ) {
@@ -3572,7 +3574,7 @@ std::string format_bionic_row( const std::string &name, const int count )
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_proficiency_row( const std::string &name, const bool known,
+std::string format_proficiency_row( const std::string_view name, const bool known,
                                     const bool learning, const int progress )
 {
     std::vector<std::string> parts = { remove_color_tags( name ) };
@@ -3768,8 +3770,8 @@ std::string format_spell_count( const size_t count )
     return string_format( n_gettext( "%d spell", "%d spells", count ), static_cast<int>( count ) );
 }
 
-std::string format_martial_style_row( const std::string &name, const bool current,
-                                      const std::string &description )
+std::string format_martial_style_row( const std::string_view name, const bool current,
+                                      const std::string_view description )
 {
     std::vector<std::string> parts = { remove_color_tags( name ) };
     if( current ) {
@@ -3783,7 +3785,7 @@ std::string format_martial_style_row( const std::string &name, const bool curren
     } );
 }
 
-std::string format_morale_line( const std::string &label, const std::string &value )
+std::string format_morale_line( const std::string_view label, const std::string_view value )
 {
     const std::string plain_label = trim( remove_color_tags( label ) );
     std::string plain_value = trim( remove_color_tags( value ) );
@@ -3806,7 +3808,7 @@ std::string format_morale_line( const std::string &label, const std::string &val
     } );
 }
 
-std::string format_health_bar( const std::string &bar )
+std::string format_health_bar( const std::string_view bar )
 {
     const std::string plain = remove_color_tags( bar );
     int tenths = 0;
@@ -3849,7 +3851,7 @@ std::string format_body_part_row( const std::string &name, const std::string &he
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_medical_health_row( const std::string &part, const std::string &health,
+std::string format_medical_health_row( const std::string_view part, const std::string_view health,
                                        const std::vector<std::string> &conditions )
 {
     std::vector<std::string> parts = { remove_color_tags( part ) };
@@ -3864,7 +3866,7 @@ std::string format_medical_health_row( const std::string &part, const std::strin
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_proficiency_window_row( const std::string &name, const bool known,
+std::string format_proficiency_window_row( const std::string_view name, const bool known,
         const int progress )
 {
     std::vector<std::string> parts = { remove_color_tags( name ) };
@@ -3899,7 +3901,7 @@ std::string format_armor_row( const armor_row &row )
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_armor_position( const std::string &inner, const std::string &outer )
+std::string format_armor_position( const std::string_view inner, const std::string_view outer )
 {
     const std::string plain_inner = remove_color_tags( inner );
     const std::string plain_outer = remove_color_tags( outer );
@@ -3921,7 +3923,7 @@ std::string format_armor_position( const std::string &inner, const std::string &
     return format_semantic_sequence( { string_join( parts, _( ", " ) ) } );
 }
 
-std::string format_armor_moving( const std::string &name )
+std::string format_armor_moving( const std::string_view name )
 {
     //~ Sort armor: an item was picked up to change its layer; %s: item name
     return format_semantic_sequence( { string_format( _( "Moving %s" ), remove_color_tags( name ) ) } );
@@ -3956,7 +3958,7 @@ std::string format_armor_summary( const std::string &filter, const std::vector<a
     return format_semantic_sequence( parts );
 }
 
-std::string format_dialogue_utterance( const std::string &speaker, const std::string &text )
+std::string format_dialogue_utterance( const std::string_view speaker, const std::string_view text )
 {
     const std::string spoken_text = remove_color_tags( text );
     if( speaker.empty() ) {
@@ -4015,7 +4017,7 @@ void dialogue_speech_model::set_prompt_label( const std::string &label )
     prompt_label = label;
 }
 
-void dialogue_speech_model::add_utterance( const std::string &text, const bool own )
+void dialogue_speech_model::add_utterance( const std::string_view text, const bool own )
 {
     const std::string spoken = format_semantic_sequence( { remove_color_tags( text ) } );
     if( !spoken.empty() ) {
@@ -4178,7 +4180,7 @@ dialogue_speech_model::result dialogue_speech_model::handle( const std::string &
     return res;
 }
 
-std::string format_activity_start( const std::string &label, const std::string &duration,
+std::string format_activity_start( const std::string_view label, const std::string &duration,
                                    const bool resuming )
 {
     return format_semantic_sequence( {
@@ -4187,8 +4189,8 @@ std::string format_activity_start( const std::string &label, const std::string &
     } );
 }
 
-std::string format_activity_result( const std::string &label, const bool finished,
-                                    const bool canceled, const std::string &reason,
+std::string format_activity_result( const std::string_view label, const bool finished,
+                                    const bool canceled, const std::string_view reason,
                                     const std::vector<std::string> &messages )
 {
     std::vector<std::string> parts;
@@ -4206,7 +4208,7 @@ std::string format_activity_result( const std::string &label, const bool finishe
     return format_semantic_sequence( parts );
 }
 
-std::string format_activity_progress( const std::string &label, const std::string &progress,
+std::string format_activity_progress( const std::string_view label, const std::string_view progress,
                                       const std::string &remaining )
 {
     const std::string semantic_label = remove_color_tags( label );

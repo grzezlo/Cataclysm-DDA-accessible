@@ -1533,8 +1533,8 @@ void set_points( tab_manager &tabs, avatar &u, pool_type &pool )
             }
             return accessibility::format_character_tab_summary( _( "Points" ), highlighted + 1,
                     opts.size(), current, accessibility_point_balance( u, pool ), accessibility_difficulty( u ) );
-        } ) ) {
-        } else if( navigate_ui_list( action, highlighted, 1, opts_length, true ) ) {
+        } ) || navigate_ui_list( action, highlighted, 1, opts_length, true ) ) {
+            // Spoken by the shared action, or no further action required
         } else if( action == "CONFIRM" ) {
             const auto &cur_opt = opts[highlighted];
             pool = std::get<0>( cur_opt );
@@ -1889,6 +1889,7 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
     };
     const auto accessibility_summary = [&]() {
         std::vector<std::string> current;
+        current.reserve( 4 );
         for( int i = 0; i < 4; i++ ) {
             current.push_back( string_format( _( "%1$s %2$d" ), stat_labels[i].translated(), *stats[i] ) );
         }
@@ -1906,9 +1907,8 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
         } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
-        } else if( details.handle_navigation( action, ctxt )
+                                                accessibility_summary )
+                   || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, sel, 1, 4, true ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( action == "LEFT" ) {
@@ -2457,13 +2457,12 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
 
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
-        } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
         } else if( action == "LEFT" || action == "RIGHT" ) {
             iCurWorkingPage = next_avail_page( action == "LEFT" );
             speech.changed( accessibility_column_change() );
-        } else if( scrollbar_handled
+        } else if( speech.handle_shared_action( action, accessibility_details,
+                                                accessibility_summary )
+                   || scrollbar_handled
                    || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, iCurrentLine[iCurWorkingPage], 10,
                                         traits_size[iCurWorkingPage], true ) ) {
@@ -3075,9 +3074,8 @@ void set_profession( tab_manager &tabs, avatar &u, pool_type pool )
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
         } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
-        } else if( details.handle_navigation( action, ctxt )
+                                                accessibility_summary )
+                   || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, cur_id, scroll_rate, recmax, true ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( list_sb.handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
@@ -3338,6 +3336,7 @@ void set_hobbies( tab_manager &tabs, avatar &u, pool_type pool )
     };
     const auto accessibility_summary = [&]() {
         std::vector<std::string> current;
+        current.reserve( u.hobbies.size() );
         for( const profession *hobby : u.hobbies ) {
             current.push_back( hobby->gender_appropriate_name( u.male ) );
         }
@@ -3463,9 +3462,8 @@ void set_hobbies( tab_manager &tabs, avatar &u, pool_type pool )
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
         } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
-        } else if( details.handle_navigation( action, ctxt )
+                                                accessibility_summary )
+                   || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, cur_id, scroll_rate, recmax, true ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( list_sb.handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
@@ -3926,9 +3924,8 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
         } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
-        } else if( details.handle_navigation( action, ctxt ) ) {
+                                                accessibility_summary )
+                   || details.handle_navigation( action, ctxt ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( list_sb.handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
                                             scrollbar_pos ) ) {
@@ -4313,9 +4310,8 @@ void set_scenario( tab_manager &tabs, avatar &u, pool_type pool )
         if( tabs.handle_input( action, ctxt ) ) {
             break; // Tab has changed or user has quit the screen
         } else if( speech.handle_shared_action( action, accessibility_details,
-                                                accessibility_summary ) ) {
-            // Spoken by the shared action
-        } else if( details.handle_navigation( action, ctxt )
+                                                accessibility_summary )
+                   || details.handle_navigation( action, ctxt )
                    || navigate_ui_list( action, cur_id, scroll_rate, scens_length, true ) ) {
             // NO FURTHER ACTION REQUIRED
         } else if( list_sb.handle_dragging( action, ctxt.get_coordinates_text( catacurses::stdscr ),
@@ -4661,6 +4657,7 @@ static std::string accessibility_character_summary( const avatar &you, const poo
     lines.push_back( string_format( _( "Profession: %s" ),
                                     you.prof->gender_appropriate_name( you.male ) ) );
     std::vector<std::string> items;
+    items.reserve( you.hobbies.size() );
     for( const profession *hobby : you.hobbies ) {
         items.push_back( hobby->gender_appropriate_name( you.male ) );
     }

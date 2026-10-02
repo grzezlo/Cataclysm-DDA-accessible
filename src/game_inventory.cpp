@@ -2663,10 +2663,10 @@ bool game_menus::inv::compare_item_menu::show()
     int first_detail_index = 0;
     int second_detail_index = 0;
     const auto current_details = [&]() -> decltype( auto ) {
-        return ( detail_item == 0 ? first_details : second_details );
+        return detail_item == 0 ? first_details : second_details;
     };
     const auto current_detail_index = [&]() -> decltype( auto ) {
-        return ( detail_item == 0 ? first_detail_index : second_detail_index );
+        return detail_item == 0 ? first_detail_index : second_detail_index;
     };
     const auto announce_current = [&]() {
         if( !speaking ) {

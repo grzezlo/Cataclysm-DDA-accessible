@@ -8,6 +8,7 @@
 #include <memory>
 #include <ostream>
 #include <set>
+#include <string_view>
 #include <utility>
 
 #include "accessibility.h"
@@ -3302,7 +3303,7 @@ std::vector<std::string> spell_accessibility_details( const spell &sp, Character
         const bool favorite, const int invlet )
 {
     std::vector<std::string> lines;
-    const auto add = [&lines]( const std::string & line ) {
+    const auto add = [&lines]( const std::string_view line ) {
         const std::string clean = trim( remove_color_tags( line ) );
         if( !clean.empty() ) {
             lines.push_back( clean );

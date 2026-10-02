@@ -232,18 +232,20 @@ class advanced_inventory
                 const advanced_inventory_pane &dpane ) const;
         accessibility::transfer_pane accessibility_pane( side p );
         accessibility::transfer_row accessibility_row( side p ) const;
-        bool accessibility_opening = true;
+        // Members are ordered by size so the speech state adds little padding.
         int accessibility_last_src = -1;
         int accessibility_last_index = -1;
         /** Direction of the last focus move key, used to detect a wrap; 0 for other input. */
         int accessibility_move_direction = 0;
+        // Per pane, so switching panes does not report the other pane's settings as changes.
+        std::array<int, NUM_PANES> accessibility_last_sort = { -1, -1 };
+        bool accessibility_opening = true;
         bool accessibility_last_category_mode = false;
         std::string accessibility_last_row;
         std::string accessibility_last_category;
-        // Per pane, so switching panes does not report the other pane's settings as changes.
+        // Per pane, like accessibility_last_sort.
         std::array<std::string, NUM_PANES> accessibility_last_area;
         std::array<std::string, NUM_PANES> accessibility_last_filter;
-        std::array<int, NUM_PANES> accessibility_last_sort = { -1, -1 };
 };
 
 #endif // CATA_SRC_ADVANCED_INV_H

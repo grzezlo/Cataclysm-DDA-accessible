@@ -802,6 +802,7 @@ static std::vector<bionic_grouping> group_bionics( const Character &you )
     for( const bionic &bio : *you.my_bionics ) {
         bionics_map[bio.info()]++;
     }
+    bionicslist.reserve( bionics_map.size() );
     for( const auto &pair : bionics_map ) {
         bionicslist.push_back( { pair.first.name, pair.first.description, pair.second } );
     }
@@ -1507,7 +1508,8 @@ class character_sheet_speech
                         remove_color_tags( effect_name_and_text[line].first )
                     } );
                 case player_display_tab::proficiencies: {
-                    const display_proficiency &cur = you.display_proficiencies()[line];
+                    const std::vector<display_proficiency> profs = you.display_proficiencies();
+                    const display_proficiency &cur = profs[line];
                     return accessibility::format_proficiency_row( cur.id->name(), cur.known,
                             !cur.known && cur.id->can_learn(), static_cast<int>( std::floor( cur.practice * 100 ) ) );
                 }

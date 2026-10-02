@@ -709,8 +709,8 @@ bool do_turn()
     if( player_is_sleeping ) {
         // Sleep has no player_activity, so it bypasses the normal activity
         // keyboard polling above.  Keep repeat-last available while asleep.
-        static auto last_sleep_poll = std::chrono::steady_clock::now();
-        const auto now = std::chrono::steady_clock::now();
+        static std::chrono::steady_clock::time_point last_sleep_poll = std::chrono::steady_clock::now();
+        const std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
         if( now - last_sleep_poll >= std::chrono::milliseconds( 100 ) ) {
             inp_mngr.pump_events();
             last_sleep_poll = now;

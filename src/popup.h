@@ -18,7 +18,7 @@ class query_popup_impl;
 namespace accessibility
 {
 class progress_reporter;
-}
+} // namespace accessibility
 
 /**
  * UI class for displaying messages or querying player input with popups.

@@ -553,6 +553,7 @@ static std::vector<std::string> construction_accessibility_details(
         }
         if( !con->pre_terrain.empty() ) {
             std::vector<std::string> names;
+            names.reserve( con->pre_terrain.size() );
             for( const std::string &id : con->pre_terrain ) {
                 names.push_back( con->pre_is_furniture ? furn_str_id( id )->name() :
                                  ter_str_id( id )->name() );
@@ -582,8 +583,8 @@ static std::vector<std::string> construction_accessibility_details(
         if( !has_components ) {
             lines.emplace_back( _( "Components: none" ) );
         }
-        lines.push_back( can_construct( *con ) ? _( "Placement: adjacent tile available" ) :
-                         _( "Placement: no valid adjacent tile" ) );
+        lines.emplace_back( can_construct( *con ) ? _( "Placement: adjacent tile available" ) :
+                            _( "Placement: no valid adjacent tile" ) );
     }
     return lines;
 }

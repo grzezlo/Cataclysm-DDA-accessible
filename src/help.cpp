@@ -360,7 +360,7 @@ void help::display_help() const
             accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_help_menu_summary( topic_orders.size(),
-                                     static_cast<size_t>( sel_index + 1 ) ) );
+                                     static_cast<size_t>( sel_index ) + 1 ) );
         } else if( action != "QUIT" ) {
             int target_topic_order = -1;
             for( size_t i = 0; i < topic_orders.size(); ++i ) {
@@ -404,8 +404,8 @@ void help::display_help() const
                                 if( replace.empty() ) {
                                     debugmsg( "Help json: Unknown action: %s", action_str );
                                 } else {
-                                    line_proc = string_replace(
-                                                    line_proc, "<press_" + action_str + ">", replace );
+                                    const std::string press_tag = "<press_" + action_str + ">";
+                                    line_proc = string_replace( line_proc, press_tag, replace );
                                 }
                                 pos = line_proc.find( "<press_", pos2, 7 );
                             }

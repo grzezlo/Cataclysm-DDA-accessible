@@ -6,6 +6,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -316,7 +317,7 @@ accessibility::item_action_availability item_action_availability( hint_rating ra
  * Name the item when its action menu opens and let the details action read the
  * complete item information.  `info` must outlive the menu query.
  */
-void describe_item_action_menu( uilist &menu, const std::string &item_name,
+void describe_item_action_menu( uilist &menu, std::string_view item_name,
                                 const item_info_data &info );
 
 /**

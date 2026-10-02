@@ -572,7 +572,8 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         const bool access_has_rules = recmax > 0;
         if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             accessibility::announce( access_tab_open( access_tab_name() ) );
-        } else if( access_no_character() ) {
+        } else if( access_no_character() || action == "TEST_RULE" ) {
+            // Without a character, and after testing a rule, speak the focused row.
             accessibility::announce( access_row() );
         } else if( accessibility_gameplay::list_move_direction( action ) != 0 ) {
             accessibility::announce( accessibility::format_semantic_sequence( {
@@ -593,7 +594,7 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         } else if( !access_has_rules ) {
             if( action == "REMOVE_RULE" || action == "COPY_RULE" || action == "SWAP_RULE_GLOBAL_CHAR" ||
                 action == "CONFIRM" || action == "ENABLE_RULE" || action == "DISABLE_RULE" ||
-                action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" || action == "TEST_RULE" ) {
+                action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {
                 accessibility::announce( access_row() );
             }
         } else if( action == "REMOVE_RULE" ) {
@@ -617,8 +618,6 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
                                      accessibility::format_mod_moved( line + 1, current_tab.size() ) :
                                      accessibility::format_mod_not_moved( action == "MOVE_RULE_UP",
                                              action == "MOVE_RULE_UP" ? _( "already last" ) : _( "already first" ) ) );
-        } else if( action == "TEST_RULE" ) {
-            accessibility::announce( access_row() );
         }
     }
 

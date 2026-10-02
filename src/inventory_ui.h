@@ -929,7 +929,7 @@ class inventory_selector
         virtual std::string accessibility_row( const inventory_entry &entry, bool include_context,
                                                bool include_all_cells ) const;
     public:
-        void announce_accessibility_focus( bool force = false, const std::string &event = {} );
+        void announce_accessibility_focus( bool force = false, std::string_view event = {} );
         /** Speak the focus again on the next announcement, optionally as a newly entered list. */
         void reset_accessibility_focus( bool list_entered );
     protected:

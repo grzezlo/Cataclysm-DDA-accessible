@@ -884,7 +884,9 @@ shared_ptr_fast<uilist_impl> uilist::create_or_get_ui()
 static bool has_entry_details( const uilist_entry &entry )
 {
     const std::string description = remove_color_tags( entry.desc );
-    return description.find_first_not_of( " \t\r\n*" ) != std::string::npos;
+    // Character literals keep tab and carriage return out of string literals.
+    const std::string blank_chars{ ' ', '\t', '\r', '\n', '*' };
+    return description.find_first_not_of( blank_chars ) != std::string::npos;
 }
 
 /** Speak short details followed by the list position, or open a document for long ones. */
