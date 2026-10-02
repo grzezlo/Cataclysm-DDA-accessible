@@ -1510,7 +1510,8 @@ static bool is_alt_shortcut( const SDL_Keysym &keysym )
     if( !( keysym.mod & KMOD_ALT ) || ( keysym.mod & KMOD_CTRL ) ) {
         return false;
     }
-    if( keysym.sym >= SDLK_KP_0 && keysym.sym <= SDLK_KP_9 ) {
+    // Keypad digits enter Alt codes.  SDLK_KP_0 follows SDLK_KP_9 in SDL2.
+    if( keysym.sym == SDLK_KP_0 || ( keysym.sym >= SDLK_KP_1 && keysym.sym <= SDLK_KP_9 ) ) {
         return false;
     }
     return keysym.sym != SDLK_LALT && keysym.sym != SDLK_RALT;
