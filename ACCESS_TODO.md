@@ -56,100 +56,7 @@ it says so.
    or position alone: speak words such as "Over weight limit" or
    "Unavailable: <reason>".
 
-## Stage 22 - Coverage and announcement-policy audit
-
-**Outcome:** Every keyboard-reachable interface is classified and tested, speech
-policy is consistent, and remaining bespoke-screen gaps are closed.
-
-**Code inventory:** all `accessibility::` call sites; all registered
-`input_context` categories and bespoke UI entry points; the accessibility service
-and feature tests.  Create and maintain a concise coverage manifest during this
-stage so later upstream merges do not require rediscovering every screen.
-
-**Success criteria:** The manifest maps each reachable screen to a shared
-accessible control, a feature hook, or an explicit accepted limitation.  Event
-categories define focus, screen, status, message, movement, threat, urgent alert,
-and on-demand detail priority/deduplication.  Rapid events preserve the newest
-meaningful state; repeat-last is correct; no speech-cancel or automatic requeue
-exists.  Save/load, death screen, errors, debug-disabled normal play, and exit
-are covered by an end-to-end keyboard journey.  No perceptible gameplay slowdown
-with accessibility enabled in a scenario with 50+ visible creatures and rapid
-movement.
-
-The slowdown and maintenance work left from review 02 is Stage 22B.
-
-**Possible automated tests:** Table-driven service tests for categories,
-collisions, mode transitions, backend failure/reset, deduplication, and history;
-coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows
-test build, tiles build, and the branch's static checks.
-
-**User-test scenarios:** Complete the coverage-manifest journey and a
-long play session, deliberately navigating rapidly and interrupting speech.
-Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
-developer-error, static-instruction, and progress-popup integration.  Confirm
-the death screen and record all accepted limitations.
-
-## Stage 22A - Complete tutorial acceptance
-
-**Outcome:** A blind player can complete the entire built-in tutorial with
-keyboard and NVDA, understand every lesson and continuation instruction, and
-leave or resume safely.  This stage follows the gameplay, interface, and
-coverage stages because its exercises use their controls.
-
-**Code inventory:** tutorial launch in `src/main_menu.cpp`;
-`tutorial_game::init()` (which must enable gameplay speech itself because the
-tutorial bypasses `game::start_game()`), `per_turn()`, `pre_action()`,
-`post_action()`, and `add_message()` in `src/gamemode_tutorial.cpp`; C++ lessons in
-`data/mods/dda_tutorial/snippets.json`; trap lessons and map structure in
-`data/mods/dda_tutorial/traps.json` and `mapgen.json`.  The preliminary trigger,
-continuation, and exercise inventory is in `doc/tutorial_lesson_inventory.md`.
-
-**Selected lesson delivery (option A, accepted 2026-09-30):** Stage 19B's
-document delivery applies to both lesson sources.  Opening speaks the title
-and first fragment; navigation and repeat-last work within the open lesson.
-Closure preserves the original seen flags, EOC conditions, trap removal, and
-message-log availability.  No lesson archive or reopen command is added.
-
-**Implementation hints:**
-
-- C++ and EOC lessons use the shared document reader when accessibility is
-  active (Stage 19B, option A); inactive mode keeps the original popups.
-  Reassess the actual NVDA experience after the exercised
-  controls are accessible, including interruption, repetition, and speech from
-  another tile with the same lesson trap (the original trap is removed).
-- Recheck every lesson trigger, map route, continuation instruction, and required
-  action against the then-current game.  Update the inventory if upstream data
-  or integration points have changed.
-- Confirm that both C++ and EOC lessons expand keybinding tags and that their
-  spoken instructions match the current controls.  Correct misleading tutorial
-  data or accessibility gaps found during the full walkthrough.
-- If a new player-facing lesson interaction is needed, present three distinct
-  designs and record the selected behavior here before changing code.
-
-**Initial assessment:** The current data has 35 C++ snippet texts, of which 33
-have a trigger, and 14 EOC popup lessons on the tutorial map.  One additional
-trap sets pain without showing a lesson.  Several exercises rely on Stages
-06/06A, 08–12, and 13.  The bat pickup near the start depends on Stage 09.
-
-**Success criteria:** The entire tutorial route and every required exercise can
-be completed without a mouse or visual cues.  Lesson text, current instructions,
-feedback, and exit/save warnings are spoken accurately; interrupted information
-can be recovered; repeated triggers do not flood speech; and no lesson relies
-on a control or visual detail that remains inaccessible.  The final exercise
-and return to the main menu are verified.
-
-**Possible automated tests:** Use fixed lessons and map fixtures to capture
-launch, C++ and EOC delivery, keybinding substitution, repeat triggers,
-interruption recovery, transitions, completion, save/exit warning, and menu
-return.  Check that every referenced action and tutorial trap exists.
-
-**User-test scenarios:** A blind NVDA user plays the full tutorial from
-launch through the final room, completes every required exercise, checks both
-lesson sources and continuation guidance, deliberately interrupts speech and
-recovers the instructions, saves/exits, and confirms the menu return.  Record
-the tested Windows, NVDA, and fork versions and any remaining limitations.
-
-## Stage 22B - Performance and maintenance follow-up from review 02
+## Stage 21B - Performance and maintenance follow-up from review 02
 
 **Outcome:** The remaining review 02 findings are done: accessibility code does
 no avoidable work on frequent paths, and fork code in upstream files is smaller
@@ -315,6 +222,97 @@ toward obstacles and compare the spoken obstacles with the previous build.  For
 A4, wait 8 hours, listen to the periodic progress, and press Alt+R during it.
 The `REPEAT_LAST` refactor in E needs a repeat-last check on each screen
 family.
+
+## Stage 22 - Coverage and announcement-policy audit
+
+**Outcome:** Every keyboard-reachable interface is classified and tested, speech
+policy is consistent, and remaining bespoke-screen gaps are closed.
+
+**Code inventory:** all `accessibility::` call sites; all registered
+`input_context` categories and bespoke UI entry points; the accessibility service
+and feature tests.  Create and maintain a concise coverage manifest during this
+stage so later upstream merges do not require rediscovering every screen.
+
+**Success criteria:** The manifest maps each reachable screen to a shared
+accessible control, a feature hook, or an explicit accepted limitation.  Event
+categories define focus, screen, status, message, movement, threat, urgent alert,
+and on-demand detail priority/deduplication.  Rapid events preserve the newest
+meaningful state; repeat-last is correct; no speech-cancel or automatic requeue
+exists.  Save/load, death screen, errors, debug-disabled normal play, and exit
+are covered by an end-to-end keyboard journey.  No perceptible gameplay slowdown
+with accessibility enabled in a scenario with 50+ visible creatures and rapid
+movement.
+
+**Possible automated tests:** Table-driven service tests for categories,
+collisions, mode transitions, backend failure/reset, deduplication, and history;
+coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows
+test build, tiles build, and the branch's static checks.
+
+**User-test scenarios:** Complete the coverage-manifest journey and a
+long play session, deliberately navigating rapidly and interrupting speech.
+Confirm every unverified popup noted in `ACCESS_DONE.md`, including standard,
+developer-error, static-instruction, and progress-popup integration.  Confirm
+the death screen and record all accepted limitations.
+
+## Stage 22A - Complete tutorial acceptance
+
+**Outcome:** A blind player can complete the entire built-in tutorial with
+keyboard and NVDA, understand every lesson and continuation instruction, and
+leave or resume safely.  This stage follows the gameplay, interface, and
+coverage stages because its exercises use their controls.
+
+**Code inventory:** tutorial launch in `src/main_menu.cpp`;
+`tutorial_game::init()` (which must enable gameplay speech itself because the
+tutorial bypasses `game::start_game()`), `per_turn()`, `pre_action()`,
+`post_action()`, and `add_message()` in `src/gamemode_tutorial.cpp`; C++ lessons in
+`data/mods/dda_tutorial/snippets.json`; trap lessons and map structure in
+`data/mods/dda_tutorial/traps.json` and `mapgen.json`.  The preliminary trigger,
+continuation, and exercise inventory is in `doc/tutorial_lesson_inventory.md`.
+
+**Selected lesson delivery (option A, accepted 2026-09-30):** Stage 19B's
+document delivery applies to both lesson sources.  Opening speaks the title
+and first fragment; navigation and repeat-last work within the open lesson.
+Closure preserves the original seen flags, EOC conditions, trap removal, and
+message-log availability.  No lesson archive or reopen command is added.
+
+**Implementation hints:**
+
+- C++ and EOC lessons use the shared document reader when accessibility is
+  active (Stage 19B, option A); inactive mode keeps the original popups.
+  Reassess the actual NVDA experience after the exercised
+  controls are accessible, including interruption, repetition, and speech from
+  another tile with the same lesson trap (the original trap is removed).
+- Recheck every lesson trigger, map route, continuation instruction, and required
+  action against the then-current game.  Update the inventory if upstream data
+  or integration points have changed.
+- Confirm that both C++ and EOC lessons expand keybinding tags and that their
+  spoken instructions match the current controls.  Correct misleading tutorial
+  data or accessibility gaps found during the full walkthrough.
+- If a new player-facing lesson interaction is needed, present three distinct
+  designs and record the selected behavior here before changing code.
+
+**Initial assessment:** The current data has 35 C++ snippet texts, of which 33
+have a trigger, and 14 EOC popup lessons on the tutorial map.  One additional
+trap sets pain without showing a lesson.  Several exercises rely on Stages
+06/06A, 08–12, and 13.  The bat pickup near the start depends on Stage 09.
+
+**Success criteria:** The entire tutorial route and every required exercise can
+be completed without a mouse or visual cues.  Lesson text, current instructions,
+feedback, and exit/save warnings are spoken accurately; interrupted information
+can be recovered; repeated triggers do not flood speech; and no lesson relies
+on a control or visual detail that remains inaccessible.  The final exercise
+and return to the main menu are verified.
+
+**Possible automated tests:** Use fixed lessons and map fixtures to capture
+launch, C++ and EOC delivery, keybinding substitution, repeat triggers,
+interruption recovery, transitions, completion, save/exit warning, and menu
+return.  Check that every referenced action and tutorial trap exists.
+
+**User-test scenarios:** A blind NVDA user plays the full tutorial from
+launch through the final room, completes every required exercise, checks both
+lesson sources and continuation guidance, deliberately interrupts speech and
+recovers the instructions, saves/exits, and confirms the menu return.  Record
+the tested Windows, NVDA, and fork versions and any remaining limitations.
 
 ## Stage 23 - Windows packaging and playable-release acceptance
 

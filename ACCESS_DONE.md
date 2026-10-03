@@ -1729,7 +1729,7 @@ Limitations:
     aiming change.
   - P1-3 also fixes review §8: speech states and the visual colors now come
     from one call with the selected batch size.
-- The rest of review 02 is Stage 22B in `ACCESS_TODO.md`; that stage does not
+- The rest of review 02 is Stage 21B in `ACCESS_TODO.md`; that stage does not
   need the review file.
 - `test_access.bat` passed 2261 assertions in 115 cases; the Windows x64
   tiles build and AStyle 3.1 checks passed.
