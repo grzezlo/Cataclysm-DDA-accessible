@@ -3,6 +3,7 @@
 #define CATA_SRC_ACCESSIBILITY_H
 
 #include <chrono>
+#include <cstdint>
 #include <functional>
 #include <memory>
 #include <optional>
@@ -140,13 +141,35 @@ void note_travel_started();
 /** Return and clear whether announced auto-travel is in progress. */
 bool take_travel_in_progress();
 bool travel_in_progress();
+/** Identity of a visible threat, compared between turns without building text. */
+struct threat_identity {
+    /** Caller-defined category, for example NPC or monster. */
+    int kind = 0;
+    /** A stable id or the object address. */
+    std::uintptr_t object = 0;
+    /** Tells apart objects that may reuse an address, such as by monster type. */
+    std::uintptr_t type = 0;
+
+    bool operator==( const threat_identity &rhs ) const {
+        return kind == rhs.kind && object == rhs.object && type == rhs.type;
+    }
+    bool operator<( const threat_identity &rhs ) const {
+        if( kind != rhs.kind ) {
+            return kind < rhs.kind;
+        }
+        if( object != rhs.object ) {
+            return object < rhs.object;
+        }
+        return type < rhs.type;
+    }
+};
 /**
  * Update visible-threat state and return an announcement only when the set of
  * threats changed.  `describe` is called only when an announcement is needed.
  */
-std::optional<std::string> evaluate_threat_transition(
-    const std::vector<std::string> &threat_ids, const std::function<std::string()> &describe );
-bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message );
+std::optional<std::string> evaluate_threat_transition( std::vector<threat_identity> threats,
+        const std::function<std::string()> &describe );
+bool announce_threats( std::vector<threat_identity> threats, const std::string &message );
 bool announce_semantic_sequence( const std::vector<std::string> &parts );
 struct nearby_list_entry;
 bool announce_nearby_list_focus( const nearby_list_entry &entry,
@@ -163,6 +186,13 @@ void set_last_announcement( const std::string &message );
 struct condition_tracker;
 /** Evaluate transitions against the process-wide gameplay tracker. */
 std::vector<std::string> evaluate_condition_transitions( const condition_tracker &current );
+/**
+ * Like evaluate_condition_transitions(), but build the current state only when
+ * `inputs`, every raw value the state is derived from, changed since the last
+ * evaluation.
+ */
+std::vector<std::string> evaluate_condition_transitions( const std::vector<int64_t> &inputs,
+        const std::function<condition_tracker()> &make_current );
 /** Check against the global condition tracker and announce any urgent transitions. */
 bool check_and_announce_condition_transitions( const condition_tracker &current );
 /** Reset the global condition tracker (e.g. at game start or between tests). */

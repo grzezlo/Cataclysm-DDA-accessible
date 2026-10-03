@@ -217,6 +217,13 @@ TEST_CASE( "accessibility_benchmark_turn_alerts_with_visible_threats",
                 accessibility_gameplay::announce_turn_alerts( here, you, threats );
                 return accessibility::flush_gameplay_announcements();
             };
+            accessibility_gameplay::announce_turn_alerts( here, you, {} );
+            accessibility::flush_gameplay_announcements();
+            BENCHMARK( "no threats, unchanged conditions, twice per turn" ) {
+                accessibility_gameplay::announce_turn_alerts( here, you, {} );
+                accessibility_gameplay::announce_turn_alerts( here, you, {} );
+                return accessibility::flush_gameplay_announcements();
+            };
         }
     }
 }

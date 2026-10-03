@@ -135,6 +135,8 @@ std::pair<std::string, nc_color> weary_malus_text_color( const Character &u );
 std::pair<std::string, nc_color> activity_text_color( const Character &u );
 std::pair<std::string, nc_color> thirst_text_color( const Character &u );
 std::pair<std::string, nc_color> hunger_text_color( const Character &u );
+// Index of the hunger state hunger_text_color() shows, or -1 without hunger or state
+int hunger_state_index( const Character &u );
 std::pair<std::string, nc_color> weight_text_color( const Character &u );
 std::pair<std::string, nc_color> health_text_color( const Character &u );
 std::pair<std::string, nc_color> sleepiness_text_color( const Character &u );

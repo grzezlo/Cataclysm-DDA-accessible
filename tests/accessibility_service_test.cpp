@@ -15,6 +15,14 @@
 // Expected speech strings mirror the spoken output, which uses single spaces after sentences.
 // NOLINTBEGIN(cata-text-style)
 
+namespace
+{
+
+const accessibility::threat_identity first_monster{ 1, 1, 0 };
+const accessibility::threat_identity second_monster{ 1, 2, 0 };
+
+} // namespace
+
 TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessibility][nogame]" )
 {
     auto capture = std::make_unique<capture_backend>();
@@ -43,11 +51,12 @@ TEST_CASE( "accessibility_announcements_can_be_captured_and_repeated", "[accessi
     // Routine movement speech never replaces the repeat-last message.
     CHECK( accessibility::last_announcement() == "You hear a noise." );
     CHECK_FALSE( accessibility::announce_threats( {}, "No nearby threats." ) );
-    CHECK( accessibility::announce_threats( { "monster-1" },
+    CHECK( accessibility::announce_threats( { first_monster },
                                             "Nearby threats: zombie, 5 tiles north." ) );
-    CHECK_FALSE( accessibility::announce_threats( { "monster-1" }, "This must be deduplicated." ) );
-    CHECK( accessibility::announce_threats( { "monster-2" }, "A new nearby threat." ) );
-    CHECK_FALSE( accessibility::announce_threats( { "monster-2" }, "This must be deduplicated too." ) );
+    CHECK_FALSE( accessibility::announce_threats( { first_monster }, "This must be deduplicated." ) );
+    CHECK( accessibility::announce_threats( { second_monster }, "A new nearby threat." ) );
+    CHECK_FALSE( accessibility::announce_threats( { second_monster },
+                 "This must be deduplicated too." ) );
     CHECK( accessibility::announce_threats( {}, "No nearby threats." ) );
     CHECK( accessibility::last_announcement() == "No nearby threats." );
     REQUIRE( accessibility::repeat_last_announcement() );
@@ -280,10 +289,10 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
     CHECK( accessibility::evaluate_condition_transitions( normal ).empty() );
 
     const std::optional<std::string> threat = accessibility::evaluate_threat_transition(
-    { "monster-1" }, describe( "Zombie spotted!" ) );
+    { first_monster }, describe( "Zombie spotted!" ) );
     REQUIRE( threat );
     CHECK( descriptions_built == 1 );
-    CHECK_FALSE( accessibility::evaluate_threat_transition( { "monster-1" },
+    CHECK_FALSE( accessibility::evaluate_threat_transition( { first_monster },
                  describe( "Unchanged threats are not described" ) ) );
     CHECK( descriptions_built == 1 );
 
@@ -301,10 +310,43 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
 
     accessibility::reset_game_state();
     CHECK( accessibility::evaluate_condition_transitions( hungry ).empty() );
-    CHECK( accessibility::evaluate_threat_transition( { "monster-1" },
+    CHECK( accessibility::evaluate_threat_transition( { first_monster },
             describe( "Zombie spotted!" ) ) );
 
     accessibility::reset_backend_after_testing();
+}
+
+TEST_CASE( "condition_state_is_built_only_when_its_raw_inputs_change", "[accessibility][nogame]" )
+{
+    accessibility::reset_condition_tracker();
+    int built = 0;
+    accessibility::condition_tracker state;
+    state.hunger_tier = "Satisfied";
+    const auto make_state = [&]() {
+        ++built;
+        return state;
+    };
+
+    CHECK( accessibility::evaluate_condition_transitions( { 1, 2 }, make_state ).empty() );
+    CHECK( built == 1 );
+    CHECK( accessibility::evaluate_condition_transitions( { 1, 2 }, make_state ).empty() );
+    CHECK( built == 1 );
+
+    state.hunger_tier = "Hungry";
+    const std::vector<std::string> alerts = accessibility::evaluate_condition_transitions( { 1, 3 },
+                                            make_state );
+    CHECK( built == 2 );
+    REQUIRE( alerts.size() == 1 );
+    CHECK( alerts[0] == "Hunger: Hungry." );
+
+    // A state set without inputs, and a reset, make the next inputs unknown.
+    CHECK( accessibility::evaluate_condition_transitions( state ).empty() );
+    CHECK( accessibility::evaluate_condition_transitions( { 1, 3 }, make_state ).empty() );
+    CHECK( built == 3 );
+    accessibility::reset_condition_tracker();
+    CHECK( accessibility::evaluate_condition_transitions( { 1, 3 }, make_state ).empty() );
+    CHECK( built == 4 );
+    accessibility::reset_condition_tracker();
 }
 
 TEST_CASE( "screen_reader_mode_controls_speech_and_latches_detection", "[accessibility][nogame]" )

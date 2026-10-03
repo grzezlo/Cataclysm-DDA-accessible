@@ -72,6 +72,7 @@
 #include "scenario.h"
 #include "string_formatter.h"
 #include "tileray.h"
+#include "translation_cache.h"
 #include "translations.h"
 #include "trap.h"
 #include "ui_iteminfo.h"
@@ -87,6 +88,7 @@ static const ammotype ammo_battery( "battery" );
 static const efftype_id effect_bite( "bite" );
 static const efftype_id effect_bleed( "bleed" );
 static const efftype_id effect_blind( "blind" );
+static const efftype_id effect_got_checked( "got_checked" );
 static const efftype_id effect_infected( "infected" );
 static const efftype_id effect_sleep( "sleep" );
 
@@ -656,44 +658,66 @@ std::string semantic_env_temp_text( const Character &who )
 
 std::vector<std::string> condition_transitions( const Character &who )
 {
-    accessibility::condition_tracker current;
-    current.hunger_tier = semantic_hunger_text( who );
-    current.thirst_tier = semantic_thirst_text( who );
-    current.sleepiness_tier = semantic_sleepiness_text( who );
-    current.pain_tier = semantic_pain_text( who );
-    current.weariness_tier = display::weariness_text_color( who ).first;
-
     const int stam_max = who.get_stamina_max();
-    current.stamina_critical = stam_max > 0 && who.get_stamina() <= ( stam_max / 4 );
-
+    const bool stamina_critical = stam_max > 0 && who.get_stamina() <= ( stam_max / 4 );
     const limb_conditions limbs = collect_limb_conditions( who );
-    current.bleeding_limbs = limb_names( limbs.bleeding );
-    current.broken_limbs = limb_names( limbs.broken );
 
-    return accessibility::evaluate_condition_transitions( current );
+    // Every input of the texts below, so that an unchanged turn builds none of them.
+    std::vector<int64_t> inputs = {
+        detail::get_current_language_version(),
+        who.needs_food() ? 1 : 0,
+        display::hunger_state_index( who ),
+        who.get_instant_thirst(),
+        who.get_sleepiness(),
+        who.get_perceived_pain(),
+        who.has_effect( effect_got_checked ) ? 1 : 0,
+        static_cast<int64_t>( who.weariness_level() ),
+        stamina_critical ? 1 : 0,
+        static_cast<int64_t>( limbs.bleeding.size() )
+    };
+    for( const bodypart_id &bp : limbs.bleeding ) {
+        inputs.push_back( bp.to_i() );
+    }
+    for( const bodypart_id &bp : limbs.broken ) {
+        inputs.push_back( bp.to_i() );
+    }
+
+    return accessibility::evaluate_condition_transitions( inputs, [&]() {
+        accessibility::condition_tracker current;
+        current.hunger_tier = semantic_hunger_text( who );
+        current.thirst_tier = semantic_thirst_text( who );
+        current.sleepiness_tier = semantic_sleepiness_text( who );
+        current.pain_tier = semantic_pain_text( who );
+        current.weariness_tier = display::weariness_text_color( who ).first;
+        current.stamina_critical = stamina_critical;
+        current.bleeding_limbs = limb_names( limbs.bleeding );
+        current.broken_limbs = limb_names( limbs.broken );
+        return current;
+    } );
 }
 
-/**
- * Identify a threat by object identity.  Creature tracker indices shift when an
- * unrelated monster is removed, so they would cause false "spotted" repeats.
- */
 std::string creature_name( const Creature &creature )
 {
     const monster *const mon = dynamic_cast<const monster *>( &creature );
     return mon != nullptr ? mon->name() : creature.disp_name();
 }
 
-std::string threat_id( const Creature &threat )
+/**
+ * Identify a threat by object identity.  Creature tracker indices shift when an
+ * unrelated monster is removed, so they would cause false "spotted" repeats.
+ */
+accessibility::threat_identity threat_id( const Creature &threat )
 {
+    enum threat_kind : int { npc_threat, monster_threat, creature_threat };
     if( const npc *person = dynamic_cast<const npc *>( &threat ) ) {
-        return string_format( "npc:%d", person->getID().get_value() );
+        return { npc_threat, static_cast<std::uintptr_t>( person->getID().get_value() ), 0 };
     }
     // A new monster may reuse the address of a dead one; its type usually differs.
-    const std::string address = std::to_string( reinterpret_cast<std::uintptr_t>( &threat ) );
+    const std::uintptr_t address = reinterpret_cast<std::uintptr_t>( &threat );
     if( const monster *mon = threat.as_monster() ) {
-        return "monster:" + mon->type->id.str() + ":" + address;
+        return { monster_threat, address, reinterpret_cast<std::uintptr_t>( mon->type ) };
     }
-    return "creature:" + address;
+    return { creature_threat, address, 0 };
 }
 
 std::string list_footer( const input_context &ctxt, const bool detail_view )
@@ -1162,7 +1186,7 @@ void announce_turn_alerts( const map &here, const Character &viewer,
         return;
     }
 
-    std::vector<std::string> threat_ids;
+    std::vector<accessibility::threat_identity> threat_ids;
     threat_ids.reserve( threats.size() );
     for( const Creature *threat : threats ) {
         threat_ids.push_back( threat_id( *threat ) );
@@ -1194,7 +1218,7 @@ void announce_turn_alerts( const map &here, const Character &viewer,
 
     std::vector<std::string> alerts;
     if( const std::optional<std::string> threat_transition =
-            accessibility::evaluate_threat_transition( threat_ids, describe ) ) {
+            accessibility::evaluate_threat_transition( std::move( threat_ids ), describe ) ) {
         alerts.push_back( *threat_transition );
     }
     const std::vector<std::string> condition_alerts = condition_transitions( viewer );

@@ -584,18 +584,16 @@ std::pair<std::string, nc_color> display::thirst_text_color( const Character &u 
     return std::make_pair( _( hydration_string ), hydration_color );
 }
 
-std::pair<std::string, nc_color> display::hunger_text_color( const Character &u )
+using hunger_state = std::tuple<const efftype_id &, const char *, nc_color>;
+
+static const std::array<hunger_state, 9> &hunger_states()
 {
-    // NPCs who do not need food have no hunger
-    if( !u.needs_food() ) {
-        return std::make_pair( _( "Without Hunger" ), c_white );
-    }
     // clang 3.8 has some sort of issue where if the initializer list contains const arguments,
     // like all of the effect_* string_id variables which are const string_id, then it fails to
     // initialize the array with tuples successfully complaining that
     // "chosen constructor is explicit in copy-initialization". Using std::forward_as_tuple
     // returns a tuple consisting of correctly implcitly copyable types.
-    static const std::array<std::tuple<const efftype_id &, const char *, nc_color>, 9> hunger_states{ {
+    static const std::array<hunger_state, 9> states{ {
             std::forward_as_tuple( effect_hunger_engorged, translate_marker( "Engorged" ), c_red ),
             std::forward_as_tuple( effect_hunger_full, translate_marker( "Full" ), c_yellow ),
             std::forward_as_tuple( effect_hunger_satisfied, translate_marker( "Satisfied" ), c_green ),
@@ -607,10 +605,33 @@ std::pair<std::string, nc_color> display::hunger_text_color( const Character &u 
             std::forward_as_tuple( effect_hunger_famished, translate_marker( "Famished" ), c_light_red )
         }
     };
-    for( const auto &hunger_state : hunger_states ) {
-        if( u.has_effect( std::get<0>( hunger_state ) ) ) {
-            return std::make_pair( _( std::get<1>( hunger_state ) ), std::get<2>( hunger_state ) );
+    return states;
+}
+
+int display::hunger_state_index( const Character &u )
+{
+    if( !u.needs_food() ) {
+        return -1;
+    }
+    const std::array<hunger_state, 9> &states = hunger_states();
+    for( size_t index = 0; index < states.size(); ++index ) {
+        if( u.has_effect( std::get<0>( states[index] ) ) ) {
+            return static_cast<int>( index );
         }
+    }
+    return -1;
+}
+
+std::pair<std::string, nc_color> display::hunger_text_color( const Character &u )
+{
+    // NPCs who do not need food have no hunger
+    if( !u.needs_food() ) {
+        return std::make_pair( _( "Without Hunger" ), c_white );
+    }
+    const int index = hunger_state_index( u );
+    if( index >= 0 ) {
+        const hunger_state &state = hunger_states()[index];
+        return std::make_pair( _( std::get<1>( state ) ), std::get<2>( state ) );
     }
     return std::make_pair( _( "ERROR!" ), c_light_red );
 }

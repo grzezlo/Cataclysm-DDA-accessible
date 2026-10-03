@@ -5,7 +5,6 @@
 #include <cstdint>
 #include <cstdlib>
 #include <memory>
-#include <set>
 #include <utility>
 
 #include "accessibility_format.h"
@@ -40,10 +39,13 @@ struct service_state {
     std::optional<std::chrono::steady_clock::time_point> last_probe;
     std::string last_message;
     bool game_messages_enabled = false;
-    std::set<std::string> previous_threats;
+    // Sorted and unique.
+    std::vector<threat_identity> previous_threats;
     bool threats_initialized = false;
     std::string previous_movement_direction;
     condition_tracker conditions;
+    // The raw inputs of `conditions`; empty when they are unknown.
+    std::vector<int64_t> condition_inputs;
     // Incremented for every key press; speech_generation records the press
     // after which something was last spoken.
     uint64_t input_generation = 0;
@@ -406,32 +408,33 @@ bool announce_movement( const std::string &direction, const std::string &tile )
     return !message.empty() && is_active();
 }
 
-std::optional<std::string> evaluate_threat_transition(
-    const std::vector<std::string> &threat_ids, const std::function<std::string()> &describe )
+std::optional<std::string> evaluate_threat_transition( std::vector<threat_identity> threats,
+        const std::function<std::string()> &describe )
 {
     service_state &current = state();
     if( !current.game_messages_enabled ) {
         return std::nullopt;
     }
 
-    std::set<std::string> current_threats( threat_ids.begin(), threat_ids.end() );
+    std::sort( threats.begin(), threats.end() );
+    threats.erase( std::unique( threats.begin(), threats.end() ), threats.end() );
     if( !current.threats_initialized ) {
         current.threats_initialized = true;
-        current.previous_threats = std::move( current_threats );
+        current.previous_threats = std::move( threats );
         return current.previous_threats.empty() ? std::nullopt :
                std::optional<std::string>( describe() );
     }
-    if( current_threats == current.previous_threats ) {
+    if( threats == current.previous_threats ) {
         return std::nullopt;
     }
 
-    current.previous_threats = std::move( current_threats );
+    current.previous_threats = std::move( threats );
     return describe();
 }
 
-bool announce_threats( const std::vector<std::string> &threat_ids, const std::string &message )
+bool announce_threats( std::vector<threat_identity> threats, const std::string &message )
 {
-    const std::optional<std::string> transition = evaluate_threat_transition( threat_ids,
+    const std::optional<std::string> transition = evaluate_threat_transition( std::move( threats ),
     [&message]() {
         return message;
     } );
@@ -525,12 +528,28 @@ bool game_messages_enabled()
 
 std::vector<std::string> evaluate_condition_transitions( const condition_tracker &current )
 {
+    state().condition_inputs.clear();
     return evaluate_condition_transitions( state().conditions, current );
+}
+
+std::vector<std::string> evaluate_condition_transitions( const std::vector<int64_t> &inputs,
+        const std::function<condition_tracker()> &make_current )
+{
+    service_state &current = state();
+    if( current.conditions.initialized && !inputs.empty() && inputs == current.condition_inputs ) {
+        // The same inputs give the same state, which has no transitions.
+        return {};
+    }
+    std::vector<std::string> alerts = evaluate_condition_transitions( current.conditions,
+                                      make_current() );
+    current.condition_inputs = inputs;
+    return alerts;
 }
 
 void reset_condition_tracker()
 {
     state().conditions = condition_tracker{};
+    state().condition_inputs.clear();
 }
 
 bool check_and_announce_condition_transitions( const condition_tracker &current )
