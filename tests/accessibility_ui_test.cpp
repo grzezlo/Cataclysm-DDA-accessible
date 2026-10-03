@@ -1351,6 +1351,8 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
                 soldering_iron.get_component_filter(), 1, true );
     REQUIRE( groups.size() == 7 );
     CHECK( accessibility::count_missing_requirement_groups( groups ) == 7 );
+    CHECK( accessibility_gameplay::missing_requirement_groups( soldering_iron.simple_requirements(),
+            you.crafting_inventory(), soldering_iron.get_component_filter(), 1 ) == 7 );
     std::vector<std::string> lines;
     lines.reserve( groups.size() );
     for( const accessibility::requirement_group &group : groups ) {
@@ -1370,6 +1372,8 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
              you.crafting_inventory(), soldering_iron.get_component_filter(), 1, true );
     REQUIRE( groups.size() == 7 );
     CHECK( accessibility::count_missing_requirement_groups( groups ) == 5 );
+    CHECK( accessibility_gameplay::missing_requirement_groups( soldering_iron.simple_requirements(),
+            you.crafting_inventory(), soldering_iron.get_component_filter(), 1 ) == 5 );
     // Available alternatives are listed first.
     CHECK( accessibility::format_requirement_group( groups[2] ) ==
            "Components: 2 electronic scraps (have 2), have; or 1 glow plug, missing." );
@@ -1380,6 +1384,9 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
              you.crafting_inventory(), soldering_iron.get_component_filter(), 2, true );
     CHECK( accessibility::format_requirement_group( groups[4] ) ==
            "Components: 2 scrap metal (have 1), missing." );
+    CHECK( accessibility_gameplay::missing_requirement_groups( soldering_iron.simple_requirements(),
+            you.crafting_inventory(), soldering_iron.get_component_filter(), 2 ) ==
+           accessibility::count_missing_requirement_groups( groups ) );
     CHECK( recipe_accessibility_row( soldering_iron, you, 2 ).rfind( "Batch size 2, ", 0 ) == 0 );
 
     const std::vector<std::string> details = recipe_accessibility_details( soldering_iron, you );

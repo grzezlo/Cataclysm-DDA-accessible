@@ -91,6 +91,8 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
 
 /** Join parts into sentences, skipping empty parts and adding missing sentence ends. */
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
+/** format_semantic_sequence() over views, for callers that do not own the parts. */
+std::string format_semantic_sequence_of_views( const std::vector<std::string_view> &parts );
 
 /**
  * "Top" when a move toward the end wrapped to the start, "Bottom" when a move

@@ -487,19 +487,26 @@ static std::string construction_accessibility_row( const construction_group_str_
     const std::vector<construction *> variants = constructions_by_group( group );
     bool has_buildable_variant = false;
     bool has_usable_variant = false;
-    bool has_matching_skill = false;
     for( const construction *con : variants ) {
-        has_matching_skill |= you.meets_skill_requirements( *con );
         if( player_can_build( you, inv, *con, true ) ) {
             has_usable_variant = true;
-            has_buildable_variant |= can_construct( *con );
+            if( can_construct( *con ) ) {
+                has_buildable_variant = true;
+                break;
+            }
         }
     }
-    const bool visible = player_can_see_to_build( you, group );
     std::string reason;
-    if( has_buildable_variant && !visible ) {
-        reason = _( "too dark" );
-    } else if( !has_buildable_variant ) {
+    if( has_buildable_variant ) {
+        if( !player_can_see_to_build( you, group ) ) {
+            reason = _( "too dark" );
+        }
+    } else {
+        // Only an unavailable group needs the reason.
+        const bool has_matching_skill = std::any_of( variants.begin(), variants.end(),
+        [&you]( const construction * con ) {
+            return you.meets_skill_requirements( *con );
+        } );
         if( !has_matching_skill && !you.has_trait( trait_DEBUG_HS ) ) {
             reason = _( "missing skills" );
         } else if( !has_usable_variant ) {

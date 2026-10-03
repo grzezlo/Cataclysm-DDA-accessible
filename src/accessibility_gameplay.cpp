@@ -547,24 +547,26 @@ visibility_type tile_visibility( map &here, const tripoint_bub_ms &position,
     return here.get_visibility( here.apparent_light_at( position, cache ), cache );
 }
 
-bool is_terrain_hazard( const map &here, const tripoint_bub_ms &position )
+bool is_terrain_hazard( const ter_t &ter )
 {
-    return here.has_flag_ter( ter_furn_flag::TFLAG_DEEP_WATER, position ) ||
-           here.has_flag_ter( ter_furn_flag::TFLAG_ROUGH, position ) ||
-           here.has_flag_ter( ter_furn_flag::TFLAG_SHARP, position ) ||
-           here.has_flag_ter( ter_furn_flag::TFLAG_UNSTABLE, position ) ||
-           here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, position ) ||
-           here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR_WATER, position );
+    return ter.has_flag( ter_furn_flag::TFLAG_DEEP_WATER ) ||
+           ter.has_flag( ter_furn_flag::TFLAG_ROUGH ) ||
+           ter.has_flag( ter_furn_flag::TFLAG_SHARP ) ||
+           ter.has_flag( ter_furn_flag::TFLAG_UNSTABLE ) ||
+           ter.has_flag( ter_furn_flag::TFLAG_NO_FLOOR ) ||
+           ter.has_flag( ter_furn_flag::TFLAG_NO_FLOOR_WATER );
 }
 
+/** Tile description from the terrain and furniture of `position`, fetched by the caller. */
 semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
-        const tripoint_bub_ms &position, const bool include_terrain )
+        const tripoint_bub_ms &position, const bool include_terrain, const ter_t &ter,
+        const furn_t &furn )
 {
     semantic_tile_info result;
     if( include_terrain ) {
         result.terrain = string_format( _( "Terrain: %s" ), here.tername( position ) );
     }
-    if( here.has_furn( position ) ) {
+    if( !furn.id.is_null() ) {
         result.furniture = string_format( _( "Furniture: %s" ), here.furnname( position ) );
     }
 
@@ -588,7 +590,7 @@ semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
         }
     }
 
-    if( is_terrain_hazard( here, position ) ) {
+    if( is_terrain_hazard( ter ) ) {
         const std::string terrain_hazard = string_format( _( "Hazard: %s" ), here.tername( position ) );
         result.fields_and_hazards.push_back( terrain_hazard );
         result.hazards.push_back( terrain_hazard );
@@ -791,6 +793,13 @@ std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bu
                           distance, direction );
 }
 
+semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
+        const tripoint_bub_ms &position, const bool include_terrain )
+{
+    return collect_semantic_tile_info( here, viewer, position, include_terrain,
+                                       here.ter( position ).obj(), here.furn( position ).obj() );
+}
+
 std::vector<std::string> look_parts( map &here, const avatar &viewer,
                                      const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
                                      const visibility_variables &cache )
@@ -928,22 +937,29 @@ void situation_review( map &here, const avatar &viewer )
             continue;
         }
 
-        const bool is_exit = here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_DOOR, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_UP, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_GOES_DOWN, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_UP, position ) ||
-                             here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_RAMP_DOWN, position );
+        // Fetch the terrain and furniture once for all their flag tests.
+        const ter_t &ter = here.ter( position ).obj();
+        const furn_t &furn = here.furn( position ).obj();
+        const auto ter_or_furn_flag = [&ter, &furn]( const ter_furn_flag flag ) {
+            return ter.has_flag( flag ) || furn.has_flag( flag );
+        };
+        const bool is_exit = ter_or_furn_flag( ter_furn_flag::TFLAG_DOOR ) ||
+                             ter_or_furn_flag( ter_furn_flag::TFLAG_GOES_UP ) ||
+                             ter_or_furn_flag( ter_furn_flag::TFLAG_GOES_DOWN ) ||
+                             ter_or_furn_flag( ter_furn_flag::TFLAG_RAMP_UP ) ||
+                             ter_or_furn_flag( ter_furn_flag::TFLAG_RAMP_DOWN );
         const bool is_obstacle = here.impassable( position );
         // Most visible tiles are plain floor; skip them before building any text.
-        const bool may_describe = is_exit || is_obstacle || here.has_furn( position ) ||
+        const bool may_describe = is_exit || is_obstacle || !furn.id.is_null() ||
                                   here.has_items( position ) || here.field_at( position ).field_count() > 0 ||
-                                  !here.tr_at( position ).is_null() || is_terrain_hazard( here, position ) ||
+                                  !here.tr_at( position ).is_null() || is_terrain_hazard( ter ) ||
                                   get_creature_tracker().creature_at( position, true ) != nullptr;
         if( !may_describe ) {
             continue;
         }
 
-        const semantic_tile_info tile = collect_semantic_tile_info( here, viewer, position, false );
+        const semantic_tile_info tile = collect_semantic_tile_info( here, viewer, position, false, ter,
+                                        furn );
         for( const std::string &hazard : tile.hazards ) {
             add_situation_entry( region_entries, situation_entry_kind::hazard, origin, position,
                                  hazard );
@@ -954,7 +970,7 @@ void situation_review( map &here, const avatar &viewer )
         }
 
         if( is_exit || is_obstacle ) {
-            const std::string name = here.has_furn( position ) ? here.furnname( position ) :
+            const std::string name = !furn.id.is_null() ? here.furnname( position ) :
                                      here.tername( position );
             if( is_exit ) {
                 const std::string passability = is_obstacle ? _( "Impassable" ) : _( "Passable" );
@@ -1483,54 +1499,61 @@ std::string zones_manager_speech::details() const
 
 std::string zones_manager_speech::result( const std::string &action ) const
 {
-    const zone_data *zone = focused();
-    const std::string row = focus_row();
-    const std::string empty = accessibility::format_zones_manager_opening( 0, std::string() );
-    const std::string focus_or_empty = zone ? row : empty;
     if( action == "ACCESSIBILITY_STATUS" ) {
         return summary();
     }
     if( action == "ACCESSIBILITY_DETAILS" ) {
         return details();
     }
+    // Each action builds only the speech it needs.
+    const zone_data *zone = focused();
+    const auto row = [this]() {
+        return focus_row();
+    };
+    const auto empty = []() {
+        return accessibility::format_zones_manager_opening( 0, std::string() );
+    };
+    const auto focus_or_empty = [&]() {
+        return zone ? row() : empty();
+    };
     if( action == "UP" || action == "SCROLL_UP" || action == "DOWN" || action == "SCROLL_DOWN" ||
         action == "PAGE_UP" || action == "PAGE_DOWN" || action == "HOME" || action == "END" ) {
         const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
                               action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
         return zone ? accessibility::format_semantic_sequence( {
-            accessibility::format_list_wrap( previous_index, index, direction ), row
-        } ) : empty;
+            accessibility::format_list_wrap( previous_index, index, direction ), row()
+        } ) : empty();
     }
     if( action == "ADD_ZONE" || action == "ADD_PERSONAL_ZONE" ) {
         if( zone && zones.size() > previous_count ) {
             const accessibility::zone_details size = zone_details( viewer, *zone, 0, 0 );
             return accessibility::format_semantic_sequence( {
-                accessibility::format_zone_size( size.width, size.height, size.levels ), row
+                accessibility::format_zone_size( size.width, size.height, size.levels ), row()
             } );
         }
-        return focus_or_empty;
+        return focus_or_empty();
     }
     if( action == "REMOVE_ZONE" ) {
         return had_focus && zones.size() < previous_count ?
-               accessibility::format_zone_removed( previous_name, row ) : focus_or_empty;
+               accessibility::format_zone_removed( previous_name, row() ) : focus_or_empty();
     }
     if( action == "MOVE_ZONE_UP" || action == "MOVE_ZONE_DOWN" ) {
         return zone ? accessibility::format_zone_moved( zone->get_name(),
-                static_cast<size_t>( index ) + 1, zones.size() ) : empty;
+                static_cast<size_t>( index ) + 1, zones.size() ) : empty();
     }
     if( action == "ENABLE_ZONE" || action == "DISABLE_ZONE" ) {
         return zone ? accessibility::format_zone_enabled( zone->get_name(),
-                zone->get_enabled() ) : empty;
+                zone->get_enabled() ) : empty();
     }
     if( action == "TOGGLE_ZONE_DISPLAY" ) {
         return zone ? accessibility::format_zone_displayed( zone->get_name(),
-                zone->get_is_displayed() ) : empty;
+                zone->get_is_displayed() ) : empty();
     }
     if( action == "ENABLE_PERSONAL_ZONES" || action == "DISABLE_PERSONAL_ZONES" ) {
         const size_t now = enabled_personal_zones();
         const size_t changed = now > previous_personal_enabled ? now - previous_personal_enabled :
                                previous_personal_enabled - now;
-        return zones.empty() ? empty : accessibility::format_personal_zones_changed(
+        return zones.empty() ? empty() : accessibility::format_personal_zones_changed(
                    action == "ENABLE_PERSONAL_ZONES", changed );
     }
     if( action == "SHOW_ALL_ZONES" || action == "CHANGE_FACTION" ) {
@@ -1538,11 +1561,11 @@ std::string zones_manager_speech::result( const std::string &action ) const
                                    //~ Faction whose zones the zones manager shows.
                                    string_format( _( "Faction: %s" ), faction.str() ) :
                                    accessibility::format_zone_filter( show_all );
-        return accessibility::format_zone_list_change( filter, zones.size(), row );
+        return accessibility::format_zone_list_change( filter, zones.size(), row() );
     }
     if( action == "CONFIRM" ) {
         if( !zone || !had_focus || index != previous_index ) {
-            return focus_or_empty;
+            return focus_or_empty();
         }
         const accessibility::zone_details now = zone_details( viewer, *zone, 0, 0 );
         const tripoint start = zone->get_start_point().raw();
@@ -1551,19 +1574,19 @@ std::string zones_manager_speech::result( const std::string &action ) const
             const bool resized = end - start != previous_end - previous_start;
             return accessibility::format_semantic_sequence( {
                 resized ? accessibility::format_zone_size( now.width, now.height, now.levels ) :
-                std::string( _( "Zone moved" ) ), row
+                std::string( _( "Zone moved" ) ), row()
             } );
         }
         if( zone->get_name() == previous_name && now.options != previous_options ) {
             return accessibility::format_semantic_sequence( {
-                row, accessibility::format_zone_options( now.options )
+                row(), accessibility::format_zone_options( now.options )
             } );
         }
-        return row;
+        return row();
     }
     if( action == "QUIT" || action == "SHOW_ZONE_ON_MAP" || action == "HELP_KEYBINDINGS" ) {
         // Focus returns to the list after a dialog, the map, or a canceled close.
-        return focus_or_empty;
+        return focus_or_empty();
     }
     return std::string();
 }
@@ -2342,6 +2365,31 @@ std::vector<accessibility::requirement_group> requirement_groups( const requirem
         return requirement_state::have;
     } );
     return groups;
+}
+
+size_t missing_requirement_groups( const requirement_data &req, const inventory &inv,
+                                   const std::function<bool( const item & )> &component_filter, const int batch )
+{
+    if( get_player_character().has_trait( trait_DEBUG_HS ) ) {
+        return 0;
+    }
+    req.can_make_with_inventory( inv, component_filter, batch );
+    // A group is met when one alternative is fully available; see requirement_groups().
+    size_t missing = 0;
+    const auto count = [&missing]( const auto & groups ) {
+        for( const auto &alternatives : groups ) {
+            if( !alternatives.empty() && std::none_of( alternatives.begin(), alternatives.end(),
+            []( const auto & alternative ) {
+            return alternative.available == available_status::a_true;
+        } ) ) {
+                ++missing;
+            }
+        }
+    };
+    count( req.get_qualities() );
+    count( req.get_tools() );
+    count( req.get_components() );
+    return missing;
 }
 
 std::vector<std::string> disassembly_details( const recipe &uncraft, const std::string &yield,

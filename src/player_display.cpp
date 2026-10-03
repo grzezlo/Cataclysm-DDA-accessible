@@ -1440,7 +1440,7 @@ class character_sheet_speech
                 case player_display_tab::stats:
                     return 9;
                 case player_display_tab::encumbrance:
-                    return list_and_combine_bps( you, nullptr ).size();
+                    return body_parts().size();
                 case player_display_tab::speed:
                     return speedlist.size();
                 case player_display_tab::skills:
@@ -1455,7 +1455,7 @@ class character_sheet_speech
                 case player_display_tab::effects:
                     return effect_name_and_text.size();
                 case player_display_tab::proficiencies:
-                    return you.display_proficiencies().size();
+                    return proficiencies().size();
                 case player_display_tab::num_tabs:
                     break;
             }
@@ -1508,8 +1508,7 @@ class character_sheet_speech
                         remove_color_tags( effect_name_and_text[line].first )
                     } );
                 case player_display_tab::proficiencies: {
-                    const std::vector<display_proficiency> profs = you.display_proficiencies();
-                    const display_proficiency &cur = profs[line];
+                    const display_proficiency &cur = proficiencies()[line];
                     return accessibility::format_proficiency_row( cur.id->name(), cur.known,
                             !cur.known && cur.id->can_learn(), static_cast<int>( std::floor( cur.practice * 100 ) ) );
                 }
@@ -1568,7 +1567,7 @@ class character_sheet_speech
                     info = stats_info_paragraphs( you, line );
                     break;
                 case player_display_tab::encumbrance:
-                    info = get_encumbrance_description( you, list_and_combine_bps( you, nullptr )[line].first );
+                    info = get_encumbrance_description( you, body_parts()[line].first );
                     break;
                 case player_display_tab::speed:
                     info = speed_info_lines( speedlist[line] );
@@ -1588,7 +1587,7 @@ class character_sheet_speech
                     info = { effect_name_and_text[line].second };
                     break;
                 case player_display_tab::proficiencies:
-                    info = { proficiency_info_text( you.display_proficiencies()[line] ) };
+                    info = { proficiency_info_text( proficiencies()[line] ) };
                     break;
                 case player_display_tab::num_tabs:
                     break;
@@ -1612,6 +1611,23 @@ class character_sheet_speech
         const std::vector<bionic_grouping> &bionicslist;
         const std::vector<std::pair<std::string, std::string>> &effect_name_and_text;
         const std::vector<HeaderSkill> &skillslist;
+        // Built on first use; the character does not change while the sheet is open.
+        mutable std::optional<std::vector<std::pair<bodypart_id, bool>>> body_parts_cache;
+        mutable std::optional<std::vector<display_proficiency>> proficiencies_cache;
+
+        const std::vector<std::pair<bodypart_id, bool>> &body_parts() const {
+            if( !body_parts_cache ) {
+                body_parts_cache = list_and_combine_bps( you, nullptr );
+            }
+            return *body_parts_cache;
+        }
+
+        const std::vector<display_proficiency> &proficiencies() const {
+            if( !proficiencies_cache ) {
+                proficiencies_cache = you.display_proficiencies();
+            }
+            return *proficiencies_cache;
+        }
 
         /** Visual line count, including skill category headings. */
         size_t count_lines( const player_display_tab tab ) const {
@@ -1661,7 +1677,7 @@ class character_sheet_speech
         }
 
         std::string encumbrance_row( const unsigned line, const bool detailed ) const {
-            const std::vector<std::pair<bodypart_id, bool>> bps = list_and_combine_bps( you, nullptr );
+            const std::vector<std::pair<bodypart_id, bool>> &bps = body_parts();
             return encumbrance_accessibility_row( you, bps[line].first, bps[line].second, detailed,
                                                   false );
         }

@@ -456,7 +456,11 @@ std::string format_list_position( const size_t position, const size_t count )
                           static_cast<int>( count ) );
 }
 
-std::string format_semantic_sequence( const std::vector<std::string> &parts )
+namespace
+{
+
+template<typename Parts>
+std::string join_semantic_sequence( const Parts &parts )
 {
     // Formatters call this many times per announcement; translate the
     // punctuation again only when the language changes.
@@ -477,7 +481,7 @@ std::string format_semantic_sequence( const std::vector<std::string> &parts )
     const std::string &terminator = cached.terminator;
     const std::string &separator = cached.separator;
     std::string result;
-    for( const std::string &part : parts ) {
+    for( const std::string_view part : parts ) {
         const std::string normalized = collapse_whitespace( part );
         if( normalized.empty() ) {
             continue;
@@ -494,6 +498,18 @@ std::string format_semantic_sequence( const std::vector<std::string> &parts )
         result += terminator;
     }
     return result;
+}
+
+} // namespace
+
+std::string format_semantic_sequence( const std::vector<std::string> &parts )
+{
+    return join_semantic_sequence( parts );
+}
+
+std::string format_semantic_sequence_of_views( const std::vector<std::string_view> &parts )
+{
+    return join_semantic_sequence( parts );
 }
 
 std::string format_world_row( const std::string &name, const size_t character_count )
@@ -1921,9 +1937,12 @@ std::vector<std::string> format_safemode_rule_values( const safemode_rule_row &r
     };
 }
 
-std::vector<std::string> format_safemode_rule_fields( const safemode_rule_row &row )
+namespace
 {
-    std::vector<std::string> fields = format_safemode_rule_values( row );
+
+/** Prefix the column labels to the values of format_safemode_rule_values(). */
+std::vector<std::string> label_safemode_rule_values( std::vector<std::string> fields )
+{
     const std::vector<std::string> labels {
         _( "Rule" ), _( "Attitude" ), _( "Distance" ), std::string(), _( "Category" ), _( "Mode" )
     };
@@ -1936,11 +1955,19 @@ std::vector<std::string> format_safemode_rule_fields( const safemode_rule_row &r
     return fields;
 }
 
+} // namespace
+
+std::vector<std::string> format_safemode_rule_fields( const safemode_rule_row &row )
+{
+    return label_safemode_rule_values( format_safemode_rule_values( row ) );
+}
+
 std::string format_safemode_rule_row( const safemode_rule_row &row )
 {
-    const std::vector<std::string> fields = format_safemode_rule_fields( row );
+    const std::vector<std::string> values = format_safemode_rule_values( row );
+    const std::vector<std::string> fields = label_safemode_rule_values( values );
     std::vector<std::string> parts {
-        format_safemode_rule_values( row )[0], fields[3], fields[4]
+        values[0], fields[3], fields[4]
     };
     if( safemode_rule_uses_attitude( row ) ) {
         parts.push_back( fields[1] );
@@ -2632,20 +2659,28 @@ std::string format_vehicle_part_condition( const bool broken, const int damage_p
     return std::string();
 }
 
-std::string format_vehicle_part_row( const vehicle_part_row &row )
+namespace
 {
-    std::vector<std::string> parts = { row.name, row.location,
+
+std::string format_vehicle_part( const vehicle_part_row &row, const std::string &location )
+{
+    std::vector<std::string> parts = { row.name, location,
                                        format_vehicle_part_condition( row.broken, row.damage_percent )
                                      };
     parts.insert( parts.end(), row.states.begin(), row.states.end() );
     return without_empty_joined( parts, _( ", " ) );
 }
 
+} // namespace
+
+std::string format_vehicle_part_row( const vehicle_part_row &row )
+{
+    return format_vehicle_part( row, row.location );
+}
+
 std::string format_vehicle_tile_part( const vehicle_part_row &row )
 {
-    vehicle_part_row without_location = row;
-    without_location.location.clear();
-    return format_vehicle_part_row( without_location );
+    return format_vehicle_part( row, std::string() );
 }
 
 std::string format_vehicle_tile( const std::string &location, const std::vector<std::string> &parts,

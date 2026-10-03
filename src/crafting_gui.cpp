@@ -1322,9 +1322,9 @@ static std::vector<accessibility::requirement_group> accessibility_requirements(
 
 /** Unmet requirement groups plus missing knowledge, proficiencies, and practice skills. */
 static size_t accessibility_missing( const recipe &recp, const availability &avail,
-                                     const std::vector<accessibility::requirement_group> &groups )
+                                     const size_t missing_groups )
 {
-    size_t missing = accessibility::count_missing_requirement_groups( groups );
+    size_t missing = missing_groups;
     if( !avail.crafter_has_primary_skill ) {
         ++missing;
     }
@@ -1353,7 +1353,8 @@ static accessibility::recipe_row accessibility_recipe_row( const recipe &recp,
     row.craftable = accessibility_craftable( avail );
     if( !row.craftable ) {
         row.missing = accessibility_missing( recp, avail,
-                                             accessibility_requirements( recp, avail, crafter, batch_size ) );
+                                             accessibility_gameplay::missing_requirement_groups( recp.simple_requirements(),
+                                                     availability_inventory( avail, crafter ), recp.get_component_filter(), batch_size ) );
     } else {
         // The states the list shows by color: yellow, brown, and pink.
         if( !avail.has_all_skills ) {

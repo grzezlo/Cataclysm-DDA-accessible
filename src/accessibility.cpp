@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <cstdlib>
 #include <memory>
+#include <string_view>
 #include <utility>
 
 #include "accessibility_format.h"
@@ -224,20 +225,22 @@ bool flush_gameplay_announcements()
         current.gameplay_queue.clear();
         return false;
     }
-    std::vector<std::string> all_parts;
-    std::vector<std::string> meaningful_parts;
+    // Format the queued texts in place before clearing the queue.
+    std::vector<std::string_view> all_parts;
+    std::vector<std::string_view> meaningful_parts;
     all_parts.reserve( current.gameplay_queue.size() );
-    for( service_state::queued_speech &entry : current.gameplay_queue ) {
+    for( const service_state::queued_speech &entry : current.gameplay_queue ) {
         if( entry.kind == gameplay_speech::meaningful ) {
             meaningful_parts.push_back( entry.text );
         }
-        all_parts.push_back( std::move( entry.text ) );
+        all_parts.push_back( entry.text );
     }
-    current.gameplay_queue.clear();
     if( !meaningful_parts.empty() ) {
-        current.last_message = format_semantic_sequence( meaningful_parts );
+        current.last_message = format_semantic_sequence_of_views( meaningful_parts );
     }
-    return speak( format_semantic_sequence( all_parts ), false );
+    const std::string speech = format_semantic_sequence_of_views( all_parts );
+    current.gameplay_queue.clear();
+    return speak( speech, false );
 }
 
 bool announce_game_message( const std::string &message )

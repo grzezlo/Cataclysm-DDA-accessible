@@ -316,6 +316,12 @@ std::vector<std::string> target_details( map &here, const avatar &viewer,
 std::vector<accessibility::requirement_group> requirement_groups( const requirement_data &req,
         const inventory &inv, const std::function<bool( const item & )> &component_filter,
         int batch, bool include_components );
+/**
+ * The number of requirement groups of `req`, with components, that
+ * requirement_groups() reports as unmet, without building their text.
+ */
+size_t missing_requirement_groups( const requirement_data &req, const inventory &inv,
+                                   const std::function<bool( const item & )> &component_filter, int batch );
 /** Disassembly detail lines: returned components, time, and required tools. */
 std::vector<std::string> disassembly_details( const recipe &uncraft, const std::string &yield,
         const std::string &time, const inventory &inv );
