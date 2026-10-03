@@ -104,9 +104,11 @@ void distraction_manager_gui::show()
             accessibility::format_list_position( currentLine + 1, number_of_distractions ), row()
         } );
     };
-    accessibility::announce( accessibility::format_semantic_sequence( {
-        string_format( _( "Distractions manager, %d items" ), number_of_distractions ), row()
-    } ) );
+    accessibility::announce_lazy( [&]() {
+        return accessibility::format_semantic_sequence( {
+            string_format( _( "Distractions manager, %d items" ), number_of_distractions ), row()
+        } );
+    } );
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         // Draw border
@@ -177,9 +179,11 @@ void distraction_manager_gui::show()
             if( currentLine != previous_line ) {
                 const int direction = action == "UP" || action == "PAGE_UP" ? -1 :
                                       action == "DOWN" || action == "PAGE_DOWN" ? 1 : 0;
-                accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_line, currentLine, direction ), row()
-                } ) );
+                accessibility::announce_lazy( [&]() {
+                    return accessibility::format_semantic_sequence( {
+                        accessibility::format_list_wrap( previous_line, currentLine, direction ), row()
+                    } );
+                } );
             }
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();

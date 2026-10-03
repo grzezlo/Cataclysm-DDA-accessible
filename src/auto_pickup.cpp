@@ -510,8 +510,10 @@ void user_interface::show()
             accessibility::format_list_change( change, tabs[iTab].new_rules.size() ), access_row()
         } );
     };
-    accessibility::announce( accessibility::format_list_open( access_screen(),
-                             tabs[iTab].new_rules.size(), access_row() ) );
+    accessibility::announce_lazy( [&]() {
+        return accessibility::format_list_open( access_screen(),
+                                                tabs[iTab].new_rules.size(), access_row() );
+    } );
 
     while( true ) {
         rule_list &cur_rules = tabs[iTab].new_rules;

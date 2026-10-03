@@ -329,6 +329,30 @@ TEST_CASE( "accessibility_urgent_events_are_combined_and_reset_between_games",
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "lazy_announcements_build_text_only_while_speaking", "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    int built = 0;
+    const auto make_text = [&built]() {
+        ++built;
+        return std::string( "Bionics" );
+    };
+
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::off );
+    CHECK_FALSE( accessibility::announce_lazy( make_text ) );
+    CHECK( built == 0 );
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::on );
+    CHECK( accessibility::announce_lazy( make_text ) );
+    CHECK( built == 1 );
+    REQUIRE( speech->messages.size() == 1 );
+    CHECK( speech->messages.back() == "Bionics" );
+}
+
 TEST_CASE( "condition_state_is_built_only_when_its_raw_inputs_change", "[accessibility][nogame]" )
 {
     accessibility::reset_condition_tracker();

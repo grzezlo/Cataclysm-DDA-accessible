@@ -2349,11 +2349,13 @@ void Character::disp_info( bool customize_character )
     const character_sheet_speech speech( *this, speedlist, move_cost, traitslist, bionicslist,
                                          effect_name_and_text, skillslist );
     const std::string identity = character_sheet_identity( *this, race );
-    accessibility::announce( accessibility::format_semantic_sequence( {
-        //~ Opening the character sheet; %s: character name
-        string_format( _( "Character sheet, %s" ), get_name() ),
-        speech.tab_announcement( player_display_tab::stats, 0 )
-    } ) );
+    accessibility::announce_lazy( [&]() {
+        return accessibility::format_semantic_sequence( {
+            //~ Opening the character sheet; %s: character name
+            string_format( _( "Character sheet, %s" ), get_name() ),
+            speech.tab_announcement( player_display_tab::stats, 0 )
+        } );
+    } );
 
     border_helper borders;
 

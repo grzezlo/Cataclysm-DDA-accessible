@@ -355,8 +355,10 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
     const std::vector<std::string> access_column_names {
         _( "Rule" ), _( "Attitude" ), _( "Distance" ), _( "Blacklist or whitelist" ), _( "Category" ), _( "Mode" )
     };
-    accessibility::announce( access_tab_open( accessibility::format_screen_page( custom_name_in,
-                             access_tab_name() ) ) );
+    accessibility::announce_lazy( [&]() {
+        return access_tab_open( accessibility::format_screen_page( custom_name_in,
+                                access_tab_name() ) );
+    } );
 
     while( true ) {
         auto &current_tab = tab == GLOBAL_TAB ? global_rules : character_rules;

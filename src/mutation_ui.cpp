@@ -640,6 +640,7 @@ void avatar::power_mutations()
         bool handled = false;
         const std::string action = ctxt.handle_input();
         const input_event evt = ctxt.get_raw_input();
+        const bool speaking = accessibility::is_active();
         // Screen reader speech for this key, spoken however the iteration ends.
         std::string speech;
         const on_out_of_scope speak_result( [&speech]() {
@@ -650,11 +651,13 @@ void avatar::power_mutations()
             accessibility::repeat_last_announcement();
             continue;
         } else if( action == "ACCESSIBILITY_STATUS" ) {
-            speech = mutation_accessibility_summary( *this, accessible_column(), tab_mode, cursor,
-                     menu_mode );
+            if( speaking ) {
+                speech = mutation_accessibility_summary( *this, accessible_column(), tab_mode, cursor,
+                         menu_mode );
+            }
             continue;
         } else if( action == "ACCESSIBILITY_DETAILS" ) {
-            if( accessibility::is_active() ) {
+            if( speaking ) {
                 std::optional<trait_id> detail_id = examine_id;
                 if( menu_mode != mutation_menu_mode::examining || !detail_id.has_value() ) {
                     detail_id = std::nullopt;
@@ -722,7 +725,9 @@ void avatar::power_mutations()
 
                         menu_mode = mutation_menu_mode::activating;
                         examine_id = std::nullopt;
-                        speech = accessible_reassigned( mut_id );
+                        if( speaking ) {
+                            speech = accessible_reassigned( mut_id );
+                        }
                         // TODO: show a message like when reassigning a key to an item?
                         break;
                     }
@@ -745,24 +750,32 @@ void avatar::power_mutations()
                                 exit = true;
                             } else {
                                 popup( _( "You don't have enough in you to activate your %s!" ), mutation_name( mut_data.id ) );
-                                speech = accessible_focus();
+                                if( speaking ) {
+                                    speech = accessible_focus();
+                                }
                             }
                         } else {
                             popup( _( "You cannot activate %1$s!  To read a description of "
                                       "%1$s, press '%2$s', then '%3$c'." ),
                                    mutation_name( mut_data.id ), ctxt.get_desc( "TOGGLE_EXAMINE" ), cached_mutations[mut_id].key );
-                            speech = accessible_focus();
+                            if( speaking ) {
+                                speech = accessible_focus();
+                            }
                         }
                         break;
                     }
                     case mutation_menu_mode::examining:
                         // Describing mutations, not activating them!
                         examine_id = mut_id;
-                        speech = mutation_accessibility_row( *this, mut_id );
+                        if( speaking ) {
+                            speech = mutation_accessibility_row( *this, mut_id );
+                        }
                         break;
                     case mutation_menu_mode::hiding:
                         cached_mutations[mut_id].show_sprite = !cached_mutations[mut_id].show_sprite;
-                        speech = accessible_sprite( mut_id );
+                        if( speaking ) {
+                            speech = accessible_sprite( mut_id );
+                        }
                         break;
                 }
                 handled = true;
@@ -802,9 +815,11 @@ void avatar::power_mutations()
 
                 // Draw the description, shabby workaround
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
-                speech = accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
-                } );
+                if( speaking ) {
+                    speech = accessibility::format_semantic_sequence( {
+                        accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
+                    } );
+                }
 
             } else if( action == "UP" ) {
 
@@ -833,9 +848,11 @@ void avatar::power_mutations()
                 examine_pos = 0;
 
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
-                speech = accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
-                } );
+                if( speaking ) {
+                    speech = accessibility::format_semantic_sequence( {
+                        accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
+                    } );
+                }
             } else if( ( action == "SCROLL_TRAIT_INFO_UP" || action == "SCROLL_TRAIT_INFO_DOWN" ) &&
                        menu_mode == mutation_menu_mode::examining ) {
                 examine_pos += action == "SCROLL_TRAIT_INFO_UP" ? -1 : 1;
@@ -846,14 +863,18 @@ void avatar::power_mutations()
                     tab_mode = mutation_tab_mode::active;
                 } else {
                     // Nothing to switch to; the column stays.
-                    speech = accessible_tab();
+                    if( speaking ) {
+                        speech = accessible_tab();
+                    }
                     continue;
                 }
                 scroll_position = 0;
                 examine_pos = 0;
                 cursor = 0;
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
-                speech = accessible_tab();
+                if( speaking ) {
+                    speech = accessible_tab();
+                }
             } else if( action == "CONFIRM" ) {
                 trait_id mut_id;
                 if( tab_mode == mutation_tab_mode::active ) {
@@ -908,7 +929,9 @@ void avatar::power_mutations()
 
                             menu_mode = mutation_menu_mode::activating;
                             examine_id = std::nullopt;
-                            speech = accessible_reassigned( mut_id );
+                            if( speaking ) {
+                                speech = accessible_reassigned( mut_id );
+                            }
                             // TODO: show a message like when reassigning a key to an item?
                             break;
                         }
@@ -931,31 +954,41 @@ void avatar::power_mutations()
                                     exit = true;
                                 } else {
                                     popup( _( "You don't have enough in you to activate your %s!" ), mutation_name( mut_data.id ) );
-                                    speech = accessible_focus();
+                                    if( speaking ) {
+                                        speech = accessible_focus();
+                                    }
                                 }
                             } else {
                                 popup( _( "You cannot activate %1$s!  To read a description of "
                                           "%1$s, press '%2$s'." ),
                                        mutation_name( mut_data.id ), ctxt.get_desc( "TOGGLE_EXAMINE" ) );
-                                speech = accessible_focus();
+                                if( speaking ) {
+                                    speech = accessible_focus();
+                                }
                             }
                             break;
                         }
                         case mutation_menu_mode::examining:
                             // Describing mutations, not activating them!
                             examine_id = mut_id;
-                            speech = mutation_accessibility_row( *this, mut_id );
+                            if( speaking ) {
+                                speech = mutation_accessibility_row( *this, mut_id );
+                            }
                             break;
                         case mutation_menu_mode::hiding:
                             cached_mutations[mut_id].show_sprite = !cached_mutations[mut_id].show_sprite;
-                            speech = accessible_sprite( mut_id );
+                            if( speaking ) {
+                                speech = accessible_sprite( mut_id );
+                            }
                             break;
                     }
                 }
             } else if( action == "REASSIGN" ) {
                 menu_mode = mutation_menu_mode::reassigning;
                 examine_id = std::nullopt;
-                speech = accessible_mode();
+                if( speaking ) {
+                    speech = accessible_mode();
+                }
             } else if( action == "TOGGLE_EXAMINE" ) {
                 // switches between activation and examination
                 menu_mode = menu_mode == mutation_menu_mode::activating ?

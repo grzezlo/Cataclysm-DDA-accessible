@@ -58,6 +58,12 @@ void note_player_input();
 
 /** Speak a focus or status announcement immediately; it becomes repeat-last. */
 bool announce( const std::string &message );
+/** Build and speak an announcement only while the accessible interface is active. */
+template<typename MakeText>
+bool announce_lazy( MakeText &&make_text )
+{
+    return is_active() && announce( make_text() );
+}
 bool announce_focus( const std::string &label, const std::string &context = {} );
 bool announce_status( const std::string &message );
 

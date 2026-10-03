@@ -222,6 +222,9 @@ void extended_description_window::draw_vehicle_tab()
 
 void extended_description_window::announce_current_tab() const
 {
+    if( !accessibility::is_active() ) {
+        return;
+    }
     std::string category;
     std::string empty_message;
     const std::vector<std::string> *description = nullptr;

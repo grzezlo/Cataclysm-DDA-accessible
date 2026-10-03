@@ -455,7 +455,9 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
         }
     }
 
-    accessibility::announce( accessibility::format_semantic_sequence( { _( "Proficiencies" ), tab_speech() } ) );
+    accessibility::announce_lazy( [&]() {
+        return accessibility::format_semantic_sequence( { _( "Proficiencies" ), tab_speech() } );
+    } );
 
     bool done = false;
     while( !done ) {
@@ -478,10 +480,12 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
             if( sel_prof != previous_prof ) {
                 const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
                                       action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
-                accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_prof, sel_prof, direction ),
-                    row_speech( sel_prof )
-                } ) );
+                accessibility::announce_lazy( [&]() {
+                    return accessibility::format_semantic_sequence( {
+                        accessibility::format_list_wrap( previous_prof, sel_prof, direction ),
+                        row_speech( sel_prof )
+                    } );
+                } );
             }
         } else if( filter_str.empty() && ( action == "LEFT" || action == "PREV_CATEGORY" ||
                                            action == "PREV_TAB" ||
@@ -490,7 +494,9 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
                                           action == "RIGHT" || action == "NEXT_CATEGORY" || action == "NEXT_TAB", cats.size() );
             sel_prof = 0;
             top_prof = 0;
-            accessibility::announce( tab_speech() );
+            accessibility::announce_lazy( [&]() {
+                return tab_speech();
+            } );
         } else if( action == "FILTER" ) {
             //~ Refers to single-character search prefixes, like p: or s:
             std::string desc( _( "Available prefixes:" ) );

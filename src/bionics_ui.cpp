@@ -973,6 +973,7 @@ void avatar::power_bionics()
         const int ch = ctxt.get_raw_input().get_first_input();
         bionic *tmp = nullptr;
 
+        const bool speaking = accessibility::is_active();
         // Screen reader speech for this key, spoken however the iteration ends.
         std::string speech;
         const on_out_of_scope speak_result( [&speech]() {
@@ -984,10 +985,12 @@ void avatar::power_bionics()
             accessibility::repeat_last_announcement();
             continue;
         } else if( action == "ACCESSIBILITY_STATUS" ) {
-            speech = bionic_accessibility_summary( *this, accessible_list(), tab_mode, cursor, menu_mode );
+            if( speaking ) {
+                speech = bionic_accessibility_summary( *this, accessible_list(), tab_mode, cursor, menu_mode );
+            }
             continue;
         } else if( action == "ACCESSIBILITY_DETAILS" ) {
-            if( accessibility::is_active() ) {
+            if( speaking ) {
                 const std::vector<std::string> paragraphs = bionic_accessibility_details( accessible_list(),
                         cursor, *this );
                 if( paragraphs.empty() ) {
@@ -1014,9 +1017,11 @@ void avatar::power_bionics()
             if( scroll_position > 0 && cursor - scroll_position < half_list_view_location ) {
                 scroll_position = std::max( cursor - half_list_view_location, 0 );
             }
-            speech = accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
-            } );
+            if( speaking ) {
+                speech = accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
+                } );
+            }
         } else if( action == "UP" ) {
             if( cursor > 0 ) {
                 cursor--;
@@ -1032,9 +1037,11 @@ void avatar::power_bionics()
                     std::max( std::min<int>( current_bionic_list->size() - LIST_HEIGHT,
                                              cursor - half_list_view_location ), 0 );
             }
-            speech = accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
-            } );
+            if( speaking ) {
+                speech = accessibility::format_semantic_sequence( {
+                    accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
+                } );
+            }
         } else if( menu_mode == REASSIGNING ) {
             menu_mode = ACTIVATING;
 
@@ -1046,13 +1053,17 @@ void avatar::power_bionics()
             }
 
             // The mode returns to activating; name the bionic and its letter.
-            speech = accessible_mode();
+            if( speaking ) {
+                speech = accessible_mode();
+            }
             const on_out_of_scope reassign_speech( [&]() {
                 if( tmp != nullptr ) {
-                    speech = accessibility::format_semantic_sequence( { accessible_mode(),
-                             bionic_accessibility_row( *tmp, *this ),
-                             accessibility::format_assigned_key( std::string( 1, tmp->invlet ) )
-                                                                      } );
+                    if( speaking ) {
+                        speech = accessibility::format_semantic_sequence( { accessible_mode(),
+                                 bionic_accessibility_row( *tmp, *this ),
+                                 accessibility::format_assigned_key( std::string( 1, tmp->invlet ) )
+                                                                          } );
+                    }
                 }
             } );
 
@@ -1089,7 +1100,9 @@ void avatar::power_bionics()
             } else {
                 tab_mode = TAB_ACTIVE;
             }
-            speech = accessible_tab();
+            if( speaking ) {
+                speech = accessible_tab();
+            }
         } else if( action == "PREV_TAB" ) {
             scroll_position = 0;
             cursor = 0;
@@ -1098,14 +1111,20 @@ void avatar::power_bionics()
             } else {
                 tab_mode = TAB_PASSIVE;
             }
-            speech = accessible_tab();
+            if( speaking ) {
+                speech = accessible_tab();
+            }
         } else if( action == "REASSIGN" ) {
             menu_mode = REASSIGNING;
-            speech = accessible_mode();
+            if( speaking ) {
+                speech = accessible_mode();
+            }
         } else if( action == "TOGGLE_EXAMINE" ) {
             // switches between activation and examination
             menu_mode = menu_mode == ACTIVATING ? EXAMINING : ACTIVATING;
-            speech = accessible_mode();
+            if( speaking ) {
+                speech = accessible_mode();
+            }
         } else if( action == "TOGGLE_SAFE_FUEL" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( !current_bionic_list->empty() ) {
@@ -1116,26 +1135,32 @@ void avatar::power_bionics()
                 } else {
                     popup( _( "You can't toggle fuel saving mode on a non-fueled CBM." ) );
                 }
-                speech = accessible_focus();
+                if( speaking ) {
+                    speech = accessible_focus();
+                }
             }
         } else if( action == "TOGGLE_SPRITE" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( !current_bionic_list->empty() ) {
                 tmp = bio_list[cursor];
                 tmp->show_sprite = !tmp->show_sprite;
-                speech = accessibility::format_semantic_sequence( {
-                    tmp->show_sprite ? _( "Sprite shown" ) : _( "Sprite hidden" ), accessible_focus()
-                } );
+                if( speaking ) {
+                    speech = accessibility::format_semantic_sequence( {
+                        tmp->show_sprite ? _( "Sprite shown" ) : _( "Sprite hidden" ), accessible_focus()
+                    } );
+                }
             }
         } else if( action == "SORT" ) {
             uistate.bionic_sort_mode = pick_sort_mode();
             // FIXME: is there a better way to resort?
             active = filtered_bionics( *my_bionics, TAB_ACTIVE );
             passive = filtered_bionics( *my_bionics, TAB_PASSIVE );
-            speech = accessibility::format_semantic_sequence( {
-                string_format( _( "Sort: %s" ), sort_mode_str( uistate.bionic_sort_mode ) ),
-                accessible_focus()
-            } );
+            if( speaking ) {
+                speech = accessibility::format_semantic_sequence( {
+                    string_format( _( "Sort: %s" ), sort_mode_str( uistate.bionic_sort_mode ) ),
+                    accessible_focus()
+                } );
+            }
         } else if( action == "CONFIRM" || action == "ANY_INPUT" ) {
             sorted_bionics &bio_list = tab_mode == TAB_ACTIVE ? active : passive;
             if( action == "CONFIRM" && !current_bionic_list->empty() ) {
@@ -1262,13 +1287,17 @@ void avatar::power_bionics()
                         return;
                     }
                     // Game messages report the result; then the row speaks its new state.
-                    speech = accessible_focus();
+                    if( speaking ) {
+                        speech = accessible_focus();
+                    }
                     continue;
                 } else {
                     popup( _( "You can not activate %s!\n"
                               "To read a description of %s, press '%s', then '%c'." ), bio_data.name,
                            bio_data.name, ctxt.get_desc( "TOGGLE_EXAMINE" ), tmp->invlet );
-                    speech = accessible_focus();
+                    if( speaking ) {
+                        speech = accessible_focus();
+                    }
                 }
             } else if( menu_mode == EXAMINING ) {
                 // Describing bionics, allow user to jump to description key
@@ -1300,7 +1329,9 @@ void avatar::power_bionics()
                         }
                     }
                 }
-                speech = tab_mode != previous_tab ? accessible_tab() : accessible_focus();
+                if( speaking ) {
+                    speech = tab_mode != previous_tab ? accessible_tab() : accessible_focus();
+                }
             }
         } else if( action == "QUIT" ) {
             break;
