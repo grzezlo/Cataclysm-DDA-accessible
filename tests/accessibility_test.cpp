@@ -141,13 +141,13 @@ static const morale_type morale_food_good( "morale_food_good" );
 
 static const oter_str_id oter_field( "field" );
 
-static const proficiency_id proficiency_prof_knapping( "prof_knapping" );
-static const proficiency_id proficiency_prof_leatherworking_basic( "prof_leatherworking_basic" );
-
 static const profession_id profession_doctor( "doctor" );
 static const profession_id profession_hates_books( "hates_books" );
 static const profession_id profession_loves_books( "loves_books" );
 static const profession_id profession_unemployed( "unemployed" );
+
+static const proficiency_id proficiency_prof_knapping( "prof_knapping" );
+static const proficiency_id proficiency_prof_leatherworking_basic( "prof_leatherworking_basic" );
 
 static const recipe_id recipe_test_soldering_iron( "test_soldering_iron" );
 
@@ -1506,7 +1506,7 @@ TEST_CASE( "semantic_accessibility_lists_group_connected_matching_regions",
 {
     std::vector<accessibility::semantic_list_entry> entries = {
         { 3, tripoint( 3, 0, 0 ), 1, "wall", "3 tiles east" },
-        { 1, tripoint( 1, 0, 0 ), 1, "wall", "1 tile east" },
+        { 1, tripoint::east, 1, "wall", "1 tile east" },
         { 2, tripoint( 2, 1, 0 ), 1, "wall", "2 tiles southeast" },
         { 5, tripoint( -5, 0, 0 ), 1, "wall", "5 tiles west" },
         { 2, tripoint( 2, 0, 0 ), 2, "deep water", "2 tiles east" },
@@ -4047,7 +4047,7 @@ TEST_CASE( "spell_menu_speaks_rows_unavailable_reason_and_details", "[accessibil
     CHECK( details[0] == unavailable + " Key a." );
     CHECK( details[1] == "Classless" );
     CHECK( details[2] == "You aim your finger at your opponent and make 'Pew, pew' sounds." );
-    const auto has_line = [&details]( const std::string & prefix ) {
+    const auto has_line = [&details]( const std::string_view prefix ) {
         return std::any_of( details.begin(), details.end(), [&prefix]( std::string_view line ) {
             return line.rfind( prefix, 0 ) == 0;
         } );
@@ -4081,9 +4081,9 @@ TEST_CASE( "martial_style_details_speak_buffs_techniques_and_weapons", "[accessi
 
     const std::vector<std::string> lines =
         martial_art_accessibility_details( test_style_ma1 );
-    const auto has_line = [&lines]( const std::string & text ) {
+    const auto has_line = [&lines]( const std::string_view text ) {
         return std::any_of( lines.begin(), lines.end(), [&text]( std::string_view line ) {
-            return line.find( text ) != std::string::npos;
+            return line.find( text ) != std::string_view::npos;
         } );
     };
     REQUIRE( !lines.empty() );

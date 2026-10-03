@@ -70,7 +70,7 @@ bool ends_with( const std::string_view text, const std::string_view suffix )
 }
 
 /** Whether text already ends a sentence, including Unicode ellipsis and CJK full stops. */
-bool ends_sentence( const std::string &text, const bool allow_clause_end )
+bool ends_sentence( const std::string_view text, const bool allow_clause_end )
 {
     if( text.empty() ) {
         return false;
@@ -905,7 +905,7 @@ bool uilist_details_need_document( const std::string_view details )
     return utf8_width( details ) > 160;
 }
 
-std::vector<std::string> split_uilist_detail_sentences( const std::string &details )
+std::vector<std::string> split_uilist_detail_sentences( const std::string_view details )
 {
     const std::string normalized = collapse_whitespace( details );
 
@@ -1174,7 +1174,7 @@ std::string format_trade_pane_label( const bool yours )
     return yours ? _( "Your goods" ) : _( "Trader's goods" );
 }
 
-std::string format_trade_opening( const std::string &title, const std::string &trader,
+std::string format_trade_opening( const std::string_view title, const std::string &trader,
                                   const trade_balance &balance )
 {
     std::string purpose = collapse_whitespace( title );
@@ -1437,7 +1437,7 @@ std::string format_character_creation_tab( const std::string &tab, const size_t 
     } );
 }
 
-std::string format_character_choice_selected( const std::string &name, const bool added,
+std::string format_character_choice_selected( const std::string_view name, const bool added,
         const std::string &balance )
 {
     return format_semantic_sequence( {
@@ -1900,26 +1900,23 @@ std::string format_panel_moved( const std::string &name, const size_t position,
 
 std::string format_overmap_offset( const tripoint &offset )
 {
-    const int dx = offset.x;
-    const int dy = offset.y;
-    const int dz = offset.z;
     std::vector<std::string> horizontal;
-    if( dy != 0 ) {
-        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( dy ),
-                                             dy < 0 ? pgettext( "map offset", "north" ) : pgettext( "map offset", "south" ) ) );
+    if( offset.y != 0 ) {
+        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( offset.y ),
+                                             offset.y < 0 ? pgettext( "map offset", "north" ) : pgettext( "map offset", "south" ) ) );
     }
-    if( dx != 0 ) {
-        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( dx ),
-                                             dx < 0 ? pgettext( "map offset", "west" ) : pgettext( "map offset", "east" ) ) );
+    if( offset.x != 0 ) {
+        horizontal.push_back( string_format( pgettext( "map offset", "%1$d %2$s" ), std::abs( offset.x ),
+                                             offset.x < 0 ? pgettext( "map offset", "west" ) : pgettext( "map offset", "east" ) ) );
     }
     std::vector<std::string> parts;
     if( !horizontal.empty() ) {
         //~ Separator between the north-south and east-west parts of "3 north 2 east".
         parts.push_back( string_join( horizontal, pgettext( "map offset", " " ) ) );
     }
-    if( dz != 0 ) {
-        const int levels = std::abs( dz );
-        parts.push_back( dz > 0 ?
+    if( offset.z != 0 ) {
+        const int levels = std::abs( offset.z );
+        parts.push_back( offset.z > 0 ?
                          string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
                          string_format( n_gettext( "%d level below", "%d levels below", levels ), levels ) );
     }
@@ -2144,7 +2141,7 @@ std::string zone_row_parts( const zone_row &row )
 }
 
 /** Trim spaces and trailing separators left by the options pane layout. */
-std::string trim_zone_option_text( const std::string &text )
+std::string trim_zone_option_text( const std::string_view text )
 {
     std::string result = collapse_whitespace( text );
     while( !result.empty() && ( result.back() == ' ' || result.back() == ',' ) ) {
@@ -2192,7 +2189,7 @@ std::string format_zone_size( const int width, const int height, const int level
     return format_semantic_sequence( { size } );
 }
 
-std::string format_zone_enabled( const std::string &name, const bool enabled )
+std::string format_zone_enabled( const std::string_view name, const bool enabled )
 {
     //~ A zone was enabled or disabled: %s is the zone name.
     return format_semantic_sequence( { string_format( enabled ? _( "%s enabled" ) :
@@ -2200,7 +2197,7 @@ std::string format_zone_enabled( const std::string &name, const bool enabled )
                                      } );
 }
 
-std::string format_zone_displayed( const std::string &name, const bool displayed )
+std::string format_zone_displayed( const std::string_view name, const bool displayed )
 {
     //~ A zone's map display was toggled: %s is the zone name.
     return format_semantic_sequence( { string_format( displayed ? _( "%s shown on map" ) :
@@ -2208,7 +2205,8 @@ std::string format_zone_displayed( const std::string &name, const bool displayed
                                      } );
 }
 
-std::string format_zone_moved( const std::string &name, const size_t position, const size_t count )
+std::string format_zone_moved( const std::string_view name, const size_t position,
+                               const size_t count )
 {
     return format_semantic_sequence( {
         string_join( std::vector<std::string> { collapse_whitespace( name ), format_list_position( position, count ) },
@@ -2216,7 +2214,7 @@ std::string format_zone_moved( const std::string &name, const size_t position, c
     } );
 }
 
-std::string format_zone_removed( const std::string &name, const std::string &focus )
+std::string format_zone_removed( const std::string_view name, const std::string &focus )
 {
     return format_semantic_sequence( {
         //~ A zone was removed: %s is the zone name.

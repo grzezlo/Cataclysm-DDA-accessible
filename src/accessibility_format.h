@@ -213,7 +213,7 @@ std::string format_keybinding_filter( const std::string &query, int results_coun
 /** Use the document reader when spoken list details exceed a concise announcement. */
 bool uilist_details_need_document( std::string_view details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */
-std::vector<std::string> split_uilist_detail_sentences( const std::string &details );
+std::vector<std::string> split_uilist_detail_sentences( std::string_view details );
 /** Split formatted item details into clean semantic lines and sentences for document reading. */
 std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
         const std::string &raw_info );
@@ -288,7 +288,7 @@ std::string format_trade_balance( const trade_balance &balance );
 /** Name of a trade pane: the player's goods or the trader's goods. */
 std::string format_trade_pane_label( bool yours );
 /** Trade purpose, trader, and balance, spoken when the trade opens. */
-std::string format_trade_opening( const std::string &title, const std::string &trader,
+std::string format_trade_opening( std::string_view title, const std::string &trader,
                                   const trade_balance &balance );
 /** The whole trade state spoken on request. */
 struct trade_summary {
@@ -419,7 +419,7 @@ std::string format_character_creation_tab( const std::string &tab, size_t count,
         const std::string &focus,
         bool opening );
 /** Spoken after CONFIRM picks or toggles a choice, followed by the point balance. */
-std::string format_character_choice_selected( const std::string &name, bool added,
+std::string format_character_choice_selected( std::string_view name, bool added,
         const std::string &balance );
 /** Spoken after the filter changes: "Filter doc, 3 items. <row>" or "Filter cleared, ...". */
 std::string format_character_choice_filter( const std::string &filter, size_t count,
@@ -685,13 +685,13 @@ std::string format_zones_manager_opening( size_t count, const std::string &focus
 /** "Zone 4 by 3." with ", 2 levels" when the zone spans several levels. */
 std::string format_zone_size( int width, int height, int levels );
 /** "<name> enabled." or "<name> disabled." */
-std::string format_zone_enabled( const std::string &name, bool enabled );
+std::string format_zone_enabled( std::string_view name, bool enabled );
 /** "<name> shown on map." or "<name> hidden from map." */
-std::string format_zone_displayed( const std::string &name, bool displayed );
+std::string format_zone_displayed( std::string_view name, bool displayed );
 /** "<name>, 2 of 5." after reordering. */
-std::string format_zone_moved( const std::string &name, size_t position, size_t count );
+std::string format_zone_moved( std::string_view name, size_t position, size_t count );
 /** "Removed <name>. <focus>" or "Removed <name>. No zones." */
-std::string format_zone_removed( const std::string &name, const std::string &focus );
+std::string format_zone_removed( std::string_view name, const std::string &focus );
 /** "2 personal zones enabled." or "No personal zones changed." */
 std::string format_personal_zones_changed( bool enabled, size_t changed );
 /**
