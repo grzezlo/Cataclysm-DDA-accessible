@@ -70,6 +70,7 @@
 #include "recipe.h"
 #include "requirements.h"
 #include "ret_val.h"
+#include "safemode_ui.h"
 #include "scenario.h"
 #include "string_formatter.h"
 #include "tileray.h"
@@ -828,6 +829,32 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
     parts.push_back( relative_z_location( origin, position ) );
     parts.push_back( situation_location( origin, position ) );
     return parts;
+}
+
+void announce_look_cursor( map &here, const avatar &viewer, const input_context &ctxt,
+                           const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
+                           const visibility_variables &cache, const bool opening, const bool peeking )
+{
+    const auto describe_peek_action = [&ctxt]( const std::string & action_id ) {
+        const std::string action_name = ctxt.get_action_name( action_id );
+        const std::string binding = ctxt.get_desc( action_id );
+        return binding.empty() ?
+               string_format( _( "Available peek action: %s (unbound)" ), action_name ) :
+               string_format( _( "Available peek action: %1$s (%2$s)" ), action_name, binding );
+    };
+    std::vector<std::string> parts;
+    if( opening ) {
+        parts.emplace_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
+        parts.emplace_back( _( "Cursor origin: character position" ) );
+        if( peeking ) {
+            parts.push_back( describe_peek_action( "throw_blind" ) );
+            parts.push_back( describe_peek_action( "throw_blind_wielded" ) );
+        }
+    }
+    std::vector<std::string> tile_parts = look_parts( here, viewer, origin, position, cache );
+    parts.insert( parts.end(), std::make_move_iterator( tile_parts.begin() ),
+                  std::make_move_iterator( tile_parts.end() ) );
+    accessibility::announce_semantic_sequence( parts );
 }
 
 std::string gameplay_focus_description( map &here, const avatar &viewer )
@@ -2087,6 +2114,72 @@ accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
     result.result_index = result_index;
     result.result_count = result_count;
     return result;
+}
+
+accessibility::nearby_list_entry nearby_creature_list_entry( const map &here, const avatar &viewer,
+        const Creature &creature, const int result_index, const int result_count,
+        const bool player_knows )
+{
+    accessibility::nearby_list_entry entry = nearby_creature_entry( here, viewer, creature,
+            result_index, result_count, player_knows );
+    if( !get_safemode().empty() ) {
+        const monster *const mon = dynamic_cast<const monster *>( &creature );
+        const std::string rule_name = mon != nullptr ? mon->name() : "human";
+        entry.details.emplace_back( get_safemode().has_rule( rule_name, Creature::Attitude::ANY ) ?
+                                    _( "Safe mode blacklist: listed" ) : _( "Safe mode blacklist: not listed" ) );
+    }
+    return entry;
+}
+
+nearby_list_speech::nearby_list_speech( std::string list_mode ) : mode( std::move( list_mode ) )
+{
+}
+
+void nearby_list_speech::context_changed( const std::string &new_change )
+{
+    announce_context = true;
+    change = new_change;
+}
+
+void nearby_list_speech::refocus()
+{
+    force_focus = true;
+}
+
+void nearby_list_speech::request_summary()
+{
+    summary = true;
+}
+
+void nearby_list_speech::update( const int row, const int page, const int count,
+                                 const int direction, const bool has_focus,
+                                 const std::function<accessibility::nearby_list_entry()> &make_entry )
+{
+    const bool selection_changed = row != last_row || page != last_page;
+    if( !accessibility::is_active() ||
+        !( announce_context || force_focus || selection_changed || summary ) ) {
+        return;
+    }
+    const accessibility::nearby_list_entry entry = make_entry();
+    if( announce_context ) {
+        const std::string context = accessibility::format_nearby_list_context( mode, count, change );
+        if( has_focus ) {
+            accessibility::announce_nearby_list_focus( entry, context );
+        } else {
+            accessibility::announce_focus( {}, context );
+        }
+        announce_context = false;
+        change.clear();
+    } else if( summary ) {
+        accessibility::announce( accessibility::format_nearby_list_summary( mode, count, entry ) );
+    } else if( has_focus ) {
+        accessibility::announce_nearby_list_focus( entry,
+                accessibility::format_list_wrap( last_row, row, direction ) );
+    }
+    summary = false;
+    last_row = row;
+    last_page = page;
+    force_focus = false;
 }
 
 accessibility::nearby_list_entry nearby_creature_entry( const map &here, const avatar &viewer,

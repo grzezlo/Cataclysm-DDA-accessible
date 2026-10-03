@@ -8113,31 +8113,11 @@ look_around_result game::look_around(
     const bool semantic_zone = ( select_zone || is_moving_zone ) && accessibility::is_active();
     const bool semantic_cursor = semantic_look || semantic_zone;
     const tripoint_bub_ms semantic_origin = accessibility_origin.value_or( u.pos_bub( here ) );
-    const auto describe_peek_action = [&]( const std::string & action_id ) {
-        const std::string action_name = ctxt.get_action_name( action_id );
-        const std::string binding = ctxt.get_desc( action_id );
-        return binding.empty() ?
-               string_format( _( "Available peek action: %s (unbound)" ), action_name ) :
-               string_format( _( "Available peek action: %1$s (%2$s)" ), action_name, binding );
-    };
     const auto announce_cursor = [&]( const bool entering ) {
-        if( !semantic_cursor ) {
-            return;
+        if( semantic_cursor ) {
+            accessibility_gameplay::announce_look_cursor( here, u, ctxt, semantic_origin, lp, cache,
+                    entering && semantic_look, peeking );
         }
-        std::vector<std::string> parts;
-        if( entering && semantic_look ) {
-            parts.emplace_back( peeking ? _( "Peek look-around" ) : _( "Look around" ) );
-            parts.emplace_back( _( "Cursor origin: character position" ) );
-            if( peeking ) {
-                parts.push_back( describe_peek_action( "throw_blind" ) );
-                parts.push_back( describe_peek_action( "throw_blind_wielded" ) );
-            }
-        }
-        std::vector<std::string> tile_parts = accessibility_gameplay::look_parts( here, u, semantic_origin,
-                                              lp, cache );
-        parts.insert( parts.end(), std::make_move_iterator( tile_parts.begin() ),
-                      std::make_move_iterator( tile_parts.end() ) );
-        accessibility::announce_semantic_sequence( parts );
     };
     announce_cursor( true );
     tripoint_bub_ms last_announced_position = lp;
@@ -9131,12 +9111,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
     bool addCategory = uistate.list_item_sort == list_item_sort_mode::CATEGORY_DISTANCE ||
                        uistate.list_item_sort == list_item_sort_mode::CATEGORY_NAME;
     bool refilter = true;
-    bool announce_semantic_context = true;
-    bool force_semantic_selection = false;
-    bool announce_semantic_summary = false;
-    std::string semantic_change;
-    int last_semantic_item_index = -1;
-    int last_semantic_page = -1;
+    accessibility_gameplay::nearby_list_speech semantic_speech( _( "Nearby items" ) );
 
     std::string action;
     input_context ctxt( "LIST_ITEMS" );
@@ -9172,11 +9147,11 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
-            announce_semantic_summary = true;
+            semantic_speech.request_summary();
         } else if( action == "COMPARE" && activeItem ) {
             game_menus::inv::compare( active_pos );
             recalc_unread = highlight_unread_items;
-            force_semantic_selection = true;
+            semantic_speech.refocus();
         } else if( action == "FILTER" ) {
             ui.invalidate_ui();
             accessibility::announce_semantic_sequence( {
@@ -9193,16 +9168,14 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
             sFilter = imgui_popup.query();
             refilter = true;
             uistate.list_item_filter_active = !sFilter.empty();
-            semantic_change = sFilter.empty() ? _( "Filter cleared" ) :
-                              string_format( _( "Filter: %s" ), sFilter );
-            announce_semantic_context = true;
+            semantic_speech.context_changed( sFilter.empty() ? _( "Filter cleared" ) :
+                                             string_format( _( "Filter: %s" ), sFilter ) );
         } else if( action == "RESET_FILTER" ) {
             sFilter.clear();
             filtered_items = ground_items;
             refilter = true;
             uistate.list_item_filter_active = false;
-            semantic_change = _( "Filter cleared" );
-            announce_semantic_context = true;
+            semantic_speech.context_changed( _( "Filter cleared" ) );
         } else if( action == "EXAMINE" && !filtered_items.empty() && activeItem ) {
             std::vector<iteminfo> vThisItem;
             std::vector<iteminfo> vDummy;
@@ -9217,7 +9190,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
                 return catacurses::newwin( TERMY, width - 5, point::zero );
             }, info_data );
             recalc_unread = highlight_unread_items;
-            force_semantic_selection = true;
+            semantic_speech.refocus();
         } else if( action == "PRIORITY_INCREASE" ) {
             ui.invalidate_ui();
             accessibility::announce_status( _( "Set the high priority item filter, then confirm or cancel." ) );
@@ -9233,9 +9206,8 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
                                .query_string();
             refilter = true;
             uistate.list_item_priority_active = !list_item_upvote.empty();
-            semantic_change = list_item_upvote.empty() ? _( "High priority filter cleared" ) :
-                              string_format( _( "High priority filter: %s" ), list_item_upvote );
-            announce_semantic_context = true;
+            semantic_speech.context_changed( list_item_upvote.empty() ? _( "High priority filter cleared" ) :
+                                             string_format( _( "High priority filter: %s" ), list_item_upvote ) );
         } else if( action == "PRIORITY_DECREASE" ) {
             ui.invalidate_ui();
             accessibility::announce_status( _( "Set the low priority item filter, then confirm or cancel." ) );
@@ -9251,9 +9223,8 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
                                  .query_string();
             refilter = true;
             uistate.list_item_downvote_active = !list_item_downvote.empty();
-            semantic_change = list_item_downvote.empty() ? _( "Low priority filter cleared" ) :
-                              string_format( _( "Low priority filter: %s" ), list_item_downvote );
-            announce_semantic_context = true;
+            semantic_speech.context_changed( list_item_downvote.empty() ? _( "Low priority filter cleared" ) :
+                                             string_format( _( "Low priority filter: %s" ), list_item_downvote ) );
         } else if( action == "SORT" ) {
             switch( uistate.list_item_sort ) {
                 case list_item_sort_mode::count:
@@ -9277,8 +9248,8 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
 
             mSortCategory.clear();
             refilter = true;
-            semantic_change = accessibility_gameplay::nearby_item_sort_change( uistate.list_item_sort );
-            announce_semantic_context = true;
+            semantic_speech.context_changed( accessibility_gameplay::nearby_item_sort_change(
+                                                 uistate.list_item_sort ) );
         } else if( action == "TRAVEL_TO" && activeItem ) {
             // try finding route to the tile, or one tile away from it
             const std::optional<std::vector<tripoint_bub_ms>> try_route =
@@ -9460,47 +9431,21 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
             trail_start = trail_end = std::nullopt;
         }
 
-        const bool selection_changed = selected_item_index != last_semantic_item_index ||
-                                       page_num != last_semantic_page;
-        if( accessibility::is_active() && ( announce_semantic_context || force_semantic_selection ||
-                                            selection_changed ||
-                                            announce_semantic_summary ) ) {
-            accessibility::nearby_list_entry semantic_entry;
+        semantic_speech.update( selected_item_index, page_num,
+                                static_cast<int>( filtered_items.size() ), semantic_move_direction, activeItem != nullptr,
+        [&]() {
+            accessibility::nearby_list_entry entry;
             if( activeItem != nullptr && selected_item_index >= 0 ) {
                 const int priority = selected_item_index < highPEnd ? 1 :
                                      selected_item_index >= lowPStart ? -1 : 0;
-                semantic_entry = accessibility_gameplay::nearby_item_entry( u, *activeItem, page_num,
-                                 selected_item_index + 1,
-                                 static_cast<int>( filtered_items.size() ), priority,
-                                 highlight_unread_items && activeItem->example != nullptr ?
-                                 std::optional<content_newness>( check_items_newness( activeItem->example ) ) :
-                                 std::nullopt );
+                entry = accessibility_gameplay::nearby_item_entry( u, *activeItem, page_num,
+                        selected_item_index + 1, static_cast<int>( filtered_items.size() ), priority,
+                        highlight_unread_items && activeItem->example != nullptr ?
+                        std::optional<content_newness>( check_items_newness( activeItem->example ) ) :
+                        std::nullopt );
             }
-            if( announce_semantic_context ) {
-                const std::string context = accessibility::format_nearby_list_context(
-                                                _( "Nearby items" ),
-                                                static_cast<int>( filtered_items.size() ), semantic_change );
-                if( activeItem != nullptr ) {
-                    accessibility::announce_nearby_list_focus( semantic_entry, context );
-                } else {
-                    accessibility::announce_focus( {}, context );
-                }
-                announce_semantic_context = false;
-                semantic_change.clear();
-            } else if( announce_semantic_summary ) {
-                accessibility::announce( accessibility::format_nearby_list_summary(
-                                             _( "Nearby items" ), static_cast<int>( filtered_items.size() ),
-                                             semantic_entry ) );
-            } else if( activeItem != nullptr ) {
-                accessibility::announce_nearby_list_focus( semantic_entry,
-                        accessibility::format_list_wrap( last_semantic_item_index, selected_item_index,
-                                semantic_move_direction ) );
-            }
-            announce_semantic_summary = false;
-            last_semantic_item_index = selected_item_index;
-            last_semantic_page = page_num;
-            force_semantic_selection = false;
-        }
+            return entry;
+        } );
         invalidate_main_ui_adaptor();
 
         ui_manager::redraw();
@@ -9791,10 +9736,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
     add_draw_callback( trail_cb );
     const int recmax = static_cast<int>( monster_list.size() );
     const int scroll_rate = recmax > 20 ? 10 : 3;
-    bool announce_semantic_context = true;
-    bool force_semantic_selection = false;
-    bool announce_semantic_summary = false;
-    int last_semantic_creature_index = -1;
+    accessibility_gameplay::nearby_list_speech semantic_speech( _( "Nearby creatures" ) );
 
     do {
         const int semantic_move_direction = accessibility::list_move_direction( action,
@@ -9802,7 +9744,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
-            announce_semantic_summary = true;
+            semantic_speech.request_summary();
         } else if( navigate_ui_list( action, iActive, scroll_rate, recmax, true ) ) {
         } else if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             u.view_offset = stored_view_offset;
@@ -9819,7 +9761,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
 
             if( get_safemode().has_rule( monName, Creature::Attitude::ANY ) ) {
                 get_safemode().remove_rule( monName, Creature::Attitude::ANY );
-                force_semantic_selection = true;
+                semantic_speech.refocus();
             }
         } else if( action == "SAFEMODE_BLACKLIST_ADD" ) {
             if( !get_safemode().empty() ) {
@@ -9828,7 +9770,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
 
                 get_safemode().add_rule( monName, Creature::Attitude::ANY, get_option<int>( "SAFEMODEPROXIMITY" ),
                                          rule_state::BLACKLISTED );
-                force_semantic_selection = true;
+                semantic_speech.refocus();
             }
         } else if( action == "look" && cCurMon != nullptr ) {
             hide_ui = true;
@@ -9840,7 +9782,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
             look_around( look_params );
             hide_ui = false;
             ui.mark_resize();
-            force_semantic_selection = true;
+            semantic_speech.refocus();
         } else if( action == "fire" ) {
             if( cCurMon != nullptr && rl_dist( u.pos_bub(), cCurMon->pos_bub() ) <= max_gun_range ) {
                 u.last_target = shared_from( *cCurMon );
@@ -9867,44 +9809,11 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
             trail_start = trail_end = std::nullopt;
         }
 
-        const bool selection_changed = iActive != last_semantic_creature_index;
-        if( accessibility::is_active() && ( announce_semantic_context || force_semantic_selection ||
-                                            selection_changed ||
-                                            announce_semantic_summary ) ) {
-            accessibility::nearby_list_entry semantic_entry;
-            if( cCurMon != nullptr ) {
-                semantic_entry = accessibility_gameplay::nearby_creature_entry( here, u, *cCurMon, iActive + 1,
-                                 recmax,
-                                 player_knows );
-                if( !get_safemode().empty() ) {
-                    const monster *const mon = dynamic_cast<const monster *>( cCurMon );
-                    const std::string rule_name = mon != nullptr ? mon->name() : "human";
-                    semantic_entry.details.emplace_back(
-                        get_safemode().has_rule( rule_name, Creature::Attitude::ANY ) ?
-                        _( "Safe mode blacklist: listed" ) : _( "Safe mode blacklist: not listed" ) );
-                }
-            }
-            if( announce_semantic_context ) {
-                const std::string context = accessibility::format_nearby_list_context(
-                                                _( "Nearby creatures" ), recmax );
-                if( cCurMon != nullptr ) {
-                    accessibility::announce_nearby_list_focus( semantic_entry, context );
-                } else {
-                    accessibility::announce_focus( {}, context );
-                }
-                announce_semantic_context = false;
-            } else if( announce_semantic_summary ) {
-                accessibility::announce( accessibility::format_nearby_list_summary(
-                                             _( "Nearby creatures" ), recmax, semantic_entry ) );
-            } else if( cCurMon != nullptr ) {
-                accessibility::announce_nearby_list_focus( semantic_entry,
-                        accessibility::format_list_wrap( last_semantic_creature_index, iActive,
-                                semantic_move_direction ) );
-            }
-            announce_semantic_summary = false;
-            last_semantic_creature_index = iActive;
-            force_semantic_selection = false;
-        }
+        semantic_speech.update( iActive, 0, recmax, semantic_move_direction, cCurMon != nullptr,
+        [&]() {
+            return cCurMon != nullptr ? accessibility_gameplay::nearby_creature_list_entry( here, u,
+                    *cCurMon, iActive + 1, recmax, player_knows ) : accessibility::nearby_list_entry();
+        } );
         invalidate_main_ui_adaptor();
 
         ui_manager::redraw();

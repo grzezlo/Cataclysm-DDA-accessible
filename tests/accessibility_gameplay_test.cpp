@@ -410,6 +410,62 @@ TEST_CASE( "nearby_list_focus_announcements_cover_navigation_and_context_restora
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "nearby_list_speech_speaks_context_moves_summary_and_refocus",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    const std::vector<std::string> names = { "rock", "stick", "hammer" };
+    int row = 0;
+    const auto entry = [&]() {
+        accessibility::nearby_list_entry result;
+        result.name = names[row];
+        result.result_index = row + 1;
+        result.result_count = 3;
+        return result;
+    };
+    accessibility_gameplay::nearby_list_speech list( "Nearby items" );
+
+    // Opening speaks the context and the focus once.
+    list.update( row, 1, 3, 0, true, entry );
+    REQUIRE( speech->messages.size() == 1 );
+    CHECK( speech->messages.back().rfind( "Nearby items. 3 results.", 0 ) == 0 );
+    CHECK( speech->messages.back().find( "rock" ) != std::string::npos );
+    list.update( row, 1, 3, 0, true, entry );
+    CHECK( speech->messages.size() == 1 );
+
+    // A move speaks the row, with "Top" after wrapping.
+    row = 2;
+    list.update( row, 1, 3, -1, true, entry );
+    REQUIRE( speech->messages.size() == 2 );
+    CHECK( speech->messages.back().rfind( "Bottom. hammer", 0 ) == 0 );
+    row = 0;
+    list.update( row, 1, 3, 1, true, entry );
+    REQUIRE( speech->messages.size() == 3 );
+    CHECK( speech->messages.back().rfind( "Top. rock", 0 ) == 0 );
+
+    // The summary, a refocus, and a changed context are each spoken once.
+    list.request_summary();
+    list.update( row, 1, 3, 0, true, entry );
+    REQUIRE( speech->messages.size() == 4 );
+    CHECK( speech->messages.back() ==
+           accessibility::format_nearby_list_summary( "Nearby items", 3, entry() ) );
+    list.refocus();
+    list.update( row, 1, 3, 0, true, entry );
+    REQUIRE( speech->messages.size() == 5 );
+    CHECK( speech->messages.back().rfind( "rock", 0 ) == 0 );
+    list.context_changed( "Sorted by name" );
+    list.update( row, 1, 3, 0, true, entry );
+    REQUIRE( speech->messages.size() == 6 );
+    CHECK( speech->messages.back().rfind( "Nearby items. Sorted by name. 3 results.", 0 ) == 0 );
+    list.update( row, 1, 3, 0, true, entry );
+    CHECK( speech->messages.size() == 6 );
+}
+
 TEST_CASE( "nearby_item_collection_groups_visible_positions_and_respects_blindness",
            "[accessibility]" )
 {

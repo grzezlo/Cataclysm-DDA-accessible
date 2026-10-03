@@ -102,6 +102,13 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
                                      const visibility_variables &cache );
 std::string gameplay_focus_description( map &here, const avatar &viewer );
 /**
+ * Speak the look-around cursor tile; `opening` first names the mode, the cursor
+ * origin, and, when `peeking`, the peek actions with their keys.
+ */
+void announce_look_cursor( map &here, const avatar &viewer, const input_context &ctxt,
+                           const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
+                           const visibility_variables &cache, bool opening, bool peeking );
+/**
  * Name the most salient thing the viewer can see at a position next to
  * `origin`, with its direction from `origin`.
  */
@@ -306,7 +313,39 @@ accessibility::nearby_list_entry nearby_item_entry( const avatar &viewer,
         std::optional<content_newness> newness );
 accessibility::nearby_list_entry nearby_creature_entry( const map &here, const avatar &viewer,
         const Creature &creature, int result_index, int result_count, bool player_knows );
+/** nearby_creature_entry() with the safe mode blacklist state the list shows. */
+accessibility::nearby_list_entry nearby_creature_list_entry( const map &here, const avatar &viewer,
+        const Creature &creature, int result_index, int result_count, bool player_knows );
 std::string nearby_item_sort_change( list_item_sort_mode mode );
+
+/**
+ * Speech of the nearby items or creatures list: the list context when it opens
+ * or changes, the summary on request, and otherwise the focus after a move.
+ */
+class nearby_list_speech
+{
+    public:
+        explicit nearby_list_speech( std::string mode );
+        /** Speak the context again, after `change` such as "Filter cleared". */
+        void context_changed( const std::string &change = {} );
+        /** Speak the focus again even if it did not move. */
+        void refocus();
+        void request_summary();
+        /**
+         * Speak what the last actions require; call once per loop pass.  `row`
+         * and `page` identify the focus, and `make_entry` builds the focused row.
+         */
+        void update( int row, int page, int count, int direction, bool has_focus,
+                     const std::function<accessibility::nearby_list_entry()> &make_entry );
+    private:
+        std::string mode;
+        std::string change;
+        bool announce_context = true;
+        bool force_focus = false;
+        bool summary = false;
+        int last_row = -1;
+        int last_page = -1;
+};
 
 /**
  * Describe what the targeting cursor is on: the visible `critter` or `veh`
