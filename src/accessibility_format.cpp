@@ -537,6 +537,30 @@ std::string join_phrases( const std::vector<std::string> &parts )
     return result;
 }
 
+std::string format_rule_list_change( const std::string &change, const size_t count,
+                                     const std::string &focused_rule )
+{
+    return format_semantic_sequence( { format_list_change( change, count ), focused_rule } );
+}
+
+std::string format_rule_move( const bool moved, const bool up, const size_t position,
+                              const size_t count )
+{
+    // Moving up raises the index, toward the end of the visual list.
+    return moved ? format_mod_moved( position, count ) :
+           format_mod_not_moved( up, up ? _( "already last" ) : _( "already first" ) );
+}
+
+std::string format_rule_enabled( const bool enabled )
+{
+    return enabled ? _( "Enabled" ) : _( "Disabled" );
+}
+
+std::string format_rule_changes( const bool saved )
+{
+    return saved ? _( "Changes saved" ) : _( "Changes discarded" );
+}
+
 std::string format_world_row( const std::string &name, const size_t character_count )
 {
     //~ The number of characters saved in a world.

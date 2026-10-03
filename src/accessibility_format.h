@@ -518,6 +518,15 @@ std::string format_mod_manager_summary( const std::string &pane, size_t position
 std::string format_screen_page( const std::string &screen, const std::string &page );
 /** A list change and the new item count: "Rule added, 3 items" or "Rule removed, No items". */
 std::string format_list_change( const std::string &change, size_t count );
+/** Rule managers: the change with the new rule count, then the focused rule. */
+std::string format_rule_list_change( const std::string &change, size_t count,
+                                     const std::string &focused_rule );
+/** Rule managers: the new one-based position, or why the rule did not move. */
+std::string format_rule_move( bool moved, bool up, size_t position, size_t count );
+/** Rule managers: "Enabled" or "Disabled". */
+std::string format_rule_enabled( bool enabled );
+/** Rule managers on closing: "Changes saved" or "Changes discarded". */
+std::string format_rule_changes( bool saved );
 /** A shortcut-marked label without its markup: "[<Global>]" becomes "Global". */
 std::string format_shortcut_label( std::string_view label );
 /**

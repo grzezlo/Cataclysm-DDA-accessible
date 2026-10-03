@@ -506,9 +506,8 @@ void user_interface::show()
                               std::string( _( "empty rule" ) ) : rules[iLine].sRule );
     };
     const auto access_change = [&]( const std::string & change ) {
-        return accessibility::format_semantic_sequence( {
-            accessibility::format_list_change( change, tabs[iTab].new_rules.size() ), access_row()
-        } );
+        return accessibility::format_rule_list_change( change, tabs[iTab].new_rules.size(),
+                access_row() );
     };
     accessibility::announce_lazy( [&]() {
         return accessibility::format_list_open( access_screen(),
@@ -676,12 +675,10 @@ void user_interface::show()
             accessibility::announce( access_change( string_format( _( "Rule moved to %s" ),
                                                     access_tab_name() ) ) );
         } else if( action == "ENABLE_RULE" || action == "DISABLE_RULE" ) {
-            accessibility::announce( action == "ENABLE_RULE" ? _( "Enabled" ) : _( "Disabled" ) );
+            accessibility::announce( accessibility::format_rule_enabled( action == "ENABLE_RULE" ) );
         } else if( action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {
-            accessibility::announce( iLine != access_previous_line ?
-                                     accessibility::format_mod_moved( iLine + 1, access_count ) :
-                                     accessibility::format_mod_not_moved( action == "MOVE_RULE_UP",
-                                             action == "MOVE_RULE_UP" ? _( "already last" ) : _( "already first" ) ) );
+            accessibility::announce( accessibility::format_rule_move( iLine != access_previous_line,
+                                     action == "MOVE_RULE_UP", iLine + 1, access_count ) );
         } else if( action == "TEST_RULE" ) {
             accessibility::announce( player_character.name.empty() ?
                                      std::string( _( "Unavailable: load a character first" ) ) : access_row() );
@@ -693,14 +690,14 @@ void user_interface::show()
     }
 
     if( !query_yn_about( title, _( "Save changes?" ) ) ) {
-        accessibility::announce( _( "Changes discarded" ) );
+        accessibility::announce( accessibility::format_rule_changes( false ) );
         return;
     }
 
     for( tab &t : tabs ) {
         t.rules.get() = t.new_rules;
     }
-    accessibility::announce( _( "Changes saved" ) );
+    accessibility::announce( accessibility::format_rule_changes( true ) );
 }
 
 void player_settings::show()

@@ -348,9 +348,7 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         } );
     };
     const auto access_change = [&]( const std::string & change ) {
-        return accessibility::format_semantic_sequence( {
-            accessibility::format_list_change( change, access_rules().size() ), access_row()
-        } );
+        return accessibility::format_rule_list_change( change, access_rules().size(), access_row() );
     };
     const std::vector<std::string> access_column_names {
         _( "Rule" ), _( "Attitude" ), _( "Distance" ), _( "Blacklist or whitelist" ), _( "Category" ), _( "Mode" )
@@ -614,12 +612,10 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
                                      accessibility::format_safemode_rule_fields( row )[column] :
                                      accessibility::format_safemode_rule_values( row )[column] );
         } else if( action == "ENABLE_RULE" || action == "DISABLE_RULE" ) {
-            accessibility::announce( action == "ENABLE_RULE" ? _( "Enabled" ) : _( "Disabled" ) );
+            accessibility::announce( accessibility::format_rule_enabled( action == "ENABLE_RULE" ) );
         } else if( action == "MOVE_RULE_UP" || action == "MOVE_RULE_DOWN" ) {
-            accessibility::announce( line != access_previous_line ?
-                                     accessibility::format_mod_moved( line + 1, current_tab.size() ) :
-                                     accessibility::format_mod_not_moved( action == "MOVE_RULE_UP",
-                                             action == "MOVE_RULE_UP" ? _( "already last" ) : _( "already first" ) ) );
+            accessibility::announce( accessibility::format_rule_move( line != access_previous_line,
+                                     action == "MOVE_RULE_UP", line + 1, current_tab.size() ) );
         }
     }
 
@@ -636,11 +632,11 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         } else {
             create_rules();
         }
-        accessibility::announce( _( "Changes saved" ) );
+        accessibility::announce( accessibility::format_rule_changes( true ) );
     } else {
         global_rules = global_rules_old;
         character_rules = character_rules_old;
-        accessibility::announce( _( "Changes discarded" ) );
+        accessibility::announce( accessibility::format_rule_changes( false ) );
     }
 }
 

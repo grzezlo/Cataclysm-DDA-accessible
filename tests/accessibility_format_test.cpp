@@ -697,6 +697,22 @@ TEST_CASE( "phrases_and_level_differences_share_one_wording", "[accessibility][n
     CHECK( accessibility::format_level_difference( -2 ) == "2 levels below" );
 }
 
+TEST_CASE( "rule_managers_share_change_move_and_closing_speech", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::format_rule_list_change( "Rule copied", 3, "wood, Include" ) ==
+    accessibility::format_semantic_sequence( {
+        accessibility::format_list_change( "Rule copied", 3 ), "wood, Include"
+    } ) );
+    CHECK( accessibility::format_rule_move( true, true, 2, 3 ) ==
+           accessibility::format_mod_moved( 2, 3 ) );
+    CHECK( accessibility::format_rule_move( false, true, 3, 3 ) ==
+           accessibility::format_mod_not_moved( true, "already last" ) );
+    CHECK( accessibility::format_rule_move( false, false, 1, 3 ) ==
+           accessibility::format_mod_not_moved( false, "already first" ) );
+    CHECK( accessibility::format_rule_enabled( false ) == "Disabled" );
+    CHECK( accessibility::format_rule_changes( true ) == "Changes saved" );
+}
+
 TEST_CASE( "semantic_sequences_respect_existing_sentence_ends", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_semantic_sequence( { "Loading the save…", "Please wait" } ) ==
