@@ -16,6 +16,7 @@
 #include <utility>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "achievement.h"
 #include "activity_type.h"
 #include "avatar.h"

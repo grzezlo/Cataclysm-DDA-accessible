@@ -8,6 +8,8 @@
 #include <utility>
 #include <vector>
 
+#include "accessibility_dialogue_model.h"
+#include "accessibility_document_cursor.h"
 #include "point.h"
 
 // Renderer-independent semantic models and speech formatters.  Everything here
@@ -123,18 +125,6 @@ struct semantic_document_line {
 std::vector<semantic_document_line> select_document_lines(
     const std::vector<std::string> &source_lines );
 int move_document_cursor( int current, int line_count, int delta );
-/** Retain independent reading positions when switching between documents. */
-class document_cursor_memory
-{
-    public:
-        explicit document_cursor_memory( size_t document_count );
-        int position( size_t document ) const;
-        int move( size_t document, int line_count, int delta );
-        void reset();
-
-    private:
-        std::vector<int> positions_;
-};
 /** Format a document title and the first line or paragraph for opening announcement. */
 std::string format_document_focus( const std::string &title, const std::string &text );
 /** Format opening announcement for the help topic menu. */
@@ -170,7 +160,7 @@ std::string format_uilist_open( const std::string &context, const std::string &c
                                 const std::string &focus, const std::string &details_binding,
                                 bool has_details );
 /** Whether an item action is possible, which the visual menu shows only by color. */
-enum class item_action_availability {
+enum class item_action_availability : int {
     available,
     not_now,
     not_applicable
@@ -1394,72 +1384,6 @@ struct dialogue_response_row {
 std::string format_dialogue_response( const dialogue_response_row &row );
 /** Final conversation element: "Your response, 5 options." */
 std::string format_dialogue_prompt( const std::string &label, size_t count );
-
-/**
- * Screen reader model of the dialogue window.  The conversation level is a
- * history of utterances ending in the response prompt; Enter on the prompt
- * opens the response list, and Escape returns to the prompt.
- */
-class dialogue_speech_model
-{
-    public:
-        struct option {
-            /** Row spoken on focus. */
-            std::string spoken;
-            /** Input action of an extra screen action; empty for a response. */
-            std::string action;
-        };
-        struct result {
-            /** The window must ignore the action. */
-            bool consumed = false;
-            /** Action the window handles instead of the input, when not consumed. */
-            std::string action;
-            std::string speech;
-            /** Response the visible cursor moves to; negative to leave it. */
-            int response_cursor = -1;
-            /** Text to open in the document view. */
-            std::string document;
-        };
-
-        /** Window name for the summary, such as "Dialogue: Rubik". */
-        void set_title( const std::string &title );
-        /** Prompt label, such as "Your response". */
-        void set_prompt_label( const std::string &label );
-        /** Add a history element; the player's own lines are not spoken automatically. */
-        void add_utterance( std::string_view text, bool own );
-        /**
-         * Replace the response list.  The first `response_count` options are
-         * responses; the rest are extra actions.  `cursor` is the visible response.
-         */
-        void set_options( const std::vector<option> &new_options, size_t responses, int cursor );
-        /**
-         * Speech for a newly presented topic: the utterances not yet spoken,
-         * then the prompt, which receives focus on the conversation level.
-         */
-        std::string begin_topic();
-        result handle( const std::string &action );
-        /** The focused element, spoken again after a declined confirmation. */
-        std::string focus() const;
-        /** The row of a response that cannot be chosen. */
-        std::string option_row( size_t index ) const;
-        bool in_response_list() const {
-            return responses_open;
-        }
-
-    private:
-        std::string prompt() const;
-        std::string summary() const;
-        std::string title;
-        std::string prompt_label;
-        std::vector<std::pair<std::string, bool>> history;
-        size_t first_unspoken = 0;
-        std::vector<option> options;
-        size_t response_count = 0;
-        /** History index; history.size() is the prompt. */
-        size_t history_focus = 0;
-        int option_focus = 0;
-        bool responses_open = false;
-};
 
 /** Activity lifecycle speech, independent of handlers and game state. */
 std::string format_activity_start( std::string_view label, const std::string &duration,

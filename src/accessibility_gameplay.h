@@ -10,7 +10,6 @@
 #include <utility>
 #include <vector>
 
-#include "accessibility_format.h"
 #include "coords_fwd.h"
 #include "point.h"
 #include "type_id.h"
@@ -38,6 +37,21 @@ struct visibility_variables;
 namespace accessibility
 {
 class game_message_speech_capture;
+enum class item_action_availability : int;
+struct character_choice_row;
+struct character_trait_row;
+struct direction_target;
+struct known_place;
+struct nearby_list_entry;
+struct overmap_tile;
+struct requirement_group;
+struct target_focus;
+struct vehicle_grid_position;
+struct vehicle_part_row;
+struct vehicle_status;
+struct world_mod_row;
+struct zone_details;
+struct zone_row;
 } // namespace accessibility
 enum class content_newness;
 enum class hint_rating;

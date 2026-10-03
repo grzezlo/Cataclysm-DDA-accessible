@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 
-#include "accessibility_format.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_pane.h"
 #include "cursesdef.h"
@@ -19,6 +18,11 @@ class input_context;
 class string_input_popup;
 class ui_adaptor;
 struct advanced_inv_save_state;
+namespace accessibility
+{
+struct transfer_pane;
+struct transfer_row;
+} // namespace accessibility
 
 void create_advanced_inv();
 

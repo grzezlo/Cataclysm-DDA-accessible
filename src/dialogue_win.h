@@ -7,7 +7,7 @@
 #include <tuple>
 #include <vector>
 
-#include "accessibility_format.h"
+#include "accessibility_dialogue_model.h"
 #include "color.h"
 #include "cursesdef.h"
 #include "output.h"

@@ -4,6 +4,7 @@
 #include <memory>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "accessibility_gameplay.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"

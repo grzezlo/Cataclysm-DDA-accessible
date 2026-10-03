@@ -104,7 +104,9 @@ over upstream contribution policy or exact UI parity.
 - `src/accessibility_format.h` and `src/accessibility_format.cpp` own the pure
   semantic models and speech formatters.  Keep them free of game state so they
   can be tested with fixed inputs; add new formatters here, not to the service
-  header.
+  header.  Other headers forward-declare its types; a model that an upstream
+  header keeps as a member lives in its own small header, such as
+  `accessibility_document_cursor.h` and `accessibility_dialogue_model.h`.
 - `src/accessibility_gameplay.h` and `src/accessibility_gameplay.cpp` own the
   gameplay views and descriptions: situation and status review, look-around
   tile descriptions, threat and condition alerts, movement, and nearby-list

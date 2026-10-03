@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "accessibility_format.h"
+#include "accessibility_document_cursor.h"
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "enums.h"

@@ -19,6 +19,7 @@
 #include <vector>
 
 #include "accessibility.h"
+#include "accessibility_format.h"
 #include "activity_actor_definitions.h"
 #include "advanced_inv_area.h"
 #include "advanced_inv_listitem.h"
