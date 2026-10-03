@@ -143,21 +143,25 @@ std::string player_activity::get_str_value( size_t index, std::string_view def )
     return std::string( index < str_values.size() ? str_values[index] : def );
 }
 
-std::optional<std::string> player_activity::get_progress_message( const avatar &u ) const
+bool player_activity::has_progress_message() const
 {
     if( type == ACT_NULL || get_verb().empty() ) {
-        return std::optional<std::string>();
+        return false;
     }
 
-    if( type == ACT_AIM ||
-        type == ACT_ARMOR_LAYERS ||
-        type == ACT_ATM ||
-        type == ACT_CONSUME_DRINK_MENU ||
-        type == ACT_CONSUME_FOOD_MENU ||
-        type == ACT_CONSUME_MEDS_MENU ||
-        type == ACT_EAT_MENU ||
-        type == ACT_INVOKE_ITEM
-      ) {
+    return !( type == ACT_AIM ||
+              type == ACT_ARMOR_LAYERS ||
+              type == ACT_ATM ||
+              type == ACT_CONSUME_DRINK_MENU ||
+              type == ACT_CONSUME_FOOD_MENU ||
+              type == ACT_CONSUME_MEDS_MENU ||
+              type == ACT_EAT_MENU ||
+              type == ACT_INVOKE_ITEM );
+}
+
+std::optional<std::string> player_activity::get_progress_message( const avatar &u ) const
+{
+    if( !has_progress_message() ) {
         return std::nullopt;
     }
 
@@ -235,7 +239,7 @@ void player_activity::start_or_resume( Character &who, bool resuming )
     synchronize_type_with_actor();
     get_event_bus().send<event_type::character_starts_activity>( who.getID(), type, resuming );
     if( who.is_avatar() && accessibility::is_active() ) {
-        if( *this && get_progress_message( *who.as_avatar() ) ) {
+        if( *this && has_progress_message() ) {
             accessibility_gameplay::activity_started( *this, *who.as_avatar(), resuming );
         } else {
             accessibility::queue_gameplay_announcement(

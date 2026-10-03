@@ -117,6 +117,11 @@ struct activity_speech_state {
     std::string progress_message;
     std::string progress_remaining;
     std::string progress_speech;
+    // The raw progress message of this turn, activity, and remaining moves.
+    time_point raw_progress_turn = calendar::before_time_starts;
+    std::string raw_progress_activity;
+    int raw_progress_moves_left = 0;
+    std::optional<std::string> raw_progress;
     unsigned generation = 0;
     int turns = 0;
     bool canceled = false;
@@ -188,7 +193,7 @@ void reset_activity_speech()
 void activity_started( const player_activity &act, const avatar &viewer, const bool resuming )
 {
     if( !accessibility::is_active() || !accessibility::game_messages_enabled() ||
-        !act.get_progress_message( viewer ) ) {
+        !act.has_progress_message() ) {
         return;
     }
     // Construction assigns its placement after start_or_resume; its owning
@@ -282,6 +287,29 @@ void sleep_finished( const avatar & )
     // The effect's remove message reports waking once it is actually removed.
 }
 
+namespace
+{
+
+/**
+ * The activity's progress message.  The end of an activity turn and the end of
+ * the game turn both update progress; the second reuses the first message.
+ */
+const std::optional<std::string> &raw_activity_progress( const avatar &viewer )
+{
+    activity_speech_state &state = activity_state();
+    const player_activity &act = viewer.activity;
+    if( state.raw_progress_turn != calendar::turn || state.raw_progress_activity != act.id().str() ||
+        state.raw_progress_moves_left != act.moves_left ) {
+        state.raw_progress_turn = calendar::turn;
+        state.raw_progress_activity = act.id().str();
+        state.raw_progress_moves_left = act.moves_left;
+        state.raw_progress = act.get_progress_message( viewer );
+    }
+    return state.raw_progress;
+}
+
+} // namespace
+
 void update_activity_progress( const avatar &viewer )
 {
     if( !accessibility::is_active() || !accessibility::game_messages_enabled() ) {
@@ -305,7 +333,7 @@ void update_activity_progress( const avatar &viewer )
     if( activity_state().id == "sleep" ) {
         // No remaining duration is visible while sleeping.
         activity_state().progress->update( _( "Sleeping" ) );
-    } else if( const auto progress = viewer.activity.get_progress_message( viewer ) ) {
+    } else if( const std::optional<std::string> &progress = raw_activity_progress( viewer ) ) {
         std::string remaining;
         const player_activity &act = viewer.activity;
         if( act.moves_left > 0 && ( act.id().str() == "ACT_WAIT" ||
@@ -329,8 +357,7 @@ void update_activity_progress( const avatar &viewer )
 activity_turn_speech::activity_turn_speech( Character &who )
 {
     if( !who.is_avatar() || !accessibility::is_active() ||
-        !accessibility::game_messages_enabled() ||
-        !who.activity.get_progress_message( *who.as_avatar() ) ) {
+        !accessibility::game_messages_enabled() || !who.activity.has_progress_message() ) {
         return;
     }
     viewer = who.as_avatar();

@@ -130,6 +130,8 @@ class player_activity
          * Helper that returns an activity specific progress message.
          */
         std::optional<std::string> get_progress_message( const avatar &u ) const;
+        /** Whether get_progress_message() returns a message, without building it. */
+        bool has_progress_message() const;
 
         /**
          * If this returns true, the action can be continued without
