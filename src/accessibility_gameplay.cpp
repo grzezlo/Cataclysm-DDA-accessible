@@ -354,6 +354,11 @@ void update_activity_progress( const avatar &viewer )
     }
 }
 
+bool has_activity_progress()
+{
+    return static_cast<bool>( activity_state().progress );
+}
+
 activity_turn_speech::activity_turn_speech( Character &who )
 {
     if( !who.is_avatar() || !accessibility::is_active() ||

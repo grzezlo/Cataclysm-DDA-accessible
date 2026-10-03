@@ -169,6 +169,10 @@ void query_popup::set_message( const std::string &display_text, const std::strin
 
     const std::string spoken = remove_color_tags( semantic_text );
     if( progress ) {
+        if( !progress_spoken ) {
+            speech_progress.reset();
+            return;
+        }
         if( !speech_progress ) {
             speech_progress = std::make_shared<accessibility::progress_reporter>();
             if( !progress_start_suppressed ) {

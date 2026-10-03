@@ -745,6 +745,8 @@ bool do_turn()
                 g->wait_popup = std::make_unique<static_popup>();
                 g->wait_popup->suppress_progress_start();
             }
+            // Speak the activity's own progress, not the popup text with its key hint.
+            g->wait_popup->speak_progress( !accessibility_gameplay::has_activity_progress() );
             g->wait_popup->on_top( true ).wait_message( "%s", wait_message );
             ui_manager::redraw();
             refresh_display();

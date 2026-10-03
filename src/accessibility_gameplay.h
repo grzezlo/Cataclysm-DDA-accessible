@@ -56,6 +56,8 @@ void activity_interruption_reason( const std::string &reason );
 void sleep_started( const avatar &viewer );
 void sleep_finished( const avatar &viewer );
 void update_activity_progress( const avatar &viewer );
+/** Whether the current activity or sleep has its own progress speech. */
+bool has_activity_progress();
 void reset_activity_speech();
 
 /** Capture one handler turn; report its result only when the activity ends. */

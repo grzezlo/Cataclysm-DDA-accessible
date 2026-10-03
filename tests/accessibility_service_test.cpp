@@ -230,6 +230,19 @@ TEST_CASE( "static_progress_popups_speak_one_start_and_rate_limited_updates",
     }
     now += std::chrono::seconds( 5 );
     CHECK_FALSE( accessibility::poll_progress() );
+
+    // While another source speaks the progress, the popup only shows it.
+    accessibility::progress_reporter activity;
+    activity.update( "Waiting, 2 hours remaining" );
+    static_popup waiting;
+    waiting.suppress_progress_start();
+    waiting.speak_progress( false );
+    waiting.progress_message( "%s", "Waiting…\nPress p to interrupt" );
+    CHECK( accessibility::last_announcement() == "Waiting, 2 hours remaining" );
+    now += std::chrono::seconds( 5 );
+    waiting.progress_message( "%s", "Waiting…\nPress p to interrupt" );
+    CHECK( accessibility::poll_progress() );
+    CHECK( speech->messages.back() == "Waiting, 2 hours remaining" );
 }
 
 TEST_CASE( "activity_message_capture_keeps_results_without_turn_speech",

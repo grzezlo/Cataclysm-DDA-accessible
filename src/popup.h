@@ -46,6 +46,10 @@ class query_popup
         void suppress_progress_start() {
             progress_start_suppressed = true;
         }
+        /** Whether progress messages are spoken; off while another source speaks them. */
+        void speak_progress( const bool speak ) {
+            progress_spoken = speak;
+        }
         /**
          * Query result returned by `query_once` and `query`.
          *
@@ -240,6 +244,7 @@ class query_popup
         bool has_announced_text;
         bool static_announcements;
         bool progress_start_suppressed = false;
+        bool progress_spoken = true;
         std::vector<query_option> options;
         size_t cur;
         nc_color default_text_color;
