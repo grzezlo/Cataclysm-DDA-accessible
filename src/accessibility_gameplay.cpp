@@ -526,16 +526,7 @@ std::vector<std::string> limb_names( const std::vector<bodypart_id> &limbs )
 
 std::string relative_z_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target )
 {
-    const int difference = target.z() - origin.z();
-    if( difference == 0 ) {
-        return {};
-    }
-    if( difference > 0 ) {
-        return string_format( n_gettext( "%d level above", "%d levels above", difference ), difference );
-    }
-    const int levels_below = -difference;
-    return string_format( n_gettext( "%d level below", "%d levels below", levels_below ),
-                          levels_below );
+    return accessibility::format_level_difference( target.z() - origin.z() );
 }
 
 /** Use the same visibility rule as look-around so both views describe the same tiles. */
@@ -2652,8 +2643,7 @@ std::optional<tripoint_abs_omt> choose_known_overmap_place( const avatar &viewer
     const std::string title = _( "Known places" );
     if( places.empty() ) {
         accessibility::announce( accessibility::format_semantic_sequence( {
-            string_join( std::vector<std::string> { title, accessibility::format_known_place_count( 0 ) },
-            _( ", " ) )
+            accessibility::join_phrases( { title, accessibility::format_known_place_count( 0 ) } )
         } ) );
         return std::nullopt;
     }
@@ -2708,10 +2698,10 @@ std::string overmap_note_row( const avatar &viewer, const tripoint_abs_omt &posi
     place.in_dangerous_area = place.danger_radius < 0 && overmap_buffer.is_marked_dangerous( position );
     const std::string terrain = overmap_known_terrain( position );
     return accessibility::format_semantic_sequence( {
-        string_join( std::vector<std::string> {
+        accessibility::join_phrases( {
             accessibility::format_known_place_row( place ),
             terrain.empty() ? std::string( _( "unexplored" ) ) : terrain
-        }, _( ", " ) )
+        } )
     } );
 }
 

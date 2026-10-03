@@ -868,28 +868,34 @@ std::pair<std::string, nc_color> display::faction_text( const Character &u )
     return std::pair( display_name, display_color );
 }
 
-nc_color display::bodytemp_color( const Character &u, const bodypart_id &bp )
+int display::bodytemp_band( const Character &u, const bodypart_id &bp )
 {
-    nc_color color = c_light_gray; // default
     const units::temperature temp_conv = u.get_part_temp_conv( bp );
     if( bp == body_part_eyes ) {
-        color = c_light_gray;    // Eyes don't count towards warmth
+        return -1;    // Eyes don't count towards warmth
     } else if( temp_conv  > BODYTEMP_SCORCHING ) {
-        color = c_red;
+        return 0;
     } else if( temp_conv  > BODYTEMP_VERY_HOT ) {
-        color = c_light_red;
+        return 1;
     } else if( temp_conv  > BODYTEMP_HOT ) {
-        color = c_yellow;
+        return 2;
     } else if( temp_conv  > BODYTEMP_COLD ) {
-        color = c_green;
+        return 3;
     } else if( temp_conv  > BODYTEMP_VERY_COLD ) {
-        color = c_light_blue;
+        return 4;
     } else if( temp_conv  > BODYTEMP_FREEZING ) {
-        color = c_cyan;
-    } else {
-        color = c_blue;
+        return 5;
     }
-    return color;
+    return 6;
+}
+
+nc_color display::bodytemp_color( const Character &u, const bodypart_id &bp )
+{
+    static const std::array<nc_color, 7> band_colors = {
+        c_red, c_light_red, c_yellow, c_green, c_light_blue, c_cyan, c_blue
+    };
+    const int band = bodytemp_band( u, bp );
+    return band < 0 ? c_light_gray : band_colors[band];
 }
 
 nc_color display::encumb_color( const int level )

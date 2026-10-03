@@ -93,6 +93,10 @@ std::vector<connected_semantic_list_group> group_connected_semantic_list_entries
 
 /** Join parts into sentences, skipping empty parts and adding missing sentence ends. */
 std::string format_semantic_sequence( const std::vector<std::string> &parts );
+/** "2 levels above", "1 level below", or empty for the same level. */
+std::string format_level_difference( int dz );
+/** Join the non-empty phrases of one sentence with commas. */
+std::string join_phrases( const std::vector<std::string> &parts );
 /** format_semantic_sequence() over views, for callers that do not own the parts. */
 std::string format_semantic_sequence_of_views( const std::vector<std::string_view> &parts );
 

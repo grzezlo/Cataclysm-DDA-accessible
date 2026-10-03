@@ -178,6 +178,9 @@ nc_color get_bodygraph_bp_color( const Character &u, const bodypart_id &bid,
 
 // Define color for displaying the body temperature
 nc_color bodytemp_color( const Character &u, const bodypart_id &bp );
+// Temperature band of bodytemp_color(): -1 for parts without warmth, then 0 (scorching)
+// to 6 (freezing)
+int bodytemp_band( const Character &u, const bodypart_id &bp );
 // Returns color which this limb would have in healing menus
 nc_color limb_color( const Character &u, const bodypart_id &bp, bool bleed, bool bite,
                      bool infect );

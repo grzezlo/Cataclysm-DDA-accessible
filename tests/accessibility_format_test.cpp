@@ -688,6 +688,15 @@ TEST_CASE( "visual_hints_speak_fields_without_separator_symbols", "[accessibilit
     CHECK( accessibility::format_visual_hint( "" ).empty() );
 }
 
+TEST_CASE( "phrases_and_level_differences_share_one_wording", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::join_phrases( { "rock", "", "3 tiles north" } ) == "rock, 3 tiles north" );
+    CHECK( accessibility::join_phrases( { "", "" } ).empty() );
+    CHECK( accessibility::format_level_difference( 0 ).empty() );
+    CHECK( accessibility::format_level_difference( 1 ) == "1 level above" );
+    CHECK( accessibility::format_level_difference( -2 ) == "2 levels below" );
+}
+
 TEST_CASE( "semantic_sequences_respect_existing_sentence_ends", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_semantic_sequence( { "Loading the save…", "Please wait" } ) ==

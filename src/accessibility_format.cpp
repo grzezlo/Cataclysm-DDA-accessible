@@ -512,13 +512,38 @@ std::string format_semantic_sequence_of_views( const std::vector<std::string_vie
     return join_semantic_sequence( parts );
 }
 
+std::string format_level_difference( const int dz )
+{
+    if( dz == 0 ) {
+        return std::string();
+    }
+    const int levels = std::abs( dz );
+    return dz > 0 ? string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
+           string_format( n_gettext( "%d level below", "%d levels below", levels ), levels );
+}
+
+std::string join_phrases( const std::vector<std::string> &parts )
+{
+    std::string result;
+    for( const std::string &part : parts ) {
+        if( part.empty() ) {
+            continue;
+        }
+        if( !result.empty() ) {
+            result += _( ", " );
+        }
+        result += part;
+    }
+    return result;
+}
+
 std::string format_world_row( const std::string &name, const size_t character_count )
 {
     //~ The number of characters saved in a world.
     const std::string characters = character_count == 0 ? std::string( _( "no characters" ) ) :
                                    string_format( n_gettext( "%d character", "%d characters", character_count ),
                                            static_cast<int>( character_count ) );
-    return string_join( std::vector<std::string> { name, characters }, _( ", " ) );
+    return join_phrases( { name, characters } );
 }
 
 std::string format_main_menu_focus( const std::string &menu_name, const std::string &tab,
@@ -1116,6 +1141,41 @@ std::vector<std::string> format_document_paragraphs( const std::string &text )
     return paragraphs;
 }
 
+namespace
+{
+
+/** Location, favorite, and contents state of an item row, in that order. */
+void append_item_details( std::vector<std::string> &parts, const inventory_focus_entry &item )
+{
+    if( !item.location.empty() ) {
+        parts.push_back( string_format( _( "Location: %s" ), item.location ) );
+    }
+    if( item.favorite ) {
+        parts.emplace_back( _( "Favorite" ) );
+    }
+    if( item.has_contents ) {
+        parts.emplace_back( item.contents_collapsed ? _( "Contents collapsed" ) :
+                            _( "Contents expanded" ) );
+    }
+}
+
+std::string item_not_owned()
+{
+    return _( "Not owned" );
+}
+
+std::string item_unavailable( const std::string &denial )
+{
+    return string_format( _( "Unavailable: %s" ), denial );
+}
+
+std::string item_owner( const std::string &owner )
+{
+    return string_format( _( "Owner: %s" ), owner );
+}
+
+} // namespace
+
 std::string format_inventory_focus( const inventory_focus_entry &entry,
                                     const bool include_context, const bool include_all_cells )
 {
@@ -1128,18 +1188,9 @@ std::string format_inventory_focus( const inventory_focus_entry &entry,
         parts.push_back( entry.selection );
     }
     if( entry.not_owned ) {
-        parts.emplace_back( _( "Not owned" ) );
+        parts.push_back( item_not_owned() );
     }
-    if( !entry.location.empty() ) {
-        parts.push_back( string_format( _( "Location: %s" ), entry.location ) );
-    }
-    if( entry.favorite ) {
-        parts.emplace_back( _( "Favorite" ) );
-    }
-    if( entry.has_contents ) {
-        parts.emplace_back( entry.contents_collapsed ? _( "Contents collapsed" ) :
-                            _( "Contents expanded" ) );
-    }
+    append_item_details( parts, entry );
     const size_t cell_count = include_all_cells ? entry.cells.size() :
                               std::min<size_t>( entry.cells.size(), 2 );
     for( size_t i = 0; i < cell_count; ++i ) {
@@ -1150,10 +1201,10 @@ std::string format_inventory_focus( const inventory_focus_entry &entry,
         }
     }
     if( !entry.denial.empty() ) {
-        parts.push_back( string_format( _( "Unavailable: %s" ), entry.denial ) );
+        parts.push_back( item_unavailable( entry.denial ) );
     }
     if( include_all_cells && !entry.owner.empty() ) {
-        parts.push_back( string_format( _( "Owner: %s" ), entry.owner ) );
+        parts.push_back( item_owner( entry.owner ) );
     }
     if( include_all_cells && !entry.destination.empty() ) {
         parts.push_back( string_format( _( "Goes into: %s" ), entry.destination ) );
@@ -1249,24 +1300,15 @@ std::string format_trade_row( const trade_row &row, const bool include_context,
     }
     parts.push_back( format_trade_marked( row.marked, row.available ) );
     if( item.not_owned ) {
-        parts.emplace_back( _( "Not owned" ) );
+        parts.push_back( item_not_owned() );
     }
     if( !item.denial.empty() ) {
-        parts.push_back( string_format( _( "Unavailable: %s" ), item.denial ) );
+        parts.push_back( item_unavailable( item.denial ) );
     }
     if( include_details ) {
-        if( !item.location.empty() ) {
-            parts.push_back( string_format( _( "Location: %s" ), item.location ) );
-        }
-        if( item.favorite ) {
-            parts.emplace_back( _( "Favorite" ) );
-        }
-        if( item.has_contents ) {
-            parts.emplace_back( item.contents_collapsed ? _( "Contents collapsed" ) :
-                                _( "Contents expanded" ) );
-        }
+        append_item_details( parts, item );
         if( !item.owner.empty() ) {
-            parts.push_back( string_format( _( "Owner: %s" ), item.owner ) );
+            parts.push_back( item_owner( item.owner ) );
         }
     }
     return format_semantic_sequence( parts );
@@ -1401,8 +1443,7 @@ std::string format_mission_tab( const mission_category category, const size_t co
                                 const std::string &focus )
 {
     std::vector<std::string> parts = {
-        string_join( std::vector<std::string> { format_mission_category( category ), format_mission_count( count ) },
-        _( ", " ) )
+        join_phrases( { format_mission_category( category ), format_mission_count( count ) } )
     };
     if( count > 0 ) {
         parts.push_back( focus );
@@ -1479,8 +1520,7 @@ std::string format_mission_summary( const mission_category category, const size_
                                     const size_t count, const std::string &current_objective )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { _( "Your missions" ), format_mission_category( category ), format_mission_count( count ) },
-        _( ", " ) ),
+        join_phrases( { _( "Your missions" ), format_mission_category( category ), format_mission_count( count ) } ),
         format_list_position( position, count ),
         current_objective.empty() ? std::string( _( "No current objective" ) ) :
         string_format( _( "Current objective: %s" ), current_objective )
@@ -1504,19 +1544,26 @@ std::string format_mission_track_unavailable( const mission_category category,
     return std::string();
 }
 
+namespace
+{
+
+std::string format_point_cost( const int points )
+{
+    if( points < 0 ) {
+        //~ A character creation choice that adds points, such as "earns 2 points".
+        return string_format( n_gettext( "earns %d point", "earns %d points", -points ), -points );
+    }
+    //~ The point cost of a character creation choice, such as "2 points".
+    return string_format( n_gettext( "%d point", "%d points", points ), points );
+}
+
+} // namespace
+
 std::string format_character_choice_row( const character_choice_row &row )
 {
     std::vector<std::string> parts = { collapse_whitespace( row.name ) };
     if( row.show_points ) {
-        if( row.points < 0 ) {
-            //~ A character creation choice that adds points, such as "earns 2 points".
-            parts.push_back( string_format( n_gettext( "earns %d point", "earns %d points", -row.points ),
-                                            -row.points ) );
-        } else {
-            //~ The point cost of a character creation choice, such as "2 points".
-            parts.push_back( string_format( n_gettext( "%d point", "%d points", row.points ),
-                                            row.points ) );
-        }
+        parts.push_back( format_point_cost( row.points ) );
     }
     if( row.selected ) {
         parts.emplace_back( _( "selected" ) );
@@ -1558,7 +1605,7 @@ std::string format_character_creation_tab( const std::string &tab, const size_t 
 {
     return format_semantic_sequence( {
         opening ? std::string( _( "Character creation" ) ) : std::string(),
-        string_join( std::vector<std::string> { tab, format_list_count( count ) }, _( ", " ) ),
+        join_phrases( { tab, format_list_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -1579,7 +1626,7 @@ std::string format_character_choice_filter( const std::string &filter, const siz
                               //~ Character creation list filter, such as "Filter doc".
                               string_format( _( "Filter %s" ), filter );
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { label, format_list_count( count ) }, _( ", " ) ),
+        join_phrases( { label, format_list_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -1596,7 +1643,7 @@ std::string format_character_tab_summary( const std::string &tab, const size_t p
         const std::string &difficulty )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { tab, format_list_count( count ) }, _( ", " ) ),
+        join_phrases( { tab, format_list_count( count ) } ),
         format_list_position( position, count ),
         current.empty() ? std::string( _( "Current: none" ) ) :
         string_format( _( "Current: %s" ), string_join( current, _( ", " ) ) ),
@@ -1611,7 +1658,7 @@ std::string format_character_creation_pane( const std::string &tab, const std::s
     return format_semantic_sequence( {
         opening ? std::string( _( "Character creation" ) ) : std::string(),
         tab,
-        string_join( std::vector<std::string> { pane, format_list_count( count ) }, _( ", " ) ),
+        join_phrases( { pane, format_list_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -1622,7 +1669,7 @@ std::string format_character_stat_row( const std::string &stat, const int value,
     //~ A character stat and its value, such as "Strength 8".
     std::string row = string_format( _( "%1$s %2$d" ), stat, value );
     if( !level.empty() ) {
-        row = string_join( std::vector<std::string> { row, level }, _( ", " ) );
+        row = join_phrases( { row, level } );
     }
     return format_semantic_sequence( { row, note } );
 }
@@ -1641,13 +1688,7 @@ std::string format_character_trait_row( const character_trait_row &row )
 {
     std::vector<std::string> parts = { collapse_whitespace( row.name ) };
     if( row.show_points ) {
-        if( row.points < 0 ) {
-            parts.push_back( string_format( n_gettext( "earns %d point", "earns %d points", -row.points ),
-                                            -row.points ) );
-        } else {
-            parts.push_back( string_format( n_gettext( "%d point", "%d points", row.points ),
-                                            row.points ) );
-        }
+        parts.push_back( format_point_cost( row.points ) );
     }
     if( row.selected ) {
         parts.emplace_back( _( "selected" ) );
@@ -1700,16 +1741,16 @@ std::string format_character_start_location( const std::string &name, const int 
     if( variants <= 1 ) {
         return name;
     }
-    return string_join( std::vector<std::string> {
+    return join_phrases( {
         name, string_format( n_gettext( "%d variant", "%d variants", variants ), variants )
-    }, _( ", " ) );
+    } );
 }
 
 std::string format_list_open( const std::string &name, const size_t count,
                               const std::string &focus )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { name, format_list_count( count ) }, _( ", " ) ),
+        join_phrases( { name, format_list_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -1724,8 +1765,7 @@ std::string format_world_creation_summary( const size_t position, const size_t c
         const std::vector<std::string> &settings, const bool custom_options, const size_t mod_count )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { _( "Create World" ), format_list_position( position, count ) },
-        _( ", " ) ),
+        join_phrases( { _( "Create World" ), format_list_position( position, count ) } ),
         string_join( settings, _( ", " ) ),
         custom_options ? _( "Advanced options customized" ) : std::string(),
         string_format( n_gettext( "%d mod in load order", "%d mods in load order", mod_count ),
@@ -1780,11 +1820,11 @@ std::string format_mod_removed( const std::string &name, const size_t count,
                                 const std::vector<std::string> &also_removed )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> {
+        join_phrases( {
             string_format( _( "Removed %s" ), name ),
             string_format( n_gettext( "%d mod in load order", "%d mods in load order", count ),
                            static_cast<int>( count ) )
-        }, _( ", " ) ),
+        } ),
         also_removed.empty() ? std::string() :
         string_format( _( "Also removed: %s" ), enumerate_as_string( also_removed ) )
     } );
@@ -1815,9 +1855,9 @@ std::string format_mod_manager_summary( const std::string &pane, const size_t po
                                         const size_t count, const size_t active_count, const std::string &filter )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> {
+        join_phrases( {
             pane, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
-        }, _( ", " ) ),
+        } ),
         string_format( n_gettext( "%d mod in load order", "%d mods in load order", active_count ),
                        static_cast<int>( active_count ) ),
         filter.empty() ? std::string() : string_format( _( "Filter: %s" ), filter )
@@ -1835,7 +1875,7 @@ std::string format_screen_page( const std::string &screen, const std::string &pa
 
 std::string format_list_change( const std::string &change, const size_t count )
 {
-    return string_join( std::vector<std::string> { change, format_list_count( count ) }, _( ", " ) );
+    return join_phrases( { change, format_list_count( count ) } );
 }
 
 std::string format_shortcut_label( const std::string_view label )
@@ -1860,8 +1900,7 @@ std::string format_option_row( const std::string &name, const std::string &value
     std::string row = string_format( _( "%1$s: %2$s" ), name, value );
     if( !unavailable.empty() ) {
         //~ An option whose prerequisite is not met, such as "Unavailable: requires Use tiles".
-        row = string_join( std::vector<std::string> { row, string_format( _( "Unavailable: requires %s" ), unavailable ) },
-                           _( ", " ) );
+        row = join_phrases( { row, string_format( _( "Unavailable: requires %s" ), unavailable ) } );
     }
     return row;
 }
@@ -1874,9 +1913,9 @@ static std::string option_count_text( const size_t count )
 std::string format_option_group_row( const std::string &name, const bool expanded,
                                      const size_t option_count )
 {
-    return string_join( std::vector<std::string> {
+    return join_phrases( {
         name, expanded ? _( "expanded" ) : _( "collapsed" ), option_count_text( option_count )
-    }, _( ", " ) );
+    } );
 }
 
 std::string format_option_group_toggled( const bool expanded, const size_t option_count )
@@ -1884,8 +1923,7 @@ std::string format_option_group_toggled( const bool expanded, const size_t optio
     if( !expanded ) {
         return _( "Collapsed" );
     }
-    return string_join( std::vector<std::string> { _( "Expanded" ), option_count_text( option_count ) },
-                        _( ", " ) );
+    return join_phrases( { _( "Expanded" ), option_count_text( option_count ) } );
 }
 
 std::string format_option_tooltip( const std::string &tooltip, const std::string &note )
@@ -1906,9 +1944,9 @@ std::string format_options_summary( const std::string &page, const size_t positi
                                     const size_t count, const size_t page_number, const size_t page_count )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> {
+        join_phrases( {
             page, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
-        }, _( ", " ) ),
+        } ),
         page_count > 1 ? string_format( _( "Page %s" ), format_list_position( page_number, page_count ) ) :
         std::string()
     } );
@@ -1999,9 +2037,9 @@ std::string format_rule_manager_summary( const std::string &screen, const size_t
         const size_t count, const std::string &state, const std::string &column )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> {
+        join_phrases( {
             screen, count > 0 ? format_list_position( position, count ) : format_list_count( 0 )
-        }, _( ", " ) ),
+        } ),
         state,
         column.empty() ? std::string() : string_format( _( "Column: %s" ), column )
     } );
@@ -2009,13 +2047,12 @@ std::string format_rule_manager_summary( const std::string &screen, const size_t
 
 std::string format_panel_row( const std::string &name, const bool shown )
 {
-    return string_join( std::vector<std::string> { name, shown ? _( "shown" ) : _( "hidden" ) },
-                        _( ", " ) );
+    return join_phrases( { name, shown ? _( "shown" ) : _( "hidden" ) } );
 }
 
 std::string format_layout_row( const std::string &name, const bool active )
 {
-    return active ? string_join( std::vector<std::string> { name, _( "active" ) }, _( ", " ) ) : name;
+    return active ? join_phrases( { name, _( "active" ) } ) : name;
 }
 
 std::string format_panel_move_start( const std::string &name, const size_t position,
@@ -2052,10 +2089,7 @@ std::string format_overmap_offset( const tripoint &offset )
         parts.push_back( string_join( horizontal, pgettext( "map offset", " " ) ) );
     }
     if( offset.z != 0 ) {
-        const int levels = std::abs( offset.z );
-        parts.push_back( offset.z > 0 ?
-                         string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
-                         string_format( n_gettext( "%d level below", "%d levels below", levels ), levels ) );
+        parts.push_back( format_level_difference( offset.z ) );
     }
     if( parts.empty() ) {
         return _( "here" );
@@ -2141,8 +2175,7 @@ std::string format_known_place_row( const known_place &place )
                                              place.distance ), place.distance, place.direction );
     }
     if( place.dz != 0 ) {
-        location = string_join( std::vector<std::string> { location, format_overmap_offset( tripoint( 0, 0, place.dz ) ) },
-                                _( ", " ) );
+        location = join_phrases( { location, format_overmap_offset( tripoint( 0, 0, place.dz ) ) } );
     }
     parts.push_back( location );
     if( place.city ) {
@@ -2269,10 +2302,7 @@ std::string zone_row_parts( const zone_row &row )
         parts.emplace_back( _( "here" ) );
     }
     if( row.dz != 0 ) {
-        const int levels = std::abs( row.dz );
-        parts.push_back( row.dz > 0 ?
-                         string_format( n_gettext( "%d level above", "%d levels above", levels ), levels ) :
-                         string_format( n_gettext( "%d level below", "%d levels below", levels ), levels ) );
+        parts.push_back( format_level_difference( row.dz ) );
     }
     return string_join( parts, _( ", " ) );
 }
@@ -2309,7 +2339,7 @@ std::string format_zone_count( const size_t count )
 std::string format_zones_manager_opening( const size_t count, const std::string &focus )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { _( "Zones manager" ), format_zone_count( count ) }, _( ", " ) ),
+        join_phrases( { _( "Zones manager" ), format_zone_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -2319,9 +2349,9 @@ std::string format_zone_size( const int width, const int height, const int level
     //~ Size of a zone in tiles, such as "Zone 4 by 3".
     std::string size = string_format( _( "Zone %1$d by %2$d" ), width, height );
     if( levels > 1 ) {
-        size = string_join( std::vector<std::string> { size,
-                            string_format( n_gettext( "%d level", "%d levels", levels ), levels )
-                                                     }, _( ", " ) );
+        size = join_phrases( { size,
+                               string_format( n_gettext( "%d level", "%d levels", levels ), levels )
+                             } );
     }
     return format_semantic_sequence( { size } );
 }
@@ -2346,8 +2376,7 @@ std::string format_zone_moved( const std::string_view name, const size_t positio
                                const size_t count )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { collapse_whitespace( name ), format_list_position( position, count ) },
-        _( ", " ) )
+        join_phrases( { collapse_whitespace( name ), format_list_position( position, count ) } )
     } );
 }
 
@@ -2381,7 +2410,7 @@ std::string format_zone_list_change( const std::string &filter, const size_t cou
                                      const std::string &focus )
 {
     return format_semantic_sequence( {
-        string_join( std::vector<std::string> { filter, format_zone_count( count ) }, _( ", " ) ),
+        join_phrases( { filter, format_zone_count( count ) } ),
         count > 0 ? focus : std::string()
     } );
 }
@@ -2642,7 +2671,7 @@ std::string format_vehicle_position_details( const vehicle_grid_position &positi
         across = string_format( _( "column %1$d of %2$d from the left" ),
                                 position.tile.y - position.min.y + 1, position.max.y - position.min.y + 1 );
     }
-    std::string result = string_join( std::vector<std::string> { along, across }, _( ", " ) );
+    std::string result = join_phrases( { along, across } );
     result = uppercase_first_letter( result );
     return format_semantic_sequence( { result } );
 }
@@ -3560,7 +3589,7 @@ std::string format_construction_list( const std::string &category, const size_t 
     const std::string count_text = count == 0 ? _( "No projects" ) :
                                    string_format( n_gettext( "%d project", "%d projects", count ),
                                            static_cast<int>( count ) );
-    return string_join( std::vector<std::string> { category, count_text }, _( ", " ) );
+    return join_phrases( { category, count_text } );
 }
 
 std::string format_character_stat( const std::string &name, const int current, const int base )
@@ -3572,9 +3601,9 @@ std::string format_character_stat( const std::string &name, const int current, c
 
 std::string format_character_value( const std::string &label, const std::string &value )
 {
-    return format_semantic_sequence( { string_join( std::vector<std::string> {
+    return format_semantic_sequence( { join_phrases( {
             label, remove_color_tags( value )
-        }, _( ", " ) )
+        } )
     } );
 }
 
@@ -3698,9 +3727,9 @@ std::string format_trait_row( const std::string_view name, const trait_kind kind
             state = pgettext( "trait kind", "debug" );
             break;
     }
-    return format_semantic_sequence( { string_join( std::vector<std::string> {
+    return format_semantic_sequence( { join_phrases( {
             remove_color_tags( name ), state
-        }, _( ", " ) )
+        } )
     } );
 }
 
@@ -3942,9 +3971,9 @@ std::string format_morale_line( const std::string_view label, const std::string_
     if( plain_label.back() == ':' ) {
         return format_semantic_sequence( { plain_label + " " + plain_value } );
     }
-    return format_semantic_sequence( { string_join( std::vector<std::string> {
+    return format_semantic_sequence( { join_phrases( {
             plain_label, plain_value
-        }, _( ", " ) )
+        } )
     } );
 }
 
@@ -4083,9 +4112,9 @@ std::string format_armor_sprite( const bool hidden, const std::string &row )
 std::string format_armor_summary( const std::string &filter, const std::vector<armor_row> &rows,
                                   const int total, const int layering )
 {
-    std::vector<std::string> parts = { string_join( std::vector<std::string> {
+    std::vector<std::string> parts = { join_phrases( {
             filter, format_list_count( rows.size() )
-        }, _( ", " ) )
+        } )
     };
     for( const armor_row &row : rows ) {
         parts.push_back( format_armor_row( row ) );

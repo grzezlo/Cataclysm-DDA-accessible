@@ -143,24 +143,15 @@ static std::string encumbrance_accessibility_row( const Character &you, const bo
     row.covered = covered;
     const units::temperature temp = you.get_part_temp_conv( bp );
     row.warmth = temperature_print_rescaling( temp );
-    // The same bands as display::bodytemp_color().
-    if( bp == body_part_eyes ) {
-        row.warmth_state = accessibility::body_warmth::none;
-    } else if( temp > BODYTEMP_SCORCHING ) {
-        row.warmth_state = accessibility::body_warmth::scorching;
-    } else if( temp > BODYTEMP_VERY_HOT ) {
-        row.warmth_state = accessibility::body_warmth::very_hot;
-    } else if( temp > BODYTEMP_HOT ) {
-        row.warmth_state = accessibility::body_warmth::warm;
-    } else if( temp > BODYTEMP_COLD ) {
-        row.warmth_state = accessibility::body_warmth::comfortable;
-    } else if( temp > BODYTEMP_VERY_COLD ) {
-        row.warmth_state = accessibility::body_warmth::chilly;
-    } else if( temp > BODYTEMP_FREEZING ) {
-        row.warmth_state = accessibility::body_warmth::very_cold;
-    } else {
-        row.warmth_state = accessibility::body_warmth::freezing;
-    }
+    // The bands that display::bodytemp_color() shows by color.
+    static const std::array<accessibility::body_warmth, 7> band_states = {
+        accessibility::body_warmth::scorching, accessibility::body_warmth::very_hot,
+        accessibility::body_warmth::warm, accessibility::body_warmth::comfortable,
+        accessibility::body_warmth::chilly, accessibility::body_warmth::very_cold,
+        accessibility::body_warmth::freezing
+    };
+    const int band = display::bodytemp_band( you, bp );
+    row.warmth_state = band < 0 ? accessibility::body_warmth::none : band_states[band];
     return accessibility::format_encumbrance_row( row, detailed );
 }
 

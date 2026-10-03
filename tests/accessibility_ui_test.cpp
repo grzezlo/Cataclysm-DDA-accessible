@@ -27,6 +27,7 @@
 #include "crafting_gui.h"
 #include "dialogue.h"
 #include "dialogue_win.h"
+#include "display.h"
 #include "faction.h"
 #include "accessibility_test_helpers.h"
 #include "cata_catch.h"
@@ -89,6 +90,7 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
+#include "weather.h"
 #include "worldfactory.h"
 
 // Expected speech strings mirror the spoken output, which uses single spaces after sentences.
@@ -1416,6 +1418,37 @@ TEST_CASE( "crafting_speech_names_missing_requirements_and_disassembly_tools", "
     CHECK( std::none_of( disassembly.begin(), disassembly.end(), []( std::string_view line ) {
         return line.rfind( "Components:", 0 ) == 0;
     } ) );
+}
+
+TEST_CASE( "encumbrance_warmth_words_follow_the_warmth_colors", "[accessibility]" )
+{
+    clear_avatar();
+    avatar &you = get_avatar();
+    const on_out_of_scope cleanup( []() {
+        clear_avatar();
+    } );
+    const std::vector<std::pair<units::temperature, std::string>> bands = {
+        { BODYTEMP_SCORCHING + 1_C_delta, "scorching" }, { BODYTEMP_SCORCHING, "very hot" },
+        { BODYTEMP_VERY_HOT, "warm" }, { BODYTEMP_HOT, "comfortable" },
+        { BODYTEMP_COLD, "chilly" }, { BODYTEMP_VERY_COLD, "very cold" },
+        { BODYTEMP_FREEZING, "freezing" }
+    };
+    const std::vector<nc_color> colors = {
+        c_red, c_light_red, c_yellow, c_green, c_light_blue, c_cyan, c_blue
+    };
+    for( size_t band = 0; band < bands.size(); ++band ) {
+        CAPTURE( bands[band].second );
+        you.set_part_temp_conv( body_part_torso, bands[band].first );
+        CHECK( display::bodytemp_band( you, body_part_torso ) == static_cast<int>( band ) );
+        CHECK( display::bodytemp_color( you, body_part_torso ) == colors[band] );
+        // The detailed rows name the band after the warmth number.
+        const std::vector<std::string> rows = encumbrance_accessibility_rows( you, nullptr );
+        CHECK( std::any_of( rows.begin(), rows.end(), [&]( const std::string & row ) {
+            return row.rfind( "torso, ", 0 ) == 0 &&
+                   ( row.find( ", " + bands[band].second + "." ) != std::string::npos ||
+                     row.find( ", " + bands[band].second + "," ) != std::string::npos );
+        } ) );
+    }
 }
 
 TEST_CASE( "character_sheet_speaks_tabs_rows_categories_and_details", "[accessibility]" )
