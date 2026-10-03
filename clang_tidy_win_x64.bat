@@ -51,7 +51,9 @@ if not "%~1"=="" goto explicit_files
 
 for %%F in (src\accessibility.cpp src\accessibility_format.cpp ^
     src\accessibility_gameplay.cpp src\accessibility_document_view.cpp ^
-    src\accessibility_nvda.cpp tests\accessibility_test.cpp) do (
+    src\accessibility_nvda.cpp tests\accessibility_service_test.cpp ^
+    tests\accessibility_format_test.cpp tests\accessibility_gameplay_test.cpp ^
+    tests\accessibility_ui_test.cpp) do (
     call :check_file "%%F"
     if errorlevel 1 set "CATA_TIDY_FAILED=1"
 )

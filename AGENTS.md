@@ -111,9 +111,12 @@ over upstream contribution policy or exact UI parity.
   semantics.
 - `src/accessibility_nvda.cpp` is the only place for NVDA Controller Client and
   Windows desktop calls.  Other code must use the accessibility service.
-- `tests/accessibility_test.cpp` contains the capture backend and service-level
-  contract tests.  Prefer small semantic formatters that can be tested with
-  fixed inputs over assertions against rendered windows.
+- `tests/accessibility_test_helpers.h` contains the capture backend.  Tests are
+  split into `accessibility_service_test.cpp` (service contract),
+  `accessibility_format_test.cpp` (pure formatters with light headers),
+  `accessibility_gameplay_test.cpp`, and `accessibility_ui_test.cpp`; all keep
+  the `[accessibility]` tag.  Prefer small semantic formatters that can be
+  tested with fixed inputs over assertions against rendered windows.
 - `src/main_menu.cpp`, `src/uilist.cpp`, `src/popup.cpp`, and
   `src/messages.cpp` are shared announcement integration points.  Extend a
   shared control only when the semantics are valid for every caller; otherwise
