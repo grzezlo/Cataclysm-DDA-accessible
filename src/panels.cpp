@@ -974,11 +974,9 @@ void panel_manager::show_adm()
         if( action == "UP" || action == "DOWN" ) {
             accessibility::announce( swapping ?
                                      accessibility::format_mod_moved( current_row + 1, row_indices.size() ) :
-            accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( static_cast<int>( access_previous_row ),
-                                                 static_cast<int>( current_row ), action == "DOWN" ? 1 : -1 ),
-                access_row()
-            } ) );
+                                     accessibility::format_list_move( static_cast<int>( access_previous_row ),
+                                             static_cast<int>( current_row ), accessibility::list_move_direction( action,
+                                                     accessibility::list_move_arrows ), access_row() ) );
         } else if( action == "MOVE_PANEL" && current_col == 0 ) {
             const std::string name = panels[swapping ? source_index : row_indices[current_row]].get_name();
             accessibility::announce( swapping ?

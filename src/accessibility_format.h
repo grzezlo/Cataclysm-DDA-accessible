@@ -106,6 +106,18 @@ std::string format_semantic_sequence_of_views( const std::vector<std::string_vie
  * without a wrap, for a zero `direction`, or when either index is negative.
  */
 std::string format_list_wrap( int previous, int current, int direction );
+/** The wrap, if any, then the focused row after a list move. */
+std::string format_list_move( int previous, int current, int direction, const std::string &row );
+/** Keys that move list focus besides UP and DOWN; screens handle different sets. */
+enum list_move_keys : unsigned {
+    list_move_arrows = 0,
+    list_move_scroll = 1,
+    list_move_pages = 2,
+    list_move_ends = 4,
+    list_move_all = list_move_scroll | list_move_pages | list_move_ends
+};
+/** -1 for list moves toward the start, 1 toward the end, 0 for other actions. */
+int list_move_direction( std::string_view action, unsigned keys = list_move_all );
 /** Item count spoken once when a list opens or a pane is switched to. */
 std::string format_list_count( size_t count );
 /** One-based focus position, spoken only on request. */

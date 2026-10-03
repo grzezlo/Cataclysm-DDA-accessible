@@ -2189,7 +2189,8 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
         const int recmax = static_cast<int>( current.size() );
         const int scroll_rate = recmax > 20 ? 10 : 3;
         const int acc_move_from = line;
-        const int acc_move_direction = action == "DOWN" ? 1 : action == "UP" ? -1 : 0;
+        const int acc_move_direction = accessibility::list_move_direction( action,
+                                       accessibility::list_move_arrows );
 
         std::optional<point> coord = ctxt.get_coordinates_text( catacurses::stdscr );
         const bool mouse_in_list = coord.has_value() && mouseover_area_list.contains( coord.value() );

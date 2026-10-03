@@ -1508,10 +1508,8 @@ static bool search( const ui_adaptor &om_ui, tripoint_abs_omt &curs, const tripo
                 accessibility::announce( accessibility::format_overmap_search_results( locations.size(),
                                          result_focus() ) );
             } else {
-                accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_result, i, action == "NEXT_TAB" ? 1 : -1 ),
-                    result_focus()
-                } ) );
+                accessibility::announce( accessibility::format_list_move( previous_result, i,
+                                         action == "NEXT_TAB" ? 1 : -1, result_focus() ) );
             }
             spoken_result = i;
         }

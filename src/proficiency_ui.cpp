@@ -478,13 +478,10 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
             }
         } else if( navigate_ui_list( action, sel_prof, 10, cur_set.size(), true ) ) {
             if( sel_prof != previous_prof ) {
-                const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
-                                      action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
+                const int direction = accessibility::list_move_direction( action, accessibility::list_move_scroll );
                 accessibility::announce_lazy( [&]() {
-                    return accessibility::format_semantic_sequence( {
-                        accessibility::format_list_wrap( previous_prof, sel_prof, direction ),
-                        row_speech( sel_prof )
-                    } );
+                    return accessibility::format_list_move( previous_prof, sel_prof, direction,
+                                                            row_speech( sel_prof ) );
                 } );
             }
         } else if( filter_str.empty() && ( action == "LEFT" || action == "PREV_CATEGORY" ||

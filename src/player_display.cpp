@@ -1848,12 +1848,10 @@ static void speak_player_display_action( const character_sheet_speech &speech, C
     };
     if( navigated ) {
         if( curtab == previous_tab && line != previous_line ) {
-            const int direction = action == "UP" || action == "PAGE_UP" || action == "SCROLL_UP" ? -1 :
-                                  action == "DOWN" || action == "PAGE_DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( previous_line, line, direction ),
-                speech.focus( curtab, line, previous_line )
-            } ) );
+            const int direction = accessibility::list_move_direction( action,
+                                  accessibility::list_move_scroll | accessibility::list_move_pages );
+            accessibility::announce( accessibility::format_list_move( previous_line, line, direction,
+                                     speech.focus( curtab, line, previous_line ) ) );
         }
     } else if( is_one_of( tab_actions, action ) ) {
         accessibility::announce( speech.tab_announcement( curtab, line ) );

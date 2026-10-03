@@ -780,12 +780,9 @@ void bodygraph_display::display()
         } else if( navigate_ui_list( action, sel_part, 3, partlist.size(), true ) ) {
             prepare_infolist();
             if( sel_part != previous_part ) {
-                const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
-                                      action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
-                accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_part, sel_part, direction ),
-                    part_row( sel_part )
-                } ) );
+                const int direction = accessibility::list_move_direction( action, accessibility::list_move_scroll );
+                accessibility::announce( accessibility::format_list_move( previous_part, sel_part, direction,
+                                         part_row( sel_part ) ) );
             }
         }
         if( static_cast<int>( info_txt.size() ) >= all_height - 2 ) {

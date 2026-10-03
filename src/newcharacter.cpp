@@ -243,8 +243,7 @@ class choice_tab_speech
             }
             if( navigation.count( last_action ) ) {
                 pending = event::move;
-                direction = last_action == "UP" || last_action == "SCROLL_UP" || last_action == "PAGE_UP" ||
-                            last_action == "HOME" ? -1 : 1;
+                direction = accessibility::list_move_direction( last_action );
             } else if( last_action == "QUIT" && !quit ) {
                 pending = event::focus;
             }
@@ -316,9 +315,7 @@ class choice_tab_speech
                         speech = focused_row();
                         break;
                     case event::move:
-                        speech = accessibility::format_semantic_sequence( {
-                            accessibility::format_list_wrap( previous, cur_id, direction ), focused_row()
-                        } );
+                        speech = accessibility::format_list_move( previous, cur_id, direction, focused_row() );
                         break;
                     case event::filter:
                         speech = accessibility::format_character_choice_filter( filter_text, count,

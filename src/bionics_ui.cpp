@@ -1018,9 +1018,7 @@ void avatar::power_bionics()
                 scroll_position = std::max( cursor - half_list_view_location, 0 );
             }
             if( speaking ) {
-                speech = accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
-                } );
+                speech = accessibility::format_list_move( previous_cursor, cursor, 1, accessible_focus() );
             }
         } else if( action == "UP" ) {
             if( cursor > 0 ) {
@@ -1038,9 +1036,7 @@ void avatar::power_bionics()
                                              cursor - half_list_view_location ), 0 );
             }
             if( speaking ) {
-                speech = accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
-                } );
+                speech = accessibility::format_list_move( previous_cursor, cursor, -1, accessible_focus() );
             }
         } else if( menu_mode == REASSIGNING ) {
             menu_mode = ACTIVATING;

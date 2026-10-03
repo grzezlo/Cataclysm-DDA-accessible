@@ -9167,8 +9167,8 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
 
     do {
         bool recalc_unread = false;
-        const int semantic_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
-                                            action == "UP" || action == "PAGE_UP" ? -1 : 0;
+        const int semantic_move_direction = accessibility::list_move_direction( action,
+                                            accessibility::list_move_pages );
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
@@ -9797,8 +9797,8 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
     int last_semantic_creature_index = -1;
 
     do {
-        const int semantic_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
-                                            action == "UP" || action == "PAGE_UP" ? -1 : 0;
+        const int semantic_move_direction = accessibility::list_move_direction( action,
+                                            accessibility::list_move_pages );
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {

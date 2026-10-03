@@ -1223,7 +1223,7 @@ action_id input_context::display_menu( bool permit_execute_action )
                     } else if( action == "PAGE_DOWN" ) {
                         next = std::min( count - 1, next + 10 );
                     } else {
-                        direction = action == "UP" ? -1 : 1;
+                        direction = accessibility::list_move_direction( action, accessibility::list_move_arrows );
                         next = ( next + count + direction ) % count;
                     }
                     focused_action = kb_menu.filtered_registered_actions[next];

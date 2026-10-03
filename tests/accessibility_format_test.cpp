@@ -697,6 +697,21 @@ TEST_CASE( "phrases_and_level_differences_share_one_wording", "[accessibility][n
     CHECK( accessibility::format_level_difference( -2 ) == "2 levels below" );
 }
 
+TEST_CASE( "list_moves_count_only_the_keys_a_screen_handles", "[accessibility][nogame]" )
+{
+    CHECK( accessibility::list_move_direction( "UP" ) == -1 );
+    CHECK( accessibility::list_move_direction( "END" ) == 1 );
+    CHECK( accessibility::list_move_direction( "CONFIRM" ) == 0 );
+    CHECK( accessibility::list_move_direction( "PAGE_DOWN", accessibility::list_move_arrows ) == 0 );
+    CHECK( accessibility::list_move_direction( "PAGE_DOWN", accessibility::list_move_pages ) == 1 );
+    CHECK( accessibility::list_move_direction( "SCROLL_UP", accessibility::list_move_pages ) == 0 );
+    CHECK( accessibility::list_move_direction( "SCROLL_UP", accessibility::list_move_scroll ) == -1 );
+    CHECK( accessibility::list_move_direction( "HOME", accessibility::list_move_scroll |
+            accessibility::list_move_pages ) == 0 );
+    CHECK( accessibility::format_list_move( 4, 0, 1, "rock" ) == "Top. rock." );
+    CHECK( accessibility::format_list_move( 0, 1, 1, "rock" ) == "rock." );
+}
+
 TEST_CASE( "rule_managers_share_change_move_and_closing_speech", "[accessibility][nogame]" )
 {
     CHECK( accessibility::format_rule_list_change( "Rule copied", 3, "wood, Include" ) ==

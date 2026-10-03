@@ -3178,8 +3178,8 @@ std::string inventory_selector::accessibility_status() const
 
 void inventory_selector::note_accessibility_move( const std::string &action )
 {
-    accessibility_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
-                                   action == "UP" || action == "PAGE_UP" ? -1 : 0;
+    accessibility_move_direction = accessibility::list_move_direction( action,
+                                   accessibility::list_move_pages );
 }
 
 std::pair<size_t, size_t> inventory_selector::accessibility_position() const

@@ -575,12 +575,9 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         } else if( access_no_character() || action == "TEST_RULE" ) {
             // Without a character, and after testing a rule, speak the focused row.
             accessibility::announce( access_row() );
-        } else if( accessibility_gameplay::list_move_direction( action ) != 0 ) {
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( access_previous_line, line,
-                                                 accessibility_gameplay::list_move_direction( action ) ),
-                access_row()
-            } ) );
+        } else if( accessibility::list_move_direction( action ) != 0 ) {
+            accessibility::announce( accessibility::format_list_move( access_previous_line, line,
+                                     accessibility::list_move_direction( action ), access_row() ) );
         } else if( action == "ADD_DEFAULT_RULESET" ) {
             accessibility::announce( access_change( _( "Default rules added" ) ) );
         } else if( action == "ADD_RULE" ) {

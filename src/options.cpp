@@ -3986,14 +3986,11 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
         if( !accessibility::is_active() ) {
             continue;
         }
-        const int access_direction = action == "DOWN" || action == "SCROLL_DOWN" ||
-                                     action == "PAGE_DOWN" ? 1 : action == "UP" || action == "SCROLL_UP" ||
-                                     action == "PAGE_UP" ? -1 : 0;
+        const int access_direction = accessibility::list_move_direction( action,
+                                     accessibility::list_move_scroll | accessibility::list_move_pages );
         if( access_direction != 0 ) {
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( access_previous_line, iCurrentLine, access_direction ),
-                access_row()
-            } ) );
+            accessibility::announce( accessibility::format_list_move( access_previous_line, iCurrentLine,
+                                     access_direction, access_row() ) );
         } else if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             accessibility::announce( access_open( access_page_name() ) );
         } else if( action == "RIGHT" || action == "LEFT" || action == "CONFIRM" ) {

@@ -1132,10 +1132,8 @@ void outfit::sort_armor( Character &guy )
             if( previous_selected >= 0 && selected >= 0 ) {
                 return armor_position_speech( items, index );
             }
-            return accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( previous_index, leftListIndex, action == "DOWN" ? 1 : -1 ),
-                row
-            } );
+            return accessibility::format_list_move( previous_index, leftListIndex,
+                                                    accessibility::list_move_direction( action, accessibility::list_move_arrows ), row );
         } else if( action == "LEFT" || action == "RIGHT" || action == "PREV_TAB" ||
                    action == "NEXT_TAB" || action == "EQUIP_ARMOR" || action == "EQUIP_ARMOR_HERE" ||
                    action == "REMOVE_ARMOR" )

@@ -385,8 +385,6 @@ std::string mod_move_refusal( mod_ui &mods, size_t selection, const std::vector<
 /** Spoken mod name: the display name, or the id of a mod that is not installed. */
 std::string mod_display_name( const mod_id &mod );
 
-/** -1 for list moves toward the start, 1 toward the end, 0 for other actions. */
-int list_move_direction( const std::string &action );
 /**
  * Speech for a read-only match list such as a rule test result.  Call once
  * with an empty action after creating `ctxt`: it registers the shared keys and

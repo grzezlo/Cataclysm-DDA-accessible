@@ -177,12 +177,9 @@ void distraction_manager_gui::show()
         const int previous_line = currentLine;
         if( navigate_ui_list( action, currentLine, 5, number_of_distractions, true ) ) {
             if( currentLine != previous_line ) {
-                const int direction = action == "UP" || action == "PAGE_UP" ? -1 :
-                                      action == "DOWN" || action == "PAGE_DOWN" ? 1 : 0;
+                const int direction = accessibility::list_move_direction( action, accessibility::list_move_pages );
                 accessibility::announce_lazy( [&]() {
-                    return accessibility::format_semantic_sequence( {
-                        accessibility::format_list_wrap( previous_line, currentLine, direction ), row()
-                    } );
+                    return accessibility::format_list_move( previous_line, currentLine, direction, row() );
                 } );
             }
         } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {

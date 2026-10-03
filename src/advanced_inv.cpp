@@ -1932,8 +1932,8 @@ void advanced_inventory::process_action( const std::string &input_action )
     avatar &u = get_avatar();
 
     const std::string &action = is_processing() ? "MOVE_ALL_ITEMS" : input_action;
-    accessibility_move_direction = action == "DOWN" || action == "PAGE_DOWN" ? 1 :
-                                   action == "UP" || action == "PAGE_UP" ? -1 : 0;
+    accessibility_move_direction = accessibility::list_move_direction( action,
+                                   accessibility::list_move_pages );
     if( action == "ACCESSIBILITY_DETAILS" ) {
         if( sitem != nullptr ) {
             accessibility::announce( accessibility::format_transfer_row( accessibility_row( src ), true,

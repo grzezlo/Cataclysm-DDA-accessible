@@ -645,12 +645,9 @@ void user_interface::show()
         if( action == "NEXT_TAB" || action == "PREV_TAB" ) {
             accessibility::announce( accessibility::format_list_open( access_tab_name(), access_count,
                                      access_row() ) );
-        } else if( accessibility_gameplay::list_move_direction( action ) != 0 ) {
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                accessibility::format_list_wrap( access_previous_line, iLine,
-                                                 accessibility_gameplay::list_move_direction( action ) ),
-                access_row()
-            } ) );
+        } else if( accessibility::list_move_direction( action ) != 0 ) {
+            accessibility::announce( accessibility::format_list_move( access_previous_line, iLine,
+                                     accessibility::list_move_direction( action ), access_row() ) );
         } else if( action == "ADD_RULE" ) {
             accessibility::announce( access_count > static_cast<size_t>( recmax ) ?
                                      access_change( _( "Rule added" ) ) : std::string( _( "No rule added" ) ) );

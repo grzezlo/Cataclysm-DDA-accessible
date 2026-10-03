@@ -1189,10 +1189,9 @@ void Character::disp_medical()
             }
             info_scroll_position = 0;
             if( speaking && cursor.y != previous_cursor.y ) {
-                speech = accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor.y, cursor.y, action == "DOWN" ? 1 : -1 ),
-                    medical_row_speech( columns(), cursor )
-                } );
+                speech = accessibility::format_list_move( previous_cursor.y, cursor.y,
+                         accessibility::list_move_direction( action, accessibility::list_move_arrows ),
+                         medical_row_speech( columns(), cursor ) );
             }
         } else if( action == "RIGHT" || action == "LEFT" ) {
             const int step = cursor.x + ( action == "RIGHT" ? 1 : -1 );

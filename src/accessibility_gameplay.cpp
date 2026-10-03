@@ -1512,9 +1512,7 @@ std::string zones_manager_speech::result( const std::string &action ) const
         action == "PAGE_UP" || action == "PAGE_DOWN" || action == "HOME" || action == "END" ) {
         const int direction = action == "UP" || action == "SCROLL_UP" ? -1 :
                               action == "DOWN" || action == "SCROLL_DOWN" ? 1 : 0;
-        return zone ? accessibility::format_semantic_sequence( {
-            accessibility::format_list_wrap( previous_index, index, direction ), row()
-        } ) : empty();
+        return zone ? accessibility::format_list_move( previous_index, index, direction, row() ) : empty();
     }
     if( action == "ADD_ZONE" || action == "ADD_PERSONAL_ZONE" ) {
         if( zone && zones.size() > previous_count ) {
@@ -2980,17 +2978,6 @@ std::string mod_move_refusal( mod_ui &mods, const size_t selection,
     return string_format( _( "%s depends on it" ), mod_display_name( active[selection + 1] ) );
 }
 
-int list_move_direction( const std::string &action )
-{
-    if( action == "UP" || action == "SCROLL_UP" || action == "PAGE_UP" || action == "HOME" ) {
-        return -1;
-    }
-    if( action == "DOWN" || action == "SCROLL_DOWN" || action == "PAGE_DOWN" || action == "END" ) {
-        return 1;
-    }
-    return 0;
-}
-
 void match_list_speech( input_context &ctxt, const std::string &title, const std::string &note,
                         const std::vector<std::string> &matches, const int line, const std::string &action,
                         const int previous_line )
@@ -3004,12 +2991,11 @@ void match_list_speech( input_context &ctxt, const std::string &title, const std
         } ) );
         return;
     }
-    const int direction = list_move_direction( action );
+    const int direction = accessibility::list_move_direction( action );
     if( direction != 0 && !matches.empty() && line >= 0 &&
         static_cast<size_t>( line ) < matches.size() ) {
-        accessibility::announce( accessibility::format_semantic_sequence( {
-            accessibility::format_list_wrap( previous_line, line, direction ), matches[line]
-        } ) );
+        accessibility::announce( accessibility::format_list_move( previous_line, line, direction,
+                                 matches[line] ) );
     } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
         accessibility::repeat_last_announcement();
     } else if( action == "ACCESSIBILITY_STATUS" ) {

@@ -816,9 +816,7 @@ void avatar::power_mutations()
                 // Draw the description, shabby workaround
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
                 if( speaking ) {
-                    speech = accessibility::format_semantic_sequence( {
-                        accessibility::format_list_wrap( previous_cursor, cursor, 1 ), accessible_focus()
-                    } );
+                    speech = accessibility::format_list_move( previous_cursor, cursor, 1, accessible_focus() );
                 }
 
             } else if( action == "UP" ) {
@@ -849,9 +847,7 @@ void avatar::power_mutations()
 
                 examine_id = GetTrait( active, passive, cursor, tab_mode );
                 if( speaking ) {
-                    speech = accessibility::format_semantic_sequence( {
-                        accessibility::format_list_wrap( previous_cursor, cursor, -1 ), accessible_focus()
-                    } );
+                    speech = accessibility::format_list_move( previous_cursor, cursor, -1, accessible_focus() );
                 }
             } else if( ( action == "SCROLL_TRAIT_INFO_UP" || action == "SCROLL_TRAIT_INFO_DOWN" ) &&
                        menu_mode == mutation_menu_mode::examining ) {

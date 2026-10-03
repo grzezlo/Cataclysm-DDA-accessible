@@ -439,6 +439,28 @@ std::string format_list_wrap( const int previous, const int current, const int d
     return std::string();
 }
 
+std::string format_list_move( const int previous, const int current, const int direction,
+                              const std::string &row )
+{
+    return format_semantic_sequence( { format_list_wrap( previous, current, direction ), row } );
+}
+
+int list_move_direction( const std::string_view action, const unsigned keys )
+{
+    const bool scroll = ( keys & list_move_scroll ) != 0;
+    const bool pages = ( keys & list_move_pages ) != 0;
+    const bool ends = ( keys & list_move_ends ) != 0;
+    if( action == "UP" || ( scroll && action == "SCROLL_UP" ) || ( pages && action == "PAGE_UP" ) ||
+        ( ends && action == "HOME" ) ) {
+        return -1;
+    }
+    if( action == "DOWN" || ( scroll && action == "SCROLL_DOWN" ) ||
+        ( pages && action == "PAGE_DOWN" ) || ( ends && action == "END" ) ) {
+        return 1;
+    }
+    return 0;
+}
+
 std::string format_list_count( const size_t count )
 {
     if( count == 0 ) {
