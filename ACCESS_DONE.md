@@ -1718,6 +1718,9 @@ Limitations:
   entries, monster threat ids include the monster type, and the automatic
   screen-reader probe uses the replaceable test clock.
 - Deferred items are listed in Stage 22.
+- `test_access.bat` passed 2261 assertions in 115 cases; the Windows x64
+  tiles build and AStyle 3.1 checks passed.
+- Implementation commit: `5e9963bf1f`.
 
 Limitations:
 
