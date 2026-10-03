@@ -438,9 +438,7 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
     ctxt.register_action( "NEXT_CATEGORY" );
     ctxt.register_action( "FILTER" );
     ctxt.register_action( "QUIT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     populate_categories();
     shared_ptr_fast<ui_adaptor> current_ui = create_or_get_ui_adaptor();
@@ -465,9 +463,7 @@ void prof_window::run( std::optional<proficiency_id> default_selection )
         std::string action = ctxt.handle_input();
         std::vector<display_prof_deps *> &cur_set = get_current_set();
         const int previous_prof = sel_prof;
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( summary() );
         } else if( action == "ACCESSIBILITY_DETAILS" ) {
             const std::vector<std::string> paragraphs = accessibility_details();

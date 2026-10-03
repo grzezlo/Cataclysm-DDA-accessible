@@ -1095,9 +1095,7 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         const int scroll_amount = scroll_amount_from_action( ret_act );
         const int previous_fselected = fselected;
 
-        if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
+        if( ret_act == "ACCESSIBILITY_DETAILS" ) {
             const std::string semantic_selection = selection_speech();
             const std::string semantic_position = position_speech();
             const bool selected_has_details = selected_valid && visible_entry_details &&

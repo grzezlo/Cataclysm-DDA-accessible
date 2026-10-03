@@ -258,9 +258,7 @@ void mission_ui::draw_mission_ui()
     //ctxt.register_action( "DOUBLE_CLICK", to_translation( "Set selected mission as current objective" ) );
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "QUIT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
     // Smooths out our handling, makes tabs load immediately after input instead of waiting for next.
     ctxt.set_timeout( 10 );
 
@@ -273,9 +271,7 @@ void mission_ui::draw_mission_ui()
         if( p_impl.last_action == "QUIT" || !p_impl.get_is_open() ) {
             break;
         }
-        if( p_impl.last_action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( p_impl.last_action == "ACCESSIBILITY_STATUS" ) {
+        if( p_impl.last_action == "ACCESSIBILITY_STATUS" ) {
             p_impl.accessibility_summary();
         } else if( p_impl.last_action == "ACCESSIBILITY_DETAILS" ) {
             p_impl.accessibility_details();

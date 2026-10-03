@@ -1613,10 +1613,6 @@ void zones_manager_speech::after( const std::string &action, const bool closing 
     if( !accessibility::is_active() || action == "TIMEOUT" || closing ) {
         return;
     }
-    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
-        return;
-    }
     const std::string speech = result( action );
     if( !speech.empty() ) {
         accessibility::announce( speech );
@@ -3076,9 +3072,7 @@ void match_list_speech( input_context &ctxt, const std::string &title, const std
                         const int previous_line )
 {
     if( action.empty() ) {
-        ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-        ctxt.register_action( "ACCESSIBILITY_STATUS" );
-        ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+        ctxt.register_accessibility_actions();
         accessibility::announce( accessibility::format_semantic_sequence( {
             title, matches.empty() ? std::string() : matches.front()
         } ) );
@@ -3089,8 +3083,6 @@ void match_list_speech( input_context &ctxt, const std::string &title, const std
         static_cast<size_t>( line ) < matches.size() ) {
         accessibility::announce( accessibility::format_list_move( previous_line, line, direction,
                                  matches[line] ) );
-    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
     } else if( action == "ACCESSIBILITY_STATUS" ) {
         accessibility::announce( accessibility::format_semantic_sequence( {
             title, accessibility::format_list_position( line + 1, matches.size() )

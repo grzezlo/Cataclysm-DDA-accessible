@@ -2348,9 +2348,10 @@ TEST_CASE( "zones_manager_speaks_focus_edits_order_and_return_focus", "[accessib
     act( "ACCESSIBILITY_STATUS", nothing );
     CHECK( capture_ptr->messages.back().rfind( "Zones manager. Hiding distant zones. 3 of 3. Apples, ",
             0 ) == 0 );
-    const std::string summary = capture_ptr->messages.back();
+    // input_context::handle_input() answers repeat-last; the screen speaks nothing more.
+    const size_t spoken_before_repeat = capture_ptr->messages.size();
     act( "ACCESSIBILITY_REPEAT_LAST", nothing );
-    CHECK( capture_ptr->messages.back() == summary );
+    CHECK( capture_ptr->messages.size() == spoken_before_repeat );
 
     // Changing the filter speaks the filter, count, and row.
     act( "SHOW_ALL_ZONES", [&]() {

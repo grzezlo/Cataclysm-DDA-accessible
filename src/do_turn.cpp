@@ -239,16 +239,17 @@ void handle_key_blocking_activity()
             || u.activity.moves_left > 0 );
     if( has_unfinished_activity || u.has_destination() ) {
         input_context ctxt = get_default_mode_input_context();
+        // Repeat-last reads the current progress, not the last automatic update.
+        ctxt.set_repeat_last_handler( [&u]() {
+            accessibility_gameplay::update_activity_progress( u );
+            accessibility::repeat_last_announcement();
+        } );
         const std::string action = ctxt.handle_input( 0 );
         bool refresh = true;
         if( action == "pause" ) {
             if( u.activity.is_interruptible_with_kb() ) {
                 g->cancel_activity_query( _( "Confirm:" ) );
             }
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility_gameplay::update_activity_progress( u );
-            accessibility::repeat_last_announcement();
-            refresh = false;
         } else if( action == "player_data" ) {
             u.disp_info( true );
         } else if( action == "messages" ) {

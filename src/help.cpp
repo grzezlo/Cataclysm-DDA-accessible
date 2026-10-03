@@ -356,8 +356,6 @@ void help::display_help() const
                     announce_current_topic();
                 }
             }
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_help_menu_summary( topic_orders.size(),
                                      static_cast<size_t>( sel_index ) + 1 ) );

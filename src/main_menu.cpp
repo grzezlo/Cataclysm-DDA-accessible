@@ -844,10 +844,6 @@ bool main_menu::opening_screen()
         std::string action = ctxt.handle_input();
         input_event sInput = ctxt.get_raw_input();
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        }
         if( action == "ACCESSIBILITY_STATUS" ) {
             announce_position();
             continue;

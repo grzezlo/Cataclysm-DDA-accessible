@@ -315,6 +315,13 @@ class input_context
         void register_leftright();
         void register_cardinal();
         void register_navigate_ui_list();
+        /** Screen reader details, screen summary, and repeat-last. */
+        void register_accessibility_actions();
+        /**
+         * handle_input() answers ACCESSIBILITY_REPEAT_LAST itself and waits for the
+         * next input.  It repeats the last announcement, or calls `handler` when set.
+         */
+        void set_repeat_last_handler( std::function<void()> handler );
 
         /**
          * Display the possible actions in the current context and their
@@ -427,6 +434,7 @@ class input_context
         bool is_registered_action( const std::string &action_name ) const;
     private:
         bool registered_any_input;
+        std::function<void()> repeat_last_handler;
         std::string category; // The input category this context uses.
         point coordinate;
         bool coordinate_input_received;

@@ -4166,8 +4166,6 @@ bool veh_interact::accessible_grid_action( map &here, const std::string &action,
         const std::vector<std::string> lines = accessibility_gameplay::vehicle_tile_details( *veh, -dd );
         accessibility_ui::show_document( location, location, lines, lines );
         accessibility::announce( cursor_description() );
-    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
     } else {
         return false;
     }

@@ -848,9 +848,7 @@ void avatar::power_bionics()
     ctxt.register_action( "TOGGLE_SAFE_FUEL" );
     ctxt.register_action( "TOGGLE_SPRITE" );
     ctxt.register_action( "SORT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     const auto accessible_list = [&]() -> const sorted_bionics & {
         return tab_mode == TAB_ACTIVE ? active : passive;
@@ -981,10 +979,7 @@ void avatar::power_bionics()
         } );
         const int previous_cursor = cursor;
         const bionic_tab_mode previous_tab = tab_mode;
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             if( speaking ) {
                 speech = bionic_accessibility_summary( *this, accessible_list(), tab_mode, cursor, menu_mode );
             }

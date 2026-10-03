@@ -1827,10 +1827,6 @@ static void speak_player_display_action( const character_sheet_speech &speech, C
         const player_display_tab previous_tab, const unsigned previous_line,
         const player_display_tab curtab, const unsigned line, const bool customize_character )
 {
-    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
-        return;
-    }
     if( !accessibility::is_active() ) {
         return;
     }
@@ -2331,9 +2327,7 @@ void Character::disp_info( bool customize_character )
     ctxt.register_action( "SELECT_BIONICS_TAB" );
     ctxt.register_action( "SELECT_EFFECTS_TAB" );
     ctxt.register_action( "SELECT_PROFICIENCIES_TAB" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     std::map<std::string, int> speed_effects;
     for( auto &elem : *effects ) {

@@ -211,13 +211,6 @@ WORLD *worldfactory::make_new_world( bool show_prompt, const std::string &world_
 namespace
 {
 
-void register_accessibility_actions( input_context &ctxt )
-{
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
-}
-
 /** Characters and load order of a world for the document view. */
 std::string accessibility_world_details( const WORLD &world )
 {
@@ -696,7 +689,7 @@ WORLD *worldfactory::pick_world( bool show_prompt, bool empty_only )
     // for mouse selection
     ctxt.register_action( "SELECT" );
     ctxt.register_action( "MOUSE_MOVE" );
-    register_accessibility_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     const auto world_row = [&]() -> std::string {
         if( world_pages[selpage].empty() || sel < 0 ||
@@ -730,10 +723,7 @@ WORLD *worldfactory::pick_world( bool show_prompt, bool empty_only )
         const size_t scroll_rate = recmax > 20 ? 10 : 3;
         const int previous_sel = sel;
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_semantic_sequence( {
                 string_join( std::vector<std::string> { _( "World selection" ), page_name() }, _( ", " ) ),
                 accessibility::format_list_position( sel + 1, recmax )
@@ -1061,7 +1051,7 @@ void worldfactory::show_active_world_mods( const std::vector<mod_id> &world_mods
     ctxt.register_action( "SELECT" );
     ctxt.register_action( "MOUSE_MOVE" );
     ctxt.register_action( "SEC_SELECT" );
-    register_accessibility_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         draw_border( w_border, BORDER_COLOR, _( "Active world mods" ) );
@@ -1093,10 +1083,7 @@ void worldfactory::show_active_world_mods( const std::vector<mod_id> &world_mods
         const int scroll_rate = recmax > 20 ? 10 : 3;
         const int previous_cursor = cursor;
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_semantic_sequence( {
                 string_join( std::vector<std::string> {
                     _( "Active world mods" ),
@@ -1454,7 +1441,7 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
         fpopup.reset();
     };
 
-    register_accessibility_actions( ctxt );
+    ctxt.register_accessibility_actions();
     // Screen reader speech: the two columns behave as tabs; rows speak name, state, and category.
     using mod_list = std::vector<mod_id>;
     const auto pane_mods = [&]( const size_t pane ) -> const mod_list & {
@@ -1580,10 +1567,7 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
                         static_cast<int>( active_mod_order.size() );
         size_t scroll_rate = recmax > 20 ? 10 : 3;
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_mod_manager_summary( pane_name( active_header ),
                                      cursel[active_header] + 1, pane_mods( active_header ).size(), active_mod_order.size(),
                                      current_filter ) );
@@ -2034,7 +2018,7 @@ int worldfactory::show_worldgen_basic( WORLD *world )
     // Screen reader speech.  Rows are the name, the sliders, and the three
     // buttons.  Results are spoken at the start of the next pass so that
     // branches that restart the loop still report them.
-    register_accessibility_actions( ctxt );
+    ctxt.register_accessibility_actions();
     const int access_sliders = static_cast<int>( wg_sliders.size() );
     const auto access_slider_value = [&]( const int i ) {
         return custom_opts ? std::string( _( "Custom" ) ) :
@@ -2108,11 +2092,7 @@ int worldfactory::show_worldgen_basic( WORLD *world )
         std::string action = ctxt.handle_input();
         const int access_previous = sel_opt;
         access_speak = action != "MOUSE_MOVE" && action != "SELECT";
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            access_speak = false;
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             std::vector<std::string> settings { access_name_setting() };
             for( int i = 0; i < access_sliders; i++ ) {
                 settings.push_back( accessibility::format_world_setting( wg_sliders[i]->name().translated(),

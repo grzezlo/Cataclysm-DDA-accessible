@@ -378,9 +378,7 @@ void user_interface::show()
     if( allow_swapping ) {
         ctxt.register_action( "SWAP_RULE_GLOBAL_CHAR" );
     }
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         // Redraw the border
@@ -527,10 +525,7 @@ void user_interface::show()
         const int access_previous_line = iLine;
         const size_t access_previous_tab = iTab;
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_rule_manager_summary( access_screen(),
                                      iLine + 1, cur_rules.size(),
                                      get_option<bool>( "AUTO_PICKUP" ) ? _( "Auto pickup enabled" ) : _( "Auto pickup disabled" ),

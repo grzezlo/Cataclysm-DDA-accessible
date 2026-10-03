@@ -451,9 +451,7 @@ void avatar::power_mutations()
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "QUIT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 #if defined(__ANDROID__)
     for( const auto &p : passive ) {
         ctxt.register_manual_key( cached_mutations[p].key, p.obj().name() );
@@ -647,10 +645,7 @@ void avatar::power_mutations()
             accessibility::announce( speech );
         } );
         const int previous_cursor = cursor;
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             if( speaking ) {
                 speech = mutation_accessibility_summary( *this, accessible_column(), tab_mode, cursor,
                          menu_mode );

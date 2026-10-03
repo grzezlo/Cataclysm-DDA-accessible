@@ -2993,10 +2993,6 @@ inventory_input inventory_selector::get_input()
     }
     while( true ) {
         const std::string action = ctxt.handle_input();
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        }
         note_accessibility_move( action );
         const int ch = ctxt.get_raw_input().get_first_input();
         return process_input( action, ch );
@@ -5031,6 +5027,7 @@ void trade_selector::execute()
             input_event const iev = _ctxt_trade.get_raw_input();
             inventory_input const input =
                 process_input( ctxt.input_to_action( iev ), iev.get_first_input() );
+            // The trade context passes this key on as ANY_INPUT, so answer it here.
             if( input.action == "ACCESSIBILITY_REPEAT_LAST" ) {
                 accessibility::repeat_last_announcement();
                 continue;

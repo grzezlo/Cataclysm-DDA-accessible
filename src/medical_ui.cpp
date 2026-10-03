@@ -1135,9 +1135,7 @@ void Character::disp_medical()
     ctxt.register_action( "SCROLL_INFOBOX_UP", to_translation( "Scroll up" ) );
     ctxt.register_action( "SCROLL_INFOBOX_DOWN", to_translation( "Scroll down" ) );
     ctxt.register_action( "QUIT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     if( accessibility::is_active() ) {
         accessibility::announce( medical_open_speech( *this, medical_accessibility_columns( *this ),
@@ -1158,9 +1156,7 @@ void Character::disp_medical()
             return medical_accessibility_columns( *this );
         };
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( action == "ACCESSIBILITY_STATUS" && speaking ) {
+        if( action == "ACCESSIBILITY_STATUS" && speaking ) {
             speech = medical_summary( *this, columns(), cursor );
         } else if( action == "ACCESSIBILITY_DETAILS" && speaking ) {
             std::array<medical_column, 3> current = columns();

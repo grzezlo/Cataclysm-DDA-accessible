@@ -501,8 +501,6 @@ const std::string &string_input_popup::query_string( const bool loop, const bool
 
         if( desc_view_ptr && desc_view_ptr->handle_navigation( action, *ctxt ) ) {
             // NO FURTHER ACTION REQUIRED
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "TEXT.QUIT" ) {
 #if defined(__ANDROID__)
             if( get_option<bool>( "ANDROID_AUTO_KEYBOARD" ) ) {

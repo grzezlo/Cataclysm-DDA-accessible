@@ -137,8 +137,6 @@ void show_document( const std::string &window_title, const std::string &spoken_t
             move_by( -current_para );
         } else if( action == "END" ) {
             move_by( num_paragraphs - 1 - current_para );
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "HELP_KEYBINDINGS" && num_paragraphs > 0 ) {
             accessibility::announce( spoken_paragraphs[current_para] );
         }

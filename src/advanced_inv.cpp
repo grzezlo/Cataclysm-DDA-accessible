@@ -1390,9 +1390,7 @@ input_context advanced_inventory::register_ctxt() const
 
     ctxt.register_action( "ITEMS_DEFAULT" );
     ctxt.register_action( "SAVE_DEFAULT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     return ctxt;
 }
@@ -1945,8 +1943,6 @@ void advanced_inventory::process_action( const std::string &input_action )
             sitem != nullptr ? accessibility::format_list_position(
                 static_cast<size_t>( spane.index ) + 1, spane.items.size() ) : std::string()
         } ) );
-    } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
     } else if( action == "CATEGORY_SELECTION" ) {
         inCategoryMode = !inCategoryMode;
     } else if( action == "ITEMS_DEFAULT" ) {

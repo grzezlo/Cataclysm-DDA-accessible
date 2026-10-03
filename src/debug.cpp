@@ -416,10 +416,6 @@ static void debug_error_prompt(
     for( bool stop = false; !stop; ) {
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        }
         switch( ctxt.get_raw_input().get_first_input() ) {
 #if defined(TILES)
             case 'c':

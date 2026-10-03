@@ -2887,8 +2887,6 @@ target_handler::trajectory target_ui::run()
             if( accessibility::is_active() ) {
                 accessibility::announce( accessibility::format_target_status( accessibility_status() ) );
             }
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "TOGGLE_UNLOAD_RAS_WEAPON" ) {
             unload_RAS_weapon = !unload_RAS_weapon;
             activity->should_unload_RAS = unload_RAS_weapon;
@@ -3111,9 +3109,7 @@ void target_ui::init_window_and_input()
     ctxt.register_action( "zoom_out" );
     ctxt.register_action( "zoom_in" );
     ctxt.register_action( "TOGGLE_MOVE_CURSOR_VIEW" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
     if( fov_3d_z_range > 0 ) {
         ctxt.register_action( "LEVEL_UP" );
         ctxt.register_action( "LEVEL_DOWN" );

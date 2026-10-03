@@ -222,12 +222,6 @@ class choice_tab_speech
     public:
         choice_tab_speech( tab_manager &tabs, std::string tab ) : tabs( tabs ), tab( std::move( tab ) ) {}
 
-        static void register_actions( input_context &ctxt ) {
-            ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-            ctxt.register_action( "ACCESSIBILITY_STATUS" );
-            ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
-        }
-
         /** Remember the focus before the action changes it. */
         void before_action( const std::string &action, const int cur_id ) {
             last_action = action;
@@ -340,9 +334,7 @@ class choice_tab_speech
         bool handle_shared_action( const std::string &action,
                                    const std::function<std::pair<std::string, std::string>()> &details,
                                    const std::function<std::string()> &summary ) {
-            if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-                accessibility::repeat_last_announcement();
-            } else if( action == "ACCESSIBILITY_STATUS" ) {
+            if( action == "ACCESSIBILITY_STATUS" ) {
                 accessibility::announce( summary() );
             } else if( action == "ACCESSIBILITY_DETAILS" ) {
                 if( accessibility::is_active() ) {
@@ -1501,7 +1493,7 @@ void set_points( tab_manager &tabs, avatar &u, pool_type &pool )
         wnoutrefresh( w_description );
     } );
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
     choice_tab_speech speech( tabs, _( "Points" ) );
     const auto accessibility_row = [&]() {
         accessibility::character_choice_row row;
@@ -1855,7 +1847,7 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
         details.draw( COL_STAT_NEUTRAL );
     } );
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
     choice_tab_speech speech( tabs, _( "Stats" ) );
     // The limit or cost note the header shows for the stat.
     const auto accessibility_stat_note = [&]( const int i ) {
@@ -2154,7 +2146,7 @@ void set_traits( tab_manager &tabs, avatar &u, pool_type pool )
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "SORT" );
     ctxt.register_action( "RANDOMIZE" );
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     choice_tab_speech speech( tabs, _( "Traits" ) );
     const auto accessibility_column = [&]() {
@@ -2926,7 +2918,7 @@ void set_profession( tab_manager &tabs, avatar &u, pool_type pool )
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "RANDOMIZE" );
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     bool recalc_profs = true;
     size_t profs_length = 0;
@@ -3314,7 +3306,7 @@ void set_hobbies( tab_manager &tabs, avatar &u, pool_type pool )
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "RANDOMIZE" );
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     bool recalc_hobbies = true;
     size_t hobbies_length = 0;
@@ -3725,7 +3717,7 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
 
     const int remaining_points_length = utf8_width( pools_to_string( u, pool ), true );
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
     choice_tab_speech speech( tabs, _( "Skills" ) );
     speech.set_section( [&]() {
         return skill_list[cur_pos].skill->display_category()->display_string();
@@ -4153,7 +4145,7 @@ void set_scenario( tab_manager &tabs, avatar &u, pool_type pool )
     ctxt.register_action( "CHANGE_START_OF_GAME" );
     ctxt.register_action( "RESET_CALENDAR" );
     ctxt.register_action( "RANDOMIZE" );
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
 
     bool recalc_scens = true;
     size_t scens_length = 0;
@@ -4915,7 +4907,7 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
 
     bool no_name_entered = false;
 
-    choice_tab_speech::register_actions( ctxt );
+    ctxt.register_accessibility_actions();
     choice_tab_speech speech( tabs, _( "Description" ) );
     // The field value as the screen shows it, without the label.
     const auto accessibility_value = [&]( const char_creation::description_selector field ) {

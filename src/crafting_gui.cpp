@@ -673,9 +673,7 @@ static input_context make_crafting_context( bool highlight_unread_recipes )
     ctxt.register_action( "SCROLL_UP" );
     ctxt.register_action( "SCROLL_DOWN" );
     ctxt.register_action( "COMPARE" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
     if( highlight_unread_recipes ) {
         ctxt.register_action( "TOGGLE_RECIPE_UNREAD" );
         ctxt.register_action( "MARK_ALL_RECIPES_READ" );
@@ -2250,8 +2248,6 @@ std::pair<Character *, const recipe *> select_crafter_and_crafting_recipe( int &
             }
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             acc_speech.speak_status( result_info, line_item_info, w_iteminfo );
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "SCROLL_RECIPE_INFO_UP" ) {
             line_recipe_info -= dataLines;
         } else if( action == "SCROLL_UP" && mouse_in_recipe ) {

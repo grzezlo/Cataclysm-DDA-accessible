@@ -465,8 +465,6 @@ query_popup::result query_popup::query_once()
         if( speaking && button_prompt ) {
             accessibility::announce( spoken_prompt( false, false ) );
         }
-    } else if( res.action == "ACCESSIBILITY_REPEAT_LAST" && button_prompt ) {
-        accessibility::repeat_last_announcement();
     } else {
         for( size_t ind = 0; ind < options.size(); ++ind ) {
             if( res.action == options[ind].action ) {

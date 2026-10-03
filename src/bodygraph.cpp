@@ -311,9 +311,7 @@ bodygraph_display::bodygraph_display( const Character *u, const bodygraph_id &id
     ctxt.register_action( "PAGE_DOWN" );
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 }
 
 void bodygraph_display::init_ui_windows()
@@ -766,8 +764,6 @@ void bodygraph_display::display()
             top_info--;
         } else if( action == "SCROLL_INFOBOX_DOWN" || action == "PAGE_DOWN" ) {
             top_info++;
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( summary() );
         } else if( action == "ACCESSIBILITY_DETAILS" ) {

@@ -1175,9 +1175,6 @@ static std::optional<tripoint_rel_ms> choose_direction_impl( const std::string &
             return tripoint_rel_ms::below;
         } else if( action == "QUIT" ) {
             done = true;
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
         }
         if( !done && action_cb ) {
             const std::pair<bool, std::optional<tripoint_rel_ms>> ret = action_cb( ctxt, action );

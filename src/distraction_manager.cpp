@@ -88,9 +88,7 @@ void distraction_manager_gui::show()
     ctxt.register_action( "CONFIRM" );
     ctxt.register_leftright();
     ctxt.register_navigate_ui_list();
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     const auto row = [&]() {
         const configurable_distraction &entry = get_configurable_distractions()[currentLine];
@@ -182,8 +180,6 @@ void distraction_manager_gui::show()
                     return accessibility::format_list_move( previous_line, currentLine, direction, row() );
                 } );
             }
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( summary() );
         } else if( action == "ACCESSIBILITY_DETAILS" ) {

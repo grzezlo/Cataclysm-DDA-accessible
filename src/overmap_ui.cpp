@@ -1521,8 +1521,6 @@ static bool search( const ui_adaptor &om_ui, tripoint_abs_omt &curs, const tripo
         if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_overmap_search_position( i + 1,
                                      locations.size(), result_focus() ) );
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "NEXT_TAB" ) {
             i = ( i + 1 ) % locations.size();
         } else if( action == "PREV_TAB" ) {
@@ -2063,9 +2061,7 @@ static tripoint_abs_omt display()
     ictxt.register_action( "TOGGLE_FAST_TRAVEL" );
     ictxt.register_action( "MISSIONS" );
     ictxt.register_action( "ACCESSIBILITY_KNOWN_PLACES" );
-    ictxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ictxt.register_action( "ACCESSIBILITY_STATUS" );
-    ictxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ictxt.register_accessibility_actions();
 
     if( data.debug_editor ) {
         ictxt.register_action( "PLACE_TERRAIN" );
@@ -2213,8 +2209,6 @@ static tripoint_abs_omt display()
                                                  accessibility_weather_at( curs ) ) ) );
         } else if( action == "ACCESSIBILITY_STATUS" ) {
             speech.summary( get_avatar(), curs );
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "GO_TO_DESTINATION" ) {
             avatar &player_character = get_avatar();
             if( player_character.omt_path.empty() && accessibility::is_active() ) {

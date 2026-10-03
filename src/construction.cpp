@@ -660,9 +660,7 @@ construction_id construction_menu( const bool blueprint )
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "FILTER" );
     ctxt.register_action( "RESET_FILTER" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
     ctxt.set_timeout( get_option<int>( "BLINK_SPEED" ) );
 
     const std::vector<construction_category> &construct_cat = construction_categories::get_all();
@@ -1225,8 +1223,6 @@ construction_id construction_menu( const bool blueprint )
                     _( "Unavailable projects shown" )
                 } ) );
             }
-        } else if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
         } else if( action == "QUIT" ) {
             exit = true;
         } else if( action == "TOGGLE_UNAVAILABLE_CONSTRUCTIONS" ) {

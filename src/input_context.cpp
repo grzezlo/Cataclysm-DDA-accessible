@@ -474,6 +474,16 @@ const std::string &input_context::handle_input( const int timeout )
             break;
         }
 
+        // Repeat-last is the same everywhere; screens never receive it.
+        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
+            if( repeat_last_handler ) {
+                repeat_last_handler();
+            } else {
+                accessibility::repeat_last_announcement();
+            }
+            continue;
+        }
+
         if( next_action.type == input_event_t::mouse
             && !handling_coordinate_input && action == CATA_ERROR ) {
             continue; // Ignore mouse movement.
@@ -498,6 +508,18 @@ const std::string &input_context::handle_input( const int timeout )
     }
     inp_mngr.set_timeout( old_timeout );
     return *result;
+}
+
+void input_context::register_accessibility_actions()
+{
+    register_action( "ACCESSIBILITY_DETAILS" );
+    register_action( "ACCESSIBILITY_STATUS" );
+    register_action( "ACCESSIBILITY_REPEAT_LAST" );
+}
+
+void input_context::set_repeat_last_handler( std::function<void()> handler )
+{
+    repeat_last_handler = std::move( handler );
 }
 
 void input_context::register_directions()
@@ -1181,10 +1203,6 @@ action_id input_context::display_menu( bool permit_execute_action )
                                               kb_menu.get_filter() );
         if( accessibility_navigation ) {
             sync_focus();
-            if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-                accessibility::repeat_last_announcement();
-                continue;
-            }
             if( action == "NEXT_TAB" ) {
                 kb_menu.status = kb_menu.status == kb_menu_status::filter ? kb_menu_status::show :
                                  kb_menu_status::filter;

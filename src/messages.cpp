@@ -940,9 +940,7 @@ void Messages::dialog::input()
         }
     } else {
         const std::string &action = ctxt.handle_input();
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( semantic_mode && ( action == "CONFIRM" || action == "ACCESSIBILITY_DETAILS" ) ) {
+        if( semantic_mode && ( action == "CONFIRM" || action == "ACCESSIBILITY_DETAILS" ) ) {
             if( review.focused() ) {
                 accessibility::announce( accessibility::format_message_log_detail( *review.focused(),
                                          review.focused_position(), review.matches().size() ) );

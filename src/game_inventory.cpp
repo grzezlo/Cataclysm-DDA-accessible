@@ -2700,10 +2700,6 @@ bool game_menus::inv::compare_item_menu::show()
 
         std::string action = has_button_action() ? get_button_action() : ctxt.handle_input();
 
-        if( speaking && action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        }
         if( speaking && action == "ACCESSIBILITY_DETAILS" ) {
             detail_mode = !detail_mode;
             if( detail_mode ) {

@@ -7311,9 +7311,7 @@ void game::zones_manager()
     ctxt.register_action( "DISABLE_PERSONAL_ZONES" );
     ctxt.register_action( "SHOW_ALL_ZONES" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
     if( debug_mode ) {
         ctxt.register_action( "CHANGE_FACTION" );
     }
@@ -9144,9 +9142,7 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
         bool recalc_unread = false;
         const int semantic_move_direction = accessibility::list_move_direction( action,
                                             accessibility::list_move_pages );
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             semantic_speech.request_summary();
         } else if( action == "COMPARE" && activeItem ) {
             game_menus::inv::compare( active_pos );
@@ -9741,9 +9737,7 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
     do {
         const int semantic_move_direction = accessibility::list_move_direction( action,
                                             accessibility::list_move_pages );
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             semantic_speech.request_summary();
         } else if( navigate_ui_list( action, iActive, scroll_rate, recmax, true ) ) {
         } else if( action == "NEXT_TAB" || action == "PREV_TAB" ) {

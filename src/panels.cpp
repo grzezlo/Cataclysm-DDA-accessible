@@ -722,9 +722,7 @@ void panel_manager::show_adm()
     ctxt.register_action( "RIGHT" );
     ctxt.register_action( "MOVE_PANEL" );
     ctxt.register_action( "TOGGLE_PANEL" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     const std::vector<int> column_widths = { 25, 37, 17 };
 
@@ -877,10 +875,7 @@ void panel_manager::show_adm()
         const std::string action = ctxt.handle_input();
         const size_t access_previous_row = current_row;
         const bool access_was_swapping = swapping;
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             const auto layout = layouts.find( current_layout_id );
             accessibility::announce( accessibility::format_semantic_sequence( {
                 string_join( std::vector<std::string> {

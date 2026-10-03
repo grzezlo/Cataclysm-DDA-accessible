@@ -859,9 +859,7 @@ void outfit::sort_armor( Character &guy )
     ctxt.register_action( "HELP_KEYBINDINGS" );
     ctxt.register_action( "SCROLL_ITEM_INFO_UP" );
     ctxt.register_action( "SCROLL_ITEM_INFO_DOWN" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     Character &player_character = get_player_character();
     auto do_return_entry = [&player_character]() {
@@ -1196,10 +1194,7 @@ void outfit::sort_armor( Character &guy )
             // It doesn't make sense to assign invlets to NPC items
             continue;
         }
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( armor_summary( *this, guy, accessible_list(),
                                                     armor_cat[tabindex] ) );
             continue;

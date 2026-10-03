@@ -3404,9 +3404,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
     ctxt.register_action( "MOUSE_MOVE" );
     ctxt.register_action( "SCROLL_UP" );
     ctxt.register_action( "SCROLL_DOWN" );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     const int iWorldOffset = world_options_only ? 2 : 0;
     int iMinScreenWidth = 0;
@@ -3736,10 +3734,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
             return action;
         }
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             const std::pair<size_t, size_t> position = access_position();
             accessibility::announce( accessibility::format_options_summary(
                                          world_options_only ? access_page_name() :

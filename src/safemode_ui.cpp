@@ -145,9 +145,7 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         ctxt.register_action( "SWITCH_SAFEMODE_OPTION" );
         ctxt.register_action( "SWAP_RULE_GLOBAL_CHAR" );
     }
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 
     Character &player_character = get_player_character();
     ui.on_redraw( [&]( const ui_adaptor & ) {
@@ -369,10 +367,7 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
         const int access_previous_line = line;
         const int access_previous_tab = tab;
 
-        if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-            accessibility::repeat_last_announcement();
-            continue;
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        if( action == "ACCESSIBILITY_STATUS" ) {
             accessibility::announce( accessibility::format_rule_manager_summary(
                                          accessibility::format_screen_page( custom_name_in, access_tab_name() ),
                                          access_no_character() ? 0 : line + 1, access_no_character() ? 0 : current_tab.size(),

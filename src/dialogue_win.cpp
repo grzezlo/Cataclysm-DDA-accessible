@@ -133,9 +133,7 @@ void dialogue_window::set_up_scrolling( input_context &ctxt ) const
     }
     history_view->set_up_navigation( ctxt, scrolling_key_scheme::angle_bracket_scroll );
     responses_list->set_up_navigation( ctxt );
-    ctxt.register_action( "ACCESSIBILITY_DETAILS" );
-    ctxt.register_action( "ACCESSIBILITY_STATUS" );
-    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
+    ctxt.register_accessibility_actions();
 }
 
 void dialogue_window::add_to_history( const std::string &text, const std::string &speaker_name,
@@ -263,11 +261,6 @@ void dialogue_window::announce_topic( const std::string &npc_name )
 void dialogue_window::handle_accessible_input( std::string &action )
 {
     if( !accessibility::is_active() ) {
-        return;
-    }
-    if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
-        accessibility::repeat_last_announcement();
-        action.clear();
         return;
     }
     const accessibility::dialogue_speech_model::result result = speech.handle( action );
