@@ -1717,7 +1717,20 @@ Limitations:
 - Fixes found by the review: speech for mutations no longer inserts missing
   entries, monster threat ids include the monster type, and the automatic
   screen-reader probe uses the replaceable test clock.
-- Deferred items are listed in Stage 22.
+- Decisions that differ from the review's proposals:
+  - The lazy install list (P1-1) also applies to the sighted workshop: the
+    cursor no longer builds it there either.  `can_mount_here()` assumes an
+    unobstructed tile always has some mountable part type.
+  - `talk_response::create_option_line()` (`npctalk.cpp`) is not gated: a
+    test expects its `spoken` text without a screen reader, and it costs one
+    string per topic.
+  - P2-5 shares predictions within one message instead of caching them
+    across messages, because a cache would need invalidation on every
+    aiming change.
+  - P1-3 also fixes review §8: speech states and the visual colors now come
+    from one call with the selected batch size.
+- The rest of review 02 is Stage 22B in `ACCESS_TODO.md`; that stage does not
+  need the review file.
 - `test_access.bat` passed 2261 assertions in 115 cases; the Windows x64
   tiles build and AStyle 3.1 checks passed.
 - Implementation commit: `5e9963bf1f`.
