@@ -161,6 +161,9 @@ int main_menu::sub_item_count() const
 
 void main_menu::announce_position() const
 {
+    if( !accessibility::is_active() ) {
+        return;
+    }
     const int count = sub_item_count();
     accessibility::announce( accessibility::format_main_menu_position(
                                  remove_color_tags( shortcut_text( c_white, vMenuItems[sel1] ) ),
@@ -171,6 +174,9 @@ void main_menu::announce_position() const
 void main_menu::announce_selection( const bool include_menu_name, const bool include_tab,
                                     const bool include_screen_info, const std::string &wrap ) const
 {
+    if( !accessibility::is_active() ) {
+        return;
+    }
     const auto spoken_text = []( const std::string & text ) {
         return remove_color_tags( shortcut_text( c_white, text ) );
     };
@@ -1334,23 +1340,8 @@ bool main_menu::load_character_tab( const std::string &worldname )
 /** A yes/no confirmation that names the world it concerns when spoken. */
 static bool query_world_yn( const std::string &worldname, const std::string &question )
 {
-    const bool force_uc = get_option<bool>( "FORCE_CAPITAL_YN" );
-    const auto &allow_key = force_uc ? input_context::disallow_lower_case_or_non_modified_letters
-                            : input_context::allow_all_keys;
-    return query_popup()
-           .preferred_keyboard_mode( keyboard_mode::keycode )
-           .context( "YESNO" )
-           //~ Spoken before a confirmation about a world, such as "World Survival".
-           .accessibility_context( string_format( _( "World %s" ), worldname ) )
-           .message( force_uc && !is_keycode_mode_supported() ?
-                     pgettext( "query_yn", "%s (Case Sensitive)" ) :
-                     pgettext( "query_yn", "%s" ), question )
-           .option( "YES", allow_key )
-           .option( "NO", allow_key )
-           .cursor( 1 )
-           .default_color( c_light_red )
-           .query()
-           .action == "YES";
+    //~ Spoken before a confirmation about a world, such as "World Survival".
+    return query_yn_about( string_format( _( "World %s" ), worldname ), question );
 }
 
 /** Speak the result of a world management action before the main menu speaks its focus. */

@@ -864,8 +864,10 @@ void avatar::power_bionics()
     const auto accessible_mode = [&]() {
         return accessibility::format_power_menu_mode( bionic_accessibility_mode( menu_mode ) );
     };
-    accessibility::announce( accessibility::format_semantic_sequence( { _( "Bionics" ),
-                             accessible_tab() } ) );
+    if( accessibility::is_active() ) {
+        accessibility::announce( accessibility::format_semantic_sequence( { _( "Bionics" ),
+                                 accessible_tab() } ) );
+    }
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         if( hide ) {

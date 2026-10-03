@@ -694,7 +694,7 @@ task_reason veh_interact::cant_do( const map &here,  char mode )
         case 'i':
             // install mode
             enough_morale = player_character.has_morale_to_craft();
-            valid_target = !can_mount.empty();
+            valid_target = can_mount_here();
             //tool checks processed later
             enough_light = player_character.fine_detail_vision_mod() <= 4;
             has_tools = true;
@@ -1030,6 +1030,7 @@ static void sort_uilist_entries_by_line_drawing( std::vector<uilist_entry> &shap
 
 void veh_interact::do_install( map &here )
 {
+    ensure_can_mount( here );
     task_reason reason = cant_do( here,  'i' );
 
     if( reason == task_reason::INVALID_TARGET ) {
@@ -2340,6 +2341,49 @@ bool veh_interact::can_potentially_install( const vpart_info &vpart )
     return hammerspace || ( can_make && engine_reqs_met && !vpart.has_flag( VPFLAG_APPLIANCE ) );
 }
 
+void veh_interact::ensure_can_mount( map &here )
+{
+    if( !can_mount_stale ) {
+        return;
+    }
+    can_mount_stale = false;
+    can_mount.clear();
+    can_mount_installable = 0;
+    if( cursor_obstructed ) {
+        return;
+    }
+    const tripoint_bub_ms vehp = veh->pos_bub( here ) + veh->coord_translate( -dd );
+    const bool has_critter = get_creature_tracker().creature_at( vehp );
+    std::vector<const vpart_info *> req_missing;
+    for( const vpart_info &vpi : vehicles::parts::get_all() ) {
+        if( has_critter && vpi.has_flag( VPFLAG_OBSTACLE ) ) {
+            continue;
+        }
+        if( vpi.has_flag( "NO_INSTALL_HIDDEN" ) ||
+            vpi.has_flag( VPFLAG_APPLIANCE ) ) {
+            continue; // hide parts with incompatible flags
+        }
+        if( can_potentially_install( vpi ) ) {
+            can_mount.push_back( &vpi );
+        } else {
+            req_missing.push_back( &vpi );
+        }
+    }
+    auto vpart_localized_sort = []( const vpart_info * a, const vpart_info * b ) {
+        return localized_compare( a->name(), b->name() );
+    };
+    std::sort( can_mount.begin(), can_mount.end(), vpart_localized_sort );
+    std::sort( req_missing.begin(), req_missing.end(), vpart_localized_sort );
+    can_mount_installable = can_mount.size();
+    can_mount.insert( can_mount.end(), req_missing.cbegin(), req_missing.cend() );
+}
+
+bool veh_interact::can_mount_here() const
+{
+    // Some part type can always be mounted on an unobstructed square.
+    return can_mount_stale ? !cursor_obstructed : !can_mount.empty();
+}
+
 /**
  * Moves the cursor on the vehicle editing window.
  * @param d How far to move the cursor.
@@ -2359,7 +2403,6 @@ void veh_interact::move_cursor( map &here, const point_rel_ms &d, int dstart_at 
     const point_rel_ms vd = -dd;
     const point_rel_ms q = veh->coord_translate( vd );
     const tripoint_bub_ms vehp = veh->pos_bub( here ) + q;
-    const bool has_critter = get_creature_tracker().creature_at( vehp );
     terrain_here = here.ter( vehp ).obj();
     bool obstruct = here.impassable_ter_furn( vehp );
     const optional_vpart_position ovp = here.veh_at( vehp );
@@ -2369,29 +2412,8 @@ void veh_interact::move_cursor( map &here, const point_rel_ms &d, int dstart_at 
     cursor_obstructed = obstruct;
 
     can_mount.clear();
-    if( !obstruct ) {
-        std::vector<const vpart_info *> req_missing;
-        for( const vpart_info &vpi : vehicles::parts::get_all() ) {
-            if( has_critter && vpi.has_flag( VPFLAG_OBSTACLE ) ) {
-                continue;
-            }
-            if( vpi.has_flag( "NO_INSTALL_HIDDEN" ) ||
-                vpi.has_flag( VPFLAG_APPLIANCE ) ) {
-                continue; // hide parts with incompatible flags
-            }
-            if( can_potentially_install( vpi ) ) {
-                can_mount.push_back( &vpi );
-            } else {
-                req_missing.push_back( &vpi );
-            }
-        }
-        auto vpart_localized_sort = []( const vpart_info * a, const vpart_info * b ) {
-            return localized_compare( a->name(), b->name() );
-        };
-        std::sort( can_mount.begin(), can_mount.end(), vpart_localized_sort );
-        std::sort( req_missing.begin(), req_missing.end(), vpart_localized_sort );
-        can_mount.insert( can_mount.end(), req_missing.cbegin(), req_missing.cend() );
-    }
+    can_mount_installable = 0;
+    can_mount_stale = true;
 
     need_repair.clear();
     parts_here.clear();
@@ -3745,8 +3767,14 @@ void veh_interact::evaluate_tasks( map &here, const std::vector<access_option> &
 {
     reasons.clear();
     speech.assign( options.size(), task_speech() );
+    // The options usually share one tile; focus it once.
+    std::optional<point_rel_ms> focused;
     for( size_t i = 0; i < options.size(); ++i ) {
-        focus_part( here, options[i].part );
+        const point_rel_ms mount = veh->part( options[i].part ).mount;
+        if( focused != mount ) {
+            focus_part( here, options[i].part );
+            focused = mount;
+        }
         reasons.push_back( task_unavailable( here, options[i].task, options[i].part, speech[i] ) );
     }
 }
@@ -3887,9 +3915,11 @@ void veh_interact::accessible_choose_part( map &here, const access_task task,
 {
     std::vector<access_option> options;
     options.reserve( parts.size() );
+    const accessibility::vehicle_grid_position grid = accessibility_gameplay::vehicle_grid_position(
+                *veh, point_rel_ms::zero );
     for( const int part : parts ) {
         options.push_back( { task, part, accessibility::format_vehicle_tile_part(
-                                 accessibility_gameplay::vehicle_part_row( *veh, veh->part( part ) ) )
+                                 accessibility_gameplay::vehicle_part_row( *veh, veh->part( part ), grid ) )
                            } );
     }
     const std::string menu_title = task == access_task::repair ? _( "Choose a part here to repair:" ) :
@@ -3944,9 +3974,11 @@ bool veh_interact::accessible_part_list( map &here )
         menu.accessibility_count = []( const size_t count ) {
             return accessibility::format_vehicle_part_count( count );
         };
+        const accessibility::vehicle_grid_position grid = accessibility_gameplay::vehicle_grid_position(
+                    *veh, point_rel_ms::zero );
         for( size_t i = 0; i < parts.size(); ++i ) {
             const accessibility::vehicle_part_row row = accessibility_gameplay::vehicle_part_row( *veh,
-                    veh->part( parts[i] ) );
+                    veh->part( parts[i] ), grid );
             menu.addentry_col( static_cast<int>( i ), true, std::nullopt, row.name, row.location );
             menu.entries.back().accessibility_focus = accessibility::format_vehicle_part_row( row );
             if( parts[i] == focused ) {
@@ -3998,10 +4030,11 @@ void veh_interact::accessible_install( map &here )
     menu.set_category_filter( [this]( const uilist_entry & entry, const std::string & key ) {
         return key == "_all" || can_mount[entry.retval]->has_category( key );
     } );
+    ensure_can_mount( here );
     for( size_t i = 0; i < can_mount.size(); ++i ) {
         const vpart_info &info = *can_mount[i];
-        // The visual list grays out parts whose requirements are not met.
-        const bool potential = can_potentially_install( info );
+        // The visual list grays out parts whose requirements are not met; they come last.
+        const bool potential = i < can_mount_installable;
         menu.addentry( static_cast<int>( i ), potential, std::nullopt, info.name() );
         menu.entries.back().accessibility_focus = accessibility::format_vehicle_task( info.name(),
                 potential ? std::string() : accessibility::format_vehicle_missing_requirements( 0 ) );
@@ -4093,9 +4126,11 @@ void veh_interact::accessible_overview( map &here )
     menu.accessibility_count = []( const size_t count ) {
         return accessibility::format_vehicle_part_count( count );
     };
+    const accessibility::vehicle_grid_position grid = accessibility_gameplay::vehicle_grid_position(
+                *veh, point_rel_ms::zero );
     for( size_t i = 0; i < parts.size(); ++i ) {
         const accessibility::vehicle_part_row row = accessibility_gameplay::vehicle_part_row( *veh,
-                *parts[i] );
+                *parts[i], grid );
         menu.addentry_col( static_cast<int>( i ), true, MENU_AUTOASSIGN, row.name, row.location );
         menu.entries.back().accessibility_focus = accessibility::format_vehicle_part_row( row );
     }

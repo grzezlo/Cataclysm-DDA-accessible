@@ -89,10 +89,6 @@ std::chrono::steady_clock::time_point now()
     return state().clock ? state().clock() : std::chrono::steady_clock::now();
 }
 
-/**
- * Send speech to the backend.  Only the first focus speech after a key press
- * may replace unfinished speech; everything else queues behind it.
- */
 /** Set CATA_ACCESSIBILITY_TRACE to log every speech request to debug.log. */
 bool trace_enabled()
 {
@@ -100,6 +96,10 @@ bool trace_enabled()
     return enabled;
 }
 
+/**
+ * Send speech to the backend.  Only the first focus speech after a key press
+ * may replace unfinished speech; everything else queues behind it.
+ */
 bool speak( const std::string &message, const bool may_interrupt )
 {
     service_state &current = state();
@@ -157,11 +157,11 @@ bool is_active()
     if( current.detected ) {
         return true;
     }
-    const std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
-    if( current.last_probe && now - *current.last_probe < automatic_probe_interval ) {
+    const std::chrono::steady_clock::time_point probe_time = now();
+    if( current.last_probe && probe_time - *current.last_probe < automatic_probe_interval ) {
         return false;
     }
-    current.last_probe = now;
+    current.last_probe = probe_time;
     current.detected = current.active_backend->is_available();
     return current.detected;
 }
@@ -218,18 +218,20 @@ bool flush_gameplay_announcements()
     if( current.gameplay_queue.empty() ) {
         return false;
     }
+    if( !is_active() ) {
+        current.gameplay_queue.clear();
+        return false;
+    }
     std::vector<std::string> all_parts;
     std::vector<std::string> meaningful_parts;
-    for( const service_state::queued_speech &entry : current.gameplay_queue ) {
-        all_parts.push_back( entry.text );
+    all_parts.reserve( current.gameplay_queue.size() );
+    for( service_state::queued_speech &entry : current.gameplay_queue ) {
         if( entry.kind == gameplay_speech::meaningful ) {
             meaningful_parts.push_back( entry.text );
         }
+        all_parts.push_back( std::move( entry.text ) );
     }
     current.gameplay_queue.clear();
-    if( !is_active() ) {
-        return false;
-    }
     if( !meaningful_parts.empty() ) {
         current.last_message = format_semantic_sequence( meaningful_parts );
     }
@@ -473,17 +475,45 @@ void set_last_announcement( const std::string &message )
     }
 }
 
+namespace
+{
+
+/** Forget the speech state of the current turn and of movement and threats. */
+void reset_turn_speech( service_state &current )
+{
+    current.previous_threats.clear();
+    current.threats_initialized = false;
+    current.previous_movement_direction.clear();
+    current.gameplay_queue.clear();
+    current.last_game_message.clear();
+    current.movement_suppressed = false;
+    current.travel_in_progress = false;
+}
+
+/** Use `replacement`, or the null backend, with fresh speech state. */
+void install_backend( std::unique_ptr<backend> replacement )
+{
+    service_state &current = state();
+    current.active_backend = replacement ? std::move( replacement ) :
+                             std::make_unique<null_backend>();
+    current.mode = screen_reader_mode::automatic;
+    reset_detection();
+    current.input_generation = 0;
+    current.speech_generation = 0;
+    current.last_message.clear();
+    current.last_speech.reset();
+    current.last_spoken_message.clear();
+    current.progress_interval = 5;
+    reset_game_state();
+}
+
+} // namespace
+
 void enable_game_messages( const bool enabled )
 {
     service_state &current = state();
     if( current.game_messages_enabled != enabled ) {
-        current.previous_threats.clear();
-        current.threats_initialized = false;
-        current.previous_movement_direction.clear();
-        current.gameplay_queue.clear();
-        current.last_game_message.clear();
-        current.movement_suppressed = false;
-        current.travel_in_progress = false;
+        reset_turn_speech( current );
     }
     current.game_messages_enabled = enabled;
 }
@@ -511,13 +541,7 @@ bool check_and_announce_condition_transitions( const condition_tracker &current 
 void reset_game_state()
 {
     service_state &current = state();
-    current.previous_threats.clear();
-    current.threats_initialized = false;
-    current.previous_movement_direction.clear();
-    current.gameplay_queue.clear();
-    current.last_game_message.clear();
-    current.movement_suppressed = false;
-    current.travel_in_progress = false;
+    reset_turn_speech( current );
     for( progress_reporter *source : current.progress_sources ) {
         source->message.clear();
         source->last_spoken.clear();
@@ -527,38 +551,15 @@ void reset_game_state()
 
 void set_backend_for_testing( std::unique_ptr<backend> replacement )
 {
-    service_state &current = state();
-    current.active_backend = replacement ? std::move( replacement ) :
-                             std::make_unique<null_backend>();
-    current.mode = screen_reader_mode::automatic;
-    reset_detection();
-    current.input_generation = 0;
-    current.speech_generation = 0;
-    current.last_message.clear();
-    current.last_speech.reset();
-    current.last_spoken_message.clear();
-    current.progress_interval = 5;
-    reset_game_state();
+    install_backend( std::move( replacement ) );
 }
 
 void reset_backend_after_testing()
 {
     service_state &current = state();
-    current.active_backend = make_platform_backend();
-    if( !current.active_backend ) {
-        current.active_backend = std::make_unique<null_backend>();
-    }
-    current.mode = screen_reader_mode::automatic;
-    reset_detection();
-    current.input_generation = 0;
-    current.speech_generation = 0;
-    current.last_message.clear();
     current.game_messages_enabled = false;
     current.clock = {};
-    current.last_speech.reset();
-    current.last_spoken_message.clear();
-    current.progress_interval = 5;
-    reset_game_state();
+    install_backend( make_platform_backend() );
 }
 
 } // namespace accessibility

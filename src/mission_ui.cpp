@@ -323,11 +323,11 @@ void mission_ui_impl::accessibility_details() const
 void mission_ui_impl::update_accessibility( const std::vector<mission *> &missions,
         const int selected_mission, const bool confirmed )
 {
-    accessible_missions = missions;
-    accessible_index = missions.empty() ? 0 : selected_mission;
     if( !accessibility::is_active() ) {
         return;
     }
+    accessible_missions = missions;
+    accessible_index = missions.empty() ? 0 : selected_mission;
     const mission *focused = missions.empty() ? nullptr : missions[accessible_index];
     const accessibility::mission_category category = mission_category_of( selected_tab );
     const bool tab_changed = spoken_tab != selected_tab;

@@ -262,6 +262,12 @@ accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
 /** Part list row of `part`, a part of `veh`, with its location. */
 accessibility::vehicle_part_row vehicle_part_row( const vehicle &veh, const vehicle_part &part );
 /**
+ * Part list row with the bounds of `grid`, a vehicle_grid_position() of any tile
+ * of `veh`; lists compute it once instead of once per part.
+ */
+accessibility::vehicle_part_row vehicle_part_row( const vehicle &veh, const vehicle_part &part,
+        const accessibility::vehicle_grid_position &grid );
+/**
  * Indices of the parts of `veh` in part list order: front to rear, left to
  * right, and as stacked on each tile.
  */

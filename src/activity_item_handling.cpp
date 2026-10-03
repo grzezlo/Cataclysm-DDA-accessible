@@ -194,29 +194,34 @@ static bool same_type( const std::list<item> &items )
 // Names and counts of dropped items for the spoken drop result, in drop order.
 static std::vector<std::string> spoken_drop_items( const std::list<item> &items )
 {
-    std::vector<std::pair<const item *, int>> groups;
+    struct drop_group {
+        const item *first;
+        std::string name;
+        int count;
+    };
+    std::vector<drop_group> groups;
     for( const item &it : items ) {
-        const std::string name = it.tname();
+        std::string name = it.tname();
         const auto group = std::find_if( groups.begin(), groups.end(),
-        [&name]( const std::pair<const item *, int> &entry ) {
-            return entry.first->tname() == name;
+        [&name]( const drop_group & entry ) {
+            return entry.name == name;
         } );
         if( group == groups.end() ) {
-            groups.emplace_back( &it, it.count() );
+            groups.push_back( { &it, std::move( name ), it.count() } );
         } else {
-            group->second += it.count();
+            group->count += it.count();
         }
     }
     std::vector<std::string> names;
-    for( const std::pair<const item *, int> &group : groups ) {
+    for( drop_group &group : groups ) {
         if( group.first->count_by_charges() ) {
             item stack( *group.first );
-            stack.charges = group.second;
+            stack.charges = group.count;
             names.push_back( stack.display_name( stack.charges ) );
         } else {
-            names.push_back( group.second > 1 ?
-                             string_format( "%d %s", group.second, group.first->tname( group.second ) ) :
-                             group.first->tname() );
+            names.push_back( group.count > 1 ?
+                             string_format( "%d %s", group.count, group.first->tname( group.count ) ) :
+                             std::move( group.name ) );
         }
     }
     return names;
@@ -355,7 +360,7 @@ static std::vector<item_location> try_to_put_into_vehicle( Character &c, item_dr
             case item_drop_reason::deliberate: {
                 // The spoken result names the items when all of them fit.
                 std::optional<accessibility::game_message_speech_suppression> quiet;
-                if( c.is_avatar() && items_did_not_fit_count == 0 ) {
+                if( c.is_avatar() && items_did_not_fit_count == 0 && accessibility::is_active() ) {
                     quiet.emplace();
                 }
                 c.add_msg_player_or_npc(
@@ -461,7 +466,7 @@ std::vector<item_location> drop_on_map( Character &you, item_drop_reason reason,
             case item_drop_reason::deliberate: {
                 // The spoken result names the items instead of "several items".
                 std::optional<accessibility::game_message_speech_suppression> quiet;
-                if( you.is_avatar() ) {
+                if( you.is_avatar() && accessibility::is_active() ) {
                     quiet.emplace();
                 }
                 if( can_move_there ) {

@@ -362,8 +362,17 @@ class veh_interact
 
         /* Vector of all vpart TYPES that can be mounted in the current square.
          * Can be converted to a vector<vpart_info>.
-         * Updated whenever the cursor moves. */
+         * Built by ensure_can_mount() for the cursor square; moving the cursor
+         * only marks it stale, because building it checks every part type. */
         std::vector<const vpart_info *> can_mount;
+        /** Whether can_mount was not built for the cursor square yet. */
+        bool can_mount_stale = true;
+        /** Number of leading can_mount entries whose requirements are met. */
+        size_t can_mount_installable = 0;
+        /** Build can_mount for the cursor square when it is stale. */
+        void ensure_can_mount( map &here );
+        /** Whether any part could be mounted in the cursor square. */
+        bool can_mount_here() const;
 
         /* Vector of vparts in the current square that can be repaired. Strictly a
          * subset of parts_here.

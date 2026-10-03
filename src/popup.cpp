@@ -163,23 +163,24 @@ void query_popup::set_message( const std::string &display_text, const std::strin
 {
     invalidate_ui();
     text = display_text;
-    if( !static_announcements ) {
+    if( !static_announcements || !accessibility::is_active() ) {
         return;
     }
 
-    const std::string announcement = accessibility::normalize_status_announcement(
-                                         remove_color_tags( semantic_text ), progress );
+    const std::string spoken = remove_color_tags( semantic_text );
     if( progress ) {
         if( !speech_progress ) {
             speech_progress = std::make_shared<accessibility::progress_reporter>();
             if( !progress_start_suppressed ) {
-                accessibility::announce_status( announcement );
+                accessibility::announce_status( accessibility::normalize_status_announcement( spoken,
+                                                true ) );
             }
         }
-        speech_progress->update( remove_color_tags( semantic_text ) );
+        speech_progress->update( spoken );
         return;
     }
     speech_progress.reset();
+    const std::string announcement = accessibility::normalize_status_announcement( spoken, false );
     if( !announcement.empty() && announcement != last_static_announcement ) {
         accessibility::announce_status( announcement );
         last_static_announcement = announcement;
@@ -333,7 +334,9 @@ query_popup::result query_popup::query_once()
     }
 
     const bool button_prompt = !options.empty();
-    const std::string semantic_text = spoken_context.empty() ? remove_color_tags( text ) :
+    const bool speaking = accessibility::is_active();
+    const std::string semantic_text = !speaking ? std::string() :
+                                      spoken_context.empty() ? remove_color_tags( text ) :
                                       accessibility::format_semantic_sequence( { spoken_context, remove_color_tags( text ) } );
 
     std::shared_ptr<query_popup_impl> impl = create_or_get_impl();
@@ -373,7 +376,7 @@ query_popup::result query_popup::query_once()
         return index < options.size() ? ctxt.get_action_name( options[index].action ) : std::string();
     };
     std::vector<std::string> choice_labels;
-    if( button_prompt ) {
+    if( speaking && button_prompt ) {
         choice_labels.reserve( options.size() );
         for( const query_option &option : options ) {
             choice_labels.push_back( ctxt.get_action_name( option.action ) );
@@ -396,7 +399,7 @@ query_popup::result query_popup::query_once()
                    navigation_binding( "RIGHT", KEY_RIGHT ), ctxt.get_desc( "CONFIRM", 1 ),
                    include_hint );
     };
-    if( ( !semantic_text.empty() || button_prompt ) &&
+    if( speaking && ( !semantic_text.empty() || button_prompt ) &&
         ( !has_announced_text || semantic_text != last_announced_text ) ) {
         accessibility::announce_status( button_prompt ? spoken_prompt( true, true ) : semantic_text );
         last_announced_text = semantic_text;
@@ -455,7 +458,7 @@ query_popup::result query_popup::query_once()
             impl->on_resized();
         }
         //init();
-        if( button_prompt ) {
+        if( speaking && button_prompt ) {
             accessibility::announce( spoken_prompt( false, false ) );
         }
     } else if( res.action == "ACCESSIBILITY_REPEAT_LAST" && button_prompt ) {
@@ -472,7 +475,8 @@ query_popup::result query_popup::query_once()
         }
     }
 
-    if( button_prompt && res.wait_input && previous_selection != impl->keyboard_selected_option ) {
+    if( speaking && button_prompt && res.wait_input &&
+        previous_selection != impl->keyboard_selected_option ) {
         const std::string option = selected_option();
         accessibility::announce( accessibility::format_popup_option_focus( option ) );
         accessibility::set_last_announcement( accessibility::format_popup_prompt(

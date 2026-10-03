@@ -115,10 +115,18 @@ static bool mutation_resources_available( const avatar &you, const mutation_bran
 
 // Screen reader speech for the mutations screen.  Rows speak in words what the
 // columns show by color: on or off, starting traits, and missing resources.
+static const Character::trait_data &mutation_accessibility_data( const avatar &you,
+        const trait_id &mut )
+{
+    static const Character::trait_data missing;
+    const auto found = you.cached_mutations.find( mut );
+    return found != you.cached_mutations.end() ? found->second : missing;
+}
+
 static std::string mutation_accessibility_row( avatar &you, const trait_id &mut )
 {
     const mutation_branch &md = mut.obj();
-    const Character::trait_data &td = you.cached_mutations[mut];
+    const Character::trait_data &td = mutation_accessibility_data( you, mut );
     accessibility::mutation_power_row row;
     row.name = you.mutation_name( mut );
     row.activated = md.activated;
@@ -200,7 +208,8 @@ static std::string mutation_accessibility_tab( avatar &you, const std::vector<tr
 
 static std::string mutation_accessibility_key( avatar &you, const trait_id &mut )
 {
-    return accessibility::format_assigned_key( std::string( 1, you.cached_mutations[mut].key ) );
+    return accessibility::format_assigned_key( std::string( 1, mutation_accessibility_data( you,
+            mut ).key ) );
 }
 
 static std::string mutation_accessibility_summary( avatar &you,
@@ -479,8 +488,10 @@ void avatar::power_mutations()
             mutation_accessibility_row( *this, mut_id )
         } );
     };
-    accessibility::announce( accessibility::format_semantic_sequence( { _( "Mutations" ),
-                             accessible_tab() } ) );
+    if( accessibility::is_active() ) {
+        accessibility::announce( accessibility::format_semantic_sequence( { _( "Mutations" ),
+                                 accessible_tab() } ) );
+    }
 
     ui.on_redraw( [&]( const ui_adaptor & ) {
         werase( wBio );

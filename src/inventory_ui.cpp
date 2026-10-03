@@ -3049,7 +3049,7 @@ void inventory_selector::announce_accessibility_focus( const bool force,
 
     const size_t column = active_column_index;
     const size_t row = get_active_column().get_highlighted_index();
-    const std::string full_focus = accessibility_row( highlighted, true, true );
+    const std::string full_focus = accessibility_row( highlighted, semantic, true, true );
     const std::string snapshot = string_format( "%zu:%zu:%d:%d:%s:%s", column, row,
                                  static_cast<int>( mode ), static_cast<int>( _uimode ),
                                  filter, full_focus );
@@ -3061,7 +3061,7 @@ void inventory_selector::announce_accessibility_focus( const bool force,
     const bool category_changed = semantic.category != accessibility_last_category;
     const bool filter_changed = filter != accessibility_last_filter;
     const bool mode_changed = mode != accessibility_last_mode || _uimode != accessibility_last_uimode;
-    const std::string focus = accessibility_row( highlighted,
+    const std::string focus = accessibility_row( highlighted, semantic,
                               accessibility_opening || column_changed || category_changed, false );
 
     std::vector<std::string> context;
@@ -3111,10 +3111,11 @@ void inventory_selector::announce_accessibility_focus( const bool force,
     accessibility_context_spoken = true;
 }
 
-std::string inventory_selector::accessibility_row( const inventory_entry &entry,
+std::string inventory_selector::accessibility_row( const inventory_entry &,
+        const accessibility::inventory_focus_entry &semantic,
         const bool include_context, const bool include_all_cells ) const
 {
-    return accessibility::format_inventory_focus( accessibility_entry( entry ), include_context,
+    return accessibility::format_inventory_focus( semantic, include_context,
             include_all_cells );
 }
 
@@ -3309,7 +3310,7 @@ void inventory_selector::on_input( const inventory_input &input )
         const inventory_entry &entry = get_active_column().get_highlighted();
         if( entry.is_item() ) {
             const accessibility::inventory_focus_entry semantic = accessibility_entry( entry );
-            const std::string row = accessibility_row( entry, true, true );
+            const std::string row = accessibility_row( entry, semantic, true, true );
             std::vector<std::string> details = accessibility::is_active() ?
                                                preset.get_accessibility_details( entry.any_item() ) :
                                                std::vector<std::string>();
@@ -4307,6 +4308,10 @@ std::string inventory_multiselector::accessibility_status() const
 
 void inventory_multiselector::on_input( const inventory_input &input )
 {
+    if( !accessibility::is_active() ) {
+        on_selection_input( input );
+        return;
+    }
     const std::vector<std::pair<item_location, int>> selection_before = to_use;
     on_selection_input( input );
     if( to_use != selection_before ) {
@@ -5046,13 +5051,15 @@ void trade_selector::on_toggle()
 }
 
 std::string trade_selector::accessibility_row( const inventory_entry &entry,
+        const accessibility::inventory_focus_entry &semantic,
         const bool include_context, const bool include_all_cells ) const
 {
     if( !entry.is_item() ) {
-        return inventory_drop_selector::accessibility_row( entry, include_context, include_all_cells );
+        return inventory_drop_selector::accessibility_row( entry, semantic, include_context,
+                include_all_cells );
     }
     accessibility::trade_row row;
-    row.item = accessibility_entry( entry );
+    row.item = semantic;
     // The only cell after the name is the unit price; refused rows show none.
     if( row.item.denial.empty() && !row.item.cells.empty() ) {
         row.unit_price = row.item.cells.front().second;

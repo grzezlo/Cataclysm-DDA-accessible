@@ -216,6 +216,9 @@ void dialogue_window::print_header( const std::string &name ) const
 void dialogue_window::set_responses( const std::vector<talk_data> &responses )
 {
     responses_list->create_entries( responses );
+    if( !accessibility::is_active() ) {
+        return;
+    }
 
     std::vector<accessibility::dialogue_speech_model::option> options;
     options.reserve( responses.size() );

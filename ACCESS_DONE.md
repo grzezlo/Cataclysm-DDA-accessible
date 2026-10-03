@@ -1693,3 +1693,33 @@ Limitations:
 - The safe mode "move up" key moves a rule toward the end of the list, as
   upstream does; speech reports the resulting position.
 - Mouse movement over these screens is silent.
+
+## 2026-10-03 — Review 02: speech work only with an active screen reader
+
+- Screens and gameplay hooks build speech only when `accessibility::is_active()`:
+  look-around, the medical menu (rows format speech on demand), multi-item
+  drops, pickup results, `inventory_multiselector` selection changes, `uilist`,
+  static and progress popups, `query_popup` prompts, the V menu, armor sorting,
+  missions, the overmap cursor, the main menu, the mod manager, dialogue
+  response options, bionics and mutations opening, and game log messages.
+- Vehicle workshop: moving the cursor no longer builds the list of mountable
+  part types; `ensure_can_mount()` builds it when the install list opens, and
+  task menus focus each tile once.  Part lists compute the vehicle bounds once.
+- `requirement_groups()` reads the availability that one
+  `can_make_with_inventory()` call caches, for the selected batch size, so the
+  visual list and speech agree for batches.
+- Activity progress is formatted only when its text changes; regular
+  expressions in progress normalization and markup removal became scanners
+  (a test compares them with the old expressions); sentence punctuation is
+  translated once per language.
+- Inventory focus builds its entry once per key; targeting computes hit
+  predictions once for the details document.
+- Fixes found by the review: speech for mutations no longer inserts missing
+  entries, monster threat ids include the monster type, and the automatic
+  screen-reader probe uses the replaceable test clock.
+- Deferred items are listed in Stage 22.
+
+Limitations:
+
+- No profiling was done; the changes remove work identified by reading the
+  code, and the speech captured by tests is unchanged.

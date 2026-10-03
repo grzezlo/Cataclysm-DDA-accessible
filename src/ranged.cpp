@@ -211,6 +211,8 @@ static int RAS_time( const Character &p, const item_location &loc );
 static void cycle_action( item &weap, const itype_id &ammo, map *here, const tripoint_bub_ms &pos );
 static void make_gun_sound_effect( const Character &p, bool burst, item *weapon );
 
+struct aim_type_prediction;
+
 class target_ui
 {
     public:
@@ -471,9 +473,16 @@ class target_ui
 
         // Screen reader speech
         std::string accessibility_title() const;
-        std::vector<accessibility::target_aim_level> accessibility_aim_levels();
+        // Hit predictions of the cursor; compute them once per announcement.
+        std::vector<aim_type_prediction> accessibility_predictions();
+        std::vector<accessibility::target_aim_level> accessibility_aim_levels(
+            const std::vector<aim_type_prediction> &predictions );
         accessibility::target_focus accessibility_focus();
+        accessibility::target_focus accessibility_focus(
+            const std::vector<accessibility::target_aim_level> &levels );
         accessibility::target_status accessibility_status();
+        accessibility::target_status accessibility_status(
+            const std::vector<aim_type_prediction> &predictions );
         std::string accessibility_ammo() const;
         void announce_accessibility_open( bool reentered );
         void announce_accessibility_focus( bool as_tile, const std::string &change = {} );
@@ -4449,19 +4458,24 @@ std::string target_ui::accessibility_title() const
     }
 }
 
-std::vector<accessibility::target_aim_level> target_ui::accessibility_aim_levels()
+std::vector<aim_type_prediction> target_ui::accessibility_predictions()
 {
-    std::vector<aim_type_prediction> predictions;
     if( status != Status::Good ) {
         return {};
     }
     if( mode == TargetMode::Fire ) {
-        predictions = fire_aim_predictions( *this, *you, ctxt, *relevant->gun_current_mode(), dst,
-                                            activity->reload_loc );
+        return fire_aim_predictions( *this, *you, ctxt, *relevant->gun_current_mode(), dst,
+                                     activity->reload_loc );
     } else if( mode == TargetMode::Throw || mode == TargetMode::ThrowBlind ) {
-        predictions = throw_aim_predictions( *this, *you, ctxt, *relevant, dst,
-                                             mode == TargetMode::ThrowBlind );
+        return throw_aim_predictions( *this, *you, ctxt, *relevant, dst,
+                                      mode == TargetMode::ThrowBlind );
     }
+    return {};
+}
+
+std::vector<accessibility::target_aim_level> target_ui::accessibility_aim_levels(
+    const std::vector<aim_type_prediction> &predictions )
+{
     const aim_type selected = get_selected_aim_type();
     std::vector<accessibility::target_aim_level> result;
     result.reserve( predictions.size() );
@@ -4487,6 +4501,12 @@ std::vector<accessibility::target_aim_level> target_ui::accessibility_aim_levels
 
 accessibility::target_focus target_ui::accessibility_focus()
 {
+    return accessibility_focus( accessibility_aim_levels( accessibility_predictions() ) );
+}
+
+accessibility::target_focus target_ui::accessibility_focus(
+    const std::vector<accessibility::target_aim_level> &levels )
+{
     map &here = get_map();
     accessibility::target_focus focus = accessibility_gameplay::target_focus( here, *you, src, dst,
                                         traj, dst_critter, dst_veh, mode != TargetMode::Turrets && dst != src );
@@ -4508,7 +4528,7 @@ accessibility::target_focus target_ui::accessibility_focus()
             }
             break;
     }
-    for( const accessibility::target_aim_level &level : accessibility_aim_levels() ) {
+    for( const accessibility::target_aim_level &level : levels ) {
         if( level.selected ) {
             focus.hit = accessibility::format_target_hit_chance( level.hit_chance );
         }
@@ -4531,6 +4551,13 @@ std::string target_ui::accessibility_ammo() const
 
 accessibility::target_status target_ui::accessibility_status()
 {
+    return accessibility_status( mode == TargetMode::Fire ? accessibility_predictions() :
+                                 std::vector<aim_type_prediction>() );
+}
+
+accessibility::target_status target_ui::accessibility_status(
+    const std::vector<aim_type_prediction> &predictions )
+{
     accessibility::target_status result;
     if( mode == TargetMode::Fire || mode == TargetMode::TurretManual ) {
         const gun_mode m = relevant->gun_current_mode();
@@ -4545,12 +4572,10 @@ accessibility::target_status target_ui::accessibility_status()
     }
     if( mode == TargetMode::Fire ) {
         result.aim_mode = get_selected_aim_type().name;
-        if( status == Status::Good ) {
-            for( const aim_type_prediction &prediction : fire_aim_predictions( *this, *you, ctxt,
-                    *relevant->gun_current_mode(), dst, activity->reload_loc ) ) {
-                if( prediction.is_default ) {
-                    result.steadiness = static_cast<int>( 100.0 * prediction.steadiness );
-                }
+        // In fire mode, the predictions exist exactly when the status is good.
+        for( const aim_type_prediction &prediction : predictions ) {
+            if( prediction.is_default ) {
+                result.steadiness = static_cast<int>( 100.0 * prediction.steadiness );
             }
         }
     }
@@ -4635,7 +4660,10 @@ void target_ui::announce_accessibility_cursor( const std::string &action,
 void target_ui::show_accessibility_details()
 {
     map &here = get_map();
-    const accessibility::target_focus focus = accessibility_focus();
+    const std::vector<aim_type_prediction> predictions = accessibility_predictions();
+    const std::vector<accessibility::target_aim_level> levels = accessibility_aim_levels(
+                predictions );
+    const accessibility::target_focus focus = accessibility_focus( levels );
     std::vector<std::string> paragraphs = { accessibility::format_target_focus( focus, false ) };
     if( !focus.target.empty() ) {
         const std::vector<std::string> details = accessibility_gameplay::target_details( here, *you,
@@ -4643,8 +4671,8 @@ void target_ui::show_accessibility_details()
         paragraphs.insert( paragraphs.end(), details.begin(), details.end() );
         paragraphs.push_back( accessibility::format_semantic_sequence( focus.tile ) );
     }
-    paragraphs.push_back( accessibility::format_target_status( accessibility_status() ) );
-    for( const accessibility::target_aim_level &level : accessibility_aim_levels() ) {
+    paragraphs.push_back( accessibility::format_target_status( accessibility_status( predictions ) ) );
+    for( const accessibility::target_aim_level &level : levels ) {
         paragraphs.push_back( accessibility::format_target_aim_level( level ) );
     }
     if( mode == TargetMode::Spell ) {

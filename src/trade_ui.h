@@ -49,7 +49,8 @@ class trade_selector : public inventory_drop_selector
         shared_ptr_fast<ui_adaptor> get_ui() const;
         input_context const *get_ctxt() const;
 
-        std::string accessibility_row( const inventory_entry &entry, bool include_context,
+        std::string accessibility_row( const inventory_entry &entry,
+                                       const accessibility::inventory_focus_entry &semantic, bool include_context,
                                        bool include_all_cells ) const override;
         std::string accessibility_status() const override;
 

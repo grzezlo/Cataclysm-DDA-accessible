@@ -925,8 +925,12 @@ class inventory_selector
         void toggle_navigation_mode();
 
         accessibility::inventory_focus_entry accessibility_entry( const inventory_entry &entry ) const;
-        /** Spoken row of an entry: concise, or everything that ACCESSIBILITY_DETAILS reads. */
-        virtual std::string accessibility_row( const inventory_entry &entry, bool include_context,
+        /**
+         * Spoken row of an entry: concise, or everything that ACCESSIBILITY_DETAILS reads.
+         * @p semantic is accessibility_entry( entry ), built once by the caller.
+         */
+        virtual std::string accessibility_row( const inventory_entry &entry,
+                                               const accessibility::inventory_focus_entry &semantic, bool include_context,
                                                bool include_all_cells ) const;
     public:
         void announce_accessibility_focus( bool force = false, std::string_view event = {} );

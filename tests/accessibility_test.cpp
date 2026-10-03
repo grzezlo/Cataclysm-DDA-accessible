@@ -6,6 +6,7 @@
 #include <map>
 #include <memory>
 #include <optional>
+#include <regex>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -1757,6 +1758,33 @@ TEST_CASE( "accessible_status_summary_formats_semantic_state", "[accessibility][
                accessibility::safe_mode_state::off, true, 0 ) == "Off; auto-safe pending" );
     CHECK( accessibility::format_safe_mode_status(
                accessibility::safe_mode_state::off, true, 1 ) == "Off; auto-safe in 1 turn" );
+}
+
+TEST_CASE( "speech_text_scanners_match_the_regular_expressions_they_replace",
+           "[accessibility][nogame]" )
+{
+    // The scanners replaced these expressions; they must remove the same text.
+    const std::regex fraction( R"(\s*\[\s*\d+\s*/\s*\d+\s*\])" );
+    const std::regex percentage( R"(\s*\d+(\.\d+)?\s*%)" );
+    for( const std::string &progress : {
+             "Saving [3/10]  25%", "Crafting [ 12 / 300 ]", "Reading 7.5 %", "Waiting 1.5.5%",
+             "Unpacking [3/]", "Done [a/b] 100%%", "x[1/2][3/4]y", "Level 3.%", "  42%  ", "[1/2"
+         } ) {
+        CAPTURE( progress );
+        const std::string expected = std::regex_replace( std::regex_replace( progress, fraction, "" ),
+                                     percentage, "" );
+        CHECK( accessibility::normalize_status_announcement( progress, true ) ==
+               accessibility::normalize_status_announcement( expected, false ) );
+    }
+    const std::regex markup_tags( R"(<[^<>\s][^<>]*>)" );
+    for( const std::string &text : {
+             "<color_red>Hot</color> < 5 and <good>fine</good>", "a <b<c> d", "x <> y < z>",
+             "<a\nb>c", "trailing <open", "<info>Weight: 1.5 kg</info>\n<bad>Broken.</bad>"
+         } ) {
+        CAPTURE( text );
+        CHECK( accessibility::format_document_paragraphs( text ) ==
+               accessibility::format_document_paragraphs( std::regex_replace( text, markup_tags, "" ) ) );
+    }
 }
 
 TEST_CASE( "tutorial_document_preserves_instruction_lines_and_sentences",

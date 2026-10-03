@@ -7,7 +7,6 @@
 #include <iterator>
 #include <map>
 #include <optional>
-#include <regex>
 #include <string_view>
 #include <tuple>
 #include <utility>
@@ -61,6 +60,107 @@ std::string collapse_whitespace( const std::string_view text )
         result.push_back( ch );
     }
     return result;
+}
+
+bool is_digit( const char ch )
+{
+    return ch >= '0' && ch <= '9';
+}
+
+size_t skip_spaces( const std::string_view text, size_t pos )
+{
+    while( pos < text.size() && is_space( static_cast<unsigned char>( text[pos] ) ) ) {
+        ++pos;
+    }
+    return pos;
+}
+
+size_t skip_digits( const std::string_view text, size_t pos )
+{
+    while( pos < text.size() && is_digit( text[pos] ) ) {
+        ++pos;
+    }
+    return pos;
+}
+
+/** End of a progress fraction such as "[3/10]", with any spaces before it, at `pos`, or 0. */
+size_t match_progress_fraction( const std::string_view text, const size_t pos )
+{
+    size_t at = skip_spaces( text, pos );
+    if( at >= text.size() || text[at] != '[' ) {
+        return 0;
+    }
+    for( const char separator : {
+             '/', ']'
+         } ) {
+        at = skip_spaces( text, at + 1 );
+        const size_t digits_end = skip_digits( text, at );
+        if( digits_end == at ) {
+            return 0;
+        }
+        at = skip_spaces( text, digits_end );
+        if( at >= text.size() || text[at] != separator ) {
+            return 0;
+        }
+    }
+    return at + 1;
+}
+
+/** End of a `\s*\d+(\.\d+)?\s*%` progress percentage starting at `pos`, or 0. */
+size_t match_progress_percentage( const std::string_view text, const size_t pos )
+{
+    const size_t digits = skip_spaces( text, pos );
+    size_t at = skip_digits( text, digits );
+    if( at == digits ) {
+        return 0;
+    }
+    if( at + 1 < text.size() && text[at] == '.' && is_digit( text[at + 1] ) ) {
+        at = skip_digits( text, at + 1 );
+    }
+    at = skip_spaces( text, at );
+    return at < text.size() && text[at] == '%' ? at + 1 : 0;
+}
+
+/** Remove every leftmost, non-overlapping match; `match` returns its end or 0. */
+std::string remove_matches( const std::string_view text,
+                            size_t ( *match )( std::string_view, size_t ) )
+{
+    std::string result;
+    result.reserve( text.size() );
+    size_t pos = 0;
+    while( pos < text.size() ) {
+        const size_t end = match( text, pos );
+        if( end > pos ) {
+            pos = end;
+        } else {
+            result.push_back( text[pos] );
+            ++pos;
+        }
+    }
+    return result;
+}
+
+/** End of a `<[^<>\s][^<>]*>` markup tag starting at `pos`, or 0. */
+size_t match_markup_tag( const std::string_view text, const size_t pos )
+{
+    if( text[pos] != '<' || pos + 1 >= text.size() ) {
+        return 0;
+    }
+    const char first = text[pos + 1];
+    if( first == '<' || first == '>' || is_space( static_cast<unsigned char>( first ) ) ) {
+        return 0;
+    }
+    const size_t end = text.find_first_of( "<>", pos + 2 );
+    return end != std::string_view::npos && text[end] == '>' ? end + 1 : 0;
+}
+
+/**
+ * Remove color tags and semantic tags such as <good>; a tag never starts with
+ * whitespace, so comparisons like "< 5" are preserved.
+ */
+std::string strip_markup_tags( const std::string_view text )
+{
+    return remove_matches( text, match_markup_tag );
 }
 
 bool ends_with( const std::string_view text, const std::string_view suffix )
@@ -358,10 +458,24 @@ std::string format_list_position( const size_t position, const size_t count )
 
 std::string format_semantic_sequence( const std::vector<std::string> &parts )
 {
-    //~ Sentence terminator added between spoken accessibility phrases that lack one.
-    const std::string terminator = pgettext( "accessibility sentence end", "." );
-    //~ Separator between spoken accessibility sentences.
-    const std::string separator = pgettext( "accessibility sentence separator", " " );
+    // Formatters call this many times per announcement; translate the
+    // punctuation again only when the language changes.
+    struct punctuation {
+        std::optional<int> language_version;
+        std::string terminator;
+        std::string separator;
+    };
+    static punctuation cached;
+    const int language_version = detail::get_current_language_version();
+    if( cached.language_version != language_version ) {
+        cached.language_version = language_version;
+        //~ Sentence terminator added between spoken accessibility phrases that lack one.
+        cached.terminator = pgettext( "accessibility sentence end", "." );
+        //~ Separator between spoken accessibility sentences.
+        cached.separator = pgettext( "accessibility sentence separator", " " );
+    }
+    const std::string &terminator = cached.terminator;
+    const std::string &separator = cached.separator;
     std::string result;
     for( const std::string &part : parts ) {
         const std::string normalized = collapse_whitespace( part );
@@ -944,10 +1058,7 @@ std::vector<std::string> format_item_info_paragraphs( const std::string &type_na
 {
     std::vector<std::string> paragraphs;
 
-    // Item info uses color tags and a few semantic tags such as <good>; a tag
-    // never starts with whitespace, so comparisons like "< 5" are preserved.
-    static const std::regex markup_tags( R"(<[^<>\s][^<>]*>)" );
-    const std::string clean_type = trim_ascii( std::regex_replace( type_name, markup_tags, "" ) );
+    const std::string clean_type = trim_ascii( strip_markup_tags( type_name ) );
     if( !clean_type.empty() ) {
         paragraphs.push_back( clean_type );
     }
@@ -960,8 +1071,7 @@ std::vector<std::string> format_item_info_paragraphs( const std::string &type_na
 
 std::vector<std::string> format_document_paragraphs( const std::string &text )
 {
-    static const std::regex markup_tags( R"(<[^<>\s][^<>]*>)" );
-    const std::string clean_info = std::regex_replace( text, markup_tags, "" );
+    const std::string clean_info = strip_markup_tags( text );
     std::vector<std::string> paragraphs;
 
     size_t start = 0;
@@ -2865,11 +2975,8 @@ std::string normalize_status_announcement( const std::string &message, const boo
     if( !progress ) {
         return collapse_whitespace( message );
     }
-    static const std::regex fraction( R"(\s*\[\s*\d+\s*/\s*\d+\s*\])" );
-    static const std::regex percentage( R"(\s*\d+(\.\d+)?\s*%)" );
-    std::string result = std::regex_replace( message, fraction, "" );
-    result = std::regex_replace( result, percentage, "" );
-    return collapse_whitespace( result );
+    return collapse_whitespace( remove_matches( remove_matches( message, match_progress_fraction ),
+                                match_progress_percentage ) );
 }
 
 std::vector<std::string> evaluate_condition_transitions( condition_tracker &tracker,

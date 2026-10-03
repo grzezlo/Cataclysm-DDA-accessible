@@ -6,6 +6,7 @@
 #include <functional>
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -66,9 +67,7 @@ class selection_line
     public:
         selection_line() = default;
         selection_line( const std::string &text, const std::string &desc_str, const int max_width )
-            : desc_str( desc_str ), spoken_str( accessibility::format_semantic_sequence( {
-            trim( remove_color_tags( text ) )
-        } ) ) {
+            : desc_str( desc_str ), text_str( text ) {
             std::vector<std::string> textformatted = foldstring( text, max_width,
                     ']' );
             row_count = textformatted.size();
@@ -108,8 +107,11 @@ class selection_line
         }
 
         /** Screen reader speech of the row; by default its text without color. */
-        const std::string &spoken() const {
-            return spoken_str;
+        std::string spoken() const {
+            if( spoken_str ) {
+                return *spoken_str;
+            }
+            return accessibility::format_semantic_sequence( { trim( remove_color_tags( text_str ) ) } );
         }
 
         void set_spoken( const std::string &spoken ) {
@@ -132,7 +134,8 @@ class selection_line
         std::string header_str;
         std::string desc_str;
         std::pair<std::string, std::string> detail_str;
-        std::string spoken_str;
+        std::string text_str;
+        std::optional<std::string> spoken_str;
         int row_count;
         bool highlight_line = false;
 };
@@ -1136,13 +1139,16 @@ void Character::disp_medical()
     ctxt.register_action( "ACCESSIBILITY_STATUS" );
     ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
 
-    accessibility::announce( medical_open_speech( *this, medical_accessibility_columns( *this ),
-                             cursor ) );
+    if( accessibility::is_active() ) {
+        accessibility::announce( medical_open_speech( *this, medical_accessibility_columns( *this ),
+                                 cursor ) );
+    }
 
     for( ;; ) {
         ui_manager::redraw();
         const std::string action = ctxt.handle_input();
         const point previous_cursor = cursor;
+        const bool speaking = accessibility::is_active();
         // Screen reader speech for this key, spoken however the iteration ends.
         std::string speech;
         const on_out_of_scope speak_result( [&speech]() {
@@ -1154,9 +1160,9 @@ void Character::disp_medical()
 
         if( action == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
-        } else if( action == "ACCESSIBILITY_STATUS" ) {
+        } else if( action == "ACCESSIBILITY_STATUS" && speaking ) {
             speech = medical_summary( *this, columns(), cursor );
-        } else if( action == "ACCESSIBILITY_DETAILS" ) {
+        } else if( action == "ACCESSIBILITY_DETAILS" && speaking ) {
             std::array<medical_column, 3> current = columns();
             const std::vector<std::string> paragraphs = medical_details( current, cursor );
             if( accessibility::is_active() && !paragraphs.empty() ) {
@@ -1182,7 +1188,7 @@ void Character::disp_medical()
                 scroll_position = std::max( 0, std::min( scroll_overflow, cursor.y - half_list ) );
             }
             info_scroll_position = 0;
-            if( cursor.y != previous_cursor.y ) {
+            if( speaking && cursor.y != previous_cursor.y ) {
                 speech = accessibility::format_semantic_sequence( {
                     accessibility::format_list_wrap( previous_cursor.y, cursor.y, action == "DOWN" ? 1 : -1 ),
                     medical_row_speech( columns(), cursor )
@@ -1211,7 +1217,9 @@ void Character::disp_medical()
                 scroll_position = 0;
             }
             info_scroll_position = 0;
-            speech = medical_column_speech( columns(), cursor );
+            if( speaking ) {
+                speech = medical_column_speech( columns(), cursor );
+            }
         } else if( action == "APPLY" ) {
             avatar *a = this->as_avatar();
             if( a ) {
@@ -1223,7 +1231,7 @@ void Character::disp_medical()
             const std::array<medical_column, 3> current = columns();
             cursor.y = std::min<int>( cursor.y, std::max<int>( 0, current[cursor.x].lines().size() - 1 ) );
             speech = medical_row_speech( current, cursor );
-        } else if( action == "HELP_KEYBINDINGS" ) {
+        } else if( action == "HELP_KEYBINDINGS" && speaking ) {
             speech = medical_row_speech( columns(), cursor );
         } else if( action == "SCROLL_INFOBOX_UP" || action == "SCROLL_INFOBOX_DOWN" ) {
             const int scroll_overflow = info_lines - INFO_SCROLL_POINT - 1;

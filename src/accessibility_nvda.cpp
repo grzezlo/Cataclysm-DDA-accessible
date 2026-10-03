@@ -56,14 +56,23 @@ class nvda_backend final : public backend
 
 std::wstring controller_client_path()
 {
-    std::array<wchar_t, 32768> executable_path{};
-    const DWORD length = GetModuleFileNameW( nullptr, executable_path.data(),
-                         static_cast<DWORD>( executable_path.size() ) );
-    if( length == 0 || length >= executable_path.size() ) {
-        return {};
+    // Grow the buffer until the path fits; Windows paths are at most 32767 characters.
+    std::wstring path( MAX_PATH, L'\0' );
+    DWORD length = 0;
+    while( true ) {
+        length = GetModuleFileNameW( nullptr, path.data(), static_cast<DWORD>( path.size() ) );
+        if( length == 0 ) {
+            return {};
+        }
+        if( length < path.size() ) {
+            break;
+        }
+        if( path.size() >= 32768 ) {
+            return {};
+        }
+        path.resize( path.size() * 2 );
     }
-
-    std::wstring path( executable_path.data(), length );
+    path.resize( length );
     const size_t separator = path.find_last_of( L"\\/" );
     if( separator == std::wstring::npos ) {
         return {};

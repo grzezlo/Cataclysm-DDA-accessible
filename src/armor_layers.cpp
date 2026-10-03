@@ -1492,7 +1492,7 @@ void outfit::sort_armor( Character &guy )
         } else if( action == "QUIT" ) {
             exit = true;
         }
-        if( !exit ) {
+        if( !exit && accessibility::is_active() ) {
             accessibility::announce( armor_action_speech( action, previous_index, previous_selected ) );
         }
     }

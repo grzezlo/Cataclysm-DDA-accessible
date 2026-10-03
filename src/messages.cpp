@@ -202,6 +202,7 @@ class messages_impl
             // A repeated message is coalesced into a visible count, so speak it
             // again rather than letting the repetition pass silently.
             const std::string spoken = accessibility::game_messages_enabled() && type != m_debug &&
+                                       accessibility::is_active() &&
                                        !m.is_in_cooldown() ?
                                        remove_color_tags( m.message ) : std::string();
 

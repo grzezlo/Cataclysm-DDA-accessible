@@ -12,6 +12,7 @@
 #include <set>
 #include <sstream>
 #include <tuple>
+#include <unordered_set>
 #include <utility>
 
 #include "accessibility.h"
@@ -106,7 +107,14 @@ struct activity_speech_state {
     std::string label;
     std::string reason;
     std::vector<std::string> results;
+    // The results already listed, for fast deduplication.
+    std::unordered_set<std::string> result_set;
     std::unique_ptr<accessibility::progress_reporter> progress;
+    // The last label, progress message, and remaining time, and their formatted speech.
+    std::string progress_label;
+    std::string progress_message;
+    std::string progress_remaining;
+    std::string progress_speech;
     unsigned generation = 0;
     int turns = 0;
     bool canceled = false;
@@ -142,10 +150,10 @@ std::string activity_label( const player_activity &act, const avatar &viewer )
 
 void add_activity_results( const std::vector<std::string> &messages )
 {
+    activity_speech_state &state = activity_state();
     for( const std::string &message : messages ) {
-        if( std::find( activity_state().results.begin(), activity_state().results.end(), message ) ==
-            activity_state().results.end() ) {
-            activity_state().results.push_back( message );
+        if( state.result_set.insert( message ).second ) {
+            state.results.push_back( message );
         }
     }
 }
@@ -160,6 +168,7 @@ void end_activity_speech( const bool finished, const std::vector<std::string> &m
     activity_state().progress.reset();
     activity_state().reason.clear();
     activity_state().results.clear();
+    activity_state().result_set.clear();
     activity_state().canceled = false;
     activity_state().completed = false;
     accessibility::queue_gameplay_announcement( result,
@@ -301,8 +310,17 @@ void update_activity_progress( const avatar &viewer )
                                     act.id().str() == "ACT_READ" || act.id().str() == "ACT_WAIT_WEATHER" ) ) {
             remaining = to_string_approx( time_duration::from_moves( act.moves_left ) );
         }
-        activity_state().progress->update( accessibility::format_activity_progress(
-                                               activity_state().label, *progress, remaining ) );
+        // Most turns repeat the previous progress; skip formatting it again.
+        activity_speech_state &state = activity_state();
+        if( state.progress_speech.empty() || state.progress_label != state.label ||
+            state.progress_message != *progress || state.progress_remaining != remaining ) {
+            state.progress_label = state.label;
+            state.progress_message = *progress;
+            state.progress_remaining = remaining;
+            state.progress_speech = accessibility::format_activity_progress( state.label, *progress,
+                                    remaining );
+        }
+        state.progress->update( state.progress_speech );
     }
 }
 
@@ -670,7 +688,12 @@ std::string threat_id( const Creature &threat )
     if( const npc *person = dynamic_cast<const npc *>( &threat ) ) {
         return string_format( "npc:%d", person->getID().get_value() );
     }
-    return "creature:" + std::to_string( reinterpret_cast<std::uintptr_t>( &threat ) );
+    // A new monster may reuse the address of a dead one; its type usually differs.
+    const std::string address = std::to_string( reinterpret_cast<std::uintptr_t>( &threat ) );
+    if( const monster *mon = threat.as_monster() ) {
+        return "monster:" + mon->type->id.str() + ":" + address;
+    }
+    return "creature:" + address;
 }
 
 std::string list_footer( const input_context &ctxt, const bool detail_view )
@@ -1736,9 +1759,17 @@ accessibility::vehicle_grid_position vehicle_grid_position( const vehicle &veh,
 
 accessibility::vehicle_part_row vehicle_part_row( const vehicle &veh, const vehicle_part &part )
 {
+    return vehicle_part_row( veh, part, vehicle_grid_position( veh, part.mount ) );
+}
+
+accessibility::vehicle_part_row vehicle_part_row( const vehicle &, const vehicle_part &part,
+        const accessibility::vehicle_grid_position &grid )
+{
     accessibility::vehicle_part_row row;
     row.name = remove_color_tags( part.name( false ) );
-    row.location = accessibility::format_vehicle_location( vehicle_grid_position( veh, part.mount ) );
+    accessibility::vehicle_grid_position position = grid;
+    position.tile = part.mount.raw();
+    row.location = accessibility::format_vehicle_location( position );
     row.broken = part.is_broken();
     row.damage_percent = static_cast<int>( std::lround( part.damage_percent() * 100 ) );
     if( part.is_leaking() ) {
@@ -1841,15 +1872,16 @@ std::string vehicle_tile_description( const vehicle &veh, const point_rel_ms &mo
                                       const bool obstructed )
 {
     const std::vector<int> indices = vehicle_tile_parts( veh, mount );
+    const accessibility::vehicle_grid_position grid = vehicle_grid_position( veh, mount );
     std::vector<std::string> parts;
     parts.reserve( indices.size() );
     for( const int index : indices ) {
         parts.push_back( accessibility::format_vehicle_tile_part( vehicle_part_row( veh,
-                         veh.part( index ) ) ) );
+                         veh.part( index ), grid ) ) );
     }
     return accessibility::format_semantic_sequence( {
-        accessibility::format_vehicle_tile( accessibility::format_vehicle_location(
-                                                vehicle_grid_position( veh, mount ) ), parts, obstructed ),
+        accessibility::format_vehicle_tile( accessibility::format_vehicle_location( grid ), parts,
+                                            obstructed ),
         vehicle_tile_label( veh, indices )
     } );
 }
@@ -1857,13 +1889,14 @@ std::string vehicle_tile_description( const vehicle &veh, const point_rel_ms &mo
 std::vector<std::string> vehicle_tile_details( const vehicle &veh, const point_rel_ms &mount )
 {
     const std::vector<int> indices = vehicle_tile_parts( veh, mount );
+    const accessibility::vehicle_grid_position grid = vehicle_grid_position( veh, mount );
     std::vector<std::string> lines = {
-        accessibility::format_vehicle_position_details( vehicle_grid_position( veh, mount ) )
+        accessibility::format_vehicle_position_details( grid )
     };
     for( const int index : indices ) {
         const vehicle_part &part = veh.part( index );
         lines.push_back( accessibility::format_semantic_sequence( {
-            accessibility::format_vehicle_tile_part( vehicle_part_row( veh, part ) ),
+            accessibility::format_vehicle_tile_part( vehicle_part_row( veh, part, grid ) ),
             vehicle_part_contents( veh, part )
         } ) );
     }
@@ -2163,29 +2196,40 @@ std::vector<accessibility::requirement_group> requirement_groups( const requirem
     using accessibility::requirement_state;
     std::vector<accessibility::requirement_group> groups;
     const bool debug_hammerspace = get_player_character().has_trait( trait_DEBUG_HS );
-    // Refresh the cached availability that the visual requirement list colors by.
-    req.can_make_with_inventory( inv, return_true<item> );
+    // Refresh the cached availability that the visual requirement list colors
+    // by; the states below read it.  Debug hammerspace skips the refresh.
+    req.can_make_with_inventory( inv, include_components ? component_filter :
+                                 std::function<bool( const item & )>( return_true<item> ),
+                                 batch );
+    const auto cached_state = [debug_hammerspace]( const available_status status ) {
+        if( debug_hammerspace ) {
+            return requirement_state::have;
+        }
+        switch( status ) {
+            case available_status::a_true:
+                return requirement_state::have;
+            case available_status::a_insufficient:
+                return requirement_state::not_enough;
+            default:
+                return requirement_state::missing;
+        }
+    };
     append_requirement_groups( groups, accessibility::requirement_kind::tools, req.get_qualities(),
     [batch]( const quality_requirement & quality ) {
         return without_final_period( remove_color_tags( quality.to_string( batch ) ) );
-    }, [debug_hammerspace]( const quality_requirement & quality ) {
-        return debug_hammerspace || quality.available == available_status::a_true ?
+    }, [&cached_state]( const quality_requirement & quality ) {
+        return cached_state( quality.available ) == requirement_state::have ?
                requirement_state::have : requirement_state::missing;
     } );
     append_requirement_groups( groups, accessibility::requirement_kind::tools, req.get_tools(),
     [batch]( const tool_comp & tool ) {
         return remove_color_tags( tool.to_string( batch ) );
-    }, [&inv, batch]( const tool_comp & tool ) {
-        if( tool.available == available_status::a_insufficient ) {
-            return requirement_state::not_enough;
-        }
-        return tool.has( inv, return_true<item>, batch ) ? requirement_state::have :
-               requirement_state::missing;
+    }, [&cached_state]( const tool_comp & tool ) {
+        return cached_state( tool.available );
     } );
     if( !include_components ) {
         return groups;
     }
-    req.can_make_with_inventory( inv, component_filter );
     append_requirement_groups( groups, accessibility::requirement_kind::components,
                                req.get_components(),
     [&inv, &component_filter, batch]( const item_comp & component ) {
@@ -2193,12 +2237,10 @@ std::vector<accessibility::requirement_group> requirement_groups( const requirem
                              inv.charges_of( component.type, INT_MAX, component_filter ) :
                              inv.amount_of( component.type, false, INT_MAX, component_filter );
         return remove_color_tags( component.to_string( batch, quantity ) );
-    }, [&inv, &component_filter, batch]( const item_comp & component ) {
-        if( component.available == available_status::a_insufficient ) {
-            return requirement_state::not_enough;
-        }
-        if( !component.has( inv, component_filter, batch ) ) {
-            return requirement_state::missing;
+    }, [&inv, &component_filter, &cached_state, batch]( const item_comp & component ) {
+        const requirement_state state = cached_state( component.available );
+        if( state != requirement_state::have ) {
+            return state;
         }
         const int used = component.count * batch;
         const bool liquid_container = std::any_of( component.type->pockets.begin(),
@@ -2401,19 +2443,16 @@ std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> known_overm
             const avatar &viewer )
 {
     std::vector<std::pair<tripoint_abs_omt, accessibility::known_place>> places;
-    const auto place_at = [&places]( const tripoint_abs_omt & position ) ->
+    // Index of each position in `places`, which keeps the order places were found in.
+    std::map<tripoint_abs_omt, size_t> place_index;
+    const auto place_at = [&places, &place_index]( const tripoint_abs_omt & position ) ->
     accessibility::known_place & {
-        const auto found = std::find_if( places.begin(), places.end(),
-                                         [&position]( const std::pair<tripoint_abs_omt, accessibility::known_place> &place )
+        const auto inserted = place_index.emplace( position, places.size() );
+        if( inserted.second )
         {
-            return place.first == position;
-        } );
-        if( found != places.end() )
-        {
-            return found->second;
+            places.emplace_back( position, accessibility::known_place() );
         }
-        places.emplace_back( position, accessibility::known_place() );
-        return places.back().second;
+        return places[inserted.first->second].second;
     };
     const tripoint_abs_omt origin = viewer.pos_abs_omt();
     const tripoint_abs_sm center = project_to<coords::sm>( origin );
@@ -2559,15 +2598,12 @@ void overmap_speech::open( const avatar &viewer, const std::string &opening_prom
 
 void overmap_speech::update( const avatar &viewer, const tripoint_abs_omt &cursor )
 {
-    if( cursor.raw() == spoken ) {
+    if( !accessibility::is_active() || cursor.raw() == spoken ) {
         return;
     }
     const tripoint previous = spoken;
     const std::string previous_terrain = terrain;
     sync( viewer, cursor );
-    if( !accessibility::is_active() ) {
-        return;
-    }
     const accessibility::overmap_tile tile = overmap_tile( viewer, cursor );
     if( !previous.is_invalid() && previous.z != cursor.z() ) {
         accessibility::announce( accessibility::format_overmap_level_change( cursor.z(),

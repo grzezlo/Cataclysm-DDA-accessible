@@ -211,18 +211,6 @@ WORLD *worldfactory::make_new_world( bool show_prompt, const std::string &world_
 namespace
 {
 
-/** -1 for list moves toward the start, 1 toward the end, 0 for other actions. */
-int accessibility_move_direction( const std::string &action )
-{
-    if( action == "UP" || action == "SCROLL_UP" || action == "PAGE_UP" || action == "HOME" ) {
-        return -1;
-    }
-    if( action == "DOWN" || action == "SCROLL_DOWN" || action == "PAGE_DOWN" || action == "END" ) {
-        return 1;
-    }
-    return 0;
-}
-
 void register_accessibility_actions( input_context &ctxt )
 {
     ctxt.register_action( "ACCESSIBILITY_DETAILS" );
@@ -788,7 +776,7 @@ WORLD *worldfactory::pick_world( bool show_prompt, bool empty_only )
             on_move( recmax < 2 );
             if( accessibility::is_active() && action != "MOUSE_MOVE" && action != "SELECT" ) {
                 accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_sel, sel, accessibility_move_direction( action ) ),
+                    accessibility::format_list_wrap( previous_sel, sel, accessibility_gameplay::list_move_direction( action ) ),
                     world_row()
                 } ) );
             }
@@ -1142,7 +1130,7 @@ void worldfactory::show_active_world_mods( const std::vector<mod_id> &world_mods
             recalc_start = true;
             if( accessibility::is_active() ) {
                 accessibility::announce( accessibility::format_semantic_sequence( {
-                    accessibility::format_list_wrap( previous_cursor, cursor, accessibility_move_direction( action ) ),
+                    accessibility::format_list_wrap( previous_cursor, cursor, accessibility_gameplay::list_move_direction( action ) ),
                     mod_row()
                 } ) );
             }
@@ -1507,7 +1495,7 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
     const auto mod_selection_speech = [&]( const std::string & action, const size_t pane,
                                            const size_t cursor, const std::vector<mod_id> &before, const mod_id & target,
     const std::string & refusal, const bool popup ) -> std::string {
-        const int direction = accessibility_move_direction( action );
+        const int direction = accessibility_gameplay::list_move_direction( action );
         if( direction != 0 )
         {
             return accessibility::format_semantic_sequence( {
@@ -1620,7 +1608,9 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
         // State before the action, for speaking what it changed.
         const size_t access_pane = active_header;
         const size_t access_cursor = cursel[active_header];
-        const std::vector<mod_id> access_before = active_mod_order;
+        const bool access_speaking = accessibility::is_active();
+        const std::vector<mod_id> access_before = access_speaking ? active_mod_order :
+                std::vector<mod_id>();
         mod_id access_target;
         if( access_cursor < pane_mods( access_pane ).size() ) {
             access_target = pane_mods( access_pane )[access_cursor];
@@ -1628,7 +1618,7 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
         const bool access_keyboard = action != "MOUSE_MOVE" && action != "SELECT";
         std::string access_refusal;
         bool access_popup = false;
-        if( action == "CONFIRM" && access_pane == 0 && !access_target.is_empty() ) {
+        if( access_speaking && action == "CONFIRM" && access_pane == 0 && !access_target.is_empty() ) {
             if( std::find( access_before.begin(), access_before.end(), access_target ) ==
                 access_before.end() && access_target.is_valid() &&
                 !mman_ui->confirm_mod_compatibility( access_target, access_before ) ) {
@@ -1638,7 +1628,8 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
                 access_refusal = accessibility_gameplay::mod_add_refusal( *mman_ui, access_target,
                                  access_before );
             }
-        } else if( ( action == "MOVE_MOD_UP" || action == "MOVE_MOD_DOWN" ) && access_pane == 1 ) {
+        } else if( access_speaking && ( action == "MOVE_MOD_UP" || action == "MOVE_MOD_DOWN" ) &&
+                   access_pane == 1 ) {
             access_refusal = accessibility_gameplay::mod_move_refusal( *mman_ui, access_cursor,
                              access_before, action == "MOVE_MOD_UP" );
         }
@@ -1801,7 +1792,7 @@ int worldfactory::show_worldgen_tab_modselection( const catacurses::window &win,
         }
         // end RESOLVE INPUTS
 
-        if( accessibility::is_active() && access_keyboard && tab_output == 0 ) {
+        if( access_speaking && access_keyboard && tab_output == 0 ) {
             const std::string speech = mod_selection_speech( action, access_pane, access_cursor,
                                        access_before, access_target, access_refusal, access_popup );
             if( !speech.empty() ) {
@@ -2235,7 +2226,7 @@ int worldfactory::show_worldgen_basic( WORLD *world )
         } else if( navigate_ui_list( action, sel_opt, 1, wg_sliders.size() + 2, true ) ) {
             recalc_startpos = true;
             access_prefix = accessibility::format_list_wrap( access_previous, sel_opt,
-                            accessibility_move_direction( action ) );
+                            accessibility_gameplay::list_move_direction( action ) );
         } else if( action == "LEFT" || action == "RIGHT" ) {
             if( sel_opt > 0 && sel_opt <= static_cast<int>( wg_sliders.size() ) ) {
                 if( custom_opts && query_yn( _( "Currently using customized advanced options.  "

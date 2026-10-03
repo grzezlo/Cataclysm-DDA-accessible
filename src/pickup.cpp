@@ -74,6 +74,8 @@ struct pickup_speech {
     // Keyed like PickupMap.
     std::map<std::string, std::string> destinations;
     std::vector<accessibility::pickup_failure> failures;
+    // Whether the result is spoken; nothing else is collected otherwise.
+    bool active = false;
 };
 
 static std::string pickup_speech_result( const PickupMap &mapPickup, const pickup_speech &speech )
@@ -285,9 +287,11 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
                !player_character.can_stash_partial( newit, false ) ) {
         option = CANCEL;
         stash_successful = false;
-        speech.failures.push_back( { newit.display_name(),
-                                     player_character.can_pickWeight_partial( newit, false ) ?
-                                     _( "no room" ) : _( "too heavy" ) } );
+        if( speech.active ) {
+            speech.failures.push_back( { newit.display_name(),
+                                         player_character.can_pickWeight_partial( newit, false ) ?
+                                         _( "no room" ) : _( "too heavy" ) } );
+        }
     } else {
         option = STASH;
     }
@@ -320,7 +324,7 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
         case STASH: {
             int last_charges = newit.charges;
             // Charges spread over pockets report no location; name the best pocket's container.
-            const item_location best_container = accessibility::is_active() ?
+            const item_location best_container = speech.active ?
                                                  player_character.best_pocket( newit ).first : item_location();
             ret_val<item_location> ret = player_character.i_add_or_fill( newit, true, nullptr, &it,
                                          /*allow_drop=*/false, /*allow_wield=*/false, false );
@@ -349,7 +353,7 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
                     entry.second += newit.count();
                     entry.first = newit;
                     picked_up = true;
-                    if( added_it.where() == item_location::type::container ) {
+                    if( speech.active && added_it.where() == item_location::type::container ) {
                         speech.destinations[newit.tname()] = added_it.parent_item()->type_name();
                     }
                 }
@@ -357,7 +361,7 @@ static bool pick_one_up( item_location &loc, int quantity, bool &got_water, bool
             if( picked_up ) {
                 // Update info
                 info.set_dst( added_it );
-            } else if( !merged_back ) {
+            } else if( !merged_back && speech.active ) {
                 speech.failures.push_back( { newit.display_name(), _( "no room" ) } );
             }
             break;
@@ -413,6 +417,7 @@ bool Pickup::do_pickup( std::vector<item_location> &targets, std::vector<int> &q
     // merge dropping items with the same name.
     PickupMap mapPickup;
     pickup_speech speech;
+    speech.active = accessibility::is_active();
 
     bool problem = false;
     while( !problem && player_character.get_moves() >= 0 && !targets.empty() ) {
@@ -444,7 +449,9 @@ bool Pickup::do_pickup( std::vector<item_location> &targets, std::vector<int> &q
         accessibility::game_message_speech_suppression quiet;
         show_pickup_message( mapPickup );
     }
-    accessibility::announce_game_message( pickup_speech_result( mapPickup, speech ) );
+    if( speech.active ) {
+        accessibility::announce_game_message( pickup_speech_result( mapPickup, speech ) );
+    }
     if( got_frozen_liquid ) {
         add_msg( m_info, _( "Chunks of frozen liquid cannot be picked up without the correct tools." ) );
     }

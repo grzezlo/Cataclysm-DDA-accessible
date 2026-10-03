@@ -76,6 +76,25 @@ are covered by an end-to-end keyboard journey.  No perceptible gameplay slowdown
 with accessibility enabled in a scenario with 50+ visible creatures and rapid
 movement.
 
+**Performance follow-up (review 02, measure first):** the remaining items need a
+measurement in the 50+ creature scenario before changing code, because each can
+alter which events are spoken:
+
+- Visible-threat and condition transitions run at least twice per turn
+  (`announce_turn_alerts()`); compare numeric ids and raw condition values
+  before building strings.
+- `vehicle_obstacle_transition()` casts rays from every vehicle tile; cast only
+  from the leading edge and stop at the first obstacle, then confirm the
+  obstacle tests still pass.
+- `do_turn.cpp` asks for the activity progress again after `conclude()` in the
+  same turn.
+- Per-key row speech in bionics, mutations, the character sheet, and
+  construction still builds before `is_active()`; it is one row per key.
+- Larger maintenance refactors: central `ACCESSIBILITY_REPEAT_LAST` handling in
+  `input_context` (changes every screen; needs NVDA retests), forward
+  declarations instead of `accessibility_format.h` in headers, and splitting
+  `tests/accessibility_test.cpp`.
+
 **Possible automated tests:** Table-driven service tests for categories,
 collisions, mode transitions, backend failure/reset, deduplication, and history;
 coverage-manifest consistency checks; `test_access.bat`, `test_all.bat`, Windows

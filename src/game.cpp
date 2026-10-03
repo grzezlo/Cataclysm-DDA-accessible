@@ -8107,7 +8107,8 @@ look_around_result game::look_around(
     here.update_visibility_cache( old_levz );
     const visibility_variables &cache = here.get_visibility_variables_cache();
 
-    const bool semantic_look = show_window && !select_zone && !is_moving_zone;
+    const bool semantic_look = accessibility::is_active() && show_window && !select_zone &&
+                               !is_moving_zone;
     // Zone corners and zone moves speak the cursor tile; the caller's popup names the step.
     const bool semantic_zone = ( select_zone || is_moving_zone ) && accessibility::is_active();
     const bool semantic_cursor = semantic_look || semantic_zone;
@@ -9461,8 +9462,9 @@ game::vmenu_ret game::list_items( const std::vector<map_item_stack> &item_list )
 
         const bool selection_changed = selected_item_index != last_semantic_item_index ||
                                        page_num != last_semantic_page;
-        if( announce_semantic_context || force_semantic_selection || selection_changed ||
-            announce_semantic_summary ) {
+        if( accessibility::is_active() && ( announce_semantic_context || force_semantic_selection ||
+                                            selection_changed ||
+                                            announce_semantic_summary ) ) {
             accessibility::nearby_list_entry semantic_entry;
             if( activeItem != nullptr && selected_item_index >= 0 ) {
                 const int priority = selected_item_index < highPEnd ? 1 :
@@ -9866,8 +9868,9 @@ game::vmenu_ret game::list_monsters( const std::vector<Creature *> &monster_list
         }
 
         const bool selection_changed = iActive != last_semantic_creature_index;
-        if( announce_semantic_context || force_semantic_selection || selection_changed ||
-            announce_semantic_summary ) {
+        if( accessibility::is_active() && ( announce_semantic_context || force_semantic_selection ||
+                                            selection_changed ||
+                                            announce_semantic_summary ) ) {
             accessibility::nearby_list_entry semantic_entry;
             if( cCurMon != nullptr ) {
                 semantic_entry = accessibility_gameplay::nearby_creature_entry( here, u, *cCurMon, iActive + 1,

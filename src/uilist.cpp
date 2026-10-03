@@ -1018,65 +1018,74 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
     do {
         ui_manager::redraw();
 
-        std::string semantic_selection;
         const bool selected_valid = selected >= 0 && static_cast<size_t>( selected ) < entries.size();
         const bool visible_entry_details = desc_enabled && footer_text.empty();
-        const bool selected_has_details = selected_valid && visible_entry_details &&
-                                          has_entry_details( entries[selected] );
-        if( selected_valid && !entries[selected].accessibility_focus.empty() ) {
-            semantic_selection = entries[selected].accessibility_focus;
-        } else if( selected_valid ) {
-            semantic_selection = accessibility::format_uilist_focus(
-                                     entries[selected]._txt_nocolor(),
-                                     entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
-                                     entries[selected].accessibility_state );
+        const auto selection_speech = [&]() -> std::string {
+            if( selected_valid && !entries[selected].accessibility_focus.empty() )
+            {
+                return entries[selected].accessibility_focus;
+            } else if( selected_valid )
+            {
+                return accessibility::format_uilist_focus(
+                    entries[selected]._txt_nocolor(),
+                    entries[selected]._ctxt_nocolor(), !entries[selected].enabled,
+                    entries[selected].accessibility_state );
+            }
+            return _( "No matching entries" );
+        };
+        const auto position_speech = [&]() -> std::string {
+            const bool fselected_valid = fselected >= 0 &&
+            static_cast<size_t>( fselected ) < fentries.size();
+            return fselected_valid ?
+            accessibility::format_list_position( static_cast<size_t>( fselected ) + 1,
+                                                 fentries.size() ) : std::string();
+        };
+        if( !accessibility::is_active() ) {
+            // Nothing is spoken; keep the speech state as it was and build no speech.
+            accessibility_pending.clear();
+            accessibility_category = current_category;
         } else {
-            semantic_selection = _( "No matching entries" );
+            const std::string semantic_selection = selection_speech();
+            const std::string category_name = current_category < categories.size() ?
+                                              remove_color_tags( categories[current_category].second ) : std::string();
+            const std::string semantic_count = accessibility_count ? accessibility_count( fentries.size() ) :
+                                               accessibility::format_list_count( fentries.size() );
+            if( accessibility_open && current_category != accessibility_category ) {
+                accessibility_pending = accessibility::format_semantic_sequence( {
+                    category_name, semantic_count
+                } );
+            }
+            accessibility_category = current_category;
+            const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
+            if( accessibility_silent ) {
+                accessibility_silent = false;
+                accessibility_open = true;
+                accessibility_selection = selection_key;
+            }
+            if( !accessibility_open ) {
+                const std::string semantic_context = accessibility::format_semantic_sequence( {
+                    !accessibility_context.empty() ? accessibility_context :
+                    remove_color_tags( !title.empty() ? title : text ), category_name
+                } );
+                const bool any_details = accessibility_details ||
+                                         ( visible_entry_details &&
+                                           std::any_of( entries.begin(), entries.end(), has_entry_details ) );
+                accessibility::announce( accessibility::format_uilist_open(
+                                             semantic_context, semantic_count, semantic_selection,
+                                             ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
+                accessibility_open = true;
+                accessibility_selection = selection_key;
+            } else if( !accessibility_pending.empty() ) {
+                accessibility::announce( accessibility::format_semantic_sequence( {
+                    accessibility_pending, semantic_selection
+                } ) );
+                accessibility_selection = selection_key;
+            } else if( selection_key != accessibility_selection ) {
+                accessibility::announce( semantic_selection );
+                accessibility_selection = selection_key;
+            }
+            accessibility_pending.clear();
         }
-        const bool fselected_valid = fselected >= 0 &&
-                                     static_cast<size_t>( fselected ) < fentries.size();
-        const std::string semantic_position = fselected_valid ?
-                                              accessibility::format_list_position( static_cast<size_t>( fselected ) + 1,
-                                                      fentries.size() ) : std::string();
-        const std::string category_name = current_category < categories.size() ?
-                                          remove_color_tags( categories[current_category].second ) : std::string();
-        const std::string semantic_count = accessibility_count ? accessibility_count( fentries.size() ) :
-                                           accessibility::format_list_count( fentries.size() );
-        if( accessibility_open && current_category != accessibility_category ) {
-            accessibility_pending = accessibility::format_semantic_sequence( {
-                category_name, semantic_count
-            } );
-        }
-        accessibility_category = current_category;
-        const std::string selection_key = std::to_string( selected ) + ":" + semantic_selection;
-        if( accessibility_silent ) {
-            accessibility_silent = false;
-            accessibility_open = true;
-            accessibility_selection = selection_key;
-        }
-        if( !accessibility_open ) {
-            const std::string semantic_context = accessibility::format_semantic_sequence( {
-                !accessibility_context.empty() ? accessibility_context :
-                remove_color_tags( !title.empty() ? title : text ), category_name
-            } );
-            const bool any_details = accessibility_details ||
-                                     ( visible_entry_details &&
-                                       std::any_of( entries.begin(), entries.end(), has_entry_details ) );
-            accessibility::announce( accessibility::format_uilist_open(
-                                         semantic_context, semantic_count, semantic_selection,
-                                         ctxt.get_desc( "ACCESSIBILITY_DETAILS" ), any_details ) );
-            accessibility_open = true;
-            accessibility_selection = selection_key;
-        } else if( !accessibility_pending.empty() ) {
-            accessibility::announce( accessibility::format_semantic_sequence( {
-                accessibility_pending, semantic_selection
-            } ) );
-            accessibility_selection = selection_key;
-        } else if( selection_key != accessibility_selection ) {
-            accessibility::announce( semantic_selection );
-            accessibility_selection = selection_key;
-        }
-        accessibility_pending.clear();
 
         ret_act = ctxt.handle_input( timeout );
         const input_event event = ctxt.get_raw_input();
@@ -1089,6 +1098,10 @@ shared_ptr_fast<uilist_impl> uilist::query( bool loop, int timeout,
         if( ret_act == "ACCESSIBILITY_REPEAT_LAST" ) {
             accessibility::repeat_last_announcement();
         } else if( ret_act == "ACCESSIBILITY_DETAILS" ) {
+            const std::string semantic_selection = selection_speech();
+            const std::string semantic_position = position_speech();
+            const bool selected_has_details = selected_valid && visible_entry_details &&
+                                              has_entry_details( entries[selected] );
             if( accessibility_details ) {
                 accessibility_details();
                 accessibility::announce( accessibility::format_semantic_sequence( {
