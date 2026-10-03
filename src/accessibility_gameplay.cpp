@@ -1580,9 +1580,11 @@ std::string vehicle_speed_units()
 }
 
 /** Obstacle keys in the path of the controlled vehicle at the last check. */
-std::set<std::string> &vehicle_obstacles_in_path()
+using vehicle_obstacle_key = std::pair<tripoint_abs_ms, std::string>;
+
+std::set<vehicle_obstacle_key> &vehicle_obstacles_in_path()
 {
-    static std::set<std::string> keys;
+    static std::set<vehicle_obstacle_key> keys;
     return keys;
 }
 } // namespace
@@ -1658,7 +1660,7 @@ bool announce_driving_status( map &here, const avatar &viewer )
 
 std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar &viewer )
 {
-    std::set<std::string> &previous = vehicle_obstacles_in_path();
+    std::set<vehicle_obstacle_key> &previous = vehicle_obstacles_in_path();
     const vehicle *veh = accessibility::is_active() && viewer.controlling_vehicle ?
                          display::vehicle_driven( viewer ) : nullptr;
     if( veh == nullptr ) {
@@ -1673,20 +1675,40 @@ std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar 
     const std::set<tripoint_abs_ms> &own = veh->get_points();
     const visibility_variables &cache = here.get_visibility_variables_cache();
 
-    struct obstacle {
-        int distance;
-        std::string key;
-        std::string name;
-    };
-    std::vector<obstacle> obstacles;
-    std::set<std::string> current;
     tileray ray( reversing ? veh->face.dir() + 180_degrees : veh->face.dir() );
+    std::vector<tripoint_rel_ms> offsets;
+    offsets.reserve( range );
     tripoint_rel_ms offset = tripoint_rel_ms::zero;
     for( int distance = 1; distance <= range; ++distance ) {
         ray.advance();
         offset += tripoint_rel_ms( ray.dx(), ray.dy(), 0 );
-        for( const tripoint_abs_ms &part_position : own ) {
-            const tripoint_abs_ms target = part_position + offset;
+        offsets.push_back( offset );
+    }
+    // Rays start from the leading edge: the tiles whose next tile in the
+    // direction of travel is not part of the vehicle.
+    struct obstacle_ray {
+        tripoint_abs_ms start;
+        bool blocked = false;
+    };
+    std::vector<obstacle_ray> rays;
+    for( const tripoint_abs_ms &part_position : own ) {
+        if( own.count( part_position + offsets.front() ) == 0 ) {
+            rays.push_back( { part_position } );
+        }
+    }
+
+    struct obstacle {
+        int distance;
+        const vehicle_obstacle_key *key;
+    };
+    std::vector<obstacle> obstacles;
+    std::set<vehicle_obstacle_key> current;
+    for( int distance = 1; distance <= range; ++distance ) {
+        for( obstacle_ray &cast : rays ) {
+            if( cast.blocked ) {
+                continue;
+            }
+            const tripoint_abs_ms target = cast.start + offsets[distance - 1];
             if( own.count( target ) != 0 ) {
                 continue;
             }
@@ -1705,9 +1727,11 @@ std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar 
             } else {
                 continue;
             }
-            std::string key = target.to_string() + ":" + name;
-            if( current.insert( key ).second ) {
-                obstacles.push_back( { distance, std::move( key ), name } );
+            // Anything further along this ray is behind the obstacle.
+            cast.blocked = true;
+            const auto inserted = current.emplace( target, std::move( name ) );
+            if( inserted.second ) {
+                obstacles.push_back( { distance, &*inserted.first } );
             }
         }
     }
@@ -1715,8 +1739,9 @@ std::optional<std::string> vehicle_obstacle_transition( map &here, const avatar 
     std::optional<std::string> result;
     // Obstacles are found nearest first.
     for( const obstacle &found : obstacles ) {
-        if( previous.count( found.key ) == 0 ) {
-            result = accessibility::format_vehicle_obstacle( found.name, found.distance, reversing );
+        if( previous.count( *found.key ) == 0 ) {
+            result = accessibility::format_vehicle_obstacle( found.key->second, found.distance,
+                     reversing );
             break;
         }
     }

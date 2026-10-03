@@ -1133,6 +1133,14 @@ TEST_CASE( "driving_speaks_entry_controls_obstacles_and_status", "[accessibility
     accessibility_gameplay::before_player_input( here, you );
     CHECK( capture_ptr->messages.size() == spoken );
 
+    // An obstacle behind the known one on the same line is not on the path.
+    here.ter_set( ahead + tripoint_rel_ms( 2, 0, 0 ), ter_t_wall );
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+    accessibility_gameplay::before_player_input( here, you );
+    CHECK( capture_ptr->messages.size() == spoken );
+
     // Reversing looks behind the vehicle; the wall ahead re-enters the path later.
     const tripoint_bub_ms behind( back - 2, controls->y(), 0 );
     here.ter_set( behind, ter_t_wall );
