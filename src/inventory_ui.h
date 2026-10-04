@@ -947,7 +947,7 @@ class inventory_selector
         /** One-based position of the highlighted item among the active column's items, and their count. */
         std::pair<size_t, size_t> accessibility_position() const;
         /** Remember the direction of a focus move key so the next focus announcement can report a wrap. */
-        void note_accessibility_move( const std::string &action );
+        void note_accessibility_move( std::string_view action );
         /** Predicted destination of the entry's item, spoken with the row details. */
         virtual std::string accessibility_destination( const inventory_entry & ) const {
             return {};

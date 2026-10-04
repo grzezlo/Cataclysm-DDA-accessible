@@ -788,12 +788,17 @@ std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bu
                           distance, direction );
 }
 
+namespace
+{
+
 semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
         const tripoint_bub_ms &position, const bool include_terrain )
 {
     return collect_semantic_tile_info( here, viewer, position, include_terrain,
                                        here.ter( position ).obj(), here.furn( position ).obj() );
 }
+
+} // namespace
 
 std::vector<std::string> perceived_sound_parts( const map &here,
         const tripoint_bub_ms &position,

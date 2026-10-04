@@ -223,10 +223,10 @@ bool uilist_details_need_document( std::string_view details );
 /** Split a long list description into spoken sentences, independent of visual wrapping. */
 std::vector<std::string> split_uilist_detail_sentences( std::string_view details );
 /** Split formatted item details into clean semantic lines and sentences for document reading. */
-std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
-        const std::string &raw_info );
+std::vector<std::string> format_item_info_paragraphs( std::string_view type_name,
+        std::string_view raw_info );
 /** Split formatted text into source lines and sentences, independent of visual wrapping. */
-std::vector<std::string> format_document_paragraphs( const std::string &text );
+std::vector<std::string> format_document_paragraphs( std::string_view text );
 /** Semantic inventory row, independent of item and renderer types. */
 struct inventory_focus_entry {
     std::string caption;
@@ -974,7 +974,7 @@ std::string format_inventory_comparison_stat( const std::string &label,
         const std::string &second_name, const std::string &second_value,
         inventory_comparison_relation relation );
 /** Collapse whitespace, trim, and optionally strip progress counters and percentages. */
-std::string normalize_status_announcement( const std::string &message, bool progress );
+std::string normalize_status_announcement( std::string_view message, bool progress );
 
 /** Discrete condition state tracked between turns to detect urgent transitions. */
 struct condition_tracker {

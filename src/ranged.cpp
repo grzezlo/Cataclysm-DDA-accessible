@@ -476,7 +476,7 @@ class target_ui
         // Hit predictions of the cursor; compute them once per announcement.
         std::vector<aim_type_prediction> accessibility_predictions();
         std::vector<accessibility::target_aim_level> accessibility_aim_levels(
-            const std::vector<aim_type_prediction> &predictions );
+            const std::vector<aim_type_prediction> &predictions ) const;
         accessibility::target_focus accessibility_focus();
         accessibility::target_focus accessibility_focus(
             const std::vector<accessibility::target_aim_level> &levels );
@@ -4470,7 +4470,7 @@ std::vector<aim_type_prediction> target_ui::accessibility_predictions()
 }
 
 std::vector<accessibility::target_aim_level> target_ui::accessibility_aim_levels(
-    const std::vector<aim_type_prediction> &predictions )
+    const std::vector<aim_type_prediction> &predictions ) const
 {
     const aim_type selected = get_selected_aim_type();
     std::vector<accessibility::target_aim_level> result;

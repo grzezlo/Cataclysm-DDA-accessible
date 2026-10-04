@@ -208,7 +208,7 @@ class capture_inventory_selector final : public inventory_pick_selector
         }
 
         // A focus move key followed by the resulting highlight.
-        bool move_to( const std::string &action, const item_location &target ) {
+        bool move_to( const std::string_view action, const item_location &target ) {
             note_accessibility_move( action );
             const bool found = highlight_one_of( { target } );
             announce_accessibility_focus();
@@ -1704,7 +1704,7 @@ TEST_CASE( "encumbrance_warmth_words_follow_the_warmth_colors", "[accessibility]
         CHECK( display::bodytemp_color( you, body_part_torso ) == colors[band] );
         // The detailed rows name the band after the warmth number.
         const std::vector<std::string> rows = encumbrance_accessibility_rows( you, nullptr );
-        CHECK( std::any_of( rows.begin(), rows.end(), [&]( const std::string & row ) {
+        CHECK( std::any_of( rows.begin(), rows.end(), [&]( const std::string_view row ) {
             return row.rfind( "torso, ", 0 ) == 0 &&
                    ( row.find( ", " + bands[band].second + "." ) != std::string::npos ||
                      row.find( ", " + bands[band].second + "," ) != std::string::npos );
