@@ -146,36 +146,41 @@ def print_message(msg, segments):
     print(bcolors.ENDC)
 
 
-po_files = []
-for file in sorted(os.listdir("lang/po")):
-    if file.endswith(".po") and not file.endswith("en.po"):
-        po_files.append(file)
-files_to_check = []
-if len(sys.argv) == 1:
-    files_to_check = po_files
-else:
-    for i in range(1, len(sys.argv)):
-        if sys.argv[i] + ".po" in po_files:
-            files_to_check.append(sys.argv[i] + ".po")
-        else:
-            print("Warning: Unknown language", sys.argv[i])
-num_errors = 0
-for file in sorted(files_to_check):
-    print("Checking", file, end="", flush=True)
-    errors = check_po_file("lang/po/" + file)
-    n = len(errors)
-    num_errors += n
-    if n > 0:
-        print(f" => {bcolors.FAIL}{n} error(s) detected:{bcolors.ENDC}")
-        for (msgid, msgstr, seg_msgid, seg_msgstr, reason) in errors:
-            print(f"{bcolors.BOLD}problem   :{bcolors.ENDC}", end="")
-            print(reason)
-            print(f"{bcolors.BOLD}original  :{bcolors.ENDC}", end="")
-            print_message(msgid.replace("\n\n", "\n"), seg_msgid)
-            print(f"{bcolors.BOLD}translated:{bcolors.ENDC}", end="")
-            print_message(msgstr.replace("\n\n", "\n"), seg_msgstr)
-            print()
+def main():
+    po_files = []
+    for file in sorted(os.listdir("lang/po")):
+        if file.endswith(".po") and not file.endswith("en.po"):
+            po_files.append(file)
+    files_to_check = []
+    if len(sys.argv) == 1:
+        files_to_check = po_files
     else:
-        print(f" => {bcolors.OKGREEN}No error detected.{bcolors.ENDC}")
-    print()
-exit(num_errors)
+        for i in range(1, len(sys.argv)):
+            if sys.argv[i] + ".po" in po_files:
+                files_to_check.append(sys.argv[i] + ".po")
+            else:
+                print("Warning: Unknown language", sys.argv[i])
+    num_errors = 0
+    for file in sorted(files_to_check):
+        print("Checking", file, end="", flush=True)
+        errors = check_po_file("lang/po/" + file)
+        n = len(errors)
+        num_errors += n
+        if n > 0:
+            print(f" => {bcolors.FAIL}{n} error(s) detected:{bcolors.ENDC}")
+            for (msgid, msgstr, seg_msgid, seg_msgstr, reason) in errors:
+                print(f"{bcolors.BOLD}problem   :{bcolors.ENDC}", end="")
+                print(reason)
+                print(f"{bcolors.BOLD}original  :{bcolors.ENDC}", end="")
+                print_message(msgid.replace("\n\n", "\n"), seg_msgid)
+                print(f"{bcolors.BOLD}translated:{bcolors.ENDC}", end="")
+                print_message(msgstr.replace("\n\n", "\n"), seg_msgstr)
+                print()
+        else:
+            print(f" => {bcolors.OKGREEN}No error detected.{bcolors.ENDC}")
+        print()
+    return num_errors
+
+
+if __name__ == "__main__":
+    sys.exit(main())

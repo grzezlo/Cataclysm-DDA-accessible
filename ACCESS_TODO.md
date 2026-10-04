@@ -198,16 +198,34 @@ This stage does not block the Stage 23 release and can run independently.
   neither `lang/po` nor `lang/access` translates.  The file is the provenance
   marker; entries carry no special flags.  Machine translations are never
   submitted to Transifex.
+- `lang/machine/<language>-overrides.po` (accepted 2026-10-04) holds
+  corrections of wrong upstream translations, AI-made or manual, so the fork
+  need not wait for upstream to fix them.  They are never submitted to
+  Transifex either.  An override stays until removed by hand, except that the
+  update script drops it once the upstream translation becomes identical and
+  drops it when its source string disappears or changes (the old text stays
+  in history).  Fork strings are never overridden here; they belong in
+  `lang/access`, and the update script reports such entries.
 - Compilation takes translated, non-fuzzy entries in the order `lang/access`,
-  `lang/po`, `lang/machine` (`msgcat --use-first`).  Untranslated entries of
-  every layer are removed first so they cannot hide a lower layer.  A
-  `--no-machine` option and a missing machine catalog produce the current
-  result.
+  machine overrides, `lang/po`, `lang/machine` (`msgcat --use-first`).
+  Upstream fuzzy entries keep their current in-game use.  Untranslated
+  entries of every layer are removed first so they cannot hide a lower layer.
+  A `--no-machine` option, which skips both machine files, and missing
+  machine catalogs produce the current result.
 
 **Code inventory:** `lang/update_access_po.sh`, `lang/compile_access_mo.sh`,
 `lang/access_catalog.py`, `update_translations_win_x64.bat`,
 `compile_translations_win_x64.bat`, `tools/check_po_printf_format.py`,
 `lang/notes/`, `README.md`, and release notes.
+
+**Progress:** The layer tooling is implemented: `--machine` in the update
+script (gap step, override pruning, validation with clearing of failing
+machine entries, status report with AI-draft counts), `--no-machine` and the
+four-layer precedence in the compile script, and fixture tests in
+`lang/test_access_po.sh` (`test_translations_win_x64.bat`).  Remaining: the
+Polish glossary, filling the machine catalog, the first overrides (the
+validator already flags about a dozen upstream `pl` entries with invented or
+unbalanced tags), release notes, and the user test.
 
 **Implementation hints:**
 

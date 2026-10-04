@@ -30,6 +30,8 @@
 
 # The access fork's own catalogs are small and reviewed as text.
 lang/access/*.po text eol=lf diff
+# Machine translations are reviewed as text too, so diffs show their changes.
+lang/machine/*.po text eol=lf diff
 
 # Treat images, archives, and font files as binary.
 # (binary is a macro for -text -diff)

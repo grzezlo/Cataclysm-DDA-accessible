@@ -262,6 +262,12 @@ over upstream contribution policy or exact UI parity.
   fork belong in `lang/access/<language>.po`; refresh them with
   `update_translations_win_x64.bat` and build `lang/mo` with
   `compile_translations_win_x64.bat`.
+- AI translations of upstream strings that `lang/po` leaves untranslated
+  belong in `lang/machine/<language>.po`, refreshed with
+  `update_translations_win_x64.bat --machine`.  Corrections of wrong
+  upstream translations belong in `lang/machine/<language>-overrides.po`.
+  Never submit `lang/machine` entries to Transifex or upstream.  Run
+  `test_translations_win_x64.bat` after changing the translation scripts.
 - Use AStyle 3.1 directly on Windows instead of the Makefile targets, whose
   checks require a POSIX shell and can report success without running.  Format
   changed C and C++ files with

@@ -1,14 +1,21 @@
 #!/usr/bin/env bash
 #
-# Update the access fork's own translation catalogs in lang/access.
+# Update the access fork's own translation catalogs in lang/access and,
+# with --machine, the machine translation layer in lang/machine.
 #
-# Usage: lang/update_access_po.sh [--base <revision>] [language...]
+# Usage: lang/update_access_po.sh [--base <revision>] [--machine] [language...]
 #
 # The fork template contains every string extracted from this tree that the
 # upstream base lacks.  The base is the merge base of HEAD and upstream-base
 # (or origin/upstream-base in a clone) unless --base names another revision.  Its template is cached in lang/po
-# by commit.  Without languages, every existing lang/access catalog is
-# updated.  Upstream catalogs in lang/po are left unchanged.
+# by commit.  Without languages, every existing lang/access and lang/machine
+# catalog is updated.  Upstream catalogs in lang/po are left unchanged.
+#
+# --machine also merges lang/machine/<language>.po with the upstream strings
+# that neither lang/po nor lang/access translates (written to
+# lang/po/gaps-<language>.pot), so an upstream translation retires its machine
+# entry.  It prunes lang/machine/<language>-overrides.po and clears machine
+# entries that fail validation.  Run it rarely, for example once per release.
 
 set -eu
 
@@ -25,17 +32,30 @@ then
     fi
 fi
 
+all_args=("$@")
 base_ref=""
-if [ "${1:-}" = "--base" ]
-then
-    if [ $# -lt 2 ]
-    then
-        echo "Error: --base requires a revision."
-        exit 1
-    fi
-    base_ref="$2"
-    shift 2
-fi
+machine=""
+while [ $# -gt 0 ]
+do
+    case "$1" in
+        --base)
+            if [ $# -lt 2 ]
+            then
+                echo "Error: --base requires a revision."
+                exit 1
+            fi
+            base_ref="$2"
+            shift 2
+            ;;
+        --machine)
+            machine=1
+            shift
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
 if [ -z "$base_ref" ]
 then
     for candidate in upstream-base origin/upstream-base
@@ -69,7 +89,7 @@ then
     if [ -z "${CATA_ACCESS_PO_UV:-}" ] && command -v uv >/dev/null 2>&1
     then
         export CATA_ACCESS_PO_UV=1
-        exec uv run --no-project --with polib bash "$script" --base "$base_ref" "$@"
+        exec uv run --no-project --with polib bash "$script" "${all_args[@]}"
     fi
     echo "Error: Python 3 with polib is required."
     exit 1
@@ -89,13 +109,20 @@ fi
 
 if [ $# -eq 0 ]
 then
-    for f in lang/access/*.po
+    for f in lang/access/*.po lang/machine/*.po
     do
-        [ -f "$f" ] && set -- "$@" "$(basename "$f" .po)"
+        n="$(basename "$f" .po)"
+        case "$n" in
+            *-overrides) n="${n%-overrides}" ;;
+        esac
+        if [ -f "$f" ] && [[ " $* " != *" $n "* ]]
+        then
+            set -- "$@" "$n"
+        fi
     done
     if [ $# -eq 0 ]
     then
-        echo "Error: No catalogs in lang/access; name the languages to create."
+        echo "Error: No catalogs in lang/access or lang/machine; name the languages to create."
         exit 1
     fi
 fi
@@ -130,6 +157,7 @@ lang/update_pot.sh
 access_pot="lang/po/cataclysm-dda-access.pot"
 "$python" lang/access_catalog.py diff lang/po/cataclysm-dda.pot "$base_pot" "$access_pot"
 
+failed=""
 mkdir -p lang/access
 for n in "$@"
 do
@@ -144,6 +172,52 @@ do
     # leaves them out of the game.
     msgmerge --quiet --previous "$po" "$access_pot" | msgattrib --no-obsolete -o "$po"
     msgfmt -c -o "$work/check.mo" "$po"
+    "$python" lang/access_catalog.py validate "$po" || failed=1
 done
+
+if [ -n "$machine" ]
+then
+    mkdir -p lang/machine
+    for n in "$@"
+    do
+        gaps_pot="lang/po/gaps-${n}.pot"
+        machine_po="lang/machine/${n}.po"
+        overrides_po="lang/machine/${n}-overrides.po"
+        "$python" lang/access_catalog.py gaps lang/po/cataclysm-dda.pot "$access_pot"             "lang/po/${n}.po" "$gaps_pot"
+        if [ ! -f "$machine_po" ]
+        then
+            echo "> Creating $machine_po"
+            "$python" lang/access_catalog.py init --layer machine "$n" "lang/po/${n}.po" "$machine_po"
+        fi
+        echo "> Updating $machine_po"
+        msgmerge --quiet --previous "$machine_po" "$gaps_pot" | msgattrib --no-obsolete -o "$machine_po"
+        "$python" lang/access_catalog.py validate --clear "$machine_po"
+        msgfmt -c -o "$work/check.mo" "$machine_po"
+        if [ -f "$overrides_po" ]
+        then
+            echo "> Updating $overrides_po"
+            "$python" lang/access_catalog.py overrides "$overrides_po" lang/po/cataclysm-dda.pot                 "$access_pot" "lang/po/${n}.po"
+            msgfmt -c -o "$work/check.mo" "$overrides_po"
+            "$python" lang/access_catalog.py validate "$overrides_po" || failed=1
+        fi
+    done
+fi
+
+for n in "$@"
+do
+    for po in "lang/access/${n}.po" "lang/machine/${n}.po" "lang/machine/${n}-overrides.po"
+    do
+        if [ -f "$po" ]
+        then
+            "$python" lang/access_catalog.py status "$po"
+        fi
+    done
+done
+
+if [ -n "$failed" ]
+then
+    echo "Error: Fix the translations reported above."
+    exit 1
+fi
 
 echo "ALL DONE!"
