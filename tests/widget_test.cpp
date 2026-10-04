@@ -2870,8 +2870,11 @@ TEST_CASE( "W_NO_PADDING_widget_flag", "[widget]" )
 
     // workaround for mbstowcs to process multibyte utf-8 chars
     std::locale const &oldloc = std::locale();
-    on_out_of_scope reset_loc( [&oldloc]() {
+    const std::string old_c_locale = setlocale( LC_ALL, nullptr );
+    on_out_of_scope reset_loc( [&oldloc, &old_c_locale]() {
         std::locale::global( oldloc );
+        // Restoring an unchanged C++ locale need not restore the C locale.
+        char *discard [[maybe_unused]] = setlocale( LC_ALL, old_c_locale.c_str() );
     } );
     char *result = setlocale( LC_ALL, "" );
     REQUIRE( result );
