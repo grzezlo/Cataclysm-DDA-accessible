@@ -15,6 +15,7 @@
 #include "point.h"
 
 class query_popup_impl;
+class input_context;
 namespace accessibility
 {
 class progress_reporter;
@@ -208,6 +209,8 @@ class query_popup
          * Query until a valid action or an error happens and return the result.
          */
         result query();
+        /** Build the keyboard context used by this popup without opening it. */
+        input_context make_input_context() const;
     protected:
         /**
          * Create or get a ui_adaptor on the UI stack to handle redrawing and

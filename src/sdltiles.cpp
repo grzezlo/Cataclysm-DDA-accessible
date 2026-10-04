@@ -3953,12 +3953,8 @@ void input_manager::pump_events()
 
     if( last_input.type != input_event_t::error ) {
         // Honor the player's binding, which may differ from the default Alt+R.
-        for( const input_event &binding : get_input_for_action( "ACCESSIBILITY_REPEAT_LAST" ) ) {
-            if( binding == last_input ) {
-                accessibility::repeat_last_announcement();
-                break;
-            }
-        }
+        dispatch_accessibility_repeat( last_input,
+                                       get_input_for_action( "ACCESSIBILITY_REPEAT_LAST" ) );
     }
 
     last_input = input_event();

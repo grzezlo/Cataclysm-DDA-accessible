@@ -326,28 +326,8 @@ void query_popup::invalidate_ui() const
     }
 }
 
-query_popup::result query_popup::query_once()
+input_context query_popup::make_input_context() const
 {
-
-    if( !anykey && !cancel && options.empty() ) {
-        return { false, "ERROR", {} };
-    }
-
-    if( test_mode ) {
-        return { false, "ERROR", {} };
-    }
-
-    const bool button_prompt = !options.empty();
-    const bool speaking = accessibility::is_active();
-    const std::string semantic_text = !speaking ? std::string() :
-                                      spoken_context.empty() ? remove_color_tags( text ) :
-                                      accessibility::format_semantic_sequence( { spoken_context, remove_color_tags( text ) } );
-
-    std::shared_ptr<query_popup_impl> impl = create_or_get_impl();
-
-    // ImGui doesn't like to show the window on the first drawn frame, so we do this
-    ui_manager::redraw();
-
     input_context ctxt( category, pref_kbd_mode );
     if( cancel || !options.empty() ) {
         ctxt.register_action( "HELP_KEYBINDINGS" );
@@ -371,9 +351,35 @@ query_popup::result query_popup::query_once()
     if( cancel ) {
         ctxt.register_action( "QUIT" );
     }
-    if( button_prompt ) {
+    // A raw-key prompt must be able to capture the repeat binding itself.
+    if( !options.empty() || ( cancel && !anykey ) ) {
         ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     }
+    return ctxt;
+}
+
+query_popup::result query_popup::query_once()
+{
+    if( !anykey && !cancel && options.empty() ) {
+        return { false, "ERROR", {} };
+    }
+
+    if( test_mode ) {
+        return { false, "ERROR", {} };
+    }
+
+    const bool button_prompt = !options.empty();
+    const bool speaking = accessibility::is_active();
+    const std::string semantic_text = !speaking ? std::string() :
+                                      spoken_context.empty() ? remove_color_tags( text ) :
+                                      accessibility::format_semantic_sequence( { spoken_context, remove_color_tags( text ) } );
+
+    std::shared_ptr<query_popup_impl> impl = create_or_get_impl();
+
+    // ImGui doesn't like to show the window on the first drawn frame, so we do this
+    ui_manager::redraw();
+
+    input_context ctxt = make_input_context();
 
     const auto selected_option = [&]() {
         const size_t index = static_cast<size_t>( impl->keyboard_selected_option );

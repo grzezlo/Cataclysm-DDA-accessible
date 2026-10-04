@@ -13,6 +13,7 @@
 #include <utility>
 
 #include "action.h"
+#include "accessibility.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "cata_path.h"
 #include "cata_utility.h"
@@ -29,6 +30,18 @@
 #include "translations.h"
 
 static const std::string default_context_id( "default" );
+
+bool dispatch_accessibility_repeat( const input_event &event,
+                                    const std::vector<input_event> &bindings )
+{
+    if( event.type == input_event_t::error || event.type == input_event_t::timeout ||
+        std::find( bindings.begin(), bindings.end(), event ) == bindings.end() ) {
+        return false;
+    }
+    accessibility::note_player_input();
+    accessibility::repeat_last_announcement();
+    return true;
+}
 
 static int str_to_int( const std::string &number )
 {

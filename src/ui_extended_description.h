@@ -20,6 +20,7 @@ enum class description_target : int {
 };
 
 void draw_extended_description( const std::vector<std::string> &description, uint64_t width );
+input_context extended_description_input_context();
 
 class extended_description_window : public cataimgui::window
 {

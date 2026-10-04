@@ -82,15 +82,9 @@ void draw_extended_description( const std::vector<std::string> &description, con
     }
 }
 
-extended_description_window::extended_description_window( tripoint_bub_ms &p ) :
-    cataimgui::window( "ext_desc",
-                       ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize |
-                       ImGuiWindowFlags_NoNavInputs ),
-    p( p )
+input_context extended_description_input_context()
 {
-    const map &here = get_map();
-
-    ctxt = input_context( "EXTENDED_DESCRIPTION" );
+    input_context ctxt( "EXTENDED_DESCRIPTION" );
     ctxt.register_action( "NEXT_TAB" );
     ctxt.register_action( "PREV_TAB" );
     ctxt.register_action( "CREATURE" );
@@ -100,7 +94,18 @@ extended_description_window::extended_description_window( tripoint_bub_ms &p ) :
     ctxt.register_action( "CONFIRM" );
     ctxt.register_action( "QUIT" );
     ctxt.register_action( "HELP_KEYBINDINGS" );
+    ctxt.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     ctxt.set_timeout( 10 );
+    return ctxt;
+}
+
+extended_description_window::extended_description_window( tripoint_bub_ms &p ) :
+    cataimgui::window( "ext_desc",
+                       ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize |
+                       ImGuiWindowFlags_NoNavInputs ),
+    ctxt( extended_description_input_context() ), p( p )
+{
+    const map &here = get_map();
 
     const Creature *critter = seen_critter( p );
     if( critter ) {

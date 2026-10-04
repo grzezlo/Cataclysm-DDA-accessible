@@ -197,6 +197,10 @@ constexpr int JOY_LEFTDOWN  = 256 + 8;
  * 2. Multi-key combination: `a
  * 3. Gamepad button: A
  */
+/** Dispatch repeat during event pumping, counting only a recognized binding as input. */
+bool dispatch_accessibility_repeat( const input_event &event,
+                                    const std::vector<input_event> &bindings );
+
 class input_manager
 {
         friend class keybindings_ui;

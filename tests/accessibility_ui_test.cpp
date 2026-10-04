@@ -85,6 +85,7 @@
 #include "trade_ui.h"
 #include "units_utility.h"
 #include "type_id.h"
+#include "ui_extended_description.h"
 #include "veh_interact.h"
 #include "veh_type.h"
 #include "vehicle.h"
@@ -369,6 +370,89 @@ TEST_CASE( "accessibility_alt_bindings", "[accessibility]" )
     number.register_action( "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( number.input_to_action( alt_r_char ) == "ACCESSIBILITY_REPEAT_LAST" );
     CHECK( number.input_to_action( pure_r ) != "ACCESSIBILITY_REPEAT_LAST" );
+}
+
+TEST_CASE( "popup_and_extended_description_register_repeat_without_consuming_raw_keys",
+           "[accessibility][nogame]" )
+{
+    const on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    accessibility::set_backend_for_testing( std::make_unique<capture_backend>() );
+    for( const bool speaking : {
+             true, false
+         } ) {
+        accessibility::set_screen_reader_mode( speaking ? accessibility::screen_reader_mode::on :
+                                               accessibility::screen_reader_mode::off );
+        for( const input_event_t type : {
+                 input_event_t::keyboard_code, input_event_t::keyboard_char
+             } ) {
+            const input_event repeat( { keymod_t::alt }, 'r', type );
+            query_popup informational;
+            informational.context( "POPUP_WAIT" ).allow_cancel( true );
+            CHECK( informational.make_input_context().input_to_action( repeat ) ==
+                   "ACCESSIBILITY_REPEAT_LAST" );
+            CHECK( informational.make_input_context().is_registered_action( "QUIT" ) );
+
+            query_popup choices;
+            choices.context( "YESNO" ).option( "YES" ).option( "NO" );
+            CHECK( choices.make_input_context().input_to_action( repeat ) ==
+                   "ACCESSIBILITY_REPEAT_LAST" );
+
+            query_popup raw;
+            raw.context( "POPUP_WAIT" ).allow_anykey( true );
+            CHECK( raw.make_input_context().input_to_action( repeat ) == "ERROR" );
+            CHECK( raw.make_input_context().is_registered_action( "ANY_INPUT" ) );
+            raw.allow_cancel( true );
+            CHECK( raw.make_input_context().input_to_action( repeat ) == "ERROR" );
+
+            input_context extended = extended_description_input_context();
+            CHECK( extended.input_to_action( repeat ) == "ACCESSIBILITY_REPEAT_LAST" );
+            CHECK( extended.is_registered_action( "NEXT_TAB" ) );
+            CHECK( extended.is_registered_action( "QUIT" ) );
+        }
+    }
+}
+
+TEST_CASE( "pumped_repeat_honors_bindings_and_interrupts_once_per_request",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    accessibility::announce( "Loading a long save" );
+    const int initial_cancels = speech->cancels;
+    const input_event repeat( { keymod_t::alt }, 'r', input_event_t::keyboard_code );
+    const std::vector<input_event> bindings = inp_mngr.get_input_for_action(
+                "ACCESSIBILITY_REPEAT_LAST" );
+    REQUIRE( dispatch_accessibility_repeat( repeat, bindings ) );
+    REQUIRE( dispatch_accessibility_repeat( repeat, bindings ) );
+    CHECK( speech->cancels == initial_cancels + 2 );
+    CHECK( speech->messages == std::vector<std::string> { "Loading a long save",
+            "Loading a long save", "Loading a long save"
+                                                        } );
+
+    CHECK_FALSE( dispatch_accessibility_repeat( input_event(), bindings ) );
+    CHECK_FALSE( dispatch_accessibility_repeat( input_event( 0, input_event_t::timeout ), bindings ) );
+    CHECK_FALSE( dispatch_accessibility_repeat(
+                     input_event( { keymod_t::ctrl }, 'r', input_event_t::keyboard_code ), bindings ) );
+    CHECK( speech->messages.size() == 3 );
+    accessibility::announce( "Same input generation" );
+    CHECK( speech->cancels == initial_cancels + 2 );
+
+    const input_event remapped( { keymod_t::alt }, 'q', input_event_t::keyboard_char );
+    const std::vector<input_event> custom = { remapped };
+    CHECK_FALSE( dispatch_accessibility_repeat( repeat, custom ) );
+    CHECK( dispatch_accessibility_repeat( remapped, custom ) );
+    CHECK( speech->cancels == initial_cancels + 3 );
+    CHECK( speech->messages.back() == "Same input generation" );
+    accessibility::set_screen_reader_mode( accessibility::screen_reader_mode::off );
+    CHECK( dispatch_accessibility_repeat( remapped, custom ) );
+    CHECK( speech->messages.size() == 5 );
+    CHECK( speech->cancels == initial_cancels + 3 );
 }
 
 TEST_CASE( "message_log_review_keeps_complete_messages_and_filter_focus",
