@@ -207,7 +207,7 @@ class capture_inventory_selector final : public inventory_pick_selector
         }
 
         // A focus move key followed by the resulting highlight.
-        bool move_to( const std::string &action, const item_location &target ) {
+        bool move_to( const std::string_view action, const item_location &target ) {
             note_accessibility_move( action );
             const bool found = highlight_one_of( { target } );
             announce_accessibility_focus();
