@@ -296,7 +296,7 @@ void safemode::show( const std::string &custom_name_in, bool is_safemode_in )
     } );
 
     // Screen reader speech: Global and Character behave as tabs; columns are spoken as words.
-    const auto access_rules = [&]() -> std::vector<rules_class>& {
+    const auto access_rules = [&]() -> const auto & {
         return tab == GLOBAL_TAB ? global_rules : character_rules;
     };
     const auto access_tab_name = [&]() {
