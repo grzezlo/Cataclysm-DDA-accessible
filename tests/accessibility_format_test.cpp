@@ -452,7 +452,7 @@ TEST_CASE( "speech_text_scanners_match_the_regular_expressions_they_replace",
     // The scanners replaced these expressions; they must remove the same text.
     const std::regex fraction( R"(\s*\[\s*\d+\s*/\s*\d+\s*\])" );
     const std::regex percentage( R"(\s*\d+(\.\d+)?\s*%)" );
-    for( const std::string &progress : {
+    for( const char *progress : {
              "Saving [3/10]  25%", "Crafting [ 12 / 300 ]", "Reading 7.5 %", "Waiting 1.5.5%",
              "Unpacking [3/]", "Done [a/b] 100%%", "x[1/2][3/4]y", "Level 3.%", "  42%  ", "[1/2"
          } ) {
@@ -463,7 +463,7 @@ TEST_CASE( "speech_text_scanners_match_the_regular_expressions_they_replace",
                accessibility::normalize_status_announcement( expected, false ) );
     }
     const std::regex markup_tags( R"(<[^<>\s][^<>]*>)" );
-    for( const std::string &text : {
+    for( const char *text : {
              "<color_red>Hot</color> < 5 and <good>fine</good>", "a <b<c> d", "x <> y < z>",
              "<a\nb>c", "trailing <open", "<info>Weight: 1.5 kg</info>\n<bad>Broken.</bad>"
          } ) {
