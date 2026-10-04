@@ -1,0 +1,109 @@
+# Langbench sample: upstream Polish translations that need correction.  Each translator comment names the detected problem; fix the msgstr.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+# Problem: Tags missing from the original: <puste>
+#: src/armor_layers.cpp:814
+msgid "<empty>"
+msgstr "<puste>"
+
+# Problem: Tags missing from the original: <Globalne>
+#: src/auto_pickup.cpp:573 src/safemode_ui.cpp:198
+msgid "[<Global>]"
+msgstr "[<Globalne>]"
+
+# Problem: Tags missing from the original: <npcpname>
+#: src/character_attire.cpp:737
+#, c-format
+msgid "<npcname>'s %s conflicts with %s so they cannot swap its side."
+msgstr "%s <npcpname> konfliktuje z %s, więc nie może zmienić jego strony."
+
+# Problem: Tags missing from the original: <color_pink>
+#: src/game.cpp:14056
+msgid "It <color_green>seems perfectly safe</color> to climb down like this."
+msgstr ""
+"Zejście w ten sposób <color_pink>wygląda na całkowicie bezpieczne</color>."
+
+# Problem: Tags missing from the original: <color_yellow>
+#: src/game.cpp:14096
+#, c-format
+msgid ""
+"Even if you climb down safely, you will fall <color_yellow>at least %d "
+"story</color>."
+msgid_plural ""
+"Even if you climb down safely, you will fall <color_red>at least %d "
+"stories</color>."
+msgstr[0] ""
+"Nawet jeśli bezpiecznie zejdziesz na dół, spadniesz <color_yellow>co najmniej"
+" %d piętro</color>."
+msgstr[1] ""
+"Nawet jeśli bezpiecznie zejdziesz na dół, spadniesz <color_yellow>co najmniej"
+" %d piętra</color>."
+msgstr[2] ""
+"Nawet jeśli bezpiecznie zejdziesz na dół, spadniesz <color_yellow>co najmniej"
+" %d piętrer</color>."
+msgstr[3] ""
+"Nawet jeśli bezpiecznie zejdziesz na dół, spadniesz <color_yellow>co najmniej"
+" %d piętra</color>."
+
+# Problem: Unbalanced <info> tags
+#: src/item.cpp:3809 src/item.cpp:4035
+msgid ""
+"Protection values are <bad>reduced by damage</bad> and you may be able to "
+"<info>improve them by repairing this item</info>."
+msgstr ""
+"Wartość ochrony <bad>maleje z uszkodzeniami</bad> i możesz ją </info>ulepszyć"
+" naprawiając ten przedmiot</info>."
+
+# Problem: Tags missing from the original: <npcname>
+#. ~ Description of mutation "Scrooge"
+#: data/json/mutations/npc_personality.json
+msgid "<npc_name> collects trash like a RPG protagonist collects potions."
+msgstr "<npcname> zbiera śmieci, jak bohater RPG zbiera mikstury."
+
+# Problem: Unbalanced <color> tags
+#. ~ Description of mission "Analyze Zombie Blood"
+#: data/json/npcs/refugee_center/surface_staff/NPC_old_guard_doctor.json
+msgid ""
+"First, you need to kill <color_light_blue>any zombie</color> and extract the blood from its body using the <color_light_blue>blood draw kit</color>.\n"
+"Second, you need to deliver this blood to any working <color_light_blue>centrifuge with a computer</color>.  Equipment like this can most commonly be found at <color_light_blue>hospitals</color>, but you can also try to search for it at <color_light_blue>medical labs</color>.\n"
+"Third, you need to place the extracted blood on the <color_light_blue>centrifuge</color> and analyze it using the <color_light_blue>computer nearby</color>.  If you're successful, the data will be written on an <color_light_blue>empty USB drive</color> you have to provide.\n"
+"Finally, you need to bring the USB drive with the data back to the <color_light_blue>Doctor</color>."
+msgstr ""
+"Po pierwsze, musisz zabić <color_light_blue>każdego zombie</color> i pobrać krew z jego ciała, używając zestawu do pobierania krwi <color_light_blue>.\n"
+"Po drugie, musisz dostarczyć tę krew do dowolnej działającej <color_light_blue>wirówki z komputerem</color>. Sprzęt taki najczęściej można znaleźć w <color_light_blue>szpitalach</color>, ale możesz też spróbować poszukać go w <color_light_blue>laboratoriach medycznych</color>.\n"
+"Po trzecie, musisz umieścić pobraną krew w <color_light_blue>wirówce</color> i przeanalizować ją za pomocą <color_light_blue>komputera znajdującego się w pobliżu</color>. Jeśli ci się powiedzie, dane zostaną zapisane na <color_light_blue>pustym dysku USB</color>, który musisz dostarczyć.\n"
+"Na koniec musisz zanieść dysk USB z danymi do <color_light_blue>lekarza</color>."
+
+# Problem: Tags missing from the original: <spirale>
+#. ~ Snippet in category "<spirals>"
+#. ~ Spiral madman's responses.
+#: data/json/npcs/snippets/talk_tags_line.json
+msgid "Now, now!  Let the games begin!  <spirals>"
+msgstr "Teraz, teraz! Niech gry się rozpoczną! <spirale>"
+
+# Problem: Tags missing from the original: <zombie>
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/refugee_center/surface_visitors/NPC_visiting_scavenger.json
+msgctxt "npc:f"
+msgid ""
+"I found a map to this place in an evac center and thought I'd see if it was "
+"just full of <zombies> or if there was something up.  Didn't expect to find "
+"so many survivors still alive though."
+msgstr ""
+"Znalazłem mapę tego miejsca w centrum ewakuacyjnym i pomyślałem, że sprawdzę,"
+" czy jest ono po prostu pełne <zombie>, czy może coś jest na rzeczy. Nie "
+"spodziewałem się jednak, że znajdę tam tak wielu ocalałych, którzy jeszcze "
+"żyją."

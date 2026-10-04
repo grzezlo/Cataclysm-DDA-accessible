@@ -1,0 +1,368 @@
+# Langbench sample: Item names and descriptions.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP, matchhead powder"
+msgid_plural ".32 ACP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "flame-resistant socks (pair)"
+msgid_plural "flame-resistant socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Argentinian flag" of item "national flag"
+#: data/json/items/armor/cloaks.json
+msgid ""
+"It has three horizontal lines of baby blue and white, with a gold star in the"
+" middle."
+msgstr ""
+
+#. ~ Conditional name for "refined pistol-cartridge necklace" when COMPONENT_ID
+#. matches blue_topaz
+#. ~ Conditional name for "refined rifle-cartridge necklace" when COMPONENT_ID
+#. matches blue_topaz
+#. ~ Conditional name for "refined ordnance-cartridge necklace" when
+#. COMPONENT_ID matches blue_topaz
+#: data/json/items/armor/jewelry.json
+#, c-format
+msgid "%s topaz necklace"
+msgid_plural "%s topaz necklaces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "tiger stripe leggings" of item "leggings"
+#: data/json/items/armor/legs_clothes.json
+msgid "This pair has a tiger stripe pattern."
+msgstr ""
+
+#. ~ "noise_message" action message of item "clown nose"
+#: data/json/items/armor/misc.json
+msgid "Honk!"
+msgstr ""
+
+#. ~ Description of variant "polka dot tights" of item "tights"
+#: data/json/items/armor/undergarment.json
+msgid "These are adorned with dozens of <color> polka dots."
+msgstr ""
+
+#. ~ Variant name of item "The Modern Tanner"
+#: data/json/items/book/chemistry.json
+msgid "Leatherworking Handbook"
+msgid_plural "copies of Leatherworking Handbook"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "USMC Sword Manual Procedure"
+#: data/json/items/book/cutting.json
+msgid "Art of Sword Combat"
+msgid_plural "copies of Art of Sword Combat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "A Short History of the Jewish People: From
+#. Legendary Times to Modern Statehood" of item "Judaica softcover"
+#: data/json/items/book/misc.json
+msgid ""
+"A survey-level study of Jewish history, from Biblical times through to the "
+"1990s.  At only 250 pages long, it is by necessity very brief on any "
+"individual topic."
+msgstr ""
+
+#. ~ Variant name of item "Talmud"
+#: data/json/items/book/spiritual.json
+msgid "Talmud, Vol. 36, Tractate Nazir (Part 2)"
+msgid_plural "copies of the Talmud, Vol. 36, Tractate Nazir (Part 2)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/dairy.json
+msgid "yogurt"
+msgid_plural "yogurt"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "fruit juice" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "kompot" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "fruit leather" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "cooked fruit" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "fruit jam" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "dehydrated fruit" when COMPONENT_ID_SUBSTRING
+#. matches blueberries
+#. ~ Conditional name for "rehydrated fruit" when COMPONENT_ID_SUBSTRING
+#. matches blueberries
+#. ~ Conditional name for "fruit slice" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "canned fruit" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#. ~ Conditional name for "brandied fruit" when COMPONENT_ID_SUBSTRING matches
+#. blueberries
+#: data/json/items/comestibles/drink.json
+#: data/json/items/comestibles/fruit_dishes.json
+#, c-format
+msgid "%s, blueberry"
+msgid_plural "%s, blueberry"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "kompot" when COMPONENT_ID matches juice_pulp
+#. ~ Conditional name for "dehydrated fruit" when COMPONENT_ID matches
+#. juice_pulp
+#. ~ Conditional name for "rehydrated fruit" when COMPONENT_ID matches
+#. juice_pulp
+#: data/json/items/comestibles/drink.json
+#: data/json/items/comestibles/fruit_dishes.json
+#, c-format
+msgid "%s, juice pulp"
+msgid_plural "%s, juice pulp"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "snow cone" when COMPONENT_ID_SUBSTRING matches mango
+#: data/json/items/comestibles/frozen.json
+#, c-format
+msgid "mango %s"
+msgid_plural "mango %s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "snow cone" when COMPONENT_ID_SUBSTRING matches plums
+#: data/json/items/comestibles/frozen.json
+#, c-format
+msgid "plum %s"
+msgid_plural "plum %s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bifocal contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>both nearsightedness and "
+"farsightedness</color>, and should be discarded after <color_light_blue>a "
+"week</color> of use."
+msgstr ""
+
+#. ~ Description of "hyperopia contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>farsightedness</color>, and should be discarded"
+" after <color_light_blue>16 hours</color> of use."
+msgstr ""
+
+#. ~ Description of "myopia contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>nearsightedness</color>, and should be "
+"discarded after <color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ Variant name of item "chewing gum"
+#: data/json/items/comestibles/other.json
+msgid "gum, green apple"
+msgid_plural "gum, green apple"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "chewing gum"
+#: data/json/items/comestibles/other.json
+msgid "gum, pomegranate"
+msgid_plural "gum, pomegranate"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "barley seeds"
+#: data/json/items/comestibles/seed.json
+msgid "This pile of dried barley is earmarked for planting."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/seed.json
+msgid "groundnut seeds"
+msgid_plural "groundnut seeds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".40 S&W ammo box"
+#: data/json/items/containers/ammo_boxes.json
+msgid ""
+"This box holds 20 rounds of .40 S&W ammo.  It's made of a thin cardboard "
+"plastered with text about the ammo, and the manufacturer's logo."
+msgstr ""
+
+#. ~ Description of variant "84mm HE crate" of item "84mm HE crate"
+#: data/json/items/containers/military.json
+msgid ""
+"A big metal crate.  On one side it has label \"EXPLOSIVE\", and on another is written:\n"
+"<color_yellow>6 RDS 84MM HE</color>"
+msgstr ""
+
+#. ~ Description of variant "72 40mm ammo crate" of item "wooden crate"
+#: data/json/items/containers/military.json
+msgid ""
+"Huge wooden crate, closed with metal wire.  Front side has printed:\n"
+"<color_yellow>1310-00-992-0451 B546\n"
+"72 CARTRIDGE COMP A-5\n"
+"40 MM HEDP M433</color>"
+msgstr ""
+
+#. ~ Variant name of item "Jigsaw puzzle"
+#: data/json/items/fluff.json
+msgid "Northern Lights jigsaw puzzle"
+msgid_plural "Northern Lights jigsaw puzzles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "character portrait" of item "painting"
+#: data/json/items/fluff.json
+msgid ""
+"This painting depicts a <sketch_concept_description> <random_character_pose>."
+"  It seems to have been <painting_type_with_style>.  "
+"<artist_identifying_info>."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 9x19mm casing"
+msgid_plural "primerless 9x19mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "The side of the mug reads \"fuck you, <name_b>!\""
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "mossberg_500"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "remington_870_breacher"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/stock.json
+msgctxt "gun_type_type"
+msgid "mauser_c96"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/stock.json data/json/items/gunmod/underbarrel.json
+msgctxt "gun_type_type"
+msgid "steyr_scout"
+msgstr ""
+
+#. ~ Description of "LIXA military police badge"
+#: data/json/items/id_cards.json
+msgid ""
+"An id card bearing the name, rank, and serial number of a soldier stationed "
+"at LIXA."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/melee/spears_and_polearms.json
+msgctxt "weapon"
+msgid "bronze pike"
+msgid_plural "bronze pikes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skewer knuckles"
+#: data/json/items/melee/unarmed_weapons.json
+msgid ""
+"A pair of metal braces, each with a single sturdy spike attached.  When "
+"strapped to your hands, the spikes protrude 5 centimeters past your clenched "
+"fists."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/cooking.json
+msgid "multi-cooker"
+msgid_plural "multi-cookers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wood boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"A wooden board that keeps the boat afloat.  Add boat hulls to a vehicle until"
+" it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "25 L 650 HP gas turbine engine"
+msgid_plural "25 L 650 HP gas turbine engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

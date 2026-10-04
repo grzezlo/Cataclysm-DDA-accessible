@@ -1,0 +1,204 @@
+# Langbench sample: Interface strings from src/.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/activity_actor.cpp
+msgid "<npcname> cannot pulp this corpse without a heavier tool."
+msgid_plural "<npcname> cannot pulp these corpses without a heavier tool."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You left one corpse unpulped, for you have no tool heavy enough to deal with "
+"it."
+msgid_plural ""
+"You left some corpses unpulped, for you have no tool heavy enough to deal "
+"with it."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/character.cpp
+#, c-format
+msgid "You are too weak to wield the %s with only one arm."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "Your %s needs %d kJ of bionic power."
+msgid_plural "Your %s needs %d kJ of bionic power."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/crafting.cpp
+msgid "<npcname> can no longer make that craft!"
+msgstr ""
+
+#: src/crafting_gui.cpp
+msgid "result can contain item of <color_cyan>length</color>"
+msgstr ""
+
+#: src/debug_menu.cpp
+msgid "Add new variable"
+msgstr ""
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Aggression(base): %d (%d)"
+msgstr ""
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Set gut kcal to?  Currently: %d"
+msgstr ""
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Set lifestyle value to?  Currently: %d"
+msgstr ""
+
+#: src/debug_menu.cpp src/editmap.cpp
+#, c-format
+msgid "Set rads to?  Currently: %d"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Just stuff your face.  You're hungry!"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Send a companion to clear a nearby forest.\n"
+"Note that it's likely both forest and field roads look exactly the same after having been cleared.\n"
+"\n"
+"Skill used: fabrication\n"
+"Difficulty: 1\n"
+"Effects:\n"
+"> 95%% of trees/trunks at the forest position will be cut down.\n"
+"> 0%% of total material will be brought back.\n"
+"> Forest should become a field tile.\n"
+"> Useful for clearing land for another faction camp.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Active\n"
+"Time: 6 Hour Base + Travel Time + Cutting Time\n"
+"Positions: %d/1\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Notes:\n"
+"This will open the regular crafting screen where you may select a recipe and batch size.\n"
+"\n"
+"You will be prompted to select a NPC to perform the craft after selecting the recipe.\n"
+"\n"
+"Kcal cost will be shown last, you will be prompted to accept or back out."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select an existing hide site from %d to %d tiles away."
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Edit"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Personal"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Toggle zone display"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Needs at least %d charge."
+msgid_plural "Needs at least %d charges."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/iexamine.cpp
+#, c-format
+msgid "Biogas generating process started for about %d day."
+msgid_plural "Biogas generating process started for about %d days."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/iexamine.cpp src/item.cpp
+#, c-format
+msgid "Failed to find milling recipe for %s."
+msgstr ""
+
+#: src/iexamine.cpp
+#, c-format
+msgid "The tank now contains %s (%d), %0.f%% full."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid ""
+"Can be <info>activated</info> to deploy as an appliance (<stat>%s</stat>)."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You need a mop to clean up liquids before deploying the %s."
+msgstr ""
+
+#: src/martialarts.cpp
+msgctxt "martial arts buff desc"
+msgid "<bold>Bonus:</bold> "
+msgid_plural "<bold>Bonus/stack:</bold> "
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/monexamine.cpp
+#, c-format
+msgid "Remove a bag from the %s"
+msgstr ""
+
+#: src/output.cpp
+msgid "can contain item of <color_cyan>volume</color>"
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "<npcname>'s %s is hurt by the recoil!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> suddenly shifts slightly."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Engine conflict: %s."
+msgstr ""
