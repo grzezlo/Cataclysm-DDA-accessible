@@ -602,7 +602,7 @@ TEST_CASE( "keybinding_accessibility_actions_registered_in_contexts", "[accessib
     CHECK_FALSE( custom_ctx.is_registered_action( "ACCESSIBILITY_DETAILS" ) );
     CHECK_FALSE( custom_ctx.is_registered_action( "ACCESSIBILITY_REPEAT_LAST" ) );
 
-    for( const std::string &accessibility_action : {
+    for( const char *accessibility_action : {
              "ACCESSIBILITY_DETAILS",
              "ACCESSIBILITY_REPEAT_LAST"
          } ) {
