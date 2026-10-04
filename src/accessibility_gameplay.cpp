@@ -40,6 +40,7 @@
 #include "fault.h"
 #include "field.h"
 #include "flag.h"
+#include "game_constants.h"
 #include "input_context.h"
 #include "inventory.h"
 #include "item.h"
@@ -72,6 +73,7 @@
 #include "ret_val.h"
 #include "safemode_ui.h"
 #include "scenario.h"
+#include "sounds.h"
 #include "string_formatter.h"
 #include "tileray.h"
 #include "translation_cache.h"
@@ -793,6 +795,34 @@ semantic_tile_info collect_semantic_tile_info( map &here, const avatar &viewer,
                                        here.ter( position ).obj(), here.furn( position ).obj() );
 }
 
+std::vector<std::string> perceived_sound_parts( const map &here,
+        const tripoint_bub_ms &position,
+        const std::function<std::string( const tripoint_bub_ms & )> &sound_at )
+{
+    std::vector<std::string> parts;
+    if( !here.inbounds( position ) ) {
+        return parts;
+    }
+    const std::string same_level = sound_at( position );
+    if( !same_level.empty() ) {
+        parts.push_back( string_format( _( "From here you heard %s" ), same_level ) );
+        return parts;
+    }
+    tripoint_bub_ms other = position;
+    for( other.z() = -OVERMAP_DEPTH; other.z() <= OVERMAP_HEIGHT; ++other.z() ) {
+        if( other.z() == position.z() ) {
+            continue;
+        }
+        const std::string description = sound_at( other );
+        if( !description.empty() ) {
+            parts.push_back( string_format( other.z() > position.z() ?
+                                            _( "From above you heard %s" ) : _( "From below you heard %s" ),
+                                            description ) );
+        }
+    }
+    return parts;
+}
+
 std::vector<std::string> look_parts( map &here, const avatar &viewer,
                                      const tripoint_bub_ms &origin, const tripoint_bub_ms &position,
                                      const visibility_variables &cache )
@@ -826,6 +856,9 @@ std::vector<std::string> look_parts( map &here, const avatar &viewer,
             parts.emplace_back( _( "Unseen" ) );
             break;
     }
+    const std::vector<std::string> sound_parts = perceived_sound_parts( here, position,
+            sounds::sound_at );
+    parts.insert( parts.end(), sound_parts.begin(), sound_parts.end() );
     parts.push_back( relative_z_location( origin, position ) );
     parts.push_back( situation_location( origin, position ) );
     return parts;

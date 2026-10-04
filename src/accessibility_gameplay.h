@@ -96,6 +96,10 @@ class activity_turn_speech
 
 /** Describe a target position relative to an origin, e.g. "3 tiles north". */
 std::string situation_location( const tripoint_bub_ms &origin, const tripoint_bub_ms &target );
+/** Describe only perceived markers from sound_at, with the visual panel's level precedence. */
+std::vector<std::string> perceived_sound_parts( const map &here,
+        const tripoint_bub_ms &position,
+        const std::function<std::string( const tripoint_bub_ms & )> &sound_at );
 /** Semantic description of one look-around cursor position. */
 std::vector<std::string> look_parts( map &here, const avatar &viewer,
                                      const tripoint_bub_ms &origin, const tripoint_bub_ms &position,

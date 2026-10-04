@@ -3,8 +3,11 @@
 #include <cfloat>
 #include <climits>
 #include <clocale>
+#include <cmath>
 #include <iterator>
 #include <limits>
+#include <locale>
+#include <sstream>
 #include <stdexcept>
 
 #include "accessibility.h"
@@ -1041,6 +1044,29 @@ void options_manager::cOpt::setPrev()
 }
 
 //set value
+std::string options_manager::cOpt::setNumericInput( const std::string &text )
+{
+    if( sType == "int" ) {
+        const ret_val<int> value = try_parse_integer<int>( text, false );
+        if( value.success() ) {
+            setValue( value.value() );
+            return {};
+        }
+    } else if( sType == "float" ) {
+        std::istringstream stream( text );
+        stream.imbue( std::locale::classic() );
+        float value = 0.0f;
+        if( stream >> value && std::isfinite( value ) ) {
+            stream >> std::ws;
+            if( stream.eof() ) {
+                setValue( value );
+                return {};
+            }
+        }
+    }
+    return _( "Not a number" );
+}
+
 void options_manager::cOpt::setValue( float fSetIn )
 {
     if( sType != "float" ) {
@@ -3798,24 +3824,7 @@ std::string options_manager::show( bool ingame, const bool world_options_only, b
                         if( popup.canceled() ) {
                             return;
                         }
-                        if( is_int ) {
-                            const ret_val<int> value = try_parse_integer<int>( text, false );
-                            if( value.success() ) {
-                                current_opt.setValue( value.value() );
-                            } else {
-                                access_feedback = _( "Not a number" );
-                            }
-                        } else {
-                            std::istringstream stream( text );
-                            stream.imbue( std::locale::classic() );
-                            float value = 0.0f;
-                            stream >> value;
-                            if( stream ) {
-                                current_opt.setValue( value );
-                            } else {
-                                access_feedback = _( "Not a number" );
-                            }
-                        }
+                        access_feedback = current_opt.setNumericInput( text );
                     } else if( is_int ) {
                         number_input_popup<int> popup( 0, current_opt.value_as<int>() );
                         popup.set_label( current_opt.getMenuText() );

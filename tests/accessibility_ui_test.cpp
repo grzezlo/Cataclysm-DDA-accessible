@@ -455,6 +455,41 @@ TEST_CASE( "pumped_repeat_honors_bindings_and_interrupts_once_per_request",
     CHECK( speech->cancels == initial_cancels + 3 );
 }
 
+TEST_CASE( "numeric_option_text_requires_a_complete_finite_number", "[accessibility][nogame]" )
+{
+    auto option = get_options().get_option( "TURN_DURATION" );
+    option.setValue( 2.0f );
+    for( const std::string text : {
+             "1.5garbage", "1,5", "1.5 2", "", " \t", "1e999",
+             "nan", "NaN", "inf", "-infinity", "1.5.6"
+         } ) {
+        INFO( text );
+        CHECK( option.setNumericInput( text ) == "Not a number" );
+        CHECK( option.value_as<float>() == 2.0f );
+    }
+    const std::vector<std::pair<std::string, float>> valid = {
+        { "1", 1.0f }, { "1.5", 1.5f }, { "+2.5", 2.5f }, { "-0", 0.0f },
+        { "1e-1", 0.1f }, { "  1.5 \t", 1.5f }, { ".5", 0.5f }
+    };
+    for( const auto &entry : valid ) {
+        INFO( entry.first );
+        CHECK( option.setNumericInput( entry.first ).empty() );
+        CHECK( option.value_as<float>() == Approx( entry.second ) );
+    }
+    // Valid out-of-range numbers retain the existing setter's default fallback.
+    CHECK( option.setNumericInput( "-1.5" ).empty() );
+    CHECK( option.value_as<float>() == 0.0f );
+    CHECK( option.setNumericInput( "100" ).empty() );
+    CHECK( option.value_as<float>() == 0.0f );
+
+    auto integer = get_options().get_option( "MUSIC_VOLUME" );
+    integer.setValue( 25 );
+    CHECK( integer.setNumericInput( "12garbage" ) == "Not a number" );
+    CHECK( integer.value_as<int>() == 25 );
+    CHECK( integer.setNumericInput( "12" ).empty() );
+    CHECK( integer.value_as<int>() == 12 );
+}
+
 TEST_CASE( "message_log_review_keeps_complete_messages_and_filter_focus",
            "[accessibility][nogame]" )
 {

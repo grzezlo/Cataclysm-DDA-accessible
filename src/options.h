@@ -120,6 +120,8 @@ class options_manager
                 void setValue( const std::string &sSetIn );
                 void setValue( float fSetIn );
                 void setValue( int iSetIn );
+                /** Apply a complete numeric input; return translated feedback without changing invalid values. */
+                std::string setNumericInput( const std::string &text );
 
                 template<typename T>
                 T value_as( bool convert = false ) const;

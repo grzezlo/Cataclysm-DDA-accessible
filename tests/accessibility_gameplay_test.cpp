@@ -79,6 +79,7 @@
 #include "scenario.h"
 #include "point.h"
 #include "skill.h"
+#include "sounds.h"
 #include "skill_ui.h"
 #include "string_formatter.h"
 #include "trade_ui.h"
@@ -1220,6 +1221,100 @@ TEST_CASE( "driving_speaks_entry_controls_obstacles_and_status", "[accessibility
     here.update_visibility_cache( origin.z() );
     you.controlling_vehicle = true;
     CHECK_FALSE( accessibility_gameplay::vehicle_obstacle_transition( here, you ).has_value() );
+}
+
+TEST_CASE( "look_sound_markers_match_bounds_and_same_level_precedence", "[accessibility]" )
+{
+    map &here = get_map();
+    const tripoint_bub_ms position( 60, 60, 0 );
+    std::map<int, std::string> markers;
+    int lookups = 0;
+    const auto lookup = [&]( const tripoint_bub_ms & p ) {
+        ++lookups;
+        CHECK( p.xy() == position.xy() );
+        const auto found = markers.find( p.z() );
+        return found == markers.end() ? std::string() : found->second;
+    };
+    CHECK( accessibility_gameplay::perceived_sound_parts( here, position, lookup ).empty() );
+    markers = { { position.z() - 2, "distant rumble" }, { position.z() - 1, "steps" },
+        { position.z() + 1, "crash" }, { position.z() + 2, "a sound" }
+    };
+    CHECK( accessibility_gameplay::perceived_sound_parts( here, position, lookup ) ==
+           std::vector<std::string> { "From below you heard distant rumble",
+                                      "From below you heard steps", "From above you heard crash", "From above you heard a sound"
+                                    } );
+    markers[position.z()] = "local knock";
+    lookups = 0;
+    CHECK( accessibility_gameplay::perceived_sound_parts( here, position, lookup ) ==
+           std::vector<std::string> { "From here you heard local knock" } );
+    CHECK( lookups == 1 );
+    lookups = 0;
+    CHECK( accessibility_gameplay::perceived_sound_parts( here, tripoint_bub_ms( -1, -1,
+            position.z() ), lookup ).empty() );
+    CHECK( lookups == 0 );
+}
+
+TEST_CASE( "look_cursor_reports_real_perceived_markers_without_unseen_creatures",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    sounds::reset_sounds();
+    avatar &you = get_avatar();
+    map &here = get_map();
+    const tripoint_bub_ms origin = you.pos_bub( here );
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope cleanup( []() {
+        sounds::reset_sounds();
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+        clear_map();
+    } );
+    player_wear_blindfold();
+    here.invalidate_map_cache( origin.z() );
+    here.build_map_cache( origin.z(), true );
+    here.update_visibility_cache( origin.z() );
+    const visibility_variables &cache = here.get_visibility_variables_cache();
+    const tripoint_bub_ms hidden = origin + tripoint_rel_ms( 8, 0, 0 );
+    spawn_test_monster( "mon_zombie", hidden );
+    const std::string no_marker = accessibility::format_semantic_sequence(
+                                      accessibility_gameplay::look_parts( here, you, origin, hidden, cache ) );
+    CHECK( no_marker.find( "zombie" ) == std::string::npos );
+    CHECK( no_marker.find( "you heard" ) == std::string::npos );
+
+    for( const bool empty_description : {
+             false, true
+         } ) {
+        sounds::reset_sounds();
+        const tripoint_bub_ms source = origin + tripoint_rel_ms( 2, 0, 0 );
+        if( empty_description ) {
+            sounds::add_footstep( source, 100, 2, nullptr, "" );
+        } else {
+            sounds::sound( source, 100, sounds::sound_t::order, std::string( "a test knock" ), true );
+        }
+        sounds::process_sound_markers( &you );
+        const std::vector<tripoint_bub_ms> markers = sounds::get_footstep_markers();
+        REQUIRE( markers.size() == 1 );
+        const tripoint_bub_ms marker = markers.front();
+        const std::string description = empty_description ? "a sound" : "a test knock";
+        CHECK( sounds::sound_at( marker ) == description );
+        input_context ctxt( "LOOK" );
+        accessibility_gameplay::announce_look_cursor( here, you, ctxt, origin, marker, cache, false,
+                false );
+        const std::string announced = accessibility::last_announcement();
+        CHECK( announced.find( "From here you heard " + description ) != std::string::npos );
+        CHECK( announced.find( "zombie" ) == std::string::npos );
+        const size_t count = speech->messages.size();
+        CHECK( accessibility::repeat_last_announcement() );
+        CHECK( speech->messages.size() == count + 1 );
+        CHECK( speech->messages.back() == announced );
+        sounds::reset_markers();
+        const std::string reset = accessibility::format_semantic_sequence(
+                                      accessibility_gameplay::look_parts( here, you, origin, marker, cache ) );
+        CHECK( reset.find( "you heard" ) == std::string::npos );
+    }
 }
 
 // NOLINTEND(cata-text-style)
