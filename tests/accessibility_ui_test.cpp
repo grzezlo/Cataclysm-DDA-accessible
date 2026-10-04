@@ -455,7 +455,7 @@ TEST_CASE( "pumped_repeat_honors_bindings_and_interrupts_once_per_request",
     CHECK( speech->cancels == initial_cancels + 3 );
 }
 
-TEST_CASE( "numeric_option_text_requires_a_complete_finite_number", "[accessibility][nogame]" )
+TEST_CASE( "numeric_option_text_requires_a_complete_finite_number", "[accessibility]" )
 {
     auto option = get_options().get_option( "TURN_DURATION" );
     option.setValue( 2.0f );
@@ -2319,7 +2319,10 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     REQUIRE( capture_ptr->messages.size() == 1 );
     const std::string opening = capture_ptr->messages.back();
     CAPTURE( opening );
-    CHECK( opening.find( "Trade: " + trader.get_name() + ". Balance: credit $0.00, acceptable." ) ==
+    // Language changes on Windows may select the system's decimal separator.
+    const std::string zero_amount = format_money( 0 );
+    CHECK( opening.find( "Trade: " + trader.get_name() + ". Balance: credit " + zero_amount +
+                         ", acceptable." ) ==
            0 );
     CHECK( opening.find( "Trader's goods. 1 item." ) != std::string::npos );
     CHECK( opening.find( "hammer" ) != std::string::npos );
@@ -2343,7 +2346,7 @@ TEST_CASE( "trade_panes_speak_party_rows_marks_balance_and_status", "[accessibil
     CAPTURE( status );
     CHECK( status.find( "Trade: " ) == 0 );
     CHECK( status.find( "trader refuses. Buying: $" ) != std::string::npos );
-    CHECK( status.find( "Selling: $0.00." ) != std::string::npos );
+    CHECK( status.find( "Selling: " + zero_amount + "." ) != std::string::npos );
     CHECK( status.find( "Trader's goods." ) != std::string::npos );
     CHECK( status.find( "1 entry selected" ) != std::string::npos );
     CHECK( status.find( "1 of 1" ) != std::string::npos );
