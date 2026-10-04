@@ -126,6 +126,10 @@ over upstream contribution policy or exact UI parity.
 - `src/game.cpp` keeps only narrow calls into `accessibility_gameplay` from the
   gameplay lifecycle, movement, visible-threat, look-around, and nearby-list
   code.  Do not add accessibility logic bodies to `game.cpp`.
+- `input_context::handle_input()` answers `ACCESSIBILITY_REPEAT_LAST` for every
+  screen; screens do not handle it.  A screen that must refresh the last
+  announcement first sets `input_context::set_repeat_last_handler()`, as the
+  activity loop in `do_turn.cpp` does.
 - `data/raw/keybindings.json` owns default accessibility bindings.  New actions
   must also be discoverable through the in-game keybinding and help interfaces.
 - Before changing an integration point, inspect its current symbol and recent

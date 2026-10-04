@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T175.
+Last assigned test ID: T178.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1282,3 +1282,35 @@ Change terrain, or drive toward a building.
   states, Enter speaks a changed state, and `Alt+D` gives the description.
   Return to gameplay using only the keyboard.  Interrupt a row with Control
   and check that `Alt+R` repeats it without an automatic replay.
+
+## Stage 21B: Performance and maintenance follow-up
+
+- **T176 - Driving obstacles from the front of the vehicle.**  Spawn a car
+  on an open road through the debug menu (Spawn > vehicle), board it, take
+  the controls, and drive at speed toward a wall or another vehicle.  Hear
+  one "<obstacle> ahead, N tiles" when it comes into view, nothing more
+  while it stays on the path, and the nearer obstacle first when two are
+  ahead.  A second obstacle directly behind the first one on the same line
+  is not announced until the first one leaves the path.  Reverse toward an
+  obstacle and hear "behind".  Interrupt with Control; `Alt+R` repeats the
+  last obstacle without an automatic replay.
+- **T177 - Progress during a long wait.**  In a safe place, wait 8 hours
+  from the wait menu.  Hear one start announcement, then periodic progress
+  such as "Waiting, 7 hours remaining" no more often than the progress
+  interval, never the popup text with "to interrupt".  Press `Alt+R` during
+  the wait and hear the current remaining time once.  The result is spoken
+  once at the end.  Repeat with sleep (debug menu > Player > set sleepiness
+  high, then sleep) and check that `Alt+R` says "Sleeping".
+- **T178 - Repeat-last on every screen family.**  `Alt+R` is now answered in
+  one place for all screens.  In each of these screens make one
+  announcement, then press `Alt+R` and hear it exactly once, with no
+  other change: main menu, a `uilist` menu (for example the action menu),
+  a yes/no prompt, a text input, the help and keybinding screens, the
+  message log, the inventory and advanced inventory, trading with an NPC,
+  look-around, nearby items and creatures, targeting, crafting,
+  construction, the character sheet, bionics, mutations, medical, body
+  status, armor sorting, proficiencies, missions, dialogue, the overmap,
+  zones, the vehicle workshop, world and mod management, options, safe mode
+  and auto pickup rules, sidebar panels, and character creation.  During a
+  long activity, `Alt+R` speaks the current progress.  In the main game,
+  `Alt+R` and the action menu's repeat entry each speak once.

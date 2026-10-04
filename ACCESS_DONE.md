@@ -1739,3 +1739,83 @@ Limitations:
 
 - No profiling was done; the changes remove work identified by reading the
   code, and the speech captured by tests is unchanged.
+
+## 2026-10-04 — Stage 21B: Performance and maintenance follow-up from review 02
+
+- Measurements: hidden `[.][benchmark]` cases in
+  `tests/accessibility_benchmark_test.cpp` (run with
+  `"[accessibility_benchmark]"`), each with speech on and off.  Speech off
+  stays in nanoseconds everywhere.  With speech on:
+  - turn alerts with ten visible threats, two checks per turn: 10.7 → 4.0 µs;
+    without threats 4.8 → 3.1 µs;
+  - eight hours of `ACT_WAIT`: 316 → 282 ms (143 ms without speech);
+  - driving obstacle scan of a car at speed: 131 → 13 µs;
+  - vehicle task menu 0.44 ms and look-around over 100 items 0.17 ms per
+    move, both already acceptable after review 02.
+- A1: threats are compared as numeric `threat_identity` values with the old
+  identity rules; condition texts are built only when one of their raw inputs
+  changes (language, hunger state from the new `display::hunger_state_index()`,
+  thirst, sleepiness, pain and its check, weariness, stamina, limbs).
+- A2: obstacle rays start from the vehicle's leading edge and stop at their
+  first obstacle; keys are position and name.  An obstacle hidden behind a
+  known one on the same line is no longer announced.
+- A3: the raw progress message is reused within one turn, activity, and
+  remaining move count; `player_activity::has_progress_message()` replaces
+  the existence tests.
+- A4: by code reading, the wait popup's own reporter could win
+  automatic progress after the silence interval and speak the raw popup text
+  with "to interrupt".  The popup now shows progress without speaking it
+  while the activity or sleep has its own progress speech (T177).
+- B: the bionics and mutations loops, and the opening or navigation speech of
+  the character sheet, extended description, safe mode, auto pickup,
+  distractions, and proficiencies, are built only with an active screen
+  reader; `accessibility::announce_lazy()` was added.
+- C: recipe rows count missing requirement groups without building text;
+  construction rows stop at the first buildable variant; the character sheet
+  speech builds its body part and proficiency lists once; zones manager
+  speech builds only the text an action needs; situation review fetches
+  terrain and furniture once per tile; safe mode rows, vehicle tile parts,
+  and the turn speech queue no longer format or copy values twice.
+- D: `accessibility_gameplay.h` and `advanced_inv.h` forward-declare the
+  formatter types; `accessibility_document_cursor.h` and
+  `accessibility_dialogue_model.h` hold the models `main_menu.h` and
+  `dialogue_win.h` keep as members.  The tests are split into service,
+  formatter, gameplay, and UI files with the capture backend in
+  `accessibility_test_helpers.h`.
+- E: `accessibility::list_move_direction()` takes the key set each screen
+  handled and replaces the local direction ternaries; `format_list_move()`
+  joins wrap and row.  `input_context::handle_input()` answers
+  `ACCESSIBILITY_REPEAT_LAST` for every screen (40 branches removed;
+  `do_turn.cpp` sets a handler that updates progress first), and
+  `register_accessibility_actions()` registers details, summary, and
+  repeat-last.  Nearby item and creature list speech moved to
+  `accessibility_gameplay::nearby_list_speech` and the look-around cursor
+  speech to `announce_look_cursor()`.  Formatters share the item row
+  phrases, point cost, level difference, `join_phrases()`, and the rule
+  manager change, move, enable, and save speech.  Body warmth words come
+  from `display::bodytemp_band()`, which `display::bodytemp_color()` also
+  uses; a test checks both at every threshold.
+- Not done, by decision:
+  - `dialogue_window::add_to_history()` still records history without a
+    screen reader, so a screen reader started during a conversation gets
+    the earlier lines.  It costs one string per utterance.
+  - `accessibility_format.h/.cpp` is not split by topic; the forward
+    declarations already keep it out of the four widely included headers.
+  - The construction menu has no availability map in this version; the row
+    instead stops at the first buildable variant.
+- `test_access.bat` passed 2343 assertions in 122 cases; `test_all.bat`, the
+  Windows x64 test and tiles builds, and AStyle 3.1 checks passed.
+- Commits: `0570954a20` (test split), `b60f6e842a` (benchmarks),
+  `3db63636ea` (A1), `e515ad038a` (A2), `09700c90d3` (A3), `d72d066634`
+  (A4), `3257056fae` (B), `ab5a1df62f` (C), `fd465fc08b` (D), `d2a07c1ef9`,
+  `6ac79f7bdf`, `fb5d22cc47`, `527dad1ac0`, and `daf35d8983` (E).
+
+Limitations:
+
+- NVDA verification is pending: T176 (driving obstacles), T177 (long wait
+  progress), and T178 (repeat-last on every screen family).
+- The construction menu keeps its own list direction, which counts every
+  move key except Up and Page Up as a move down; Scroll Up can therefore
+  say "Top" without wrapping.  Changing it would change speech.
+- Repeat-last has no automated end-to-end test because the test harness
+  cannot inject key events into `input_context::handle_input()`.
