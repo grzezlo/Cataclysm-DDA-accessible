@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cataclysm-dda-access\n"
-"POT-Creation-Date: 2026-10-01 23:28+0200\n"
+"POT-Creation-Date: 2026-10-04 13:41+0200\n"
 "PO-Revision-Date: 2026-10-01 23:28+0200\n"
 "Last-Translator: Cataclysm: DDA Access contributors\n"
 "Language-Team: pl\n"
@@ -126,6 +126,40 @@ msgctxt "accessibility sentence separator"
 msgid " "
 msgstr ""
 
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d level above"
+msgid_plural "%d levels above"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp
+#, c-format
+msgid "%d level below"
+msgid_plural "%d levels below"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+msgid "already first"
+msgstr ""
+
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+msgid "already last"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Changes discarded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Changes saved"
+msgstr ""
+
 #. ~ The number of characters saved in a world.
 #: src/accessibility_format.cpp
 msgid "no characters"
@@ -152,14 +186,14 @@ msgstr ""
 
 #: src/accessibility_format.cpp
 #, c-format
-msgid "Help. 0 topics. %s to exit."
+msgid "Help.  0 topics.  %s to exit."
 msgstr ""
 
 #: src/accessibility_format.cpp
 #, c-format
 msgid ""
-"Help. %1$d topics. Use %2$s and %3$s to browse, hotkey or %4$s to open, %5$s "
-"to exit. %6$s"
+"Help.  %1$d topics.  Use %2$s and %3$s to browse, hotkey or %4$s to open, "
+"%5$s to exit.  %6$s"
 msgstr ""
 
 #: src/accessibility_format.cpp
@@ -358,22 +392,18 @@ msgstr[3] ""
 #: src/accessibility_format.cpp
 #, c-format
 msgid ""
-"%1$s and %2$s choose an action. %3$s switches to the filter. %4$s opens "
-"actions. %5$s reads all keys."
+"%1$s and %2$s choose an action.  %3$s switches to the filter.  %4$s opens "
+"actions.  %5$s reads all keys."
 msgstr ""
 
 #: src/accessibility_format.cpp
 #, c-format
-msgid "Filter. Type to search. %s returns to the action list."
+msgid "Filter.  Type to search.  %s returns to the action list."
 msgstr ""
 
 #: src/accessibility_format.cpp
 #, c-format
 msgid "Text: %1$s. Results: %2$d."
-msgstr ""
-
-#: src/accessibility_format.cpp
-msgid "Not owned"
 msgstr ""
 
 #: src/accessibility_format.cpp src/crafting_gui.cpp
@@ -386,6 +416,10 @@ msgstr ""
 
 #: src/accessibility_format.cpp
 msgid "Contents expanded"
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "Not owned"
 msgstr ""
 
 #. ~ Why a mod cannot be activated, such as "Unavailable: missing dependency
@@ -505,6 +539,7 @@ msgstr ""
 msgid "Your goods"
 msgstr ""
 
+#. ~ Trade window purpose and the trader's name, e.g. "Trade: Rubik"
 #. ~ A character description field and its value, such as "Name: Ada".
 #. ~ A world creation setting and its value, such as "Population density:
 #. High".
@@ -701,6 +736,7 @@ msgstr ""
 msgid "Character creation"
 msgstr ""
 
+#. ~ A zone was removed: %s is the zone name.
 #: src/accessibility_format.cpp
 #, c-format
 msgid "Removed %s"
@@ -973,24 +1009,6 @@ msgstr ""
 msgctxt "map offset"
 msgid " "
 msgstr ""
-
-#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
-#, c-format
-msgid "%d level above"
-msgid_plural "%d levels above"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-
-#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
-#, c-format
-msgid "%d level below"
-msgid_plural "%d levels below"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/accessibility_format.cpp src/accessibility_gameplay.cpp
 msgid "here"
@@ -2903,7 +2921,25 @@ msgstr ""
 
 #: src/accessibility_gameplay.cpp
 #, c-format
-msgid "Gameplay. Current position: %s"
+msgid "Available peek action: %s (unbound)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Available peek action: %1$s (%2$s)"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Peek look-around"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Cursor origin: character position"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+#, c-format
+msgid "Gameplay.  Current position: %s"
 msgstr ""
 
 #. ~ %1$s: target such as "table"; %2$d: number of items on it
@@ -3129,6 +3165,14 @@ msgid "May hide contents"
 msgstr ""
 
 #: src/accessibility_gameplay.cpp
+msgid "Safe mode blacklist: listed"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
+msgid "Safe mode blacklist: not listed"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp
 #, c-format
 msgid "Behavior: %s"
 msgstr ""
@@ -3230,10 +3274,6 @@ msgstr ""
 msgid "already in the load order"
 msgstr ""
 
-#: src/accessibility_gameplay.cpp src/auto_pickup.cpp src/safemode_ui.cpp
-msgid "already first"
-msgstr ""
-
 #. ~ A mod cannot move above the core mod, such as "Dark Days Ahead loads
 #. first".
 #: src/accessibility_gameplay.cpp
@@ -3245,10 +3285,6 @@ msgstr ""
 #: src/accessibility_gameplay.cpp
 #, c-format
 msgid "depends on %s"
-msgstr ""
-
-#: src/accessibility_gameplay.cpp src/auto_pickup.cpp src/safemode_ui.cpp
-msgid "already last"
 msgstr ""
 
 #: src/accessibility_gameplay.cpp
@@ -3273,6 +3309,7 @@ msgstr ""
 msgid "(Direction button)"
 msgstr ""
 
+#. ~ Vehicle part receiving dropped items: %1$s vehicle name, %2$s part name
 #: src/activity_item_handling.cpp
 #, c-format
 msgid "%1$s's %2$s"
@@ -3368,14 +3405,6 @@ msgstr ""
 
 #: src/auto_pickup.cpp src/safemode_ui.cpp
 msgid "Unavailable: load a character first"
-msgstr ""
-
-#: src/auto_pickup.cpp src/safemode_ui.cpp
-msgid "Changes discarded"
-msgstr ""
-
-#: src/auto_pickup.cpp src/safemode_ui.cpp
-msgid "Changes saved"
 msgstr ""
 
 #: src/bionics_ui.cpp
@@ -3677,22 +3706,8 @@ msgstr ""
 msgid "Movement: %s"
 msgstr ""
 
-#: src/game.cpp
-#, c-format
-msgid "Available peek action: %s (unbound)"
-msgstr ""
-
-#: src/game.cpp
-#, c-format
-msgid "Available peek action: %1$s (%2$s)"
-msgstr ""
-
-#: src/game.cpp
-msgid "Peek look-around"
-msgstr ""
-
-#: src/game.cpp
-msgid "Cursor origin: character position"
+#: src/game.cpp src/inventory_ui.cpp
+msgid "Nearby items"
 msgstr ""
 
 #: src/game.cpp
@@ -3736,18 +3751,6 @@ msgstr ""
 #: src/game.cpp
 #, c-format
 msgid "Low priority filter: %s"
-msgstr ""
-
-#: src/game.cpp src/inventory_ui.cpp
-msgid "Nearby items"
-msgstr ""
-
-#: src/game.cpp
-msgid "Safe mode blacklist: listed"
-msgstr ""
-
-#: src/game.cpp
-msgid "Safe mode blacklist: not listed"
 msgstr ""
 
 #: src/game.cpp
@@ -3811,7 +3814,7 @@ msgstr ""
 
 #: src/input_context.cpp
 msgid ""
-"Local bindings are already defined. Remove them before adding a global "
+"Local bindings are already defined.  Remove them before adding a global "
 "binding."
 msgstr ""
 
