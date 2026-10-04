@@ -6,10 +6,12 @@
 #
 # Usage: lang/test_access_po.sh
 
-set -eu
+set -euo pipefail
 
 script="$(cd "$(dirname "$0")" && pwd)/$(basename "$0")"
 lang_dir="$(dirname "$script")"
+access_po_tools="$lang_dir"
+source "$access_po_tools/access_po_update.sh"
 
 python=""
 for candidate in python3 python
@@ -163,7 +165,7 @@ expect "--no-machine keeps the fork catalog" "$mo" fork "access fork"
 } > lang/po/fork.pot
 "$python" "$catalog" gaps lang/po/template.pot lang/po/fork.pot lang/po/xx.po lang/po/gaps.pot > /dev/null
 expect_entries "gaps hold untranslated upstream strings" lang/po/gaps.pot "gap new"
-msgmerge --quiet --previous lang/machine/xx.po lang/po/gaps.pot | msgattrib --no-obsolete -o lang/machine/xx.po
+merge_access_po lang/machine/xx.po lang/po/gaps.pot "$python" machine
 expect_entries "upstream translations retire machine entries" lang/machine/xx.po "gap new"
 
 {
@@ -172,7 +174,8 @@ expect_entries "upstream translations retire machine entries" lang/machine/xx.po
     entry gone "override gone"
     entry fuzzy "override fuzzy"
 } > lang/machine/xx-overrides.po
-"$python" "$catalog" overrides lang/machine/xx-overrides.po lang/po/template.pot lang/po/fork.pot lang/po/xx.po > /dev/null
+update_access_overrides lang/machine/xx-overrides.po lang/po/template.pot \
+    lang/po/fork.pot lang/po/xx.po "$python" > /dev/null
 expect_entries "identical and obsolete overrides are dropped" lang/machine/xx-overrides.po "fuzzy"
 
 {
@@ -196,6 +199,116 @@ expect "valid translation is kept" bad.mo "<npcname> waves" "<npcname> macha"
 expect "printf mismatch is cleared" bad.mo "%d items" ""
 expect "missing closing tag is cleared" bad.mo "<color_red>Stop</color>" ""
 expect "misspelled tag is cleared" bad.mo "<info>note</info>" ""
+
+# Negative cases use the production merge function, never tracked catalogs.
+for layer in access machine
+do
+    for failure in template producer filter msgfmt validator
+    do
+        po="lang/${layer}/failure.po"
+        cp lang/po/xx.po "$po"
+        before=$(sha256sum "$po")
+        printf 'msgid "unterminated\n' > broken.pot
+        if (
+            template=lang/po/template.pot
+            validator="$python"
+            case "$failure" in
+                template) template=broken.pot ;;
+                producer) msgmerge() { return 42; } ;;
+                filter) msgattrib() { printf 'partial output'; return 43; } ;;
+                msgfmt) msgfmt() { return 44; } ;;
+                validator)
+                    failing_validator() { return 45; }
+                    validator=failing_validator
+                    ;;
+            esac
+            merge_access_po "$po" "$template" "$validator" "$layer" || exit 1
+            echo 'ALL DONE!'
+        ) > failure.log 2>&1
+        then
+            echo "FAILED: $layer $failure failure reported success"
+            failures=$((failures + 1))
+        elif [ "$(sha256sum "$po")" != "$before" ] || grep -q 'ALL DONE!' failure.log
+        then
+            echo "FAILED: $layer $failure failure changed the catalog or printed success"
+            failures=$((failures + 1))
+        else
+            echo "ok: $layer $failure failure preserves the catalog and exits nonzero"
+        fi
+    done
+done
+
+for failure in prune msgfmt validator
+do
+    po=lang/machine/failure-overrides.po
+    cp lang/machine/xx-overrides.po "$po"
+    before=$(sha256sum "$po")
+    if (
+        validator="$python"
+        case "$failure" in
+            prune)
+                failing_validator() { return 45; }
+                validator=failing_validator
+                ;;
+            msgfmt) msgfmt() { return 44; } ;;
+            validator)
+                real_python="$python"
+                failing_validator() {
+                    if [ "$2" = validate ]; then return 45; fi
+                    "$real_python" "$@"
+                }
+                validator=failing_validator
+                ;;
+        esac
+        update_access_overrides "$po" lang/po/template.pot lang/po/fork.pot \
+            lang/po/xx.po "$validator" || exit 1
+        echo 'ALL DONE!'
+    ) > failure.log 2>&1
+    then
+        echo "FAILED: override $failure failure reported success"
+        failures=$((failures + 1))
+    elif [ "$(sha256sum "$po")" != "$before" ] || grep -q 'ALL DONE!' failure.log
+    then
+        echo "FAILED: override $failure failure changed the catalog or printed success"
+        failures=$((failures + 1))
+    else
+        echo "ok: override $failure failure preserves the catalog and exits nonzero"
+    fi
+done
+
+# Run the real refresh orchestration with extraction and Git replaced by
+# fixture setup. A failing producer must also suppress the script's footer.
+mkdir -p refresh/lang/po refresh/lang/access refresh/lang/machine refresh/tools
+cp "$catalog" refresh/lang/access_catalog.py
+cp "$lang_dir/../tools/check_po_printf_format.py" refresh/tools/
+cp lang/po/template.pot refresh/lang/po/cataclysm-dda.pot
+cp lang/po/template.pot refresh/lang/po/upstream-0123456789ab.pot
+cp lang/po/xx.po refresh/lang/po/xx.po
+cp lang/access/xx.po refresh/lang/access/xx.po
+cp lang/machine/xx.po refresh/lang/machine/xx.po
+printf '#!/usr/bin/env bash\nexit 0\n' > refresh/lang/update_pot.sh
+chmod +x refresh/lang/update_pot.sh
+before_access=$(sha256sum refresh/lang/access/xx.po)
+before_machine=$(sha256sum refresh/lang/machine/xx.po)
+if (
+    cd refresh
+    git() { printf '0123456789abcdef0123456789abcdef01234567\n'; }
+    msgmerge() { return 42; }
+    export -f git msgmerge
+    bash "$lang_dir/update_access_po.sh" --base fixture --machine xx
+) > refresh.log 2>&1
+then
+    echo "FAILED: refresh script accepted a failed merge"
+    failures=$((failures + 1))
+elif [ "$(sha256sum refresh/lang/access/xx.po)" != "$before_access" ] ||
+    [ "$(sha256sum refresh/lang/machine/xx.po)" != "$before_machine" ] ||
+    grep -q 'ALL DONE!' refresh.log
+then
+    echo "FAILED: failed refresh changed catalogs or printed success"
+    failures=$((failures + 1))
+else
+    echo "ok: failed refresh retains both catalogs and omits the success footer"
+fi
 
 if [ $failures -ne 0 ]
 then

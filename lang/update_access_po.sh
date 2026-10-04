@@ -17,9 +17,11 @@
 # entry.  It prunes lang/machine/<language>-overrides.po and clears machine
 # entries that fail validation.  Run it rarely, for example once per release.
 
-set -eu
+set -euo pipefail
 
 script="$(cd "$(dirname "$0")" && pwd)/$(basename "$0")"
+access_po_tools="$(dirname "$script")"
+source "$access_po_tools/access_po_update.sh"
 
 if [ ! -d lang/po ]
 then
@@ -170,9 +172,7 @@ do
     echo "> Updating $po"
     # Fuzzy matches are suggestions for the translator; compile_access_mo.sh
     # leaves them out of the game.
-    msgmerge --quiet --previous "$po" "$access_pot" | msgattrib --no-obsolete -o "$po"
-    msgfmt -c -o "$work/check.mo" "$po"
-    "$python" lang/access_catalog.py validate "$po" || failed=1
+    merge_access_po "$po" "$access_pot" "$python" access || failed=1
 done
 
 if [ -n "$machine" ]
@@ -190,15 +190,12 @@ then
             "$python" lang/access_catalog.py init --layer machine "$n" "lang/po/${n}.po" "$machine_po"
         fi
         echo "> Updating $machine_po"
-        msgmerge --quiet --previous "$machine_po" "$gaps_pot" | msgattrib --no-obsolete -o "$machine_po"
-        "$python" lang/access_catalog.py validate --clear "$machine_po"
-        msgfmt -c -o "$work/check.mo" "$machine_po"
+        merge_access_po "$machine_po" "$gaps_pot" "$python" machine || failed=1
         if [ -f "$overrides_po" ]
         then
             echo "> Updating $overrides_po"
-            "$python" lang/access_catalog.py overrides "$overrides_po" lang/po/cataclysm-dda.pot                 "$access_pot" "lang/po/${n}.po"
-            msgfmt -c -o "$work/check.mo" "$overrides_po"
-            "$python" lang/access_catalog.py validate "$overrides_po" || failed=1
+            update_access_overrides "$overrides_po" lang/po/cataclysm-dda.pot \
+                "$access_pot" "lang/po/${n}.po" "$python" || failed=1
         fi
     done
 fi
@@ -216,7 +213,7 @@ done
 
 if [ -n "$failed" ]
 then
-    echo "Error: Fix the translations reported above."
+    echo "Error: Catalog refresh failed; fix the errors reported above."
     exit 1
 fi
 
