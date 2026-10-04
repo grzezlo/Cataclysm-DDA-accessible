@@ -63,8 +63,10 @@ policy is consistent, and remaining bespoke-screen gaps are closed.
 
 **Code inventory:** all `accessibility::` call sites; all registered
 `input_context` categories and bespoke UI entry points; the accessibility service
-and feature tests.  Create and maintain a concise coverage manifest during this
-stage so later upstream merges do not require rediscovering every screen.
+and feature tests; `tests/accessibility_benchmark_test.cpp` includes the hidden
+`[accessibility_profile]` selection, activity, and changing 60-creature fixtures.
+Create and maintain a concise coverage manifest during this stage so later
+upstream merges do not require rediscovering every screen.
 
 **Success criteria:** The manifest maps each reachable screen to a shared
 accessible control, a feature hook, or an explicit accepted limitation.  Event

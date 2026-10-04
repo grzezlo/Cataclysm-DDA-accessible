@@ -5,7 +5,7 @@ blind screen-reader user.  The maintainer works through it during
 development, and beta testers receive it before a release.  Development does
 not wait for these tests; a stage is closed once its automated tests pass.
 
-Last assigned test ID: T178.
+Last assigned test ID: T185.
 
 - Each scenario has a permanent ID: `T1`, `T2`, and so on.  Append new tests
   at the end of the file, using the next number and updating the last assigned
@@ -1314,3 +1314,81 @@ Change terrain, or drive toward a building.
   and auto pickup rules, sidebar panels, and character creation.  During a
   long activity, `Alt+R` speaks the current progress.  In the main game,
   `Alt+R` and the action menu's repeat entry each speak once.
+
+## Stage 22: Review 03 regressions and load measurement
+
+- **T179 - Informational popup and extended-description repeat (R03-01;
+  follow-up to T2 and T178).**  Open advanced inventory, discover Save default
+  layout in its keybinding help, and activate it.  The saved-layout message
+  speaks once.  Interrupt it with Control, then press `Alt+R`: hear the same
+  message once; the popup stays open.  Close it with its normal cancel key.
+  In look-around open Extended description on visible terrain or furniture;
+  switch populated tabs, interrupt speech, and repeat without moving the tab.
+  Rebind Repeat last screen reader announcement, check both screens with the
+  new key, and restore the binding.  In keybinding assignment capture that
+  same key: it must be accepted as the key being assigned.  Remove the trial
+  binding afterward.  With speech Off, the normal close and confirm keys work.
+- **T180 - Repeat during event pumping (R03-02; follow-up to T7 and T177).**
+  Load a sufficiently large save, then test sleep (debug menu > Player >
+  Edit character > increase sleepiness, then sleep).  While an announcement
+  is still speaking, press repeat twice separately.  Each request starts one
+  current progress announcement promptly, replacing unfinished speech rather
+  than adding another queued copy.  Check a remapped repeat binding too.
+  Interrupt with Control and wait without pressing repeat: the interrupted
+  text must not be automatically requeued.  Repeat and interruption must not
+  cancel loading or sleep.  Restore the original binding and sleepiness.
+- **T181 - Advanced-inventory return (R03-03).**  Use debug menu > Spawn >
+  item to obtain a hammer and a backpack; carry one item and drop the other
+  on the current tile.  In advanced inventory focus the ground item, examine
+  it, read a later fragment, and Escape.  Hear exactly one concise parent
+  row, without opening instructions; repeat reads that row.  Repeat with the
+  carried item and its item-action screen.  Open and cancel Sort, Filter,
+  and keybinding help: each return restores the row once.  Change a filter,
+  cancel a transfer quantity/destination prompt, and dismiss an invalid
+  destination warning: each closed child restores the current parent focus.
+  Change an item state and return: hear one coherent updated announcement.
+  Within the parent, `Alt+D` and `Alt+S` retain their requested detail or
+  summary for repeat; idle redraws stay silent.  Interrupt with Control and
+  confirm that nothing restarts until another explicit action.
+- **T182 - Comparison detail reentry (R03-04).**  Obtain two distinct items
+  with several information fragments through debug menu > Spawn > item,
+  then compare them through the inventory comparison action.  Press `Alt+D`,
+  Right, Down, Escape, `Alt+D`, Down.  The second detail entry names the
+  second item and resumes its saved fragment; Down reads its next fragment.
+  Repeat the sequence using `Alt+D` to leave details, and switch Left/Right
+  to check that each item keeps its own reading position.  Repeat-last must
+  match the named item and fragment.  There is one announcement per action,
+  no extra speech on redraw, and Control interruption causes no replay.
+- **T183 - Perceived sound markers in look-around (R03-05).**  In a safe
+  location use debug menu > Map > Generate sound, choose an unseen nearby
+  position, and enter a volume such as 100.  Close the debug menu; when the
+  sound is heard, enter look-around before taking a turn-consuming action.
+  Inspect nearby marker tiles: terrain can say Unseen while a separate phrase
+  says "From here you heard DEBUG SOUND ...".  It must not identify an unseen
+  creature or assert its exact location.  Repeat with a generated sound
+  above and below the selected column; hear the appropriate direction.
+  A same-level marker takes precedence over other levels.  Advance time
+  until the marker disappears: its description must disappear too.
+  Navigation and repeat read the cursor once, redraws stay silent, and
+  Control interruption does not cause an automatic replay.
+- **T184 - Complete numeric option input (R03-06; follow-up to T171).**
+  Open Settings > Options > General and locate Realtime turn progression,
+  which accepts a fractional number of seconds.  Note its
+  original value.  Confirm to edit it using the spoken text input.  Submit
+  `1.5garbage`, `1,5`, an empty string, a second number, and an overflowing
+  number: hear "Not a number" followed by the unchanged value.  A valid
+  in-range decimal with a dot is applied and announced once.  Escape from
+  input preserves the old value.  `Alt+D`, `Alt+S`, and repeat retain the
+  expected detail, summary, or value; interrupt with Control and recover
+  with repeat.  Restore the original option and discard trial changes.
+- **T185 - Changing crowd and rapid input (O03-03).**  Use debug menu >
+  Spawn > monster to place at least 50 zombies in a visible open area in
+  daylight; use debug character editing to prepare a safe test character.
+  Move rapidly along the crowd, then around a wall so visibility changes.
+  Hear concise current movement and newly perceived threat information;
+  unchanged threats and redraws must not flood speech.  Compare responsiveness
+  with speech On and Off.  Interrupt with Control: nothing is requeued by
+  itself; repeat recovers the newest meaningful alert.  Open situation review,
+  navigate its rows, request details, return, and confirm focus and count.
+  Record perceptible input-to-speech delays and any stale queued messages.
+  Capture-backend CPU benchmarks do not establish this NVDA result.

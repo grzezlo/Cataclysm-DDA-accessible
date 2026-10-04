@@ -1819,3 +1819,59 @@ Limitations:
   say "Top" without wrapping.  Changing it would change speech.
 - Repeat-last has no automated end-to-end test because the test harness
   cannot inject key events into `input_context::handle_input()`.
+
+## 2026-10-04 — Review 03: Regression fixes and CPU profiles
+
+- R03-01/02: informational/cancellable popups and extended descriptions register
+  repeat; raw-key capture still receives the binding itself.  Event-pump repeat
+  records one recognized player input before speaking, with the same interruption
+  policy as normal dispatch.  Commit: `b1681d0c2a`.
+- R03-03/04: advanced inventory restores one concise row after child return,
+  including canceled sort/filter and keybinding help.  Comparison reentry uses
+  the selected item's saved paragraph; independent item and statistics cursors
+  are retained.  Transfer questions and warnings also restore focus without
+  replacing the parent's requested detail/status.  Commits: `29dbf8ba36`,
+  `6f20f571b1`.
+- R03-05/06: look-around includes only perceived sound markers, matching the
+  visual panel's bounds and same-level-first rules, including on unseen terrain.
+  Numeric option input must be complete and finite in the classic locale;
+  invalid input retains the previous value.  Commit: `3688682307`.
+- R03-07: access, machine, and override catalog candidates are validated before
+  replacement.  Producer, filter, and validation failures preserve originals,
+  return nonzero, and suppress the refresh success footer.  Explicit failure
+  checks remain effective when Bash callers test a function's status.
+  Commit: `dbc7eace34`.
+- O03-01/02/03: added real selection fixtures, component timing for 28,800 wait
+  turns, and movement with 60 real creatures and changing visibility.  Defer
+  selection revisions and further activity caches: 1,000-item snapshots cost
+  about 32 microseconds, wait overhead about 4.7 microseconds/turn, and crowd
+  hooks about 30 microseconds/step.  Reproduction, results, and limits are in
+  [the measurement record](doc/accessibility_review03_performance.md).
+  Commit: `b9820c5693`.
+- Full-suite verification exposed an existing C-locale leak in the widget
+  padding test: armor protection passed alone but failed after that test on
+  a system with a comma decimal separator.  Restore the original C locale
+  separately from the C++ locale.  The two-case reproducer now passes all
+  412 assertions with seed 1791143184.  Commit: `ed6d2087b4`.
+- Trade assertions use the current monetary formatting for zero amounts,
+  including after Windows language changes; the translation/trade pair passes
+  41 assertions with seed 1791143916.  The numeric option fixture declares its
+  need for initialized options and passes 44 assertions when run alone.
+  Commit: `d6fafb66be`.
+- Checks: `test_access.bat` passed 2586 assertions in 129 cases; Windows x64
+  tiles builds and AStyle 3.1 checks passed.  Translation fixtures passed,
+  including malformed input, failing commands, and real refresh orchestration.
+  The hidden profiles passed 620 assertions in three cases.
+- Final `test_all.bat` without arguments passed 39,924,215 assertions in 1,284
+  cases, in lexical order with a fresh user directory and seed 1791145929.
+- These are regressions within conventions 1, 2, 3, 4, 6, 7, and 8; Stage 22's full
+  coverage audit remains unfinished.
+
+Limitations:
+
+- NVDA verification is pending in T179–T185 (follow-ups to T2, T7, T171, T177, and
+  T178).  Automated input tests exercise production registration/dispatch and
+  comparison/return state; they do not inject SDL keys into the complete UI.
+- Capture CPU profiles do not measure NVDA queue freshness or input-to-speech
+  latency.  The crowd fixture rebuilds real visibility but keeps creatures
+  stationary and omits AI/combat; the wait fixture omits the complete game turn.
