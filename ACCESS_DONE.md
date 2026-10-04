@@ -1875,3 +1875,21 @@ Limitations:
 - Capture CPU profiles do not measure NVDA queue freshness or input-to-speech
   latency.  The crowd fixture rebuilds real visibility but keeps creatures
   stationary and omits AI/combat; the wait fixture omits the complete game turn.
+
+## 2026-10-04 — PR 2: Compiler and clang-tidy cleanup
+
+- Accepted [PR #2](https://github.com/grzezlo/Cataclysm-DDA-accessible/pull/2)
+  through head `6c8f1320ed`, with GitHub merge `e3b6795e88` and local integration
+  commit `070ea34f98`.
+- The tile-info wrapper has internal linkage, preserving Review 03's public
+  perceived-sound helper when resolving the integration conflict.  Threat
+  identities keep the same ordering through `std::tie`; read-only text uses
+  `std::string_view`, aim-level collection is const, and the threat benchmark
+  reserves its known capacity.
+- Checks: AStyle 3.1, Windows x64 test and tiles builds, and `test_access.bat`
+  passed (2586 assertions in 129 cases).  `test_all.bat` without arguments passed
+  40,635,700 assertions in 1,284 cases, in lexical order with a fresh user
+  directory and seed 1791148636.  The final integration tree is identical to the
+  verified tree.
+- No player-facing interaction changed.  The pending NVDA checklist and Stage
+  22's remaining coverage audit are unchanged.
