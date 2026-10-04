@@ -960,7 +960,7 @@ action_id input_context::display_menu( bool permit_execute_action )
 {
     action_id action_to_execute = ACTION_NULL;
     const std::vector<std::string> original_registered_actions = registered_actions;
-    for( const std::string &accessibility_action : {
+    for( const char *accessibility_action : {
              "ACCESSIBILITY_DETAILS",
              "ACCESSIBILITY_REPEAT_LAST"
          } ) {
