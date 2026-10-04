@@ -2657,28 +2657,23 @@ bool game_menus::inv::compare_item_menu::show()
     const std::vector<std::string> second_details = speaking ?
             accessibility::format_item_info_paragraphs( second.type_name(),
                     format_item_info( second_info, {} ) ) : std::vector<std::string>();
-    bool detail_mode = false;
-    int detail_item = 0;
-    int paired_index = 0;
-    int first_detail_index = 0;
-    int second_detail_index = 0;
+    accessibility::inventory_comparison_cursor cursor;
     const auto current_details = [&]() -> decltype( auto ) {
-        return detail_item == 0 ? first_details : second_details;
+        return cursor.selected_item() == 0 ? first_details : second_details;
     };
-    const auto current_detail_index = [&]() -> decltype( auto ) {
-        return detail_item == 0 ? first_detail_index : second_detail_index;
+    const auto detail_focus = [&]() {
+        return accessibility::inventory_comparison_detail_focus( cursor, first.tname(), second.tname(),
+                first_details, second_details );
     };
     const auto announce_current = [&]() {
         if( !speaking ) {
             return;
         }
-        if( detail_mode ) {
-            const std::vector<std::string> &details = current_details();
-            accessibility::announce( details.empty() ? _( "No details available" ) :
-                                     details[current_detail_index()] );
+        if( cursor.in_details() ) {
+            accessibility::announce( detail_focus().second );
         } else {
             accessibility::announce( paired.empty() ? _( "No shared numeric statistics" ) :
-                                     paired[paired_index] );
+                                     paired[cursor.position()] );
         }
     };
 
@@ -2701,33 +2696,31 @@ bool game_menus::inv::compare_item_menu::show()
         std::string action = has_button_action() ? get_button_action() : ctxt.handle_input();
 
         if( speaking && action == "ACCESSIBILITY_DETAILS" ) {
-            detail_mode = !detail_mode;
-            if( detail_mode ) {
+            cursor.toggle_details();
+            if( cursor.in_details() ) {
+                const auto focus = detail_focus();
                 accessibility::announce( accessibility::format_semantic_sequence( {
                     _( "Full item details" ),
-                    first.tname(),
+                    focus.first,
                     string_format( _( "Use %1$s and %2$s to switch items, %3$s to return to paired statistics" ),
                                    accessibility::format_spoken_key( ctxt.get_desc( "LEFT", 1 ) ),
                                    accessibility::format_spoken_key( ctxt.get_desc( "RIGHT", 1 ) ),
                                    accessibility::format_spoken_key( ctxt.get_desc( "QUIT", 1 ) ) ),
-                    first_details.empty() ? _( "No details available" ) : first_details[first_detail_index]
+                    focus.second
                 } ) );
             } else {
                 announce_current();
             }
             continue;
         }
-        if( speaking && detail_mode && ( action == "LEFT" || action == "RIGHT" ) ) {
-            detail_item = action == "LEFT" ? 0 : 1;
-            const std::string &name = detail_item == 0 ? first.tname() : second.tname();
-            const std::vector<std::string> &details = current_details();
-            accessibility::announce( accessibility::format_document_focus( name,
-                                     details.empty() ? _( "No details available" ) :
-                                     details[current_detail_index()] ) );
+        if( speaking && cursor.in_details() && ( action == "LEFT" || action == "RIGHT" ) ) {
+            cursor.select_item( action == "LEFT" ? 0 : 1 );
+            const auto focus = detail_focus();
+            accessibility::announce( accessibility::format_document_focus( focus.first, focus.second ) );
             continue;
         }
-        if( speaking && detail_mode && action == "QUIT" ) {
-            detail_mode = false;
+        if( speaking && cursor.in_details() && action == "QUIT" ) {
+            cursor.leave_details();
             announce_current();
             continue;
         }
@@ -2747,11 +2740,9 @@ bool game_menus::inv::compare_item_menu::show()
             delta = 1000000;
         }
         if( speaking && delta != 0 ) {
-            int &index = detail_mode ? current_detail_index() : paired_index;
-            const int count = static_cast<int>( detail_mode ? current_details().size() : paired.size() );
-            const int next = accessibility::move_document_cursor( index, count, delta );
-            if( next != index ) {
-                index = next;
+            const int count = static_cast<int>( cursor.in_details() ? current_details().size() :
+                                                paired.size() );
+            if( cursor.move( count, delta ) ) {
                 announce_current();
             }
         }

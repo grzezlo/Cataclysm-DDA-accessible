@@ -1280,6 +1280,148 @@ TEST_CASE( "advanced_inventory_speaks_panes_rows_status_and_transfer_result",
     accessibility::reset_backend_after_testing();
 }
 
+TEST_CASE( "advanced_inventory_restores_parent_focus_once_after_child_return",
+           "[accessibility]" )
+{
+    clear_avatar();
+    clear_map();
+    avatar &you = get_avatar();
+    you.worn.wear_item( you, item( itype_backpack ), false, false );
+    you.i_add( item( itype_rock ) );
+    get_map().add_item_or_charges( you.pos_bub(), item( itype_hammer ) );
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+        clear_avatar();
+        clear_map();
+    } );
+
+    advanced_inventory advinv;
+    advinv.init();
+    // Consume any pending transfer result from a previous test.
+    advinv.announce_accessibility();
+    for( const bool carried : {
+             false, true
+         } ) {
+        set_transfer_panes( advinv, carried ? "ITEMS_INVENTORY" : "ITEMS_CE",
+                            carried ? AIM_INVENTORY : AIM_CENTER,
+                            carried ? "ITEMS_CE" : "ITEMS_INVENTORY",
+                            carried ? AIM_CENTER : AIM_INVENTORY );
+        advinv.get_pane( advinv.get_src() ).scroll_to_start();
+        advinv.announce_accessibility();
+        speech->messages.clear();
+        const advanced_inventory_pane &pane = advinv.get_pane( advinv.get_src() );
+        REQUIRE( !pane.items.empty() );
+        REQUIRE( pane.index >= 0 );
+        REQUIRE( pane.index < static_cast<int>( pane.items.size() ) );
+        REQUIRE( !pane.items[pane.index].items.empty() );
+        const std::string expected_name = pane.items[pane.index].items.front()->display_name();
+        accessibility::announce( "Later fragment in a child item document" );
+        advinv.resume_accessibility_focus();
+        advinv.resume_accessibility_focus();
+        advinv.announce_accessibility();
+        REQUIRE( speech->messages.size() == 2 );
+        const std::string row = speech->messages.back();
+        CHECK( row.find( "Advanced inventory" ) == std::string::npos );
+        CHECK( row.find( expected_name ) != std::string::npos );
+        advinv.announce_accessibility();
+        CHECK( speech->messages.size() == 2 );
+        CHECK( accessibility::repeat_last_announcement() );
+        CHECK( speech->messages.back() == row );
+
+        accessibility::announce( "Keybinding help" );
+        advinv.process_action( "HELP_KEYBINDINGS" );
+        const size_t before_return = speech->messages.size();
+        advinv.announce_accessibility();
+        CHECK( speech->messages.size() == before_return + 1 );
+        CHECK( speech->messages.back() == row );
+
+        for( const std::string action : {
+                 "ACCESSIBILITY_DETAILS", "ACCESSIBILITY_STATUS"
+             } ) {
+            advinv.process_action( action );
+            const std::string requested = accessibility::last_announcement();
+            const size_t count = speech->messages.size();
+            advinv.announce_accessibility();
+            CHECK( speech->messages.size() == count );
+            CHECK( accessibility::last_announcement() == requested );
+        }
+        // A real row-state change and return are combined into one announcement.
+        accessibility::announce( "Child document" );
+        advinv.resume_accessibility_focus();
+        advinv.process_action( "TOGGLE_FAVORITE" );
+        advinv.recalc_pane( advinv.get_src() );
+        const size_t before_change = speech->messages.size();
+        advinv.announce_accessibility();
+        CHECK( speech->messages.size() == before_change + 1 );
+        advinv.announce_accessibility();
+        CHECK( speech->messages.size() == before_change + 1 );
+    }
+}
+
+TEST_CASE( "comparison_detail_reentry_keeps_item_paragraph_and_repeat_aligned",
+           "[accessibility][nogame]" )
+{
+    auto capture = std::make_unique<capture_backend>();
+    capture_backend *speech = capture.get();
+    accessibility::set_backend_for_testing( std::move( capture ) );
+    const on_out_of_scope restore( []() {
+        accessibility::reset_backend_after_testing();
+    } );
+    const std::vector<std::string> first = { "First A", "First B" };
+    const std::vector<std::string> second = { "Second A", "Second B", "Second C" };
+    for( const bool toggle_out : {
+             false, true
+         } ) {
+        accessibility::inventory_comparison_cursor cursor;
+        cursor.toggle_details();
+        CHECK( cursor.move( first.size(), 1 ) );
+        cursor.select_item( 1 );
+        CHECK( cursor.move( second.size(), 1 ) );
+        if( toggle_out ) {
+            cursor.toggle_details();
+        } else {
+            cursor.leave_details();
+        }
+        CHECK_FALSE( cursor.in_details() );
+        CHECK( cursor.move( 4, 2 ) );
+        cursor.toggle_details();
+        CHECK( cursor.selected_item() == 1 );
+        CHECK( cursor.position() == 1 );
+        const auto focus = accessibility::inventory_comparison_detail_focus(
+                               cursor, "First item", "Second item", first, second );
+        CHECK( focus.first == "Second item" );
+        CHECK( focus.second == "Second B" );
+        accessibility::announce( accessibility::format_document_focus( focus.first, focus.second ) );
+        CHECK( accessibility::repeat_last_announcement() );
+        CHECK( speech->messages.back() == "Second item. Second B" );
+        CHECK( cursor.move( second.size(), 1 ) );
+        CHECK( accessibility::inventory_comparison_detail_focus(
+                   cursor, "First item", "Second item", first, second ).second == "Second C" );
+        cursor.select_item( 0 );
+        CHECK( cursor.position() == 1 );
+        CHECK_FALSE( cursor.move( first.size(), 1 ) );
+        CHECK( accessibility::inventory_comparison_detail_focus(
+                   cursor, "First item", "Second item", first, second ).second == "First B" );
+        cursor.leave_details();
+        CHECK( cursor.position() == 2 );
+    }
+    accessibility::inventory_comparison_cursor empty;
+    empty.toggle_details();
+    for( const int item : {
+             0, 1
+         } ) {
+        empty.select_item( item );
+        CHECK_FALSE( empty.move( 0, 1 ) );
+        const auto focus = accessibility::inventory_comparison_detail_focus(
+                               empty, "First item", "Second item", {}, {} );
+        CHECK( focus.first == ( item == 0 ? "First item" : "Second item" ) );
+        CHECK( focus.second == "No details available" );
+    }
+}
+
 TEST_CASE( "screen_status_binding_reaches_transfer_screens", "[accessibility]" )
 {
     const input_event alt_s( { keymod_t::alt }, 's', input_event_t::keyboard_code );

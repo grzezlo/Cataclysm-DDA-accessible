@@ -3035,6 +3035,58 @@ std::string format_transfer_result( const std::string &item_name, const int move
                           destination );
 }
 
+bool inventory_comparison_cursor::in_details() const
+{
+    return details_;
+}
+
+void inventory_comparison_cursor::toggle_details()
+{
+    details_ = !details_;
+}
+
+void inventory_comparison_cursor::leave_details()
+{
+    details_ = false;
+}
+
+void inventory_comparison_cursor::select_item( const int item )
+{
+    item_ = item == 0 ? 0 : 1;
+}
+
+int inventory_comparison_cursor::selected_item() const
+{
+    return item_;
+}
+
+int inventory_comparison_cursor::position() const
+{
+    return details_ ? detail_positions_.position( item_ ) : statistics_position_;
+}
+
+bool inventory_comparison_cursor::move( const int count, const int delta )
+{
+    const int previous = position();
+    if( details_ ) {
+        detail_positions_.move( item_, count, delta );
+    } else {
+        statistics_position_ = move_document_cursor( statistics_position_, count, delta );
+    }
+    return position() != previous;
+}
+
+std::pair<std::string, std::string> inventory_comparison_detail_focus(
+    const inventory_comparison_cursor &cursor, const std::string &first_name,
+    const std::string &second_name, const std::vector<std::string> &first_details,
+    const std::vector<std::string> &second_details )
+{
+    const std::vector<std::string> &details = cursor.selected_item() == 0 ? first_details :
+            second_details;
+    return { cursor.selected_item() == 0 ? first_name : second_name,
+             details.empty() ? _( "No details available" ) : details[cursor.position()] };
+}
+
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second )
 {

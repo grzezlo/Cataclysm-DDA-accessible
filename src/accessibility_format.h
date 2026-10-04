@@ -254,6 +254,31 @@ std::string format_inventory_selection_change( const std::string &caption,
         const std::string &state, size_t selected_entries );
 std::string format_inventory_comparison_choice( const std::string &first,
         const std::string &second );
+
+/** Preserve the selected comparison item and independent cursors across detail reentry. */
+class inventory_comparison_cursor
+{
+    public:
+        bool in_details() const;
+        void toggle_details();
+        void leave_details();
+        void select_item( int item );
+        int selected_item() const;
+        int position() const;
+        bool move( int count, int delta );
+
+    private:
+        bool details_ = false;
+        int item_ = 0;
+        int statistics_position_ = 0;
+        document_cursor_memory detail_positions_{ 2 };
+};
+
+/** The name and paragraph used by both detail entry and subsequent navigation. */
+std::pair<std::string, std::string> inventory_comparison_detail_focus(
+    const inventory_comparison_cursor &cursor, const std::string &first_name,
+    const std::string &second_name, const std::vector<std::string> &first_details,
+    const std::vector<std::string> &second_details );
 /** Weight and volume against their limits, as shown by a selector's statistics. */
 struct inventory_capacity {
     std::string weight;

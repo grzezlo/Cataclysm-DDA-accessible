@@ -78,6 +78,8 @@ class advanced_inventory
         }
         /** Speak what changed since the previous announcement; called before each input. */
         void announce_accessibility();
+        /** Restore the current row once after a child screen relinquishes focus. */
+        void resume_accessibility_focus();
     private:
 
         static constexpr int head_height = 5;
@@ -244,6 +246,7 @@ class advanced_inventory
         // Per pane, so switching panes does not report the other pane's settings as changes.
         std::array<int, NUM_PANES> accessibility_last_sort = { -1, -1 };
         bool accessibility_opening = true;
+        bool accessibility_resume_pending = false;
         bool accessibility_last_category_mode = false;
         std::string accessibility_last_row;
         std::string accessibility_last_category;

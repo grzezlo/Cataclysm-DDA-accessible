@@ -1895,6 +1895,7 @@ void advanced_inventory::action_examine( advanced_inv_listitem *sitem,
     } else if( ret == KEY_PPAGE || ret == KEY_UP ) {
         spane.scroll_by( -1 );
     }
+    resume_accessibility_focus();
 }
 
 bool advanced_inventory::action_unload( advanced_inv_listitem *sitem,
@@ -1932,7 +1933,9 @@ void advanced_inventory::process_action( const std::string &input_action )
     const std::string &action = is_processing() ? "MOVE_ALL_ITEMS" : input_action;
     accessibility_move_direction = accessibility::list_move_direction( action,
                                    accessibility::list_move_pages );
-    if( action == "ACCESSIBILITY_DETAILS" ) {
+    if( action == "HELP_KEYBINDINGS" ) {
+        resume_accessibility_focus();
+    } else if( action == "ACCESSIBILITY_DETAILS" ) {
         if( sitem != nullptr ) {
             accessibility::announce( accessibility::format_transfer_row( accessibility_row( src ), true,
                                      true ) );
@@ -1961,6 +1964,7 @@ void advanced_inventory::process_action( const std::string &input_action )
         save_state->saved_area = panes[left].get_area();
         save_state->saved_area_right = panes[right].get_area();
         popup( _( "Default layout was saved." ) );
+        resume_accessibility_focus();
     } else if( get_square( action, changeSquare ) ) {
         change_square( changeSquare, dpane, spane );
     } else if( action == "TOGGLE_FAVORITE" ) {
@@ -1988,6 +1992,7 @@ void advanced_inventory::process_action( const std::string &input_action )
         if( show_sort_menu( spane ) ) {
             recalc = true;
         }
+        resume_accessibility_focus();
     } else if( action == "FILTER" ) {
         const std::string &filter = spane.get_filter();
         filter_edit = true;
@@ -2012,6 +2017,7 @@ void advanced_inventory::process_action( const std::string &input_action )
         } while( !spopup->canceled() && !spopup->confirmed() );
         filter_edit = false;
         spopup = nullptr;
+        resume_accessibility_focus();
     } else if( action == "RESET_FILTER" ) {
         spane.set_filter( "" );
     } else if( action == "TOGGLE_AUTO_PICKUP" ) {
@@ -2042,6 +2048,7 @@ void advanced_inventory::process_action( const std::string &input_action )
         if( examine_result == NO_CONTENTS_TO_EXAMINE ) {
             action_examine( sitem, spane );
         }
+        resume_accessibility_focus();
     } else if( action == "UNLOAD_CONTAINER" ) {
         recalc = action_unload( sitem, spane, dpane );
     } else if( action == "QUIT" ) {
@@ -2705,6 +2712,13 @@ accessibility::transfer_row advanced_inventory::accessibility_row( const side p 
     return row;
 }
 
+void advanced_inventory::resume_accessibility_focus()
+{
+    if( accessibility::is_active() ) {
+        accessibility_resume_pending = true;
+    }
+}
+
 void advanced_inventory::announce_accessibility()
 {
     const std::string result = take_accessibility_transfer_result();
@@ -2719,7 +2733,8 @@ void advanced_inventory::announce_accessibility()
     const bool mode_changed = inCategoryMode != accessibility_last_category_mode;
     const bool row_changed = row_text != accessibility_last_row ||
                              spane.index != accessibility_last_index;
-    if( !accessibility_opening && result.empty() && !src_changed && !area_changed &&
+    if( !accessibility_opening && !accessibility_resume_pending && result.empty() && !src_changed &&
+        !area_changed &&
         !filter_changed && !sort_changed && !mode_changed && !row_changed ) {
         return;
     }
@@ -2758,6 +2773,7 @@ void advanced_inventory::announce_accessibility()
     accessibility::announce( accessibility::format_semantic_sequence( parts ) );
 
     accessibility_opening = false;
+    accessibility_resume_pending = false;
     accessibility_last_src = src;
     accessibility_last_index = spane.index;
     accessibility_move_direction = 0;
