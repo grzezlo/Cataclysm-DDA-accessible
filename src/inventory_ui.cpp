@@ -3172,7 +3172,7 @@ std::string inventory_selector::accessibility_status() const
     return accessibility::format_semantic_sequence( parts );
 }
 
-void inventory_selector::note_accessibility_move( const std::string &action )
+void inventory_selector::note_accessibility_move( const std::string_view action )
 {
     accessibility_move_direction = accessibility::list_move_direction( action,
                                    accessibility::list_move_pages );

@@ -8,6 +8,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <tuple>
 #include <vector>
 
 // Screen-reader-independent accessibility service.  Semantic formatters live in
@@ -160,13 +161,7 @@ struct threat_identity {
         return kind == rhs.kind && object == rhs.object && type == rhs.type;
     }
     bool operator<( const threat_identity &rhs ) const {
-        if( kind != rhs.kind ) {
-            return kind < rhs.kind;
-        }
-        if( object != rhs.object ) {
-            return object < rhs.object;
-        }
-        return type < rhs.type;
+        return std::tie( kind, object, type ) < std::tie( rhs.kind, rhs.object, rhs.type );
     }
 };
 /**

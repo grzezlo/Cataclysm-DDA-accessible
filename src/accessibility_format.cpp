@@ -1140,8 +1140,8 @@ std::vector<std::string> split_uilist_detail_sentences( const std::string_view d
     return sentences;
 }
 
-std::vector<std::string> format_item_info_paragraphs( const std::string &type_name,
-        const std::string &raw_info )
+std::vector<std::string> format_item_info_paragraphs( const std::string_view type_name,
+        const std::string_view raw_info )
 {
     std::vector<std::string> paragraphs;
 
@@ -1156,7 +1156,7 @@ std::vector<std::string> format_item_info_paragraphs( const std::string &type_na
     return paragraphs;
 }
 
-std::vector<std::string> format_document_paragraphs( const std::string &text )
+std::vector<std::string> format_document_paragraphs( const std::string_view text )
 {
     const std::string clean_info = strip_markup_tags( text );
     std::vector<std::string> paragraphs;
@@ -3080,7 +3080,7 @@ std::string format_inventory_comparison_stat( const std::string &label,
     } );
 }
 
-std::string normalize_status_announcement( const std::string &message, const bool progress )
+std::string normalize_status_announcement( const std::string_view message, const bool progress )
 {
     if( !progress ) {
         return collapse_whitespace( message );
