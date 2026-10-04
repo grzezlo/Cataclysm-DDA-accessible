@@ -1931,6 +1931,17 @@ void advanced_inventory::process_action( const std::string &input_action )
     avatar &u = get_avatar();
 
     const std::string &action = is_processing() ? "MOVE_ALL_ITEMS" : input_action;
+    // Transfer questions and error popups can also take focus without changing
+    // any pane state.  Preserve detail/status requested in the parent itself.
+    const bool watch_child_focus = accessibility::is_active() &&
+                                   action != "ACCESSIBILITY_DETAILS" && action != "ACCESSIBILITY_STATUS";
+    const std::string announcement_before = watch_child_focus ? accessibility::last_announcement() :
+                                            std::string();
+    const on_out_of_scope restore_child_focus( [&]() {
+        if( watch_child_focus && accessibility::last_announcement() != announcement_before ) {
+            resume_accessibility_focus();
+        }
+    } );
     accessibility_move_direction = accessibility::list_move_direction( action,
                                    accessibility::list_move_pages );
     if( action == "HELP_KEYBINDINGS" ) {
