@@ -200,6 +200,7 @@ TEST_CASE( "accessibility_benchmark_turn_alerts_with_visible_threats",
     } );
     const tripoint_bub_ms origin = you.pos_bub( here );
     std::vector<const Creature *> threats;
+    threats.reserve( 10 );
     for( int index = 0; index < 10; ++index ) {
         threats.push_back( &spawn_test_monster( mon_zombie.str(),
                                                 origin + tripoint_rel_ms( 3 + index, 5, 0 ) ) );

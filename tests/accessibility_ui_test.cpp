@@ -1443,7 +1443,7 @@ TEST_CASE( "encumbrance_warmth_words_follow_the_warmth_colors", "[accessibility]
         CHECK( display::bodytemp_color( you, body_part_torso ) == colors[band] );
         // The detailed rows name the band after the warmth number.
         const std::vector<std::string> rows = encumbrance_accessibility_rows( you, nullptr );
-        CHECK( std::any_of( rows.begin(), rows.end(), [&]( const std::string & row ) {
+        CHECK( std::any_of( rows.begin(), rows.end(), [&]( const std::string_view row ) {
             return row.rfind( "torso, ", 0 ) == 0 &&
                    ( row.find( ", " + bands[band].second + "." ) != std::string::npos ||
                      row.find( ", " + bands[band].second + "," ) != std::string::npos );
