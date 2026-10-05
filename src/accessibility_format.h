@@ -276,8 +276,8 @@ class inventory_comparison_cursor
 
 /** The name and paragraph used by both detail entry and subsequent navigation. */
 std::pair<std::string, std::string> inventory_comparison_detail_focus(
-    const inventory_comparison_cursor &cursor, const std::string &first_name,
-    const std::string &second_name, const std::vector<std::string> &first_details,
+    const inventory_comparison_cursor &cursor, std::string_view first_name,
+    std::string_view second_name, const std::vector<std::string> &first_details,
     const std::vector<std::string> &second_details );
 /** Weight and volume against their limits, as shown by a selector's statistics. */
 struct inventory_capacity {
