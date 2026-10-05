@@ -3077,13 +3077,13 @@ bool inventory_comparison_cursor::move( const int count, const int delta )
 }
 
 std::pair<std::string, std::string> inventory_comparison_detail_focus(
-    const inventory_comparison_cursor &cursor, const std::string &first_name,
-    const std::string &second_name, const std::vector<std::string> &first_details,
+    const inventory_comparison_cursor &cursor, const std::string_view first_name,
+    const std::string_view second_name, const std::vector<std::string> &first_details,
     const std::vector<std::string> &second_details )
 {
     const std::vector<std::string> &details = cursor.selected_item() == 0 ? first_details :
             second_details;
-    return { cursor.selected_item() == 0 ? first_name : second_name,
+    return { std::string( cursor.selected_item() == 0 ? first_name : second_name ),
              details.empty() ? _( "No details available" ) : details[cursor.position()] };
 }
 

@@ -457,7 +457,7 @@ TEST_CASE( "pumped_repeat_honors_bindings_and_interrupts_once_per_request",
 
 TEST_CASE( "numeric_option_text_requires_a_complete_finite_number", "[accessibility]" )
 {
-    auto option = get_options().get_option( "TURN_DURATION" );
+    options_manager::cOpt option = get_options().get_option( "TURN_DURATION" );
     option.setValue( 2.0f );
     for( const std::string text : {
              "1.5garbage", "1,5", "1.5 2", "", " \t", "1e999",
@@ -482,7 +482,7 @@ TEST_CASE( "numeric_option_text_requires_a_complete_finite_number", "[accessibil
     CHECK( option.setNumericInput( "100" ).empty() );
     CHECK( option.value_as<float>() == 0.0f );
 
-    auto integer = get_options().get_option( "MUSIC_VOLUME" );
+    options_manager::cOpt integer = get_options().get_option( "MUSIC_VOLUME" );
     integer.setValue( 25 );
     CHECK( integer.setNumericInput( "12garbage" ) == "Not a number" );
     CHECK( integer.value_as<int>() == 25 );

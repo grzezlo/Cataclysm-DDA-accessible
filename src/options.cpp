@@ -7,7 +7,6 @@
 #include <iterator>
 #include <limits>
 #include <locale>
-#include <sstream>
 #include <stdexcept>
 
 #include "accessibility.h"
