@@ -154,7 +154,9 @@ TEST_CASE( "accessibility_benchmark_large_unchanged_selection",
                     if( !accessibility::is_active() ) {
                         return true;
                     }
-                    const std::vector<std::pair<item_location, int>> &before = selector.selection();
+                    // The copy is the snapshot cost being measured.
+                    // NOLINTNEXTLINE(performance-unnecessary-copy-initialization)
+                    const std::vector<std::pair<item_location, int>> before = selector.selection();
                     return selector.selection() == before;
                 };
                 CHECK( speech.backend().messages.empty() );
@@ -245,7 +247,7 @@ TEST_CASE( "accessibility_profile_movement_with_sixty_creatures",
     crowd.reserve( 60 );
     for( int index = 0; index < 60; ++index ) {
         crowd.push_back( &spawn_test_monster( mon_zombie.str(),
-                                              origin + tripoint_rel_ms( 6 + index % 8, -4 + index / 8, 0 ) ) );
+                                              origin + tripoint_rel_ms( 6 + ( index % 8 ), -4 + ( index / 8 ), 0 ) ) );
     }
     const auto visible_threats = [&]() {
         std::vector<const Creature *> visible;
