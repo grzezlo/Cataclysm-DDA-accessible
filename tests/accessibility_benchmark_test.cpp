@@ -154,7 +154,7 @@ TEST_CASE( "accessibility_benchmark_large_unchanged_selection",
                     if( !accessibility::is_active() ) {
                         return true;
                     }
-                    const std::vector<std::pair<item_location, int>> before = selector.selection();
+                    const std::vector<std::pair<item_location, int>> &before = selector.selection();
                     return selector.selection() == before;
                 };
                 CHECK( speech.backend().messages.empty() );
@@ -187,10 +187,10 @@ TEST_CASE( "accessibility_profile_wait_components", "[.][accessibility_profile]"
             you.assign_activity( ACT_WAIT, to_moves<int>( 8_hours ) );
             std::array<double, 5> elapsed = {};
             int turns = 0;
-            const auto start = profile_clock::now();
+            const profile_clock::time_point start = profile_clock::now();
             while( you.activity ) {
                 you.set_moves( 100 );
-                auto part = profile_clock::now();
+                profile_clock::time_point part = profile_clock::now();
                 you.activity.do_turn( you );
                 elapsed[0] += microseconds_since( part );
                 calendar::turn += 1_turns;
@@ -211,9 +211,11 @@ TEST_CASE( "accessibility_profile_wait_components", "[.][accessibility_profile]"
             accessibility::flush_gameplay_announcements();
             const double total = microseconds_since( start );
             REQUIRE( turns == to_turns<int>( 8_hours ) );
+            const size_t backend_calls = speech.backend().messages.size();
+            const int cancels = speech.backend().cancels;
             std::cout << "wait speech=" << speaking << " sample=" << sample << " turns=" << turns
-                      << " total_ms=" << total / 1000 << " backend_calls=" << speech.backend().messages.size()
-                      << " cancels=" << speech.backend().cancels << '\n';
+                      << " total_ms=" << total / 1000 << " backend_calls=" << backend_calls
+                      << " cancels=" << cancels << '\n';
             for( size_t index = 0; index < names.size(); ++index ) {
                 std::cout << "  " << names[index] << " ms=" << elapsed[index] / 1000
                           << " us/turn=" << elapsed[index] / turns << '\n';
@@ -240,6 +242,7 @@ TEST_CASE( "accessibility_profile_movement_with_sixty_creatures",
     const tripoint_bub_ms origin( 60, 60, 0 );
     you.setpos( here, origin );
     std::vector<const Creature *> crowd;
+    crowd.reserve( 60 );
     for( int index = 0; index < 60; ++index ) {
         crowd.push_back( &spawn_test_monster( mon_zombie.str(),
                                               origin + tripoint_rel_ms( 6 + index % 8, -4 + index / 8, 0 ) ) );
@@ -286,18 +289,18 @@ TEST_CASE( "accessibility_profile_movement_with_sixty_creatures",
             double visibility_us = 0;
             double hooks_us = 0;
             double maximum_hooks_us = 0;
-            const auto start = profile_clock::now();
+            const profile_clock::time_point start = profile_clock::now();
             for( const tripoint_bub_ms &position : route ) {
                 const tripoint_abs_ms old = you.pos_abs();
                 you.setpos( here, position );
-                const auto cache_start = profile_clock::now();
+                const profile_clock::time_point cache_start = profile_clock::now();
                 rebuild_caches( here, position.z() );
                 const std::vector<const Creature *> visible = visible_threats();
                 visibility_us += microseconds_since( cache_start );
                 maximum_visible = std::max( maximum_visible, visible.size() );
                 visibility_changes += visible.size() != previous_visible;
                 previous_visible = visible.size();
-                const auto hooks_start = profile_clock::now();
+                const profile_clock::time_point hooks_start = profile_clock::now();
                 accessibility::note_player_input();
                 accessibility_gameplay::announce_avatar_moved( old, you, here );
                 accessibility_gameplay::announce_turn_alerts( here, you, visible );
@@ -316,12 +319,14 @@ TEST_CASE( "accessibility_profile_movement_with_sixty_creatures",
             REQUIRE( visibility_changes > 2 );
             CHECK( speech.backend().messages.size() <= route.size() );
             CHECK( speech.backend().messages.empty() == !speaking );
+            const size_t backend_calls = speech.backend().messages.size();
+            const int cancels = speech.backend().cancels;
             std::cout << "crowd speech=" << speaking << " sample=" << sample << " steps=" << route.size()
                       << " max_visible=" << maximum_visible << " visibility_changes=" << visibility_changes
                       << " total_ms=" << total / 1000 << " visibility_ms=" << visibility_us / 1000
                       << " hooks_us/step=" << hooks_us / route.size() << " hooks_max_us=" << maximum_hooks_us
-                      << " backend_calls=" << speech.backend().messages.size()
-                      << " cancels=" << speech.backend().cancels << '\n';
+                      << " backend_calls=" << backend_calls
+                      << " cancels=" << cancels << '\n';
             if( speaking ) {
                 const std::string latest = accessibility::last_announcement();
                 accessibility::note_player_input();
