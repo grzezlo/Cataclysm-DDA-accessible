@@ -1,0 +1,247 @@
+# Langbench sample: Terrain, furniture, monsters, mutations, effects, recipes, skills, professions, and other core data.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of effect type "Beta blocker"
+#: data/json/effects.json
+msgid ""
+"You are under the influence of a beta blocker.  This controls your heart "
+"rate, decreasing the influence of stressful events such as pain on it.  "
+"However, it also lowers blood pressure and induces sleepiness."
+msgstr "Jesteś pod wpływem beta-blokera.  Reguluje on tętno, ograniczając wpływ stresujących zdarzeń, takich jak ból.  Obniża jednak również ciśnienie krwi i wywołuje senność."
+
+#. ~ Apply message of effect type "Molting"
+#: data/json/effects.json
+msgid "Your chitin plating itches against your body."
+msgstr "Twoje chitynowe poszycie wywołuje swędzenie skóry."
+
+#. ~ Description of furniture "styling station"
+#: data/json/furniture_and_terrain/furniture-decorative.json
+msgid ""
+"A styling station, is a countertop with a mirror mounted above it and just "
+"enough room and cubbies to store a stylist's equipment on it."
+msgstr "Stanowisko fryzjerskie to blat z zamontowanym nad nim lustrem oraz miejscem i przegródkami na sprzęt fryzjera."
+
+#. ~ Lockpick message of furniture "map board"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the locked glass panel opens."
+msgstr "Zamknięta na klucz szklana tafla otwiera się z satysfakcjonującym kliknięciem."
+
+#. ~ Prying message of terrain "mysterious closed door"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "With great effort, you pry open the door."
+msgstr "Z wielkim wysiłkiem wyważasz drzwi."
+
+#. ~ Description of terrain "concrete wall with ropes"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A boxlike wall of concrete with ropes attached to the exterior edges."
+msgstr "Betonowa ściana w kształcie skrzyni, z linami przymocowanymi do zewnętrznych krawędzi."
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "empty window with curtains"
+msgstr "pusty otwór okienny z zasłonami"
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> Family Laundry"
+msgstr "Pralnia rodziny <family_name>"
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<family_name> Bazaar"
+msgstr "Bazar rodziny <family_name>"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a knife!"
+msgstr "%1$s trafia <npcname> nożem w %2$s!"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s attempts to push you away with its arms."
+msgstr "%1$s próbuje odepchnąć cię ramionami."
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s claws at your %2$s while holding you!"
+msgstr "%1$s drapie cię w %2$s, jednocześnie cię trzymając!"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at <npcname>, covering them in acid!"
+msgstr "%1$s tnie <npcname>, oblewając go kwasem!"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to sting <npcname>, but they dodge!"
+msgstr "%1$s próbuje użądlić <npcname>, ale ten robi unik!"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s's barbed tentacle lashes out at <npcname> without doing any damage."
+msgstr "Kolczasta macka stwora %1$s smaga <npcname>, nie wyrządzając żadnych obrażeń."
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s flicks its horns at <npcname>, but they dodge!"
+msgstr "%s wymachuje rogami w stronę <npcname>, ale ten robi unik!"
+
+#. ~ Player sees monster spawns in nested effect in then statement in nested
+#. effect in switch statement in nested effect in switch statement in effect in
+#. EoC "EOC_mon_reflection_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid "Something deep inside you is manifested physically."
+msgstr "Coś z głębi twojego wnętrza przybiera fizyczną postać."
+
+#. ~ Player message in effect in EoC "EOC_STARE2"
+#: data/json/monster_special_attacks/spells.json
+msgid "The <npc_name> stares at you, and you shudder."
+msgstr "<npc_name> wpatruje się w ciebie, a ty drżysz."
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "European carp"
+msgid_plural "European carp"
+msgstr[0] "karp europejski"
+msgstr[1] "karpie europejskie"
+msgstr[2] "karpi europejskich"
+msgstr[3] "karpia europejskiego"
+
+#. ~ Description of monster "fungal pouncer"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This four legged, oversized cat seems to spew spores from its pawpads with "
+"each clumsy landing, as if constantly gaining and losing balance in air."
+msgstr "Ten przerośnięty, czworonożny kot zdaje się wypluwać zarodniki z poduszek łap przy każdym niezdarnym lądowaniu, jakby w powietrzu ciągle odzyskiwał i tracił równowagę."
+
+#. ~ Monster name
+#: data/json/monsters/mammal.json
+msgid "black cat"
+msgid_plural "black cats"
+msgstr[0] "czarny kot"
+msgstr[1] "czarne koty"
+msgstr[2] "czarnych kotów"
+msgstr[3] "czarnego kota"
+
+#. ~ Monster name
+#: data/json/monsters/misc.json
+msgid "debug dragger"
+msgid_plural "debug draggers"
+msgstr[0] "testowy ciągacz"
+msgstr[1] "testowe ciągacze"
+msgstr[2] "testowych ciągaczy"
+msgstr[3] "testowego ciągacza"
+
+#. ~ Monster name
+#: data/json/monsters/misc.json
+msgid "middle-strength debug grabber"
+msgid_plural "middle-strength debug grabbers"
+msgstr[0] "testowy chwytacz o średniej sile"
+msgstr[1] "testowe chwytacze o średniej sile"
+msgstr[2] "testowych chwytaczy o średniej sile"
+msgstr[3] "testowego chwytacza o średniej sile"
+
+#. ~ Monster name
+#: data/json/monsters/triffid.json
+msgid "fungicidal triffid"
+msgid_plural "fungicidal triffids"
+msgstr[0] "grzybobójczy tryfid"
+msgstr[1] "grzybobójcze tryfidy"
+msgstr[2] "grzybobójczych tryfidów"
+msgstr[3] "grzybobójczego tryfida"
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "smoldering stallion"
+msgid_plural "smoldering stallions"
+msgstr[0] "tlący się ogier"
+msgstr[1] "tlące się ogiery"
+msgstr[2] "tlących się ogierów"
+msgstr[3] "tlącego się ogiera"
+
+#. ~ Monster name
+#: data/json/monsters/zed_skeletal.json
+msgid "skeletal reaper"
+msgid_plural "skeletal reapers"
+msgstr[0] "szkieletowy żniwiarz"
+msgstr[1] "szkieletowi żniwiarze"
+msgstr[2] "szkieletowych żniwiarzy"
+msgstr[3] "szkieletowego żniwiarza"
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, modern"
+msgstr "Włosy: fioletowe, nowoczesne"
+
+#. ~ Description of variant "Hair: white, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long white locks."
+msgstr "Z tymi długimi, białymi włosami wyglądasz rockowo."
+
+#. ~ Description of mutation "Self-centered"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> steers every interaction into discussing how it will help them."
+msgstr "<npc_name> sprowadza każdą rozmowę do tego, co sam może na niej zyskać."
+
+#. ~ Description of profession "Relief Volunteer" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a member of a nonprofit organization dedicated to helping out where "
+"help was needed.  When the riots happened, you were eager to lend a hand.  "
+"But you had to cut your plans short when everyone was less interested in "
+"handouts, and more interested in eating you."
+msgstr "Byłeś członkiem organizacji non-profit, która pomagała tam, gdzie było to potrzebne.  Kiedy wybuchły zamieszki, chętnie ruszyłeś z pomocą.  Musiałeś jednak porzucić swoje plany, gdy wszystkich mniej interesowała pomoc, a bardziej zjedzenie ciebie."
+
+#. ~ Description of profession "Home Mechanic" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've always loved cars, and there's nothing like getting under the hood and"
+" fixing it yourself.  You've kept ahold of some handy tools for the job, and "
+"at least now you'll never want for parts."
+msgstr "Zawsze kochałaś samochody, a nic nie daje takiej satysfakcji, jak zajrzenie pod maskę i samodzielna naprawa.  Zachowałaś kilka przydatnych narzędzi, a przynajmniej teraz nigdy nie zabraknie ci części."
+
+#. ~ Description of profession "Volunteer Mutant" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"Your dreams of becoming a mutant superhero through genetic alteration may "
+"have fallen a bit short, but the scientists say you're ready.  It's time for "
+"a field test."
+msgstr "Twoje marzenia o zostaniu zmutowanym superbohaterem dzięki modyfikacjom genetycznym może nie do końca się spełniły, ale naukowcy twierdzą, że jesteś gotowy.  Czas na test w terenie."
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_8"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section H"
+msgstr "ustaw 1 ½ rzędu regałów magazynowych w sekcji H"
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "wool coifs"
+msgstr "wełniane kaptury ochronne"
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Electric Sedan"
+msgstr "Luksusowy sedan elektryczny"

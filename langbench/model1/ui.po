@@ -1,0 +1,204 @@
+# Langbench sample: Interface strings from src/.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/activity_actor.cpp
+msgid "<npcname> cannot pulp this corpse without a heavier tool."
+msgid_plural "<npcname> cannot pulp these corpses without a heavier tool."
+msgstr[0] "<npcname> nie może zmiażdżyć tych zwłok bez cięższego narzędzia."
+msgstr[1] "<npcname> nie może zmiażdżyć tych zwłok bez cięższego narzędzia."
+msgstr[2] "<npcname> nie może zmiażdżyć tych zwłok bez cięższego narzędzia."
+msgstr[3] "<npcname> nie może zmiażdżyć tych zwłok bez cięższego narzędzia."
+
+#: src/activity_actor.cpp
+msgid ""
+"You left one corpse unpulped, for you have no tool heavy enough to deal with "
+"it."
+msgid_plural ""
+"You left some corpses unpulped, for you have no tool heavy enough to deal "
+"with it."
+msgstr[0] "Pozostawiłeś jedne zwłoki niezmiażdżone, bo nie masz wystarczająco ciężkiego narzędzia."
+msgstr[1] "Pozostawiłeś część zwłok niezmiażdżonych, bo nie masz wystarczająco ciężkiego narzędzia."
+msgstr[2] "Pozostawiłeś część zwłok niezmiażdżonych, bo nie masz wystarczająco ciężkiego narzędzia."
+msgstr[3] "Pozostawiłeś część zwłok niezmiażdżonych, bo nie masz wystarczająco ciężkiego narzędzia."
+
+#: src/character.cpp
+#, c-format
+msgid "You are too weak to wield the %s with only one arm."
+msgstr "Jesteś za słaby, by trzymać przedmiot %s jedną ręką."
+
+#: src/character.cpp
+#, c-format
+msgid "Your %s needs %d kJ of bionic power."
+msgid_plural "Your %s needs %d kJ of bionic power."
+msgstr[0] "Twój %s potrzebuje %d kJ mocy bionicznej."
+msgstr[1] "Twój %s potrzebuje %d kJ mocy bionicznej."
+msgstr[2] "Twój %s potrzebuje %d kJ mocy bionicznej."
+msgstr[3] "Twój %s potrzebuje %d kJ mocy bionicznej."
+
+#: src/crafting.cpp
+msgid "<npcname> can no longer make that craft!"
+msgstr "<npcname> nie może już tego wytworzyć!"
+
+#: src/crafting_gui.cpp
+msgid "result can contain item of <color_cyan>length</color>"
+msgstr "wynik może pomieścić przedmiot o <color_cyan>długości</color>"
+
+#: src/debug_menu.cpp
+msgid "Add new variable"
+msgstr "Dodaj nową zmienną"
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Aggression(base): %d (%d)"
+msgstr "Agresja (bazowa): %d (%d)"
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Set gut kcal to?  Currently: %d"
+msgstr "Na ile ustawić kcal w jelitach?  Obecnie: %d"
+
+#: src/debug_menu.cpp
+#, c-format
+msgid "Set lifestyle value to?  Currently: %d"
+msgstr "Na ile ustawić wartość stylu życia?  Obecnie: %d"
+
+#: src/debug_menu.cpp src/editmap.cpp
+#, c-format
+msgid "Set rads to?  Currently: %d"
+msgstr "Na ile ustawić napromieniowanie?  Obecnie: %d"
+
+#: src/faction_camp.cpp
+msgid "Just stuff your face.  You're hungry!"
+msgstr "Po prostu się najedz.  Jesteś głodny!"
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Send a companion to clear a nearby forest.\n"
+"Note that it's likely both forest and field roads look exactly the same after having been cleared.\n"
+"\n"
+"Skill used: fabrication\n"
+"Difficulty: 1\n"
+"Effects:\n"
+"> 95%% of trees/trunks at the forest position will be cut down.\n"
+"> 0%% of total material will be brought back.\n"
+"> Forest should become a field tile.\n"
+"> Useful for clearing land for another faction camp.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Active\n"
+"Time: 6 Hour Base + Travel Time + Cutting Time\n"
+"Positions: %d/1\n"
+msgstr "Notatki:\nWyślij towarzysza, by wykarczował pobliski las.\nPamiętaj, że po wykarczowaniu drogi leśne i polne najprawdopodobniej będą wyglądać tak samo.\n\nUżywana umiejętność: wytwarzanie\nTrudność: 1\nEfekty:\n> 95%% drzew/pni na terenie lasu zostanie ściętych.\n> 0%% całego materiału zostanie przyniesione z powrotem.\n> Las powinien zmienić się w pole.\n> Przydatne do przygotowania terenu pod kolejny obóz frakcji.\n\nRyzyko: Brak\nIntensywność: Aktywna\nCzas: 6 godzin bazowo + czas podróży + czas ścinania\nStanowiska: %d/1\n"
+
+#: src/faction_camp.cpp
+msgid ""
+"Notes:\n"
+"This will open the regular crafting screen where you may select a recipe and batch size.\n"
+"\n"
+"You will be prompted to select a NPC to perform the craft after selecting the recipe.\n"
+"\n"
+"Kcal cost will be shown last, you will be prompted to accept or back out."
+msgstr "Notatki:\nOtworzy się zwykły ekran wytwarzania, na którym możesz wybrać przepis i wielkość partii.\n\nPo wybraniu przepisu zostaniesz poproszony o wybranie NPC, który zajmie się wytwarzaniem.\n\nKoszt w kcal zostanie pokazany na końcu; będziesz mógł go zaakceptować lub zrezygnować."
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select an existing hide site from %d to %d tiles away."
+msgstr "Wybierz istniejącą kryjówkę odległą o %d do %d pól."
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Edit"
+msgstr "Edytuj"
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Personal"
+msgstr "Osobista"
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Toggle zone display"
+msgstr "Przełącz wyświetlanie stref"
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Needs at least %d charge."
+msgid_plural "Needs at least %d charges."
+msgstr[0] "Wymaga co najmniej %d ładunku."
+msgstr[1] "Wymaga co najmniej %d ładunków."
+msgstr[2] "Wymaga co najmniej %d ładunków."
+msgstr[3] "Wymaga co najmniej %d ładunku."
+
+#: src/iexamine.cpp
+#, c-format
+msgid "Biogas generating process started for about %d day."
+msgid_plural "Biogas generating process started for about %d days."
+msgstr[0] "Rozpoczęto proces wytwarzania biogazu, który potrwa około %d dnia."
+msgstr[1] "Rozpoczęto proces wytwarzania biogazu, który potrwa około %d dni."
+msgstr[2] "Rozpoczęto proces wytwarzania biogazu, który potrwa około %d dni."
+msgstr[3] "Rozpoczęto proces wytwarzania biogazu, który potrwa około %d dnia."
+
+#: src/iexamine.cpp src/item.cpp
+#, c-format
+msgid "Failed to find milling recipe for %s."
+msgstr "Nie znaleziono przepisu na mielenie: %s."
+
+#: src/iexamine.cpp
+#, c-format
+msgid "The tank now contains %s (%d), %0.f%% full."
+msgstr "Zbiornik zawiera teraz %s (%d), napełnienie: %0.f%%."
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid ""
+"Can be <info>activated</info> to deploy as an appliance (<stat>%s</stat>)."
+msgstr "Można <info>aktywować</info>, aby rozstawić jako urządzenie (<stat>%s</stat>)."
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You need a mop to clean up liquids before deploying the %s."
+msgstr "Potrzebujesz mopa, by posprzątać płyny przed rozstawieniem przedmiotu %s."
+
+#: src/martialarts.cpp
+msgctxt "martial arts buff desc"
+msgid "<bold>Bonus:</bold> "
+msgid_plural "<bold>Bonus/stack:</bold> "
+msgstr[0] "<bold>Premia:</bold> "
+msgstr[1] "<bold>Premia/kumulacja:</bold> "
+msgstr[2] "<bold>Premia/kumulacja:</bold> "
+msgstr[3] "<bold>Premia/kumulacja:</bold> "
+
+#: src/monexamine.cpp
+#, c-format
+msgid "Remove a bag from the %s"
+msgstr "Zdejmij torbę z: %s"
+
+#: src/output.cpp
+msgid "can contain item of <color_cyan>volume</color>"
+msgstr "może pomieścić przedmiot o <color_cyan>objętości</color>"
+
+#: src/ranged.cpp
+#, c-format
+msgid "<npcname>'s %s is hurt by the recoil!"
+msgstr "Odrzut rani <npcname> w %s!"
+
+#: src/suffer.cpp
+msgid "<npcname> suddenly shifts slightly."
+msgstr "<npcname> nagle nieznacznie zmienia pozycję."
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Engine conflict: %s."
+msgstr "Konflikt silników: %s."

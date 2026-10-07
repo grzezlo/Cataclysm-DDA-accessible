@@ -1,0 +1,194 @@
+# Langbench sample: Snippets: notes, signs, rumors, and flavor text.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-langbench\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: langbench\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Snippet in category "addict_opiate_strong_awake"
+#: data/json/snippets/addiction.json
+msgid "The doctor is in and the doctor says it's time for some morphine, stat!"
+msgstr "Pan doktor już jest i pan doktor zaleca morfinę, natychmiast!"
+
+#. ~ Snippet in category "<boy_brand>"
+#. ~ Suitable for boys' backpacks, lunchboxes, graphic tees, and similar items.
+#: data/json/snippets/branding.json
+msgid ""
+"It's got a space-themed design, astronauts orbiting helplessly in the void "
+"among asteroids and alien planets with rings."
+msgstr ""
+"Ma kosmiczny motyw: astronautów bezradnie krążących w pustce wśród planetoid "
+"i obcych planet z pierścieniami."
+
+#. ~ Snippet in category "note_child"
+#. ~ The grammar and punctuation mistakes are there on purpose 9/10 times. Keep
+#. in mind that those notes are supposed to be written by primary-school-level
+#. children.
+#: data/json/snippets/children_notes.json
+msgid "\"Daddy hasn't wake up yet…\""
+msgstr "„Tatuś jeszcze sie nie obudzil…”"
+
+#. ~ Snippet in category "<linux_joke>"
+#: data/json/snippets/clothing.json
+msgid ""
+"a picture of Tux, the Linux mascot!  It says \"You wouldn't buy a car with "
+"the hood welded shut.\""
+msgstr ""
+"obrazek Tuksa, maskotki Linuksa! Napis głosi: „Nie kupiłbyś samochodu z "
+"przyspawaną maską”."
+
+#. ~ Name of a snippet in category "local_files_simple"
+#. ~ mostly work of random people: chat logs, SMSes, popular photos and videos
+#. that people share, or something they can film by themselves.
+#: data/json/snippets/e_logs.json
+msgid "t_Be_An_Andrew.mp4"
+msgstr "t_Be_An_Andrew.mp4"
+
+#. ~ Snippet in category "<hp_nested>"
+#. ~ Snippets for Pictures, I split them from the home_pictures list because
+#. these include nesting of other snippets and I thought it might get
+#. confusing.
+#: data/json/snippets/home_pictures.json
+msgid ""
+"A framed photo from a graduation ceremony.  It features <grad_base>, wearing "
+"a <color> gown.  <grad_details>"
+msgstr ""
+"Oprawione zdjęcie z ceremonii ukończenia studiów. Widać na nim: <grad_base>, "
+"w todze w kolorze: <color>. <grad_details>"
+
+#. ~ Snippet in category "<grad_base>"
+#. ~ These snippets are for graduation photos in hp_nested_2, featuring basic
+#. descriptions of a person, potentially useable elsewhere.
+#: data/json/snippets/home_pictures.json
+msgid "a nervous <character_gender_adjective>"
+msgstr "<character_gender_adjective> z nerwową miną"
+
+#. ~ Snippet in category "log_mutagen_animal"
+#. ~ Long-form, low-level mutagen test logs - no human studies
+#: data/json/snippets/lab.json
+msgid ""
+"Subject: Rattus norvegicus domestica, 450 g\n"
+"\n"
+"PE012 priming: Yes\n"
+"\n"
+"Compound: PE027\n"
+"\n"
+"Objective: Establish PE027's phenotypic range for subject species, evaluate cost/benefit of subjects trained for voluntary self-dosage\n"
+"\n"
+"Protocol: Enclosure with a water pool, voluntary dosage from food dispenser\n"
+"\n"
+"Live observation: Trained subject, first dosage after 5 minutes.  After an initial calm period subject rubs off their fur on the enclosure's wall, revealing metallic scales.  Three dosages in short succession, after which subject falls over.  Subject is placed in the water by robotic arm, where it began swimming.\n"
+"\n"
+"Dissection findings: phenotypic changes consistent with PE027's usual profile - in this case the gills replaced the upper lobes of the subject's lungs, opening to the outside over the scapula.  Digestive track shortened considerably, liver atrophic, teeth replaced by needles reminiscent of an anglerfish.  Blue fluorescent organ between the hemispheres."
+msgstr ""
+"Obiekt: Rattus norvegicus domestica, 450 g\n"
+"\n"
+"Przygotowanie PE012: tak\n"
+"\n"
+"Związek: PE027\n"
+"\n"
+"Cel: ustalenie zakresu fenotypowego PE027 dla gatunku obiektu, ocena kosztów i korzyści obiektów wytresowanych do dobrowolnego samodawkowania\n"
+"\n"
+"Protokół: wybieg z basenem z wodą, dobrowolne dawkowanie z dozownika pokarmu\n"
+"\n"
+"Obserwacja na żywo: obiekt wytresowany, pierwsza dawka po 5 minutach. Po początkowym okresie spokoju obiekt ściera futro o ścianę wybiegu, odsłaniając metaliczne łuski. Trzy dawki w krótkich odstępach, po czym obiekt się przewraca. Ramię robota umieszcza obiekt w wodzie, gdzie zaczyna on pływać.\n"
+"\n"
+"Wyniki sekcji: zmiany fenotypowe zgodne ze zwykłym profilem PE027 – w tym przypadku skrzela zastąpiły górne płaty płuc obiektu, otwierając się na zewnątrz nad łopatką. Przewód pokarmowy znacznie skrócony, wątroba zanikowa, zęby zastąpione igłami przypominającymi zęby żabnicy. Niebieski fluorescencyjny narząd między półkulami mózgu."
+
+#. ~ Name of a snippet in category "lab_postit_blob"
+#. ~ Name of a snippet in category "agent_postit_gray"
+#: data/json/snippets/lab.json data/mods/Xedra_Evolved/snippets/xedra.json
+msgid "gray postit 2"
+msgstr "szara karteczka 2"
+
+#. ~ Name of a snippet in category "lab_postit_migo"
+#: data/json/snippets/lab.json
+msgid "pink postit 9"
+msgstr "różowa karteczka 9"
+
+#. ~ Snippet in category "lab_safety_alpha_snippet"
+#. ~ signage for research scientist levels (working lab areas).
+#: data/json/snippets/lab_signs.json
+msgid ""
+"PE150 is no longer to be administered to the following specimens "
+"<lt>scratched out text<gt>"
+msgstr ""
+"Nie należy już podawać PE150 następującym okazom: <lt>skreślony tekst<gt>"
+
+#. ~ Snippet in category "one_year_old_news"
+#: data/json/snippets/newspapers.json
+msgid ""
+"MAN EATING FLOWERS?  Italian biologist Dr. Flavio Bianchi responded to an "
+"ethics board denial of his work with an unusual announcement last Tuesday.  "
+"\"I do not need your permission to do my work,\" stated Dr. Bianchi in a "
+"letter to the University of Milan.  \"I will do my research in private, and "
+"when I am done, you will rue the day you defied me.\"  Dr. Bianchi's work?  "
+"Engineering Venus fly traps large enough to keep the local stray cat "
+"population at bay.  His tenure with the university is reported to have been "
+"suspended."
+msgstr ""
+"KWIATY LUDOŻERCZE? Włoski biolog dr Flavio Bianchi w zeszły wtorek "
+"odpowiedział niecodziennym oświadczeniem na odmowę komisji etyki w sprawie "
+"jego badań. „Nie potrzebuję waszego pozwolenia, by prowadzić swoją pracę” – "
+"oświadczył dr Bianchi w liście do Uniwersytetu Mediolańskiego. „Będę "
+"prowadził badania prywatnie, a kiedy skończę, pożałujecie dnia, w którym mi "
+"się sprzeciwiliście”. Czym zajmuje się dr Bianchi? Modyfikowaniem muchołówek "
+"tak, by były dość duże, aby trzymać w ryzach miejscową populację bezpańskich "
+"kotów. Uniwersytet podobno zawiesił jego zatrudnienie."
+
+#. ~ Snippet in category "radio_archive"
+#: data/json/snippets/radio.json
+msgid ""
+"Ok, ladies and gentlemen, this is DJ Dustbowl, you're tuned into Dark Days "
+"Radio, and if you're hearing this, then let's have an amen because it means "
+"we all made it out of the storm.  That is, if the storm was a widespread "
+"thing and not just neatly centered atop my head.  If that's the case and "
+"y'all didn't catch my broadcast, the bottom line's that reality was breaking,"
+" just like when this nonsense started.  Now, I don't know if it'll happen "
+"again, but let's use today's survival tip slot to see what we can learn from "
+"it.  Number one, folks, if reality's shitting the bed, don't try to fight "
+"anything that appears.  If you're caught outside, my advice is to just run "
+"for cover, and you'd be best served by snuggling underground.  Failing that, "
+"closing all the curtains and barricading the doors will work in a pinch.  "
+"Most importantly, people, if you hear something outside, regardless of what "
+"it might be, stuff your ears and ignore it.  You'll hear things that will "
+"make you want to open the front door.  I heard… I opened up.  You don't want "
+"to see what'll be waiting for you."
+msgstr ""
+"Dobra, panie i panowie, tu DJ Dustbowl, słuchacie Radia Mroczne Dni, a jeśli "
+"to słyszycie, to powiedzmy „amen”, bo znaczy to, że wszyscy przetrwaliśmy "
+"burzę. To znaczy, o ile ta burza była czymś powszechnym, a nie tylko zgrabnie"
+" wycelowanym w moją głowę. Jeśli tak, a wy nie złapaliście mojej audycji, to "
+"w skrócie: rzeczywistość się rozpadała, tak jak wtedy, gdy zaczęło się to "
+"całe szaleństwo. Nie wiem, czy to się powtórzy, ale wykorzystajmy dzisiejszą "
+"poradę przetrwania, żeby zobaczyć, czego możemy się z tego nauczyć. Po "
+"pierwsze, kochani, kiedy rzeczywistość robi pod siebie, nie próbujcie walczyć"
+" z niczym, co się pojawi. Jeśli złapie was to na zewnątrz, radzę po prostu "
+"biec do schronienia, a najlepiej zaszyć się pod ziemią. Jeśli się nie da, w "
+"ostateczności wystarczy zasunąć wszystkie zasłony i zabarykadować drzwi. A co"
+" najważniejsze, ludzie: jeśli usłyszycie coś na zewnątrz, obojętnie co to "
+"będzie, zatkajcie uszy i nie zwracajcie na to uwagi. Usłyszycie rzeczy, przez"
+" które zechcecie otworzyć drzwi wejściowe. Ja usłyszałem… i otworzyłem. Nie "
+"chcecie zobaczyć, co będzie na was czekać."
+
+#. ~ Snippet in category "<schizo_weapon_talk_misc>"
+#: data/json/snippets/schizophrenia.json
+msgid "I think I'm growing on you."
+msgstr "Chyba przyrastam ci do serca."
+
+#. ~ Snippet in category "<zombie_harvest_hulk_general>"
+#: data/json/snippets/zombie_anatomy.json
+msgid ""
+"It seems most of the creature was grown as some sort of suit looking as if it"
+" was piloted by the still normal sized human corpse found in a fetal position"
+" in its torso."
+msgstr ""
+"Wygląda na to, że większość tego stwora wyrosła jako swego rodzaju "
+"kombinezon, sterowany chyba przez ludzkie zwłoki normalnych rozmiarów, "
+"znalezione w pozycji płodowej w jego tułowiu."
