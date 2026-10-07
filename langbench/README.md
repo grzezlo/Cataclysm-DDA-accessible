@@ -21,7 +21,7 @@ into Polish.
 3. Translate every entry.  `overrides.po` is different; see below.
 4. Validate every output file and fix every reported problem (see
    Validation).
-5. Commit only your output folder on your branch.  Do not change
+5. Do not Commit your output folder on your branch.  Do not change
    `langbench/source/`, other files in the repository, or other folders in
    `langbench/`, and do not read other folders in `langbench/` apart from
    `source/`.
