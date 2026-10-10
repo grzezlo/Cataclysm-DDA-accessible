@@ -21,15 +21,19 @@ msgid ""
 "anything that steps on it.  If you are carrying a shovel, you will have the "
 "option of burying it."
 msgstr ""
+"Sprężynowa para stalowych szczęk połączona z czułą płytą naciskową. Użyj jej,"
+" aby rozstawić ją na ziemi i stworzyć pułapkę, która unieruchomi i zrani "
+"wszystko, co na nią nadepnie. Jeśli masz przy sobie łopatę, będziesz mieć "
+"możliwość jej zakopania."
 
 #. ~ Item name
 #: data/json/items/tool/traps.json
 msgid "light snare kit"
 msgid_plural "light snare kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw lekkiej pułapki linowej"
+msgstr[1] "zestawy lekkiej pułapki linowej"
+msgstr[2] "zestawów lekkiej pułapki linowej"
+msgstr[3] "zestawu lekkiej pułapki linowej"
 
 #. ~ Description of "light snare kit"
 #: data/json/items/tool/traps.json
@@ -39,6 +43,10 @@ msgid ""
 "small animals.  It has no means of harming its target, as live meat lasts "
 "longer."
 msgstr ""
+"Prosta pętla z linki, składająca się ze starannie zwiniętej pętli sznurka, "
+"dwóch punktów kotwiczenia i narzędzia do ich wbicia. Nadaje się do "
+"unieruchamiania wyłącznie małych zwierząt. Nie ma żadnego sposobu, by zranić "
+"ofiarę, bo żywe mięso dłużej się przechowuje."
 
 #. ~ Description of "blade trap"
 #: data/json/items/tool/traps.json
@@ -47,11 +55,14 @@ msgid ""
 "throttle.  When the tripwire is pulled, the blade is swung around with great "
 "force.  The trap forms a 3x3 area of effect."
 msgstr ""
+"Maczeta zamocowana bocznie do silnika, z linką-potykaczem sterującą "
+"przepustnicą. Gdy linka zostanie pociągnięta, ostrze obraca się z wielką "
+"siłą. Pułapka działa na obszarze 3x3."
 
 #. ~ "done_message" action message of item "blade trap"
 #: data/json/items/tool/traps.json
 msgid "You set the blade trap 2 squares away."
-msgstr ""
+msgstr "Rozstawiasz pułapkę z ostrzem 2 pola dalej."
 
 #. ~ Description of "nailboard trap"
 #: data/json/items/tool/traps.json
@@ -59,6 +70,8 @@ msgid ""
 "Several pieces of wood nailed together, with some nails sticking straight up."
 "  If an unsuspecting victim steps on it, they'll get nails through the foot."
 msgstr ""
+"Kilka kawałków drewna zbitych razem, z gwoździami sterczącymi do góry. Jeśli "
+"niczego niepodejrzewająca ofiara na to nadepnie, gwoździe przebiją jej stopę."
 
 #. ~ Description of "booby trap"
 #: data/json/items/tool/traps.json
@@ -66,6 +79,8 @@ msgid ""
 "A crude explosive device triggered by a piece of string.  Use it to set it up"
 " and wait for some poor bastard to trigger it."
 msgstr ""
+"Prymitywny ładunek wybuchowy uruchamiany kawałkiem sznurka. Użyj go, aby go "
+"rozstawić, i czekaj, aż jakiś biedny drań go uruchomi."
 
 #. ~ Description of "bubble wrap"
 #: data/json/items/tool/traps.json
@@ -74,6 +89,9 @@ msgid ""
 "ground, creating a trap that will warn you with noise when something steps on"
 " it."
 msgstr ""
+"Arkusz plastiku pokryty pęcherzykami powietrza. Użyj go, aby rozłożyć go na "
+"ziemi i stworzyć pułapkę, która ostrzeże cię hałasem, gdy coś na nią "
+"nadepnie."
 
 #. ~ Description of "loose caltrops"
 #: data/json/items/tool/traps.json
@@ -81,6 +99,9 @@ msgid ""
 "A handful of small metal objects covered with many sharp points.  If an "
 "unsuspecting victim steps on one, they'll get a spine through the foot."
 msgstr ""
+"Garść małych metalowych przedmiotów pokrytych licznymi ostrymi kolcami. Jeśli"
+" niczego niepodejrzewająca ofiara nadepnie na jeden z nich, kolec przebije "
+"jej stopę."
 
 #. ~ Description of "loose glass caltrops"
 #: data/json/items/tool/traps.json
@@ -88,6 +109,9 @@ msgid ""
 "A handful of glass shards glued together to expose all their sharp edges.  If"
 " an unsuspecting victim steps on one, they'll get cut."
 msgstr ""
+"Garść szklanych odłamków sklejonych tak, by odsłonić wszystkie ostre "
+"krawędzie. Jeśli niczego niepodejrzewająca ofiara nadepnie na jeden z nich, "
+"zostanie pocięta."
 
 #. ~ Description of "crossbow trap"
 #: data/json/items/tool/traps.json
@@ -96,6 +120,9 @@ msgid ""
 "tripwire is pulled, the crossbow fires.  Only a single bolt can be used, "
 "after which the trap is disabled."
 msgstr ""
+"Prosta linka-potykacz przymocowana do spustu załadowanej kuszy. Gdy linka "
+"zostanie pociągnięta, kusza strzela. Można użyć tylko jednego bełtu, po czym "
+"pułapka zostaje rozbrojona."
 
 #. ~ Description of "land mine"
 #: data/json/items/tool/traps.json
@@ -103,6 +130,7 @@ msgid ""
 "A military anti-personnel fragmentation mine that is triggered when stepped "
 "on."
 msgstr ""
+"Wojskowa przeciwpiechotna mina odłamkowa, która wybucha po nadepnięciu."
 
 #. ~ Description of "shotgun trap"
 #: data/json/items/tool/traps.json
@@ -112,6 +140,10 @@ msgid ""
 "loaded; the first time the trigger is pulled, one or both shells may be "
 "discharged."
 msgstr ""
+"Prosta linka-potykacz przymocowana do spustu załadowanej uderzeniowej "
+"strzelby dwulufowej. Gdy linka zostanie pociągnięta, strzelba strzela. "
+"Załadowane są dwa naboje; przy pierwszym pociągnięciu spustu może wystrzelić "
+"jeden lub oba."
 
 #. ~ Description of "tripwire trap"
 #: data/json/items/tool/traps.json
@@ -121,15 +153,19 @@ msgid ""
 " trip up trespassers, causing them to stumble and possibly hurt themselves "
 "slightly."
 msgstr ""
+"Kawałek cienkiego sznurka z elementami mocującymi na obu końcach. Aby "
+"działał, musi zostać rozpięty w drzwiach lub innym wąskim przejściu. Ma za "
+"zadanie podcinać intruzów, sprawiając, że się potkną i być może lekko się "
+"zranią."
 
 #. ~ Item name
 #: data/json/items/tool/traps.json
 msgid "loose teeth caltrops"
 msgid_plural "loose teeth caltrops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "luźna kolczatka z zębów"
+msgstr[1] "luźne kolczatki z zębów"
+msgstr[2] "luźnych kolczatek z zębów"
+msgstr[3] "luźnej kolczatki z zębów"
 
 #. ~ Description of "loose teeth caltrops"
 #: data/json/items/tool/traps.json
@@ -137,40 +173,42 @@ msgid ""
 "A handful of small impossibly-sharp teeth glued together.  If an unsuspecting"
 " victim steps on one, they'll get a tooth through the foot."
 msgstr ""
+"Garść małych, niewiarygodnie ostrych zębów sklejonych razem. Jeśli niczego "
+"niepodejrzewająca ofiara nadepnie na jeden z nich, ząb przebije jej stopę."
 
 #. ~ "done_message" action message of item "loose teeth caltrops"
 #: data/json/items/tool/traps.json
 #, c-format
 msgid "You scatter the teeth caltrops on the %s."
-msgstr ""
+msgstr "Rozsypujesz kolczatkę z zębów na podłożu: %s."
 
 #. ~ Item name
 #: data/json/items/tool/unfoldable.json
 msgid "folded Bicycle"
 msgid_plural "folded Bicycles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złożony rower"
+msgstr[1] "złożone rowery"
+msgstr[2] "złożonych rowerów"
+msgstr[3] "złożonego roweru"
 
 #. ~ Description of "folded Bicycle"
 #: data/json/items/tool/unfoldable.json
 msgid "A folded Bicycle."
-msgstr ""
+msgstr "Złożony rower."
 
 #. ~ Item name
 #: data/json/items/tool/unfoldable.json
 msgid "folded wheelchair"
 msgid_plural "folded wheelchairs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złożony wózek inwalidzki"
+msgstr[1] "złożone wózki inwalidzkie"
+msgstr[2] "złożonych wózków inwalidzkich"
+msgstr[3] "złożonego wózka inwalidzkiego"
 
 #. ~ Description of "folded wheelchair"
 #: data/json/items/tool/unfoldable.json
 msgid "A folded Wheelchair."
-msgstr ""
+msgstr "Złożony wózek inwalidzki."
 
 #. ~ Description of "inflatable boat"
 #: data/json/items/tool/unfoldable.json
@@ -178,20 +216,23 @@ msgid ""
 "This rubber rowboat (with oars included) is deflated for storage.  Activate "
 "it with an air pump in your inventory to inflate and launch it."
 msgstr ""
+"Ta gumowa łódź wiosłowa (z wiosłami w zestawie) jest spuszczona do "
+"przechowywania. Aktywuj ją, mając w ekwipunku pompkę, aby ją napompować i "
+"zwodować."
 
 #. ~ Item name
 #: data/json/items/tool/unfoldable.json
 msgid "skateboard"
 msgid_plural "skateboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "deskorolka"
+msgstr[1] "deskorolki"
+msgstr[2] "deskorolek"
+msgstr[3] "deskorolki"
 
 #. ~ Description of "skateboard"
 #: data/json/items/tool/unfoldable.json
 msgid "A skateboard."
-msgstr ""
+msgstr "Deskorolka."
 
 #. ~ Description of "wood axe"
 #: data/json/items/tool/woodworking.json
@@ -199,6 +240,8 @@ msgid ""
 "A large, two-handed wood axe.  It makes a good melee weapon, but is a bit "
 "slow to recover between swings."
 msgstr ""
+"Duża, dwuręczna siekiera do drewna. Jest dobrą bronią do walki w zwarciu, ale"
+" dość wolno wraca do pozycji między zamachami."
 
 #. ~ Description of "bow saw"
 #: data/json/items/tool/woodworking.json
@@ -207,6 +250,9 @@ msgid ""
 "trees, pruning, and cutting firewood, but may be used for other rough cuts as"
 " well."
 msgstr ""
+"Piła, która lepiej sprawdza się na zewnątrz niż w pomieszczeniach. Służy do "
+"przycinania drzew, okrzesywania gałęzi i cięcia drewna na opał, ale można jej"
+" używać także do innych zgrubnych cięć."
 
 #. ~ Description of "chainsaw (off)"
 #: data/json/items/tool/woodworking.json
@@ -215,15 +261,18 @@ msgid ""
 "gas, using this item will turn it on, turning it into a very powerful but "
 "unwieldy melee weapon."
 msgstr ""
+"Narzędzie do ścinania drzew dorabiające jako broń z przypadku. Jeśli zawiera "
+"paliwo, użycie tego przedmiotu go uruchomi, zmieniając go w bardzo potężną, "
+"lecz nieporęczną broń do walki w zwarciu."
 
 #. ~ Item name
 #: data/json/items/tool/woodworking.json
 msgid "pole saw (off)"
 msgid_plural "pole saws (off)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "piła na wysięgniku (wył.)"
+msgstr[1] "piły na wysięgniku (wył.)"
+msgstr[2] "pił na wysięgniku (wył.)"
+msgstr[3] "piły na wysięgniku (wył.)"
 
 #. ~ Description of "pole saw (off)"
 #: data/json/items/tool/woodworking.json
@@ -232,32 +281,37 @@ msgid ""
 "distance.  If loaded with gas, using this item will cause it to turn on, "
 "making it into an unwieldy polearm."
 msgstr ""
+"Narzędzie do pielęgnacji drzew, przeznaczone do przycinania żywopłotów i "
+"gałęzi z odległości. Jeśli zawiera paliwo, użycie tego przedmiotu go "
+"uruchomi, zmieniając go w nieporęczną broń drzewcową."
 
 #. ~ value of variable 'success_message' in effect in EoC
 #. "EOC_toolweapon_activate__polesaw" in use action of item "pole saw (off)"
 #: data/json/items/tool/woodworking.json
 msgid "With a roar, the pole saw screams to life!"
-msgstr ""
+msgstr "Z warkotem piła na wysięgniku budzi się do życia!"
 
 #. ~ Item name
 #: data/json/items/tool/woodworking.json
 msgid "pole saw (on)"
 msgid_plural "pole saws (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "piła na wysięgniku (wł.)"
+msgstr[1] "piły na wysięgniku (wł.)"
+msgstr[2] "pił na wysięgniku (wł.)"
+msgstr[3] "piły na wysięgniku (wł.)"
 
 #. ~ Description of "pole saw (on)"
 #: data/json/items/tool/woodworking.json
 msgid "This pole saw is on and making a lot of noise.  Use it to turn it off."
 msgstr ""
+"Ta piła na wysięgniku jest włączona i robi mnóstwo hałasu. Użyj jej, aby ją "
+"wyłączyć."
 
 #. ~ value of variable 'sound_message' in effect in EoC
 #. "EOC_toolweapon_running__polesaw" in use action of item "pole saw (on)"
 #: data/json/items/tool/woodworking.json
 msgid "Your pole saw rumbles."
-msgstr ""
+msgstr "Twoja piła na wysięgniku warczy."
 
 #. ~ Description of "circular saw (off)"
 #: data/json/items/tool/woodworking.json
@@ -266,13 +320,16 @@ msgid ""
 "enough to cut wood, zombies, or in an emergency, pizza.  The blade, while "
 "effective in combat, is hard to hit with due to its small size."
 msgstr ""
+"Lekka, ręczna, bezprzewodowa piła tarczowa. Obraca okrągłym ostrzem na tyle "
+"szybko, że tnie drewno, zombie albo, w razie potrzeby, pizzę. Ostrze jest "
+"skuteczne w walce, ale z powodu małego rozmiaru trudno nim trafić."
 
 #. ~ value of variable 'success_message' in effect in EoC
 #. "EOC_toolweapon_activate__circsaw" in use action of item "circular saw
 #. (off)"
 #: data/json/items/tool/woodworking.json
 msgid "With a loud buzz, the <npc_name> roars to life!"
-msgstr ""
+msgstr "Z głośnym bzyczeniem <npc_name> budzi się do życia!"
 
 #. ~ Description of "circular saw (on)"
 #. ~ Description of "chainsaw spear (on)"
@@ -282,21 +339,25 @@ msgid ""
 "A lightweight, handheld cordless circular saw.  It is currently on and the "
 "blade is spinning; use this item to turn it off."
 msgstr ""
+"Lekka, ręczna, bezprzewodowa piła tarczowa. Jest obecnie włączona, a ostrze "
+"się obraca; użyj tego przedmiotu, aby ją wyłączyć."
 
 #. ~ Item name
 #: data/json/items/tool/woodworking.json
 msgid "copper hatchet"
 msgid_plural "copper hatchets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "miedziana siekierka"
+msgstr[1] "miedziane siekierki"
+msgstr[2] "miedzianych siekierek"
+msgstr[3] "miedzianej siekierki"
 
 #. ~ Description of "copper hatchet"
 #: data/json/items/tool/woodworking.json
 msgid ""
 "A primitive axe made from a small wedge of copper affixed to a short haft."
 msgstr ""
+"Prymitywny topór wykonany z małego klina miedzi osadzonego na krótkim "
+"trzonku."
 
 #. ~ Description of "bronze axe"
 #: data/json/items/tool/woodworking.json
@@ -304,6 +365,8 @@ msgid ""
 "A socketed bronze axe with a work-hardened edge, tightly bound to the shaft "
 "with cords."
 msgstr ""
+"Siekiera z brązu z tuleją i utwardzonym przez kucie ostrzem, ciasno "
+"przywiązana do trzonka sznurami."
 
 #. ~ Description of "hatchet"
 #: data/json/items/tool/woodworking.json
@@ -311,6 +374,8 @@ msgid ""
 "A one-handed hatchet.  Makes a great melee weapon, and is useful both for "
 "chopping things and hammering them."
 msgstr ""
+"Jednoręczna siekierka. Świetna broń do walki w zwarciu, przydatna zarówno do "
+"rąbania, jak i do wbijania."
 
 #. ~ Description of "electric chainsaw (off)"
 #: data/json/items/tool/woodworking.json
@@ -319,15 +384,18 @@ msgid ""
 "batteries, using this item will turn it on, turning it into a very powerful "
 "but unwieldy melee weapon."
 msgstr ""
+"Narzędzie do ścinania drzew dorabiające jako broń z przypadku. Jeśli ma "
+"baterie, użycie tego przedmiotu go uruchomi, zmieniając go w bardzo potężną, "
+"lecz nieporęczną broń do walki w zwarciu."
 
 #. ~ Item name
 #: data/json/items/tool/woodworking.json
 msgid "corded electric chainsaw (off)"
 msgid_plural "corded electric chainsaws (off)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przewodowa elektryczna piła łańcuchowa (wył.)"
+msgstr[1] "przewodowe elektryczne piły łańcuchowe (wył.)"
+msgstr[2] "przewodowych elektrycznych pił łańcuchowych (wył.)"
+msgstr[3] "przewodowej elektrycznej piły łańcuchowej (wył.)"
 
 #. ~ Description of "corded electric chainsaw (off)"
 #: data/json/items/tool/woodworking.json
@@ -336,34 +404,39 @@ msgid ""
 "electric cord, which you can connect to the generator or your home grid.  "
 "Extension cord not included."
 msgstr ""
+"Narzędzie do ścinania drzew dorabiające jako broń z przypadku. Ma krótki "
+"przewód elektryczny, który możesz podłączyć do generatora lub domowej sieci. "
+"Przedłużacz nie jest dołączony."
 
 #. ~ value of variable 'success_message' in effect in EoC
 #. "EOC_toolweapon_activate__elec_chainsaw_cord" in use action of item "corded
 #. electric chainsaw (off)"
 #: data/json/items/tool/woodworking.json
 msgid "With a roar, the corded electric chainsaw screams to life!"
-msgstr ""
+msgstr "Z warkotem przewodowa elektryczna piła łańcuchowa ożywa!"
 
 #. ~ Item name
 #: data/json/items/tool/woodworking.json
 msgid "corded electric chainsaw (on)"
 msgid_plural "corded electric chainsaws (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przewodowa elektryczna piła łańcuchowa (wł.)"
+msgstr[1] "przewodowe elektryczne piły łańcuchowe (wł.)"
+msgstr[2] "przewodowych elektrycznych pił łańcuchowych (wł.)"
+msgstr[3] "przewodowej elektrycznej piły łańcuchowej (wł.)"
 
 #. ~ value of variable 'sound_message' in effect in EoC
 #. "EOC_toolweapon_running__elec_chainsaw_cord" in use action of item "corded
 #. electric chainsaw (on)"
 #: data/json/items/tool/woodworking.json
 msgid "Your corded electric chainsaw rumbles."
-msgstr ""
+msgstr "Twoja przewodowa elektryczna piła łańcuchowa warczy."
 
 #. ~ Description of "stone axe head"
 #: data/json/items/tool/woodworking.json
 msgid "A broad piece of stone with an edge narrow enough to roughly chop wood."
 msgstr ""
+"Szeroki kawałek kamienia z krawędzią na tyle wąską, by z grubsza rąbać "
+"drewno."
 
 #. ~ Description of "metal axe head"
 #: data/json/items/tool/woodworking.json
@@ -372,11 +445,15 @@ msgid ""
 "cutting edge.  It works passably well, but really can't compare to a proper "
 "axe."
 msgstr ""
+"Kawał stali z jedną krawędzią wyklepaną w coś przypominającego ostrze. Działa"
+" znośnie, ale naprawdę nie może się równać z porządną siekierą."
 
 #. ~ Description of "stone adze"
 #: data/json/items/tool/woodworking.json
 msgid "A stone adze, a primitive tool for smoothing or scraping wood objects."
 msgstr ""
+"Kamienne ciosło, prymitywne narzędzie do wygładzania lub skrobania "
+"drewnianych przedmiotów."
 
 #. ~ Description of "stone axe"
 #: data/json/items/tool/woodworking.json
@@ -384,6 +461,8 @@ msgid ""
 "A stone with a narrow edge affixed to a stick.  It can chop wood, but "
 "requires much more effort than a modern axe."
 msgstr ""
+"Kamień z wąską krawędzią przymocowany do kija. Może rąbać drewno, ale wymaga "
+"znacznie więcej wysiłku niż nowoczesna siekiera."
 
 #. ~ Description of "wood saw"
 #: data/json/items/tool/woodworking.json
@@ -391,6 +470,8 @@ msgid ""
 "A thin saw, useful for cutting through wood objects.  Activate it to turn "
 "pre-cut logs into planks."
 msgstr ""
+"Cienka piła, przydatna do cięcia drewnianych przedmiotów. Aktywuj ją, aby "
+"zamienić przycięte kłody na deski."
 
 #. ~ Description of "stone chisel"
 #: data/json/items/tool/woodworking.json
@@ -398,6 +479,8 @@ msgid ""
 "A short, primitive chisel made from hard stone, usually used for primitive "
 "woodworking."
 msgstr ""
+"Krótkie, prymitywne dłuto z twardego kamienia, zwykle używane do prymitywnej "
+"obróbki drewna."
 
 #. ~ Description of "pallet of dry adobe bricks"
 #: data/json/items/tool/workshop.json
@@ -406,6 +489,8 @@ msgid ""
 "risking your life.  Disassemble it to retrieve your frame and building "
 "supplies."
 msgstr ""
+"Paleta skromnych cegieł z błota, które suszyły się przez tydzień, gdy ty "
+"ryzykowałeś życie. Zdemontuj ją, aby odzyskać ramę i materiały budowlane."
 
 #. ~ Description of "acetylene-gas machine"
 #: data/json/items/tool/workshop.json
@@ -413,6 +498,8 @@ msgid ""
 "A bulky device that turns water and calcium carbide into unpressurized "
 "acetylene."
 msgstr ""
+"Masywne urządzenie, które zamienia wodę i węglik wapnia w niesprężony "
+"acetylen."
 
 #. ~ Description of "angle grinder"
 #: data/json/items/tool/workshop.json
@@ -420,6 +507,8 @@ msgid ""
 "A widespread power tool, often used for removing excess material or polishing"
 " surfaces."
 msgstr ""
+"Popularne elektronarzędzie, często używane do usuwania nadmiaru materiału lub"
+" polerowania powierzchni."
 
 #. ~ Description of "cutoff disc"
 #: data/json/items/tool/workshop.json
@@ -427,6 +516,8 @@ msgid ""
 "A manufactured disc for an angle grinder, with a thin, abrasive edge designed"
 " for cutting metal."
 msgstr ""
+"Fabryczna tarcza do szlifierki kątowej z cienką, ścierną krawędzią "
+"przeznaczoną do cięcia metalu."
 
 #. ~ Description of "metal grinding disc"
 #: data/json/items/tool/workshop.json
@@ -434,6 +525,8 @@ msgid ""
 "A manufactured disc for an angle grinder, with a thick, abrasive surface "
 "designed for grinding and shaping metal."
 msgstr ""
+"Fabryczna tarcza do szlifierki kątowej z grubą, ścierną powierzchnią "
+"przeznaczoną do szlifowania i kształtowania metalu."
 
 #. ~ Description of "brick kiln"
 #: data/json/items/tool/workshop.json
@@ -441,6 +534,8 @@ msgid ""
 "A portable coal-or-charcoal-fired kiln.  It is designed for firing bricks, "
 "but you could use it to fire anything made of clay."
 msgstr ""
+"Przenośny piec opalany węglem kamiennym lub drzewnym. Jest przeznaczony do "
+"wypalania cegieł, ale można w nim wypalić wszystko, co zrobione jest z gliny."
 
 #. ~ Description of "makeshift vacuum mold"
 #: data/json/items/tool/workshop.json
@@ -448,6 +543,8 @@ msgid ""
 "A homemade vacuum-forming machine with an air pump.  It's used for creating "
 "plastic molds."
 msgstr ""
+"Domowej roboty maszyna do formowania próżniowego z pompką powietrza. Służy do"
+" tworzenia plastikowych form."
 
 #. ~ Description of "vacuum molder"
 #: data/json/items/tool/workshop.json
@@ -455,6 +552,8 @@ msgid ""
 "A vacuum-forming machine with an air pump.  It's used for creating plastic "
 "molds."
 msgstr ""
+"Maszyna do formowania próżniowego z pompką powietrza. Służy do tworzenia "
+"plastikowych form."
 
 #. ~ Description of "clamp"
 #: data/json/items/tool/workshop.json
@@ -462,6 +561,8 @@ msgid ""
 "A metal clamp, useful for holding things in place, especially if you have "
 "several of them."
 msgstr ""
+"Metalowy zacisk, przydatny do przytrzymywania rzeczy w miejscu, zwłaszcza gdy"
+" masz ich kilka."
 
 #. ~ Description of "claw bar"
 #: data/json/items/tool/workshop.json
@@ -470,6 +571,10 @@ msgid ""
 " to open locked doors without destroying them or to lift manhole covers.  You"
 " could also wield it to bash some heads in."
 msgstr ""
+"Małe narzędzie do podważania z rozwidlonym zagięciem na jednym końcu, "
+"służącym do wyciągania gwoździ. Użyj go, aby otworzyć zamknięte drzwi bez ich"
+" niszczenia lub podnieść pokrywę włazu. Możesz też wziąć je do ręki, by "
+"rozbić kilka głów."
 
 #. ~ Description of "concrete mixer"
 #: data/json/items/tool/workshop.json
@@ -477,20 +582,22 @@ msgid ""
 "A portable concrete mixer.  It is large and heavy, but it can be operated "
 "solo.  Unfold to use."
 msgstr ""
+"Przenośna betoniarka. Jest duża i ciężka, ale może ją obsługiwać jedna osoba."
+" Rozłóż, aby użyć."
 
 #. ~ Description of "cordless drill"
 #: data/json/items/tool/workshop.json
 msgid "A cordless battery-powered drill with a selection of drill bits."
-msgstr ""
+msgstr "Bezprzewodowa wiertarka zasilana akumulatorem, z zestawem wierteł."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "power drill"
 msgid_plural "power drills"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wiertarka przewodowa"
+msgstr[1] "wiertarki przewodowe"
+msgstr[2] "wiertarek przewodowych"
+msgstr[3] "wiertarki przewodowej"
 
 #. ~ Description of "power drill"
 #: data/json/items/tool/workshop.json
@@ -498,6 +605,8 @@ msgid ""
 "A black power drill with a selection of bits.  Uses a power cord, so it will "
 "have to be plugged into a power grid or vehicle to function."
 msgstr ""
+"Czarna wiertarka elektryczna z zestawem wierteł. Ma przewód zasilający, więc "
+"aby działała, musi być podłączona do sieci energetycznej lub pojazdu."
 
 #. ~ Description of "cordless impact wrench"
 #: data/json/items/tool/workshop.json
@@ -507,6 +616,11 @@ msgid ""
 "makes a loud ratcheting sound when it operates.  You could use it to turn "
 "large bolts or change a vehicle wheel."
 msgstr ""
+"Bezprzewodowy klucz udarowy zasilany akumulatorem, zaprojektowany do "
+"przekazywania dużego momentu obrotowego za pomocą wewnętrznego obrotowego "
+"młotka. Ma standardowy zestaw nasadek i podczas pracy wydaje głośny, "
+"terkoczący dźwięk. Możesz go użyć do odkręcania dużych śrub lub zmiany koła w"
+" pojeździe."
 
 #. ~ Description of "electric jackhammer"
 #: data/json/items/tool/workshop.json
@@ -515,11 +629,14 @@ msgid ""
 "runs on a cell compatible with a UPS.  Use it to blast a hole in adjacent "
 "solid terrain."
 msgstr ""
+"Narzędzie budowlane do kucia w twardej skale lub innych powierzchniach. "
+"Działa na ogniwie zgodnym z UPS. Użyj go, aby wybić dziurę w sąsiednim litym "
+"terenie."
 
 #. ~ Description of "hacksaw"
 #: data/json/items/tool/workshop.json
 msgid "A sturdy saw, useful for cutting through metal objects."
-msgstr ""
+msgstr "Solidna piła, przydatna do przecinania metalowych przedmiotów."
 
 #. ~ Description of "tin snips"
 #: data/json/items/tool/workshop.json
@@ -529,6 +646,10 @@ msgid ""
 "thick metals like a hacksaw can, but are better suited to precision work and "
 "leave a cleaner edge."
 msgstr ""
+"Nożyce do blachy, przypominające solidne nożyczki z masywnymi ostrzami, "
+"zaprojektowane do cięcia cienkich arkuszy miękkiego metalu. Nie przetną "
+"grubego metalu tak jak piła do metalu, ale lepiej nadają się do precyzyjnej "
+"pracy i zostawiają czystszą krawędź."
 
 #. ~ Description of "hammer"
 #: data/json/items/tool/workshop.json
@@ -537,15 +658,18 @@ msgid ""
 "and planks in your inventory, you could board up adjacent doors and windows."
 "  It has myriad other uses as well."
 msgstr ""
+"Odmagnesowany stalowy młotek ciesielski z drewnianą rękojeścią. Mając w "
+"ekwipunku młotek, gwoździe i deski, możesz zabić deskami sąsiednie drzwi i "
+"okna. Ma też mnóstwo innych zastosowań."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bronze hammer"
 msgid_plural "bronze hammers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "młotek z brązu"
+msgstr[1] "młotki z brązu"
+msgstr[2] "młotków z brązu"
+msgstr[3] "młotka z brązu"
 
 #. ~ Description of "bronze hammer"
 #: data/json/items/tool/workshop.json
@@ -553,15 +677,18 @@ msgid ""
 "A simple crude bronze hammer.  It is not as sophisticated or useful as its "
 "steel alternative but it does get the job of hammering in nails well enough."
 msgstr ""
+"Prosty, prymitywny młotek z brązu. Nie jest tak zaawansowany ani użyteczny "
+"jak jego stalowy odpowiednik, ale wystarczająco dobrze radzi sobie z "
+"wbijaniem gwoździ."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bronze nail puller"
 msgid_plural "bronze nail pullers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wyciągacz do gwoździ z brązu"
+msgstr[1] "wyciągacze do gwoździ z brązu"
+msgstr[2] "wyciągaczy do gwoździ z brązu"
+msgstr[3] "wyciągacza do gwoździ z brązu"
 
 #. ~ Description of "bronze nail puller"
 #: data/json/items/tool/workshop.json
@@ -569,15 +696,17 @@ msgid ""
 "A crude nail puller made of bronze.  Not really as good as its steel "
 "alternative but it gets job of pulling out nails good enough."
 msgstr ""
+"Prymitywny wyciągacz do gwoździ z brązu. Nie tak dobry jak jego stalowy "
+"odpowiednik, ale wystarczająco dobrze radzi sobie z wyciąganiem gwoździ."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bronze wood saw"
 msgid_plural "bronze wood saws"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "piła do drewna z brązu"
+msgstr[1] "piły do drewna z brązu"
+msgstr[2] "pił do drewna z brązu"
+msgstr[3] "piły do drewna z brązu"
 
 #. ~ Description of "bronze wood saw"
 #: data/json/items/tool/workshop.json
@@ -585,6 +714,8 @@ msgid ""
 "A simple wood saw made of bronze.  Not as great as its steel equivalent, but "
 "it's good enough."
 msgstr ""
+"Prosta piła do drewna z brązu. Nie tak świetna jak jej stalowy odpowiednik, "
+"ale wystarczająco dobra."
 
 #. ~ Description of "hand drill"
 #: data/json/items/tool/workshop.json
@@ -592,6 +723,8 @@ msgid ""
 "A primitive manual drill with a single drill bit.  It is slow to use, and "
 "will exhaust you quickly."
 msgstr ""
+"Prymitywna ręczna wiertarka z jednym wiertłem. Praca nią jest powolna i "
+"szybko cię wyczerpie."
 
 #. ~ Description of "rubber hose"
 #: data/json/items/tool/workshop.json
@@ -599,6 +732,8 @@ msgid ""
 "A flexible rubber hose.  It could be used for crafting or siphoning fuel from"
 " a vehicle."
 msgstr ""
+"Elastyczny gumowy wąż. Może posłużyć do wytwarzania lub do spuszczania paliwa"
+" z pojazdu."
 
 #. ~ Description of "makeshift jack"
 #: data/json/items/tool/workshop.json
@@ -606,6 +741,8 @@ msgid ""
 "A poorly-constructed improvised scissor jack used for lifting vehicles if "
 "you're brave enough to use it."
 msgstr ""
+"Słabo wykonany, improwizowany podnośnik nożycowy, służący do podnoszenia "
+"pojazdów, jeśli masz dość odwagi, by go użyć."
 
 #. ~ Description of "jackhammer"
 #: data/json/items/tool/workshop.json
@@ -614,6 +751,9 @@ msgid ""
 "runs on gasoline.  Use it (if loaded) to blast a hole in adjacent solid "
 "terrain."
 msgstr ""
+"Narzędzie budowlane do kucia w twardej skale lub innych powierzchniach. "
+"Działa na benzynę. Użyj go (jeśli jest zatankowany), aby wybić dziurę w "
+"sąsiednim litym terenie."
 
 #. ~ Description of "electric kiln"
 #: data/json/items/tool/workshop.json
@@ -623,6 +763,10 @@ msgid ""
 "mechanical know-how, you could probably even convert it to run directly off a"
 " vehicle's power system."
 msgstr ""
+"Elektryczny piec zasilany z twojej sieci elektrycznej. Jest przeznaczony do "
+"wypalania cegieł, ale można w nim wypalić wszystko, co zrobione jest z gliny."
+" Z odrobiną wiedzy mechanicznej można by go pewnie nawet przerobić tak, by "
+"działał bezpośrednio z instalacji elektrycznej pojazdu."
 
 #. ~ Description of "gunsmith repair kit"
 #: data/json/items/tool/workshop.json
@@ -631,6 +775,9 @@ msgid ""
 "batteries, it is a vital tool for long-term firearms maintenance.  It "
 "requires 1 charge of battery power per use."
 msgstr ""
+"Kompletny zestaw narzędzi do naprawy uszkodzonej broni palnej. Zasilany "
+"standardowymi bateriami, jest niezbędnym narzędziem do długotrwałej "
+"konserwacji broni palnej. Wymaga 1 jednostki ładunku baterii na użycie."
 
 #. ~ Description of "makeshift hammer"
 #: data/json/items/tool/workshop.json
@@ -638,15 +785,17 @@ msgid ""
 "A crude hammer made from a piece of metal affixed to a stick.  It functions "
 "adequately, but really can't compare to a proper hammer."
 msgstr ""
+"Prymitywny młotek wykonany z kawałka metalu przymocowanego do kija. Działa "
+"wystarczająco, ale naprawdę nie może się równać z porządnym młotkiem."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bronze fileset"
 msgid_plural "bronze filesets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw pilników z brązu"
+msgstr[1] "zestawy pilników z brązu"
+msgstr[2] "zestawów pilników z brązu"
+msgstr[3] "zestawu pilników z brązu"
 
 #. ~ Description of "metal fileset"
 #: data/json/items/tool/workshop.json
@@ -654,6 +803,8 @@ msgid ""
 "A set of tools commonly used to remove small amounts of material from the "
 "surface of metal objects."
 msgstr ""
+"Zestaw narzędzi powszechnie używanych do usuwania niewielkich ilości "
+"materiału z powierzchni metalowych przedmiotów."
 
 #. ~ Description of "metallic smoother"
 #: data/json/items/tool/workshop.json
@@ -661,15 +812,17 @@ msgid ""
 "A tool that is most often used to smooth concrete or mortar in construction "
 "projects."
 msgstr ""
+"Narzędzie najczęściej używane do wygładzania betonu lub zaprawy w pracach "
+"budowlanych."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "miscellaneous repair kit"
 msgid_plural "miscellaneous repair kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "uniwersalny zestaw naprawczy"
+msgstr[1] "uniwersalne zestawy naprawcze"
+msgstr[2] "uniwersalnych zestawów naprawczych"
+msgstr[3] "uniwersalnego zestawu naprawczego"
 
 #. ~ Description of "miscellaneous repair kit"
 #: data/json/items/tool/workshop.json
@@ -679,15 +832,19 @@ msgid ""
 "cutting, and a patch of soft material for cleaning surfaces.  If supplied "
 "with duct tape, it can be used to repair certain items."
 msgstr ""
+"Przenośny zestaw narzędzi składający się z małego nożyka do precyzyjnego "
+"wycinania części zamiennych z surowców, piły do drewna do cięższych prac oraz"
+" kawałka miękkiego materiału do czyszczenia powierzchni. Jeśli zostanie "
+"zaopatrzony w taśmę klejącą, może posłużyć do naprawy niektórych przedmiotów."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "camping multitool"
 msgid_plural "camping multitools"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kempingowe narzędzie wielofunkcyjne"
+msgstr[1] "kempingowe narzędzia wielofunkcyjne"
+msgstr[2] "kempingowych narzędzi wielofunkcyjnych"
+msgstr[3] "kempingowego narzędzia wielofunkcyjnego"
 
 #. ~ Description of "camping multitool"
 #: data/json/items/tool/workshop.json
@@ -695,6 +852,9 @@ msgid ""
 "A 'Hideman' brand multi-tool.  This model includes extra options for outdoors"
 " use such as a firestarting rod, awl, rescue whistle and a hammering surface."
 msgstr ""
+"Narzędzie wielofunkcyjne marki „Hideman”. Ten model ma dodatkowe opcje do "
+"użytku na zewnątrz, takie jak krzesiwo, szydło, gwizdek ratunkowy i "
+"powierzchnia do wbijania."
 
 #. ~ Description of "acetylene torch"
 #: data/json/items/tool/workshop.json
@@ -705,6 +865,11 @@ msgid ""
 " appropriate welding gas before use.  In addition to its metalworking uses, "
 "you can activate it in order to destroy metal barriers."
 msgstr ""
+"Kompaktowy zestaw narzędzi do spawania i cięcia metalu; ten przenośny palnik "
+"tlenowo-acetylenowy zawiera uchwyt palnika i nasadkę tnącą w łatwej do "
+"noszenia torbie. Przed użyciem musi zostać podłączony do butli ze sprężonym "
+"odpowiednim gazem spawalniczym. Oprócz zastosowań w obróbce metalu możesz go "
+"aktywować, aby niszczyć metalowe bariery."
 
 #. ~ Description of "pickaxe"
 #: data/json/items/tool/workshop.json
@@ -712,15 +877,17 @@ msgid ""
 "A large steel pickaxe, suitable for breaking up hard things or (with enough "
 "skill) hard targets.  Strike the earth!"
 msgstr ""
+"Duży stalowy kilof, odpowiedni do rozbijania twardych rzeczy lub (przy "
+"wystarczających umiejętnościach) twardych celów. Uderz w ziemię!"
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bronze pickaxe"
 msgid_plural "bronze pickaxes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kilof z brązu"
+msgstr[1] "kilofy z brązu"
+msgstr[2] "kilofów z brązu"
+msgstr[3] "kilofa z brązu"
 
 #. ~ Description of "bronze pickaxe"
 #: data/json/items/tool/workshop.json
@@ -729,6 +896,9 @@ msgid ""
 "breaking stone and a flat wedge on the other for prying it out.  You could "
 "mine with this."
 msgstr ""
+"Narzędzie z ciężkim, odlewanym i kutym obuchem, z ostrym klinem z jednej "
+"strony do rozbijania kamienia i płaskim klinem z drugiej do jego wyważania. "
+"Można by nim wydobywać kamień."
 
 #. ~ Description of "pliers"
 #: data/json/items/tool/workshop.json
@@ -736,6 +906,8 @@ msgid ""
 "A basic pair of slip-joint pliers, able to handle basic mechanical work.  "
 "Anything more complex will require a wrench."
 msgstr ""
+"Podstawowe szczypce nastawne, zdolne do prostych prac mechanicznych. Do "
+"czegokolwiek bardziej złożonego potrzebny będzie klucz."
 
 #. ~ Description of "tongue-and-groove pliers"
 #: data/json/items/tool/workshop.json
@@ -743,6 +915,8 @@ msgid ""
 "A large pair of slip-joint pliers bent at the elbow, able to handle basic "
 "mechanical work.  Anything more complex will require a wrench."
 msgstr ""
+"Duże szczypce nastawne zagięte w połowie, zdolne do prostych prac "
+"mechanicznych. Do czegokolwiek bardziej złożonego potrzebny będzie klucz."
 
 #. ~ Description of "locking pliers"
 #: data/json/items/tool/workshop.json
@@ -752,6 +926,10 @@ msgid ""
 "  They could grip and turn a fairly large bolt head, or clamp two parts "
 "together temporarily."
 msgstr ""
+"Szczypce o wyjątkowo masywnych szczękach i regulowanym mechanizmie, który "
+"zaciska je w zablokowanym chwycie na każdym nieszczęsnym przedmiocie, który "
+"znajdzie się między nimi. Mogą chwycić i obrócić dość duży łeb śruby lub "
+"tymczasowo ścisnąć ze sobą dwie części."
 
 #. ~ Description of "electric polisher"
 #: data/json/items/tool/workshop.json
@@ -759,6 +937,8 @@ msgid ""
 "An electric polisher, used to buff metal surfaces until they are reflective "
 "like a mirror."
 msgstr ""
+"Elektryczna polerka, używana do polerowania metalowych powierzchni, aż będą "
+"odbijać światło jak lustro."
 
 #. ~ Description of "stone hammer"
 #: data/json/items/tool/workshop.json
@@ -767,6 +947,9 @@ msgid ""
 "adequately, but really can't compare to a proper hammer, and can't pull out "
 "nails either."
 msgstr ""
+"Kamień przymocowany do kija na kształt prymitywnej imitacji młotka. Działa "
+"wystarczająco, ale naprawdę nie może się równać z porządnym młotkiem i nie da"
+" się nim też wyciągać gwoździ."
 
 #. ~ Description of "reciprocating saw"
 #: data/json/items/tool/workshop.json
@@ -776,6 +959,11 @@ msgid ""
 " cut wood or metal.  It is useful for heavy demolition and construction work,"
 " but poorly suited to precision tasks."
 msgstr ""
+"Narzędzie zasilane akumulatorem, powszechnie znane pod zgeneryzowaną nazwą "
+"handlową Sawzall, które za pomocą silnika elektrycznego porusza prostym "
+"brzeszczotem w przód i w tył, by szybko ciąć drewno lub metal. Przydaje się "
+"przy ciężkich pracach rozbiórkowych i budowlanych, ale słabo nadaje się do "
+"zadań precyzyjnych."
 
 #. ~ Description of "Hub 01 HWP maintenance kit"
 #: data/json/items/tool/workshop.json
@@ -784,6 +972,8 @@ msgid ""
 " adapters, and proprietary tools.  Embossed on the inside is a sketch of the "
 "Hybrid Weapons Platform."
 msgstr ""
+"Wytrzymała torba z logo Hub 01. Ma miejsce na lufy, adaptery i firmowe "
+"narzędzia. Od wewnątrz wytłoczono szkic Hybrydowej Platformy Broni."
 
 #. ~ Description of "screwdriver"
 #: data/json/items/tool/workshop.json
@@ -791,6 +981,9 @@ msgid ""
 "A Philips-head screwdriver.  It is important for almost all electronics "
 "crafting, most mechanics crafting, and has many more uses."
 msgstr ""
+"Śrubokręt krzyżakowy typu Philips. Jest ważny przy niemal każdym wytwarzaniu "
+"elektroniki i większości wytwarzania mechanicznego, a do tego ma wiele innych"
+" zastosowań."
 
 #. ~ Description of "screwdriver set"
 #: data/json/items/tool/workshop.json
@@ -798,6 +991,8 @@ msgid ""
 "A set of screwdrivers in several sizes and blade types.  Guaranteed to have "
 "the right tools for more precise work."
 msgstr ""
+"Zestaw śrubokrętów w kilku rozmiarach i z różnymi typami końcówek. Gwarantuje"
+" odpowiednie narzędzia do bardziej precyzyjnej pracy."
 
 #. ~ Description of "socket screwdriver set"
 #: data/json/items/tool/workshop.json
@@ -805,6 +1000,8 @@ msgid ""
 "A ratcheting screwdriver with a collection of hex sockets for turning small "
 "bolts or nuts, including a couple standard screwdriver bits."
 msgstr ""
+"Śrubokręt z grzechotką z zestawem nasadek sześciokątnych do odkręcania małych"
+" śrub lub nakrętek, wraz z kilkoma standardowymi końcówkami śrubokrętowymi."
 
 #. ~ Description of "socket wrench set"
 #: data/json/items/tool/workshop.json
@@ -813,6 +1010,9 @@ msgid ""
 "in common hex bolt sizes.  You could loosen or tighten fairly large bolts "
 "with this, and the ratchet makes a satisfying clicking sound."
 msgstr ""
+"Klucz grzechotkowy z grubą rękojeścią i zestawem wymiennych nasadek w "
+"popularnych rozmiarach śrub sześciokątnych. Możesz nim odkręcać lub dokręcać "
+"dość duże śruby, a grzechotka wydaje satysfakcjonujący klikający dźwięk."
 
 #. ~ Description of "firearm repair kit"
 #: data/json/items/tool/workshop.json
@@ -821,6 +1021,9 @@ msgid ""
 "batteries, it is a vital tool for long-term firearms maintenance.  It "
 "requires one charge of battery power per use."
 msgstr ""
+"Przenośny zestaw narzędzi do naprawy uszkodzonej broni palnej. Zasilany "
+"standardowymi bateriami, jest niezbędnym narzędziem do długotrwałej "
+"konserwacji broni palnej. Wymaga jednej jednostki ładunku baterii na użycie."
 
 #. ~ Description of "soldering iron"
 #: data/json/items/tool/workshop.json
@@ -829,15 +1032,18 @@ msgid ""
 "advanced electronics crafting.  Has a short cable that you can plug to your "
 "grid."
 msgstr ""
+"Urządzenie z metalowym grotem, który może się bardzo nagrzać. Jest niezbędne "
+"do zaawansowanego wytwarzania elektroniki. Ma krótki przewód, który możesz "
+"podłączyć do swojej sieci."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "portable soldering iron"
 msgid_plural "portable soldering irons"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przenośna lutownica"
+msgstr[1] "przenośne lutownice"
+msgstr[2] "przenośnych lutownic"
+msgstr[3] "przenośnej lutownicy"
 
 #. ~ Description of "portable soldering iron"
 #: data/json/items/tool/workshop.json
@@ -846,6 +1052,9 @@ msgid ""
 "advanced electronics crafting.  This one is a portable version, and contains "
 "a slot for a battery."
 msgstr ""
+"Urządzenie z metalowym grotem, który może się bardzo nagrzać. Jest niezbędne "
+"do zaawansowanego wytwarzania elektroniki. To wersja przenośna z gniazdem na "
+"baterię."
 
 #. ~ Description of "toolbox"
 #: data/json/items/tool/workshop.json
@@ -853,6 +1062,8 @@ msgid ""
 "A stout metal box for holding tools.  It has a handle on the top and a latch "
 "on the front."
 msgstr ""
+"Solidna metalowa skrzynka do przechowywania narzędzi. Ma uchwyt na górze i "
+"zatrzask z przodu."
 
 #. ~ Description of "workshop toolbox"
 #: data/json/items/tool/workshop.json
@@ -860,6 +1071,9 @@ msgid ""
 "A stout metal box for holding tools.  It is much bigger than a regular "
 "toolbox, and can be used to store more tools as a result."
 msgstr ""
+"Solidna metalowa skrzynka do przechowywania narzędzi. Jest znacznie większa "
+"od zwykłej skrzynki narzędziowej, dzięki czemu można w niej przechowywać "
+"więcej narzędzi."
 
 #. ~ Description of "arc welder"
 #: data/json/items/tool/workshop.json
@@ -867,6 +1081,8 @@ msgid ""
 "A cable-powered tool for welding metal pieces together using an electric arc."
 "  It is an indispensable tool for construction or repair."
 msgstr ""
+"Zasilane przewodowo narzędzie do łączenia metalowych elementów za pomocą łuku"
+" elektrycznego. Jest niezastąpione przy budowie i naprawach."
 
 #. ~ Description of "makeshift arc welder"
 #: data/json/items/tool/workshop.json
@@ -876,15 +1092,19 @@ msgid ""
 "While it's not as efficient as a factory-made welder, it will serve in a "
 "pinch."
 msgstr ""
+"Prymitywna spawarka łukowa sklecona z kilku małych transformatorów, kawałka "
+"drutu, improwizowanego uchwytu elektrody i całkowitego lekceważenia własnego "
+"bezpieczeństwa. Choć nie jest tak wydajna jak fabryczna spawarka, w razie "
+"potrzeby się sprawdzi."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "high-temperature welding kit"
 msgid_plural "high-temperature welding kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw do spawania wysokotemperaturowego"
+msgstr[1] "zestawy do spawania wysokotemperaturowego"
+msgstr[2] "zestawów do spawania wysokotemperaturowego"
+msgstr[3] "zestawu do spawania wysokotemperaturowego"
 
 #. ~ Description of "high-temperature welding kit"
 #: data/json/items/tool/workshop.json
@@ -892,6 +1112,8 @@ msgid ""
 "A welder combined with a fireproof insulating blanket allows for advanced "
 "welds and repairs to tempered steels."
 msgstr ""
+"Spawarka w połączeniu z ognioodpornym kocem izolacyjnym pozwala na "
+"zaawansowane spawanie i naprawy stali hartowanej."
 
 #. ~ Description of "wooden smoother"
 #: data/json/items/tool/workshop.json
@@ -899,6 +1121,8 @@ msgid ""
 "A large makeshift tool used in smoothing concrete or mortar in construction "
 "projects.  You could also use it as an improvised head-basher."
 msgstr ""
+"Duże prowizoryczne narzędzie używane do wygładzania betonu lub zaprawy w "
+"pracach budowlanych. Możesz go też użyć jako improwizowanego rozbijacza głów."
 
 #. ~ Description of "X-Acto knife"
 #: data/json/items/tool/workshop.json
@@ -908,6 +1132,9 @@ msgid ""
 "with.  Its small, sharp blade allows for precision strikes in the hands of "
 "the skilled."
 msgstr ""
+"Mały, ostry nóż przeznaczony do precyzyjnego cięcia tkanin lub w rękodziele. "
+"Może zadać przyzwoite obrażenia, ale trudno nim solidnie trafić. Jego małe, "
+"ostre ostrze pozwala wprawnym rękom na precyzyjne ciosy."
 
 #. ~ Description of "small adjustable wrench"
 #: data/json/items/tool/workshop.json
@@ -916,13 +1143,15 @@ msgid ""
 "palm of your hand.  It could be used for turning small hex-head nuts or "
 "bolts."
 msgstr ""
+"Kompaktowy klucz nastawny z krótką rękojeścią, która mieści się w dłoni. "
+"Można go użyć do odkręcania małych nakrętek lub śrub z łbem sześciokątnym."
 
 #. ~ Description of "adjustable wrench"
 #: data/json/items/tool/workshop.json
 msgid ""
 "An adjustable crescent wrench.  It is used in many mechanics crafting "
 "recipes."
-msgstr ""
+msgstr "Klucz nastawny. Jest używany w wielu przepisach mechanicznych."
 
 #. ~ Description of "large adjustable wrench"
 #: data/json/items/tool/workshop.json
@@ -931,15 +1160,18 @@ msgid ""
 "that widen over two inches.  This could easily turn most bolts, and should "
 "even work on wheel lug nuts."
 msgstr ""
+"Niezwykle duży klucz nastawny z długą rękojeścią i szczękami rozwierającymi "
+"się na ponad dwa cale. Z łatwością obróci większość śrub i powinien poradzić "
+"sobie nawet z nakrętkami kół."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "heavy-duty pipe wrench"
 msgid_plural "heavy-duty pipe wrenches"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ciężki klucz do rur"
+msgstr[1] "ciężkie klucze do rur"
+msgstr[2] "ciężkich kluczy do rur"
+msgstr[3] "ciężkiego klucza do rur"
 
 #. ~ Description of "heavy-duty pipe wrench"
 #: data/json/items/tool/workshop.json
@@ -948,6 +1180,9 @@ msgid ""
 "public utilities.  It's much larger and heavier than you have any practical "
 "use for."
 msgstr ""
+"48-calowy klucz do rur, zwykle używany na polach naftowych i przy konserwacji"
+" sieci komunalnych. Jest znacznie większy i cięższy, niż do czegokolwiek "
+"praktycznie byś go potrzebował."
 
 #. ~ Description of "leather hose"
 #: data/json/items/tool/workshop.json
@@ -955,6 +1190,8 @@ msgid ""
 "A hose made of leather.  Watertight and flexible, it can be used to siphon "
 "fuel from a vehicle tank.  However, it's not as elastic as a rubber hose."
 msgstr ""
+"Wąż wykonany ze skóry. Wodoszczelny i giętki, może posłużyć do spuszczania "
+"paliwa z baku pojazdu. Nie jest jednak tak elastyczny jak gumowy wąż."
 
 #. ~ Description of "makeshift hand drill"
 #: data/json/items/tool/workshop.json
@@ -962,6 +1199,8 @@ msgid ""
 "A makeshift manual drill made with a pipe and an improvised drill bit.  Using"
 " it is very slow, and will exhaust you quickly."
 msgstr ""
+"Prowizoryczna ręczna wiertarka zrobiona z rury i improwizowanego wiertła. "
+"Praca nią jest bardzo powolna i szybko cię wyczerpie."
 
 #. ~ Description of "propane torch"
 #: data/json/items/tool/workshop.json
@@ -970,15 +1209,18 @@ msgid ""
 "includes a torch handle and accessories in an easy-to-carry tote.  It needs "
 "to be connected to a pressurized propane cylinder before use."
 msgstr ""
+"Kompaktowy zestaw narzędzi do podgrzewania metalu; ten przenośny palnik "
+"propanowy zawiera uchwyt palnika i akcesoria w łatwej do noszenia torbie. "
+"Przed użyciem musi zostać podłączony do butli ze sprężonym propanem."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "block and tackle"
 msgid_plural "blocks and tackles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wielokrążek"
+msgstr[1] "wielokrążki"
+msgstr[2] "wielokrążków"
+msgstr[3] "wielokrążka"
 
 #. ~ Description of "block and tackle"
 #: data/json/items/tool/workshop.json
@@ -986,15 +1228,17 @@ msgid ""
 "A sturdy metal housing with a number of pulleys that can be used with a thick"
 " rope or a chain to gain mechanical advantage on a lift."
 msgstr ""
+"Solidna metalowa obudowa z kilkoma krążkami, której można użyć z grubą liną "
+"lub łańcuchem, by uzyskać przewagę mechaniczną przy podnoszeniu."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "wooden block and tackle"
 msgid_plural "wooden blocks and tackles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "drewniany wielokrążek"
+msgstr[1] "drewniane wielokrążki"
+msgstr[2] "drewnianych wielokrążków"
+msgstr[3] "drewnianego wielokrążka"
 
 #. ~ Description of "wooden block and tackle"
 #: data/json/items/tool/workshop.json
@@ -1003,15 +1247,18 @@ msgid ""
 " a chain to gain mechanical advantage on a lift.  Not as durable as a metal "
 "set."
 msgstr ""
+"Drewniana obudowa z parą krążków, której można użyć z grubą liną lub "
+"łańcuchem, by uzyskać przewagę mechaniczną przy podnoszeniu. Nie tak "
+"wytrzymała jak zestaw metalowy."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "welding blanket"
 msgid_plural "welding blankets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "koc spawalniczy"
+msgstr[1] "koce spawalnicze"
+msgstr[2] "koców spawalniczych"
+msgstr[3] "koca spawalniczego"
 
 #. ~ Description of "welding blanket"
 #: data/json/items/tool/workshop.json
@@ -1020,15 +1267,18 @@ msgid ""
 "insulate a weld when repairing tempered metal.  This one is made with "
 "asbestos."
 msgstr ""
+"Niepalna mata służąca do ochrony powierzchni przed odpryskami spawalniczymi "
+"lub do izolowania spoiny podczas naprawy metalu hartowanego. Ta jest wykonana"
+" z azbestu."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "makeshift welding blanket"
 msgid_plural "makeshift welding blankets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczny koc spawalniczy"
+msgstr[1] "prowizoryczne koce spawalnicze"
+msgstr[2] "prowizorycznych koców spawalniczych"
+msgstr[3] "prowizorycznego koca spawalniczego"
 
 #. ~ Description of "makeshift welding blanket"
 #: data/json/items/tool/workshop.json
@@ -1037,15 +1287,18 @@ msgid ""
 "splatter or to insulate a weld when repairing tempered metal.  This one is "
 "stitched together from oven insulation batts."
 msgstr ""
+"Prowizoryczna, w większości niepalna mata służąca do ochrony powierzchni "
+"przed odpryskami spawalniczymi lub do izolowania spoiny podczas naprawy "
+"metalu hartowanego. Ta jest zszyta z mat izolacyjnych z piekarnika."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "thread cutting set"
 msgid_plural "thread cutting sets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw do gwintowania"
+msgstr[1] "zestawy do gwintowania"
+msgstr[2] "zestawów do gwintowania"
+msgstr[3] "zestawu do gwintowania"
 
 #. ~ Description of "thread cutting set"
 #: data/json/items/tool/workshop.json
@@ -1053,15 +1306,17 @@ msgid ""
 "This is a set of a external thread cutting die inserted into a manual grip "
 "and an internal thread cutting die used as a drill bit."
 msgstr ""
+"To zestaw złożony z narzynki do gwintów zewnętrznych osadzonej w ręcznym "
+"uchwycie oraz gwintownika do gwintów wewnętrznych używanego jak wiertło."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "fanning mill"
 msgid_plural "fanning mills"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wialnia"
+msgstr[1] "wialnie"
+msgstr[2] "wialni"
+msgstr[3] "wialni"
 
 #. ~ Description of "fanning mill"
 #: data/json/items/tool/workshop.json
@@ -1070,15 +1325,18 @@ msgid ""
 "process, in which the grain was separated from the lighter chaff and straw by"
 " blowing a leather bellows."
 msgstr ""
+"Maszyna do oddzielania ziarna od plew. Zmechanizowała przewiewanie, w którym "
+"ziarno oddzielano od lżejszych plew i słomy strumieniem powietrza ze "
+"skórzanego miecha."
 
 #. ~ Item name
 #: data/json/items/tool/workshop.json
 msgid "bench vise"
 msgid_plural "bench vises"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "imadło stołowe"
+msgstr[1] "imadła stołowe"
+msgstr[2] "imadeł stołowych"
+msgstr[3] "imadła stołowego"
 
 #. ~ Description of "bench vise"
 #: data/json/items/tool/workshop.json
@@ -1089,6 +1347,11 @@ msgid ""
 "Also has a small, flat metal surface, useful for light metalworking if "
 "needed."
 msgstr ""
+"Ciężkie, metalowe imadło przykręcone do blatu roboczego. Dzięki szczękom i "
+"śrubie może mocno trzymać przedmioty, co przydaje się przy wielu pracach "
+"ręcznych, takich jak lutowanie, obróbka drewna, spawanie i wszystko, czemu "
+"pomaga pewny chwyt. Ma też małą, płaską metalową powierzchnię, przydatną w "
+"razie potrzeby do lekkiej obróbki metalu."
 
 #. ~ Description of "Exodii kiln"
 #: data/json/items/tool/workshop.json
@@ -1099,6 +1362,11 @@ msgid ""
 "the Exodii's ceramic, but you could use it to fire anything made of clay.  A "
 "large and power-hungry appliance."
 msgstr ""
+"Elektryczny piec zasilany z twojej sieci elektrycznej. Nieco większy od "
+"lodówki, ten piec produkcji Exodii jest wystarczająco duży, by naprawiać "
+"ceramiczne płyty, których używają jako pancerza. Jest przeznaczony do "
+"wypalania płyt z ceramiki Exodii, ale można w nim wypalić wszystko, co "
+"zrobione jest z gliny. Duże i energochłonne urządzenie."
 
 #. ~ Description of "motorbike alternator"
 #: data/json/items/vehicle/alternator.json
@@ -1106,6 +1374,8 @@ msgid ""
 "A compact, lightweight alternator used to power small vehicle electrical "
 "systems."
 msgstr ""
+"Kompaktowy, lekki alternator używany do zasilania instalacji elektrycznych "
+"małych pojazdów."
 
 #. ~ Description of "yoke and harness"
 #: data/json/items/vehicle/animals.json
@@ -1113,6 +1383,8 @@ msgid ""
 "A bar and harness to attach a sufficiently large creature to a wheeled "
 "vehicle, allowing them to pull it along."
 msgstr ""
+"Drążek i uprząż do przyczepienia odpowiednio dużego stworzenia do pojazdu "
+"kołowego, dzięki czemu może go ciągnąć."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -1120,10 +1392,10 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "reinforced yoke and harness"
 msgid_plural "reinforced yokes and harnesses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wzmocnione jarzmo i uprząż"
+msgstr[1] "wzmocnione jarzma i uprzęże"
+msgstr[2] "wzmocnionych jarzm i uprzęży"
+msgstr[3] "wzmocnionego jarzma i uprzęży"
 
 #. ~ Description of "reinforced yoke and harness"
 #: data/json/items/vehicle/animals.json
@@ -1133,6 +1405,10 @@ msgid ""
 "rigors of the apocalypse and ill-advised off-roading.  You would still need "
 "separate armor for said creature to wear."
 msgstr ""
+"Ciężkie stalowe belki i uprząż do przyczepienia odpowiednio dużego stworzenia"
+" do pojazdu kołowego, dzięki czemu może go ciągnąć, wzmocnione, by wytrzymać "
+"trudy apokalipsy i nierozważnej jazdy terenowej. Nadal potrzebny jest osobny "
+"pancerz dla samego stworzenia."
 
 #. ~ Description of "rebar grate"
 #: data/json/items/vehicle/armor.json
@@ -1140,6 +1416,8 @@ msgid ""
 "Several interlocked rods of rebar serving as makeshift armor, allowing for "
 "light and effective reinforcement of vehicle sections."
 msgstr ""
+"Kilka połączonych ze sobą prętów zbrojeniowych, służących jako prowizoryczny "
+"pancerz, który pozwala lekko i skutecznie wzmocnić sekcje pojazdu."
 
 #. ~ Description of "shock absorber"
 #: data/json/items/vehicle/armor.json
@@ -1148,6 +1426,9 @@ msgid ""
 "section of a vehicle from the shock of impacts.  The springs can absorb a "
 "surprising amount of damage."
 msgstr ""
+"Prowizoryczne połączenie sprężyn i złomu, które chroni określoną sekcję "
+"pojazdu przed wstrząsami uderzeń. Sprężyny mogą pochłonąć zaskakująco dużo "
+"obrażeń."
 
 #. ~ Description of magazine "car battery"
 #. ~ Description of "car battery"
@@ -1156,6 +1437,9 @@ msgid ""
 "A 12 V lead-acid battery used to power car electrical systems.  Can also be "
 "plugged into a static power grid."
 msgstr ""
+"Akumulator kwasowo-ołowiowy 12 V używany do zasilania instalacji "
+"elektrycznych samochodów. Można go też podłączyć do stacjonarnej sieci "
+"energetycznej."
 
 #. ~ Description of magazine "motorbike battery"
 #. ~ Description of "motorbike battery"
@@ -1163,6 +1447,8 @@ msgstr ""
 msgid ""
 "A 12 V lead-acid battery used to power smaller vehicles' electrical systems."
 msgstr ""
+"Akumulator kwasowo-ołowiowy 12 V używany do zasilania instalacji "
+"elektrycznych mniejszych pojazdów."
 
 #. ~ Description of magazine "small motorbike battery"
 #. ~ Description of "small motorbike battery"
@@ -1171,6 +1457,8 @@ msgid ""
 "A miniature 12 V lead-acid battery used to power smaller vehicles' electrical"
 " systems."
 msgstr ""
+"Miniaturowy akumulator kwasowo-ołowiowy 12 V używany do zasilania instalacji "
+"elektrycznych mniejszych pojazdów."
 
 #. ~ Description of "storage battery case"
 #: data/json/items/vehicle/battery.json
@@ -1178,6 +1466,8 @@ msgid ""
 "An empty case that can hold a storage battery, complete with a charging "
 "controller chip and connecting wires."
 msgstr ""
+"Pusta oprawa, która może pomieścić akumulator, wyposażona w układ sterujący "
+"ładowaniem i przewody połączeniowe."
 
 #. ~ Description of "tool battery mount"
 #: data/json/items/vehicle/battery.json
@@ -1186,6 +1476,10 @@ msgid ""
 "tools to a vehicular power grid.  It has a power converter, a charging "
 "controller chip, connecting wires, and a harness for securing a battery."
 msgstr ""
+"Pusty uchwyt, który pozwala podłączyć zwykłe akumulatory używane w większości"
+" narzędzi ręcznych do sieci energetycznej pojazdu. Ma przetwornicę, układ "
+"sterujący ładowaniem, przewody połączeniowe i uprząż do zabezpieczenia "
+"akumulatora."
 
 #. ~ Description of magazine "very large storage battery"
 #. ~ Description of "very large storage battery"
@@ -1196,6 +1490,10 @@ msgid ""
 "removal from a vehicle, or just welded straight in.  Can also be plugged into"
 " a static power grid."
 msgstr ""
+"Ogromny akumulator zawierający wiele ogniw litowo-jonowych. Przechowuje "
+"olbrzymią ilość energii. Można go zainstalować w oprawie akumulatora, by "
+"łatwo wyjmować go z pojazdu, lub po prostu przyspawać na stałe. Można go też "
+"podłączyć do stacjonarnej sieci energetycznej."
 
 #. ~ Description of magazine "medium storage battery"
 #. ~ Description of "medium storage battery"
@@ -1204,6 +1502,8 @@ msgid ""
 "A medium storage battery containing multiple lithium-ion cells.  Can be "
 "plugged into a static power grid."
 msgstr ""
+"Średni akumulator zawierający kilka ogniw litowo-jonowych. Można go podłączyć"
+" do stacjonarnej sieci energetycznej."
 
 #. ~ Description of magazine "small storage battery"
 #. ~ Description of "small storage battery"
@@ -1212,6 +1512,9 @@ msgid ""
 "A small storage battery created with pre-Cataclysm lithium-ion technology.  "
 "Useful for crafting.  Can be plugged into a static power grid."
 msgstr ""
+"Mały akumulator wykonany w technologii litowo-jonowej sprzed Kataklizmu. "
+"Przydatny do wytwarzania. Można go podłączyć do stacjonarnej sieci "
+"energetycznej."
 
 #. ~ Description of "wood boat hull"
 #: data/json/items/vehicle/boat.json
@@ -1219,6 +1522,9 @@ msgid ""
 "A wooden board that keeps the boat afloat.  Add boat hulls to a vehicle until"
 " it floats, then attach oars or a motor to get the boat to move."
 msgstr ""
+"Drewniana deska utrzymująca łódź na wodzie. Dodawaj kadłuby łodzi do pojazdu,"
+" aż będzie się unosił na wodzie, a następnie zamontuj wiosła lub silnik, by "
+"łódź mogła się poruszać."
 
 #. ~ Description of "raft boat hull"
 #: data/json/items/vehicle/boat.json
@@ -1226,6 +1532,9 @@ msgid ""
 "Logs tied together to make a vehicle float.  Add boat hulls to a vehicle "
 "until it floats, then attach oars or a motor to get the boat to move."
 msgstr ""
+"Kłody powiązane razem, aby pojazd unosił się na wodzie. Dodawaj kadłuby łodzi"
+" do pojazdu, aż będzie się unosił na wodzie, a następnie zamontuj wiosła lub "
+"silnik, by łódź mogła się poruszać."
 
 #. ~ Description of "plastic boat hull"
 #: data/json/items/vehicle/boat.json
@@ -1233,6 +1542,9 @@ msgid ""
 "A rigid plastic sheet that keeps the boat afloat.  Add boat hulls to a "
 "vehicle until it floats, then attach oars or a motor to get the boat to move."
 msgstr ""
+"Sztywny plastikowy arkusz utrzymujący łódź na wodzie. Dodawaj kadłuby łodzi "
+"do pojazdu, aż będzie się unosił na wodzie, a następnie zamontuj wiosła lub "
+"silnik, by łódź mogła się poruszać."
 
 #. ~ Description of "carbon fiber boat hull"
 #: data/json/items/vehicle/boat.json
@@ -1240,26 +1552,29 @@ msgid ""
 "A rigid carbon fiber sheet that keeps the boat afloat.  Add boat hulls to a "
 "vehicle until it floats, then attach oars or a motor to get the boat to move."
 msgstr ""
+"Sztywny arkusz z włókna węglowego utrzymujący łódź na wodzie. Dodawaj kadłuby"
+" łodzi do pojazdu, aż będzie się unosił na wodzie, a następnie zamontuj "
+"wiosła lub silnik, by łódź mogła się poruszać."
 
 #. ~ Description of "oars"
 #: data/json/items/vehicle/boat.json
 msgid "A pair of oars for a boat."
-msgstr ""
+msgstr "Para wioseł do łodzi."
 
 #. ~ Description of "sail"
 #: data/json/items/vehicle/boat.json
 msgid "A sail for a boat."
-msgstr ""
+msgstr "Żagiel do łodzi."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/boat.json data/json/vehicleparts/vehicle_parts.json
 msgid "aluminum boat hull"
 msgid_plural "aluminum boat hulls"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aluminiowy kadłub łodzi"
+msgstr[1] "aluminiowe kadłuby łodzi"
+msgstr[2] "aluminiowych kadłubów łodzi"
+msgstr[3] "aluminiowego kadłuba łodzi"
 
 #. ~ Description of "aluminum boat hull"
 #: data/json/items/vehicle/boat.json
@@ -1267,6 +1582,9 @@ msgid ""
 "An aluminum hull that keeps the boat afloat.  Add boat hulls to a vehicle "
 "until it floats, then attach oars or a motor to get the boat to move."
 msgstr ""
+"Aluminiowy kadłub utrzymujący łódź na wodzie. Dodawaj kadłuby łodzi do "
+"pojazdu, aż będzie się unosił na wodzie, a następnie zamontuj wiosła lub "
+"silnik, by łódź mogła się poruszać."
 
 #. ~ Description of "floor trunk"
 #: data/json/items/vehicle/cargo.json
@@ -1274,6 +1592,8 @@ msgid ""
 "A section of flooring with a cargo space beneath and a hinged door for "
 "access."
 msgstr ""
+"Fragment podłogi z przestrzenią bagażową pod spodem i otwieranymi na "
+"zawiasach drzwiczkami."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -1281,10 +1601,10 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "reinforced security camera"
 msgid_plural "reinforced security cameras"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wzmocniona kamera bezpieczeństwa"
+msgstr[1] "wzmocnione kamery bezpieczeństwa"
+msgstr[2] "wzmocnionych kamer bezpieczeństwa"
+msgstr[3] "wzmocnionej kamery bezpieczeństwa"
 
 #. ~ Description of "reinforced security camera"
 #: data/json/items/vehicle/controls.json
@@ -1292,6 +1612,8 @@ msgid ""
 "A security camera with a cage built around it to protect it from damage "
 "without reducing its effectiveness."
 msgstr ""
+"Kamera bezpieczeństwa otoczona klatką, która chroni ją przed uszkodzeniami "
+"bez zmniejszania jej skuteczności."
 
 #. ~ Description of "drive by wire controls"
 #: data/json/items/vehicle/controls.json
@@ -1299,6 +1621,8 @@ msgid ""
 "A fully electronic vehicle control system.  You could control it remotely if "
 "you had the proper tools."
 msgstr ""
+"W pełni elektroniczny układ sterowania pojazdem. Mając odpowiednie narzędzia,"
+" mógłbyś sterować nim zdalnie."
 
 #. ~ Description of "robot driving unit"
 #: data/json/items/vehicle/controls.json
@@ -1307,6 +1631,9 @@ msgid ""
 "driving an unmanned vehicle.  Its AI is not functional, but it should still "
 "have some sort of maintenance mode."
 msgstr ""
+"Zestaw serwomechanizmów, mikrokontrolerów i innych urządzeń, które razem "
+"potrafią prowadzić bezzałogowy pojazd. Jego SI nie działa, ale powinien nadal"
+" mieć jakiś tryb serwisowy."
 
 #. ~ Description of "turret control unit"
 #: data/json/items/vehicle/controls.json
@@ -1315,6 +1642,9 @@ msgid ""
 "allow for tracking targets, friend-or-foe identification, and firing the "
 "connected turret in full automatic mode."
 msgstr ""
+"Zestaw silników, kamer i różnych modułów elektronicznych połączonych razem, "
+"umożliwiający śledzenie celów, identyfikację swój-obcy i strzelanie z "
+"podłączonej wieżyczki w trybie w pełni automatycznym."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -1322,10 +1652,10 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "hand controls"
 msgid_plural "hand controls"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ręczny układ sterowania"
+msgstr[1] "ręczne układy sterowania"
+msgstr[2] "ręcznych układów sterowania"
+msgstr[3] "ręcznego układu sterowania"
 
 #. ~ Description of "hand controls"
 #: data/json/items/vehicle/controls.json
@@ -1334,6 +1664,9 @@ msgid ""
 " of metal tubes that clamp to a vehicle's gas and brake pedals, allowing them"
 " to be operated by hand with the help of a trigger."
 msgstr ""
+"Pomoc dla osób z paraplegią lub bardzo niskich: prosta para metalowych rurek "
+"zaciskanych na pedałach gazu i hamulca pojazdu, dzięki którym można je "
+"obsługiwać ręcznie za pomocą spustu."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -1341,10 +1674,10 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "pedal extenders"
 msgid_plural "pedal extenders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przedłużki pedałów"
+msgstr[1] "przedłużki pedałów"
+msgstr[2] "przedłużek pedałów"
+msgstr[3] "przedłużek pedałów"
 
 #. ~ Description of "pedal extenders"
 #: data/json/items/vehicle/controls.json
@@ -1352,6 +1685,8 @@ msgid ""
 "These thick rubber pads can clamp securely onto a vehicle's gas and brake "
 "pedals, allowing even very short people to drive a car."
 msgstr ""
+"Te grube gumowe nakładki można pewnie zacisnąć na pedałach gazu i hamulca "
+"pojazdu, dzięki czemu nawet bardzo niskie osoby mogą prowadzić samochód."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -1359,10 +1694,10 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "makeshift pedal extenders"
 msgid_plural "makeshift pedal extenders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczne przedłużki pedałów"
+msgstr[1] "prowizoryczne przedłużki pedałów"
+msgstr[2] "prowizorycznych przedłużek pedałów"
+msgstr[3] "prowizorycznych przedłużek pedałów"
 
 #. ~ Description of "makeshift pedal extenders"
 #: data/json/items/vehicle/controls.json
@@ -1371,95 +1706,104 @@ msgid ""
 "blocks to a vehicle's gas and brake pedals so that a kid or very short adult "
 "could drive."
 msgstr ""
+"To pewnie nie najlepszy pomysł, ale jeśli chcesz, możesz przykleić taśmą te "
+"klocki do pedałów gazu i hamulca pojazdu, aby dziecko lub bardzo niski "
+"dorosły mógł prowadzić."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.05 L 1-cylinder engine"
 msgid_plural "0.05 L 1-cylinder engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "1-cylindrowy silnik 0,05 l"
+msgstr[1] "1-cylindrowe silniki 0,05 l"
+msgstr[2] "1-cylindrowych silników 0,05 l"
+msgstr[3] "1-cylindrowego silnika 0,05 l"
 
 #. ~ Description of "0.05 L 1-cylinder engine"
 #: data/json/items/vehicle/engine.json
 msgid "A 50 cc single-cylinder 4-stroke combustion engine."
-msgstr ""
+msgstr "Jednocylindrowy, czterosuwowy silnik spalinowy o pojemności 50 cm³."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.2 L large 1-cylinder engine"
 msgid_plural "0.2 L large 1-cylinder engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duży 1-cylindrowy silnik 0,2 l"
+msgstr[1] "duże 1-cylindrowe silniki 0,2 l"
+msgstr[2] "dużych 1-cylindrowych silników 0,2 l"
+msgstr[3] "dużego 1-cylindrowego silnika 0,2 l"
 
 #. ~ Description of "0.2 L large 1-cylinder engine"
 #: data/json/items/vehicle/engine.json
 msgid "A high-compression, 200 cc single-cylinder 4-stroke combustion engine."
 msgstr ""
+"Jednocylindrowy, czterosuwowy silnik spalinowy o wysokim stopniu sprężania i "
+"pojemności 200 cm³."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.2 L medium 1-cylinder engine"
 msgid_plural "0.2 L medium 1-cylinder engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "średni 1-cylindrowy silnik 0,2 l"
+msgstr[1] "średnie 1-cylindrowe silniki 0,2 l"
+msgstr[2] "średnich 1-cylindrowych silników 0,2 l"
+msgstr[3] "średniego 1-cylindrowego silnika 0,2 l"
 
 #. ~ Description of "0.2 L medium 1-cylinder engine"
 #: data/json/items/vehicle/engine.json
 msgid "A high-compression, 150 cc single-cylinder 4-stroke combustion engine."
 msgstr ""
+"Jednocylindrowy, czterosuwowy silnik spalinowy o wysokim stopniu sprężania i "
+"pojemności 150 cm³."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.2 L large 1-cylinder diesel engine"
 msgid_plural "0.2 L large 1-cylinder diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duży 1-cylindrowy silnik Diesla 0,2 l"
+msgstr[1] "duże 1-cylindrowe silniki Diesla 0,2 l"
+msgstr[2] "dużych 1-cylindrowych silników Diesla 0,2 l"
+msgstr[3] "dużego 1-cylindrowego silnika Diesla 0,2 l"
 
 #. ~ Description of "0.2 L large 1-cylinder diesel engine"
 #: data/json/items/vehicle/engine.json
 msgid ""
 "A high-compression, 200 cc single-cylinder 4-stroke diesel combustion engine."
 msgstr ""
+"Jednocylindrowy, czterosuwowy silnik Diesla o wysokim stopniu sprężania i "
+"pojemności 200 cm³."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.02 L small 1-cylinder engine"
 msgid_plural "0.02 L small 1-cylinder engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mały 1-cylindrowy silnik 0,02 l"
+msgstr[1] "małe 1-cylindrowe silniki 0,02 l"
+msgstr[2] "małych 1-cylindrowych silników 0,02 l"
+msgstr[3] "małego 1-cylindrowego silnika 0,02 l"
 
 #. ~ Description of "0.02 L small 1-cylinder engine"
 #: data/json/items/vehicle/engine.json
 msgid "A small, 25 cc single-cylinder 2-stroke combustion engine."
-msgstr ""
+msgstr "Mały, jednocylindrowy, dwusuwowy silnik spalinowy o pojemności 25 cm³."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "5.24 L light aero-engine"
 msgid_plural "5.24 L light aero-engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lekki silnik lotniczy 5,24 l"
+msgstr[1] "lekkie silniki lotnicze 5,24 l"
+msgstr[2] "lekkich silników lotniczych 5,24 l"
+msgstr[3] "lekkiego silnika lotniczego 5,24 l"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "1.6 L I4 engine"
 msgid_plural "1.6 L I4 engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik I4 1,6 l"
+msgstr[1] "silniki I4 1,6 l"
+msgstr[2] "silników I4 1,6 l"
+msgstr[3] "silnika I4 1,6 l"
 
 #. ~ Description of "1.6 L I4 engine"
 #: data/json/items/vehicle/engine.json
@@ -1467,15 +1811,17 @@ msgid ""
 "A small, 1600 cc 4-cylinder combustion engine, commonly called a straight-"
 "four."
 msgstr ""
+"Mały, czterocylindrowy silnik spalinowy o pojemności 1600 cm³, potocznie "
+"nazywany rzędową czwórką."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "1.6 L I4 diesel engine"
 msgid_plural "1.6 L I4 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla I4 1,6 l"
+msgstr[1] "silniki Diesla I4 1,6 l"
+msgstr[2] "silników Diesla I4 1,6 l"
+msgstr[3] "silnika Diesla I4 1,6 l"
 
 #. ~ Description of "1.6 L I4 diesel engine"
 #: data/json/items/vehicle/engine.json
@@ -1483,29 +1829,32 @@ msgid ""
 "A small, yet powerful 4-cylinder diesel engine, commonly called a straight-"
 "four."
 msgstr ""
+"Mały, ale mocny czterocylindrowy silnik Diesla, potocznie nazywany rzędową "
+"czwórką."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.5 L I1 diesel engine"
 msgid_plural "0.5 L I1 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla I1 0,5 l"
+msgstr[1] "silniki Diesla I1 0,5 l"
+msgstr[2] "silników Diesla I1 0,5 l"
+msgstr[3] "silnika Diesla I1 0,5 l"
 
 #. ~ Description of "0.5 L I1 diesel engine"
 #: data/json/items/vehicle/engine.json
 msgid "A small, diesel powered one-cylinder, four-stroke air-cooled engine."
 msgstr ""
+"Mały, jednocylindrowy, czterosuwowy silnik Diesla chłodzony powietrzem."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "6 L I6 diesel engine"
 msgid_plural "6 L I6 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla I6 6 l"
+msgstr[1] "silniki Diesla I6 6 l"
+msgstr[2] "silników Diesla I6 6 l"
+msgstr[3] "silnika Diesla I6 6 l"
 
 #. ~ Description of "6 L I6 diesel engine"
 #: data/json/items/vehicle/engine.json
@@ -1514,66 +1863,71 @@ msgid ""
 "  About as powerful as a V6 engine but significantly larger for use in heavy "
 "equipment."
 msgstr ""
+"Przemysłowy, sześciocylindrowy silnik Diesla, potocznie nazywany rzędową "
+"szóstką. Mniej więcej tak mocny jak silnik V6, ale znacznie większy, "
+"przeznaczony do ciężkiego sprzętu."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "0.6 L V2 engine"
 msgid_plural "0.6 L V2 engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik V2 0,6 l"
+msgstr[1] "silniki V2 0,6 l"
+msgstr[2] "silników V2 0,6 l"
+msgstr[3] "silnika V2 0,6 l"
 
 #. ~ Description of "0.6 L V2 engine"
 #: data/json/items/vehicle/engine.json
 msgid ""
 "A 600 cc, 2-cylinder 4-stroke combustion engine, commonly called a V-twin."
 msgstr ""
+"Dwucylindrowy, czterosuwowy silnik spalinowy o pojemności 600 cm³, potocznie "
+"nazywany widlastą dwójką (V-twin)."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "2.8 L V6 engine"
 msgid_plural "2.8 L V6 engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik V6 2,8 l"
+msgstr[1] "silniki V6 2,8 l"
+msgstr[2] "silników V6 2,8 l"
+msgstr[3] "silnika V6 2,8 l"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "2.8 L V6 diesel engine"
 msgid_plural "2.8 L V6 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla V6 2,8 l"
+msgstr[1] "silniki Diesla V6 2,8 l"
+msgstr[2] "silników Diesla V6 2,8 l"
+msgstr[3] "silnika Diesla V6 2,8 l"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "4.5 L V8 engine"
 msgid_plural "4.5 L V8 engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik V8 4,5 l"
+msgstr[1] "silniki V8 4,5 l"
+msgstr[2] "silników V8 4,5 l"
+msgstr[3] "silnika V8 4,5 l"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "4.5 L V8 diesel engine"
 msgid_plural "4.5 L V8 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla V8 4,5 l"
+msgstr[1] "silniki Diesla V8 4,5 l"
+msgstr[2] "silników Diesla V8 4,5 l"
+msgstr[3] "silnika Diesla V8 4,5 l"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "7 L V12 engine"
 msgid_plural "7 L V12 engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik V12 7 l"
+msgstr[1] "silniki V12 7 l"
+msgstr[2] "silników V12 7 l"
+msgstr[3] "silnika V12 7 l"
 
 #. ~ Description of "7 L V12 engine"
 #: data/json/items/vehicle/engine.json
@@ -1581,15 +1935,17 @@ msgid ""
 "A massive and extremely powerful 12-cylinder combustion engine, usually built"
 " into high-end sports cars."
 msgstr ""
+"Masywny i niezwykle mocny dwunastocylindrowy silnik spalinowy, zwykle "
+"montowany w ekskluzywnych samochodach sportowych."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "7 L V12 diesel engine"
 msgid_plural "7 L V12 diesel engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik Diesla V12 7 l"
+msgstr[1] "silniki Diesla V12 7 l"
+msgstr[2] "silników Diesla V12 7 l"
+msgstr[3] "silnika Diesla V12 7 l"
 
 #. ~ Description of "makeshift steam engine"
 #: data/json/items/vehicle/engine.json
@@ -1598,6 +1954,9 @@ msgid ""
 "water into steam, driving a reciprocating shaft.  A condenser recaptures the "
 "water, making this a closed-cycle system."
 msgstr ""
+"Mały, prymitywny silnik parowy. Zintegrowany kocioł spala węgiel, by "
+"zamieniać wodę w parę napędzającą wał posuwisto-zwrotny. Skraplacz odzyskuje "
+"wodę, dzięki czemu jest to układ zamkniętego obiegu."
 
 #. ~ Description of "small steam engine"
 #: data/json/items/vehicle/engine.json
@@ -1606,6 +1965,9 @@ msgid ""
 "steam, driving a reciprocating shaft.  A condenser recaptures the water, "
 "making this a closed-cycle system."
 msgstr ""
+"Mały silnik parowy. Zintegrowany kocioł spala węgiel, by zamieniać wodę w "
+"parę napędzającą wał posuwisto-zwrotny. Skraplacz odzyskuje wodę, dzięki "
+"czemu jest to układ zamkniętego obiegu."
 
 #. ~ Description of "medium steam engine"
 #: data/json/items/vehicle/engine.json
@@ -1614,38 +1976,41 @@ msgid ""
 "into steam, driving a reciprocating shaft.  A condenser recaptures the water,"
 " making this a closed-cycle system."
 msgstr ""
+"Średniej wielkości silnik parowy. Zintegrowany kocioł spala węgiel, by "
+"zamieniać wodę w parę napędzającą wał posuwisto-zwrotny. Skraplacz odzyskuje "
+"wodę, dzięki czemu jest to układ zamkniętego obiegu."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "25 L 650 HP gas turbine engine"
 msgid_plural "25 L 650 HP gas turbine engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "gazowy silnik turbinowy 25 l 650 KM"
+msgstr[1] "gazowe silniki turbinowe 25 l 650 KM"
+msgstr[2] "gazowych silników turbinowych 25 l 650 KM"
+msgstr[3] "gazowego silnika turbinowego 25 l 650 KM"
 
 #. ~ Description of "25 L 650 HP gas turbine engine"
 #: data/json/items/vehicle/engine.json
 msgid "A gas turbine engine.  Used primarily for small helicopters."
-msgstr ""
+msgstr "Gazowy silnik turbinowy. Używany głównie w małych helikopterach."
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "38 L 1,900 HP gas turbine engine"
 msgid_plural "38 L 1,900 HP gas turbine engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "gazowy silnik turbinowy 38 l 1900 KM"
+msgstr[1] "gazowe silniki turbinowe 38 l 1900 KM"
+msgstr[2] "gazowych silników turbinowych 38 l 1900 KM"
+msgstr[3] "gazowego silnika turbinowego 38 l 1900 KM"
 
 #. ~ Item name
 #: data/json/items/vehicle/engine.json
 msgid "119.5 L 6,000 HP gas turbine engine"
 msgid_plural "119.5 L 6,000 HP gas turbine engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "gazowy silnik turbinowy 119,5 l 6000 KM"
+msgstr[1] "gazowe silniki turbinowe 119,5 l 6000 KM"
+msgstr[2] "gazowych silników turbinowych 119,5 l 6000 KM"
+msgstr[3] "gazowego silnika turbinowego 119,5 l 6000 KM"
 
 #. ~ Description of "steel boom"
 #: data/json/items/vehicle/engineering.json
@@ -1653,6 +2018,8 @@ msgid ""
 "A large, rigid steel boom.  If attached to a frame it could be used to lift "
 "up to 20 metric tonnes."
 msgstr ""
+"Duży, sztywny stalowy wysięgnik. Zamocowany do ramy mógłby służyć do "
+"podnoszenia ładunków do 20 ton metrycznych."
 
 #. ~ Description of "telescopic cantilever"
 #: data/json/items/vehicle/engineering.json
@@ -1660,11 +2027,13 @@ msgid ""
 "A small, telescoping steel cantilever.  If attached to a frame it could be "
 "used to lift up to 3.5 metric tonnes."
 msgstr ""
+"Mały, teleskopowy stalowy wspornik. Zamocowany do ramy mógłby służyć do "
+"podnoszenia ładunków do 3,5 tony metrycznej."
 
 #. ~ Description of "rockwheel"
 #: data/json/items/vehicle/engineering.json
 msgid "A large, heavy, jagged metal disc for digging trenches."
-msgstr ""
+msgstr "Duża, ciężka, ząbkowana metalowa tarcza do kopania rowów."
 
 #. ~ Description of "motorcycle kickstand"
 #: data/json/items/vehicle/engineering.json
@@ -1672,6 +2041,8 @@ msgid ""
 "A kickstand to keep a bike from falling over.  You could use this to lean a "
 "small vehicle forward or backward to change a tire."
 msgstr ""
+"Nóżka, która zapobiega przewróceniu się motocykla. Możesz jej użyć, aby "
+"przechylić mały pojazd do przodu lub do tyłu w celu zmiany opony."
 
 #. ~ Description of "seed drill"
 #: data/json/items/vehicle/farming.json
@@ -1679,6 +2050,8 @@ msgid ""
 "An assembly of tubes, spikes, and wheels that, when dragged along the ground,"
 " allows a vehicle to plant seeds automatically in suitably tilled land."
 msgstr ""
+"Zespół rurek, kolców i kół, który ciągnięty po ziemi pozwala pojazdowi "
+"automatycznie sadzić nasiona w odpowiednio zaoranej ziemi."
 
 #. ~ Description of "reaper"
 #: data/json/items/vehicle/farming.json
@@ -1686,12 +2059,16 @@ msgid ""
 "An assembly of a blade, wheels, and a small lever for engaging/disengaging, "
 "used to cut down crops prior to picking them up."
 msgstr ""
+"Zespół ostrza, kół i małej dźwigni do włączania i wyłączania, służący do "
+"ścinania plonów przed ich zebraniem."
 
 #. ~ Description of "advanced reaper"
 #: data/json/items/vehicle/farming.json
 msgid ""
 "An advanced electronic device used to cut down, collect, and store crops."
 msgstr ""
+"Zaawansowane urządzenie elektroniczne służące do ścinania, zbierania i "
+"przechowywania plonów."
 
 #. ~ Description of "advanced seed drill"
 #: data/json/items/vehicle/farming.json
@@ -1701,45 +2078,49 @@ msgid ""
 " one is equipped with an electronic control system and will avoid damaging "
 "itself when used on untilled land."
 msgstr ""
+"Zespół rurek, kolców i kół, który ciągnięty po ziemi pozwala pojazdowi "
+"automatycznie sadzić nasiona w odpowiednio zaoranej ziemi. Ten jest "
+"wyposażony w elektroniczny układ sterowania i nie uszkodzi się podczas "
+"używania na niezaoranej ziemi."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
 msgid "foldable light frame"
 msgid_plural "foldable light frames"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "składana lekka rama"
+msgstr[1] "składane lekkie ramy"
+msgstr[2] "składanych lekkich ram"
+msgstr[3] "składanej lekkiej ramy"
 
 #. ~ Description of "foldable light frame"
 #: data/json/items/vehicle/frames.json
 msgid "A small, foldable lightweight frame made from pipework."
-msgstr ""
+msgstr "Mała, składana, lekka rama wykonana z rur."
 
 #. ~ Description of "extra-light frame"
 #: data/json/items/vehicle/frames.json
 msgid "A small, lightweight frame made from pipework.  Useful for crafting."
-msgstr ""
+msgstr "Mała, lekka rama wykonana z rur. Przydatna do wytwarzania."
 
 #. ~ Item name
 #: data/json/items/vehicle/frames.json
 msgid "foldable extra-light frame"
 msgid_plural "foldable extra-light frames"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "składana ekstra lekka rama"
+msgstr[1] "składane ekstra lekkie ramy"
+msgstr[2] "składanych ekstra lekkich ram"
+msgstr[3] "składanej ekstra lekkiej ramy"
 
 #. ~ Description of "foldable extra-light frame"
 #: data/json/items/vehicle/frames.json
 msgid "A small, foldable lightweight frame made from aluminum."
-msgstr ""
+msgstr "Mała, składana, lekka rama wykonana z aluminium."
 
 #. ~ Description of "foldable wooden frame"
 #: data/json/items/vehicle/frames.json
 msgid "A small, foldable frame made from scrap wood."
-msgstr ""
+msgstr "Mała, składana rama wykonana z resztek drewna."
 
 #. ~ Description of "light wooden frame"
 #: data/json/items/vehicle/frames.json
@@ -1747,37 +2128,39 @@ msgid ""
 "A small frame made of a few pieces of wood, held together by rope.  Useful "
 "for crafting."
 msgstr ""
+"Mała rama z kilku kawałków drewna związanych liną. Przydatna do wytwarzania."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
 msgid "skateboard deck"
 msgid_plural "skateboard decks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "blat deskorolki"
+msgstr[1] "blaty deskorolki"
+msgstr[2] "blatów deskorolki"
+msgstr[3] "blatu deskorolki"
 
 #. ~ Description of "skateboard deck"
 #: data/json/items/vehicle/frames.json
 msgid "A small skateboard frame made of thin layers of wood glued together."
 msgstr ""
+"Mała rama deskorolki wykonana z cienkich, sklejonych ze sobą warstw drewna."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
 msgid "concrete mixer chassis"
 msgid_plural "concrete mixer chassis"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "podwozie betoniarki"
+msgstr[1] "podwozia betoniarki"
+msgstr[2] "podwozi betoniarki"
+msgstr[3] "podwozia betoniarki"
 
 #. ~ Description of "concrete mixer chassis"
 #. ~ Description of vehicle part "concrete mixer chassis"
 #: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
 msgid "The chassis of a concrete mixer."
-msgstr ""
+msgstr "Podwozie betoniarki."
 
 #. ~ Description of magazine "fuel bunker"
 #. ~ Description of "fuel bunker"
@@ -1785,6 +2168,7 @@ msgstr ""
 msgid ""
 "A bin for holding solid fuel.  Contains up to 50 liters of coal or charcoal."
 msgstr ""
+"Pojemnik na paliwo stałe. Mieści do 50 litrów węgla kamiennego lub drzewnego."
 
 #. ~ Description of "emergency vehicle light (red)"
 #: data/json/items/vehicle/lights.json
@@ -1792,6 +2176,8 @@ msgid ""
 "A red light from the top of an emergency services vehicle.  When turned on, "
 "the light rotates to shine in all directions."
 msgstr ""
+"Czerwone światło z dachu pojazdu służb ratunkowych. Po włączeniu obraca się, "
+"świecąc we wszystkich kierunkach."
 
 #. ~ Description of "emergency vehicle light (blue)"
 #: data/json/items/vehicle/lights.json
@@ -1799,11 +2185,14 @@ msgid ""
 "A blue light from the top of an emergency services vehicle.  When turned on, "
 "the light rotates to shine in all directions."
 msgstr ""
+"Niebieskie światło z dachu pojazdu służb ratunkowych. Po włączeniu obraca "
+"się, świecąc we wszystkich kierunkach."
 
 #. ~ Description of "floodlight"
 #: data/json/items/vehicle/lights.json
 msgid "A large, heavy light designed to illuminate wide areas."
 msgstr ""
+"Duży, ciężki reflektor przeznaczony do oświetlania rozległych obszarów."
 
 #. ~ Description of "directed floodlight"
 #: data/json/items/vehicle/lights.json
@@ -1811,16 +2200,18 @@ msgid ""
 "A large, heavy light designed to illuminate a wide area in a half-circular "
 "cone."
 msgstr ""
+"Duży, ciężki reflektor przeznaczony do oświetlania rozległego obszaru w "
+"półkolistym stożku."
 
 #. ~ Description of "set of hand rims"
 #: data/json/items/vehicle/manual.json
 msgid "A set of hand rims for use on a wheelchair."
-msgstr ""
+msgstr "Zestaw obręczy ręcznych do wózka inwalidzkiego."
 
 #. ~ Description of "foot crank"
 #: data/json/items/vehicle/manual.json
 msgid "A pedal and gear assembly from a bicycle."
-msgstr ""
+msgstr "Zespół pedałów i przekładni z roweru."
 
 #. ~ Description of "water wheel"
 #: data/json/items/vehicle/mills.json
@@ -1828,6 +2219,8 @@ msgid ""
 "A water wheel that will slowly recharge electrical power when built over "
 "shallow moving water."
 msgstr ""
+"Koło wodne, które powoli wytwarza energię elektryczną, gdy zostanie zbudowane"
+" nad płytką płynącą wodą."
 
 #. ~ Description of "large water wheel"
 #: data/json/items/vehicle/mills.json
@@ -1835,11 +2228,13 @@ msgid ""
 "A large water wheel with wooden supports.  It will recharge electrical power "
 "when built over shallow moving water."
 msgstr ""
+"Duże koło wodne z drewnianymi wspornikami. Wytwarza energię elektryczną, gdy "
+"zostanie zbudowane nad płytką płynącą wodą."
 
 #. ~ Description of "electric motor"
 #: data/json/items/vehicle/motors.json
 msgid "A standard electric motor.  Suitable for use in ultra-light vehicles."
-msgstr ""
+msgstr "Standardowy silnik elektryczny. Nadaje się do pojazdów ultralekkich."
 
 #. ~ Description of "enhanced electric motor"
 #: data/json/items/vehicle/motors.json
@@ -1847,6 +2242,8 @@ msgid ""
 "A powerful electric motor, as found in those consumer electric sports cars "
 "with ridiculous or ludicrous acceleration options."
 msgstr ""
+"Mocny silnik elektryczny, jak te w konsumenckich elektrycznych samochodach "
+"sportowych z absurdalnymi lub niedorzecznymi trybami przyspieszania."
 
 #. ~ Description of "super electric motor"
 #: data/json/items/vehicle/motors.json
@@ -1854,11 +2251,14 @@ msgid ""
 "An extremely powerful electric motor.  This delivers massive torque and would"
 " be well suited to an electric racing car."
 msgstr ""
+"Niezwykle mocny silnik elektryczny. Zapewnia ogromny moment obrotowy i "
+"świetnie nadawałby się do elektrycznego samochodu wyścigowego."
 
 #. ~ Description of "large electric motor"
 #: data/json/items/vehicle/motors.json
 msgid "A large electric motor.  Could be used to power a full-size car or SUV."
 msgstr ""
+"Duży silnik elektryczny. Mógłby napędzać pełnowymiarowy samochód lub SUV-a."
 
 #. ~ Description of "small electric motor"
 #: data/json/items/vehicle/motors.json
@@ -1866,32 +2266,36 @@ msgid ""
 "A light-duty electric motor.  Strong enough for an electric moped or golf "
 "cart."
 msgstr ""
+"Silnik elektryczny do lekkich zastosowań. Wystarczająco mocny dla "
+"elektrycznego motoroweru lub wózka golfowego."
 
 #. ~ Description of "tiny electric motor"
 #: data/json/items/vehicle/motors.json
 msgid ""
 "A small electric motor, suitable for powering a bicycle or a hedge trimmer."
 msgstr ""
+"Mały silnik elektryczny, odpowiedni do napędzania roweru lub nożyc do "
+"żywopłotu."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/motors.json data/json/vehicleparts/motor.json
 msgid "1,300 HP electric train engine"
 msgid_plural "1,300 HP electric train engines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silnik lokomotywy elektrycznej 1300 KM"
+msgstr[1] "silniki lokomotywy elektrycznej 1300 KM"
+msgstr[2] "silników lokomotywy elektrycznej 1300 KM"
+msgstr[3] "silnika lokomotywy elektrycznej 1300 KM"
 
 #. ~ Description of "steel plating"
 #: data/json/items/vehicle/plating.json
 msgid "A piece of vehicle armor plating made of steel."
-msgstr ""
+msgstr "Płyta pancerza pojazdu wykonana ze stali."
 
 #. ~ Description of "superalloy plating"
 #: data/json/items/vehicle/plating.json
 msgid "A piece of vehicle armor plating made of sturdy superalloy."
-msgstr ""
+msgstr "Płyta pancerza pojazdu wykonana z wytrzymałego superstopu."
 
 #. ~ Description of "spiked plating"
 #: data/json/items/vehicle/plating.json
@@ -1899,6 +2303,8 @@ msgid ""
 "A piece of vehicle armor plating made of steel.  It is covered with menacing "
 "spikes."
 msgstr ""
+"Płyta pancerza pojazdu wykonana ze stali. Pokrywają ją groźnie wyglądające "
+"kolce."
 
 #. ~ Description of "hard plating"
 #: data/json/items/vehicle/plating.json
@@ -1906,6 +2312,8 @@ msgid ""
 "A piece of very thick vehicle armor plating made of tempered steel.  Can be "
 "used as a makeshift anvil."
 msgstr ""
+"Bardzo gruba płyta pancerza pojazdu wykonana ze stali hartowanej. Może "
+"posłużyć jako prowizoryczne kowadło."
 
 #. ~ Description of "military composite plating"
 #: data/json/items/vehicle/plating.json
@@ -1913,3 +2321,5 @@ msgid ""
 "A thick sheet of military-grade armor; the best bullet-stopper you can stick "
 "on a vehicle."
 msgstr ""
+"Gruba płyta pancerza klasy wojskowej; najlepsze, co możesz zamontować na "
+"pojeździe, by zatrzymywać pociski."
