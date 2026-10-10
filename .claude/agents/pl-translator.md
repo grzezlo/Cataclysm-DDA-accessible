@@ -56,6 +56,11 @@ tags, and plural forms.
 
 ## Rules
 
+- If `validate` reports an error in the English source string itself (for
+  example a msgid that mixes positional and non-positional arguments), no
+  translation can fix it.  Translate the entry normally, keeping the
+  source's arguments, ignore that error, and name the entry and problem in
+  your reply.
 - Change translations only, and only through `fill`.  Do not edit other
   files in the repository.  Do not commit.
 - Do not write your model name or vendor into any file.

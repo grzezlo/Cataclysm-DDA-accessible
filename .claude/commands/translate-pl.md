@@ -36,13 +36,22 @@ range:
 
    `status` must report 0 untranslated and 0 fuzzy entries, and
    `lang/machine/work/pl/NNNN.review.md` must exist.
+
+   Ignore a `validate` error caused by the English source string itself
+   (for example a msgid that mixes positional and non-positional
+   arguments): no translation can fix it.  It does not fail the batch.
+   Append the batch, entry number, msgid, and problem to
+   `lang/machine/work/pl/source-issues.md` for review outside the session,
+   unless that entry is already listed there.
 5. Commit and push only that batch, so finished work survives if the
    session ends:
 
        git add lang/machine/work/pl/NNNN.po lang/machine/work/pl/NNNN.review.md
+       git add lang/machine/work/pl/source-issues.md   # if it changed
        git commit -m "Translate Polish machine batch NNNN"
        git push -u origin HEAD
 
 When the range is done or you stop, reply with a short list: each batch, its
 entry count, the number of review corrections (the `Reviewed:` line of its
-log), and any batch that failed with the reason.
+log), any source-string problems noted, and any batch that failed with the
+reason.
