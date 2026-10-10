@@ -18,6 +18,7 @@ msgstr ""
 #: data/json/flags.json
 msgid "This clothing is able to <info>accommodate even mutated anatomy</info>."
 msgstr ""
+"Ta odzież potrafi <info>dopasować się nawet do zmutowanej anatomii</info>."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "BLEEDSLOW"
@@ -26,6 +27,8 @@ msgid ""
 "The character bleeds slower than normal, losing blood at 2/3rds the normal "
 "rate."
 msgstr ""
+"Postać krwawi wolniej niż zwykle, tracąc krew w tempie równym 2/3 normalnego "
+"tempa."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "BLEEDSLOW2"
@@ -34,18 +37,20 @@ msgid ""
 "The character bleeds even slower than normal, losing blood at 1/3rd the "
 "normal rate."
 msgstr ""
+"Postać krwawi jeszcze wolniej niż zwykle, tracąc krew w tempie równym 1/3 "
+"normalnego tempa."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "LIXA_SCIENCE_CARD"
 #: data/json/flags.json
 msgid "This grants access to the LIXA facility."
-msgstr ""
+msgstr "Zapewnia dostęp do placówki LIXA."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "LIXA_SCIENCE_CARD_2"
 #: data/json/flags.json
 msgid "This grants access to the experiment chamber of the LIXA facility."
-msgstr ""
+msgstr "Zapewnia dostęp do komory eksperymentalnej w placówce LIXA."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "LIXA_SCIENCE_CARD_3"
@@ -54,22 +59,24 @@ msgid ""
 "This grants access to the experiment chamber and PPE lockup for the LIXA "
 "facility."
 msgstr ""
+"Zapewnia dostęp do komory eksperymentalnej i magazynu środków ochrony "
+"indywidualnej w placówce LIXA."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "LIXA_MILITARY_CARD"
 #: data/json/flags.json
 msgid "This grants access to locked-down areas of the LIXA facility."
-msgstr ""
+msgstr "Zapewnia dostęp do zamkniętych obszarów placówki LIXA."
 
 #. ~ This is custom prefix added to item name. "PREFIX_XL"
 #: data/json/flags.json
 msgid "XL "
-msgstr ""
+msgstr "XL "
 
 #. ~ This is custom prefix added to item name. "PREFIX_XS"
 #: data/json/flags.json
 msgid "XS "
-msgstr ""
+msgstr "XS "
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "DECAYS_IN_AIR"
@@ -77,6 +84,8 @@ msgstr ""
 msgid ""
 "This will eventually <bad>go bad</bad> if left in the open air too long."
 msgstr ""
+"Z czasem <bad>zepsuje się</bad>, jeśli zbyt długo pozostanie na otwartym "
+"powietrzu."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "IRRITANT_IMMUNE"
@@ -85,6 +94,8 @@ msgid ""
 "This gear <good>completely protects</good> you from <info>skin "
 "irritants</info>."
 msgstr ""
+"Ten sprzęt <good>całkowicie chroni</good> cię przed <info>substancjami "
+"drażniącymi skórę</info>."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "ITEM_WATERPROOFING"
@@ -93,24 +104,26 @@ msgid ""
 "Something is preventing your worn and carried items from being effected by "
 "water."
 msgstr ""
+"Coś zapobiega oddziaływaniu wody na przedmioty, które nosisz na sobie i przy "
+"sobie."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "WATERWALKING"
 #: data/json/flags.json
 msgid "You can walk across the surface of water."
-msgstr ""
+msgstr "Możesz chodzić po powierzchni wody."
 
 #. ~ Please leave anything in <angle brackets> unchanged.
 #. ~ Description of JSON flag "CRAFT_IN_DARKNESS"
 #: data/json/flags.json
 #, no-c-format
 msgid "You can craft at 100% speed in any level of light."
-msgstr ""
+msgstr "Możesz wytwarzać z prędkością 100% przy dowolnym oświetleniu."
 
 #. ~ Harvest message
 #: data/json/harvest.json
 msgid "You carefully crack open the hive structure and drain the liquid."
-msgstr ""
+msgstr "Ostrożnie rozłupujesz strukturę ula i spuszczasz płyn."
 
 #. ~ Harvest message
 #: data/json/harvest.json
@@ -120,11 +133,15 @@ msgid ""
 "up at a formless amalgamation of eyes, jaws, eggs, and ganglia deep within.  "
 "Love truly knows no bounds."
 msgstr ""
+"Rąbiąc chitynowy zlepek, mimowolnie podążasz tunelem, który odwłok ważki "
+"(samca?) wydrążył w ciele jej partnerki, aż docierasz do bezkształtnego "
+"kłębowiska oczu, szczęk, jaj i zwojów nerwowych głęboko w środku. Miłość "
+"naprawdę nie zna granic."
 
 #. ~ Harvest message
 #: data/json/harvest.json
 msgid "<mi-go_harvest>"
-msgstr ""
+msgstr "<mi-go_harvest>"
 
 #. ~ Description of profession "Archery (Beginner)" for male
 #: data/json/hobbies.json
@@ -134,6 +151,9 @@ msgid ""
 "pulling off any trick shots but at least you can usually get an arrow to fly "
 "forward instead of spinning off to the side."
 msgstr ""
+"Używałeś już łuku, a może nawet byłeś na jednych czy dwóch zajęciach. Nie "
+"będziesz wykonywać żadnych popisowych strzałów, ale przynajmniej zwykle "
+"potrafisz posłać strzałę do przodu, zamiast pozwolić jej odlecieć bokiem."
 
 #. ~ Description of profession "Archery (Beginner)" for female
 #: data/json/hobbies.json
@@ -143,6 +163,9 @@ msgid ""
 "pulling off any trick shots but at least you can usually get an arrow to fly "
 "forward instead of spinning off to the side."
 msgstr ""
+"Używałaś już łuku, a może nawet byłaś na jednych czy dwóch zajęciach. Nie "
+"będziesz wykonywać żadnych popisowych strzałów, ale przynajmniej zwykle "
+"potrafisz posłać strzałę do przodu, zamiast pozwolić jej odlecieć bokiem."
 
 #. ~ Description of profession "Archery (Expert)" for male
 #: data/json/hobbies.json
@@ -153,6 +176,10 @@ msgid ""
 "longbowmen of old.  In either case, sniping zombie heads should be as easy as"
 " pinning apples to trees for you."
 msgstr ""
+"Jesteś współczesnym Robin Hoodem i zapewne masz cholernie mocne mięśnie "
+"pleców. Może trenujesz łucznictwo z myślą o olimpiadzie, a może wywodzisz się"
+" od dawnych łuczników z długimi łukami. Tak czy inaczej, trafianie w głowy "
+"zombie powinno być dla ciebie równie łatwe jak przyszpilanie jabłek do drzew."
 
 #. ~ Description of profession "Archery (Expert)" for female
 #: data/json/hobbies.json
@@ -163,6 +190,10 @@ msgid ""
 "longbowmen of old.  In either case, sniping zombie heads should be as easy as"
 " pinning apples to trees for you."
 msgstr ""
+"Jesteś współczesną wersją Robin Hooda i zapewne masz cholernie mocne mięśnie "
+"pleców. Może trenujesz łucznictwo z myślą o olimpiadzie, a może wywodzisz się"
+" od dawnych łuczników z długimi łukami. Tak czy inaczej, trafianie w głowy "
+"zombie powinno być dla ciebie równie łatwe jak przyszpilanie jabłek do drzew."
 
 #. ~ Description of profession "Swimming (Beginner)" for male
 #: data/json/hobbies.json
@@ -171,6 +202,8 @@ msgid ""
 "You can swim.  Probably not very well, and you won't break any speed records,"
 " but, you CAN swim."
 msgstr ""
+"Umiesz pływać. Pewnie niezbyt dobrze i nie pobijesz żadnych rekordów "
+"prędkości, ale UMIESZ pływać."
 
 #. ~ Description of profession "Swimming (Beginner)" for female
 #: data/json/hobbies.json
@@ -179,6 +212,8 @@ msgid ""
 "You can swim.  Probably not very well, and you won't break any speed records,"
 " but, you CAN swim."
 msgstr ""
+"Umiesz pływać. Pewnie niezbyt dobrze i nie pobijesz żadnych rekordów "
+"prędkości, ale UMIESZ pływać."
 
 #. ~ Description of profession "Swimming (Expert)" for male
 #: data/json/hobbies.json
@@ -188,6 +223,9 @@ msgid ""
 "has left you in great shape.  There aren't any zombie sharks in the water, "
 "right?"
 msgstr ""
+"Jesteś świetnym pływakiem i być może po części rybą. Poza tym całe to "
+"pływanie zapewniło ci doskonałą kondycję. W wodzie nie ma rekinów zombie, "
+"prawda?"
 
 #. ~ Description of profession "Swimming (Expert)" for female
 #: data/json/hobbies.json
@@ -197,6 +235,8 @@ msgid ""
 "has left you in great shape.  There aren't any zombie sharks in the water, "
 "right?"
 msgstr ""
+"Jesteś świetną pływaczką i być może po części rybą. Poza tym całe to pływanie"
+" zapewniło ci doskonałą kondycję. W wodzie nie ma rekinów zombie, prawda?"
 
 #. ~ Description of profession "Baseball (Beginner)" for male
 #: data/json/hobbies.json
@@ -206,6 +246,9 @@ msgid ""
 "growing up, but it was never a focus of yours.  Hopefully you can still "
 "remember how to use a bat when your life depends on it."
 msgstr ""
+"Kiedyś od czasu do czasu grałeś w baseball. Może w dzieciństwie należałeś do "
+"szkolnej drużyny, ale nigdy nie było to twoją główną pasją. Obyś nadal "
+"pamiętał, jak używać kija, kiedy zależy od tego twoje życie."
 
 #. ~ Description of profession "Baseball (Beginner)" for female
 #: data/json/hobbies.json
@@ -215,6 +258,9 @@ msgid ""
 "growing up, but it was never a focus of yours.  Hopefully you can still "
 "remember how to use a bat when your life depends on it."
 msgstr ""
+"Kiedyś od czasu do czasu grałaś w baseball. Może w dzieciństwie należałaś do "
+"szkolnej drużyny, ale nigdy nie było to twoją główną pasją. Obyś nadal "
+"pamiętała, jak używać kija, kiedy zależy od tego twoje życie."
 
 #. ~ Description of profession "Baseball Pitcher (Expert)" for male
 #: data/json/hobbies.json
@@ -224,6 +270,9 @@ msgid ""
 "throw a mean knuckleball.  Now you get to practice your fastball, but perhaps"
 " with rocks or grenades this time."
 msgstr ""
+"Jesteś przyzwyczajony do eliminowania biednych pałkarzy przy bazie domowej i "
+"zapewne potrafisz rzucić niezłą piłkę bez rotacji. Teraz możesz ćwiczyć "
+"szybkie rzuty, ale tym razem może kamieniami lub granatami."
 
 #. ~ Description of profession "Baseball Pitcher (Expert)" for female
 #: data/json/hobbies.json
@@ -233,6 +282,9 @@ msgid ""
 "throw a mean knuckleball.  Now you get to practice your fastball, but perhaps"
 " with rocks or grenades this time."
 msgstr ""
+"Jesteś przyzwyczajona do eliminowania biednych pałkarzy przy bazie domowej i "
+"zapewne potrafisz rzucić niezłą piłkę bez rotacji. Teraz możesz ćwiczyć "
+"szybkie rzuty, ale tym razem może kamieniami lub granatami."
 
 #. ~ Description of profession "Baseball (Expert)" for male
 #: data/json/hobbies.json
@@ -242,6 +294,9 @@ msgid ""
 "time to go for the grand slam or you'll be dealing with worse than a strike "
 "out."
 msgstr ""
+"Nie dostałeś się do najwyższej ligi, ale byłeś blisko. Teraz czas na home run"
+" przy pełnych bazach, bo inaczej czeka cię coś gorszego niż eliminacja po "
+"trzech strike'ach."
 
 #. ~ Description of profession "Baseball (Expert)" for female
 #: data/json/hobbies.json
@@ -251,6 +306,9 @@ msgid ""
 "time to go for the grand slam or you'll be dealing with worse than a strike "
 "out."
 msgstr ""
+"Nie dostałaś się do najwyższej ligi, ale byłaś blisko. Teraz czas na home run"
+" przy pełnych bazach, bo inaczej czeka cię coś gorszego niż eliminacja po "
+"trzech strike'ach."
 
 #. ~ Description of profession "Wrestling (Beginner)" for male
 #: data/json/hobbies.json
@@ -261,6 +319,9 @@ msgid ""
 "family growing up.  You're not entirely unused to grappling, but you're "
 "hardly an expert."
 msgstr ""
+"Może chodziłeś na kilka zajęć w jakiejś siłowni, należałeś do drużyny "
+"młodzieżowej albo po prostu w dzieciństwie lubiłeś siłować się ze znajomymi "
+"lub rodziną. Chwyty nie są ci zupełnie obce, ale do eksperta ci daleko."
 
 #. ~ Description of profession "Wrestling (Beginner)" for female
 #: data/json/hobbies.json
@@ -271,6 +332,9 @@ msgid ""
 "family growing up.  You're not entirely unused to grappling, but you're "
 "hardly an expert."
 msgstr ""
+"Może chodziłaś na kilka zajęć w jakiejś siłowni, należałaś do drużyny "
+"młodzieżowej albo po prostu w dzieciństwie lubiłaś siłować się ze znajomymi "
+"lub rodziną. Chwyty nie są ci zupełnie obce, ale do ekspertki ci daleko."
 
 #. ~ Description of profession "Wrestling (Intermediate)" for male
 #: data/json/hobbies.json
@@ -281,6 +345,10 @@ msgid ""
 "referees around to see, but hopefully your skills will help you avoid getting"
 " pinned by the undead."
 msgstr ""
+"Nie jesteś wprawdzie zapaśnikiem, który używa składanych krzeseł jako broni, "
+"ale masz doświadczenie w siłowaniu się i przepychankach na macie. Nie ma tu "
+"sędziów, którzy mogliby to oglądać, ale oby twoje umiejętności pomogły ci "
+"uniknąć przyszpilenia przez nieumarłych."
 
 #. ~ Description of profession "Wrestling (Intermediate)" for female
 #: data/json/hobbies.json
@@ -291,6 +359,10 @@ msgid ""
 "referees around to see, but hopefully your skills will help you avoid getting"
 " pinned by the undead."
 msgstr ""
+"Nie jesteś wprawdzie zapaśniczką, która używa składanych krzeseł jako broni, "
+"ale masz doświadczenie w siłowaniu się i przepychankach na macie. Nie ma tu "
+"sędziów, którzy mogliby to oglądać, ale oby twoje umiejętności pomogły ci "
+"uniknąć przyszpilenia przez nieumarłych."
 
 #. ~ Description of profession "Wrestling (Expert)" for male
 #: data/json/hobbies.json
@@ -301,6 +373,10 @@ msgid ""
 "Considering how grabby those zombies are, you should get plenty of use out of"
 " your skills."
 msgstr ""
+"W szkole pewnie trafiłeś na listę osób z ponad 100 zwycięstwami, a teraz może"
+" uprawiasz zapasy na uczelni albo wykorzystujesz je w czymś takim jak MMA. "
+"Biorąc pod uwagę, jak chętne do chwytania są te zombie, twoje umiejętności "
+"powinny się często przydawać."
 
 #. ~ Description of profession "Wrestling (Expert)" for female
 #: data/json/hobbies.json
@@ -311,6 +387,10 @@ msgid ""
 "Considering how grabby those zombies are, you should get plenty of use out of"
 " your skills."
 msgstr ""
+"W szkole pewnie trafiłaś na listę osób z ponad 100 zwycięstwami, a teraz może"
+" uprawiasz zapasy na uczelni albo wykorzystujesz je w czymś takim jak MMA. "
+"Biorąc pod uwagę, jak chętne do chwytania są te zombie, twoje umiejętności "
+"powinny się często przydawać."
 
 #. ~ Description of profession "DIY Crafting (Expert)" for male
 #: data/json/hobbies.json
@@ -321,6 +401,10 @@ msgid ""
 " of fabrication knowledge.  You could probably make a functioning cannon out "
 "of a paper clip and some bubble gum."
 msgstr ""
+"Czy to z powodu okoliczności zmuszających do pomysłowości, czy niezdrowej "
+"fascynacji majsterkowaniem, jesteś prawdziwym MacGyverem z bardzo rozległą "
+"wiedzą o wytwarzaniu. Pewnie potrafiłbyś zrobić działające działo ze spinacza"
+" i kawałka gumy do żucia."
 
 #. ~ Description of profession "DIY Crafting (Expert)" for female
 #: data/json/hobbies.json
@@ -331,6 +415,10 @@ msgid ""
 " of fabrication knowledge.  You could probably make a functioning cannon out "
 "of a paper clip and some bubble gum."
 msgstr ""
+"Czy to z powodu okoliczności zmuszających do pomysłowości, czy niezdrowej "
+"fascynacji majsterkowaniem, jesteś prawdziwą żeńską wersją MacGyvera z bardzo"
+" rozległą wiedzą o wytwarzaniu. Pewnie potrafiłabyś zrobić działające działo "
+"ze spinacza i kawałka gumy do żucia."
 
 #. ~ Description of profession "Cooking (Beginner)" for male
 #: data/json/hobbies.json
@@ -339,6 +427,9 @@ msgid ""
 "You can cook well enough that you didn't have to live on instant noodles and "
 "takeout, but you've only really learned the bare minimum."
 msgstr ""
+"Potrafisz gotować na tyle dobrze, że nie musiałeś żyć na zupkach "
+"błyskawicznych i jedzeniu na wynos, ale tak naprawdę nauczyłeś się tylko "
+"absolutnych podstaw."
 
 #. ~ Description of profession "Cooking (Beginner)" for female
 #: data/json/hobbies.json
@@ -347,6 +438,9 @@ msgid ""
 "You can cook well enough that you didn't have to live on instant noodles and "
 "takeout, but you've only really learned the bare minimum."
 msgstr ""
+"Potrafisz gotować na tyle dobrze, że nie musiałaś żyć na zupkach "
+"błyskawicznych i jedzeniu na wynos, ale tak naprawdę nauczyłaś się tylko "
+"absolutnych podstaw."
 
 #. ~ Description of profession "Cooking (Expert)" for male
 #: data/json/hobbies.json
@@ -356,6 +450,9 @@ msgid ""
 "anything and have a wide array of culinary knowledge.  Sadly, the undead "
 "would rather eat you than your meals."
 msgstr ""
+"Jesteś znakomitym kucharzem, potrafisz przygotować pyszne posiłki niemal ze "
+"wszystkiego i masz rozległą wiedzę kulinarną. Niestety nieumarli woleliby "
+"zjeść ciebie niż twoje dania."
 
 #. ~ Description of profession "Cooking (Expert)" for female
 #: data/json/hobbies.json
@@ -365,6 +462,9 @@ msgid ""
 "anything and have a wide array of culinary knowledge.  Sadly, the undead "
 "would rather eat you than your meals."
 msgstr ""
+"Jesteś znakomitą kucharką, potrafisz przygotować pyszne posiłki niemal ze "
+"wszystkiego i masz rozległą wiedzę kulinarną. Niestety nieumarli woleliby "
+"zjeść ciebie niż twoje dania."
 
 #. ~ Description of profession "Cheesemaking" for male
 #: data/json/hobbies.json
@@ -374,6 +474,9 @@ msgid ""
 "your family for generations.  How useful these skills will be in the "
 "apocalypse remains to *brie* seen."
 msgstr ""
+"Sztuka wytwarzania serów najwyższej jakości jest przekazywana w twojej "
+"rodzinie z pokolenia na pokolenie. Jak przydatne okażą się te umiejętności "
+"podczas apokalipsy, dowiesz się dopiero z czasem — mówiąc całkiem *serio*."
 
 #. ~ Description of profession "Cheesemaking" for female
 #: data/json/hobbies.json
@@ -383,6 +486,9 @@ msgid ""
 "your family for generations.  How useful these skills will be in the "
 "apocalypse remains to *brie* seen."
 msgstr ""
+"Sztuka wytwarzania serów najwyższej jakości jest przekazywana w twojej "
+"rodzinie z pokolenia na pokolenie. Jak przydatne okażą się te umiejętności "
+"podczas apokalipsy, dowiesz się dopiero z czasem — mówiąc całkiem *serio*."
 
 #. ~ Description of profession "Home canning" for male
 #: data/json/hobbies.json
@@ -393,6 +499,10 @@ msgid ""
 " and meat in cans or mason jars.  With the electricity down and refrigerators"
 " dead, saying your skills could come in handy is an understatement."
 msgstr ""
+"Czy to rodzinna tradycja, czy sposób na przedłużenie trwałości zakupionej "
+"żywności, wiesz, jak konserwować warzywa, owoce i mięso w puszkach lub "
+"słoikach. Przy braku prądu i niedziałających lodówkach stwierdzenie, że twoje"
+" umiejętności mogą się przydać, to spore niedopowiedzenie."
 
 #. ~ Description of profession "Home canning" for female
 #: data/json/hobbies.json
@@ -403,6 +513,10 @@ msgid ""
 " and meat in cans or mason jars.  With the electricity down and refrigerators"
 " dead, saying your skills could come in handy is an understatement."
 msgstr ""
+"Czy to rodzinna tradycja, czy sposób na przedłużenie trwałości zakupionej "
+"żywności, wiesz, jak konserwować warzywa, owoce i mięso w puszkach lub "
+"słoikach. Przy braku prądu i niedziałających lodówkach stwierdzenie, że twoje"
+" umiejętności mogą się przydać, to spore niedopowiedzenie."
 
 #. ~ Description of profession "Street Fighting (Intermediate)" for male
 #: data/json/hobbies.json
@@ -411,6 +525,8 @@ msgid ""
 "You've been in quite a few fights in the street.  You can throw and dodge a "
 "punch better than most."
 msgstr ""
+"Brałeś udział w wielu ulicznych bójkach. Potrafisz zadawać ciosy pięścią i "
+"ich unikać lepiej niż większość ludzi."
 
 #. ~ Description of profession "Street Fighting (Intermediate)" for female
 #: data/json/hobbies.json
@@ -419,6 +535,8 @@ msgid ""
 "You've been in quite a few fights in the street.  You can throw and dodge a "
 "punch better than most."
 msgstr ""
+"Brałaś udział w wielu ulicznych bójkach. Potrafisz zadawać ciosy pięścią i "
+"ich unikać lepiej niż większość ludzi."
 
 #. ~ Description of profession "Street Fighting (Expert)" for male
 #: data/json/hobbies.json
@@ -429,6 +547,10 @@ msgid ""
 "into fights with strangers on the streets for most of your life, and somehow "
 "you ain't dead yet, so you must be doing something right."
 msgstr ""
+"Może jesteś mięśniakiem z jakiegoś gangu, może bramkarzem w klubie, a może po"
+" prostu wielkim dupkiem. Przez większość życia ciągle wdawałeś się w bójki z "
+"obcymi na ulicach i jakimś cudem jeszcze nie zdechłeś, więc coś musisz robić "
+"dobrze."
 
 #. ~ Description of profession "Street Fighting (Expert)" for female
 #: data/json/hobbies.json
@@ -439,6 +561,10 @@ msgid ""
 "into fights with strangers on the streets for most of your life, and somehow "
 "you ain't dead yet, so you must be doing something right."
 msgstr ""
+"Może jesteś mięśniaczką z jakiegoś gangu, może bramkarką w klubie, a może po "
+"prostu wredną suką. Przez większość życia ciągle wdawałaś się w bójki z "
+"obcymi na ulicach i jakimś cudem jeszcze nie zdechłaś, więc coś musisz robić "
+"dobrze."
 
 #. ~ Description of profession "Sewing (Intermediate)" for male
 #: data/json/hobbies.json
@@ -447,6 +573,8 @@ msgid ""
 "You are quite good at sewing torn clothes back together, and have even made "
 "your own clothes a few times."
 msgstr ""
+"Całkiem dobrze radzisz sobie z zszywaniem podartych ubrań, a nawet kilka razy"
+" uszyłeś własne."
 
 #. ~ Description of profession "Sewing (Intermediate)" for female
 #: data/json/hobbies.json
@@ -455,6 +583,8 @@ msgid ""
 "You are quite good at sewing torn clothes back together, and have even made "
 "your own clothes a few times."
 msgstr ""
+"Całkiem dobrze radzisz sobie z zszywaniem podartych ubrań, a nawet kilka razy"
+" uszyłaś własne."
 
 #. ~ Description of profession "Sewing (Expert)" for male
 #: data/json/hobbies.json
@@ -465,6 +595,10 @@ msgid ""
 " or to sell as artisanal goods.  Too bad you can't stitch the holes in "
 "reality closed."
 msgstr ""
+"Choć nowoczesna technologia sprawia, że zawodowi krawcy stają się zbędni, "
+"spędziłeś dużą część życia, ręcznie szyjąc najróżniejsze ubrania, czy to do "
+"rekonstrukcji historycznych, czy na sprzedaż jako wyroby rzemieślnicze. "
+"Szkoda, że nie możesz zaszyć dziur w rzeczywistości."
 
 #. ~ Description of profession "Sewing (Expert)" for female
 #: data/json/hobbies.json
@@ -475,6 +609,10 @@ msgid ""
 " or to sell as artisanal goods.  Too bad you can't stitch the holes in "
 "reality closed."
 msgstr ""
+"Choć nowoczesna technologia sprawia, że zawodowi krawcy stają się zbędni, "
+"spędziłaś dużą część życia, ręcznie szyjąc najróżniejsze ubrania, czy to do "
+"rekonstrukcji historycznych, czy na sprzedaż jako wyroby rzemieślnicze. "
+"Szkoda, że nie możesz zaszyć dziur w rzeczywistości."
 
 #. ~ Description of profession "Fencing (Expert)" for male
 #: data/json/hobbies.json
@@ -483,6 +621,8 @@ msgid ""
 "You've spent so long practicing your fencing you wouldn't look out of place "
 "in the Renaissance dueling with ne'er-do-wells and rapscallions.  En Garde!"
 msgstr ""
+"Tyle czasu poświęciłeś ćwiczeniu szermierki, że w renesansie nie wyróżniałbyś"
+" się, pojedynkując się z łotrami i hultajami. Do gardy!"
 
 #. ~ Description of profession "Fencing (Expert)" for female
 #: data/json/hobbies.json
@@ -491,6 +631,8 @@ msgid ""
 "You've spent so long practicing your fencing you wouldn't look out of place "
 "in the Renaissance dueling with ne'er-do-wells and rapscallions.  En Garde!"
 msgstr ""
+"Tyle czasu poświęciłaś ćwiczeniu szermierki, że w renesansie nie "
+"wyróżniałabyś się, pojedynkując się z łotrami i hultajami. Do gardy!"
 
 #. ~ Description of profession "Racing" for male
 #: data/json/hobbies.json
@@ -500,6 +642,9 @@ msgid ""
 "turns at high speeds is a difficult skill to master but you can drift with "
 "the best of them."
 msgstr ""
+"Jesteś prawdziwym demonem prędkości za kierownicą wszystkiego, co ma silnik! "
+"Pokonywanie ostrych zakrętów z dużą prędkością to trudna sztuka, ale "
+"potrafisz driftować jak najlepsi."
 
 #. ~ Description of profession "Racing" for female
 #: data/json/hobbies.json
@@ -509,6 +654,9 @@ msgid ""
 "turns at high speeds is a difficult skill to master but you can drift with "
 "the best of them."
 msgstr ""
+"Jesteś prawdziwym demonem prędkości za kierownicą wszystkiego, co ma silnik! "
+"Pokonywanie ostrych zakrętów z dużą prędkością to trudna sztuka, ale "
+"potrafisz driftować jak najlepsi."
 
 #. ~ Description of profession "Cardio Kickboxing" for male
 #: data/json/hobbies.json
@@ -519,6 +667,10 @@ msgid ""
 "dangerous than a falling punching bag.  Whether you can remember your "
 "training when push kick comes to jab is up to you."
 msgstr ""
+"Trenowałeś kickboxing bez walki na siłowni, żeby poprawić kondycję. Choć "
+"nauczyłeś się ruchów, nigdy nie sparowałeś ani nie walczyłeś z niczym "
+"groźniejszym od spadającego worka treningowego. Gdy przyjdzie co do ciosu, to"
+" od ciebie zależy, czy przypomnisz sobie trening."
 
 #. ~ Description of profession "Cardio Kickboxing" for female
 #: data/json/hobbies.json
@@ -529,6 +681,10 @@ msgid ""
 "dangerous than a falling punching bag.  Whether you can remember your "
 "training when push kick comes to jab is up to you."
 msgstr ""
+"Trenowałaś kickboxing bez walki na siłowni, żeby poprawić kondycję. Choć "
+"nauczyłaś się ruchów, nigdy nie sparowałaś ani nie walczyłaś z niczym "
+"groźniejszym od spadającego worka treningowego. Gdy przyjdzie co do ciosu, to"
+" od ciebie zależy, czy przypomnisz sobie trening."
 
 #. ~ Description of profession "Self-Defense" for male
 #: data/json/hobbies.json
@@ -538,6 +694,9 @@ msgid ""
 " choice of Boxing, Kickboxing, Capoeira, Krav Maga, Muay Thai, Ninjutsu, Wing"
 " Chun, or Zui Quan."
 msgstr ""
+"Uczestniczyłeś w zajęciach z samoobrony w miejscowej siłowni. Zaczynasz z "
+"wybraną sztuką walki: Boks, Kickboxing, Capoeira, Krav maga, Muay thai, "
+"Ninjutsu, Wing Chun lub Zui Quan."
 
 #. ~ Description of profession "Self-Defense" for female
 #: data/json/hobbies.json
@@ -547,6 +706,9 @@ msgid ""
 " choice of Boxing, Kickboxing, Capoeira, Krav Maga, Muay Thai, Ninjutsu, Wing"
 " Chun, or Zui Quan."
 msgstr ""
+"Uczestniczyłaś w zajęciach z samoobrony w miejscowej siłowni. Zaczynasz z "
+"wybraną sztuką walki: Boks, Kickboxing, Capoeira, Krav maga, Muay thai, "
+"Ninjutsu, Wing Chun lub Zui Quan."
 
 #. ~ Description of profession "Black Belt" for male
 #: data/json/hobbies.json
@@ -555,6 +717,8 @@ msgid ""
 "You've been doing martial arts for years and have earned the coveted black "
 "belt in a martial art of your choice."
 msgstr ""
+"Od lat trenujesz sztuki walki i zdobyłeś upragniony czarny pas w wybranej "
+"przez siebie dyscyplinie."
 
 #. ~ Description of profession "Black Belt" for female
 #: data/json/hobbies.json
@@ -563,6 +727,8 @@ msgid ""
 "You've been doing martial arts for years and have earned the coveted black "
 "belt in a martial art of your choice."
 msgstr ""
+"Od lat trenujesz sztuki walki i zdobyłaś upragniony czarny pas w wybranej "
+"przez siebie dyscyplinie."
 
 #. ~ Description of profession "Melee Training (Expert)" for male
 #: data/json/hobbies.json
@@ -575,6 +741,12 @@ msgid ""
 "Bōjutsu, Eskrima, Fencing, Fior Di Battaglia, Medieval Swordsmanship, Niten "
 "Ichi-Ryu, Pencak Silat, or Sōjutsu."
 msgstr ""
+"Choć broń palna w dużej mierze wyparła tradycyjną broń do walki w zwarciu, "
+"masz bogate doświadczenie w starciach bezpośrednich z użyciem oręża. Może to "
+"pełnokontaktowe sparingi HEMA lub SCA, a może po prostu jesteś twardym "
+"komandosem z maczetą. Zaczynasz z wybraną sztuką walki: Barbaran Montante, "
+"Bōjutsu, Eskrima, Szermierka, Fior di battaglia, Średniowieczne władanie "
+"mieczem, Niten ichi-ryu, Pencak Silat lub Sōjutsu."
 
 #. ~ Description of profession "Melee Training (Expert)" for female
 #: data/json/hobbies.json
@@ -587,6 +759,12 @@ msgid ""
 "Bōjutsu, Eskrima, Fencing, Fior Di Battaglia, Medieval Swordsmanship, Niten "
 "Ichi-Ryu, Pencak Silat, or Sōjutsu."
 msgstr ""
+"Choć broń palna w dużej mierze wyparła tradycyjną broń do walki w zwarciu, "
+"masz bogate doświadczenie w starciach bezpośrednich z użyciem oręża. Może to "
+"pełnokontaktowe sparingi HEMA lub SCA, a może po prostu jesteś twardą "
+"komandoską z maczetą. Zaczynasz z wybraną sztuką walki: Barbaran Montante, "
+"Bōjutsu, Eskrima, Szermierka, Fior di battaglia, Średniowieczne władanie "
+"mieczem, Niten ichi-ryu, Pencak Silat lub Sōjutsu."
 
 #. ~ Description of profession "Fine Dining" for male
 #: data/json/hobbies.json
@@ -596,6 +774,9 @@ msgid ""
 "world of culinary arts had to offer.  Nowadays, those chefs are all dead, so "
 "it'll be up to you to recreate the joys of your past."
 msgstr ""
+"Uwielbiałeś odwiedzać najróżniejsze restauracje i poznawać wszystko, co świat"
+" sztuki kulinarnej miał do zaoferowania. Teraz ci kucharze już nie żyją, więc"
+" sam będziesz musiał odtworzyć dawne przyjemności."
 
 #. ~ Description of profession "Fine Dining" for female
 #: data/json/hobbies.json
@@ -605,6 +786,9 @@ msgid ""
 "world of culinary arts had to offer.  Nowadays, those chefs are all dead, so "
 "it'll be up to you to recreate the joys of your past."
 msgstr ""
+"Uwielbiałaś odwiedzać najróżniejsze restauracje i poznawać wszystko, co świat"
+" sztuki kulinarnej miał do zaoferowania. Teraz ci kucharze już nie żyją, więc"
+" sama będziesz musiała odtworzyć dawne przyjemności."
 
 #. ~ Description of profession "Competitive Eating" for male
 #: data/json/hobbies.json
@@ -616,6 +800,11 @@ msgid ""
 "minutes might not be too useful in the apocalypse, your fortitude might help "
 "you survive off food other survivors would pass over."
 msgstr ""
+"Przed Kataklizmem byłeś zawodowym pożeraczem i często brałeś udział w "
+"zawodach w jedzeniu. Dzięki treningowi możesz zjadać ogromne ilości jedzenia "
+"bez mdłości. Choć zjedzenie czterdziestu hot dogów w dziesięć minut może nie "
+"być zbyt przydatne podczas apokalipsy, twoja wytrzymałość może pomóc ci "
+"przetrwać na jedzeniu, które inni ocaleni by odrzucili."
 
 #. ~ Description of profession "Competitive Eating" for female
 #: data/json/hobbies.json
@@ -627,6 +816,11 @@ msgid ""
 "minutes might not be too useful in the apocalypse, your fortitude might help "
 "you survive off food other survivors would pass over."
 msgstr ""
+"Przed Kataklizmem byłaś zawodową pożeraczką i często brałaś udział w zawodach"
+" w jedzeniu. Dzięki treningowi możesz zjadać ogromne ilości jedzenia bez "
+"mdłości. Choć zjedzenie czterdziestu hot dogów w dziesięć minut może nie być "
+"zbyt przydatne podczas apokalipsy, twoja wytrzymałość może pomóc ci przetrwać"
+" na jedzeniu, które inni ocaleni by odrzucili."
 
 #. ~ Description of profession "Modeling" for male
 #: data/json/hobbies.json
@@ -636,6 +830,9 @@ msgid ""
 "even modeling clothes yourself.  Having style and good looks is just as, if "
 "not more, important to you than practicality."
 msgstr ""
+"Mocno tkwiłeś w świecie mody, śledziłeś najnowsze trendy i sam prezentowałeś "
+"ubrania jako model. Styl i dobry wygląd są dla ciebie równie ważne jak "
+"praktyczność, jeśli nie ważniejsze."
 
 #. ~ Description of profession "Modeling" for female
 #: data/json/hobbies.json
@@ -645,6 +842,9 @@ msgid ""
 "even modeling clothes yourself.  Having style and good looks is just as, if "
 "not more, important to you than practicality."
 msgstr ""
+"Mocno tkwiłaś w świecie mody, śledziłaś najnowsze trendy i sama prezentowałaś"
+" ubrania jako modelka. Styl i dobry wygląd są dla ciebie równie ważne jak "
+"praktyczność, jeśli nie ważniejsze."
 
 #. ~ Description of profession "Ham Radio" for male
 #: data/json/hobbies.json
@@ -654,6 +854,9 @@ msgid ""
 "Now you have no one to talk to. But you won't give up hope, and maybe your "
 "electronics knowledge can help you somehow."
 msgstr ""
+"Spędzałeś noce, używając, budując i naprawiając stare radiostacje "
+"krótkofalarskie. Teraz nie masz z kim rozmawiać. Ale nie tracisz nadziei i "
+"może twoja wiedza o elektronice jakoś ci pomoże."
 
 #. ~ Description of profession "Ham Radio" for female
 #: data/json/hobbies.json
@@ -663,6 +866,9 @@ msgid ""
 "Now you have no one to talk to. But you won't give up hope, and maybe your "
 "electronics knowledge can help you somehow."
 msgstr ""
+"Spędzałaś noce, używając, budując i naprawiając stare radiostacje "
+"krótkofalarskie. Teraz nie masz z kim rozmawiać. Ale nie tracisz nadziei i "
+"może twoja wiedza o elektronice jakoś ci pomoże."
 
 #. ~ Description of profession "Cyclist (Beginner)" for male
 #: data/json/hobbies.json
@@ -671,6 +877,8 @@ msgid ""
 "Whether through regular commuting, or just riding for the joy of it, you're "
 "no stranger to bicycles."
 msgstr ""
+"Czy to dzięki regularnym dojazdom, czy jeździe dla samej przyjemności, rowery"
+" nie są ci obce."
 
 #. ~ Description of profession "Cyclist (Beginner)" for female
 #: data/json/hobbies.json
@@ -679,6 +887,8 @@ msgid ""
 "Whether through regular commuting, or just riding for the joy of it, you're "
 "no stranger to bicycles."
 msgstr ""
+"Czy to dzięki regularnym dojazdom, czy jeździe dla samej przyjemności, rowery"
+" nie są ci obce."
 
 #. ~ Description of profession "Cyclist (Intermediate)" for male
 #: data/json/hobbies.json
@@ -687,6 +897,7 @@ msgid ""
 "You've shed gallons of sweat, and more than a little blood, riding the "
 "streets and trails as a cyclist."
 msgstr ""
+"Wylałeś litry potu i niemało krwi, przemierzając ulice i szlaki na rowerze."
 
 #. ~ Description of profession "Cyclist (Intermediate)" for female
 #: data/json/hobbies.json
@@ -695,6 +906,7 @@ msgid ""
 "You've shed gallons of sweat, and more than a little blood, riding the "
 "streets and trails as a cyclist."
 msgstr ""
+"Wylałaś litry potu i niemało krwi, przemierzając ulice i szlaki na rowerze."
 
 #. ~ Description of profession "Cyclist (Expert)" for male
 #: data/json/hobbies.json
@@ -703,6 +915,8 @@ msgid ""
 "You've honed the fitness and form of a professional bicycle racer.  When "
 "you're riding, your wheels are like an extension of your body."
 msgstr ""
+"Wypracowałeś kondycję i technikę zawodowego kolarza. Podczas jazdy koła są "
+"jak przedłużenie twojego ciała."
 
 #. ~ Description of profession "Cyclist (Expert)" for female
 #: data/json/hobbies.json
@@ -711,6 +925,8 @@ msgid ""
 "You've honed the fitness and form of a professional bicycle racer.  When "
 "you're riding, your wheels are like an extension of your body."
 msgstr ""
+"Wypracowałaś kondycję i technikę zawodowej kolarki. Podczas jazdy koła są jak"
+" przedłużenie twojego ciała."
 
 #. ~ Description of profession "Basketball (Beginner)" for male
 #: data/json/hobbies.json
@@ -720,6 +936,8 @@ msgid ""
 " of corpses who were up to no good started making trouble in your "
 "neighborhood."
 msgstr ""
+"Kiedyś rzucałeś do kosza pod szkołą… przynajmniej do czasu, gdy parę trupów o"
+" złych zamiarach zaczęło rozrabiać w twojej okolicy."
 
 #. ~ Description of profession "Basketball (Beginner)" for female
 #: data/json/hobbies.json
@@ -729,6 +947,8 @@ msgid ""
 " of corpses who were up to no good started making trouble in your "
 "neighborhood."
 msgstr ""
+"Kiedyś rzucałaś do kosza pod szkołą… przynajmniej do czasu, gdy parę trupów o"
+" złych zamiarach zaczęło rozrabiać w twojej okolicy."
 
 #. ~ Description of profession "Basketball (Expert)" for male
 #: data/json/hobbies.json
@@ -737,6 +957,8 @@ msgid ""
 "You can sink 3-pointers all day, and dribble around the most determined "
 "defenders."
 msgstr ""
+"Możesz bez końca trafiać za trzy punkty i omijać z piłką nawet najbardziej "
+"zawziętych obrońców."
 
 #. ~ Description of profession "Basketball (Expert)" for female
 #: data/json/hobbies.json
@@ -745,6 +967,8 @@ msgid ""
 "You can sink 3-pointers all day, and dribble around the most determined "
 "defenders."
 msgstr ""
+"Możesz bez końca trafiać za trzy punkty i omijać z piłką nawet najbardziej "
+"zawziętych obrońców."
 
 #. ~ Description of profession "Football (Beginner)" for male
 #: data/json/hobbies.json
@@ -753,6 +977,8 @@ msgid ""
 "You'd occasionally play touch or flag football at the park, but never got too"
 " serious about it."
 msgstr ""
+"Od czasu do czasu grałeś w parku w bezkontaktowe odmiany futbolu "
+"amerykańskiego, ale nigdy nie traktowałeś tego zbyt poważnie."
 
 #. ~ Description of profession "Football (Beginner)" for female
 #: data/json/hobbies.json
@@ -761,6 +987,8 @@ msgid ""
 "You'd occasionally play touch or flag football at the park, but never got too"
 " serious about it."
 msgstr ""
+"Od czasu do czasu grałaś w parku w bezkontaktowe odmiany futbolu "
+"amerykańskiego, ale nigdy nie traktowałaś tego zbyt poważnie."
 
 #. ~ Description of profession "Football (Intermediate)" for male
 #: data/json/hobbies.json
@@ -770,6 +998,9 @@ msgid ""
 "Hopefully your skills in dodging defenders will help you charge through the "
 "hordes of undead."
 msgstr ""
+"Rzucanie futbolową piłką i przyjmowanie kilku szarż nie są ci obce. Oby "
+"umiejętność omijania obrońców pomogła ci przedrzeć się przez hordy "
+"nieumarłych."
 
 #. ~ Description of profession "Football (Intermediate)" for female
 #: data/json/hobbies.json
@@ -779,6 +1010,9 @@ msgid ""
 "Hopefully your skills in dodging defenders will help you charge through the "
 "hordes of undead."
 msgstr ""
+"Rzucanie futbolową piłką i przyjmowanie kilku szarż nie są ci obce. Oby "
+"umiejętność omijania obrońców pomogła ci przedrzeć się przez hordy "
+"nieumarłych."
 
 #. ~ Description of profession "Football (Expert)" for male
 #: data/json/hobbies.json
@@ -787,6 +1021,8 @@ msgid ""
 "You played college ball, ya know.  You could have gone pro if the world "
 "hadn't ended."
 msgstr ""
+"Grałeś w futbol na uczelni, wiesz? Mógłbyś przejść na zawodowstwo, gdyby "
+"świat się nie skończył."
 
 #. ~ Description of profession "Football (Expert)" for female
 #: data/json/hobbies.json
@@ -795,12 +1031,14 @@ msgid ""
 "You played college ball, ya know.  You could have gone pro if the world "
 "hadn't ended."
 msgstr ""
+"Grałaś w futbol na uczelni, wiesz? Mogłabyś przejść na zawodowstwo, gdyby "
+"świat się nie skończył."
 
 #. ~ Profession name for male
 #: data/json/hobbies.json
 msgctxt "profession_male"
 msgid "Soccer (Beginner)"
-msgstr ""
+msgstr "Piłka nożna (początkujący)"
 
 #. ~ Description of profession "Soccer (Beginner)" for male
 #: data/json/hobbies.json
@@ -809,12 +1047,14 @@ msgid ""
 "You used to kick a ball around with your friends, having fun together.  "
 "Though it may not be the case anymore."
 msgstr ""
+"Kiedyś kopałeś piłkę ze znajomymi, dobrze się razem bawiąc. Choć teraz może "
+"już tak nie być."
 
 #. ~ Profession name for female
 #: data/json/hobbies.json
 msgctxt "profession_female"
 msgid "Soccer (Beginner)"
-msgstr ""
+msgstr "Piłka nożna (początkująca)"
 
 #. ~ Description of profession "Soccer (Beginner)" for female
 #: data/json/hobbies.json
@@ -823,12 +1063,14 @@ msgid ""
 "You used to kick a ball around with your friends, having fun together.  "
 "Though it may not be the case anymore."
 msgstr ""
+"Kiedyś kopałaś piłkę ze znajomymi, dobrze się razem bawiąc. Choć teraz może "
+"już tak nie być."
 
 #. ~ Profession name for male
 #: data/json/hobbies.json
 msgctxt "profession_male"
 msgid "Soccer (Intermediate)"
-msgstr ""
+msgstr "Piłka nożna (średniozaawansowany)"
 
 #. ~ Description of profession "Soccer (Intermediate)" for male
 #: data/json/hobbies.json
@@ -838,12 +1080,15 @@ msgid ""
 "tackles.  Whether you can go past the backline of the undead is a question "
 "yet to be answered."
 msgstr ""
+"Twoje zamiłowanie do tej pięknej gry widać w efektownych zagraniach, "
+"umiejętnościach i odbiorach piłki. Czy zdołasz minąć linię obrony "
+"nieumarłych? To pytanie wciąż czeka na odpowiedź."
 
 #. ~ Profession name for female
 #: data/json/hobbies.json
 msgctxt "profession_female"
 msgid "Soccer (Intermediate)"
-msgstr ""
+msgstr "Piłka nożna (średniozaawansowana)"
 
 #. ~ Description of profession "Soccer (Intermediate)" for female
 #: data/json/hobbies.json
@@ -853,12 +1098,15 @@ msgid ""
 "tackles.  Whether you can go past the backline of the undead is a question "
 "yet to be answered."
 msgstr ""
+"Twoje zamiłowanie do tej pięknej gry widać w efektownych zagraniach, "
+"umiejętnościach i odbiorach piłki. Czy zdołasz minąć linię obrony "
+"nieumarłych? To pytanie wciąż czeka na odpowiedź."
 
 #. ~ Profession name for male
 #: data/json/hobbies.json
 msgctxt "profession_male"
 msgid "Soccer (Expert)"
-msgstr ""
+msgstr "Piłka nożna (ekspert)"
 
 #. ~ Description of profession "Soccer (Expert)" for male
 #: data/json/hobbies.json
@@ -867,12 +1115,14 @@ msgid ""
 "You were on trial at a professional club, ready to get a contract.  What a "
 "great opportunity for you, if only your coaches were still alive."
 msgstr ""
+"Byłeś na testach w zawodowym klubie, gotów podpisać kontrakt. Co za wspaniała"
+" okazja, gdyby tylko twoi trenerzy wciąż żyli."
 
 #. ~ Profession name for female
 #: data/json/hobbies.json
 msgctxt "profession_female"
 msgid "Soccer (Expert)"
-msgstr ""
+msgstr "Piłka nożna (ekspertka)"
 
 #. ~ Description of profession "Soccer (Expert)" for female
 #: data/json/hobbies.json
@@ -881,6 +1131,8 @@ msgid ""
 "You were on trial at a professional club, ready to get a contract.  What a "
 "great opportunity for you, if only your coaches were still alive."
 msgstr ""
+"Byłaś na testach w zawodowym klubie, gotowa podpisać kontrakt. Co za "
+"wspaniała okazja, gdyby tylko twoi trenerzy wciąż żyli."
 
 #. ~ Description of profession "Shooting (Beginner)" for male
 #: data/json/hobbies.json
@@ -890,6 +1142,9 @@ msgid ""
 "class.  At the very least, you're confident you can point the gun in the "
 "correct direction."
 msgstr ""
+"Byłeś na strzelnicy raz czy dwa i może uczestniczyłeś w kursie bezpiecznego "
+"obchodzenia się z bronią. Przynajmniej jesteś pewien, że potrafisz skierować "
+"broń we właściwą stronę."
 
 #. ~ Description of profession "Shooting (Beginner)" for female
 #: data/json/hobbies.json
@@ -899,6 +1154,9 @@ msgid ""
 "class.  At the very least, you're confident you can point the gun in the "
 "correct direction."
 msgstr ""
+"Byłaś na strzelnicy raz czy dwa i może uczestniczyłaś w kursie bezpiecznego "
+"obchodzenia się z bronią. Przynajmniej jesteś pewna, że potrafisz skierować "
+"broń we właściwą stronę."
 
 #. ~ Description of profession "Shooting (Intermediate)" for male
 #: data/json/hobbies.json
@@ -908,6 +1166,9 @@ msgid ""
 "blasting cans off of fence posts with a variety of firearms.  Maybe if you "
 "just imagine targets on those undead, this could help."
 msgstr ""
+"Lubiłeś chodzić na miejscową strzelnicę i strzelać do tarcz albo zestrzeliwać"
+" puszki ze słupków płotu przy użyciu różnej broni palnej. Może pomoże ci "
+"wyobrażenie sobie tarcz na tych nieumarłych."
 
 #. ~ Description of profession "Shooting (Intermediate)" for female
 #: data/json/hobbies.json
@@ -917,6 +1178,9 @@ msgid ""
 "blasting cans off of fence posts with a variety of firearms.  Maybe if you "
 "just imagine targets on those undead, this could help."
 msgstr ""
+"Lubiłaś chodzić na miejscową strzelnicę i strzelać do tarcz albo zestrzeliwać"
+" puszki ze słupków płotu przy użyciu różnej broni palnej. Może pomoże ci "
+"wyobrażenie sobie tarcz na tych nieumarłych."
 
 #. ~ Description of profession "Trap Shooting" for male
 #: data/json/hobbies.json
@@ -926,6 +1190,9 @@ msgid ""
 "Your future will likely involve shooting things a little fleshier than clay "
 "pigeons."
 msgstr ""
+"Uwielbiałeś zapach prochu i zestrzeliwanie ceramicznych krążków z nieba. W "
+"przyszłości pewnie będziesz strzelać do czegoś nieco bardziej mięsistego niż "
+"gliniane rzutki."
 
 #. ~ Description of profession "Trap Shooting" for female
 #: data/json/hobbies.json
@@ -935,6 +1202,9 @@ msgid ""
 "Your future will likely involve shooting things a little fleshier than clay "
 "pigeons."
 msgstr ""
+"Uwielbiałaś zapach prochu i zestrzeliwanie ceramicznych krążków z nieba. W "
+"przyszłości pewnie będziesz strzelać do czegoś nieco bardziej mięsistego niż "
+"gliniane rzutki."
 
 #. ~ Description of profession "Woodworking - Luthier" for male
 #: data/json/hobbies.json
@@ -943,6 +1213,8 @@ msgid ""
 "You've learned woodworking in the field of making musical instruments.  "
 "You'll be able to create musical instruments in the Cataclysm."
 msgstr ""
+"Nauczyłeś się obróbki drewna pod kątem wytwarzania instrumentów muzycznych. "
+"Będziesz mógł tworzyć instrumenty muzyczne podczas Kataklizmu."
 
 #. ~ Description of profession "Woodworking - Luthier" for female
 #: data/json/hobbies.json
@@ -951,6 +1223,8 @@ msgid ""
 "You've learned woodworking in the field of making musical instruments.  "
 "You'll be able to create musical instruments in the Cataclysm."
 msgstr ""
+"Nauczyłaś się obróbki drewna pod kątem wytwarzania instrumentów muzycznych. "
+"Będziesz mogła tworzyć instrumenty muzyczne podczas Kataklizmu."
 
 #. ~ Description of profession "Home Improvement" for male
 #: data/json/hobbies.json
@@ -960,6 +1234,9 @@ msgid ""
 "two hands and some elbow grease.  You did it to save money on repairmen, but "
 "now it seems you'll do it to save your life."
 msgstr ""
+"Naprawiałeś dziury i sprzęty w swoim domu, mając tylko własne ręce i zapał do"
+" pracy. Robiłeś to, by oszczędzić na fachowcach, ale teraz wygląda na to, że "
+"będziesz to robić, by ocalić życie."
 
 #. ~ Description of profession "Home Improvement" for female
 #: data/json/hobbies.json
@@ -969,72 +1246,77 @@ msgid ""
 "two hands and some elbow grease.  You did it to save money on repairmen, but "
 "now it seems you'll do it to save your life."
 msgstr ""
+"Naprawiałaś dziury i sprzęty w swoim domu, mając tylko własne ręce i zapał do"
+" pracy. Robiłaś to, by oszczędzić na fachowcach, ale teraz wygląda na to, że "
+"będziesz to robić, by ocalić życie."
 
 #. ~ Item action name of "GEIGER"
 #: data/json/item_actions.json
 msgid "Use Geiger counter"
-msgstr ""
+msgstr "Użyj licznika Geigera"
 
 #. ~ Item action name of "E_FILE_DEVICE"
 #: data/json/item_actions.json
 msgid "Manage files"
-msgstr ""
+msgstr "Zarządzaj plikami"
 
 #. ~ Item category name used for headers
 #: data/json/item_category.json
 msgid "Files"
-msgstr ""
+msgstr "Pliki"
 
 #. ~ Item category name used for headers
 #: data/json/item_category.json
 msgid "Software"
-msgstr ""
+msgstr "Oprogramowanie"
 
 #. ~ Name of spell "debug_kill_spell"
 #: data/json/item_spell_effects.json
 msgid "Debug Kill Creature"
-msgstr ""
+msgstr "Debug: zabij stworzenie"
 
 #. ~ Description of spell "debug_kill_spell ( Debug Kill Creature )"
 #: data/json/item_spell_effects.json
 #, c-format
 msgid "Deal damage equal to 100% of monster's HP."
-msgstr ""
+msgstr "Zadaje obrażenia równe 100% obecnych PŻ potwora."
 
 #. ~ Name of the limb score as displayed in the UI
 #: data/json/limb_scores.json
 msgid "Consume (Solid)"
-msgstr ""
+msgstr "Spożywanie (pokarmy stałe)"
 
 #. ~ Name of the limb score as displayed in the UI
 #: data/json/limb_scores.json
 msgid "Consume (Liquid)"
-msgstr ""
+msgstr "Spożywanie (płyny)"
 
 #. ~ Description of loot zone "Loot: Default"
 #: data/json/loot_zones.json
 msgid "Destination for any loot without a more specific zone defined."
 msgstr ""
+"Miejsce docelowe dla łupów, dla których nie określono bardziej szczegółowej "
+"strefy."
 
 #. ~ Description of loot zone "Loot: Martial arts manuals"
 #: data/json/loot_zones.json
 msgid "Destination for manuals for martial arts."
-msgstr ""
+msgstr "Miejsce docelowe dla podręczników sztuk walki."
 
 #. ~ Description of loot zone "Loot: Tool Magazines"
 #: data/json/loot_zones.json
 msgid "Destination for tool magazines."
-msgstr ""
+msgstr "Miejsce docelowe dla czasopism o narzędziach."
 
 #. ~ Description of loot zone "Loot: Traps"
 #: data/json/loot_zones.json
 msgid "Destination for traps."
-msgstr ""
+msgstr "Miejsce docelowe dla pułapek."
 
 #. ~ Name of loot zone
 #: data/json/loot_zones.json
 msgid "Loot: Unload Everything"
-msgstr ""
+msgstr "Łup: opróżnij wszystko"
 
 #. ~ Description of loot zone "Loot: Unload Everything"
 #: data/json/loot_zones.json
@@ -1043,17 +1325,20 @@ msgid ""
 " dumped out and placed on the same tile.  This includes corpses, magazines, "
 "and magazine wells."
 msgstr ""
+"Zawartość wszystkich pojemników w tej strefie, których nie sortujesz w inny "
+"sposób, zostanie wyrzucona na to samo pole. Dotyczy to również zwłok, "
+"magazynków i gniazd magazynków."
 
 #. ~ Initiate message of martial art "Aikido"
 #: data/json/martialarts.json
 msgid "You enter the hanmi stance."
-msgstr ""
+msgstr "Przyjmujesz postawę hanmi."
 
 #. ~ Initiate message of martial art "Aikido"
 #: data/json/martialarts.json
 #, c-format
 msgid "%s enters a relaxed combat posture."
-msgstr ""
+msgstr "%s przyjmuje swobodną postawę bojową."
 
 #. ~ Description of buff "Aikido" in martial art "Aikido Stance"
 #: data/json/martialarts.json
@@ -1063,6 +1348,9 @@ msgid ""
 "\n"
 "Blocked damage reduced by 100% of Dexterity, +2 blocking effectiveness, +1.0 Dodging skill."
 msgstr ""
+"Rezygnując z ataku na rzecz obrony, lepiej chronisz się przed obrażeniami.\n"
+"\n"
+"Obrażenia przy blokowaniu zmniejszone o 100% zręczności, +2 do skuteczności blokowania, +1,0 do umiejętności wykonywania uników."
 
 #. ~ Description of martial art "Barbaran Montante"
 #: data/json/martialarts.json
@@ -1071,13 +1359,16 @@ msgid ""
 "thick armor with heavy weaponry and sweeping blows, transferring kinetic "
 "energy through armor and into vulnerable organs and bones."
 msgstr ""
+"Barbaran Montante powstało w XVI-wiecznej Hiszpanii i skupia się na "
+"pokonywaniu grubego pancerza ciężką bronią i zamaszystymi ciosami, "
+"przekazując energię kinetyczną przez pancerz do wrażliwych narządów i kości."
 
 #. ~ Buff name of martial art "Brawling"
 #. ~ Clause text "buff_brawling_onpause" of UI widget
 #. "ma_buff_indicator_template"
 #: data/json/martialarts.json data/json/ui/ma_style.json
 msgid "Preparation to Hit"
-msgstr ""
+msgstr "Przygotowanie do uderzenia"
 
 #. ~ Description of buff "Brawling" in martial art "Preparation to Hit"
 #: data/json/martialarts.json
@@ -1086,6 +1377,9 @@ msgid ""
 "\n"
 "+1 accuracy.  Lasts 2 turns.  Stacks 2 times."
 msgstr ""
+"Poświęcasz chwilę na przygotowanie postawy przed przeciwnikiem, co pozwala ci trafiać nieco celniej.\n"
+"\n"
+"+1 do celności. Trwa 2 tury. Kumuluje się 2 razy."
 
 #. ~ Description of buff "Capoeira" in martial art "Capoeira Momentum"
 #: data/json/martialarts.json
@@ -1096,6 +1390,11 @@ msgid ""
 "Enables \"Spin Kick\" and \"Sweep Kick\" techniques.\n"
 "Lasts 3 turns."
 msgstr ""
+"Czujesz rytm podczas ruchu. Trudniej cię trafić, a twoje kopnięcia są jeszcze wspanialsze!\n"
+"\n"
+"+1,0 do umiejętności wykonywania uników.\n"
+"Umożliwia techniki „Kopniak z obrotu” i „Kopniak z zamachem”.\n"
+"Trwa 3 tury."
 
 #. ~ Description of buff "Capoeira" in martial art "Capoeira Tempo"
 #: data/json/martialarts.json
@@ -1106,6 +1405,10 @@ msgid ""
 "+5% damage.\n"
 "Lasts 1 turn.  Stacks 3 times."
 msgstr ""
+"Trafisz czy chybisz, to tylko część tańca! A najlepsze dopiero się zacznie!\n"
+"\n"
+"+5% do obrażeń.\n"
+"Trwa 1 turę. Kumuluje się 3 razy."
 
 #. ~ Description of buff "Crane Kung Fu" in martial art "Crane's Precision"
 #: data/json/martialarts.json
@@ -1115,6 +1418,9 @@ msgid ""
 "\n"
 "Bash damage increased by 75% of Dexterity but decreased by 75% of Strength."
 msgstr ""
+"Twoje ataki trafiają w słabe punkty przeciwników dzięki szybkości i precyzji, a nie brutalnej sile.\n"
+"\n"
+"Obrażenia obuchowe zwiększone o 75% zręczności, ale zmniejszone o 75% siły."
 
 #. ~ Description of buff "Crane Kung Fu" in martial art "Crane's Flight"
 #: data/json/martialarts.json
@@ -1125,6 +1431,11 @@ msgid ""
 "Enables \"Crane Kick\" and \"Crane Strike\" techniques.\n"
 "Lasts 3 turns."
 msgstr ""
+"Podobnie jak żuraw, szybko unikasz niebezpieczeństwa i odpowiadasz ciosem.\n"
+"\n"
+"+1 do celności, +1,0 do umiejętności wykonywania uników.\n"
+"Umożliwia techniki „Kopniak żurawia” i „Uderzenie żurawia”.\n"
+"Trwa 3 tury."
 
 #. ~ Description of buff "Dragon Kung Fu" in martial art "Dragon's Knowledge"
 #: data/json/martialarts.json
@@ -1134,6 +1445,9 @@ msgid ""
 "\n"
 "Accuracy increased by 25% of Intelligence but decreased by 25% of Dexterity, bash damage increased by 75% of Intelligence but decreased by 75% of Strength."
 msgstr ""
+"Planujesz ataki z dużym wyprzedzeniem, polegając na intuicji, a nie szybkości, by celnie uderzyć.\n"
+"\n"
+"Celność zwiększona o 25% inteligencji, ale zmniejszona o 25% zręczności, obrażenia obuchowe zwiększone o 75% inteligencji, ale zmniejszone o 75% siły."
 
 #. ~ Description of buff "Dragon Kung Fu" in martial art "Dragon Power"
 #: data/json/martialarts.json
@@ -1144,6 +1458,10 @@ msgid ""
 "+2 blocking effectiveness, blocked damage reduced by 100% of Intelligence, +1.0 Dodging skill.\n"
 "Lasts 2 turns."
 msgstr ""
+"Poświęcasz chwilę na rozmyślanie o minionych i przyszłych bitwach. Ta refleksja ochroni cię przed kolejnymi obrażeniami.\n"
+"\n"
+"+2 do skuteczności blokowania, obrażenia przy blokowaniu zmniejszone o 100% inteligencji, +1,0 do umiejętności wykonywania uników.\n"
+"Trwa 2 tury."
 
 #. ~ Description of buff "Fencing" in martial art "Fencing Stance"
 #: data/json/martialarts.json
@@ -1153,6 +1471,9 @@ msgid ""
 "\n"
 "Blocked damage reduced by 50% of Dexterity."
 msgstr ""
+"Twoja boczna postawa zmniejsza ryzyko odniesienia obrażeń w walce.\n"
+"\n"
+"Obrażenia przy blokowaniu zmniejszone o 50% zręczności."
 
 #. ~ Description of buff "Fencing" in martial art "Parry"
 #: data/json/martialarts.json
@@ -1162,6 +1483,10 @@ msgid ""
 "+1 accuracy.\n"
 "Lasts 1 turn."
 msgstr ""
+"Po sparowaniu ciosu twoje następne uderzenie znacznie łatwiej trafi w cel.\n"
+"\n"
+"+1 do celności.\n"
+"Trwa 1 turę."
 
 #. ~ Description of martial art "Fior Di Battaglia"
 #: data/json/martialarts.json
@@ -1170,6 +1495,9 @@ msgid ""
 "\"Flower of Battle\" places great focus on countering one's opponent and "
 "knocking them down before landing a killing blow."
 msgstr ""
+"Techniki walki bronią z hakami pochodzące ze średniowiecznej Europy. „Kwiat "
+"walki” kładzie duży nacisk na kontrowanie przeciwnika i przewracanie go przed"
+" zadaniem śmiertelnego ciosu."
 
 #. ~ Description of martial art "Judo"
 #: data/json/martialarts.json
@@ -1178,6 +1506,10 @@ msgid ""
 "offensive.  You are resistant to most effects that can knock you down and can"
 " counter grab and takedown attacks with a strong judo throw."
 msgstr ""
+"Judo to sztuka walki skupiająca się na chwytach i rzutach, zarówno obronnych,"
+" jak i ofensywnych. Jesteś odporny na większość efektów mogących cię "
+"przewrócić i potrafisz kontrować chwyty oraz ataki obalające silnym rzutem "
+"judo."
 
 #. ~ Description of buff "Judo" in martial art "Judo Stance"
 #: data/json/martialarts.json
@@ -1186,6 +1518,8 @@ msgid ""
 "instantly.  In addition, you can counter grabs and takedown attacks with a "
 "judo throw."
 msgstr ""
+"Twoja znajomość chwytów pozwala ci natychmiast dojść do siebie po powaleniu. "
+"Ponadto możesz kontrować chwyty i ataki obalające rzutem judo."
 
 #. ~ Description of buff "Karate" in martial art "Karate Stance"
 #: data/json/martialarts.json
@@ -1194,11 +1528,14 @@ msgid ""
 "\n"
 "+2 accuracy."
 msgstr ""
+"Twoja praktyczna postawa pozwala ci trafiać celniej.\n"
+"\n"
+"+2 do celności."
 
 #. ~ Name of martial art
 #: data/json/martialarts.json
 msgid "Kickboxing"
-msgstr ""
+msgstr "Kickboxing"
 
 #. ~ Description of martial art "Kickboxing"
 #: data/json/martialarts.json
@@ -1208,24 +1545,27 @@ msgid ""
 " Kickboxing in particular focuses on high kicks without knee or elbow "
 "strikes."
 msgstr ""
+"Sztuka walki łącząca zachodni boks z elementami karate, taekwondo, muay thai "
+"i savate, szczególnie w zakresie kopnięć. Zwłaszcza amerykański kickboxing "
+"skupia się na wysokich kopnięciach bez ciosów kolanami ani łokciami."
 
 #. ~ Initiate message of martial art "Kickboxing"
 #: data/json/martialarts.json
 msgid "You bring your fists up and stay light on your feet."
-msgstr ""
+msgstr "Unosisz pięści i lekko poruszasz się na nogach."
 
 #. ~ Initiate message of martial art "Kickboxing"
 #: data/json/martialarts.json
 #, c-format
 msgid "%s brings their fists up and stays light on their feet."
-msgstr ""
+msgstr "%s unosi pięści i lekko porusza się na nogach."
 
 #. ~ Buff name of martial art "Kickboxing"
 #. ~ Clause text "buff_kickboxing_stance_static" of UI widget
 #. "ma_buff_indicator_template"
 #: data/json/martialarts.json data/json/ui/ma_style.json
 msgid "Kick stance"
-msgstr ""
+msgstr "Postawa do kopnięć"
 
 #. ~ Description of buff "Kickboxing" in martial art "Kick stance"
 #: data/json/martialarts.json
@@ -1236,6 +1576,10 @@ msgid ""
 "Blocked damage reduced by 25% of Strength.\n"
 "+1.0 Dodging skill."
 msgstr ""
+"Przyjmujesz postawę zapewniającą większą ruchliwość i stabilność. Trzymasz ręce w gardzie z łokciami z przodu, by się chronić.\n"
+"\n"
+"Obrażenia przy blokowaniu zmniejszone o 25% siły.\n"
+"+1,0 do umiejętności wykonywania uników."
 
 #. ~ Description of buff "Krav Maga" in martial art "Strike Vitals"
 #: data/json/martialarts.json
@@ -1246,6 +1590,10 @@ msgid ""
 "+5% critical hit chance.\n"
 "Lasts 1 turn."
 msgstr ""
+"Twój przeciwnik głupio odsłania się całkowicie.\n"
+"\n"
+"+5% do szansy na trafienie krytyczne.\n"
+"Trwa 1 turę."
 
 #. ~ Description of martial art "Leopard Kung Fu"
 #: data/json/martialarts.json
@@ -1254,6 +1602,9 @@ msgid ""
 "strategically-planned strikes.  Dexterity determines your damage, rather than"
 " Strength and also increases your critical hit chance."
 msgstr ""
+"Jeden z pięciu zwierzęcych stylów Shaolin. Lampart skupia się na szybkich, "
+"strategicznie zaplanowanych uderzeniach. To zręczność, a nie siła, określa "
+"zadawane obrażenia, a także zwiększa szansę na trafienie krytyczne."
 
 #. ~ Description of martial art "Medieval Swordsmanship"
 #: data/json/martialarts.json
@@ -1263,6 +1614,10 @@ msgid ""
 "grappling as well as defensive and offensive sword techniques.  This style is"
 " a combination of the Italian and German traditions."
 msgstr ""
+"Sztuka walki mieczem długim oraz mieczem i puklerzem, poprzedzająca "
+"późniejszy rozwój szermierki. Przeznaczona do walki zarówno bez pancerza, jak"
+" i w nim, obejmuje chwyty oraz obronne i ofensywne techniki miecza. Ten styl "
+"łączy tradycje włoskie i niemieckie."
 
 #. ~ Description of buff "Medieval Swordsmanship" in martial art "Half
 #. Swording"
@@ -1275,6 +1630,11 @@ msgid ""
 "Enables \"Grab\" and \"Lethal Strike\" techniques.\n"
 "Lasts 2 turns."
 msgstr ""
+"Chwytasz ostrze w pewnej odległości od rękojeści, by zyskać większą kontrolę.\n"
+"\n"
+"Obrażenia przy blokowaniu zmniejszone o 50% siły, -1 do celności.\n"
+"Umożliwia techniki „Chwyt” i „Śmiertelne uderzenie”.\n"
+"Trwa 2 tury."
 
 #. ~ Description of buff "Ninjutsu" in martial art "Sneak Attack"
 #: data/json/martialarts.json
@@ -1284,6 +1644,9 @@ msgid ""
 "\n"
 "+25% critical hit chance."
 msgstr ""
+"Dla prawdziwego shinobi pierwszy i ostatni cios są jednym i tym samym.\n"
+"\n"
+"+25% do szansy na trafienie krytyczne."
 
 #. ~ Description of buff "Ninjutsu" in martial art "Momentum Shift"
 #: data/json/martialarts.json
@@ -1294,6 +1657,10 @@ msgid ""
 "+1.0 Dodging skill, accuracy increased by 20% of Dexterity.\n"
 "Lasts 1 turn."
 msgstr ""
+"Ninja szkolą się, by osiągnąć niezwykłą zwinność i ruchliwość.\n"
+"\n"
+"+1,0 do umiejętności wykonywania uników, celność zwiększona o 20% zręczności.\n"
+"Trwa 1 turę."
 
 #. ~ Description of buff "Ninjutsu" in martial art "Loss of Surprise"
 #: data/json/martialarts.json
@@ -1303,6 +1670,10 @@ msgid ""
 "Disables \"Sneak Attack\" buff and \"Assassinate\" and \"Ninjutsu Takedown\" techniques.  Enables \"Swift Strike (crit)\" technique.\n"
 "Lasts 3 turns, persists after switching styles."
 msgstr ""
+"Twoje zamiary są znane! Minie kilka chwil, zanim znów zdołasz zaatakować z zaskoczenia.\n"
+"\n"
+"Wyłącza bonus „Atak z zaskoczenia” oraz techniki „Skrytobójstwo” i „Powalenie ninjutsu”. Umożliwia technikę „Szybkie uderzenie (krytyczne)”.\n"
+"Trwa 3 tury, utrzymuje się po zmianie stylu."
 
 #. ~ Description of martial art "Pankration"
 #: data/json/martialarts.json
@@ -1311,6 +1682,9 @@ msgid ""
 "and wrestling techniques to create a brutal sport, though the modern revival "
 "of the art is more restrained and rules-based."
 msgstr ""
+"Starożytna grecka sztuka walki używana niegdyś przez Spartan. Łączy techniki "
+"bokserskie i zapaśnicze, tworząc brutalny sport, choć jego współczesna "
+"odrodzona wersja jest bardziej powściągliwa i podporządkowana regułom."
 
 #. ~ Description of buff "Pankration" in martial art "Close Combat"
 #: data/json/martialarts.json
@@ -1321,11 +1695,15 @@ msgid ""
 "+20% damage.\n"
 "Lasts 1 turn."
 msgstr ""
+"Masz przeciwnika dokładnie tam, gdzie chcesz go mieć!\n"
+"\n"
+"+20% do obrażeń.\n"
+"Trwa 1 turę."
 
 #. ~ Initiate message of martial art "Silat"
 #: data/json/martialarts.json
 msgid "You give a salute of respect as you prepare for combat."
-msgstr ""
+msgstr "Przygotowując się do walki, oddajesz pozdrowienie na znak szacunku."
 
 #. ~ Description of buff "Silat" in martial art "Silat Stance"
 #: data/json/martialarts.json
@@ -1334,6 +1712,9 @@ msgid ""
 "\n"
 "+1 dodge attempt."
 msgstr ""
+"Podczas walki starasz się zachować jak największą swobodę ruchów, by mieć więcej okazji do uników.\n"
+"\n"
+"+1 próba uniku."
 
 #. ~ Description of buff "Silat" in martial art "Silat Appraisal"
 #: data/json/martialarts.json
@@ -1344,6 +1725,10 @@ msgid ""
 "Accuracy increased by 15% of Dexterity.\n"
 "Lasts 2 turns.  Stacks 3 times."
 msgstr ""
+"Za każdym razem, gdy unikasz ataku, dowiadujesz się nieco więcej o stylu walki przeciwnika. Pozwala ci to atakować go precyzyjniej.\n"
+"\n"
+"Celność zwiększona o 15% zręczności.\n"
+"Trwa 2 tury. Kumuluje się 3 razy."
 
 #. ~ Description of martial art "Snake Kung Fu"
 #: data/json/martialarts.json
@@ -1353,6 +1738,10 @@ msgid ""
 "rather than Dexterity and Strength.  Standing still increases the accuracy "
 "and critical hit chance of your next few attacks."
 msgstr ""
+"Jeden z pięciu zwierzęcych stylów Shaolin. Wąż skupia się na wijących ruchach"
+" i precyzyjnych uderzeniach. To percepcja, a nie zręczność i siła, określa "
+"celność oraz obrażenia. Stanie w miejscu zwiększa celność i szansę na "
+"trafienie krytyczne kilku następnych ataków."
 
 #. ~ Description of buff "Snake Kung Fu" in martial art "Snake's Sight"
 #: data/json/martialarts.json
@@ -1362,6 +1751,9 @@ msgid ""
 "\n"
 "Accuracy increased by 25% of Perception but decreased by 25% of Dexterity, bash damage increased by 75% of Perception but decreased by 75% of Strength."
 msgstr ""
+"Jesteś cierpliwy i wiesz, gdzie uderzyć przeciwnika, by uzyskać najlepszy efekt.\n"
+"\n"
+"Celność zwiększona o 25% percepcji, ale zmniejszona o 25% zręczności, obrażenia obuchowe zwiększone o 75% percepcji, ale zmniejszone o 75% siły."
 
 #. ~ Description of buff "Snake Kung Fu" in martial art "Snake's Coil"
 #: data/json/martialarts.json
@@ -1372,6 +1764,10 @@ msgid ""
 "+1 accuracy, +1 blocking effectiveness, +5% critical hit chance.\n"
 "Lasts 4 turns.  Stacks 3 times."
 msgstr ""
+"Każdy wąż czeka na idealny moment do ataku. Celuj, gdy przeciwnicy się zbliżają, i bezlitośnie uderzaj w ich słabe punkty!\n"
+"\n"
+"+1 do celności, +1 do skuteczności blokowania, +5% do szansy na trafienie krytyczne.\n"
+"Trwa 4 tury. Kumuluje się 3 razy."
 
 #. ~ Description of martial art "Sōjutsu"
 #: data/json/martialarts.json
@@ -1381,6 +1777,10 @@ msgid ""
 " maintain the advantage in combat.  Standing still gives you an extra block "
 "attempt but moving will briefly increase your damage."
 msgstr ""
+"Sōjutsu, „droga włóczni”, to japońska sztuka walki włócznią. Sōjutsu skupia "
+"się na utrzymywaniu przeciwników na dystans, by zachować przewagę w walce. "
+"Stanie w miejscu daje dodatkową próbę bloku, a poruszanie się na krótko "
+"zwiększa zadawane obrażenia."
 
 #. ~ Description of martial art "Taekwondo"
 #: data/json/martialarts.json
@@ -1390,6 +1790,10 @@ msgid ""
 " weapons.  It also includes strength training; your blocks absorb extra "
 "damage and your attacks do more damage if you are not holding anything."
 msgstr ""
+"Taekwondo to narodowy sport Korei, wykorzystywany w XX wieku przez armię "
+"Korei Południowej. Skupia się na kopnięciach i nie daje korzyści z trzymanej "
+"broni. Obejmuje też trening siłowy: twoje bloki pochłaniają dodatkowe "
+"obrażenia, a ataki zadają większe obrażenia, jeśli niczego nie trzymasz."
 
 #. ~ Description of buff "Taekwondo" in martial art "Taekwondo Stance"
 #: data/json/martialarts.json
@@ -1399,6 +1803,9 @@ msgid ""
 "\n"
 "Blocked damage reduced by 50% of Strength."
 msgstr ""
+"Atakowanie nogami pozostawia ręce wolne, co ułatwia obronę.\n"
+"\n"
+"Obrażenia przy blokowaniu zmniejszone o 50% siły."
 
 #. ~ Description of buff "Tai Chi" in martial art "Tai Chi Stance"
 #: data/json/martialarts.json
@@ -1408,6 +1815,9 @@ msgid ""
 "\n"
 "+1 block attempt, blocked damage reduced by 100% Perception."
 msgstr ""
+"Skupiasz się na obronie i przewidywaniu ataków przeciwników.\n"
+"\n"
+"+1 próba bloku, obrażenia przy blokowaniu zmniejszone o 100% percepcji."
 
 #. ~ Description of martial art "Wing Chun"
 #: data/json/martialarts.json
@@ -1418,6 +1828,11 @@ msgid ""
 "focuses on sensitivity to the opponent's direction of force, and flowing "
 "around it to create opportunities for attack."
 msgstr ""
+"Wing Chun to chińska sztuka walki, która powstała przez wybranie "
+"najłatwiejszych do nauczenia się skutecznych technik z różnych zwierzęcych "
+"stylów Shaolin. Wykorzystuje wysoką postawę z ciężarem ciała spoczywającym "
+"całkowicie na tylnej nodze. Wing Chun skupia się na wyczuwaniu kierunku siły "
+"przeciwnika i płynnym omijaniu jej, by tworzyć okazje do ataku."
 
 #. ~ Description of buff "Zui Quan" in martial art "Zui Quan Stance"
 #: data/json/martialarts.json
@@ -1427,6 +1842,9 @@ msgid ""
 "\n"
 "+2 dodge attempts, Dodging skill increased by 20% of Intelligence."
 msgstr ""
+"Inni mogą sądzić, że zataczasz się bez celu, ale ty wiesz swoje. Każdy ruch jest obliczony na łatwe uniknięcie obrażeń.\n"
+"\n"
+"+2 próby uniku, umiejętność wykonywania uników zwiększona o 20% inteligencji."
 
 #. ~ Description of martial art "Bionic Combatives"
 #: data/json/martialarts_fictional.json
@@ -1435,6 +1853,9 @@ msgid ""
 "Bionic Combatives combines integrated weaponry, armor, and augments into a "
 "consolidated fighting discipline."
 msgstr ""
+"Nowoczesny styl walki dla postmodernistycznego człowieka. Bioniczna "
+"waleczność, zwana „Biojutsu”, łączy zintegrowane uzbrojenie, pancerz i "
+"ulepszenia w spójną dyscyplinę walki."
 
 #. ~ Description of buff "Centipede Kung Fu" in martial art "Centipede's
 #. Frenzy"
@@ -1445,6 +1866,10 @@ msgid ""
 "-4 move cost.\n"
 "Lasts 3 turns.  Stacks 4 times."
 msgstr ""
+"Twoje ataki to rozmazane ruchy rąk i nóg, które stają się szybsze, gdy bez ustanku uderzasz przeciwników.\n"
+"\n"
+"-4 do kosztu ruchu.\n"
+"Trwa 3 tury. Kumuluje się 4 razy."
 
 #. ~ Description of buff "Lizard Kung Fu" in martial art "Lizard's Venom"
 #: data/json/martialarts_fictional.json
@@ -1455,6 +1880,10 @@ msgid ""
 "+15% damage.\n"
 "Lasts 5 turns."
 msgstr ""
+"Twój jad to długotrwały ból, którego przeciwnicy nigdy nie zapomną.\n"
+"\n"
+"+15% do obrażeń.\n"
+"Trwa 5 tur."
 
 #. ~ Description of buff "Scorpion Kung Fu" in martial art "Scorpion's Charge"
 #: data/json/martialarts_fictional.json
@@ -1466,6 +1895,11 @@ msgid ""
 "Enables \"Pincer Fist\" technique.\n"
 "Lasts 2 turns.  Stacks 2 times."
 msgstr ""
+"Rusz naprzód i złap swoją ofiarę!\n"
+"\n"
+"+10% do obrażeń.\n"
+"Umożliwia technikę „Pięść-szczypce”.\n"
+"Trwa 2 tury. Kumuluje się 2 razy."
 
 #. ~ Description of martial art "Viper Kung Fu"
 #: data/json/martialarts_fictional.json
@@ -1475,6 +1909,10 @@ msgid ""
 "a Viper Bite will allow you to finish them off with the legendary Viper "
 "Strike."
 msgstr ""
+"Dziedzictwo Pięciu Śmiercionośnych Jadów, wykorzystywane przez Qi Donga. Styl"
+" żmii (pierwotnie zwany stylem węża) jest bezlitosny dla ogłuszonych "
+"przeciwników. Ogłuszenie wroga Ukąszeniem żmii pozwala wykończyć go "
+"legendarnym Uderzeniem żmii."
 
 #. ~ Description of buff "Viper Kung Fu" in martial art "Viper's Rattle"
 #: data/json/martialarts_fictional.json
@@ -1484,217 +1922,222 @@ msgid ""
 "+1 accuracy, +1.0 Dodging skill.\n"
 "Lasts 3 turns.  Stacks 2 times."
 msgstr ""
+"Jesteś przerażającym potworem na polu bitwy! Przeciwnikom trudniej będzie się bronić.\n"
+"\n"
+"+1 do celności, +1,0 do umiejętności wykonywania uników.\n"
+"Trwa 3 tury. Kumuluje się 2 razy."
 
 #. ~ Message of martial technique "Grab Break"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "You were almost grabbed by %s, but you outmaneuver it"
-msgstr ""
+msgstr "%s niemal cię chwyta, ale unikasz tego zręcznym manewrem"
 
 #. ~ Message of martial technique "Grab Break"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "<npcname> was almost grabbed by %s, but they outmaneuver it"
 msgstr ""
+"<npcname> w ostatniej chwili unika chwytu przeciwnika %s zręcznym manewrem"
 
 #. ~ Message of martial technique "Viper Bite"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "<npcname> lashes out at %s with a Viper Bite"
-msgstr ""
+msgstr "<npcname> wykonuje technikę „Ukąszenie żmii” na celu: %s"
 
 #. ~ Condition description of martial technique "Viper Tail"
 #. ~ Condition description of martial technique "Viper Strike"
 #: data/json/martialarts_fictional.json
 msgid "Requires a stunned target"
-msgstr ""
+msgstr "Wymaga ogłuszonego celu"
 
 #. ~ Message of martial technique "Toad Slam"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "You meet %s head-on with a stunning slam"
-msgstr ""
+msgstr "Zderzasz się czołowo z celem: %s, zadając mu ogłuszający cios"
 
 #. ~ Message of martial technique "Toad Slam"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "<npcname> meet %s head-on with a stunning slam"
-msgstr ""
+msgstr "<npcname> zderza się czołowo z celem %s, zadając ogłuszający cios"
 
 #. ~ Message of martial technique "Grab Break"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "You were almost grabbed by %s, but you skitter free"
-msgstr ""
+msgstr "%s niemal cię chwyta, ale szybko się wymykasz"
 
 #. ~ Message of martial technique "Grab Break"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "<npcname> was almost grabbed by %s, but they skitter free"
-msgstr ""
+msgstr "<npcname> szybko wymyka się z niemal udanego chwytu przeciwnika %s"
 
 #. ~ Bash damage verb of material
 #. ~ Damage adjective of material
 #: data/json/materials.json
 msgid "mangled"
-msgstr ""
+msgstr "zmasakrowany"
 
 #. ~ Damage adjective of material
 #: data/json/materials.json
 msgid "compromised"
-msgstr ""
+msgstr "uszkodzony"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Exodii Ceramic"
-msgstr ""
+msgstr "Ceramika Exodii"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Plutonium"
-msgstr ""
+msgstr "Pluton"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Gas"
-msgstr ""
+msgstr "Gaz"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Nitrogen"
-msgstr ""
+msgstr "Azot"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Oxygen"
-msgstr ""
+msgstr "Tlen"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Hydrogen"
-msgstr ""
+msgstr "Wodór"
 
 #. ~ Damage adjective of material
 #: data/json/materials.json data/mods/Aftershock/items/materials.json
 #: data/mods/aftershock_exoplanet/items/materials.json
 msgid "unraveling"
-msgstr ""
+msgstr "rozpadający się"
 
 #. ~ Name of material
 #: data/json/materials.json
 msgid "Ballistic Barrier"
-msgstr ""
+msgstr "Bariera balistyczna"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Had to suffer through an inane conversation"
-msgstr ""
+msgstr "Konieczność znoszenia bezsensownej rozmowy"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Tingly feeling"
-msgstr ""
+msgstr "Uczucie mrowienia"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Anguished by memories of butchering a person's corpse"
-msgstr ""
+msgstr "Udręka na wspomnienie ćwiartowania ludzkich zwłok"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Chemical enhancement moodswing"
-msgstr ""
+msgstr "Wahania nastroju po chemicznym wspomaganiu"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Spent time around allies"
-msgstr ""
+msgstr "Czas spędzony wśród sojuszników"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Spent time alone"
-msgstr ""
+msgstr "Czas spędzony samotnie"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Covered in bile"
-msgstr ""
+msgstr "Oblanie żółcią"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Saw the sun rise"
-msgstr ""
+msgstr "Widok wschodu słońca"
 
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Saw the sun set"
-msgstr ""
+msgstr "Widok zachodu słońca"
 
 #. ~ Verb in activity "ACT_E_FILE"
 #: data/json/player_activities.json
 msgid "managing files"
-msgstr ""
+msgstr "zarządzanie plikami"
 
 #. ~ Verb in activity "ACT_EBOOKSAVE"
 #: data/json/player_activities.json
 msgid "taking pictures of books"
-msgstr ""
+msgstr "fotografowanie książek"
 
 #. ~ Verb in activity "ACT_VEHICLE_FOLD"
 #: data/json/player_activities.json
 msgid "folding a vehicle"
-msgstr ""
+msgstr "składanie pojazdu"
 
 #. ~ Verb in activity "ACT_VEHICLE_UNFOLD"
 #: data/json/player_activities.json
 msgid "unfolding a vehicle"
-msgstr ""
+msgstr "rozkładanie pojazdu"
 
 #. ~ Verb in activity "ACT_UNLOAD_LOOT"
 #: data/json/player_activities.json
 msgid "unloading loot"
-msgstr ""
+msgstr "opróżnianie łupów"
 
 #. ~ Verb in activity "ACT_OUTFIT_SWAP"
 #: data/json/player_activities.json
 msgid "changing clothes"
-msgstr ""
+msgstr "zmienianie ubrań"
 
 #. ~ Verb in activity "ACT_INVOKE_ITEM"
 #: data/json/player_activities.json
 msgid "using item"
-msgstr ""
+msgstr "używanie przedmiotu"
 
 #. ~ Verb in activity "ACT_DATA_HANDLING"
 #: data/json/player_activities.json
 msgid "downloading data"
-msgstr ""
+msgstr "pobieranie danych"
 
 #. ~ Verb in activity "ACT_REEL_CABLE"
 #: data/json/player_activities.json
 msgid "reeling cable"
-msgstr ""
+msgstr "zwijanie kabla"
 
 #. ~ Verb in activity "ACT_GLIDE"
 #: data/json/player_activities.json
 msgid "gliding"
-msgstr ""
+msgstr "szybowanie"
 
 #. ~ Verb in activity "ACT_PHONE_RECOVERY_BASIC"
 #. ~ Verb in activity "ACT_PHONE_RECOVERY_ADVANCED"
 #: data/json/player_activities.json
 msgid "recovering"
-msgstr ""
+msgstr "przywracanie sprawności"
 
 #. ~ Verb in activity "ACT_SALINE_INFUSE"
 #: data/json/player_activities.json
 msgid "infusing saline"
-msgstr ""
+msgstr "podawanie roztworu soli fizjologicznej"
 
 #. ~ Verb in activity "ACT_MORTAR_AIMING"
 #: data/json/player_activities.json
 msgid "aiming the artillery"
-msgstr ""
+msgstr "celowanie artylerią"
 
 #. ~ Description of profession "Chemical Engineer" for male
 #: data/json/professions.json
@@ -1705,6 +2148,10 @@ msgid ""
 "prevent the prospect of employment from looking bleak for you.  Fortunately, "
 "the Cataclysm might just be the thing to save you from a dead end job."
 msgstr ""
+"Znasz układ okresowy na wylot i potrafisz wymienić dziesięć różnych procesów "
+"przemysłowych wykorzystujących dowolną substancję chemiczną, ale to nie "
+"sprawiało, że twoje perspektywy zatrudnienia wyglądały mniej ponuro. Na "
+"szczęście Kataklizm może właśnie ocalić cię przed pracą bez przyszłości."
 
 #. ~ Description of profession "Chemical Engineer" for female
 #: data/json/professions.json
@@ -1715,6 +2162,10 @@ msgid ""
 "prevent the prospect of employment from looking bleak for you.  Fortunately, "
 "the Cataclysm might just be the thing to save you from a dead end job."
 msgstr ""
+"Znasz układ okresowy na wylot i potrafisz wymienić dziesięć różnych procesów "
+"przemysłowych wykorzystujących dowolną substancję chemiczną, ale to nie "
+"sprawiało, że twoje perspektywy zatrudnienia wyglądały mniej ponuro. Na "
+"szczęście Kataklizm może właśnie ocalić cię przed pracą bez przyszłości."
 
 #. ~ Description of profession "Home Mechanic" for male
 #: data/json/professions.json
@@ -1724,6 +2175,9 @@ msgid ""
 " fixing it yourself.  You've kept ahold of some handy tools for the job, and "
 "at least now you'll never want for parts."
 msgstr ""
+"Zawsze kochałeś samochody, a nic nie dorównuje zaglądaniu pod maskę i "
+"samodzielnym naprawom. Zachowałeś kilka przydatnych narzędzi do tej pracy, a "
+"przynajmniej teraz nigdy nie zabraknie ci części."
 
 #. ~ Description of profession "Home Mechanic" for female
 #: data/json/professions.json
@@ -1733,6 +2187,9 @@ msgid ""
 " fixing it yourself.  You've kept ahold of some handy tools for the job, and "
 "at least now you'll never want for parts."
 msgstr ""
+"Zawsze kochałaś samochody, a nic nie dorównuje zaglądaniu pod maskę i "
+"samodzielnym naprawom. Zachowałaś kilka przydatnych narzędzi do tej pracy, a "
+"przynajmniej teraz nigdy nie zabraknie ci części."
 
 #. ~ Description of profession "Mechanical Engineer" for male
 #: data/json/professions.json
@@ -1743,6 +2200,9 @@ msgid ""
 "being subjected to a stress test, and it remains unclear if you will retain "
 "your structural integrity."
 msgstr ""
+"Zawsze kochałeś maszyny i były one ważną częścią twojej kariery. Niedługo po "
+"zdobyciu dyplomu wygląda na to, że sam jesteś poddawany próbie obciążeniowej,"
+" a to, czy zachowasz integralność konstrukcji, pozostaje niewiadomą."
 
 #. ~ Description of profession "Mechanical Engineer" for female
 #: data/json/professions.json
@@ -1753,6 +2213,10 @@ msgid ""
 "being subjected to a stress test, and it remains unclear if you will retain "
 "your structural integrity."
 msgstr ""
+"Zawsze kochałaś maszyny i były one ważną częścią twojej kariery. Niedługo po "
+"zdobyciu dyplomu wygląda na to, że sama jesteś poddawana próbie "
+"obciążeniowej, a to, czy zachowasz integralność konstrukcji, pozostaje "
+"niewiadomą."
 
 #. ~ Description of profession "Basketball Player" for male
 #: data/json/professions.json
@@ -1762,6 +2226,9 @@ msgid ""
 "Quick feet and good reflexes meant you were among the lucky few to escape the"
 " stadium alive."
 msgstr ""
+"Twój pierwszy ważny mecz został nagle odwołany, gdy zombie wdarły się na "
+"boisko. Szybkie nogi i dobry refleks sprawiły, że znalazłeś się wśród "
+"nielicznych szczęśliwców, którzy uszli ze stadionu z życiem."
 
 #. ~ Description of profession "Basketball Player" for female
 #: data/json/professions.json
@@ -1771,6 +2238,9 @@ msgid ""
 "Quick feet and good reflexes meant you were among the lucky few to escape the"
 " stadium alive."
 msgstr ""
+"Twój pierwszy ważny mecz został nagle odwołany, gdy zombie wdarły się na "
+"boisko. Szybkie nogi i dobry refleks sprawiły, że znalazłaś się wśród "
+"nielicznych szczęśliwców, którzy uszli ze stadionu z życiem."
 
 #. ~ Description of profession "Marine Infantryman" for male
 #: data/json/professions.json
@@ -1781,6 +2251,10 @@ msgid ""
 "suppose that it falls to you to carry the memory of the Corps forward into "
 "the future.  Semper fi."
 msgstr ""
+"Należysz do nielicznych i dumnych: jesteś żołnierzem Korpusu Piechoty "
+"Morskiej Stanów Zjednoczonych. Teraz, gdy z tego, co wiesz, dowództwo "
+"wojskowe się rozpadło, sądzisz, że to na tobie spoczywa obowiązek zachowania "
+"pamięci o Korpusie dla przyszłych pokoleń. Semper fi."
 
 #. ~ Description of profession "Marine Infantrywoman" for female
 #: data/json/professions.json
@@ -1791,6 +2265,10 @@ msgid ""
 "suppose that it falls to you to carry the memory of the Corps forward into "
 "the future.  Semper fi."
 msgstr ""
+"Należysz do nielicznych i dumnych: jesteś żołnierką Korpusu Piechoty Morskiej"
+" Stanów Zjednoczonych. Teraz, gdy z tego, co wiesz, dowództwo wojskowe się "
+"rozpadło, sądzisz, że to na tobie spoczywa obowiązek zachowania pamięci o "
+"Korpusie dla przyszłych pokoleń. Semper fi."
 
 #. ~ Description of profession "Navy Sailor" for male
 #: data/json/professions.json
@@ -1803,6 +2281,12 @@ msgid ""
 "nowhere.  This is going to take more than a cup of coffee and a monkey wrench"
 " to fix."
 msgstr ""
+"Jesteś marynarzem US Navy i spędziłeś ostatnie kilka lat, pracując na "
+"pokładzie lotniskowca. Choć przeszkolono cię do walki, twoim głównym "
+"obowiązkiem było utrzymanie okrętu. Po jakimś zdarzeniu, którego nie "
+"rozumiesz, lotniskowiec stał się pływającym cmentarzem pośrodku niczego. "
+"Naprawienie tego będzie wymagało czegoś więcej niż filiżanki kawy i klucza "
+"nastawnego."
 
 #. ~ Description of profession "Navy Sailor" for female
 #: data/json/professions.json
@@ -1815,6 +2299,12 @@ msgid ""
 "nowhere.  This is going to take more than a cup of coffee and a monkey wrench"
 " to fix."
 msgstr ""
+"Służysz w US Navy jako marynarz i spędziłaś ostatnie kilka lat, pracując na "
+"pokładzie lotniskowca. Choć przeszkolono cię do walki, twoim głównym "
+"obowiązkiem było utrzymanie okrętu. Po jakimś zdarzeniu, którego nie "
+"rozumiesz, lotniskowiec stał się pływającym cmentarzem pośrodku niczego. "
+"Naprawienie tego będzie wymagało czegoś więcej niż filiżanki kawy i klucza "
+"nastawnego."
 
 #. ~ Description of profession "Navy Diver" for male
 #: data/json/professions.json
@@ -1827,6 +2317,13 @@ msgid ""
 "who survived with your sanity intact, but it's not safe to stay here.  At "
 "least you're already dressed to abandon ship."
 msgstr ""
+"Należałeś do grupy nurkowej sił specjalnych marynarki wojennej, będąc "
+"wyszkolonym żołnierzem biegłym w podwodnej infiltracji i walce na morzu. "
+"Właśnie zakładałeś kombinezon przed ćwiczebnym nurkowaniem, gdy lotniskowiec,"
+" na którym służyłeś, został jakoś przeniesiony z Morza Żółtego nie wiadomo "
+"dokąd. Wygląda na to, że jesteś jedynym, który przeżył i zachował zdrowe "
+"zmysły, ale nie jest tu bezpiecznie. Przynajmniej jesteś już ubrany do "
+"opuszczenia okrętu."
 
 #. ~ Description of profession "Navy Diver" for female
 #: data/json/professions.json
@@ -1839,6 +2336,13 @@ msgid ""
 "who survived with your sanity intact, but it's not safe to stay here.  At "
 "least you're already dressed to abandon ship."
 msgstr ""
+"Należałaś do grupy nurkowej sił specjalnych marynarki wojennej, będąc "
+"wyszkoloną żołnierką biegłą w podwodnej infiltracji i walce na morzu. Właśnie"
+" zakładałaś kombinezon przed ćwiczebnym nurkowaniem, gdy lotniskowiec, na "
+"którym służyłaś, został jakoś przeniesiony z Morza Żółtego nie wiadomo dokąd."
+" Wygląda na to, że jesteś jedyną, która przeżyła i zachowała zdrowe zmysły, "
+"ale nie jest tu bezpiecznie. Przynajmniej jesteś już ubrana do opuszczenia "
+"okrętu."
 
 #. ~ Description of profession "Military Veteran" for male
 #: data/json/professions.json
@@ -1849,6 +2353,11 @@ msgid ""
 "and readjusted to civilian life, the world has come to an end and your worst "
 "nightmare has become a reality: life in an endless battlefield."
 msgstr ""
+"Po zwolnieniu ze służby w siłach zbrojnych skierowano cię na leczenie do "
+"szpitala dla weteranów. Właśnie gdy myślałeś, że przezwyciężyłeś swoje traumy"
+" i na nowo przystosowałeś się do życia w cywilu, świat dobiegł końca, a twój "
+"najgorszy koszmar stał się rzeczywistością: życie na niekończącym się polu "
+"bitwy."
 
 #. ~ Description of profession "Military Veteran" for female
 #: data/json/professions.json
@@ -1859,6 +2368,11 @@ msgid ""
 "and readjusted to civilian life, the world has come to an end and your worst "
 "nightmare has become a reality: life in an endless battlefield."
 msgstr ""
+"Po zwolnieniu ze służby w siłach zbrojnych skierowano cię na leczenie do "
+"szpitala dla weteranów. Właśnie gdy myślałaś, że przezwyciężyłaś swoje traumy"
+" i na nowo przystosowałaś się do życia w cywilu, świat dobiegł końca, a twój "
+"najgorszy koszmar stał się rzeczywistością: życie na niekończącym się polu "
+"bitwy."
 
 #. ~ Description of profession "Rifleman" for male
 #: data/json/professions.json
@@ -1867,6 +2381,8 @@ msgid ""
 "When you were young, you dreamed of being a soldier.  War is hell and hell is"
 " war, but you never thought it would be this bad."
 msgstr ""
+"Za młodu marzyłeś o zostaniu żołnierzem. Wojna to piekło, a piekło to wojna, "
+"ale nigdy nie sądziłeś, że będzie aż tak źle."
 
 #. ~ Description of profession "Rifleman" for female
 #: data/json/professions.json
@@ -1875,6 +2391,8 @@ msgid ""
 "When you were young, you dreamed of being a soldier.  War is hell and hell is"
 " war, but you never thought it would be this bad."
 msgstr ""
+"Za młodu marzyłaś o zostaniu żołnierką. Wojna to piekło, a piekło to wojna, "
+"ale nigdy nie sądziłaś, że będzie aż tak źle."
 
 #. ~ Description of profession "Navy SEAL Marksmen" for male
 #: data/json/professions.json
@@ -1888,6 +2406,12 @@ msgid ""
 "skills with a rifle and covert operations are the only things standing "
 "between you and the Cataclysm."
 msgstr ""
+"Zwerbowano cię do sił specjalnych US Navy jako snajpera, a twoje szkolenie w "
+"precyzyjnym strzelaniu i operacjach morskich było rozległe. Jako sprawny "
+"żołnierz i wszechstronny wojownik zapewniałeś osłonę i eliminowałeś cele z "
+"dużej odległości w ramach służby. Teraz, gdy dowództwo marynarki się rozpada,"
+" a twój obserwator zaginął w akcji, umiejętności strzelania z karabinu i "
+"prowadzenia skrytych operacji to jedyne, co stoi między tobą a Kataklizmem."
 
 #. ~ Description of profession "Navy SEAL Marksmen" for female
 #: data/json/professions.json
@@ -1901,6 +2425,13 @@ msgid ""
 "skills with a rifle and covert operations are the only things standing "
 "between you and the Cataclysm."
 msgstr ""
+"Zwerbowano cię do sił specjalnych US Navy jako snajperkę, a twoje szkolenie w"
+" precyzyjnym strzelaniu i operacjach morskich było rozległe. Jako sprawna "
+"żołnierka i wszechstronna wojowniczka zapewniałaś osłonę i eliminowałaś cele "
+"z dużej odległości w ramach służby. Teraz, gdy dowództwo marynarki się "
+"rozpada, a twój obserwator zaginął w akcji, umiejętności strzelania z "
+"karabinu i prowadzenia skrytych operacji to jedyne, co stoi między tobą a "
+"Kataklizmem."
 
 #. ~ Description of profession "Navy SEAL" for male
 #: data/json/professions.json
@@ -1911,6 +2442,10 @@ msgid ""
 "'The only easy day was yesterday', and with the chain of command in ruins, "
 "you may fulfill your final mission in any way you see fit."
 msgstr ""
+"Byłeś członkiem SEALs, kluczowego elementu sił specjalnych US Navy, i "
+"sprawnym żołnierzem zarówno w operacjach morskich, jak i lądowych. „Jedyny "
+"łatwy dzień był wczoraj”, a skoro łańcuch dowodzenia leży w gruzach, możesz "
+"wykonać swoją ostatnią misję w dowolny sposób, jaki uznasz za stosowny."
 
 #. ~ Description of profession "Navy SEAL" for female
 #: data/json/professions.json
@@ -1921,6 +2456,10 @@ msgid ""
 "'The only easy day was yesterday', and with the chain of command in ruins, "
 "you may fulfill your final mission in any way you see fit."
 msgstr ""
+"Byłaś członkinią SEALs, kluczowego elementu sił specjalnych US Navy, i "
+"sprawną żołnierką zarówno w operacjach morskich, jak i lądowych. „Jedyny "
+"łatwy dzień był wczoraj”, a skoro łańcuch dowodzenia leży w gruzach, możesz "
+"wykonać swoją ostatnią misję w dowolny sposób, jaki uznasz za stosowny."
 
 #. ~ Description of profession "Doctor" for male
 #: data/json/professions.json
@@ -1930,6 +2469,10 @@ msgid ""
 "  While your bedside manner might not get you far in this new world, your "
 "medical skills will certainly help."
 msgstr ""
+"Byłeś lekarzem pracującym bezpośrednio z pacjentami, zajmującym się medycyną "
+"ogólną lub specjalistyczną. Choć umiejętność dobrego kontaktu z pacjentami "
+"może nie zaprowadzić cię daleko w tym nowym świecie, twoje umiejętności "
+"medyczne z pewnością pomogą."
 
 #. ~ Description of profession "Doctor" for female
 #: data/json/professions.json
@@ -1939,6 +2482,10 @@ msgid ""
 "  While your bedside manner might not get you far in this new world, your "
 "medical skills will certainly help."
 msgstr ""
+"Byłaś lekarką pracującą bezpośrednio z pacjentami, zajmującą się medycyną "
+"ogólną lub specjalistyczną. Choć umiejętność dobrego kontaktu z pacjentami "
+"może nie zaprowadzić cię daleko w tym nowym świecie, twoje umiejętności "
+"medyczne z pewnością pomogą."
 
 #. ~ Description of profession "Pharmacist" for male
 #: data/json/professions.json
@@ -1949,6 +2496,10 @@ msgid ""
 "and biology.  With your trusty mortar and pestle, you hope to grind the "
 "undead to a pulp."
 msgstr ""
+"Byłeś farmaceutą pracującym w lokalnej aptece. Nie tylko wydawałeś tabletki: "
+"masz ogromną wiedzę o przygotowywaniu leków, biochemii i biologii. Ze swoim "
+"niezawodnym moździerzem i tłuczkiem masz nadzieję utrzeć nieumarłych na "
+"miazgę."
 
 #. ~ Description of profession "Pharmacist" for female
 #: data/json/professions.json
@@ -1959,6 +2510,10 @@ msgid ""
 "and biology.  With your trusty mortar and pestle, you hope to grind the "
 "undead to a pulp."
 msgstr ""
+"Byłaś farmaceutką pracującą w ogólnodostępnej aptece. Nie tylko wydawałaś "
+"tabletki: masz ogromną wiedzę o przygotowywaniu leków, biochemii i biologii. "
+"Ze swoim niezawodnym moździerzem i tłuczkiem masz nadzieję utrzeć nieumarłych"
+" na miazgę."
 
 #. ~ Description of profession "Helicopter Pilot" for male
 #: data/json/professions.json
@@ -1968,6 +2523,8 @@ msgid ""
 "tourists around.  The Cataclysm has grounded you for now, but the sky still "
 "calls to you…"
 msgstr ""
+"Zdobyłeś licencję pilota i zarabiałeś na życie, przewożąc biznesmenów i "
+"turystów. Kataklizm na razie cię uziemił, ale niebo wciąż cię wzywa…"
 
 #. ~ Description of profession "Helicopter Pilot" for female
 #: data/json/professions.json
@@ -1977,6 +2534,8 @@ msgid ""
 "tourists around.  The Cataclysm has grounded you for now, but the sky still "
 "calls to you…"
 msgstr ""
+"Zdobyłaś licencję pilota i zarabiałaś na życie, przewożąc biznesmenów i "
+"turystów. Kataklizm na razie cię uziemił, ale niebo wciąż cię wzywa…"
 
 #. ~ Description of profession "Mounted Police Officer" for male
 #: data/json/professions.json
@@ -1986,6 +2545,9 @@ msgid ""
 "from running down common thugs, to entertaining kids when you ride on by.  "
 "The Cataclysm is upon you, but at least you have each other."
 msgstr ""
+"Spędziłeś wiele długich lat, budując więź ze swoim końskim towarzyszem, od "
+"ścigania zwykłych oprychów po sprawianie radości dzieciom, gdy przejeżdżałeś "
+"obok. Nadszedł Kataklizm, ale przynajmniej macie siebie nawzajem."
 
 #. ~ Description of profession "Mounted Police Officer" for female
 #: data/json/professions.json
@@ -1995,6 +2557,9 @@ msgid ""
 "from running down common thugs, to entertaining kids when you ride on by.  "
 "The Cataclysm is upon you, but at least you have each other."
 msgstr ""
+"Spędziłaś wiele długich lat, budując więź ze swoim końskim towarzyszem, od "
+"ścigania zwykłych oprychów po sprawianie radości dzieciom, gdy przejeżdżałaś "
+"obok. Nadszedł Kataklizm, ale przynajmniej macie siebie nawzajem."
 
 #. ~ Description of profession "Dog Lover" for male
 #: data/json/professions.json
@@ -2005,6 +2570,10 @@ msgid ""
 "things to protect them.  The zombies could be nearby, but at least your "
 "canine friends won't have to worry about the rain."
 msgstr ""
+"Spędzałeś dni, biegając ze swoimi wiernymi psami u boku. Gdy świat dobiegł "
+"końca, zabrałeś swoich towarzyszy i kilka ich rzeczy, by ich chronić. Zombie "
+"mogą być w pobliżu, ale przynajmniej twoi psi przyjaciele nie będą musieli "
+"martwić się deszczem."
 
 #. ~ Description of profession "Dog Lover" for female
 #: data/json/professions.json
@@ -2015,3 +2584,7 @@ msgid ""
 "things to protect them.  The zombies could be nearby, but at least your "
 "canine friends won't have to worry about the rain."
 msgstr ""
+"Spędzałaś dni, biegając ze swoimi wiernymi psami u boku. Gdy świat dobiegł "
+"końca, zabrałaś swoich towarzyszy i kilka ich rzeczy, by ich chronić. Zombie "
+"mogą być w pobliżu, ale przynajmniej twoi psi przyjaciele nie będą musieli "
+"martwić się deszczem."
