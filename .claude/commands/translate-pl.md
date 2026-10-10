@@ -26,6 +26,13 @@ range:
    If entries are still missing, invoke `pl-translator` once more with the
    prompt "Finish lang/machine/work/pl/NNNN.po; some entries are still
    untranslated or fuzzy."  If that fails too, stop and report the batch.
+   When the translator ran, commit and push the batch at once, so the
+   translation survives if the session ends:
+
+       git add lang/machine/work/pl/NNNN.po
+       git commit -m "Translate Polish machine batch NNNN"
+       git push -u origin HEAD
+
 3. Invoke `pl-reviewer` with the prompt "Review
    lang/machine/work/pl/NNNN.po."
 4. Verify the result; if any check fails, stop and report the batch:
@@ -34,13 +41,15 @@ range:
        msgfmt -c -o /tmp/check.mo lang/machine/work/pl/NNNN.po
        uv run --no-project --with polib python lang/access_catalog.py status lang/machine/work/pl/NNNN.po
 
-   `status` must report 0 untranslated and 0 fuzzy entries, and
+   `validate` must exit successfully; its warnings about an "Invalid
+   original string" are expected, because no translation can fix the
+   English text, and those entries stay empty.  `status` must report 0
+   untranslated and 0 fuzzy entries, and
    `lang/machine/work/pl/NNNN.review.md` must exist.
-5. Commit and push only that batch, so finished work survives if the
-   session ends:
+5. Commit and push the review:
 
        git add lang/machine/work/pl/NNNN.po lang/machine/work/pl/NNNN.review.md
-       git commit -m "Translate Polish machine batch NNNN"
+       git commit -m "Review Polish machine batch NNNN"
        git push -u origin HEAD
 
 When the range is done or you stop, reply with a short list: each batch, its

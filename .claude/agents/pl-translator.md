@@ -26,7 +26,9 @@ tags, and plural forms.
    (`#:`), msgctxt, msgid, msgid_plural, and the current translation.
 2. Translate every entry whose translation is empty.  An entry marked fuzzy
    has an outdated translation of a changed source string; translate it
-   again.
+   again.  Leave empty any entry that `show` marks with "Invalid original
+   string": its English text has a format error that no translation can
+   fix, and the tools never use its translation.
    - Search the translation memory for every name and game term:
 
          uv run --no-project --with polib python lang/access_catalog.py lookup -i "<regex>" lang/po/pl.po lang/machine/work/pl/*.po
