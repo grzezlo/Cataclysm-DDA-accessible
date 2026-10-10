@@ -20,6 +20,8 @@ msgid ""
 "you from the floor, making it easier to sleep.  Use it to unroll and place on"
 " the ground."
 msgstr ""
+"Posłanie ze skór, które można zwinąć do transportu. Izoluje od podłoża, "
+"ułatwiając zaśnięcie. Użyj, aby je rozwinąć i rozłożyć na ziemi."
 
 #. ~ Description of "garden hose"
 #: data/json/items/tool/misc.json
@@ -27,6 +29,8 @@ msgid ""
 "A flexible garden hose.  If you cut it into smaller pieces, it could be used "
 "for crafting or siphoning fuel from a vehicle."
 msgstr ""
+"Elastyczny wąż ogrodowy. Po pocięciu na mniejsze kawałki przyda się do "
+"wytwarzania lub do odsysania paliwa z pojazdu."
 
 #. ~ Description of "grappling hook"
 #: data/json/items/tool/misc.json
@@ -35,46 +39,58 @@ msgid ""
 "lightweight cord.  Useful for keeping yourself safe from falls.  Can be used "
 "in place of a long rope for butchering, in a pinch."
 msgstr ""
+"Składana kotwiczka przymocowana do mocnej, lekkiej linki o długości ok. 9 "
+"metrów. Przydaje się do zabezpieczania się przed upadkiem. W razie potrzeby "
+"może zastąpić długą linę przy rozbieraniu tusz."
 
 #. ~ Description of "grip hook"
 #: data/json/items/tool/misc.json
 msgid "A simple steel meat hook with a circular steel handle."
-msgstr ""
+msgstr "Prosty stalowy hak do mięsa z okrągłym stalowym uchwytem."
 
 #. ~ Description of "hand pump"
 #: data/json/items/tool/misc.json
 msgid "A hand-powered pump suitable for pumping air into inflatable objects."
 msgstr ""
+"Pompka napędzana ręcznie, nadająca się do pompowania powietrza do "
+"nadmuchiwanych przedmiotów."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "leather bellow"
 msgid_plural "leather bellows"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "skórzany miech"
+msgstr[1] "skórzane miechy"
+msgstr[2] "skórzanych miechów"
+msgstr[3] "skórzanego miecha"
 
 #. ~ Description of "leather bellow"
 #: data/json/items/tool/misc.json
 msgid "A bellow is a device constructed to furnish a strong blast of air."
 msgstr ""
+"Miech to urządzenie zbudowane do wytwarzania silnego strumienia powietrza."
 
 #. ~ Description of "bicycle horn"
 #: data/json/items/tool/misc.json
 msgid ""
 "A simple bulb horn found on many bicycles.  Activate it to honk.  Honk honk."
 msgstr ""
+"Prosty klakson z gumową gruszką, montowany na wielu rowerach. Aktywuj, aby "
+"zatrąbić. Trąb, trąb."
 
 #. ~ Description of "truck horn"
 #: data/json/items/tool/misc.json
 msgid "A very loud horn, usually found on large trucks like semis."
 msgstr ""
+"Bardzo głośny klakson, zwykle montowany w dużych ciężarówkach, takich jak "
+"ciągniki siodłowe."
 
 #. ~ Description of "car horn"
 #: data/json/items/tool/misc.json
 msgid "A car horn meant to be attached to a car's electrical system."
 msgstr ""
+"Klakson samochodowy przeznaczony do podłączenia do instalacji elektrycznej "
+"auta."
 
 #. ~ Description of "large space heater"
 #. ~ Description of "large space heater (on)"
@@ -84,6 +100,9 @@ msgid ""
 "about 10 degrees Celsius, and fills a larger volume of air than the smaller "
 "version."
 msgstr ""
+"Przenośny grzejnik elektryczny, który równomiernie wydmuchuje ciepłe "
+"powietrze. Podnosi temperaturę o około 10 stopni Celsjusza i ogrzewa większą "
+"przestrzeń niż mniejsza wersja."
 
 #. ~ Description of "lifestraw"
 #: data/json/items/tool/misc.json
@@ -93,6 +112,10 @@ msgid ""
 "system will purify the water you drink up to a certain amount.  Water taken "
 "from uncertain sources like a river may be dirty."
 msgstr ""
+"Mały osobisty filtr do wody. Instrukcja zaleca włożyć słomkę życia do "
+"podejrzanej wody, odczekać minutę, a następnie pić. Dwuetapowy system "
+"filtracji oczyszcza wypijaną wodę do określonej ilości. Woda z niepewnych "
+"źródeł, takich jak rzeka, może być brudna."
 
 #. ~ Description of "permanent marker"
 #: data/json/items/tool/misc.json
@@ -101,6 +124,10 @@ msgid ""
 "typical marker and a can of spray paint in size.  Activate it to write "
 "something down.  However, writing \"Elbereth\" probably won't help you."
 msgstr ""
+"Przemysłowy marker permanentny King Size™, pod względem wielkości mniej "
+"więcej w połowie drogi między zwykłym markerem a puszką farby w sprayu. "
+"Aktywuj go, aby coś zapisać. Jednak napisanie „Elbereth” raczej ci nie "
+"pomoże."
 
 #. ~ Description of "pocket watch"
 #: data/json/items/tool/misc.json
@@ -108,15 +135,17 @@ msgid ""
 "An old-fashioned pocket watch.  Tells the time and looks good doing it.  Can "
 "also be disassembled into some useful parts."
 msgstr ""
+"Staromodny zegarek kieszonkowy. Pokazuje godzinę i wygląda przy tym świetnie."
+" Można go też zdemontować na kilka przydatnych części."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "porcelain urn"
 msgid_plural "porcelain urns"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "porcelanowa urna"
+msgstr[1] "porcelanowe urny"
+msgstr[2] "porcelanowych urn"
+msgstr[3] "porcelanowej urny"
 
 #. ~ Description of "porcelain urn"
 #: data/json/items/tool/misc.json
@@ -125,6 +154,8 @@ msgid ""
 "have taken good care of it, as you can see your face reflected clearly upon "
 "its surface."
 msgstr ""
+"Pojemnik na prochy ukochanej osoby. Poprzedni właściciele musieli o niego "
+"bardzo dbać, bo w jego powierzchni wyraźnie widzisz odbicie swojej twarzy."
 
 #. ~ Description of "rollmat"
 #: data/json/items/tool/misc.json
@@ -133,6 +164,8 @@ msgid ""
 "from the floor, making it easier to sleep.  Use it to unroll and place on the"
 " ground."
 msgstr ""
+"Arkusz pianki, który można ciasno zwinąć do przechowywania. Izoluje od "
+"podłoża, ułatwiając zaśnięcie. Użyj, aby go rozwinąć i rozłożyć na ziemi."
 
 #. ~ Description of "safe deposit box"
 #: data/json/items/tool/misc.json
@@ -140,6 +173,8 @@ msgid ""
 "A secure combination-lock box.  Sadly, you don't know the combination.  "
 "Breaking into it would destroy anything of value."
 msgstr ""
+"Zabezpieczona skrytka z zamkiem szyfrowym. Niestety nie znasz szyfru. "
+"Włamanie się do niej zniszczyłoby wszystko, co ma jakąkolwiek wartość."
 
 #. ~ Description of "sarcophagus access code"
 #: data/json/items/tool/misc.json
@@ -147,6 +182,8 @@ msgid ""
 "A printout displaying a string of numbers, the passcode to access the "
 "elevator in the hazardous waste sarcophagus."
 msgstr ""
+"Wydruk z ciągiem cyfr – kodem dostępu do windy w sarkofagu na odpady "
+"niebezpieczne."
 
 #. ~ Description of "small space heater"
 #. ~ Description of "small space heater (on)"
@@ -155,6 +192,8 @@ msgid ""
 "A portable electric heater that steadily emits warm air.  Raises temperature "
 "about 10 degrees Celsius."
 msgstr ""
+"Przenośny grzejnik elektryczny, który równomiernie wydmuchuje ciepłe "
+"powietrze. Podnosi temperaturę o około 10 stopni Celsjusza."
 
 #. ~ Description of "spray can"
 #: data/json/items/tool/misc.json
@@ -162,11 +201,13 @@ msgid ""
 "An aerosol spray can filled with paint.  Activate it to make graffiti on the "
 "floor."
 msgstr ""
+"Puszka aerozolu wypełniona farbą. Aktywuj, aby namalować graffiti na "
+"podłodze."
 
 #. ~ Description of "wooden stepladder"
 #: data/json/items/tool/misc.json
 msgid "A ten-foot wooden stepladder.  Activate it to set it down."
-msgstr ""
+msgstr "Trzymetrowa drewniana drabinka. Aktywuj, aby ją rozstawić."
 
 #. ~ Description of "survival marker"
 #: data/json/items/tool/misc.json
@@ -175,15 +216,17 @@ msgid ""
 "guaranteed to get your hands all covered in charcoal.  Activate it to write "
 "something down."
 msgstr ""
+"Zaostrzony kawałek węgla drzewnego używany jako prowizoryczny ołówek. Niemal "
+"na pewno ubrudzisz sobie całe ręce węglem. Aktywuj go, aby coś zapisać."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "retractable telescope"
 msgid_plural "retractable telescopes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "składana luneta"
+msgstr[1] "składane lunety"
+msgstr[2] "składanych lunet"
+msgstr[3] "składanej lunety"
 
 #. ~ Description of "retractable telescope"
 #: data/json/items/tool/misc.json
@@ -192,15 +235,18 @@ msgid ""
 "inaccurate to use as a weapon scope, but carrying it in your inventory will "
 "double the distance that is mapped around you during your travels."
 msgstr ""
+"Domowej roboty składana luneta, idealna dla pirata. Zbyt duża i niedokładna, "
+"by służyć za celownik, ale noszona w ekwipunku podwaja zasięg, na jakim w "
+"trakcie podróży nanoszone jest otoczenie na mapę."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "tear gas sprayer"
 msgid_plural "tear gas sprayers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "rozpylacz gazu łzawiącego"
+msgstr[1] "rozpylacze gazu łzawiącego"
+msgstr[2] "rozpylaczy gazu łzawiącego"
+msgstr[3] "rozpylacza gazu łzawiącego"
 
 #. ~ Description of "tear gas sprayer"
 #: data/json/items/tool/misc.json
@@ -213,15 +259,23 @@ msgid ""
 "nasty surprise and give you time to get away.  It contains enough spray for "
 "about twenty seconds of continuous application."
 msgstr ""
+"Kieszonkowy plastikowy pojemnik wypełniony gazem łzawiącym pod ciśnieniem, o "
+"stopień silniejszym od gazu pieprzowego z oleożywicy kapsaicyny. Najczęściej "
+"używany przez policję i turystów obawiających się niedźwiedzi, ale w "
+"ostatnich miesiącach stał się bardziej popularny z powodu niepokoju "
+"wywołanego zamieszkami. Raczej niewiele zdziała przeciwko zombie, ale "
+"wszystko, co wciąż oddycha, czeka paskudna niespodzianka, a ty zyskasz czas "
+"na ucieczkę. Zawiera tyle gazu, ile wystarczy na około dwadzieścia sekund "
+"ciągłego rozpylania."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "C-4 payload"
 msgid_plural "C-4 payloads"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ładunek C-4"
+msgstr[1] "ładunki C-4"
+msgstr[2] "ładunków C-4"
+msgstr[3] "ładunku C-4"
 
 #. ~ Description of "C-4 payload"
 #: data/json/items/tool/misc.json
@@ -229,15 +283,17 @@ msgid ""
 "This is a dummy item used by c4 hacks.  You should never see it outside of "
 "debug."
 msgstr ""
+"To przedmiot zastępczy używany przez młynki C-4. Nie powinien być widoczny "
+"poza trybem debugowania."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "telescoping umbrella (collapsed)"
 msgid_plural "telescoping umbrellas (collapsed)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "parasol teleskopowy (złożony)"
+msgstr[1] "parasole teleskopowe (złożone)"
+msgstr[2] "parasoli teleskopowych (złożonych)"
+msgstr[3] "parasola teleskopowego (złożonego)"
 
 #. ~ Description of "telescoping umbrella (collapsed)"
 #: data/json/items/tool/misc.json
@@ -245,20 +301,22 @@ msgid ""
 "A telescoping umbrella which has been collapsed down for easy storage.  May "
 "be used to keep dry when extended and wielded."
 msgstr ""
+"Parasol teleskopowy złożony dla łatwego przechowywania. Po rozłożeniu i "
+"wzięciu do ręki chroni przed deszczem."
 
 #. ~ "msg" action message of item "telescoping umbrella (collapsed)"
 #: data/json/items/tool/misc.json
 msgid "You open your umbrella."
-msgstr ""
+msgstr "Otwierasz parasol."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "telescoping umbrella (extended)"
 msgid_plural "telescoping umbrellas (extended)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "parasol teleskopowy (rozłożony)"
+msgstr[1] "parasole teleskopowe (rozłożone)"
+msgstr[2] "parasoli teleskopowych (rozłożonych)"
+msgstr[3] "parasola teleskopowego (rozłożonego)"
 
 #. ~ Description of "telescoping umbrella (extended)"
 #: data/json/items/tool/misc.json
@@ -266,11 +324,13 @@ msgid ""
 "A telescoping umbrella currently in its extended form, useful for keeping dry"
 " when wielded.  May be collapsed down for easy storage."
 msgstr ""
+"Parasol teleskopowy w rozłożonej formie, chroniący przed deszczem, gdy "
+"trzymasz go w ręce. Można go złożyć dla łatwego przechowywania."
 
 #. ~ "msg" action message of item "telescoping umbrella (extended)"
 #: data/json/items/tool/misc.json
 msgid "You collapse your umbrella."
-msgstr ""
+msgstr "Składasz parasol."
 
 #. ~ Description of "travel toilet"
 #: data/json/items/tool/misc.json
@@ -278,35 +338,37 @@ msgid ""
 "A portable plastic toilet, designed to use plastic bags for waste instead of "
 "plumbing."
 msgstr ""
+"Przenośna plastikowa toaleta, w której zamiast kanalizacji odpady trafiają do"
+" plastikowych worków."
 
 #. ~ "msg" action message of item "travel toilet"
 #: data/json/items/tool/misc.json
 msgid "You collapse the toilet for transport."
-msgstr ""
+msgstr "Składasz toaletę do transportu."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "folded travel toilet"
 msgid_plural "folded travel toilets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złożona toaleta turystyczna"
+msgstr[1] "złożone toalety turystyczne"
+msgstr[2] "złożonych toalet turystycznych"
+msgstr[3] "złożonej toalety turystycznej"
 
 #. ~ Description of "folded travel toilet"
 #: data/json/items/tool/misc.json
 msgid "A portable plastic toilet.  It has been collapsed for easy transport."
-msgstr ""
+msgstr "Przenośna plastikowa toaleta. Została złożona dla łatwego transportu."
 
 #. ~ "msg" action message of item "folded travel toilet"
 #: data/json/items/tool/misc.json
 msgid "You unfold the travel toilet."
-msgstr ""
+msgstr "Rozkładasz toaletę turystyczną."
 
 #. ~ Description of "Flaming Chunk of Steel +2"
 #: data/json/items/tool/misc.json
 msgid "HOLY SHIT THIS THING IS ON FIRE!"
-msgstr ""
+msgstr "O KURWA, TO CHOLERSTWO SIĘ PALI!"
 
 #. ~ Description of "vortex stone"
 #: data/json/items/tool/misc.json
@@ -314,6 +376,8 @@ msgid ""
 "A stone with spirals all over it and holes around its perimeter.  Though it "
 "is fairly large, it weighs next to nothing.  Air seems to gather around it."
 msgstr ""
+"Kamień pokryty spiralami, z otworami na obwodzie. Choć jest dość duży, nie "
+"waży prawie nic. Powietrze zdaje się gromadzić wokół niego."
 
 #. ~ Description of "sandbox kit"
 #: data/json/items/tool/misc.json
@@ -321,20 +385,22 @@ msgid ""
 "A plastic bucket holding a small spade and rake, perfect for building sand "
 "castles!"
 msgstr ""
+"Plastikowe wiaderko z małą łopatką i grabkami, idealne do budowania zamków z "
+"piasku!"
 
 #. ~ Description of "aluminum stepladder"
 #: data/json/items/tool/misc.json
 msgid "A ten-foot aluminum stepladder.  Activate it to set it down."
-msgstr ""
+msgstr "Trzymetrowa aluminiowa drabinka. Aktywuj, aby ją rozstawić."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "handheld glass cutter"
 msgid_plural "handheld glass cutters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ręczny nóż do szkła"
+msgstr[1] "ręczne noże do szkła"
+msgstr[2] "ręcznych noży do szkła"
+msgstr[3] "ręcznego noża do szkła"
 
 #. ~ Description of "handheld glass cutter"
 #: data/json/items/tool/misc.json
@@ -342,15 +408,17 @@ msgid ""
 "A handheld tool used for controlled breaking of glass.  A necessity for any "
 "glass cutting projects."
 msgstr ""
+"Ręczne narzędzie do kontrolowanego łamania szkła. Niezbędne przy każdej pracy"
+" z cięciem szkła."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "novelty pneumatic launcher"
 msgid_plural "novelty pneumatic launchers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zabawkowa wyrzutnia pneumatyczna"
+msgstr[1] "zabawkowe wyrzutnie pneumatyczne"
+msgstr[2] "zabawkowych wyrzutni pneumatycznych"
+msgstr[3] "zabawkowej wyrzutni pneumatycznej"
 
 #. ~ Description of "novelty pneumatic launcher"
 #: data/json/items/tool/misc.json
@@ -359,15 +427,18 @@ msgid ""
 "children.  It is very tiring to reload, and completely ineffective as a "
 "weapon.  Pump sold separately."
 msgstr ""
+"Zabawka, która za pomocą sprężonego powietrza wystrzeliwuje małe przedmioty "
+"ku uciesze dzieci. Przeładowanie jest bardzo męczące, a jako broń jest "
+"zupełnie nieskuteczna. Pompka sprzedawana oddzielnie."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "dressage whip"
 msgid_plural "dressage whips"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bat ujeżdżeniowy"
+msgstr[1] "baty ujeżdżeniowe"
+msgstr[2] "batów ujeżdżeniowych"
+msgstr[3] "bata ujeżdżeniowego"
 
 #. ~ Description of "dressage whip"
 #: data/json/items/tool/misc.json
@@ -375,15 +446,17 @@ msgid ""
 "A long, thin and flexible rod that tapers to a point, originally used to "
 "stimulate a horse and give them orders."
 msgstr ""
+"Długi, cienki i giętki pręt zwężający się ku końcowi, pierwotnie używany do "
+"pobudzania konia i wydawania mu poleceń."
 
 #. ~ Item name
 #: data/json/items/tool/misc.json
 msgid "riding crop"
 msgid_plural "riding crops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "palcat"
+msgstr[1] "palcaty"
+msgstr[2] "palcatów"
+msgstr[3] "palcata"
 
 #. ~ Description of "riding crop"
 #: data/json/items/tool/misc.json
@@ -391,6 +464,8 @@ msgid ""
 "A rod ending in a leather popper originally used to stimulate a horse and "
 "give them orders."
 msgstr ""
+"Pręt zakończony skórzaną klapką, pierwotnie używany do pobudzania konia i "
+"wydawania mu poleceń."
 
 #. ~ Description of "monster teeth"
 #: data/json/items/tool/misc.json
@@ -398,6 +473,8 @@ msgid ""
 "Impossibly-sharp teeth extracted from a giant corpse.  You could use them as "
 "a weapon, but you might want to wear gloves."
 msgstr ""
+"Niesamowicie ostre zęby wydobyte z olbrzymiego truchła. Można ich użyć jako "
+"broni, ale lepiej założyć rękawice."
 
 #. ~ "done_message" action message of item "monster teeth"
 #: data/json/items/tool/misc.json
@@ -405,15 +482,17 @@ msgid ""
 "You carefully place the teeth on the ground, ready to be walked on by "
 "something passing by."
 msgstr ""
+"Ostrożnie układasz zęby na ziemi, gotowe, by coś, co będzie przechodzić, na "
+"nie nadepnęło."
 
 #. ~ Item name
 #: data/json/items/tool/musical_instruments.json
 msgid "kantele"
 msgid_plural "kanteles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kantele"
+msgstr[1] "kantele"
+msgstr[2] "kantele"
+msgstr[3] "kantele"
 
 #. ~ Description of "kantele"
 #: data/json/items/tool/musical_instruments.json
@@ -422,6 +501,9 @@ msgid ""
 " fashioned from a great pike's bone.  This ordinary wooden one doesn't seem "
 "quite as special."
 msgstr ""
+"Tradycyjny fiński instrument strunowy. Według mitu pierwszy z nich wykonano z"
+" kości wielkiego szczupaka. To zwykłe drewniane kantele nie wydaje się aż tak"
+" wyjątkowe."
 
 #. ~ Description of "ukulele"
 #: data/json/items/tool/musical_instruments.json
@@ -429,64 +511,66 @@ msgid ""
 "A small factory-made ukulele.  Makes you wish you were on a tropical island, "
 "or somewhere over the rainbow."
 msgstr ""
+"Małe fabryczne ukulele. Sprawia, że chcesz się znaleźć na tropikalnej wyspie "
+"albo gdzieś ponad tęczą."
 
 #. ~ Item name
 #: data/json/items/tool/musical_instruments.json
 msgid "golden krar"
 msgid_plural "golden krars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złoty krar"
+msgstr[1] "złote krary"
+msgstr[2] "złotych krarów"
+msgstr[3] "złotego krara"
 
 #. ~ Description of "golden krar"
 #: data/json/items/tool/musical_instruments.json
 msgid "A shiny golden krar, similar to a harp."
-msgstr ""
+msgstr "Lśniący złoty krar, podobny do harfy."
 
 #. ~ Item name
 #: data/json/items/tool/musical_instruments.json
 msgid "krar"
 msgid_plural "krars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "krar"
+msgstr[1] "krary"
+msgstr[2] "krarów"
+msgstr[3] "krara"
 
 #. ~ Description of "krar"
 #: data/json/items/tool/musical_instruments.json
 msgid "A wooden krar, similar to a harp."
-msgstr ""
+msgstr "Drewniany krar, podobny do harfy."
 
 #. ~ Item name
 #: data/json/items/tool/musical_instruments.json
 msgid "drum, percussion"
 msgid_plural "drums, percussion"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bęben perkusyjny"
+msgstr[1] "bębny perkusyjne"
+msgstr[2] "bębnów perkusyjnych"
+msgstr[3] "bębna perkusyjnego"
 
 #. ~ Description of "drum, percussion"
 #: data/json/items/tool/musical_instruments.json
 msgid ""
 "A standard factory-made percussion drum.  Looks to be in working condition."
-msgstr ""
+msgstr "Standardowy fabryczny bęben perkusyjny. Wygląda na sprawny."
 
 #. ~ Item name
 #: data/json/items/tool/musical_instruments.json
 msgid "primitive drum, percussion"
 msgid_plural "primitive drums, percussion"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prymitywny bęben perkusyjny"
+msgstr[1] "prymitywne bębny perkusyjne"
+msgstr[2] "prymitywnych bębnów perkusyjnych"
+msgstr[3] "prymitywnego bębna perkusyjnego"
 
 #. ~ Description of "primitive drum, percussion"
 #: data/json/items/tool/musical_instruments.json
 msgid ""
 "A handmade primitive percussion drum.  Looks to be in working condition."
-msgstr ""
+msgstr "Ręcznie wykonany prymitywny bęben perkusyjny. Wygląda na sprawny."
 
 #. ~ Description of "bagpipes"
 #: data/json/items/tool/musical_instruments.json
@@ -495,6 +579,9 @@ msgid ""
 "of air contained within a leather bag.  It has a strap so you can wear it "
 "around, even when not playing."
 msgstr ""
+"Tradycyjny instrument muzyczny, w którym zamknięte stroiki zasilane są "
+"powietrzem ze skórzanego worka. Ma pasek, dzięki któremu możesz go nosić, "
+"nawet gdy nie grasz."
 
 #. ~ Description of "tuba"
 #. ~ ol' is an informal short-form for old, and here is part of big-ol as
@@ -504,6 +591,8 @@ msgid ""
 "A big ol' tuba.  Much easier to play when you're wearing it.  Thankfully, "
 "this one has a harness attached."
 msgstr ""
+"Wielka, ciężka tuba. Znacznie łatwiej na niej grać, gdy ma się ją na sobie. "
+"Na szczęście ta ma przymocowaną uprząż."
 
 #. ~ Description of "dog whistle"
 #: data/json/items/tool/pets.json
@@ -512,11 +601,14 @@ msgid ""
 " friendly dogs to either follow you closely and stop attacking, or start "
 "attacking enemies if they are currently docile."
 msgstr ""
+"Mały gwizdek. Dmuchnięcie w niego wydaje wysoki dźwięk, na który pobliskie "
+"przyjazne psy albo podążają tuż za tobą i przestają atakować, albo zaczynają "
+"atakować wrogów, jeśli były spokojne."
 
 #. ~ Description of "shears"
 #: data/json/items/tool/pets.json
 msgid "A set of shears designed to obtain wool from sheep."
-msgstr ""
+msgstr "Nożyce przeznaczone do strzyżenia wełny z owiec."
 
 #. ~ Description of "forged shears"
 #: data/json/items/tool/pets.json
@@ -524,6 +616,8 @@ msgid ""
 "A set of heavy-duty shears designed to obtain wool from sheep.  Made of two "
 "steel blades connected by spring leaf."
 msgstr ""
+"Wytrzymałe nożyce przeznaczone do strzyżenia wełny z owiec. Wykonane z dwóch "
+"stalowych ostrzy połączonych sprężyną płaską."
 
 #. ~ Description of "bronze shears"
 #: data/json/items/tool/pets.json
@@ -532,20 +626,23 @@ msgid ""
 "painstakingly sharpened blades connected by a carefully tempered twisted "
 "bridge."
 msgstr ""
+"Kute z jednego kawałka nożyce z brązu do cięcia tkanin. Składają się z dwóch "
+"starannie naostrzonych ostrzy połączonych pieczołowicie zahartowanym "
+"skręconym mostkiem."
 
 #. ~ Description of "electric shears"
 #: data/json/items/tool/pets.json
 msgid "Electric corded shears, used to quickly shear animals."
-msgstr ""
+msgstr "Elektryczne nożyce przewodowe do szybkiego strzyżenia zwierząt."
 
 #. ~ Item name
 #: data/json/items/tool/pets.json
 msgid "livestock scale"
 msgid_plural "livestock scales"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "waga dla zwierząt hodowlanych"
+msgstr[1] "wagi dla zwierząt hodowlanych"
+msgstr[2] "wag dla zwierząt hodowlanych"
+msgstr[3] "wagi dla zwierząt hodowlanych"
 
 #. ~ Description of "livestock scale"
 #: data/json/items/tool/pets.json
@@ -553,6 +650,8 @@ msgid ""
 "A giant electronic scale with a rubber mat meant for weighing a single horse,"
 " cow, or other large animal.  You could also weigh yourself with it."
 msgstr ""
+"Olbrzymia waga elektroniczna z gumową matą, przeznaczona do ważenia jednego "
+"konia, krowy lub innego dużego zwierzęcia. Możesz też zważyć na niej siebie."
 
 #. ~ Description of "wooden dog whistle"
 #: data/json/items/tool/pets.json
@@ -561,6 +660,9 @@ msgid ""
 "that causes nearby friendly dogs to either follow you closely and stop "
 "attacking, or start attacking enemies if they are currently docile."
 msgstr ""
+"Gwizdek wyrzeźbiony z twardego drewna. Dmuchnięcie w niego wydaje wysoki "
+"dźwięk, na który pobliskie przyjazne psy albo podążają tuż za tobą i "
+"przestają atakować, albo zaczynają atakować wrogów, jeśli były spokojne."
 
 #. ~ Description of "RC control"
 #: data/json/items/tool/radio_tools.json
@@ -569,11 +671,14 @@ msgid ""
 " buttons that don't seem to do anything.  Perhaps they were for the deluxe "
 "model?"
 msgstr ""
+"Pilot do zdalnie sterowanego samochodu, z joystickiem do kierowania i "
+"kolorowymi przyciskami, które chyba nic nie robią. Może były przeznaczone do "
+"wersji deluxe?"
 
 #. ~ Description of "RC car"
 #: data/json/items/tool/radio_tools.json
 msgid "A remote-controlled car.  Fun for all ages."
-msgstr ""
+msgstr "Zdalnie sterowany samochód. Zabawa dla każdego wieku."
 
 #. ~ Description of "RC car (on)"
 #: data/json/items/tool/radio_tools.json
@@ -581,6 +686,8 @@ msgid ""
 "A remote-controlled toy car.  It is turned on and draining its batteries just"
 " like a real electric car!  Use a remote control to drive it around."
 msgstr ""
+"Zdalnie sterowany samochodzik. Jest włączony i rozładowuje baterie zupełnie "
+"jak prawdziwy samochód elektryczny! Użyj pilota, aby nim jeździć."
 
 #. ~ Description of "radio activation mod"
 #: data/json/items/tool/radio_tools.json
@@ -588,6 +695,9 @@ msgid ""
 "A small electronic device that can be attached to certain items to activate "
 "them with a radio signal from an RC car controller."
 msgstr ""
+"Małe urządzenie elektroniczne, które można przymocować do niektórych "
+"przedmiotów, aby aktywować je sygnałem radiowym z kontrolera zdalnie "
+"sterowanego samochodu."
 
 #. ~ Description of "radio (off)"
 #: data/json/items/tool/radio_tools.json
@@ -595,6 +705,8 @@ msgid ""
 "A portable radio.  Using this radio turns it on.  It will pick up any nearby "
 "signals being broadcasted and play them audibly."
 msgstr ""
+"Przenośne radio. Użycie go włącza je. Odbiera wszelkie pobliskie nadawane "
+"sygnały i odtwarza je na głos."
 
 #. ~ Description of "radio (on)"
 #: data/json/items/tool/radio_tools.json
@@ -602,6 +714,8 @@ msgid ""
 "A portable radio that is turned on and continually draining its batteries.  "
 "It is playing the broadcast being sent from any nearby radio towers."
 msgstr ""
+"Przenośne radio, które jest włączone i stale rozładowuje baterie. Odtwarza "
+"audycję nadawaną przez pobliskie wieże radiowe."
 
 #. ~ Description of "two-way radio"
 #: data/json/items/tool/radio_tools.json
@@ -609,6 +723,7 @@ msgid ""
 "A radio with a transmitting unit.  You could use it to contact someone who "
 "also has one."
 msgstr ""
+"Radio z nadajnikiem. Możesz się nim skontaktować z kimś, kto też ma takie."
 
 #. ~ Description of "remote vehicle controller"
 #: data/json/items/tool/radio_tools.json
@@ -616,15 +731,17 @@ msgid ""
 "A remote controller for a real car.  Can turn onboard devices on and off.  "
 "Some cars can be driven remotely."
 msgstr ""
+"Pilot do prawdziwego samochodu. Pozwala włączać i wyłączać urządzenia "
+"pokładowe. Niektórymi samochodami można kierować zdalnie."
 
 #. ~ Item name
 #: data/json/items/tool/radio_tools.json
 msgid "modified radio"
 msgid_plural "modified radios"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zmodyfikowane radio"
+msgstr[1] "zmodyfikowane radia"
+msgstr[2] "zmodyfikowanych radiów"
+msgstr[3] "zmodyfikowanego radia"
 
 #. ~ Description of "modified radio"
 #: data/json/items/tool/radio_tools.json
@@ -632,11 +749,13 @@ msgid ""
 "A modified portable radio.  A mess of metal and wires has been attached to "
 "the back and the frequency dial has been removed."
 msgstr ""
+"Zmodyfikowane przenośne radio. Z tyłu przymocowano plątaninę metalu i "
+"przewodów, a pokrętło częstotliwości zostało usunięte."
 
 #. ~ "menu_text" action message of item "modified radio"
 #: data/json/items/tool/radio_tools.json
 msgid "Use radio"
-msgstr ""
+msgstr "Użyj radia"
 
 #. ~ Player message in effect in EoC "EOC_BALTHAZAR_RADIO_FALSE" in use action
 #. of item "modified radio"
@@ -646,6 +765,9 @@ msgid ""
 "\n"
 "Just static."
 msgstr ""
+"Włączasz radio.\n"
+"\n"
+"Tylko szumy."
 
 #. ~ Player message in nested effect in then statement in effect in EoC
 #. "EOC_BALTHAZAR_RADIO_TRUE" in use action of item "modified radio"
@@ -655,6 +777,9 @@ msgid ""
 "\"If anyone can hear, I'm stuck in a bunker and need help.  I'm also transmitting my coordinates.  This message will repeat.\"\n"
 "You note down the coordinates."
 msgstr ""
+"Włączasz radio. Słyszysz komunikat:\n"
+"„Jeśli ktoś mnie słyszy, utknąłem w bunkrze i potrzebuję pomocy. Nadaję też swoje współrzędne. Ta wiadomość będzie powtarzana”.\n"
+"Zapisujesz współrzędne."
 
 #. ~ Player message in nested effect in else statement in effect in EoC
 #. "EOC_BALTHAZAR_RADIO_TRUE" in use action of item "modified radio"
@@ -664,6 +789,9 @@ msgid ""
 "\"If anyone who is listening to this broadcast is willing to do work for weapons, head to the transmitted coordinates.  This message will repeat.\"\n"
 "You write down the coordinates."
 msgstr ""
+"Włączasz radio. Słyszysz komunikat:\n"
+"„Jeśli ktoś, kto słucha tej audycji, chce pracować w zamian za broń, niech uda się pod nadane współrzędne. Ta wiadomość będzie powtarzana”.\n"
+"Zapisujesz współrzędne."
 
 #. ~ Description of "birchbark funnel"
 #: data/json/items/tool/raincatchers.json
@@ -671,6 +799,8 @@ msgid ""
 "A small birchbark funnel.  Place it above an outdoor container to collect "
 "rainwater."
 msgstr ""
+"Mały lejek z kory brzozowej. Umieść go nad pojemnikiem na zewnątrz, aby "
+"zbierać deszczówkę."
 
 #. ~ Description of "funnel"
 #: data/json/items/tool/raincatchers.json
@@ -678,6 +808,8 @@ msgid ""
 "A plastic funnel used to collect rainwater.  Use it outside and place a "
 "container beneath it to collect water when it rains."
 msgstr ""
+"Plastikowy lejek do zbierania deszczówki. Użyj go na zewnątrz i postaw pod "
+"nim pojemnik, aby zbierać wodę, gdy pada deszcz."
 
 #. ~ Description of "leather funnel"
 #: data/json/items/tool/raincatchers.json
@@ -685,6 +817,8 @@ msgid ""
 "A small leather funnel used to collect rainwater.  Use it outside and place a"
 " container beneath it to collect water when it rains."
 msgstr ""
+"Mały skórzany lejek do zbierania deszczówki. Użyj go na zewnątrz i postaw pod"
+" nim pojemnik, aby zbierać wodę, gdy pada deszcz."
 
 #. ~ Description of "makeshift funnel"
 #: data/json/items/tool/raincatchers.json
@@ -692,6 +826,8 @@ msgid ""
 "A small makeshift funnel used to collect rainwater.  Use it outside and place"
 " a container beneath it to collect water when it rains."
 msgstr ""
+"Mały prowizoryczny lejek do zbierania deszczówki. Użyj go na zewnątrz i "
+"postaw pod nim pojemnik, aby zbierać wodę, gdy pada deszcz."
 
 #. ~ Description of "metal funnel"
 #: data/json/items/tool/raincatchers.json
@@ -700,6 +836,9 @@ msgid ""
 "funnels, but collects more water.  Use it outside and place a container "
 "beneath it to collect water when it rains."
 msgstr ""
+"Duży metalowy lejek do zbierania deszczówki. Mniej poręczny w transporcie niż"
+" plastikowe lejki, ale zbiera więcej wody. Użyj go na zewnątrz i postaw pod "
+"nim pojemnik, aby zbierać wodę, gdy pada deszcz."
 
 #. ~ Description of "tarp raincatcher"
 #: data/json/items/tool/raincatchers.json
@@ -707,11 +846,13 @@ msgid ""
 "A collection of sticks and string with a tarpaulin to set up as an improvised"
 " raincatcher."
 msgstr ""
+"Zestaw kijów i sznurka z plandeką do rozstawienia jako prowizoryczny "
+"deszczołap."
 
 #. ~ Description of "barometer"
 #: data/json/items/tool/science.json
 msgid "A plastic barometer that can read atmospheric pressure."
-msgstr ""
+msgstr "Plastikowy barometr, który mierzy ciśnienie atmosferyczne."
 
 #. ~ Description of "goo canister"
 #: data/json/items/tool/science.json
@@ -720,6 +861,9 @@ msgid ""
 "corrosive materials.  Contents may be sentient.  Open at your own risk.\" You"
 " think you can feel something moving inside it."
 msgstr ""
+"Metalowy kanister z etykietą: „Ostrzeżenie: zawiera wysoce toksyczne i żrące "
+"materiały. Zawartość może być świadoma. Otwierasz na własne ryzyko”. Wydaje "
+"ci się, że czujesz, jak coś się w nim porusza."
 
 #. ~ Description of "chemistry set"
 #: data/json/items/tool/science.json
@@ -728,6 +872,9 @@ msgid ""
 "wire, a hotplate, and a pair of safety glasses.  It might be used to craft "
 "some chemistry projects if you're so inclined."
 msgstr ""
+"Zestaw chemiczny przechowywany w pudełku. Zawiera szklane naczynia, węże, "
+"drut metalowy, kuchenkę elektryczną i okulary ochronne. Przyda się do "
+"wykonania niektórych projektów chemicznych, jeśli masz na to ochotę."
 
 #. ~ Description of "basic chemistry set"
 #: data/json/items/tool/science.json
@@ -736,6 +883,9 @@ msgid ""
 " glasses.  It might be used to craft some chemistry projects if you're so "
 "inclined, but you'll need a source of heat."
 msgstr ""
+"Podstawowy zestaw chemiczny zawierający szklane naczynia, węże i okulary "
+"ochronne. Przyda się do wykonania niektórych projektów chemicznych, jeśli "
+"masz na to ochotę, ale potrzebne będzie źródło ciepła."
 
 #. ~ Description of "electrolysis kit"
 #: data/json/items/tool/science.json
@@ -744,6 +894,9 @@ msgid ""
 "liquid.  Useful for crafting.  Load with a storage battery or 12 V vehicle "
 "battery to use."
 msgstr ""
+"Zestaw przewodów i elektrod do przykładania prądu stałego, zwykle do cieczy. "
+"Przydatny przy wytwarzaniu. Aby go użyć, podłącz akumulator magazynowy lub "
+"12-woltowy akumulator samochodowy."
 
 #. ~ Description of "ketene lamp"
 #: data/json/items/tool/science.json
@@ -754,6 +907,11 @@ msgid ""
 "reactions.  Due to the instability of ketene, it can't be stored and must be "
 "used immediately."
 msgstr ""
+"Odcinek szklanej rury z bańką pośrodku, w której znajduje się elektryczny "
+"element grzejny. Służy do wytwarzania ketenu przez pirolizę acetonu lub "
+"1,3-butadienu z cykloheksanu, do użycia w innych reakcjach chemicznych. Z "
+"powodu niestabilności ketenu nie można go przechowywać i trzeba go zużyć od "
+"razu."
 
 #. ~ Description of "makerspace kit for STEM"
 #: data/json/items/tool/science.json
@@ -761,6 +919,8 @@ msgid ""
 "A kit with hundreds of pieces and dozens of blueprints for small engineering "
 "projects designed for beginner learners.  Explore mechanics and hydraulics!"
 msgstr ""
+"Zestaw zawierający setki elementów i dziesiątki schematów małych projektów "
+"inżynieryjnych dla początkujących. Poznaj mechanikę i hydraulikę!"
 
 #. ~ Description of "robotics kit for young learners"
 #: data/json/items/tool/science.json
@@ -771,15 +931,20 @@ msgid ""
 " assemble 12 different robots.  The versatile parts also allow you to make "
 "robots according to your own designs."
 msgstr ""
+"Kompletny system inżynierii robotycznej do nauki podstaw budowania i "
+"programowania robotów. Korzystając z czujników, silników, głównego sterownika"
+" i setek zatrzaskiwanych elementów, możesz według instrukcji złożyć 12 "
+"różnych robotów. Wszechstronne części pozwalają też budować roboty według "
+"własnych projektów."
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "Stirling engine kit"
 msgid_plural "Stirling engine kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw silnika Stirlinga"
+msgstr[1] "zestawy silnika Stirlinga"
+msgstr[2] "zestawów silnika Stirlinga"
+msgstr[3] "zestawu silnika Stirlinga"
 
 #. ~ Description of "Stirling engine kit"
 #: data/json/items/tool/science.json
@@ -787,6 +952,8 @@ msgid ""
 "A Stirling engine kit that demonstrates the principles behind the generation "
 "of electricity through the use of hot air."
 msgstr ""
+"Zestaw z silnikiem Stirlinga, który demonstruje zasady wytwarzania "
+"elektryczności za pomocą gorącego powietrza."
 
 #. ~ Description of "small vacuum oven"
 #: data/json/items/tool/science.json
@@ -794,6 +961,9 @@ msgid ""
 "A small 0.9 cubic foot vacuum oven used to purge residual solvents out of "
 "liquids and solids.  Looks kind of like a microwave."
 msgstr ""
+"Mała suszarka próżniowa o pojemności ok. 25 litrów, służąca do usuwania "
+"resztek rozpuszczalników z cieczy i ciał stałych. Wygląda trochę jak "
+"mikrofalówka."
 
 #. ~ Description of "small closed loop extractor"
 #: data/json/items/tool/science.json
@@ -804,6 +974,11 @@ msgid ""
 "tube, flushed with solvent, and essential oils gathered from the pot.  Must "
 "be powered up to operate."
 msgstr ""
+"Mały ekstraktor z zamkniętym obiegiem, służący do pozyskiwania olejków "
+"eterycznych z materii organicznej i dający wysokiej jakości ekstrakt. Składa "
+"się z długiej metalowej rury przymocowanej do stalowego „garnka na miód”. "
+"Materię organiczną upycha się w rurze, przepłukuje rozpuszczalnikiem, a "
+"olejki eteryczne zbiera z garnka. Do działania wymaga zasilania."
 
 #. ~ Description of "large closed loop extractor"
 #: data/json/items/tool/science.json
@@ -814,6 +989,11 @@ msgid ""
 "series of hoses and tubes come out of the machine going to different valves."
 "  It needs to be powered up to operate."
 msgstr ""
+"Duża maszyna służąca do pozyskiwania olejków eterycznych z dużych partii "
+"materii organicznej, dająca niskiej jakości surowy olej. Składa się z trzech "
+"długich metalowych rur uchodzących do dużego, poziomo ustawionego bębna. Z "
+"maszyny wychodzi szereg węży i rurek prowadzących do różnych zaworów. Do "
+"działania wymaga zasilania."
 
 #. ~ Description of "makeshift essential oil extractor"
 #: data/json/items/tool/science.json
@@ -822,15 +1002,18 @@ msgid ""
 "pipe to stir the solution, and a faucet at the bottom to drain the extractor."
 "  Not the most ideal piece of equipment, but it will work."
 msgstr ""
+"Prowizoryczny system ekstrakcyjny. To w zasadzie tylko 200-litrowa beczka, "
+"rura do mieszania roztworu i kran na dole do opróżniania ekstraktora. Nie "
+"jest to idealny sprzęt, ale zadziała."
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "disassembled catalytic cracking reactor"
 msgid_plural "disassembled catalytic cracking reactors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zdemontowany reaktor do krakingu katalitycznego"
+msgstr[1] "zdemontowane reaktory do krakingu katalitycznego"
+msgstr[2] "zdemontowanych reaktorów do krakingu katalitycznego"
+msgstr[3] "zdemontowanego reaktora do krakingu katalitycznego"
 
 #. ~ Description of "disassembled catalytic cracking reactor"
 #: data/json/items/tool/science.json
@@ -840,6 +1023,10 @@ msgid ""
 "disassembled.  You can reassemble and plug it into your own power grid to use"
 " it."
 msgstr ""
+"Prowizoryczny system ekstrakcyjny, o ile można tak nazwać coś, co zbudowała w"
+" laboratorium specjalnie do tego celu grupa ekspertów. Starannie "
+"zdemontowany. Możesz go ponownie złożyć i podłączyć do własnej sieci "
+"energetycznej, aby go używać."
 
 #. ~ Description of "qualitative filter paper"
 #: data/json/items/tool/science.json
@@ -849,6 +1036,10 @@ msgid ""
 " filter paper, but the process takes longer.  It's intended to be disposable,"
 " but you could probably use it for some time before it's unusable."
 msgstr ""
+"Kawałek bibuły filtracyjnej do oddzielania ciał stałych od cieczy. Ta bibuła "
+"ma klasę 2 mikronów, więc oddziela więcej ciał stałych niż bibuła ilościowa, "
+"ale proces trwa dłużej. Jest przeznaczona do jednorazowego użytku, ale pewnie"
+" możesz jej używać przez jakiś czas, zanim przestanie się nadawać."
 
 #. ~ Description of "quantitative filter paper"
 #: data/json/items/tool/science.json
@@ -858,6 +1049,10 @@ msgid ""
 " filter paper, but the process is much faster.  It's intended to be "
 "disposable, but you could probably use it for some time before it's unusable."
 msgstr ""
+"Kawałek bibuły filtracyjnej do oddzielania ciał stałych od cieczy. Ta bibuła "
+"ma klasę 20 mikronów, więc oddziela mniej ciał stałych niż bibuła jakościowa,"
+" ale proces jest znacznie szybszy. Jest przeznaczona do jednorazowego użytku,"
+" ale pewnie możesz jej używać przez jakiś czas, zanim przestanie się nadawać."
 
 #. ~ Description of "vacuum pump"
 #: data/json/items/tool/science.json
@@ -865,6 +1060,8 @@ msgid ""
 "A small belt-driven mechanical pump capable of achieving a vacuum of -29.99 "
 "hg (50 microns)."
 msgstr ""
+"Mała mechaniczna pompa z napędem pasowym, zdolna osiągnąć próżnię -29,99 hg "
+"(50 mikronów)."
 
 #. ~ Description of "makeshift ammonia machine reactor"
 #: data/json/items/tool/science.json
@@ -874,6 +1071,10 @@ msgid ""
 "primitive catalysts for the reaction, energy efficiency is very low.  This "
 "one is powered by electricity."
 msgstr ""
+"Ogromne urządzenie zbudowane z odzyskanego sprzętu przemysłowego, które "
+"wytwarza amoniak z wodoru i azotu metodą Habera-Boscha. Ponieważ do reakcji "
+"używa prymitywnych katalizatorów, jego wydajność energetyczna jest bardzo "
+"niska. To jest zasilane elektrycznie."
 
 #. ~ Description of "makeshift ammonia machine pipework"
 #: data/json/items/tool/science.json
@@ -883,6 +1084,10 @@ msgid ""
 " hydrogen via Haber-Bosch process.  It also acts as a power source for all "
 "the low-powered electrical components of the system."
 msgstr ""
+"Dość skomplikowany system grubościennych rur, mocnych sprężarek i "
+"okablowania, przeznaczony do współpracy z reaktorem wytwarzającym amoniak z "
+"azotu i wodoru metodą Habera-Boscha. Służy też jako źródło zasilania "
+"wszystkich elektrycznych podzespołów systemu o niskim poborze mocy."
 
 #. ~ Description of "butane tank"
 #: data/json/items/tool/science.json
@@ -890,6 +1095,8 @@ msgid ""
 "A tank of compressed butane.  Aside from its practicality as fuel, it can "
 "also be used to extract essential oils from organic material."
 msgstr ""
+"Zbiornik ze sprężonym butanem. Poza praktycznym zastosowaniem jako paliwo "
+"może też służyć do pozyskiwania olejków eterycznych z materii organicznej."
 
 #. ~ Description of "hydrogen tank"
 #: data/json/items/tool/science.json
@@ -897,11 +1104,13 @@ msgid ""
 "A tank of compressed hydrogen gas.  If you need to make water from scratch, "
 "or lift a zeppelin, it could come in handy."
 msgstr ""
+"Zbiornik ze sprężonym wodorem. Przyda się, jeśli chcesz zrobić wodę od zera "
+"albo unieść sterowiec."
 
 #. ~ Description of "pressurized tank"
 #: data/json/items/tool/science.json
 msgid "A tank designed to hold high pressure gases."
-msgstr ""
+msgstr "Zbiornik przeznaczony do przechowywania gazów pod wysokim ciśnieniem."
 
 #. ~ Description of "nitrogen tank"
 #: data/json/items/tool/science.json
@@ -909,6 +1118,8 @@ msgid ""
 "A tank of compressed nitrogen gas.  Nitrogen is useful for its lack of "
 "reactivity.  Don't try to breathe it."
 msgstr ""
+"Zbiornik ze sprężonym azotem. Azot jest przydatny ze względu na brak "
+"reaktywności. Nie próbuj nim oddychać."
 
 #. ~ Description of "platinum grille"
 #: data/json/items/tool/science.json
@@ -916,6 +1127,8 @@ msgid ""
 "A metal grille with a layer of platinum plating, suitable for use as a "
 "catalyst for some chemical reactions."
 msgstr ""
+"Metalowa kratka pokryta warstwą platyny, nadająca się do użycia jako "
+"katalizator niektórych reakcji chemicznych."
 
 #. ~ Description of "portal generator"
 #: data/json/items/tool/science.json
@@ -923,6 +1136,8 @@ msgid ""
 "A rare, bizarre, and arcane device of an otherworldly nature.  It's giving "
 "you a headache just looking at it.  It is covered in alien markings."
 msgstr ""
+"Rzadkie, dziwaczne i tajemnicze urządzenie nieziemskiego pochodzenia. Sam "
+"jego widok przyprawia cię o ból głowy. Pokrywają je obce symbole."
 
 #. ~ Description of "teleport pad"
 #: data/json/items/tool/science.json
@@ -930,6 +1145,8 @@ msgid ""
 "A kit for a teleporter trap, consisting of a teleporter and a solar cell that"
 " is triggered when stepped upon."
 msgstr ""
+"Zestaw do pułapki teleportacyjnej, składający się z teleportera i ogniwa "
+"słonecznego, uruchamiany po nadepnięciu."
 
 #. ~ Description of "teleporter"
 #: data/json/items/tool/science.json
@@ -937,6 +1154,8 @@ msgid ""
 "An experimental device that will teleport you a short distance when "
 "activated."
 msgstr ""
+"Eksperymentalne urządzenie, które po aktywacji teleportuje cię na niewielką "
+"odległość."
 
 #. ~ Description of "Doppler Radar Turbo 2000"
 #: data/json/items/tool/science.json
@@ -945,6 +1164,9 @@ msgid ""
 "vintage monochrome monitor displays a plethora of meteorological data.  No "
 "sign of the FLDSMDFR, however."
 msgstr ""
+"Aktówka z wbudowanym laptopem, który wygląda jak z lat 80. Jego zabytkowy "
+"monochromatyczny monitor wyświetla mnóstwo danych meteorologicznych. Nie ma "
+"jednak śladu FLDSMDFR."
 
 #. ~ Description of "basic laboratory analysis kit"
 #: data/json/items/tool/science.json
@@ -955,6 +1177,11 @@ msgid ""
 "layer chromatography.  This makes it a lot easier to feel confident that the "
 "chemical you've made is what you think it is."
 msgstr ""
+"Solidny zestaw zawierający kilka podstawowych rzeczy, bez których raczej nie "
+"warto próbować precyzyjnej chemii: małą wagę szalkową, spektrofotometr, "
+"kuwety, aparat do pomiaru punktu topnienia, pH-metr i zestaw płytek do "
+"chromatografii cienkowarstwowej. Dzięki niemu znacznie łatwiej mieć pewność, "
+"że wytworzona substancja jest tym, czym myślisz."
 
 #. ~ Description of "small weight scale"
 #: data/json/items/tool/science.json
@@ -962,6 +1189,8 @@ msgid ""
 "A simple scale that uses a set of steel weights on sliding bars to measure a "
 "sample's mass quite accurately."
 msgstr ""
+"Prosta waga, która za pomocą stalowych odważników na suwakach dość dokładnie "
+"mierzy masę próbki."
 
 #. ~ Description of "spectrophotometer"
 #: data/json/items/tool/science.json
@@ -969,6 +1198,8 @@ msgid ""
 "A ubiquitous analytical chemistry tool that measures the light absorption of "
 "a liquid sample in a special tube called a cuvette."
 msgstr ""
+"Powszechnie stosowane narzędzie chemii analitycznej, które mierzy absorpcję "
+"światła przez ciekłą próbkę w specjalnej probówce zwanej kuwetą."
 
 #. ~ Description of "set of spectrometry cuvettes"
 #: data/json/items/tool/science.json
@@ -976,6 +1207,8 @@ msgid ""
 "A small box filled with precisely-calibrated square plastic tubes for "
 "laboratory spectrometer use."
 msgstr ""
+"Małe pudełko pełne precyzyjnie skalibrowanych kwadratowych plastikowych "
+"probówek do laboratoryjnego spektrometru."
 
 #. ~ Description of "pH meter"
 #: data/json/items/tool/science.json
@@ -984,6 +1217,9 @@ msgid ""
 "calibration solution (conveniently included) and the other in a substance, "
 "you can calculate the substance's acidity."
 msgstr ""
+"Para szklanych sond podłączonych do woltomierza. Umieszczając jedną sondę w "
+"roztworze kalibracyjnym (wygodnie dołączonym do zestawu), a drugą w badanej "
+"substancji, możesz obliczyć jej kwasowość."
 
 #. ~ Description of "voltmeter"
 #: data/json/items/tool/science.json
@@ -991,6 +1227,8 @@ msgid ""
 "A device with two probes that let you measure the electrical potential "
 "between two points."
 msgstr ""
+"Urządzenie z dwiema sondami, które pozwala zmierzyć potencjał elektryczny "
+"między dwoma punktami."
 
 #. ~ Description of "multimeter"
 #: data/json/items/tool/science.json
@@ -1000,6 +1238,10 @@ msgid ""
 "voltage, but current in amps, and resistance in ohms, as well as test for "
 "electrical continuity."
 msgstr ""
+"Urządzenie nieco większe od kieszonkowego kalkulatora, z cyfrowym "
+"wyświetlaczem i dwiema ostrymi sondami na przewodach. Mierzy nie tylko "
+"napięcie, ale też natężenie prądu w amperach i opór w omach, a także sprawdza"
+" ciągłość obwodu."
 
 #. ~ Description of "melting point apparatus"
 #: data/json/items/tool/science.json
@@ -1010,6 +1252,10 @@ msgid ""
 "melting point of a crystal, a property very useful in identifying what it is "
 "and how pure it is."
 msgstr ""
+"Płyta grzejna z przymocowaną metalową obudową. W obudowie jest okienko z "
+"powiększeniem i szczelina na kapilarę z krystaliczną próbką. Urządzenie "
+"pozwala precyzyjnie zmierzyć temperaturę topnienia kryształu, co bardzo "
+"pomaga ustalić, czym on jest i jak jest czysty."
 
 #. ~ Description of "vortex device"
 #: data/json/items/tool/science.json
@@ -1020,6 +1266,10 @@ msgid ""
 "rapidly shake and mix the contents of the test tube.  It's surprisingly fun "
 "to use."
 msgstr ""
+"Małe, ciężkie, nudno wyglądające urządzenie. Jego obciążona trapezowa obudowa"
+" ma jeden włącznik i pokrętło prędkości, a na górze znajduje się gumowe "
+"gniazdo. Wciśnięcie probówki w gniazdo przy włączonym zasilaniu szybko "
+"wstrząsa i miesza jej zawartość. Zaskakująco fajnie się tego używa."
 
 #. ~ Description of "light detector"
 #: data/json/items/tool/science.json
@@ -1027,17 +1277,21 @@ msgid ""
 "A photodiode on a chip, designed to convert incoming light to electrical "
 "energy for quantification."
 msgstr ""
+"Fotodioda na układzie scalonym, zaprojektowana do zamiany padającego światła "
+"na energię elektryczną w celu jego pomiaru."
 
 #. ~ Description of "glass prism"
 #: data/json/items/tool/science.json
 msgid ""
 "A high-quality crystal glass prism for separating and redirecting light."
 msgstr ""
+"Wysokiej jakości pryzmat ze szkła kryształowego do rozszczepiania i "
+"odchylania światła."
 
 #. ~ Description of "small glass tube"
 #: data/json/items/tool/science.json
 msgid "A small glass tube.  Small, tube-shaped, and made of glass."
-msgstr ""
+msgstr "Mała szklana tuba. Mała, w kształcie tuby i ze szkła."
 
 #. ~ Description of "dissecting microscope"
 #: data/json/items/tool/science.json
@@ -1048,6 +1302,10 @@ msgid ""
 "creatures.  It still works pretty well with an added light source, but what "
 "would you do with it?"
 msgstr ""
+"Ten mikroskop ma mniejsze powiększenie niż standardowy. Jest też "
+"stereoskopowy i daje ładny trójwymiarowy obraz powierzchni. Zwykle używano go"
+" do sekcji i innych precyzyjnych prac na małych stworzeniach. Z dodatkowym "
+"źródłem światła wciąż działa całkiem dobrze, ale co byś z nim robił?"
 
 #. ~ Description of "separation funnel"
 #: data/json/items/tool/science.json
@@ -1059,6 +1317,11 @@ msgid ""
 "compound you're trying to isolate.  With a high level of skill, it can also "
 "be used to make juvenile farting noises."
 msgstr ""
+"To coś nie bardzo przypomina lejek. To szklane naczynie w kształcie łzy z "
+"korkiem na szerokim końcu i zaworem na drugim. Można nim przemywać jedną "
+"ciecz drugą, na przykład wodę olejem, a następnie odciągnąć tę z dwóch "
+"cieczy, która zawiera więcej związku, który próbujesz wyizolować. Przy "
+"wysokich umiejętnościach można nim też wydawać dziecinne odgłosy pierdzenia."
 
 #. ~ Description of "rotary evaporator"
 #: data/json/items/tool/science.json
@@ -1069,15 +1332,21 @@ msgid ""
 "motor, evaporating the contents.  The vapor is then condensed in the tubes "
 "and collected in another flask, in case you wanted to save it for later."
 msgstr ""
+"Sam widok tego urządzenia sprawia, że czujesz się jak prawdziwy szalony "
+"naukowiec. To zestaw szklanych rurek i okrągłych kolb połączonych z "
+"centralnym silnikiem i elementem grzejnym. Element grzejny ogrzewa jedną "
+"kolbę, obracaną przez silnik, odparowując jej zawartość. Pary skraplają się "
+"następnie w rurkach i zbierają w innej kolbie, na wypadek gdybyś chciał je "
+"zachować na później."
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "fractional distillation apparatus"
 msgid_plural "fractional distillation apparatuses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aparat do destylacji frakcyjnej"
+msgstr[1] "aparaty do destylacji frakcyjnej"
+msgstr[2] "aparatów do destylacji frakcyjnej"
+msgstr[3] "aparatu do destylacji frakcyjnej"
 
 #. ~ Description of "fractional distillation apparatus"
 #: data/json/items/tool/science.json
@@ -1089,6 +1358,12 @@ msgid ""
 "so that specific contents can be analyzed.  Going a few milliliters at a "
 "time, it would not be very effective to try to distill whiskey in this thing."
 msgstr ""
+"Jeden z klasycznych elementów szklanego sprzętu szalonych naukowców. To mała "
+"destylarka, która przepuszcza pary przez kolumnę do destylacji frakcyjnej, a "
+"następnie skrapla destylat w chłodzonej kolumnie zbiorczej. Doktorant lub "
+"robot (czy jest w ogóle jakaś różnica?) zbiera destylat we frakcjach, aby "
+"można było przeanalizować konkretne składniki. Przy kilku mililitrach naraz "
+"próba destylowania w tym whisky nie byłaby zbyt skuteczna."
 
 #. ~ Description of "electrophoresis tray"
 #: data/json/items/tool/science.json
@@ -1098,6 +1373,10 @@ msgid ""
 "Stuff like proteins and DNA would then get separated on the gel according to "
 "electrical charge and size.  Pretty useless now for anything but salvage."
 msgstr ""
+"Zestaw plastikowych tacek, elektrod i zasilacza, przeznaczony do wytwarzania "
+"gradientu napięcia elektrycznego w roztworze zawierającym stały żel. Białka i"
+" DNA rozdzielały się wtedy na żelu według ładunku elektrycznego i wielkości. "
+"Obecnie praktycznie bezużyteczny, chyba że na części."
 
 #. ~ Description of "microcentrifuge"
 #: data/json/items/tool/science.json
@@ -1106,11 +1385,15 @@ msgid ""
 "be fooled by its portable scale; it's still a very powerful piece of "
 "equipment that can spin stuff really quickly.  It's not a toy!"
 msgstr ""
+"Mniejsza, stołowa wersja dużej wirówki wielkości mebla. Nie daj się zwieść "
+"jej przenośnym rozmiarom; to wciąż bardzo mocne urządzenie, które potrafi "
+"naprawdę szybko wirować. To nie zabawka!"
 
 #. ~ Description of "ring stand"
 #: data/json/items/tool/science.json
 msgid "A heavy metal plate and a sturdy rod, for clamping lab stuff to."
 msgstr ""
+"Ciężka metalowa płyta i solidny pręt do mocowania sprzętu laboratoryjnego."
 
 #. ~ Description of "set of ring stand clamps"
 #: data/json/items/tool/science.json
@@ -1120,6 +1403,10 @@ msgid ""
 "one wing nut for tightening; twist ties, duct tape, and other random stuff "
 "has been used to compensate."
 msgstr ""
+"Małe pudełko z pomieszanym zestawem klipsów do mocowania na stojakach "
+"laboratoryjnych. Wygląda na to, że obowiązuje jakaś zasada, według której "
+"każdemu z nich brakuje co najmniej jednej nakrętki motylkowej do dokręcania; "
+"w zastępstwie użyto drucików, taśmy klejącej i innych przypadkowych rzeczy."
 
 #. ~ Description of "sextant"
 #: data/json/items/tool/science.json
@@ -1127,58 +1414,60 @@ msgid ""
 "A tool for measuring angles of distant objects.  It can be used for measuring"
 " the altitude of the sun."
 msgstr ""
+"Narzędzie do mierzenia kątów odległych obiektów. Można nim zmierzyć wysokość "
+"słońca nad horyzontem."
 
 #. ~ "description" action message of item "Mi-go Biotech"
 #. ~ "description" action message of item "test dust storm causer"
 #: data/json/items/tool/science.json
 #: data/mods/desert_region/weather/weather_eoc.json
 msgid "Touch the opening."
-msgstr ""
+msgstr "Dotknij otworu."
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_INTEREST_SLIGHT" in use
 #. action of item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You have a slight feeling of being watched."
-msgstr ""
+msgstr "Masz lekkie poczucie, że ktoś cię obserwuje."
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_INTEREST_INTENSE" in
 #. use action of item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You have an intense feeling of being watched."
-msgstr ""
+msgstr "Masz silne poczucie, że ktoś cię obserwuje."
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_MORALE" in use action
 #. of item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You feel amazing!"
-msgstr ""
+msgstr "Czujesz się niesamowicie!"
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_FOCUS" in use action of
 #. item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You feel incredibly focused!"
-msgstr ""
+msgstr "Czujesz się niewiarygodnie skupiony!"
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_PAIN" in use action of
 #. item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You feel your aches and pains fade away!"
-msgstr ""
+msgstr "Czujesz, jak twoje bóle i dolegliwości znikają!"
 
 #. ~ Player message in effect in EoC "EOC_MIGO_BIO_TECH_SLEEPINESS" in use
 #. action of item "Mi-go Biotech"
 #: data/json/items/tool/science.json
 msgid "You instantly feel more awake!"
-msgstr ""
+msgstr "Natychmiast czujesz się bardziej rozbudzony!"
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "weather glass"
 msgid_plural "weather glass"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "szkło pogodowe"
+msgstr[1] "szkła pogodowe"
+msgstr[2] "szkieł pogodowych"
+msgstr[3] "szkła pogodowego"
 
 #. ~ Description of "weather glass"
 #: data/json/items/tool/science.json
@@ -1190,15 +1479,21 @@ msgid ""
 "the narrow open spout determines the atmospheric pressure.  Activate to get "
 "current atmospheric pressure."
 msgstr ""
+"Szkło pogodowe, zwane też szkłem burzowym lub „barometrem Goethego”, to "
+"barometr składający się ze szczelnie zamkniętego szklanego naczynia do połowy"
+" wypełnionego wodą. Wąska rurka łączy się z naczyniem poniżej poziomu wody i "
+"wznosi się ponad ten poziom. Różnica między poziomem wody w zamkniętym "
+"naczyniu a w wąskiej otwartej rurce wskazuje ciśnienie atmosferyczne. "
+"Aktywuj, aby odczytać aktualne ciśnienie atmosferyczne."
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "hygroscope"
 msgid_plural "hygroscopes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "higroskop"
+msgstr[1] "higroskopy"
+msgstr[2] "higroskopów"
+msgstr[3] "higroskopu"
 
 #. ~ Description of "hygroscope"
 #: data/json/items/tool/science.json
@@ -1207,15 +1502,18 @@ msgid ""
 "utilizing the hygroscopy of hair.  The hair's length changes with humidity as"
 " indicated on a dial."
 msgstr ""
+"Małe prostokątne pudełko. W środku znajduje się urządzenie, które mierzy "
+"wilgotność, wykorzystując higroskopijność włosa. Długość włosa zmienia się "
+"wraz z wilgotnością, co wskazuje tarcza."
 
 #. ~ Item name
 #: data/json/items/tool/science.json
 msgid "glass thermometer"
 msgid_plural "glass thermometers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "termometr szklany"
+msgstr[1] "termometry szklane"
+msgstr[2] "termometrów szklanych"
+msgstr[3] "termometru szklanego"
 
 #. ~ Description of "glass thermometer"
 #: data/json/items/tool/science.json
@@ -1224,6 +1522,9 @@ msgid ""
 "Mercury is used as its temperature sensor.  You could use this to get "
 "accurate information on current air temperature."
 msgstr ""
+"Urządzenie do mierzenia temperatury. Ten jest wykonany w całości ze szkła. "
+"Jako czujnik temperatury służy w nim rtęć. Pozwala uzyskać dokładną "
+"informację o aktualnej temperaturze powietrza."
 
 #. ~ Description of "damaged shelter kit"
 #: data/json/items/tool/shelters.json
@@ -1231,15 +1532,17 @@ msgid ""
 "A disassembled small shelter made of sticks and skins.  It's been damaged and"
 " needs to be repaired before you can set it up."
 msgstr ""
+"Rozłożone małe schronienie z kijów i skór. Zostało uszkodzone i trzeba je "
+"naprawić, zanim będzie można je rozstawić."
 
 #. ~ Item name
 #: data/json/items/tool/shelters.json
 msgid "large damaged shelter"
 msgid_plural "large damaged shelters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duże uszkodzone schronienie"
+msgstr[1] "duże uszkodzone schronienia"
+msgstr[2] "dużych uszkodzonych schronień"
+msgstr[3] "dużego uszkodzonego schronienia"
 
 #. ~ Description of "large damaged shelter"
 #: data/json/items/tool/shelters.json
@@ -1247,6 +1550,8 @@ msgid ""
 "A huge shelter made of sticks and skins, very bulky but with plenty of space."
 "  This is broken and cannot be deployed."
 msgstr ""
+"Ogromne schronienie z kijów i skór, bardzo nieporęczne, ale z mnóstwem "
+"miejsca. Jest uszkodzone i nie można go rozstawić."
 
 #. ~ Description of "large tent"
 #: data/json/items/tool/shelters.json
@@ -1254,29 +1559,31 @@ msgid ""
 "A family sized tent in a storage bag.  It provides a large amount of space, "
 "but is very bulky."
 msgstr ""
+"Rodzinny namiot w worku do przechowywania. Zapewnia dużo miejsca, ale jest "
+"bardzo nieporęczny."
 
 #. ~ Description of "shelter kit"
 #: data/json/items/tool/shelters.json
 msgid ""
 "A disassembled small shelter made of sticks and skins.  Activate it to set it"
 " up."
-msgstr ""
+msgstr "Rozłożone małe schronienie z kijów i skór. Aktywuj, aby je rozstawić."
 
 #. ~ Item name
 #: data/json/items/tool/shelters.json
 msgid "large shelter kit"
 msgid_plural "large shelter kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duży zestaw schronienia"
+msgstr[1] "duże zestawy schronienia"
+msgstr[2] "dużych zestawów schronienia"
+msgstr[3] "dużego zestawu schronienia"
 
 #. ~ Description of "large shelter kit"
 #: data/json/items/tool/shelters.json
 msgid ""
 "A large disassembled shelter made of sticks and skins.  Activate it to set it"
 " up."
-msgstr ""
+msgstr "Duże rozłożone schronienie z kijów i skór. Aktywuj, aby je rozstawić."
 
 #. ~ Description of "tent"
 #: data/json/items/tool/shelters.json
@@ -1284,6 +1591,8 @@ msgid ""
 "A small personal tent in a storage bag.  It's just big enough to fit one "
 "person comfortably."
 msgstr ""
+"Mały namiot jednoosobowy w worku do przechowywania. Jest akurat na tyle duży,"
+" by jedna osoba zmieściła się w nim wygodnie."
 
 #. ~ Description of "aluminum tent pole"
 #: data/json/items/tool/shelters.json
@@ -1291,6 +1600,7 @@ msgid ""
 "A light, collapsible tent pole made from aluminum, perfect for pitching a "
 "tent."
 msgstr ""
+"Lekki, składany maszt do namiotu z aluminium, idealny do rozbijania namiotu."
 
 #. ~ Description of "advanced electronic cigarette"
 #: data/json/items/tool/smoking.json
@@ -1299,6 +1609,9 @@ msgid ""
 "your nicotine fix than regular cigarettes, but still addictive.  It needs "
 "batteries and nicotine liquid to function."
 msgstr ""
+"Zaawansowany elektroniczny papieros wielokrotnego ładowania. Mniej szkodliwy "
+"sposób na dostarczenie sobie nikotyny niż zwykłe papierosy, ale wciąż "
+"uzależniający. Do działania potrzebuje baterii i płynu z nikotyną."
 
 #. ~ Description of "crack pipe"
 #: data/json/items/tool/smoking.json
@@ -1306,6 +1619,8 @@ msgid ""
 "A fine glass tube with a bulb with a bowl on one end.  It's used to partake "
 "of certain illicit substances."
 msgstr ""
+"Cienka szklana rurka z bańką z miseczką na jednym końcu. Służy do zażywania "
+"pewnych nielegalnych substancji."
 
 #. ~ Description of "glass pipe"
 #: data/json/items/tool/smoking.json
@@ -1313,15 +1628,17 @@ msgid ""
 "A hand-blown glass pipe.  It's commonly used to smoke recreational "
 "substances."
 msgstr ""
+"Ręcznie dmuchana szklana fajka. Zwykle służy do palenia substancji "
+"rekreacyjnych."
 
 #. ~ Item name
 #: data/json/items/tool/smoking.json
 msgid "water pipe"
 msgid_plural "water pipes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "fajka wodna"
+msgstr[1] "fajki wodne"
+msgstr[2] "fajek wodnych"
+msgstr[3] "fajki wodnej"
 
 #. ~ Description of "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1330,15 +1647,18 @@ msgid ""
 "often insist these are used solely for tobacco, despite their iconic status "
 "as cannabis paraphernalia."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Sklepy z akcesoriami "
+"często upierają się, że służą wyłącznie do tytoniu, mimo ich kultowego "
+"statusu jako akcesoriów do marihuany."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "bong"
 msgid_plural "bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bongo"
+msgstr[1] "bonga"
+msgstr[2] "bong"
+msgstr[3] "bonga"
 
 #. ~ Description of variant "bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1346,15 +1666,17 @@ msgid ""
 "A mass-manufactured water pipe, otherwise known as a 'bong'.  This one is "
 "made of plain, clear, glass."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. To jest wykonane ze "
+"zwykłego, przezroczystego szkła."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "cartoon bong"
 msgid_plural "cartoon bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bongo z kreskówkami"
+msgstr[1] "bonga z kreskówkami"
+msgstr[2] "bong z kreskówkami"
+msgstr[3] "bonga z kreskówkami"
 
 #. ~ Description of variant "cartoon bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1362,15 +1684,17 @@ msgid ""
 "A mass-manufactured water pipe, otherwise known as a 'bong'.  It is covered "
 "in copyrighted cartoon characters, all smoking marijuana."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Jest pokryte chronionymi"
+" prawem autorskim postaciami z kreskówek, które palą marihuanę."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "rasta bong"
 msgid_plural "rasta bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bongo rasta"
+msgstr[1] "bonga rasta"
+msgstr[2] "bong rasta"
+msgstr[3] "bonga rasta"
 
 #. ~ Description of variant "rasta bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1378,15 +1702,17 @@ msgid ""
 "A mass-manufactured water pipe, otherwise known as a 'bong'.  It is colored "
 "with the 'rasta' pattern of red, yellow, and green."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Jest pomalowane we wzór "
+"„rasta” w kolorach czerwonym, żółtym i zielonym."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "handblown bong"
 msgid_plural "handblown bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ręcznie dmuchane bongo"
+msgstr[1] "ręcznie dmuchane bonga"
+msgstr[2] "ręcznie dmuchanych bong"
+msgstr[3] "ręcznie dmuchanego bonga"
 
 #. ~ Description of variant "handblown bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1394,15 +1720,18 @@ msgid ""
 "A handblown water pipe, also known as a 'bong'.  Lovingly crafted by an "
 "artisan, a true fusion of aesthetic sensibilities and stoner functionalities."
 msgstr ""
+"Ręcznie dmuchana fajka wodna, inaczej „bongo”. Z miłością wykonana przez "
+"rzemieślnika, prawdziwe połączenie wrażliwości estetycznej z funkcjonalnością"
+" dla zjaranych."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "psychedelic bong"
 msgid_plural "psychedelic bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "psychodeliczne bongo"
+msgstr[1] "psychodeliczne bonga"
+msgstr[2] "psychodelicznych bong"
+msgstr[3] "psychodelicznego bonga"
 
 #. ~ Description of variant "psychedelic bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1410,15 +1739,17 @@ msgid ""
 "A mass-manufactured water pipe, also known as a 'bong'.  It is covered in "
 "stickers depicting 'psychedelic' art."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Jest pokryte naklejkami "
+"przedstawiającymi „psychodeliczną” sztukę."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "frosted bong"
 msgid_plural "frosted bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "matowe bongo"
+msgstr[1] "matowe bonga"
+msgstr[2] "matowych bong"
+msgstr[3] "matowego bonga"
 
 #. ~ Description of variant "frosted bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1426,15 +1757,17 @@ msgid ""
 "A mass-manufactured water pipe, also known as a 'bong'.  It is made out of "
 "frosted glass."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Jest wykonane z matowego"
+" szkła."
 
 #. ~ Variant name of item "water pipe"
 #: data/json/items/tool/smoking.json
 msgid "gold bong"
 msgid_plural "gold bongs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złote bongo"
+msgstr[1] "złote bonga"
+msgstr[2] "złotych bong"
+msgstr[3] "złotego bonga"
 
 #. ~ Description of variant "gold bong" of item "water pipe"
 #: data/json/items/tool/smoking.json
@@ -1442,6 +1775,8 @@ msgid ""
 "A mass-manufactured water pipe, also known as a 'bong'.  Though it looks like"
 " it's made out of gold it is, in fact, just metallic paint."
 msgstr ""
+"Fabrycznie produkowana fajka wodna, inaczej „bongo”. Choć wygląda, jakby było"
+" zrobione ze złota, w rzeczywistości to tylko metaliczna farba."
 
 #. ~ Description of "tobacco pipe"
 #: data/json/items/tool/smoking.json
@@ -1449,11 +1784,13 @@ msgid ""
 "A hand-carved wooden smoking pipe.  It's designed to facilitate the "
 "consumption of fire-cured tobacco leaves."
 msgstr ""
+"Ręcznie rzeźbiona drewniana fajka. Służy do palenia suszonych ogniowo liści "
+"tytoniu."
 
 #. ~ Description of "stapler"
 #: data/json/items/tool/stationery.json
 msgid "A desk tool for fastening sheets of paper together."
-msgstr ""
+msgstr "Biurowe narzędzie do łączenia kartek papieru."
 
 #. ~ Description of "hole puncher"
 #: data/json/items/tool/stationery.json
@@ -1463,6 +1800,10 @@ msgid ""
 " you really wanted more holes with one punch, I suppose you could fold the "
 "paper….  This is a one-cylinder hole puncher."
 msgstr ""
+"Metalowe narzędzie, które potrafi wybić jedną dziurkę w kartce papieru. To "
+"znaczy, możesz wybić więcej, jeśli chcesz, ale musiałbyś robić to po jednej. "
+"Albo, jeśli naprawdę chcesz więcej dziurek jednym ruchem, chyba możesz złożyć"
+" kartkę…. To jest jednootworowy dziurkacz."
 
 #. ~ Description of "letter opener"
 #: data/json/items/tool/stationery.json
@@ -1470,6 +1811,9 @@ msgid ""
 "A sterling silver letter opener resembling a small dagger, with a sharp point"
 " and no cutting edge.  It's used to open mail envelopes neatly and quickly."
 msgstr ""
+"Otwieracz do listów ze srebra próby 925, przypominający mały sztylet, z "
+"ostrym czubkiem, ale bez ostrej krawędzi. Służy do szybkiego i schludnego "
+"otwierania kopert."
 
 #. ~ Description of "pair of office scissors"
 #: data/json/items/tool/stationery.json
@@ -1477,15 +1821,17 @@ msgid ""
 "A long pair of heavy-duty scissors.  You can use them to cut things such as "
 "fabric or plastic apart."
 msgstr ""
+"Długie, wytrzymałe nożyczki. Możesz nimi przecinać rzeczy takie jak tkanina "
+"czy plastik."
 
 #. ~ Item name
 #: data/json/items/tool/stationery.json
 msgid "pair of kiddie scissors"
 msgid_plural "pairs of kiddie scissors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para nożyczek dla dzieci"
+msgstr[1] "pary nożyczek dla dzieci"
+msgstr[2] "par nożyczek dla dzieci"
+msgstr[3] "pary nożyczek dla dzieci"
 
 #. ~ Description of "pair of kiddie scissors"
 #: data/json/items/tool/stationery.json
@@ -1494,15 +1840,18 @@ msgid ""
 " things such as fabric or plastic apart, although they are probably subpar "
 "compared to other alternatives."
 msgstr ""
+"Krótkie nożyczki zaprojektowane z myślą o dzieciach. Możesz nimi przecinać "
+"rzeczy takie jak tkanina czy plastik, choć prawdopodobnie ustępują innym "
+"możliwościom."
 
 #. ~ Item name
 #: data/json/items/tool/stationery.json
 msgid "pair of wavy scissors"
 msgid_plural "pairs of wavy scissors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para falistych nożyczek"
+msgstr[1] "pary falistych nożyczek"
+msgstr[2] "par falistych nożyczek"
+msgstr[3] "pary falistych nożyczek"
 
 #. ~ Description of "pair of wavy scissors"
 #: data/json/items/tool/stationery.json
@@ -1510,16 +1859,19 @@ msgid ""
 "A pair of wavy artistic scissors.  You can theoretically use them to cut "
 "things but you should probably not get your hopes too high."
 msgstr ""
+"Faliste nożyczki do prac plastycznych. Teoretycznie można nimi coś przeciąć, "
+"ale lepiej nie robić sobie zbyt wielkich nadziei."
 
 #. ~ Description of "pen"
 #: data/json/items/tool/stationery.json
 msgid "A fine metal pen, of much better quality than a disposable model."
 msgstr ""
+"Elegancki metalowy długopis, znacznie lepszej jakości niż model jednorazowy."
 
 #. ~ Description of "pencil"
 #: data/json/items/tool/stationery.json
 msgid "A sharpened HB Number 2 graphite pencil, equipped with an eraser."
-msgstr ""
+msgstr "Zaostrzony grafitowy ołówek HB nr 2 z gumką."
 
 #. ~ Description of "black pen"
 #: data/json/items/tool/stationery.json
@@ -1527,6 +1879,8 @@ msgid ""
 "A disposable ballpoint pen, offers a smooth writing experience on paper.  Has"
 " the same logo as those disposable lighters.  This one is black."
 msgstr ""
+"Jednorazowy długopis kulkowy, płynnie piszący po papierze. Ma to samo logo co"
+" tamte jednorazowe zapalniczki. Ten jest czarny."
 
 #. ~ Description of "blue pen"
 #: data/json/items/tool/stationery.json
@@ -1534,6 +1888,8 @@ msgid ""
 "A disposable ballpoint pen, offers a smooth writing experience on paper.  Has"
 " the same logo as those disposable lighters.  This one is blue."
 msgstr ""
+"Jednorazowy długopis kulkowy, płynnie piszący po papierze. Ma to samo logo co"
+" tamte jednorazowe zapalniczki. Ten jest niebieski."
 
 #. ~ Description of "red pen"
 #: data/json/items/tool/stationery.json
@@ -1541,6 +1897,8 @@ msgid ""
 "A disposable ballpoint pen, offers a smooth writing experience on paper.  Has"
 " the same logo as those disposable lighters.  This one is red."
 msgstr ""
+"Jednorazowy długopis kulkowy, płynnie piszący po papierze. Ma to samo logo co"
+" tamte jednorazowe zapalniczki. Ten jest czerwony."
 
 #. ~ Description of "green pen"
 #: data/json/items/tool/stationery.json
@@ -1548,6 +1906,8 @@ msgid ""
 "A disposable ballpoint pen, offers a smooth writing experience on paper.  Has"
 " the same logo as those disposable lighters.  This one is green."
 msgstr ""
+"Jednorazowy długopis kulkowy, płynnie piszący po papierze. Ma to samo logo co"
+" tamte jednorazowe zapalniczki. Ten jest zielony."
 
 #. ~ Description of "bone billet"
 #: data/json/items/tool/stoneworking.json
@@ -1555,6 +1915,8 @@ msgid ""
 "A thick, short bone, usually used in flintknapping for soft-hammer "
 "percussion."
 msgstr ""
+"Gruba, krótka kość, zwykle używana przy łupaniu krzemienia do obróbki miękkim"
+" tłukiem."
 
 #. ~ Description of "wooden billet"
 #: data/json/items/tool/stoneworking.json
@@ -1562,6 +1924,8 @@ msgid ""
 "A thick, short wooden stick, usually used in flintknapping for soft-hammer "
 "percussion."
 msgstr ""
+"Gruby, krótki drewniany kij, zwykle używany przy łupaniu krzemienia do "
+"obróbki miękkim tłukiem."
 
 #. ~ Description of "primitive rock drill"
 #: data/json/items/tool/stoneworking.json
@@ -1569,6 +1933,8 @@ msgid ""
 "A thick, blunted wooden stick.  Can be used to drill rough holes in rock, if "
 "water and sand are available, but the process is lengthy."
 msgstr ""
+"Gruby, stępiony drewniany kij. Przy dostępie do wody i piasku można nim "
+"wiercić w skale nierówne otwory, ale proces jest długotrwały."
 
 #. ~ Description of "bone punch"
 #: data/json/items/tool/stoneworking.json
@@ -1576,6 +1942,8 @@ msgid ""
 "A thick, short bone with a small, pointy tip, usually used in flintknapping "
 "for indirect percussion and pressure flaking."
 msgstr ""
+"Gruba, krótka kość z małym, ostrym czubkiem, zwykle używana przy łupaniu "
+"krzemienia do obróbki pośredniej i retuszu naciskowego."
 
 #. ~ Description of "nail punch"
 #: data/json/items/tool/stoneworking.json
@@ -1583,6 +1951,9 @@ msgid ""
 "Two pieces of wood with a steel nail secured between them with some cordage."
 "  Usually used in flintknapping for indirect percussion and pressure flaking."
 msgstr ""
+"Dwa kawałki drewna ze stalowym gwoździem umocowanym między nimi sznurkiem. "
+"Zwykle używane przy łupaniu krzemienia do obróbki pośredniej i retuszu "
+"naciskowego."
 
 #. ~ Description of "bone sewing awl"
 #: data/json/items/tool/tailoring.json
@@ -1591,6 +1962,9 @@ msgid ""
 "discovered.  It can also serve as an improvised stabbing weapon, but will "
 "break quickly."
 msgstr ""
+"Prymitywne, zaostrzone szydło z kości, używane do obróbki skóry, zanim "
+"odkryto metal. Może też posłużyć jako prowizoryczna broń kłująca, ale szybko "
+"się złamie."
 
 #. ~ Description of "steel sewing awl"
 #: data/json/items/tool/tailoring.json
@@ -1598,15 +1972,17 @@ msgid ""
 "A steel awl with a wooden grip, usually used for leatherworking.  It can also"
 " serve as an improvised stabbing weapon, but will break quickly."
 msgstr ""
+"Stalowe szydło z drewnianym uchwytem, zwykle używane do obróbki skóry. Może "
+"też posłużyć jako prowizoryczna broń kłująca, ale szybko się złamie."
 
 #. ~ Item name
 #: data/json/items/tool/tailoring.json
 msgid "pair of knitting needles"
 msgid_plural "pairs of knitting needles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para drutów do dziergania"
+msgstr[1] "pary drutów do dziergania"
+msgstr[2] "par drutów do dziergania"
+msgstr[3] "pary drutów do dziergania"
 
 #. ~ Description of "pair of knitting needles"
 #: data/json/items/tool/tailoring.json
@@ -1614,6 +1990,8 @@ msgid ""
 "A pair of stout wooden needles with round ends, used to turn thread and yarn "
 "into cloth."
 msgstr ""
+"Para mocnych drewnianych drutów o zaokrąglonych końcach, służących do "
+"przerabiania nici i włóczki na tkaninę."
 
 #. ~ Description of "frame loom"
 #: data/json/items/tool/tailoring.json
@@ -1621,6 +1999,8 @@ msgid ""
 "A rather bulky and primitive wooden frame which can be used to weave cloth "
 "sheets.  The process is very slow, though."
 msgstr ""
+"Dość nieporęczna i prymitywna drewniana rama, na której można tkać płaty "
+"tkaniny. Proces jest jednak bardzo powolny."
 
 #. ~ Description of "bone needle"
 #: data/json/items/tool/tailoring.json
@@ -1629,6 +2009,9 @@ msgid ""
 "  Its low quality makes it rather unsuitable for anything requiring speed or "
 "precision."
 msgstr ""
+"Ostra igła wykonana z kości. Przydatna do szycia prostych ubrań i "
+"przedmiotów. Z powodu niskiej jakości słabo nadaje się do prac wymagających "
+"szybkości lub precyzji."
 
 #. ~ Description of "curved needle"
 #: data/json/items/tool/tailoring.json
@@ -1637,6 +2020,9 @@ msgid ""
 "stitches that only pierce one side of the material.  While unsuitable for "
 "most tailoring projects, it's a necessity for stitching neoprene."
 msgstr ""
+"Zakrzywiona, ostra igła ze stali. Jej zaokrąglony kształt pozwala robić "
+"ściegi przebijające materiał tylko z jednej strony. Choć nie nadaje się do "
+"większości prac krawieckich, jest niezbędna do zszywania neoprenu."
 
 #. ~ Description of "wooden needle"
 #: data/json/items/tool/tailoring.json
@@ -1646,21 +2032,24 @@ msgid ""
 "anything requiring speed or precision, or involving tougher materials like "
 "Kevlar."
 msgstr ""
+"Drewniana igła zastrugana w ostry szpic. W główce wycięto wąski otwór na nić."
+" Z powodu niskiej jakości słabo nadaje się do prac wymagających szybkości lub"
+" precyzji albo twardszych materiałów, takich jak kevlar."
 
 #. ~ Item name
 #: data/json/items/tool/tailoring.json
 msgid "needle"
 msgid_plural "needles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "igła"
+msgstr[1] "igły"
+msgstr[2] "igieł"
+msgstr[3] "igły"
 
 #. ~ Description of "needle"
 #: data/json/items/tool/tailoring.json
 msgid ""
 "A stainless steel needle.  It would be useful for making clothing and items."
-msgstr ""
+msgstr "Igła ze stali nierdzewnej. Przydaje się do szycia ubrań i przedmiotów."
 
 #. ~ Description of "sewing kit"
 #: data/json/items/tool/tailoring.json
@@ -1670,6 +2059,10 @@ msgid ""
 " article of clothing to attempt to repair or refit if applicable.  This uses "
 "your tailoring skill."
 msgstr ""
+"Plastikowy zestaw z różnymi igłami, plastikowymi szpulkami na nici, małymi "
+"nożyczkami i kilkoma innymi przydatnymi narzędziami krawieckimi. Użyj zestawu"
+" do szycia na odzieży, aby spróbować ją naprawić lub dopasować, jeśli to "
+"możliwe. Wykorzystuje twoją umiejętność krawiectwa."
 
 #. ~ Description of "wooden shed stick"
 #: data/json/items/tool/tailoring.json
@@ -1677,6 +2070,8 @@ msgid ""
 "A short, thin, flat wooden stick, used as a tool while weaving cloth with a "
 "frame loom."
 msgstr ""
+"Krótki, cienki, płaski drewniany kij używany jako narzędzie przy tkaniu na "
+"krośnie ramowym."
 
 #. ~ Description of "tanning leather hide"
 #: data/json/items/tool/tailoring.json
@@ -1685,6 +2080,9 @@ msgid ""
 "become leather.  You will be able to activate it to unroll and make use of it"
 " when it is done."
 msgstr ""
+"Zakonserwowana skóra zwierzęca poddawana procesom chemicznym, które zmienią "
+"ją w skórę wyprawioną. Gdy proces się zakończy, będzie można ją aktywować, "
+"aby ją rozwinąć i wykorzystać."
 
 #. ~ Description of "tanning fur pelt"
 #: data/json/items/tool/tailoring.json
@@ -1693,6 +2091,9 @@ msgid ""
 "become fur.  You will be able to activate it to unroll and make use of it "
 "when it is done."
 msgstr ""
+"Zakonserwowana skóra zwierzęca z sierścią poddawana procesom chemicznym, "
+"które zmienią ją w futro. Gdy proces się zakończy, będzie można ją aktywować,"
+" aby ją rozwinąć i wykorzystać."
 
 #. ~ Description of "tailoring pattern set"
 #: data/json/items/tool/tailoring.json
@@ -1701,6 +2102,9 @@ msgid ""
 " any kind of cloth or leather items from scratch, but are necessary for more "
 "advanced projects."
 msgstr ""
+"Duży zestaw papierowych wykrojów krawieckich. Przydają się przy wykonywaniu "
+"od zera wszelkich przedmiotów z tkaniny lub skóry, a przy bardziej "
+"zaawansowanych projektach są niezbędne."
 
 #. ~ Description of "pair of Kevlar shears"
 #: data/json/items/tool/tailoring.json
@@ -1709,15 +2113,18 @@ msgid ""
 "materials, from polyaramid fabrics to tough plastics and thin metals.  The "
 "blades feature flat shearing edges and fine serrations."
 msgstr ""
+"Wytrzymałe nożyce nadające się do cięcia szczególnie twardych materiałów, od "
+"tkanin poliaramidowych po twarde tworzywa i cienkie blachy. Ostrza mają "
+"płaskie krawędzie tnące i drobne ząbkowanie."
 
 #. ~ Item name
 #: data/json/items/tool/tailoring.json
 msgid "electric spinwheel"
 msgid_plural "electric spinwheels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "elektryczny kołowrotek"
+msgstr[1] "elektryczne kołowrotki"
+msgstr[2] "elektrycznych kołowrotków"
+msgstr[3] "elektrycznego kołowrotka"
 
 #. ~ Description of "electric spinwheel"
 #: data/json/items/tool/tailoring.json
@@ -1725,6 +2132,8 @@ msgid ""
 "A device for spinning thread or yarn from fibers.  This particular model is "
 "electrically-powered and easily portable."
 msgstr ""
+"Urządzenie do przędzenia nici lub włóczki z włókien. Ten model jest zasilany "
+"elektrycznie i łatwy do przenoszenia."
 
 #. ~ Description of "tailor's kit"
 #: data/json/items/tool/tailoring.json
@@ -1734,31 +2143,35 @@ msgid ""
 "article of clothing to attempt to repair or refit if applicable.  This uses "
 "your tailoring skill."
 msgstr ""
+"Wysokiej jakości zestaw składający się z różnych igieł, plastikowych szpulek "
+"na nici, nożyczek, nożyc i szydła. Użyj zestawu krawieckiego na odzieży, aby "
+"spróbować ją naprawić lub dopasować, jeśli to możliwe. Wykorzystuje twoją "
+"umiejętność krawiectwa."
 
 #. ~ Description of "bathroom scale"
 #: data/json/items/tool/toiletries.json
 msgid "A small bathroom scale, meant to weigh a person while naked."
-msgstr ""
+msgstr "Mała waga łazienkowa, przeznaczona do ważenia nagiej osoby."
 
 #. ~ Description of "scrub brush"
 #: data/json/items/tool/toiletries.json
 msgid "A simple scrub brush for cleaning hard objects."
-msgstr ""
+msgstr "Prosta szczotka do szorowania twardych przedmiotów."
 
 #. ~ Description of "dish towel"
 #: data/json/items/tool/toiletries.json
 msgid "A dish towel, useful for cleaning hard surfaces."
-msgstr ""
+msgstr "Ręcznik do naczyń, przydatny do czyszczenia twardych powierzchni."
 
 #. ~ Snippet of item "dish towel"
 #: data/json/items/tool/toiletries.json
 msgid "A well-used dish towel, judging by the stains."
-msgstr ""
+msgstr "Sądząc po plamach, mocno używany ręcznik do naczyń."
 
 #. ~ Snippet of item "dish towel"
 #: data/json/items/tool/toiletries.json
 msgid "A novelty dish towel featuring a popular children's cartoon character."
-msgstr ""
+msgstr "Modny ręcznik do naczyń z postacią z popularnej kreskówki dla dzieci."
 
 #. ~ Description of "electric hair trimmer"
 #: data/json/items/tool/toiletries.json
@@ -1767,12 +2180,14 @@ msgid ""
 " your hair if it's supplied with batteries.  It requires 1 unit of charge per"
 " use."
 msgstr ""
+"Kieszonkowa elektryczna strzyżarka do włosów. Jeśli ma baterie, możesz nią "
+"ściąć sobie włosy. Zużywa 1 jednostkę ładunku na użycie."
 
 #. ~ "description" action message of item "electric hair trimmer"
 #. ~ "description" action message of item "makeshift haircut kit"
 #: data/json/items/tool/toiletries.json
 msgid "Trim your hair"
-msgstr ""
+msgstr "Przytnij włosy"
 
 #. ~ Description of "mop"
 #: data/json/items/tool/toiletries.json
@@ -1780,6 +2195,8 @@ msgid ""
 "An unwieldy mop.  Good for cleaning up spills.  Use to mop up any 'mess' you "
 "may have made."
 msgstr ""
+"Nieporęczny mop. Dobry do sprzątania rozlanych płynów. Użyj, aby zmyć "
+"„bałagan”, który mogłeś zrobić."
 
 #. ~ Description of "collapsible mop"
 #: data/json/items/tool/toiletries.json
@@ -1787,6 +2204,8 @@ msgid ""
 "A long, unwieldy mop with a collapsible handle for convenient transportation."
 "  You may use it to clean up any 'mess' you have made."
 msgstr ""
+"Długi, nieporęczny mop ze składanym trzonkiem dla wygodnego transportu. "
+"Możesz go użyć, aby zmyć „bałagan”, który zrobiłeś."
 
 #. ~ Description of "shaving kit"
 #: data/json/items/tool/toiletries.json
@@ -1794,12 +2213,14 @@ msgid ""
 "A compact, lightweight shaving kit made for travelers.  You can use it to "
 "shave if it's supplied with soap.  It requires 1 unit of soap per use."
 msgstr ""
+"Kompaktowy, lekki zestaw do golenia dla podróżnych. Jeśli masz mydło, możesz "
+"się nim ogolić. Zużywa 1 jednostkę mydła na użycie."
 
 #. ~ "description" action message of item "shaving kit"
 #. ~ "description" action message of item "makeshift shaving kit"
 #: data/json/items/tool/toiletries.json
 msgid "Trim your beard"
-msgstr ""
+msgstr "Przytnij brodę"
 
 #. ~ Description of "sponge"
 #: data/json/items/tool/toiletries.json
@@ -1807,31 +2228,33 @@ msgid ""
 "A cleaning aid made of soft, porous material.  Typically used for cleaning "
 "hard objects."
 msgstr ""
+"Środek czyszczący z miękkiego, porowatego materiału. Zwykle służy do "
+"czyszczenia twardych przedmiotów."
 
 #. ~ Snippet of item "sponge"
 #: data/json/items/tool/toiletries.json
 msgid "A round smiley-face sponge."
-msgstr ""
+msgstr "Okrągła gąbka z uśmiechniętą buźką."
 
 #. ~ Snippet of item "sponge"
 #: data/json/items/tool/toiletries.json
 msgid "A dolphin-shaped sponge.  It looks at home in the water."
-msgstr ""
+msgstr "Gąbka w kształcie delfina. W wodzie wygląda jak u siebie."
 
 #. ~ Snippet of item "sponge"
 #: data/json/items/tool/toiletries.json
 msgid "A sponge cake-shaped sponge, the abrasive pad looks like frosting."
-msgstr ""
+msgstr "Gąbka w kształcie biszkoptu, warstwa szorstka wygląda jak lukier."
 
 #. ~ Snippet of item "sponge"
 #: data/json/items/tool/toiletries.json
 msgid "A cat-shaped sponge."
-msgstr ""
+msgstr "Gąbka w kształcie kota."
 
 #. ~ Description of "makeshift haircut kit"
 #: data/json/items/tool/toiletries.json
 msgid "A kit containing various improvised tools for cutting hair."
-msgstr ""
+msgstr "Zestaw zawierający różne prowizoryczne narzędzia do strzyżenia włosów."
 
 #. ~ Description of "makeshift shaving kit"
 #: data/json/items/tool/toiletries.json
@@ -1839,6 +2262,8 @@ msgid ""
 "A makeshift shaving kit.  You can use it to shave if it's supplied with soap."
 "  It requires 1 unit of soap per use."
 msgstr ""
+"Prowizoryczny zestaw do golenia. Jeśli masz mydło, możesz się nim ogolić. "
+"Zużywa 1 jednostkę mydła na użycie."
 
 #. ~ Description of "washboard"
 #: data/json/items/tool/toiletries.json
@@ -1846,6 +2271,8 @@ msgid ""
 "A wooden washboard.  You can use it to wash filthy clothing if it's supplied "
 "with cleansing agent."
 msgstr ""
+"Drewniana tara do prania. Jeśli masz środek czyszczący, możesz na niej wyprać"
+" brudną odzież."
 
 #. ~ Description of "washing kit"
 #: data/json/items/tool/toiletries.json
@@ -1853,15 +2280,17 @@ msgid ""
 "A combination of a washboard and a scrubbing tool.  Everything you need to "
 "clean items after the apocalypse."
 msgstr ""
+"Połączenie tary do prania i narzędzia do szorowania. Wszystko, czego "
+"potrzebujesz do czyszczenia przedmiotów po apokalipsie."
 
 #. ~ Item name
 #: data/json/items/tool/toiletries.json
 msgid "hair dye kit"
 msgid_plural "hair dye kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw do farbowania włosów"
+msgstr[1] "zestawy do farbowania włosów"
+msgstr[2] "zestawów do farbowania włosów"
+msgstr[3] "zestawu do farbowania włosów"
 
 #. ~ Description of "hair dye kit"
 #: data/json/items/tool/toiletries.json
@@ -1869,8 +2298,10 @@ msgid ""
 "A kit featuring all the tools needed to dye hair, including an applicator "
 "brush, combs, and plastic gloves."
 msgstr ""
+"Zestaw zawierający wszystkie narzędzia potrzebne do farbowania włosów, w tym "
+"pędzelek do nakładania, grzebienie i plastikowe rękawiczki."
 
 #. ~ "description" action message of item "hair dye kit"
 #: data/json/items/tool/toiletries.json
 msgid "Dye your hair"
-msgstr ""
+msgstr "Zafarbuj włosy"
