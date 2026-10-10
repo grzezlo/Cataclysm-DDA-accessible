@@ -218,15 +218,36 @@ This stage does not block the Stage 23 release and can run independently.
 **Code inventory:** `lang/update_access_po.sh`, `lang/compile_access_mo.sh`,
 `lang/access_catalog.py`, `update_translations_win_x64.bat`,
 `compile_translations_win_x64.bat`, `tools/check_po_printf_format.py`,
-`lang/notes/`, `README.md`, and release notes.
+`lang/notes/`, `.claude/agents/pl-translator.md`,
+`.claude/agents/pl-reviewer.md`, `.claude/commands/translate-pl.md`,
+`README.md`, and release notes.
 
 **Progress:** The layer tooling is implemented: `--machine` in the update
 script (gap step, override pruning, validation with clearing of failing
 machine entries, status report with AI-draft counts), `--no-machine` and the
 four-layer precedence in the compile script, and fixture tests in
-`lang/test_access_po.sh` (`test_translations_win_x64.bat`).  Remaining: the
-Polish glossary, filling the machine catalog, the first overrides (the
-validator already flags about a dozen upstream `pl` entries with invented or
+`lang/test_access_po.sh` (`test_translations_win_x64.bat`).  The Polish
+glossary is drafted in `lang/notes/pl.txt` from the `langbench` comparison.
+
+**Selected Polish workflow (2026-10-10):** The `langbench` comparison chose
+Opus (medium effort) to translate and Sonnet (high effort) to review.
+`access_catalog.py split` divided the 50,339 empty entries of
+`lang/machine/pl.po` into 204 batches of up to 250 entries in
+`lang/machine/work/pl/` (0001-0007 interface, 0008-0054 items, 0055-0058
+monsters, 0059-0086 other core data, 0087-0096 snippets, 0097-0125 NPCs,
+0126-0204 mods).  A Claude Code cloud session runs `/translate-pl
+<first>-<last>`: for each batch the `pl-translator` subagent fills it with
+`show`, `lookup`, and `fill`, the `pl-reviewer` subagent corrects errors only
+and logs them in `NNNN.review.md`, and the session commits each batch.  Cloud
+environment: Ubuntu with `apt-get install -y gettext` in the setup script and
+Trusted network access.  Afterwards, locally: `access_catalog.py merge
+lang/machine/pl.po lang/machine/work/pl`, then
+`update_translations_win_x64.bat --machine pl`, and remove
+`lang/machine/work/pl`.  Start with a pilot of batches 0001-0003 to measure
+cost and check that the reviewer fixes errors without restyling.
+
+Remaining: the pilot and the full run, the first overrides (the validator
+already flags about a dozen upstream `pl` entries with invented or
 unbalanced tags), release notes, and the user test.
 
 **Implementation hints:**

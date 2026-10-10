@@ -1,0 +1,126 @@
+Notes for translating Cataclysm: Dark Days Ahead into Polish
+=============================================================
+
+These notes guide the AI translations in lang/machine/pl.po and the
+reviewers who check them.  lang/po/pl.po, the upstream human translation, is
+the authority for terminology: when these notes and an established term in
+lang/po/pl.po disagree, follow lang/po/pl.po, except where a rule below
+corrects a known upstream mistake.
+
+Finding existing translations
+-----------------------------
+
+Search the translation memory before naming any item, monster, faction,
+skill, mutation, or game term:
+
+    uv run --no-project --with polib python lang/access_catalog.py lookup -i "<English regex>" lang/po/pl.po lang/machine/work/pl/*.po
+
+Add --translation to search Polish text instead.  Search for the item a
+variant or conditional name refers to (the #. comment names it), and reuse
+its Polish name.  Translations in lang/machine/work/pl come from earlier
+batches; keep them consistent unless they are wrong.
+
+When a name is not translated anywhere, read the game data named in the #:
+reference to learn what the thing is before translating it.  Example:
+"groundnut" in this game is Apios americana ("Indian potato"), not a peanut.
+
+Address and voice
+-----------------
+
+- Address the player in the second person singular: "Czujesz, że...".
+- Use the masculine form for the player when the gender is unknown.  The
+  msgctxt values u:f, u:m, npc:f, npc:m, and npc:n select the gender of the
+  player (u) or the speaking NPC; follow them.
+- Do not assume the gender of <npcname>, <npc_name>, or a monster.  Prefer
+  wording that needs no gender: "ale cel robi unik", "ale <npcname> robi
+  unik", "oblewając cel kwasem", "jaką korzyść z tego odniesie".
+- Dialogue should sound like the speaker, notes and signs like their writer.
+  Swearing stays swearing.  Intentional mistakes in children's notes stay
+  (keep about as many mistakes as the original).
+- Interface text is short and uses the established patterns, for example
+  debug prompts "Ustaw X na? Obecnie: %d".
+
+Typography
+----------
+
+- Quotation marks: „tekst”.  Ellipsis: … where the original has one.
+- One space between sentences, even where the English has two.
+- Keep leading and trailing spaces, \n, and interface punctuation such as a
+  trailing colon.  Do not add a final period where the original has none.
+- Vehicle names, item names, and monster names start with a lowercase letter
+  ("luksusowy sedan elektryczny") unless they begin with a proper name.
+- Calibers keep their notation; casings use "łuska 9 x 19 mm".
+
+Plural forms
+------------
+
+msgstr[0] is used for 1, msgstr[1] for 2-4, 22-24, ..., msgstr[2] for 0,
+5-21, 25-31, ..., and msgstr[3] for fractions.  Item names: "latarka",
+"latarki", "latarek", "latarki".
+
+- Uncountable or collective names still need a natural form for every count:
+  "garść nasion rzepaku", "garście nasion rzepaku", "garści nasion rzepaku",
+  "garści nasion rzepaku".
+- Book variants: "Podręcznik wytwórcy octu", "książki Podręcznik wytwórcy
+  octu", "książek Podręcznik wytwórcy octu", "książki Podręcznik wytwórcy
+  octu".
+- A count with "co najmniej", "wymaga", or "potrzebuje" takes the genitive:
+  "Wymaga co najmniej %d ładunku" / "ładunków" / "ładunków" / "ładunku".
+  lang/po/pl.po has this wrong in "Needs at least %d charge"; do not copy it.
+
+Format arguments and tags
+-------------------------
+
+Follow lang/notes/README_all_translators.md.  The validator enforces
+arguments and tag balance; these rules cover grammar it cannot check.
+
+- A substitution tag inserts text in a fixed grammatical form, almost always
+  the nominative.  Build the sentence so that form fits:
+  - <color> inserts a masculine adjective ("turkusowy"): write "w kolorze:
+    <color>", never "w <color> todze".
+  - <character_gender_adjective> inserts a noun ("kobieta", "mężczyzna"):
+    write "<character_gender_adjective> z nerwową miną", never "zdenerwowany
+    <character_gender_adjective>".
+  - <the_cataclysm> inserts a noun such as "Kataklizm" or "koniec świata".
+    Where a case other than the nominative is needed, rephrase ("odwrócenie
+    tego, czym jest <the_cataclysm>").  Never add a tag the original lacks
+    and never replace literal text such as "The Cataclysm" with a tag.
+  - A colon before the tag is an accepted way to avoid inflection:
+    "Widać na nim: <grad_base>".
+- Find out what a %s or %1$s holds before inflecting around it.  Read the
+  source named in #: when the comment does not say.
+  - Body parts in combat messages arrive in the accusative ("lewą rękę"):
+    "%1$s trafia <npcname> nożem w %2$s!", "drapie cię w %2$s".  They cannot
+    be the subject of a sentence.
+  - Item names arrive in the nominative and have unknown gender: write
+    "trzymać w jednej ręce: %s" or "przedmiot %s", never "Twój %s".
+  - In conditional names such as "%s topaz necklace" the %s may be a
+    nickname ("Big Iron"), so keep the noun: "naszyjnik %s z topazem".
+- The possessive "<npcname>'s %s" is written "%s <npcname>" as in
+  lang/po/pl.po.
+- msgctxt "gun_type_type" entries are internal identifiers; keep them as in
+  the original ("glock_19").
+
+Established terms
+-----------------
+
+Verify anything not listed here with lookup.
+
+- merch: kwity ("[200 kwitów, 3 dni]")
+- Exodii: Exodii, undeclined ("karabin Exodii", "robotnik Exodii")
+- Thorazine: torazyna
+- zombie: zombie, undeclined
+- survivor: ocalony
+- triffid: tryfid; fungaloid: grzyboloid; mi-go: mi-go
+- shocker zombie: zombie porażacz; feral human: dziki człowiek
+- bionic: bionika; proficiency: biegłość; mana: mana; stamina: stamina
+- skills: wytwarzanie (fabrication), surwiwal (survival), mechanika,
+  elektronika, krawiectwo, strzelectwo, walka w zwarciu (melee), walka wręcz
+  (unarmed combat), broń obuchowa, broń sieczna, broń kłująca, łucznictwo,
+  rzucanie, prowadzenie, pływanie, komputery
+- matchhead powder: proch z zapałek
+- bronze X: X z brązu ("pika z brązu"), never "brązowy" (brown)
+- gas turbine engine: gazowy silnik turbinowy
+- leather pouch: skórzana sakwa; chest rig: kamizelka taktyczna
+- Dark Days Radio: Radio Mrocznych Dni
+- Mod names (Magiclysm, Aftershock, Xedra Evolved) stay in English.
