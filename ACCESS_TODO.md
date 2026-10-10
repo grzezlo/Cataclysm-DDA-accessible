@@ -218,7 +218,8 @@ This stage does not block the Stage 23 release and can run independently.
 **Code inventory:** `lang/update_access_po.sh`, `lang/compile_access_mo.sh`,
 `lang/access_catalog.py`, `update_translations_win_x64.bat`,
 `compile_translations_win_x64.bat`, `tools/check_po_printf_format.py`,
-`lang/notes/`, `.claude/agents/pl-translator.md`,
+`lang/notes/` (including `machine_translation.md`),
+`.claude/agents/pl-translator.md`,
 `.claude/agents/pl-reviewer.md`, `.claude/commands/translate-pl.md`,
 `README.md`, and release notes.
 
@@ -230,21 +231,25 @@ four-layer precedence in the compile script, and fixture tests in
 glossary is drafted in `lang/notes/pl.txt` from the `langbench` comparison.
 
 **Selected Polish workflow (2026-10-10):** The `langbench` comparison chose
-Opus (medium effort) to translate and Sonnet (high effort) to review.
-`access_catalog.py split` divided the 50,339 empty entries of
-`lang/machine/pl.po` into 204 batches of up to 250 entries in
+Opus (medium effort) or GPT 6.1 Sol (medium) to translate and Sonnet (high
+effort) to review.  `access_catalog.py split` divided the 50,339 empty
+entries of `lang/machine/pl.po` into 204 batches of up to 250 entries in
 `lang/machine/work/pl/` (0001-0007 interface, 0008-0054 items, 0055-0058
 monsters, 0059-0086 other core data, 0087-0096 snippets, 0097-0125 NPCs,
-0126-0204 mods).  A Claude Code cloud session runs `/translate-pl
-<first>-<last>`: for each batch the `pl-translator` subagent fills it with
-`show`, `lookup`, and `fill`, the `pl-reviewer` subagent corrects errors only
-and logs them in `NNNN.review.md`, and the session commits each batch.  Cloud
-environment: Ubuntu with `apt-get install -y gettext` in the setup script and
-Trusted network access.  Afterwards, locally: `access_catalog.py merge
-lang/machine/pl.po lang/machine/work/pl`, then
-`update_translations_win_x64.bat --machine pl`, and remove
-`lang/machine/work/pl`.  Start with a pilot of batches 0001-0003 to measure
-cost and check that the reviewer fixes errors without restyling.
+0126-0204 mods).  `lang/notes/machine_translation.md` is the tool-neutral
+procedure: a translator fills each batch with `show`, `lookup`, and `fill`,
+a different model corrects errors only and logs them in `NNNN.review.md`,
+`check` verifies the batch, and each step is committed.  In Claude Code,
+`/translate-pl <first>-<last>` runs both steps with subagents, in the cloud
+(Ubuntu, `apt-get install -y gettext` in the setup script, Trusted network
+access) or locally; Codex follows the procedure directly.  The pilot
+(0001-0003) cost about 7 USD of cloud credit for 750 entries, so the full
+catalog would cost several hundred dollars in the cloud; the remaining
+batches mix cloud credit and local Claude Code and Codex sessions.  The
+reviewer corrected 52 of 750 entries, nearly all real errors.  Afterwards,
+locally: `access_catalog.py merge lang/machine/pl.po lang/machine/work/pl`,
+then `update_translations_win_x64.bat --machine pl`, and remove
+`lang/machine/work/pl`.
 
 Nineteen upstream originals mix positional and plain format arguments
 (`src/activity_item_handling.cpp` "%1s failed to perform the %2$s
@@ -253,7 +258,7 @@ activity…" and eighteen monster attack messages beginning "The %s lashes at
 `split` leaves them out and `merge` drops their translations.  Fix them in
 the sources after the batch run, then refresh the catalog.
 
-Remaining: the pilot and the full run, the first overrides (the validator
+Remaining: batches 0004-0204, the first overrides (the validator
 already flags about a dozen upstream `pl` entries with invented or
 unbalanced tags), release notes, and the user test.
 

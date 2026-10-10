@@ -267,6 +267,27 @@ else
     echo "FAILED: fill clears the fuzzy flag of a retranslated entry"
     failures=$((failures + 1))
 fi
+if "$python" "$catalog" check batches/0001.po > /dev/null
+then
+    echo "ok: check accepts a complete batch"
+else
+    echo "FAILED: check accepts a complete batch"
+    failures=$((failures + 1))
+fi
+if "$python" "$catalog" check fuzzy.po > /dev/null
+then
+    echo "FAILED: check accepts an untranslated entry"
+    failures=$((failures + 1))
+else
+    echo "ok: check rejects an untranslated entry"
+fi
+if "$python" "$catalog" lookup 'item two' 'batches/*.po' | grep -q "drugi"
+then
+    echo "ok: lookup expands catalog patterns itself"
+else
+    echo "FAILED: lookup expands catalog patterns itself"
+    failures=$((failures + 1))
+fi
 "$python" - <<'EOF'
 import polib
 third = polib.pofile("batches/0003.po")

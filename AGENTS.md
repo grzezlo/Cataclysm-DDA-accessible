@@ -268,6 +268,8 @@ over upstream contribution policy or exact UI parity.
   upstream translations belong in `lang/machine/<language>-overrides.po`.
   Never submit `lang/machine` entries to Transifex or upstream.  Run
   `test_translations_win_x64.bat` after changing the translation scripts.
+- Fill the machine catalog in batches as described in
+  `lang/notes/machine_translation.md`, whatever AI tool does the work.
 - Use AStyle 3.1 directly on Windows instead of the Makefile targets, whose
   checks require a POSIX shell and can report success without running.  Format
   changed C and C++ files with

@@ -26,6 +26,11 @@ lookup:    print existing translations whose source or translation matches
 show:      print the numbered entries of a batch with their context.
 fill:      set translations of a batch from a JSON object keyed by entry
            number; --log records changed translations with their reasons.
+check:     validate a batch, compile it with msgfmt -c, and require every
+           translatable entry to be translated and not fuzzy.
+
+Catalog arguments may be glob patterns such as lang/machine/work/pl/*.po,
+because PowerShell does not expand them.
 """
 
 import argparse
@@ -33,7 +38,10 @@ import glob
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 from datetime import datetime
 
 import polib
@@ -278,8 +286,16 @@ def validate(args):
     return 1 if failures else 0
 
 
+def expand_paths(patterns):
+    paths = []
+    for pattern in patterns:
+        matches = sorted(glob.glob(pattern)) if glob.has_magic(pattern) else []
+        paths.extend(matches or [pattern])
+    return paths
+
+
 def status(args):
-    for path in args.catalogs:
+    for path in expand_paths(args.catalogs):
         catalog = polib.pofile(path)
         # An invalid original cannot be translated, so it is not counted.
         untranslated = sum(1 for entry in catalog.untranslated_entries()
@@ -402,7 +418,7 @@ def lookup(args):
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     shown = 0
-    for path in args.catalogs:
+    for path in expand_paths(args.catalogs):
         if shown >= args.limit:
             break
         for entry in polib.pofile(path):
@@ -536,6 +552,60 @@ def fill(args):
     return 0
 
 
+def find_msgfmt():
+    # Windows installs often keep gettext out of PATH; the batch files make
+    # the same assumption in lang/translation_env.bat.
+    found = shutil.which("msgfmt")
+    if found is None and os.path.exists(r"C:\gettext\bin\msgfmt.exe"):
+        found = r"C:\gettext\bin\msgfmt.exe"
+    return found
+
+
+def check(args):
+    problems = 0
+    catalog = polib.pofile(args.catalog)
+    for entry in catalog:
+        if entry.obsolete or not translations(entry):
+            continue
+        reason = entry_problem(entry)
+        if reason and source_problem(entry):
+            print(f"{args.catalog}: warning: {reason}: {entry.msgid!r}")
+        elif reason:
+            print(f"{args.catalog}: error: {reason}: {entry.msgid!r}")
+            problems += 1
+    missing = {"fuzzy": [], "untranslated": []}
+    for number, entry in enumerate(numbered_entries(catalog), start=1):
+        if source_problem(entry):
+            continue
+        if "fuzzy" in entry.flags:
+            missing["fuzzy"].append(number)
+        elif not has_translation(entry):
+            missing["untranslated"].append(number)
+    for kind, numbers in missing.items():
+        if numbers:
+            shown = ", ".join(str(number) for number in numbers[:20])
+            if len(numbers) > 20:
+                shown += f" and {len(numbers) - 20} more"
+            print(f"{args.catalog}: error: {kind} entries: {shown}")
+            problems += len(numbers)
+    msgfmt = find_msgfmt()
+    if msgfmt is None:
+        print("Error: msgfmt was not found; install gettext.")
+        return 1
+    with tempfile.TemporaryDirectory() as work:
+        result = subprocess.run(
+            [msgfmt, "-c", "-o", os.path.join(work, "check.mo"),
+             args.catalog], capture_output=True, text=True)
+    if result.returncode != 0:
+        print(result.stderr.strip())
+        problems += 1
+    if problems:
+        print(f"{args.catalog}: {problems} problems")
+        return 1
+    print(f"{args.catalog}: complete and valid")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
@@ -601,6 +671,9 @@ def main():
     fill_parser.add_argument("catalog")
     fill_parser.add_argument("translations")
     fill_parser.set_defaults(run=fill)
+    check_parser = commands.add_parser("check")
+    check_parser.add_argument("catalog")
+    check_parser.set_defaults(run=check)
     args = parser.parse_args()
     return args.run(args)
 
