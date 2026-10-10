@@ -98,6 +98,15 @@ arguments and tag balance; these rules cover grammar it cannot check.
     nickname ("Big Iron"), so keep the noun: "naszyjnik %s z topazem".
 - The possessive "<npcname>'s %s" is written "%s <npcname>" as in
   lang/po/pl.po.
+- <npcname> and %s names stay uninflected, so never use them where Polish
+  needs the dative or genitive ("utrudnia <npcname> uciskanie").  Use the
+  possessive pattern or a colon: "Złamana kończyna <npcname> utrudnia…",
+  "%1$s: nie udało się wykonać czynności %2$s…".
+- A number that is not part of a plural entry cannot agree with its noun
+  ("%d pól" is wrong for 1-4).  Put it after a label instead: "Liczba pól
+  blokujących zmianę: %d", "Kursy w jedną str.: %15d".
+- Hotkey labels such as "<R>emove custom color" put the letter first, as in
+  lang/po/pl.po: "<r> Usuń własny kolor".
 - msgctxt "gun_type_type" entries are internal identifiers; keep them as in
   the original ("glock_19").
 
@@ -118,9 +127,14 @@ Verify anything not listed here with lookup.
   elektronika, krawiectwo, strzelectwo, walka w zwarciu (melee), walka wręcz
   (unarmed combat), broń obuchowa, broń sieczna, broń kłująca, łucznictwo,
   rzucanie, prowadzenie, pływanie, komputery
+- wield: trzymać, weź do ręki (not dzierżyć or dobyć)
+- encumbrance: skrępowanie; crafter: wytwórca; tileset: nakładka graficzna
+- activity levels: Brisk is Energiczna
+- clothing layers: przy skórze, normalne, zewnętrzne, przyczepione
+- MOLLE or ammo pouches: ładownice; leather pouch: skórzana sakwa
 - matchhead powder: proch z zapałek
 - bronze X: X z brązu ("pika z brązu"), never "brązowy" (brown)
 - gas turbine engine: gazowy silnik turbinowy
-- leather pouch: skórzana sakwa; chest rig: kamizelka taktyczna
+- chest rig: kamizelka taktyczna
 - Dark Days Radio: Radio Mrocznych Dni
 - Mod names (Magiclysm, Aftershock, Xedra Evolved) stay in English.
