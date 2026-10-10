@@ -17,9 +17,20 @@ overrides: drop overrides that upstream now translates identically or whose
 validate:  check printf arguments and tags of translated entries; --clear
            empties the entries that fail.
 status:    report untranslated entries and AI drafts awaiting review.
+split:     write the entries that need translation to numbered batch files
+           in player-visible order, so translators can work in batches.
+merge:     copy the valid, non-fuzzy translations of batch files back into
+           their catalog.
+lookup:    print existing translations whose source or translation matches
+           a pattern, as translation memory.
+show:      print the numbered entries of a batch with their context.
+fill:      set translations of a batch from a JSON object keyed by entry
+           number; --log records changed translations with their reasons.
 """
 
 import argparse
+import glob
+import json
 import os
 import re
 import sys
@@ -248,16 +259,248 @@ def validate(args):
 
 
 def status(args):
-    catalog = polib.pofile(args.catalog)
-    untranslated = len(catalog.untranslated_entries())
-    fuzzy = len(catalog.fuzzy_entries())
-    drafts = sum(1 for entry in catalog.translated_entries()
-                 if AI_DRAFT in entry.tcomment.splitlines())
-    message = (f"{args.catalog}: {len(catalog)} entries, {untranslated} "
-               f"untranslated, {fuzzy} fuzzy")
-    if drafts:
-        message += f", {drafts} AI drafts awaiting review"
-    print(message)
+    for path in args.catalogs:
+        catalog = polib.pofile(path)
+        untranslated = len(catalog.untranslated_entries())
+        fuzzy = len(catalog.fuzzy_entries())
+        drafts = sum(1 for entry in catalog.translated_entries()
+                     if AI_DRAFT in entry.tcomment.splitlines())
+        message = (f"{path}: {len(catalog)} entries, {untranslated} "
+                   f"untranslated, {fuzzy} fuzzy")
+        if drafts:
+            message += f", {drafts} AI drafts awaiting review"
+        print(message)
+
+
+# Players meet interface strings (rank 0) first, then items and monsters,
+# other core data, flavor texts, dialogue, and finally the bundled mods.
+# The first matching prefix wins.
+SOURCE_ORDER = [
+    ("data/json/items/", 1),
+    ("data/json/monsters/", 2),
+    ("data/json/snippets/", 4),
+    ("data/json/npcs/", 5),
+    ("data/json/", 3),
+    ("data/", 6),
+]
+
+
+def source_rank(entry):
+    path = entry.occurrences[0][0] if entry.occurrences else ""
+    for prefix, rank in SOURCE_ORDER:
+        if path.startswith(prefix):
+            return rank
+    return 0
+
+
+def needs_translation(entry):
+    return (not entry.obsolete and
+            ("fuzzy" in entry.flags or not has_translation(entry)))
+
+
+def batch_paths(directory):
+    return sorted(glob.glob(os.path.join(directory, "[0-9]*.po")))
+
+
+def split(args):
+    if batch_paths(args.directory):
+        print(f"Error: {args.directory} already holds batches; merge or "
+              f"remove them first.")
+        return 1
+    catalog = polib.pofile(args.catalog, wrapwidth=79)
+    pending = [entry for entry in catalog if needs_translation(entry)]
+    pending.sort(key=source_rank)
+    batches = []
+    for entry in pending:
+        # A batch never mixes source groups, so each covers related strings.
+        if (not batches or len(batches[-1]) >= args.size or
+                source_rank(batches[-1][0]) != source_rank(entry)):
+            batches.append([])
+        batches[-1].append(entry)
+    os.makedirs(args.directory, exist_ok=True)
+    for number, entries in enumerate(batches, start=1):
+        batch = polib.POFile(wrapwidth=79)
+        batch.metadata = catalog.metadata
+        batch.header = (f"Batch {number} of {len(batches)} from "
+                        f"{args.catalog}.\nMerge it back with "
+                        f"lang/access_catalog.py merge.")
+        batch.extend(entries)
+        batch.save(os.path.join(args.directory, f"{number:04d}.po"))
+    print(f"{len(pending)} entries written to {len(batches)} batches in "
+          f"{args.directory}")
+    return 0
+
+
+def merge(args):
+    catalog = polib.pofile(args.catalog, wrapwidth=79)
+    targets = {entry_key(entry): entry for entry in catalog
+               if not entry.obsolete}
+    merged = 0
+    skipped = 0
+    for path in batch_paths(args.directory):
+        for entry in polib.pofile(path):
+            if (entry.obsolete or "fuzzy" in entry.flags or
+                    not has_translation(entry)):
+                continue
+            target = targets.get(entry_key(entry))
+            if target is None or target.msgid_plural != entry.msgid_plural:
+                print(f"{path}: skipped, source string changed: "
+                      f"{entry.msgid!r}")
+                skipped += 1
+                continue
+            reason = entry_problem(entry)
+            if reason:
+                print(f"{path}: skipped: {reason}: {entry.msgid!r}")
+                skipped += 1
+                continue
+            if target.msgid_plural:
+                target.msgstr_plural = dict(entry.msgstr_plural)
+            else:
+                target.msgstr = entry.msgstr
+            if "fuzzy" in target.flags:
+                target.flags.remove("fuzzy")
+            target.previous_msgctxt = None
+            target.previous_msgid = None
+            target.previous_msgid_plural = None
+            merged += 1
+    catalog.save(args.catalog)
+    print(f"{merged} translations merged into {args.catalog}, {skipped} "
+          f"skipped")
+    return 0
+
+
+def lookup(args):
+    flags = re.IGNORECASE if args.ignore_case else 0
+    pattern = re.compile(args.pattern, flags)
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    for path in args.catalogs:
+        shown = 0
+        for entry in polib.pofile(path):
+            if (shown >= args.limit or entry.obsolete or
+                    "fuzzy" in entry.flags or not has_translation(entry)):
+                continue
+            if entry.msgid_plural:
+                msgstr = " | ".join(entry.msgstr_plural[index]
+                                    for index in sorted(entry.msgstr_plural))
+            else:
+                msgstr = entry.msgstr
+            texts = [msgstr] if args.translation else [entry.msgid,
+                                                       entry.msgid_plural]
+            if not any(pattern.search(text) for text in texts if text):
+                continue
+            context = f"[{entry.msgctxt}] " if entry.msgctxt else ""
+            print(f"{path}: {context}{entry.msgid!r}\n    -> {msgstr!r}")
+            shown += 1
+    return 0
+
+
+def numbered_entries(catalog):
+    return [entry for entry in catalog if not entry.obsolete]
+
+
+def plural_count(catalog):
+    match = re.search(r"nplurals\s*=\s*(\d+)",
+                      catalog.metadata.get("Plural-Forms", ""))
+    return int(match.group(1)) if match else 2
+
+
+def translation_text(entry):
+    if entry.msgid_plural:
+        return [entry.msgstr_plural.get(index, "")
+                for index in sorted(entry.msgstr_plural)]
+    return entry.msgstr
+
+
+def show(args):
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    entries = numbered_entries(polib.pofile(args.catalog))
+    last = min(args.last or len(entries), len(entries))
+    for number in range(max(args.first, 1), last + 1):
+        entry = entries[number - 1]
+        print(f"=== {number}")
+        for line in entry.comment.splitlines():
+            print(f"#. {line}")
+        for line in entry.tcomment.splitlines():
+            print(f"# {line}")
+        for path, _line in entry.occurrences:
+            print(f"#: {path}")
+        if entry.flags:
+            print(f"#, {', '.join(entry.flags)}")
+        if entry.previous_msgid:
+            print(f"previous msgid: "
+                  f"{json.dumps(entry.previous_msgid, ensure_ascii=False)}")
+        if entry.msgctxt is not None:
+            print(f"msgctxt: {json.dumps(entry.msgctxt, ensure_ascii=False)}")
+        print(f"msgid: {json.dumps(entry.msgid, ensure_ascii=False)}")
+        if entry.msgid_plural:
+            print(f"msgid_plural: "
+                  f"{json.dumps(entry.msgid_plural, ensure_ascii=False)}")
+        print(f"translation: "
+              f"{json.dumps(translation_text(entry), ensure_ascii=False)}")
+    return 0
+
+
+def fill(args):
+    catalog = polib.pofile(args.catalog, wrapwidth=79)
+    entries = numbered_entries(catalog)
+    nplurals = plural_count(catalog)
+    with open(args.translations, encoding="utf-8") as stream:
+        values = json.load(stream)
+    errors = []
+    changes = []
+    for key, value in values.items():
+        reason = ""
+        if isinstance(value, dict):
+            reason = value.get("reason", "")
+            value = value.get("translation")
+        if not key.isdigit() or not 1 <= int(key) <= len(entries):
+            errors.append(f"{key}: no such entry")
+            continue
+        entry = entries[int(key) - 1]
+        if entry.msgid_plural:
+            if (not isinstance(value, list) or len(value) != nplurals or
+                    not all(isinstance(text, str) for text in value)):
+                errors.append(f"{key}: expected a list of {nplurals} plural "
+                              f"forms")
+                continue
+        elif not isinstance(value, str):
+            errors.append(f"{key}: expected a string")
+            continue
+        changes.append((int(key), entry, value, reason))
+    if errors:
+        for error in errors:
+            print(f"{args.translations}: error: {error}")
+        print("Nothing was changed.")
+        return 1
+    log = []
+    for number, entry, value, reason in sorted(changes, key=lambda c: c[0]):
+        old = translation_text(entry)
+        if old == value:
+            continue
+        if any(old if isinstance(old, list) else [old]):
+            log.append(f"- {number} `{entry.msgid}`\n"
+                       f"  - before: {json.dumps(old, ensure_ascii=False)}\n"
+                       f"  - after: {json.dumps(value, ensure_ascii=False)}\n"
+                       f"  - reason: {reason or 'not given'}\n")
+        if entry.msgid_plural:
+            entry.msgstr_plural = dict(enumerate(value))
+        else:
+            entry.msgstr = value
+        # A translation set here is current, so it is no longer fuzzy.
+        if "fuzzy" in entry.flags and has_translation(entry):
+            entry.flags.remove("fuzzy")
+            entry.previous_msgctxt = None
+            entry.previous_msgid = None
+            entry.previous_msgid_plural = None
+    catalog.save(args.catalog)
+    print(f"{len(changes)} translations set in {args.catalog}, "
+          f"{len(log)} changed")
+    if args.log:
+        with open(args.log, "a", encoding="utf-8") as stream:
+            stream.writelines(log)
+    return 0
 
 
 def main():
@@ -293,8 +536,37 @@ def main():
     validate_parser.add_argument("catalog")
     validate_parser.set_defaults(run=validate)
     status_parser = commands.add_parser("status")
-    status_parser.add_argument("catalog")
+    status_parser.add_argument("catalogs", nargs="+")
     status_parser.set_defaults(run=status)
+    split_parser = commands.add_parser("split")
+    split_parser.add_argument("--size", type=int, default=300)
+    split_parser.add_argument("catalog")
+    split_parser.add_argument("directory")
+    split_parser.set_defaults(run=split)
+    merge_parser = commands.add_parser("merge")
+    merge_parser.add_argument("catalog")
+    merge_parser.add_argument("directory")
+    merge_parser.set_defaults(run=merge)
+    lookup_parser = commands.add_parser("lookup")
+    lookup_parser.add_argument("-i", "--ignore-case", action="store_true")
+    lookup_parser.add_argument("--translation", action="store_true",
+                               help="match the translation, not the source")
+    lookup_parser.add_argument("--limit", type=int, default=20,
+                               help="matches shown per catalog")
+    lookup_parser.add_argument("pattern")
+    lookup_parser.add_argument("catalogs", nargs="+")
+    lookup_parser.set_defaults(run=lookup)
+    show_parser = commands.add_parser("show")
+    show_parser.add_argument("catalog")
+    show_parser.add_argument("first", type=int, nargs="?", default=1)
+    show_parser.add_argument("last", type=int, nargs="?")
+    show_parser.set_defaults(run=show)
+    fill_parser = commands.add_parser("fill")
+    fill_parser.add_argument("--log", help="append changed translations, "
+                             "with reasons, to this Markdown file")
+    fill_parser.add_argument("catalog")
+    fill_parser.add_argument("translations")
+    fill_parser.set_defaults(run=fill)
     args = parser.parse_args()
     return args.run(args)
 

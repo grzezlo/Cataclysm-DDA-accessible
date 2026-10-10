@@ -200,6 +200,127 @@ expect "printf mismatch is cleared" bad.mo "%d items" ""
 expect "missing closing tag is cleared" bad.mo "<color_red>Stop</color>" ""
 expect "misspelled tag is cleared" bad.mo "<info>note</info>" ""
 
+# Batches follow player-visible order, never mix source groups, and merge
+# back only valid, non-fuzzy translations of unchanged source strings.
+{
+    header
+    printf '#: data/mods/Mod/a.json\nmsgid "mod"\nmsgstr ""\n\n'
+    printf '#: data/json/npcs/a.json\nmsgid "talk"\nmsgstr ""\n\n'
+    printf '#: data/json/items/a.json\nmsgid "item one"\nmsgstr ""\n\n'
+    printf '#: data/json/items/b.json\nmsgid "item two"\nmsgstr ""\n\n'
+    printf '#: data/json/items/c.json\nmsgid "item three"\nmsgstr ""\n\n'
+    printf '#: data/json/items/d.json\nmsgid "done"\nmsgstr "gotowe"\n\n'
+    printf '#: data/json/items/e.json\n#, fuzzy\n#| msgid "olde"\nmsgid "old"\nmsgstr "stare"\n\n'
+    printf '#: src/a.cpp\nmsgid "%%d shots"\nmsgid_plural "%%d shots"\nmsgstr[0] ""\nmsgstr[1] ""\n\n'
+    printf '#: src/b.cpp\nmsgid "gone"\nmsgstr ""\n\n'
+} > lang/machine/batch.po
+"$python" "$catalog" split --size 2 lang/machine/batch.po batches > /dev/null
+expect_entries "interface strings come first" batches/0001.po "%d shots gone"
+expect_entries "batches respect the size" batches/0002.po "item one item two"
+expect_entries "fuzzy entries are retranslated" batches/0003.po "item three old"
+expect_entries "core data precedes dialogue" batches/0004.po "talk"
+expect_entries "mods come last" batches/0005.po "mod"
+if "$python" "$catalog" split lang/machine/batch.po batches > /dev/null
+then
+    echo "FAILED: split overwrote existing batches"
+    failures=$((failures + 1))
+else
+    echo "ok: split refuses to overwrite batches"
+fi
+if "$python" "$catalog" show batches/0001.po 2 | grep -q '^msgid: "gone"$'
+then
+    echo "ok: show prints numbered entries"
+else
+    echo "FAILED: show prints numbered entries"
+    failures=$((failures + 1))
+fi
+printf '{"1": ["%%d strzał"], "3": "x"}' > bad.json
+before=$(sha256sum batches/0001.po)
+if "$python" "$catalog" fill batches/0001.po bad.json > /dev/null ||
+    [ "$(sha256sum batches/0001.po)" != "$before" ]
+then
+    echo "FAILED: fill accepts wrong plural forms or entry numbers"
+    failures=$((failures + 1))
+else
+    echo "ok: fill rejects wrong plural forms and entry numbers"
+fi
+printf '{"1": ["%%d strzał", "%%d strzały"], "2": "usunięte"}' > first.json
+"$python" "$catalog" fill batches/0001.po first.json > /dev/null
+printf '{"1": "<color_red>pierwszy", "2": "druga"}' > second.json
+"$python" "$catalog" fill batches/0002.po second.json > /dev/null
+printf '{"2": {"translation": "drugi", "reason": "gender"}}' > review.json
+"$python" "$catalog" fill --log review.md batches/0002.po review.json > /dev/null
+if grep -q 'reason: gender' review.md && ! grep -q pierwszy review.md
+then
+    echo "ok: fill logs changed translations only"
+else
+    echo "FAILED: fill logs changed translations only"
+    failures=$((failures + 1))
+fi
+cp batches/0003.po fuzzy.po
+printf '{"2": "dawne"}' > fuzzy.json
+"$python" "$catalog" fill fuzzy.po fuzzy.json > /dev/null
+if "$python" "$catalog" status fuzzy.po | grep -q ' 0 fuzzy'
+then
+    echo "ok: fill clears the fuzzy flag of a retranslated entry"
+else
+    echo "FAILED: fill clears the fuzzy flag of a retranslated entry"
+    failures=$((failures + 1))
+fi
+"$python" - <<'EOF'
+import polib
+third = polib.pofile("batches/0003.po")
+third[0].msgstr = "trzeci"
+third[0].flags.append("fuzzy")
+third[1].msgstr = "dawne"
+third[1].flags.remove("fuzzy")
+third.save()
+EOF
+# "gone" leaves the catalog after the split, as when its source changes.
+"$python" - <<'EOF'
+import polib
+catalog = polib.pofile("lang/machine/batch.po")
+catalog[:] = [entry for entry in catalog if entry.msgid != "gone"]
+catalog.save("lang/machine/merged.po")
+EOF
+if "$python" "$catalog" merge lang/machine/merged.po batches | grep -q 'source string changed'
+then
+    echo "ok: merge reports translations of changed source strings"
+else
+    echo "FAILED: merge reports translations of changed source strings"
+    failures=$((failures + 1))
+fi
+msgfmt -o merged.mo lang/machine/merged.po
+expect "a valid batch translation is merged" merged.mo "item two" "drugi"
+expect "a retranslated fuzzy entry is merged" merged.mo "old" "dawne"
+expect "an invalid batch translation is not merged" merged.mo "item one" ""
+expect "a fuzzy batch translation is not merged" merged.mo "item three" ""
+expect "earlier translations are kept" merged.mo "done" "gotowe"
+plural=$("$python" -c 'import polib, sys
+entry = polib.pofile(sys.argv[1]).find("%d shots")
+print(entry.msgstr_plural[1])' lang/machine/merged.po)
+if [ "${plural%$'\r'}" = "%d strzały" ]
+then
+    echo "ok: plural batch translations are merged"
+else
+    echo "FAILED: plural batch translations are merged: got '$plural'"
+    failures=$((failures + 1))
+fi
+if "$python" "$catalog" lookup -i 'ITEM T' lang/machine/merged.po | grep -q "drugi"
+then
+    echo "ok: lookup finds translations by source"
+else
+    echo "FAILED: lookup finds translations by source"
+    failures=$((failures + 1))
+fi
+if "$python" "$catalog" lookup --translation 'pierwszy' lang/machine/merged.po | grep -q .
+then
+    echo "FAILED: lookup shows untranslated entries"
+    failures=$((failures + 1))
+else
+    echo "ok: lookup skips untranslated entries"
+fi
+
 # Negative cases use the production merge function, never tracked catalogs.
 for layer in access machine
 do
