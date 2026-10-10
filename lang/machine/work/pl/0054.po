@@ -16,22 +16,24 @@ msgstr ""
 #. ~ Description of "chitin armor kit"
 #: data/json/items/vehicle/plating.json
 msgid "A piece of light chitin plating made for a vehicle."
-msgstr ""
+msgstr "Kawałek lekkiego chitynowego poszycia przeznaczonego dla pojazdu."
 
 #. ~ Description of "biosilicified chitin armor kit"
 #: data/json/items/vehicle/plating.json
 msgid "A piece of durable silica-coated chitin plating made for a vehicle."
 msgstr ""
+"Kawałek wytrzymałego chitynowego poszycia pokrytego krzemionką, "
+"przeznaczonego dla pojazdu."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/plating.json data/json/vehicleparts/boards.json
 msgid "counterweight"
 msgid_plural "counterweights"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przeciwwaga"
+msgstr[1] "przeciwwagi"
+msgstr[2] "przeciwwag"
+msgstr[3] "przeciwwagi"
 
 #. ~ Description of "counterweight"
 #: data/json/items/vehicle/plating.json
@@ -39,6 +41,8 @@ msgid ""
 "A heavy block of steel used for balancing other heavy things.  Can be used as"
 " a makeshift anvil."
 msgstr ""
+"Ciężki blok stali służący do równoważenia innych ciężkich rzeczy. Może "
+"posłużyć jako prowizoryczne kowadło."
 
 #. ~ Description of "shredder"
 #: data/json/items/vehicle/rams.json
@@ -49,6 +53,12 @@ msgid ""
 "sturdy enough to withstand multiple impacts, and is designed to detach if it "
 "would take a hit that would break it."
 msgstr ""
+"To groźnie wyglądające urządzenie jest przeznaczone do napędzania przez "
+"silnik pojazdu. Po uruchomieniu okrągłe ostrza tego urządzenia obracają się "
+"szybko; wszystko, co znajdzie się przed nim, zostanie najpewniej rozszarpane "
+"na strzępy. Jest na tyle wytrzymałe, by przetrwać wiele uderzeń, i "
+"zaprojektowano je tak, by odczepiało się, jeśli miałoby przyjąć cios, który "
+"by je zniszczył."
 
 #. ~ Description of "vehicle forge rig"
 #: data/json/items/vehicle/rigs.json
@@ -56,15 +66,17 @@ msgid ""
 "A forge rig made to run off a vehicle's storage battery, with integrated tool"
 " storage for metalworking equipment."
 msgstr ""
+"Kuźnia zasilana z akumulatora pojazdu, ze zintegrowanym schowkiem na "
+"narzędzia do obróbki metalu."
 
 #. ~ Item name
 #: data/json/items/vehicle/rigs.json
 msgid "vehicle high-temperature welding kit"
 msgid_plural "vehicle high-temperature welding kits"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mobilny zestaw do spawania wysokotemperaturowego"
+msgstr[1] "mobilne zestawy do spawania wysokotemperaturowego"
+msgstr[2] "mobilnych zestawów do spawania wysokotemperaturowego"
+msgstr[3] "mobilnego zestawu do spawania wysokotemperaturowego"
 
 #. ~ Description of "vehicle high-temperature welding kit"
 #: data/json/items/vehicle/rigs.json
@@ -72,36 +84,38 @@ msgid ""
 "A welder combined with a fireproof insulating blanket, allowing for advanced "
 "welds and repairs to tempered steels."
 msgstr ""
+"Spawarka połączona z ognioodpornym kocem izolacyjnym, umożliwiająca "
+"zaawansowane spawanie i naprawy stali hartowanej."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/seating.json data/json/vehicleparts/seats.json
 msgid "bucket seat"
 msgid_plural "bucket seats"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "fotel kubełkowy"
+msgstr[1] "fotele kubełkowe"
+msgstr[2] "foteli kubełkowych"
+msgstr[3] "fotela kubełkowego"
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/seating.json data/json/vehicleparts/seats.json
 msgid "leather bucket seat"
 msgid_plural "leather bucket seats"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "skórzany fotel kubełkowy"
+msgstr[1] "skórzane fotele kubełkowe"
+msgstr[2] "skórzanych foteli kubełkowych"
+msgstr[3] "skórzanego fotela kubełkowego"
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/seating.json data/json/vehicleparts/seats.json
 msgid "bench seat"
 msgid_plural "bench seats"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kanapa samochodowa"
+msgstr[1] "kanapy samochodowe"
+msgstr[2] "kanap samochodowych"
+msgstr[3] "kanapy samochodowej"
 
 #. ~ Description of "bench seat"
 #: data/json/items/vehicle/seating.json
@@ -109,16 +123,18 @@ msgid ""
 "A wide, flat seat like you'd find in the back of a sedan, upholstered with "
 "soft nylon."
 msgstr ""
+"Szerokie, płaskie siedzenie, jakie można znaleźć z tyłu sedana, obite miękkim"
+" nylonem."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/seating.json data/json/vehicleparts/seats.json
 msgid "leather bench seat"
 msgid_plural "leather bench seats"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "skórzana kanapa samochodowa"
+msgstr[1] "skórzane kanapy samochodowe"
+msgstr[2] "skórzanych kanap samochodowych"
+msgstr[3] "skórzanej kanapy samochodowej"
 
 #. ~ Description of "leather bench seat"
 #: data/json/items/vehicle/seating.json
@@ -126,6 +142,7 @@ msgid ""
 "A wide, flat seat like you'd find in the back of a sedan, upholstered with "
 "leather."
 msgstr ""
+"Szerokie, płaskie siedzenie, jakie można znaleźć z tyłu sedana, obite skórą."
 
 #. ~ Description of "solar panel"
 #: data/json/items/vehicle/solar.json
@@ -133,15 +150,18 @@ msgid ""
 "An electronic device that can convert solar radiation into electric power.  "
 "Useful for a vehicle or a static power grid."
 msgstr ""
+"Urządzenie elektroniczne, które potrafi przetwarzać promieniowanie słoneczne "
+"na energię elektryczną. Przydatne w pojeździe lub w stacjonarnej sieci "
+"energetycznej."
 
 #. ~ Item name
 #: data/json/items/vehicle/solar.json
 msgid "solar panel array"
 msgid_plural "solar panel arrays"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw paneli słonecznych"
+msgstr[1] "zestawy paneli słonecznych"
+msgstr[2] "zestawów paneli słonecznych"
+msgstr[3] "zestawu paneli słonecznych"
 
 #. ~ Description of "solar panel array"
 #: data/json/items/vehicle/solar.json
@@ -150,15 +170,18 @@ msgid ""
 "radiation into electric power.  Install them to use them in a static power "
 "grid."
 msgstr ""
+"Zestaw czterech paneli słonecznych, gotowych do przetwarzania promieniowania "
+"słonecznego na energię elektryczną. Zainstaluj je, aby używać ich w "
+"stacjonarnej sieci energetycznej."
 
 #. ~ Item name
 #: data/json/items/vehicle/solar.json
 msgid "folding solar panel"
 msgid_plural "folding solar panels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "składany panel słoneczny"
+msgstr[1] "składane panele słoneczne"
+msgstr[2] "składanych paneli słonecznych"
+msgstr[3] "składanego panelu słonecznego"
 
 #. ~ Description of "folding solar panel"
 #: data/json/items/vehicle/solar.json
@@ -167,15 +190,18 @@ msgid ""
 "charge anything on the go.  Its small size means in might take quite some "
 "time to charge, however."
 msgstr ""
+"Ten „mały” panel słoneczny składa się do noszenia, na wypadek gdyby trzeba "
+"było coś naładować w drodze. Ze względu na niewielkie rozmiary ładowanie może"
+" jednak zająć sporo czasu."
 
 #. ~ Item name
 #: data/json/items/vehicle/solar.json
 msgid "solar suitcase"
 msgid_plural "solar suitcases"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "walizka solarna"
+msgstr[1] "walizki solarne"
+msgstr[2] "walizek solarnych"
+msgstr[3] "walizki solarnej"
 
 #. ~ Description of "solar suitcase"
 #: data/json/items/vehicle/solar.json
@@ -183,6 +209,8 @@ msgid ""
 "A large, ready-to-deploy set of solar panels, designed for portable off-the-"
 "grid use."
 msgstr ""
+"Duży, gotowy do rozłożenia zestaw paneli słonecznych, przeznaczony do "
+"przenośnego użytku z dala od sieci."
 
 #. ~ Description of "advanced solar panel"
 #: data/json/items/vehicle/solar.json
@@ -190,15 +218,18 @@ msgid ""
 "An electronic device that can convert solar radiation into electric power.  "
 "This one is a high-performance type made with monocrystalline silicon cells."
 msgstr ""
+"Urządzenie elektroniczne, które potrafi przetwarzać promieniowanie słoneczne "
+"na energię elektryczną. Ten egzemplarz to wysokowydajny typ wykonany z ogniw "
+"z krzemu monokrystalicznego."
 
 #. ~ Item name
 #: data/json/items/vehicle/solar.json
 msgid "advanced solar panel array"
 msgid_plural "advanced solar panel arrays"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw zaawansowanych paneli słonecznych"
+msgstr[1] "zestawy zaawansowanych paneli słonecznych"
+msgstr[2] "zestawów zaawansowanych paneli słonecznych"
+msgstr[3] "zestawu zaawansowanych paneli słonecznych"
 
 #. ~ Description of "advanced solar panel array"
 #: data/json/items/vehicle/solar.json
@@ -207,6 +238,9 @@ msgid ""
 "into electric power.  These panels are high-performance, made with "
 "monocrystalline silicon cells."
 msgstr ""
+"Zestaw czterech mniejszych paneli słonecznych, gotowych do przetwarzania "
+"promieniowania słonecznego na energię elektryczną. Te panele są "
+"wysokowydajne, wykonane z ogniw z krzemu monokrystalicznego."
 
 #. ~ Description of "advanced solar cell"
 #: data/json/items/vehicle/solar.json
@@ -214,6 +248,9 @@ msgid ""
 "A small electronic device that can convert solar radiation into electric "
 "power.  This one is a high-performance type made of monocrystalline silicon."
 msgstr ""
+"Małe urządzenie elektroniczne, które potrafi przetwarzać promieniowanie "
+"słoneczne na energię elektryczną. Ten egzemplarz to wysokowydajny typ "
+"wykonany z krzemu monokrystalicznego."
 
 #. ~ Description of "fancy table"
 #: data/json/items/vehicle/tables.json
@@ -221,15 +258,17 @@ msgid ""
 "A very fancy table for those with fancy lives.  If times were better, it "
 "might be useful for something other than firewood."
 msgstr ""
+"Bardzo wymyślny stolik dla tych, którzy wiodą wymyślne życie. Gdyby czasy "
+"były lepsze, mógłby się przydać do czegoś innego niż na opał."
 
 #. ~ Item name
 #: data/json/items/vehicle/tables.json
 msgid "workbench (folded)"
 msgid_plural "workbenches (folded)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "stół warsztatowy (złożony)"
+msgstr[1] "stoły warsztatowe (złożone)"
+msgstr[2] "stołów warsztatowych (złożonych)"
+msgstr[3] "stołu warsztatowego (złożonego)"
 
 #. ~ Description of "workbench (folded)"
 #: data/json/items/vehicle/tables.json
@@ -237,6 +276,8 @@ msgid ""
 "A sturdy workbench made of metal and wood.  It is perfect for crafting large "
 "and heavy things, when unfolded."
 msgstr ""
+"Solidny stół warsztatowy z metalu i drewna. Po rozłożeniu doskonale nadaje "
+"się do wytwarzania dużych i ciężkich rzeczy."
 
 #. ~ Description of "workbench with battery recharger"
 #: data/json/items/vehicle/tables.json
@@ -244,6 +285,8 @@ msgid ""
 "A sturdy metal workbench, perfect for crafting large and heavy things.  It "
 "also has a built-in battery charger for your phone."
 msgstr ""
+"Solidny metalowy stół warsztatowy, doskonały do wytwarzania dużych i ciężkich"
+" rzeczy. Ma też wbudowaną ładowarkę akumulatorów do twojego telefonu."
 
 #. ~ Description of "military black box"
 #: data/json/items/vehicle/utilities.json
@@ -252,6 +295,9 @@ msgid ""
 "wreckage.  If you can find a system to analyze this, you may find something "
 "of interest."
 msgstr ""
+"Czarna skrzynka statku powietrznego, najwyraźniej wyciągnięta z wraku "
+"jakiegoś pojazdu wojskowego. Jeśli znajdziesz system zdolny ją "
+"przeanalizować, może odkryjesz coś interesującego."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -259,15 +305,15 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "small integrated cooler"
 msgid_plural "small integrated coolers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała wbudowana chłodziarka"
+msgstr[1] "małe wbudowane chłodziarki"
+msgstr[2] "małych wbudowanych chłodziarek"
+msgstr[3] "małej wbudowanej chłodziarki"
 
 #. ~ Description of "small integrated cooler"
 #: data/json/items/vehicle/utilities.json
 msgid "A small vehicle-mounted area cooler."
-msgstr ""
+msgstr "Mała klimatyzacja zamontowana w pojeździe."
 
 #. ~ Description of "recharging station"
 #: data/json/items/vehicle/utilities.json
@@ -278,6 +324,11 @@ msgid ""
 "can only be installed onto existing storage compartments, and is controlled "
 "from a dashboard or electronics control unit."
 msgstr ""
+"Uniwersalna stacja ładowania zaprojektowana do pracy na zasilaniu pojazdu. "
+"Gdy jest włączona, stopniowo ładuje wszystkie akumulatory (ogniwa, "
+"akumulatory kwasowo-ołowiowe itp.) umieszczone bezpośrednio w jej schowku. "
+"System można zainstalować tylko na istniejących schowkach, a steruje się nim "
+"z deski rozdzielczej lub elektronicznego modułu sterującego."
 
 #. ~ Item name
 #. ~ Vehicle part name
@@ -285,20 +336,20 @@ msgstr ""
 #: data/json/vehicleparts/vehicle_parts.json
 msgid "portable dishwasher"
 msgid_plural "portable dishwashers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przenośna zmywarka"
+msgstr[1] "przenośne zmywarki"
+msgstr[2] "przenośnych zmywarek"
+msgstr[3] "przenośnej zmywarki"
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/utilities.json data/json/vehicleparts/tanks.json
 msgid "refrigerated tank (60 L)"
 msgid_plural "refrigerated tanks (60 L)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "chłodzony zbiornik (60 l)"
+msgstr[1] "chłodzone zbiorniki (60 l)"
+msgstr[2] "chłodzonych zbiorników (60 l)"
+msgstr[3] "chłodzonego zbiornika (60 l)"
 
 #. ~ Description of "refrigerated tank (60 L)"
 #: data/json/items/vehicle/utilities.json
@@ -306,16 +357,18 @@ msgid ""
 "A 60 L refrigerated tank for keeping liquids cool.  Provides some insulation "
 "from outside weather."
 msgstr ""
+"Chłodzony zbiornik o pojemności 60 l, utrzymujący płyny w chłodzie. Zapewnia "
+"pewną izolację od pogody na zewnątrz."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/utilities.json data/json/vehicleparts/tanks.json
 msgid "refrigerated tank (100 L)"
 msgid_plural "refrigerated tanks (100 L)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "chłodzony zbiornik (100 l)"
+msgstr[1] "chłodzone zbiorniki (100 l)"
+msgstr[2] "chłodzonych zbiorników (100 l)"
+msgstr[3] "chłodzonego zbiornika (100 l)"
 
 #. ~ Description of "refrigerated tank (100 L)"
 #: data/json/items/vehicle/utilities.json
@@ -323,6 +376,8 @@ msgid ""
 "A 100 L refrigerated tank for keeping liquids cool.  Provides some insulation"
 " from outside weather."
 msgstr ""
+"Chłodzony zbiornik o pojemności 100 l, utrzymujący płyny w chłodzie. Zapewnia"
+" pewną izolację od pogody na zewnątrz."
 
 #. ~ Description of "heated tank"
 #: data/json/items/vehicle/utilities.json
@@ -330,6 +385,8 @@ msgid ""
 "A 60 L heated tank for keeping liquids from freezing.  Provides some "
 "insulation from outside weather."
 msgstr ""
+"Podgrzewany zbiornik o pojemności 60 l, chroniący płyny przed zamarzaniem. "
+"Zapewnia pewną izolację od pogody na zewnątrz."
 
 #. ~ Description of "medium wheel hub assembly"
 #: data/json/items/vehicle/wheel.json
@@ -337,6 +394,8 @@ msgid ""
 "A metal assembly that allows bolting a wheel onto a car.  Fit for a car "
 "wheel."
 msgstr ""
+"Metalowy zespół umożliwiający przykręcenie koła do samochodu. Pasuje do koła "
+"samochodowego."
 
 #. ~ Description of "heavy wheel hub assembly"
 #: data/json/items/vehicle/wheel.json
@@ -344,30 +403,32 @@ msgid ""
 "A heavy metal assembly that allows bolting a wheel onto a car.  Fit for a "
 "large car wheel."
 msgstr ""
+"Ciężki metalowy zespół umożliwiający przykręcenie koła do samochodu. Pasuje "
+"do dużego koła samochodowego."
 
 #. ~ Item name
 #: data/json/items/vehicle/wheel.json
 msgid "pair of skateboard trucks"
 msgid_plural "pairs of skateboard trucks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para traków do deskorolki"
+msgstr[1] "pary traków do deskorolki"
+msgstr[2] "par traków do deskorolki"
+msgstr[3] "pary traków do deskorolki"
 
 #. ~ Description of "pair of skateboard trucks"
 #: data/json/items/vehicle/wheel.json
 msgid "A pair metal skateboard trucks, for attaching wheels to."
-msgstr ""
+msgstr "Para metalowych traków do deskorolki, do których mocuje się kółka."
 
 #. ~ Description of "medium steel rim"
 #: data/json/items/vehicle/wheel.json
 msgid "A medium-size steel rim for a car tire."
-msgstr ""
+msgstr "Średniej wielkości stalowa obręcz do opony samochodowej."
 
 #. ~ Description of "bicycle rim"
 #: data/json/items/vehicle/wheel.json
 msgid "A large, spoked rim for a bicycle tire."
-msgstr ""
+msgstr "Duża obręcz rowerowa ze szprychami, do opony rowerowej."
 
 #. ~ Description of "27" off-road bicycle tire"
 #: data/json/items/vehicle/wheel.json
@@ -375,25 +436,27 @@ msgid ""
 "A wide, studded bicycle tire intended to be fitted to a bicycle rim for off-"
 "road biking."
 msgstr ""
+"Szeroka, kolcowana opona rowerowa, przeznaczona do montażu na obręczy "
+"rowerowej do jazdy terenowej."
 
 #. ~ Description of "armored wheel"
 #: data/json/items/vehicle/wheel.json
 msgid "A wide military-grade wheel."
-msgstr ""
+msgstr "Szerokie koło klasy wojskowej."
 
 #. ~ Description of "off-road bicycle wheel"
 #: data/json/items/vehicle/wheel.json
 msgid "A wide, studded bicycle wheel intended for off-road biking."
-msgstr ""
+msgstr "Szerokie, kolcowane koło rowerowe przeznaczone do jazdy terenowej."
 
 #. ~ Item name
 #: data/json/items/vehicle/wheel.json
 msgid "set of small casters"
 msgid_plural "sets of small casters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw małych kółek obrotowych"
+msgstr[1] "zestawy małych kółek obrotowych"
+msgstr[2] "zestawów małych kółek obrotowych"
+msgstr[3] "zestawu małych kółek obrotowych"
 
 #. ~ Description of "set of small casters"
 #. ~ Description of vehicle part "small casters"
@@ -402,15 +465,17 @@ msgid ""
 "A set of small wheels mounted on pivots, like you'd find on a rolling office "
 "chair."
 msgstr ""
+"Zestaw małych kółek zamocowanych na obrotowych osiach, jak w biurowym krześle"
+" na kółkach."
 
 #. ~ Item name
 #: data/json/items/vehicle/wheel.json
 msgid "set of medium casters"
 msgid_plural "sets of medium casters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw średnich kółek obrotowych"
+msgstr[1] "zestawy średnich kółek obrotowych"
+msgstr[2] "zestawów średnich kółek obrotowych"
+msgstr[3] "zestawu średnich kółek obrotowych"
 
 #. ~ Description of "set of medium casters"
 #. ~ Description of vehicle part "medium casters"
@@ -418,15 +483,17 @@ msgstr[3] ""
 msgid ""
 "A set of medium wheels mounted on pivots, like you'd find on a shopping cart."
 msgstr ""
+"Zestaw średnich kółek zamocowanych na obrotowych osiach, jak w wózku "
+"sklepowym."
 
 #. ~ Item name
 #: data/json/items/vehicle/wheel.json
 msgid "set of large casters"
 msgid_plural "sets of large casters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw dużych kółek obrotowych"
+msgstr[1] "zestawy dużych kółek obrotowych"
+msgstr[2] "zestawów dużych kółek obrotowych"
+msgstr[3] "zestawu dużych kółek obrotowych"
 
 #. ~ Description of "set of large casters"
 #. ~ Description of vehicle part "large casters"
@@ -435,6 +502,8 @@ msgid ""
 "A set of large rubber wheels mounted on pivots, like you'd find on small "
 "industrial equipment."
 msgstr ""
+"Zestaw dużych gumowych kółek zamocowanych na obrotowych osiach, jak w małych "
+"urządzeniach przemysłowych."
 
 #. ~ Description of "large steel drum"
 #: data/json/items/vehicle/wheel.json
@@ -444,59 +513,65 @@ msgid ""
 "reinforce its structure even further, making it an unstoppable force once it "
 "starts rolling."
 msgstr ""
+"Duży walec wykonany z grubych płyt hartowanej stali, zwykle spotykany w "
+"walcach drogowych. Liczne masywne szprychy, przymocowane do centralnej osi, "
+"dodatkowo wzmacniają jego konstrukcję, czyniąc go niepowstrzymaną siłą, gdy "
+"już zacznie się toczyć."
 
 #. ~ Item name
 #: data/json/items/vehicle/wheel.json
 msgid "set of skateboard wheels"
 msgid_plural "sets of skateboard wheels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw kółek do deskorolki"
+msgstr[1] "zestawy kółek do deskorolki"
+msgstr[2] "zestawów kółek do deskorolki"
+msgstr[3] "zestawu kółek do deskorolki"
 
 #. ~ Description of "set of skateboard wheels"
 #. ~ Description of vehicle part "skateboard wheels"
 #: data/json/items/vehicle/wheel.json data/json/vehicleparts/wheel.json
 msgid "A set of four small wheels, for a skateboard."
-msgstr ""
+msgstr "Zestaw czterech małych kółek do deskorolki."
 
 #. ~ Description of "wooden cart wheel"
 #: data/json/items/vehicle/wheel.json
 msgid "A handmade wooden cart wheel."
-msgstr ""
+msgstr "Ręcznie wykonane drewniane kółko do wózka."
 
 #. ~ Description of "banded wooden cart wheel"
 #: data/json/items/vehicle/wheel.json
 msgid "A handmade wooden cart wheel with metal bands for durability."
 msgstr ""
+"Ręcznie wykonane drewniane kółko do wózka z metalowymi obręczami dla większej"
+" wytrzymałości."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/wheel.json data/json/vehicleparts/wheel.json
 msgid "concrete mixer wheel mounts"
 msgid_plural "concrete mixer wheel mounts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "komplet mocowań kół betoniarki"
+msgstr[1] "komplety mocowań kół betoniarki"
+msgstr[2] "kompletów mocowań kół betoniarki"
+msgstr[3] "kompletu mocowań kół betoniarki"
 
 #. ~ Description of "concrete mixer wheel mounts"
 #. ~ Description of vehicle part "concrete mixer wheel mounts"
 #: data/json/items/vehicle/wheel.json data/json/vehicleparts/wheel.json
 msgid "A set of two small wheel mounts from a concrete mixer."
-msgstr ""
+msgstr "Zestaw dwóch małych mocowań kół z betoniarki."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/vehicle/wheel.json data/json/vehicleparts/wheel.json
 msgid "concrete mixer wheels"
 msgid_plural "concrete mixer wheels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "komplet kół betoniarki"
+msgstr[1] "komplety kół betoniarki"
+msgstr[2] "kompletów kół betoniarki"
+msgstr[3] "kompletu kół betoniarki"
 
 #. ~ Description of "concrete mixer wheels"
 #: data/json/items/vehicle/wheel.json
 msgid "A set of two small wheels from a concrete mixer."
-msgstr ""
+msgstr "Zestaw dwóch małych kół z betoniarki."
