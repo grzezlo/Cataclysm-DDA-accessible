@@ -15,80 +15,82 @@ msgstr ""
 
 #: src/handle_action.cpp
 msgid "Disable autohaul"
-msgstr ""
+msgstr "Wyłącz automatyczne ciągnięcie"
 
 #: src/handle_action.cpp
 msgid "Enable autohaul"
-msgstr ""
+msgstr "Włącz automatyczne ciągnięcie"
 
 #: src/handle_action.cpp
 msgid "Edit autohaul filter"
-msgstr ""
+msgstr "Edytuj filtr automatycznego ciągnięcia"
 
 #: src/handle_action.cpp
 msgid "Select items to haul"
-msgstr ""
+msgstr "Wybierz przedmioty do ciągnięcia"
 
 #: src/handle_action.cpp
 msgid "Keep smashing until destroyed?"
-msgstr ""
+msgstr "Rozbijać aż do zniszczenia?"
 
 #: src/handle_action.cpp
 msgid "Wait 20 heartbeats"
-msgstr ""
+msgstr "Zaczekaj 20 uderzeń serca"
 
 #: src/handle_action.cpp
 msgid "Wait 60 heartbeats"
-msgstr ""
+msgstr "Zaczekaj 60 uderzeń serca"
 
 #: src/handle_action.cpp
 msgid "You can't sleep while controlling a vehicle."
-msgstr ""
+msgstr "Nie możesz spać, kierując pojazdem."
 
 #: src/handle_action.cpp
 msgid "You cannot sleep while airborne."
-msgstr ""
+msgstr "Nie możesz spać w powietrzu."
 
 #: src/handle_action.cpp
 msgid "Unload nearby containers"
-msgstr ""
+msgstr "Rozładuj pobliskie pojemniki"
 
 #: src/handle_action.cpp
 msgid "Unloads any corpses or containers that are in their respective zones."
 msgstr ""
+"Rozładowuje wszystkie zwłoki i pojemniki znajdujące się w odpowiednich "
+"strefach."
 
 #: src/handle_action.cpp
 msgid "You refuse to use ranged weapons."
-msgstr ""
+msgstr "Odmawiasz używania broni dystansowej."
 
 #: src/handle_action.cpp
 msgid "You refuse to use firearms."
-msgstr ""
+msgstr "Odmawiasz używania broni palnej."
 
 #: src/handle_action.cpp
 msgid "You cannot cast spells at this moment."
-msgstr ""
+msgstr "W tej chwili nie możesz rzucać zaklęć."
 
 #: src/handle_action.cpp
 msgid "Cast a spell first"
-msgstr ""
+msgstr "Najpierw rzuć zaklęcie"
 
 #: src/handle_action.cpp
 msgid "You can't drop things while you're in your shell."
-msgstr ""
+msgstr "Nie możesz upuszczać rzeczy, będąc w swojej skorupie."
 
 #: src/handle_action.cpp
 msgid "You can't disassemble while you're in your shell."
-msgstr ""
+msgstr "Nie możesz demontować rzeczy, będąc w swojej skorupie."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "Your %s has only one firing mode."
-msgstr ""
+msgstr "Przedmiot %s ma tylko jeden tryb strzelania."
 
 #: src/handle_action.cpp
 msgid "You have no idea where you are."
-msgstr ""
+msgstr "Nie masz pojęcia, gdzie jesteś."
 
 #. ~ %1$s: liquid name, %2$s: container name
 #: src/handle_liquid.cpp
@@ -98,126 +100,132 @@ msgid ""
 "The %1$s would spill.\n"
 "What to do with the %2$s inside it?"
 msgstr ""
+"Zawartość pojemnika %1$s by się rozlała.\n"
+"Co zrobić z płynem %2$s w środku?"
 
 #. ~ %1$s: liquid name, %2$s: container name
 #: src/handle_liquid.cpp
 #, c-format
 msgctxt "liquid"
 msgid "What to do with the %1$s in the %2$s?"
-msgstr ""
+msgstr "Co zrobić z płynem %1$s w pojemniku %2$s?"
 
 #: src/handle_liquid.cpp
 msgid "Select a container"
-msgstr ""
+msgstr "Wybierz pojemnik"
 
 #: src/handle_liquid.cpp
 #, c-format
 msgid "Select an adjacent keg (%s)"
-msgstr ""
+msgstr "Wybierz pobliski keg (%s)"
 
 #. ~ EOC option name in nested effect in then statement in effect in EoC
 #. "EOC_WARPED_POND_CREATION"
 #: src/help.cpp data/mods/Sky_Island/EOCs.json
 msgid "Northwest"
-msgstr ""
+msgstr "Północny zachód"
 
 #. ~ EOC option name in nested effect in then statement in effect in EoC
 #. "EOC_WARPED_POND_CREATION"
 #: src/help.cpp data/mods/Sky_Island/EOCs.json
 msgid "Northeast"
-msgstr ""
+msgstr "Północny wschód"
 
 #. ~ EOC option name in nested effect in then statement in effect in EoC
 #. "EOC_WARPED_POND_CREATION"
 #: src/help.cpp data/mods/Sky_Island/EOCs.json
 msgid "Southwest"
-msgstr ""
+msgstr "Południowy zachód"
 
 #. ~ EOC option name in nested effect in then statement in effect in EoC
 #. "EOC_WARPED_POND_CREATION"
 #: src/help.cpp data/mods/Sky_Island/EOCs.json
 msgid "Southeast"
-msgstr ""
+msgstr "Południowy wschód"
 
 #: src/iexamine.cpp
 msgid "Select Genetic Treatment"
-msgstr ""
+msgstr "Wybierz terapię genetyczną"
 
 #: src/iexamine.cpp
 msgid "You aren't carrying have any genetic treatments."
-msgstr ""
+msgstr "Nie masz przy sobie żadnych terapii genetycznych."
 
 #: src/iexamine.cpp
 msgid "Trait will be reverted to base human morphology."
-msgstr ""
+msgstr "Cecha zostanie przywrócona do bazowej ludzkiej morfologii."
 
 #: src/iexamine.cpp
 msgid "Conflicts with installed:"
-msgstr ""
+msgstr "Koliduje z zainstalowanymi:"
 
 #: src/iexamine.cpp
 msgid "Requires any of the following traits:"
-msgstr ""
+msgstr "Wymaga dowolnej z następujących cech:"
 
 #: src/iexamine.cpp
 msgid ""
 "As you wake, you find yourself much more attuned to your new form than "
 "before."
 msgstr ""
+"Po przebudzeniu czujesz się znacznie bardziej zżyty ze swoją nową postacią "
+"niż wcześniej."
 
 #: src/iexamine.cpp
 msgid ""
 "As you wake, you feel like if you have lost a once important part of "
 "yourself."
 msgstr ""
+"Po przebudzeniu czujesz się tak, jakbyś utracił niegdyś ważną część siebie."
 
 #: src/iexamine.cpp
 msgid "Translocate"
-msgstr ""
+msgstr "Translokuj"
 
 #: src/iexamine.cpp
 msgid "Adjust activation status"
-msgstr ""
+msgstr "Zmień stan aktywacji"
 
 #: src/iexamine.cpp
 msgid "Select destination floor"
-msgstr ""
+msgstr "Wybierz piętro docelowe"
 
 #: src/iexamine.cpp
 msgid " (this floor)"
-msgstr ""
+msgstr " (to piętro)"
 
 #: src/iexamine.cpp
 msgid "You must stand inside the elevator to use it."
-msgstr ""
+msgstr "Musisz stać wewnątrz windy, aby z niej skorzystać."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "The %s is blocking the elevator"
-msgstr ""
+msgstr "Pojazd %s blokuje windę"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Pull up the %s?"
-msgstr ""
+msgstr "Wciągnąć do góry: %s?"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You pull up the %s."
-msgstr ""
+msgstr "Wciągasz do góry: %s."
 
 #: src/iexamine.cpp
 msgid "You carefully dial a combination… and it opens!"
-msgstr ""
+msgstr "Ostrożnie wybierasz kombinację… i otwiera się!"
 
 #: src/iexamine.cpp
 msgid "You carefully dial a combination."
-msgstr ""
+msgstr "Ostrożnie wybierasz kombinację."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "There's nobody here to protect %s.  Do you want to claim ownership?"
 msgstr ""
+"Nie ma tu nikogo, kto by bronił obozu %s. Chcesz go przejąć na własność?"
 
 #: src/iexamine.cpp
 #, c-format
@@ -225,329 +233,334 @@ msgid ""
 "Take whatever you can find from the stores?  This may anger %s and their "
 "allies."
 msgstr ""
+"Zabrać wszystko, co znajdziesz w magazynach? Może to rozgniewać frakcję %s i "
+"jej sojuszników."
 
 #: src/iexamine.cpp
 msgid "You don't run this camp, the board is useless to you."
-msgstr ""
+msgstr "Nie zarządzasz tym obozem, ta tablica jest dla ciebie bezużyteczna."
 
 #: src/iexamine.cpp
 msgid "This bulletin board is not inside a camp."
-msgstr ""
+msgstr "Ten słup ogłoszeniowy nie znajduje się w obozie."
 
 #: src/iexamine.cpp
 msgid "This type of seed can not be planted in this location."
-msgstr ""
+msgstr "Tego rodzaju nasion nie można zasadzić w tym miejscu."
 
 #: src/iexamine.cpp
 msgid "You pull up what's left of the planted crop and trample the rest."
-msgstr ""
+msgstr "Wyrywasz to, co zostało z posadzonej uprawy, a resztę rozdeptujesz."
 
 #: src/iexamine.cpp
 msgid "You will need a grass-cutting tool to harvest this plant."
-msgstr ""
+msgstr "Do zebrania tej rośliny potrzebujesz narzędzia do ścinania trawy."
 
 #: src/iexamine.cpp
 msgid "You harvest the plant."
-msgstr ""
+msgstr "Zbierasz roślinę."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "This %s is ready to be fired, but you have no fire source."
-msgstr ""
+msgstr "Można rozpalić: %s, ale nie masz źródła ognia."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Fire the %s?"
-msgstr ""
+msgstr "Rozpalić ogień w: %s?"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "This pile contains %s, which can't be dried here!"
-msgstr ""
+msgstr "Ta sterta zawiera %s, czego nie da się tu wysuszyć!"
 
 #: src/iexamine.cpp
 msgid "Place some fresh grain here and try again."
-msgstr ""
+msgstr "Połóż tu trochę świeżego zboża i spróbuj ponownie."
 
 #: src/iexamine.cpp
 msgid "The stook will need to be set up outside to dry."
-msgstr ""
+msgstr "Mendel trzeba ustawić na zewnątrz, żeby wysechł."
 
 #: src/iexamine.cpp
 msgid "This pile contains grain that is ready to be left out for drying."
-msgstr ""
+msgstr "Ta sterta zawiera zboże gotowe do pozostawienia do wyschnięcia."
 
 #: src/iexamine.cpp
 msgid "Stand the grain up to dry?"
-msgstr ""
+msgstr "Ustawić zboże w mendel do wyschnięcia?"
 
 #: src/iexamine.cpp
 msgid "You set up the stook and leave it to dry."
-msgstr ""
+msgstr "Ustawiasz mendel i zostawiasz go do wyschnięcia."
 
 #: src/iexamine.cpp
 msgid "Examined furniture is stook_full but doesn't contain any grain."
-msgstr ""
+msgstr "Badany mebel to stook_full, ale nie zawiera zboża."
 
 #: src/iexamine.cpp
 msgid "There's a grain stook there."
-msgstr ""
+msgstr "Stoi tu mendel zboża."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "The stook will finish drying in %s."
-msgstr ""
+msgstr "Mendel skończy schnąć za %s."
 
 #: src/iexamine.cpp
 msgid "You take down the stook as the drying process is now finished."
-msgstr ""
+msgstr "Rozkładasz mendel, bo proces suszenia już się zakończył."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You remove the %s from the vat."
-msgstr ""
+msgstr "Wyjmujesz z kadzi: %s."
 
 #: src/iexamine.cpp
 msgid "This tank is empty."
-msgstr ""
+msgstr "Ten zbiornik jest pusty."
 
 #: src/iexamine.cpp
 msgid "You have nothing that could be used as biomass to ferment."
 msgstr ""
+"Nie masz niczego, co dałoby się wykorzystać jako biomasę do fermentacji."
 
 #: src/iexamine.cpp
 msgid "What do you want to use as biomass?"
-msgstr ""
+msgstr "Czego chcesz użyć jako biomasy?"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Set %s in the tank?"
-msgstr ""
+msgstr "Umieścić w zbiorniku: %s?"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "This tank contains %s (%d), %0.f%% full."
-msgstr ""
+msgstr "Ten zbiornik zawiera %s (%d), zapełnienie %0.f%%."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Add more %s to the tank"
-msgstr ""
+msgstr "Dodaj do zbiornika więcej: %s"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Remove %s from the tank"
-msgstr ""
+msgstr "Wyjmij ze zbiornika: %s"
 
 #: src/iexamine.cpp
 msgid "Start anaerobic digestion"
-msgstr ""
+msgstr "Rozpocznij fermentację beztlenową"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Set %s in the tank."
-msgstr ""
+msgstr "Umieszczasz w zbiorniku: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "The tank now contains %s (%d), %0.f%% full."
-msgstr ""
+msgstr "Zbiornik zawiera teraz %s (%d), zapełnienie %0.f%%."
 
 #: src/iexamine.cpp
 msgid "Start anaerobic digestion?"
-msgstr ""
+msgstr "Rozpocząć fermentację beztlenową?"
 
 #: src/iexamine.cpp
 msgid "The tank is full, so you close the lid and start anaerobic digestion."
 msgstr ""
+"Zbiornik jest pełny, więc zamykasz pokrywę i rozpoczynasz fermentację "
+"beztlenową."
 
 #: src/iexamine.cpp
 msgid "You close the lid and start anaerobic digestion."
-msgstr ""
+msgstr "Zamykasz pokrywę i rozpoczynasz fermentację beztlenową."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You remove %s from the tank."
-msgstr ""
+msgstr "Wyjmujesz ze zbiornika: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "There's a tank of %s set to ferment there."
-msgstr ""
+msgstr "Stoi tu zbiornik z fermentującym: %s."
 
 #: src/iexamine.cpp
 msgid "It will finish fermenting in less than an hour."
-msgstr ""
+msgstr "Fermentacja zakończy się za mniej niż godzinę."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "It will finish fermenting in about %d hour."
 msgid_plural "It will finish fermenting in about %d hours."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Fermentacja zakończy się za około %d godzinę."
+msgstr[1] "Fermentacja zakończy się za około %d godziny."
+msgstr[2] "Fermentacja zakończy się za około %d godzin."
+msgstr[3] "Fermentacja zakończy się za około %d godziny."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "It will finish fermenting in about %d day."
 msgid_plural "It will finish fermenting in about %d days."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Fermentacja zakończy się za około %d dzień."
+msgstr[1] "Fermentacja zakończy się za około %d dni."
+msgstr[2] "Fermentacja zakończy się za około %d dni."
+msgstr[3] "Fermentacja zakończy się za około %d dnia."
 
 #: src/iexamine.cpp
 msgid "Gather biogas?  Can't stop once releasing started."
-msgstr ""
+msgstr "Zebrać biogaz? Po rozpoczęciu uwalniania nie da się go przerwać."
 
 #: src/iexamine.cpp
 msgid "No biogas gathered."
-msgstr ""
+msgstr "Nie zebrano biogazu."
 
 #: src/iexamine.cpp
 msgid "You released some biogas from the tank."
-msgstr ""
+msgstr "Wypuszczasz trochę biogazu ze zbiornika."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Gathered %s units of biogas."
-msgstr ""
+msgstr "Zebrano jednostki biogazu: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Biogas generating process started for about %d day."
 msgid_plural "Biogas generating process started for about %d days."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Rozpoczęto proces wytwarzania biogazu na około %d dzień."
+msgstr[1] "Rozpoczęto proces wytwarzania biogazu na około %d dni."
+msgstr[2] "Rozpoczęto proces wytwarzania biogazu na około %d dni."
+msgstr[3] "Rozpoczęto proces wytwarzania biogazu na około %d dnia."
 
 #: src/iexamine.cpp
 msgid "Finish fermenting?"
-msgstr ""
+msgstr "Zakończyć fermentację?"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "The %s is now ready for use."
-msgstr ""
+msgstr "Gotowe do użycia: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You removed the %s from the tank."
-msgstr ""
+msgstr "Wyjąłeś ze zbiornika: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "There's a tank of %s there."
-msgstr ""
+msgstr "Stoi tu zbiornik z zawartością: %s."
 
 #. ~ $1 - furniture name, $2 - liquid name, $3 - liquid charges, $4 - liquid
 #. volume, $5 - liquid capacity
 #: src/iexamine.cpp
 #, c-format
 msgid "%1$s with %2$s (%3$d)    %4$s / %5$s"
-msgstr ""
+msgstr "%1$s z: %2$s (%3$d)    %4$s / %5$s"
 
 #: src/iexamine.cpp
 msgid "You don't have a container at hand."
-msgstr ""
+msgstr "Nie masz pod ręką pojemnika."
 
 #: src/iexamine.cpp
 msgid "Use which tapping tool?"
-msgstr ""
+msgstr "Którego narzędzia do nacinania użyć?"
 
 #: src/iexamine.cpp
 msgid "You don't have a tapping tool at hand."
-msgstr ""
+msgstr "Nie masz pod ręką narzędzia do nacinania drzew."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You drill the maple tree crust and tap a %s into the prepared hole."
-msgstr ""
+msgstr "Nawiercasz korę klonu i wbijasz w przygotowany otwór przedmiot %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You hang the %s under the %s to collect sap."
-msgstr ""
+msgstr "Wieszasz przedmiot %s pod: %s, aby zbierać sok."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You need a hammering tool to remove the %s from the crust."
-msgstr ""
+msgstr "Potrzebujesz narzędzia do wbijania, aby wyjąć przedmiot %s z kory."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You remove %1$s from the %2$s."
-msgstr ""
+msgstr "Wyjmujesz z: %2$s przedmiot %1$s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "The %s is full, cannot reload."
-msgstr ""
+msgstr "%s ma pełny zapas, nie można przeładować."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "This %s is already loaded with %s!"
-msgstr ""
+msgstr "%s: już załadowano %s!"
 
 #: src/iexamine.cpp
 #, c-format
 msgid "How many liters of %s to buy?  Max: %d L."
-msgstr ""
+msgstr "Ile litrów kupić: %s? Maks.: %d l."
 
 #: src/iexamine.cpp
 msgid "Peek down."
-msgstr ""
+msgstr "Zajrzyj w dół."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Reach for the %s below."
-msgstr ""
+msgstr "Sięgnij do: %s poniżej."
 
 #: src/iexamine.cpp
 msgid "Can't jump across (need a small gap)."
-msgstr ""
+msgstr "Nie da się przeskoczyć (potrzebna mała szczelina)."
 
 #: src/iexamine.cpp
 msgid "Jump across."
-msgstr ""
+msgstr "Przeskocz."
 
 #: src/iexamine.cpp
 msgid "Fall down."
-msgstr ""
+msgstr "Spadnij."
 
 #: src/iexamine.cpp
 msgid "Glide away."
-msgstr ""
+msgstr "Odleć szybując."
 
 #: src/iexamine.cpp
 msgid "You can't glide in your current state"
-msgstr ""
+msgstr "Nie możesz szybować w obecnym stanie"
 
 #: src/iexamine.cpp
 msgid "You can't peek down there."
-msgstr ""
+msgstr "Nie możesz tam zajrzeć w dół."
 
 #: src/iexamine.cpp
 msgid "You peek over the ledge."
-msgstr ""
+msgstr "Zaglądasz przez krawędź."
 
 #: src/iexamine.cpp
 msgid "You soar away from the ledge."
-msgstr ""
+msgstr "Odlatujesz szybując znad krawędzi."
 
 #: src/iexamine.cpp
 msgid "Your glide is aided by a tailwind."
-msgstr ""
+msgstr "Twojemu lotowi pomaga wiatr w plecy."
 
 #: src/iexamine.cpp
 msgid "Your glide is hindered by a headwind."
-msgstr ""
+msgstr "Twój lot utrudnia wiatr w twarz."
 
 #: src/iexamine.cpp
 msgid "Climbing might be safer.  Really fall from the ledge?"
-msgstr ""
+msgstr "Wspinaczka może być bezpieczniejsza. Na pewno chcesz spaść z krawędzi?"
 
 #: src/iexamine.cpp
 #, c-format
@@ -555,6 +568,8 @@ msgid ""
 "The Autodoc detected ongoing blood loss from your %s and administered you "
 "hemostatic drugs to stop it."
 msgstr ""
+"Autodok wykrył trwającą utratę krwi (%s) i podał ci leki hemostatyczne, aby "
+"ją zatamować."
 
 #: src/iexamine.cpp
 #, c-format
@@ -562,6 +577,8 @@ msgid ""
 "The Autodoc detected ongoing blood loss from <npcname>'s %s and administered "
 "them hemostatic drugs to stop it."
 msgstr ""
+"Autodok wykrył trwającą utratę krwi u <npcname> (%s) i podał leki "
+"hemostatyczne, aby ją zatamować."
 
 #: src/iexamine.cpp
 #, c-format
@@ -569,6 +586,8 @@ msgid ""
 "The Autodoc detected an open wound on your %s and applied disinfectant to "
 "sterilize it."
 msgstr ""
+"Autodok wykrył otwartą ranę (%s) i zastosował środek dezynfekujący, aby ją "
+"wysterylizować."
 
 #: src/iexamine.cpp
 #, c-format
@@ -576,33 +595,39 @@ msgid ""
 "The Autodoc detected an open wound on <npcname>'s %s and applied disinfectant"
 " to sterilize it."
 msgstr ""
+"Autodok wykrył otwartą ranę u <npcname> (%s) i zastosował środek "
+"dezynfekujący, aby ją wysterylizować."
 
 #: src/iexamine.cpp
 msgid ""
 "The Autodoc detected an anti-radiation drug in your bloodstream, so it "
 "decided not to administer you another dose right now."
 msgstr ""
+"Autodok wykrył w twoim krwiobiegu lek antyradiacyjny, więc postanowił na "
+"razie nie podawać ci kolejnej dawki."
 
 #: src/iexamine.cpp
 msgid ""
 "The Autodoc detected an anti-radiation drug in <npcname>'s bloodstream, so it"
 " decided not to administer them another dose right now."
 msgstr ""
+"Autodok wykrył lek antyradiacyjny w krwiobiegu <npcname>, więc postanowił na "
+"razie nie podawać kolejnej dawki."
 
 #: src/iexamine.cpp src/item.cpp
 #, c-format
 msgid "Failed to find milling recipe for %s."
-msgstr ""
+msgstr "Nie znaleziono przepisu mielenia dla: %s."
 
 #: src/iexamine.cpp src/item.cpp
 #, c-format
 msgid "Failed to find milling recipe for %s. It can't be milled."
-msgstr ""
+msgstr "Nie znaleziono przepisu mielenia dla: %s. Nie można tego zmielić."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "This mill contains too little of %s, which requires a batch size of %d."
-msgstr ""
+msgstr "Ten młyn zawiera za mało: %s, wymagana wielkość partii to %d."
 
 #: src/iexamine.cpp
 #, c-format
@@ -610,83 +635,89 @@ msgid ""
 "This mill doesn't contain a full last batch of %s, which requires a batch "
 "size of %d."
 msgstr ""
+"Ten młyn nie zawiera pełnej ostatniej partii: %s, wymagana wielkość partii to"
+" %d."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "You remove the excess %s from the mill."
-msgstr ""
+msgstr "Wyjmujesz z młyna nadmiar: %s."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Failed to find milling recipe for %s. It wasn't milled."
-msgstr ""
+msgstr "Nie znaleziono przepisu mielenia dla: %s. Nic nie zmielono."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Failed to find milling recipe for %s. Milling of it failed."
-msgstr ""
+msgstr "Nie znaleziono przepisu mielenia dla: %s. Mielenie się nie powiodło."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "%s is milled in batches of %d, so none was processed."
-msgstr ""
+msgstr "Przedmiot %s jest mielony w partiach po %d, więc nic nie przetworzono."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "%s is milled in batches of %d, so %d remained unprocessed."
 msgstr ""
+"Przedmiot %s jest mielony w partiach po %d, więc %d pozostało "
+"nieprzetworzone."
 
 #: src/iexamine.cpp
 #, c-format
 msgid ""
 "Failed to find milling recipe for %s. It can't be inserted into the mill."
 msgstr ""
+"Nie znaleziono przepisu mielenia dla: %s. Nie można tego włożyć do młyna."
 
 #: src/iexamine.cpp
 #, c-format
 msgid "Failed to find milling recipe for %s. Cannot be placed into the mill."
 msgstr ""
+"Nie znaleziono przepisu mielenia dla: %s. Nie można tego umieścić w młynie."
 
 #: src/iexamine_actors.cpp
 msgid "This card-reader cannot be hacked."
-msgstr ""
+msgstr "Tego czytnika kart nie da się zhakować."
 
 #: src/iexamine_actors.cpp
 msgid "Pick a projectile to be used."
-msgstr ""
+msgstr "Wybierz pocisk do użycia."
 
 #: src/iexamine_actors.cpp
 msgid "You have no rounds to use the mortar."
-msgstr ""
+msgstr "Nie masz pocisków do moździerza."
 
 #: src/iexamine_actors.cpp
 msgid "Target is too close."
-msgstr ""
+msgstr "Cel jest za blisko."
 
 #: src/iexamine_actors.cpp
 msgid "You can't use this mortar."
-msgstr ""
+msgstr "Nie możesz użyć tego moździerza."
 
 #: src/init.cpp
 msgid "Mod migrations"
-msgstr ""
+msgstr "Migracje modów"
 
 #: src/init.cpp
 msgid "Trap migrations"
-msgstr ""
+msgstr "Migracje pułapek"
 
 #: src/item.cpp
 #, c-format
 msgid "%s (taking %s)"
-msgstr ""
+msgstr "%s (przyjmuje %s)"
 
 #: src/item.cpp
 msgid "Memory:"
-msgstr ""
+msgstr "Pamięć:"
 
 #: src/item.cpp
 msgid "if prone"
-msgstr ""
+msgstr "w pozycji leżącej"
 
 #: src/item.cpp
 #, c-format
@@ -694,126 +725,140 @@ msgid ""
 "* This item is <neutral>perishable</neutral>, and at room temperature has an "
 "estimated nominal shelf life of <info>%s</info>."
 msgstr ""
+"* Ten przedmiot jest <neutral>łatwo psujący się</neutral> i w temperaturze "
+"pokojowej ma szacowany nominalny okres przydatności wynoszący "
+"<info>%s</info>."
 
 #: src/item.cpp
 msgid ""
 "This item has started to <neutral>rot</neutral>, but <info>your bionic "
 "digestion can tolerate it</info>."
 msgstr ""
+"Ten przedmiot zaczął <neutral>się psuć</neutral>, ale <info>twoje bioniczne "
+"trawienie to toleruje</info>."
 
 #: src/item.cpp
 msgid ""
 "This item has started to <neutral>rot</neutral>, but <info>you can tolerate "
 "it</info>."
 msgstr ""
+"Ten przedmiot zaczął <neutral>się psuć</neutral>, ale <info>tolerujesz "
+"to</info>."
 
 #: src/item.cpp
 msgid ""
 "This item has started to <bad>rot</bad>. <info>Eating</info> it would be a "
 "<bad>very bad idea</bad>."
 msgstr ""
+"Ten przedmiot zaczął <bad>się psuć</bad>. <info>Zjedzenie</info> go byłoby "
+"<bad>bardzo złym pomysłem</bad>."
 
 #: src/item.cpp
 msgid "<bold>Compatible guns</bold>: "
-msgstr ""
+msgstr "<bold>Kompatybilne bronie</bold>: "
 
 #: src/item.cpp
 msgid "This ammo <neutral>may start fires</neutral>."
-msgstr ""
+msgstr "Ta amunicja <neutral>może wywołać pożar</neutral>."
 
 #: src/item.cpp
 msgid ""
 "Weapon is <bad>not attached a bore mod</bad>, so stats below assume the "
 "default bore mod: "
 msgstr ""
+"Broń <bad>nie ma założonego modu przewodu lufy</bad>, więc poniższe "
+"statystyki zakładają domyślny mod przewodu lufy: "
 
 #: src/item.cpp
 msgid "Weapon is <bad>not attached a bore mod</bad>. "
-msgstr ""
+msgstr "Broń <bad>nie ma założonego modu przewodu lufy</bad>. "
 
 #: src/item.cpp
 msgid "To-hit modifier: "
-msgstr ""
+msgstr "Modyfikator trafienia: "
 
 #: src/item.cpp
 msgid "<bold>Incompatible with slots: </bold> "
-msgstr ""
+msgstr "<bold>Niekompatybilne z gniazdami: </bold> "
 
 #: src/item.cpp
 msgid "Personal aura"
-msgstr ""
+msgstr "Aura osobista"
 
 #: src/item.cpp
 msgid "Close to skin"
-msgstr ""
+msgstr "Przy skórze"
 
 #: src/item.cpp
 msgid "Waist"
-msgstr ""
+msgstr "Pas"
 
 #. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_11"
 #: src/item.cpp data/mods/Xedra_Evolved/eocs/eoc_riddles.json
 msgid "Outer"
-msgstr ""
+msgstr "Zewnętrzne"
 
 #: src/item.cpp
 msgid "Strapped"
-msgstr ""
+msgstr "Na pasach"
 
 #: src/item.cpp
 msgid "Outer aura"
-msgstr ""
+msgstr "Aura zewnętrzna"
 
 #: src/item.cpp
 msgid "Should never see this"
-msgstr ""
+msgstr "Tego nie powinno być widać"
 
 #: src/item.cpp
 msgid "* This device has electronic port type: "
-msgstr ""
+msgstr "* To urządzenie ma port elektroniczny typu: "
 
 #: src/item.cpp
 msgid ""
 "\n"
 "* This device does not support transfer to e-port types: "
 msgstr ""
+"\n"
+"* To urządzenie nie obsługuje przesyłu do portów elektronicznych typu: "
 
 #: src/item.cpp
 #, c-format
 msgid "<info>Description</info>: %s"
-msgstr ""
+msgstr "<info>Opis</info>: %s"
 
 #: src/item.cpp
 msgid "When <bold>wielded</bold> this item provides:"
-msgstr ""
+msgstr "Gdy <bold>dzierżony</bold>, ten przedmiot zapewnia:"
 
 #: src/item.cpp
 msgid "When <bold>worn</bold> this item provides:"
-msgstr ""
+msgstr "Gdy <bold>noszony</bold>, ten przedmiot zapewnia:"
 
 #: src/item.cpp
 msgid "When <bold>carried</bold> this item provides:"
-msgstr ""
+msgstr "Gdy <bold>przenoszony</bold>, ten przedmiot zapewnia:"
 
 #. ~ Type of protection (ex: "Bash Protection")
 #: src/item.cpp
 #, c-format
 msgid "<bold>%s Protection</bold>:"
-msgstr ""
+msgstr "<bold>Ochrona (%s)</bold>:"
 
 #: src/item.cpp
 #, c-format
 msgid "* This item is currently used by %s"
-msgstr ""
+msgstr "* Ten przedmiot jest obecnie używany przez: %s"
 
 #: src/item.cpp
 #, c-format
 msgid "* <neutral>%d %s</neutral> can be turned into <neutral>%d %s</neutral>."
 msgstr ""
+"* <neutral>%d %s</neutral> można przerobić na <neutral>%d %s</neutral>."
 
 #: src/item.cpp
 msgid "* This item can be <info>milled</info>."
-msgstr ""
+msgstr "* Ten przedmiot można <info>zmielić</info>."
 
 #: src/item.cpp
 #, c-format
@@ -822,9 +867,17 @@ msgid ""
 msgid_plural ""
 "* Once set in an anaerobic digester, this will ferment in around %d hours."
 msgstr[0] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d godziny."
 msgstr[1] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d godzin."
 msgstr[2] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d godzin."
 msgstr[3] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d godziny."
 
 #: src/item.cpp
 #, c-format
@@ -833,189 +886,199 @@ msgid ""
 msgid_plural ""
 "* Once set in an anaerobic digester, this will ferment in around %d days."
 msgstr[0] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d dnia."
 msgstr[1] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d dni."
 msgstr[2] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d dni."
 msgstr[3] ""
+"* Po umieszczeniu w komorze fermentacji beztlenowej przefermentuje w ciągu "
+"około %d dnia."
 
 #: src/item.cpp
 #, c-format
 msgid "<bold>Can be stored in %d unworn wearables.</bold>"
-msgstr ""
+msgstr "<bold>Można przechowywać w nienoszonych ubraniach: %d.</bold>"
 
 #: src/item.cpp
 #, c-format
 msgid "<bold>Can be stored in (worn)</bold>: %s.  And %d unworn wearables."
 msgstr ""
+"<bold>Można przechowywać w (noszone)</bold>: %s. Oraz w nienoszonych "
+"ubraniach: %d."
 
 #: src/item.cpp
 #, c-format
 msgid "<bold>Can be stored in (wearables)</bold>: %s."
-msgstr ""
+msgstr "<bold>Można przechowywać w (ubrania)</bold>: %s."
 
 #: src/item.cpp
 #, c-format
 msgid "You could install it in a vehicle: %s"
-msgstr ""
+msgstr "Możesz zainstalować to w pojeździe: %s"
 
 #: src/item.cpp
 #, c-format
 msgid "You could install it as an appliance: %s"
-msgstr ""
+msgstr "Możesz zainstalować to jako urządzenie: %s"
 
 #: src/item.cpp
 msgid "<color_light_green>█VNT </color>"
-msgstr ""
+msgstr "<color_light_green>█WENT </color>"
 
 #: src/item.cpp
 msgid "<color_yellow>▃HEAT </color>"
-msgstr ""
+msgstr "<color_yellow>▃CIEPŁO </color>"
 
 #: src/item.cpp
 msgid "<color_light_red>▅HEAT </color>"
-msgstr ""
+msgstr "<color_light_red>▅CIEPŁO </color>"
 
 #: src/item.cpp
 msgid "<color_red>▇HEAT! </color>"
-msgstr ""
+msgstr "<color_red>▇CIEPŁO! </color>"
 
 #: src/item.cpp
 msgid "<color_pink>█HEAT!! </color>"
-msgstr ""
+msgstr "<color_pink>█CIEPŁO!! </color>"
 
 #: src/item.cpp
 #, c-format
 msgid " (-/%1$d cable%2$s)"
-msgstr ""
+msgstr " (-/%1$d kabel%2$s)"
 
 #: src/item.cpp
 #, c-format
 msgid " (%1$s cable%2$s)"
-msgstr ""
+msgstr " (%1$s kabel%2$s)"
 
 #: src/item.cpp
 #, c-format
 msgid "%d/%d cable%s"
-msgstr ""
+msgstr "%d/%d kabel%s"
 
 #: src/item.cpp
 msgid "chute needs modification before attaching"
-msgstr ""
+msgstr "rękaw wymaga modyfikacji przed zamocowaniem"
 
 #: src/item.cpp
 #, c-format
 msgid "cannot be installed on a weapon with a \"%s\""
-msgstr ""
+msgstr "nie można zainstalować na broni z: „%s”"
 
 #: src/item.cpp
 #, c-format
 msgid "You extinguish your %s and put it away."
-msgstr ""
+msgstr "Gasisz przedmiot %s i odkładasz go."
 
 #: src/item.cpp
 #, c-format
 msgid " %s's cable"
-msgstr ""
+msgstr " kabel: %s"
 
 #: src/item.cpp
 #, c-format
 msgid "The %s doesn't have a cable!"
-msgstr ""
+msgstr "%s nie ma kabla!"
 
 #: src/item.cpp
 msgid "You can't attach a tow-line to an internal part."
-msgstr ""
+msgstr "Nie możesz przymocować liny holowniczej do części wewnętrznej."
 
 #: src/item.cpp
 msgid "You can't attach a tow-line to a racked part."
-msgstr ""
+msgstr "Nie możesz przymocować liny holowniczej do części na stojaku."
 
 #: src/item.cpp
 #, c-format
 msgid "The %s can't connect to that."
-msgstr ""
+msgstr "%s nie może się z tym połączyć."
 
 #: src/item.cpp
 #, c-format
 msgid "You cannot connect the %s to itself."
-msgstr ""
+msgstr "Nie możesz połączyć przedmiotu %s z nim samym."
 
 #: src/item.cpp
 #, c-format
 msgid "The %1$s and %2$s are already connected."
-msgstr ""
+msgstr "%1$s i %2$s są już połączone."
 
 #: src/item.cpp
 #, c-format
 msgid "The %s can't stretch that far!"
-msgstr ""
+msgstr "%s nie sięgnie tak daleko!"
 
 #. ~ %1$s - cable name, %2$s - the reason why it failed
 #: src/item.cpp
 #, c-format
 msgid "You can't attach the %1$s: %2$s"
-msgstr ""
+msgstr "Nie możesz podłączyć: %1$s: %2$s"
 
 #. ~ %1$s - first vehicle name, %2$s - second vehicle name - %3$s - cable
 #. name,
 #: src/item.cpp
 #, c-format
 msgid "You connect the %1$s and %2$s with the %3$s."
-msgstr ""
+msgstr "Łączysz pojazdy: %1$s i %2$s za pomocą: %3$s."
 
 #: src/item.cpp
 #, c-format
 msgid "The %s has come loose from the solar pack."
-msgstr ""
+msgstr "%s odłącza się od plecaka solarnego."
 
 #: src/item.cpp
 #, c-format
 msgid "The %s has come loose from the UPS."
-msgstr ""
+msgstr "%s odłącza się od UPS-a."
 
 #: src/item.cpp
 #, c-format
 msgid "over-extended %s"
-msgstr ""
+msgstr "%s (nadmiernie rozciągnięty)"
 
 #: src/item.cpp
 #, c-format
 msgid "%s's over-extended cable"
-msgstr ""
+msgstr "nadmiernie rozciągnięty kabel: %s"
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s breaks loose!"
-msgstr ""
+msgstr "Twój przedmiot %s się wyrywa!"
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s is stretched to its limit!"
-msgstr ""
+msgstr "Twój przedmiot %s jest rozciągnięty do granic możliwości!"
 
 #: src/item.cpp src/vehicle.cpp
 #, c-format
 msgid "You detached the %s."
-msgstr ""
+msgstr "Odłączasz: %s."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s has come loose."
-msgstr ""
+msgstr "Twój przedmiot %s się odłącza."
 
 #: src/item.cpp
 #, c-format
 msgid "The %s has come loose."
-msgstr ""
+msgstr "%s się odłącza."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s rusts due to corrosive powder fouling."
-msgstr ""
+msgstr "Twój przedmiot %s rdzewieje z powodu zanieczyszczenia żrącym prochem."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s beeps as its cooling cycle concludes."
-msgstr ""
+msgstr "Twój przedmiot %s piszczy, kończąc cykl chłodzenia."
 
 #: src/item.cpp
 #, c-format
@@ -1023,160 +1086,167 @@ msgid ""
 "You can feel the struggling systems of your %s beneath the blare of the "
 "overheat alarm."
 msgstr ""
+"Poprzez wycie alarmu przegrzania wyczuwasz walczące systemy przedmiotu %s."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s frantically sounds an overheat alarm."
-msgstr ""
+msgstr "Twój przedmiot %s gorączkowo włącza alarm przegrzania."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s sounds a heat warning chime!"
-msgstr ""
+msgstr "Twój przedmiot %s wydaje ostrzegawczy sygnał przegrzania!"
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s reboots successfully."
-msgstr ""
+msgstr "Twój przedmiot %s pomyślnie uruchamia się ponownie."
 
 #: src/item.cpp
 #, c-format
 msgid "Your %s fails to reboot properly."
-msgstr ""
+msgstr "Twój przedmiot %s nie uruchamia się poprawnie ponownie."
 
 #: src/item_contents.cpp
 msgid "Enter Priority"
-msgstr ""
+msgstr "Podaj priorytet"
 
 #: src/item_contents.cpp
 #, c-format
 msgid "<bold>Pockets %s</bold>"
-msgstr ""
+msgstr "<bold>Kieszenie %s</bold>"
 
 #: src/item_location.cpp
 msgid "item is too heavy for a parent pocket"
-msgstr ""
+msgstr "przedmiot jest za ciężki dla kieszeni nadrzędnej"
 
 #: src/item_location.cpp
 msgid "item is too big for a parent pocket"
-msgstr ""
+msgstr "przedmiot jest za duży dla kieszeni nadrzędnej"
 
 #: src/item_location.cpp
 msgid "item is too long for a parent pocket"
-msgstr ""
+msgstr "przedmiot jest za długi dla kieszeni nadrzędnej"
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "The %s falls out of the %s."
-msgstr ""
+msgstr "%s wypada z: %s."
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "Allowed materials: %s"
-msgstr ""
+msgstr "Dozwolone materiały: %s"
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "<bold>Can't put hard armor on: %s</bold>:"
-msgstr ""
+msgstr "<bold>Nie można założyć twardego pancerza na: %s</bold>:"
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "<bold>Protection</bold>: %s: "
-msgstr ""
+msgstr "<bold>Ochrona</bold>: %s: "
 
 #: src/item_pocket.cpp
 #, c-format
 msgctxt "protection info"
 msgid " %s: "
-msgstr ""
+msgstr " %s: "
 
 #: src/item_pocket.cpp
 msgid "This pocket is over capacity and will spill if moved!"
 msgstr ""
+"Ta kieszeń jest przepełniona i jej zawartość wysypie się przy przenoszeniu!"
 
 #: src/item_pocket.cpp
 msgid "only books, e-scannable items can go into e-file pocket"
 msgstr ""
+"do e-kieszeni na pliki mogą trafić tylko książki i przedmioty dające się "
+"zeskanować"
 
 #: src/item_pocket.cpp
 msgid "only cables can go into cable pocket"
-msgstr ""
+msgstr "do kieszeni na kable mogą trafić tylko kable"
 
 #: src/item_pocket.cpp
 msgid "item is not ammunition"
-msgstr ""
+msgstr "przedmiot nie jest amunicją"
 
 #: src/item_pocket.cpp
 msgid "item is too big"
-msgstr ""
+msgstr "przedmiot jest za duży"
 
 #: src/item_pocket.cpp
 msgid "can't mix frozen liquid with contained item in the watertight container"
 msgstr ""
+"nie można mieszać zamarzniętego płynu z zawartością wodoszczelnego pojemnika"
 
 #: src/item_pocket.cpp
 msgid "can't mix item with contained frozen liquid in the watertight container"
 msgstr ""
+"nie można mieszać przedmiotu z zamarzniętym płynem w wodoszczelnym pojemniku"
 
 #: src/item_pocket.cpp
 msgid "ablative pocket is being worn with hard armor can't support hard plate"
 msgstr ""
+"kieszeń ablacyjna noszona z twardym pancerzem nie może utrzymać twardej płyty"
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "Your %1$s falls into your %2$s."
-msgstr ""
+msgstr "Twój przedmiot %1$s wpada do: %2$s."
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "<npcname>'s %s falls to the ground."
-msgstr ""
+msgstr "%s <npcname> spada na ziemię."
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "The %s falls to the ground."
-msgstr ""
+msgstr "%s spada na ziemię."
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "Liquid leaked out from the %s and dripped onto the ground!"
-msgstr ""
+msgstr "Płyn wyciekł z: %s i skapnął na ziemię!"
 
 #: src/item_pocket.cpp
 msgid "pocket preset configuration"
-msgstr ""
+msgstr "konfiguracja szablonu kieszeni"
 
 #: src/item_pocket.cpp
 #, c-format
 msgid "Preset Name: %s"
-msgstr ""
+msgstr "Nazwa szablonu: %s"
 
 #: src/item_tname.cpp
 msgid " (uninteresting)"
-msgstr ""
+msgstr " (nieciekawe)"
 
 #: src/item_tname.cpp
 msgid " (read)"
-msgstr ""
+msgstr " (przeczytane)"
 
 #: src/item_tname.cpp
 msgid " (in use)"
-msgstr ""
+msgstr " (w użyciu)"
 
 #: src/item_tname.cpp
 msgctxt "Adjective, as in diamond katana"
 msgid "diamond "
-msgstr ""
+msgstr "diament. "
 
 #: src/item_tname.cpp
 #, c-format
 msgid " (%s free)"
-msgstr ""
+msgstr " (wolne: %s)"
 
 #: src/item_tname.cpp
 msgid " (unbrowsed)"
-msgstr ""
+msgstr " (nieprzejrzane)"
 
 #. ~ You can use this string to change the order of item name segments. The
 #. default order is:
@@ -1193,27 +1263,27 @@ msgstr ""
 #. ~ refer to io::enum_to_string<tname::segments> for an updated list
 #: src/item_tname.cpp
 msgid "tname_segments_order"
-msgstr ""
+msgstr "tname_segments_order"
 
 #: src/iuse.cpp
 msgid "You wash some of the chemical irritant from your eyes."
-msgstr ""
+msgstr "Wypłukujesz część drażniącej substancji chemicznej z oczu."
 
 #: src/iuse.cpp
 msgid "Automatically eating the gross food because a test told us to."
-msgstr ""
+msgstr "Automatycznie jesz obrzydliwe jedzenie, bo kazał tak test."
 
 #: src/iuse.cpp
 #, c-format
 msgid "Tame which animal with %s?"
-msgstr ""
+msgstr "Które zwierzę oswoić za pomocą: %s?"
 
 #: src/iuse.cpp
 #, c-format
 msgid "Unload everything from this %s"
-msgstr ""
+msgstr "Wyładuj wszystko z: %s"
 
 #: src/iuse.cpp
 #, c-format
 msgid "Activate the %s"
-msgstr ""
+msgstr "Aktywuj: %s"
