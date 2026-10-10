@@ -20,15 +20,18 @@ msgid ""
 "still makes a decent melee weapon, and can be used for all kinds "
 "construction."
 msgstr ""
+"Długa deska o przekroju 2 na 4 cale. Choć nie jest tak powszechna jak wersja "
+"czterostopowa, nadal stanowi przyzwoitą broń do walki w zwarciu i nadaje się "
+"do wszelkiego rodzaju konstrukcji."
 
 #. ~ Item name
 #: data/json/items/resources/wood.json
 msgid "wooden post"
 msgid_plural "wooden posts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "drewniany słupek"
+msgstr[1] "drewniane słupki"
+msgstr[2] "drewnianych słupków"
+msgstr[3] "drewnianego słupka"
 
 #. ~ Description of "wooden post"
 #: data/json/items/resources/wood.json
@@ -36,15 +39,17 @@ msgid ""
 "A wooden post with a 4 by 4 square base.  Posts with a length similar to this"
 " are commonly used in mailboxes or as table legs."
 msgstr ""
+"Drewniany słupek o kwadratowej podstawie 4 na 4 cale. Słupki o podobnej "
+"długości są powszechnie używane do skrzynek pocztowych lub jako nogi stołów."
 
 #. ~ Item name
 #: data/json/items/resources/wood.json
 msgid "short wooden post"
 msgid_plural "short wooden posts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "krótki drewniany słupek"
+msgstr[1] "krótkie drewniane słupki"
+msgstr[2] "krótkich drewnianych słupków"
+msgstr[3] "krótkiego drewnianego słupka"
 
 #. ~ Description of "short wooden post"
 #: data/json/items/resources/wood.json
@@ -52,15 +57,17 @@ msgid ""
 "A wooden post with a 4 by 4 square base.  Posts with a length similar to this"
 " are commonly used as chair legs."
 msgstr ""
+"Drewniany słupek o kwadratowej podstawie 4 na 4 cale. Słupki o podobnej "
+"długości są powszechnie używane jako nogi krzeseł."
 
 #. ~ Item name
 #: data/json/items/resources/wood.json
 msgid "long wooden post"
 msgid_plural "long wooden posts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "długi drewniany słup"
+msgstr[1] "długie drewniane słupy"
+msgstr[2] "długich drewnianych słupów"
+msgstr[3] "długiego drewnianego słupa"
 
 #. ~ Description of "long wooden post"
 #: data/json/items/resources/wood.json
@@ -68,15 +75,17 @@ msgid ""
 "A wooden post with a 4 by 4 square base.  Posts with a length similar to this"
 " are commonly used in the construction of walls and floors."
 msgstr ""
+"Drewniany słup o kwadratowej podstawie 4 na 4 cale. Słupy o podobnej długości"
+" są powszechnie używane przy budowie ścian i podłóg."
 
 #. ~ Item name
 #: data/json/items/resources/wood.json
 msgid "small wood block"
 msgid_plural "small wood blocks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mały klocek drewna"
+msgstr[1] "małe klocki drewna"
+msgstr[2] "małych klocków drewna"
+msgstr[3] "małego klocka drewna"
 
 #. ~ Description of "small wood block"
 #: data/json/items/resources/wood.json
@@ -84,6 +93,8 @@ msgid ""
 "A small 2x2x5 inches block of wood, primarily used for carving out small "
 "wooden objects."
 msgstr ""
+"Mały klocek drewna o wymiarach 2 x 2 x 5 cali, używany głównie do rzeźbienia "
+"małych drewnianych przedmiotów."
 
 #. ~ Description of "wooden panel"
 #: data/json/items/resources/wood.json
@@ -92,6 +103,10 @@ msgid ""
 "similar, already cut to shape.  Good for all kinds of construction, but for "
 "really big projects you'd need a proper sheet of uncut plywood or the like."
 msgstr ""
+"Szeroka, cienka drewniana płyta – sklejka, OSB, MDF, deski na pióro i wpust "
+"lub coś podobnego, już przycięta na wymiar. Dobra do wszelkiego rodzaju "
+"konstrukcji, ale do naprawdę dużych projektów potrzebny byłby porządny arkusz"
+" nieprzyciętej sklejki lub czegoś podobnego."
 
 #. ~ Description of "large wooden sheet"
 #: data/json/items/resources/wood.json
@@ -100,15 +115,19 @@ msgid ""
 "and bulky, it is extremely useful for all manner of construction, but you "
 "might have to cut it to size before doing smaller projects."
 msgstr ""
+"Standardowy arkusz płaskiego drewna o wymiarach 4 na 8 stóp – zwykle sklejka,"
+" OSB lub MDF. Ciężki i nieporęczny, niezwykle przydatny przy wszelkiego "
+"rodzaju konstrukcjach, ale przed mniejszymi projektami trzeba go może "
+"przyciąć na wymiar."
 
 #. ~ Item name
 #: data/json/items/resources/wood.json
 msgid "giant wooden screw"
 msgid_plural "giant wooden screws"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "olbrzymia drewniana śruba"
+msgstr[1] "olbrzymie drewniane śruby"
+msgstr[2] "olbrzymich drewnianych śrub"
+msgstr[3] "olbrzymiej drewnianej śruby"
 
 #. ~ Description of "giant wooden screw"
 #: data/json/items/resources/wood.json
@@ -116,6 +135,8 @@ msgid ""
 "A giant screw carved out of solid wood, a simple component used to convert "
 "rotational energy into a downward movement of greater force."
 msgstr ""
+"Olbrzymia śruba wyrzeźbiona z litego drewna – prosty element służący do "
+"zamiany ruchu obrotowego na ruch w dół o większej sile."
 
 #. ~ Description of "power cord"
 #: data/json/items/tool/cables.json
@@ -123,12 +144,14 @@ msgid ""
 "A power cord, like you've seen many times before: it's a short multi-stranded"
 " copper cord with a power outlet at the end."
 msgstr ""
+"Przewód zasilający, jakich widziałeś już wiele: krótki, wielożyłowy miedziany"
+" przewód z gniazdkiem na końcu."
 
 #. ~ "menu_text" action message of item "power cord"
 #. ~ "menu_text" action message of item "extension cord"
 #: data/json/items/tool/cables.json
 msgid "Plug in / Manage connections"
-msgstr ""
+msgstr "Podłącz / zarządzaj połączeniami"
 
 #. ~ Description of "jumper cable"
 #: data/json/items/tool/cables.json
@@ -137,23 +160,27 @@ msgid ""
 "with power leads on either end, whose main purpose is to share power between "
 "vehicles, but can also link other electrical systems."
 msgstr ""
+"Trzystopowy (czyli około metrowy) kabel rozruchowy: krótki, wielożyłowy "
+"miedziany kabel z końcówkami zasilającymi po obu stronach, służący głównie do"
+" przekazywania energii między pojazdami, ale może też łączyć inne układy "
+"elektryczne."
 
 #. ~ "menu_text" action message of item "jumper cable"
 #. ~ "menu_text" action message of item "heavy-duty tow cable"
 #. ~ "menu_text" action message of item "shiny debug cable"
 #: data/json/items/tool/cables.json
 msgid "Attach / Manage connections"
-msgstr ""
+msgstr "Przyczep / zarządzaj połączeniami"
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/tool/cables.json data/json/vehicleparts/vehicle_parts.json
 msgid "heavy-duty jumper cable"
 msgid_plural "heavy-duty jumper cables"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wytrzymały kabel rozruchowy"
+msgstr[1] "wytrzymałe kable rozruchowe"
+msgstr[2] "wytrzymałych kabli rozruchowych"
+msgstr[3] "wytrzymałego kabla rozruchowego"
 
 #. ~ Description of "heavy-duty jumper cable"
 #: data/json/items/tool/cables.json
@@ -163,6 +190,10 @@ msgid ""
 " expect the power loss would be noticeable.  Can also link other electrical "
 "systems."
 msgstr ""
+"Długi, gruby, wytrzymały kabel rozruchowy z końcówkami zasilającymi po obu "
+"stronach. Wygląda na to, że można nim połączyć ze sobą dwa pojazdy, choć "
+"spodziewasz się zauważalnych strat energii. Może też łączyć inne układy "
+"elektryczne."
 
 #. ~ Description of "extension cord"
 #: data/json/items/tool/cables.json
@@ -171,6 +202,9 @@ msgid ""
 "connecting appliances.  Could be used on any appliance or other household "
 "electrical system."
 msgstr ""
+"Długi, trzydziestostopowy (czyli około dziesięciometrowy) pomarańczowy "
+"przedłużacz do przedłużania kabli lub podłączania urządzeń. Można go użyć z "
+"każdym urządzeniem lub innym domowym układem elektrycznym."
 
 #. ~ Description of "outdoor extension cord"
 #: data/json/items/tool/cables.json
@@ -179,6 +213,9 @@ msgid ""
 "cables or connecting outdoor appliances.  Could be used on any appliance or "
 "other household electrical system."
 msgstr ""
+"Bardzo długi, stustopowy (czyli około trzydziestometrowy) pomarańczowy "
+"przedłużacz do przedłużania kabli lub podłączania urządzeń na zewnątrz. Można"
+" go użyć z każdym urządzeniem lub innym domowym układem elektrycznym."
 
 #. ~ Description of "heavy-duty tow cable"
 #: data/json/items/tool/cables.json
@@ -187,16 +224,19 @@ msgid ""
 "steel wire coated in plastic.  If attached to a vehicle, it could be used to "
 "pull another vehicle of any weight."
 msgstr ""
+"Niezwykle wytrzymały, trzydziestostopowy (czyli około dziewięciometrowy) "
+"kabel holowniczy z grubej stalowej linki w plastikowej osłonie. Przyczepiony "
+"do pojazdu pozwoliłby holować inny pojazd o dowolnej masie."
 
 #. ~ Item name
 #. ~ Vehicle part name
 #: data/json/items/tool/cables.json data/json/vehicleparts/vehicle_parts.json
 msgid "shiny debug cable"
 msgid_plural "shiny debug cables"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lśniący kabel debugowania"
+msgstr[1] "lśniące kable debugowania"
+msgstr[2] "lśniących kabli debugowania"
+msgstr[3] "lśniącego kabla debugowania"
 
 #. ~ Description of "shiny debug cable"
 #: data/json/items/tool/cables.json
@@ -205,26 +245,30 @@ msgid ""
 "feather, and fits in a matchbook.  You're sure this wasn't supposed to exist,"
 " and the way it shimmers makes you uneasy."
 msgstr ""
+"To kabel bogów: 100 metrów długości, bez strat energii, lekki jak piórko i "
+"mieści się w pudełku zapałek. Jesteś pewien, że nie powinien istnieć, a "
+"sposób, w jaki migocze, budzi twój niepokój."
 
 #. ~ Description of "steel bottle"
 #: data/json/items/tool/container.json
 msgid "A stainless steel water bottle, holds 750 mL of liquid."
-msgstr ""
+msgstr "Butelka na wodę ze stali nierdzewnej, mieści 750 ml płynu."
 
 #. ~ Description of "foldable plastic bottle"
 #: data/json/items/tool/container.json
 msgid "A non-rigid plastic bottle for easy storage, holds 500 mL of liquid."
 msgstr ""
+"Miękka plastikowa butelka, łatwa do przechowywania, mieści 500 ml płynu."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json data/mods/Aftershock/items/tools.json
 #: data/mods/aftershock_exoplanet/items/tools.json
 msgid "atomic coffeemaker"
 msgid_plural "atomic coffeemakers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "atomowy ekspres do kawy"
+msgstr[1] "atomowe ekspresy do kawy"
+msgstr[2] "atomowych ekspresów do kawy"
+msgstr[3] "atomowego ekspresu do kawy"
 
 #. ~ Description of "atomic coffeemaker"
 #: data/json/items/tool/cooking.json
@@ -235,6 +279,11 @@ msgid ""
 "well as many other countries, but don't let that stop you from brewing your "
 "morning Joe with the power of the atom™!"
 msgstr ""
+"To ekspres do kawy Curie-G firmy CuppaTech. Słynie z tego, że do podgrzewania"
+" wody na kawę używa generatora radioaktywnego, co zmniejsza całkowite zużycie"
+" prądu. Obawy o bezpieczeństwo konsumentów doprowadziły do zakazania go w UE "
+"i wielu innych krajach, ale niech cię to nie powstrzyma przed parzeniem "
+"porannej kawy mocą atomu™!"
 
 #. ~ Description of "butchering kit"
 #: data/json/items/tool/cooking.json
@@ -242,6 +291,8 @@ msgid ""
 "A kit containing all the specialized knives you need to debone, skin, and "
 "prepare cuts of meat from an animal."
 msgstr ""
+"Zestaw zawierający wszystkie specjalistyczne noże potrzebne do odkostniania, "
+"oprawiania i porcjowania mięsa ze zwierzęcia."
 
 #. ~ Description of "can sealer"
 #: data/json/items/tool/cooking.json
@@ -249,6 +300,8 @@ msgid ""
 "A hand-crank-powered cast steel machine designed to automatically seal tin "
 "cans."
 msgstr ""
+"Maszyna z lanej stali napędzana ręczną korbą, przeznaczona do automatycznego "
+"zamykania puszek."
 
 #. ~ Description of "electric carver (off)"
 #: data/json/items/tool/cooking.json
@@ -257,6 +310,8 @@ msgid ""
 "vibrate together to slice just about anything from turkey to ham… even "
 "zombies!"
 msgstr ""
+"Elektryczny nóż do mięsa zasilany z sieci. Ma dwa ząbkowane ostrza, które "
+"wibrują razem i kroją prawie wszystko, od indyka po szynkę… nawet zombie!"
 
 #. ~ Description of "charcoal smoker"
 #: data/json/items/tool/cooking.json
@@ -264,15 +319,18 @@ msgid ""
 "A portable charcoal smoker.  Good for weekend barbecuing and preserving meat "
 "with smoke.  Cannot be used with coal; the toxic fumes would ruin the meat."
 msgstr ""
+"Przenośna wędzarnia na węgiel drzewny. Dobra do weekendowego grillowania i "
+"konserwowania mięsa dymem. Nie można w niej używać węgla kamiennego – "
+"toksyczne opary zepsułyby mięso."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "coal/charcoal cooker"
 msgid_plural "coal/charcoal cookers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kuchenka na węgiel"
+msgstr[1] "kuchenki na węgiel"
+msgstr[2] "kuchenek na węgiel"
+msgstr[3] "kuchenki na węgiel"
 
 #. ~ Description of "coal/charcoal cooker"
 #: data/json/items/tool/cooking.json
@@ -280,11 +338,13 @@ msgid ""
 "A little metal tank for holding coal or charcoal, with a pilot light attached"
 " and a pipe to vent toxic coal fumes.  You could use it for cooking food."
 msgstr ""
+"Mały metalowy zbiornik na węgiel kamienny lub drzewny, z płomieniem pilotowym"
+" i rurą odprowadzającą toksyczne opary węgla. Można na nim gotować jedzenie."
 
 #. ~ Description of "clay pot"
 #: data/json/items/tool/cooking.json
 msgid "A crude clay pot used for cooking."
-msgstr ""
+msgstr "Prymitywny gliniany garnek do gotowania."
 
 #. ~ Description of "coffeemaker"
 #: data/json/items/tool/cooking.json
@@ -292,6 +352,8 @@ msgid ""
 "A heating element with a pot and a frame for holding coffee or other powders."
 "  You can use it to make coffee, or other drinks if you so choose."
 msgstr ""
+"Grzałka z dzbankiem i obudową na kawę lub inne proszki. Możesz jej użyć do "
+"zrobienia kawy albo, jeśli wolisz, innych napojów."
 
 #. ~ Description of "food dehydrator"
 #: data/json/items/tool/cooking.json
@@ -299,6 +361,8 @@ msgid ""
 "An electric food dehydrator, invaluable in preserving food.  Can be connected"
 " to the electric grid using cord."
 msgstr ""
+"Elektryczna suszarka do żywności, nieoceniona przy konserwowaniu jedzenia. "
+"Można ją podłączyć do sieci elektrycznej przewodem."
 
 #. ~ Description of "hexamine stove"
 #: data/json/items/tool/cooking.json
@@ -306,6 +370,8 @@ msgid ""
 "A lightweight, folding stove designed to use small hexamine tablets for "
 "cooking.  Also known as an Esbit stove."
 msgstr ""
+"Lekka, składana kuchenka przeznaczona do gotowania na małych tabletkach "
+"urotropiny. Znana też jako kuchenka Esbit."
 
 #. ~ Description of "food processor"
 #: data/json/items/tool/cooking.json
@@ -313,11 +379,14 @@ msgid ""
 "A kitchen appliance capable of slicing, chopping, shredding, grinding, "
 "pureeing, and mixing."
 msgstr ""
+"Urządzenie kuchenne, które potrafi kroić, siekać, szatkować, mielić, "
+"przecierać i mieszać."
 
 #. ~ Description of "gasoline cooker"
 #: data/json/items/tool/cooking.json
 msgid "A simple heater powered by gasoline.  It is designed for cooking food."
 msgstr ""
+"Prosty podgrzewacz zasilany benzyną. Przeznaczony do gotowania jedzenia."
 
 #. ~ Description of "heat pack"
 #: data/json/items/tool/cooking.json
@@ -325,6 +394,8 @@ msgid ""
 "A chemical heat pack, used to treat sports injuries and heat food.  It is "
 "usable only once."
 msgstr ""
+"Chemiczny ogrzewacz, używany do leczenia urazów sportowych i podgrzewania "
+"jedzenia. Jednorazowy."
 
 #. ~ Description of "used heat pack"
 #: data/json/items/tool/cooking.json
@@ -332,6 +403,9 @@ msgid ""
 "A chemical heat pack, used to treat sports injuries and heat food.  This one "
 "has been used up and is chemically inert, rendering it useless."
 msgstr ""
+"Chemiczny ogrzewacz, używany do leczenia urazów sportowych i podgrzewania "
+"jedzenia. Ten został zużyty i jest chemicznie obojętny, więc stał się "
+"bezużyteczny."
 
 #. ~ Description of "hotplate"
 #: data/json/items/tool/cooking.json
@@ -339,15 +413,17 @@ msgid ""
 "A small heating element on a stand, powered by your electric grid.  It is "
 "indispensable for cooking and chemistry.  Try not to burn yourself."
 msgstr ""
+"Mały element grzejny na podstawce, zasilany z twojej sieci elektrycznej. "
+"Niezbędny do gotowania i chemii. Uważaj, żeby się nie poparzyć."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "induction hotplate"
 msgid_plural "induction hotplates"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "indukcyjna kuchenka turystyczna"
+msgstr[1] "indukcyjne kuchenki turystyczne"
+msgstr[2] "indukcyjnych kuchenek turystycznych"
+msgstr[3] "indukcyjnej kuchenki turystycznej"
 
 #. ~ Description of "induction hotplate"
 #: data/json/items/tool/cooking.json
@@ -355,6 +431,9 @@ msgid ""
 "A high end hotplate that utilizes magnetic induction coils to heat ferrous "
 "cookware directly.  It is far more efficient than a standard hotplate."
 msgstr ""
+"Wysokiej klasy kuchenka, która za pomocą cewek indukcyjnych bezpośrednio "
+"nagrzewa naczynia z materiałów ferromagnetycznych. Jest znacznie wydajniejsza"
+" od zwykłej kuchenki turystycznej."
 
 #. ~ Description of "makeshift vacuum sealer"
 #: data/json/items/tool/cooking.json
@@ -362,6 +441,8 @@ msgid ""
 "A homemade heat sealer unit with an air pump.  It's used for vacuum packing "
 "food to preserve it."
 msgstr ""
+"Domowej roboty zgrzewarka z pompką powietrza. Służy do pakowania żywności "
+"próżniowo, aby ją zakonserwować."
 
 #. ~ Description of "mess kit"
 #: data/json/items/tool/cooking.json
@@ -369,6 +450,8 @@ msgid ""
 "A self-contained camping mess kit, containing everything you might need for "
 "wilderness cooking."
 msgstr ""
+"Samodzielny turystyczny zestaw z menażką, zawierający wszystko, czego możesz "
+"potrzebować do gotowania w dziczy."
 
 #. ~ Description of "mortar and pestle"
 #: data/json/items/tool/cooking.json
@@ -376,15 +459,18 @@ msgid ""
 "A simple combination of a small grindstone and a bowl-shaped stone.  Used for"
 " grinding grain, but time-consuming compared to more complex methods."
 msgstr ""
+"Proste połączenie małego kamienia do mielenia i kamiennej misy. Służy do "
+"mielenia ziarna, ale jest czasochłonne w porównaniu z bardziej złożonymi "
+"metodami."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "multi-cooker"
 msgid_plural "multi-cookers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "multi-kucharz"
+msgstr[1] "multi-kucharze"
+msgstr[2] "multi-kucharzy"
+msgstr[3] "multi-kucharza"
 
 #. ~ Description of "multi-cooker"
 #: data/json/items/tool/cooking.json
@@ -394,15 +480,19 @@ msgid ""
 "parboiling potatoes to cooking curry to popping popcorn.  There's no manual, "
 "but you're sure you can work it out."
 msgstr ""
+"Profesjonalny multi-kucharz z krótkim przewodem elektrycznym. Jego liczne "
+"ustawienia i funkcje obiecują poradzić sobie z każdym rodzajem gotowania, od "
+"podgotowywania ziemniaków przez gotowanie curry po prażenie popcornu. Nie ma "
+"instrukcji, ale jesteś pewien, że jakoś to rozgryziesz."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "multi-cooker - cooking"
 msgid_plural "multi-cookers - cooking"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "multi-kucharz – gotuje"
+msgstr[1] "multi-kucharze – gotuje"
+msgstr[2] "multi-kucharzy – gotuje"
+msgstr[3] "multi-kucharza – gotuje"
 
 #. ~ Description of "multi-cooker - cooking"
 #: data/json/items/tool/cooking.json
@@ -410,11 +500,13 @@ msgid ""
 "A professional-grade multi-cooker, with a battery slot for camping trips or "
 "tailgating.  There is a dish cooking inside it."
 msgstr ""
+"Profesjonalny multi-kucharz z gniazdem na baterię na wyjazdy kempingowe lub "
+"imprezy przy samochodzie. W środku gotuje się danie."
 
 #. ~ Description of "kerosene cooker"
 #: data/json/items/tool/cooking.json
 msgid "A simple heater powered by kerosene.  It is designed for cooking food."
-msgstr ""
+msgstr "Prosty podgrzewacz zasilany naftą. Przeznaczony do gotowania jedzenia."
 
 #. ~ Description of "manual oil press"
 #: data/json/items/tool/cooking.json
@@ -422,15 +514,17 @@ msgid ""
 "A hand-cranked press for creating vegetable oil.  A hotplate heats the raw "
 "material to increase extraction efficiency."
 msgstr ""
+"Prasa z ręczną korbą do wytwarzania oleju roślinnego. Kuchenka podgrzewa "
+"surowiec, aby zwiększyć wydajność tłoczenia."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "oil-powered manual oil press"
 msgid_plural "oil-powered manual oil presses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ręczna prasa do oleju zasilana olejem"
+msgstr[1] "ręczne prasy do oleju zasilane olejem"
+msgstr[2] "ręcznych pras do oleju zasilanych olejem"
+msgstr[3] "ręcznej prasy do oleju zasilanej olejem"
 
 #. ~ Description of "pasta extruder"
 #: data/json/items/tool/cooking.json
@@ -438,6 +532,8 @@ msgid ""
 "A pasta extruder powered by a hand crank.  Useful in making pasta.  It comes "
 "with various heads to make various kinds of pasta."
 msgstr ""
+"Wyciskarka do makaronu napędzana ręczną korbą. Przydatna do robienia "
+"makaronu. Ma różne końcówki do wytwarzania różnych rodzajów makaronu."
 
 #. ~ Description of "soda can stove kit"
 #: data/json/items/tool/cooking.json
@@ -446,6 +542,9 @@ msgid ""
 " a couple of aluminum soda cans.  It comes with a 500 mL plastic bottle to "
 "hold concentrated alcohol fuel."
 msgstr ""
+"Ultralekka kuchenka na alkohol z pierścieniem do gotowania na małym ogniu, "
+"wykonana ręcznie z kilku aluminiowych puszek po napojach. W zestawie jest "
+"plastikowa butelka 500 ml na skoncentrowane paliwo alkoholowe."
 
 #. ~ Description of "pressure cooker"
 #: data/json/items/tool/cooking.json
@@ -454,21 +553,24 @@ msgid ""
 "Useful for all kinds of cooking, and it can also be used for pressure-"
 "sensitive chemical reactions."
 msgstr ""
+"Szczelnie zamykany garnek do gotowania jedzenia pod wyższym ciśnieniem i w "
+"wyższej temperaturze. Przydatny do wszelkiego gotowania; można go też używać "
+"do reakcji chemicznych wrażliwych na ciśnienie."
 
 #. ~ Description of "stone quern"
 #: data/json/items/tool/cooking.json
 msgid ""
 "A simple hand-powered stone quern with a wooden handle, for grinding grain."
-msgstr ""
+msgstr "Proste ręczne kamienne żarna z drewnianą rączką, do mielenia ziarna."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "home snow machine"
 msgid_plural "home snow machines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "domowa maszyna do śniegu"
+msgstr[1] "domowe maszyny do śniegu"
+msgstr[2] "domowych maszyn do śniegu"
+msgstr[3] "domowej maszyny do śniegu"
 
 #. ~ Description of "home snow machine"
 #: data/json/items/tool/cooking.json
@@ -476,6 +578,9 @@ msgid ""
 "A snow machine, which freezes water and shreds it into \"snow\", designed to "
 "be used from the comfort of your own home!  Useful for making snow cones."
 msgstr ""
+"Maszyna do śniegu, która zamraża wodę i rozdrabnia ją na „śnieg”, "
+"przeznaczona do używania w zaciszu własnego domu! Przydatna do robienia "
+"śnieżnych rożków."
 
 #. ~ Description of "wicker sieve"
 #: data/json/items/tool/cooking.json
@@ -484,6 +589,9 @@ msgid ""
 "sieves like this were used to sift grain, though the openings on this one are"
 " too small for that."
 msgstr ""
+"Prymitywne sito wykonane z plecionych pasków materiału roślinnego. Wczesnych "
+"sit tego typu używano do przesiewania ziarna, choć oczka w tym są na to za "
+"małe."
 
 #. ~ Description of "sieve"
 #: data/json/items/tool/cooking.json
@@ -494,15 +602,20 @@ msgid ""
 "gradation tests for any civil engineers you might know.  This one has been "
 "constructed from steel mesh."
 msgstr ""
+"To nie jest zwykły durszlak do makaronu; to laboratoryjne sito służące do "
+"oddzielania cząstek o określonych rozmiarach. Można nim bardzo dobrze "
+"przesiać mąkę, oczyścić ziarno z kurzu i ziemi albo przeprowadzić analizę "
+"uziarnienia dla znajomych inżynierów budownictwa. To zostało wykonane ze "
+"stalowej siatki."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "makeshift sieve"
 msgid_plural "makeshift sieves"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczne sito"
+msgstr[1] "prowizoryczne sita"
+msgstr[2] "prowizorycznych sit"
+msgstr[3] "prowizorycznego sita"
 
 #. ~ Description of "makeshift sieve"
 #: data/json/items/tool/cooking.json
@@ -510,6 +623,8 @@ msgid ""
 "Some fine steel mesh attached to a length of thicker steel wire, forming a "
 "rigid frame.  Useful for sieving."
 msgstr ""
+"Kawałek drobnej stalowej siatki przymocowany do grubszego stalowego drutu "
+"tworzącego sztywną ramę. Przydatny do przesiewania."
 
 #. ~ Description of "still"
 #: data/json/items/tool/cooking.json
@@ -517,6 +632,8 @@ msgid ""
 "A large still, useful for creating distillations of alcohol and other, more "
 "curious substances.  Features a slot for a thermometer."
 msgstr ""
+"Duża destylarnia, przydatna do destylacji alkoholu i innych, bardziej "
+"osobliwych substancji. Ma gniazdo na termometr."
 
 #. ~ Description of "survivor mess kit"
 #: data/json/items/tool/cooking.json
@@ -525,6 +642,9 @@ msgid ""
 "apocalyptic cuisine.  Powered by a kerosene burner, it is composed of simple "
 "yet durable tools and materials."
 msgstr ""
+"Domowej roboty zestaw z menażką, zawierający wszystko, czego możesz "
+"potrzebować do przyrządzania postapokaliptycznej kuchni. Zasilany palnikiem "
+"naftowym, składa się z prostych, ale wytrzymałych narzędzi i materiałów."
 
 #. ~ Description of "vacuum sealer"
 #: data/json/items/tool/cooking.json
@@ -532,11 +652,13 @@ msgid ""
 "A portable heat sealer unit with an air pump.  It's used for vacuum packing "
 "food to preserve it."
 msgstr ""
+"Przenośna zgrzewarka z pompką powietrza. Służy do pakowania żywności "
+"próżniowo, aby ją zakonserwować."
 
 #. ~ Description of "waffle iron"
 #: data/json/items/tool/cooking.json
 msgid "A waffle iron, generally used for making waffles."
-msgstr ""
+msgstr "Gofrownica, zwykle używana do robienia gofrów."
 
 #. ~ Description of "water purifier"
 #: data/json/items/tool/cooking.json
@@ -546,15 +668,18 @@ msgid ""
 "for water taken from uncertain sources like a river, as it may be non-"
 "potable."
 msgstr ""
+"Zasilane bateriami urządzenie do oczyszczania wody pitnej. Użycie go na "
+"pojemniku pełnym wody oczyści jego zawartość. Może się przydać do wody z "
+"niepewnych źródeł, takich jak rzeka, która może nie nadawać się do picia."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "slow-sand water filter"
 msgid_plural "slow-sand water filters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "powolny filtr piaskowy"
+msgstr[1] "powolne filtry piaskowe"
+msgstr[2] "powolnych filtrów piaskowych"
+msgstr[3] "powolnego filtra piaskowego"
 
 #. ~ Description of "slow-sand water filter"
 #: data/json/items/tool/cooking.json
@@ -564,34 +689,39 @@ msgid ""
 "sand and a layer of gravel.  It can be used to remove particulates and some "
 "pathogens from water, but it is not 100% effective."
 msgstr ""
+"Improwizowany filtr do wody z plastikowego wiadra wypełnionego warstwą piasku"
+" i warstwą żwiru. Usuwa z wody zawiesiny i część patogenów, ale nie jest w "
+"100% skuteczny."
 
 #. ~ Description of "propane cooker"
 #: data/json/items/tool/cooking.json
 msgid "A simple heater powered by propane.  It is designed for cooking food."
 msgstr ""
+"Prosty podgrzewacz zasilany propanem. Przeznaczony do gotowania jedzenia."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "biogas cooker"
 msgid_plural "biogas cookers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kuchenka na biogaz"
+msgstr[1] "kuchenki na biogaz"
+msgstr[2] "kuchenek na biogaz"
+msgstr[3] "kuchenki na biogaz"
 
 #. ~ Description of "biogas cooker"
 #: data/json/items/tool/cooking.json
 msgid "A simple heater powered by biogas.  It is designed for cooking food."
 msgstr ""
+"Prosty podgrzewacz zasilany biogazem. Przeznaczony do gotowania jedzenia."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "acetylene cooker"
 msgid_plural "acetylene cookers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kuchenka acetylenowa"
+msgstr[1] "kuchenki acetylenowe"
+msgstr[2] "kuchenek acetylenowych"
+msgstr[3] "kuchenki acetylenowej"
 
 #. ~ Description of "acetylene cooker"
 #: data/json/items/tool/cooking.json
@@ -599,20 +729,23 @@ msgid ""
 "A simple heater powered by acetylene welding gas.  It is designed for cooking"
 " food."
 msgstr ""
+"Prosty podgrzewacz zasilany acetylenem do spawania. Przeznaczony do gotowania"
+" jedzenia."
 
 #. ~ Description of "microwave"
 #: data/json/items/tool/cooking.json
 msgid "A home microwave, has probably seen its share of baked beans."
 msgstr ""
+"Domowa kuchenka mikrofalowa; pewnie podgrzała już niejedną porcję fasolki."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "makeshift pressure cooker"
 msgid_plural "makeshift pressure cookers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczny garnek ciśnieniowy"
+msgstr[1] "prowizoryczne garnki ciśnieniowe"
+msgstr[2] "prowizorycznych garnków ciśnieniowych"
+msgstr[3] "prowizorycznego garnka ciśnieniowego"
 
 #. ~ Description of "makeshift pressure cooker"
 #: data/json/items/tool/cooking.json
@@ -620,21 +753,24 @@ msgid ""
 "A large pot with 20 gauge walls and a thick aluminum bottom, modified to "
 "serve as a bulky but passable pressure cooker."
 msgstr ""
+"Duży garnek o ściankach grubości 20 gauge i grubym aluminiowym dnie, "
+"przerobiony na nieporęczny, ale znośny garnek ciśnieniowy."
 
 #. ~ Description of "toaster"
 #: data/json/items/tool/cooking.json
 msgid ""
 "A small two-slice toaster, can be used to toast toast and few other things."
 msgstr ""
+"Mały toster na dwie kromki; można w nim opiekać tosty i kilka innych rzeczy."
 
 #. ~ Item name
 #: data/json/items/tool/cooking.json
 msgid "crystallizing sugar"
 msgid_plural "crystallizing sugars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "krystalizujący się cukier"
+msgstr[1] "porcje krystalizującego się cukru"
+msgstr[2] "porcji krystalizującego się cukru"
+msgstr[3] "porcji krystalizującego się cukru"
 
 #. ~ Description of "crystallizing sugar"
 #: data/json/items/tool/cooking.json
@@ -642,51 +778,53 @@ msgid ""
 "Sweet, sweet sugar in the process of crystallizing.  It needs two weeks to "
 "form solid crystals."
 msgstr ""
+"Słodki, słodki cukier w trakcie krystalizacji. Potrzebuje dwóch tygodni, aby "
+"utworzyć stałe kryształy."
 
 #. ~ "msg" action message of item "crystallizing sugar"
 #: data/json/items/tool/cooking.json
 msgid "You break up the crystallized sugar into a coarse powder."
-msgstr ""
+msgstr "Rozbijasz skrystalizowany cukier na gruboziarnisty proszek."
 
 #. ~ "not_ready_msg" action message of item "crystallizing sugar"
 #: data/json/items/tool/cooking.json
 msgid "The sugar is still crystallizing."
-msgstr ""
+msgstr "Cukier wciąż się krystalizuje."
 
 #. ~ Item name
 #: data/json/items/tool/debug_tools.json
 msgid "debug lux meter"
 msgid_plural "debug lux meters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "luksomierz debugowania"
+msgstr[1] "luksomierze debugowania"
+msgstr[2] "luksomierzy debugowania"
+msgstr[3] "luksomierza debugowania"
 
 #. ~ Description of "debug lux meter"
 #: data/json/items/tool/debug_tools.json
 msgid "This debug tool will tell you about light."
-msgstr ""
+msgstr "To narzędzie debugowania powie ci coś o świetle."
 
 #. ~ Item name
 #: data/json/items/tool/debug_tools.json
 msgid "debug item damager (simple)"
 msgid_plural "debug item damager (simple)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "niszczyciel przedmiotów debugowania (prosty)"
+msgstr[1] "niszczyciele przedmiotów debugowania (proste)"
+msgstr[2] "niszczycieli przedmiotów debugowania (prostych)"
+msgstr[3] "niszczyciela przedmiotów debugowania (prostego)"
 
 #. ~ Description of "debug item damager (simple)"
 #: data/json/items/tool/debug_tools.json
 msgid "Deals 1 full bar of damage to an item you wield."
-msgstr ""
+msgstr "Zadaje trzymanemu przedmiotowi obrażenia równe 1 pełnemu paskowi."
 
 #. ~ "menu_text" action message of item "debug item damager (simple)"
 #. ~ "menu_text" action message of item "debug item damager (advanced)"
 #. ~ "menu_text" action message of item "debug fault applier"
 #: data/json/items/tool/debug_tools.json
 msgid "Damage item"
-msgstr ""
+msgstr "Uszkodź przedmiot"
 
 #. ~ Player message in effect in EoC "EOC_DAMAGE_ITEM_simple" in nested EOCs on
 #. true condition in effect in EoC "EOC_FIND_ITEM_simple" in use action of item
@@ -696,73 +834,75 @@ msgid ""
 "<npc_name> have had <context_val:hp_before> hp, now has "
 "<context_val:hp_after> hp."
 msgstr ""
+"<npc_name>: wcześniej <context_val:hp_before> hp, teraz "
+"<context_val:hp_after> hp."
 
 #. ~ Item name
 #: data/json/items/tool/debug_tools.json
 msgid "debug item damager (advanced)"
 msgid_plural "debug item damager (advanced)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "niszczyciel przedmiotów debugowania (zaawansowany)"
+msgstr[1] "niszczyciele przedmiotów debugowania (zaawansowane)"
+msgstr[2] "niszczycieli przedmiotów debugowania (zaawansowanych)"
+msgstr[3] "niszczyciela przedmiotów debugowania (zaawansowanego)"
 
 #. ~ Description of "debug item damager (advanced)"
 #: data/json/items/tool/debug_tools.json
 msgid "Deals damage to items you pick."
-msgstr ""
+msgstr "Zadaje obrażenia wybranym przedmiotom."
 
 #. ~ Player message in effect in EoC "EOC_DAMAGE_ITEM" in nested EOCs on true
 #. condition in effect in EoC "EOC_FIND_ITEM" in use action of item "debug item
 #. damager (advanced)"
 #: data/json/items/tool/debug_tools.json
 msgid "Dealt damage to all items."
-msgstr ""
+msgstr "Zadano obrażenia wszystkim przedmiotom."
 
 #. ~ Item name
 #: data/json/items/tool/debug_tools.json
 msgid "debug explosion generator"
 msgid_plural "debug explosion generator"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "generator eksplozji debugowania"
+msgstr[1] "generatory eksplozji debugowania"
+msgstr[2] "generatorów eksplozji debugowania"
+msgstr[3] "generatora eksplozji debugowania"
 
 #. ~ Description of "debug explosion generator"
 #: data/json/items/tool/debug_tools.json
 msgid "Causes explosion at overmap you pick."
-msgstr ""
+msgstr "Wywołuje eksplozję w wybranym miejscu na mapie świata."
 
 #. ~ "menu_text" action message of item "debug explosion generator"
 #: data/json/items/tool/debug_tools.json
 msgid "Cause explosion"
-msgstr ""
+msgstr "Wywołaj eksplozję"
 
 #. ~ Message in effect in EoC "EOC_CAUSE_EXPLOSION" in use action of item
 #. "debug explosion generator"
 #: data/json/items/tool/debug_tools.json
 msgid "Select point."
-msgstr ""
+msgstr "Wybierz punkt."
 
 #. ~ Item name
 #: data/json/items/tool/debug_tools.json
 msgid "debug fault applier"
 msgid_plural "debug fault applier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aplikator usterek debugowania"
+msgstr[1] "aplikatory usterek debugowania"
+msgstr[2] "aplikatorów usterek debugowania"
+msgstr[3] "aplikatora usterek debugowania"
 
 #. ~ Description of "debug fault applier"
 #: data/json/items/tool/debug_tools.json
 msgid "Applies the fault on item by id."
-msgstr ""
+msgstr "Dodaje przedmiotowi usterkę o podanym id."
 
 #. ~ String input window's description in effect in EoC "EOC_APPLY_FAULT" in
 #. nested EOCs on true condition in effect in EoC "EOC_FIND_ITEM_fault" in use
 #. action of item "debug fault applier"
 #: data/json/items/tool/debug_tools.json
 msgid "fault_id or fault_type_id"
-msgstr ""
+msgstr "fault_id lub fault_type_id"
 
 #. ~ Player message in nested effect in then statement in effect in EoC
 #. "EOC_APPLY_FAULT" in nested EOCs on true condition in effect in EoC
@@ -772,6 +912,8 @@ msgid ""
 "<npc_name> has random fault from fault_type \"<context_val:str>\" added, if "
 "such group exists."
 msgstr ""
+"<npc_name>: dodano losową usterkę z fault_type „<context_val:str>”, jeśli "
+"taka grupa istnieje."
 
 #. ~ Player message in nested effect in else statement in effect in EoC
 #. "EOC_APPLY_FAULT" in nested EOCs on true condition in effect in EoC
@@ -779,6 +921,7 @@ msgstr ""
 #: data/json/items/tool/debug_tools.json
 msgid "<npc_name> has \"<context_val:str>\" fault added, if such id exists."
 msgstr ""
+"<npc_name>: dodano usterkę „<context_val:str>”, jeśli takie id istnieje."
 
 #. ~ Description of "makeshift brazier"
 #: data/json/items/tool/deployable.json
@@ -788,6 +931,10 @@ msgid ""
 "larger than some splintered wood.  Fires set in this bucket will not spread "
 "to surrounding flammable objects."
 msgstr ""
+"Przenośne palenisko zrobione ze stalowego wiadra przez wybicie małych otworów"
+" w bokach dla lepszego dopływu powietrza. Jest za małe, by zmieścić paliwo "
+"większe niż drzazgi. Ogień rozpalony w tym wiadrze nie rozprzestrzeni się na "
+"otaczające łatwopalne przedmioty."
 
 #. ~ Description of "hobo stove"
 #: data/json/items/tool/deployable.json
@@ -796,6 +943,9 @@ msgid ""
 " the right size.  It's too small to fit anything much larger than splintered "
 "wood.  Activate it to deploy."
 msgstr ""
+"Mały, improwizowany piecyk na drewno, zrobiony z metalowej puszki lub "
+"podobnego pojemnika odpowiedniej wielkości. Jest za mały, by zmieścić coś "
+"znacznie większego niż drzazgi. Aktywuj, aby rozstawić."
 
 #. ~ Description of "portable stove"
 #: data/json/items/tool/deployable.json
@@ -803,22 +953,25 @@ msgid ""
 "A foldable wood stove to safely lit fires while camping in the wilderness.  "
 "Activate it to deploy."
 msgstr ""
+"Składany piecyk na drewno do bezpiecznego rozpalania ognia podczas "
+"biwakowania w dziczy. Aktywuj, aby rozstawić."
 
 #. ~ Description of "camp chair"
 #: data/json/items/tool/deployable.json
 msgid ""
 "A folded chair for camping.  Activate it to set it down for a place to sit."
 msgstr ""
+"Złożone krzesło turystyczne. Aktywuj, aby je rozstawić i mieć gdzie usiąść."
 
 #. ~ Description of "deck chair"
 #: data/json/items/tool/deployable.json
 msgid "Folded deck chair, deploy to sit down."
-msgstr ""
+msgstr "Złożony leżak; rozstaw, aby usiąść."
 
 #. ~ Description of "folding chair"
 #: data/json/items/tool/deployable.json
 msgid "Folded plastic chair on a metal frame, deploy to sit down."
-msgstr ""
+msgstr "Złożone plastikowe krzesło na metalowej ramie; rozstaw, aby usiąść."
 
 #. ~ Description of "cot"
 #: data/json/items/tool/deployable.json
@@ -826,6 +979,8 @@ msgid ""
 "A military-style folding cot.  While it may not be quite as comfortable as a "
 "bed, it's better than slumming it on the ground."
 msgstr ""
+"Składane łóżko polowe w wojskowym stylu. Może nie jest tak wygodne jak łóżko,"
+" ale lepsze niż spanie na gołej ziemi."
 
 #. ~ Description of "metal butchering rack"
 #: data/json/items/tool/deployable.json
@@ -833,6 +988,8 @@ msgid ""
 "A metal butchering rack designed to hang a carcass in the air.  It is folded "
 "for easy transportation."
 msgstr ""
+"Metalowy stojak rzeźniczy do wieszania tuszy w powietrzu. Jest złożony dla "
+"łatwego transportu."
 
 #. ~ Description of "folding table"
 #: data/json/items/tool/deployable.json
@@ -840,6 +997,8 @@ msgid ""
 "A metal folding table for off-road trips.  It is currently folded for easy "
 "transportation."
 msgstr ""
+"Metalowy składany stół na wyprawy terenowe. Obecnie jest złożony dla łatwego "
+"transportu."
 
 #. ~ Description of "leather tarp"
 #: data/json/items/tool/deployable.json
@@ -848,6 +1007,9 @@ msgid ""
 "more valuable as a surface for butchering as it does not soak up blood.  It's"
 " rolled and ready for carrying."
 msgstr ""
+"Duży płat skóry. Mógłby służyć jako koc piknikowy, ale cenniejszy jest jako "
+"powierzchnia do rzeźnictwa, bo nie wchłania krwi. Jest zwinięty i gotowy do "
+"noszenia."
 
 #. ~ Description of "fiber mat"
 #: data/json/items/tool/deployable.json
@@ -856,6 +1018,9 @@ msgid ""
 "blanket, but it's more valuable as a surface for butchering.  Too thin to be "
 "used as a comfortable sleeping mat.  It's rolled and ready for carrying."
 msgstr ""
+"Duża mata utkana z włóknistego materiału. Mogłaby służyć jako koc piknikowy, "
+"ale cenniejsza jest jako powierzchnia do rzeźnictwa. Zbyt cienka, by wygodnie"
+" na niej spać. Jest zwinięta i gotowa do noszenia."
 
 #. ~ Description of "water mill"
 #: data/json/items/tool/deployable.json
@@ -863,6 +1028,8 @@ msgid ""
 "A small water-powered mill that can convert starchy products into flour.  "
 "Needs to be placed via the construction menu."
 msgstr ""
+"Mały młyn wodny, który potrafi przerabiać produkty skrobiowe na mąkę. Trzeba "
+"go postawić z menu budowy."
 
 #. ~ Description of "wind mill"
 #: data/json/items/tool/deployable.json
@@ -870,6 +1037,8 @@ msgid ""
 "A small wind-powered mill that can convert starchy products into flour.  "
 "Needs to be placed via the construction menu."
 msgstr ""
+"Mały wiatrak, który potrafi przerabiać produkty skrobiowe na mąkę. Trzeba go "
+"postawić z menu budowy."
 
 #. ~ Description of "screw press"
 #: data/json/items/tool/deployable.json
@@ -877,6 +1046,8 @@ msgid ""
 "A large screw press for manually pressing oil out of fruit or seed paste.  "
 "Needs to be placed via the construction menu."
 msgstr ""
+"Duża prasa śrubowa do ręcznego wyciskania oleju z owoców lub pasty z nasion. "
+"Trzeba ją postawić z menu budowy."
 
 #. ~ Description of "manual tire changer"
 #: data/json/items/tool/deployable.json
@@ -884,24 +1055,27 @@ msgid ""
 "A floor-mounted machine containing all the levers, clamps, and mounts "
 "required to remove or fit a tire, plus an integrated foot pump to inflate it."
 msgstr ""
+"Montowana do podłogi maszyna ze wszystkimi dźwigniami, zaciskami i uchwytami "
+"potrzebnymi do zdejmowania i zakładania opon, a także ze zintegrowaną pompką "
+"nożną do ich pompowania."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "laptop"
 msgid_plural "laptops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "laptop"
+msgstr[1] "laptopy"
+msgstr[2] "laptopów"
+msgstr[3] "laptopa"
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "e-ink tablet"
 msgid_plural "e-ink tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tablet w technologii e-papieru"
+msgstr[1] "tablety w technologii e-papieru"
+msgstr[2] "tabletów w technologii e-papieru"
+msgstr[3] "tabletu w technologii e-papieru"
 
 #. ~ Description of "camera"
 #: data/json/items/tool/electronics.json
@@ -910,6 +1084,9 @@ msgid ""
 "sight', and flash.  You can look at your photos on the digital screen, or "
 "transfer them with any standard electronic device."
 msgstr ""
+"Kompaktowy aparat cyfrowy z cyfrowym wizjerem, zapasowym „celownikiem "
+"mechanicznym” i lampą błyskową. Zdjęcia możesz oglądać na cyfrowym ekranie "
+"lub przesłać je na dowolne standardowe urządzenie elektroniczne."
 
 #. ~ Description of "professional camera"
 #: data/json/items/tool/electronics.json
@@ -920,6 +1097,11 @@ msgid ""
 "electronic device.  Before the Cataclysm, you could have taken professional-"
 "grade photos using this."
 msgstr ""
+"Cyfrowa lustrzanka jednoobiektywowa (SLR) 35 mm z wizjerem optycznym i "
+"cyfrowym, obiektywem zmiennoogniskowym z autofokusem i stabilizacją oraz "
+"lampą błyskową. Zdjęcia możesz oglądać na cyfrowym ekranie lub przesłać je na"
+" dowolne standardowe urządzenie elektroniczne. Przed Kataklizmem można było "
+"nim robić zdjęcia profesjonalnej jakości."
 
 #. ~ Description of "cellphone"
 #: data/json/items/tool/electronics.json
@@ -929,11 +1111,15 @@ msgid ""
 "turn it on and provide light, assuming it is sufficiently charged.  It also "
 "tells the time and has an alarm feature."
 msgstr ""
+"Telefon komórkowy, starszy kuzyn smartfona, wciąż popularny w pewnych kręgach"
+" ze względu na niezawodność i wytrzymałość. Użycie telefonu włączy go i "
+"zapewni światło, o ile jest wystarczająco naładowany. Pokazuje też godzinę i "
+"ma funkcję budzika."
 
 #. ~ "msg" action message of item "cellphone - Flashlight"
 #: data/json/items/tool/electronics.json
 msgid "You turn off the screen."
-msgstr ""
+msgstr "Wyłączasz ekran."
 
 #. ~ Description of "directional antenna"
 #: data/json/items/tool/electronics.json
@@ -941,6 +1127,8 @@ msgid ""
 "An antenna designed to pick up signals better when pointed at the source.  "
 "You could use this with a radio to receive faint signals."
 msgstr ""
+"Antena zaprojektowana tak, by lepiej odbierać sygnał, gdy jest skierowana w "
+"stronę źródła. Można jej użyć z radiem do odbioru słabych sygnałów."
 
 #. ~ Description of "e-ink tablet PC"
 #: data/json/items/tool/electronics.json
@@ -949,20 +1137,23 @@ msgid ""
 "these were nifty gadgets; now, they are extremely useful tools.  Runs on "
 "conventional batteries."
 msgstr ""
+"Tablet z wydajnym kolorowym wyświetlaczem w technologii e-papieru. Przed "
+"Kataklizmem były to fajne gadżety; teraz to niezwykle przydatne narzędzia. "
+"Działa na zwykłe baterie."
 
 #. ~ Description of "USB drive"
 #: data/json/items/tool/electronics.json
 msgid "A USB thumb drive.  Useful for holding electronic data."
-msgstr ""
+msgstr "Pendrive USB. Przydatny do przechowywania danych elektronicznych."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "older USB drive"
 msgid_plural "older USB drives"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "starszy pendrive"
+msgstr[1] "starsze pendrive’y"
+msgstr[2] "starszych pendrive’ów"
+msgstr[3] "starszego pendrive’a"
 
 #. ~ Description of "older USB drive"
 #: data/json/items/tool/electronics.json
@@ -970,15 +1161,17 @@ msgid ""
 "A USB thumb drive.  Maybe a decade out of date, but still useful for holding "
 "electronic data."
 msgstr ""
+"Pendrive USB. Może o dekadę przestarzały, ale wciąż przydatny do "
+"przechowywania danych elektronicznych."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "portable hard drive"
 msgid_plural "portable hard drives"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przenośny dysk twardy"
+msgstr[1] "przenośne dyski twarde"
+msgstr[2] "przenośnych dysków twardych"
+msgstr[3] "przenośnego dysku twardego"
 
 #. ~ Description of "portable hard drive"
 #: data/json/items/tool/electronics.json
@@ -986,15 +1179,18 @@ msgid ""
 "A portable external hard drive, the best in affordable mass storage.  Useful "
 "for holding lots of electronic data."
 msgstr ""
+"Przenośny zewnętrzny dysk twardy, najlepsze z niedrogich rozwiązań do "
+"przechowywania dużych ilości danych. Przydatny do przechowywania mnóstwa "
+"danych elektronicznych."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "older memory card"
 msgid_plural "older memory cards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "starsza karta pamięci"
+msgstr[1] "starsze karty pamięci"
+msgstr[2] "starszych kart pamięci"
+msgstr[3] "starszej karty pamięci"
 
 #. ~ Description of "older memory card"
 #: data/json/items/tool/electronics.json
@@ -1002,6 +1198,8 @@ msgid ""
 "A memory card.  Maybe a decade out of date, but can still be used to store "
 "data."
 msgstr ""
+"Karta pamięci. Może o dekadę przestarzała, ale wciąż można na niej "
+"przechowywać dane."
 
 #. ~ Description of "electrohack"
 #: data/json/items/tool/electronics.json
@@ -1010,15 +1208,18 @@ msgid ""
 "control panel or other electronic machine (but not computers).  With a little"
 " skill, it can be used to crack passwords and more."
 msgstr ""
+"To urządzenie ma wiele portów, które pozwalają podłączyć je do niemal każdego"
+" panelu sterowania lub innej maszyny elektronicznej (ale nie do komputerów). "
+"Przy odrobinie umiejętności można nim łamać hasła i nie tylko."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "Geiger counter (off)"
 msgid_plural "Geiger counters (off)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "licznik Geigera (wył.)"
+msgstr[1] "liczniki Geigera (wył.)"
+msgstr[2] "liczników Geigera (wył.)"
+msgstr[3] "licznika Geigera (wył.)"
 
 #. ~ Description of "Geiger counter (off)"
 #: data/json/items/tool/electronics.json
@@ -1027,15 +1228,18 @@ msgid ""
 "to scan yourself or the terrain, or to turn on continuous scan, which will "
 "provide continuous feedback on ambient radiation.  It is currently off."
 msgstr ""
+"Przyrząd do pomiaru promieniowania. Użycie go pozwoli wybrać, czy zbadać "
+"siebie, czy teren, albo włączyć ciągłe skanowanie, które będzie na bieżąco "
+"informować o promieniowaniu otoczenia. Obecnie jest wyłączony."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "Geiger counter (on)"
 msgid_plural "Geiger counters (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "licznik Geigera (wł.)"
+msgstr[1] "liczniki Geigera (wł.)"
+msgstr[2] "liczników Geigera (wł.)"
+msgstr[3] "licznika Geigera (wł.)"
 
 #. ~ Description of "Geiger counter (on)"
 #: data/json/items/tool/electronics.json
@@ -1044,20 +1248,23 @@ msgid ""
 "produce quiet clicking sounds in the presence of ambient radiation.  Using it"
 " allows you to turn it off, or scan yourself or the ground."
 msgstr ""
+"Przyrząd do pomiaru promieniowania. Jest w trybie ciągłego skanowania i w "
+"obecności promieniowania otoczenia będzie cicho trzeszczał. Użycie go pozwala"
+" go wyłączyć albo zbadać siebie lub teren."
 
 #. ~ "msg" action message of item "Geiger counter (on)"
 #: data/json/items/tool/electronics.json
 msgid "The Geiger counter's SCANNING LED turns off."
-msgstr ""
+msgstr "Dioda SKANOWANIE na liczniku Geigera gaśnie."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "Otherworldly measuring device"
 msgid_plural "Otherworldly measuring devices"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nieziemski przyrząd pomiarowy"
+msgstr[1] "nieziemskie przyrządy pomiarowe"
+msgstr[2] "nieziemskich przyrządów pomiarowych"
+msgstr[3] "nieziemskiego przyrządu pomiarowego"
 
 #. ~ Description of "Otherworldly measuring device"
 #: data/json/items/tool/electronics.json
@@ -1069,6 +1276,11 @@ msgid ""
 "Despite not appearing to do anything, it consumes an enormous amount of "
 "electricity and provides a brief numerical readout."
 msgstr ""
+"To dziwne urządzenie wygląda na niewiele więcej niż laminowane pudełko "
+"zbudowane wokół baterii, słabo podświetlonego ekranu i nawiniętej szpuli "
+"materiałowej siatki. Na boku widnieją litery „X E D R A”. Aby obsłużyć "
+"urządzenie, rozwiń siatkę i owiń nią badany obiekt. Choć wydaje się nic nie "
+"robić, zużywa ogromną ilość prądu i wyświetla krótki odczyt liczbowy."
 
 #. ~ Description of "NRE recorder"
 #: data/json/items/tool/electronics.json
@@ -1078,11 +1290,15 @@ msgid ""
 "perpetually blank, save for a battery indicator on its upper right, and on "
 "its left side lies a single red button: \"PRINT DATA\"."
 msgstr ""
+"Dziwny aparat, składający się najwyraźniej z mikrofonu w szklanej obudowie "
+"połączonego z małą drukarką termiczną i cyfrowym ekranem. Ekran pozostaje "
+"stale pusty, z wyjątkiem wskaźnika baterii w prawym górnym rogu, a po lewej "
+"stronie znajduje się jeden czerwony przycisk: „DRUKUJ DANE”."
 
 #. ~ "description" action message of item "NRE recorder"
 #: data/json/items/tool/electronics.json
 msgid "Activate the recorder's printer."
-msgstr ""
+msgstr "Uruchom drukarkę rejestratora."
 
 #. ~ Description of "hand-crank charger"
 #: data/json/items/tool/electronics.json
@@ -1090,6 +1306,8 @@ msgid ""
 "A hand-powered battery charger.  It has an adjustable receptacle designed to "
 "accept a wide variety of rechargeable battery cells."
 msgstr ""
+"Ręczna ładowarka do baterii. Ma regulowane gniazdo przystosowane do szerokiej"
+" gamy akumulatorków."
 
 #. ~ Description of "laptop computer"
 #: data/json/items/tool/electronics.json
@@ -1098,6 +1316,9 @@ msgid ""
 "While you no longer have internet access, you still can load it with books "
 "and other useful software."
 msgstr ""
+"Przenośny komputer, wszechobecne narzędzie zarówno przed Kataklizmem, jak i "
+"po nim. Choć nie masz już dostępu do internetu, nadal możesz wgrać na niego "
+"książki i inne przydatne oprogramowanie."
 
 #. ~ Description of "noise emitter (off)"
 #: data/json/items/tool/electronics.json
@@ -1106,6 +1327,9 @@ msgid ""
 "It has no other use besides emitting loud crackling static noise that could "
 "distract zombies."
 msgstr ""
+"Urządzenie zbudowane przez „ulepszenie” głośnika kilkoma obwodami "
+"wzmacniacza. Nie ma innego zastosowania niż wydawanie głośnych, trzeszczących"
+" szumów, które mogą odwrócić uwagę zombie."
 
 #. ~ Description of "noise emitter (on)"
 #: data/json/items/tool/electronics.json
@@ -1113,6 +1337,8 @@ msgid ""
 "A homemade device that is emitting horrible crackles, pops, and other loud "
 "static sounds.  Quick, get away from it before it draws zombies to you!"
 msgstr ""
+"Domowej roboty urządzenie, które wydaje okropne trzaski, pyknięcia i inne "
+"głośne szumy. Szybko, oddal się od niego, zanim ściągnie do ciebie zombie!"
 
 #. ~ Description of "EMF detector (on)"
 #: data/json/items/tool/electronics.json
@@ -1121,6 +1347,9 @@ msgid ""
 "on, humming and beeping with proximity.  It is sensitive enough you could use"
 " it to get a sense of direction."
 msgstr ""
+"To urządzenie wykrywa i odczytuje fale o różnych długościach. Jest obecnie "
+"włączone i buczy oraz piszczy w zależności od odległości. Jest na tyle czułe,"
+" że można go użyć do określenia kierunku."
 
 #. ~ Description of "handheld game system"
 #: data/json/items/tool/electronics.json
@@ -1129,15 +1358,18 @@ msgid ""
 "the dark.  You can use it to play a game, but this requires batteries.  "
 "Multiple game systems can be linked together for multiplayer games."
 msgstr ""
+"Przenośna konsola do gier z podświetlanym ekranem, który pozwala grać w "
+"ciemności. Możesz na niej zagrać w grę, ale wymaga to baterii. Kilka konsol "
+"można połączyć, aby grać w trybie wieloosobowym."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "smartphone (locked)"
 msgid_plural "smartphones (locked)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smartfon (zablokowany)"
+msgstr[1] "smartfony (zablokowane)"
+msgstr[2] "smartfonów (zablokowanych)"
+msgstr[3] "smartfona (zablokowanego)"
 
 #. ~ Description of "smartphone (locked)"
 #: data/json/items/tool/electronics.json
@@ -1147,20 +1379,25 @@ msgid ""
 "are still able to check the time and use a flashlight.  Runs on a small, "
 "rechargeable power cell compatible with a Unified Power Supply."
 msgstr ""
+"Popularny, szpanerski smartfon. Na twoje nieszczęście poprzedni użytkownik "
+"korzystał z zabezpieczeń, więc nie możesz używać większości jego funkcji. "
+"Nadal możesz sprawdzić godzinę i użyć latarki. Działa na małym akumulatorze "
+"zgodnym z UPS."
 
 #. ~ "description" action message of item "smartphone (locked)"
 #: data/json/items/tool/electronics.json
 msgid "You can reset the smartphone to be able to use all its functions."
 msgstr ""
+"Możesz zresetować smartfon, aby móc korzystać ze wszystkich jego funkcji."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "smartphone (locked) - Flashlight"
 msgid_plural "smartphones (locked) - Flashlight"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smartfon (zablokowany) - latarka"
+msgstr[1] "smartfony (zablokowane) - latarka"
+msgstr[2] "smartfonów (zablokowanych) - latarka"
+msgstr[3] "smartfona (zablokowanego) - latarka"
 
 #. ~ Description of "UPS"
 #. ~ Description of "UPS (on)"
@@ -1171,24 +1408,28 @@ msgid ""
 "designed to power tools, smartphones, armor, and some guns, but drains "
 "batteries quickly."
 msgstr ""
+"Zunifikowane źródło zasilania, czyli UPS. To urządzenie opracowane wspólnie "
+"przez wojsko i naukowców do użytku w walce i w terenie. UPS służy do "
+"zasilania narzędzi, smartfonów, pancerzy i niektórych broni palnych, ale "
+"szybko wyczerpuje baterie."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "UPS (on)"
 msgid_plural "UPSes (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "UPS (wł.)"
+msgstr[1] "UPS-y (wł.)"
+msgstr[2] "UPS-ów (wł.)"
+msgstr[3] "UPS-a (wł.)"
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "UPS (off)"
 msgid_plural "UPSes (off)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "UPS (wył.)"
+msgstr[1] "UPS-y (wył.)"
+msgstr[2] "UPS-ów (wył.)"
+msgstr[3] "UPS-a (wył.)"
 
 #. ~ Description of "UPS (off)"
 #: data/json/items/tool/electronics.json
@@ -1198,20 +1439,24 @@ msgid ""
 "designed to power tools, smartphones, armor, and some guns, but drains "
 "batteries quickly.  Use it to turn it on."
 msgstr ""
+"Zunifikowane źródło zasilania, czyli UPS. To urządzenie opracowane wspólnie "
+"przez wojsko i naukowców do użytku w walce i w terenie. UPS służy do "
+"zasilania narzędzi, smartfonów, pancerzy i niektórych broni palnych, ale "
+"szybko wyczerpuje baterie. Użyj go, aby go włączyć."
 
 #. ~ "need_charges_msg" action message of item "UPS (off)"
 #: data/json/items/tool/electronics.json
 msgid "The charger's battery is empty."
-msgstr ""
+msgstr "Bateria ładowarki jest pusta."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "methanol fuel cell UPS"
 msgid_plural "methanol fuel cell UPSes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "UPS z metanolowym ogniwem paliwowym"
+msgstr[1] "UPS-y z metanolowym ogniwem paliwowym"
+msgstr[2] "UPS-ów z metanolowym ogniwem paliwowym"
+msgstr[3] "UPS-a z metanolowym ogniwem paliwowym"
 
 #. ~ Description of "methanol fuel cell UPS"
 #: data/json/items/tool/electronics.json
@@ -1220,6 +1465,9 @@ msgid ""
 "electronic devices by oxidizing methanol supplied from a specialized fuel "
 "tank to produce electricity."
 msgstr ""
+"Ogniwo paliwowe z bezpośrednim zasilaniem metanolem, które może zasilać "
+"urządzenia elektroniczne zgodne z UPS, wytwarzając prąd przez utlenianie "
+"metanolu dostarczanego ze specjalnego zbiornika paliwa."
 
 #. ~ Description of "gas-powered UPS (off)"
 #: data/json/items/tool/electronics.json
@@ -1227,6 +1475,8 @@ msgid ""
 "A compact thermoelectric generator.  Burns propane gas to charge UPS devices."
 "  Use it to turn it on."
 msgstr ""
+"Kompaktowy generator termoelektryczny. Spala propan, aby ładować urządzenia "
+"UPS. Użyj go, aby go włączyć."
 
 #. ~ Description of "gas-powered UPS (on)"
 #: data/json/items/tool/electronics.json
@@ -1234,15 +1484,17 @@ msgid ""
 "A compact thermoelectric generator.  When connected to a propane tank, it "
 "will slowly charge UPS-compatible devices."
 msgstr ""
+"Kompaktowy generator termoelektryczny. Podłączony do butli z propanem będzie "
+"powoli ładował urządzenia zgodne z UPS."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "super noise emitter (off)"
 msgid_plural "super noise emitters (off)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "super emiter dźwięku (wył.)"
+msgstr[1] "super emitery dźwięku (wył.)"
+msgstr[2] "super emiterów dźwięku (wył.)"
+msgstr[3] "super emitera dźwięku (wył.)"
 
 #. ~ Description of "super noise emitter (off)"
 #: data/json/items/tool/electronics.json
@@ -1252,20 +1504,24 @@ msgid ""
 "from sound-induced nausea, and it's as sure to attract every zombie in town "
 "as it is to give you permanent hearing damage."
 msgstr ""
+"To urządzenie hałasujące dodatkowo wzmocnione szeregiem wzmacniaczy. Jest "
+"prawie tak głośne, jak to możliwe bez wywoływania wymiotów od mdłości "
+"spowodowanych dźwiękiem, i z równą pewnością przyciągnie każdego zombie w "
+"mieście, jak trwale uszkodzi ci słuch."
 
 #. ~ "msg" action message of item "super noise emitter (off)"
 #: data/json/items/tool/electronics.json
 msgid "You turn the super noise emitter on."
-msgstr ""
+msgstr "Włączasz super emiter dźwięku."
 
 #. ~ Item name
 #: data/json/items/tool/electronics.json
 msgid "super noise emitter (on)"
 msgid_plural "super noise emitters (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "super emiter dźwięku (wł.)"
+msgstr[1] "super emitery dźwięku (wł.)"
+msgstr[2] "super emiterów dźwięku (wł.)"
+msgstr[3] "super emitera dźwięku (wł.)"
 
 #. ~ Description of "super noise emitter (on)"
 #: data/json/items/tool/electronics.json
@@ -1274,18 +1530,20 @@ msgid ""
 "amplifiers.  It's currently making an extraordinary amount of noise - "
 "hopefully you have hearing protection."
 msgstr ""
+"To urządzenie hałasujące dodatkowo wzmocnione szeregiem wzmacniaczy. Obecnie "
+"wydaje niezwykłą ilość hałasu – oby twoje uszy były czymś chronione."
 
 #. ~ "msg" action message of item "super noise emitter (on)"
 #: data/json/items/tool/electronics.json
 msgid "The infernal racket dies as the super noise emitter turns off."
-msgstr ""
+msgstr "Piekielny hałas cichnie, gdy super emiter dźwięku się wyłącza."
 
 #. ~ value of variable 'sound_message' in effect in EoC
 #. "EOC_toolweapon_running__supernoisemaker" in use action of item "super noise
 #. emitter (on)"
 #: data/json/items/tool/electronics.json
 msgid "Your super noise emitter produces an unholy blast of sonic chaos."
-msgstr ""
+msgstr "Twój super emiter dźwięku wydaje bezbożny wybuch dźwiękowego chaosu."
 
 #. ~ Description of "crowbar"
 #: data/json/items/tool/entry_tools.json
@@ -1293,6 +1551,9 @@ msgid ""
 "A hefty prying tool.  Use it to open locked doors without destroying them, or"
 " to lift manhole covers.  You could also wield it to bash some heads in."
 msgstr ""
+"Solidne narzędzie do podważania. Użyj go, aby otworzyć zamknięte drzwi bez "
+"niszczenia ich albo podnieść pokrywę włazu. Możesz też wziąć go do ręki, by "
+"rozbić parę głów."
 
 #. ~ Description of "rudimentary lockpick"
 #: data/json/items/tool/entry_tools.json
@@ -1302,6 +1563,10 @@ msgid ""
 "inadequate for picking locks, but when you've got nothing else, it might "
 "work."
 msgstr ""
+"Para cienkich kawałków metalu, jeden wygięty w kształt litery „L” do "
+"popychania zapadek, a drugi pełniący rolę napinacza. Te narzędzia prawie "
+"zupełnie nie nadają się do otwierania zamków, ale gdy nie masz nic innego, "
+"mogą zadziałać."
 
 #. ~ Description of "improvised lockpick"
 #: data/json/items/tool/entry_tools.json
@@ -1310,6 +1575,9 @@ msgid ""
 "MacGyver-like skills to open locks with these as they are brittle, but they "
 "lower the chances of alarms being set off."
 msgstr ""
+"Improwizowany wytrych i napinacz zrobione ze złomu. Do otwierania nimi zamków"
+" potrzebne są umiejętności MacGyvera, bo są kruche, ale zmniejszają szansę na"
+" uruchomienie alarmu."
 
 #. ~ Description of "ice axe"
 #: data/json/items/tool/entry_tools.json
@@ -1318,6 +1586,9 @@ msgid ""
 "climbing tool used by mountaineers.  It is sturdy enough to lift manhole "
 "covers."
 msgstr ""
+"Czekan z młotkiem na drugim końcu, wielofunkcyjne narzędzie do wędrówek i "
+"wspinaczki używane przez alpinistów. Jest na tyle wytrzymały, że można nim "
+"podnieść pokrywę włazu."
 
 #. ~ Description of "makeshift crowbar"
 #: data/json/items/tool/entry_tools.json
@@ -1327,6 +1598,10 @@ msgid ""
 "It's not strong enough to pry doors or windows, though.  You could also wield"
 " it to fight with, in a pinch."
 msgstr ""
+"Rura z obydwoma końcami wygiętymi i rozklepanymi na płasko, przypominająca "
+"łom. Użyj jej, aby otworzyć zamknięte skrzynie bez niszczenia ich albo "
+"podnieść pokrywę włazu. Nie jest jednak dość mocna, by wyważać drzwi lub "
+"okna. W razie potrzeby możesz też wziąć ją do ręki i nią walczyć."
 
 #. ~ Description of "locksmith kit"
 #: data/json/items/tool/entry_tools.json
@@ -1335,6 +1610,9 @@ msgid ""
 "essential for silently and quickly opening locks, provided you have some "
 "lockpicking and mechanical skills."
 msgstr ""
+"Ślusarski zestaw solidnych stalowych wytrychów i napinaczy. Niezbędny do "
+"cichego i szybkiego otwierania zamków, o ile masz pewne umiejętności "
+"otwierania zamków i mechaniki."
 
 #. ~ Description of "heavy crowbar"
 #: data/json/items/tool/entry_tools.json
@@ -1342,6 +1620,8 @@ msgid ""
 "A 60-inch-long construction prybar.  Essentially a long, solid steel rod with"
 " a hardened chisel tip."
 msgstr ""
+"Budowlany łom o długości 60 cali. W zasadzie długi, lity pręt stalowy z "
+"hartowanym końcem w kształcie dłuta."
 
 #. ~ Description of "C-4 explosive"
 #: data/json/items/tool/explosives.json
@@ -1349,6 +1629,8 @@ msgid ""
 "A block of military-grade RDX composition explosive.  A label reads: \"Highly"
 " explosive, use with extreme caution!\" It comes with a small timer."
 msgstr ""
+"Kostka wojskowego materiału wybuchowego na bazie heksogenu. Etykieta głosi: "
+"„Silnie wybuchowe, używać z najwyższą ostrożnością!”. Ma mały zegar."
 
 #. ~ Description of "C-4 explosive (armed)"
 #: data/json/items/tool/explosives.json
@@ -1357,6 +1639,9 @@ msgid ""
 " explosive, use with extreme caution!\" It comes with a small timer, which is"
 " currently ticking down."
 msgstr ""
+"Kostka wojskowego materiału wybuchowego na bazie heksogenu. Etykieta głosi: "
+"„Silnie wybuchowe, używać z najwyższą ostrożnością!”. Ma mały zegar, który "
+"obecnie odlicza czas."
 
 #. ~ Description of "dynamite"
 #: data/json/items/tool/explosives.json
@@ -1366,6 +1651,10 @@ msgid ""
 "in your inventory to do this.  Shortly after lighting the fuse, this item "
 "will explode, so get away!"
 msgstr ""
+"Kilka lasek materiału wybuchowego związanych razem, z przymocowanym lontem. "
+"Użyj tego przedmiotu, aby zapalić lont. Oczywiście potrzebujesz do tego "
+"zapalniczki lub zapałek w ekwipunku. Krótko po zapaleniu lontu przedmiot "
+"wybuchnie, więc uciekaj!"
 
 #. ~ Description of "dynamite bomb"
 #: data/json/items/tool/explosives.json
@@ -1376,6 +1665,10 @@ msgid ""
 "inventory to do this.  Shortly after lighting the fuse, this item will "
 "explode, so get away!"
 msgstr ""
+"Kilka lasek materiału wybuchowego wepchniętych do metalowego pojemnika i "
+"otoczonych odłamkami. Lont wystaje przez mały otwór. Użyj tego przedmiotu, "
+"aby zapalić lont. Oczywiście potrzebujesz do tego zapalniczki lub zapałek w "
+"ekwipunku. Krótko po zapaleniu lontu przedmiot wybuchnie, więc uciekaj!"
 
 #. ~ Description of "active EMP bomb"
 #: data/json/items/tool/explosives.json
@@ -1384,6 +1677,9 @@ msgid ""
 " that damages robots and drains bionic energy, as well as a sizeable "
 "explosion.  You may not want to be holding it much longer."
 msgstr ""
+"Ta bomba EMP jest aktywna i wkrótce wybuchnie, tworząc rozległe pole EMP, "
+"które uszkadza roboty i wysysa energię bioniczną, a także sporą eksplozję. "
+"Lepiej nie trzymaj jej zbyt długo."
 
 #. ~ Description of "pack of firecrackers"
 #: data/json/items/tool/explosives.json
@@ -1392,6 +1688,9 @@ msgid ""
 "fuse.  Of course, you will need a lighter or some matches to do so.  Shortly "
 "after you light the fuse they will begin to explode, so throw them quickly!"
 msgstr ""
+"Paczka 25 petard z lontem. Użyj tego przedmiotu, aby zapalić lont. Oczywiście"
+" potrzebujesz do tego zapalniczki lub zapałek. Krótko po zapaleniu lontu "
+"petardy zaczną wybuchać, więc szybko je rzuć!"
 
 #. ~ Description of "pack of firecrackers (lit)"
 #: data/json/items/tool/explosives.json
@@ -1399,6 +1698,8 @@ msgid ""
 "A pack of 25 firecrackers that has been lit; the fuse is hissing.  Throw them"
 " quickly before they start to explode."
 msgstr ""
+"Paczka 25 petard z zapalonym, syczącym lontem. Szybko je rzuć, zanim zaczną "
+"wybuchać."
 
 #. ~ Description of "flashbang"
 #: data/json/items/tool/explosives.json
@@ -1407,6 +1708,10 @@ msgid ""
 "the fuse.  You will then have five seconds before it detonates with intense "
 "light and sound, blinding, deafening, and disorienting anyone nearby."
 msgstr ""
+"Granat hukowo-błyskowy w stylu żandarmerii wojskowej. Użyj tego przedmiotu, "
+"aby wyciągnąć zawleczkę i uruchomić zapalnik. Będziesz mieć wtedy pięć "
+"sekund, zanim wybuchnie intensywnym światłem i dźwiękiem, oślepiając, "
+"ogłuszając i dezorientując wszystkich w pobliżu."
 
 #. ~ Description of "active flashbang"
 #: data/json/items/tool/explosives.json
@@ -1415,6 +1720,9 @@ msgid ""
 "sound, blinding, deafening, and disorienting anyone nearby.  It may be a good"
 " idea to throw it!"
 msgstr ""
+"Ten granat hukowo-błyskowy jest aktywny i wkrótce wybuchnie intensywnym "
+"światłem i dźwiękiem, oślepiając, ogłuszając i dezorientując wszystkich w "
+"pobliżu. Dobrze byłoby go rzucić!"
 
 #. ~ Description of "fungicidal gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1424,6 +1732,10 @@ msgid ""
 " five seconds it will begin to expel a volatile gas that is highly toxic to "
 "fungal life forms."
 msgstr ""
+"Granat gazowy wypełniony roztworem grzybobójczym. Użyj tego przedmiotu, aby "
+"wyciągnąć zawleczkę i uruchomić zapalnik, aktywując granat. Po pięciu "
+"sekundach zacznie wydzielać lotny gaz silnie toksyczny dla form życia "
+"grzybów."
 
 #. ~ Description of "armed fungicidal gas canister"
 #: data/json/items/tool/explosives.json
@@ -1431,6 +1743,8 @@ msgid ""
 "This fungicidal bomb has had its pin removed and is (or will shortly be) "
 "expelling highly toxic gas."
 msgstr ""
+"Z tej bomby grzybobójczej wyciągnięto zawleczkę i wydziela (lub wkrótce "
+"zacznie wydzielać) silnie toksyczny gaz."
 
 #. ~ Description of "makeshift fungicidal gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1440,6 +1754,10 @@ msgid ""
 "grenade.  In five seconds it will begin to expel a volatile gas that is "
 "highly toxic to fungal life forms."
 msgstr ""
+"Prowizoryczny granat gazowy wypełniony roztworem grzybobójczym. Użyj tego "
+"przedmiotu, aby wyciągnąć zawleczkę i uruchomić zapalnik, aktywując granat. "
+"Po pięciu sekundach zacznie wydzielać lotny gaz silnie toksyczny dla form "
+"życia grzybów."
 
 #. ~ Description of "armed makeshift fungicidal gas canister"
 #: data/json/items/tool/explosives.json
@@ -1447,6 +1765,8 @@ msgid ""
 "This makeshift fungicidal bomb has had its pin removed and is (or will "
 "shortly be) expelling highly toxic gas."
 msgstr ""
+"Z tej prowizorycznej bomby grzybobójczej wyciągnięto zawleczkę i wydziela "
+"(lub wkrótce zacznie wydzielać) silnie toksyczny gaz."
 
 #. ~ Description of "makeshift gas canister"
 #: data/json/items/tool/explosives.json
@@ -1456,6 +1776,10 @@ msgid ""
 "  This gas poisons those exposed to it, in addition to obscuring vision and "
 "scent."
 msgstr ""
+"Prymitywna bomba gazowa zrobiona z domowych środków chemicznych. Użyj tego "
+"przedmiotu, aby ją uzbroić. Po trzech sekundach zacznie przez krótki czas "
+"wydzielać silnie toksyczny gaz. Gaz ten zatruwa wystawione na niego istoty, a"
+" także ogranicza widoczność i maskuje zapach."
 
 #. ~ Description of "grenade"
 #: data/json/items/tool/explosives.json
@@ -1464,6 +1788,9 @@ msgid ""
 "and start the fuse.  You will then have five seconds before it explodes; "
 "throwing it would be a good idea."
 msgstr ""
+"Wojskowy odłamkowy granat ręczny. Użyj tego przedmiotu, aby wyciągnąć "
+"zawleczkę i uruchomić zapalnik. Będziesz mieć wtedy pięć sekund, zanim "
+"wybuchnie; dobrze byłoby go rzucić."
 
 #. ~ Description of "active grenade"
 #: data/json/items/tool/explosives.json
@@ -1471,6 +1798,7 @@ msgid ""
 "This fragmentation grenade is active, and will explode any second now.  "
 "Better throw it!"
 msgstr ""
+"Ten granat odłamkowy jest aktywny i wybuchnie lada chwila. Lepiej go rzuć!"
 
 #. ~ Description of "EMP grenade"
 #: data/json/items/tool/explosives.json
@@ -1482,6 +1810,12 @@ msgid ""
 "before it detonates, creating an EMP field that damages robots and drains "
 "bionic energy."
 msgstr ""
+"Granat wytwarzający impuls elektromagnetyczny przez rozładowanie baterii "
+"kondensatorów o niskiej indukcyjności w antenie jednopętlowej. Wytwarza też "
+"chmurę słabych wyładowań elektrycznych. Użyj tego przedmiotu, aby wyciągnąć "
+"zawleczkę i zapalić lont, aktywując granat EMP. Będziesz mieć wtedy trzy "
+"sekundy, zanim wybuchnie, tworząc pole EMP, które uszkadza roboty i wysysa "
+"energię bioniczną."
 
 #. ~ Description of "active EMP grenade"
 #: data/json/items/tool/explosives.json
@@ -1490,6 +1824,9 @@ msgid ""
 "field that damages robots and drains bionic energy, as well as a mild "
 "electric shock cloud.  You may not want to be holding it much longer."
 msgstr ""
+"Ten granat EMP jest aktywny i wkrótce wybuchnie, tworząc rozległe pole EMP, "
+"które uszkadza roboty i wysysa energię bioniczną, a także chmurę słabych "
+"wyładowań elektrycznych. Lepiej nie trzymaj go zbyt długo."
 
 #. ~ Description of "incendiary grenade"
 #: data/json/items/tool/explosives.json
@@ -1498,6 +1835,9 @@ msgid ""
 "start the fuse.  You will then have five seconds before it explodes into a "
 "raging inferno; throwing it would be a good idea."
 msgstr ""
+"Wojskowy zapalający granat ręczny. Użyj tego przedmiotu, aby wyciągnąć "
+"zawleczkę i uruchomić zapalnik. Będziesz mieć wtedy pięć sekund, zanim "
+"wybuchnie szalejącym piekłem ognia; dobrze byłoby go rzucić."
 
 #. ~ Description of "active incendiary grenade"
 #: data/json/items/tool/explosives.json
@@ -1505,6 +1845,8 @@ msgid ""
 "An active incendiary grenade, likely to burst into an inferno any second now."
 "  Better throw it!"
 msgstr ""
+"Aktywny granat zapalający, który lada chwila buchnie piekłem ognia. Lepiej go"
+" rzuć!"
 
 #. ~ Description of "tear gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1514,15 +1856,20 @@ msgid ""
 "seconds it will begin to expel a highly toxic gas for some time.  This gas "
 "damages and slows those who enter it, as well as obscuring vision and scent."
 msgstr ""
+"Granat gazowy wypełniony szkodliwym środkiem drażniącym. Użyj tego "
+"przedmiotu, aby wyciągnąć zawleczkę i uruchomić zapalnik, aktywując granat z "
+"gazem łzawiącym. Po pięciu sekundach zacznie przez pewien czas wydzielać "
+"silnie toksyczny gaz. Gaz ten rani i spowalnia tych, którzy w niego wejdą, a "
+"także ogranicza widoczność i maskuje zapach."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "armed tear gas grenade"
 msgid_plural "armed tear gas grenades"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "uzbrojony granat z gazem łzawiącym"
+msgstr[1] "uzbrojone granaty z gazem łzawiącym"
+msgstr[2] "uzbrojonych granatów z gazem łzawiącym"
+msgstr[3] "uzbrojonego granatu z gazem łzawiącym"
 
 #. ~ Description of "armed tear gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1530,6 +1877,8 @@ msgid ""
 "This tear gas grenade has had its pin removed and is (or will shortly be) "
 "expelling highly noxious gas."
 msgstr ""
+"Z tego granatu z gazem łzawiącym wyciągnięto zawleczkę i wydziela (lub "
+"wkrótce zacznie wydzielać) wysoce szkodliwy gaz."
 
 #. ~ Description of "insecticidal gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1539,6 +1888,9 @@ msgid ""
 "In five seconds it will begin to expel a volatile gas that is highly toxic to"
 " insect life forms."
 msgstr ""
+"Granat gazowy wypełniony roztworem insektobójczym. Użyj tego przedmiotu, aby "
+"wyciągnąć zawleczkę i uruchomić zapalnik, aktywując granat. Po pięciu "
+"sekundach zacznie wydzielać lotny gaz silnie toksyczny dla owadów."
 
 #. ~ Description of "armed insecticidal gas canister"
 #: data/json/items/tool/explosives.json
@@ -1546,6 +1898,8 @@ msgid ""
 "This insecticidal grenade has had its pin removed and is (or will shortly be)"
 " expelling highly toxic gas."
 msgstr ""
+"Z tego granatu insektobójczego wyciągnięto zawleczkę i wydziela (lub wkrótce "
+"zacznie wydzielać) silnie toksyczny gaz."
 
 #. ~ Description of "makeshift insecticidal gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1555,15 +1909,18 @@ msgid ""
 "insecticidal grenade.  In five seconds it will begin to expel a volatile gas "
 "that is highly toxic to insect life forms."
 msgstr ""
+"Prowizoryczny granat gazowy wypełniony roztworem insektobójczym. Użyj tego "
+"przedmiotu, aby wyciągnąć zawleczkę i uruchomić zapalnik, aktywując granat. "
+"Po pięciu sekundach zacznie wydzielać lotny gaz silnie toksyczny dla owadów."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "armed makeshift insecticidal gas grenade"
 msgid_plural "armed makeshift insecticidal gas grenades"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "uzbrojony prowizoryczny granat z insektobójczym gazem"
+msgstr[1] "uzbrojone prowizoryczne granaty z insektobójczym gazem"
+msgstr[2] "uzbrojonych prowizorycznych granatów z insektobójczym gazem"
+msgstr[3] "uzbrojonego prowizorycznego granatu z insektobójczym gazem"
 
 #. ~ Description of "armed makeshift insecticidal gas grenade"
 #: data/json/items/tool/explosives.json
@@ -1571,15 +1928,17 @@ msgid ""
 "This makeshift insecticidal grenade has had its pin removed and is (or will "
 "shortly be) expelling highly toxic gas."
 msgstr ""
+"Z tego prowizorycznego granatu insektobójczego wyciągnięto zawleczkę i "
+"wydziela (lub wkrótce zacznie wydzielać) silnie toksyczny gaz."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "packed disposable rocket launcher"
 msgid_plural "packed disposable rocket launchers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "złożona jednorazowa wyrzutnia rakiet"
+msgstr[1] "złożone jednorazowe wyrzutnie rakiet"
+msgstr[2] "złożonych jednorazowych wyrzutni rakiet"
+msgstr[3] "złożonej jednorazowej wyrzutni rakiet"
 
 #. ~ Description of "packed disposable rocket launcher"
 #: data/json/items/tool/explosives.json
@@ -1588,15 +1947,18 @@ msgid ""
 "be reloaded and must be disposed of.  Activate it to pop it out and make it "
 "ready to fire."
 msgstr ""
+"Złożona, jednorazowa lekka przeciwpancerna wyrzutnia rakiet. Po wystrzale nie"
+" da się jej przeładować i trzeba ją wyrzucić. Aktywuj ją, aby ją rozłożyć i "
+"przygotować do strzału."
 
 #. ~ Variant name of item "packed disposable rocket launcher"
 #: data/json/items/tool/explosives.json
 msgid "M72 LAW (packed)"
 msgid_plural "M72 LAWs (packed)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "M72 LAW (złożona)"
+msgstr[1] "M72 LAW (złożone)"
+msgstr[2] "M72 LAW (złożonych)"
+msgstr[3] "M72 LAW (złożonej)"
 
 #. ~ Description of variant "M72 LAW (packed)" of item "packed disposable
 #. rocket launcher"
@@ -1609,15 +1971,22 @@ msgid ""
 "service to this day.  Due to its design, you must unpack it to use it, and it"
 " cannot be reloaded.  Activate to unpack."
 msgstr ""
+"M72 LAW (Light Anti-armor Weapon) to jednorazowa lekka wyrzutnia rakiet "
+"przeznaczona do niszczenia czołgów i innych pojazdów opancerzonych. "
+"Zaprojektowana, by zastąpić wcześniejsze bazooki, wystrzeliwuje głowicę "
+"kumulacyjną przebijającą pancerz. Choć jest słabsza od nowocześniejszej i "
+"cięższej AT4, pozostaje w służbie do dziś. Ze względu na konstrukcję trzeba "
+"ją rozłożyć przed użyciem i nie da się jej przeładować. Aktywuj, aby "
+"rozłożyć."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "SADM mininuke"
 msgid_plural "SADM mininukes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "miniatomówka SADM"
+msgstr[1] "miniatomówki SADM"
+msgstr[2] "miniatomówek SADM"
+msgstr[3] "miniatomówki SADM"
 
 #. ~ Description of "SADM mininuke"
 #: data/json/items/tool/explosives.json
@@ -1628,15 +1997,19 @@ msgid ""
 " the timer.  You guess that the explosion would be large enough to take out a"
 " small house."
 msgstr ""
+"B54 Special Atomic Demolition Munition to niezwykle potężna broń – przenośna "
+"bomba atomowa z najmniejszą głowicą jądrową w arsenale USA. Umieszczono ją w "
+"niezwykle wytrzymałym pojemniku transportowym. Użyj jej, aby uruchomić zegar."
+" Sądzisz, że wybuch wystarczyłby, by zniszczyć mały dom."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "active SADM mininuke"
 msgid_plural "active SADM mininukes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aktywna miniatomówka SADM"
+msgstr[1] "aktywne miniatomówki SADM"
+msgstr[2] "aktywnych miniatomówek SADM"
+msgstr[3] "aktywnej miniatomówki SADM"
 
 #. ~ Description of "active SADM mininuke"
 #: data/json/items/tool/explosives.json
@@ -1645,6 +2018,8 @@ msgid ""
 "device is armed and counting down.  You should probably get far, far away "
 "from it."
 msgstr ""
+"Z zewnątrz bomba atomowa wygląda tak samo, ale wiesz, że urządzenie jest "
+"uzbrojone i odlicza czas. Lepiej oddal się od niej bardzo, bardzo daleko."
 
 #. ~ Description of "scrambler grenade"
 #: data/json/items/tool/explosives.json
@@ -1654,6 +2029,10 @@ msgid ""
 "kick in.  Use this item to pull the pin and start the fuse, turning it into "
 "an active scrambler grenade."
 msgstr ""
+"Specjalistyczny granat przeznaczony do zakłócania chipów identyfikacji swój-"
+"obcy w robotach. Przeciąga robota na twoją stronę na krótki czas, zanim "
+"włączą się systemy zapasowe. Użyj tego przedmiotu, aby wyciągnąć zawleczkę i "
+"uruchomić zapalnik, aktywując granat zagłuszający."
 
 #. ~ Description of "active scrambler grenade"
 #: data/json/items/tool/explosives.json
@@ -1661,6 +2040,8 @@ msgid ""
 "This scrambler grenade is active and will soon detonate, releasing a control "
 "wave that temporarily converts robots to your side."
 msgstr ""
+"Ten granat zagłuszający jest aktywny i wkrótce wybuchnie, uwalniając falę "
+"sterującą, która tymczasowo przeciągnie roboty na twoją stronę."
 
 #. ~ Description of "smoke bomb"
 #: data/json/items/tool/explosives.json
@@ -1671,6 +2052,11 @@ msgid ""
 "smoke.  This smoke will slow those who enter it, as well as obscuring vision "
 "and scent."
 msgstr ""
+"Granat gazowy wypełniony różnymi środkami pirotechnicznymi. Użyj tego "
+"przedmiotu, aby wyciągnąć zawleczkę i uruchomić zapalnik, aktywując bombę "
+"dymną. Pięć sekund później zacznie wydzielać gęsty czarny dym. Dym ten "
+"spowalnia tych, którzy w niego wejdą, a także ogranicza widoczność i maskuje "
+"zapach."
 
 #. ~ Description of "armed smoke bomb"
 #: data/json/items/tool/explosives.json
@@ -1678,6 +2064,8 @@ msgid ""
 "This smoke bomb has had its pin removed and is (or will shortly be) expelling"
 " thick smoke."
 msgstr ""
+"Z tej bomby dymnej wyciągnięto zawleczkę i wydziela (lub wkrótce zacznie "
+"wydzielać) gęsty dym."
 
 #. ~ Description of "rocket candy"
 #: data/json/items/tool/explosives.json
@@ -1687,6 +2075,10 @@ msgid ""
 "smokescreen - if you light the narrow end, you should be able to throw it "
 "before the flame reaches the broad end."
 msgstr ""
+"Gruszkowaty kawałek rakietowego cukierka, otrzymany przez podgrzanie saletry "
+"z cukrem i odlanie powstałej cieczy. Może służyć jako paliwo rakietowe, ale "
+"też jako zasłona dymna – jeśli podpalisz węższy koniec, zdążysz go rzucić, "
+"zanim płomień dotrze do szerszego."
 
 #. ~ Description of "burning rocket candy"
 #: data/json/items/tool/explosives.json
@@ -1694,6 +2086,8 @@ msgid ""
 "A chunk of rocket candy that has been lit on fire and burns with a loud hiss,"
 " spewing forth large amounts of smoke."
 msgstr ""
+"Kawałek rakietowego cukierka, który podpalono i który płonie z głośnym "
+"sykiem, buchając dużymi ilościami dymu."
 
 #. ~ Description of "military explosive small homemade grenade"
 #. ~ Description of "military explosive homemade grenade"
@@ -1703,6 +2097,9 @@ msgid ""
 " light the fuse.  You will then have five seconds before it explodes; "
 "throwing it would be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z części. Użyj tego przedmiotu, aby "
+"zapalić lont. Będziesz mieć wtedy pięć sekund, zanim wybuchnie; dobrze byłoby"
+" go rzucić."
 
 #. ~ "msg" action message of item "military explosive small homemade grenade"
 #. ~ "msg" action message of item "military explosive homemade grenade"
@@ -1713,6 +2110,7 @@ msgid ""
 "You light the fuse on the improvised grenade.  Throw it before it blows up in"
 " your face!"
 msgstr ""
+"Zapalasz lont improwizowanego granatu. Rzuć go, zanim wybuchnie ci w twarz!"
 
 #. ~ Description of "active military explosive small homemade grenade"
 #. ~ Description of "active military explosive homemade grenade"
@@ -1723,6 +2121,8 @@ msgid ""
 "The fuse on this improvised grenade is lit, and it will explode any second "
 "now.  Better throw it!"
 msgstr ""
+"Lont tego improwizowanego granatu jest zapalony i granat wybuchnie lada "
+"chwila. Lepiej go rzuć!"
 
 #. ~ Description of "military explosive pipebomb"
 #: data/json/items/tool/explosives.json
@@ -1730,6 +2130,9 @@ msgid ""
 "A section of steel pipe filled with military explosives.  Use this item to "
 "pull the pin, giving you six seconds to get away from it before it detonates."
 msgstr ""
+"Kawałek stalowej rury wypełniony wojskowym materiałem wybuchowym. Użyj tego "
+"przedmiotu, aby wyciągnąć zawleczkę; będziesz mieć sześć sekund na oddalenie "
+"się, zanim wybuchnie."
 
 #. ~ Description of "military explosive bomb"
 #: data/json/items/tool/explosives.json
@@ -1738,6 +2141,10 @@ msgid ""
 "military explosives and scrap metal, equipped with a delayed fuse.  Use this "
 "item to pull the pin.  Once you do, it should explode after about 20 seconds."
 msgstr ""
+"Domowej roboty ładunek wybuchowy z dużego plastikowego kanistra wypełnionego "
+"wojskowym materiałem wybuchowym i złomem, wyposażony w zapalnik czasowy. Użyj"
+" tego przedmiotu, aby wyciągnąć zawleczkę. Gdy to zrobisz, powinien wybuchnąć"
+" po około 20 sekundach."
 
 #. ~ Description of "active military explosive bomb"
 #: data/json/items/tool/explosives.json
@@ -1746,15 +2153,18 @@ msgid ""
 "military explosives and scrap metal.  Its fuse has been lit, its final "
 "countdown starting."
 msgstr ""
+"Domowej roboty ładunek wybuchowy z dużego plastikowego kanistra wypełnionego "
+"wojskowym materiałem wybuchowym i złomem. Jego zapalnik został uruchomiony i "
+"rozpoczęło się ostatnie odliczanie."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "military explosive 50 L barrel bomb"
 msgid_plural "military explosive 50 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wojskowa wybuchowa bomba beczkowa 50 l"
+msgstr[1] "wojskowe wybuchowe bomby beczkowe 50 l"
+msgstr[2] "wojskowych wybuchowych bomb beczkowych 50 l"
+msgstr[3] "wojskowej wybuchowej bomby beczkowej 50 l"
 
 #. ~ Description of "military explosive 50 L barrel bomb"
 #: data/json/items/tool/explosives.json
@@ -1763,15 +2173,18 @@ msgid ""
 "will explode after 100 seconds, raining fire and steel on everything in "
 "sight."
 msgstr ""
+"Metalowa beczułka wypełniona wojskowym materiałem wybuchowym. Po aktywowaniu "
+"wybuchnie po 100 sekundach, zasypując ogniem i stalą wszystko w zasięgu "
+"wzroku."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "active military explosive 50 L barrel bomb"
 msgid_plural "active military explosive 50 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aktywna wojskowa wybuchowa bomba beczkowa 50 l"
+msgstr[1] "aktywne wojskowe wybuchowe bomby beczkowe 50 l"
+msgstr[2] "aktywnych wojskowych wybuchowych bomb beczkowych 50 l"
+msgstr[3] "aktywnej wojskowej wybuchowej bomby beczkowej 50 l"
 
 #. ~ Description of "active military explosive 50 L barrel bomb"
 #: data/json/items/tool/explosives.json
@@ -1779,15 +2192,18 @@ msgid ""
 "A metal keg filled with military explosives.  It has been activated and will "
 "soon explode, delivering its entire destructive power to everything in sight."
 msgstr ""
+"Metalowa beczułka wypełniona wojskowym materiałem wybuchowym. Została "
+"aktywowana i wkrótce wybuchnie, uderzając całą swoją niszczycielską siłą we "
+"wszystko w zasięgu wzroku."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "military explosive 100 L barrel bomb"
 msgid_plural "military explosive 100 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wojskowa wybuchowa bomba beczkowa 100 l"
+msgstr[1] "wojskowe wybuchowe bomby beczkowe 100 l"
+msgstr[2] "wojskowych wybuchowych bomb beczkowych 100 l"
+msgstr[3] "wojskowej wybuchowej bomby beczkowej 100 l"
 
 #. ~ Description of "military explosive 100 L barrel bomb"
 #. ~ Description of "100 L barrel bomb"
@@ -1797,15 +2213,18 @@ msgid ""
 "activated it will explode after 100 seconds, raining fire and steel on "
 "everything in sight."
 msgstr ""
+"Stulitrowa metalowa beczka wypełniona wojskowym materiałem wybuchowym. Po "
+"aktywowaniu wybuchnie po 100 sekundach, zasypując ogniem i stalą wszystko w "
+"zasięgu wzroku."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "active military explosive 100 L barrel bomb"
 msgid_plural "active military explosive 100 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aktywna wojskowa wybuchowa bomba beczkowa 100 l"
+msgstr[1] "aktywne wojskowe wybuchowe bomby beczkowe 100 l"
+msgstr[2] "aktywnych wojskowych wybuchowych bomb beczkowych 100 l"
+msgstr[3] "aktywnej wojskowej wybuchowej bomby beczkowej 100 l"
 
 #. ~ Description of "active military explosive 100 L barrel bomb"
 #. ~ Description of "active 100 L barrel bomb"
@@ -1815,6 +2234,9 @@ msgid ""
 "and will soon explode, delivering its entire destructive power to everything "
 "in sight."
 msgstr ""
+"Stulitrowa metalowa beczka wypełniona wojskowym materiałem wybuchowym. "
+"Została aktywowana i wkrótce wybuchnie, uderzając całą swoją niszczycielską "
+"siłą we wszystko w zasięgu wzroku."
 
 #. ~ Description of "small homemade grenade"
 #. ~ Description of "homemade grenade"
@@ -1824,6 +2246,9 @@ msgid ""
 "item to light the fuse.  You will then have 5 seconds before it explodes; "
 "throwing it would be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z części zamiennych. Użyj tego "
+"przedmiotu, aby zapalić lont. Będziesz mieć wtedy 5 sekund, zanim wybuchnie; "
+"dobrze byłoby go rzucić."
 
 #. ~ Description of "pipebomb"
 #: data/json/items/tool/explosives.json
@@ -1832,6 +2257,9 @@ msgid ""
 "fuse, giving you six seconds to get away from it before it detonates.  You'll"
 " need a lighter or some matches to use it."
 msgstr ""
+"Kawałek stalowej rury wypełniony materiałem wybuchowym. Użyj tego przedmiotu,"
+" aby zapalić lont; będziesz mieć sześć sekund na oddalenie się, zanim "
+"wybuchnie. Potrzebujesz do tego zapalniczki lub zapałek."
 
 #. ~ Description of "homemade bomb"
 #: data/json/items/tool/explosives.json
@@ -1840,6 +2268,10 @@ msgid ""
 "stable explosives and scrap metal, equipped with a long fuse.  Use this item "
 "to light the fuse.  Once you do, it should explode after about 20 seconds."
 msgstr ""
+"Domowej roboty ładunek wybuchowy z dużego plastikowego kanistra wypełnionego "
+"stabilnym materiałem wybuchowym i złomem, wyposażony w długi lont. Użyj tego "
+"przedmiotu, aby zapalić lont. Gdy to zrobisz, powinien wybuchnąć po około 20 "
+"sekundach."
 
 #. ~ Description of "homemade bomb"
 #: data/json/items/tool/explosives.json
@@ -1848,6 +2280,9 @@ msgid ""
 "stable explosives and scrap metal.  Its fuse has been lit, its final "
 "countdown starting."
 msgstr ""
+"Domowej roboty ładunek wybuchowy z dużego plastikowego kanistra wypełnionego "
+"stabilnym materiałem wybuchowym i złomem. Jego lont został zapalony i "
+"rozpoczęło się ostatnie odliczanie."
 
 #. ~ Description of "homemade demolition charge"
 #: data/json/items/tool/explosives.json
@@ -1856,15 +2291,18 @@ msgid ""
 " of course, need a lighter or matches in your inventory to do this.  20 "
 "seconds after lighting the fuse, it will explode, so get away!"
 msgstr ""
+"Improwizowany ładunek burzący. Użyj tego przedmiotu, aby zapalić lont. "
+"Oczywiście potrzebujesz do tego zapalniczki lub zapałek w ekwipunku. 20 "
+"sekund po zapaleniu lontu wybuchnie, więc uciekaj!"
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "50 L barrel bomb"
 msgid_plural "50 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bomba beczkowa 50 l"
+msgstr[1] "bomby beczkowe 50 l"
+msgstr[2] "bomb beczkowych 50 l"
+msgstr[3] "bomby beczkowej 50 l"
 
 #. ~ Description of "50 L barrel bomb"
 #: data/json/items/tool/explosives.json
@@ -1873,27 +2311,31 @@ msgid ""
 "core, so 100 seconds after the fuse has been lit the charge will detonate "
 "completely, delivering its entire destructive power to everything in sight."
 msgstr ""
+"Metalowa beczułka wypełniona stabilnym materiałem wybuchowym. Zawiera lotny "
+"rdzeń wybuchowy, więc 100 sekund po zapaleniu lontu ładunek wybuchnie w "
+"całości, uderzając całą swoją niszczycielską siłą we wszystko w zasięgu "
+"wzroku."
 
 #. ~ "menu_text" action message of item "50 L barrel bomb"
 #. ~ "menu_text" action message of item "100 L barrel bomb"
 #: data/json/items/tool/explosives.json
 msgid "Activate fuse"
-msgstr ""
+msgstr "Uruchom lont"
 
 #. ~ "msg" action message of item "50 L barrel bomb"
 #. ~ "msg" action message of item "100 L barrel bomb"
 #: data/json/items/tool/explosives.json
 msgid "You activate the fuse on the barrel bomb.  Clear the area!"
-msgstr ""
+msgstr "Uruchamiasz lont bomby beczkowej. Opuść teren!"
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "active 50 L barrel bomb"
 msgid_plural "active 50 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aktywna bomba beczkowa 50 l"
+msgstr[1] "aktywne bomby beczkowe 50 l"
+msgstr[2] "aktywnych bomb beczkowych 50 l"
+msgstr[3] "aktywnej bomby beczkowej 50 l"
 
 #. ~ Description of "active 50 L barrel bomb"
 #: data/json/items/tool/explosives.json
@@ -1902,33 +2344,36 @@ msgid ""
 " ignites the primary explosive, the bomb will detonate and rain fire and "
 "steel on everything in sight."
 msgstr ""
+"Metalowa beczułka wypełniona stabilnym materiałem wybuchowym. Lont został "
+"zapalony, a gdy odpali główny ładunek, bomba wybuchnie, zasypując ogniem i "
+"stalą wszystko w zasięgu wzroku."
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "100 L barrel bomb"
 msgid_plural "100 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "bomba beczkowa 100 l"
+msgstr[1] "bomby beczkowe 100 l"
+msgstr[2] "bomb beczkowych 100 l"
+msgstr[3] "bomby beczkowej 100 l"
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "active 100 L barrel bomb"
 msgid_plural "active 100 L barrel bombs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aktywna bomba beczkowa 100 l"
+msgstr[1] "aktywne bomby beczkowe 100 l"
+msgstr[2] "aktywnych bomb beczkowych 100 l"
+msgstr[3] "aktywnej bomby beczkowej 100 l"
 
 #. ~ Item name
 #: data/json/items/tool/explosives.json
 msgid "60 mm mortar propellant charge"
 msgid_plural "60 mm mortar propellant charges"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ładunek miotający do moździerza 60 mm"
+msgstr[1] "ładunki miotające do moździerza 60 mm"
+msgstr[2] "ładunków miotających do moździerza 60 mm"
+msgstr[3] "ładunku miotającego do moździerza 60 mm"
 
 #. ~ Description of "60 mm mortar propellant charge"
 #: data/json/items/tool/explosives.json
@@ -1938,6 +2383,10 @@ msgid ""
 "and, therefore, its range.  Since the projectile it was connected to was "
 "already shot, you can only cut it for its content."
 msgstr ""
+"Mały ładunek wybuchowy w kształcie pączka z wyciętym kawałkiem, przeznaczony "
+"do mocowania na stateczniku pocisku moździerzowego, by zwiększyć prędkość "
+"pocisku, a tym samym jego zasięg. Pocisk, do którego był przymocowany, został"
+" już wystrzelony, więc możesz go jedynie rozciąć dla zawartości."
 
 #. ~ Description of "electric firestarter"
 #: data/json/items/tool/fire.json
@@ -1945,6 +2394,8 @@ msgid ""
 "A crudely-made electric firestarter, which can function as an inefficient "
 "lighter."
 msgstr ""
+"Prymitywnie wykonana elektryczna zapalarka, która może służyć jako mało "
+"wydajna zapalniczka."
 
 #. ~ Description of "bow fire drill"
 #: data/json/items/tool/fire.json
@@ -1953,6 +2404,10 @@ msgid ""
 "wooden shaft.  The shaft is spun rapidly with a sawing motion by a bowstring "
 "wrapped around it.  Very slow to acquire a usable ember."
 msgstr ""
+"Prosty przedmiot do rozpalania ognia przez tarcie między naciętą deską a "
+"drewnianym trzpieniem. Trzpień obraca się szybko dzięki cięciwie owiniętej "
+"wokół niego i poruszanej ruchem piłowania. Uzyskanie żaru nadającego się do "
+"użytku trwa bardzo długo."
 
 #. ~ Description of "pump fire drill"
 #: data/json/items/tool/fire.json
@@ -1961,3 +2416,7 @@ msgid ""
 "wooden shaft, with a flywheel attached.  The shaft is spun rapidly with a "
 "pumping motion by a cord wrapped around it.  Slow to acquire a usable ember."
 msgstr ""
+"Prosty przedmiot do rozpalania ognia przez tarcie między naciętą deską a "
+"drewnianym trzpieniem z przymocowanym kołem zamachowym. Trzpień obraca się "
+"szybko dzięki sznurkowi owiniętemu wokół niego i poruszanemu ruchem "
+"pompowania. Uzyskanie żaru nadającego się do użytku trwa długo."
