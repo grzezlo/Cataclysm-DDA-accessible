@@ -401,8 +401,10 @@ def lookup(args):
     pattern = re.compile(args.pattern, flags)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
+    shown = 0
     for path in args.catalogs:
-        shown = 0
+        if shown >= args.limit:
+            break
         for entry in polib.pofile(path):
             if (shown >= args.limit or entry.obsolete or
                     "fuzzy" in entry.flags or not has_translation(entry)):
@@ -583,7 +585,8 @@ def main():
     lookup_parser.add_argument("--translation", action="store_true",
                                help="match the translation, not the source")
     lookup_parser.add_argument("--limit", type=int, default=20,
-                               help="matches shown per catalog")
+                               help="matches shown in total, from the "
+                               "first catalog onward")
     lookup_parser.add_argument("pattern")
     lookup_parser.add_argument("catalogs", nargs="+")
     lookup_parser.set_defaults(run=lookup)
