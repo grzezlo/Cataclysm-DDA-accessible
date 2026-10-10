@@ -92,8 +92,15 @@ arguments and tag balance; these rules cover grammar it cannot check.
   - Body parts in combat messages arrive in the accusative ("lewą rękę"):
     "%1$s trafia <npcname> nożem w %2$s!", "drapie cię w %2$s".  They cannot
     be the subject of a sentence.
-  - Item names arrive in the nominative and have unknown gender: write
-    "trzymać w jednej ręce: %s" or "przedmiot %s", never "Twój %s".
+  - Item, furniture, and liquid names arrive in the nominative and have
+    unknown gender.  Never put them where Polish needs another case or
+    agreement: after a verb that takes an object ("Wyjmujesz %s z kadzi"
+    gives "Wyjmujesz latarka"), after a preposition ("dla %s", "z %s",
+    "bez %s"), after "więcej", "nadmiar", or a quantity ("5 litrów %s"),
+    or with a gendered word ("Twój %s", "%s jest pusty").  End the phrase
+    with a colon or use a neutral noun: "Wyjmujesz z kadzi: %s.",
+    "Nie znaleziono przepisu mielenia dla: %s.", "Nie możesz trzymać
+    przedmiotu %s.".  This was the most frequent review correction.
   - In conditional names such as "%s topaz necklace" the %s may be a
     nickname ("Big Iron"), so keep the noun: "naszyjnik %s z topazem".
 - The possessive "<npcname>'s %s" is written "%s <npcname>" as in
@@ -129,6 +136,7 @@ Verify anything not listed here with lookup.
   rzucanie, prowadzenie, pływanie, komputery
 - wield: trzymać, weź do ręki (not dzierżyć or dobyć)
 - encumbrance: skrępowanie; crafter: wytwórca; tileset: nakładka graficzna
+- disassemble: demontować, zdemontowanie (not rozbierać, which means undress)
 - activity levels: Brisk is Energiczna
 - clothing layers: przy skórze, normalne, zewnętrzne, przyczepione
 - MOLLE or ammo pouches: ładownice; leather pouch: skórzana sakwa
