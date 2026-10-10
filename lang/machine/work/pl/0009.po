@@ -20,6 +20,9 @@ msgid ""
 "long-range weapon is not incredibly damaging, but is very accurate, and has "
 "the potential to start fires."
 msgstr ""
+"Mały laser dużej mocy wbudowany w opuszkę palca użytkownika. Ta broń "
+"dalekiego zasięgu nie zadaje wielkich obrażeń, ale jest bardzo celna i może "
+"wzniecać pożary."
 
 #. ~ Description of "Leukocyte Breeder System CBM"
 #: data/json/items/bionics.json
@@ -29,6 +32,10 @@ msgid ""
 "It is designed for continuous use and may cause unpleasant side effects when "
 "turned off."
 msgstr ""
+"Zestaw bionicznych stymulatorów wspomagających układ krwiotwórczy "
+"użytkownika, które pozwalają przyspieszyć produkcję białych krwinek kosztem "
+"mocy bionicznej. Jest przeznaczony do ciągłego użytku, a jego wyłączenie może"
+" wywołać nieprzyjemne skutki uboczne."
 
 #. ~ Description of "Finger Lighter CBM"
 #: data/json/items/bionics.json
@@ -36,15 +43,16 @@ msgid ""
 "A pair of powerful fire starters which extend from the tip of both hands' "
 "index fingers."
 msgstr ""
+"Para silnych zapalników wysuwanych z czubków palców wskazujących obu dłoni."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Nictitating Membrane CBM"
 msgid_plural "Nictitating Membrane CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Druga powieka"
+msgstr[1] "KMB-y Druga powieka"
+msgstr[2] "KMB-ów Druga powieka"
+msgstr[3] "KMB-a Druga powieka"
 
 #. ~ Description of "Nictitating Membrane CBM"
 #: data/json/items/bionics.json
@@ -52,6 +60,8 @@ msgid ""
 "Thin membranes that cover the user's eyes while underwater, negating any "
 "vision penalties."
 msgstr ""
+"Cienkie błony, które zakrywają oczy użytkownika pod wodą, niwelując wszelkie "
+"kary do widzenia."
 
 #. ~ Description of "Enhanced Memory Banks CBM"
 #: data/json/items/bionics.json
@@ -62,6 +72,11 @@ msgid ""
 "and thus cannot be removed without risk of severe permanent amnesia and "
 "difficulty forming new memories."
 msgstr ""
+"Zestaw wysoce zaawansowanych kwantowych dysków pamięci wspomagających pamięć."
+" Gdy są aktywne, zwiększają tempo, w jakim użytkownik uczy się umiejętności. "
+"Po instalacji częściowo przejmują funkcje hipokampa, dlatego nie można ich "
+"usunąć bez ryzyka ciężkiej, trwałej amnezji i trudności z tworzeniem nowych "
+"wspomnień."
 
 #. ~ Description of "Weather Reader CBM"
 #: data/json/items/bionics.json
@@ -70,6 +85,9 @@ msgid ""
 "data.  The data are compiled and presented as a simple readout of the current"
 " weather.  It also passively tells the user their external temperature."
 msgstr ""
+"Mnóstwo instrumentów naukowych i czujników zbiera dane o otoczeniu. Dane są "
+"zestawiane i przedstawiane jako prosty odczyt bieżącej pogody. Moduł biernie "
+"informuje też użytkownika o temperaturze otoczenia."
 
 #. ~ Description of "Repair Nanobots CBM"
 #: data/json/items/bionics.json
@@ -77,6 +95,8 @@ msgid ""
 "A fleet of tiny, dormant robots.  While activated, they will flit about the "
 "user's body, repairing damage and stopping bleeding at the cost of power."
 msgstr ""
+"Flota maleńkich, uśpionych robotów. Po aktywacji krążą po ciele użytkownika, "
+"naprawiając obrażenia i tamując krwawienie kosztem mocy."
 
 #. ~ Description of "Artificial Night Generator CBM"
 #: data/json/items/bionics.json
@@ -84,6 +104,8 @@ msgid ""
 "When active, this bionic eliminates all light within a 2 tile radius of the "
 "user through destructive interference."
 msgstr ""
+"Gdy ta bionika jest aktywna, eliminuje całe światło w promieniu 2 pól wokół "
+"użytkownika za pomocą interferencji destruktywnej."
 
 #. ~ Description of "Air Filtration System CBM"
 #: data/json/items/bionics.json
@@ -92,15 +114,18 @@ msgid ""
 "toxins or airborne diseases find their way into the windpipe, the filter will"
 " attempt to remove them."
 msgstr ""
+"Zaawansowany system filtracji wszczepiony w tchawicę użytkownika. Jeśli "
+"toksyny lub choroby przenoszone drogą powietrzną dostaną się do tchawicy, "
+"filtr spróbuje je usunąć."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Infolink CBM"
 msgid_plural "Infolink CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Infolink"
+msgstr[1] "KMB-y Infolink"
+msgstr[2] "KMB-ów Infolink"
+msgstr[3] "KMB-a Infolink"
 
 #. ~ Description of "Infolink CBM"
 #: data/json/items/bionics.json
@@ -108,6 +133,8 @@ msgid ""
 "A wireless communications device that integrates with the ear canal to enable"
 " hands-free communication over radio waves."
 msgstr ""
+"Bezprzewodowe urządzenie komunikacyjne zintegrowane z przewodem słuchowym, "
+"umożliwiające komunikację radiową bez użycia rąk."
 
 #. ~ Description of "Radiation Scrubber System CBM"
 #: data/json/items/bionics.json
@@ -116,6 +143,9 @@ msgid ""
 "throughout the body, allowing the user to purge themself of absorbed "
 "radiation at the cost of some bionic power."
 msgstr ""
+"System zaawansowanych piezomechanicznych filtrów krwi wszczepionych w całym "
+"ciele, który pozwala użytkownikowi oczyścić się z pochłoniętego "
+"promieniowania kosztem części mocy bionicznej."
 
 #. ~ Description of "Fingertip Razors CBM"
 #: data/json/items/bionics.json
@@ -124,6 +154,10 @@ msgid ""
 "implanted underneath the fingernails.  They deal a small amount of unarmed "
 "slashing damage whenever the user's fingertips are uncovered."
 msgstr ""
+"Zestaw dziesięciu obosiecznych, ostrych jak brzytwa szponów o długości "
+"czterech centymetrów, wszczepionych pod paznokcie. Zadają niewielkie "
+"obrażenia sieczne w walce wręcz, gdy opuszki palców użytkownika są "
+"odsłonięte."
 
 #. ~ Description of "Gasoline Fuel Cell CBM"
 #: data/json/items/bionics.json
@@ -132,6 +166,9 @@ msgid ""
 "connected to a diffuse network of bio-plastic bladders able to hold up to 500"
 " mL of gasoline."
 msgstr ""
+"Małe ogniwo paliwowe zdolne zamieniać benzynę w moc bioniczną. Jest połączone"
+" z rozproszoną siecią pęcherzy z bioplastiku, które mieszczą do 500 ml "
+"benzyny."
 
 #. ~ Description of "Sonic Resonator CBM"
 #: data/json/items/bionics.json
@@ -140,6 +177,9 @@ msgid ""
 "power, creating a short-range shockwave.  While it will not do much damage to"
 " creatures, solid objects such as walls and doors will be damaged."
 msgstr ""
+"Moduł bioniczny, który pozwala całemu ciału użytkownika rezonować z bardzo "
+"dużą mocą, wytwarzając falę uderzeniową o krótkim zasięgu. Nie wyrządza wielu"
+" szkód istotom, ale uszkadza obiekty stałe, takie jak ściany i drzwi."
 
 #. ~ Description of "Shockwave Generator CBM"
 #: data/json/items/bionics.json
@@ -149,6 +189,10 @@ msgid ""
 "upon impact with impassable terrain, and knock back any creatures they "
 "collide with."
 msgstr ""
+"Moduł bioniczny wytwarzający potężną falę uderzeniową, która odrzuca "
+"wszystkie pobliskie istoty. Cele zostają na krótko ogłuszone, a po uderzeniu "
+"w nieprzekraczalny teren otrzymują obrażenia i dodatkowe ogłuszenie oraz "
+"odrzucają wszystkie istoty, z którymi się zderzą."
 
 #. ~ Description of "Synaptic Accelerator CBM"
 #: data/json/items/bionics.json
@@ -157,6 +201,8 @@ msgid ""
 "A set of bionic stimulators that enhance the user's nervous system, granting "
 "a 10% boost to speed."
 msgstr ""
+"Zestaw bionicznych stymulatorów wspomagających układ nerwowy użytkownika, "
+"który zwiększa szybkość o 10%."
 
 #. ~ Description of "Muscle Augmentation CBM"
 #: data/json/items/bionics.json
@@ -164,6 +210,8 @@ msgid ""
 "A set of myomer fibers that enhance the user's muscular system, granting a +2"
 " bonus to strength."
 msgstr ""
+"Zestaw włókien miomerowych wspomagających układ mięśniowy użytkownika, który "
+"daje premię +2 do siły."
 
 #. ~ Description of "Autonomous Surgical Scalpels CBM"
 #: data/json/items/bionics.json
@@ -172,15 +220,18 @@ msgid ""
 "  They allow for automated precise cuts and can be used as a high-quality "
 "butchering tool."
 msgstr ""
+"System skalpeli klasy chirurgicznej wszczepiony w palce użytkownika. "
+"Pozwalają wykonywać zautomatyzowane, precyzyjne cięcia i mogą służyć jako "
+"wysokiej jakości narzędzie rzeźnicze."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Synthetic Lungs CBM"
 msgid_plural "Synthetic Lungs CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Syntetyczne płuca"
+msgstr[1] "KMB-y Syntetyczne płuca"
+msgstr[2] "KMB-ów Syntetyczne płuca"
+msgstr[3] "KMB-a Syntetyczne płuca"
 
 #. ~ Description of "Synthetic Lungs CBM"
 #: data/json/items/bionics.json
@@ -191,6 +242,10 @@ msgid ""
 " remain breathing.  Further, they will weaken the user's immune system "
 "somewhat."
 msgstr ""
+"Wysoce wydajne syntetyczne płuca, które zastępują płuca użytkownika. Po "
+"instalacji kondycja użytkownika znacznie wzrośnie i nie będzie wymagać "
+"regularnych ćwiczeń, ale użytkownik będzie potrzebował stałego zasilania, aby"
+" oddychać. Ponadto nieco osłabiają one układ odpornościowy użytkownika."
 
 #. ~ Description of "Targeting System CBM"
 #: data/json/items/bionics.json
@@ -199,15 +254,18 @@ msgid ""
 "the user's eyes with their arms, to a degree.  Shots they fire will be much "
 "more accurate, particularly at long ranges."
 msgstr ""
+"Moduł bioniczny zawierający dalmierze, który do pewnego stopnia synchronizuje"
+" ruch oczu użytkownika z ruchem rąk. Oddawane przez niego strzały będą "
+"znacznie celniejsze, zwłaszcza na duże odległości."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Super Stun Gun CBM"
 msgid_plural "Super Stun Gun CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Super paralizator"
+msgstr[1] "KMB-y Super paralizator"
+msgstr[2] "KMB-ów Super paralizator"
+msgstr[3] "KMB-a Super paralizator"
 
 #. ~ Description of "Super Stun Gun CBM"
 #: data/json/items/bionics.json
@@ -218,6 +276,11 @@ msgid ""
 " nearly impossible to miss, but it still requires the user to be nearly "
 "adjacent to their target."
 msgstr ""
+"Bioniczny paralizator wszczepiany w dłoń. Ma bardzo dużą moc i z łatwością "
+"wywołuje u celów oparzenia elektryczne i zatrzymanie akcji serca. Wytwarzany "
+"prąd przeskakuje łukiem przez powietrze na krótkie odległości, przez co "
+"niemal nie da się chybić, ale użytkownik wciąż musi stać prawie tuż przy "
+"celu."
 
 #. ~ Description of "Teleportation Unit CBM"
 #: data/json/items/bionics.json
@@ -227,6 +290,10 @@ msgid ""
 "of much power.  Note that prolonged or frequent use may have dangerous side "
 "effects."
 msgstr ""
+"Wysoce eksperymentalne urządzenie, które zakrzywia przestrzeń na krótkich "
+"odległościach, natychmiast przenosząc ciało użytkownika na odległość do 25 "
+"stóp w losowym kierunku kosztem dużej ilości mocy. Uwaga: długotrwałe lub "
+"częste używanie może mieć niebezpieczne skutki uboczne."
 
 #. ~ Description of "Integrated Multitool CBM"
 #: data/json/items/bionics.json
@@ -235,15 +302,18 @@ msgid ""
 "user's power banks.  Includes screwdriving heads, a multi-purpose knife, a "
 "low-power impact wrench and a nail prying tool."
 msgstr ""
+"Chirurgicznie wszczepiony zestaw kompaktowych narzędzi i spawarka zasilane z "
+"banków energii użytkownika. Zawiera końcówki śrubokrętów, wielofunkcyjny nóż,"
+" klucz udarowy małej mocy i narzędzie do wyciągania gwoździ."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Integrated Multimeter CBM"
 msgid_plural "Integrated Multimeter CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Zintegrowany multimetr"
+msgstr[1] "KMB-y Zintegrowany multimetr"
+msgstr[2] "KMB-ów Zintegrowany multimetr"
+msgstr[3] "KMB-a Zintegrowany multimetr"
 
 #. ~ Description of "Integrated Multimeter CBM"
 #: data/json/items/bionics.json
@@ -253,15 +323,18 @@ msgid ""
 "resistance, and current using their fingertips, and provides slight "
 "protection against electric shocks."
 msgstr ""
+"Zestaw przewodów pomiarowych wszczepianych w palce użytkownika i połączonych "
+"z multimetrem w dłoni. Pozwala mierzyć napięcie, opór i natężenie prądu "
+"opuszkami palców oraz zapewnia lekką ochronę przed porażeniem prądem."
 
 #. ~ Item name
 #: data/json/items/bionics.json
 msgid "Integrated Circuitry Toolset CBM"
 msgid_plural "Integrated Circuitry Toolset CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Zintegrowany zestaw narzędzi elektronicznych"
+msgstr[1] "KMB-y Zintegrowany zestaw narzędzi elektronicznych"
+msgstr[2] "KMB-ów Zintegrowany zestaw narzędzi elektronicznych"
+msgstr[3] "KMB-a Zintegrowany zestaw narzędzi elektronicznych"
 
 #. ~ Description of "Integrated Circuitry Toolset CBM"
 #: data/json/items/bionics.json
@@ -270,6 +343,10 @@ msgid ""
 "user's hands.  Contains all the tools required for manipulating bench-scale "
 "electrical circuits, and provides slight protection against electric shocks."
 msgstr ""
+"Lutownica, multimetr i zestaw precyzyjnych śrubokrętów wszczepione w dłonie "
+"użytkownika. Zawiera wszystkie narzędzia potrzebne do pracy z obwodami "
+"elektrycznymi na stole warsztatowym i zapewnia lekką ochronę przed porażeniem"
+" prądem."
 
 #. ~ Description of "Joint Torsion Ratchet CBM"
 #: data/json/items/bionics.json
@@ -278,6 +355,9 @@ msgid ""
 "power when they move.  These can be toggled to generate more power, but "
 "movement will require more effort."
 msgstr ""
+"Zestaw grzechotek skrętnych, które zastępują stawy użytkownika i powoli "
+"wytwarzają energię podczas ruchu. Można je przełączyć na wytwarzanie większej"
+" ilości energii, ale wtedy poruszanie się wymaga więcej wysiłku."
 
 #. ~ Description of "Joint Servo CBM"
 #: data/json/items/bionics.json
@@ -287,6 +367,10 @@ msgid ""
 "effort while this bionic is active.  However, when it's offline it will "
 "hamper the user's movement."
 msgstr ""
+"Zestaw serwomotorów zainstalowanych w stawach nóg, które wspomagają ruch. Są "
+"zoptymalizowane pod kątem biegania, ale gdy ta bionika jest aktywna, również "
+"chodzenie wymaga mniej wysiłku. Jednak gdy jest wyłączona, utrudnia "
+"użytkownikowi poruszanie się."
 
 #. ~ Description of "Uncanny Dodge CBM"
 #: data/json/items/bionics.json
@@ -294,6 +378,8 @@ msgid ""
 "A set of bionic processors that augment the user's nervous system, allowing "
 "them to dodge attacks beyond normal human capability."
 msgstr ""
+"Zestaw bionicznych procesorów wspomagających układ nerwowy użytkownika, które"
+" pozwalają unikać ataków w sposób przekraczający zwykłe ludzkie możliwości."
 
 #. ~ Description of "Internal Chronometer CBM"
 #: data/json/items/bionics.json
@@ -301,6 +387,8 @@ msgid ""
 "A bionic module containing an atomic clock, complete with a silent alarm "
 "clock function."
 msgstr ""
+"Moduł bioniczny zawierający zegar atomowy, wyposażony w funkcję cichego "
+"budzika."
 
 #. ~ Description of "Water Extraction Unit CBM"
 #: data/json/items/bionics.json
@@ -309,6 +397,10 @@ msgid ""
 "hand to pump any available fluid out of a dead body, cleanse it of "
 "impurities, and convert it into potable water.  Water container not included."
 msgstr ""
+"Moduł zawierający nanorurki wszczepiane we wnętrze dłoni użytkownika, które "
+"wypompowują wszelkie dostępne płyny z martwego ciała, oczyszczają je z "
+"zanieczyszczeń i zamieniają w wodę pitną. Pojemnik na wodę nie jest "
+"dołączony."
 
 #. ~ Description of "Intravenous Needletip CBM"
 #: data/json/items/bionics.json
@@ -317,6 +409,9 @@ msgid ""
 " instead of a plunger.  When installed, it allows the user to draw substances"
 " directly into their bloodstream akin to a regular syringe."
 msgstr ""
+"Mała rurka z wysuwaną igłą, zakończona zamiast tłoka siecią maleńkich "
+"wężyków. Po instalacji pozwala użytkownikowi wprowadzać substancje "
+"bezpośrednio do krwiobiegu, podobnie jak zwykła strzykawka."
 
 #. ~ Description of "Titanium Skeletal Bracing CBM"
 #: data/json/items/bionics.json
@@ -326,6 +421,10 @@ msgid ""
 "allowing the user to carry more weight.  The reinforcement also provides 2 "
 "bashing armor to the torso, legs and arms."
 msgstr ""
+"Zestaw zawiasów, sprężyn i innych syntetycznych wzmocnień układu kostnego. Te"
+" sztuczne wzmacniacze wzmacniają kolana i łokcie, pozwalając użytkownikowi "
+"nosić większy ciężar. Wzmocnienie zapewnia też 2 punkty ochrony przed "
+"obrażeniami obuchowymi tułowia, nóg i rąk."
 
 #. ~ Description of "Taste Modifier CBM"
 #: data/json/items/bionics.json
@@ -334,13 +433,16 @@ msgid ""
 "with a sophisticated analyzer.  While active, it will block all unpleasant "
 "taste and texture at the cost of bionic energy."
 msgstr ""
+"Zestaw bardzo czułych czujników wszczepionych w usta użytkownika, połączonych"
+" z zaawansowanym analizatorem. Gdy jest aktywny, blokuje wszelkie "
+"nieprzyjemne smaki i konsystencje kosztem energii bionicznej."
 
 #. ~ Description of "Acidic Discharge CBM"
 #: data/json/items/bionics.json
 msgid ""
 "A CBM that has been breached in several places.  Some acid is leaking from "
 "it."
-msgstr ""
+msgstr "KMB rozszczelniony w kilku miejscach. Wycieka z niego trochę kwasu."
 
 #. ~ Description of "Electrical Discharge CBM"
 #: data/json/items/bionics.json
@@ -348,6 +450,8 @@ msgid ""
 "A formerly-functional CBM that is now a mess of naked wires and burnt "
 "resistors."
 msgstr ""
+"Niegdyś działający KMB, który teraz jest plątaniną gołych przewodów i "
+"spalonych rezystorów."
 
 #. ~ Description of "Itchy Metal Thing CBM"
 #: data/json/items/bionics.json
@@ -355,11 +459,14 @@ msgid ""
 "You can't recognize what this is supposed to be, but you imagine it'd be a "
 "very awkward thing to have in one's body."
 msgstr ""
+"Nie potrafisz rozpoznać, czym to ma być, ale wyobrażasz sobie, że mieć to w "
+"ciele byłoby bardzo niezręcznie."
 
 #. ~ Description of "Glowy Thing CBM"
 #: data/json/items/bionics.json
 msgid "It's a… thing?  And it glows, at least it did when it was installed."
 msgstr ""
+"To jest… coś? I świeci, a przynajmniej świeciło, gdy było zainstalowane."
 
 #. ~ Description of "Noisemaker CBM"
 #: data/json/items/bionics.json
@@ -367,6 +474,8 @@ msgid ""
 "A malfunctioning bionic.  When installed, it occasionally emits a loud burst "
 "of noise."
 msgstr ""
+"Wadliwa bionika. Po zainstalowaniu od czasu do czasu wydaje głośny wybuch "
+"hałasu."
 
 #. ~ Description of "Endocrine Enervator CBM"
 #: data/json/items/bionics.json
@@ -374,6 +483,8 @@ msgid ""
 "A malfunctioning bionic that causes sleepiness by altering the unfortunate "
 "user's brain chemistry."
 msgstr ""
+"Wadliwa bionika, która wywołuje senność, zmieniając chemię mózgu "
+"nieszczęsnego użytkownika."
 
 #. ~ Description of "Synaptic Regeneration System CBM"
 #: data/json/items/bionics.json
@@ -384,6 +495,11 @@ msgid ""
 "sleepy; if activated by a user that is already sleep-deprived, it will "
 "gradually reduce the symptoms of lacking sleep."
 msgstr ""
+"Elektromagnetyczny stymulator wszczepiony chirurgicznie z tyłu głowy i wzdłuż"
+" kręgosłupa, stale pobierający moc. Dopóki jest aktywny, użytkownik nie "
+"cierpi z powodu deprywacji snu, choć wciąż może odczuwać senność. Jeśli "
+"aktywuje go użytkownik, który już cierpi na deprywację snu, stopniowo "
+"złagodzi objawy braku snu."
 
 #. ~ Description of "Electromagnetic Leak CBM"
 #: data/json/items/bionics.json
@@ -391,6 +507,8 @@ msgid ""
 "A broken implant that sends electromagnetic impulses that reduce other "
 "implants' capacity to store charge."
 msgstr ""
+"Zepsuty implant wysyłający impulsy elektromagnetyczne, które zmniejszają "
+"zdolność innych implantów do przechowywania ładunku."
 
 #. ~ Description of "Oil Generator CBM"
 #: data/json/items/bionics.json
@@ -398,6 +516,8 @@ msgid ""
 "A CBM that generates power out of kerosene or motor oil.  It is fairly "
 "efficient and can store up to 750 mL of fuel, but works somewhat slowly."
 msgstr ""
+"KMB wytwarzający moc z nafty lub oleju silnikowego. Jest dość wydajny i może "
+"przechowywać do 750 ml paliwa, ale działa nieco powoli."
 
 #. ~ Description of "Taste Fouler CBM"
 #: data/json/items/bionics.json
@@ -405,6 +525,8 @@ msgid ""
 "A broken and mis-wired module that would cause food and drink to taste "
 "terrible if installed."
 msgstr ""
+"Zepsuty i źle podłączony moduł, który po zainstalowaniu sprawiałby, że "
+"jedzenie i napoje smakują okropnie."
 
 #. ~ Description of "Radioactive Leak CBM"
 #: data/json/items/bionics.json
@@ -413,6 +535,9 @@ msgid ""
 " to have been sealed off during the removal process, but you definitely "
 "shouldn't put it back."
 msgstr ""
+"Zepsuty KMB, z którego promieniowanie wyciekało do organizmu użytkownika. "
+"Wygląda na to, że zagrożenie zostało odizolowane podczas usuwania, ale "
+"zdecydowanie nie należy go wszczepiać z powrotem."
 
 #. ~ Description of "Sleep Mode Shutdown CBM"
 #: data/json/items/bionics.json
@@ -423,6 +548,10 @@ msgid ""
 "inability to trigger its effects manually makes it useless as an anesthesia "
 "substitute."
 msgstr ""
+"KMB, który całkowicie odcina komunikację między mózgiem użytkownika a resztą "
+"ciała, gdy ten zasypia, uniemożliwiając przebudzenie w jakichkolwiek "
+"okolicznościach aż do zakończenia naturalnego cyklu snu. Ponieważ nie da się "
+"go uruchomić ręcznie, jest bezużyteczny jako substytut znieczulenia."
 
 #. ~ Item name
 #: data/json/items/bionics.json
@@ -431,10 +560,10 @@ msgstr ""
 #: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
 msgid "Throwing Assist CBM"
 msgid_plural "Throwing Assist CBMs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "KMB Wspomaganie rzutu"
+msgstr[1] "KMB-y Wspomaganie rzutu"
+msgstr[2] "KMB-ów Wspomaganie rzutu"
+msgstr[3] "KMB-a Wspomaganie rzutu"
 
 #. ~ Description of "Throwing Assist CBM"
 #: data/json/items/bionics.json
@@ -448,33 +577,41 @@ msgid ""
 "cybernetic enhancement suite, they found it to be an economical way to ensure"
 " precise grenade placement in partial cyborgs."
 msgstr ""
+"Zwieńczenie dziesięcioleci badań nad paleoantropologią hominidów i "
+"modelowaniem biomechanicznym. KMB wspomagający rzut wprowadzono na rynek, aby"
+" zrewolucjonizować turnieje beqballa, które wkrótce stały się pokazami "
+"cybernetycznego ludzkiego wysiłku i inżynierii. Sieć neurostymulatorów i "
+"czujników, głównie w rękach i dłoniach, współpracuje z oczami, znacznie "
+"zwiększając celność i precyzję rzutów. Gdy Exodii natrafili na ten zestaw "
+"ulepszeń cybernetycznych, uznali go za ekonomiczny sposób na zapewnienie "
+"precyzyjnego rozmieszczania granatów przez częściowe cyborgi."
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "manure"
 msgid_plural "manure"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "obornik"
+msgstr[1] "porcje obornika"
+msgstr[2] "porcji obornika"
+msgstr[3] "porcji obornika"
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "roach dirt"
 msgid_plural "roach dirt"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "odchody karaluchów"
+msgstr[1] "porcje odchodów karaluchów"
+msgstr[2] "porcji odchodów karaluchów"
+msgstr[3] "porcji odchodów karaluchów"
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "shed snakeskin"
 msgid_plural "shed snakeskins"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wylinka węża"
+msgstr[1] "wylinki węża"
+msgstr[2] "wylinek węża"
+msgstr[3] "wylinki węża"
 
 #. ~ Description of "shed snakeskin"
 #: data/json/items/biosignatures.json
@@ -482,6 +619,8 @@ msgid ""
 "A small length of shed snakeskin.  It's thin and translucent but still bears "
 "the distinct pattern of scales."
 msgstr ""
+"Niewielki kawałek wylinki węża. Jest cienka i półprzezroczysta, ale wciąż ma "
+"wyraźny wzór łusek."
 
 #. ~ Description of "shed snakeskin"
 #: data/json/items/biosignatures.json
@@ -489,15 +628,17 @@ msgid ""
 "The molted dermis of an adult snake.  This one is in one piece.  You can even"
 " see the individual eyes."
 msgstr ""
+"Zrzucona skóra dorosłego węża. Ta jest w jednym kawałku. Widać nawet "
+"poszczególne oczy."
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "big shed snakeskin"
 msgid_plural "big shed snakeskins"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duża wylinka węża"
+msgstr[1] "duże wylinki węża"
+msgstr[2] "dużych wylinek węża"
+msgstr[3] "dużej wylinki węża"
 
 #. ~ Description of "big shed snakeskin"
 #: data/json/items/biosignatures.json
@@ -505,15 +646,17 @@ msgid ""
 "A very large shed snakeskin.  This didn't come from anything native, or "
 "natural, to New England."
 msgstr ""
+"Bardzo duża wylinka węża. Nie pochodzi od niczego, co jest rodzime albo "
+"naturalne dla Nowej Anglii."
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "gigantic shed snakeskin"
 msgid_plural "gigantic shed snakeskins"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "gigantyczna wylinka węża"
+msgstr[1] "gigantyczne wylinki węża"
+msgstr[2] "gigantycznych wylinek węża"
+msgstr[3] "gigantycznej wylinki węża"
 
 #. ~ Description of "gigantic shed snakeskin"
 #: data/json/items/biosignatures.json
@@ -522,15 +665,18 @@ msgid ""
 "getting even bigger.  You should not be, or return to, wherever you found "
 "this."
 msgstr ""
+"Kompletna wylinka węża o ogromnych rozmiarach. Cokolwiek ją zostawiło, musi "
+"wciąż rosnąć. Nie powinno cię być tam, gdzie ją znalazłeś, ani nie powinieneś"
+" tam wracać."
 
 #. ~ Item name
 #: data/json/items/biosignatures.json
 msgid "gigantic snake scales"
 msgid_plural "gigantic snake scales"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść gigantycznych łusek węża"
+msgstr[1] "garście gigantycznych łusek węża"
+msgstr[2] "garści gigantycznych łusek węża"
+msgstr[3] "garści gigantycznych łusek węża"
 
 #. ~ Description of "gigantic snake scales"
 #: data/json/items/biosignatures.json
@@ -540,20 +686,24 @@ msgid ""
 "hardness in spite of the obvious decay, and the fact that snakes don't shed "
 "individual scales like this."
 msgstr ""
+"Garść ogromnych łusek węża. To niepokojące znalezisko z kilku powodów. "
+"Oczywiście chodzi o rozmiar, ale także o niezwykłą twardość mimo wyraźnego "
+"rozkładu oraz o to, że węże nie zrzucają pojedynczych łusek w ten sposób."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "fertility supplement"
 msgid_plural "fertility supplement"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "suplement płodności"
+msgstr[1] "suplementy płodności"
+msgstr[2] "suplementów płodności"
+msgstr[3] "suplementu płodności"
 
 #. ~ Description of "fertility supplement"
 #: data/json/items/chemicals_and_resources.json
 msgid "A pill for those looking to have children.  It is of no use to you."
 msgstr ""
+"Tabletka dla osób starających się o dziecko. Do niczego ci się nie przyda."
 
 #. ~ Description of "sulfur"
 #: data/json/items/chemicals_and_resources.json
@@ -563,24 +713,29 @@ msgid ""
 " that is deadly to bacteria and humans alike, or oxidized to make paper-"
 "bleaching agents.  It also serves as a basis for many kinds of fungicide."
 msgstr ""
+"Garść czystej siarki. Używana głównie do produkcji kwasu akumulatorowego, "
+"siarka bywa też paliwem do materiałów wybuchowych. Można ją spalić, aby "
+"wytworzyć kwaśny dym, zabójczy zarówno dla bakterii, jak i dla ludzi, albo "
+"utlenić, aby uzyskać środki do wybielania papieru. Stanowi też bazę wielu "
+"rodzajów fungicydów."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "cement powder"
 msgid_plural "cement powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "cement w proszku"
+msgstr[1] "porcje cementu w proszku"
+msgstr[2] "porcji cementu w proszku"
+msgstr[3] "porcji cementu w proszku"
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "slaked lime"
 msgid_plural "slaked lime"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wapno gaszone"
+msgstr[1] "porcje wapna gaszonego"
+msgstr[2] "porcji wapna gaszonego"
+msgstr[3] "porcji wapna gaszonego"
 
 #. ~ Description of "slaked lime"
 #: data/json/items/chemicals_and_resources.json
@@ -588,11 +743,13 @@ msgid ""
 " A handful of slaked lime, a white odorless powder with many uses.  Also "
 "known as calcium hydroxide."
 msgstr ""
+" Garść wapna gaszonego, białego, bezwonnego proszku o wielu zastosowaniach. "
+"Znanego też jako wodorotlenek wapnia."
 
 #. ~ Description of "bleach"
 #: data/json/items/chemicals_and_resources.json
 msgid "Sodium hypochlorite, a common household cleaning agent."
-msgstr ""
+msgstr "Podchloryn sodu, popularny domowy środek czyszczący."
 
 #. ~ Description of "liquid ammonia"
 #: data/json/items/chemicals_and_resources.json
@@ -600,20 +757,22 @@ msgid ""
 "Anhydrous ammonia, a useful chemical compound.  It must be stored under "
 "pressure or refrigerated.  Don't even think about drinking it."
 msgstr ""
+"Bezwodny amoniak, przydatny związek chemiczny. Trzeba go przechowywać pod "
+"ciśnieniem lub w lodówce. Nawet nie myśl o piciu."
 
 #. ~ Description of "ammonia solution"
 #: data/json/items/chemicals_and_resources.json
 msgid "Ammonium hydroxide, a common household cleaning agent."
-msgstr ""
+msgstr "Wodorotlenek amonu, popularny domowy środek czyszczący."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "fermentable liquid mixture"
 msgid_plural "fermentable liquid mixture"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mieszanka do fermentacji"
+msgstr[1] "porcje mieszanki do fermentacji"
+msgstr[2] "porcji mieszanki do fermentacji"
+msgstr[3] "porcji mieszanki do fermentacji"
 
 #. ~ Description of "fermentable liquid mixture"
 #: data/json/items/chemicals_and_resources.json
@@ -622,15 +781,18 @@ msgid ""
 "them to be fermented in a tank.  Also, biogas production will start after one"
 " month."
 msgstr ""
+"Mieszanka różnych odpadów organicznych i wody. Odczekaj około dwóch miesięcy,"
+" aż przefermentuje w zbiorniku. Po miesiącu zacznie się też wytwarzanie "
+"biogazu."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "fermentable fish mixture"
 msgid_plural "fermentable fish mixture"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "rybna mieszanka do fermentacji"
+msgstr[1] "porcje rybnej mieszanki do fermentacji"
+msgstr[2] "porcji rybnej mieszanki do fermentacji"
+msgstr[3] "porcji rybnej mieszanki do fermentacji"
 
 #. ~ Description of "fermentable fish mixture"
 #: data/json/items/chemicals_and_resources.json
@@ -638,6 +800,8 @@ msgid ""
 "A mixture of fish, sugars, and water.  Wait about two months for them to be "
 "fermented in an open tank."
 msgstr ""
+"Mieszanka ryb, cukrów i wody. Odczekaj około dwóch miesięcy, aż "
+"przefermentuje w otwartym zbiorniku."
 
 #. ~ "not_ready_msg" action message of item "fermentable fish mixture"
 #: data/json/items/chemicals_and_resources.json
@@ -645,15 +809,17 @@ msgid ""
 "The overpowering smell of the fermenting fish liquid makes it clear that it "
 "is not ready for use."
 msgstr ""
+"Przytłaczający smród fermentującej rybnej cieczy nie pozostawia wątpliwości, "
+"że nie jest jeszcze gotowa do użycia."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "fermented fertilizer liquid"
 msgid_plural "fermented fertilizer liquid"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przefermentowana ciecz nawozowa"
+msgstr[1] "porcje przefermentowanej cieczy nawozowej"
+msgstr[2] "porcji przefermentowanej cieczy nawozowej"
+msgstr[3] "porcji przefermentowanej cieczy nawozowej"
 
 #. ~ Description of "fermented fertilizer liquid"
 #: data/json/items/chemicals_and_resources.json
@@ -661,24 +827,26 @@ msgid ""
 "A mixture of fermented biomass, will become liquid fertilizer after simple "
 "treatment."
 msgstr ""
+"Mieszanka przefermentowanej biomasy, która po prostej obróbce stanie się "
+"płynnym nawozem."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "sewage sample"
 msgid_plural "sewage sample"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "próbka ścieków"
+msgstr[1] "próbki ścieków"
+msgstr[2] "próbek ścieków"
+msgstr[3] "próbki ścieków"
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "nickel powder"
 msgid_plural "nickel powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "proszek niklowy"
+msgstr[1] "porcje proszku niklowego"
+msgstr[2] "porcji proszku niklowego"
+msgstr[3] "porcji proszku niklowego"
 
 #. ~ Description of "nickel powder"
 #: data/json/items/chemicals_and_resources.json
@@ -687,15 +855,17 @@ msgid ""
 "industrial uses include production of stainless steel as well as other "
 "alloys."
 msgstr ""
+"Garść srebrzystobiałego metalicznego proszku z niklu. W przemyśle używa się "
+"go powszechnie do produkcji stali nierdzewnej i innych stopów."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "ferric chloride"
 msgid_plural "ferric chloride"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "chlorek żelaza(III)"
+msgstr[1] "porcje chlorku żelaza(III)"
+msgstr[2] "porcji chlorku żelaza(III)"
+msgstr[3] "porcji chlorku żelaza(III)"
 
 #. ~ Description of "ferric chloride"
 #: data/json/items/chemicals_and_resources.json
@@ -704,15 +874,18 @@ msgid ""
 " to that of hydrochloric acid.  Commonly used as a Lewis acid for catalyzing "
 "various chemical reactions."
 msgstr ""
+"Garść ciemnozielonego krystalicznego proszku o słabym, ostrym zapachu "
+"podobnym do kwasu solnego. Powszechnie używany jako kwas Lewisa do "
+"katalizowania różnych reakcji chemicznych."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "antimony trichloride"
 msgid_plural "antimony trichloride"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "trichlorek antymonu"
+msgstr[1] "porcje trichlorku antymonu"
+msgstr[2] "porcji trichlorku antymonu"
+msgstr[3] "porcji trichlorku antymonu"
 
 #. ~ Description of "antimony trichloride"
 #: data/json/items/chemicals_and_resources.json
@@ -721,6 +894,9 @@ msgid ""
 "butter of antimony.  It's a catalyst for polymerization, hydrocracking, and "
 "chlorination reactions, and has some other niche uses."
 msgstr ""
+"Garść miękkiego, bezbarwnego proszku o ostrym, gryzącym zapachu, znanego też "
+"jako masło antymonowe. Jest katalizatorem reakcji polimeryzacji, "
+"hydrokrakingu i chlorowania oraz ma kilka innych niszowych zastosowań."
 
 #. ~ Description of "acetone"
 #: data/json/items/chemicals_and_resources.json
@@ -729,6 +905,9 @@ msgid ""
 "  Flammable, and can be easily used for potent homemade explosives, as "
 "demonstrated by the terrorist attacks of 2016."
 msgstr ""
+"Aceton, najbardziej znany jako główny składnik większości zmywaczy do "
+"paznokci. Łatwopalny i łatwo go użyć do domowej roboty silnych materiałów "
+"wybuchowych, czego dowiodły zamachy terrorystyczne z 2016 roku."
 
 #. ~ Description of "nitric acid"
 #: data/json/items/chemicals_and_resources.json
@@ -739,6 +918,11 @@ msgid ""
 "array of pyrotechnic and explosive agents and as a direct weapon: not many "
 "beings enjoy being doused in nitric acid."
 msgstr ""
+"Kwas azotowy, silny utleniacz i skrajnie żrąca substancja. Używany głównie do"
+" produkcji nawozów sztucznych, trawienia płytek drukowanych i w obróbce "
+"drewna. Wciąż bardzo przydatny zarówno do wytwarzania szerokiej gamy środków "
+"pirotechnicznych i wybuchowych, jak i bezpośrednio jako broń: niewiele istot "
+"lubi być oblewanych kwasem azotowym."
 
 #. ~ Description of "calcium carbide"
 #: data/json/items/chemicals_and_resources.json
@@ -749,15 +933,20 @@ msgid ""
 " sealed, it will explode with little strength, but with a relatively loud "
 "noise that might be useful as a distraction."
 msgstr ""
+"Garść węglika wapnia wydzielającego słaby, czosnkowy zapach. W przemyśle "
+"węglik wapnia służył do wytwarzania acetylenu na miejscu, a dawniej do "
+"zasilania lamp acetylenowych. Zmieszany z wodą i szczelnie zamknięty "
+"wybuchnie z niewielką siłą, ale dość głośno, co może się przydać do "
+"odwrócenia uwagi."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "calcium carbonate"
 msgid_plural "calcium carbonate"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "węglan wapnia"
+msgstr[1] "porcje węglanu wapnia"
+msgstr[2] "porcji węglanu wapnia"
+msgstr[3] "porcji węglanu wapnia"
 
 #. ~ Description of "calcium carbonate"
 #: data/json/items/chemicals_and_resources.json
@@ -766,6 +955,9 @@ msgid ""
 "  Useful for a number of roles, such as sugar production, fracking, "
 "construction, paint additives and antacid medicine."
 msgstr ""
+"Garść proszku z węglanu wapnia, zwykle pozyskiwanego z wapienia lub muszli. "
+"Przydaje się do wielu celów, takich jak produkcja cukru, szczelinowanie, "
+"budownictwo, dodatki do farb i leki zobojętniające kwas."
 
 #. ~ Description of "hexamine"
 #: data/json/items/chemicals_and_resources.json
@@ -776,6 +968,12 @@ msgid ""
 "until the Cataclysm.  Nowadays, it is even more valuable than before, being "
 "the key component in the preparation of several military-grade explosives."
 msgstr ""
+"Garść woskowatych tabletek urotropiny, które w razie potrzeby można pokruszyć"
+" na mniejsze kawałki. Tego wszechobecnego paliwa używano do rozpalania niemal"
+" każdego ogrodowego grilla i żaden „prawdziwy” biwak nie mógł się bez niego "
+"obyć przy gotowaniu, aż do Kataklizmu. Dziś jest jeszcze cenniejsze niż "
+"wcześniej, bo stanowi kluczowy składnik kilku wojskowych materiałów "
+"wybuchowych."
 
 #. ~ Description of "plutonium"
 #: data/json/items/chemicals_and_resources.json
@@ -783,6 +981,8 @@ msgid ""
 "A chunk of unshielded plutonium.  You should probably get very far away from "
 "this, if you enjoy not being irradiated."
 msgstr ""
+"Bryłka nieosłoniętego plutonu. Lepiej odejdź od niej bardzo daleko, jeśli "
+"lubisz nie być napromieniowany."
 
 #. ~ Description of "uranium"
 #: data/json/items/chemicals_and_resources.json
@@ -790,6 +990,8 @@ msgid ""
 "Some uranium.  You should probably get very far away from this, if you enjoy "
 "not being irradiated."
 msgstr ""
+"Trochę uranu. Lepiej odejdź od niego bardzo daleko, jeśli lubisz nie być "
+"napromieniowany."
 
 #. ~ Description of "ammonium nitrate pellets"
 #: data/json/items/chemicals_and_resources.json
@@ -799,6 +1001,10 @@ msgid ""
 " sharply lower its temperature, but is there any use for this quality in this"
 " new world?"
 msgstr ""
+"Garść granulek azotanu amonu. Granulki te są powszechnie składnikiem nawozów "
+"i materiałów wybuchowych. Można je też rozpuścić w wodzie, aby gwałtownie "
+"obniżyć jej temperaturę, ale czy ta właściwość na cokolwiek się przyda w tym "
+"nowym świecie?"
 
 #. ~ Description of "aluminum sulfate"
 #: data/json/items/chemicals_and_resources.json
@@ -810,6 +1016,12 @@ msgid ""
 "could be used to saturate soil with aluminum, causing all but the most "
 "resistant of plants to wither and die."
 msgstr ""
+"Kilka kryształów siarczanu glinu. Dawniej środek do oczyszczania wody i "
+"zwalczania mięczaków, ponieważ rozkłada ich śluz. Tuż przed Kataklizmem "
+"używano go głównie do regulacji kwasowości gleby i jako dodatku do proszku do"
+" pieczenia. Zmieszany z silnym kwasem mógłby posłużyć do nasycenia gleby "
+"glinem, przez co wszystkie rośliny poza najodporniejszymi uschłyby i "
+"obumarły."
 
 #. ~ Description of "acetic acid"
 #: data/json/items/chemicals_and_resources.json
@@ -819,6 +1031,10 @@ msgid ""
 "perfumes, but would making perfume not be too fancy for post-apocalyptic New "
 "England?"
 msgstr ""
+"Stężony kwas octowy, zwykle używany jako odczynnik chemiczny i środek "
+"przeciwgrzybiczy. Mimo okropnego zapachu służył do przygotowywania kilku "
+"rodzajów perfum, ale czy robienie perfum nie byłoby zbyt wydumane w "
+"postapokaliptycznej Nowej Anglii?"
 
 #. ~ Description of "ANFO"
 #: data/json/items/chemicals_and_resources.json
@@ -828,6 +1044,11 @@ msgid ""
 "industrial explosive due to its stability and low price.  Burns fast, but "
 "needs an explosive primer to detonate."
 msgstr ""
+"Garść brązowawych granulek powstałych przez nasączenie azotanu amonu paliwem "
+"organicznym. Ta mieszanina azotanu amonu i oleju napędowego, czyli ANFO, jest"
+" popularnym przemysłowym materiałem wybuchowym ze względu na stabilność i "
+"niską cenę. Spala się szybko, ale do detonacji potrzebuje wybuchowego "
+"inicjatora."
 
 #. ~ Description of "black gunpowder"
 #: data/json/items/chemicals_and_resources.json
@@ -837,6 +1058,10 @@ msgid ""
 "burns will quickly clog any firearm, but it could be used to make some "
 "vicious bombs."
 msgstr ""
+"Garść czarnego prochu strzelniczego, mieszanki saletry, węgla drzewnego i "
+"siarki. Raczej bezużyteczny do produkcji nowoczesnych nabojów, bo sadza "
+"powstająca przy jego spalaniu szybko zapcha każdą broń palną, ale można z "
+"niego zrobić paskudne bomby."
 
 #. ~ Description of "composition B"
 #: data/json/items/chemicals_and_resources.json
@@ -845,6 +1070,9 @@ msgid ""
 "  It is used as the main explosive filling in artillery projectiles, rockets,"
 " land mines, hand grenades, and various other munitions."
 msgstr ""
+"Kompozyt B to materiał wybuchowy składający się z odlewanych mieszanin RDX i "
+"TNT. Służy jako główny ładunek wybuchowy w pociskach artyleryjskich, "
+"rakietach, minach lądowych, granatach ręcznych i innej amunicji."
 
 #. ~ Description of "APEX"
 #: data/json/items/chemicals_and_resources.json
@@ -853,6 +1081,10 @@ msgid ""
 "explosive, used to initiate detonation of more stable explosives, such as "
 "RDX.  Relatively stable, with a fruit-like smell when pure."
 msgstr ""
+"Nadtlenek acetonu: ten drobny, biały, krystaliczny proszek to silny materiał "
+"wybuchowy inicjujący, używany do wywoływania detonacji bardziej stabilnych "
+"materiałów wybuchowych, takich jak RDX. Względnie stabilny, w czystej postaci"
+" ma owocowy zapach."
 
 #. ~ Description of "improvised rocket fuel"
 #: data/json/items/chemicals_and_resources.json
@@ -860,6 +1092,8 @@ msgid ""
 "A chunk of a zinc powder-and-sulfur mixture, bound together by superglue, "
 "that can be used as an impromptu rocket fuel."
 msgstr ""
+"Bryłka mieszanki sproszkowanego cynku i siarki, spojona superklejem, której "
+"można użyć jako prowizorycznego paliwa rakietowego."
 
 #. ~ Description of "water purification tablet"
 #: data/json/items/chemicals_and_resources.json
@@ -869,74 +1103,78 @@ msgid ""
 "purification tablet removes dangerous contaminants using powerful chemicals."
 "  The label says to use one tablet per liter (4 units of water)."
 msgstr ""
+"Ta tabletka oczyszczająca na bazie dichloroizocyjanuranu sodu, przeznaczona "
+"do klarowania i dezynfekcji niebezpiecznej wody pitnej na biwaku lub w "
+"podróży, usuwa groźne zanieczyszczenia za pomocą silnych środków chemicznych."
+" Etykieta zaleca używać jednej tabletki na litr (4 jednostki wody)."
 
 #. ~ Description of "hickory nuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a hickory tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z orzesznika, wciąż w łupinach."
 
 #. ~ Description of "pecans"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a pecan tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z drzewa pekan, wciąż w łupinach."
 
 #. ~ Description of "pistachios"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a pistachio tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z pistacjowca, wciąż w łupinach."
 
 #. ~ Description of "almonds"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from an almond tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z migdałowca, wciąż w łupinach."
 
 #. ~ Description of "peanuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a peanut bush, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z krzewu orzecha ziemnego, wciąż w łupinach."
 
 #. ~ Description of "hazelnuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a hazelnut tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z leszczyny, wciąż w łupinach."
 
 #. ~ Description of "chestnuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a chestnut tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z kasztana jadalnego, wciąż w łupinach."
 
 #. ~ Description of "walnuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of hard nuts from a walnut tree, still in their shells."
-msgstr ""
+msgstr "Garść twardych orzechów z orzecha włoskiego, wciąż w łupinach."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "butternuts"
 msgid_plural "butternuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść orzechów szarych"
+msgstr[1] "garście orzechów szarych"
+msgstr[2] "garści orzechów szarych"
+msgstr[3] "garści orzechów szarych"
 
 #. ~ Description of "butternuts"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of nuts from a butternut tree, still in their shell."
-msgstr ""
+msgstr "Garść orzechów z orzecha szarego, wciąż w łupinach."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "butternut husks"
 msgid_plural "butternut husks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść łupin orzechów szarych"
+msgstr[1] "garście łupin orzechów szarych"
+msgstr[2] "garści łupin orzechów szarych"
+msgstr[3] "garści łupin orzechów szarych"
 
 #. ~ Description of "butternut husks"
 #: data/json/items/chemicals_and_resources.json
 msgid "A handful of husks from a butternuts, emptied of their meat."
-msgstr ""
+msgstr "Garść łupin orzechów szarych, z których wydobyto miąższ."
 
 #. ~ Description of "soap flakes"
 #: data/json/items/chemicals_and_resources.json
@@ -944,21 +1182,23 @@ msgid ""
 "A handful of flakes shaved off a bar of soap, suitable for use in a washing "
 "machine."
 msgstr ""
+"Garść płatków zestruganych z kostki mydła, nadających się do użycia w pralce."
 
 #. ~ Description of "lye"
 #: data/json/items/chemicals_and_resources.json
 msgid ""
 "A liquid form of sodium hydroxide.  It is highly corrosive; handle with care."
 msgstr ""
+"Płynna postać wodorotlenku sodu. Silnie żrący, obchodź się z nim ostrożnie."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "potassium lye"
 msgid_plural "potassium lye"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ług potasowy"
+msgstr[1] "porcje ługu potasowego"
+msgstr[2] "porcji ługu potasowego"
+msgstr[3] "porcji ługu potasowego"
 
 #. ~ Description of "potassium lye"
 #: data/json/items/chemicals_and_resources.json
@@ -966,6 +1206,7 @@ msgid ""
 "A liquid form of potassium hydroxide.  It is highly corrosive; handle with "
 "care."
 msgstr ""
+"Płynna postać wodorotlenku potasu. Silnie żrący, obchodź się z nim ostrożnie."
 
 #. ~ Description of "nanomaterial canister"
 #: data/json/items/chemicals_and_resources.json
@@ -974,36 +1215,39 @@ msgid ""
 "elements in specifically engineered atomic-scale configurations.  A "
 "nanofabricator can assemble them into usable items."
 msgstr ""
+"Stalowy kanister zawierający węgiel, żelazo, tytan, miedź i inne pierwiastki "
+"w specjalnie zaprojektowanych konfiguracjach w skali atomowej. Nanofabrykator"
+" potrafi złożyć z nich użyteczne przedmioty."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "wood ashes"
 msgid_plural "wood ashes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "popiół drzewny"
+msgstr[1] "porcje popiołu drzewnego"
+msgstr[2] "porcji popiołu drzewnego"
+msgstr[3] "porcji popiołu drzewnego"
 
 #. ~ Description of "wood ashes"
 #: data/json/items/chemicals_and_resources.json
 msgid ""
 "A handful of almost-weightless residue left after the burning of some "
 "substance."
-msgstr ""
+msgstr "Garść niemal nieważkich pozostałości po spaleniu jakiejś substancji."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "corpse ashes"
 msgid_plural "corpse ashes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prochy zwłok"
+msgstr[1] "porcje prochów zwłok"
+msgstr[2] "porcji prochów zwłok"
+msgstr[3] "porcji prochów zwłok"
 
 #. ~ Description of "corpse ashes"
 #: data/json/items/chemicals_and_resources.json
 msgid "The burnt remains of a person or animal."
-msgstr ""
+msgstr "Spalone szczątki człowieka lub zwierzęcia."
 
 #. ~ Description of "dimethyl sulfoxide"
 #: data/json/items/chemicals_and_resources.json
@@ -1013,6 +1257,10 @@ msgid ""
 " being absorbed very quickly through the skin, causing a garlic flavor in the"
 " mouth, even if it touched your arm."
 msgstr ""
+"Dimetylosulfotlenek, czyli DMSO, to popularny i ważny rozpuszczalnik "
+"aprotyczny, zdolny rozpuścić ogromną gamę substancji. Ma niezwykłą właściwość"
+" bardzo szybkiego wchłaniania się przez skórę, co wywołuje czosnkowy posmak w"
+" ustach, nawet jeśli dotknął tylko ręki."
 
 #. ~ Description of "phenol"
 #: data/json/items/chemicals_and_resources.json
@@ -1022,15 +1270,20 @@ msgid ""
 "antiseptic, it can strip paint and break down epoxy, and it can burn your "
 "skin away like tissue paper under a heat gun.  Wear gloves."
 msgstr ""
+"Przydatny i silny rozpuszczalnik o szerokim zastosowaniu w reakcjach "
+"chemicznych. Można z niego wytworzyć ogromną liczbę tworzyw sztucznych i "
+"polimerów, może służyć jako środek antyseptyczny, zdzierać farbę i rozkładać "
+"żywicę epoksydową, a także przepalić ci skórę jak bibułę pod opalarką. Noś "
+"rękawice."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "benzene"
 msgid_plural "benzene"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "benzen"
+msgstr[1] "porcje benzenu"
+msgstr[2] "porcji benzenu"
+msgstr[3] "porcji benzenu"
 
 #. ~ Description of "benzene"
 #: data/json/items/chemicals_and_resources.json
@@ -1040,15 +1293,20 @@ msgid ""
 "chemicals with more complex structure, it's a major industrial chemical, but "
 "finds limited use in consumer items because of its toxicity."
 msgstr ""
+"Bezbarwna, wysoce łatwopalna ciecz o słodkawym zapachu, jeden z podstawowych "
+"produktów petrochemicznych. Jest ważną substancją przemysłową, używaną "
+"głównie jako prekursor do wytwarzania związków o bardziej złożonej budowie, "
+"ale ze względu na toksyczność ma ograniczone zastosowanie w produktach "
+"konsumenckich."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "toluene"
 msgid_plural "toluene"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "toluen"
+msgstr[1] "porcje toluenu"
+msgstr[2] "porcji toluenu"
+msgstr[3] "porcji toluenu"
 
 #. ~ Description of "toluene"
 #: data/json/items/chemicals_and_resources.json
@@ -1058,21 +1316,26 @@ msgid ""
 "and is also used as an intoxicative inhalant in a manner unintended by "
 "manufacturers."
 msgstr ""
+"Bezbarwna, toksyczna i wysoce łatwopalna ciecz pachnąca jak rozcieńczalnik do"
+" farb. Używana głównie jako surowiec przemysłowy i rozpuszczalnik, a także "
+"jako środek odurzający do wdychania, w sposób niezamierzony przez "
+"producentów."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "peptone water powder"
 msgid_plural "peptone water powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "proszek do wody peptonowej"
+msgstr[1] "porcje proszku do wody peptonowej"
+msgstr[2] "porcji proszku do wody peptonowej"
+msgstr[3] "porcji proszku do wody peptonowej"
 
 #. ~ Description of "peptone water powder"
 #: data/json/items/chemicals_and_resources.json
 msgid ""
 "A pre-mixed salty solution of protein and sugar meant for bacteria to eat."
 msgstr ""
+"Gotowa słona mieszanka białka i cukru przeznaczona na pożywkę dla bakterii."
 
 #. ~ Description of "agar"
 #: data/json/items/chemicals_and_resources.json
@@ -1082,6 +1345,10 @@ msgid ""
 "making gels to separate molecules by size, but it's a great cheat ingredient "
 "to make sure your jellies set properly."
 msgstr ""
+"Przezroczyste płatki przetworzonych wodorostów, które można rozpuścić we "
+"wrzątku, aby uzyskać bardzo trwały, odporny na temperaturę żel. Nie tylko "
+"nadaje się do robienia żeli do rozdzielania cząsteczek według rozmiaru, ale "
+"też jest świetnym sposobem na to, żeby galaretki na pewno dobrze stężały."
 
 #. ~ Description of "acrylamide"
 #: data/json/items/chemicals_and_resources.json
@@ -1089,6 +1356,8 @@ msgid ""
 "A handful of highly carcinogenic white powder that can be readily polymerized"
 " into a whole bunch of useful water-soluble gels."
 msgstr ""
+"Garść silnie rakotwórczego białego proszku, który łatwo spolimeryzować w całą"
+" masę przydatnych żeli rozpuszczalnych w wodzie."
 
 #. ~ Description of "steel grille"
 #: data/json/items/chemicals_and_resources.json
@@ -1096,6 +1365,8 @@ msgid ""
 "A metal grille.  It can be used as a framework for making a chemical "
 "catalyst."
 msgstr ""
+"Metalowa kratka. Może służyć jako szkielet do wykonania katalizatora "
+"chemicznego."
 
 #. ~ Description of "cobalt-60 pellet"
 #: data/json/items/chemicals_and_resources.json
@@ -1104,6 +1375,9 @@ msgid ""
 "nuclear industry equipment.  You have yet to find some use for it, and you "
 "probably shouldn't stand near it."
 msgstr ""
+"Kawałek nieosłoniętego materiału radioaktywnego, który kiedyś był częścią "
+"jakiegoś sprzętu przemysłu jądrowego. Jeszcze nie znalazłeś dla niego "
+"zastosowania i raczej nie powinieneś stać blisko niego."
 
 #. ~ Description of "wooden bead"
 #: data/json/items/chemicals_and_resources.json
@@ -1111,20 +1385,22 @@ msgid ""
 "A wooden bead.  It can be used to craft inscribable jewelry or create a "
 "beaded curtain door."
 msgstr ""
+"Drewniany koralik. Można go użyć do wykonania biżuterii z inskrypcją albo "
+"zasłony z koralików w drzwiach."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "rosin"
 msgid_plural "rosin"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kalafonia"
+msgstr[1] "porcje kalafonii"
+msgstr[2] "porcji kalafonii"
+msgstr[3] "porcji kalafonii"
 
 #. ~ Description of "rosin"
 #: data/json/items/chemicals_and_resources.json
 msgid "A chunk of yellowish rosin, usable as a flux for soldering."
-msgstr ""
+msgstr "Bryłka żółtawej kalafonii, nadającej się jako topnik do lutowania."
 
 #. ~ Description of "citric acid"
 #: data/json/items/chemicals_and_resources.json
@@ -1132,6 +1408,8 @@ msgid ""
 "A manufactured form of citric acid that is commonly used as an additive in "
 "food, cleaning agents, and nutritional supplements."
 msgstr ""
+"Wytworzona przemysłowo postać kwasu cytrynowego, powszechnie używana jako "
+"dodatek do żywności, środków czyszczących i suplementów diety."
 
 #. ~ Description of "sac of paralytic venom"
 #: data/json/items/chemicals_and_resources.json
@@ -1140,6 +1418,9 @@ msgid ""
 "agent the triffids use to subdue still-moving fertilizer such as yourself.  "
 "If you know your way around poisons you might be able to find a use for it."
 msgstr ""
+"Szarawy, elastyczny pęcherzyk wypełniony po brzegi silnym środkiem "
+"paraliżującym, którym tryfidy obezwładniają wciąż ruchliwy nawóz, taki jak "
+"ty. Jeśli znasz się na truciznach, może znajdziesz dla niego zastosowanie."
 
 #. ~ Description of "sac of triffid fungicide"
 #: data/json/items/chemicals_and_resources.json
@@ -1149,6 +1430,10 @@ msgid ""
 "offensive applications, but requires further refining before it can be used "
 "as a medical drug."
 msgstr ""
+"Torebka tryfida wypełniona czymś, co wygląda na wytwarzany przez tryfidy "
+"środek przeciwgrzybiczy. Prawdopodobnie już teraz zadziała jako związek "
+"przeciwgrzybiczy w bardziej ofensywnych zastosowaniach, ale wymaga dalszej "
+"rafinacji, zanim będzie można go użyć jako leku."
 
 #. ~ Description of "concentrated venom"
 #: data/json/items/chemicals_and_resources.json
@@ -1158,6 +1443,10 @@ msgid ""
 " protein toxins.  It is now relatively stable, but will require further "
 "separation to be useful for anything other than killing you."
 msgstr ""
+"Przezroczysta, lekko zielonkawa ciecz uzyskana z jadu pszczół i os. Składniki"
+" czynne to m.in. (nor)adrenalina, dopamina, histamina i toksyny białkowe. "
+"Teraz jest względnie stabilna, ale wymaga dalszego rozdzielenia, aby przydała"
+" się do czegoś innego niż zabicie cię."
 
 #. ~ Description of "concentrated paralytic"
 #: data/json/items/chemicals_and_resources.json
@@ -1167,6 +1456,11 @@ msgid ""
 "their striking similarity to earthly flora, you figure it's related to "
 "curarines.  Might come in handy in crafting more useful things."
 msgstr ""
+"Skoncentrowany środek paraliżujący pochodzący z tryfida. Biorąc pod uwagę "
+"twoje doświadczenia z jego działaniem (zebrane głównie podczas pozyskiwania "
+"tej partii) i ich uderzające podobieństwo do ziemskiej flory, uznajesz, że "
+"jest spokrewniony z kurarynami. Może się przydać do wytwarzania bardziej "
+"użytecznych rzeczy."
 
 #. ~ Description of "red phosphorous"
 #: data/json/items/chemicals_and_resources.json
@@ -1176,15 +1470,19 @@ msgid ""
 "to make bombs, and if you were truly desperate you might even be able to use "
 "it in small portions as a propellant for bullets."
 msgstr ""
+"Odmiana alotropowa fosforu. Używa się go do zapalania zapałek, ale też do "
+"syntezy metamfetaminy. Można z niego zrobić bomby, a w akcie prawdziwej "
+"desperacji nawet użyć go w małych porcjach jako materiału miotającego do "
+"nabojów."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "small portion of red phosphorous"
 msgid_plural "small portion of red phosphorous"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała porcja czerwonego fosforu"
+msgstr[1] "małe porcje czerwonego fosforu"
+msgstr[2] "małych porcji czerwonego fosforu"
+msgstr[3] "małej porcji czerwonego fosforu"
 
 #. ~ Description of "small portion of red phosphorous"
 #: data/json/items/chemicals_and_resources.json
@@ -1194,15 +1492,18 @@ msgid ""
 "to make bombs, and if you were truly desperate you might even be able to use "
 "it as a propellant for bullets."
 msgstr ""
+"Odmiana alotropowa fosforu. Używa się go do zapalania zapałek, ale też do "
+"syntezy metamfetaminy. Można z niego zrobić bomby, a w akcie prawdziwej "
+"desperacji nawet użyć go jako materiału miotającego do nabojów."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "white phosphorous"
 msgid_plural "white phosphorous"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "biały fosfor"
+msgstr[1] "porcje białego fosforu"
+msgstr[2] "porcji białego fosforu"
+msgstr[3] "porcji białego fosforu"
 
 #. ~ Description of "white phosphorous"
 #: data/json/items/chemicals_and_resources.json
@@ -1210,15 +1511,17 @@ msgid ""
 "An allotrope of the element phosphorous.  Extremely flammable, produces toxic"
 " smoke, you can use it to make smoke bombs."
 msgstr ""
+"Odmiana alotropowa fosforu. Skrajnie łatwopalny, wytwarza toksyczny dym, "
+"można z niego zrobić bomby dymne."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "iodine crystals"
 msgid_plural "iodine crystals"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kryształki jodu"
+msgstr[1] "porcje kryształków jodu"
+msgstr[2] "porcji kryształków jodu"
+msgstr[3] "porcji kryształków jodu"
 
 #. ~ Description of "iodine crystals"
 #: data/json/items/chemicals_and_resources.json
@@ -1226,6 +1529,8 @@ msgid ""
 "A handful of resublimed crystals of the element iodine, they can be used as "
 "an antiseptic, but are also used in the making of methamphetamine."
 msgstr ""
+"Garść resublimowanych kryształków jodu. Mogą służyć jako środek "
+"antyseptyczny, ale używa się ich też do produkcji metamfetaminy."
 
 #. ~ Description of "liquid soap"
 #: data/json/items/chemicals_and_resources.json
@@ -1234,43 +1539,47 @@ msgid ""
 "shower shelf, or bathroom soap dispenser, but it should work reasonably well "
 "for cleaning anything that's filthy."
 msgstr ""
+"Zwykłe, bezpieczne dla skóry mydło w płynie, jakie można zobaczyć przy zlewie"
+" kuchennym, na półce pod prysznicem albo w łazienkowym dozowniku, ale powinno"
+" całkiem dobrze sprawdzić się przy czyszczeniu wszystkiego, co jest brudne."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "pine resin"
 msgid_plural "pine resin"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "żywica sosnowa"
+msgstr[1] "porcje żywicy sosnowej"
+msgstr[2] "porcji żywicy sosnowej"
+msgstr[3] "porcji żywicy sosnowej"
 
 #. ~ Description of "pine resin"
 #: data/json/items/chemicals_and_resources.json
 msgid "A sticky, sludgy mass of sap harvested from a pine tree."
-msgstr ""
+msgstr "Lepka, maziowata masa żywicy pozyskanej z sosny."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "silicone caulk"
 msgid_plural "silicone caulk"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "silikon uszczelniający"
+msgstr[1] "porcje silikonu uszczelniającego"
+msgstr[2] "porcji silikonu uszczelniającego"
+msgstr[3] "porcji silikonu uszczelniającego"
 
 #. ~ Description of "silicone caulk"
 #: data/json/items/chemicals_and_resources.json
 msgid "A thick gray paste used as a sealant in many construction projects."
 msgstr ""
+"Gęsta szara pasta używana jako uszczelniacz w wielu pracach budowlanych."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "toxic acidic blood"
 msgid_plural "toxic acidic blood"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "toksyczna kwasowa krew"
+msgstr[1] "porcje toksycznej kwasowej krwi"
+msgstr[2] "porcji toksycznej kwasowej krwi"
+msgstr[3] "porcji toksycznej kwasowej krwi"
 
 #. ~ Description of "toxic acidic blood"
 #. ~ Description of "virulent acidic blood"
@@ -1279,24 +1588,26 @@ msgid ""
 "Blood mixed with acidic compounds, extremely corrosive, a means of refining "
 "this could net some useful chemicals."
 msgstr ""
+"Krew zmieszana ze związkami kwasowymi, skrajnie żrąca. Jakiś sposób na jej "
+"rafinację mógłby dać przydatne substancje chemiczne."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "virulent acidic blood"
 msgid_plural "virulent acidic blood"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zjadliwa kwasowa krew"
+msgstr[1] "porcje zjadliwej kwasowej krwi"
+msgstr[2] "porcji zjadliwej kwasowej krwi"
+msgstr[3] "porcji zjadliwej kwasowej krwi"
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "putrid acidic blood"
 msgid_plural "putrid acidic blood"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zgniła kwasowa krew"
+msgstr[1] "porcje zgniłej kwasowej krwi"
+msgstr[2] "porcji zgniłej kwasowej krwi"
+msgstr[3] "porcji zgniłej kwasowej krwi"
 
 #. ~ Description of "putrid acidic blood"
 #: data/json/items/chemicals_and_resources.json
@@ -1304,15 +1615,17 @@ msgid ""
 "Blood mixed with acidic compounds, smells putrid, a means of refining this "
 "could net some useful chemicals."
 msgstr ""
+"Krew zmieszana ze związkami kwasowymi, cuchnie zgnilizną. Jakiś sposób na jej"
+" rafinację mógłby dać przydatne substancje chemiczne."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "foul acidic blood"
 msgid_plural "foul acidic blood"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "cuchnąca kwasowa krew"
+msgstr[1] "porcje cuchnącej kwasowej krwi"
+msgstr[2] "porcji cuchnącej kwasowej krwi"
+msgstr[3] "porcji cuchnącej kwasowej krwi"
 
 #. ~ Description of "foul acidic blood"
 #: data/json/items/chemicals_and_resources.json
@@ -1320,15 +1633,17 @@ msgid ""
 "Blood mixed with acidic compounds, foul-smelling and extremely corrosive, a "
 "means of refining this could net some useful chemicals."
 msgstr ""
+"Krew zmieszana ze związkami kwasowymi, cuchnąca i skrajnie żrąca. Jakiś "
+"sposób na jej rafinację mógłby dać przydatne substancje chemiczne."
 
 #. ~ Item name
 #: data/json/items/chemicals_and_resources.json
 msgid "exodii ceramic patch"
 msgid_plural "exodii ceramic patch"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ceramiczna łatka Exodii"
+msgstr[1] "ceramiczne łatki Exodii"
+msgstr[2] "ceramicznych łatek Exodii"
+msgstr[3] "ceramicznej łatki Exodii"
 
 #. ~ Description of "exodii ceramic patch"
 #: data/json/items/chemicals_and_resources.json
@@ -1336,6 +1651,8 @@ msgid ""
 "A patch kit produced by the Exodii for repairing their nanotube-infused "
 "ceramics.  Requires a kiln."
 msgstr ""
+"Zestaw naprawczy wytwarzany przez Exodii do naprawy ich ceramiki nasyconej "
+"nanorurkami. Wymaga pieca do wypalania."
 
 #. ~ Description of "magnetron"
 #: data/json/items/electronics.json
@@ -1343,6 +1660,8 @@ msgid ""
 "An electrical component designed to produce microwaves, for use in a "
 "microwave oven."
 msgstr ""
+"Podzespół elektryczny przeznaczony do wytwarzania mikrofal, używany w "
+"kuchenkach mikrofalowych."
 
 #. ~ Description of "explosively pumped flux compression generator"
 #: data/json/items/electronics.json
@@ -1352,15 +1671,19 @@ msgid ""
 "explosives allow the device to produce large amounts of electrical energy in "
 "a very short time."
 msgstr ""
+"Duże urządzenie składające się głównie ze zwoju miedzianego drutu "
+"otaczającego dużą miedzianą rurę wypełnioną silnym materiałem wybuchowym. "
+"Prawidłowo zdetonowany materiał wybuchowy pozwala urządzeniu wytworzyć w "
+"bardzo krótkim czasie dużą ilość energii elektrycznej."
 
 #. ~ Item name
 #: data/json/items/electronics.json
 msgid "supercomputer platter"
 msgid_plural "supercomputer platters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "talerz superkomputera"
+msgstr[1] "talerze superkomputera"
+msgstr[2] "talerzy superkomputera"
+msgstr[3] "talerza superkomputera"
 
 #. ~ Description of "supercomputer platter"
 #: data/json/items/electronics.json
@@ -1368,15 +1691,17 @@ msgid ""
 "A hefty and expensive-looking golden dish engraved with concentric circuitry."
 "  You felt the urge to rip it from a supercomputer."
 msgstr ""
+"Ciężki i drogo wyglądający złoty dysk z wygrawerowanymi koncentrycznymi "
+"obwodami. Poczułeś nieodpartą chęć, żeby wyrwać go z superkomputera."
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "WearMan Music"
 msgid_plural "WearMan Musics"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "WearMan (muzyka)"
+msgstr[1] "WearMan (muzyka)"
+msgstr[2] "WearMan (muzyka)"
+msgstr[3] "WearMan (muzyka)"
 
 #. ~ Description of "WearMan Music"
 #: data/json/items/fake.json
@@ -1385,15 +1710,18 @@ msgid ""
 "radiowaves and play downloaded music at a concert hall quality.  It is "
 "currently playing \"Rubik's Mickse\"."
 msgstr ""
+"Zestaw głośników wszczepionych w czaszkę, które odbierają lokalne fale "
+"radiowe i odtwarzają pobraną muzykę w jakości sali koncertowej. Obecnie gra "
+"„Rubik's Mickse”."
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "WearMan Radio"
 msgid_plural "WearMan Radios"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "WearMan (radio)"
+msgstr[1] "WearMan (radio)"
+msgstr[2] "WearMan (radio)"
+msgstr[3] "WearMan (radio)"
 
 #. ~ Description of "WearMan Radio"
 #: data/json/items/fake.json
@@ -1402,6 +1730,9 @@ msgid ""
 "radiowaves and play downloaded music at a concert hall quality.  It is "
 "currently listening to the radio."
 msgstr ""
+"Zestaw głośników wszczepionych w czaszkę, które odbierają lokalne fale "
+"radiowe i odtwarzają pobraną muzykę w jakości sali koncertowej. Obecnie "
+"odbiera radio."
 
 #. ~ Description of "Integrated AR System"
 #: data/json/items/fake.json
@@ -1409,6 +1740,9 @@ msgid ""
 "Extremely thin lenses provides user with augmented reality overlay allowing "
 "the user to zoom, and it displays handy information about local topology."
 msgstr ""
+"Niezwykle cienkie soczewki nakładają przed oczami użytkownika obraz "
+"rozszerzonej rzeczywistości, który pozwala przybliżać widok i wyświetla "
+"przydatne informacje o ukształtowaniu terenu."
 
 #. ~ Description of "autonomous surgical scalpels"
 #: data/json/items/fake.json
@@ -1416,15 +1750,17 @@ msgid ""
 "A system of surgical-grade scalpels.  They allow you to make precise cuts on "
 "corpses."
 msgstr ""
+"System skalpeli klasy chirurgicznej. Pozwalają wykonywać precyzyjne cięcia na"
+" zwłokach."
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "sharp piece of wreckage"
 msgid_plural "sharp piece of wreckages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ostry kawałek wraku"
+msgstr[1] "ostre kawałki wraku"
+msgstr[2] "ostrych kawałków wraku"
+msgstr[3] "ostrego kawałka wraku"
 
 #. ~ Description of "smoldering embers"
 #: data/json/items/fake.json
@@ -1432,56 +1768,58 @@ msgid ""
 "A handful of smoldering embers emitting smoke.  They are fading away before "
 "your eyes."
 msgstr ""
+"Garść tlących się żarzących węgielków, z których unosi się dym. Gasną na "
+"twoich oczach."
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "bionic radio"
 msgid_plural "bionic radios"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "radio bioniczne"
+msgstr[1] "radia bioniczne"
+msgstr[2] "radiów bionicznych"
+msgstr[3] "radia bionicznego"
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "light hoist"
 msgid_plural "light hoists"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lekki wciągnik"
+msgstr[1] "lekkie wciągniki"
+msgstr[2] "lekkich wciągników"
+msgstr[3] "lekkiego wciągnika"
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "sturdy hoist"
 msgid_plural "sturdy hoists"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "solidny wciągnik"
+msgstr[1] "solidne wciągniki"
+msgstr[2] "solidnych wciągników"
+msgstr[3] "solidnego wciągnika"
 
 #. ~ Item name
 #: data/json/items/fake.json
 msgid "heavy-duty hoist"
 msgid_plural "heavy-duty hoists"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wciągnik o dużym udźwigu"
+msgstr[1] "wciągniki o dużym udźwigu"
+msgstr[2] "wciągników o dużym udźwigu"
+msgstr[3] "wciągnika o dużym udźwigu"
 
 #. ~ Description of variant "deck of cards" of item "deck of cards"
 #: data/json/items/fluff.json
 msgid "A fairly new, glossy deck of 52 playing cards."
-msgstr ""
+msgstr "Dość nowa, błyszcząca talia 52 kart do gry."
 
 #. ~ Variant name of item "deck of cards"
 #: data/json/items/fluff.json
 msgid "worn deck of cards"
 msgid_plural "worn decks of cards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zniszczona talia kart"
+msgstr[1] "zniszczone talie kart"
+msgstr[2] "zniszczonych talii kart"
+msgstr[3] "zniszczonej talii kart"
 
 #. ~ Description of variant "worn deck of cards" of item "deck of cards"
 #: data/json/items/fluff.json
@@ -1489,15 +1827,17 @@ msgid ""
 "A deck of 52 playing cards.  Judging by the bent, frayed edges and faded "
 "prints, it saw its share of games."
 msgstr ""
+"Talia 52 kart do gry. Sądząc po zagiętych, postrzępionych brzegach i "
+"wyblakłym nadruku, swoje już przegrała."
 
 #. ~ Variant name of item "deck of cards"
 #: data/json/items/fluff.json
 msgid "deck of Uno cards"
 msgid_plural "decks of Uno cards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "talia kart Uno"
+msgstr[1] "talie kart Uno"
+msgstr[2] "talii kart Uno"
+msgstr[3] "talii kart Uno"
 
 #. ~ Description of variant "deck of Uno cards" of item "deck of cards"
 #: data/json/items/fluff.json
@@ -1505,15 +1845,17 @@ msgid ""
 "A set of Uno cards meant to play a game of Uno with your companions.  Just "
 "don't yell Uno too loud to avoid attracting the undead."
 msgstr ""
+"Zestaw kart Uno do gry w Uno z towarzyszami. Tylko nie krzycz „Uno” zbyt "
+"głośno, żeby nie zwabić nieumarłych."
 
 #. ~ Variant name of item "deck of cards"
 #: data/json/items/fluff.json
 msgid "deck of Shadowcaser cards"
 msgid_plural "decks of Shadowcaser cards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "talia kart Shadowcaser"
+msgstr[1] "talie kart Shadowcaser"
+msgstr[2] "talii kart Shadowcaser"
+msgstr[3] "talii kart Shadowcaser"
 
 #. ~ Description of variant "deck of Shadowcaser cards" of item "deck of cards"
 #: data/json/items/fluff.json
@@ -1525,6 +1867,12 @@ msgid ""
 " players to escape this dream world by unlocking eight doors before they run "
 "out of time or succumb to the nightmares haunting them."
 msgstr ""
+"Zestaw kart do Shadowcasera, kooperacyjnej gry karcianej dla jednego lub "
+"dwóch graczy. Talia składa się z 76 unikalnych kart. Shadowcaser to "
+"wciągająca gra karciana osadzona w świecie snów, w którym gracze trafiają do "
+"tajemniczego, labiryntowego snu. Celem gry jest ucieczka z tego świata snów "
+"przez otwarcie ośmiorga drzwi, zanim skończy się czas albo gracze ulegną "
+"nawiedzającym ich koszmarom."
 
 #. ~ Variant name of item "deck of cards"
 #. ~ Item name
@@ -1532,10 +1880,10 @@ msgstr ""
 #: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
 msgid "deck of tarot cards"
 msgid_plural "decks of tarot cards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "talia kart tarota"
+msgstr[1] "talie kart tarota"
+msgstr[2] "talii kart tarota"
+msgstr[3] "talii kart tarota"
 
 #. ~ Description of variant "deck of tarot cards" of item "deck of cards"
 #: data/json/items/fluff.json
@@ -1543,6 +1891,8 @@ msgid ""
 "A deck of tarot cards.  Commonly used for the practice of divination.  Each "
 "card has a unique and highly symbolic picture."
 msgstr ""
+"Talia kart tarota. Powszechnie używana do wróżenia. Każda karta ma "
+"niepowtarzalny, mocno symboliczny obrazek."
 
 #. ~ Description of variant "makeshift deck of cards" of item "deck of cards"
 #: data/json/items/fluff.json
@@ -1550,6 +1900,8 @@ msgid ""
 "A deck of 52 makeshift cards, made out of cardboard rectangles with simple "
 "designs drawn on them."
 msgstr ""
+"Talia 52 prowizorycznych kart wykonanych z tekturowych prostokątów z "
+"narysowanymi prostymi wzorami."
 
 #. ~ Description of "family photo"
 #: data/json/items/fluff.json
@@ -1557,6 +1909,8 @@ msgid ""
 "A photo of a smiling family on a camping trip.  One of the parents looks like"
 " a cleaner, happier version of a zombie you've seen."
 msgstr ""
+"Zdjęcie uśmiechniętej rodziny na biwaku. Jedno z rodziców wygląda jak "
+"czystsza, szczęśliwsza wersja zombie, którego widziałeś."
 
 #. ~ Description of "polaroid photo"
 #: data/json/items/fluff.json
@@ -1564,15 +1918,17 @@ msgid ""
 "A poorly-taken polaroid photo of a young man wearing bell-bottoms and a "
 "fedora.  It's pretty blurry."
 msgstr ""
+"Kiepsko zrobione zdjęcie polaroid młodego mężczyzny w spodniach dzwonach i "
+"fedorze. Jest dość rozmazane."
 
 #. ~ Item name
 #: data/json/items/fluff.json
 msgid "Jigsaw puzzle"
 msgid_plural "Jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli"
+msgstr[1] "pudełka puzzli"
+msgstr[2] "pudełek puzzli"
+msgstr[3] "pudełka puzzli"
 
 #. ~ Description of "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1580,15 +1936,17 @@ msgid ""
 "A jigsaw puzzle cardboard box containing 1000 cardboard pieces that when "
 "connected together properly forms a image of something, somewhere."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą obraz czegoś, gdzieś."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "White House jigsaw puzzle"
 msgid_plural "White House jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Białym Domem"
+msgstr[1] "pudełka puzzli z Białym Domem"
+msgstr[2] "pudełek puzzli z Białym Domem"
+msgstr[3] "pudełka puzzli z Białym Domem"
 
 #. ~ Description of variant "White House jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1597,15 +1955,17 @@ msgid ""
 "connected together properly forms the main view of the White House in "
 "Washington, DC."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą główny widok Białego Domu w Waszyngtonie."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "St. Basil's jigsaw puzzle"
 msgid_plural "St. Basil's jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z soborem Wasyla Błogosławionego"
+msgstr[1] "pudełka puzzli z soborem Wasyla Błogosławionego"
+msgstr[2] "pudełek puzzli z soborem Wasyla Błogosławionego"
+msgstr[3] "pudełka puzzli z soborem Wasyla Błogosławionego"
 
 #. ~ Description of variant "St. Basil's jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1614,15 +1974,18 @@ msgid ""
 "connected together properly forms the main view of the St. Basil's Cathedral "
 "at the Red Square in Moscow, Russia."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą główny widok soboru Wasyla Błogosławionego na "
+"placu Czerwonym w Moskwie w Rosji."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Big Ben jigsaw puzzle"
 msgid_plural "Big Ben jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Big Benem"
+msgstr[1] "pudełka puzzli z Big Benem"
+msgstr[2] "pudełek puzzli z Big Benem"
+msgstr[3] "pudełka puzzli z Big Benem"
 
 #. ~ Description of variant "Big Ben jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1631,15 +1994,18 @@ msgid ""
 "connected together properly forms the front view of the Big Ben in London, "
 "United Kingdom."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok Big Bena w Londynie w Wielkiej Brytanii od"
+" frontu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Curitiba's Botanical Garden jigsaw puzzle"
 msgid_plural "Curitiba's Botanical Garden jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z ogrodem botanicznym w Kurytybie"
+msgstr[1] "pudełka puzzli z ogrodem botanicznym w Kurytybie"
+msgstr[2] "pudełek puzzli z ogrodem botanicznym w Kurytybie"
+msgstr[3] "pudełka puzzli z ogrodem botanicznym w Kurytybie"
 
 #. ~ Description of variant "Curitiba's Botanical Garden jigsaw puzzle" of item
 #. "Jigsaw puzzle"
@@ -1649,15 +2015,18 @@ msgid ""
 "connected together properly forms the front view of the Curitiba's Botanical "
 "Garden in Curitiba, Brazil."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok ogrodu botanicznego w Kurytybie w Brazylii"
+" od frontu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Christ Redeemer jigsaw puzzle"
 msgid_plural "Christ Redeemer jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Chrystusem Zbawicielem"
+msgstr[1] "pudełka puzzli z Chrystusem Zbawicielem"
+msgstr[2] "pudełek puzzli z Chrystusem Zbawicielem"
+msgstr[3] "pudełka puzzli z Chrystusem Zbawicielem"
 
 #. ~ Description of variant "Christ Redeemer jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1667,15 +2036,18 @@ msgid ""
 "connected together properly forms the backside view of Christ Redeemer, the "
 "Copacabana Beach, and the Pao de Acucar in Rio de Janeiro, Brazil."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok pomnika Chrystusa Zbawiciela od tyłu, z "
+"plażą Copacabana i Głową Cukru w Rio de Janeiro w Brazylii."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Machu Picchu jigsaw puzzle"
 msgid_plural "Machu Picchu jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Machu Picchu"
+msgstr[1] "pudełka puzzli z Machu Picchu"
+msgstr[2] "pudełek puzzli z Machu Picchu"
+msgstr[3] "pudełka puzzli z Machu Picchu"
 
 #. ~ Description of variant "Machu Picchu jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1685,15 +2057,18 @@ msgid ""
 "connected together properly forms the background view of the ancient village "
 "of Machu Picchu in Machu Picchu, Peru."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok starożytnego miasta Machu Picchu w Peru na"
+" tle krajobrazu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Pyramids of Giza jigsaw puzzle"
 msgid_plural "Pyramids of Giza jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z piramidami w Gizie"
+msgstr[1] "pudełka puzzli z piramidami w Gizie"
+msgstr[2] "pudełek puzzli z piramidami w Gizie"
+msgstr[3] "pudełka puzzli z piramidami w Gizie"
 
 #. ~ Description of variant "Pyramids of Giza jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1703,15 +2078,17 @@ msgid ""
 "connected together properly forms the front view of the Pyramids of Giza in "
 "Al Haram, Egypt."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok piramid w Gizie w Egipcie od frontu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Great Wall of China jigsaw puzzle"
 msgid_plural "Great Wall of China jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Wielkim Murem Chińskim"
+msgstr[1] "pudełka puzzli z Wielkim Murem Chińskim"
+msgstr[2] "pudełek puzzli z Wielkim Murem Chińskim"
+msgstr[3] "pudełka puzzli z Wielkim Murem Chińskim"
 
 #. ~ Description of variant "Great Wall of China jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1721,15 +2098,18 @@ msgid ""
 "connected together properly forms a beautiful horizontal view of the Great "
 "Wall of China in Northern China."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą piękną panoramę Wielkiego Muru Chińskiego w "
+"północnych Chinach."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Roman Colosseum jigsaw puzzle"
 msgid_plural "Roman Colosseum jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Koloseum"
+msgstr[1] "pudełka puzzli z Koloseum"
+msgstr[2] "pudełek puzzli z Koloseum"
+msgstr[3] "pudełka puzzli z Koloseum"
 
 #. ~ Description of variant "Roman Colosseum jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1739,15 +2119,17 @@ msgid ""
 "connected together properly forms the front view of the Roman Colosseum in "
 "Roma, Italy."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok Koloseum w Rzymie we Włoszech od frontu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Taj Mahal jigsaw puzzle"
 msgid_plural "Taj Mahal jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Tadż Mahal"
+msgstr[1] "pudełka puzzli z Tadż Mahal"
+msgstr[2] "pudełek puzzli z Tadż Mahal"
+msgstr[3] "pudełka puzzli z Tadż Mahal"
 
 #. ~ Description of variant "Taj Mahal jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1756,15 +2138,18 @@ msgid ""
 "connected together properly forms the background view of the Taj Mahal "
 "mausoleum in Agra, India."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok mauzoleum Tadż Mahal w Agrze w Indiach na "
+"tle krajobrazu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Hanging Gardens of Babylon jigsaw puzzle"
 msgid_plural "Hanging Gardens of Babylon jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z wiszącymi ogrodami Babilonu"
+msgstr[1] "pudełka puzzli z wiszącymi ogrodami Babilonu"
+msgstr[2] "pudełek puzzli z wiszącymi ogrodami Babilonu"
+msgstr[3] "pudełka puzzli z wiszącymi ogrodami Babilonu"
 
 #. ~ Description of variant "Hanging Gardens of Babylon jigsaw puzzle" of item
 #. "Jigsaw puzzle"
@@ -1774,15 +2159,18 @@ msgid ""
 "connected together properly forms a possible accurate representation of the "
 "Hanging Gardens of Babylon."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą być może wierne przedstawienie wiszących ogrodów"
+" Babilonu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Statue of Zeus jigsaw puzzle"
 msgid_plural "Statue of Zeus jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z posągiem Zeusa"
+msgstr[1] "pudełka puzzli z posągiem Zeusa"
+msgstr[2] "pudełek puzzli z posągiem Zeusa"
+msgstr[3] "pudełka puzzli z posągiem Zeusa"
 
 #. ~ Description of variant "Statue of Zeus jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1792,15 +2180,18 @@ msgid ""
 "connected together properly forms a theoretical representation of the Statue "
 "of Zeus, a wonder that used to be at Olympia, Greece."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą teoretyczne przedstawienie posągu Zeusa, cudu "
+"świata, który niegdyś stał w Olimpii w Grecji."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Temple of Artemis jigsaw puzzle"
 msgid_plural "Temple of Artemis jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli ze świątynią Artemidy"
+msgstr[1] "pudełka puzzli ze świątynią Artemidy"
+msgstr[2] "pudełek puzzli ze świątynią Artemidy"
+msgstr[3] "pudełka puzzli ze świątynią Artemidy"
 
 #. ~ Description of variant "Temple of Artemis jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1810,15 +2201,18 @@ msgid ""
 "connected together properly forms a historical representation of the Temple "
 "of Artemis, possibly located in present-day, pre-Cataclysm Turkey."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą historyczne przedstawienie świątyni Artemidy, "
+"która prawdopodobnie stała na terenie dzisiejszej, sprzed Kataklizmu, Turcji."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Mausoleum at Halicarnassus jigsaw puzzle"
 msgid_plural "Mausoleum at Halicarnassus jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z mauzoleum w Halikarnasie"
+msgstr[1] "pudełka puzzli z mauzoleum w Halikarnasie"
+msgstr[2] "pudełek puzzli z mauzoleum w Halikarnasie"
+msgstr[3] "pudełka puzzli z mauzoleum w Halikarnasie"
 
 #. ~ Description of variant "Mausoleum at Halicarnassus jigsaw puzzle" of item
 #. "Jigsaw puzzle"
@@ -1829,15 +2223,19 @@ msgid ""
 "representation of the Mausoleum at Halicarnassus, probably located in "
 "present-day, pre-Cataclysm Turkey."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą być może historycznie wierne przedstawienie "
+"mauzoleum w Halikarnasie, które prawdopodobnie stało na terenie dzisiejszej, "
+"sprzed Kataklizmu, Turcji."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Colossus of Rhodes jigsaw puzzle"
 msgid_plural "Colossus of Rhodes jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Kolosem Rodyjskim"
+msgstr[1] "pudełka puzzli z Kolosem Rodyjskim"
+msgstr[2] "pudełek puzzli z Kolosem Rodyjskim"
+msgstr[3] "pudełka puzzli z Kolosem Rodyjskim"
 
 #. ~ Description of variant "Colossus of Rhodes jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1847,15 +2245,18 @@ msgid ""
 "connected together properly forms a representation of the Colossus of Rhodes "
 "in the island of same name, Greece, that may or may not be accurate."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą przedstawienie Kolosa Rodyjskiego na greckiej "
+"wyspie o tej samej nazwie, które może, ale nie musi być wierne."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Lighthouse of Alexandria jigsaw puzzle"
 msgid_plural "Lighthouse of Alexandria jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z latarnią morską na Faros"
+msgstr[1] "pudełka puzzli z latarnią morską na Faros"
+msgstr[2] "pudełek puzzli z latarnią morską na Faros"
+msgstr[3] "pudełka puzzli z latarnią morską na Faros"
 
 #. ~ Description of variant "Lighthouse of Alexandria jigsaw puzzle" of item
 #. "Jigsaw puzzle"
@@ -1866,15 +2267,18 @@ msgid ""
 "Lighthouse of Alexandria, that was built in the ancient city of Alexandria, "
 "Egypt."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą historyczne przedstawienie latarni morskiej na "
+"Faros, zbudowanej w starożytnym mieście Aleksandrii w Egipcie."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Stonehenge jigsaw puzzle"
 msgid_plural "Stonehenge jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli ze Stonehenge"
+msgstr[1] "pudełka puzzli ze Stonehenge"
+msgstr[2] "pudełek puzzli ze Stonehenge"
+msgstr[3] "pudełka puzzli ze Stonehenge"
 
 #. ~ Description of variant "Stonehenge jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1883,15 +2287,18 @@ msgid ""
 "connected together properly forms the front view of the ancient Stonehenge in"
 " Salisbury, United Kingdom."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok starożytnego Stonehenge koło Salisbury w "
+"Wielkiej Brytanii od frontu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Great Barrier Reef jigsaw puzzle"
 msgid_plural "Great Barrier Reef jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Wielką Rafą Koralową"
+msgstr[1] "pudełka puzzli z Wielką Rafą Koralową"
+msgstr[2] "pudełek puzzli z Wielką Rafą Koralową"
+msgstr[3] "pudełka puzzli z Wielką Rafą Koralową"
 
 #. ~ Description of variant "Great Barrier Reef jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1901,15 +2308,18 @@ msgid ""
 "connected together properly forms the underwater view of the Great Barrier "
 "Reef in the coast of Queensland, Australia."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą podwodny widok Wielkiej Rafy Koralowej u "
+"wybrzeży Queenslandu w Australii."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Mount Everest jigsaw puzzle"
 msgid_plural "Mount Everest jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Mount Everest"
+msgstr[1] "pudełka puzzli z Mount Everest"
+msgstr[2] "pudełek puzzli z Mount Everest"
+msgstr[3] "pudełka puzzli z Mount Everest"
 
 #. ~ Description of variant "Mount Everest jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1919,15 +2329,17 @@ msgid ""
 "connected together properly forms the forms the horizontal view of the Mount "
 "Everest, located at the Himalayan Mountain Range."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą panoramę Mount Everestu w Himalajach."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Mount Fuji jigsaw puzzle"
 msgid_plural "Mount Fuji jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z górą Fudżi"
+msgstr[1] "pudełka puzzli z górą Fudżi"
+msgstr[2] "pudełek puzzli z górą Fudżi"
+msgstr[3] "pudełka puzzli z górą Fudżi"
 
 #. ~ Description of variant "Mount Fuji jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1936,15 +2348,17 @@ msgid ""
 "connected together properly forms the horizontal view of Mount Fuji, at the "
 "Japanese island of Honshu."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą panoramę góry Fudżi na japońskiej wyspie Honsiu."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Victoria Falls jigsaw puzzle"
 msgid_plural "Victoria Falls jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z wodospadem Wiktorii"
+msgstr[1] "pudełka puzzli z wodospadem Wiktorii"
+msgstr[2] "pudełek puzzli z wodospadem Wiktorii"
+msgstr[3] "pudełka puzzli z wodospadem Wiktorii"
 
 #. ~ Description of variant "Victoria Falls jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1954,15 +2368,18 @@ msgid ""
 "connected together properly forms a magnificent upper view of the Victoria "
 "Falls at the border between Zambia and Zimbabwe."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą wspaniały widok z góry na wodospad Wiktorii na "
+"granicy Zambii i Zimbabwe."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Paricutín Volcano jigsaw puzzle"
 msgid_plural "Paricutín Volcano jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z wulkanem Paricutín"
+msgstr[1] "pudełka puzzli z wulkanem Paricutín"
+msgstr[2] "pudełek puzzli z wulkanem Paricutín"
+msgstr[3] "pudełka puzzli z wulkanem Paricutín"
 
 #. ~ Description of variant "Paricutín Volcano jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -1972,15 +2389,18 @@ msgid ""
 "connected together properly forms the natural view of the Paricutín Volcano, "
 "located in the Michoacán State, Mexico."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą naturalny widok wulkanu Paricutín w stanie "
+"Michoacán w Meksyku."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Angkor Wat jigsaw puzzle"
 msgid_plural "Angkor Wat jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Angkor Wat"
+msgstr[1] "pudełka puzzli z Angkor Wat"
+msgstr[2] "pudełek puzzli z Angkor Wat"
+msgstr[3] "pudełka puzzli z Angkor Wat"
 
 #. ~ Description of variant "Angkor Wat jigsaw puzzle" of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
@@ -1989,15 +2409,18 @@ msgid ""
 "connected together properly forms a interior view of the Angkor Wat temple "
 "complex in Cambodia."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą widok wnętrza kompleksu świątynnego Angkor Wat w"
+" Kambodży."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Guanabara Bay jigsaw puzzle"
 msgid_plural "Guanabara Bay jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z zatoką Guanabara"
+msgstr[1] "pudełka puzzli z zatoką Guanabara"
+msgstr[2] "pudełek puzzli z zatoką Guanabara"
+msgstr[3] "pudełka puzzli z zatoką Guanabara"
 
 #. ~ Description of variant "Guanabara Bay jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -2007,15 +2430,18 @@ msgid ""
 "connected together properly forms the natural view of the Guanabara Bay in "
 "Rio de Janeiro, Brazil."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą naturalny widok zatoki Guanabara w Rio de "
+"Janeiro w Brazylii."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Grand Canyon jigsaw puzzle"
 msgid_plural "Grand Canyon jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Wielkim Kanionem"
+msgstr[1] "pudełka puzzli z Wielkim Kanionem"
+msgstr[2] "pudełek puzzli z Wielkim Kanionem"
+msgstr[3] "pudełka puzzli z Wielkim Kanionem"
 
 #. ~ Description of variant "Grand Canyon jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -2025,15 +2451,18 @@ msgid ""
 "connected together properly forms the rocky view of the Grand Canyon, at the "
 "State of Arizona."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą skalisty widok Wielkiego Kanionu w stanie "
+"Arizona."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Northern Lights jigsaw puzzle"
 msgid_plural "Northern Lights jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z zorzą polarną"
+msgstr[1] "pudełka puzzli z zorzą polarną"
+msgstr[2] "pudełek puzzli z zorzą polarną"
+msgstr[3] "pudełka puzzli z zorzą polarną"
 
 #. ~ Description of variant "Northern Lights jigsaw puzzle" of item "Jigsaw
 #. puzzle"
@@ -2044,15 +2473,19 @@ msgid ""
 "Northern Lights (Aurora Borealis) which occur most often in the Arctic Circle"
 " and polar regions."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą nieziemsko piękny widok zorzy polarnej (Aurora "
+"Borealis), występującej najczęściej za kołem podbiegunowym i w rejonach "
+"polarnych."
 
 #. ~ Variant name of item "Jigsaw puzzle"
 #: data/json/items/fluff.json
 msgid "Acadia National Park jigsaw puzzle"
 msgid_plural "Acadia National Park jigsaw puzzles"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pudełko puzzli z Parkiem Narodowym Acadia"
+msgstr[1] "pudełka puzzli z Parkiem Narodowym Acadia"
+msgstr[2] "pudełek puzzli z Parkiem Narodowym Acadia"
+msgstr[3] "pudełka puzzli z Parkiem Narodowym Acadia"
 
 #. ~ Description of variant "Acadia National Park jigsaw puzzle" of item
 #. "Jigsaw puzzle"
@@ -2062,3 +2495,6 @@ msgid ""
 "connected together properly forms the natural view of the entrance of the "
 "Acadia National Park, located in Maine."
 msgstr ""
+"Kartonowe pudełko z puzzlami zawierające 1000 tekturowych elementów, które po"
+" prawidłowym złożeniu tworzą naturalny widok wejścia do Parku Narodowego "
+"Acadia w stanie Maine."
