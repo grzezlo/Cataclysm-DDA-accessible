@@ -16,292 +16,319 @@ msgstr ""
 #: src/ranged.cpp
 #, c-format
 msgid "You shoot your %1$s.  %2$s"
-msgstr ""
+msgstr "Strzelasz z: %1$s. %2$s"
 
 #: src/ranged.cpp
 msgid "swoosh!"
-msgstr ""
+msgstr "świst!"
 
 #: src/ranged.cpp
 msgid "No hostile creature in reach."
-msgstr ""
+msgstr "Brak wrogiego stworzenia w zasięgu."
 
 #: src/ranged.cpp
 msgid "Really attack yourself?"
-msgstr ""
+msgstr "Naprawdę zaatakować samego siebie?"
 
 #: src/ranged.cpp
 #, c-format
 msgid "[%s] to unload the %s after quitting."
-msgstr ""
+msgstr "[%s], aby rozładować po wyjściu: %s."
 
 #: src/ranged.cpp
 #, c-format
 msgid "[%s] to keep the %s loaded after quitting."
-msgstr ""
+msgstr "[%s], aby pozostawić załadowane po wyjściu: %s."
 
 #: src/ranged.cpp
 #, c-format
 msgid "Pfft.  You are a brawler; using this %s is beneath you."
 msgstr ""
+"Pff. Jesteś zabijaką; używanie czegoś takiego jak %s jest poniżej twojej "
+"godności."
 
 #: src/ranged.cpp
 msgid "You're too gun-shy to use this."
-msgstr ""
+msgstr "Za bardzo boisz się broni palnej, żeby tego użyć."
 
 #: src/ranged.cpp
 #, c-format
 msgid "You need at least %2$d kJ of bionic power to fire the %1$s!"
 msgstr ""
+"Potrzebujesz co najmniej %2$d kJ energii bionicznej, by wystrzelić z: %1$s!"
 
 #: src/ranged.cpp
 #, c-format
 msgid "You need a UPS with at least %2$d kJ to fire the %1$s!"
-msgstr ""
+msgstr "Potrzebujesz UPS-a z co najmniej %2$d kJ, by wystrzelić z: %1$s!"
 
 #: src/recipe.cpp
 #, c-format
 msgid "<color_%s>%s</color> (<color_%s>%.2f skill bonus</color>%s)"
-msgstr ""
+msgstr "<color_%s>%s</color> (<color_%s>premia do umiejętności %.2f</color>%s)"
 
 #: src/recipe.cpp
 #, c-format
 msgid "<color_%s>%s</color> (<color_%s>%.2fx time, %.2f skill bonus</color>%s)"
 msgstr ""
+"<color_%s>%s</color> (<color_%s>czas ×%.2f, premia do "
+"umiejętności %.2f</color>%s)"
 
 #: src/recipe.cpp
 msgid "[bad param name]"
-msgstr ""
+msgstr "[błędna nazwa parametru]"
 
 #: src/recipe.cpp
 msgid "[bad argument value]"
-msgstr ""
+msgstr "[błędna wartość argumentu]"
 
 #: src/scenario.cpp
 msgid ""
 "\n"
 "This scenario can only be unlocked through achievements."
 msgstr ""
+"\n"
+"Ten scenariusz można odblokować tylko poprzez osiągnięcia."
 
 #: src/scores_ui.cpp
 msgid "Your scores"
-msgstr ""
+msgstr "Twoje wyniki"
 
 #: src/scores_ui.cpp
 msgid "Achievements and conducts are disabled for debug characters."
-msgstr ""
+msgstr "Osiągnięcia i postępki są wyłączone dla postaci debugowania."
 
 #: src/scores_ui.cpp
 msgid "This game has no valid conducts."
-msgstr ""
+msgstr "Ta gra nie ma żadnych prawidłowych postępków."
 
 #: src/scores_ui.cpp
 msgid "This game has no valid achievements."
-msgstr ""
+msgstr "Ta gra nie ma żadnych prawidłowych osiągnięć."
 
 #: src/scores_ui.cpp
 msgid ""
 "Note that only conducts that existed when you started this game and still "
 "exist now will appear here."
 msgstr ""
+"Uwaga: widoczne są tu tylko postępki, które istniały w chwili rozpoczęcia tej"
+" gry i nadal istnieją."
 
 #: src/scores_ui.cpp
 msgid ""
 "Note that only achievements that existed when you started this game and still"
 " exist now will appear here."
 msgstr ""
+"Uwaga: widoczne są tu tylko osiągnięcia, które istniały w chwili rozpoczęcia "
+"tej gry i nadal istnieją."
 
 #: src/scores_ui.cpp
 msgid "This game has no valid scores."
-msgstr ""
+msgstr "Ta gra nie ma żadnych prawidłowych wyników."
 
 #: src/scores_ui.cpp
 msgid ""
 "Note that only scores that existed when you started this game and still exist"
 " now will appear here."
 msgstr ""
+"Uwaga: widoczne są tu tylko wyniki, które istniały w chwili rozpoczęcia tej "
+"gry i nadal istnieją."
 
 #: src/scores_ui.cpp
 msgid "Stats through kills:"
-msgstr ""
+msgstr "Statystyki z zabójstw:"
 
 #: src/scores_ui.cpp
 #, c-format
 msgid "Experience: %d (%d points available)"
-msgstr ""
+msgstr "Doświadczenie: %d (dostępne punkty: %d)"
 
 #: src/scores_ui.cpp
 #, c-format
 msgid "Monster kills (%d):"
-msgstr ""
+msgstr "Zabite potwory (%d):"
 
 #: src/scores_ui.cpp
 #, c-format
 msgid "NPC kills (%d):"
-msgstr ""
+msgstr "Zabici NPC (%d):"
 
 #: src/scores_ui.cpp
 msgid "You haven't killed any NPCs yet!"
-msgstr ""
+msgstr "Nie zabiłeś jeszcze żadnych NPC!"
 
 #: src/suffer.cpp
 #, c-format
 msgid "You don't have enough mana to keep your %s going."
-msgstr ""
+msgstr "Nie masz dość many, by podtrzymać: %s."
 
 #: src/suffer.cpp
 msgid "You're crushed against the walls!"
-msgstr ""
+msgstr "Zostajesz zmiażdżony o ściany!"
 
 #: src/suffer.cpp
 msgid "You start having withdrawals!"
-msgstr ""
+msgstr "Zaczynasz mieć objawy odstawienia!"
 
 #: src/suffer.cpp
 msgid "<npcname> starts wheezing and coughing."
-msgstr ""
+msgstr "<npcname> zaczyna świszczeć i kaszleć."
 
 #: src/suffer.cpp
 msgid "You fear the sunlight!"
-msgstr ""
+msgstr "Boisz się światła słonecznego!"
 
 #: src/suffer.cpp
 msgid ""
 "Your flesh tingles with an air of danger, yet it is strangely pleasurable."
 msgstr ""
+"Twoje ciało mrowi od aury niebezpieczeństwa, a jednak jest to dziwnie "
+"przyjemne."
 
 #: src/suffer.cpp
 msgid "Emergency!  User's lungs are not powered!"
-msgstr ""
+msgstr "Alarm! Płuca użytkownika nie są zasilane!"
 
 #: src/suffer.cpp
 msgid ""
 "Your fear of the dark is so intense that your hands start shaking "
 "uncontrollably."
 msgstr ""
+"Twój strach przed ciemnością jest tak silny, że ręce zaczynają ci się "
+"niekontrolowanie trząść."
 
 #: src/suffer.cpp
 msgid ""
 "Your fear of the dark is so intense that you start breathing rapidly, and you"
 " feel like your heart is ready to jump out of your chest."
 msgstr ""
+"Twój strach przed ciemnością jest tak silny, że zaczynasz gwałtownie oddychać"
+" i czujesz, jakby serce miało ci wyskoczyć z piersi."
 
 #: src/suffer.cpp
 msgid "You feel a twinge of panic as darkness engulfs you."
-msgstr ""
+msgstr "Czujesz ukłucie paniki, gdy ogarnia cię ciemność."
 
 #: src/suffer.cpp
 msgid "You attract the attention of something horrible."
-msgstr ""
+msgstr "Przyciągasz uwagę czegoś okropnego."
 
 #: src/suffer.cpp
 msgid "<npcname> attracts the attention of something horrible."
-msgstr ""
+msgstr "<npcname> przyciąga uwagę czegoś okropnego."
 
 #: src/suffer.cpp
 msgid "Reality gives way under your feet like rotten scaffolding."
 msgstr ""
+"Rzeczywistość ustępuje pod twoimi stopami niczym zbutwiałe rusztowanie."
 
 #: src/suffer.cpp
 msgid "Reality gives way under <npcname>'s feet like rotten scaffolding."
 msgstr ""
+"Rzeczywistość ustępuje pod stopami postaci <npcname> niczym zbutwiałe "
+"rusztowanie."
 
 #: src/suffer.cpp
 msgid "You suddenly lose all substance and corporeality."
-msgstr ""
+msgstr "Nagle tracisz całą swoją substancję i cielesność."
 
 #: src/suffer.cpp
 msgid "<npcname> suddenly loses all substance and corporeality."
-msgstr ""
+msgstr "<npcname> nagle traci całą substancję i cielesność."
 
 #: src/suffer.cpp
 msgid "You are suddenly beset with agonizing, unbearable pain."
-msgstr ""
+msgstr "Nagle ogarnia cię rozdzierający, nieznośny ból."
 
 #: src/suffer.cpp
 msgid "<npcname> suddenly cries out in agony."
-msgstr ""
+msgstr "<npcname> nagle krzyczy w agonii."
 
 #: src/suffer.cpp
 msgid "The air folds and distorts around you."
-msgstr ""
+msgstr "Powietrze wokół ciebie fałduje się i zniekształca."
 
 #: src/suffer.cpp
 msgid "The air folds and distorts around <npcname>."
-msgstr ""
+msgstr "Powietrze wokół postaci <npcname> fałduje się i zniekształca."
 
 #: src/suffer.cpp
 msgid "You're bombarded with radioactive energy!"
-msgstr ""
+msgstr "Bombarduje cię energia radioaktywna!"
 
 #: src/suffer.cpp
 msgid "<npcname> is bombarded with radioactive energy!"
-msgstr ""
+msgstr "Energia radioaktywna bombarduje postać <npcname>!"
 
 #: src/suffer.cpp
 msgid "You suddenly shift slightly."
-msgstr ""
+msgstr "Nagle lekko się przesuwasz."
 
 #: src/suffer.cpp
 msgid "<npcname> suddenly shifts slightly."
-msgstr ""
+msgstr "<npcname> nagle lekko się przesuwa."
 
 #: src/suffer.cpp
 msgid "You hear a painfully loud grinding noise from your location."
-msgstr ""
+msgstr "Słyszysz boleśnie głośny zgrzyt dochodzący z miejsca, w którym stoisz."
 
 #: src/suffer.cpp
 msgid ""
 "A painfully loud grinding noise suddenly blares from the location of "
 "<npcname>."
 msgstr ""
+"Z miejsca, w którym znajduje się <npcname>, nagle rozlega się boleśnie głośny"
+" zgrzyt."
 
 #: src/suffer.cpp
 msgid "A horribly loud grinding sound!"
-msgstr ""
+msgstr "Potwornie głośny zgrzyt!"
 
 #: src/suffer.cpp
 msgid "The air suddenly crackles around you."
-msgstr ""
+msgstr "Powietrze wokół ciebie nagle zaczyna trzeszczeć."
 
 #: src/suffer.cpp
 msgid "The air suddenly crackles around <npcname>."
-msgstr ""
+msgstr "Powietrze wokół postaci <npcname> nagle zaczyna trzeszczeć."
 
 #: src/suffer.cpp
 msgid "You suddenly feel a sharp, stabbing pain with no apparent source."
-msgstr ""
+msgstr "Nagle czujesz ostry, kłujący ból bez widocznego źródła."
 
 #: src/suffer.cpp
 msgid "Your vision becomes blurry and you suddenly feel like you're falling."
-msgstr ""
+msgstr "Wzrok ci się rozmywa i nagle czujesz, jakbyś spadał."
 
 #: src/suffer.cpp
 msgid "You suddenly feel very queasy."
-msgstr ""
+msgstr "Nagle robi ci się bardzo niedobrze."
 
 #: src/suffer.cpp
 msgid "You feel the water runs on your skin, making you feel better."
 msgstr ""
+"Czujesz, jak woda spływa po twojej skórze, i od razu czujesz się lepiej."
 
 #: src/talker_npc.cpp
 msgid "<npc_name> seems to be:"
-msgstr ""
+msgstr "Jak się wydaje, <npc_name> to:"
 
 #: src/talker_npc.cpp
 msgid ""
 "\n"
 "Normal person - <npc_name> seems to be pretty normal."
 msgstr ""
+"\n"
+"Zwyczajna osoba – <npc_name> wygląda na całkiem zwyczajną osobę."
 
 #: src/teleport.cpp
 #, c-format
 msgid "%s flickers but remains exactly where they are."
-msgstr ""
+msgstr "%s migocze, ale pozostaje dokładnie w tym samym miejscu."
 
 #: src/teleport.cpp
 msgid "You're blasted with strange energy!"
-msgstr ""
+msgstr "Uderza w ciebie dziwna energia!"
 
 #: src/teleport.cpp
 #, c-format
@@ -309,6 +336,8 @@ msgid ""
 "You collide with %s mid teleport, and you are both knocked away by a violent "
 "explosion of energy."
 msgstr ""
+"W trakcie teleportacji zderzasz się z: %s i gwałtowna eksplozja energii "
+"odrzuca was na boki."
 
 #: src/teleport.cpp
 #, c-format
@@ -316,6 +345,8 @@ msgid ""
 "<npcname> collides with %s mid teleport, and they are both knocked away by a "
 "violent explosion of energy."
 msgstr ""
+"W trakcie teleportacji <npcname> zderza się z: %s i gwałtowna eksplozja "
+"energii odrzuca ich na boki."
 
 #: src/teleport.cpp
 #, c-format
@@ -323,102 +354,104 @@ msgid ""
 "%1$s collides with %2$s mid teleport, and they are both knocked away by a "
 "violent explosion of energy!"
 msgstr ""
+"W trakcie teleportacji %1$s zderza się z: %2$s i gwałtowna eksplozja energii "
+"odrzuca ich na boki!"
 
 #: src/trade_ui.cpp
 msgid "Your promises of digital payment mean nothing here."
-msgstr ""
+msgstr "Twoje obietnice płatności cyfrowej nic tu nie znaczą."
 
 #: src/trade_ui.cpp
 #, c-format
 msgid "Bank Balance: %s"
-msgstr ""
+msgstr "Saldo konta: %s"
 
 #: src/trade_ui.cpp
 #, c-format
 msgid "%s to balance trade with bank account balance"
-msgstr ""
+msgstr "%s – wyrównaj wymianę saldem konta bankowego"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "A bear trap closes on your %s!"
-msgstr ""
+msgstr "Pułapka na niedźwiedzia chwyta cię za %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "A bear trap closes on <npcname>'s %s!"
-msgstr ""
+msgstr "Pułapka na niedźwiedzia zaciska się na: %s <npcname>!"
 
 #. ~Player with an animal mount. e.g. "Your horse stepped on a spiked board!"
 #: src/trapfunc.cpp
 #, c-format
 msgid "Your %s stepped on a %s!"
-msgstr ""
+msgstr "Twój wierzchowiec (%s) nadeptuje na: %s!"
 
 #. ~NPC with an animal mount. e.g. "Jane's horse stepped on a spiked board!"
 #: src/trapfunc.cpp
 #, c-format
 msgid "%s %s stepped on a %s!"
-msgstr ""
+msgstr "%2$s %1$s nadeptuje na: %3$s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "You step on a %s!"
-msgstr ""
+msgstr "Nadeptujesz na: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "%s steps on a %s!"
-msgstr ""
+msgstr "%s nadeptuje na: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "%s destroys a %s as they move over it!"
-msgstr ""
+msgstr "Przechodząc, %s niszczy: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "You destroy the %s as you step on it!"
-msgstr ""
+msgstr "Nadeptujesz i niszczysz: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "You step on a sharp %s!"
-msgstr ""
+msgstr "Nadeptujesz na ostry przedmiot: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "%s steps on a sharp %s!"
-msgstr ""
+msgstr "%s nadeptuje na ostry przedmiot: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "You harmlessly pass a %1$s."
-msgstr ""
+msgstr "Bezpiecznie mijasz: %1$s."
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "A %1$s catches your %2$s!"
-msgstr ""
+msgstr "%1$s łapie cię za %2$s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "Your %1$s is caught by a %2$s!"
-msgstr ""
+msgstr "Twój wierzchowiec (%1$s) łapie się w: %2$s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "%1$s is caught by a %2$s!"
-msgstr ""
+msgstr "%1$s łapie się w: %2$s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "The acidic goo eats away at your %s!"
-msgstr ""
+msgstr "Kwaśna maź przeżera: %s!"
 
 #: src/trapfunc.cpp
 #, c-format
 msgid "The acidic goo eats away at <npcname>'s %s!"
-msgstr ""
+msgstr "Kwaśna maź przeżera: %s <npcname>!"
 
 #: src/trapfunc.cpp
 #, c-format
@@ -426,6 +459,8 @@ msgid ""
 "Failed to generate the new map, probably due to collision with %s "
 "vehicle/appliance."
 msgstr ""
+"Nie udało się wygenerować nowej mapy, prawdopodobnie z powodu kolizji z "
+"pojazdem/urządzeniem %s."
 
 #: src/try_parse_integer.cpp
 #, c-format
@@ -433,6 +468,8 @@ msgid ""
 "Error interpreting coordinate: expected two or three comma-separated values; "
 "got %zu"
 msgstr ""
+"Błąd interpretacji współrzędnej: oczekiwano dwóch lub trzech wartości "
+"oddzielonych przecinkami; otrzymano %zu"
 
 #: src/try_parse_integer.cpp
 #, c-format
@@ -440,171 +477,182 @@ msgid ""
 "Error interpreting coordinate: expected an integer or two integers separated "
 "by '; got %s"
 msgstr ""
+"Błąd interpretacji współrzędnej: oczekiwano liczby całkowitej lub dwóch liczb"
+" całkowitych oddzielonych '; otrzymano %s"
 
 #: src/try_parse_integer.cpp
 #, c-format
 msgid "Error interpreting coordinate: %s"
-msgstr ""
+msgstr "Błąd interpretacji współrzędnej: %s"
 
 #: src/turret.cpp
 msgid "Pfft.  You are a brawler; using turrets is beneath you."
-msgstr ""
+msgstr "Pff. Jesteś zabijaką; używanie wieżyczek jest poniżej twojej godności."
 
 #: src/turret.cpp
 msgid "You refuse to use a firearm even when it's mounted."
-msgstr ""
+msgstr "Odmawiasz użycia broni palnej, nawet zamontowanej."
 
 #: src/ui_extended_description.cpp
 msgid "Inscription: ???"
-msgstr ""
+msgstr "Napis: ???"
 
 #: src/ui_extended_description.cpp
 msgid "You can't see vehicles or appliances here."
-msgstr ""
+msgstr "Nie widzisz tu żadnych pojazdów ani urządzeń."
 
 #: src/veh_appliance.cpp
 msgid "You merge it into the adjacent power grid."
-msgstr ""
+msgstr "Włączasz je do sąsiedniej sieci energetycznej."
 
 #: src/veh_appliance.cpp
 msgid "Appliance has no connection to a battery."
-msgstr ""
+msgstr "Urządzenie nie jest podłączone do akumulatora."
 
 #: src/veh_appliance.cpp
 msgid "Grid battery power flow: "
-msgstr ""
+msgstr "Przepływ energii akumulatorów sieci: "
 
 #: src/veh_appliance.cpp
 msgid "Appliance power consumption: "
-msgstr ""
+msgstr "Pobór mocy urządzenia: "
 
 #. ~ An addendum to Plug In's description, as in: Plug in appliance / merge
 #. power grid".
 #: src/veh_appliance.cpp
 msgid " / merge power grid"
-msgstr ""
+msgstr " / połącz sieć energetyczną"
 
 #: src/veh_appliance.cpp src/vehicle_use.cpp
 msgid "Remove other cables first"
-msgstr ""
+msgstr "Najpierw usuń inne kable"
 
 #: src/veh_interact.cpp
 msgid "Unracking is required before installing any parts here."
 msgstr ""
+"Przed zamontowaniem tu jakichkolwiek części trzeba zdjąć pojazd ze stelaża."
 
 #: src/veh_interact.cpp
 msgid ""
 "<color_white>Cannot install due to:</color>\n"
 "> "
 msgstr ""
+"<color_white>Nie można zamontować z powodu:</color>\n"
+"> "
 
 #: src/veh_interact.cpp
 msgid ""
 "\n"
 "Unracking is required before replacing this part.\n"
 msgstr ""
+"\n"
+"Przed wymianą tej części trzeba zdjąć pojazd ze stelaża.\n"
 
 #: src/veh_interact.cpp src/veh_shape.cpp
 msgid "Choose cosmetic variant:"
-msgstr ""
+msgstr "Wybierz wariant wyglądu:"
 
 #: src/veh_interact.cpp
 msgid ""
 "<color_red>Unsuitable terrain</color> for working on part that requires "
 "jacking."
 msgstr ""
+"<color_red>Nieodpowiedni teren</color> do pracy nad częścią wymagającą "
+"lewarowania."
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "(Effective lifting strength is %d)"
-msgstr ""
+msgstr "(Efektywna siła podnoszenia: %d)"
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "Cargo: <color_light_blue>%s</color> / <color_light_blue>%s</color> %s"
 msgstr ""
+"Ładunek: <color_light_blue>%s</color> / <color_light_blue>%s</color> %s"
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "<npcname> doesn't meet the requirements to install the %s."
-msgstr ""
+msgstr "<npcname> nie spełnia wymagań, by zamontować: %s."
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "<npcname> fails to recover %1$d %2$s."
-msgstr ""
+msgstr "<npcname> bezskutecznie próbuje odzyskać: %1$d x %2$s."
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "<npcname> fails to recover %1$s."
-msgstr ""
+msgstr "<npcname> bezskutecznie próbuje odzyskać: %1$s."
 
 #: src/veh_interact.cpp
 #, c-format
 msgid "You disconnect the %s's power connection."
-msgstr ""
+msgstr "Odłączasz przyłącze zasilania: %s."
 
 #: src/veh_shape.cpp
 msgid "Confirm to select or quit to select another tile."
-msgstr ""
+msgstr "Zatwierdź, aby wybrać, lub wyjdź, aby wybrać inne pole."
 
 #: src/veh_shape.cpp
 msgid "Only one shape"
-msgstr ""
+msgstr "Tylko jeden kształt"
 
 #: src/veh_shape.cpp
 msgid "Part is obscured"
-msgstr ""
+msgstr "Część jest zasłonięta"
 
 #: src/veh_shape.cpp
 msgid "Confirm to save or exit to revert"
-msgstr ""
+msgstr "Zatwierdź, aby zapisać, lub wyjdź, aby przywrócić"
 
 #: src/veh_type.cpp
 #, c-format
 msgctxt "mounted turret prefix"
 msgid "mounted %s"
-msgstr ""
+msgstr "%s (wieżyczka)"
 
 #: src/veh_type.cpp
 msgid "Provides: "
-msgstr ""
+msgstr "Zapewnia: "
 
 #: src/veh_type.cpp
 msgid "Allows connecting: "
-msgstr ""
+msgstr "Pozwala podłączyć: "
 
 #. ~ Name for an array of electronic power grid appliances, like batteries and
 #. solar panels
 #: src/vehicle.cpp
 msgid "power grid"
-msgstr ""
+msgstr "sieć energetyczna"
 
 #: src/vehicle.cpp
 #, c-format
 msgid ""
 "the %s emitting a beep and saying \"Autonomous driving protocols suspended!\""
 msgstr ""
+"pikanie i komunikat „Zawieszono protokoły jazdy autonomicznej!” z pojazdu: %s"
 
 #: src/vehicle.cpp
 msgid "There's no structure to support it."
-msgstr ""
+msgstr "Nie ma konstrukcji, która by to podtrzymała."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "%s is in the way."
-msgstr ""
+msgstr "Przeszkadza: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "%s is already installed here."
-msgstr ""
+msgstr "Już tu zamontowano: %s."
 
 #. ~ %1$s - already installed part name, %2$s - part location name
 #: src/vehicle.cpp
 #, c-format
 msgid "The installed %1$s already occupies the '%2$s' location."
-msgstr ""
+msgstr "Zamontowana część %1$s zajmuje już miejsce „%2$s”."
 
 #: src/vehicle.cpp
 #, c-format
@@ -612,326 +660,335 @@ msgid ""
 "There can't be two cargo parts on the same tile.  Part conflicts with "
 "existing %1$s."
 msgstr ""
+"Na jednym polu nie mogą być dwie części ładunkowe. Część koliduje z "
+"istniejącą: %1$s."
 
 #: src/vehicle.cpp
 msgid "Mirrors cannot be mounted on opaque parts."
-msgstr ""
+msgstr "Lustra nie mogą być montowane na nieprzezroczystych częściach."
 
 #: src/vehicle.cpp
 msgid "Opaque parts cannot be mounted on mirror parts."
-msgstr ""
+msgstr "Nieprzezroczyste części nie mogą być montowane na lustrach."
 
 #: src/vehicle.cpp
 msgid "Only one turret mount can be installed."
-msgstr ""
+msgstr "Można zamontować tylko jedno mocowanie wieżyczki."
 
 #: src/vehicle.cpp
 msgid "Part needs to be adjacent to or on existing structure."
 msgstr ""
+"Część musi przylegać do istniejącej konstrukcji lub być na niej zamontowana."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "Engine conflict: %s."
-msgstr ""
+msgstr "Konflikt silników: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "Part requires %s."
-msgstr ""
+msgstr "Część wymaga: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "Part requires any of: %s."
-msgstr ""
+msgstr "Część wymaga dowolnego z: %s."
 
 #: src/vehicle.cpp
 msgid "Unracking is required before removing this part."
-msgstr ""
+msgstr "Przed usunięciem tej części trzeba zdjąć pojazd ze stelaża."
 
 #: src/vehicle.cpp
 msgid "Unlock this part first."
-msgstr ""
+msgstr "Najpierw odblokuj tę część."
 
 #: src/vehicle.cpp
 msgid "Remove other parts before removing last structure part."
-msgstr ""
+msgstr "Usuń inne części przed usunięciem ostatniej części konstrukcji."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "Can't merge into %s, the resulting grid would be too big."
-msgstr ""
+msgstr "Nie można połączyć z: %s, powstała sieć byłaby zbyt duża."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "You separate the %s from the power grid"
-msgstr ""
+msgstr "Odłączasz od sieci energetycznej: %s"
 
 #. ~ %s is the vehicle being loaded onto the bicycle rack
 #: src/vehicle.cpp
 #, c-format
 msgid "The %s is being unloaded from the bike rack."
-msgstr ""
+msgstr "Trwa zdejmowanie pojazdu %s ze stelaża na rower."
 
 #: src/vehicle.cpp
 msgid "Smart controller engine may turn on engine back.  Disable it?"
-msgstr ""
+msgstr "Inteligentny sterownik może ponownie włączyć silnik. Wyłączyć go?"
 
 #: src/vehicle.cpp
 #, c-format
 msgid "The %s's %s was detached!"
-msgstr ""
+msgstr "Odczepiono: %2$s (%1$s)!"
 
 #: src/vehicle.cpp
 #, c-format
 msgid "You detach items connected to the %s."
-msgstr ""
+msgstr "Odłączasz przedmioty podłączone do: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "You detach the %s and take it."
-msgstr ""
+msgstr "Odłączasz i zabierasz: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "You detach the %s and drop it."
-msgstr ""
+msgstr "Odłączasz i upuszczasz: %s."
 
 #: src/vehicle.cpp
 #, c-format
 msgid "The %1$s's %2$s is disconnected!"
-msgstr ""
+msgstr "Rozłączono: %2$s (%1$s)!"
 
 #: src/vehicle.cpp
 #, c-format
 msgid "It will take %s to unfold."
-msgstr ""
+msgstr "Rozłożenie zajmie %s."
 
 #: src/vehicle_move.cpp
 msgid "Smart controller can not detect any controllable engine."
-msgstr ""
+msgstr "Inteligentny sterownik nie wykrywa żadnego sterowalnego silnika."
 
 #: src/vehicle_move.cpp
 msgid "Smart controller detects only a single electric engine."
-msgstr ""
+msgstr "Inteligentny sterownik wykrywa tylko jeden silnik elektryczny."
 
 #: src/vehicle_move.cpp
 msgid "An electric engine does not need optimization."
-msgstr ""
+msgstr "Silnik elektryczny nie wymaga optymalizacji."
 
 #: src/vehicle_move.cpp
 msgid "You turn slower than you meant to."
-msgstr ""
+msgstr "Skręcasz wolniej, niż zamierzałeś."
 
 #: src/vehicle_move.cpp
 #, c-format
 msgid "You oversteer the %s!"
-msgstr ""
+msgstr "Za mocno skręcasz pojazdem %s!"
 
 #: src/vehicle_move.cpp
 msgid "It takes you a very long time to steer the vehicle!"
-msgstr ""
+msgstr "Kierowanie pojazdem zajmuje ci bardzo dużo czasu!"
 
 #: src/vehicle_move.cpp
 msgid "It takes you a long time to steer the vehicle!"
-msgstr ""
+msgstr "Kierowanie pojazdem zajmuje ci dużo czasu!"
 
 #. ~Invalid here means it doesn't refer to a real furn_str_id, i.e. something
 #. is wrong with the game. This is not a state the player should normally
 #. encounter.
 #: src/vehicle_part.cpp
 msgid " holding invalid furniture"
-msgstr ""
+msgstr " z nieprawidłowym meblem"
 
 #: src/vehicle_part.cpp
 msgid " (leaking)"
-msgstr ""
+msgstr " (cieknie)"
 
 #: src/vehicle_use.cpp
 msgid "Lock"
-msgstr ""
+msgstr "Zablokuj"
 
 #: src/vehicle_use.cpp
 msgid "Unlock"
-msgstr ""
+msgstr "Odblokuj"
 
 #: src/vehicle_use.cpp
 msgid "Disable pre-collision system"
-msgstr ""
+msgstr "Wyłącz system zapobiegania kolizjom"
 
 #: src/vehicle_use.cpp
 msgid "Enable pre-collision system"
-msgstr ""
+msgstr "Włącz system zapobiegania kolizjom"
 
 #. ~ Key binding name
 #: src/vehicle_use.cpp data/raw/keybindings/vehicle.json
 msgid "Toggle pre-collision system"
-msgstr ""
+msgstr "Przełącz system zapobiegania kolizjom"
 
 #: src/vehicle_use.cpp
 msgid "You turn off pre-collision system."
-msgstr ""
+msgstr "Wyłączasz system zapobiegania kolizjom."
 
 #: src/vehicle_use.cpp
 msgid "You turn on pre-collision system."
-msgstr ""
+msgstr "Włączasz system zapobiegania kolizjom."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "You cannot use %s without at least two legs."
-msgstr ""
+msgstr "Bez co najmniej dwóch nóg nie możesz używać: %s."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "You need at least one leg to control the %s."
-msgstr ""
+msgstr "Potrzebujesz co najmniej jednej nogi, by kierować pojazdem %s."
 
 #: src/vehicle_use.cpp
 msgid "You are too short to reach the pedals!"
-msgstr ""
+msgstr "Jesteś za niski, by sięgnąć do pedałów!"
 
 #: src/vehicle_use.cpp
 msgid ""
 "You pour some detergent into the dishwasher, close its lid, and turn it on.  "
 "The dishwasher is being filled from the water tanks."
 msgstr ""
+"Wlewasz trochę detergentu do zmywarki, zamykasz wieko i ją włączasz. Zmywarka"
+" jest napełniana ze zbiorników z wodą."
 
 #: src/vehicle_use.cpp
 msgid ""
 "Can't put furniture there.  There is a vehicle or another furniture in the "
 "way."
 msgstr ""
+"Nie można tam postawić mebla. Na przeszkodzie stoi pojazd lub inny mebel."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Select where to place the %s."
-msgstr ""
+msgstr "Wybierz, gdzie umieścić: %s."
 
 #: src/vehicle_use.cpp
 msgid "Select a furniture to load into the vehicle."
-msgstr ""
+msgstr "Wybierz mebel do załadowania do pojazdu."
 
 #: src/vehicle_use.cpp
 msgid "No adjacent furniture."
-msgstr ""
+msgstr "Brak sąsiednich mebli."
 
 #: src/vehicle_use.cpp
 msgid "That furniture can't be moved."
-msgstr ""
+msgstr "Tego mebla nie da się przesunąć."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Even working together, you are unable to lift the %s."
-msgstr ""
+msgstr "Nawet wspólnymi siłami nie jesteście w stanie podnieść: %s."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "You aren't able to lift the %s on your own."
-msgstr ""
+msgstr "Nie jesteś w stanie samodzielnie podnieść: %s."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "The %s is broken and cannot be used."
-msgstr ""
+msgstr "%s: uszkodzenie uniemożliwia użycie."
 
 #: src/vehicle_use.cpp
 msgid "Can't store furniture while there are items in the way."
-msgstr ""
+msgstr "Nie można schować mebla, gdy na przeszkodzie są przedmioty."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Attach the %s to the rack"
-msgstr ""
+msgstr "Przymocuj do stelaża: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "This vehicle already has '%s' racked.  Please rename before racking."
 msgstr ""
+"Ten pojazd ma już na stelażu „%s”. Zmień nazwę przed umieszczeniem na "
+"stelażu."
 
 #: src/vehicle_use.cpp
 msgid "Bike rack is empty"
-msgstr ""
+msgstr "Stelaż na rower jest pusty"
 
 #: src/vehicle_use.cpp
 msgid "Nothing to take off or put on the rack is nearby."
 msgstr ""
+"W pobliżu nie ma niczego do zdjęcia ze stelaża ani umieszczenia na nim."
 
 #: src/vehicle_use.cpp
 msgid "Examine vehicle effects"
-msgstr ""
+msgstr "Zbadaj efekty pojazdu"
 
 #: src/vehicle_use.cpp
 msgid "Try to smash alarm"
-msgstr ""
+msgstr "Spróbuj rozbić alarm"
 
 #: src/vehicle_use.cpp
 msgid "Disconnect power connections"
-msgstr ""
+msgstr "Odłącz połączenia zasilania"
 
 #: src/vehicle_use.cpp
 msgid "Disconnect items and tow cables"
-msgstr ""
+msgstr "Odłącz przedmioty i kable holownicze"
 
 #: src/vehicle_use.cpp
 msgid "Disconnect items"
-msgstr ""
+msgstr "Odłącz przedmioty"
 
 #: src/vehicle_use.cpp
 msgid "Disconnect tow cables"
-msgstr ""
+msgstr "Odłącz kable holownicze"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "The %s is no longer compatible with %s and pops out."
-msgstr ""
+msgstr "%s przestaje pasować do: %s i wyskakuje."
 
 #. ~ Key binding name
 #: src/vehicle_use.cpp data/raw/keybindings/vehicle.json
 msgid "Tie down or remove a furniture"
-msgstr ""
+msgstr "Przymocuj lub usuń mebel"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Attach a tool to %s"
-msgstr ""
+msgstr "Przymocuj narzędzie do: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "You attach %s to %s."
-msgstr ""
+msgstr "Przymocowujesz: %s do: %s."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Detach a tool from %s"
-msgstr ""
+msgstr "Odczep narzędzie od: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "There are no tools attached to %s"
-msgstr ""
+msgstr "Brak narzędzi przymocowanych do: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "You detach %s from %s."
-msgstr ""
+msgstr "Odczepiasz: %s od: %s."
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Lock %s"
-msgstr ""
+msgstr "Zablokuj: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Unlock %s"
-msgstr ""
+msgstr "Odblokuj: %s"
 
 #: src/vehicle_use.cpp
 #, c-format
 msgid "Check the lock on %s"
-msgstr ""
+msgstr "Sprawdź zamek: %s"
 
 #: src/wish.cpp
 msgid "Id:"
-msgstr ""
+msgstr "Id:"
 
 #: src/wish.cpp
 #, c-format
@@ -940,122 +997,128 @@ msgid ""
 "Max power: %s\n"
 "Bionics installed: %d"
 msgstr ""
+"Obecny poziom energii: %s\n"
+"Maksymalna energia: %s\n"
+"Zainstalowane bioniki: %d"
 
 #: src/wish.cpp
 msgid "Install from CBM…"
-msgstr ""
+msgstr "Zainstaluj z KMB…"
 
 #: src/wish.cpp
 msgid "Uninstall…"
-msgstr ""
+msgstr "Odinstaluj…"
 
 #: src/wish.cpp
 msgid "Uninstall all"
-msgstr ""
+msgstr "Odinstaluj wszystkie"
 
 #: src/wish.cpp
 msgid "Edit power capacity (kJ)"
-msgstr ""
+msgstr "Edytuj pojemność energii (kJ)"
 
 #: src/wish.cpp
 msgid "Edit power capacity (J)"
-msgstr ""
+msgstr "Edytuj pojemność energii (J)"
 
 #: src/wish.cpp
 msgid "Edit power level (kJ)"
-msgstr ""
+msgstr "Edytuj poziom energii (kJ)"
 
 #: src/wish.cpp
 msgid "Edit power level (J)"
-msgstr ""
+msgstr "Edytuj poziom energii (J)"
 
 #: src/wish.cpp
 #, c-format
 msgid "Set the value to (in kJ)?  Currently: %s"
-msgstr ""
+msgstr "Ustaw wartość na (w kJ)? Obecnie: %s"
 
 #: src/wish.cpp
 #, c-format
 msgid "Set the value to (in J)?  Currently: %s"
-msgstr ""
+msgstr "Ustaw wartość na (w J)? Obecnie: %s"
 
 #: src/wish.cpp
 msgid ""
 "Is this a population-based horde, based on an existing monster group?  Select"
 " \"No\" to manually assign monsters."
 msgstr ""
+"Czy to horda oparta na populacji, na podstawie istniejącej grupy potworów? "
+"Wybierz „Nie”, aby ręcznie przypisać potwory."
 
 #: src/wish.cpp
 msgid "Spawn group how many times?"
-msgstr ""
+msgstr "Ile razy przywołać grupę?"
 
 #: src/wish.cpp
 #, c-format
 msgid "Potential result of spawning %s %d %s:"
-msgstr ""
+msgstr "Potencjalny wynik przywołania grupy %s – %d %s:"
 
 #: src/wish.cpp
 msgid "times"
-msgstr ""
+msgstr "razy"
 
 #: src/wish.cpp
 #, c-format
 msgid "%s set to %d"
-msgstr ""
+msgstr "Ustawiono %s na %d"
 
 #: src/worldfactory.cpp
 msgid "Unable to create new world, some active mods are incompatible."
 msgstr ""
+"Nie można utworzyć nowego świata, niektóre aktywne mody są niekompatybilne."
 
 #: src/worldfactory.cpp
 msgid " --- INCOMPATIBLE!"
-msgstr ""
+msgstr " --- NIEKOMPATYBILNY!"
 
 #: src/worldfactory.cpp
 msgid "world timestamp"
-msgstr ""
+msgstr "znacznik czasu świata"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Compressing maps [%d/%d]"
-msgstr ""
+msgstr "Kompresowanie map [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Compressing overmaps [%d/%d]"
-msgstr ""
+msgstr "Kompresowanie map głównych [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Compressing map memory [%d/%d]"
-msgstr ""
+msgstr "Kompresowanie pamięci mapy [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Compressing main save files [%d/%d]"
-msgstr ""
+msgstr "Kompresowanie głównych plików zapisu [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Cleaning up [%d/%d]"
-msgstr ""
+msgstr "Sprzątanie [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Decompressing maps [%d/%d]"
-msgstr ""
+msgstr "Dekompresowanie map [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Decompressing overmaps [%d/%d]"
-msgstr ""
+msgstr "Dekompresowanie map głównych [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Decompressing map memory [%d/%d]"
-msgstr ""
+msgstr "Dekompresowanie pamięci mapy [%d/%d]"
 
 #: src/worldfactory.cpp
 #, c-format
 msgid "Decompressing main save files [%d/%d]"
-msgstr ""
+msgstr "Dekompresowanie głównych plików zapisu [%d/%d]"
