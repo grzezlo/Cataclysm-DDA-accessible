@@ -17,10 +17,10 @@ msgstr ""
 #: data/json/items/ammo/460sw.json
 msgid ".460 S&W Magnum FTX"
 msgid_plural ".460 S&W Magnum FTX"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".460 S&W Magnum FTX"
+msgstr[1] ".460 S&W Magnum FTX"
+msgstr[2] ".460 S&W Magnum FTX"
+msgstr[3] ".460 S&W Magnum FTX"
 
 #. ~ Description of ".460 S&W Magnum FTX"
 #: data/json/items/ammo/460sw.json
@@ -29,24 +29,28 @@ msgid ""
 "mainly as a hunting handgun, or to deter wildlife in dangerous areas, though "
 "you have no doubt about its effectiveness against the undead."
 msgstr ""
+"Amunicja .460 S&W Magnum z 200-granowym pociskiem FTX. Służy głównie jako "
+"amunicja myśliwska do broni krótkiej lub do odstraszania dzikich zwierząt w "
+"niebezpiecznych rejonach, choć nie masz wątpliwości co do jej skuteczności "
+"przeciwko nieumarłym."
 
 #. ~ Item name
 #: data/json/items/ammo/460sw.json
 msgid ".460 S&W Magnum FTX, reloaded"
 msgid_plural ".460 S&W Magnum FTX, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".460 S&W Magnum FTX, reelaborowany"
+msgstr[1] ".460 S&W Magnum FTX, reelaborowane"
+msgstr[2] ".460 S&W Magnum FTX, reelaborowanych"
+msgstr[3] ".460 S&W Magnum FTX, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/460sw.json
 msgid ".460 S&W Magnum JHP"
 msgid_plural ".460 S&W Magnum JHP"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".460 S&W Magnum JHP"
+msgstr[1] ".460 S&W Magnum JHP"
+msgstr[2] ".460 S&W Magnum JHP"
+msgstr[3] ".460 S&W Magnum JHP"
 
 #. ~ Description of ".460 S&W Magnum JHP"
 #: data/json/items/ammo/460sw.json
@@ -55,15 +59,19 @@ msgid ""
 "mainly as a hunting handgun, or to deter wildlife in dangerous areas, though "
 "you have no doubt about its effectiveness against the undead."
 msgstr ""
+"Amunicja .460 S&W Magnum z 300-granowym pociskiem JHP. Służy głównie jako "
+"amunicja myśliwska do broni krótkiej lub do odstraszania dzikich zwierząt w "
+"niebezpiecznych rejonach, choć nie masz wątpliwości co do jej skuteczności "
+"przeciwko nieumarłym."
 
 #. ~ Item name
 #: data/json/items/ammo/460sw.json
 msgid ".460 S&W Magnum JHP, reloaded"
 msgid_plural ".460 S&W Magnum JHP, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".460 S&W Magnum JHP, reelaborowany"
+msgstr[1] ".460 S&W Magnum JHP, reelaborowane"
+msgstr[2] ".460 S&W Magnum JHP, reelaborowanych"
+msgstr[3] ".460 S&W Magnum JHP, reelaborowanego"
 
 #. ~ Description of ".50 BMG M33 Ball"
 #: data/json/items/ammo/50.json
@@ -74,6 +82,12 @@ msgid ""
 "piercing capabilities make it one of the most deadly rounds available, offset"
 " only by its drastic recoil and noise."
 msgstr ""
+"Amunicja .50 BMG z 661-granowym pociskiem FMJ z rdzeniem z miękkiej stali. "
+".50 BMG to bardzo potężny nabój karabinowy zaprojektowany do zwalczania celów"
+" powietrznych, później zaadaptowany do zwalczania pojazdów i siły żywej. Jego"
+" ogromna energia i zdolność przebijania pancerza czynią go jednym z "
+"najbardziej zabójczych dostępnych nabojów, a jedynymi wadami są potężny "
+"odrzut i hałas."
 
 #. ~ Description of ".50 BMG Match"
 #: data/json/items/ammo/50.json
@@ -84,6 +98,11 @@ msgid ""
 " capabilities make it one of the most deadly rounds available, offset only by"
 " its drastic recoil and noise."
 msgstr ""
+"Amunicja .50 BMG z pociskiem FMJ z ołowianym rdzeniem. .50 BMG to bardzo "
+"potężny nabój karabinowy zaprojektowany do zwalczania celów powietrznych, "
+"później zaadaptowany do zwalczania pojazdów i siły żywej. Jego ogromna "
+"energia i zdolność przebijania pancerza czynią go jednym z najbardziej "
+"zabójczych dostępnych nabojów, a jedynymi wadami są potężny odrzut i hałas."
 
 #. ~ Description of ".50 BMG M2 AP"
 #: data/json/items/ammo/50.json
@@ -91,6 +110,8 @@ msgid ""
 "A variant of the .50 BMG round that uses a core of very dense, hardened "
 "tungsten steel.  Penetration is increased, but damage is reduced."
 msgstr ""
+"Wariant naboju .50 BMG z rdzeniem z bardzo gęstej, utwardzonej stali "
+"wolframowej. Przebijalność jest większa, ale obrażenia są mniejsze."
 
 #. ~ Description of ".50 BMG Raufoss Mk 211"
 #: data/json/items/ammo/50.json
@@ -104,15 +125,23 @@ msgid ""
 "increasing lethality.  This rare, complicated, and expensive round is not "
 "likely to be manufactured again; use it wisely."
 msgstr ""
+"Ten wariant naboju .50 BMG w pełni wykorzystuje możliwości kalibru w zakresie"
+" przenoszenia ładunku: czubek wypełniony jest mieszanką zapalającą, która "
+"zapala się przy uderzeniu, detonując ładunek RDX lub PETN. To z kolei zapala "
+"dodatkowy ładunek zapalający z proszku cyrkonowego, otaczający penetrator z "
+"węglika wolframu, a całość zamknięta jest w miseczce z miękkiej stali. "
+"Odłamki miseczki i płonący proszek metaliczny podążają za penetratorem przez "
+"opancerzone cele, zwiększając śmiertelność. Ten rzadki, skomplikowany i drogi"
+" nabój raczej nie będzie już produkowany; używaj go mądrze."
 
 #. ~ Item name
 #: data/json/items/ammo/500.json
 msgid ".500 S&W Magnum"
 msgid_plural ".500 S&W Magnum"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".500 S&W Magnum"
+msgstr[1] ".500 S&W Magnum"
+msgstr[2] ".500 S&W Magnum"
+msgstr[3] ".500 S&W Magnum"
 
 #. ~ Description of ".500 S&W Magnum"
 #: data/json/items/ammo/500.json
@@ -121,15 +150,18 @@ msgid ""
 " a colossally powerful handgun cartridge capable of killing almost any target"
 " with one hit.  It has extremely high damage, and recoil to match."
 msgstr ""
+"Amunicja .500 S&W Magnum z 500-granowym pociskiem. Nabój .500 S&W Magnum to "
+"niezwykle potężny nabój do broni krótkiej, zdolny zabić niemal każdy cel "
+"jednym trafieniem. Zadaje ogromne obrażenia i ma równie ogromny odrzut."
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf XTP"
 msgid_plural ".50 Beowulf XTP"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf XTP"
+msgstr[1] ".50 Beowulf XTP"
+msgstr[2] ".50 Beowulf XTP"
+msgstr[3] ".50 Beowulf XTP"
 
 #. ~ Description of ".50 Beowulf XTP"
 #: data/json/items/ammo/50_beowulf.json
@@ -142,15 +174,22 @@ msgid ""
 "encouraging commendable terminal ballistics, penetrative capabilities, and "
 "overall expansion from its 12.7x42mm projectile."
 msgstr ""
+"Amunicja kalibru .50 Beowulf z 350-granowym pociskiem eXtreme Terminal "
+"Performance w miedzianym płaszczu. Opracowany w 2001 roku jako potężny nabój "
+"na krótki i średni dystans do karabinów typu AR-15, ten mocny nabój zyskał "
+"przed Kataklizmem pewną popularność jako amunicja myśliwska. Ta konkretna "
+"wersja naboju jest pokryta warstwą polimeru, co zapewnia godną pochwały "
+"balistykę końcową, zdolność penetracji i ogólne rozszerzanie się pocisku 12,7"
+" x 42 mm."
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf Xtreme Penetrator"
 msgid_plural ".50 Beowulf Xtreme Penetrators"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf Xtreme Penetrator"
+msgstr[1] ".50 Beowulf Xtreme Penetrator"
+msgstr[2] ".50 Beowulf Xtreme Penetrator"
+msgstr[3] ".50 Beowulf Xtreme Penetrator"
 
 #. ~ Description of ".50 Beowulf Xtreme Penetrator"
 #: data/json/items/ammo/50_beowulf.json
@@ -163,51 +202,58 @@ msgid ""
 "solid copper design allows it to punch through entry barriers while resulting"
 " in a larger wound column."
 msgstr ""
+"Amunicja kalibru .50 Beowulf z 420-granowym pociskiem Xtreme Penetrator z "
+"litej miedzi. Opracowany w 2001 roku jako potężny nabój na krótki i średni "
+"dystans do karabinów typu AR-15, ten mocny nabój zyskał przed Kataklizmem "
+"pewną popularność jako amunicja myśliwska. Dzięki tępemu czubkowi, "
+"zapewniającemu lepsze początkowe przekazanie energii, ten pocisk z litej "
+"miedzi o średnicy 12,7 mm przebija przeszkody, a jednocześnie tworzy szerszy "
+"kanał rany."
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf XTP, black powder"
 msgid_plural ".50 Beowulf XTP, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf XTP, czarnoprochowy"
+msgstr[1] ".50 Beowulf XTP, czarnoprochowe"
+msgstr[2] ".50 Beowulf XTP, czarnoprochowych"
+msgstr[3] ".50 Beowulf XTP, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf Xtreme Penetrator, black powder"
 msgid_plural ".50 Beowulf Xtreme Penetrators, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf Xtreme Penetrator, czarnoprochowy"
+msgstr[1] ".50 Beowulf Xtreme Penetrator, czarnoprochowe"
+msgstr[2] ".50 Beowulf Xtreme Penetrator, czarnoprochowych"
+msgstr[3] ".50 Beowulf Xtreme Penetrator, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf XTP, reloaded"
 msgid_plural ".50 Beowulf XTP, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf XTP, reelaborowany"
+msgstr[1] ".50 Beowulf XTP, reelaborowane"
+msgstr[2] ".50 Beowulf XTP, reelaborowanych"
+msgstr[3] ".50 Beowulf XTP, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/50_beowulf.json
 msgid ".50 Beowulf Xtreme Penetrator, reloaded"
 msgid_plural ".50 Beowulf Xtreme Penetrators, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 Beowulf Xtreme Penetrator, reelaborowany"
+msgstr[1] ".50 Beowulf Xtreme Penetrator, reelaborowane"
+msgstr[2] ".50 Beowulf Xtreme Penetrator, reelaborowanych"
+msgstr[3] ".50 Beowulf Xtreme Penetrator, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE FMJ"
 msgid_plural ".50 AE FMJ"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE FMJ"
+msgstr[1] ".50 AE FMJ"
+msgstr[2] ".50 AE FMJ"
+msgstr[3] ".50 AE FMJ"
 
 #. ~ Description of ".50 AE FMJ"
 #: data/json/items/ammo/50ae.json
@@ -215,15 +261,17 @@ msgid ""
 ".50 Action Express ammunition loaded with a 325-grain jacketed flat-nose "
 "bullet, primarily for use in the Desert Eagle pistol."
 msgstr ""
+"Amunicja .50 Action Express z 325-granowym płaszczowym pociskiem z płaskim "
+"czubkiem, przeznaczona głównie do pistoletu Desert Eagle."
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE JHP"
 msgid_plural ".50 AE JHP"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE JHP"
+msgstr[1] ".50 AE JHP"
+msgstr[2] ".50 AE JHP"
+msgstr[3] ".50 AE JHP"
 
 #. ~ Description of ".50 AE JHP"
 #: data/json/items/ammo/50ae.json
@@ -231,69 +279,71 @@ msgid ""
 ".50 Action Express ammunition loaded with a 300-grain jacketed hollowpoint "
 "bullet, primarily for use in the Desert Eagle pistol."
 msgstr ""
+"Amunicja .50 Action Express z 300-granowym płaszczowym pociskiem wydrążonym, "
+"przeznaczona głównie do pistoletu Desert Eagle."
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE JHP, reloaded"
 msgid_plural ".50 AE JHP, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE JHP, reelaborowany"
+msgstr[1] ".50 AE JHP, reelaborowane"
+msgstr[2] ".50 AE JHP, reelaborowanych"
+msgstr[3] ".50 AE JHP, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE FMJ, reloaded"
 msgid_plural ".50 AE FMJ, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE FMJ, reelaborowany"
+msgstr[1] ".50 AE FMJ, reelaborowane"
+msgstr[2] ".50 AE FMJ, reelaborowanych"
+msgstr[3] ".50 AE FMJ, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE JHP, black powder"
 msgid_plural ".50 AE JHP, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE JHP, czarnoprochowy"
+msgstr[1] ".50 AE JHP, czarnoprochowe"
+msgstr[2] ".50 AE JHP, czarnoprochowych"
+msgstr[3] ".50 AE JHP, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE FMJ, black powder"
 msgid_plural ".50 AE FMJ, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE FMJ, czarnoprochowy"
+msgstr[1] ".50 AE FMJ, czarnoprochowe"
+msgstr[2] ".50 AE FMJ, czarnoprochowych"
+msgstr[3] ".50 AE FMJ, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE JHP, matchhead powder"
 msgid_plural ".50 AE JHP, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE JHP, z prochem z zapałek"
+msgstr[1] ".50 AE JHP, z prochem z zapałek"
+msgstr[2] ".50 AE JHP, z prochem z zapałek"
+msgstr[3] ".50 AE JHP, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/50ae.json
 msgid ".50 AE FMJ, matchhead powder"
 msgid_plural ".50 AE FMJ, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] ".50 AE FMJ, z prochem z zapałek"
+msgstr[1] ".50 AE FMJ, z prochem z zapałek"
+msgstr[2] ".50 AE FMJ, z prochem z zapałek"
+msgstr[3] ".50 AE FMJ, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/545x39.json
 msgid "5.45x39mm FMJ"
 msgid_plural "5.45x39mm FMJ"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "5,45 x 39 mm FMJ"
+msgstr[1] "5,45 x 39 mm FMJ"
+msgstr[2] "5,45 x 39 mm FMJ"
+msgstr[3] "5,45 x 39 mm FMJ"
 
 #. ~ Description of "5.45x39mm FMJ"
 #: data/json/items/ammo/545x39.json
@@ -303,15 +353,19 @@ msgid ""
 " wounding potential to the older 7.62x39mm round and quickly replaced it in "
 "Soviet military use."
 msgstr ""
+"Amunicja 5,45 x 39 mm produkcji krajowej z 56-granowym pociskiem FMJ. Nabój "
+"5,45 x 39 mm wprowadzono wraz z AK-74 w 1974 roku. Ma lepszy potencjał "
+"ranienia niż starszy nabój 7,62 x 39 mm i szybko zastąpił go w radzieckim "
+"wojsku."
 
 #. ~ Item name
 #: data/json/items/ammo/545x39.json
 msgid "5.45x39mm 7N6"
 msgid_plural "5.45x39mm 7N6"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "5,45 x 39 mm 7N6"
+msgstr[1] "5,45 x 39 mm 7N6"
+msgstr[2] "5,45 x 39 mm 7N6"
+msgstr[3] "5,45 x 39 mm 7N6"
 
 #. ~ Description of "5.45x39mm 7N6"
 #: data/json/items/ammo/545x39.json
@@ -321,6 +375,10 @@ msgid ""
 "Developed in 1974 by the Russian military, and banned from import into the US"
 " in 2014."
 msgstr ""
+"Amunicja 5,45 x 39 mm z 57-granowym pociskiem z penetratorem z miękkiej "
+"stali, który przebija pancerz nieznacznie lepiej niż pociski z rdzeniem "
+"ołowianym. Opracowana w 1974 roku przez rosyjskie wojsko, a w 2014 roku "
+"objęta zakazem importu do USA."
 
 #. ~ Description of "5.7x28mm SS190"
 #: data/json/items/ammo/57.json
@@ -331,15 +389,21 @@ msgid ""
 "round has seen action in many conflicts and has proven to be reliable.  It "
 "has very low recoil and its armor penetration is a defining feature."
 msgstr ""
+"Amunicja 5,7 x 28 mm z 31-granowym przeciwpancernym pociskiem FMJ. Nabój 5,7 "
+"x 28 mm został zaprojektowany przez FN Herstal, aby zastąpić nabój 9 x 19 mm "
+"w NATO. Choć projekt zastąpienia 9 x 19 mm Parabellum został w praktyce "
+"porzucony, nabój 5,7 x 28 mm był używany w wielu konfliktach i okazał się "
+"niezawodny. Ma bardzo mały odrzut, a jego cechą charakterystyczną jest "
+"przebijalność pancerza."
 
 #. ~ Item name
 #: data/json/items/ammo/57.json
 msgid "5.7x28mm SS195LF"
 msgid_plural "5.7x28mm SS195LF"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "5,7 x 28 mm SS195LF"
+msgstr[1] "5,7 x 28 mm SS195LF"
+msgstr[2] "5,7 x 28 mm SS195LF"
+msgstr[3] "5,7 x 28 mm SS195LF"
 
 #. ~ Description of "5.7x28mm SS195LF"
 #: data/json/items/ammo/57.json
@@ -351,6 +415,12 @@ msgid ""
 "against unarmored targets.  In all other respects, it remains largely "
 "identical to the military version."
 msgstr ""
+"Dostępny w handlu nabój wywodzący się z 5,7 x 28 mm. Ma pocisk w miedzianym "
+"płaszczu z aluminiowym rdzeniem, co znacznie zmniejsza jego zdolność "
+"przebijania pancerza w porównaniu z odpowiednikiem z ołowianym rdzeniem. "
+"Jednak wydrążony czubek poprawia skuteczność przeciwko nieopancerzonym celom."
+" Pod wszystkimi innymi względami pozostaje w dużej mierze identyczny z wersją"
+" wojskową."
 
 #. ~ Description of "5.7x28mm, black powder"
 #. ~ Description of "5.7x28mm, reloaded"
@@ -363,15 +433,22 @@ msgid ""
 "has very low recoil but lacks its usual armor penetration due to using a "
 "simple lead bullet rather than a proper factory-made penetrator projectile."
 msgstr ""
+"Amunicja 5,7 x 28 mm z 31-granowym przeciwpancernym pociskiem FMJ. Nabój 5,7 "
+"x 28 mm został zaprojektowany przez FN Herstal, aby zastąpić nabój 9 x 19 mm "
+"w NATO. Choć projekt zastąpienia 9 x 19 mm Parabellum został w praktyce "
+"porzucony, nabój 5,7 x 28 mm był używany w wielu konfliktach i okazał się "
+"niezawodny. Ma bardzo mały odrzut, ale brakuje mu zwykłej przebijalności "
+"pancerza, ponieważ używa prostego ołowianego pocisku zamiast fabrycznego "
+"pocisku penetrującego."
 
 #. ~ Item name
 #: data/json/items/ammo/60mm.json
 msgid "high-explosive mortar shell"
 msgid_plural "high-explosive mortar shells"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "odłamkowo-burzący pocisk moździerzowy"
+msgstr[1] "odłamkowo-burzące pociski moździerzowe"
+msgstr[2] "odłamkowo-burzących pocisków moździerzowych"
+msgstr[3] "odłamkowo-burzącego pocisku moździerzowego"
 
 #. ~ Description of "high-explosive mortar shell"
 #. ~ Description of variant "M720A1 60 mm mortar shell (HE)" of item "high-
@@ -381,15 +458,17 @@ msgid ""
 "High-explosive mortar cartridge, designed to be used against troops, light "
 "vehicles, light bunkers or similar targets."
 msgstr ""
+"Odłamkowo-burzący nabój moździerzowy, przeznaczony do użycia przeciwko "
+"piechocie, lekkim pojazdom, lekkim bunkrom lub podobnym celom."
 
 #. ~ Variant name of item "high-explosive mortar shell"
 #: data/json/items/ammo/60mm.json
 msgid "M720A1 60 mm mortar shell (HE)"
 msgid_plural "M720A1 60 mm mortar shells (HE)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pocisk moździerzowy 60 mm M720A1 (HE)"
+msgstr[1] "pociski moździerzowe 60 mm M720A1 (HE)"
+msgstr[2] "pocisków moździerzowych 60 mm M720A1 (HE)"
+msgstr[3] "pocisku moździerzowego 60 mm M720A1 (HE)"
 
 #. ~ Description of "high-explosive mortar shell"
 #: data/json/items/ammo/60mm.json
@@ -398,15 +477,18 @@ msgid ""
 "vehicles, light bunkers or similar targets.  This one is more modern version,"
 " both more safe and more powerful."
 msgstr ""
+"Odłamkowo-burzący nabój moździerzowy, przeznaczony do użycia przeciwko "
+"piechocie, lekkim pojazdom, lekkim bunkrom lub podobnym celom. Ten jest "
+"nowocześniejszą wersją, zarówno bezpieczniejszą, jak i silniejszą."
 
 #. ~ Variant name of item "high-explosive mortar shell"
 #: data/json/items/ammo/60mm.json
 msgid "M768 60 mm mortar shell (HE)"
 msgid_plural "M768 60 mm mortar shells (HE)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pocisk moździerzowy 60 mm M768 (HE)"
+msgstr[1] "pociski moździerzowe 60 mm M768 (HE)"
+msgstr[2] "pocisków moździerzowych 60 mm M768 (HE)"
+msgstr[3] "pocisku moździerzowego 60 mm M768 (HE)"
 
 #. ~ Description of variant "M768 60 mm mortar shell (HE)" of item "high-
 #. explosive mortar shell"
@@ -416,6 +498,10 @@ msgid ""
 "vehicles, light bunkers or similar targets.  This one is more modern version,"
 " more safe and more powerful, but uses more simple impact fuze."
 msgstr ""
+"Odłamkowo-burzący nabój moździerzowy, przeznaczony do użycia przeciwko "
+"piechocie, lekkim pojazdom, lekkim bunkrom lub podobnym celom. Ten jest "
+"nowocześniejszą wersją, bezpieczniejszą i silniejszą, ale używa prostszego "
+"zapalnika uderzeniowego."
 
 #. ~ Description of "M74 rocket"
 #: data/json/items/ammo/66mm.json
@@ -424,6 +510,9 @@ msgid ""
 "warhead is filled with a thickened pyrophoric agent, which burns at 2200 "
 "degrees Fahrenheit."
 msgstr ""
+"Zapalająca rakieta 66 mm, używana w wyrzutni rakiet M202 FLASH. Jej głowica "
+"wypełniona jest zagęszczonym środkiem piroforycznym, który płonie w "
+"temperaturze 2200 stopni Fahrenheita."
 
 #. ~ Description of "7.62x39mm FMJ"
 #: data/json/items/ammo/762.json
@@ -432,6 +521,9 @@ msgid ""
 "bullet.  Thankfully this loading has non-corrosive primers, and also features"
 " a reloadable brass case."
 msgstr ""
+"Importowana amunicja 7,62 x 39 mm w stylu M67 ze 124-granowym płaszczowym "
+"pociskiem z ołowianym rdzeniem. Na szczęście ma niekorozyjne spłonki, a także"
+" mosiężną łuskę nadającą się do ponownej elaboracji."
 
 #. ~ Description of "7.62x39mm JHP"
 #: data/json/items/ammo/762.json
@@ -443,15 +535,21 @@ msgid ""
 "exporting nations and drying up of formerly plentiful surplus has made these "
 "loadings of 7.62x39 less popular."
 msgstr ""
+"Amunicja 7,62 x 39 mm ze 123-granowym płaszczowym pociskiem wydrążonym. "
+"Stworzone do polowań na średnią zwierzynę naboje takie jak te były niegdyś "
+"popularne wśród użytkowników tanich karabinów z demobilu, ponieważ balistyka "
+"7,62 x 39 jest dość podobna do .30-30 Winchester. Sankcje wobec krajów "
+"eksportujących i wyczerpanie się niegdyś obfitych zapasów z demobilu "
+"sprawiły, że te wersje 7,62 x 39 stały się mniej popularne."
 
 #. ~ Item name
 #: data/json/items/ammo/762.json
 msgid "7.62x39mm FMJ, black powder"
 msgid_plural "7.62x39mm FMJ, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,62 x 39 mm FMJ, czarnoprochowy"
+msgstr[1] "7,62 x 39 mm FMJ, czarnoprochowe"
+msgstr[2] "7,62 x 39 mm FMJ, czarnoprochowych"
+msgstr[3] "7,62 x 39 mm FMJ, czarnoprochowego"
 
 #. ~ Description of "7.62x54mmR"
 #: data/json/items/ammo/762R.json
@@ -461,42 +559,46 @@ msgid ""
 "Mosin-Nagant rifle.  It is a powerful cartridge capable of killing most "
 "targets with one shot."
 msgstr ""
+"Amunicja 7,62 x 54 mm R ze 150-granowym pociskiem FMJ. Nabój 7,62 x 54 mm R "
+"to jeden z najstarszych wciąż powszechnie używanych nabojów, głównie dzięki "
+"popularności karabinu Mosina. To potężny nabój, zdolny zabić większość celów "
+"jednym strzałem."
 
 #. ~ Item name
 #: data/json/items/ammo/762x25.json
 msgid "7.62x25mm FMJ hot load"
 msgid_plural "7.62x25mm FMJ hot load"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,62 x 25 mm FMJ wzmocniony"
+msgstr[1] "7,62 x 25 mm FMJ wzmocnione"
+msgstr[2] "7,62 x 25 mm FMJ wzmocnionych"
+msgstr[3] "7,62 x 25 mm FMJ wzmocnionego"
 
 #. ~ Item name
 #: data/json/items/ammo/762x25.json
 msgid "7.62x25mm FMJ, reloaded"
 msgid_plural "7.62x25mm FMJ, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,62 x 25 mm FMJ, reelaborowany"
+msgstr[1] "7,62 x 25 mm FMJ, reelaborowane"
+msgstr[2] "7,62 x 25 mm FMJ, reelaborowanych"
+msgstr[3] "7,62 x 25 mm FMJ, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/762x25.json
 msgid "7.62x25mm FMJ, matchhead powder"
 msgid_plural "7.62x25mm FMJ, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,62 x 25 mm FMJ, z prochem z zapałek"
+msgstr[1] "7,62 x 25 mm FMJ, z prochem z zapałek"
+msgstr[2] "7,62 x 25 mm FMJ, z prochem z zapałek"
+msgstr[3] "7,62 x 25 mm FMJ, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/77mm_arisaka.json
 msgid "7.7x58mm Japanese JSP"
 msgid_plural "7.7x58mm Japanese JSP"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,7 x 58 mm japoński JSP"
+msgstr[1] "7,7 x 58 mm japońskie JSP"
+msgstr[2] "7,7 x 58 mm japońskich JSP"
+msgstr[3] "7,7 x 58 mm japońskiego JSP"
 
 #. ~ Description of "7.7x58mm Japanese JSP"
 #: data/json/items/ammo/77mm_arisaka.json
@@ -510,33 +612,42 @@ msgid ""
 "Cataclysm, mainly due to the prevalence of captured or surrendered Japanese "
 "rifles, the round was more common than its older 6.5x50mm counterpart."
 msgstr ""
+"Nabój 7,7 x 58 mm Arisaka z 174-granowym pociskiem półpłaszczowym, doskonały "
+"przeciwko większej zwierzynie, a teraz także przeciwko zombie. Przyjęty jako "
+"standardowy nabój służbowy Cesarstwa Japonii w 1939 roku (choć wcześniej "
+"stosowany w karabinach maszynowych), aby zastąpić słabszy nabój 6,5 x 50 mm "
+"Arisaka, pocisk 7,7 mm, choć bardziej zabójczy, nigdy w pełni nie wyparł "
+"starszej amunicji. Ponieważ przed Kataklizmem zyskał popularność jako nabój "
+"myśliwski, głównie dzięki powszechności zdobycznych lub oddanych japońskich "
+"karabinów, był bardziej rozpowszechniony niż jego starszy odpowiednik 6,5 x "
+"50 mm."
 
 #. ~ Item name
 #: data/json/items/ammo/77mm_arisaka.json
 msgid "7.7x58mm Japanese JSP, black powder"
 msgid_plural "7.7x58mm Japanese JSP, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,7 x 58 mm japoński JSP, czarnoprochowy"
+msgstr[1] "7,7 x 58 mm japońskie JSP, czarnoprochowe"
+msgstr[2] "7,7 x 58 mm japońskich JSP, czarnoprochowych"
+msgstr[3] "7,7 x 58 mm japońskiego JSP, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/77mm_arisaka.json
 msgid "7.7x58mm Japanese JSP, reloaded"
 msgid_plural "7.7x58mm Japanese JSP, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "7,7 x 58 mm japoński JSP, reelaborowany"
+msgstr[1] "7,7 x 58 mm japońskie JSP, reelaborowane"
+msgstr[2] "7,7 x 58 mm japońskich JSP, reelaborowanych"
+msgstr[3] "7,7 x 58 mm japońskiego JSP, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/84x246mm.json
 msgid "84x245mm HE"
 msgid_plural "84x245mm HE"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "84 x 245 mm HE"
+msgstr[1] "84 x 245 mm HE"
+msgstr[2] "84 x 245 mm HE"
+msgstr[3] "84 x 245 mm HE"
 
 #. ~ Description of "84x245mm HE"
 #: data/json/items/ammo/84x246mm.json
@@ -545,15 +656,18 @@ msgid ""
 "and other 84mm recoilless rifles.  Designed to be highly effective against "
 "personnel."
 msgstr ""
+"Odłamkowo-burzący nabój przeciwpiechotny 84 x 245 mm do Carl Gustaf M3 i "
+"innych bezodrzutowych dział 84 mm. Zaprojektowany z myślą o wysokiej "
+"skuteczności przeciwko sile żywej."
 
 #. ~ Item name
 #: data/json/items/ammo/84x246mm.json
 msgid "84x245mm HEDP"
 msgid_plural "84x245mm HEDP"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "84 x 245 mm HEDP"
+msgstr[1] "84 x 245 mm HEDP"
+msgstr[2] "84 x 245 mm HEDP"
+msgstr[3] "84 x 245 mm HEDP"
 
 #. ~ Description of "84x245mm HEDP"
 #: data/json/items/ammo/84x246mm.json
@@ -562,15 +676,18 @@ msgid ""
 "Gustaf M3 and other 84mm recoilless rifles.  Designed to be highly effective "
 "against vehicles and structures."
 msgstr ""
+"Burzący nabój dwufunkcyjny (HEDP) 84 x 245 mm do niszczenia sprzętu, "
+"przeznaczony do Carl Gustaf M3 i innych bezodrzutowych dział 84 mm. "
+"Zaprojektowany z myślą o wysokiej skuteczności przeciwko pojazdom i budowlom."
 
 #. ~ Item name
 #: data/json/items/ammo/84x246mm.json
 msgid "84x245mm smoke"
 msgid_plural "84x245mm smoke"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "84 x 245 mm dymny"
+msgstr[1] "84 x 245 mm dymne"
+msgstr[2] "84 x 245 mm dymnych"
+msgstr[3] "84 x 245 mm dymnego"
 
 #. ~ Description of "84x245mm smoke"
 #: data/json/items/ammo/84x246mm.json
@@ -579,6 +696,9 @@ msgid ""
 "recoilless rifles.  Commonly used for signaling, target designation, and for "
 "screening troop movements."
 msgstr ""
+"Dymny nabój znacznikowy 84 x 245 mm do Carl Gustaf M3 i innych bezodrzutowych"
+" dział 84 mm. Powszechnie używany do sygnalizacji, wskazywania celów i "
+"maskowania ruchów wojsk."
 
 #. ~ Description of "8x40mm FMJ"
 #: data/json/items/ammo/8x40mm.json
@@ -588,15 +708,19 @@ msgid ""
 "firing, the body will be consumed, leaving nothing behind in the chamber.  "
 "Proprietary ammunition for Rivtech 8x40 caseless guns."
 msgstr ""
+"Bezłuskowy nabój 8 x 40 mm o prostokątnym kształcie, złożony ze 127-granowego"
+" pocisku płaszczowego osadzonego w zaawansowanym korpusie z materiału "
+"miotającego. Podczas strzału korpus ulega spaleniu, nie pozostawiając niczego"
+" w komorze nabojowej. Firmowa amunicja do bezłuskowej broni Rivtech 8 x 40."
 
 #. ~ Item name
 #: data/json/items/ammo/8x40mm.json
 msgid "8x40mm SCX"
 msgid_plural "8x40mm SCX"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "8 x 40 mm SCX"
+msgstr[1] "8 x 40 mm SCX"
+msgstr[2] "8 x 40 mm SCX"
+msgstr[3] "8 x 40 mm SCX"
 
 #. ~ Description of "8x40mm SCX"
 #: data/json/items/ammo/8x40mm.json
@@ -608,6 +732,13 @@ msgid ""
 " to greater manufacturing precision, while also offering excellent expansion "
 "and penetration.  Proprietary ammunition for Rivtech 8x40 caseless guns."
 msgstr ""
+"Bezłuskowy nabój 8 x 40 mm o prostokątnym kształcie, złożony z "
+"licencjonowanego 127-granowego rozszerzającego się pocisku z litej miedzi, "
+"osadzonego w zaawansowanym korpusie z materiału miotającego. Podczas strzału "
+"korpus ulega spaleniu, nie pozostawiając niczego w komorze nabojowej. "
+"Jednolita konstrukcja pocisku pozwala na większą precyzję produkcji, a "
+"jednocześnie zapewnia doskonałe rozszerzanie i penetrację. Firmowa amunicja "
+"do bezłuskowej broni Rivtech 8 x 40."
 
 #. ~ Description of "9x19mm JHP"
 #: data/json/items/ammo/9mm.json
@@ -616,6 +747,10 @@ msgid ""
 " inferior penetration to FMJ rounds, but their expansion slightly increases "
 "stopping power against unarmored targets and reduces overpenetration."
 msgstr ""
+"Amunicja 9 x 19 mm ze 116-granowym płaszczowym pociskiem wydrążonym. Pociski "
+"JHP mają gorszą penetrację niż pociski FMJ, ale ich rozszerzanie się nieco "
+"zwiększa siłę obalającą przeciwko nieopancerzonym celom i ogranicza "
+"przestrzelenie celu na wylot."
 
 #. ~ Description of "9x19mm FMJ"
 #: data/json/items/ammo/9mm.json
@@ -623,24 +758,26 @@ msgid ""
 "9x19mm ammunition with a brass jacketed 115gr bullet.  It has been a popular "
 "round for military, law enforcement, and civilian use for over a century."
 msgstr ""
+"Amunicja 9 x 19 mm ze 115-granowym pociskiem w mosiężnym płaszczu. Od ponad "
+"stu lat jest popularnym nabojem w wojsku, policji i wśród cywili."
 
 #. ~ Item name
 #: data/json/items/ammo/9mm.json
 msgid "9x19mm FMJ, matchhead powder"
 msgid_plural "9x19mm FMJ, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "9 x 19 mm FMJ, z prochem z zapałek"
+msgstr[1] "9 x 19 mm FMJ, z prochem z zapałek"
+msgstr[2] "9 x 19 mm FMJ, z prochem z zapałek"
+msgstr[3] "9 x 19 mm FMJ, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/9mm.json
 msgid "9x19mm JHP, matchhead powder"
 msgid_plural "9x19mm JHP, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "9 x 19 mm JHP, z prochem z zapałek"
+msgstr[1] "9 x 19 mm JHP, z prochem z zapałek"
+msgstr[2] "9 x 19 mm JHP, z prochem z zapałek"
+msgstr[3] "9 x 19 mm JHP, z prochem z zapałek"
 
 #. ~ Description of "9x18mm 57-N-181S"
 #: data/json/items/ammo/9x18.json
@@ -649,6 +786,9 @@ msgid ""
 "round was very common in the Eastern Bloc during the 20th century and "
 "remained in Russian military service into the 21st."
 msgstr ""
+"Amunicja 9 x 18 mm Makarowa z 93-granowym pociskiem FMJ ze stalowym rdzeniem."
+" Nabój 9 x 18 mm był bardzo powszechny w bloku wschodnim w XX wieku i "
+"pozostawał na wyposażeniu rosyjskiego wojska także w XXI wieku."
 
 #. ~ Description of "9x18mm SP-7"
 #: data/json/items/ammo/9x18.json
@@ -657,6 +797,9 @@ msgid ""
 "Eastern Bloc during the 20th century and remained in Russian military service"
 " into the 21st."
 msgstr ""
+"Amunicja 9 x 18 mm Makarowa SP-7. Nabój 9 x 18 mm był bardzo powszechny w "
+"bloku wschodnim w XX wieku i pozostawał na wyposażeniu rosyjskiego wojska "
+"także w XXI wieku."
 
 #. ~ Description of "9x18mm RG028"
 #: data/json/items/ammo/9x18.json
@@ -664,33 +807,35 @@ msgid ""
 "9x18mm Makarov RG028 ammunition.  The RG028 round uses a bullet with a "
 "hardened steel core to improve armor penetration."
 msgstr ""
+"Amunicja 9 x 18 mm Makarowa RG028. Nabój RG028 ma pocisk z rdzeniem z "
+"utwardzonej stali, który poprawia przebijalność pancerza."
 
 #. ~ Item name
 #: data/json/items/ammo/9x18.json
 msgid "9x18mm FMJ, matchhead powder"
 msgid_plural "9x18mm FMJ, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "9 x 18 mm FMJ, z prochem z zapałek"
+msgstr[1] "9 x 18 mm FMJ, z prochem z zapałek"
+msgstr[2] "9 x 18 mm FMJ, z prochem z zapałek"
+msgstr[3] "9 x 18 mm FMJ, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/9x18.json
 msgid "9x18mm, matchhead powder"
 msgid_plural "9x18mm, matchhead powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "9 x 18 mm, z prochem z zapałek"
+msgstr[1] "9 x 18 mm, z prochem z zapałek"
+msgstr[2] "9 x 18 mm, z prochem z zapałek"
+msgstr[3] "9 x 18 mm, z prochem z zapałek"
 
 #. ~ Item name
 #: data/json/items/ammo/barb.json
 msgid "gene sting barb"
 msgid_plural "gene sting barbs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "cierń żądła genowego"
+msgstr[1] "ciernie żądła genowego"
+msgstr[2] "cierni żądła genowego"
+msgstr[3] "ciernia żądła genowego"
 
 #. ~ Description of "gene sting barb"
 #: data/json/items/ammo/barb.json
@@ -698,11 +843,14 @@ msgid ""
 "Tiny droplets of cyan venom trickle out of the sponge-like tissue of this "
 "sharp barb."
 msgstr ""
+"Z gąbczastej tkanki tego ostrego ciernia sączą się maleńkie kropelki "
+"turkusowego jadu."
 
 #. ~ Description of ".22 blank"
 #: data/json/items/ammo/blank.json
 msgid "A powder load .22 blank used for powder-actuated tools."
 msgstr ""
+"Ślepy nabój .22 z ładunkiem prochowym, używany w narzędziach prochowych."
 
 #. ~ Description of "cannon round shot"
 #: data/json/items/ammo/cannon.json
@@ -710,6 +858,8 @@ msgid ""
 "A bundle of wadding, black gunpowder, and a cannonball, ready to be loaded "
 "into a cannon."
 msgstr ""
+"Zestaw przybitki, czarnego prochu i kuli armatniej, gotowy do załadowania do "
+"armaty."
 
 #. ~ Description of "sprayable toxic gas"
 #: data/json/items/ammo/chemical_spray.json
@@ -718,6 +868,9 @@ msgid ""
 "use in a chemical thrower.  Best used with some kind of mask or mouth "
 "protection."
 msgstr ""
+"Niebezpieczna mieszanina z domowych środków czystości, zaimprowizowana do "
+"użycia w miotaczu chemikaliów. Najlepiej używać z jakąś maską lub ochroną "
+"ust."
 
 #. ~ Description of "sprayable fungicide"
 #: data/json/items/ammo/chemical_spray.json
@@ -725,6 +878,8 @@ msgid ""
 "Fungicide enhanced with sulfur to create sprayable anti-fungal ammo for the "
 "chemical thrower.  Best used with some kind of mask or mouth protection."
 msgstr ""
+"Fungicyd wzbogacony siarką, tworzący rozpylaną amunicję przeciwgrzybiczą do "
+"miotacza chemikaliów. Najlepiej używać z jakąś maską lub ochroną ust."
 
 #. ~ Description of "sprayable insecticide"
 #: data/json/items/ammo/chemical_spray.json
@@ -732,6 +887,8 @@ msgid ""
 "Strong sprayable insecticide ammo for the chemical thrower.  Best used with "
 "some kind of mask or mouth protection."
 msgstr ""
+"Silny rozpylany środek owadobójczy jako amunicja do miotacza chemikaliów. "
+"Najlepiej używać z jakąś maską lub ochroną ust."
 
 #. ~ Description of "12.3ln round"
 #: data/json/items/ammo/exodii.json
@@ -745,33 +902,40 @@ msgid ""
 "like a rimless, .303 British cartridge loaded with a larger, non-spitzer "
 "bullet."
 msgstr ""
+"W pewnym alternatywnym wszechświecie nabój 12,3 ln wprowadzono w Rumunii w "
+"następstwie drugiego konfliktu karpackiego. Karabin PA md. 71, używający tej "
+"amunicji, szybko zyskał popularność w Unii Wschodniej, a stamtąd na całym "
+"świecie. Dzięki temu 12,3 ln szybko stał się standardowym nabojem bojowym w "
+"strefie euroazjatyckiej, co ułatwiło Exodii zgromadzenie jego dużych zapasów,"
+" gdy odwiedzili tę wersję Ziemi. Wygląda trochę jak nabój .303 British bez "
+"kryzy, załadowany większym pociskiem o nieostrołukowym kształcie."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "12.3ln, reloaded"
 msgid_plural "12.3ln, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "12,3 ln, reelaborowany"
+msgstr[1] "12,3 ln, reelaborowane"
+msgstr[2] "12,3 ln, reelaborowanych"
+msgstr[3] "12,3 ln, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "12.3ln, black powder"
 msgid_plural "12.3ln, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "12,3 ln, czarnoprochowy"
+msgstr[1] "12,3 ln, czarnoprochowe"
+msgstr[2] "12,3 ln, czarnoprochowych"
+msgstr[3] "12,3 ln, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x110 Diyua light slug"
 msgid_plural "27.3x110 Diyua light slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lekka breneka 27,3 x 110 Diyua"
+msgstr[1] "lekkie breneki 27,3 x 110 Diyua"
+msgstr[2] "lekkich brenek 27,3 x 110 Diyua"
+msgstr[3] "lekkiej breneki 27,3 x 110 Diyua"
 
 #. ~ Description of "27.3x110 Diyua light slug"
 #: data/json/items/ammo/exodii.json
@@ -780,15 +944,18 @@ msgid ""
 "Earth to take dangerous game, and later, fend off commonwealth forces from "
 "atop palisade walls."
 msgstr ""
+"Lekkie breneki 27,3 x 110 Diyua były używane przez kolonistów na pewnej "
+"alternatywnej Ziemi do polowań na niebezpieczną zwierzynę, a później do "
+"odpierania sił Wspólnoty ze szczytów palisad."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x110 Diyua medium slug"
 msgid_plural "27.3x110 Diyua medium slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "średnia breneka 27,3 x 110 Diyua"
+msgstr[1] "średnie breneki 27,3 x 110 Diyua"
+msgstr[2] "średnich brenek 27,3 x 110 Diyua"
+msgstr[3] "średniej breneki 27,3 x 110 Diyua"
 
 #. ~ Description of "27.3x110 Diyua medium slug"
 #: data/json/items/ammo/exodii.json
@@ -798,15 +965,19 @@ msgid ""
 "forces from atop palisade walls.  Most users of the Brogyaga guns considered "
 "these shells too punishing to withstand."
 msgstr ""
+"Średnie breneki 27,3 x 110 Diyua były używane przez kolonistów na pewnej "
+"alternatywnej Ziemi do polowań na niezwykle niebezpieczną zwierzynę, a "
+"później do odpierania sił Wspólnoty ze szczytów palisad. Większość "
+"użytkowników broni Brogyaga uważała odrzut tych nabojów za nie do zniesienia."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x110 Diyua heavy slug"
 msgid_plural "27.3x110 Diyua heavy slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ciężka breneka 27,3 x 110 Diyua"
+msgstr[1] "ciężkie breneki 27,3 x 110 Diyua"
+msgstr[2] "ciężkich brenek 27,3 x 110 Diyua"
+msgstr[3] "ciężkiej breneki 27,3 x 110 Diyua"
 
 #. ~ Description of "27.3x110 Diyua heavy slug"
 #: data/json/items/ammo/exodii.json
@@ -816,15 +987,19 @@ msgid ""
 "however, was used almost entirely by recoil enthusiasts and braggarts, until "
 "the Exodii came upon them."
 msgstr ""
+"Podobne breneki 27,3 x 110 Diyua były używane przez kolonistów na pewnej "
+"alternatywnej Ziemi do polowań na niezwykle niebezpieczną zwierzynę. Tę "
+"ciężką brenekę stosowali jednak niemal wyłącznie miłośnicy odrzutu i "
+"samochwały, dopóki nie natknęli się na nich Exodii."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x110 Diyua flockshot"
 msgid_plural "27.3x110 Diyua flockshot"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój na ptactwo 27,3 x 110 Diyua"
+msgstr[1] "naboje na ptactwo 27,3 x 110 Diyua"
+msgstr[2] "nabojów na ptactwo 27,3 x 110 Diyua"
+msgstr[3] "naboju na ptactwo 27,3 x 110 Diyua"
 
 #. ~ Description of "27.3x110 Diyua flockshot"
 #: data/json/items/ammo/exodii.json
@@ -835,15 +1010,20 @@ msgid ""
 "this is more typically employed by the Exodii by the occasional hunting "
 "party."
 msgstr ""
+"Na pewnej obcej Ziemi wiele stad zostało zdziesiątkowanych przez ładunki "
+"takie jak ten nabój 27,3 x 110 Diyua, wypełniony absurdalną liczbą maleńkich "
+"śrucin. Choć wciąż byłby niszczycielski wobec bardziej humanoidalnych celów, "
+"Exodii używają takiego śrutu na ptactwo zwykle podczas okazjonalnych wypraw "
+"łowieckich."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x110 Diyua canister"
 msgid_plural "27.3x110 Diyua canisters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kartacz 27,3 x 110 Diyua"
+msgstr[1] "kartacze 27,3 x 110 Diyua"
+msgstr[2] "kartaczy 27,3 x 110 Diyua"
+msgstr[3] "kartacza 27,3 x 110 Diyua"
 
 #. ~ Description of "27.3x110 Diyua canister"
 #: data/json/items/ammo/exodii.json
@@ -853,15 +1033,19 @@ msgid ""
 "from atop a palisade.  The Exodii would load these in their Brogyeki sidearms"
 " for backup usage."
 msgstr ""
+"Na pewnej obcej Ziemi te miniaturowe kartacze naśladowały znacznie większą "
+"amunicję artyleryjską i były używane przeciwko piechocie, do odpierania "
+"nacierających fal ze szczytu palisady. Exodii ładowali je do swoich "
+"pistoletów Brogyeki jako broń zapasową."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x44 Diyua star"
 msgid_plural "27.3x44 Diyua star"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "27,3 x 44 Diyua świetlny"
+msgstr[1] "27,3 x 44 Diyua świetlne"
+msgstr[2] "27,3 x 44 Diyua świetlnych"
+msgstr[3] "27,3 x 44 Diyua świetlnego"
 
 #. ~ Description of "27.3x44 Diyua star"
 #: data/json/items/ammo/exodii.json
@@ -871,15 +1055,18 @@ msgid ""
 " when their usual communications systems are suffering interference, "
 "breakdown, or are being jammed."
 msgstr ""
+"Te naboje sygnałowe są przeznaczone do broni 27,3 x 44 Diyua, a może także do"
+" broni 27,3 x 110 Diyua. Exodii używają ich do sygnalizacji awaryjnej, gdy "
+"ich zwykłe systemy łączności są zakłócane, ulegają awarii lub są zagłuszane."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x44 Diyua practice"
 msgid_plural "27.3x44 Diyua practice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "27,3 x 44 Diyua ćwiczebny"
+msgstr[1] "27,3 x 44 Diyua ćwiczebne"
+msgstr[2] "27,3 x 44 Diyua ćwiczebnych"
+msgstr[3] "27,3 x 44 Diyua ćwiczebnego"
 
 #. ~ Description of "27.3x44 Diyua practice"
 #: data/json/items/ammo/exodii.json
@@ -888,15 +1075,19 @@ msgid ""
 "painted blue at the tip, for practicing shooting.  If interdimensional total "
 "replacement cyborgs have to practice, maybe you should too."
 msgstr ""
+"Nabój 27,3 x 44 Diyua z dużym, wydrążonym pociskiem aluminiowym o czubku "
+"pomalowanym na niebiesko, przeznaczony do ćwiczeń strzeleckich. Skoro "
+"międzywymiarowe cyborgi z całkowicie wymienionym ciałem muszą ćwiczyć, to "
+"może ty też powinieneś."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x44 Diyua thermobaric"
 msgid_plural "27.3x44 Diyua thermobaric"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "27,3 x 44 Diyua termobaryczny"
+msgstr[1] "27,3 x 44 Diyua termobaryczne"
+msgstr[2] "27,3 x 44 Diyua termobarycznych"
+msgstr[3] "27,3 x 44 Diyua termobarycznego"
 
 #. ~ Description of "27.3x44 Diyua thermobaric"
 #: data/json/items/ammo/exodii.json
@@ -908,15 +1099,21 @@ msgid ""
 "produced is rather diminutive, yet it makes the most of what little payload "
 "is available."
 msgstr ""
+"Nabój 27,3 x 44 Diyua z niewielką ilością paliwa ciekłego otaczającego "
+"ładunek wybuchowy, który rozprasza paliwo, oraz z dodatkowym ładunkiem "
+"zapłonowym. Przy uderzeniu paliwo zostaje rozproszone, tworząc mieszankę "
+"paliwowo-powietrzną, która zapala się kilka milisekund później. W naboju "
+"takim jak 27,3 x 44 Diyua wytwarzana fala ciśnienia jest raczej niewielka, "
+"ale nabój maksymalnie wykorzystuje ten skromny ładunek, jaki może pomieścić."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "27.3x44 Diyua high explosive"
 msgid_plural "27.3x44 Diyua high explosive"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "27,3 x 44 Diyua burzący"
+msgstr[1] "27,3 x 44 Diyua burzące"
+msgstr[2] "27,3 x 44 Diyua burzących"
+msgstr[3] "27,3 x 44 Diyua burzącego"
 
 #. ~ Description of "27.3x44 Diyua high explosive"
 #: data/json/items/ammo/exodii.json
@@ -925,15 +1122,18 @@ msgid ""
 "detonating fuze.  Primarily useful for assaulting soft targets, and, in their"
 " universe of origin, dispersing crowds."
 msgstr ""
+"Nabój 27,3 x 44 Diyua z ładunkiem burzącym i zapalnikiem uderzeniowym. "
+"Przydatny głównie do atakowania celów nieopancerzonych oraz, w jego "
+"wszechświecie pochodzenia, do rozpraszania tłumów."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "66/27.3x278 Diyua multipurpose"
 msgid_plural "66/27.3x278 Diyua multipurpose"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "66/27,3 x 278 Diyua wielozadaniowy"
+msgstr[1] "66/27,3 x 278 Diyua wielozadaniowe"
+msgstr[2] "66/27,3 x 278 Diyua wielozadaniowych"
+msgstr[3] "66/27,3 x 278 Diyua wielozadaniowego"
 
 #. ~ Description of "66/27.3x278 Diyua multipurpose"
 #: data/json/items/ammo/exodii.json
@@ -945,6 +1145,12 @@ msgid ""
 "this was of no matter to the Exodii who saw value in the explosive potential "
 "the grenade added to the Brogyeki '23."
 msgstr ""
+"Długi nabój 27,3 Diyua z ładunkiem miotającym, połączony z dużym granatem z "
+"kumulacyjnym ładunkiem burzącym o kilkakrotnie większej średnicy. "
+"Zaprojektowano go do ładowania od wylotu lufy do broni 27,3 x 44 Diyua. Choć "
+"przebijalność i fragmentacja granatu zostały ostatecznie uznane za "
+"niewystarczające, nie miało to znaczenia dla Exodii, którzy dostrzegli "
+"wartość w potencjale wybuchowym, jaki granat dodawał broni Brogyeki '23."
 
 #. ~ Description of "Caotel cell"
 #: data/json/items/ammo/exodii.json
@@ -953,6 +1159,9 @@ msgid ""
 "etched into one side of the object presumably allows it to be mounted into "
 "other things, and a small red arrow has been helpfully painted besides it."
 msgstr ""
+"To niewielki metalowy sześcian o niezgłębionej konstrukcji. Pojedynczy rowek "
+"wyryty w jednym z boków prawdopodobnie pozwala zamontować go w innych "
+"rzeczach, a obok niego ktoś pomocnie namalował małą czerwoną strzałkę."
 
 #. ~ Description of "Khuunäöfaai firework payload"
 #: data/json/items/ammo/exodii.json
@@ -960,6 +1169,8 @@ msgid ""
 "Pressurized chemical payload for the Khuunäöfaai.  Highly reactive to oxygen,"
 " removing it from the tank would be a bad idea."
 msgstr ""
+"Ładunek chemiczny pod ciśnieniem do Khuunäöfaai. Silnie reaguje z tlenem, "
+"więc wyjmowanie go ze zbiornika byłoby złym pomysłem."
 
 #. ~ Description of "Khuunäöfaai incendiary payload"
 #: data/json/items/ammo/exodii.json
@@ -967,6 +1178,9 @@ msgid ""
 "Pressurized chemical payload for the Khuunäöfaai.  Highly flammable and "
 "reactive to oxygen, removing it from the tank would be a bad idea."
 msgstr ""
+"Ładunek chemiczny pod ciśnieniem do Khuunäöfaai. Jest wysoce łatwopalny i "
+"silnie reaguje z tlenem, więc wyjmowanie go ze zbiornika byłoby złym "
+"pomysłem."
 
 #. ~ Description of "Khuunäöfaai corrosive payload"
 #: data/json/items/ammo/exodii.json
@@ -974,15 +1188,18 @@ msgid ""
 "Pressurized chemical payload for the Khuunäöfaai.  Essentially a juiced up "
 "version of pirahna solution, removing it from the tank would be a bad idea."
 msgstr ""
+"Ładunek chemiczny pod ciśnieniem do Khuunäöfaai. W zasadzie to podrasowana "
+"wersja roztworu piranii, więc wyjmowanie go ze zbiornika byłoby złym "
+"pomysłem."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "Khuunäöfaai foaming payload"
 msgid_plural "Khuunäöfaai foaming payloads"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ładunek pianotwórczy Khuunäöfaai"
+msgstr[1] "ładunki pianotwórcze Khuunäöfaai"
+msgstr[2] "ładunków pianotwórczych Khuunäöfaai"
+msgstr[3] "ładunku pianotwórczego Khuunäöfaai"
 
 #. ~ Description of "Khuunäöfaai foaming payload"
 #: data/json/items/ammo/exodii.json
@@ -990,15 +1207,18 @@ msgid ""
 "Pressurized chemical payload for the Khuunäöfaai.  An incredibly powerful "
 "binding agent and sealant, removing it from the tank would be a bad idea."
 msgstr ""
+"Ładunek chemiczny pod ciśnieniem do Khuunäöfaai. To niezwykle silny środek "
+"wiążący i uszczelniający, więc wyjmowanie go ze zbiornika byłoby złym "
+"pomysłem."
 
 #. ~ Item name
 #: data/json/items/ammo/exodii.json
 msgid "3.3 naval, FMJ"
 msgid_plural "3.3 naval, FMJ"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój morski 3,3, FMJ"
+msgstr[1] "naboje morskie 3,3, FMJ"
+msgstr[2] "nabojów morskich 3,3, FMJ"
+msgstr[3] "naboju morskiego 3,3, FMJ"
 
 #. ~ Description of "3.3 naval, FMJ"
 #: data/json/items/ammo/exodii.json
@@ -1006,6 +1226,8 @@ msgid ""
 "Initially made for marine combat, this hefty projectile is a go-to round for "
 "late-stage Exodii fights."
 msgstr ""
+"Ten masywny pocisk, pierwotnie stworzony do walki na morzu, jest podstawową "
+"amunicją w późnej fazie walk Exodii."
 
 #. ~ Description of "flechette"
 #: data/json/items/ammo/nail.json
@@ -1013,15 +1235,17 @@ msgid ""
 "A tiny steel dart.  Can be fired from a nail gun or similar weapon, or used "
 "for crafting ammunition."
 msgstr ""
+"Mała stalowa strzałka. Można ją wystrzelić z pistoletu na gwoździe lub "
+"podobnej broni albo użyć do wytwarzania amunicji."
 
 #. ~ Item name
 #: data/json/items/ammo/nail.json
 msgid "bronze nail"
 msgid_plural "bronze nails"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "gwóźdź z brązu"
+msgstr[1] "gwoździe z brązu"
+msgstr[2] "gwoździ z brązu"
+msgstr[3] "gwoździa z brązu"
 
 #. ~ Description of "bronze nail"
 #: data/json/items/ammo/nail.json
@@ -1029,6 +1253,8 @@ msgid ""
 "A pin-shaped piece of bronze.  It can be used to construct various things "
 "with a hammer."
 msgstr ""
+"Kawałek brązu w kształcie szpilki. Można go użyć do budowy różnych rzeczy za "
+"pomocą młotka."
 
 #. ~ Description of "nail"
 #: data/json/items/ammo/nail.json
@@ -1036,6 +1262,8 @@ msgid ""
 "A pin-shaped piece of steel.  It can be used to construct various things with"
 " a hammer."
 msgstr ""
+"Kawałek stali w kształcie szpilki. Można go użyć do budowy różnych rzeczy za "
+"pomocą młotka."
 
 #. ~ Description of "paintball"
 #: data/json/items/ammo/paintball.json
@@ -1043,24 +1271,26 @@ msgid ""
 "A small paintball for recreational shooting.  Getting shot with one stings a "
 "little, but you'd be hard-pressed to kill anything with it."
 msgstr ""
+"Mała kulka do rekreacyjnej gry w paintball. Trafienie nią trochę piecze, ale "
+"trudno byłoby czymś takim cokolwiek zabić."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge birdshot, reloaded"
 msgid_plural "12 gauge birdshot, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 z drobnym śrutem, reelaborowany"
+msgstr[1] "naboje kal. 12 z drobnym śrutem, reelaborowane"
+msgstr[2] "nabojów kal. 12 z drobnym śrutem, reelaborowanych"
+msgstr[3] "naboju kal. 12 z drobnym śrutem, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge dragon's breath, reloaded"
 msgid_plural "12 gauge dragon's breath, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 „smoczy oddech”, reelaborowany"
+msgstr[1] "naboje kal. 12 „smoczy oddech”, reelaborowane"
+msgstr[2] "nabojów kal. 12 „smoczy oddech”, reelaborowanych"
+msgstr[3] "naboju kal. 12 „smoczy oddech”, reelaborowanego"
 
 #. ~ Description of "12 gauge dragon's breath, reloaded"
 #. ~ Description of "12 gauge dragon's breath, black powder"
@@ -1073,87 +1303,93 @@ msgid ""
 "lighting up hostiles.  This one was made in somebody's garage.  Are you sure "
 "you want to shoot this?"
 msgstr ""
+"Nabój do strzelby wypełniony granulkami lub odłamkami magnezu, używany "
+"głównie jako flara sygnałowa lub narzędzie pirotechniczne. Po wystrzale z "
+"lufy wylatują iskry i płomienie o wysokiej temperaturze. Choć wygląda to "
+"bardzo efektownie, stanowi raczej zagrożenie pożarowe niż skuteczne narzędzie"
+" do podpalania wrogów. Ten został zrobiony w czyimś garażu. Na pewno chcesz z"
+" tego strzelać?"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge buckshot, reloaded"
 msgid_plural "12 gauge buckshot, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój śrutowy kal. 12, reelaborowany"
+msgstr[1] "naboje śrutowe kal. 12, reelaborowane"
+msgstr[2] "nabojów śrutowych kal. 12, reelaborowanych"
+msgstr[3] "naboju śrutowego kal. 12, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge flechette, reloaded"
 msgid_plural "12 gauge flechettes, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój strzałkowy kal. 12, reelaborowany"
+msgstr[1] "naboje strzałkowe kal. 12, reelaborowane"
+msgstr[2] "nabojów strzałkowych kal. 12, reelaborowanych"
+msgstr[3] "naboju strzałkowego kal. 12, reelaborowanego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge slug, reloaded"
 msgid_plural "12 gauge slugs, reloaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "breneka kal. 12, reelaborowana"
+msgstr[1] "breneki kal. 12, reelaborowane"
+msgstr[2] "brenek kal. 12, reelaborowanych"
+msgstr[3] "breneki kal. 12, reelaborowanej"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge birdshot, black powder"
 msgid_plural "12 gauge birdshot, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 z drobnym śrutem, czarnoprochowy"
+msgstr[1] "naboje kal. 12 z drobnym śrutem, czarnoprochowe"
+msgstr[2] "nabojów kal. 12 z drobnym śrutem, czarnoprochowych"
+msgstr[3] "naboju kal. 12 z drobnym śrutem, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge dragon's breath, black powder"
 msgid_plural "12 gauge dragon's breath, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 „smoczy oddech”, czarnoprochowy"
+msgstr[1] "naboje kal. 12 „smoczy oddech”, czarnoprochowe"
+msgstr[2] "nabojów kal. 12 „smoczy oddech”, czarnoprochowych"
+msgstr[3] "naboju kal. 12 „smoczy oddech”, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge buckshot, black powder"
 msgid_plural "12 gauge buckshot, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój śrutowy kal. 12, czarnoprochowy"
+msgstr[1] "naboje śrutowe kal. 12, czarnoprochowe"
+msgstr[2] "nabojów śrutowych kal. 12, czarnoprochowych"
+msgstr[3] "naboju śrutowego kal. 12, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge flechette, black powder"
 msgid_plural "12 gauge flechettes, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój strzałkowy kal. 12, czarnoprochowy"
+msgstr[1] "naboje strzałkowe kal. 12, czarnoprochowe"
+msgstr[2] "nabojów strzałkowych kal. 12, czarnoprochowych"
+msgstr[3] "naboju strzałkowego kal. 12, czarnoprochowego"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge slug, black powder"
 msgid_plural "12 gauge slugs, black powder"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "breneka kal. 12, czarnoprochowa"
+msgstr[1] "breneki kal. 12, czarnoprochowe"
+msgstr[2] "brenek kal. 12, czarnoprochowych"
+msgstr[3] "breneki kal. 12, czarnoprochowej"
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge buckshot"
 msgid_plural "12 gauge buckshot"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój śrutowy kal. 12"
+msgstr[1] "naboje śrutowe kal. 12"
+msgstr[2] "nabojów śrutowych kal. 12"
+msgstr[3] "naboju śrutowego kal. 12"
 
 #. ~ Description of "12 gauge buckshot"
 #: data/json/items/ammo/shot.json
@@ -1164,15 +1400,20 @@ msgid ""
 "projectile hit, it also causes a much larger wound, greatly increasing "
 "lethality.  It does struggle with range, and against body armor."
 msgstr ""
+"Nabój do strzelby kalibru 12 wypełniony 9 śrucinami 00. Bardzo powszechny i "
+"wszechstronny nabój, przydatny zarówno do samoobrony, jak i do polowań. "
+"Rozrzut śrutu nie tylko zwiększa szansę trafienia, ale też powoduje znacznie "
+"większą ranę, co mocno zwiększa śmiertelność. Gorzej radzi sobie na większy "
+"dystans i przeciwko kamizelkom kuloodpornym."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge beanbag"
 msgid_plural "12 gauge beanbags"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 typu beanbag"
+msgstr[1] "naboje kal. 12 typu beanbag"
+msgstr[2] "nabojów kal. 12 typu beanbag"
+msgstr[3] "naboju kal. 12 typu beanbag"
 
 #. ~ Description of "12 gauge beanbag"
 #: data/json/items/ammo/shot.json
@@ -1180,15 +1421,18 @@ msgid ""
 "A beanbag round for shotguns.  Designated 'less-lethal' and intended to "
 "disable, but remember that 'less-lethal' does not mean 'non-lethal'."
 msgstr ""
+"Nabój typu beanbag do strzelb. Określany jako „mniej śmiercionośny” i "
+"przeznaczony do obezwładniania, ale pamiętaj, że „mniej śmiercionośny” nie "
+"znaczy „nieśmiercionośny”."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge birdshot"
 msgid_plural "12 gauge birdshot"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 z drobnym śrutem"
+msgstr[1] "naboje kal. 12 z drobnym śrutem"
+msgstr[2] "nabojów kal. 12 z drobnym śrutem"
+msgstr[3] "naboju kal. 12 z drobnym śrutem"
 
 #. ~ Description of "12 gauge birdshot"
 #: data/json/items/ammo/shot.json
@@ -1198,15 +1442,19 @@ msgid ""
 "round.  Their effectiveness against human targets are quite limited outside "
 "of very close ranges, serving more to hurt than kill."
 msgstr ""
+"Słaba amunicja do strzelby, wypełniona drobnymi śrucinami i małym ładunkiem "
+"prochu. Często używana do strzelania do rzutków lub ptaków; to bardzo "
+"powszechna amunicja komercyjna. Jej skuteczność przeciwko ludziom jest dość "
+"ograniczona poza bardzo bliskim dystansem; bardziej rani, niż zabija."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge dragon's breath"
 msgid_plural "12 gauge dragon's breath"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12 „smoczy oddech”"
+msgstr[1] "naboje kal. 12 „smoczy oddech”"
+msgstr[2] "nabojów kal. 12 „smoczy oddech”"
+msgstr[3] "naboju kal. 12 „smoczy oddech”"
 
 #. ~ Description of "12 gauge dragon's breath"
 #: data/json/items/ammo/shot.json
@@ -1217,15 +1465,20 @@ msgid ""
 "impressive, they present more of a fire hazard than an effective tool for "
 "lighting up hostiles."
 msgstr ""
+"Nabój do strzelby wypełniony granulkami lub odłamkami magnezu, używany "
+"głównie jako flara sygnałowa lub narzędzie pirotechniczne. Po wystrzale z "
+"lufy wylatują iskry i płomienie o wysokiej temperaturze. Choć wygląda to "
+"bardzo efektownie, stanowi raczej zagrożenie pożarowe niż skuteczne narzędzie"
+" do podpalania wrogów."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge flechette"
 msgid_plural "12 gauge flechettes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój strzałkowy kal. 12"
+msgstr[1] "naboje strzałkowe kal. 12"
+msgstr[2] "nabojów strzałkowych kal. 12"
+msgstr[3] "naboju strzałkowego kal. 12"
 
 #. ~ Description of "12 gauge flechette"
 #: data/json/items/ammo/shot.json
@@ -1234,15 +1487,19 @@ msgid ""
 " their actual effectiveness is questionable.  Despite being finned, they have"
 " a tendency to tumble mid-air, leading to greater spread and reduced damage."
 msgstr ""
+"Nabój do strzelby wypełniony maleńkimi stalowymi strzałkami. Choć wygląda "
+"dość groźnie, jego rzeczywista skuteczność jest wątpliwa. Mimo stateczników "
+"strzałki mają tendencję do koziołkowania w locie, co zwiększa rozrzut i "
+"zmniejsza obrażenia."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge explosive slug"
 msgid_plural "12 gauge explosive slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wybuchowa breneka kal. 12"
+msgstr[1] "wybuchowe breneki kal. 12"
+msgstr[2] "wybuchowych brenek kal. 12"
+msgstr[3] "wybuchowej breneki kal. 12"
 
 #. ~ Description of "12 gauge explosive slug"
 #: data/json/items/ammo/shot.json
@@ -1256,15 +1513,24 @@ msgid ""
 " it a utility tool for damaging barriers and disrupting other explosive "
 "devices, rather than something for anti-personnel use."
 msgstr ""
+"Nabój do strzelby wystrzeliwujący mały ładunek wybuchowy. Zakazany w kilku "
+"stanach. Choć ładunek wybuchowy wystrzeliwany ze strzelby brzmi imponująco, "
+"jego praktyczne zastosowania są w najlepszym razie ograniczone. Utrata masy "
+"potrzebna do zmieszczenia materiału wybuchowego sprawia, że siła uderzenia "
+"jest znacznie mniejsza niż w tradycyjnej amunicji. Stosunkowo mała breneka "
+"mieści jedynie ograniczoną ilość materiału wybuchowego, co daje dość "
+"rozczarowującą eksplozję. Przez te cechy jest to raczej narzędzie do "
+"niszczenia przeszkód i unieszkodliwiania innych ładunków wybuchowych niż "
+"amunicja przeciwpiechotna."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge buckshot, scrap loaded"
 msgid_plural "12 gauge buckshot, scrap loaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój śrutowy kal. 12 ze złomem"
+msgstr[1] "naboje śrutowe kal. 12 ze złomem"
+msgstr[2] "nabojów śrutowych kal. 12 ze złomem"
+msgstr[3] "naboju śrutowego kal. 12 ze złomem"
 
 #. ~ Description of "12 gauge buckshot, scrap loaded"
 #: data/json/items/ammo/shot.json
@@ -1272,15 +1538,17 @@ msgid ""
 "A shotgun shell filled with whatever scrap metal was lying around.  More "
 "damaging than birdshot, but fairly inaccurate."
 msgstr ""
+"Nabój do strzelby wypełniony złomem, który akurat leżał pod ręką. Zadaje "
+"większe obrażenia niż drobny śrut, ale jest dość niecelny."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge, black powder, scrap loaded"
 msgid_plural "12 gauge, black powder, scrap loaded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nabój kal. 12, czarnoprochowy, ze złomem"
+msgstr[1] "naboje kal. 12, czarnoprochowe, ze złomem"
+msgstr[2] "nabojów kal. 12, czarnoprochowych, ze złomem"
+msgstr[3] "naboju kal. 12, czarnoprochowego, ze złomem"
 
 #. ~ Description of "12 gauge, black powder, scrap loaded"
 #: data/json/items/ammo/shot.json
@@ -1289,15 +1557,18 @@ msgid ""
 "lying around.  The logical conclusion of ammunition bootlegging.  It'll kill "
 "zombies just fine, but your gun will suffer for it."
 msgstr ""
+"Nabój do strzelby wypełniony czarnym prochem i złomem, który akurat leżał pod"
+" ręką. Logiczna konsekwencja domowej produkcji amunicji. Zombie zabije bez "
+"problemu, ale twoja broń na tym ucierpi."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "12 gauge slug"
 msgid_plural "12 gauge slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "breneka kal. 12"
+msgstr[1] "breneki kal. 12"
+msgstr[2] "brenek kal. 12"
+msgstr[3] "breneki kal. 12"
 
 #. ~ Description of "12 gauge slug"
 #: data/json/items/ammo/shot.json
@@ -1308,15 +1579,21 @@ msgid ""
 "as lethal as buckshot in certain ranges, but much more accurate and with a "
 "longer range, and is more effective against armor."
 msgstr ""
+"Breneka kalibru 12. W przeciwieństwie do drobnego czy grubego śrutu breneka "
+"to pojedynczy duży pocisk wystrzeliwany ze strzelby. Breneki są używane "
+"głównie do polowań na większą zwierzynę lub do strzałów na większy dystans, "
+"na którym zwykły śrut bardziej się rozprasza. Na niektórych dystansach mniej "
+"zabójcza od śrutu, ale znacznie celniejsza, o większym zasięgu i "
+"skuteczniejsza przeciwko pancerzom."
 
 #. ~ Item name
 #: data/json/items/ammo/shot.json
 msgid "wax slug"
 msgid_plural "wax slugs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "woskowa breneka"
+msgstr[1] "woskowe breneki"
+msgstr[2] "woskowych brenek"
+msgstr[3] "woskowej breneki"
 
 #. ~ Description of "wax slug"
 #: data/json/items/ammo/shot.json
@@ -1324,6 +1601,8 @@ msgid ""
 "A round of 12 gauge birdshot that has had the crimp opened, and wax poured "
 "into the shot to mimic the performance of a proper slug."
 msgstr ""
+"Nabój kalibru 12 z drobnym śrutem, w którym otwarto zawinięcie łuski i zalano"
+" śrut woskiem, aby naśladować działanie prawdziwej breneki."
 
 #. ~ Description of "sling-ready Molotov cocktail"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1333,6 +1612,10 @@ msgid ""
 " it light the fuse.  You will, of course, need a lighter or matches in your "
 "inventory to do this.  After lighting it, throw it to cause fires."
 msgstr ""
+"Butelka łatwopalnej cieczy z włożonym długim lontem, gotowa do użycia w procy"
+" na kiju ze zmodyfikowaną kołyską. Aby rzucić tym przedmiotem bez procy, użyj"
+" go, by zapalić lont. Do tego będziesz oczywiście potrzebować zapalniczki lub"
+" zapałek w ekwipunku. Po zapaleniu rzuć nim, aby wywołać pożar."
 
 #. ~ Description of "sling-ready grenade"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1342,6 +1625,11 @@ msgid ""
 "sling, use it to snap the fuse and activate the grenade.  You will then have "
 "five seconds before it explodes; throwing it would be a good idea."
 msgstr ""
+"Wojskowy odłamkowy granat ręczny, zmodyfikowany przez dodanie zapalnika z "
+"zabezpieczeniem do użycia w procy na kiju ze zmodyfikowaną kołyską. Aby "
+"rzucić tym przedmiotem bez procy, użyj go, by zerwać zabezpieczenie zapalnika"
+" i uzbroić granat. Będziesz mieć wtedy pięć sekund do wybuchu; rzucenie go "
+"byłoby dobrym pomysłem."
 
 #. ~ Description of "sling-ready small homemade grenade"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1351,6 +1639,11 @@ msgid ""
 "a sling, use it to snap the fuse and activate the grenade.  You will then "
 "have 5 seconds before it explodes; throwing it would be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z zapasowych części i zmodyfikowany "
+"przez dodanie zapalnika z zabezpieczeniem do użycia w procy na kiju. Aby "
+"rzucić tym przedmiotem bez procy, użyj go, by zerwać zabezpieczenie zapalnika"
+" i uzbroić granat. Będziesz mieć wtedy 5 sekund do wybuchu; rzucenie go "
+"byłoby dobrym pomysłem."
 
 #. ~ Description of "sling-ready homemade grenade"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1361,6 +1654,11 @@ msgid ""
 "grenade.  You will then have 5 seconds before it explodes; throwing it would "
 "be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z zapasowych części i zmodyfikowany "
+"przez dodanie zapalnika z zabezpieczeniem do użycia w procy na kiju ze "
+"zmodyfikowaną kołyską. Aby rzucić tym przedmiotem bez procy, użyj go, by "
+"zerwać zabezpieczenie zapalnika i uzbroić granat. Będziesz mieć wtedy 5 "
+"sekund do wybuchu; rzucenie go byłoby dobrym pomysłem."
 
 #. ~ Description of "sling-ready military explosive small homemade grenade"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1370,6 +1668,11 @@ msgid ""
 "sling, use it to snap the fuse and activate the grenade.  You will then have "
 "some amount of time before it explodes; throwing it would be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z części i zmodyfikowany przez "
+"dodanie zapalnika z zabezpieczeniem do użycia w procy na kiju. Aby rzucić tym"
+" przedmiotem bez procy, użyj go, by zerwać zabezpieczenie zapalnika i uzbroić"
+" granat. Będziesz mieć wtedy trochę czasu do wybuchu; rzucenie go byłoby "
+"dobrym pomysłem."
 
 #. ~ Description of "sling-ready military explosive homemade grenade"
 #: data/json/items/ammo/sling-ready_grenade.json
@@ -1380,6 +1683,11 @@ msgid ""
 "  You will then have some amount of time before it explodes; throwing it "
 "would be a good idea."
 msgstr ""
+"Improwizowany ładunek wybuchowy sklecony z części i zmodyfikowany przez "
+"dodanie zapalnika z zabezpieczeniem do użycia w procy na kiju ze "
+"zmodyfikowaną kołyską. Aby rzucić tym przedmiotem bez procy, użyj go, by "
+"zerwać zabezpieczenie zapalnika i uzbroić granat. Będziesz mieć wtedy trochę "
+"czasu do wybuchu; rzucenie go byłoby dobrym pomysłem."
 
 #. ~ Description of "oxyacetylene"
 #: data/json/items/ammo/weldgas.json
@@ -1387,6 +1695,8 @@ msgid ""
 "Pressurized, dangerous acetylene gas.  Can be used for welding or cutting "
 "with a torch."
 msgstr ""
+"Sprężony, niebezpieczny acetylen. Można go użyć do spawania lub cięcia "
+"palnikiem."
 
 #. ~ Description of "welding rod"
 #: data/json/items/ammo/weldgas.json
@@ -1397,6 +1707,10 @@ msgid ""
 "of the seam from atmospheric gases and rapid cooling.  Required for arc "
 "welding."
 msgstr ""
+"Odcinek otulonej elektrody spawalniczej – stalowy pręt o grubości 3 mm "
+"pokryty specjalną otuliną. Podczas spawania gorący metal elektrody wypełnia "
+"spoinę, łącząc części, a otulina chroni powierzchnię spoiny przed gazami "
+"atmosferycznymi i zbyt szybkim stygnięciem. Niezbędny do spawania łukowego."
 
 #. ~ Description of "aluminum welding rod"
 #: data/json/items/ammo/weldgas.json
@@ -1404,21 +1718,26 @@ msgid ""
 "A length of coated welding electrode - a 3.2 mm thick aluminum rod coated in "
 "a special protective flux.  Required for arc welding aluminum alloys."
 msgstr ""
+"Odcinek otulonej elektrody spawalniczej – aluminiowy pręt o grubości 3,2 mm "
+"pokryty specjalną ochronną otuliną. Niezbędny do spawania łukowego stopów "
+"aluminium."
 
 #. ~ Description of "welding wire"
 #: data/json/items/ammo/weldgas.json
 msgid "A length of 0.8 mm steel wire for MAG welding."
-msgstr ""
+msgstr "Odcinek stalowego drutu o grubości 0,8 mm do spawania metodą MAG."
 
 #. ~ Description of "aluminum welding wire"
 #: data/json/items/ammo/weldgas.json
 msgid "A length of 0.9 mm aluminum wire for MIG welding."
-msgstr ""
+msgstr "Odcinek aluminiowego drutu o grubości 0,9 mm do spawania metodą MIG."
 
 #. ~ Description of "brazing rod"
 #: data/json/items/ammo/weldgas.json
 msgid "A length of 3.2 mm flux-coated bronze rod, for brazing steel."
 msgstr ""
+"Odcinek pręta z brązu o grubości 3,2 mm pokrytego topnikiem, do lutowania "
+"twardego stali."
 
 #. ~ Description of "aluminum brazing rod"
 #: data/json/items/ammo/weldgas.json
@@ -1426,6 +1745,8 @@ msgid ""
 "A length of 3.2 mm aluminum rod, for brazing aluminum alloys.  Also suitable "
 "for TIG welding."
 msgstr ""
+"Odcinek aluminiowego pręta o grubości 3,2 mm do lutowania twardego stopów "
+"aluminium. Nadaje się także do spawania metodą TIG."
 
 #. ~ Description of "portable gasoline generator"
 #: data/json/items/appliances/appliances_generators.json
@@ -1433,6 +1754,8 @@ msgid ""
 "Small, portable generator, one that people buy for a camp.  It just needs to "
 "be plugged in, fueled up, and then turned on."
 msgstr ""
+"Mały, przenośny generator, taki, jaki ludzie kupują na biwak. Wystarczy go "
+"podłączyć, zatankować i włączyć."
 
 #. ~ Description of "diesel generator"
 #: data/json/items/appliances/appliances_generators.json
@@ -1441,15 +1764,17 @@ msgid ""
 "plugged in, fueled up, and then turned on.  Has little wheels to make it "
 "easier to move."
 msgstr ""
+"Duży i mocny generator, używany przy robotach drogowych. Wystarczy go "
+"podłączyć, zatankować i włączyć. Ma małe kółka ułatwiające przemieszczanie."
 
 #. ~ Item name
 #: data/json/items/appliances/appliances_refrigeration.json
 msgid "household fridge"
 msgid_plural "household fridges"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "domowa lodówka"
+msgstr[1] "domowe lodówki"
+msgstr[2] "domowych lodówek"
+msgstr[3] "domowej lodówki"
 
 #. ~ Description of "household fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1458,6 +1783,9 @@ msgid ""
 "perishables for an average family.  Activate to deploy and connect to your "
 "electric grid."
 msgstr ""
+"Odłączona domowa lodówka. Typowy wybór przeciętnej rodziny do przechowywania "
+"łatwo psującej się żywności. Aktywuj, aby rozstawić i podłączyć do swojej "
+"sieci elektrycznej."
 
 #. ~ Description of "minifridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1465,6 +1793,8 @@ msgid ""
 "A disconnected minifridge, similar to ones in some luxury limousines.  "
 "Activate to deploy and connect to your electric grid."
 msgstr ""
+"Odłączona mini lodówka, podobna do tych w niektórych luksusowych limuzynach. "
+"Aktywuj, aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "food truck fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1474,6 +1804,10 @@ msgid ""
 "vehicle with relative assurance that any items inside will stay put.  "
 "Activate to deploy and connect to your electric grid."
 msgstr ""
+"Ciężka i nieporęczna lodówka z małymi kółkami ułatwiającymi transport. Ma "
+"wiele przegródek i przegród, dzięki którym można ją zainstalować w pojeździe "
+"ze względną pewnością, że przedmioty w środku pozostaną na miejscu. Aktywuj, "
+"aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "single glass door fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1483,6 +1817,10 @@ msgid ""
 "while still keeping them cool.  Activate to deploy and connect to your "
 "electric grid."
 msgstr ""
+"Odłączona lodówka komercyjna z przezroczystymi szklanymi drzwiami, "
+"zaprojektowana do eksponowania zimnych napojów i podobnych towarów w sklepie "
+"spożywczym przy jednoczesnym utrzymywaniu ich w chłodzie. Aktywuj, aby "
+"rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "double glass door fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1492,6 +1830,10 @@ msgid ""
 "while still keeping them cool.  Activate to deploy and connect to your "
 "electric grid."
 msgstr ""
+"Odłączona lodówka komercyjna z dwojgiem przezroczystych szklanych drzwi, "
+"zaprojektowana do eksponowania zimnych napojów i podobnych towarów w sklepie "
+"spożywczym przy jednoczesnym utrzymywaniu ich w chłodzie. Aktywuj, aby "
+"rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "heavy-duty fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1499,6 +1841,8 @@ msgid ""
 "A disconnected commercial refrigerator, used in many professional kitchens.  "
 "Activate to deploy and connect to your electric grid."
 msgstr ""
+"Odłączona lodówka komercyjna, używana w wielu profesjonalnych kuchniach. "
+"Aktywuj, aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "display fridge"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1508,15 +1852,19 @@ msgid ""
 "display any of your food, it cools the food as good as any another fridge.  "
 "Activate to deploy and connect to your electric grid."
 msgstr ""
+"Duża szklana komora zaprojektowana do eksponowania różnej żywności w wielu "
+"rzędach przy jednoczesnym jej chłodzeniu. Choć zapewne nie musisz niczego "
+"eksponować, chłodzi żywność równie dobrze jak każda inna lodówka. Aktywuj, "
+"aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Item name
 #: data/json/items/appliances/appliances_refrigeration.json
 msgid "household freezer"
 msgid_plural "household freezers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "domowa zamrażarka"
+msgstr[1] "domowe zamrażarki"
+msgstr[2] "domowych zamrażarek"
+msgstr[3] "domowej zamrażarki"
 
 #. ~ Description of "household freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1524,6 +1872,9 @@ msgid ""
 "A disconnected household freezer.  Great choice if you need to freeze some "
 "discount meat.  Activate to deploy and connect to your electric grid."
 msgstr ""
+"Odłączona domowa zamrażarka. Świetny wybór, jeśli musisz zamrozić trochę "
+"przecenionego mięsa. Aktywuj, aby rozstawić i podłączyć do swojej sieci "
+"elektrycznej."
 
 #. ~ Description of "minifreezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1531,6 +1882,9 @@ msgid ""
 "A compact version of an upright freezer, designed as a mobile solution for "
 "freezing food.  Activate to deploy and connect to your electric grid."
 msgstr ""
+"Kompaktowa wersja zamrażarki szafkowej, zaprojektowana jako mobilne "
+"rozwiązanie do zamrażania żywności. Aktywuj, aby rozstawić i podłączyć do "
+"swojej sieci elektrycznej."
 
 #. ~ Description of "chest minifreezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1540,6 +1894,10 @@ msgid ""
 "Perfect choice to put in your closet and forget for a year.  Activate to "
 "deploy and connect to your electric grid."
 msgstr ""
+"Kompaktowa wersja zamrażarki skrzyniowej, zaprojektowana jako mobilne "
+"rozwiązanie do zamrażania żywności, choć wyciągnięcie czegokolwiek z dna jest"
+" dość kłopotliwe. Idealny wybór, by wstawić ją do schowka i zapomnieć o niej "
+"na rok. Aktywuj, aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "food truck freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1549,6 +1907,10 @@ msgid ""
 "vehicle with relative assurance that any items inside will stay put.  "
 "Activate to deploy and connect to your electric grid."
 msgstr ""
+"Ciężka i nieporęczna zamrażarka z małymi kółkami ułatwiającymi transport. Ma "
+"wiele przegródek i przegród, dzięki którym można ją zainstalować w pojeździe "
+"ze względną pewnością, że przedmioty w środku pozostaną na miejscu. Aktywuj, "
+"aby rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "chest freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1557,6 +1919,9 @@ msgid ""
 "minuscule amount of power.  Activate to deploy and connect to your electric "
 "grid."
 msgstr ""
+"Pokaźna zamrażarka skrzyniowa, zaprojektowana do przechowywania mnóstwa łatwo"
+" psującej się żywności przy znikomym zużyciu energii. Aktywuj, aby rozstawić "
+"i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Description of "heavy-duty freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1565,6 +1930,10 @@ msgid ""
 " fit enough meat to feed a little colony for a week, but consumes power like "
 "no other.  Activate to deploy and connect to your electric grid."
 msgstr ""
+"Wytrzymała zamrażarka szafkowa. Duża jak szafa, ciężka jak czołg, zmieści "
+"pewnie dość mięsa, by przez tydzień wykarmić małą kolonię, ale pożera prąd "
+"jak nic innego. Aktywuj, aby rozstawić i podłączyć do swojej sieci "
+"elektrycznej."
 
 #. ~ Description of "glass door freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1573,6 +1942,9 @@ msgid ""
 "different frozen goods.  Activate to deploy and connect to your electric "
 "grid."
 msgstr ""
+"Odłączona zamrażarka komercyjna ze szklanymi drzwiami, używana do "
+"prezentowania różnych mrożonek. Aktywuj, aby rozstawić i podłączyć do swojej "
+"sieci elektrycznej."
 
 #. ~ Description of "display freezer"
 #: data/json/items/appliances/appliances_refrigeration.json
@@ -1580,45 +1952,48 @@ msgid ""
 "A disconnected commercial chest freezer with a glass lid.  Activate to deploy"
 " and connect to your electric grid."
 msgstr ""
+"Odłączona komercyjna zamrażarka skrzyniowa ze szklaną pokrywą. Aktywuj, aby "
+"rozstawić i podłączyć do swojej sieci elektrycznej."
 
 #. ~ Name of effect type id "artifact_teleportitis_aura"
 #: data/json/items/armor/altered_object_auras.json
 msgid "Strange Pressure"
-msgstr ""
+msgstr "Dziwny nacisk"
 
 #. ~ Description of effect type "Strange Pressure"
 #: data/json/items/armor/altered_object_auras.json
 msgid "You feel a strange force pressing you inwards and inside-out"
 msgstr ""
+"Czujesz dziwną siłę, która wciska cię do środka i wywraca na lewą stronę"
 
 #. ~ Name of effect type id "artifact_slow_aura"
 #: data/json/items/armor/altered_object_auras.json
 msgid "Temporal Distortion"
-msgstr ""
+msgstr "Zaburzenie czasowe"
 
 #. ~ Description of effect type "Temporal Distortion"
 #: data/json/items/armor/altered_object_auras.json
 msgid "A slight temporal distortion appears to be centered around you"
-msgstr ""
+msgstr "Wokół ciebie zdaje się skupiać lekkie zaburzenie czasu"
 
 #. ~ Item name
 #. ~ Variant name of item "chest rig"
 #: data/json/items/armor/ammo_pouch.json
 msgid "chest rig"
 msgid_plural "chest rigs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kamizelka taktyczna"
+msgstr[1] "kamizelki taktyczne"
+msgstr[2] "kamizelek taktycznych"
+msgstr[3] "kamizelki taktycznej"
 
 #. ~ Variant name of item "chest rig"
 #: data/json/items/armor/ammo_pouch.json
 msgid "patriot's chest rig"
 msgid_plural "patriot's chest rigs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "patriotyczna kamizelka taktyczna"
+msgstr[1] "patriotyczne kamizelki taktyczne"
+msgstr[2] "patriotycznych kamizelek taktycznych"
+msgstr[3] "patriotycznej kamizelki taktycznej"
 
 #. ~ Description of variant "patriot's chest rig" of item "chest rig"
 #: data/json/items/armor/ammo_pouch.json
@@ -1626,15 +2001,17 @@ msgid ""
 "An American flag is proudly embroidered across the front of each pouch, with "
 "a tiny, eagle-winged .50-caliber bullet crowning each banner."
 msgstr ""
+"Z przodu każdej ładownicy dumnie wyhaftowano amerykańską flagę, a każdy "
+"sztandar wieńczy malutki nabój kalibru .50 z orlimi skrzydłami."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "nylon quiver"
 msgid_plural "nylon quivers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nylonowy kołczan"
+msgstr[1] "nylonowe kołczany"
+msgstr[2] "nylonowych kołczanów"
+msgstr[3] "nylonowego kołczanu"
 
 #. ~ Description of "nylon quiver"
 #: data/json/items/armor/ammo_pouch.json
@@ -1642,15 +2019,16 @@ msgid ""
 "A lighter and more durable quiver made of nylon, with straps to attach to a "
 "MOLLE system."
 msgstr ""
+"Lżejszy i trwalszy kołczan z nylonu, z paskami do mocowania do systemu MOLLE."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "pipe quiver"
 msgid_plural "pipe quivers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kołczan z rury"
+msgstr[1] "kołczany z rury"
+msgstr[2] "kołczanów z rury"
+msgstr[3] "kołczanu z rury"
 
 #. ~ Description of "pipe quiver"
 #: data/json/items/armor/ammo_pouch.json
@@ -1659,15 +2037,18 @@ msgid ""
 "thinner than a typical quiver, it can only hold 10 arrows or bolts.  Use "
 "insert to store arrows or bolts."
 msgstr ""
+"Prowizoryczny kołczan wykonany z rury, noszony przy pasie. Cięższy i węższy "
+"od typowego kołczanu, mieści tylko 10 strzał lub bełtów. Użyj opcji włóż do "
+"przechowywania strzał lub bełtów."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "large pipe quiver"
 msgid_plural "large pipe quivers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duży kołczan z rur"
+msgstr[1] "duże kołczany z rur"
+msgstr[2] "dużych kołczanów z rur"
+msgstr[3] "dużego kołczanu z rur"
 
 #. ~ Description of "large pipe quiver"
 #: data/json/items/armor/ammo_pouch.json
@@ -1676,15 +2057,18 @@ msgid ""
 "and thinner than a typical large quiver, it can only hold 30 arrows or bolts."
 "  Use insert to store arrows or bolts."
 msgstr ""
+"Duży prowizoryczny kołczan wykonany z 3 rur, noszony na plecach. Cięższy i "
+"węższy od typowego dużego kołczanu, mieści tylko 30 strzał lub bełtów. Użyj "
+"opcji włóż do przechowywania strzał lub bełtów."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "simple cloth quiver"
 msgid_plural "simple cloth quivers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prosty kołczan z tkaniny"
+msgstr[1] "proste kołczany z tkaniny"
+msgstr[2] "prostych kołczanów z tkaniny"
+msgstr[3] "prostego kołczanu z tkaniny"
 
 #. ~ Description of "simple cloth quiver"
 #: data/json/items/armor/ammo_pouch.json
@@ -1694,6 +2078,10 @@ msgid ""
 "pull ammunition from than a regular quiver.  Use insert to store arrows, "
 "bolts, fishing spears, or atlatl spears."
 msgstr ""
+"Prosty kołczan z tkaniny, który można dopasować do różnych rodzajów strzał, "
+"bełtów i oszczepów o różnej długości. Wyciąganie z niego amunicji trwa nieco "
+"dłużej niż ze zwykłego kołczanu. Użyj opcji włóż do przechowywania strzał, "
+"bełtów, harpunów lub oszczepów do atlatla."
 
 #. ~ Description of "tac vest"
 #: data/json/items/armor/ammo_pouch.json
@@ -1702,6 +2090,9 @@ msgid ""
 "are popular among law enforcement, but less so than combination tactical "
 "vests incorporating Kevlar."
 msgstr ""
+"Ta lekka kamizelka służy do noszenia magazynków, nabojów do strzelby i "
+"pistoletów. Jest popularna w policji, ale mniej niż kamizelki taktyczne z "
+"wbudowanym kevlarem."
 
 #. ~ Description of "breacher load bearing vest"
 #: data/json/items/armor/ammo_pouch.json
@@ -1712,6 +2103,11 @@ msgid ""
 "your weapon extra secure, as well as a set of strong magnets attached to the "
 "torso and waist to hold a breaching shotgun."
 msgstr ""
+"Ta masywna kamizelka pokryta taśmą MOLLE przeznaczona jest do mocowania dużej"
+" liczby ładownic, kabur i innych akcesoriów zgodnych z PALS. Ta ma "
+"jednopunktowe zawieszenie owinięte wokół ramion, dodatkowo zabezpieczające "
+"broń, a także zestaw mocnych magnesów przymocowanych na tułowiu i w pasie do "
+"trzymania strzelby do wyważania drzwi."
 
 #. ~ Description of "tactical tool pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1720,6 +2116,9 @@ msgid ""
 "MOLLE straps for attaching to a vest or can be strapped directly to your "
 "chest."
 msgstr ""
+"Płaska ładownica zaprojektowana tak, by narzędzia były łatwo dostępne i "
+"bezpieczne. Ma paski MOLLE do mocowania do kamizelki, można ją też przypiąć "
+"bezpośrednio na klatce piersiowej."
 
 #. ~ Description of "flashlight pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1727,6 +2126,8 @@ msgid ""
 "A tiny pouch designed to keep your flashlight accessible and secure.  Has "
 "MOLLE straps for attaching to a belt or vest."
 msgstr ""
+"Maleńka ładownica zaprojektowana tak, by latarka była łatwo dostępna i "
+"bezpieczna. Ma paski MOLLE do mocowania do pasa lub kamizelki."
 
 #. ~ Description of "tactical holster"
 #: data/json/items/armor/ammo_pouch.json
@@ -1735,6 +2136,9 @@ msgid ""
 " tactical vest.  This makes it a little more awkward to draw from than a "
 "normal holster."
 msgstr ""
+"Wytrzymała kabura zaprojektowana do noszenia w pionie, by zajmowała mało "
+"miejsca na kamizelce taktycznej. Przez to wyciąganie z niej broni jest nieco "
+"mniej wygodne niż ze zwykłej kabury."
 
 #. ~ Description of "gas mask pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1743,21 +2147,24 @@ msgid ""
 " both accessible and secure.  Has MOLLE straps for attaching to a belt or "
 "vest."
 msgstr ""
+"Duża ładownica mieszcząca maskę przeciwgazową i dodatkowy filtr, zapewniająca"
+" łatwy dostęp do nich i ich bezpieczeństwo. Ma paski MOLLE do mocowania do "
+"pasa lub kamizelki."
 
 #. ~ Description of a pocket in item "gas mask pouch"
 #: data/json/items/armor/ammo_pouch.json
 msgid "The main compartment for a respirator."
-msgstr ""
+msgstr "Główna komora na maskę oddechową."
 
 #. ~ Description of a pocket in item "gas mask pouch"
 #: data/json/items/armor/ammo_pouch.json
 msgid "A side pocket for a single spare filter."
-msgstr ""
+msgstr "Kieszeń boczna na jeden zapasowy filtr."
 
 #. ~ Description of a pocket in item "gas mask pouch"
 #: data/json/items/armor/ammo_pouch.json
 msgid "An internal divider pocket for some small accessories."
-msgstr ""
+msgstr "Wewnętrzna przegroda na drobne akcesoria."
 
 #. ~ Description of "tactical grenade pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1765,6 +2172,9 @@ msgid ""
 "A pouch designed to hold one military grenade, keeping it both accessible and"
 " secure.  Has MOLLE straps for attaching to a belt or vest."
 msgstr ""
+"Ładownica przeznaczona na jeden wojskowy granat, zapewniająca łatwy dostęp do"
+" niego i jego bezpieczeństwo. Ma paski MOLLE do mocowania do pasa lub "
+"kamizelki."
 
 #. ~ Description of "triple stacker ammo pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1773,6 +2183,10 @@ msgid ""
 "magazines and keep them accessible and secure.  Has MOLLE straps for "
 "attaching to a vest or can be strapped directly to your chest."
 msgstr ""
+"Zestaw 6 kieszeni, 3 obok siebie i po 2 jedna za drugą, zaprojektowany do "
+"przechowywania magazynków karabinowych tak, by były łatwo dostępne i "
+"bezpieczne. Ma paski MOLLE do mocowania do kamizelki, można go też przypiąć "
+"bezpośrednio na klatce piersiowej."
 
 #. ~ Description of "tactical shotshell pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1780,6 +2194,9 @@ msgid ""
 "A pouch designed to hold shotgun shells or .308 rounds, keeping them "
 "accessible and secure.  Has MOLLE straps for attaching to a belt or vest."
 msgstr ""
+"Ładownica przeznaczona na naboje do strzelby lub naboje .308, zapewniająca "
+"łatwy dostęp do nich i ich bezpieczeństwo. Ma paski MOLLE do mocowania do "
+"pasa lub kamizelki."
 
 #. ~ Description of "Kevlar vest"
 #: data/json/items/armor/ammo_pouch.json
@@ -1787,30 +2204,35 @@ msgid ""
 "A massive handmade imitation of a proper ballistic vest for abnormally large "
 "folks.  Large and heavy, but will still fit under an abnormally large coat."
 msgstr ""
+"Masywna, ręcznie wykonana imitacja prawdziwej kamizelki balistycznej dla "
+"nienaturalnie dużych osób. Duża i ciężka, ale wciąż zmieści się pod "
+"nienaturalnie dużym płaszczem."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "small belt loop"
 msgid_plural "small belt loops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała szlufka"
+msgstr[1] "małe szlufki"
+msgstr[2] "małych szlufek"
+msgstr[3] "małej szlufki"
 
 #. ~ Description of "small belt loop"
 #: data/json/items/armor/ammo_pouch.json
 msgid ""
 "A MOLLE-compatible loop for attaching small tools to a load-bearing vest."
 msgstr ""
+"Zgodna z MOLLE szlufka do mocowania małych narzędzi do kamizelki przenoszenia"
+" oporządzenia."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "medium belt loop"
 msgid_plural "medium belt loops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "średnia szlufka"
+msgstr[1] "średnie szlufki"
+msgstr[2] "średnich szlufek"
+msgstr[3] "średniej szlufki"
 
 #. ~ Description of "medium belt loop"
 #: data/json/items/armor/ammo_pouch.json
@@ -1818,16 +2240,18 @@ msgid ""
 "A MOLLE-compatible loop for attaching tools and some weapons to a load-"
 "bearing vest."
 msgstr ""
+"Zgodna z MOLLE szlufka do mocowania narzędzi i niektórych rodzajów broni do "
+"kamizelki przenoszenia oporządzenia."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 #: data/mods/aftershock_exoplanet/items/armor/pals_accesories.json
 msgid "large belt loop"
 msgid_plural "large belt loops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duża szlufka"
+msgstr[1] "duże szlufki"
+msgstr[2] "dużych szlufek"
+msgstr[3] "dużej szlufki"
 
 #. ~ Description of "large belt loop"
 #: data/json/items/armor/ammo_pouch.json
@@ -1836,15 +2260,17 @@ msgid ""
 "A MOLLE-compatible loop for attaching large tools and weapons to a load-"
 "bearing vest."
 msgstr ""
+"Zgodna z MOLLE szlufka do mocowania dużych narzędzi i broni do kamizelki "
+"przenoszenia oporządzenia."
 
 #. ~ Item name
 #: data/json/items/armor/ammo_pouch.json
 msgid "sustainment pouch"
 msgid_plural "sustainment pouches"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ładownica zaopatrzeniowa"
+msgstr[1] "ładownice zaopatrzeniowe"
+msgstr[2] "ładownic zaopatrzeniowych"
+msgstr[3] "ładownicy zaopatrzeniowej"
 
 #. ~ Description of "sustainment pouch"
 #: data/json/items/armor/ammo_pouch.json
@@ -1853,15 +2279,18 @@ msgid ""
 "part of the official MOLLE II rucksack system.  Has MOLLE straps for "
 "attaching to a belt, vest, or rucksack."
 msgstr ""
+"Duża ładownica zamykana na ściągacz i sprzączkę, pierwotnie zaprojektowana na"
+" 3 racje MRE, część oficjalnego systemu plecaków MOLLE II. Ma paski MOLLE do "
+"mocowania do pasa, kamizelki lub plecaka."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of carpet arm guards"
 msgid_plural "pairs of carpet arm guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para dywanowych ochraniaczy rąk"
+msgstr[1] "pary dywanowych ochraniaczy rąk"
+msgstr[2] "par dywanowych ochraniaczy rąk"
+msgstr[3] "pary dywanowych ochraniaczy rąk"
 
 #. ~ Description of "pair of carpet arm guards"
 #: data/json/items/armor/arms_armor.json
@@ -1869,15 +2298,17 @@ msgid ""
 "Small squares of carpet rolled around your upper and lower arms.  Armor of "
 "the truly desperate or crafty."
 msgstr ""
+"Małe kwadraty wykładziny owinięte wokół ramion i przedramion. Pancerz "
+"prawdziwych desperatów lub spryciarzy."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of carpet bracers"
 msgid_plural "pairs of carpet bracers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para dywanowych karwaszy"
+msgstr[1] "pary dywanowych karwaszy"
+msgstr[2] "par dywanowych karwaszy"
+msgstr[3] "pary dywanowych karwaszy"
 
 #. ~ Description of "pair of carpet bracers"
 #: data/json/items/armor/arms_armor.json
@@ -1885,15 +2316,17 @@ msgid ""
 "Small squares of carpet rolled around your lower arms.  The bare minimum to "
 "hopefully stop a bite or two."
 msgstr ""
+"Małe kwadraty wykładziny owinięte wokół przedramion. Absolutne minimum, które"
+" – miejmy nadzieję – powstrzyma ugryzienie czy dwa."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of cloth-padded sleeves"
 msgid_plural "pairs of cloth-padded sleeves"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para rękawów wyściełanych tkaniną"
+msgstr[1] "pary rękawów wyściełanych tkaniną"
+msgstr[2] "par rękawów wyściełanych tkaniną"
+msgstr[3] "pary rękawów wyściełanych tkaniną"
 
 #. ~ Description of "pair of cloth-padded sleeves"
 #: data/json/items/armor/arms_armor.json
@@ -1902,15 +2335,18 @@ msgid ""
 "extra padding.  They're quite lonely, no longer being attached to each other "
 "by the rest of the shirt."
 msgstr ""
+"Rękawy grubej bawełnianej koszuli z mnóstwem wszytej tkaniny, która służy "
+"jako dodatkowa wyściółka. Są dość samotne, bo nie łączy ich już reszta "
+"koszuli."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of sheet metal arm guards"
 msgid_plural "pairs of sheet metal arm guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para blaszanych ochraniaczy rąk"
+msgstr[1] "pary blaszanych ochraniaczy rąk"
+msgstr[2] "par blaszanych ochraniaczy rąk"
+msgstr[3] "pary blaszanych ochraniaczy rąk"
 
 #. ~ Description of "pair of sheet metal arm guards"
 #: data/json/items/armor/arms_armor.json
@@ -1918,15 +2354,17 @@ msgid ""
 "A pair of arm guards hammered out from metal, avoiding joints.  Perfect for "
 "the Post-Apocalyptic Warrior look."
 msgstr ""
+"Para ochraniaczy rąk wyklepanych z metalu, z pominięciem stawów. Idealne do "
+"stylizacji na Postapokaliptycznego Wojownika."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of hardened steel sheet metal arm guards"
 msgid_plural "pairs of hardened steel sheet metal arm guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para ochraniaczy rąk z blachy z utwardzonej stali"
+msgstr[1] "pary ochraniaczy rąk z blachy z utwardzonej stali"
+msgstr[2] "par ochraniaczy rąk z blachy z utwardzonej stali"
+msgstr[3] "pary ochraniaczy rąk z blachy z utwardzonej stali"
 
 #. ~ Description of "pair of hardened steel sheet metal arm guards"
 #: data/json/items/armor/arms_armor.json
@@ -1934,30 +2372,33 @@ msgid ""
 "A pair of arm guards hammered out from sheet metal, hardened for extra "
 "protection.  Still manages that Post-Apocalyptic Warrior look."
 msgstr ""
+"Para ochraniaczy rąk wyklepanych z blachy i utwardzonych dla dodatkowej "
+"ochrony. Wciąż zapewniają stylizację na Postapokaliptycznego Wojownika."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of mild steel sheet metal bracers"
 msgid_plural "pairs of mild steel sheet metal bracers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para karwaszy z blachy z miękkiej stali"
+msgstr[1] "pary karwaszy z blachy z miękkiej stali"
+msgstr[2] "par karwaszy z blachy z miękkiej stali"
+msgstr[3] "pary karwaszy z blachy z miękkiej stali"
 
 #. ~ Description of "pair of mild steel sheet metal bracers"
 #: data/json/items/armor/arms_armor.json
 msgid ""
 "A pair of arm guards hammered out from metal, only covering your forearms."
 msgstr ""
+"Para ochraniaczy rąk wyklepanych z metalu, osłaniających tylko przedramiona."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of hardened steel sheet metal bracers"
 msgid_plural "pairs of hardened steel sheet metal bracers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para karwaszy z blachy z utwardzonej stali"
+msgstr[1] "pary karwaszy z blachy z utwardzonej stali"
+msgstr[2] "par karwaszy z blachy z utwardzonej stali"
+msgstr[3] "pary karwaszy z blachy z utwardzonej stali"
 
 #. ~ Description of "pair of hardened steel sheet metal bracers"
 #: data/json/items/armor/arms_armor.json
@@ -1965,15 +2406,17 @@ msgid ""
 "A pair of forearm guards hammered out from sheet metal, hardened for extra "
 "protection."
 msgstr ""
+"Para ochraniaczy przedramion wyklepanych z blachy i utwardzonych dla "
+"dodatkowej ochrony."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of mild steel sheet metal pauldrons"
 msgid_plural "pairs of mild steel sheet metal pauldrons"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para naramienników z blachy z miękkiej stali"
+msgstr[1] "pary naramienników z blachy z miękkiej stali"
+msgstr[2] "par naramienników z blachy z miękkiej stali"
+msgstr[3] "pary naramienników z blachy z miękkiej stali"
 
 #. ~ Description of "pair of mild steel sheet metal pauldrons"
 #: data/json/items/armor/arms_armor.json
@@ -1982,15 +2425,17 @@ msgid ""
 "more underneath.  They make it impossible to raise your arms fully, but "
 "they'll keep your arms attached to you."
 msgstr ""
+"Dwa półcylindry z blachy wystające nad barkami i dwa kolejne pod nimi. "
+"Uniemożliwiają pełne uniesienie rąk, ale dzięki nim ręce zostaną przy tobie."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of hardened sheet metal pauldrons"
 msgid_plural "pairs of hardened sheet metal pauldrons"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para naramienników z utwardzonej blachy"
+msgstr[1] "pary naramienników z utwardzonej blachy"
+msgstr[2] "par naramienników z utwardzonej blachy"
+msgstr[3] "pary naramienników z utwardzonej blachy"
 
 #. ~ Description of "pair of hardened sheet metal pauldrons"
 #: data/json/items/armor/arms_armor.json
@@ -1998,15 +2443,16 @@ msgid ""
 "A pair of crude pauldrons made out of sheet metal and hardened for "
 "reinforcement."
 msgstr ""
+"Para prymitywnych naramienników z blachy, utwardzonych dla wzmocnienia."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of mild steel sheet metal elbow guards"
 msgid_plural "pairs of mild steel sheet metal elbow guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para nałokietników z blachy z miękkiej stali"
+msgstr[1] "pary nałokietników z blachy z miękkiej stali"
+msgstr[2] "par nałokietników z blachy z miękkiej stali"
+msgstr[3] "pary nałokietników z blachy z miękkiej stali"
 
 #. ~ Description of "pair of mild steel sheet metal elbow guards"
 #: data/json/items/armor/arms_armor.json
@@ -2014,15 +2460,17 @@ msgid ""
 "Two small half-cylinders of sheet metal cut down and hammered to fit over "
 "your elbows.  Very brutal, just needs spikes."
 msgstr ""
+"Dwa małe półcylindry z blachy, przycięte i wyklepane tak, by pasowały na "
+"łokcie. Bardzo brutalne, brakuje tylko kolców."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "pair of hardened sheet metal elbow guards"
 msgid_plural "pairs of hardened sheet metal elbow guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para nałokietników z utwardzonej blachy"
+msgstr[1] "pary nałokietników z utwardzonej blachy"
+msgstr[2] "par nałokietników z utwardzonej blachy"
+msgstr[3] "pary nałokietników z utwardzonej blachy"
 
 #. ~ Description of "pair of hardened sheet metal elbow guards"
 #: data/json/items/armor/arms_armor.json
@@ -2030,6 +2478,8 @@ msgid ""
 "Elbow guards of sheet metal, hardened to make sure you never bang your funny "
 "bone on the table again."
 msgstr ""
+"Nałokietniki z blachy, utwardzone, abyś już nigdy nie walnął się czułym "
+"miejscem łokcia o stół."
 
 #. ~ Description of "pair of tire arm guards"
 #: data/json/items/armor/arms_armor.json
@@ -2038,11 +2488,14 @@ msgid ""
 "strings; the loose collection of rubber plates provides decent but not the "
 "most convenient protection."
 msgstr ""
+"Para ochraniaczy rąk wykonanych z grubych kawałków opony przymocowanych "
+"prostymi sznurkami; luźny zestaw gumowych płytek zapewnia przyzwoitą, choć "
+"nie najwygodniejszą ochronę."
 
 #. ~ Description of "pair of gambeson sleeves"
 #: data/json/items/armor/arms_armor.json
 msgid "A pair of arm sleeves made from heavy quilted fabric."
-msgstr ""
+msgstr "Para rękawów wykonanych z grubej pikowanej tkaniny."
 
 #. ~ Description of "pair of Kevlar gambeson sleeves"
 #: data/json/items/armor/arms_armor.json
@@ -2050,6 +2503,8 @@ msgid ""
 "A pair arm sleeves made from aramid, with strips of soft body armor sewn on "
 "top to simulate quilting."
 msgstr ""
+"Para rękawów wykonanych z aramidu, z naszytymi na wierzchu pasami miękkiego "
+"pancerza imitującymi pikowanie."
 
 #. ~ Description of "base chainmail sleeves"
 #: data/json/items/armor/arms_armor.json
@@ -2058,6 +2513,9 @@ msgid ""
 "them with each other.  They don't cover the hands, making them less "
 "cumbersome and allowing them to be worn with gloves."
 msgstr ""
+"Spersonalizowana ochrona rąk z kolczugi. Oba rękawy mają paski do połączenia "
+"ich ze sobą. Nie zakrywają dłoni, przez co są mniej nieporęczne i można je "
+"nosić z rękawicami."
 
 #. ~ Description of a pocket in item "base chainmail sleeves"
 #. ~ Description of a pocket in item "pair of chainmail sleeves"
@@ -2075,7 +2533,7 @@ msgstr ""
 #: data/json/items/armor/suits_protection.json
 #: data/json/items/armor/torso_armor.json
 msgid "You can wear some armor over chainmail without penalty."
-msgstr ""
+msgstr "Na kolczugę można bez kary założyć pewne elementy pancerza."
 
 #. ~ Description of "pair of chainmail sleeves"
 #: data/json/items/armor/arms_armor.json
@@ -2085,6 +2543,9 @@ msgid ""
 "don't cover the hands, making them less cumbersome and allowing them to be "
 "worn with gloves."
 msgstr ""
+"Spersonalizowana ochrona rąk z kolczugi. Metal nosi ślady rdzy i korozji. Oba"
+" rękawy mają paski do połączenia ich ze sobą. Nie zakrywają dłoni, przez co "
+"są mniej nieporęczne i można je nosić z rękawicami."
 
 #. ~ Description of "pair of cut-resistant arm sleeves"
 #: data/json/items/armor/arms_armor.json
@@ -2092,6 +2553,8 @@ msgid ""
 "A long pair of cut-resistant Kevlar sleeves with thumbholes.  Useful for "
 "chainsaw protection."
 msgstr ""
+"Długa para odpornych na przecięcia kevlarowych rękawów z otworami na kciuki. "
+"Przydatne jako ochrona przy pracy z piłą łańcuchową."
 
 #. ~ Description of "high steel light arm guard"
 #: data/json/items/armor/arms_armor.json
@@ -2099,15 +2562,17 @@ msgid ""
 "A light armguard, 1.25 mm at the thickest.  Made with high steel offering "
 "excellent protection."
 msgstr ""
+"Lekki ochraniacz rąk o grubości 1,25 mm w najgrubszym punkcie. Wykonany z "
+"wysokowęglowej stali, oferuje doskonałą ochronę."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "hardened steel light arm guard"
 msgid_plural "hardened steel light arm guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lekki ochraniacz rąk z utwardzonej stali"
+msgstr[1] "lekkie ochraniacze rąk z utwardzonej stali"
+msgstr[2] "lekkich ochraniaczy rąk z utwardzonej stali"
+msgstr[3] "lekkiego ochraniacza rąk z utwardzonej stali"
 
 #. ~ Description of "hardened steel light arm guard"
 #: data/json/items/armor/arms_armor.json
@@ -2115,15 +2580,17 @@ msgid ""
 "A light armguard, 1.25 mm at the thickest.  The mild steel has been hardened,"
 " offering superior protection."
 msgstr ""
+"Lekki ochraniacz rąk o grubości 1,25 mm w najgrubszym punkcie. Miękka stal "
+"została utwardzona, co zapewnia lepszą ochronę."
 
 #. ~ Item name
 #: data/json/items/armor/arms_armor.json
 msgid "tempered steel light arm guard"
 msgid_plural "tempered steel light arm guards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "lekki ochraniacz rąk z hartowanej stali"
+msgstr[1] "lekkie ochraniacze rąk z hartowanej stali"
+msgstr[2] "lekkich ochraniaczy rąk z hartowanej stali"
+msgstr[3] "lekkiego ochraniacza rąk z hartowanej stali"
 
 #. ~ Description of "high steel arm guard"
 #: data/json/items/armor/arms_armor.json
@@ -2131,3 +2598,5 @@ msgid ""
 "An armguard, 1.75 mm at the thickest.  Made with high steel offering "
 "excellent protection."
 msgstr ""
+"Ochraniacz rąk o grubości 1,75 mm w najgrubszym punkcie. Wykonany z "
+"wysokowęglowej stali, oferuje doskonałą ochronę."

@@ -23,15 +23,21 @@ msgid ""
 "farsightedness</color>, and should be discarded after <color_light_blue>16 "
 "hours</color> of use."
 msgstr ""
+"Małe plastikowe etui z dwiema fotochromowymi, miękkimi jednodniowymi "
+"soczewkami kontaktowymi, zanurzonymi w roztworze soli fizjologicznej. Ta "
+"zaawansowana technicznie para ciemnieje pod wpływem światła, co ułatwia "
+"widzenie w jasnym otoczeniu. Soczewki są przeznaczone dla osób z "
+"<color_light_blue>jednoczesną krótkowzrocznością i dalekowzrocznością</color>"
+" i należy je wyrzucić po <color_light_blue>16 godzinach</color> użytkowania."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "plano transition contact lenses (weekly)"
 msgid_plural "plano transition contact lenses (weekly)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "fotochromowe soczewki kontaktowe bez korekcji (tygodniowe)"
+msgstr[1] "fotochromowe soczewki kontaktowe bez korekcji (tygodniowe)"
+msgstr[2] "fotochromowych soczewek kontaktowych bez korekcji (tygodniowych)"
+msgstr[3] "fotochromowych soczewek kontaktowych bez korekcji (tygodniowych)"
 
 #. ~ Description of "plano transition contact lenses (weekly)"
 #: data/json/items/comestibles/med.json
@@ -42,21 +48,27 @@ msgid ""
 "with any sight issues.  Essentially a pair of temporary sunglasses, this "
 "lenses should be discarded after <color_light_blue>a week</color> of use."
 msgstr ""
+"Małe plastikowe etui z dwiema fotochromowymi, miękkimi soczewkami "
+"kontaktowymi o przedłużonym noszeniu, zanurzonymi w roztworze soli "
+"fizjologicznej. Ta zaawansowana technicznie para ciemnieje pod wpływem "
+"światła, co ułatwia widzenie w jasnym otoczeniu, ale nie koryguje żadnych wad"
+" wzroku. To w zasadzie para tymczasowych okularów przeciwsłonecznych; "
+"soczewki należy wyrzucić po <color_light_blue>tygodniu</color> użytkowania."
 
 #. ~ "description" action message of item "plano transition contact lenses
 #. (weekly)"
 #: data/json/items/comestibles/med.json
 msgid "You can use this to mitigate your the bright light discomfort."
-msgstr ""
+msgstr "Możesz ich użyć, by złagodzić dyskomfort spowodowany jasnym światłem."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "plano transition contact lenses (daily)"
 msgid_plural "plano transition contact lenses (daily)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "fotochromowe soczewki kontaktowe bez korekcji (jednodniowe)"
+msgstr[1] "fotochromowe soczewki kontaktowe bez korekcji (jednodniowe)"
+msgstr[2] "fotochromowych soczewek kontaktowych bez korekcji (jednodniowych)"
+msgstr[3] "fotochromowych soczewek kontaktowych bez korekcji (jednodniowych)"
 
 #. ~ Description of "plano transition contact lenses (daily)"
 #: data/json/items/comestibles/med.json
@@ -67,12 +79,18 @@ msgid ""
 "with any sight issues.  Essentially a pair of temporary sunglasses, this "
 "lenses should be discarded after <color_light_blue>16 hours</color> of use."
 msgstr ""
+"Małe plastikowe etui z dwiema fotochromowymi, miękkimi jednodniowymi "
+"soczewkami kontaktowymi, zanurzonymi w roztworze soli fizjologicznej. Ta "
+"zaawansowana technicznie para ciemnieje pod wpływem światła, co ułatwia "
+"widzenie w jasnym otoczeniu, ale nie koryguje żadnych wad wzroku. To w "
+"zasadzie para tymczasowych okularów przeciwsłonecznych; soczewki należy "
+"wyrzucić po <color_light_blue>16 godzinach</color> użytkowania."
 
 #. ~ "description" action message of item "plano transition contact lenses
 #. (daily)"
 #: data/json/items/comestibles/med.json
 msgid "You can use this to mitigate the bright light discomfort."
-msgstr ""
+msgstr "Możesz ich użyć, by złagodzić dyskomfort spowodowany jasnym światłem."
 
 #. ~ Description of "non-drowsy cough syrup"
 #: data/json/items/comestibles/med.json
@@ -81,26 +99,29 @@ msgid ""
 " aching, headaches and runny noses, but you'll still need lots of fluids and "
 "rest."
 msgstr ""
+"Lek na przeziębienie i grypę na dzień, w formule niepowodującej senności. "
+"Łagodzi kaszel, bóle, bóle głowy i katar, ale nadal potrzebujesz dużo płynów "
+"i odpoczynku."
 
 #. ~ Description of "antiseptic"
 #: data/json/items/comestibles/med.json
 msgid "A powerful antiseptic commonly used to disinfect wounds."
-msgstr ""
+msgstr "Silny środek antyseptyczny, powszechnie używany do odkażania ran."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "makeshift antiseptic"
 msgid_plural "makeshift antiseptic"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczny antyseptyk"
+msgstr[1] "porcje prowizorycznego antyseptyku"
+msgstr[2] "porcji prowizorycznego antyseptyku"
+msgstr[3] "porcji prowizorycznego antyseptyku"
 
 #. ~ Description of "makeshift antiseptic"
 #: data/json/items/comestibles/med.json
 msgid ""
 "Makeshift antiseptic made from ethanol.  Can be used to disinfect wounds."
-msgstr ""
+msgstr "Prowizoryczny antyseptyk z etanolu. Można nim odkażać rany."
 
 #. ~ Description of "cannabis shatter"
 #: data/json/items/comestibles/med.json
@@ -112,6 +133,11 @@ msgid ""
 "wax, crumble, or distillate.  Normal cannabis contains around 20% THC; this "
 "shatter should be around 55% THC."
 msgstr ""
+"Skoncentrowany ekstrakt z konopi, potocznie zwany dabem. Ten rodzaj "
+"koncentratu ma postać cienkiej płytki i w temperaturze pokojowej pęka jak "
+"szkło. Prawdopodobnie jeden z lepszych rodzajów koncentratu w porównaniu z "
+"woskiem, kruszonką czy destylatem. Zwykłe konopie zawierają około 20% THC; "
+"ten tłuczeń powinien mieć około 55% THC."
 
 #. ~ Description of "cannabis wax"
 #: data/json/items/comestibles/med.json
@@ -121,11 +147,14 @@ msgid ""
 " of concentrate is yellow and waxy at room temperature.  Normal cannabis "
 "contains around 20% THC; this wax should be around 45% THC."
 msgstr ""
+"Skoncentrowany ekstrakt z konopi, potocznie zwany dabem. Ten rodzaj "
+"koncentratu jest żółty i woskowaty w temperaturze pokojowej. Zwykłe konopie "
+"zawierają około 20% THC; ten wosk powinien mieć około 45% THC."
 
 #. ~ "activation_message" action message of item "cannabis wax"
 #: data/json/items/comestibles/med.json
 msgid "You take a dab of wax.  *cough cough* Good stuff!"
-msgstr ""
+msgstr "Bierzesz bucha wosku. *kaszl kaszl* Dobry towar!"
 
 #. ~ Description of "cannabis distillate"
 #: data/json/items/comestibles/med.json
@@ -136,20 +165,25 @@ msgid ""
 " contains around 20% THC; this distillate should be around 88% THC.  Can be "
 "smoked using a refillable electronic cigarette."
 msgstr ""
+"Skoncentrowany ekstrakt z konopi. Ten rodzaj ekstraktu przechodzi najwięcej "
+"obróbki, która usuwa większość, jeśli nie wszystkie, szkodliwe składniki. "
+"Zwykłe konopie zawierają około 20% THC; ten destylat powinien mieć około 88% "
+"THC. Można go palić za pomocą elektronicznego papierosa wielokrotnego "
+"napełniania."
 
 #. ~ "activation_message" action message of item "cannabis distillate"
 #: data/json/items/comestibles/med.json
 msgid "You take a dab of distillate.  Sooooo smooth…"
-msgstr ""
+msgstr "Bierzesz bucha destylatu. Taaaaaki łagodny…"
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "steroid eyedrops"
 msgid_plural "steroid eyedrops"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "steroidowe krople do oczu"
+msgstr[1] "steroidowe krople do oczu"
+msgstr[2] "steroidowych kropli do oczu"
+msgstr[3] "steroidowych kropli do oczu"
 
 #. ~ Description of "steroid eyedrops"
 #: data/json/items/comestibles/med.json
@@ -157,11 +191,13 @@ msgid ""
 "A topical corticosteroid in the form of eye drops.  Can be used to treat "
 "irritation and inflammation of the eyes."
 msgstr ""
+"Miejscowo działający kortykosteroid w postaci kropli do oczu. Można go "
+"stosować w leczeniu podrażnień i stanów zapalnych oczu."
 
 #. ~ "activation_message" action message of item "steroid eyedrops"
 #: data/json/items/comestibles/med.json
 msgid "You put the anti-inflammatory eyedrops into your eyes."
-msgstr ""
+msgstr "Wkraplasz sobie do oczu przeciwzapalne krople."
 
 #. ~ Description of "flu shot"
 #: data/json/items/comestibles/med.json
@@ -170,6 +206,9 @@ msgid ""
 "packaging.  Purported to provide immunity to influenza, for the flu season "
 "for which it was developed."
 msgstr ""
+"Farmaceutyczna szczepionka przeciw grypie przeznaczona do masowych szczepień,"
+" wciąż w opakowaniu. Ma zapewniać odporność na grypę w sezonie, na który "
+"została opracowana."
 
 #. ~ Description of "hand-rolled cigarette"
 #: data/json/items/comestibles/med.json
@@ -178,6 +217,8 @@ msgid ""
 "Despite being hand crafted, it's still highly addictive and hazardous to "
 "health."
 msgstr ""
+"Samodzielnie skręcony papieros. Pobudza umysł i zmniejsza apetyt. Mimo "
+"ręcznego wykonania nadal silnie uzależnia i szkodzi zdrowiu."
 
 #. ~ Description of "potassium iodide tablet"
 #: data/json/items/comestibles/med.json
@@ -185,6 +226,8 @@ msgid ""
 "A potassium iodide tablet.  If taken prior to exposure, they help to mitigate"
 " injury caused by radiation absorption."
 msgstr ""
+"Tabletka z jodkiem potasu. Zażyta przed narażeniem pomaga ograniczyć "
+"obrażenia spowodowane pochłonięciem promieniowania."
 
 #. ~ Description of "pink tab"
 #: data/json/items/comestibles/med.json
@@ -192,15 +235,17 @@ msgid ""
 "A tiny pink tabs resembling a postage stamp, dosed with some sort of drug.  "
 "Really only useful for entertainment.  Will cause hallucinations."
 msgstr ""
+"Malutki różowy kartonik przypominający znaczek pocztowy, nasączony jakimś "
+"narkotykiem. Przydaje się właściwie tylko do rozrywki. Wywołuje halucynacje."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "morphine"
 msgid_plural "morphine"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "morfina"
+msgstr[1] "porcje morfiny"
+msgstr[2] "porcji morfiny"
+msgstr[3] "porcji morfiny"
 
 #. ~ Description of "morphine"
 #: data/json/items/comestibles/med.json
@@ -209,15 +254,18 @@ msgid ""
 "hospital settings.  You'll need a syringe to inject it, and it's very "
 "addictive, so be careful."
 msgstr ""
+"Bardzo silny, naturalnie występujący narkotyk stosowany w szpitalach do "
+"leczenia silnego bólu. Do wstrzyknięcia potrzebujesz strzykawki, a ponieważ "
+"mocno uzależnia, zachowaj ostrożność."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "wintergreen oil"
 msgid_plural "wintergreen oil"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "olejek z golterii"
+msgstr[1] "porcje olejku z golterii"
+msgstr[2] "porcji olejku z golterii"
+msgstr[3] "porcji olejku z golterii"
 
 #. ~ Description of "wintergreen oil"
 #: data/json/items/comestibles/med.json
@@ -225,24 +273,26 @@ msgid ""
 "An ointment infused with wintergreen oil.  Has mild antiseptic properties, "
 "and can ease the pain caused by wounds."
 msgstr ""
+"Maść z dodatkiem olejku z golterii. Ma łagodne właściwości antyseptyczne i "
+"może złagodzić ból spowodowany ranami."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "mugwort oil"
 msgid_plural "mugwort oil"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "olejek z bylicy"
+msgstr[1] "porcje olejku z bylicy"
+msgstr[2] "porcji olejku z bylicy"
+msgstr[3] "porcji olejku z bylicy"
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "antihistamine pill"
 msgid_plural "antihistamine pill"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tabletka antyhistaminowa"
+msgstr[1] "tabletki antyhistaminowe"
+msgstr[2] "tabletek antyhistaminowych"
+msgstr[3] "tabletki antyhistaminowej"
 
 #. ~ Description of "antihistamine pill"
 #: data/json/items/comestibles/med.json
@@ -250,59 +300,61 @@ msgid ""
 "Over-the-counter allergy medication.  These are meant to be taken once a day "
 "and can cause drowsiness."
 msgstr ""
+"Lek przeciwalergiczny dostępny bez recepty. Należy go przyjmować raz "
+"dziennie; może powodować senność."
 
 #. ~ "activation_message" action message of item "antihistamine pill"
 #: data/json/items/comestibles/med.json
 msgid "You take an antihistamine pill."
-msgstr ""
+msgstr "Zażywasz tabletkę antyhistaminową."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "oxycodone"
 msgid_plural "oxycodone"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "oksykodon"
+msgstr[1] "tabletki oksykodonu"
+msgstr[2] "tabletek oksykodonu"
+msgstr[3] "tabletki oksykodonu"
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "sleeping pill"
 msgid_plural "sleeping pills"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tabletka nasenna"
+msgstr[1] "tabletki nasenne"
+msgstr[2] "tabletek nasennych"
+msgstr[3] "tabletki nasennej"
 
 #. ~ "activation_message" action message of item "sleeping pill"
 #. ~ "activation_message" action message of item "poppy sleep"
 #: data/json/items/comestibles/med.json
 #, c-format
 msgid "You take a %s."
-msgstr ""
+msgstr "Zażywasz: %s."
 
 #. ~ Variant name of item "sleeping pill"
 #: data/json/items/comestibles/med.json
 msgid "Ambien"
 msgid_plural "Ambien"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ambien"
+msgstr[1] "tabletki Ambien"
+msgstr[2] "tabletek Ambien"
+msgstr[3] "tabletki Ambien"
 
 #. ~ Description of variant "Ambien" of item "sleeping pill"
 #: data/json/items/comestibles/med.json
 msgid "Its generic name is zolpidem tartarate."
-msgstr ""
+msgstr "Jego nazwa generyczna to winian zolpidemu."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "poppy painkiller"
 msgid_plural "poppy painkiller"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "makowy środek przeciwbólowy"
+msgstr[1] "makowe środki przeciwbólowe"
+msgstr[2] "makowych środków przeciwbólowych"
+msgstr[3] "makowego środka przeciwbólowego"
 
 #. ~ Description of "poppy painkiller"
 #: data/json/items/comestibles/med.json
@@ -311,15 +363,18 @@ msgid ""
 "Notably devoid of euphoric or sedative effects, but as an opiate it can still"
 " be addictive."
 msgstr ""
+"Silny opioidowy środek łagodzący, otrzymywany przez rafinację zmutowanego "
+"maku. Wyraźnie pozbawiony działania euforyzującego i uspokajającego, ale jako"
+" opiat nadal może uzależniać."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "poppy sleep"
 msgid_plural "poppy sleep"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "makowy środek nasenny"
+msgstr[1] "makowe środki nasenne"
+msgstr[2] "makowych środków nasennych"
+msgstr[3] "makowego środka nasennego"
 
 #. ~ Description of "poppy sleep"
 #: data/json/items/comestibles/med.json
@@ -327,6 +382,8 @@ msgid ""
 "A potent sleep aid extracted from mutated poppy seeds.  Effective, but as an "
 "opiate it can be addictive."
 msgstr ""
+"Silny środek nasenny pozyskiwany ze zmutowanych nasion maku. Skuteczny, ale "
+"jako opiat może uzależniać."
 
 #. ~ Description of "injectable prophylactic antivenom"
 #: data/json/items/comestibles/med.json
@@ -336,6 +393,10 @@ msgid ""
 "in top secret by the military in response to increasing biological/chemical "
 "warfare."
 msgstr ""
+"Eksperymentalna, najnowocześniejsza antytoksyna w postaci małej bursztynowej "
+"fiolki, przeznaczona do wstrzyknięcia kilka godzin przed kontaktem z jadem. "
+"Wojsko opracowało ją w ścisłej tajemnicy w odpowiedzi na coraz częstsze "
+"użycie broni biologicznej i chemicznej."
 
 #. ~ Description of "antidepressant"
 #: data/json/items/comestibles/med.json
@@ -344,20 +405,23 @@ msgid ""
 "profoundly alter the effects of other drugs.  It is only rarely habit-"
 "forming, though adverse reactions are not uncommon."
 msgstr ""
+"Popularny, powszechnie stosowany antydepresant. Poprawia nastrój i może "
+"znacząco zmieniać działanie innych leków. Rzadko uzależnia, choć działania "
+"niepożądane nie są rzadkością."
 
 #. ~ Variant name of item "antidepressant"
 #: data/json/items/comestibles/med.json
 msgid "Prozac"
 msgid_plural "Prozac"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Prozac"
+msgstr[1] "tabletki Prozac"
+msgstr[2] "tabletek Prozac"
+msgstr[3] "tabletki Prozac"
 
 #. ~ Description of variant "Prozac" of item "antidepressant"
 #: data/json/items/comestibles/med.json
 msgid "Its generic name is fluoxetine."
-msgstr ""
+msgstr "Jego nazwa generyczna to fluoksetyna."
 
 #. ~ Description of "Prussian blue tablet"
 #: data/json/items/comestibles/med.json
@@ -365,47 +429,49 @@ msgid ""
 "A tablet containing oxidized ferrous ferrocyanide salts.  Capable of purging "
 "nuclear contaminants from the body if taken after radiation exposure."
 msgstr ""
+"Tabletka zawierająca utlenione sole żelazocyjanku żelaza. Zażyta po narażeniu"
+" na promieniowanie potrafi usunąć z organizmu skażenia radioaktywne."
 
 #. ~ Variant name of item "antipsychotic"
 #: data/json/items/comestibles/med.json
 msgid "Thorazine"
 msgid_plural "Thorazine"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Torazyna"
+msgstr[1] "tabletki Torazyny"
+msgstr[2] "tabletek Torazyny"
+msgstr[3] "tabletki Torazyny"
 
 #. ~ Description of variant "Thorazine" of item "antipsychotic"
 #: data/json/items/comestibles/med.json
 msgid "Its generic name is chlorpromazine."
-msgstr ""
+msgstr "Jej nazwa generyczna to chloropromazyna."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "thyme oil"
 msgid_plural "thyme oil"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "olejek tymiankowy"
+msgstr[1] "porcje olejku tymiankowego"
+msgstr[2] "porcji olejku tymiankowego"
+msgstr[3] "porcji olejku tymiankowego"
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "rolling tobacco"
 msgid_plural "rolling tobacco"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tytoń do skrętów"
+msgstr[1] "porcje tytoniu do skrętów"
+msgstr[2] "porcji tytoniu do skrętów"
+msgstr[3] "porcji tytoniu do skrętów"
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "tramadol"
 msgid_plural "tramadol"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tramadol"
+msgstr[1] "tabletki tramadolu"
+msgstr[2] "tabletek tramadolu"
+msgstr[3] "tabletki tramadolu"
 
 #. ~ Description of "calcium tablet"
 #: data/json/items/comestibles/med.json
@@ -413,6 +479,8 @@ msgid ""
 "A white calcium tablet.  Widely used by elderly people with osteoporosis as a"
 " method to supplement calcium before the apocalypse."
 msgstr ""
+"Biała tabletka z wapniem. Przed apokalipsą powszechnie stosowana przez osoby "
+"starsze chorujące na osteoporozę jako suplement wapnia."
 
 #. ~ Description of "bone meal tablet"
 #: data/json/items/comestibles/med.json
@@ -420,6 +488,8 @@ msgid ""
 "A homemade calcium supplement made out of bone meal.  Tastes horrible and is "
 "hard to swallow but it does its job."
 msgstr ""
+"Domowej roboty suplement wapnia z mączki kostnej. Smakuje okropnie i trudno "
+"go przełknąć, ale spełnia swoje zadanie."
 
 #. ~ Description of "flavored bone meal tablet"
 #: data/json/items/comestibles/med.json
@@ -428,15 +498,18 @@ msgid ""
 "mixed in to counteract the powdery texture and the taste of ash, it's almost "
 "as palatable as the pre-Cataclysm tablets."
 msgstr ""
+"Domowej roboty suplement wapnia z mączki kostnej. Dzięki dodatkowi słodzików,"
+" które maskują pudrową konsystencję i smak popiołu, jest niemal tak smaczny "
+"jak tabletki sprzed Kataklizmu."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "vitamin C supplement"
 msgid_plural "vitamin C supplements"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "suplement witaminy C"
+msgstr[1] "suplementy witaminy C"
+msgstr[2] "suplementów witaminy C"
+msgstr[3] "suplementu witaminy C"
 
 #. ~ Description of "vitamin C supplement"
 #: data/json/items/comestibles/med.json
@@ -444,15 +517,17 @@ msgid ""
 "A small white tablet promising more vitamin C than a human can conceivably "
 "absorb."
 msgstr ""
+"Mała biała tabletka obiecująca więcej witaminy C, niż człowiek jest w stanie "
+"przyswoić."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "vitamin C supplement fragment"
 msgid_plural "vitamin C supplement fragments"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "fragment suplementu witaminy C"
+msgstr[1] "fragmenty suplementu witaminy C"
+msgstr[2] "fragmentów suplementu witaminy C"
+msgstr[3] "fragmentu suplementu witaminy C"
 
 #. ~ Description of "vitamin C supplement fragment"
 #: data/json/items/comestibles/med.json
@@ -460,6 +535,8 @@ msgid ""
 "a small slice of a vitamin C supplement, providing as much vitamin C as a "
 "human can conceivably absorb."
 msgstr ""
+"mały kawałek suplementu witaminy C, dostarczający tyle witaminy C, ile "
+"człowiek jest w stanie przyswoić."
 
 #. ~ Description of "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -468,6 +545,9 @@ msgid ""
 "ingredient with water.  The label purports that these pills are able to "
 "maintain general wellness."
 msgstr ""
+"Tabletka homeopatyczna, przygotowana przez wielokrotne rozcieńczanie "
+"składnika aktywnego wodą. Według etykiety tabletki te pomagają utrzymać "
+"ogólne dobre samopoczucie."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -476,6 +556,10 @@ msgid ""
 "part duck offal with 10^400 parts water.  The label purports that these pills"
 " are able to treat flu-like symptoms and maintain general wellness."
 msgstr ""
+"Tabletka homeopatyczna Oscillococcinum, przygotowana przez rozcieńczenie "
+"jednej części kaczych podrobów w 10^400 częściach wody. Według etykiety "
+"tabletki te łagodzą objawy grypopodobne i pomagają utrzymać ogólne dobre "
+"samopoczucie."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -484,6 +568,9 @@ msgid ""
 "part arsenic trioxide with 10^24 parts water.  Purported to treat anxiety, "
 "various digestive disorders, and arsenic poisoning."
 msgstr ""
+"Tabletka homeopatyczna Arsenicum album, przygotowana przez rozcieńczenie "
+"jednej części trójtlenku arsenu w 10^24 częściach wody. Rzekomo leczy stany "
+"lękowe, różne zaburzenia trawienne i zatrucie arsenem."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -493,6 +580,10 @@ msgid ""
 "ameliorate symptoms of asthma, gastrointestinal disorders, and bronchitis.  "
 "You briefly wonder if it can cure fungal infections."
 msgstr ""
+"Tabletka homeopatyczna Allium cepa, przygotowana przez rozcieńczenie jednej "
+"części cebuli w 10^30 częściach wody. Według etykiety tabletki te łagodzą "
+"objawy astmy, zaburzeń żołądkowo-jelitowych i zapalenia oskrzeli. Przez "
+"chwilę zastanawiasz się, czy leczą też infekcje grzybicze."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -501,6 +592,9 @@ msgid ""
 "jack-in-the-pulpit plant with 10^30 parts water.  The label claims that the "
 "pills are able to treat voice loss."
 msgstr ""
+"Tabletka homeopatyczna Arum tryphillum, przygotowana przez rozcieńczenie "
+"obrazkowca trójlistkowego w 10^30 częściach wody. Według etykiety tabletki te"
+" leczą utratę głosu."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -509,6 +603,9 @@ msgid ""
 "horse chestnut with 10^30 parts water.  These pills are meant to treat "
 "dysentery and hemorrhoids."
 msgstr ""
+"Tabletka homeopatyczna Aesculus hippocastanum, przygotowana przez "
+"rozcieńczenie kasztanowca zwyczajnego w 10^30 częściach wody. Tabletki te "
+"mają leczyć czerwonkę i hemoroidy."
 
 #. ~ Snippet of item "homeopathic pill"
 #: data/json/items/comestibles/med.json
@@ -517,21 +614,26 @@ msgid ""
 "bushmaster snake with 10^1000 parts water.  These pills are claimed to be an "
 "effective treatment for sore throat."
 msgstr ""
+"Tabletka Lachesis mutus, przygotowana przez rozcieńczenie jadu węża surukuku "
+"w 10^1000 częściach wody. Tabletki te mają być skutecznym lekiem na ból "
+"gardła."
 
 #. ~ Item name
 #: data/json/items/comestibles/med.json
 msgid "injectable iron"
 msgid_plural "injectable iron"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "żelazo do wstrzykiwań"
+msgstr[1] "porcje żelaza do wstrzykiwań"
+msgstr[2] "porcji żelaza do wstrzykiwań"
+msgstr[3] "porcji żelaza do wstrzykiwań"
 
 #. ~ Description of "injectable iron"
 #: data/json/items/comestibles/med.json
 msgid ""
 "A small vial of dark yellow liquid containing soluble iron for injection."
 msgstr ""
+"Mała fiolka ciemnożółtego płynu zawierającego rozpuszczalne żelazo do "
+"wstrzykiwań."
 
 #. ~ Description of "fast-acting sedative"
 #. ~ Description of variant "Xanax" of item "fast-acting sedative"
@@ -541,15 +643,18 @@ msgid ""
 "dissociation and loss of memory.  It is dangerously addictive, and withdrawal"
 " from regular use should be gradual."
 msgstr ""
+"Środek przeciwlękowy o silnym działaniu uspokajającym. Może powodować "
+"dysocjację i utratę pamięci. Groźnie uzależnia, a po regularnym stosowaniu "
+"należy go odstawiać stopniowo."
 
 #. ~ Variant name of item "fast-acting sedative"
 #: data/json/items/comestibles/med.json
 msgid "Xanax"
 msgid_plural "Xanax"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Xanax"
+msgstr[1] "tabletki Xanax"
+msgstr[2] "tabletek Xanax"
+msgstr[3] "tabletki Xanax"
 
 #. ~ Description of "antacid tablet"
 #: data/json/items/comestibles/med.json
@@ -557,11 +662,13 @@ msgid ""
 "A common stomach soother in flavored tablet form.  Makes you less likely to "
 "vomit."
 msgstr ""
+"Popularny środek łagodzący dolegliwości żołądkowe w postaci smakowej "
+"tabletki. Zmniejsza ryzyko wymiotów."
 
 #. ~ "activation_message" action message of item "antacid tablet"
 #: data/json/items/comestibles/med.json
 msgid "You take an antacid tablet."
-msgstr ""
+msgstr "Zażywasz tabletkę na zgagę."
 
 #. ~ Description of "Panaceus"
 #: data/json/items/comestibles/med.json
@@ -572,6 +679,12 @@ msgid ""
 "very potent, or highly experimental.  Holding it, all the little aches and "
 "pains seem to fade, just for a moment…"
 msgstr ""
+"Jabłkowoczerwona kapsułka żelowa wielkości paznokcia kciuka, wypełniona "
+"gęstym, oleistym płynem, który w nieprzewidywalnych odstępach czasu zmienia "
+"barwę z czarnej na fioletową, upstrzonym drobnymi szarymi kropkami. Biorąc "
+"pod uwagę, skąd ją masz, jest albo bardzo silna, albo wysoce eksperymentalna."
+" Gdy ją trzymasz, wszystkie drobne bóle zdają się znikać, choć tylko na "
+"chwilę…"
 
 #. ~ Description of "cattail jelly"
 #: data/json/items/comestibles/med.json
@@ -579,312 +692,316 @@ msgid ""
 "Clear jelly harvested from cattails.  Can be used to protect a wound from "
 "contamination, and works as a painkiller."
 msgstr ""
+"Przezroczysty żel pozyskany z pałki wodnej. Może chronić ranę przed "
+"zakażeniem i działa przeciwbólowo."
 
 #. ~ Item name
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "nicotine pouch"
 msgid_plural "nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa"
+msgstr[1] "saszetki nikotynowe"
+msgstr[2] "saszetek nikotynowych"
+msgstr[3] "saszetki nikotynowej"
 
 #. ~ Description of "nicotine pouch"
 #. ~ Description of variant "nicotine pouch" of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny."
 
 #. ~ "activation_message" action message of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "You put in a pouch."
-msgstr ""
+msgstr "Wkładasz saszetkę pod wargę."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "cool mint flavored nicotine pouch"
 msgid_plural "cool mint flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku chłodnej mięty"
+msgstr[1] "saszetki nikotynowe o smaku chłodnej mięty"
+msgstr[2] "saszetek nikotynowych o smaku chłodnej mięty"
+msgstr[3] "saszetki nikotynowej o smaku chłodnej mięty"
 
 #. ~ Description of variant "cool mint flavored nicotine pouch" of item
 #. "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing cool mint-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku chłodnej mięty."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "peppermint flavored nicotine pouch"
 msgid_plural "peppermint flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku mięty pieprzowej"
+msgstr[1] "saszetki nikotynowe o smaku mięty pieprzowej"
+msgstr[2] "saszetek nikotynowych o smaku mięty pieprzowej"
+msgstr[3] "saszetki nikotynowej o smaku mięty pieprzowej"
 
 #. ~ Description of variant "peppermint flavored nicotine pouch" of item
 #. "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing peppermint-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku mięty pieprzowej."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "wintergreen flavored nicotine pouch"
 msgid_plural "wintergreen flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku golterii"
+msgstr[1] "saszetki nikotynowe o smaku golterii"
+msgstr[2] "saszetek nikotynowych o smaku golterii"
+msgstr[3] "saszetki nikotynowej o smaku golterii"
 
 #. ~ Description of variant "wintergreen flavored nicotine pouch" of item
 #. "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing wintergreen-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku golterii."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "coffee flavored nicotine pouch"
 msgid_plural "coffee flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku kawy"
+msgstr[1] "saszetki nikotynowe o smaku kawy"
+msgstr[2] "saszetek nikotynowych o smaku kawy"
+msgstr[3] "saszetki nikotynowej o smaku kawy"
 
 #. ~ Description of variant "coffee flavored nicotine pouch" of item "nicotine
 #. pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing coffee-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku kawy."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "cinnamon flavored nicotine pouch"
 msgid_plural "cinnamon flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku cynamonu"
+msgstr[1] "saszetki nikotynowe o smaku cynamonu"
+msgstr[2] "saszetek nikotynowych o smaku cynamonu"
+msgstr[3] "saszetki nikotynowej o smaku cynamonu"
 
 #. ~ Description of variant "cinnamon flavored nicotine pouch" of item
 #. "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing cinnamon-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku cynamonu."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "menthol-flavored nicotine pouch"
 msgid_plural "menthol-flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku mentolu"
+msgstr[1] "saszetki nikotynowe o smaku mentolu"
+msgstr[2] "saszetek nikotynowych o smaku mentolu"
+msgstr[3] "saszetki nikotynowej o smaku mentolu"
 
 #. ~ Description of variant "menthol-flavored nicotine pouch" of item "nicotine
 #. pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing menthol-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku mentolu."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "spearmint flavored nicotine pouch"
 msgid_plural "spearmint flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku mięty zielonej"
+msgstr[1] "saszetki nikotynowe o smaku mięty zielonej"
+msgstr[2] "saszetek nikotynowych o smaku mięty zielonej"
+msgstr[3] "saszetki nikotynowej o smaku mięty zielonej"
 
 #. ~ Description of variant "spearmint flavored nicotine pouch" of item
 #. "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing spearmint-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku mięty zielonej."
 
 #. ~ Variant name of item "nicotine pouch"
 #: data/json/items/comestibles/med.json
 msgid "citrus flavored nicotine pouch"
 msgid_plural "citrus flavored nicotine pouchs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "saszetka nikotynowa o smaku cytrusów"
+msgstr[1] "saszetki nikotynowe o smaku cytrusów"
+msgstr[2] "saszetek nikotynowych o smaku cytrusów"
+msgstr[3] "saszetki nikotynowej o smaku cytrusów"
 
 #. ~ Description of variant "citrus flavored nicotine pouch" of item "nicotine
 #. pouch"
 #: data/json/items/comestibles/med.json
 msgid "A pouch containing citrus-flavored nicotine salts."
-msgstr ""
+msgstr "Saszetka zawierająca sole nikotyny o smaku cytrusów."
 
 #. ~ Description of "chicken chunks entree"
 #: data/json/items/comestibles/mre.json
 msgid "The chicken chunks entree from an MRE, with an included beef stick."
-msgstr ""
+msgstr "Danie główne: kawałki kurczaka z MRE, z dołączoną wołową kiełbaską."
 
 #. ~ Description of "cheese pizza entree"
 #: data/json/items/comestibles/mre.json
 msgid "The pizza entree from an MRE, now in vegetarian form."
-msgstr ""
+msgstr "Danie główne: pizza z MRE, tym razem w wersji wegetariańskiej."
 
 #. ~ Description of "pepperoni pizza entree"
 #: data/json/items/comestibles/mre.json
 msgid "The pizza entree from an MRE, featuring pepperoni slices and cheese."
-msgstr ""
+msgstr "Danie główne: pizza z MRE, z plasterkami pepperoni i serem."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "potatoes, Au Gratin"
 msgid_plural "potatoes, Au Gratin"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ziemniaki au gratin"
+msgstr[1] "porcje ziemniaków au gratin"
+msgstr[2] "porcji ziemniaków au gratin"
+msgstr[3] "porcji ziemniaków au gratin"
 
 #. ~ Description of "potatoes, Au Gratin"
 #: data/json/items/comestibles/mre.json
 msgid "Golden-fried potatoes."
-msgstr ""
+msgstr "Złociście zapieczone ziemniaki."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "fried rice (small portion)"
 msgid_plural "fried rice (small portions)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała porcja smażonego ryżu"
+msgstr[1] "małe porcje smażonego ryżu"
+msgstr[2] "małych porcji smażonego ryżu"
+msgstr[3] "małej porcji smażonego ryżu"
 
 #. ~ Description of "fried rice (small portion)"
 #: data/json/items/comestibles/mre.json
 msgid ""
 "Fried rice, a simple dish made by stir-frying rice with other ingredients."
 msgstr ""
+"Smażony ryż – proste danie przyrządzane przez smażenie ryżu z innymi "
+"składnikami w woku."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "zapplesauce"
 msgid_plural "zapplesauce"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mus jabłkowy Zapplesauce"
+msgstr[1] "porcje musu jabłkowego Zapplesauce"
+msgstr[2] "porcji musu jabłkowego Zapplesauce"
+msgstr[3] "porcji musu jabłkowego Zapplesauce"
 
 #. ~ Description of "zapplesauce"
 #: data/json/items/comestibles/mre.json
 msgid "Golden, jelly-like food with the flavor of apples."
-msgstr ""
+msgstr "Złocisty, galaretowaty pokarm o smaku jabłek."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "black beans in sauce"
 msgid_plural "black beans in sauce"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "czarna fasola w sosie"
+msgstr[1] "porcje czarnej fasoli w sosie"
+msgstr[2] "porcji czarnej fasoli w sosie"
+msgstr[3] "porcji czarnej fasoli w sosie"
 
 #. ~ Description of "black beans in sauce"
 #: data/json/items/comestibles/mre.json
 msgid "A savory and flavorful combination of black beans and sauce."
-msgstr ""
+msgstr "Pikantne i aromatyczne połączenie czarnej fasoli z sosem."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "carrot pound cake"
 msgid_plural "carrot pound cakes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "babka marchewkowa"
+msgstr[1] "babki marchewkowe"
+msgstr[2] "babek marchewkowych"
+msgstr[3] "babki marchewkowej"
 
 #. ~ Description of "carrot pound cake"
 #: data/json/items/comestibles/mre.json
 msgid "Delicious cake with carrots blended seamlessly."
-msgstr ""
+msgstr "Pyszne ciasto z idealnie wmieszaną marchewką."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "lemon poppy seed pound cake"
 msgid_plural "lemon poppy seed pound cakes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "babka cytrynowa z makiem"
+msgstr[1] "babki cytrynowe z makiem"
+msgstr[2] "babek cytrynowych z makiem"
+msgstr[3] "babki cytrynowej z makiem"
 
 #. ~ Description of "lemon poppy seed pound cake"
 #: data/json/items/comestibles/mre.json
 msgid "Cake filled with the goodness of lemon and poppy seeds."
-msgstr ""
+msgstr "Ciasto pełne dobroci cytryny i maku."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "chocolate pudding"
 msgid_plural "chocolate pudding"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "budyń czekoladowy"
+msgstr[1] "porcje budyniu czekoladowego"
+msgstr[2] "porcji budyniu czekoladowego"
+msgstr[3] "porcji budyniu czekoladowego"
 
 #. ~ Description of "chocolate pudding"
 #: data/json/items/comestibles/mre.json
 msgid "Pudding made with chocolate.  Yummy!"
-msgstr ""
+msgstr "Budyń z czekoladą. Pycha!"
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "chocolate chip toaster pastry"
 msgid_plural "chocolate chip toaster pastries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ciastko tostowe z kawałkami czekolady"
+msgstr[1] "ciastka tostowe z kawałkami czekolady"
+msgstr[2] "ciastek tostowych z kawałkami czekolady"
+msgstr[3] "ciastka tostowego z kawałkami czekolady"
 
 #. ~ Description of "chocolate chip toaster pastry"
 #: data/json/items/comestibles/mre.json
 msgid "Pastry with chocolate chips."
-msgstr ""
+msgstr "Ciastko z kawałkami czekolady."
 
 #. ~ Item name
 #: data/json/items/comestibles/mre.json
 msgid "strawberry toaster pastry"
 msgid_plural "strawberry toaster pastries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "truskawkowe ciastko tostowe"
+msgstr[1] "truskawkowe ciastka tostowe"
+msgstr[2] "truskawkowych ciastek tostowych"
+msgstr[3] "truskawkowego ciastka tostowego"
 
 #. ~ Description of "strawberry toaster pastry"
 #: data/json/items/comestibles/mre.json
 msgid "Strawberry-flavor pastry."
-msgstr ""
+msgstr "Ciastko o smaku truskawkowym."
 
 #. ~ Item name
 #: data/json/items/comestibles/mushroom.json
 msgid "mushroom ketchup"
 msgid_plural "mushroom ketchup"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "keczup grzybowy"
+msgstr[1] "porcje keczupu grzybowego"
+msgstr[2] "porcji keczupu grzybowego"
+msgstr[3] "porcji keczupu grzybowego"
 
 #. ~ Description of "mushroom ketchup"
 #: data/json/items/comestibles/mushroom.json
 msgid "A savory condiment made from mushrooms."
-msgstr ""
+msgstr "Pikantny dodatek do potraw przyrządzony z grzybów."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "mutagenic catalyst"
 msgid_plural "mutagenic catalyst"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "katalizator mutagenny"
+msgstr[1] "katalizatory mutagenne"
+msgstr[2] "katalizatorów mutagennych"
+msgstr[3] "katalizatora mutagennego"
 
 #. ~ Description of "mutagenic catalyst"
 #: data/json/items/comestibles/mutagen.json
@@ -892,246 +1009,248 @@ msgid ""
 "A processed, purified, and condensed dose of mutagenic drugs.  When combined "
 "with mutagenic primer, this will cause mutations over time."
 msgstr ""
+"Przetworzona, oczyszczona i skondensowana dawka leków mutagennych. W "
+"połączeniu z bazą mutagenną z czasem wywołuje mutacje."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "beast mutagenic primer"
 msgid_plural "beast mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu bestii"
+msgstr[1] "bazy mutagenu bestii"
+msgstr[2] "baz mutagenu bestii"
+msgstr[3] "bazy mutagenu bestii"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "bird mutagenic primer"
 msgid_plural "bird mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu ptaka"
+msgstr[1] "bazy mutagenu ptaka"
+msgstr[2] "baz mutagenu ptaka"
+msgstr[3] "bazy mutagenu ptaka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "cattle mutagenic primer"
 msgid_plural "cattle mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu bydlęcia"
+msgstr[1] "bazy mutagenu bydlęcia"
+msgstr[2] "baz mutagenu bydlęcia"
+msgstr[3] "bazy mutagenu bydlęcia"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "cephalopod mutagenic primer"
 msgid_plural "cephalopod mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu głowonoga"
+msgstr[1] "bazy mutagenu głowonoga"
+msgstr[2] "baz mutagenu głowonoga"
+msgstr[3] "bazy mutagenu głowonoga"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "chimera mutagenic primer"
 msgid_plural "chimera mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu chimery"
+msgstr[1] "bazy mutagenu chimery"
+msgstr[2] "baz mutagenu chimery"
+msgstr[3] "bazy mutagenu chimery"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "Elf-A mutagenic primer"
 msgid_plural "Elf-A mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu Elf-A"
+msgstr[1] "bazy mutagenu Elf-A"
+msgstr[2] "baz mutagenu Elf-A"
+msgstr[3] "bazy mutagenu Elf-A"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "feline mutagenic primer"
 msgid_plural "feline mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu kota"
+msgstr[1] "bazy mutagenu kota"
+msgstr[2] "baz mutagenu kota"
+msgstr[3] "bazy mutagenu kota"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "fish mutagenic primer"
 msgid_plural "fish mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu ryby"
+msgstr[1] "bazy mutagenu ryby"
+msgstr[2] "baz mutagenu ryby"
+msgstr[3] "bazy mutagenu ryby"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "insect mutagenic primer"
 msgid_plural "insect mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu owada"
+msgstr[1] "bazy mutagenu owada"
+msgstr[2] "baz mutagenu owada"
+msgstr[3] "bazy mutagenu owada"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "lizard mutagenic primer"
 msgid_plural "lizard mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu jaszczura"
+msgstr[1] "bazy mutagenu jaszczura"
+msgstr[2] "baz mutagenu jaszczura"
+msgstr[3] "bazy mutagenu jaszczura"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "lupine mutagenic primer"
 msgid_plural "lupine mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu wilka"
+msgstr[1] "bazy mutagenu wilka"
+msgstr[2] "baz mutagenu wilka"
+msgstr[3] "bazy mutagenu wilka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "medical mutagenic primer"
 msgid_plural "medical mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu medycznego"
+msgstr[1] "bazy mutagenu medycznego"
+msgstr[2] "baz mutagenu medycznego"
+msgstr[3] "bazy mutagenu medycznego"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "plant mutagenic primer"
 msgid_plural "plant mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu rośliny"
+msgstr[1] "bazy mutagenu rośliny"
+msgstr[2] "baz mutagenu rośliny"
+msgstr[3] "bazy mutagenu rośliny"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "raptor mutagenic primer"
 msgid_plural "raptor mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu raptora"
+msgstr[1] "bazy mutagenu raptora"
+msgstr[2] "baz mutagenu raptora"
+msgstr[3] "bazy mutagenu raptora"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "rat mutagenic primer"
 msgid_plural "rat mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu szczura"
+msgstr[1] "bazy mutagenu szczura"
+msgstr[2] "baz mutagenu szczura"
+msgstr[3] "bazy mutagenu szczura"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "chiropteran mutagenic primer"
 msgid_plural "chiropteran mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu nietoperza"
+msgstr[1] "bazy mutagenu nietoperza"
+msgstr[2] "baz mutagenu nietoperza"
+msgstr[3] "bazy mutagenu nietoperza"
 
 #. ~ Description of "chiropteran mutagenic primer"
 #: data/json/items/comestibles/mutagen.json
 msgid "A processed mutagenic primer, black as night."
-msgstr ""
+msgstr "Przetworzona baza mutagenna, czarna jak noc."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "slime mutagenic primer"
 msgid_plural "slime mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu śluzu"
+msgstr[1] "bazy mutagenu śluzu"
+msgstr[2] "baz mutagenu śluzu"
+msgstr[3] "bazy mutagenu śluzu"
 
 #. ~ Description of "slime mutagenic primer"
 #: data/json/items/comestibles/mutagen.json
 msgid "A processed mutagenic primer, oily and viscous."
-msgstr ""
+msgstr "Przetworzona baza mutagenna, oleista i lepka."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "spider mutagenic primer"
 msgid_plural "spider mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu pająka"
+msgstr[1] "bazy mutagenu pająka"
+msgstr[2] "baz mutagenu pająka"
+msgstr[3] "bazy mutagenu pająka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "snail mutagenic primer"
 msgid_plural "snail mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu ślimaka"
+msgstr[1] "bazy mutagenu ślimaka"
+msgstr[2] "baz mutagenu ślimaka"
+msgstr[3] "bazy mutagenu ślimaka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "batrachian mutagenic primer"
 msgid_plural "batrachian mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu płaza bezogonowego"
+msgstr[1] "bazy mutagenu płaza bezogonowego"
+msgstr[2] "baz mutagenu płaza bezogonowego"
+msgstr[3] "bazy mutagenu płaza bezogonowego"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "troglobite mutagenic primer"
 msgid_plural "troglobite mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu troglobionty"
+msgstr[1] "bazy mutagenu troglobionty"
+msgstr[2] "baz mutagenu troglobionty"
+msgstr[3] "bazy mutagenu troglobionty"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "ursine mutagenic primer"
 msgid_plural "ursine mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu niedźwiedzia"
+msgstr[1] "bazy mutagenu niedźwiedzia"
+msgstr[2] "baz mutagenu niedźwiedzia"
+msgstr[3] "bazy mutagenu niedźwiedzia"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "mouse mutagenic primer"
 msgid_plural "mouse mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu myszy"
+msgstr[1] "bazy mutagenu myszy"
+msgstr[2] "baz mutagenu myszy"
+msgstr[3] "bazy mutagenu myszy"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "rabbit mutagenic primer"
 msgid_plural "rabbit mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu królika"
+msgstr[1] "bazy mutagenu królika"
+msgstr[2] "baz mutagenu królika"
+msgstr[3] "bazy mutagenu królika"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "crustacean mutagenic primer"
 msgid_plural "crustacean mutagenic primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza mutagenu skorupiaka"
+msgstr[1] "bazy mutagenu skorupiaka"
+msgstr[2] "baz mutagenu skorupiaka"
+msgstr[3] "bazy mutagenu skorupiaka"
 
 #. ~ Description of "crustacean mutagenic primer"
 #: data/json/items/comestibles/mutagen.json
 msgid " A red colored mutagenic primer."
-msgstr ""
+msgstr " Baza mutagenna w czerwonym kolorze."
 
 #. ~ Description of "mutagen"
 #: data/json/items/comestibles/mutagen.json
@@ -1140,6 +1259,9 @@ msgid ""
 "making primers and mutagenic catalyst.  In this baseline form, it is highly "
 "toxic, and dangerous to consume on its own."
 msgstr ""
+"Papka z organicznych substancji chemicznych i związków, stanowiąca podstawę "
+"do wytwarzania baz mutagennych i katalizatora mutagennego. W tej podstawowej "
+"postaci jest wysoce toksyczna i niebezpieczna do spożycia bez dodatków."
 
 #. ~ "activation_message" action message of item "mutagen"
 #. ~ "activation_message" action message of item "alpha mutagen"
@@ -1189,274 +1311,274 @@ msgstr ""
 #: data/mods/aftershock_exoplanet/items/mutagen.json
 #, c-format
 msgid "You drink the %s."
-msgstr ""
+msgstr "Wypijasz: %s."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "congealed blood"
 msgid_plural "congealed blood"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "skrzepła krew"
+msgstr[1] "porcje skrzepłej krwi"
+msgstr[2] "porcji skrzepłej krwi"
+msgstr[3] "porcji skrzepłej krwi"
 
 #. ~ "activation_message" action message of item "congealed blood"
 #: data/json/items/comestibles/mutagen.json
 msgid "You choke down the congealed blood."
-msgstr ""
+msgstr "Z trudem przełykasz skrzepłą krew."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "beast mutagen"
 msgid_plural "beast mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen bestii"
+msgstr[1] "mutageny bestii"
+msgstr[2] "mutagenów bestii"
+msgstr[3] "mutagenu bestii"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "bird mutagen"
 msgid_plural "bird mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen ptaka"
+msgstr[1] "mutageny ptaka"
+msgstr[2] "mutagenów ptaka"
+msgstr[3] "mutagenu ptaka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "cattle mutagen"
 msgid_plural "cattle mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen bydlęcia"
+msgstr[1] "mutageny bydlęcia"
+msgstr[2] "mutagenów bydlęcia"
+msgstr[3] "mutagenu bydlęcia"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "cephalopod mutagen"
 msgid_plural "cephalopod mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen głowonoga"
+msgstr[1] "mutageny głowonoga"
+msgstr[2] "mutagenów głowonoga"
+msgstr[3] "mutagenu głowonoga"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "chimera mutagen"
 msgid_plural "chimera mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen chimery"
+msgstr[1] "mutageny chimery"
+msgstr[2] "mutagenów chimery"
+msgstr[3] "mutagenu chimery"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "Elf-A mutagen"
 msgid_plural "Elf-A mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen Elf-A"
+msgstr[1] "mutageny Elf-A"
+msgstr[2] "mutagenów Elf-A"
+msgstr[3] "mutagenu Elf-A"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "feline mutagen"
 msgid_plural "feline mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen kota"
+msgstr[1] "mutageny kota"
+msgstr[2] "mutagenów kota"
+msgstr[3] "mutagenu kota"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "fish mutagen"
 msgid_plural "fish mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen ryby"
+msgstr[1] "mutageny ryby"
+msgstr[2] "mutagenów ryby"
+msgstr[3] "mutagenu ryby"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "insect mutagen"
 msgid_plural "insect mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen owada"
+msgstr[1] "mutageny owada"
+msgstr[2] "mutagenów owada"
+msgstr[3] "mutagenu owada"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "lizard mutagen"
 msgid_plural "lizard mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen jaszczura"
+msgstr[1] "mutageny jaszczura"
+msgstr[2] "mutagenów jaszczura"
+msgstr[3] "mutagenu jaszczura"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "lupine mutagen"
 msgid_plural "lupine mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen wilka"
+msgstr[1] "mutageny wilka"
+msgstr[2] "mutagenów wilka"
+msgstr[3] "mutagenu wilka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "medical mutagen"
 msgid_plural "medical mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen medyczny"
+msgstr[1] "mutageny medyczne"
+msgstr[2] "mutagenów medycznych"
+msgstr[3] "mutagenu medycznego"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "plant mutagen"
 msgid_plural "plant mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen rośliny"
+msgstr[1] "mutageny rośliny"
+msgstr[2] "mutagenów rośliny"
+msgstr[3] "mutagenu rośliny"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "raptor mutagen"
 msgid_plural "raptor mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen raptora"
+msgstr[1] "mutageny raptora"
+msgstr[2] "mutagenów raptora"
+msgstr[3] "mutagenu raptora"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "rat mutagen"
 msgid_plural "rat mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen szczura"
+msgstr[1] "mutageny szczura"
+msgstr[2] "mutagenów szczura"
+msgstr[3] "mutagenu szczura"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "chiropteran mutagen"
 msgid_plural "chiropteran mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen nietoperza"
+msgstr[1] "mutageny nietoperza"
+msgstr[2] "mutagenów nietoperza"
+msgstr[3] "mutagenu nietoperza"
 
 #. ~ Description of "chiropteran mutagen"
 #: data/json/items/comestibles/mutagen.json
 msgid "A murky black liquid that smells of blood."
-msgstr ""
+msgstr "Mętny czarny płyn pachnący krwią."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "slime mutagen"
 msgid_plural "slime mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen śluzu"
+msgstr[1] "mutageny śluzu"
+msgstr[2] "mutagenów śluzu"
+msgstr[3] "mutagenu śluzu"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "spider mutagen"
 msgid_plural "spider mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen pająka"
+msgstr[1] "mutageny pająka"
+msgstr[2] "mutagenów pająka"
+msgstr[3] "mutagenu pająka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "batrachian mutagen"
 msgid_plural "batrachian mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen płaza bezogonowego"
+msgstr[1] "mutageny płaza bezogonowego"
+msgstr[2] "mutagenów płaza bezogonowego"
+msgstr[3] "mutagenu płaza bezogonowego"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "snail mutagen"
 msgid_plural "snail mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen ślimaka"
+msgstr[1] "mutageny ślimaka"
+msgstr[2] "mutagenów ślimaka"
+msgstr[3] "mutagenu ślimaka"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "troglobite mutagen"
 msgid_plural "troglobite mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen troglobionty"
+msgstr[1] "mutageny troglobionty"
+msgstr[2] "mutagenów troglobionty"
+msgstr[3] "mutagenu troglobionty"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "ursine mutagen"
 msgid_plural "ursine mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen niedźwiedzia"
+msgstr[1] "mutageny niedźwiedzia"
+msgstr[2] "mutagenów niedźwiedzia"
+msgstr[3] "mutagenu niedźwiedzia"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "mouse mutagen"
 msgid_plural "mouse mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen myszy"
+msgstr[1] "mutageny myszy"
+msgstr[2] "mutagenów myszy"
+msgstr[3] "mutagenu myszy"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "rabbit mutagen"
 msgid_plural "rabbit mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen królika"
+msgstr[1] "mutageny królika"
+msgstr[2] "mutagenów królika"
+msgstr[3] "mutagenu królika"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "crustacean mutagen"
 msgid_plural "crustacean mutagen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mutagen skorupiaka"
+msgstr[1] "mutageny skorupiaka"
+msgstr[2] "mutagenów skorupiaka"
+msgstr[3] "mutagenu skorupiaka"
 
 #. ~ Description of "crustacean mutagen"
 #: data/json/items/comestibles/mutagen.json
 msgid "A crustacean mutagen."
-msgstr ""
+msgstr "Mutagen skorupiaka."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "purifier"
 msgid_plural "purifier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "czyszczący mutagen"
+msgstr[1] "czyszczące mutageny"
+msgstr[2] "czyszczących mutagenów"
+msgstr[3] "czyszczącego mutagenu"
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "purifier primer"
 msgid_plural "purifier primer"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "baza czyszczącego mutagenu"
+msgstr[1] "bazy czyszczącego mutagenu"
+msgstr[2] "baz czyszczącego mutagenu"
+msgstr[3] "bazy czyszczącego mutagenu"
 
 #. ~ Description of "purifier primer"
 #: data/json/items/comestibles/mutagen.json
@@ -1465,20 +1587,23 @@ msgid ""
 "humanity, but perhaps counter-intuitively, it requires regular mutagen to "
 "function.  Do not use on animals."
 msgstr ""
+"Ten gęsty zastrzyk w kolorze ciała czyni cuda w przywracaniu mutantów do "
+"człowieczeństwa, ale, być może wbrew intuicji, do działania wymaga zwykłego "
+"mutagenu. Nie stosować na zwierzętach."
 
 #. ~ Item name
 #: data/json/items/comestibles/mutagen.json
 msgid "mutagen chelator"
 msgid_plural "mutagen chelator"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "chelator mutagenny"
+msgstr[1] "chelatory mutagenne"
+msgstr[2] "chelatorów mutagennych"
+msgstr[3] "chelatora mutagennego"
 
 #. ~ Description of "pine nuts"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of tasty, crunchy nuts from a pinecone."
-msgstr ""
+msgstr "Garść smacznych, chrupiących orzeszków z szyszki sosny."
 
 #. ~ Description of "junipers"
 #: data/json/items/comestibles/nuts.json
@@ -1486,278 +1611,287 @@ msgid ""
 "A handful of female juniper cones, for making gin and adding earthy flavors "
 "to food.  Spicy, tastes similar to rosemary."
 msgstr ""
+"Garść żeńskich szyszek jałowca, do produkcji ginu i nadawania potrawom "
+"ziemistego aromatu. Pikantne, w smaku przypominają rozmaryn."
 
 #. ~ Description of "shelled pistachios"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of nuts from a pistachio tree, with the shells removed."
-msgstr ""
+msgstr "Garść orzechów z drzewa pistacjowego, z usuniętymi łupinami."
 
 #. ~ Description of "shelled almonds"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of nuts from an almond tree, with the shells removed."
-msgstr ""
+msgstr "Garść orzechów z drzewa migdałowego, z usuniętymi łupinami."
 
 #. ~ Description of "shelled pecans"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "A handful of pecans, a sub-species of hickory nuts, with the shells removed."
 msgstr ""
+"Garść orzechów pekan, podgatunku orzechów orzesznika, z usuniętymi łupinami."
 
 #. ~ Description of "shelled peanuts"
 #: data/json/items/comestibles/nuts.json
 msgid "Salty peanuts with the shells removed."
-msgstr ""
+msgstr "Solone orzeszki ziemne z usuniętymi łupinami."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "beechnuts"
 msgid_plural "beechnuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść bukwi"
+msgstr[1] "garście bukwi"
+msgstr[2] "garści bukwi"
+msgstr[3] "garści bukwi"
 
 #. ~ Description of "beechnuts"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of hard, pointy nuts from a beech tree."
-msgstr ""
+msgstr "Garść twardych, spiczastych orzeszków z buka."
 
 #. ~ Description of "shelled walnuts"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "A handful of raw, hard nuts from a walnut tree, with the shells removed."
 msgstr ""
+"Garść surowych, twardych orzechów z orzecha włoskiego, z usuniętymi łupinami."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "walnut pulp"
 msgid_plural "walnut pulp"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pulpa z orzechów włoskich"
+msgstr[1] "pulpy z orzechów włoskich"
+msgstr[2] "pulp z orzechów włoskich"
+msgstr[3] "pulpy z orzechów włoskich"
 
 #. ~ Description of "walnut pulp"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "Pulp left over after making walnut milk.  It's gritty and incredibly bland."
 msgstr ""
+"Pulpa pozostała po zrobieniu mleka z orzechów włoskich. Jest ziarnista i "
+"niewiarygodnie mdła."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "shelled butternuts"
 msgid_plural "shelled butternuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść łuskanych orzechów szarych"
+msgstr[1] "garście łuskanych orzechów szarych"
+msgstr[2] "garści łuskanych orzechów szarych"
+msgstr[3] "garści łuskanych orzechów szarych"
 
 #. ~ Description of "shelled butternuts"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of raw nuts from a butternut tree, with the shells removed."
-msgstr ""
+msgstr "Garść surowych orzechów z orzecha szarego, z usuniętymi łupinami."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "roasted butternuts"
 msgid_plural "roasted butternuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "garść prażonych orzechów szarych"
+msgstr[1] "garście prażonych orzechów szarych"
+msgstr[2] "garści prażonych orzechów szarych"
+msgstr[3] "garści prażonych orzechów szarych"
 
 #. ~ Description of "roasted butternuts"
 #: data/json/items/comestibles/nuts.json
 msgid "A handful of roasted nuts from a butternut tree."
-msgstr ""
+msgstr "Garść prażonych orzechów z orzecha szarego."
 
 #. ~ Description of "shelled chestnuts"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "A handful of raw, hard nuts from a chestnut tree, with the shells removed."
 msgstr ""
+"Garść surowych, twardych owoców kasztana jadalnego, z usuniętymi łupinami."
 
 #. ~ Description of "shelled hazelnuts"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "A handful of raw, hard nuts from a hazelnut tree, with the shells removed."
-msgstr ""
+msgstr "Garść surowych, twardych orzechów z leszczyny, z usuniętymi łupinami."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "hazelnut pulp"
 msgid_plural "hazelnut pulp"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pulpa z orzechów laskowych"
+msgstr[1] "pulpy z orzechów laskowych"
+msgstr[2] "pulp z orzechów laskowych"
+msgstr[3] "pulpy z orzechów laskowych"
 
 #. ~ Description of "hazelnut pulp"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "Pulp left over after making hazelnut milk.  It's gritty and incredibly bland."
 msgstr ""
+"Pulpa pozostała po zrobieniu mleka z orzechów laskowych. Jest ziarnista i "
+"niewiarygodnie mdła."
 
 #. ~ Description of "shelled hickory nuts"
 #: data/json/items/comestibles/nuts.json
 msgid ""
 "A handful of raw, hard nuts from a hickory tree, with the shells removed."
-msgstr ""
+msgstr "Garść surowych, twardych orzechów z orzesznika, z usuniętymi łupinami."
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "hickory nut ambrosia"
 msgid_plural "hickory nut ambrosia"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ambrozja z orzechów orzesznika"
+msgstr[1] "porcje ambrozji z orzechów orzesznika"
+msgstr[2] "porcji ambrozji z orzechów orzesznika"
+msgstr[3] "porcji ambrozji z orzechów orzesznika"
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "nut butter"
 msgid_plural "nut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów"
+msgstr[1] "porcje masła z orzechów"
+msgstr[2] "porcji masła z orzechów"
+msgstr[3] "porcji masła z orzechów"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches pine
 #: data/json/items/comestibles/nuts.json
 msgid "pine nut butter"
 msgid_plural "pine nut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzeszków piniowych"
+msgstr[1] "porcje masła z orzeszków piniowych"
+msgstr[2] "porcji masła z orzeszków piniowych"
+msgstr[3] "porcji masła z orzeszków piniowych"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. pecan
 #: data/json/items/comestibles/nuts.json
 msgid "pecan butter"
 msgid_plural "pecan butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów pekan"
+msgstr[1] "porcje masła z orzechów pekan"
+msgstr[2] "porcji masła z orzechów pekan"
+msgstr[3] "porcji masła z orzechów pekan"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. cashew
 #: data/json/items/comestibles/nuts.json
 msgid "cashew butter"
 msgid_plural "cashew butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów nerkowca"
+msgstr[1] "porcje masła z orzechów nerkowca"
+msgstr[2] "porcji masła z orzechów nerkowca"
+msgstr[3] "porcji masła z orzechów nerkowca"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. pistachio
 #: data/json/items/comestibles/nuts.json
 msgid "pistachio butter"
 msgid_plural "pistachio butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z pistacji"
+msgstr[1] "porcje masła z pistacji"
+msgstr[2] "porcji masła z pistacji"
+msgstr[3] "porcji masła z pistacji"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. almond
 #: data/json/items/comestibles/nuts.json
 msgid "almond butter"
 msgid_plural "almond butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z migdałów"
+msgstr[1] "porcje masła z migdałów"
+msgstr[2] "porcji masła z migdałów"
+msgstr[3] "porcji masła z migdałów"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. beech
 #: data/json/items/comestibles/nuts.json
 msgid "beechnut butter"
 msgid_plural "beechnut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z bukwi"
+msgstr[1] "porcje masła z bukwi"
+msgstr[2] "porcji masła z bukwi"
+msgstr[3] "porcji masła z bukwi"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. hickory
 #: data/json/items/comestibles/nuts.json
 msgid "hickory nut butter"
 msgid_plural "hickory nut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów orzesznika"
+msgstr[1] "porcje masła z orzechów orzesznika"
+msgstr[2] "porcji masła z orzechów orzesznika"
+msgstr[3] "porcji masła z orzechów orzesznika"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. chestnut
 #: data/json/items/comestibles/nuts.json
 msgid "chestnut butter"
 msgid_plural "chestnut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z kasztanów"
+msgstr[1] "porcje masła z kasztanów"
+msgstr[2] "porcji masła z kasztanów"
+msgstr[3] "porcji masła z kasztanów"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. hazelnut
 #: data/json/items/comestibles/nuts.json
 msgid "hazelnut butter"
 msgid_plural "hazelnut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów laskowych"
+msgstr[1] "porcje masła z orzechów laskowych"
+msgstr[2] "porcji masła z orzechów laskowych"
+msgstr[3] "porcji masła z orzechów laskowych"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. walnut
 #: data/json/items/comestibles/nuts.json
 msgid "walnut butter"
 msgid_plural "walnut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów włoskich"
+msgstr[1] "porcje masła z orzechów włoskich"
+msgstr[2] "porcji masła z orzechów włoskich"
+msgstr[3] "porcji masła z orzechów włoskich"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. butternut
 #: data/json/items/comestibles/nuts.json
 msgid "butternut butter"
 msgid_plural "butternut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzechów szarych"
+msgstr[1] "porcje masła z orzechów szarych"
+msgstr[2] "porcji masła z orzechów szarych"
+msgstr[3] "porcji masła z orzechów szarych"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches
 #. acorn
 #: data/json/items/comestibles/nuts.json
 msgid "acorn butter"
 msgid_plural "acorn butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z żołędzi"
+msgstr[1] "porcje masła z żołędzi"
+msgstr[2] "porcji masła z żołędzi"
+msgstr[3] "porcji masła z żołędzi"
 
 #. ~ Conditional name for "nut butter" when COMPONENT_ID_SUBSTRING matches soy
 #: data/json/items/comestibles/nuts.json
 msgid "soy nut butter"
 msgid_plural "soy nut butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "masło z orzeszków sojowych"
+msgstr[1] "porcje masła z orzeszków sojowych"
+msgstr[2] "porcji masła z orzeszków sojowych"
+msgstr[3] "porcji masła z orzeszków sojowych"
 
 #. ~ Item name
 #: data/json/items/comestibles/nuts.json
 msgid "vegan butter"
 msgid_plural "vegan butter"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wegańskie masło"
+msgstr[1] "porcje wegańskiego masła"
+msgstr[2] "porcji wegańskiego masła"
+msgstr[3] "porcji wegańskiego masła"
 
 #. ~ Description of "vegan butter"
 #: data/json/items/comestibles/nuts.json
@@ -1766,6 +1900,9 @@ msgid ""
 "butters in that the fats are removed from the meat and only the fats "
 "retained."
 msgstr ""
+"Jasnobrązowy zamiennik masła wytwarzany z orzechów. Od innych maseł "
+"orzechowych różni się tym, że tłuszcze oddziela się od miąższu i zachowuje "
+"wyłącznie je."
 
 #. ~ Description of "faux gras"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1773,29 +1910,32 @@ msgid ""
 "Though this meal is technically not foie gras, you have a feeling neither the"
 " French nor animal rights groups are likely to criticize it now."
 msgstr ""
+"Choć technicznie rzecz biorąc to danie nie jest foie gras, masz przeczucie, "
+"że ani Francuzi, ani obrońcy praw zwierząt raczej go teraz nie skrytykują."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "fried liver"
 msgid_plural "fried liver"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smażona wątróbka"
+msgstr[1] "porcje smażonej wątróbki"
+msgstr[2] "porcji smażonej wątróbki"
+msgstr[3] "porcji smażonej wątróbki"
 
 #. ~ Description of "fried liver"
 #: data/json/items/comestibles/offal_dishes.json
 msgid "Tasty deep-fried liver, a Southern delicacy."
 msgstr ""
+"Smaczna wątróbka smażona w głębokim tłuszczu, przysmak z południa Stanów."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "fried heart"
 msgid_plural "fried heart"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smażone serce"
+msgstr[1] "porcje smażonego serca"
+msgstr[2] "porcji smażonego serca"
+msgstr[3] "porcji smażonego serca"
 
 #. ~ Description of "fried heart"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1803,20 +1943,22 @@ msgid ""
 "Tasty deep-fried heart, retaining most of its texture and gaining that "
 "delicious fried taste."
 msgstr ""
+"Smaczne serce smażone w głębokim tłuszczu, które zachowuje większość swojej "
+"tekstury i zyskuje ten pyszny smak smażeniny."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "stuffed heart"
 msgid_plural "stuffed heart"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "faszerowane serce"
+msgstr[1] "porcje faszerowanego serca"
+msgstr[2] "porcji faszerowanego serca"
+msgstr[3] "porcji faszerowanego serca"
 
 #. ~ Description of "stuffed heart"
 #: data/json/items/comestibles/offal_dishes.json
 msgid "Chunks of heart filled with vegetables and spices."
-msgstr ""
+msgstr "Kawałki serca nadziewane warzywami i przyprawami."
 
 #. ~ Description of "humble pie"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1824,24 +1966,26 @@ msgid ""
 "Also known as 'Umble' pie, made with chopped organ meats.  Not half bad, and "
 "full of vitamins!"
 msgstr ""
+"Znana też jako pieczeń „umble”, przyrządzana z posiekanych podrobów. Całkiem "
+"niezła i pełna witamin!"
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "stewed tripe"
 msgid_plural "stewed tripe"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "duszone flaki"
+msgstr[1] "porcje duszonych flaków"
+msgstr[2] "porcji duszonych flaków"
+msgstr[3] "porcji duszonych flaków"
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "deep-fried tripe"
 msgid_plural "deep-fried tripe"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "flaki smażone w głębokim tłuszczu"
+msgstr[1] "porcje flaków smażonych w głębokim tłuszczu"
+msgstr[2] "porcji flaków smażonych w głębokim tłuszczu"
+msgstr[3] "porcji flaków smażonych w głębokim tłuszczu"
 
 #. ~ Description of "deep-fried tripe"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1849,30 +1993,34 @@ msgid ""
 "Some people don't enjoy the taste or texture of organ meat, so deep-frying is"
 " a great way to disguise both."
 msgstr ""
+"Niektórzy nie lubią smaku ani konsystencji podrobów, więc smażenie w głębokim"
+" tłuszczu to świetny sposób, by zamaskować jedno i drugie."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "fried brain"
 msgid_plural "fried brain"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smażony mózg"
+msgstr[1] "porcje smażonego mózgu"
+msgstr[2] "porcji smażonego mózgu"
+msgstr[3] "porcji smażonego mózgu"
 
 #. ~ Description of "fried brain"
 #: data/json/items/comestibles/offal_dishes.json
 msgid ""
 "I don't know what you were expecting.  It's brain.  It's deep-fried.  Enjoy!"
 msgstr ""
+"Nie wiem, czego się spodziewałeś. To mózg. Smażony w głębokim tłuszczu. "
+"Smacznego!"
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "deviled kidney"
 msgid_plural "deviled kidney"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nerki po diabelsku"
+msgstr[1] "porcje nerek po diabelsku"
+msgstr[2] "porcji nerek po diabelsku"
+msgstr[3] "porcji nerek po diabelsku"
 
 #. ~ Description of "deviled kidney"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1881,52 +2029,56 @@ msgid ""
 "had to make some substitutions in the devilling sauce, but it still came out "
 "damn good."
 msgstr ""
+"Pyszny sposób przyrządzania nerek, wywodzący się z wiktoriańskiej Anglii. W "
+"ostrym sosie musiałeś zastąpić kilka składników, ale i tak wyszło cholernie "
+"dobre."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "grilled sweetbread"
 msgid_plural "grilled sweetbread"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "grillowana grasica"
+msgstr[1] "porcje grillowanej grasicy"
+msgstr[2] "porcji grillowanej grasicy"
+msgstr[3] "porcji grillowanej grasicy"
 
 #. ~ Description of "grilled sweetbread"
 #: data/json/items/comestibles/offal_dishes.json
 msgid "Not sweet like the name would suggest, but delicious all the same!"
 msgstr ""
+"Wcale nie jest słodka, jak sugerowałaby angielska nazwa, ale i tak pyszna!"
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "canned liver"
 msgid_plural "canned liver"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "wątróbka z puszki"
+msgstr[1] "porcje wątróbki z puszki"
+msgstr[2] "porcji wątróbki z puszki"
+msgstr[3] "porcji wątróbki z puszki"
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "canned heart"
 msgid_plural "canned heart"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "serce z puszki"
+msgstr[1] "porcje serca z puszki"
+msgstr[2] "porcji serca z puszki"
+msgstr[3] "porcji serca z puszki"
 
 #. ~ Description of "canned heart"
 #: data/json/items/comestibles/offal_dishes.json
 msgid "Chunks of heart preserved in a can."
-msgstr ""
+msgstr "Kawałki serca zakonserwowane w puszce."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "lung provence"
 msgid_plural "lung provence"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "płuca po prowansalsku"
+msgstr[1] "porcje płuc po prowansalsku"
+msgstr[2] "porcji płuc po prowansalsku"
+msgstr[3] "porcji płuc po prowansalsku"
 
 #. ~ Description of "lung provence"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1934,15 +2086,18 @@ msgid ""
 "A French lung dish, made by poaching the lungs before pan-frying them with "
 "onion, tomato, seasonings, and a generous amount of wine."
 msgstr ""
+"Francuskie danie z płuc, przyrządzane przez obgotowanie płuc, a następnie "
+"podsmażenie ich na patelni z cebulą, pomidorami, przyprawami i sporą ilością "
+"wina."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "töttchen"
 msgid_plural "töttchen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "töttchen"
+msgstr[1] "porcje töttchen"
+msgstr[2] "porcji töttchen"
+msgstr[3] "porcji töttchen"
 
 #. ~ Description of "töttchen"
 #: data/json/items/comestibles/offal_dishes.json
@@ -1951,29 +2106,33 @@ msgid ""
 "into a palatable meal with the liberal application of butter, sugar, and "
 "wine."
 msgstr ""
+"Niemieckie danie chłopskie, które dzięki hojnemu dodatkowi masła, cukru i "
+"wina zamienia wiele mniej pożądanych kawałków mięsa i podrobów w smaczny "
+"posiłek."
 
 #. ~ Item name
 #: data/json/items/comestibles/offal_dishes.json
 msgid "scrambled eggs and brain"
 msgid_plural "scrambled eggs and brain"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "jajecznica z mózgiem"
+msgstr[1] "porcje jajecznicy z mózgiem"
+msgstr[2] "porcji jajecznicy z mózgiem"
+msgstr[3] "porcji jajecznicy z mózgiem"
 
 #. ~ Description of "scrambled eggs and brain"
 #: data/json/items/comestibles/offal_dishes.json
 msgid "Brain and eggs, why didn't you ever think to put these together?"
 msgstr ""
+"Mózg i jajka – czemu nigdy wcześniej nie wpadłeś na to, by je połączyć?"
 
 #. ~ Item name
 #: data/json/items/comestibles/other.json
 msgid "dried bottle gourd"
 msgid_plural "dried bottle gourds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "suszona tykwa"
+msgstr[1] "suszone tykwy"
+msgstr[2] "suszonych tykw"
+msgstr[3] "suszonej tykwy"
 
 #. ~ Description of "dried bottle gourd"
 #: data/json/items/comestibles/other.json
@@ -1982,15 +2141,18 @@ msgid ""
 " by the first Native American settlers crossing the Bering strait.  This one "
 "has been dried for processing into a watertight container."
 msgstr ""
+"Warzywo z rodziny dyniowatych; tykwy przywieźli do Ameryk pierwsi rdzenni "
+"osadnicy przekraczający Cieśninę Beringa. Tę wysuszono, by przerobić ją na "
+"wodoszczelny pojemnik."
 
 #. ~ Variant name of item "chewing gum"
 #: data/json/items/comestibles/other.json
 msgid "gum, peppermint"
 msgid_plural "gum, peppermint"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "guma do żucia, mięta pieprzowa"
+msgstr[1] "gumy do żucia, mięta pieprzowa"
+msgstr[2] "gum do żucia, mięta pieprzowa"
+msgstr[3] "gumy do żucia, mięta pieprzowa"
 
 #. ~ Description of variant "gum, peppermint" of item "chewing gum"
 #: data/json/items/comestibles/other.json
@@ -1998,15 +2160,17 @@ msgid ""
 "The classic of classics, a flavor that provides a fresh and invigorating "
 "sensation in the mouth, as well as freshening breath."
 msgstr ""
+"Klasyka nad klasykami: smak, który daje w ustach świeże i orzeźwiające "
+"uczucie, a przy tym odświeża oddech."
 
 #. ~ Variant name of item "chewing gum"
 #: data/json/items/comestibles/other.json
 msgid "gum, spearmint"
 msgid_plural "gum, spearmint"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "guma do żucia, mięta zielona"
+msgstr[1] "gumy do żucia, mięta zielona"
+msgstr[2] "gum do żucia, mięta zielona"
+msgstr[3] "gumy do żucia, mięta zielona"
 
 #. ~ Description of variant "gum, spearmint" of item "chewing gum"
 #: data/json/items/comestibles/other.json
@@ -2014,15 +2178,17 @@ msgid ""
 "Spearmint is a slightly sweeter and milder version of peppermint, providing a"
 " fresher taste and is also good for freshening breath."
 msgstr ""
+"Mięta zielona to nieco słodsza i łagodniejsza odmiana mięty pieprzowej; daje "
+"świeższy smak i również dobrze odświeża oddech."
 
 #. ~ Variant name of item "chewing gum"
 #: data/json/items/comestibles/other.json
 msgid "gum, wintergreen"
 msgid_plural "gum, wintergreen"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "guma do żucia, golteria"
+msgstr[1] "gumy do żucia, golteria"
+msgstr[2] "gum do żucia, golteria"
+msgstr[3] "gumy do żucia, golteria"
 
 #. ~ Description of variant "gum, wintergreen" of item "chewing gum"
 #: data/json/items/comestibles/other.json
@@ -2030,3 +2196,4 @@ msgid ""
 "Wintergreen has a cool and refreshing taste, similar to mint, but with a "
 "slightly sweeter flavor."
 msgstr ""
+"Golteria ma chłodny i orzeźwiający smak, podobny do mięty, ale nieco słodszy."
