@@ -19,223 +19,231 @@ msgid ""
 "* Will give a <good>+%s</good> bonus to <info>block</info> for the stack"
 msgid_plural ""
 "* Will give a <good>+%s</good> bonus to <info>block</info> per stack"
-msgstr[0] ""
+msgstr[0] "* Daje premię <good>+%s</good> do <info>bloku</info> dla kumulacji"
 msgstr[1] ""
+"* Daje premię <good>+%s</good> do <info>bloku</info> za każdą kumulację"
 msgstr[2] ""
+"* Daje premię <good>+%s</good> do <info>bloku</info> za każdą kumulację"
 msgstr[3] ""
+"* Daje premię <good>+%s</good> do <info>bloku</info> za każdą kumulację"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "* Will give a <bad>%s</bad> penalty to <info>block</info> for the stack"
 msgid_plural ""
 "* Will give a <bad>%s</bad> penalty to <info>block</info> per stack"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "* Daje karę <bad>%s</bad> do <info>bloku</info> dla kumulacji"
+msgstr[1] "* Daje karę <bad>%s</bad> do <info>bloku</info> za każdą kumulację"
+msgstr[2] "* Daje karę <bad>%s</bad> do <info>bloku</info> za każdą kumulację"
+msgstr[3] "* Daje karę <bad>%s</bad> do <info>bloku</info> za każdą kumulację"
 
 #: src/martialarts.cpp
 msgid ""
 "* Can activate on a <info>normal</info> or a <info>reach attack</info> hit"
 msgstr ""
+"* Może się aktywować przy <info>normalnym</info> trafieniu lub trafieniu "
+"<info>atakiem zasięgowym</info>"
 
 #: src/martialarts.cpp
 msgid "* Will only activate on a <info>reach attack</info>"
-msgstr ""
+msgstr "* Aktywuje się tylko przy <info>ataku zasięgowym</info>"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "* Will <info>knock back</info> enemies <stat>%d tile</stat>"
 msgid_plural "* Will <info>knock back</info> enemies <stat>%d tiles</stat>"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "* <info>Odrzuca</info> wrogów o <stat>%d pole</stat>"
+msgstr[1] "* <info>Odrzuca</info> wrogów o <stat>%d pola</stat>"
+msgstr[2] "* <info>Odrzuca</info> wrogów o <stat>%d pól</stat>"
+msgstr[3] "* <info>Odrzuca</info> wrogów o <stat>%d pola</stat>"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "* Will <info>down</info> enemies for <stat>%d turn</stat>"
 msgid_plural "* Will <info>down</info> enemies for <stat>%d turns</stat>"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "* <info>Powala</info> wrogów na <stat>%d turę</stat>"
+msgstr[1] "* <info>Powala</info> wrogów na <stat>%d tury</stat>"
+msgstr[2] "* <info>Powala</info> wrogów na <stat>%d tur</stat>"
+msgstr[3] "* <info>Powala</info> wrogów na <stat>%d tury</stat>"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "* Will <info>stun</info> target for <stat>%d turn</stat>"
 msgid_plural "* Will <info>stun</info> target for <stat>%d turns</stat>"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "* <info>Ogłusza</info> cel na <stat>%d turę</stat>"
+msgstr[1] "* <info>Ogłusza</info> cel na <stat>%d tury</stat>"
+msgstr[2] "* <info>Ogłusza</info> cel na <stat>%d tur</stat>"
+msgstr[3] "* <info>Ogłusza</info> cel na <stat>%d tury</stat>"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "Martial art style details - %s"
-msgstr ""
+msgstr "Szczegóły stylu sztuki walki – %s"
 
 #: src/martialarts.cpp
 msgid ""
 "This style <bold>forces you to use unarmed strikes</bold>, even if wielding a"
 " weapon."
 msgstr ""
+"Ten styl <bold>zmusza cię do ataków bez broni</bold>, nawet jeśli trzymasz "
+"broń."
 
 #: src/martialarts.cpp
 msgid "This style can be used with <bold>all</bold> weapons."
-msgstr ""
+msgstr "Tego stylu można używać ze <bold>wszystkimi</bold> rodzajami broni."
 
 #: src/martialarts.cpp
 msgid "This is an <bold>armed</bold> combat style."
-msgstr ""
+msgstr "To jest styl walki <bold>z bronią</bold>."
 
 #: src/martialarts.cpp
 #, c-format
 msgid "You can <info>arm block</info> at %s"
-msgstr ""
+msgstr "Możesz <info>blokować ręką</info> przy umiejętności: %s"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "You can <info>leg block</info> at %s"
-msgstr ""
+msgstr "Możesz <info>blokować nogą</info> przy umiejętności: %s"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "You can <info>block with mutated limbs</info> at %s"
 msgstr ""
+"Możesz <info>blokować zmutowanymi kończynami</info> przy umiejętności: %s"
 
 #: src/martialarts.cpp
 msgid "Passive buffs"
-msgstr ""
+msgstr "Bonusy pasywne"
 
 #: src/martialarts.cpp
 msgid "Move buffs"
-msgstr ""
+msgstr "Bonusy przy ruchu"
 
 #: src/martialarts.cpp
 msgid "Pause buffs"
-msgstr ""
+msgstr "Bonusy przy przerwie"
 
 #: src/martialarts.cpp
 msgid "Hit buffs"
-msgstr ""
+msgstr "Bonusy przy trafieniu"
 
 #: src/martialarts.cpp
 msgid "Miss buffs"
-msgstr ""
+msgstr "Bonusy przy chybieniu"
 
 #: src/martialarts.cpp
 msgid "Attack buffs"
-msgstr ""
+msgstr "Bonusy przy ataku"
 
 #: src/martialarts.cpp
 msgid "Crit buffs"
-msgstr ""
+msgstr "Bonusy przy krytyku"
 
 #: src/martialarts.cpp
 msgid "Kill buffs"
-msgstr ""
+msgstr "Bonusy przy zabiciu"
 
 #: src/martialarts.cpp
 msgid "Dodge buffs"
-msgstr ""
+msgstr "Bonusy przy uniku"
 
 #: src/martialarts.cpp
 msgid "Block buffs"
-msgstr ""
+msgstr "Bonusy przy bloku"
 
 #: src/martialarts.cpp
 msgid "Get hit buffs"
-msgstr ""
+msgstr "Bonusy przy otrzymaniu trafienia"
 
 #: src/martialarts.cpp
 msgid "General info"
-msgstr ""
+msgstr "Informacje ogólne"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "Buffs (%d in %d categories)"
-msgstr ""
+msgstr "Bonusy (liczba: %d, kategorie: %d)"
 
 #: src/martialarts.cpp
 #, c-format
 msgid "Techniques (%d)"
-msgstr ""
+msgstr "Techniki (%d)"
 
 #: src/martialarts.cpp
 msgid "Technique: "
-msgstr ""
+msgstr "Technika: "
 
 #: src/martialarts.cpp
 #, c-format
 msgid "Weapons (%d in %d categories)"
-msgstr ""
+msgstr "Bronie (liczba: %d, kategorie: %d)"
 
 #: src/math_parser_diag.cpp
 msgid "Input a value:"
-msgstr ""
+msgstr "Wpisz wartość:"
 
 #: src/medical_ui.cpp
 msgid "SEPTIC"
-msgstr ""
+msgstr "SEPTYCZNE"
 
 #: src/medical_ui.cpp
 msgid "Applying not implemented for NPCs."
-msgstr ""
+msgstr "Stosowanie nie jest zaimplementowane dla NPC."
 
 #: src/memorial_logger.cpp
 msgctxt "memorial_female"
 msgid "Died"
-msgstr ""
+msgstr "Zmarła"
 
 #: src/memorial_logger.cpp
 msgctxt "memorial_male"
 msgid "Died"
-msgstr ""
+msgstr "Zmarł"
 
 #. ~ %s is player name
 #: src/memorial_logger.cpp
 #, c-format
 msgctxt "memorial_male"
 msgid "%s took over the journey through the Cataclysm."
-msgstr ""
+msgstr "%s przejął podróż przez Kataklizm."
 
 #: src/memorial_logger.cpp
 #, c-format
 msgctxt "memorial_female"
 msgid "%s took over the journey through the Cataclysm."
-msgstr ""
+msgstr "%s przejęła podróż przez Kataklizm."
 
 #: src/memorial_logger.cpp
 #, c-format
 msgctxt "memorial_male"
 msgid "Lost the mutation '%s'."
-msgstr ""
+msgstr "Utracił mutację „%s”."
 
 #: src/memorial_logger.cpp
 #, c-format
 msgctxt "memorial_female"
 msgid "Lost the mutation '%s'."
-msgstr ""
+msgstr "Utraciła mutację „%s”."
 
 #: src/mission_companion.cpp
 msgid "Surveying for suitable fields…\n"
-msgstr ""
+msgstr "Szuka odpowiednich pól…\n"
 
 #: src/mission_ui.cpp
 #, c-format
 msgid "Completed: %s"
-msgstr ""
+msgstr "Ukończono: %s"
 
 #: src/mission_ui.cpp
 #, c-format
 msgid "Failed at: %s"
-msgstr ""
+msgstr "Niepowodzenie: %s"
 
 #: src/mission_ui.cpp
 #, c-format
 msgid "Map location: %s"
-msgstr ""
+msgstr "Położenie na mapie: %s"
 
 #: src/mod_manager.cpp
 #, c-format
@@ -243,103 +251,112 @@ msgid ""
 "Mod %s has been removed with reason: %s\n"
 "Remove it from this world's active mods?"
 msgstr ""
+"Mod %s został usunięty z powodu: %s\n"
+"Usunąć go z aktywnych modów tego świata?"
 
 #: src/mod_manager.cpp
 #, c-format
 msgid ""
 "Mod %s not found in mods folder, remove it from this world's active mods?"
 msgstr ""
+"Nie znaleziono modu %s w folderze modów. Usunąć go z aktywnych modów tego "
+"świata?"
 
 #: src/mod_manager_ui.cpp
 #, c-format
 msgid "Unable to add %s.  It is incompatible with a currently active mod."
-msgstr ""
+msgstr "Nie można dodać %s. Jest niezgodny z jednym z aktywnych modów."
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %1s eats the %2s."
-msgstr ""
+msgstr "%1s zjada: %2s."
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %1s gobbles up the %2s."
-msgstr ""
+msgstr "%1s pożera: %2s."
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %1s gnaws on the %2s."
-msgstr ""
+msgstr "%1s ogryza: %2s."
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %1s eats from the %2s."
-msgstr ""
+msgstr "%1s je z: %2s."
 
 #: src/monattack.cpp
 msgid ""
 "a soft robotic voice say, \"Welcome doctor <male_full_name>.  I'll be your "
 "assistant today.\""
 msgstr ""
+"delikatny robotyczny głos mówi, „Witam, doktorze <male_full_name>. Będę dziś "
+"pańskim asystentem”."
 
 #: src/monattack.cpp
 msgid ""
 "a soft robotic voice say, \"Welcome doctor <female_full_name>.  I'll be your "
 "assistant today.\""
 msgstr ""
+"delikatny robotyczny głos mówi, „Witam, pani doktor <female_full_name>. Będę "
+"dziś pani asystentem”."
 
 #: src/monattack.cpp
 msgid "a robotic voice boom, \"Citizen <male_full_name>!\""
-msgstr ""
+msgstr "robotyczny głos krzyczący, „Obywatelu <male_full_name>!”"
 
 #: src/monattack.cpp
 msgid "a robotic voice boom, \"Citizen <female_full_name>!\""
-msgstr ""
+msgstr "robotyczny głos krzyczący, „Obywatelko <female_full_name>!”"
 
 #: src/monattack.cpp
 msgid "a robotic voice boom, \"Citizen… database connection lost!\""
 msgstr ""
+"robotyczny głos krzyczący, „Obywatelu… utracono połączenie z bazą danych!”"
 
 #: src/monattack.cpp
 #, c-format
 msgid "\"Drop your %s!  Now!\""
-msgstr ""
+msgstr "„Rzuć to: %s! Już!”"
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %1$s loudly blows their whistle!"
-msgstr ""
+msgstr "%1$s głośno dmie w gwizdek!"
 
 #: src/monattack.cpp
 msgid "\"Stop it please.\""
-msgstr ""
+msgstr "„Proszę, przestań”."
 
 #: src/monattack.cpp
 msgid "\"Let us help you.\""
-msgstr ""
+msgstr "„Pozwól nam sobie pomóc”."
 
 #: src/monattack.cpp
 msgid "\"We wish you no harm.\""
-msgstr ""
+msgstr "„Nie chcemy cię skrzywdzić”."
 
 #: src/monattack.cpp
 msgid "\"Do not fear.\""
-msgstr ""
+msgstr "„Nie bój się”."
 
 #: src/monattack.cpp
 msgid "\"We can help you.\""
-msgstr ""
+msgstr "„Możemy ci pomóc”."
 
 #: src/monattack.cpp
 msgid "\"We are friendly.\""
-msgstr ""
+msgstr "„Jesteśmy przyjaźni”."
 
 #: src/monattack.cpp
 msgid "\"Please don't.\""
-msgstr ""
+msgstr "„Proszę, nie rób tego”."
 
 #: src/monattack.cpp
 msgid "The robot orders you to present your hands and be cuffed."
-msgstr ""
+msgstr "Robot każe ci wyciągnąć ręce do skucia."
 
 #: src/monattack.cpp
 msgid ""
@@ -348,39 +365,42 @@ msgid ""
 "'attack' and a potentially fatal medical condition.  It backs off, signaling "
 "for medical help."
 msgstr ""
+"Padasz na ziemię i udajesz nagły atak drgawek. Choć wyraźnie wciąż żyjesz, "
+"robot nie potrafi odróżnić twojego „ataku” od potencjalnie śmiertelnego stanu"
+" medycznego. Wycofuje się, wzywając pomoc medyczną."
 
 #: src/monattack.cpp
 msgid "Your awkward movements do not fool the robot."
-msgstr ""
+msgstr "Twoje niezdarne ruchy nie zwiodą robota."
 
 #: src/monattack.cpp
 #, c-format
 msgid "The %s dissipates and reforms itself from the angles in the corner."
-msgstr ""
+msgstr "%s rozprasza się i odtwarza z kątów pomieszczenia."
 
 #: src/monexamine.cpp
 #, c-format
 msgid "I need to have in hand something to stop the bleeding of %s"
-msgstr ""
+msgstr "Muszę trzymać w ręce coś, czym zatamuję krwawienie: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "I'm not going to stop %s bleeding with this %s "
-msgstr ""
+msgstr "%1$s: nie zatamuję krwawienia przedmiotem %2$s "
 
 #: src/monexamine.cpp
 #, c-format
 msgid "The bleeding of %s stopped"
-msgstr ""
+msgstr "Zatamowano krwawienie: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "The %1$s is too long to fit in the %2$s."
-msgstr ""
+msgstr "Przedmiot %1$s jest za długi, by zmieścić się w: %2$s."
 
 #: src/monexamine.cpp
 msgid "You don't have a cutting tool."
-msgstr ""
+msgstr "Nie masz narzędzia tnącego."
 
 #: src/monexamine.cpp
 #, c-format
@@ -388,220 +408,228 @@ msgid ""
 "What to do with your %s?\n"
 "Fullness: %i%%"
 msgstr ""
+"Co zrobić z: %s?\n"
+"Sytość: %i%%"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Push the %s"
-msgstr ""
+msgstr "Popchnij: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Stop leading the %s"
-msgstr ""
+msgstr "Przestań prowadzić: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Lead the %s by the leash"
-msgstr ""
+msgstr "Prowadź na smyczy: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Remove a bag from the %s"
-msgstr ""
+msgstr "Zdejmij torbę: %s"
 
 #: src/monexamine.cpp
 msgid "Remove all items from a bag"
-msgstr ""
+msgstr "Wyjmij wszystkie przedmioty z torby"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Attach a bag to the %s"
-msgstr ""
+msgstr "Przypnij torbę: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Remove the vehicle harness from the %s"
-msgstr ""
+msgstr "Zdejmij uprząż pojazdu: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Remove armor from the %s"
-msgstr ""
+msgstr "Zdejmij pancerz: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Equip the %s with armor"
-msgstr ""
+msgstr "Załóż pancerz: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Remove the leash from the %s"
-msgstr ""
+msgstr "Zdejmij smycz: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Attach a leash to the %s"
-msgstr ""
+msgstr "Załóż smycz: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "You need any type of rope to leash the %s"
-msgstr ""
+msgstr "Potrzebujesz jakiejkolwiek liny, aby wziąć na smycz: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Play with the %s"
-msgstr ""
+msgstr "Pobaw się z: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Cull the %s"
-msgstr ""
+msgstr "Ubij: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Milk the %s"
-msgstr ""
+msgstr "Wydój: %s"
 
 #: src/monexamine.cpp
 msgid "This animal would freeze if you shear it during the winter."
-msgstr ""
+msgstr "To zwierzę zamarznie, jeśli ostrzyżesz je zimą."
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Shear the %s."
-msgstr ""
+msgstr "Ostrzyż: %s."
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Tack up the %s"
-msgstr ""
+msgstr "Osiodłaj: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "You don't know how to saddle the %s"
-msgstr ""
+msgstr "Nie wiesz, jak osiodłać: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Remove the tack from the %s"
-msgstr ""
+msgstr "Zdejmij siodło: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Manage your friendship with the %s"
-msgstr ""
+msgstr "Zarządzaj przyjaźnią: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Talk to the %s"
-msgstr ""
+msgstr "Rozmawiaj z: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Treat the %s's bleeding"
-msgstr ""
+msgstr "Zatamuj krwawienie: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Mount the %s"
-msgstr ""
+msgstr "Dosiądź: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "The %s cannot be mounted"
-msgstr ""
+msgstr "Nie można dosiąść: %s"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "The %s is too small to carry your weight"
-msgstr ""
+msgstr "%s nie uniesie twojego ciężaru"
 
 #: src/monexamine.cpp
 msgid "You require survival skill 1 to ride a mount"
 msgstr ""
+"Potrzebujesz umiejętności surwiwal na poziomie 1, aby jeździć wierzchem"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "You are too heavy to mount the %s"
-msgstr ""
+msgstr "Jesteś za ciężki, by dosiąść: %s"
 
 #: src/monexamine.cpp
 msgid "You require survival skill 4 to ride without a saddle"
 msgstr ""
+"Potrzebujesz umiejętności surwiwal na poziomie 4, aby jeździć bez siodła"
 
 #: src/monexamine.cpp
 #, c-format
 msgid "Really slaughter your %s?"
-msgstr ""
+msgstr "Naprawdę zarżnąć: %s?"
 
 #: src/monmove.cpp
 #, c-format
 msgid "The %1$s tramples %2$s."
-msgstr ""
+msgstr "%1$s tratuje: %2$s."
 
 #: src/monster.cpp
 #, c-format
 msgid "This is a %s %s. %s"
-msgstr ""
+msgstr "To jest %s %s. %s"
 
 #: src/monster.cpp
 msgid "<color_red>Aggressive towards characters</color>"
-msgstr ""
+msgstr "<color_red>Agresywny wobec postaci</color>"
 
 #: src/monster.cpp
 #, c-format
 msgid "%d special attack(s): "
-msgstr ""
+msgstr "Ataki specjalne (%d): "
 
 #: src/monster.cpp
 #, c-format
 msgid "%s, cooldown %d; "
-msgstr ""
+msgstr "%s, czas odnowienia %d; "
 
 #: src/monster.cpp
 #, c-format
 msgid "Lifespan end time: %1$d (turns left %2$d)"
-msgstr ""
+msgstr "Koniec życia: %1$d (pozostało tur: %2$d)"
 
 #: src/monster.cpp
 #, c-format
 msgid "%1$s saw the %2$s being stolen!"
-msgstr ""
+msgstr "%1$s widzi kradzież: %2$s!"
 
 #: src/monster.cpp
 #, c-format
 msgid "The %s is no longer grabbed!"
-msgstr ""
+msgstr "%s uwalnia się z chwytu!"
 
 #: src/monster.cpp
 #, c-format
 msgid "The %s breaks free from the %s's grab!"
-msgstr ""
+msgstr "%s wyrywa się z chwytu: %s!"
 
 #: src/monster.cpp
 msgid "The shadow withers in the light!"
-msgstr ""
+msgstr "Cień więdnie w świetle!"
 
 #: src/mutation.cpp
 msgid "You close your eyes and reach out to the spirits of the forest."
-msgstr ""
+msgstr "Zamykasz oczy i sięgasz do duchów lasu."
 
 #: src/mutation.cpp
 msgid ""
 "Your body tries to mutate, but it lacks a primer to do so and only contorts "
 "for a moment."
 msgstr ""
+"Twoje ciało próbuje mutować, ale brakuje mu do tego bazy mutagennej i tylko "
+"na chwilę się wykręca."
 
 #: src/mutation.cpp
 msgid ""
 "As your body transforms, you realize that by asserting your willpower, you "
 "can guide these changes to an extent."
 msgstr ""
+"Gdy twoje ciało się przemienia, uświadamiasz sobie, że siłą woli możesz do "
+"pewnego stopnia kierować tymi zmianami."
 
 #: src/mutation.cpp
 msgid "Something integral to you has changed.  Good riddance."
-msgstr ""
+msgstr "Coś nieodłącznego od ciebie się zmieniło. I dobrze."
 
 #: src/mutation.cpp
 #, c-format
@@ -609,39 +637,41 @@ msgid ""
 "Your churning flesh strains painfully against your %1$s for a moment, then "
 "the feeling fades."
 msgstr ""
+"Twoje kłębiące się ciało przez chwilę boleśnie napiera na: %1$s, po czym "
+"uczucie mija."
 
 #: src/mutation.cpp
 msgid "You mutate!"
-msgstr ""
+msgstr "Mutujesz!"
 
 #: src/mutation.cpp
 #, c-format
 msgid "The changes in your body destroy your %s."
-msgstr ""
+msgstr "Zmiany w twoim ciele niszczą: %s."
 
 #: src/mutation.cpp
 #, c-format
 msgid "Your body strains against your %s and it hurts!"
-msgstr ""
+msgstr "Twoje ciało napiera na: %s, co boli!"
 
 #: src/mutation_data.cpp
 #, c-format
 msgid "Pick variant for: %s"
-msgstr ""
+msgstr "Wybierz wariant dla: %s"
 
 #: src/mutation_ui.cpp
 msgid " mana"
-msgstr ""
+msgstr " many"
 
 #: src/mutation_ui.cpp
 #, c-format
 msgid " - %d%s / %s"
-msgstr ""
+msgstr " - %d%s / %s"
 
 #: src/mutation_ui.cpp
 #, c-format
 msgid " - %s"
-msgstr ""
+msgstr " - %s"
 
 #: src/mutation_ui.cpp
 #, c-format
@@ -649,177 +679,180 @@ msgid ""
 "You cannot activate %1$s!  To read a description of %1$s, press '%2$s', then "
 "'%3$c'."
 msgstr ""
+"Nie możesz aktywować: %1$s! Aby przeczytać opis (%1$s), wciśnij „%2$s”, a "
+"potem „%3$c”."
 
 #: src/mutation_ui.cpp
 #, c-format
 msgid "You cannot activate %1$s!  To read a description of %1$s, press '%2$s'."
 msgstr ""
+"Nie możesz aktywować: %1$s! Aby przeczytać opis (%1$s), wciśnij „%2$s”."
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "inhuman"
-msgstr ""
+msgstr "nieludzkie"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "extraordinary"
-msgstr ""
+msgstr "nadzwyczajne"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "top 1%"
-msgstr ""
+msgstr "1% najlepszych"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "top 10%"
-msgstr ""
+msgstr "10% najlepszych"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "above average"
-msgstr ""
+msgstr "powyżej przeciętnej"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "below average"
-msgstr ""
+msgstr "poniżej przeciętnej"
 
 #. ~Description of a character's main stats. Should not exceed 18 characters
 #. of width.
 #: src/newcharacter.cpp
 msgid "impaired"
-msgstr ""
+msgstr "osłabione"
 
 #: src/newcharacter.cpp
 #, c-format
 msgid "Completed \"%s\"\n"
-msgstr ""
+msgstr "Ukończono „%s”\n"
 
 #: src/newcharacter.cpp
 msgid "Profession money:"
-msgstr ""
+msgstr "Pieniądze z profesji:"
 
 #: src/newcharacter.cpp
 #, c-format
 msgid "Completed \"%s\""
-msgstr ""
+msgstr "Ukończono „%s”"
 
 #: src/npc.cpp
 msgid "Will not buy filthy items"
-msgstr ""
+msgstr "Nie kupuje brudnych przedmiotów"
 
 #: src/npc.cpp
 #, c-format
 msgid "%1$s's"
-msgstr ""
+msgstr "%1$s"
 
 #: src/npc.cpp
 #, c-format
 msgid "%1$s, %2$s's"
-msgstr ""
+msgstr "%1$s, %2$s"
 
 #: src/npc_class.cpp
 msgid "<npc_faction> faction does not trust you enough."
-msgstr ""
+msgstr "Frakcja <npc_faction> nie ufa ci wystarczająco."
 
 #: src/npcmove.cpp
 #, c-format
 msgid "%s is starting to panic a bit."
-msgstr ""
+msgstr "%s zaczyna trochę panikować."
 
 #: src/npcmove.cpp
 #, c-format
 msgid "%s is panicking!"
-msgstr ""
+msgstr "%s panikuje!"
 
 #: src/npcmove.cpp
 #, c-format
 msgid "%s has to really cram their huge body to fit."
-msgstr ""
+msgstr "%s musi się mocno ścisnąć, by zmieścić swoje ogromne ciało."
 
 #: src/npctalk.cpp
 msgid "Butchering corpses"
-msgstr ""
+msgstr "Rzeźnictwo zwłok"
 
 #: src/npctalk.cpp
 msgid "Chopping down trees"
-msgstr ""
+msgstr "Ścinanie drzew"
 
 #: src/npctalk.cpp
 msgid "Chopping logs into planks"
-msgstr ""
+msgstr "Cięcie pni na deski"
 
 #: src/npctalk.cpp
 msgid "Constructing blueprints"
-msgstr ""
+msgstr "Budowanie według projektów"
 
 #: src/npctalk.cpp
 msgid "Crafting item"
-msgstr ""
+msgstr "Wytwarzanie przedmiotu"
 
 #: src/npctalk.cpp
 msgid "Disassembly of items"
-msgstr ""
+msgstr "Rozbieranie przedmiotów"
 
 #: src/npctalk.cpp
 msgid "Farming plots"
-msgstr ""
+msgstr "Uprawa poletek"
 
 #: src/npctalk.cpp
 msgid "Fishing in a zone"
-msgstr ""
+msgstr "Łowienie ryb w strefie"
 
 #: src/npctalk.cpp
 msgid "Mining out tiles"
-msgstr ""
+msgstr "Wydobywanie pól"
 
 #: src/npctalk.cpp
 msgid "Mopping up stains"
-msgstr ""
+msgstr "Zmywanie plam"
 
 #: src/npctalk.cpp
 msgid "Study from books you have in order"
-msgstr ""
+msgstr "Nauka z posiadanych książek po kolei"
 
 #: src/npctalk.cpp
 msgid "Deconstructing vehicles"
-msgstr ""
+msgstr "Rozbieranie pojazdów"
 
 #: src/npctalk.cpp
 msgid "Repairing vehicles"
-msgstr ""
+msgstr "Naprawianie pojazdów"
 
 #: src/npctalk.cpp
 msgid "Taking it easy (Stop what they are working on)"
-msgstr ""
+msgstr "Odpoczynek (przerwanie bieżącej pracy)"
 
 #: src/npctalk.cpp
 msgid "Who should move?"
-msgstr ""
+msgstr "Kto ma się przemieścić?"
 
 #: src/npctalk.cpp
 msgid "This destination can't be reached."
-msgstr ""
+msgstr "Nie da się dotrzeć do tego celu."
 
 #: src/npctalk.cpp
 msgid "Everyone move there!"
-msgstr ""
+msgstr "Wszyscy tam!"
 
 #: src/npctalk.cpp
 #, c-format
 msgid "Move there, %s!"
-msgstr ""
+msgstr "Idź tam, %s!"
 
 #: src/npctalk.cpp
 msgid "Who should we assign?"
-msgstr ""
+msgstr "Kogo mamy przydzielić?"
 
 #: src/npctalk.cpp
 #, c-format
@@ -827,6 +860,8 @@ msgid ""
 "&Thou art but a lowley churl and ye know not this newe tongue.  %s seems "
 "unable to understand what you're saying."
 msgstr ""
+"&Jesteś jeno nędznym chamem i nie znasz tej nowej mowy. %s zdaje się nie "
+"rozumieć, co mówisz."
 
 #: src/npctalk.cpp
 #, c-format
@@ -834,6 +869,8 @@ msgid ""
 "&Thou art but a lowley churl and ye know not this newe tongue.  Unable to "
 "understand your dialect, %s becomes angry!"
 msgstr ""
+"&Jesteś jeno nędznym chamem i nie znasz tej nowej mowy. Nie rozumiejąc twojej"
+" gwary, %s wpada w gniew!"
 
 #: src/npctalk.cpp
 #, c-format
@@ -841,26 +878,28 @@ msgid ""
 "&Thou art but a lowley churl wyth litel understonding of this newe langage, "
 "yet %s can understand you and seems willing to trade!"
 msgstr ""
+"&Jesteś jeno nędznym chamem, co mało rozumie z tej nowej mowy, lecz %s "
+"rozumie cię i zdaje się chętnie handlować!"
 
 #: src/npctalk.cpp
 msgid "Sorry, I'm not sure how to teach the blind."
-msgstr ""
+msgstr "Wybacz, nie wiem, jak uczyć niewidomych."
 
 #: src/npctalk.cpp
 msgid "You're not sure how to teach them while blind."
-msgstr ""
+msgstr "Nie wiesz, jak ich uczyć, kiedy nic nie widzisz."
 
 #: src/npctalk.cpp
 msgid "Ho there, otherwyrldly devyl!  Have yow ware for to chaffare?"
-msgstr ""
+msgstr "Hej tam, diable z innego świata! Masz-li towar na kupczenie?"
 
 #: src/npctalk.cpp
 msgid "Farewell!"
-msgstr ""
+msgstr "Bywaj!"
 
 #: src/npctalk_funcs.cpp
 msgid "My destination"
-msgstr ""
+msgstr "Mój cel"
 
 #: src/npctalk_funcs.cpp
 #, c-format
@@ -869,133 +908,143 @@ msgid ""
 "Tiles to travel: %2$s  \n"
 "Is this path and destination acceptable?"
 msgstr ""
+"Szacowany czas dotarcia: %1$s  \n"
+"Pola do przebycia: %2$s  \n"
+"Czy ta trasa i cel są do przyjęcia?"
 
 #: src/npctalk_funcs.cpp
 #, c-format
 msgid "%s doesn't have any bionics installed…"
-msgstr ""
+msgstr "%s nie ma żadnych zainstalowanych bionik…"
 
 #: src/options.cpp
 msgid "Pulp or Dismember"
-msgstr ""
+msgstr "Miażdż lub rozczłonkuj"
 
 #: src/options.cpp
 msgid "Pulp or Dismember Adjacent"
-msgstr ""
+msgstr "Miażdż lub rozczłonkuj bliskie"
 
 #: src/options.cpp
 msgid "Pulp or Dismember Zombie Only"
-msgstr ""
+msgstr "Miażdż lub rozczłonkuj tylko zombie"
 
 #: src/options.cpp
 msgid "Pulp or Dismember Adjacent Zombie Only"
-msgstr ""
+msgstr "Miażdż lub rozczłonkuj tylko bliskie zombie"
 
 #: src/options.cpp
 msgid "World data compression"
-msgstr ""
+msgstr "Kompresja danych świata"
 
 #: src/options.cpp
 msgid "If true, new worlds store data in a compressed format."
-msgstr ""
+msgstr "Jeśli prawda, nowe światy przechowują dane w formacie skompresowanym."
 
 #: src/options.cpp
 msgid "Enable mouse"
-msgstr ""
+msgstr "Włącz mysz"
 
 #: src/options.cpp
 msgid "Enable input from mouse."
-msgstr ""
+msgstr "Włącz obsługę myszy."
 
 #: src/options.cpp
 msgid "Chinese glyph ranges in ImGui"
-msgstr ""
+msgstr "Zakresy chińskich glifów w ImGui"
 
 #: src/options.cpp
 msgid ""
 "If true, ImGui will add glyphs of full Chinese, include zh_CN, zh_TW, ja. Use"
 " this option when your need all Chinese glyphs.  Requires restart."
 msgstr ""
+"Jeśli prawda, ImGui doda glify pełnego pisma chińskiego, w tym zh_CN, zh_TW, "
+"ja. Użyj tej opcji, gdy potrzebujesz wszystkich chińskich glifów. Wymaga "
+"ponownego uruchomienia."
 
 #: src/options.cpp
 msgid "Show overlay icons over creatures"
-msgstr ""
+msgstr "Pokazuj ikony nad stworzeniami"
 
 #: src/options.cpp
 msgid ""
 "If true, show overlay icons over creatures such as effects, move mode and "
 "whether creatures can see the player."
 msgstr ""
+"Jeśli prawda, nad stworzeniami są wyświetlane ikony, np. efektów, trybu ruchu"
+" i tego, czy stworzenie widzi gracza."
 
 #: src/options.cpp
 msgid "Warn if file integrity check fails"
-msgstr ""
+msgstr "Ostrzegaj o nieudanym sprawdzeniu integralności plików"
 
 #: src/options.cpp
 msgid ""
 "This option controls whether the game will warn when it detects that the "
 "game's data has been modified."
 msgstr ""
+"Ta opcja określa, czy gra ostrzega, gdy wykryje, że jej dane zostały "
+"zmodyfikowane."
 
 #: src/output.cpp
 msgid "<color_cyan>category</color> of item"
-msgstr ""
+msgstr "<color_cyan>kategoria</color> przedmiotu"
 
 #: src/output.cpp
 msgid "<color_cyan>material</color> item is made of"
-msgstr ""
+msgstr "<color_cyan>materiał</color>, z którego zrobiono przedmiot"
 
 #: src/output.cpp
 msgid "<color_cyan>quality</color> provided by tool"
-msgstr ""
+msgstr "<color_cyan>jakość</color> zapewniana przez narzędzie"
 
 #: src/output.cpp
 msgid "<color_cyan>notes</color> written on item"
-msgstr ""
+msgstr "<color_cyan>notatki</color> zapisane na przedmiocie"
 
 #: src/output.cpp
 msgid "<color_cyan>hidden flags</color> of an item"
-msgstr ""
+msgstr "<color_cyan>ukryte flagi</color> przedmiotu"
 
 #: src/output.cpp
 msgid "freezerburn"
-msgstr ""
+msgstr "odmrożone"
 
 #: src/output.cpp
 msgid "<color_cyan>skill</color> taught by books"
-msgstr ""
+msgstr "<color_cyan>umiejętność</color> nauczana przez książki"
 
 #: src/output.cpp
 msgid "<color_cyan>disassembled</color> components"
-msgstr ""
+msgstr "<color_cyan>części</color> z rozbiórki"
 
 #: src/output.cpp
 msgid "can contain item of <color_cyan>length</color>"
-msgstr ""
+msgstr "może pomieścić przedmiot o <color_cyan>długości</color>"
 
 #: src/output.cpp
 msgid "can contain item of <color_cyan>volume</color>"
-msgstr ""
+msgstr "może pomieścić przedmiot o <color_cyan>objętości</color>"
 
 #: src/output.cpp
 msgid "can contain item of <color_cyan>mass</color>"
-msgstr ""
+msgstr "może pomieścić przedmiot o <color_cyan>masie</color>"
 
 #: src/output.cpp
 msgid "covers <color_cyan>body part</color>"
-msgstr ""
+msgstr "zakrywa <color_cyan>część ciała</color>"
 
 #: src/output.cpp
 msgid "covers <color_cyan>layer</color>"
-msgstr ""
+msgstr "zakrywa <color_cyan>warstwę</color>"
 
 #: src/output.cpp
 msgid "items satisfying <color_cyan>both</color> conditions"
-msgstr ""
+msgstr "przedmioty spełniające <color_cyan>oba</color> warunki"
 
 #: src/output.cpp
 msgid "mre;sealed"
-msgstr ""
+msgstr "mre;zalakowane"
 
 #: src/output.cpp
 msgid ""
@@ -1003,109 +1052,116 @@ msgid ""
 "Example: back,flash,aid, ,band\n"
 "\n"
 msgstr ""
+"Domyślnie wyszukiwane są nazwy przedmiotów. Niektórych jednoznakowych prefiksów z dwukropkiem <color_red>:</color> można użyć do innych sposobów wyszukiwania. Dodatkowe filtry oddziela się przecinkami <color_red>,</color>.\n"
+"Przykład: ple,lata,apte, ,band\n"
+"\n"
 
 #: src/output.cpp
 msgid "<color_cyan>name</color> of item"
-msgstr ""
+msgstr "<color_cyan>nazwa</color> przedmiotu"
 
 #: src/overmap_ui.cpp
 msgid "Create a danger note."
-msgstr ""
+msgstr "Utwórz notatkę o zagrożeniu."
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "Danger radius in overmap squares? (0-%d)"
-msgstr ""
+msgstr "Promień zagrożenia w polach mapy głównej? (0-%d)"
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "DANGEROUS AREA!  (R=%d)"
-msgstr ""
+msgstr "OBSZAR NIEBEZPIECZEŃSTWA! (R=%d)"
 
 #: src/overmap_ui.cpp
 msgid "IN DANGEROUS AREA!"
-msgstr ""
+msgstr "W OBSZARZE NIEBEZPIECZEŃSTWA!"
 
 #: src/overmap_ui.cpp src/sdltiles.cpp
 msgid "FAST TRAVELING"
-msgstr ""
+msgstr "SZYBKA PODRÓŻ"
 
 #: src/overmap_ui.cpp src/sdltiles.cpp
 msgid "WEATHER MODE"
-msgstr ""
+msgstr "TRYB POGODY"
 
 #: src/overmap_ui.cpp
 msgid "This is a bug!"
-msgstr ""
+msgstr "To jest błąd!"
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "Press %s to preview route."
-msgstr ""
+msgstr "Wciśnij %s, aby podejrzeć trasę."
 
 #: src/overmap_ui.cpp
 msgid ""
 "For a custom GLYPH or COLOR follow the examples below.  Default GLYPH and "
 "COLOR looks like this: <color_yellow>N</color>"
 msgstr ""
+"Aby ustawić własny GLIF lub KOLOR, postępuj według poniższych przykładów. "
+"Domyślny GLIF i KOLOR wygląda tak: <color_yellow>N</color>"
 
 #: src/overmap_ui.cpp
 msgid ""
 "Highlighted regions already have map content generated.  Their overmap id "
 "will change, but not their contents."
 msgstr ""
+"Podświetlone regiony mają już wygenerowaną zawartość mapy. Ich identyfikator "
+"na mapie głównej się zmieni, ale zawartość nie."
 
 #: src/overmap_ui.cpp
 msgid "No hordes there.  Would you like to make a new horde?"
-msgstr ""
+msgstr "Brak tu hord. Czy chcesz utworzyć nową hordę?"
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "group(type: %s) with %d monsters"
-msgstr ""
+msgstr "grupa (typ: %s), liczba potworów: %d"
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "Set horde's interest (in %%)"
-msgstr ""
+msgstr "Ustaw zainteresowanie hordy (w %%)"
 
 #: src/overmap_ui.cpp
 msgid "Set horde's destination"
-msgstr ""
+msgstr "Ustaw cel hordy"
 
 #: src/overmap_ui.cpp
 msgid "Modify horde's population"
-msgstr ""
+msgstr "Zmień liczebność hordy"
 
 #: src/overmap_ui.cpp
 msgid "Add a new monster to the horde"
-msgstr ""
+msgstr "Dodaj nowego potwora do hordy"
 
 #: src/overmap_ui.cpp
 msgid "Set horde behavior"
-msgstr ""
+msgstr "Ustaw zachowanie hordy"
 
 #: src/overmap_ui.cpp
 msgid "Set horde's boolean values"
-msgstr ""
+msgstr "Ustaw wartości logiczne hordy"
 
 #: src/overmap_ui.cpp
 msgid "Add another horde to this location"
-msgstr ""
+msgstr "Dodaj kolejną hordę w tym miejscu"
 
 #: src/overmap_ui.cpp
 #, c-format
 msgid "Set interest to what value?  Currently %d"
-msgstr ""
+msgstr "Ustaw zainteresowanie na? Obecnie: %d"
 
 #: src/overmap_ui.cpp
 msgid "Select a target destination for the horde."
-msgstr ""
+msgstr "Wybierz cel podróży dla hordy."
 
 #: src/overmap_ui.cpp src/wish.cpp
 #, c-format
 msgid "Set population to what value?  Currently %d"
-msgstr ""
+msgstr "Ustaw liczebność na? Obecnie: %d"
 
 #: src/overmap_ui.cpp
 #, c-format
@@ -1117,6 +1173,12 @@ msgid ""
 "2=roam,\n"
 "3=nemesis"
 msgstr ""
+"Ustaw zachowanie na wartość wyliczeniową? Obecnie: %d.  \n"
+"Dozwolone wartości:\n"
+"0 = brak,\n"
+"1 = miasto,\n"
+"2 = wędrówka,\n"
+"3 = nemezis"
 
 #: src/overmap_ui.cpp
 #, c-format
@@ -1124,6 +1186,8 @@ msgid ""
 "Set group's \"horde\" value to true?  (Select no to set to false)  \n"
 "Currently %s"
 msgstr ""
+"Ustawić wartość „horde” grupy na prawdę? (Wybierz „nie”, by ustawić fałsz)  \n"
+"Obecnie: %s"
 
 #: src/overmap_ui.cpp
 #, c-format
@@ -1131,24 +1195,30 @@ msgid ""
 "Set group's \"dying\" value to true?  (Select no to set to false)  \n"
 "Currently %s"
 msgstr ""
+"Ustawić wartość „dying” grupy na prawdę? (Wybierz „nie”, by ustawić fałsz)  \n"
+"Obecnie: %s"
 
 #: src/overmap_ui.cpp
 msgid "Unable to find a path from the current location:"
-msgstr ""
+msgstr "Nie można znaleźć trasy z obecnego położenia:"
 
 #: src/overmap_ui.cpp
 msgid "Auto travel requires source and destination on same Z level:"
 msgstr ""
+"Automatyczna podróż wymaga, by start i cel były na tym samym poziomie Z:"
 
 #: src/pickup.cpp
 msgid "Chunks of frozen liquid cannot be picked up without the correct tools."
 msgstr ""
+"Bryłek zamarzniętego płynu nie da się podnieść bez odpowiednich narzędzi."
 
 #: src/player_display.cpp
 msgid ""
 "How healthy you feel.  Exercise, vitamins, sleep and not ingesting poison "
 "will increase this over time."
 msgstr ""
+"Jak zdrowo się czujesz. Ćwiczenia, witaminy, sen i unikanie trucizn z czasem "
+"to poprawiają."
 
 #: src/player_display.cpp
 #, c-format
@@ -1157,66 +1227,81 @@ msgid ""
 "%s\n"
 "%s"
 msgstr ""
+"%s\n"
+"%s\n"
+"%s"
 
 #: src/player_display.cpp
 #, c-format
 msgid " %1$s | %2$s | %3$s "
-msgstr ""
+msgstr " %1$s | %2$s | %3$s "
 
 #: src/player_display.cpp
 #, c-format
 msgid " %1$s | %2$s "
-msgstr ""
+msgstr " %1$s | %2$s "
 
 #: src/player_display.cpp
 msgid "Upgrade stat"
-msgstr ""
+msgstr "Ulepsz statystykę"
 
 #: src/player_hardcoded_effects.cpp
 msgid "Your chest bulges, and fungal stalks burst out of your skin!"
 msgstr ""
+"Twoja klatka piersiowa się wybrzusza, a z twojej skóry wyrastają grzybowe "
+"łodygi!"
 
 #: src/player_hardcoded_effects.cpp
 msgid "<npcname>'s chest bulges.  Fungus stalks burst out of their skin!"
 msgstr ""
+"Klatka piersiowa <npcname> się wybrzusza. Ze skóry wyrastają grzybowe łodygi!"
 
 #: src/player_hardcoded_effects.cpp
 msgid ""
 "You could reduce the bleeding by emptying your hands and pausing to apply "
 "pressure."
 msgstr ""
+"Możesz zmniejszyć krwawienie, opróżniając ręce i zatrzymując się, by uciskać "
+"ranę."
 
 #: src/player_hardcoded_effects.cpp
 msgid "You could reduce the bleeding by pausing to apply pressure."
-msgstr ""
+msgstr "Możesz zmniejszyć krwawienie, zatrzymując się, by uciskać ranę."
 
 #: src/profession.cpp
 msgid ""
 "\n"
 "This profession can only be unlocked through achievements."
 msgstr ""
+"\n"
+"Tę profesję można odblokować tylko przez osiągnięcia."
 
 #: src/ranged.cpp
 #, c-format
 msgid ""
 "Your %s displays a warning sequence as its active cooling cycle engages."
 msgstr ""
+"Twój przedmiot %s wyświetla sekwencję ostrzegawczą, gdy włącza się aktywny "
+"cykl chłodzenia."
 
 #: src/ranged.cpp
 #, c-format
 msgid ""
 "Your %s revs and chokes violently as its internal containment fields detune!"
 msgstr ""
+"Twój przedmiot %s gwałtownie warczy i się dławi, gdy jego wewnętrzne pola "
+"powstrzymujące ulegają rozstrojeniu!"
 
 #: src/ranged.cpp
 #, c-format
 msgid "Your %s detonates!"
-msgstr ""
+msgstr "Twój przedmiot %s wybucha!"
 
 #: src/ranged.cpp
 #, c-format
 msgid "Acrid smoke pours from your %s as its internals fuse together."
 msgstr ""
+"Z twojego przedmiotu %s bucha gryzący dym, gdy jego wnętrze się stapia."
 
 #: src/ranged.cpp
 #, c-format
@@ -1224,13 +1309,15 @@ msgid ""
 "The cooling system of your %s chokes and vents a dense cloud of superheated "
 "coolant."
 msgstr ""
+"Układ chłodzenia twojego przedmiotu %s dławi się i wypuszcza gęstą chmurę "
+"przegrzanego chłodziwa."
 
 #: src/ranged.cpp
 #, c-format
 msgid "Your %s is hurt by the recoil!"
-msgstr ""
+msgstr "Obrywasz od odrzutu w %s!"
 
 #: src/ranged.cpp
 #, c-format
 msgid "<npcname>'s %s is hurt by the recoil!"
-msgstr ""
+msgstr "<npcname> obrywa od odrzutu w %s!"
