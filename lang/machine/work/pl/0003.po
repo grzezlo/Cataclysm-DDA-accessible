@@ -15,48 +15,48 @@ msgstr ""
 
 #: src/faction.cpp
 msgid "(POISON)"
-msgstr ""
+msgstr "(TRUCIZNA)"
 
 #: src/faction.cpp
 msgid "(DANGER)"
-msgstr ""
+msgstr "(ZAGROŻENIE)"
 
 #: src/faction.cpp
 msgid "(MEAGER)"
-msgstr ""
+msgstr "(SKĄPO)"
 
 #: src/faction.cpp
 #, c-format
 msgid "Food Supply: %s %d kilocalories"
-msgstr ""
+msgstr "Zapasy żywności: %s %d kilokalorii"
 
 #: src/faction.cpp
 msgid "Worst vitamin:"
-msgstr ""
+msgstr "Najgorsza witamina:"
 
 #: src/faction.cpp
 msgid "Worst toxin:"
-msgstr ""
+msgstr "Najgorsza toksyna:"
 
 #: src/faction_camp.cpp
 msgid "Choose New Leader"
-msgstr ""
+msgstr "Wybierz nowego przywódcę"
 
 #: src/faction_camp.cpp
 msgid "Have A Meal"
-msgstr ""
+msgstr "Zjedz posiłek"
 
 #: src/faction_camp.cpp
 msgid "Hide Mission(s)"
-msgstr ""
+msgstr "Ukryj misje"
 
 #: src/faction_camp.cpp
 msgid "Reveal Hidden Mission(s)"
-msgstr ""
+msgstr "Pokaż ukryte misje"
 
 #: src/faction_camp.cpp
 msgid "Survey terrain and try to convert it to Field"
-msgstr ""
+msgstr "Zbadaj teren i spróbuj zmienić go w pole"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -64,11 +64,13 @@ msgid ""
 "%1$s failed to start the %2$s basecamp, %3$s appliance/vehicle seems to be in"
 " the way."
 msgstr ""
+"%1$s: nie udało się założyć obozu %2$s, chyba przeszkadza urządzenie/pojazd "
+"%3$s."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "%s isn't under your control!"
-msgstr ""
+msgstr "%s nie jest pod twoją kontrolą!"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -79,11 +81,17 @@ msgid ""
 "\n"
 "Kcal cost will be shown last, you will be prompted to accept or back out."
 msgstr ""
+"Notatki:\n"
+"Otworzy to zwykły ekran wytwarzania, na którym wybierzesz przepis i wielkość partii.\n"
+"\n"
+"Po wybraniu przepisu zostaniesz poproszony o wybranie NPC, który wykona przedmiot.\n"
+"\n"
+"Koszt w kcal zostanie pokazany na końcu, wtedy możesz go zaakceptować lub się wycofać."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Total calorie cost: %s (have %d)"
-msgstr ""
+msgstr "Całkowity koszt kaloryczny: %s (masz %d)"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -105,10 +113,26 @@ msgid ""
 "Time: 6 Hour Base + Travel Time + Cutting Time\n"
 "Positions: %d/1\n"
 msgstr ""
+"Notatki:\n"
+"Wyślij towarzysza, by wykarczował pobliski las.\n"
+"Zauważ, że po wykarczowaniu drogi leśne i polne najpewniej będą wyglądać dokładnie tak samo.\n"
+"\n"
+"Używana umiejętność: wytwarzanie\n"
+"Trudność: 1\n"
+"Efekty:\n"
+"> 95%% drzew/kłód w lesie zostanie ściętych.\n"
+"> 0%% materiału łącznie zostanie przyniesione do obozu.\n"
+"> Las powinien zmienić się w pole.\n"
+"> Przydatne do przygotowania terenu pod kolejny obóz frakcji.\n"
+"\n"
+"Ryzyko: brak\n"
+"Intensywność: aktywna\n"
+"Czas: 6 godzin + podróż + czas ścinania\n"
+"Stanowiska: %d/1\n"
 
 #: src/faction_camp.cpp
 msgid "Hide one or more missions to clean up the UI."
-msgstr ""
+msgstr "Ukryj jedną lub więcej misji, by uporządkować interfejs."
 
 #: src/faction_camp.cpp
 #, c-format
@@ -116,6 +140,8 @@ msgid ""
 "Reveal one or more missions previously hidden.\n"
 "Current number of hidden missions: %d"
 msgstr ""
+"Pokaż jedną lub więcej wcześniej ukrytych misji.\n"
+"Obecna liczba ukrytych misji: %d"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -132,6 +158,18 @@ msgid ""
 "Time: 5 Min / Plot\n"
 "Positions: 0/1\n"
 msgstr ""
+"\n"
+"\n"
+"Używana umiejętność: wytwarzanie\n"
+"Trudność: nd.\n"
+"Efekty:\n"
+"> Odtwarza zagony utworzone przy wcześniejszych rozbudowach.\n"
+"> Nie niszczy istniejących upraw.\n"
+"\n"
+"Ryzyko: brak\n"
+"Intensywność: umiarkowana\n"
+"Czas: 5 min/pole\n"
+"Stanowiska: 0/1\n"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -148,10 +186,21 @@ msgid ""
 "Time: 0 Hours\n"
 "Positions: %d/1\n"
 msgstr ""
+"Notatki:\n"
+"Pobliski teren można zmienić w pole, jeśli zostanie całkowicie oczyszczony z terenu innego niż trawa lub ziemia. Taki teren nadaje się wtedy pod standardowe rozszerzenie obozu. Zauważ, że ścinanie drzew robi to automatycznie, gdy drzewa się wyczerpią, ale nie każdy teren nadaje się do wycinki.\n"
+"\n"
+"Używana umiejętność: nd.\n"
+"Efekty:\n"
+"> Jeśli wybrany kierunek rozszerzenia nadaje się do zmiany w pole, ta misja go zmieni. Jeśli się nie nadaje, zostaniesz o tym poinformowany i musisz go przygotować, usuwając wszystko, co nie jest trawą ani ziemią. Do usuwania nawierzchni przydają się np. strefy wydobycia. Pamiętaj, że rozbiórka budynków jest niebezpieczna, pracochłonna i może nie usunąć wszystkiego, jeśli np. zostanie piwnica albo wejście do podziemi (takie jak właz kanałowy).\n"
+"\n"
+"Ryzyko: brak\n"
+"Intensywność: umiarkowana\n"
+"Czas: 0 godzin\n"
+"Stanowiska: %d/1\n"
 
 #: src/faction_camp.cpp
 msgid "Recover Field Surveyor"
-msgstr ""
+msgstr "Wycofaj mierniczego pola"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -170,6 +219,19 @@ msgid ""
 "Time: 3 Hours\n"
 "Positions: %d/1\n"
 msgstr ""
+"Notatki:\n"
+"Rozszerzenia dają nowe możliwości, ale mogą być kosztowne i czasochłonne. Wybieraj je ostrożnie, w każdym obozie można zbudować najwyżej 8.\n"
+"\n"
+"Używana umiejętność: nd.\n"
+"Efekty:\n"
+"> Wybierz jedno z dostępnych rozszerzeń. Farma na początek to zawsze dobry wybór, bo żywność utrzymuje misje towarzyszy, a jej uruchomienie wymaga niewielkich nakładów. Kuźnia też jest świetnym pomysłem, bo pozwala przetwarzać surowce na kolejne rozszerzenia, wytwarzać lepszy sprzęt i wypalać węgiel drzewny.\n"
+"\n"
+"UWAGA: Czynności dostępne dzięki rozszerzeniom znajdują się w osobnych zakładkach okna zarządzania obozem.\n"
+"\n"
+"Ryzyko: brak\n"
+"Intensywność: umiarkowana\n"
+"Czas: 3 godziny\n"
+"Stanowiska: %d/1\n"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -184,6 +246,15 @@ msgid ""
 "or %d / %d / %d days' rations\n"
 "where the days is measured for Extra / Moderate / No exercise levels"
 msgstr ""
+"Notatki:\n"
+"Rozdaj żywność swoim towarzyszom i napełnij spiżarnię. Umieść żywność do rozdania w strefie żywności obozu. Musisz mieć strefę żywności obozu i strefę przechowywania obozu, inaczej zostaniesz poproszony o ich utworzenie w menedżerze stref.\n"
+"Efekty:\n"
+"> Zwiększa zapasy żywności frakcji, z których opłacana jest praca robotników\n"
+"\n"
+"Przyjemność musi wynosić >= -6\n"
+"Łączne zapasy żywności frakcji: %d kcal\n"
+"czyli %d / %d / %d dziennych racji\n"
+"dla poziomu wysiłku: duży / umiarkowany / żaden"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -193,6 +264,11 @@ msgid ""
 "Difficulty: N/A\n"
 "Risk: None\n"
 msgstr ""
+"Notatki:\n"
+"Wybierz nowego przywódcę swojej frakcji.\n"
+"<color_yellow>Zaczniesz grać jako nowy przywódca.</color>\n"
+"Trudność: nd.\n"
+"Ryzyko: brak\n"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -202,27 +278,32 @@ msgid ""
 "Difficulty: N/A\n"
 "Risk: None\n"
 msgstr ""
+"Notatki:\n"
+"Zjedz trochę jedzenia ze spiżarni.\n"
+"Wartość odżywcza zależy od żywności zgromadzonej w spiżarni.\n"
+"Trudność: nd.\n"
+"Ryzyko: brak\n"
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "It's too early for that.  A new leader can be chosen in %s."
-msgstr ""
+msgstr "Na to jeszcze za wcześnie. Nowego przywódcę będzie można wybrać za %s."
 
 #: src/faction_camp.cpp
 msgid "autocratic"
-msgstr ""
+msgstr "autokracja"
 
 #: src/faction_camp.cpp
 msgid "sortition"
-msgstr ""
+msgstr "losowanie"
 
 #: src/faction_camp.cpp
 msgid "democratic"
-msgstr ""
+msgstr "demokracja"
 
 #: src/faction_camp.cpp
 msgid "Choose how the new leader will be determined."
-msgstr ""
+msgstr "Wybierz, jak zostanie wyłoniony nowy przywódca."
 
 #: src/faction_camp.cpp
 msgid ""
@@ -230,6 +311,9 @@ msgid ""
 "\n"
 "Is this acceptable?"
 msgstr ""
+"Jako doświadczony przywódca tylko ty wiesz, czego będzie się wymagać od przyszłych przywódców. Ty wybierzesz.\n"
+"\n"
+"Czy to w porządku?"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -237,15 +321,18 @@ msgid ""
 "\n"
 "Is this acceptable?"
 msgstr ""
+"Pozwolisz losowi wybrać następnego przywódcę. Czy to rzut kośćmi, ciągnięcie słomek, czy losowanie imion z kapelusza, wybór będzie czysto przypadkowy.\n"
+"\n"
+"Czy to w porządku?"
 
 #: src/faction_camp.cpp
 msgid "Fate calls for you to remain in your role as leader… for now."
-msgstr ""
+msgstr "Los chce, żebyś na razie pozostał przywódcą…"
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Fate chooses %s to lead your faction."
-msgstr ""
+msgstr "Los zdecydował: %s poprowadzi twoją frakcję."
 
 #: src/faction_camp.cpp
 msgid ""
@@ -253,10 +340,13 @@ msgid ""
 "\n"
 "Is this acceptable?"
 msgstr ""
+"Przywódca może prowadzić tylko tych, którzy chcą za nim iść. Każdy musi mieć głos w wyborze nowego przywódcy.\n"
+"\n"
+"Czy to w porządku?"
 
 #: src/faction_camp.cpp
 msgid "You win the election!"
-msgstr ""
+msgstr "Wygrywasz wybory!"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -264,67 +354,73 @@ msgid ""
 "%1$s wins the election with a popularity of %2$s!  The runner-up had a "
 "popularity of %3$s."
 msgstr ""
+"%1$s wygrywa wybory z poparciem %2$s! Kandydat z drugiego miejsca miał "
+"poparcie %3$s."
 
 #: src/faction_camp.cpp
 msgid "Have a meal?"
-msgstr ""
+msgstr "Zjeść posiłek?"
 
 #: src/faction_camp.cpp
 msgid "Snack"
-msgstr ""
+msgstr "Przekąska"
 
 #: src/faction_camp.cpp
 msgid "Meal"
-msgstr ""
+msgstr "Posiłek"
 
 #: src/faction_camp.cpp
 msgid "Just stuff your face.  You're hungry!"
-msgstr ""
+msgstr "Po prostu się nażryj. Jesteś głodny!"
 
 #: src/faction_camp.cpp
 msgid "You decide not to have anything after all."
-msgstr ""
+msgstr "Jednak postanawiasz nic nie jeść."
 
 #: src/faction_camp.cpp
 msgid ""
 "You check storage for some food, but there is nothing but dust and cobwebs…"
 msgstr ""
+"Sprawdzasz magazyn w poszukiwaniu jedzenia, ale nie ma tam nic poza kurzem i "
+"pajęczynami…"
 
 #: src/faction_camp.cpp
 msgid "There's only one meal left.  Guess that's dinner!"
-msgstr ""
+msgstr "Został tylko jeden posiłek. Chyba to będzie obiad!"
 
 #: src/faction_camp.cpp
 msgid "departs to look for suitable fields…"
-msgstr ""
+msgstr "oddala się, by szukać odpowiednich pól…"
 
 #: src/faction_camp.cpp
 msgid "There are no NPCs stationed here"
-msgstr ""
+msgstr "Nie stacjonują tu żadni NPC"
 
 #: src/faction_camp.cpp
 msgid "Set all priorities"
-msgstr ""
+msgstr "Ustaw wszystkie priorytety"
 
 #: src/faction_camp.cpp
 msgid "Priority for all jobs "
-msgstr ""
+msgstr "Priorytet dla wszystkich prac "
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "%s isn't a recognized terrain.  Please file a bug report."
-msgstr ""
+msgstr "%s to nierozpoznany teren. Zgłoś błąd."
 
 #: src/faction_camp.cpp
 msgid ""
 "The logged tile has been cleared and cannot be logged further after this "
 "mission."
 msgstr ""
+"Pole wycinki zostało oczyszczone i po tej misji nie da się już na nim ścinać "
+"drzew."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select a forest (or road/trail) from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz las (lub drogę/szlak) w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 msgid ""
@@ -332,75 +428,82 @@ msgid ""
 "rural roads, and trails being valid as well.  Note that it's likely both "
 "forest and field roads look exactly the same after having been cleared."
 msgstr ""
+"Jedynymi prawidłowymi miejscami wycinki są lasy, a także leśne drogi "
+"gruntowe, leśne drogi wiejskie i szlaki. Zauważ, że po wykarczowaniu drogi "
+"leśne i polne najpewniej będą wyglądać dokładnie tak samo."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select a forest, swamp, or field from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz las, bagno lub pole w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select an existing hide site from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz istniejące miejsce ukrycia w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 msgid "You need equipment to transport to/from the hide site…"
-msgstr ""
+msgstr "Potrzebujesz sprzętu do przeniesienia do miejsca ukrycia lub z niego…"
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select a start point from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz punkt początkowy w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select an end point from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz punkt końcowy w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 msgid ""
 "Select checkpoints until you reach maximum range or select the last point "
 "again to end.  Cancel to undo a selection."
 msgstr ""
+"Wybieraj punkty kontrolne, aż osiągniesz maksymalny zasięg, albo wybierz "
+"ponownie ostatni punkt, by zakończyć. Anuluj, by cofnąć wybór."
 
 #: src/faction_camp.cpp
 msgid "There's nobody assigned to work at the camp!"
-msgstr ""
+msgstr "Nikt nie jest przydzielony do pracy w obozie!"
 
 #: src/faction_camp.cpp
 msgid ""
 "Eligible locations must be a terrain OR furniture (not item) that can contain"
 " liquid, and does not already have any items on its tile."
 msgstr ""
+"Odpowiednie miejsca to teren LUB mebel (nie przedmiot), który może pomieścić "
+"ciecz i na którego polu nie ma jeszcze żadnych przedmiotów."
 
 #: src/faction_camp.cpp
 msgid "Choose a NPC to craft"
-msgstr ""
+msgstr "Wybierz NPC do wytwarzania"
 
 #: src/faction_camp.cpp
 msgid "lacks necessary skills"
-msgstr ""
+msgstr "brak wymaganych umiejętności"
 
 #: src/faction_camp.cpp
 msgid "lacks necessary proficiencies"
-msgstr ""
+msgstr "brak wymaganych biegłości"
 
 #: src/faction_camp.cpp
 msgid "already working on something else"
-msgstr ""
+msgstr "już pracuje nad czymś innym"
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "This will cost %i kcal (you have %i stored), is that acceptable?"
-msgstr ""
+msgstr "To będzie kosztować %i kcal (masz zgromadzone %i). Akceptujesz?"
 
 #: src/faction_camp.cpp
 msgid "Not enough stored food."
-msgstr ""
+msgstr "Za mało zgromadzonej żywności."
 
 #: src/faction_camp.cpp
 msgid "Selected seeds"
-msgstr ""
+msgstr "Wybrane nasiona"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -408,22 +511,28 @@ msgid ""
 "%1$s failed to build the %2$s upgrade, %3$s vehicle/appliance seems to be in "
 "the way."
 msgstr ""
+"%1$s: nie udało się zbudować ulepszenia %2$s, chyba przeszkadza "
+"pojazd/urządzenie %3$s."
 
 #: src/faction_camp.cpp
 msgid "stops looking for terrain to turn into fields…"
-msgstr ""
+msgstr "przestaje szukać terenu do zmiany w pola…"
 
 #: src/faction_camp.cpp
 msgid ""
 "You already have an expansion at that location.  Do you want to finish this "
 "mission?  If not, another tile can be checked."
 msgstr ""
+"W tym miejscu masz już rozszerzenie. Chcesz zakończyć tę misję? Jeśli nie, "
+"można sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 msgid ""
 "This location is already a field.  Do you want to finish this mission?  If "
 "not, another tile can be checked."
 msgstr ""
+"To miejsce już jest polem. Chcesz zakończyć tę misję? Jeśli nie, można "
+"sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 #, c-format
@@ -431,16 +540,20 @@ msgid ""
 "This location has %d tiles blocking it from being converted.  Do you want to "
 "finish this mission?  If not, another tile can be checked."
 msgstr ""
+"Liczba pól blokujących zmianę w tym miejscu: %d. Chcesz zakończyć tę misję? "
+"Jeśli nie, można sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 msgid ""
 "This location has now been converted into a field!  Do you want to finish the"
 " mission?  If not, another tile can be checked."
 msgstr ""
+"To miejsce zostało właśnie zmienione w pole! Chcesz zakończyć misję? Jeśli "
+"nie, można sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 msgid "gives up trying to create an expansion…"
-msgstr ""
+msgstr "rezygnuje z prób utworzenia rozszerzenia…"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -448,11 +561,13 @@ msgid ""
 "You can't build any expansion in a %s.  Do you want to finish this mission?  "
 "If not, another tile can be checked."
 msgstr ""
+"Nie można zbudować żadnego rozszerzenia na tym terenie: %s. Chcesz zakończyć "
+"tę misję? Jeśli nie, można sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 msgid ""
 "Do you want to finish this mission?  If not, another tile can be checked."
-msgstr ""
+msgstr "Chcesz zakończyć tę misję? Jeśli nie, można sprawdzić inne pole."
 
 #: src/faction_camp.cpp
 #, c-format
@@ -460,42 +575,48 @@ msgid ""
 "%1$s failed to add the %2$s expansion, %3$s vehicle/appliance seems to be in "
 "the way."
 msgstr ""
+"%1$s: nie udało się dodać rozszerzenia %2$s, chyba przeszkadza "
+"pojazd/urządzenie %3$s."
 
 #: src/faction_camp.cpp
 msgid ""
 "Do you want to finish this mission?  If not, another tile can be checked, or "
 "you can try again after clearing away the obstacle."
 msgstr ""
+"Chcesz zakończyć tę misję? Jeśli nie, można sprawdzić inne pole albo "
+"spróbować ponownie po usunięciu przeszkody."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid "Select a location from %d to %d tiles away."
-msgstr ""
+msgstr "Wybierz miejsce w odległości od %d do %d pól."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid ""
 "You must select a target from %d to %d range.  Your selection was range %d."
-msgstr ""
+msgstr "Musisz wybrać cel w zasięgu od %d do %d. Wybrałeś zasięg %d."
 
 #: src/faction_camp.cpp
 msgid "Confirm again to finalize the path, or cancel to undo."
-msgstr ""
+msgstr "Potwierdź ponownie, by zatwierdzić trasę, albo anuluj, by cofnąć."
 
 #: src/faction_camp.cpp
 msgid "This path is too far, continue to undo and try again."
-msgstr ""
+msgstr "Ta trasa jest za długa, kontynuuj, by cofnąć i spróbować ponownie."
 
 #: src/faction_camp.cpp
 msgid ""
 "Please create some sorting zones.  You must create a camp food zone, and a "
 "camp storage zone."
 msgstr ""
+"Utwórz strefy sortowania. Musisz utworzyć strefę żywności obozu i strefę "
+"przechowywania obozu."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid ">One Way: %15d trips\n"
-msgstr ""
+msgstr ">Kursy w jedną str.: %15d\n"
 
 #: src/faction_camp.cpp
 #, c-format
@@ -506,21 +627,30 @@ msgid ""
 "Time: %s\n"
 "Calories per craft: %s\n"
 msgstr ""
+"Używana umiejętność: %s\n"
+"Trudność: %d\n"
+"%s\n"
+"Czas: %s\n"
+"Kalorie na wytworzenie: %s\n"
 
 #: src/faction_camp.cpp
 msgid "You are too full to eat right now, and put the meal back into storage."
 msgstr ""
+"Jesteś zbyt najedzony, by teraz jeść, i odkładasz posiłek z powrotem do "
+"magazynu."
 
 #: src/faction_camp.cpp
 msgid ""
 "<npcname> is too full to eat right now, and puts the meal back into storage."
 msgstr ""
+"<npcname> nie da rady teraz nic zjeść i odkłada posiłek z powrotem do "
+"magazynu."
 
 #: src/faction_camp.cpp
 #, c-format
 msgid ""
 "%s takes one look at the food and declines, explaining they're allergic."
-msgstr ""
+msgstr "%s rzuca okiem na jedzenie i odmawia, tłumacząc, że ma alergię."
 
 #: src/faction_camp.cpp
 #, c-format
@@ -528,6 +658,8 @@ msgid ""
 "%s takes a bite but spits it out.  It seems something in the food disagrees "
 "with them."
 msgstr ""
+"%s bierze kęs, ale go wypluwa. Wygląda na to, że coś w tym jedzeniu nie służy"
+" tej osobie."
 
 #: src/faction_camp.cpp
 #, c-format
@@ -535,28 +667,32 @@ msgid ""
 "%s thanks you for the meal, but when they see what's in the meal their "
 "attitude suddenly changes!"
 msgstr ""
+"%s dziękuje ci za posiłek, ale po zobaczeniu, co w nim jest, nagle zmienia "
+"nastawienie!"
 
 #: src/faction_camp.cpp
 msgid ""
 "Do you also wish to distribute comestibles without any calorie value (i.e. "
 "multivitamins, mutagens)?"
 msgstr ""
+"Czy rozdać również produkty bez wartości kalorycznej (np. multiwitaminy, "
+"mutageny)?"
 
 #: src/faction_camp.cpp
 msgid "You distribute vitamins and medicine to your companions."
-msgstr ""
+msgstr "Rozdajesz towarzyszom witaminy i leki."
 
 #: src/faction_camp.cpp
 msgid "Select mission(s) to reveal, escape when done"
-msgstr ""
+msgstr "Wybierz misje do pokazania, Escape, by zakończyć"
 
 #: src/faction_camp.cpp
 msgid "You're done for now…"
-msgstr ""
+msgstr "Na razie wystarczy…"
 
 #: src/faction_camp.cpp
 msgid "Select mission(s) to hide, escape when done"
-msgstr ""
+msgstr "Wybierz misje do ukrycia, Escape, by zakończyć"
 
 #: src/faction_camp.cpp
 msgid ""
@@ -564,41 +700,46 @@ msgid ""
 "\n"
 "Eligible locations must be a terrain OR furniture (not item) that can contain liquid, and does not already have any items on its tile."
 msgstr ""
+"Nie znaleziono odpowiednich miejsc na powstałe ciecze, zostaną umieszczone losowo.\n"
+"\n"
+"Odpowiednie miejsca to teren LUB mebel (nie przedmiot), który może pomieścić ciecz i na którego polu nie ma jeszcze żadnych przedmiotów."
 
 #: src/game.cpp
 #, c-format
 msgid "Loading the zoomed out tileset failed: %s"
-msgstr ""
+msgstr "Nie udało się wczytać oddalonej nakładki graficznej: %s"
 
 #: src/game.cpp
 msgid ""
 "Debug character detected.  Quick setup applied, good luck on the testing!"
 msgstr ""
+"Wykryto postać debugowania. Zastosowano szybką konfigurację, powodzenia w "
+"testach!"
 
 #. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_17"
 #: src/game.cpp data/mods/Xedra_Evolved/eocs/eoc_riddles.json
 msgid "The End"
-msgstr ""
+msgstr "Koniec"
 
 #: src/game.cpp
 msgid "Master save"
-msgstr ""
+msgstr "Zapis główny"
 
 #: src/game.cpp
 msgid "Character save"
-msgstr ""
+msgstr "Zapis postaci"
 
 #: src/game.cpp
 msgid "Map memory"
-msgstr ""
+msgstr "Pamięć mapy"
 
 #: src/game.cpp
 msgid "Diary"
-msgstr ""
+msgstr "Pamiętnik"
 
 #: src/game.cpp
 msgid "player achievements"
-msgstr ""
+msgstr "osiągnięć gracza"
 
 #: src/game.cpp
 #, c-format
@@ -607,6 +748,9 @@ msgid ""
 "\n"
 "Put it away?"
 msgstr ""
+"Nie możesz prowadzić, bo musisz trzymać w ręku: %s.\n"
+"\n"
+"Odłożyć?"
 
 #: src/game.cpp
 #, c-format
@@ -615,11 +759,14 @@ msgid ""
 "\n"
 "Put it away?"
 msgstr ""
+"Nie możesz prowadzić, bo musisz trzymać w obu rękach: %s.\n"
+"\n"
+"Odłożyć?"
 
 #: src/game.cpp
 #, c-format
 msgid "%s may be upset by this.  Continue?"
-msgstr ""
+msgstr "%s może się tym zdenerwować. Kontynuować?"
 
 #: src/game.cpp
 #, c-format
@@ -627,119 +774,121 @@ msgid ""
 "You're in the territory of %s, they probably won't appreciate your actions.  "
 "Continue anyway?"
 msgstr ""
+"Jesteś na terytorium frakcji %s, raczej nie spodobają się im twoje działania."
+" Kontynuować mimo to?"
 
 #: src/game.cpp
 #, c-format
 msgid "Shown faction: %s"
-msgstr ""
+msgstr "Pokazana frakcja: %s"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Personal"
-msgstr ""
+msgstr "Osobista"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Enable"
-msgstr ""
+msgstr "Włącz"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Toggle zone display"
-msgstr ""
+msgstr "Przełącz wyświetlanie stref"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Enable personal"
-msgstr ""
+msgstr "Włącz osobiste"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Disable personal"
-msgstr ""
+msgstr "Wyłącz osobiste"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Move up"
-msgstr ""
+msgstr "Przesuń w górę"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Move down"
-msgstr ""
+msgstr "Przesuń w dół"
 
 #: src/game.cpp
 msgctxt "zones manager"
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 #: src/game.cpp
 msgid "You can't see the destination."
-msgstr ""
+msgstr "Nie widzisz celu podróży."
 
 #: src/game.cpp
 msgid "<s>ort: name"
-msgstr ""
+msgstr "<s>ortuj: nazwa"
 
 #: src/game.cpp
 msgid "<s>ort: cat-dist"
-msgstr ""
+msgstr "<s>ortuj: kat.-odl."
 
 #: src/game.cpp
 msgid "<s>ort: cat-name"
-msgstr ""
+msgstr "<s>ortuj: kat.-nazwa"
 
 #: src/game.cpp
 msgid "<T>ravel to"
-msgstr ""
+msgstr "<T> podróżuj do"
 
 #: src/game.cpp src/overmap_ui.cpp
 msgctxt "string input"
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: src/game.cpp src/overmap_ui.cpp
 msgctxt "string input"
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: src/game.cpp
 msgctxt "crafting gui"
 msgid "hides contents"
-msgstr ""
+msgstr "ukrywa zawartość"
 
 #: src/game.cpp
 msgid "Filter items"
-msgstr ""
+msgstr "Filtruj przedmioty"
 
 #: src/game.cpp
 #, c-format
 msgid "%s: %s and %d items"
-msgstr ""
+msgstr "%s: %s i inne przedmioty: %d"
 
 #: src/game.cpp src/handle_action.cpp
 #, c-format
 msgid "Cleared ammo preferences for %s."
-msgstr ""
+msgstr "Wyczyszczono preferencje amunicji dla: %s."
 
 #: src/game.cpp src/handle_action.cpp
 #, c-format
 msgid "Selected %s as default ammo for %s."
-msgstr ""
+msgstr "Wybrano %s jako domyślną amunicję dla: %s."
 
 #: src/game.cpp src/handle_action.cpp
 msgid "You need to keep that ammo on you to select it as default ammo."
-msgstr ""
+msgstr "Musisz mieć tę amunicję przy sobie, by wybrać ją jako domyślną."
 
 #. ~ %1$s: Description of primary monster spotted ("3 fat zombies")
 #. ~ %2$s: Description of how far away the monsters are ("7 tiles" or "5-20
@@ -750,53 +899,57 @@ msgstr ""
 #: src/game.cpp
 #, c-format
 msgid "%1$s %2$s %3$s%4$s"
-msgstr ""
+msgstr "%1$s %2$s %3$s%4$s"
 
 #: src/game.cpp
 msgid ""
 "It's so dark and scary in there!  You can't force yourself to walk into this "
 "tile.  Switch to running movement mode to move there."
 msgstr ""
+"Tam jest tak ciemno i strasznie! Nie możesz się zmusić, by wejść na to pole. "
+"Przełącz się na bieg, by tam wejść."
 
 #: src/game.cpp
 #, c-format
 msgid "You move into the %s, releasing it."
-msgstr ""
+msgstr "Wchodzisz do pojazdu %s, puszczając go."
 
 #: src/game.cpp
 msgid "You barely fit in this tiny human vehicle."
-msgstr ""
+msgstr "Ledwo mieścisz się w tym malutkim ludzkim pojeździe."
 
 #: src/game.cpp
 msgid ""
 "All the stuff you're carrying isn't making it any easier to move in here."
-msgstr ""
+msgstr "Wszystkie niesione rzeczy wcale nie ułatwiają poruszania się tutaj."
 
 #: src/game.cpp
 msgid "You load the furniture onto the vehicle."
-msgstr ""
+msgstr "Ładujesz mebel na pojazd."
 
 #: src/game.cpp
 msgid "Your Joint Servo bionic powers down."
-msgstr ""
+msgstr "Twoja bionika Serwo-stawy się wyłącza."
 
 #: src/game.cpp
 msgid "You're almost sent flying, but something holds you in place!"
-msgstr ""
+msgstr "Prawie wylatujesz w powietrze, ale coś trzyma cię w miejscu!"
 
 #: src/game.cpp
 msgid "<npcname> is almost sent flying, but something holds them in place!"
 msgstr ""
+"<npcname> o mało nie wylatuje w powietrze, ale coś przytrzymuje tę osobę w "
+"miejscu!"
 
 #: src/game.cpp
 #, c-format
 msgid "Climb down %s (%s)"
-msgstr ""
+msgstr "Zejdź w kierunku: %s (%s)"
 
 #: src/game.cpp
 #, c-format
 msgid "Climb up %s (%s)"
-msgstr ""
+msgstr "Wejdź w kierunku: %s (%s)"
 
 #: src/game.cpp src/iexamine.cpp
 #, c-format
@@ -805,284 +958,291 @@ msgid ""
 "\n"
 "Put it away?"
 msgstr ""
+"Nie możesz się wspinać, bo musisz trzymać w obu rękach: %s.\n"
+"\n"
+"Odłożyć?"
 
 #: src/game.cpp
 msgid "There appears to be a dangerous field at your destination.  Continue?"
-msgstr ""
+msgstr "W miejscu docelowym wydaje się być niebezpieczne pole. Kontynuować?"
 
 #: src/game.cpp
 msgid "You swim down."
-msgstr ""
+msgstr "Płyniesz w dół."
 
 #: src/game.cpp
 msgid ""
 "You are already underwater and there is no more water beneath you to swim "
 "down!"
-msgstr ""
+msgstr "Jesteś już pod wodą i pod tobą nie ma już wody, by płynąć niżej!"
 
 #: src/game.cpp
 msgid "You can't dive while walking on water."
-msgstr ""
+msgstr "Nie możesz nurkować, kiedy chodzisz po wodzie."
 
 #: src/game.cpp
 msgid "You swim up."
-msgstr ""
+msgstr "Płyniesz w górę."
 
 #: src/game.cpp
 msgid "You are already underwater and there is no water above you to swim up!"
-msgstr ""
+msgstr "Jesteś już pod wodą i nad tobą nie ma wody, by płynąć wyżej!"
 
 #: src/game.cpp
 msgid "Set scent map sensitivity to?"
-msgstr ""
+msgstr "Ustaw czułość mapy zapachów na?"
 
 #: src/game.cpp
 msgid "No support for curses mode"
-msgstr ""
+msgstr "Brak obsługi w trybie curses"
 
 #: src/game.cpp
 msgid "Your skill in parkour makes up for your bad knees while climbing."
 msgstr ""
+"Twoja umiejętność parkouru rekompensuje słabe kolana podczas wspinaczki."
 
 #: src/game.cpp
 msgid "You are winded, which makes climbing harder."
-msgstr ""
+msgstr "Jesteś zdyszany, co utrudnia wspinaczkę."
 
 #: src/game.cpp
 msgid "You are out of breath, which makes climbing much harder."
-msgstr ""
+msgstr "Brakuje ci tchu, co znacznie utrudnia wspinaczkę."
 
 #: src/game.cpp
 msgid ""
 "You can't catch your breath, which makes it much more difficult to climb."
-msgstr ""
+msgstr "Nie możesz złapać tchu, co bardzo utrudnia wspinaczkę."
 
 #: src/game.cpp
 msgid "You feel faint and can't keep your balance."
-msgstr ""
+msgstr "Robi ci się słabo i nie możesz utrzymać równowagi."
 
 #: src/game.cpp
 #, c-format
 msgid ""
 "There appears to be a dangerous <color_red>%s</color> at your destination."
 msgstr ""
+"W miejscu docelowym wydaje się być niebezpieczne: <color_red>%s</color>."
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Pour %s | %s %s into"
-msgstr ""
+msgstr "Wlej %s | %s %s do"
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "You don't have a suitable container to pour %s into."
-msgstr ""
+msgstr "Nie masz odpowiedniego pojemnika, do którego można wlać: %s."
 
 #: src/game_inventory.cpp
 msgid "Can't pick up gasses."
-msgstr ""
+msgstr "Nie można podnieść gazów."
 
 #: src/game_inventory.cpp
 msgid "Does not have any pocket for frozen liquids!"
-msgstr ""
+msgstr "Nie ma żadnej kieszeni na zamarznięte ciecze!"
 
 #: src/game_inventory.cpp
 msgid "Can't consume spilt gasses."
-msgstr ""
+msgstr "Nie można spożyć rozlanych gazów."
 
 #. ~ kcal_estimated_intake
 #: src/game_inventory.cpp
 msgid "none "
-msgstr ""
+msgstr "brak "
 
 #. ~ kcal_estimated_intake
 #: src/game_inventory.cpp
 msgid "minimal "
-msgstr ""
+msgstr "minimalnie "
 
 #. ~ kcal_estimated_intake
 #: src/game_inventory.cpp
 msgid "low "
-msgstr ""
+msgstr "mało "
 
 #. ~ kcal_estimated_intake
 #: src/game_inventory.cpp
 msgid "high "
-msgstr ""
+msgstr "dużo "
 
 #. ~ kcal_estimated_intake
 #: src/game_inventory.cpp
 msgid "very high "
-msgstr ""
+msgstr "bardzo dużo "
 
 #: src/game_inventory.cpp
 msgid "Vitamin Intake: "
-msgstr ""
+msgstr "Spożycie witamin: "
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "%s: %d%%.  "
-msgstr ""
+msgstr "%s: %d%%. "
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "%s: %s.  "
-msgstr ""
+msgstr "%s: %s. "
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "%1$s</color> <color_dark_gray>or</color> <color_light_green>%2$s"
-msgstr ""
+msgstr "%1$s</color> <color_dark_gray>lub</color> <color_light_green>%2$s"
 
 #: src/game_inventory.cpp
 msgid "you lack the skills to reinstall"
-msgstr ""
+msgstr "brak umiejętności do ponownego montażu"
 
 #: src/game_inventory.cpp
 msgid "must be unloaded before removing this mod"
-msgstr ""
+msgstr "trzeba rozładować przed zdjęciem tej modyfikacji"
 
 #: src/game_inventory.cpp
 msgid "has mods attached"
-msgstr ""
+msgstr "ma zamontowane modyfikacje"
 
 #: src/game_inventory.cpp
 msgid "You don't have any mods to remove."
-msgstr ""
+msgstr "Nie masz żadnych modyfikacji do zdjęcia."
 
 #: src/game_inventory.cpp
 msgid "E-reader is broken and won't turn on."
-msgstr ""
+msgstr "Czytnik e-booków jest zepsuty i się nie włącza."
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Needs at least %d charge."
 msgid_plural "Needs at least %d charges."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Wymaga co najmniej %d ładunku."
+msgstr[1] "Wymaga co najmniej %d ładunków."
+msgstr[2] "Wymaga co najmniej %d ładunków."
+msgstr[3] "Wymaga co najmniej %d ładunku."
 
 #: src/game_inventory.cpp
 msgid "You don't have any e-readers you can use."
-msgstr ""
+msgstr "Nie masz żadnych czytników e-booków, których możesz użyć."
 
 #: src/game_inventory.cpp
 msgid "Select e-reader."
-msgstr ""
+msgstr "Wybierz czytnik e-booków."
 
 #: src/game_inventory.cpp
 msgid "Charges"
-msgstr ""
+msgstr "Ładunki"
 
 #: src/game_inventory.cpp src/iuse.cpp
 msgid "Estimated time"
-msgstr ""
+msgstr "Szacowany czas"
 
 #: src/game_inventory.cpp
 msgid "SELECT BOOKS TO SCAN"
-msgstr ""
+msgstr "WYBIERZ KSIĄŻKI DO ZESKANOWANIA"
 
 #: src/game_inventory.cpp
 msgid "Scan which books?"
-msgstr ""
+msgstr "Które książki zeskanować?"
 
 #: src/game_inventory.cpp
 msgid "You have no books to scan."
-msgstr ""
+msgstr "Nie masz książek do zeskanowania."
 
 #: src/game_inventory.cpp
 #, c-format
 msgid " (using %s)?"
-msgstr ""
+msgstr " (za pomocą: %s)?"
 
 #: src/game_inventory.cpp
 msgid " which device"
-msgstr ""
+msgstr " – które urządzenie"
 
 #: src/game_inventory.cpp
 msgid "You have no eligible devices to "
-msgstr ""
+msgstr "Nie masz odpowiednich urządzeń do czynności: "
 
 #: src/game_inventory.cpp
 msgid "Select devices to "
-msgstr ""
+msgstr "Wybierz urządzenia do czynności: "
 
 #: src/game_inventory.cpp
 msgid " which devices"
-msgstr ""
+msgstr " – które urządzenia"
 
 #: src/game_inventory.cpp
 msgid "Estimated time:"
-msgstr ""
+msgstr "Szacowany czas:"
 
 #: src/game_inventory.cpp
 msgid "Estimated time (slow!):"
-msgstr ""
+msgstr "Szacowany czas (wolno!):"
 
 #: src/game_inventory.cpp
 msgid "Processed / Available Memory: "
-msgstr ""
+msgstr "Przetworzona / dostępna pamięć: "
 
 #: src/game_inventory.cpp
 msgid " which files?"
-msgstr ""
+msgstr " – które pliki?"
 
 #: src/game_inventory.cpp
 msgid "Files selected:"
-msgstr ""
+msgstr "Wybrane pliki:"
 
 #: src/game_inventory.cpp
 msgid ""
 "Using two devices without high-speed compatibility will result in longer transfer times.\n"
 "Having an external storage device compatible with both devices can avoid this."
 msgstr ""
+"Użycie dwóch urządzeń bez zgodności z szybkim transferem wydłuży czas przesyłania.\n"
+"Można tego uniknąć, mając zewnętrzne urządzenie pamięci zgodne z oboma urządzeniami."
 
 #: src/game_inventory.cpp
 msgid "You have no files to "
-msgstr ""
+msgstr "Nie masz plików do czynności: "
 
 #: src/game_inventory.cpp
 msgid "Select files to "
-msgstr ""
+msgstr "Wybierz pliki do czynności: "
 
 #: src/game_inventory.cpp
 msgid "Selected file size exceeds available storage size."
-msgstr ""
+msgstr "Rozmiar wybranych plików przekracza dostępną pamięć."
 
 #: src/game_inventory.cpp
 msgid "<color_red>NONE</color>"
-msgstr ""
+msgstr "<color_red>BRAK</color>"
 
 #: src/game_inventory.cpp
 msgid "MATERIALS AVAILABLE"
-msgstr ""
+msgstr "DOSTĘPNE MATERIAŁY"
 
 #: src/game_inventory.cpp
 msgid "DAMAGE CHANCE"
-msgstr ""
+msgstr "SZANSA USZKODZENIA"
 
 #: src/game_inventory.cpp
 msgid "DIFFICULTY"
-msgstr ""
+msgstr "TRUDNOŚĆ"
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Tool: <color_cyan>%s</color>"
-msgstr ""
+msgstr "Narzędzie: <color_cyan>%s</color>"
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Skill used: <color_cyan>%s (%d)</color>"
-msgstr ""
+msgstr "Używana umiejętność: <color_cyan>%s (%d)</color>"
 
 #: src/game_inventory.cpp
 msgid "Saw stock"
-msgstr ""
+msgstr "Przytnij kolbę"
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Attach an item to the %s"
-msgstr ""
+msgstr "Przymocuj przedmiot do: %s"
 
 #: src/game_inventory.cpp
 #, c-format
@@ -1092,154 +1252,160 @@ msgid ""
 "Allowed equipment:\n"
 "%s"
 msgstr ""
+"Nie masz żadnych przedmiotów zgodnych z: %s.\n"
+"\n"
+"Dozwolone wyposażenie:\n"
+"%s"
 
 #: src/game_inventory.cpp
 #, c-format
 msgid "Choose a tool to attach to %s"
-msgstr ""
+msgstr "Wybierz narzędzie do przymocowania do: %s"
 
 #: src/game_inventory.cpp
 msgid "Shown as"
-msgstr ""
+msgstr "Widoczne jako"
 
 #: src/game_inventory.cpp
 msgid "Change appearance of your armor:"
-msgstr ""
+msgstr "Zmień wygląd swojego pancerza:"
 
 #: src/game_inventory.cpp
 msgid "LOCATION"
-msgstr ""
+msgstr "POŁOŻENIE"
 
 #: src/game_inventory.cpp
 msgid "DESTINATION"
-msgstr ""
+msgstr "CEL"
 
 #: src/game_inventory.cpp
 msgid "AMOUNT"
-msgstr ""
+msgstr "ILOŚĆ"
 
 #: src/game_inventory.cpp
 msgid "DAMAGE"
-msgstr ""
+msgstr "OBRAŻENIA"
 
 #: src/game_inventory.cpp
 msgid "PIERCE"
-msgstr ""
+msgstr "PRZEBICIE"
 
 #: src/game_inventory.cpp
 msgid "Choose ammo to reload"
-msgstr ""
+msgstr "Wybierz amunicję do przeładowania"
 
 #: src/gates.cpp
 #, c-format
 msgid "You lock the %1$s's %2$s."
-msgstr ""
+msgstr "Zamykasz na klucz: %2$s (%1$s)."
 
 #: src/gates.cpp
 #, c-format
 msgid "That %s can only be locked from the inside."
-msgstr ""
+msgstr "Ten obiekt (%s) można zamknąć na klucz tylko od środka."
 
 #: src/gates.cpp
 #, c-format
 msgid "That %s is already locked."
-msgstr ""
+msgstr "Ten obiekt (%s) jest już zamknięty na klucz."
 
 #: src/gates.cpp
 #, c-format
 msgid "You cannot lock the %s."
-msgstr ""
+msgstr "Nie możesz zamknąć na klucz: %s."
 
 #: src/gates.cpp
 msgid "a soft chk."
-msgstr ""
+msgstr "ciche „szczęk”."
 
 #: src/gates.cpp
 #, c-format
 msgid "You unlock the %1$s's %2$s."
-msgstr ""
+msgstr "Otwierasz zamek: %2$s (%1$s)."
 
 #: src/gates.cpp
 #, c-format
 msgid "That %s can only be unlocked from the inside."
-msgstr ""
+msgstr "Ten obiekt (%s) można odemknąć tylko od środka."
 
 #: src/gates.cpp
 #, c-format
 msgid "That %s is already unlocked."
-msgstr ""
+msgstr "Ten obiekt (%s) jest już odemknięty."
 
 #: src/gates.cpp
 #, c-format
 msgid "You cannot unlock the %s."
-msgstr ""
+msgstr "Nie możesz otworzyć zamka: %s."
 
 #: src/gates.cpp
 msgid "a soft click."
-msgstr ""
+msgstr "ciche kliknięcie."
 
 #: src/grab.cpp
 #, c-format
 msgid "The %s is at too sharp an angle to move like this!"
-msgstr ""
+msgstr "Pojazd %s stoi pod zbyt ostrym kątem, by go tak przesunąć!"
 
 #: src/grab.cpp
 #, c-format
 msgid "The %s is steered too far to move like this!"
-msgstr ""
+msgstr "Pojazd %s ma zbyt mocno skręcone koła, by go tak przesunąć!"
 
 #: src/grab.cpp
 #, c-format
 msgid "You let go of the %s as it turns."
-msgstr ""
+msgstr "Puszczasz pojazd %s, gdy skręca."
 
 #: src/handle_action.cpp
 msgid "You have no idea how to make the vehicle move."
-msgstr ""
+msgstr "Nie masz pojęcia, jak wprawić ten pojazd w ruch."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "That %s is locked."
-msgstr ""
+msgstr "Ten obiekt (%s) jest zamknięty na klucz."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "Set %s to %s."
-msgstr ""
+msgstr "Ustawiono %s na %s."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "Warning: Options > %s > %s > %s set to %s."
-msgstr ""
+msgstr "Uwaga: Opcje > %s > %s > %s ustawiono na %s."
 
 #: src/handle_action.cpp
 msgid "You can't move that, it's attached to the wall."
-msgstr ""
+msgstr "Nie możesz tego przesunąć, jest przymocowane do ściany."
 
 #: src/handle_action.cpp
 msgid ""
 "That's part of a power grid.  Separate it from the grid so you can move it?"
 msgstr ""
+"To jest część sieci energetycznej. Odłączyć to od sieci, aby można było "
+"przesunąć?"
 
 #: src/handle_action.cpp
 #, c-format
 msgid "Grab %s on %s?"
-msgstr ""
+msgstr "Chwycić mebel %s na pojeździe %s?"
 
 #: src/handle_action.cpp
 #, c-format
 msgid "You grab the %s loaded on the %s."
-msgstr ""
+msgstr "Chwytasz mebel %s załadowany na pojazd %s."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "You can't move the %s while you're boarding it."
-msgstr ""
+msgstr "Nie możesz przesuwać pojazdu %s, kiedy do niego wsiadasz."
 
 #: src/handle_action.cpp
 #, c-format
 msgid "You can not grab the %s."
-msgstr ""
+msgstr "Nie możesz chwycić: %s."
 
 #: src/handle_action.cpp
 msgid ""
@@ -1247,12 +1413,17 @@ msgid ""
 "If autohaul is enabled, you will automatically add encountered items to the haul.\n"
 "You can set a filter to limit which items are automatically added."
 msgstr ""
+"Wybierz przedmioty na bieżącym polu, które będziesz ciągnąć za sobą podczas ruchu.\n"
+"Jeśli automatyczne ciągnięcie jest włączone, napotkane przedmioty będą automatycznie dodawane do ciągniętych.\n"
+"Możesz ustawić filtr, by ograniczyć, które przedmioty są dodawane automatycznie."
 
 #: src/handle_action.cpp
 msgid ""
 "You are currently not hauling any items, but autohaul is enabled, so any new "
 "items encountered on the ground will be hauled."
 msgstr ""
+"Obecnie nie ciągniesz żadnych przedmiotów, ale automatyczne ciągnięcie jest "
+"włączone, więc wszystkie nowe przedmioty napotkane na ziemi będą ciągnięte."
 
 #: src/handle_action.cpp
 #, c-format
@@ -1260,6 +1431,8 @@ msgid ""
 "You are currently hauling %d items.\n"
 "Autohaul is enabled, so any new items encountered on the ground will be hauled."
 msgstr ""
+"Obecnie ciągniesz przedmioty: %d.\n"
+"Automatyczne ciągnięcie jest włączone, więc wszystkie nowe przedmioty napotkane na ziemi będą ciągnięte."
 
 #: src/handle_action.cpp
 #, c-format
@@ -1267,18 +1440,24 @@ msgid ""
 "You are currently hauling %d items.\n"
 "Autohaul is disabled."
 msgstr ""
+"Obecnie ciągniesz przedmioty: %d.\n"
+"Automatyczne ciągnięcie jest wyłączone."
 
 #: src/handle_action.cpp
 msgid ""
 "You are currently not hauling.  Select items to haul or enable autohaul to "
 "start."
 msgstr ""
+"Obecnie nic nie ciągniesz. Wybierz przedmioty do ciągnięcia lub włącz "
+"automatyczne ciągnięcie, by zacząć."
 
 #: src/handle_action.cpp
 msgid ""
 "\n"
 "Autohaul filter not set."
 msgstr ""
+"\n"
+"Nie ustawiono filtra automatycznego ciągnięcia."
 
 #: src/handle_action.cpp
 #, c-format
@@ -1286,15 +1465,17 @@ msgid ""
 "\n"
 "Autohaul filter: %s"
 msgstr ""
+"\n"
+"Filtr automatycznego ciągnięcia: %s"
 
 #: src/handle_action.cpp
 msgid "Stop hauling"
-msgstr ""
+msgstr "Przestań ciągnąć"
 
 #: src/handle_action.cpp
 msgid "Haul everything here"
-msgstr ""
+msgstr "Ciągnij wszystko stąd"
 
 #: src/handle_action.cpp
 msgid "Choose items to haul"
-msgstr ""
+msgstr "Wybierz przedmioty do ciągnięcia"

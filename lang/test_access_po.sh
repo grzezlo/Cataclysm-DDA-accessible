@@ -321,6 +321,40 @@ else
     echo "ok: lookup skips untranslated entries"
 fi
 
+# An original that mixes positional and plain arguments cannot be translated
+# validly: split leaves it out, status does not count it, validate only
+# warns, and merge and --clear drop its translation.
+{
+    header
+    printf '#: src/a.cpp\n#, c-format\nmsgid "%%1s and %%2$s"\nmsgstr ""\n\n'
+    printf '#: src/a.cpp\nmsgid "fine"\nmsgstr ""\n\n'
+} > lang/machine/broken.po
+"$python" "$catalog" split lang/machine/broken.po broken > /dev/null
+expect_entries "split leaves out invalid originals" broken/0001.po "fine"
+cp lang/machine/broken.po broken/0002.po
+printf '{"1": "%%1s i %%2$s", "2": "dobrze"}' > broken.json
+"$python" "$catalog" fill broken/0002.po broken.json > /dev/null
+if "$python" "$catalog" validate broken/0002.po | grep -q 'warning: Invalid original'
+then
+    echo "ok: validate only warns about invalid originals"
+else
+    echo "FAILED: validate only warns about invalid originals"
+    failures=$((failures + 1))
+fi
+cp lang/machine/broken.po broken/untranslated.po
+if "$python" "$catalog" status broken/untranslated.po | grep -q ' 1 untranslated'
+then
+    echo "ok: status does not count invalid originals"
+else
+    echo "FAILED: status does not count invalid originals"
+    failures=$((failures + 1))
+fi
+rm broken/untranslated.po
+"$python" "$catalog" merge lang/machine/broken.po broken > /dev/null
+msgfmt -o broken.mo lang/machine/broken.po
+expect "merge drops translations of invalid originals" broken.mo "%1s and %2\$s" ""
+expect "merge keeps other translations" broken.mo "fine" "dobrze"
+
 # Negative cases use the production merge function, never tracked catalogs.
 for layer in access machine
 do

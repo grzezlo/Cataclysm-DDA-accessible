@@ -15,59 +15,67 @@ msgstr ""
 
 #: src/crafting.cpp
 msgid "Ugh, this should be EASY with how smart you are!"
-msgstr ""
+msgstr "Ugh, przy twoim intelekcie to powinno być ŁATWE!"
 
 #: src/crafting.cpp
 msgid "<npcname> seems to get really upset over this."
-msgstr ""
+msgstr "<npcname> wydaje się tym bardzo przejmować."
 
 #: src/crafting.cpp
 #, c-format
 msgid "%1s crafts %2s using a reference."
-msgstr ""
+msgstr "%1s wytwarza %2s, korzystając z materiałów pomocniczych."
 
 #: src/crafting.cpp
 #, c-format
 msgid "You have insufficient %s charges and can't continue crafting."
-msgstr ""
+msgstr "Brakuje ci ładunków: %s i nie możesz kontynuować wytwarzania."
 
 #: src/crafting.cpp
 #, c-format
 msgid "<npcname> has insufficient %s charges and can't continue crafting."
 msgstr ""
+"<npcname> nie ma wystarczająco ładunków: %s i nie może kontynuować "
+"wytwarzania."
 
 #: src/crafting_gui.cpp
 #, c-format
 msgid "Minor Failure Chance: <color_%s>%2.2f%%</color>"
-msgstr ""
+msgstr "Szansa drobnego niepowodzenia: <color_%s>%2.2f%%</color>"
 
 #: src/crafting_gui.cpp
 #, c-format
 msgid "Catastrophic Failure Chance: <color_%s>%2.2f%%</color>"
-msgstr ""
+msgstr "Szansa katastrofalnego niepowodzenia: <color_%s>%2.2f%%</color>"
 
 #: src/crafting_gui.cpp
 #, c-format
 msgid "Crafter: %s\n"
-msgstr ""
+msgstr "Wytwórca: %s\n"
 
 #: src/crafting_gui.cpp
 msgid ""
 "<color_red>Crafter cannot practice this because they lack the theoretical "
 "knowledge for it.</color>\n"
 msgstr ""
+"<color_red>Wytwórca nie może tego ćwiczyć, ponieważ brakuje mu wiedzy "
+"teoretycznej.</color>\n"
 
 #: src/crafting_gui.cpp
 msgid ""
 "<color_red>Crafter cannot craft this because they lack the theoretical "
 "knowledge to understand the recipe.</color>\n"
 msgstr ""
+"<color_red>Wytwórca nie może tego wytworzyć, ponieważ brakuje mu wiedzy "
+"teoretycznej, by zrozumieć przepis.</color>\n"
 
 #: src/crafting_gui.cpp
 msgid ""
 "<color_red>Cannot be crafted because the same item is needed for multiple "
 "components.</color>\n"
 msgstr ""
+"<color_red>Nie można wytworzyć, ponieważ ten sam przedmiot jest potrzebny do "
+"kilku komponentów.</color>\n"
 
 #: src/crafting_gui.cpp
 #, c-format
@@ -76,6 +84,9 @@ msgid ""
 " skill will be %.2f levels higher than normal, because of the proficiencies "
 "the crafter has.</color>\n"
 msgstr ""
+"<color_green>Ten przepis będzie wykonywany %.2fx szybciej niż normalnie, a "
+"twoja efektywna umiejętność będzie o %.2f poziomu wyższa niż normalnie dzięki"
+" biegłościom wytwórcy.</color>\n"
 
 #: src/crafting_gui.cpp
 #, c-format
@@ -83,6 +94,8 @@ msgid ""
 "<color_green>This recipe will be %.2fx faster than normal, because of the "
 "proficiencies the crafter has.</color>\n"
 msgstr ""
+"<color_green>Ten przepis będzie wykonywany %.2fx szybciej niż normalnie "
+"dzięki biegłościom wytwórcy.</color>\n"
 
 #: src/crafting_gui.cpp
 #, c-format
@@ -90,12 +103,16 @@ msgid ""
 "<color_green>Your effective skill will be %.2f levels higher than normal, "
 "because of the proficiencies the crafter has.</color>\n"
 msgstr ""
+"<color_green>Twoja efektywna umiejętność będzie o %.2f poziomu wyższa niż "
+"normalnie dzięki biegłościom wytwórcy.</color>\n"
 
 #: src/crafting_gui.cpp
 msgid ""
 "<color_red>Cannot be crafted because the crafter lacks the required "
 "proficiencies.</color>\n"
 msgstr ""
+"<color_red>Nie można wytworzyć, ponieważ wytwórcy brakuje wymaganych "
+"biegłości.</color>\n"
 
 #: src/crafting_gui.cpp
 #, c-format
@@ -103,70 +120,76 @@ msgid ""
 "The crafter does not possess the minimum <color_cyan>%s</color> skill level "
 "required to practice this."
 msgstr ""
+"Wytwórca nie ma minimalnego poziomu umiejętności <color_cyan>%s</color> "
+"wymaganego, by to ćwiczyć."
 
 #: src/crafting_gui.cpp
 msgid ""
 "<bold>Note:</bold> If crafted from poorly-fitting components, the resulting "
 "item may also be poorly-fitted."
 msgstr ""
+"<bold>Uwaga:</bold> Jeśli wytworzysz przedmiot ze źle dopasowanych "
+"komponentów, wynikowy przedmiot również może być źle dopasowany."
 
 #: src/crafting_gui.cpp
 msgid "In sealed container"
-msgstr ""
+msgstr "W szczelnym pojemniku"
 
 #: src/crafting_gui.cpp
 msgid "recipe <color_cyan>memorized</color> (or not)"
-msgstr ""
+msgstr "przepis <color_cyan>zapamiętany</color> (lub nie)"
 
 #: src/crafting_gui.cpp
 msgid "recipe's (<color_cyan>by</color>)<color_cyan>products</color>"
-msgstr ""
+msgstr "<color_cyan>produkty</color> (<color_cyan>uboczne</color>) przepisu"
 
 #: src/crafting_gui.cpp
 msgid "result can contain item of <color_cyan>length</color>"
-msgstr ""
+msgstr "wynik może pomieścić przedmiot o <color_cyan>długości</color>"
 
 #: src/crafting_gui.cpp
 msgid "result can contain item of <color_cyan>volume</color>"
-msgstr ""
+msgstr "wynik może pomieścić przedmiot o <color_cyan>objętości</color>"
 
 #: src/crafting_gui.cpp
 msgid "result can contain item of <color_cyan>mass</color>"
-msgstr ""
+msgstr "wynik może pomieścić przedmiot o <color_cyan>masie</color>"
 
 #: src/crafting_gui.cpp
 msgid "<color_cyan>body part</color> the result covers"
-msgstr ""
+msgstr "<color_cyan>część ciała</color> pokrywana przez wynik"
 
 #: src/crafting_gui.cpp
 msgid "<color_cyan>layer</color> the result covers"
-msgstr ""
+msgstr "<color_cyan>warstwa</color> pokrywana przez wynik"
 
 #: src/crafting_gui.cpp src/output.cpp
 msgid "close to skin"
-msgstr ""
+msgstr "przy skórze"
 
 #: src/crafting_gui.cpp
 msgid "brisk"
-msgstr ""
+msgstr "energiczna"
 
 #: src/crafting_gui.cpp
 msgid "recipe's <color_cyan>activity level</color>"
-msgstr ""
+msgstr "<color_cyan>poziom aktywności</color> przepisu"
 
 #: src/crafting_gui.cpp
 msgid "Select a recipe within this group"
-msgstr ""
+msgstr "Wybierz przepis z tej grupy"
 
 #. ~ Help menu
 #: src/crafting_gui.cpp src/faction_camp.cpp data/core/help.json
 msgid "Crafting"
-msgstr ""
+msgstr "Wytwarzanie"
 
 #: src/crafting_gui.cpp
 #, c-format
 msgid "Indent for line %i not set correctly.  Indents reset to 0."
 msgstr ""
+"Wcięcie dla linii %i nie zostało ustawione poprawnie. Wcięcia zresetowano do "
+"0."
 
 #: src/crafting_gui.cpp
 #, c-format
@@ -174,656 +197,660 @@ msgid ""
 "Searching… %3.0f%%\n"
 "%s\n"
 msgstr ""
+"Wyszukiwanie… %3.0f%%\n"
+"%s\n"
 
 #: src/crafting_gui.cpp
 msgid "Can craft"
-msgstr ""
+msgstr "Można wytworzyć"
 
 #: src/crafting_gui.cpp
 msgid "Can practice"
-msgstr ""
+msgstr "Można ćwiczyć"
 
 #: src/crafting_gui.cpp
 msgid "Missing"
-msgstr ""
+msgstr "Brakuje"
 
 #: src/crafting_gui.cpp
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: src/crafting_gui.cpp
 msgid "asleep"
-msgstr ""
+msgstr "śpi"
 
 #: src/crafting_gui.cpp
 msgid "awake"
-msgstr ""
+msgstr "nie śpi"
 
 #: src/crafting_gui.cpp
 msgid "hands encumbrance/wounds"
-msgstr ""
+msgstr "skrępowanie/rany dłoni"
 
 #: src/crafting_gui.cpp
 msgid "extra manipulators"
-msgstr ""
+msgstr "dodatkowe manipulatory"
 
 #: src/crafting_gui.cpp
 msgid "morale"
-msgstr ""
+msgstr "morale"
 
 #: src/crafting_gui.cpp
 msgid "lighting"
-msgstr ""
+msgstr "oświetlenie"
 
 #: src/creature.cpp
 msgid "<npcname> can't do that while underwater."
-msgstr ""
+msgstr "<npcname> nie może tego zrobić pod wodą."
 
 #. ~ %1$s: creature name, %2$s: weakpoint hit
 #: src/creature.cpp
 #, c-format
 msgid "The shot hits %1$s in %2$s but deals no damage."
-msgstr ""
+msgstr "Strzał trafia %1$s w %2$s, ale nie zadaje obrażeń."
 
 #: src/creature.cpp
 #, c-format
 msgid "%s stumbles into you!"
-msgstr ""
+msgstr "%s wpada na ciebie!"
 
 #: src/creature.cpp
 #, c-format
 msgid "%s attacks, but there is nothing there!"
-msgstr ""
+msgstr "%s atakuje, ale nic tam nie ma!"
 
 #: src/creature.cpp
 msgid ""
 "You don't think you could dodge this attack, and decide to conserve stamina."
 msgstr ""
+"Uznajesz, że nie dasz rady uniknąć tego ataku, i postanawiasz oszczędzać "
+"staminę."
 
 #: src/debug_menu.cpp
 msgid "Failed to create minimized archive"
-msgstr ""
+msgstr "Nie udało się utworzyć zminimalizowanego archiwum"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Minimized archive saved to %s"
-msgstr ""
+msgstr "Zminimalizowane archiwum zapisano w %s"
 
 #: src/debug_menu.cpp
 msgid "Reveal at which vision level?"
-msgstr ""
+msgstr "Na jakim poziomie widoczności ujawnić?"
 
 #: src/debug_menu.cpp
 msgid "Overmap reveal radius: (0-5)"
-msgstr ""
+msgstr "Promień ujawnienia mapy głównej: (0-5)"
 
 #: src/debug_menu.cpp
 msgid "Overmap revealed."
-msgstr ""
+msgstr "Mapa główna ujawniona."
 
 #: src/debug_menu.cpp
 msgid "Forget all recipes"
-msgstr ""
+msgstr "Zapomnij wszystkie przepisy"
 
 #: src/debug_menu.cpp
 msgid "Forget all items"
-msgstr ""
+msgstr "Zapomnij wszystkie przedmioty"
 
 #: src/debug_menu.cpp
 msgid "Import follower"
-msgstr ""
+msgstr "Importuj towarzysza"
 
 #: src/debug_menu.cpp
 msgid "Export follower"
-msgstr ""
+msgstr "Eksportuj towarzysza"
 
 #: src/debug_menu.cpp
 msgid "Export self"
-msgstr ""
+msgstr "Eksportuj siebie"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set %s to how much ammo?  Currently: %d"
-msgstr ""
+msgstr "Ile amunicji ustawić dla %s? Obecnie: %d"
 
 #: src/debug_menu.cpp
 msgid "Add new variable"
-msgstr ""
+msgstr "Dodaj nową zmienną"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "raw var value: %s"
-msgstr ""
+msgstr "surowa wartość zmiennej: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "as time_duration: %s"
-msgstr ""
+msgstr "jako time_duration: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "as time_point: %s"
-msgstr ""
+msgstr "jako time_point: %s"
 
 #: src/debug_menu.cpp
 msgid "Key\n"
-msgstr ""
+msgstr "Klucz\n"
 
 #: src/debug_menu.cpp
 msgid "Edit monster"
-msgstr ""
+msgstr "Edytuj potwora"
 
 #: src/debug_menu.cpp
 msgid "Monster…"
-msgstr ""
+msgstr "Potwór…"
 
 #: src/debug_menu.cpp
 msgid "No monsters found inside the bubble, aborting."
-msgstr ""
+msgstr "Nie znaleziono potworów w bańce, przerywanie."
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Monster %s of type %s"
-msgstr ""
+msgstr "Potwór %s typu %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Summoned by: %s"
-msgstr ""
+msgstr "Przywołany przez: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Expires in: %s"
-msgstr ""
+msgstr "Wygasa za: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "HP(max): %d (%d)"
-msgstr ""
+msgstr "HP(maks.): %d (%d)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Volume: %sL (size %s)"
-msgstr ""
+msgstr "Objętość: %sL (rozmiar %s)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Speed(base): %d (%d)"
-msgstr ""
+msgstr "Szybkość(bazowa): %d (%d)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Aggression(base): %d (%d)"
-msgstr ""
+msgstr "Agresja(bazowa): %d (%d)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Morale(base): %d (%d)"
-msgstr ""
+msgstr "Morale(bazowe): %d (%d)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Ammo: %s rounds of %s"
-msgstr ""
+msgstr "Amunicja: %s szt. typu %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Wandering towards: %s"
-msgstr ""
+msgstr "Wędruje w stronę: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "From cur location: %s"
-msgstr ""
+msgstr "Od obecnego położenia: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Desire to wander: %d"
-msgstr ""
+msgstr "Chęć wędrowania: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Cached item drop: %s"
-msgstr ""
+msgstr "Zapamiętany łup: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Cached dissection result: %s"
-msgstr ""
+msgstr "Zapamiętany wynik sekcji: %s"
 
 #: src/debug_menu.cpp
 msgid "Set aggression"
-msgstr ""
+msgstr "Ustaw agresję"
 
 #: src/debug_menu.cpp
 msgid "Modify ammo"
-msgstr ""
+msgstr "Zmień amunicję"
 
 #: src/debug_menu.cpp
 msgid "Set wander destination (also sets wander desire to 1000 turns)"
-msgstr ""
+msgstr "Ustaw cel wędrówki (ustawia też chęć wędrowania na 1000 tur)"
 
 #: src/debug_menu.cpp
 msgid "Set wander desire"
-msgstr ""
+msgstr "Ustaw chęć wędrowania"
 
 #: src/debug_menu.cpp
 msgid "Run EOC with monster as alpha talker (avatar as beta)"
-msgstr ""
+msgstr "Uruchom EOC z potworem jako rozmówcą alfa (awatar jako beta)"
 
 #: src/debug_menu.cpp
 msgid "Run EOC with monster as beta talker (avatar as alpha)"
-msgstr ""
+msgstr "Uruchom EOC z potworem jako rozmówcą beta (awatar jako alfa)"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set aggression to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw agresję na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 msgid "This monster doesn't have any defined ammo."
-msgstr ""
+msgstr "Ten potwór nie ma zdefiniowanej amunicji."
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set wander desire to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw chęć wędrowania na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 msgid "Generate minimized save archive"
-msgstr ""
+msgstr "Wygeneruj zminimalizowane archiwum zapisu"
 
 #: src/debug_menu.cpp
 msgid "Print factions info to console"
-msgstr ""
+msgstr "Wypisz informacje o frakcjach do konsoli"
 
 #: src/debug_menu.cpp
 msgid "Write Timed (E)vents to timed_event_list.output"
-msgstr ""
+msgstr "Zapisz zaplanowane zdarzenia (E) do timed_event_list.output"
 
 #: src/debug_menu.cpp
 msgid "Edit global v(a)rs"
-msgstr ""
+msgstr "Edytuj zmienne glob(a)lne"
 
 #: src/debug_menu.cpp
 msgid "Write city list to cities.output"
-msgstr ""
+msgstr "Zapisz listę miast do cities.output"
 
 #: src/debug_menu.cpp
 msgid "Open ImGui demo screen"
-msgstr ""
+msgstr "Otwórz ekran demonstracyjny ImGui"
 
 #: src/debug_menu.cpp
 msgid "Unlock all progression"
-msgstr ""
+msgstr "Odblokuj cały postęp"
 
 #: src/debug_menu.cpp
 msgid "Export vehicle as prototype"
-msgstr ""
+msgstr "Eksportuj pojazd jako prototyp"
 
 #: src/debug_menu.cpp
 msgid "Export vehicle effects to file"
-msgstr ""
+msgstr "Eksportuj efekty pojazdu do pliku"
 
 #: src/debug_menu.cpp
 msgid "Spawn an item group"
-msgstr ""
+msgstr "Spawnuj grupę przedmiotów"
 
 #: src/debug_menu.cpp
 msgid "Spawn named NPC"
-msgstr ""
+msgstr "Spawnuj nazwanego NPC"
 
 #: src/debug_menu.cpp
 msgid "Spawn random NPC on overmap"
-msgstr ""
+msgstr "Spawnuj losowego NPC na mapie głównej"
 
 #: src/debug_menu.cpp
 msgid "Spawn a dummy horde twenty submaps(10 OMTs) to the north"
-msgstr ""
+msgstr "Spawnuj testową hordę dwadzieścia submap (10 OMT) na północ"
 
 #: src/debug_menu.cpp
 msgid "Palette viewer"
-msgstr ""
+msgstr "Przeglądarka palet"
 
 #: src/debug_menu.cpp
 msgid "Print overmaps"
-msgstr ""
+msgstr "Wypisz mapy główne"
 
 #: src/debug_menu.cpp
 msgid "Quick setup…"
-msgstr ""
+msgstr "Szybka konfiguracja…"
 
 #: src/debug_menu.cpp
 msgid "Toggle debug mutations"
-msgstr ""
+msgstr "Przełącz mutacje debugowe"
 
 #: src/debug_menu.cpp
 msgid "Normalize body stats"
-msgstr ""
+msgstr "Znormalizuj parametry ciała"
 
 #: src/debug_menu.cpp
 msgid "Edit faction"
-msgstr ""
+msgstr "Edytuj frakcję"
 
 #: src/debug_menu.cpp
 msgid "Display talk topic"
-msgstr ""
+msgstr "Wyświetl temat rozmowy"
 
 #: src/debug_menu.cpp
 msgid "Dialogue…"
-msgstr ""
+msgstr "Dialog…"
 
 #: src/debug_menu.cpp
 msgid "Faction…"
-msgstr ""
+msgstr "Frakcja…"
 
 #: src/debug_menu.cpp src/magic.cpp
 #, c-format
 msgid "Spawn item group %1$s %2$d times"
-msgstr ""
+msgstr "Spawnuj grupę przedmiotów %1$s %2$d razy"
 
 #: src/debug_menu.cpp
 msgid "Is the artifact resonant?"
-msgstr ""
+msgstr "Czy artefakt rezonuje?"
 
 #: src/debug_menu.cpp
 msgid "Choose a teleport destination."
-msgstr ""
+msgstr "Wybierz cel teleportacji."
 
 #: src/debug_menu.cpp
 msgid "Stored kcal: "
-msgstr ""
+msgstr "Zgromadzone kcal: "
 
 #: src/debug_menu.cpp
 msgid "Total kcal: "
-msgstr ""
+msgstr "Łącznie kcal: "
 
 #: src/debug_menu.cpp
 msgid "Stored kcal"
-msgstr ""
+msgstr "Zgromadzone kcal"
 
 #: src/debug_menu.cpp
 msgid "Stomach kcal"
-msgstr ""
+msgstr "Kcal w żołądku"
 
 #: src/debug_menu.cpp
 msgid "Gut kcal"
-msgstr ""
+msgstr "Kcal w jelitach"
 
 #: src/debug_menu.cpp
 msgid "Weariness tracker"
-msgstr ""
+msgstr "Licznik strudzenia"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set stored kcal to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw zgromadzone kcal na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set stomach kcal to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw kcal w żołądku na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set gut kcal to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw kcal w jelitach na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set sleepiness to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw senność na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set weariness tracker to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw licznik strudzenia na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 msgid "aggression"
-msgstr ""
+msgstr "agresja"
 
 #: src/debug_menu.cpp
 msgid "bravery"
-msgstr ""
+msgstr "odwaga"
 
 #: src/debug_menu.cpp
 msgid "collector"
-msgstr ""
+msgstr "zbieracz"
 
 #: src/debug_menu.cpp
 msgid "altruism"
-msgstr ""
+msgstr "altruizm"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set bravery to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw odwagę na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set collector to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw cechę „zbieracz” na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set altruism to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw altruizm na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 msgid "Edit which character?"
-msgstr ""
+msgstr "Edytować którą postać?"
 
 #: src/debug_menu.cpp
 msgid "class ID:"
-msgstr ""
+msgstr "ID klasy:"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Faction: %s (API v%d)"
-msgstr ""
+msgstr "Frakcja: %s (API v%d)"
 
 #: src/debug_menu.cpp
 msgid "Set radiation"
-msgstr ""
+msgstr "Ustaw promieniowanie"
 
 #: src/debug_menu.cpp
 msgid "Edit [b]ionics"
-msgstr ""
+msgstr "Edytuj [b]ionikę"
 
 #: src/debug_menu.cpp
 msgid "Set opinions"
-msgstr ""
+msgstr "Ustaw opinie"
 
 #: src/debug_menu.cpp
 msgid "Set personality"
-msgstr ""
+msgstr "Ustaw osobowość"
 
 #: src/debug_menu.cpp
 msgid "Set faction"
-msgstr ""
+msgstr "Ustaw frakcję"
 
 #: src/debug_menu.cpp
 msgid "Run EOC with character as alpha talker (avatar as beta)"
-msgstr ""
+msgstr "Uruchom EOC z postacią jako rozmówcą alfa (awatar jako beta)"
 
 #: src/debug_menu.cpp
 msgid "Run EOC with character as beta talker (avatar as alpha)"
-msgstr ""
+msgstr "Uruchom EOC z postacią jako rozmówcą beta (awatar jako alfa)"
 
 #: src/debug_menu.cpp src/editmap.cpp
 #, c-format
 msgid "Set rads to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw promieniowanie na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Cause how much pain?  Current pain: %d"
-msgstr ""
+msgstr "Ile bólu zadać? Obecny ból: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set lifestyle value to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw wartość stylu życia na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set the daily health value to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw dzienną wartość zdrowia na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set the radiation to?  Currently: %d"
-msgstr ""
+msgstr "Ustaw promieniowanie na? Obecnie: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Edit %s's variables"
-msgstr ""
+msgstr "Edytuj zmienne: %s"
 
 #: src/debug_menu.cpp
 msgid "Like"
-msgstr ""
+msgstr "Sympatia"
 
 #: src/debug_menu.cpp
 msgid "Respect"
-msgstr ""
+msgstr "Szacunek"
 
 #: src/debug_menu.cpp
 msgid "Trust"
-msgstr ""
+msgstr "Zaufanie"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change like from %d to: "
-msgstr ""
+msgstr "Zmień sympatię z %d na: "
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change respect from %d to: "
-msgstr ""
+msgstr "Zmień szacunek z %d na: "
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change trust from %d to: "
-msgstr ""
+msgstr "Zmień zaufanie z %d na: "
 
 #: src/debug_menu.cpp
 msgid "Edit which entry?"
-msgstr ""
+msgstr "Edytować który wpis?"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "%d kcal, expires %s"
-msgstr ""
+msgstr "%d kcal, wygasa %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "kcal: have stored %i"
-msgstr ""
+msgstr "kcal: zgromadzono %i"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "%s: have stored %d"
-msgstr ""
+msgstr "%s: zgromadzono %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change food from %d to: "
-msgstr ""
+msgstr "Zmień jedzenie z %d na: "
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Wealth: %d"
-msgstr ""
+msgstr "Majątek: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Currency: %s"
-msgstr ""
+msgstr "Waluta: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Size: %d"
-msgstr ""
+msgstr "Rozmiar: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Power: %d"
-msgstr ""
+msgstr "Siła: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Food Supply: %d"
-msgstr ""
+msgstr "Zapasy żywności: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Like: %d"
-msgstr ""
+msgstr "Sympatia: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Respect: %d"
-msgstr ""
+msgstr "Szacunek: %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Known by you: %s"
-msgstr ""
+msgstr "Znana ci: %s"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Lone wolf: %s"
-msgstr ""
+msgstr "Samotny wilk: %s"
 
 #: src/debug_menu.cpp
 msgid "Set wealth"
-msgstr ""
+msgstr "Ustaw majątek"
 
 #: src/debug_menu.cpp
 msgid "Set size"
-msgstr ""
+msgstr "Ustaw rozmiar"
 
 #: src/debug_menu.cpp
 msgid "Set power"
-msgstr ""
+msgstr "Ustaw siłę"
 
 #: src/debug_menu.cpp
 msgid "Set food supply"
-msgstr ""
+msgstr "Ustaw zapasy żywności"
 
 #: src/debug_menu.cpp
 msgid "Toggle Known by you"
-msgstr ""
+msgstr "Przełącz „Znana ci”"
 
 #: src/debug_menu.cpp
 msgid "Toggle Lone wolf"
-msgstr ""
+msgstr "Przełącz „Samotny wilk”"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change wealth from %d to: "
-msgstr ""
+msgstr "Zmień majątek z %d na: "
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change size from %d to: "
-msgstr ""
+msgstr "Zmień rozmiar z %d na: "
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Change power from %d to: "
-msgstr ""
+msgstr "Zmień siłę z %d na: "
 
 #: src/debug_menu.cpp
 msgid "Unsetting current objective"
-msgstr ""
+msgstr "Usuwanie obecnego celu"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Stomach Contents: %d mL / %d mL kcal: %d, Water: %d mL"
-msgstr ""
+msgstr "Zawartość żołądka: %d mL / %d mL kcal: %d, woda: %d mL"
 
 #: src/debug_menu.cpp
 #, c-format
@@ -831,54 +858,56 @@ msgid ""
 "Guts Contents: %d mL / %d mL kcal: %d, Water: %d mL\n"
 "Hunger: %d, Thirst: %d, kcal: %d / %d"
 msgstr ""
+"Zawartość jelit: %d mL / %d mL kcal: %d, woda: %d mL\n"
+"Głód: %d, pragnienie: %d, kcal: %d / %d"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Is debugger active: %s"
-msgstr ""
+msgstr "Czy debugger jest aktywny: %s"
 
 #: src/debug_menu.cpp
 msgid "Choose NPC to hold topic:"
-msgstr ""
+msgstr "Wybierz NPC, który otrzyma temat:"
 
 #: src/debug_menu.cpp
 msgid "Choose talk topic to display:"
-msgstr ""
+msgstr "Wybierz temat rozmowy do wyświetlenia:"
 
 #: src/debug_menu.cpp
 msgid "You need an NPC to add a talk topic to."
-msgstr ""
+msgstr "Potrzebujesz NPC, któremu można dodać temat rozmowy."
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Set temperature to?  [%s]"
-msgstr ""
+msgstr "Ustaw temperaturę na? [%s]"
 
 #: src/debug_menu.cpp
 msgid "There's no one to export!"
-msgstr ""
+msgstr "Nie ma kogo eksportować!"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Damage self for how much?  HP: %s"
-msgstr ""
+msgstr "Ile obrażeń zadać sobie? HP: %s"
 
 #: src/debug_menu.cpp
 msgid "There's no NPCs to import!"
-msgstr ""
+msgstr "Nie ma NPC do zaimportowania!"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Failed to read NPC: %s"
-msgstr ""
+msgstr "Nie udało się odczytać NPC: %s"
 
 #: src/debug_menu.cpp
 msgid "Select location to spawn map extra."
-msgstr ""
+msgstr "Wybierz miejsce, w którym spawnować dodatek mapy."
 
 #: src/debug_menu.cpp
 msgid "Enter NPC template"
-msgstr ""
+msgstr "Wprowadź szablon NPC"
 
 #: src/debug_menu.cpp
 msgid ""
@@ -893,15 +922,25 @@ msgid ""
 "new to the game, meta progression will help you be introduced to mechanics at"
 " a reasonable pace."
 msgstr ""
+"Aktywacja doda osiągnięcie Tryb zręcznościowy, odblokowujące wszystkie "
+"scenariusze startowe i profesje we wszystkich światach. Aby to zarejestrować,"
+" musisz zapisać postać. Osiągnięcia są przechowywane w folderze "
+"„achievements”, jeśli chcesz się tego pozbyć (oraz w folderze „memorial”, "
+"jeśli chcesz się tego pozbyć z martwej postaci w starszym zapisie). Aktywacja"
+" zepsuje przyjemność odkrywania frakcji i sytuacji, na które można natknąć "
+"się naturalnie podczas gry. Niektóre scenariusze są frustrujące dla "
+"niewtajemniczonych, a niektóre profesje pomijają część zawartości gry. Jeśli "
+"jesteś nowym graczem, progresja meta pomoże ci zapoznać się z mechaniką w "
+"rozsądnym tempie."
 
 #: src/debug_menu.cpp
 msgid "Exported file name?"
-msgstr ""
+msgstr "Nazwa eksportowanego pliku?"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Failed to export vehicle: %s"
-msgstr ""
+msgstr "Nie udało się wyeksportować pojazdu: %s"
 
 #: src/debug_menu.cpp
 #, c-format
@@ -909,95 +948,100 @@ msgid ""
 "Written: %s .\n"
 " Please format the exported file for readability."
 msgstr ""
+"Zapisano: %s .\n"
+" Sformatuj wyeksportowany plik, aby był czytelny."
 
 #: src/debug_menu.cpp
 msgid "Top-left point?"
-msgstr ""
+msgstr "Lewy górny punkt?"
 
 #: src/debug_menu.cpp
 msgid "Bottom-right point?"
-msgstr ""
+msgstr "Prawy dolny punkt?"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "z-values must match!  (provided %d, %d)"
-msgstr ""
+msgstr "Wartości z muszą się zgadzać! (podano %d, %d)"
 
 #: src/debug_menu.cpp
 msgid "Second point was not bottom-left!"
-msgstr ""
+msgstr "Drugi punkt nie był lewym dolnym!"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Copied overmap in points %s, %s to clipboard!"
-msgstr ""
+msgstr "Skopiowano mapę główną w punktach %s, %s do schowka!"
 
 #: src/debug_menu.cpp
 msgid "city list written to cities.output"
-msgstr ""
+msgstr "lista miast zapisana do cities.output"
 
 #: src/debug_menu.cpp
 msgid "Achievements have been disabled."
-msgstr ""
+msgstr "Osiągnięcia zostały wyłączone."
 
 #: src/debug_menu.cpp
 msgid "How many NPCs to try spawning?"
-msgstr ""
+msgstr "Ilu NPC spróbować spawnować?"
 
 #: src/debug_menu.cpp
 msgid "Recipe debug: forget recipes."
-msgstr ""
+msgstr "Debug przepisów: zapomnij przepisy."
 
 #: src/debug_menu.cpp
 msgid "You don't know how to craft anymore."
-msgstr ""
+msgstr "Nie wiesz już, jak cokolwiek wytwarzać."
 
 #: src/debug_menu.cpp
 msgid "Recipe debug: forget items."
-msgstr ""
+msgstr "Debug przepisów: zapomnij przedmioty."
 
 #: src/debug_menu.cpp
 msgid "You don't know about any items anymore."
-msgstr ""
+msgstr "Nie wiesz już nic o żadnych przedmiotach."
 
 #: src/debug_menu.cpp
 msgid "Are you sure you want to crash the game?"
-msgstr ""
+msgstr "Na pewno chcesz zawiesić grę?"
 
 #: src/debug_menu.cpp
 msgid "Are you REALLY sure you want to crash the game?"
-msgstr ""
+msgstr "Na pewno NAPRAWDĘ chcesz zawiesić grę?"
 
 #: src/debug_menu.cpp
 msgid ""
 "Quickload without saving?  This may cause issues such as duplicated or "
 "missing items and vehicles!"
 msgstr ""
+"Szybko wczytać bez zapisywania? Może to spowodować problemy, takie jak "
+"zduplikowane lub brakujące przedmioty i pojazdy!"
 
 #: src/debug_menu.cpp
 msgid "Var list written to timed_event_list.output"
-msgstr ""
+msgstr "Lista zmiennych zapisana do timed_event_list.output"
 
 #: src/debug_menu.cpp
 msgid "Edit global variables"
-msgstr ""
+msgstr "Edytuj zmienne globalne"
 
 #: src/debug_menu.cpp
 msgid "Writing archive, this may take a while."
-msgstr ""
+msgstr "Zapisywanie archiwum, to może chwilę potrwać."
 
 #: src/debug_menu.cpp
 msgid "There's no vehicle there, destroy vehicles in all loaded submaps?"
 msgstr ""
+"Nie ma tam pojazdu. Zniszczyć pojazdy we wszystkich wczytanych submapach?"
 
 #: src/debug_menu.cpp
 #, c-format
 msgid "Written: %s"
-msgstr ""
+msgstr "Zapisano: %s"
 
 #: src/dialogue_chatbin.h
 msgid "Don't move a <freaking> muscle…"
-msgstr ""
+msgstr "Nie ruszaj ani jednego <freaking> mięśnia…"
 
 #. ~ Response to NPC dialogue
 #: src/dialogue_chatbin.h
@@ -1035,162 +1079,173 @@ msgstr ""
 #: data/json/npcs/scrap_trader/scrap_trader.json
 #: data/mods/Xedra_Evolved/npc/dialogue/generic_dialogue.json
 msgid "<end_talking_bye>"
-msgstr ""
+msgstr "<end_talking_bye>"
 
 #: src/dialogue_chatbin.h
 msgid "I don't fuckin' trust you enough to eat THIS…"
-msgstr ""
+msgstr "Kurwa, nie ufam ci na tyle, żeby zjeść TO…"
 
 #: src/diary.cpp
 msgid "Lost Mutation: "
-msgstr ""
+msgstr "Utracona mutacja: "
 
 #: src/distraction_manager.cpp
 msgid "This distraction will interrupt your activity when you hear a noise."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy usłyszysz hałas."
 
 #: src/distraction_manager.cpp
 msgid "This distraction will interrupt your activity when you feel pain."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy poczujesz ból."
 
 #: src/distraction_manager.cpp
 msgid "This distraction will interrupt your activity when you're attacked."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy zostaniesz zaatakowany."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when a hostile comes within 5 "
 "tiles from you."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy wróg znajdzie się w odległości 5"
+" pól od ciebie."
 
 #: src/distraction_manager.cpp
 msgid "This distraction will interrupt your activity when you spot a hostile."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy dostrzeżesz wroga."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when someone starts a "
 "conversation with you."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy ktoś zacznie z tobą rozmowę."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you suffer an asthma "
 "attack."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy dostaniesz ataku astmy."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you're standing in a "
 "dangerous field."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy stoisz w niebezpiecznym polu."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when weather changes to "
 "dangerous."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy pogoda zmieni się na "
+"niebezpieczną."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you're at risk of "
 "starving."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy grozi ci śmierć głodowa."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you're dangerously "
 "dehydrated."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy jesteś niebezpiecznie "
+"odwodniony."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when your temperature is very "
 "high or very low."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy twoja temperatura jest bardzo "
+"wysoka lub bardzo niska."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you gain or lose a "
 "mutation."
 msgstr ""
+"Ten rozpraszacz przerwie twoją czynność, gdy zyskasz lub stracisz mutację."
 
 #: src/distraction_manager.cpp
 msgid "Asphyxiation"
-msgstr ""
+msgstr "Uduszenie"
 
 #: src/distraction_manager.cpp
 msgid "This distraction will interrupt your activity when you can't breathe."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy nie możesz oddychać."
 
 #: src/distraction_manager.cpp
 msgid ""
 "This distraction will interrupt your activity when you have withdrawals."
-msgstr ""
+msgstr "Ten rozpraszacz przerwie twoją czynność, gdy masz objawy odstawienia."
 
 #: src/distraction_manager.cpp
 msgid "Withdrawal"
-msgstr ""
+msgstr "Objawy odstawienia"
 
 #: src/distraction_manager.cpp
 msgid "Toggle all distractions"
-msgstr ""
+msgstr "Przełącz wszystkie rozpraszacze"
 
 #: src/do_turn.cpp
 msgid "You suddenly feel alerted!"
-msgstr ""
+msgstr "Nagle czujesz się czujny!"
 
 #: src/do_turn.cpp
 msgid "Your instincts warn you for danger!"
-msgstr ""
+msgstr "Instynkt ostrzega cię przed niebezpieczeństwem!"
 
 #: src/editmap.cpp
 #, c-format
 msgid "Ter: %s (%d); move cost %d"
-msgstr ""
+msgstr "Teren: %s (%d); koszt ruchu %d"
 
 #: src/editmap.cpp
 #, c-format
 msgid "Furn: %s (%d); move cost %d; movestr %d"
-msgstr ""
+msgstr "Mebel: %s (%d); koszt ruchu %d; siła przesunięcia %d"
 
 #: src/editmap.cpp
 #, c-format
 msgctxt "keybinding descriptions"
 msgid "[%s] Reselect, %s"
-msgstr ""
+msgstr "[%s] Wybierz ponownie, %s"
 
 #: src/effect.cpp
 msgid "Local"
-msgstr ""
+msgstr "Lokalne"
 
 #: src/effect.cpp
 #, c-format
 msgid "%s %s modifier: x%.1f\n"
-msgstr ""
+msgstr "Modyfikator (%s) %s: x%.1f\n"
 
 #: src/effect_on_condition.cpp
 #, c-format
 msgid "Possible infinite loop in EOC %s.  Stop execution?"
-msgstr ""
+msgstr "Możliwa nieskończona pętla w EOC %s. Przerwać wykonywanie?"
 
 #: src/explosion.cpp
 #, c-format
 msgid "The EMP blast fries your %s!"
-msgstr ""
+msgstr "Impuls EMP przepala %s!"
 
 #: src/faction.cpp
 msgid "None present (NONE)"
-msgstr ""
+msgstr "Brak w zapasach (BRAK)"
 
 #: src/faction.cpp
 msgid "(PLENTY)"
-msgstr ""
+msgstr "(DUŻO)"
 
 #: src/faction.cpp
 msgid "(TRACE)"
-msgstr ""
+msgstr "(ŚLADY)"
 
 #: src/faction.cpp
 msgid "(LACK)"
-msgstr ""
+msgstr "(NIEDOBÓR)"

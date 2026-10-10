@@ -246,6 +246,13 @@ lang/machine/pl.po lang/machine/work/pl`, then
 `lang/machine/work/pl`.  Start with a pilot of batches 0001-0003 to measure
 cost and check that the reviewer fixes errors without restyling.
 
+Nineteen upstream originals mix positional and plain format arguments
+(`src/activity_item_handling.cpp` "%1s failed to perform the %2$s
+activity…" and eighteen monster attack messages beginning "The %s lashes at
+…", "The %s wraps its filaments…", and "The %s pulls … in its orifice…");
+`split` leaves them out and `merge` drops their translations.  Fix them in
+the sources after the batch run, then refresh the catalog.
+
 Remaining: the pilot and the full run, the first overrides (the validator
 already flags about a dozen upstream `pl` entries with invented or
 unbalanced tags), release notes, and the user test.

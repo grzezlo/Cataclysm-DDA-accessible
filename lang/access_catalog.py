@@ -215,7 +215,22 @@ def tag_problem(source, msgstr):
     return None
 
 
+def source_problem(entry):
+    """A format error in the original, which no translation can fix."""
+    for source in (entry.msgid, entry.msgid_plural):
+        if not source:
+            continue
+        ok, _seg_msgid, _seg_msgstr, reason = check_message(
+            polib.POEntry(msgid=source, msgstr=source))
+        if not ok:
+            return reason
+    return None
+
+
 def entry_problem(entry):
+    reason = source_problem(entry)
+    if reason:
+        return f"Invalid original string: {reason}"
     for source, msgstr in translations(entry):
         ok, _seg_msgid, _seg_msgstr, reason = check_message(
             polib.POEntry(msgid=source, msgstr=msgstr))
@@ -244,6 +259,11 @@ def validate(args):
         reason = entry_problem(entry)
         if reason is None:
             continue
+        if source_problem(entry) and not args.clear:
+            # The translator cannot fix the original; merge and --clear
+            # drop the translation, so it never reaches the game.
+            print(f"{args.catalog}: warning: {reason}: {entry.msgid!r}")
+            continue
         failures += 1
         action = "cleared" if args.clear else "error"
         print(f"{args.catalog}: {action}: {reason}: {entry.msgid!r}")
@@ -261,7 +281,9 @@ def validate(args):
 def status(args):
     for path in args.catalogs:
         catalog = polib.pofile(path)
-        untranslated = len(catalog.untranslated_entries())
+        # An invalid original cannot be translated, so it is not counted.
+        untranslated = sum(1 for entry in catalog.untranslated_entries()
+                           if not source_problem(entry))
         fuzzy = len(catalog.fuzzy_entries())
         drafts = sum(1 for entry in catalog.translated_entries()
                      if AI_DRAFT in entry.tcomment.splitlines())
@@ -294,7 +316,7 @@ def source_rank(entry):
 
 
 def needs_translation(entry):
-    return (not entry.obsolete and
+    return (not entry.obsolete and not source_problem(entry) and
             ("fuzzy" in entry.flags or not has_translation(entry)))
 
 
@@ -308,6 +330,11 @@ def split(args):
               f"remove them first.")
         return 1
     catalog = polib.pofile(args.catalog, wrapwidth=79)
+    for entry in catalog:
+        reason = source_problem(entry)
+        if reason and not entry.obsolete:
+            print(f"Skipping an invalid original string: {reason}: "
+                  f"{entry.msgid!r}")
     pending = [entry for entry in catalog if needs_translation(entry)]
     pending.sort(key=source_rank)
     batches = []
@@ -374,8 +401,10 @@ def lookup(args):
     pattern = re.compile(args.pattern, flags)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
+    shown = 0
     for path in args.catalogs:
-        shown = 0
+        if shown >= args.limit:
+            break
         for entry in polib.pofile(path):
             if (shown >= args.limit or entry.obsolete or
                     "fuzzy" in entry.flags or not has_translation(entry)):
@@ -420,6 +449,10 @@ def show(args):
     for number in range(max(args.first, 1), last + 1):
         entry = entries[number - 1]
         print(f"=== {number}")
+        reason = source_problem(entry)
+        if reason:
+            print(f"!!! Invalid original string ({reason}); leave the "
+                  f"translation empty.")
         for line in entry.comment.splitlines():
             print(f"#. {line}")
         for line in entry.tcomment.splitlines():
@@ -552,7 +585,8 @@ def main():
     lookup_parser.add_argument("--translation", action="store_true",
                                help="match the translation, not the source")
     lookup_parser.add_argument("--limit", type=int, default=20,
-                               help="matches shown per catalog")
+                               help="matches shown in total, from the "
+                               "first catalog onward")
     lookup_parser.add_argument("pattern")
     lookup_parser.add_argument("catalogs", nargs="+")
     lookup_parser.set_defaults(run=lookup)
