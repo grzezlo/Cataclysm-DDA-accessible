@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cataclysm-dda-access\n"
-"POT-Creation-Date: 2026-10-04 13:41+0200\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
 "PO-Revision-Date: 2026-10-01 23:28+0200\n"
 "Last-Translator: Cataclysm: DDA Access contributors\n"
 "Language-Team: pl\n"
@@ -1778,6 +1778,10 @@ msgstr ""
 #: src/accessibility_format.cpp
 #, c-format
 msgid "Moved %1$d of %2$d %3$s to %4$s."
+msgstr ""
+
+#: src/accessibility_format.cpp
+msgid "No details available"
 msgstr ""
 
 #: src/accessibility_format.cpp
@@ -3758,10 +3762,6 @@ msgid "Nearby creatures"
 msgstr ""
 
 #: src/game_inventory.cpp
-msgid "No details available"
-msgstr ""
-
-#: src/game_inventory.cpp
 msgid "No shared numeric statistics"
 msgstr ""
 
@@ -4274,6 +4274,10 @@ msgid "Starting city: %s"
 msgstr ""
 
 #: src/options.cpp
+msgid "Not a number"
+msgstr ""
+
+#: src/options.cpp
 msgid "Screen reader speech"
 msgstr ""
 
@@ -4301,10 +4305,6 @@ msgstr ""
 
 #: src/options.cpp
 msgid "Advanced world options"
-msgstr ""
-
-#: src/options.cpp
-msgid "Not a number"
 msgstr ""
 
 #: src/options.cpp
