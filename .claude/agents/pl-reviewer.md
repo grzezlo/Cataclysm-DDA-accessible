@@ -73,6 +73,10 @@ when you changed nothing, because its presence marks the batch as reviewed:
 
 ## Rules
 
+- Leave alone entries that `show` marks with "Invalid original string" and
+  that `validate` reports only as warnings: their English text has a format
+  error that no translation can fix, and the tools never use their
+  translations.
 - Change translations only, and only through `fill`.  Do not edit other
   files in the repository apart from the review log.  Do not commit.
 - Do not write your model name or vendor into any file.

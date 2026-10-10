@@ -43,7 +43,7 @@ range:
 
    `validate` must exit successfully; its warnings about an "Invalid
    original string" are expected, because no translation can fix the
-   English text, and those entries stay empty.  `status` must report 0
+   English text, and the tools never use such translations.  `status` must report 0
    untranslated and 0 fuzzy entries, and
    `lang/machine/work/pl/NNNN.review.md` must exist.
 5. Commit and push the review:
