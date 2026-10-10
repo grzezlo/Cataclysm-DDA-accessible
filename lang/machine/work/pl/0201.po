@@ -1,0 +1,1741 @@
+# Batch 201 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of spell "lilin_aoe_line_disease_spell ( Unleash the Night-
+#. Wind )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"Summon a miasma filled with pestilence to infect your enemies.  This "
+"supernatural disease can even strike zombies or stranger creatures."
+msgstr ""
+
+#. ~ Description of spell "lilin_disease_enhancement_damage_spell ( Devoured by
+#. Pestilence )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"Enhance the power of the miasma from Unleash the Night-Wind, doing serious "
+"damage and crippling your target."
+msgstr ""
+
+#. ~ Description of spell "lilin_avoid_sleep_spell ( Neither Sleep Nor Slumber
+#. )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Spend ruach to alleviate your sleepiness."
+msgstr ""
+
+#. ~ Description of spell "lilin_change_weather_fog_spell ( Thick Clouds A
+#. Covering )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"Manipulate the weather, pulling the water from the air and cause a thick fog "
+"to form and blanket the countryside.  Activate again to release your hold on "
+"the weather."
+msgstr ""
+
+#. ~ Description of spell "lilin_speed_dodge_boost_spell ( Reaping the
+#. Whirlwind )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"Spend some ruach to greatly enhance your speed for a short period of time."
+msgstr ""
+
+#. ~ Name of spell "lilin_strix_leap_spell"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Strix Leap"
+msgstr ""
+
+#. ~ Description of spell "lilin_instant_heal_spell ( The Moon to Rule the
+#. Night )"
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"At night under the moon, you can greatly speed your healing, knitting "
+"together grievous wounds in moments.  This requires direct moonlight; clouds,"
+" rain, or being indoors will prevent this power from working."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DREAMER_ARTIFACT_SPAWN"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"You pull your power into this world, and something outside of it places an "
+"object in your hand."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_DREAMER_ARTIFACT_FAIL_MESSAGE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"Your impatience is apparently a defining feature.  You're going to need a lot"
+" more time connecting with the universe to make this happen."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_DREAMER_ARTIFACT_FAIL_MESSAGE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"You try to connect the item with another dimension, but everything goes wrong"
+" from the very beginning.  You feel you need much more patience to finish "
+"this."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_DREAMER_ARTIFACT_FAIL_MESSAGE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"You try to connect the item with another dimension, but something interrupts "
+"you in the middle of your attempt.  You need just a bit more time to make "
+"this work."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_DREAMER_ARTIFACT_FAIL_MESSAGE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"You try to connect the item with another dimension, but in the end it fails."
+"  It was close though, so you think you need to try it again tomorrow."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_GENERATE_ACCELERATED_TIME_INITIATE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"<color_light_gray>Grey</color> fields of time start seeping from your body."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_GENERATE_ACCELERATED_TIME_INITIATE"
+#. ~ Player message in false effect in EoC
+#. "EOC_GENERATE_ACCELERATED_TIME_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "The world regains color as it speeds up."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_GENERATE_ACCELERATED_TIME_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"The grayscale starts to recede from your vision before it quickly reverts."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ETHEREAL_WINGS_INITIATE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "<color_white>Ethereal</color> wings grow from your back."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ETHEREAL_WINGS_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_ETHEREAL_WINGS_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "The wings behind you fade out of existence."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ETHEREAL_WINGS_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"The wings behind you grow slightly more transparent, but they quickly revert "
+"back to normal."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_KARMA_ARMS_INITIATE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"Ethereal, transparent arms appear behind your shoulders and "
+"<color_cyan>glow</color>."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_KARMA_ARMS_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_KARMA_ARMS_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "The cyan arms grow dim and finally disappear."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_KARMA_ARMS_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"The floating arms behind you slightly flicker, but they soon resume their "
+"steady glow."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEVIL_TAIL_INITIATE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "You feel like your spine stretched enormously."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DEVIL_TAIL_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_DEVIL_TAIL_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "Your devil tail fades away."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEVIL_TAIL_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "Your devilish tail stretches and twists playfully."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_STALKER_EYES_INITIATE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid ""
+"Your vision grows dark for a moment, but a second later a whole new world is "
+"revealed under your eyes."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_STALKER_EYES_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_STALKER_EYES_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "The great new world visible to your eyes disappears."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_STALKER_EYES_CONTINUE"
+#: data/mods/Xedra_Evolved/spells/spell_eocs.json
+msgid "Your sight darkens for a second, but it quickly turns back."
+msgstr ""
+
+#. ~ Name of spell "vampire_smell_nearby_blood_spell"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Scent of Blood"
+msgstr ""
+
+#. ~ Description of spell "vampire_smell_nearby_blood_spell ( Scent of Blood )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"You can smell even the faintest traces of living human, or nearly-human, blood.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 0 ml."
+msgstr ""
+
+#. ~ Name of spell "vampire_drink_blood_with_fangs_spell"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Drink Blood"
+msgstr ""
+
+#. ~ Description of spell "vampire_drink_blood_with_fangs_spell ( Drink Blood
+#. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Your fangs allow you to drink blood from an incapacitated or sleeping target."
+msgstr ""
+
+#. ~ Description of spell "vampire_stamina_for_blood_spell ( Unholy Endurance
+#. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"You focus on sending the blood in your veins to where it can do the most good for your immediate stamina.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 100 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "vampire_commune_with_night_spell ( Learn from the
+#. Children of the Night )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Speak to nearby night-creatures; rats, bats, wolves, and so on.  They will tell you the layout of your surrounding area.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 100 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "vampire_magic_for_blood_spell ( Blood-Fueled Magic
+#. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"You consume some of the blood in your veins, turning it into magical power.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 200 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "spell_blood_heal ( Sanguine Restoration )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Heal your wounds with the power of stolen blood.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 750 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "vampire_fear_gaze_spell ( Predator's Mien )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"With a bit of stolen blood and a savage expression, you can send your enemies fleeing.  This power only works on enemies capable of feeling fear.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 150 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "spell_hypnotic_gaze ( Hypnotic Gaze )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Stare into the eyes of your victim and wills them to pause.  This power does not work on unliving targets.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 150 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "vampire_command_beast_spell ( Cowing the Beast )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Exert command over a predatory wild animal like a wolf or a rat, making it your ally for a time.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 500 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Description of spell "vampire_earth_slumber_spell ( Earthen Slumber )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"You can sleep within the earth itself, avoiding the hateful light of the sun.  This power must be used on diggable soil.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 0 ml."
+msgstr ""
+
+#. ~ Description of spell "vampire_torpor ( Torpor )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Enter a deathlike slumber and recover from your wounds and fatigue.  "
+"Preferably while somewhere nobody could attack you while you sleep."
+msgstr ""
+
+#. ~ Message of spell "vampire_torpor ( Torpor )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "You enter torpor."
+msgstr ""
+
+#. ~ Description of spell "vampire_dominate ( Dominating Gaze )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Take control of a mind.  Only works on targets that have weak minds.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 700 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Message of spell "vampire_dominate ( Dominating Gaze )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "You look for a mind to control."
+msgstr ""
+
+#. ~ Name of spell "vampire_mist_form_pass_through_doors_and_windows"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "(Mist Form) Pass Through Barrier"
+msgstr ""
+
+#. ~ Description of spell "vampire_mist_form_pass_through_doors_and_windows (
+#. (Mist Form) Pass Through Barrier )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Seep through a door or a window."
+msgstr ""
+
+#. ~ Name of spell "vampire_summon_blood_container"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Create blood-storing sphere."
+msgstr ""
+
+#. ~ Description of spell "vampire_summon_blood_container ( Create blood-
+#. storing sphere. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Create a magical sphere that will contain any blood you will put in it until "
+"the spell ends."
+msgstr ""
+
+#. ~ Message of spell "vampire_summon_blood_container ( Create blood-storing
+#. sphere. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "You conjure a magical sphere to store blood."
+msgstr ""
+
+#. ~ Name of spell "vampire_invisible_in_dark"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Shrouded by the Shadowed Path."
+msgstr ""
+
+#. ~ Description of spell "vampire_invisible_in_dark ( Shrouded by the Shadowed
+#. Path. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid ""
+"Surround yourself in shadows, becoming invisible for a while.  This power will fail if you stand outside under the sun.\n"
+"\n"
+"<color_light_red>Blood Cost:</color> 300 ml (<u_val:blood_amount_for_graph> ml current)."
+msgstr ""
+
+#. ~ Message of spell "vampire_invisible_in_dark ( Shrouded by the Shadowed
+#. Path. )"
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "You gather as many shadows as you can."
+msgstr ""
+
+#. ~ Message after transforming to "t_tree_birch, t_tree_elm,
+#. t_tree_cottonwood, t_tree_basswood, t_tree_alder, t_tree_pine, t_tree_maple,
+#. t_tree_willow, t_tree_hickory, t_tree_walnut, t_tree_tupelo,
+#. t_tree_nannyberry, t_tree_butternut, t_tree_chestnut, t_tree_hazelnut,
+#. t_tree_beech, t_tree_blackjack, t_tree_apple, t_tree_cherry, t_tree_juniper,
+#. t_tree_pear, t_tree_plum, t_tree_elderberry, t_tree_mulberry,
+#. t_tree_sassafras"
+#. ~ Message after transforming to "t_tree_birch, t_tree_elm,
+#. t_tree_cottonwood, t_tree_basswood, t_tree_alder, t_tree_pine, t_tree_maple,
+#. t_tree_willow, t_tree_hickory, t_tree_walnut_harvested,
+#. t_tree_tupelo_harvested, t_tree_nannyberry_harvested,
+#. t_tree_butternut_harvested, t_tree_chestnut_harvested,
+#. t_tree_hazelnut_harvested, t_tree_beech, t_tree_blackjack,
+#. t_tree_apple_harvested, t_tree_cherry_harvested, t_tree_juniper_harvested,
+#. t_tree_pear_harvested, t_tree_plum_harvested, t_tree_elderberry_harvested,
+#. t_tree_mulberry_harvested, t_tree_sassafras_harvested"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid ""
+"The young tree creaks as its limbs begin growing, first slowly and then with "
+"increasing speed.  Roots churn through the soil and leaves stretch toward the"
+" sun, and in moments, before you is a tree that could have stood for a human "
+"lifetime."
+msgstr ""
+
+#. ~ Message after transforming to "t_grass_long"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid ""
+"Fresh green grass grows longer and longer until it stands as tall as your "
+"knees."
+msgstr ""
+
+#. ~ Message after transforming to "t_grass_tall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid ""
+"The tall grass grows and grows until a child could easily hide themselves "
+"within it."
+msgstr ""
+
+#. ~ Message after transforming to "f_plant_harvest"
+#. ~ Message after transforming to "f_dirtmound_shallow_harvest"
+#. ~ Message after transforming to "f_dirtmound_pile_harvest"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The plant grows in moments, leaves unfurling, roots churning the soil, and "
+"flowers opening toward the sun.  Before you even lower your hands, it's ripe "
+"and ready for the harvest."
+msgstr ""
+
+#. ~ Message after transforming to "t_grass_tall"
+#. ~ Message after transforming to "t_grass_long, t_grass_tall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid "The grass grows tall, reaching toward the sky."
+msgstr ""
+
+#. ~ Message after transforming to "t_grass, t_grass_long, t_grass_tall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid "The ground churns as blades of grass push out of the soil."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_bark_wall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The bark surges upward as the roots below grow into a heavy, solid wall "
+"covered in bark."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_wood_wall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The wooden wall shudders as the bark peels off in sheets, eventually becoming"
+" a solid expanse of bare wood."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_bark_wall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The bare wooden wall shudders as bark sprouts and spreads over it, covering "
+"the entire surface in moments."
+msgstr ""
+
+#. ~ Message after transforming to "t_barkfloor_no_roof"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The ground churns as bark-covered roots erupt from it and form into a solid "
+"bark-covered floor."
+msgstr ""
+
+#. ~ Message after transforming to "t_barkfloor"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The ground churns as bark-covered roots quest upward, forming an intertwining"
+" roof."
+msgstr ""
+
+#. ~ Message after transforming to "t_barkfloor_no_roof"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The wooden wall spasms and recedes into the ground, leaving only a bark-"
+"covered floor in its place."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_leaves"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The bark floor shudders as thin branches sprout from it, leaves already "
+"growing and unfurling, and soon a thicket of dense leaves covers the area."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_leaves"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The ground shudders as thin branches sprout from it, leaves already growing "
+"and unfurling, and soon a thicket of dense leaves covers the area."
+msgstr ""
+
+#. ~ Message after transforming to "t_bramble_door_c"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The wall trembles and splits apart into a tangle of gnarled roots, waving in "
+"the air like monstrous tentacles.  They weave together into a sturdy door "
+"before ceasing their motion."
+msgstr ""
+
+#. ~ Message after transforming to "t_triffid_bark_wall"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The roots surge into motion, growing together thicker and more tangled until "
+"a bark-covered wall of solid wood is all that remains."
+msgstr ""
+
+#. ~ Message after transforming to "t_dirt_barren"
+#. ~ Message after transforming to "f_null"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid "The fungus withers and dies!"
+msgstr ""
+
+#. ~ Message after transforming to "f_arvore_translocator_ground"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid "You meditate within the depths of the forest."
+msgstr ""
+
+#. ~ Message after transforming to "t_arvore_climbing_vine"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid "A vine bursts out of the ground and grows in moments!"
+msgstr ""
+
+#. ~ Message after transforming to "t_tree_birch, t_tree_elm,
+#. t_tree_cottonwood, t_tree_basswood, t_tree_alder, t_tree_pine, t_tree_maple,
+#. t_tree_willow, t_tree_hickory, t_tree_walnut, t_tree_tupelo,
+#. t_tree_nannyberry, t_tree_butternut, t_tree_chestnut, t_tree_hazelnut,
+#. t_tree_beech, t_tree_blackjack, t_tree_apple, t_tree_cherry, t_tree_juniper,
+#. t_tree_pear, t_tree_plum, t_tree_elderberry, t_tree_mulberry,
+#. t_tree_sassafras"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid ""
+"The target's limbs begin stretching and spreading toward the sky as their "
+"body elongates, and in moments, a tree that could have stood for a hundred "
+"years stands in their place."
+msgstr ""
+
+#. ~ Message after transforming to "t_arvore_living_tent"
+#: data/mods/Xedra_Evolved/ter_transforms/arvore_ter_transforms.json
+msgid "Vines and brambles rapidly grow from the ground into a small shelter."
+msgstr ""
+
+#. ~ Message after transforming to "t_grass_dead"
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid "The grass wilts."
+msgstr ""
+
+#. ~ Message after transforming to "f_plant_mature"
+#. ~ Message after transforming to "f_dirtmound_shallow_mature"
+#. ~ Message after transforming to "f_dirtmound_pile_mature"
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid ""
+"The plant grows in moments, leaves unfurling, roots churning the soil, and "
+"flowers opening toward the sun.  Before you even lower your hands, it's fully"
+" grown, though not yet ready for the harvest."
+msgstr ""
+
+#. ~ Message after transforming to "f_plant_harvest"
+#. ~ Message after transforming to "f_dirtmound_shallow_harvest"
+#. ~ Message after transforming to "f_dirtmound_pile_harvest"
+#: data/mods/Xedra_Evolved/ter_transforms/changeling_seasonal_ter_transforms.json
+msgid ""
+"The plant's buds swell, fruiting and growing.  Before you even lower your "
+"hands, it's ripe and ready for the harvest."
+msgstr ""
+
+#. ~ Message after transforming to "f_homullus_translocator_location"
+#: data/mods/Xedra_Evolved/ter_transforms/homullus_ter_transforms.json
+msgid "You close your eyes and listen to the sounds of civilization."
+msgstr ""
+
+#. ~ Message after transforming to "t_pit"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The ground opens up!"
+msgstr ""
+
+#. ~ Message after transforming to "t_rock"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The stone rises up into a stone wall."
+msgstr ""
+
+#. ~ Message after transforming to "t_rock_floor"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The stone wall sinks away."
+msgstr ""
+
+#. ~ Message after transforming to "t_soil"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The ground rises into a wall of solid earth."
+msgstr ""
+
+#. ~ Message after transforming to "t_dirt"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The solid earth sinks away."
+msgstr ""
+
+#. ~ Message after transforming to "t_open_air"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The pit deepens!"
+msgstr ""
+
+#. ~ Message after transforming to "t_earthen_stairs_up"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The ground rises up into a set of earthen stairs."
+msgstr ""
+
+#. ~ Message after transforming to "t_earthen_stairs_up"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The dirt rises up into a set of earthen stairs."
+msgstr ""
+
+#. ~ Message after transforming to "t_earthen_stairs_down"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The ground sinks down into a set of earthen stairs."
+msgstr ""
+
+#. ~ Message after transforming to "t_earthen_stairs_down"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The dirt sinks down into a set of earthen stairs."
+msgstr ""
+
+#. ~ Message after transforming to "t_rock_smooth"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "All imperfections in the stone are smoothed away."
+msgstr ""
+
+#. ~ Message after transforming to "f_rubble_rock"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The pile of dirt hardens into a large pile of stones."
+msgstr ""
+
+#. ~ Message after transforming to "f_dirtmound_shallow"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "The loose rock falls apart into a pile of dirt."
+msgstr ""
+
+#. ~ Message after transforming to "f_ierde_lithic_gaol_fang"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid "Fangs of rock erupt around the target!"
+msgstr ""
+
+#. ~ Message after transforming to "f_ierde_translocator_location"
+#: data/mods/Xedra_Evolved/ter_transforms/ierde_ter_transform.json
+msgid ""
+"You place both hands on the living earth and feel the rhythms of the rock."
+msgstr ""
+
+#. ~ Message after transforming to "t_pit_shallow"
+#. ~ Message after transforming to "t_pit"
+#: data/mods/Xedra_Evolved/ter_transforms/sylph_ter_transforms.json
+msgid "The lightning blasts a crater where it strikes!"
+msgstr ""
+
+#. ~ Message after transforming to "f_sylph_translocator_location"
+#: data/mods/Xedra_Evolved/ter_transforms/sylph_ter_transforms.json
+msgid ""
+"High above the earth, you close your eyes and feel the wind on your face."
+msgstr ""
+
+#. ~ Label of UI widget "ruach_counter_meter_block"
+#. ~ Label of UI widget "spacebar_ruach_counter_block"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "Ruach Descriptor"
+msgstr ""
+
+#. ~ Label of UI widget "ruach_counter_numbers_block"
+#. ~ Label of UI widget "spacebar_ruach_numbers_block"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "Ruach Numbers"
+msgstr ""
+
+#. ~ Label of UI widget "ruach_counter_graph_block"
+#. ~ Label of UI widget "spacebar_ruach_graph_block"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "Ruach Graph"
+msgstr ""
+
+#. ~ Clause text "ruach_level_1" of UI widget "ruach_counter_meter"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "<color_red>Almost Spent</color>"
+msgstr ""
+
+#. ~ Clause text "ruach_level_2" of UI widget "ruach_counter_meter"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "<color_light_red>Drained</color>"
+msgstr ""
+
+#. ~ Clause text "ruach_level_3" of UI widget "ruach_counter_meter"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "<color_yellow>Refreshed</color>"
+msgstr ""
+
+#. ~ Clause text "ruach_level_4" of UI widget "ruach_counter_meter"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "<color_light_green>Satiated</color>"
+msgstr ""
+
+#. ~ Clause text "ruach_level_5" of UI widget "ruach_counter_meter"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid "<color_green>Suffused</color>"
+msgstr ""
+
+#. ~ Clause text "ruach_numbers" of UI widget "ruach_counter_numbers"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid ""
+"<color_green><u_val:ruach_amount_for_graph></color>     Max: "
+"<color_green><u_val:ruach_max_amount_for_graph></color>     Days: "
+"<color_green><u_val:ruach_days_left></color>"
+msgstr ""
+
+#. ~ Clause text "ruach_numbers" of UI widget "ruach_counter_spacebar_numbers"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+msgid ""
+"<color_green><u_val:ruach_amount_for_graph></color>          Max: "
+"<color_green><u_val:ruach_max_amount_for_graph></color>          Days: "
+"<color_green><u_val:ruach_days_left></color>"
+msgstr ""
+
+#. ~ Label of UI widget "vampire_needs_desc_layout_label"
+#: data/mods/Xedra_Evolved/ui/sidebar.json
+msgid "Vampire Needs"
+msgstr ""
+
+#. ~ Label of UI widget "xe_spacebar_mana_bar_block"
+#: data/mods/Xedra_Evolved/ui/sidebar.json
+msgid "xe_mana_bar"
+msgstr ""
+
+#. ~ Label of UI widget "xe_spacebar_mana_numbers_block"
+#: data/mods/Xedra_Evolved/ui/sidebar.json
+msgid "xe_mana_number"
+msgstr ""
+
+#. ~ Label of UI widget "vampire_sidebar"
+#: data/mods/Xedra_Evolved/ui/sidebar.json
+msgctxt "UI sidebar"
+msgid "vampire"
+msgstr ""
+
+#. ~ Label of UI widget "vampire_blood_levels"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Blood levels"
+msgstr ""
+
+#. ~ Clause text "hungry" of UI widget "vampire_blood_levels"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Enervated"
+msgstr ""
+
+#. ~ Clause text "engorged" of UI widget "vampire_blood_levels"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Filled"
+msgstr ""
+
+#. ~ Clause text "swollen" of UI widget "vampire_blood_levels"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Saturated"
+msgstr ""
+
+#. ~ Clause text "brimmed" of UI widget "vampire_blood_levels"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Brimmed"
+msgstr ""
+
+#. ~ Label of UI widget "vampire_blood_levels_numbers"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Blood counter"
+msgstr ""
+
+#. ~ Clause text "vampire_blood_levels_numbers_bad" of UI widget
+#. "vampire_blood_levels_numbers"
+#. ~ Clause text "vampire_blood_levels_numbers_excess" of UI widget
+#. "vampire_blood_levels_numbers"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid ""
+"<color_red><u_val:blood_amount_for_graph></color>     Max: "
+"<color_red><u_val:max_blood_amount_for_graph></color>"
+msgstr ""
+
+#. ~ Clause text "vampire_blood_levels_numbers_good" of UI widget
+#. "vampire_blood_levels_numbers"
+#. ~ Clause text "vampire_blood_levels_numbers_stockpile" of UI widget
+#. "vampire_blood_levels_numbers"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid ""
+"<color_green><u_val:blood_amount_for_graph></color>     Max: "
+"<color_green><u_val:max_blood_amount_for_graph></color>"
+msgstr ""
+
+#. ~ Label of UI widget "vampire_blood_levels_graph"
+#: data/mods/Xedra_Evolved/ui/vamp_blood_levels.json
+msgid "Blood graph"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/mods/Xedra_Evolved/vehicles/magickal_vehicles.json
+msgid "wave rider kayak"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/mods/Xedra_Evolved/vehicles/magickal_vehicles.json
+msgid "viridescent vessel"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "floral frame"
+msgstr ""
+
+#. ~ Description of vehicle part "floral frame"
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "The thick part of the flower, floating on the water."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "floral petal"
+msgstr ""
+
+#. ~ Description of vehicle part "floral petal"
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "A giant flower petal."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "stamen"
+msgstr ""
+
+#. ~ Description of vehicle part "stamen"
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "The central part of the flower."
+msgstr ""
+
+#. ~ Vehicle part name
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "solar power"
+msgid_plural "solar power"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "solar power"
+#. ~ Description of "solar power"
+#: data/mods/Xedra_Evolved/vehicles/vehicle_parts.json
+msgid "Magical solar power, to power a floral vessel."
+msgstr ""
+
+#. ~ Sentence fragment describing the "vital_gap" weakpoint
+#: data/mods/Xedra_Evolved/weakpoints/wp_alien_being.json
+msgid "this small gap leads to something vital"
+msgstr ""
+
+#. ~ Sentence fragment describing the "alien_joint" weakpoint
+#: data/mods/Xedra_Evolved/weakpoints/wp_alien_being.json
+msgid "where a limb derives motion from"
+msgstr ""
+
+#. ~ Sentence fragment describing the "hard_point" weakpoint
+#: data/mods/Xedra_Evolved/weakpoints/wp_alien_being.json
+msgid "a particularly strong part of the body"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/aftershock_exoplanet/field.json
+msgid "air conditioner"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/aftershock_exoplanet/field.json
+msgid "toxic dust"
+msgstr ""
+
+#. ~ Player message on effect of field toxic dust
+#: data/mods/aftershock_exoplanet/field.json
+msgid "You feel the toxic dust burn through your skin."
+msgstr ""
+
+#. ~ Description of MOD "Aftershock: Exoplanet"
+#: data/mods/aftershock_exoplanet/modinfo.json
+msgid ""
+"In a fateful instant, the dream of interstellar civilization was shattered in what became known as The Discontinuity, and billions were consigned to death in the far reaches of the Orion Arm.  Three hundred years later, the survivors still eke out a meager existence within the ruins of their once-great civilization, scavenging and fighting for scraps of technology they can barely understand.\n"
+"\n"
+"You are one of these countless scavengers, come to exploit the frozen ruins of Salus IV for your own benefit."
+msgstr ""
+
+#. ~ Description of scenario "Scavenger's Frontier" for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_male"
+msgid ""
+"The Cryosleeper's slow approach allows the display of Salus IV in all its "
+"forms: a fiery marble against interstellar darkness, a silver-white mirror, "
+"and finally, a world of glaciers split by the thin ruins of an equatorial "
+"metroplex.  Before long, Port Augustmoon's ancient hull comes to obstruct "
+"most the viewport, and the ship's computer announces that it is time to "
+"disembark."
+msgstr ""
+
+#. ~ Description of scenario "Scavenger's Frontier" for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_female"
+msgid ""
+"The Cryosleeper's slow approach allows the display of Salus IV in all its "
+"forms: a fiery marble against interstellar darkness, a silver-white mirror, "
+"and finally, a world of glaciers split by the thin ruins of an equatorial "
+"metroplex.  Before long, Port Augustmoon's ancient hull comes to obstruct "
+"most the viewport, and the ship's computer announces that it is time to "
+"disembark."
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scenario_male"
+msgid "Smuggler's Hideout"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scenario_female"
+msgid "Smuggler's Hideout"
+msgstr ""
+
+#. ~ Description of scenario "Smuggler's Hideout" for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_male"
+msgid ""
+"After a disastrous smuggling run, you thought to fly your ship, The Vanishing"
+" Arc, to the most remote and backwater system you could find.  You estimate "
+"you have at least six months before the Nyssian cartels catch up with you, "
+"and you need to make the most of it."
+msgstr ""
+
+#. ~ Description of scenario "Smuggler's Hideout" for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_female"
+msgid ""
+"After a disastrous smuggling run, you thought to fly your ship, The Vanishing"
+" Arc, to the most remote and backwater system you could find.  You estimate "
+"you have at least six months before the Nyssian cartels catch up with you, "
+"and you need to make the most of it."
+msgstr ""
+
+#. ~ Starting location of scenario "Smuggler's Hideout"
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "start_name"
+msgid "The Vanishing Arc"
+msgstr ""
+
+#. ~ Description of scenario "One Last Dance on the Ice" for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_male"
+msgid ""
+"You've chased your quarry from the tragedies they left behind in the core of "
+"civilized space; all the way out here to the fringes of inhabited space.  You"
+" caught up with their ship here in the Salus system, and heavily damaged it."
+"  But the combat didn't leave your ship unscathed.  Opportunistic scavengers "
+"or pirates, you don't know which, ambushed you as you were harrying your "
+"mark's ship and forcing it to ground.  You know your quarry have crash landed"
+" somewhere on this planet but your ship, Truth and Reconciliation, will never"
+" fly again.  You won't even walk away from this icy wreck if you can't "
+"destroy the squad of drones and scavenger bots that have dropped in to finish"
+" you off."
+msgstr ""
+
+#. ~ Description of scenario "One Last Dance on the Ice" for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_female"
+msgid ""
+"You've chased your quarry from the tragedies they left behind in the core of "
+"civilized space; all the way out here to the fringes of inhabited space.  You"
+" caught up with their ship here in the Salus system, and heavily damaged it."
+"  But the combat didn't leave your ship unscathed.  Opportunistic scavengers "
+"or pirates, you don't know which, ambushed you as you were harrying your "
+"mark's ship and forcing it to ground.  You know your quarry have crash landed"
+" somewhere on this planet but your ship, Truth and Reconciliation, will never"
+" fly again.  You won't even walk away from this icy wreck if you can't "
+"destroy the squad of drones and scavenger bots that have dropped in to finish"
+" you off."
+msgstr ""
+
+#. ~ Description of scenario "Emergency Evacuation" for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_male"
+msgid ""
+"You must have hit your head when the first explosion happened.  You sit up "
+"and realize everyone is gone, the air smells like smoke, and that the ship's "
+"computer is calmly announcing in its posh English voice: \"Abandon vessel "
+"immediately, seven minutes to atmospheric entry.  Abandon vessel "
+"immediately…\" Time to grab what you can and find an escape pod."
+msgstr ""
+
+#. ~ Description of scenario "Emergency Evacuation" for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_female"
+msgid ""
+"You must have hit your head when the first explosion happened.  You sit up "
+"and realize everyone is gone, the air smells like smoke, and that the ship's "
+"computer is calmly announcing in its posh English voice: \"Abandon vessel "
+"immediately, seven minutes to atmospheric entry.  Abandon vessel "
+"immediately…\" Time to grab what you can and find an escape pod."
+msgstr ""
+
+#. ~ Description of scenario "Esper" for male
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_male"
+msgid ""
+"There are stories that before the Discontinuity, scientists had developed secret treatments unlock the powers of the human mind.  To read thoughts, move objects at a distance, control computers by the power of will alone, were just a few of the rumored abilities that laid dormant and at the edge of human potential.  But all knowledge of these treatments was lost when the Discontinuity shattered interstellar civilization.\n"
+"\n"
+"Or so you thought, until you had heard some tantalizing rumors about espers, centered on a backwater planet on the edge of known civilization.  You remember buying passage to the Salus system, arriving at Port Augustmoon, buying supplies, and descending to the surface, but after that things get hazy…  You're not entirely sure where you are, and you've clearly been through it, but somehow you've rediscovered that lost secret.  Now you just need to make it back alive."
+msgstr ""
+
+#. ~ Description of scenario "Esper" for female
+#: data/mods/aftershock_exoplanet/scenarios.json
+msgctxt "scen_desc_female"
+msgid ""
+"There are stories that before the Discontinuity, scientists had developed secret treatments unlock the powers of the human mind.  To read thoughts, move objects at a distance, control computers by the power of will alone, were just a few of the rumored abilities that laid dormant and at the edge of human potential.  But all knowledge of these treatments was lost when the Discontinuity shattered interstellar civilization.\n"
+"\n"
+"Or so you thought, until you had heard some tantalizing rumors about espers, centered on a backwater planet on the edge of known civilization.  You remember buying passage to the Salus system, arriving at Port Augustmoon, buying supplies, and descending to the surface, but after that things get hazy…  You're not entirely sure where you are, and you've clearly been through it, but somehow you've rediscovered that lost secret.  Now you just need to make it back alive."
+msgstr ""
+
+#. ~ Name of starting location "sloc_afs_glacial_tunnels"
+#: data/mods/aftershock_exoplanet/start_locations.json
+msgid "Exploring a tunnel"
+msgstr ""
+
+#. ~ Label of UI widget "cryosuit_power"
+#: data/mods/aftershock_exoplanet/ui.json
+msgid "CRYOSUIT"
+msgstr ""
+
+#. ~ Label of UI widget "cryosuit_power_graph"
+#: data/mods/aftershock_exoplanet/ui.json
+msgid "CRYOSUIT POWER"
+msgstr ""
+
+#. ~ Default clause of UI widget "cryosuit_power_graph"
+#: data/mods/aftershock_exoplanet/ui.json
+msgid "      BOOTING      "
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "_update_ui" in nested EOCs on true condition in effect in EoC
+#. "afs_cryosuit_ui_eoc"
+#: data/mods/aftershock_exoplanet/EOC/cryosuit_eocs.json
+msgid "Your cryosuit sounds a critical power warning!"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in else
+#. statement in effect in EoC "_update_ui" in nested EOCs on true condition in
+#. effect in EoC "afs_cryosuit_ui_eoc"
+#: data/mods/aftershock_exoplanet/EOC/cryosuit_eocs.json
+msgid "Your cryosuit sounds a low power warning!"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "Vanishing Arc's transponder"
+msgstr ""
+
+#. ~ Description of mission "Vanishing Arc's transponder"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "The location of your ship, the Vanishing Arc."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_SHIP_RAMP"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "The bay ramp hydraulics whine as the ramp extends downwards."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in else
+#. statement in nested effect in then statement in effect in EoC
+#. "EOC_SHIP_RAMP"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "You must clear all vehicles near the ramp before raising it"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in else
+#. statement in nested effect in then statement in effect in EoC
+#. "EOC_SHIP_RAMP"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "The ramp rises into position, sealing the bay."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_SHIP_RAMP"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "You cant deploy the ramp while in space."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_SHIP_STAIRS"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "The boarding stairs descend"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in then
+#. statement in effect in EoC "EOC_SHIP_STAIRS"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "The boarding stairs retract upward."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_SHIP_STAIRS"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "You cant deploy the stairs while in space."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_SHIP_AUTO_CONTROL"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "You can only plot a course to an empty field at least 5 map tiles away."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_SHIP_THI_MANUAL_QUERY"
+#: data/mods/aftershock_exoplanet/EOC/ship_eoc.json
+msgid "Select Destination:"
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_SHOVEL_SNOW"
+#: data/mods/aftershock_exoplanet/EOC/tool_iuse_eoc.json
+msgid "Select ice or snow to harvest from."
+msgstr ""
+
+#. ~ Player message in effect in EoC "afs_spot_spaceport"
+#: data/mods/aftershock_exoplanet/EOC/world_eocs.json
+msgid ""
+"You notice the rocket plumes of three ascending ships in the distance.  There"
+" must be a large space port in that direction."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Alien Dawn"
+msgstr ""
+
+#. ~ Description of achievement "Alien Dawn"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"At night, both water and carbon dioxide freeze in the upper atmosphere, such that every dawn is accompanied by a procession of colorful haloes over the horizon.\n"
+"<color_c_dark_gray>  - Salus IV rediscovery report 02.11.2428, submitted by Cpt.  Jean McAllister."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Alien Dawn"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Wake up after a night on Salus IV."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "A civilized Age"
+msgstr ""
+
+#. ~ Description of achievement "A civilized Age"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"Mostly, it makes me feel very small, like when I was a kid playing with my father's tools.\n"
+"<color_c_dark_gray>  - \"Life in the Tenellus Frontier\", interview with mercenary captain, c2514."
+msgstr ""
+
+#. ~ Description of requirement of achievement "A civilized Age"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Wield a weapon from the Late Hyperspace Age."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Sunfire"
+msgstr ""
+
+#. ~ Description of achievement "Sunfire"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"Now just watch this!  [STATIC]\n"
+"<color_c_dark_gray>  - unattributed comms chatter from raid on UFS Golden Sunray."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Sunfire"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Obtain a plasma weapon"
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Falling Star"
+msgstr ""
+
+#. ~ Description of achievement "Falling Star"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"Planet crosses into a giant scrapfield every few months, some old battlefield from when the discontinuity happened.  Locals make a great show of it, marks the start of the great hunt.\n"
+"<color_c_dark_gray>  -\"The Highlands of Aztlan\" holodoc"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Falling Star"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Visit a crashed spaceship."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Boneyards"
+msgstr ""
+
+#. ~ Description of achievement "Boneyards"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"We had those at home too, on summer days we'd chase frogs through the pipes and into the coolant chambers deep below them.  I remember the em-lights still glittering in the immense halls, it was like a secret night sky sealed away.\n"
+"<color_c_dark_gray>  - overheard in Port Augustmoon."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Boneyards"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Visit a ruin"
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Ruins of Orion"
+msgstr ""
+
+#. ~ Description of achievement "Ruins of Orion"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"I try not to think about what it actually means, none of us do really.  Otherwise it would drive us mad with grief.  [Laughs] Still drives some mad though, I guess.\n"
+"<color_c_dark_gray>  - \"Life in the Tenellus Frontier\", interview with salvor guild journeyman, c2514."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Ruins of Orion"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Visit many ruins."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Discontinous"
+msgstr ""
+
+#. ~ Description of achievement "Discontinous"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "[ ERROR: Outside Hypernet Range ]"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Discontinous"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Recieve 2500 damage in a single attack and survive (optional)."
+msgstr ""
+
+#. ~ Description of achievement "Chimera"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"Unexplained, instinctual urges might rarely manifest after bio-modification.  In such cases we recommend the following self-centering techniques…\n"
+"<color_c_dark_gray>  - Aftercare brochure, Mercurial Genomics ltd."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Chimera"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Cross a threshold using genetech templates."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "The New Sun"
+msgstr ""
+
+#. ~ Description of achievement "The New Sun"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid ""
+"There were among our men those who asked whether it was all not a dream.  How else could one explain the glimpse of things never heard of, never seen, and never even conceived of before.\n"
+"<color_c_dark_gray>  - recovered from the log of ESS Firebird."
+msgstr ""
+
+#. ~ Description of requirement of achievement "The New Sun"
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Gain psionic powers."
+msgstr ""
+
+#. ~ Description of event statistic "num_avatar_enters_crashed_ship"
+#: data/mods/aftershock_exoplanet/achievements/statistics.json
+msgid "crashed ship visited"
+msgid_plural "crashed ships visited"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_ruins"
+#: data/mods/aftershock_exoplanet/achievements/statistics.json
+msgid "ruin visited"
+msgid_plural "ruins visited"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "avatar_max_damage"
+#: data/mods/aftershock_exoplanet/achievements/statistics.json
+msgid "maximum damage taken in a single instant."
+msgid_plural "maximum damage taken in a single instant."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "titanium vest"
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"A lightweight armor vest made of pieces of titanium sewn together, with cloth"
+" padding for comfort.  Its not particularly effective in a real fight."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/containers.json
+msgid "survival kit"
+msgid_plural "survival kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "survival kit"
+#: data/mods/aftershock_exoplanet/items/containers.json
+msgid ""
+"A survival kit box clearly repurposed from a ship's escape pod.  It contains "
+"a variety of supplies to help you survive planetside."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/containers.json
+msgid "radio thermos"
+msgid_plural "radio thermoses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "radio thermos"
+#: data/mods/aftershock_exoplanet/items/containers.json
+msgid ""
+"A small radioactive source is used to safely(?) heat the contents of this vacuum flask.  Its not powerful enough to melt already frozen liquids.\n"
+"\n"
+" Frontier rated only."
+msgstr ""
+
+#. ~ Description of "gold"
+#: data/mods/aftershock_exoplanet/items/currency.json
+msgid ""
+"Soft, shiny metal.  Near universally valuable across human cultures, and "
+"often kept aboard ships as emergency currency."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/mods/aftershock_exoplanet/items/item_enchants.json
+msgid "Cold Climate Control Helmet"
+msgstr ""
+
+#. ~ Description of "nanomaterial canister"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"A steel canister containing carbon, iron, titanium, copper, and other "
+"elements in specifically engineered atomic-scale configurations.  Feedstock "
+"for most modern industrial processes, a nanofabricator can assemble them into"
+" usable items."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid "catalytic rod"
+msgid_plural "catalytic rod"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "catalytic rod"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"A gleaming rod of hyperspace-age alloy, manufactured through arts lost to the"
+" discontinuity.  A critical and near irreplaceable component of interstellar "
+"industry, it would fetch a high price anywhere."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid "ruined energy pistol"
+msgid_plural "ruined energy pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ruined energy pistol"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"A mass of corroded metal and plastic, identifiable as a pistol only due to "
+"its general shape.  Some of its components might still be salvageable."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid "ruined energy rifle"
+msgid_plural "ruined energy rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ruined energy rifle"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"Pitted and corroded, this weapon is barely recognizable as a rifle.  Some of "
+"its components might still be salvageable."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid "ruined long gun"
+msgid_plural "ruined long guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ruined long gun"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"Not much of this weapon remains, at most it could be used to bar a door."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid "ruined magazine"
+msgid_plural "ruined magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ruined magazine"
+#: data/mods/aftershock_exoplanet/items/items.json
+msgid ""
+"A small box of heavily corroded metal.  Its more fragile internal components "
+"wasted away long ago."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid "ancient spaceship deed"
+msgid_plural "ancient spaceship deeds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ancient spaceship deed"
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid ""
+"An ancient document from before the Discontinuity, detailing the purchase of the Vanishing Arc by your great-great-grandfather, signed and validated by a long nonexistent Earth polity.\n"
+"\n"
+"A simple legal curiosity of no real value, true ownership of this ship is guaranteed by the self-destruct mechanism you have programmed into its main reactor."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid "ancient medal"
+msgid_plural "ancient medals"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ancient medal"
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid ""
+"An ancient medal given for exemplary service in Van Maneen's Exploratory "
+"Navy.  You have no idea what the Van Maanen Navy was, or how this thing ended"
+" up in the display case, but getting rid of it would make you uncomfortable."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid "forged ident codes"
+msgid_plural "forged ident codes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "forged ident codes"
+#: data/mods/aftershock_exoplanet/items/lore_items.json
+msgid ""
+"Identity codes for Nyssia, Aztlan, Luzhan, and many other polities in the "
+"spinward frontier, all forgeries.  You fathom most of them would still work."
+msgstr ""
+
+#. ~ Name of material
+#: data/mods/aftershock_exoplanet/items/materials.json
+msgid "HDPE"
+msgstr ""
+
+#. ~ Description of "trowel"
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "A small, sharp shovel, perfect for breaking off chunks of ice."
+msgstr ""
+
+#. ~ "menu_text" action message of item "trowel"
+#. ~ "menu_text" action message of item "shovel"
+#. ~ "menu_text" action message of item "snow shovel"
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "Harvest ice"
+msgstr ""
+
+#. ~ Description of "shovel"
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "A shovel with a steel blade."
+msgstr ""
+
+#. ~ Description of "snow shovel"
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid ""
+"A sturdy metal shovel used for picking up snow and moving it somewhere else."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "self-welding paste"
+msgid_plural "self-welding paste"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "self-welding paste"
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid ""
+"A pyrotechnic metal suspension that can be applied to metal surfaces and "
+"ignited to create 'temporary' welds.  Intended for use in emergency "
+"situations."
+msgstr ""
+
+#. ~ Variant name of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "fur trimmed jacket"
+msgid_plural "fur trimmed jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "fur trimmed jacket" of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid ""
+"A cream colored jacket with a large fur collar.  Salus IV is too cold for "
+"this to function as anything more than a fashion statement."
+msgstr ""
+
+#. ~ Variant name of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "surplus jacket"
+msgid_plural "surplus jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "surplus jacket" of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid ""
+"A drab orange military jacket sold off as surplus after the end of the "
+"Reclamation.  UICA never issued these, they went into the trash directly from"
+" the factory."
+msgstr ""
+
+#. ~ Variant name of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "transparent jacket"
+msgid_plural "transparent jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "transparent jacket" of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "A jacket made from transparent plastic.  Not good for hiding in."
+msgstr ""
+
+#. ~ Variant name of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "ancient jacket"
+msgid_plural "ancient jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ancient jacket" of item "synleather jacket"
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid ""
+"Its so old and worn down that you think it might be made from actual leather."
+msgstr ""
+
+#. ~ Description of "exosuit underlayer"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  The suit is not designed for use outside of armor.  This standard model uses a scale mail of overlapping plastic disks for incidental protection.\n"
+"\n"
+"Its temperature control unit can either draw power from an active frame or be powered by its own battery port."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid "exosuit underlayer (on)"
+msgid_plural "exosuit underlayers (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "exosuit underlayer (on)"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  The suit is not designed for use outside of armor.  This standard model uses a scale mail of overlapping plastic disks for incidental protection.\n"
+"\n"
+"Its temperature control unit is active and drawing power from its own battery port."
+msgstr ""
+
+#. ~ Description of "exosuit combat underlayer"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  The suit is not designed for use outside of armor.  This model includes tough Kevlar to protect from spalling.\n"
+"\n"
+"Its temperature control unit can either draw power from an active frame or be powered by its own battery port."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid "exosuit combat underlayer (on)"
+msgid_plural "exosuit combat underlayers (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "exosuit combat underlayer (on)"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  The suit is not designed for use outside of armor.  This model includes tough Kevlar to protect from spalling.\n"
+"\n"
+"Its temperature control unit is active and drawing power from its own battery port."
+msgstr ""
+
+#. ~ Description of "exosuit EVA underlayer"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  This model is designed for EVA operation, offering protection against breaches.\n"
+"\n"
+"Its temperature control unit can either draw power from an active frame or be powered by its own battery port."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid "exosuit EVA underlayer (on)"
+msgid_plural "exosuit EVA underlayers (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "exosuit EVA underlayer (on)"
+#. ~ Description of "exosuit utility underlayer (on)"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  This model is designed for hazardous environments and sacrifices mobility for extra protection.\n"
+"\n"
+"Its temperature control unit is active and drawing power from its own battery port."
+msgstr ""
+
+#. ~ Description of "exosuit utility underlayer"
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid ""
+"A form-fitting suit meant to be worn by an exosuit pilot.  Although not a requirement for the operation of an exosuit, it features haptic feedback systems that offer improved performance and comfort while doing so.  This model is designed for hazardous environments and sacrifices mobility for extra protection.\n"
+"\n"
+"Its temperature control unit can either draw power from an active frame or be powered by its own battery port."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/armor/exosuit/exosuit_underlayers.json
+msgid "exosuit utility underlayer (on)"
+msgid_plural "exosuit utility underlayers (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "fish"
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid "synth fish"
+msgid_plural "synth fish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "synth fish" of item "fish"
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid ""
+"Pink flesh from a non-existent species of fish, grown in a vat.  Of "
+"particularly high quality, it makes for a decent meal even when raw."
+msgstr ""
+
+#. ~ Variant name of item "fish"
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid "arthropod meat"
+msgid_plural "arthropod meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "arthropod meat" of item "fish"
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid ""
+"A large white fillet of meat from the thorax of an alien insect.  It has a "
+"slightly sweet taste, and is very nutritious.  Used interchangeably with fish"
+" in many recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid "dried alien meat"
+msgid_plural "dried alien meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dried alien meat"
+#: data/mods/aftershock_exoplanet/items/comestibles/flesh.json
+msgid ""
+"Thin and long strips of white, almost sickly pale meat, clearly belonging to "
+"some sort of alien creature.  It has a very strong taste, and is quite chewy."
+msgstr ""

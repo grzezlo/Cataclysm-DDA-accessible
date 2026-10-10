@@ -1,0 +1,1611 @@
+# Batch 73 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of terrain "broken wattle-and-daub wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A wattle-and-daub wall section that has been destroyed, leaving mostly just "
+"the frame, and even that is barely held together."
+msgstr ""
+
+#. ~ Description of terrain "half-built wattle-and-daub wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A partially-complete wattle-and-daub wall with some of the wooden strip "
+"lattice in place.  It still requires the rest of the lattice and supporting "
+"wet compound to be filled in."
+msgstr ""
+
+#. ~ Description of terrain "rammed earth wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A solid wall of compressed dirt, sturdy enough to support a roof with enough "
+"walls and to keep out some unwanted visitors."
+msgstr ""
+
+#. ~ Description of terrain "warped wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"At first glance, this looks like a simple stone wall.  But the angles don't "
+"add up, and the shadows are wrong.  Whatever this is, it doesn't belong here."
+msgstr ""
+
+#. ~ Description of terrain "glass wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A barrier made of glass, it's nothing complicated, and looks extremely "
+"fragile.  Some contain glass break sensors or window sensors that trigger an "
+"alarm if the glass is damaged."
+msgstr ""
+
+#. ~ Description of terrain "laminated glass"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A laminated glass barrier, composed of layers of glass and plastic held "
+"together by an interlayer."
+msgstr ""
+
+#. ~ Description of terrain "ballistic glass"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A ballistic glass barrier, consisting of layers of laminated glass."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "lighthouse lens"
+msgstr ""
+
+#. ~ Description of terrain "lighthouse lens"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"An intricate arrangement of glass, designed to focus light from within to be "
+"visible over long distances."
+msgstr ""
+
+#. ~ Description of terrain "paper wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A huge wall of ambiguous pulpy matter, covered in sticky wasp saliva.  You "
+"could smash it down effortlessly."
+msgstr ""
+
+#. ~ Description of terrain "solid rock"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A wall of solid rock, could be full of all kinds of interesting things.  Best"
+" grab your pickaxe or equivalent digging implement, and strike the earth!"
+msgstr ""
+
+#. ~ Description of terrain "red stone"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall of red stone."
+msgstr ""
+
+#. ~ Description of terrain "green stone"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall of green stone."
+msgstr ""
+
+#. ~ Description of terrain "blue stone"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall of blue stone."
+msgstr ""
+
+#. ~ Description of terrain "half-built column"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"An empty wooden frame in the shape of a column, built around a concrete and "
+"rebar foundation.  It isn't capable of supporting roofs or shelter, and needs"
+" more resources before it could be considered complete."
+msgstr ""
+
+#. ~ Description of terrain "bollard"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A set of concrete and steel bollards sticking out of the ground, designed to "
+"protect areas against vehicle ram attacks.  It requires a few more steps for "
+"you to walk between the bollards."
+msgstr ""
+
+#. ~ Description of terrain "field stone wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A sturdy, dry stone wall.  Just rocks fitted together without mortar."
+msgstr ""
+
+#. ~ Description of terrain "field stone half-wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A sturdy, half-height, dry stone wall.  Just rocks fitted together without "
+"mortar."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "hardened resin mass"
+msgstr ""
+
+#. ~ Description of terrain "hardened resin mass"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A mass of expansive foam that has hardened like a rock, tough enough to stop "
+"most zombies from breaking through.  It's big enough to walk ontop of."
+msgstr ""
+
+#. ~ Description of terrain "window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed window with fancy curtains on the inside that can be drawn closed to"
+" block visibility and shut out any light."
+msgstr ""
+
+#. ~ Description of terrain "window without curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed smaller window typically found in residential homes.  You could "
+"install a curtain rod and drapes to block visibility and shut out any light "
+"if you had the supplies and skill."
+msgstr ""
+
+#. ~ Description of terrain "window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed window with fancy curtains that have been drawn shut, blocking "
+"sunlight and visibility.  The curtains can only be opened from the inside.  "
+"If you examined the curtains more closely, you could peek through the drapes "
+"or tear down everything.  Or you could just smash the window open."
+msgstr ""
+
+#. ~ Description of terrain "empty window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"An empty window frame made of planks and nails.  You could install a sheet of"
+" glass, or board it up for protection.  You could also convert it into a "
+"solid wall if you took the time to construct it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "empty window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "empty window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"An empty window frame consisting of planks and nails, with open curtains.  "
+"You could install a sheet of glass, or even board it up for protection.  You "
+"could also convert it into a wall if you took the time to construct it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "empty window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "empty window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"An empty window frame consisting of planks and nails, with closed curtains.  "
+"If you examined the curtains more closely, you could peek through the drapes "
+"or tear down everything.  You could install a sheet of glass, or even board "
+"it up for protection.  You could also convert it into a wall if you took the "
+"time to construct it."
+msgstr ""
+
+#. ~ Description of terrain "window frame"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A wooden window frame filled with shattered glass.  You'll probably get hurt "
+"if you crawl through the sharp and jagged shards.  You could smash out the "
+"remaining pieces, or take your time and quietly remove them."
+msgstr ""
+
+#. ~ Description of terrain "boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A glass window that has been covered with nailed-down planks, blocking "
+"sunlight and visibility.  It's not much stronger, but it could be further "
+"reinforced with strategically placed planks."
+msgstr ""
+
+#. ~ Description of terrain "boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"An empty window frame that has been covered with nailed-down planks, blocking"
+" sunlight and visibility.  It's not a very strong barrier, but it could be "
+"further reinforced with strategically placed planks."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "window with makeshift shutters"
+msgstr ""
+
+#. ~ Description of terrain "window with makeshift shutters"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A glass window with a heavy makeshift shutter bolted into the window frame, "
+"with a wooden bar to close it from the inside.  It's fairly sturdy when "
+"closed."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "window with open makeshift shutters"
+msgstr ""
+
+#. ~ Description of terrain "window with open makeshift shutters"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A glass window with a heavy makeshift shutter bolted into the window frame, "
+"with a wooden bar to close it from the inside.  The shutters are currently "
+"open, and offer no more defense than any glass window."
+msgstr ""
+
+#. ~ Prying message of terrain "window with open makeshift shutters"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "You pry the window open"
+msgstr ""
+
+#. ~ Description of terrain "window with open makeshift shutters"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A glass window with a heavy makeshift shutter bolted into the window frame, "
+"with a wooden bar to close it from the inside.  Both the shutters and the "
+"window glass are wide open, offering no defense."
+msgstr ""
+
+#. ~ Description of terrain "reinforced boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A heavily fortified glass window with planks carefully placed across the "
+"glass to block vision.  Adding a few spikes and metal plating would further "
+"increase its durability."
+msgstr ""
+
+#. ~ Description of terrain "reinforced boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A heavily fortified window with planks carefully placed across the open frame"
+" to block vision.  Adding a few spikes and metal plating would further "
+"increase its durability."
+msgstr ""
+
+#. ~ Description of terrain "armored boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"This once-normal glass window now menaces with spikes along the edges, with "
+"laboriously placed metal sheeting to further strengthen the wooden "
+"reinforcements underneath."
+msgstr ""
+
+#. ~ Description of terrain "armored boarded up window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"This once-normal window frame now menaces with spikes along the edges, with "
+"laboriously placed metal sheeting to further strengthen the wooden "
+"reinforcements underneath."
+msgstr ""
+
+#. ~ Description of terrain "window with metal bars"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A giant sheet of glass inserted into a window with thick security grilles, "
+"making it impossible to crawl through.  Typically installed in high-value "
+"stores, or ones in bad neighborhoods."
+msgstr ""
+
+#. ~ Description of terrain "window frame with metal bars"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A window frame blocked with thick security grilles, making it impossible to "
+"crawl through.  Typically installed in high-value stores, or ones in bad "
+"neighborhoods."
+msgstr ""
+
+#. ~ Description of terrain "window with metal bars"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A giant sheet of glass inserted into a window with thick security grilles, "
+"making it impossible to crawl through.  Typically installed in high-value "
+"stores, or ones in bad neighborhoods.  It has a small sticker in one corner, "
+"reading 'Protected by SecuriCorp.  Keeping you safe since 1993.'"
+msgstr ""
+
+#. ~ Description of terrain "window with metal bars and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A barred window with fancy curtains that have been drawn shut, blocking "
+"sunlight and visibility.  The curtains can only be opened from the inside.  "
+"If you examined the curtains more closely, you could peek through the drapes "
+"or tear down everything."
+msgstr ""
+
+#. ~ Description of terrain "window with metal bars and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A giant sheet of glass inserted into a window with thick security grilles, "
+"making it impossible to crawl through.  Typically installed in high-value "
+"stores, or ones in bad neighborhoods.  This one has been retrofitted with "
+"curtains, which are currently open."
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for a glass window.  Highly durable and will "
+"stand against any foe."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "window with metal grate and curtains"
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for a glass window with a closed curtain.  "
+"Highly durable and will stand against any foe."
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for a glass window with an opened curtain.  "
+"Highly durable and will stand against any foe."
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for an empty window.  Highly durable and will "
+"stand against any foe."
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for an empty window frame with a closed curtain."
+"  Highly durable and will stand against any foe."
+msgstr ""
+
+#. ~ Description of terrain "window with metal grate and curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"Metal bars made into a grate for an empty window frame with an opened "
+"curtain.  Highly durable and will stand against any foe."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A single glazed window.  Consists of a giant sheet of glass inserted into a "
+"window frame.  It's currently closed."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A single glazed window.  Consists of a giant sheet of glass inserted into a "
+"window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "single glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "single glazed window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed single glazed window with a fancy curtain on the inside that is "
+"closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "single glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "single glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed single glazed window with a fancy curtain on the inside that can be "
+"drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open single glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open single glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A single glazed window with a fancy curtain on the inside that can be drawn "
+"closed to block visibility and shut out any light.  It's open and can be "
+"crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A single glazed window.  Consists of a giant sheet of glass inserted into a "
+"window frame.  It's currently closed.  This one has been blocked out with "
+"duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "reinforced single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced single glazed window.  Consists of a giant sheet of reinforced "
+"glass inserted into a window frame.  It's currently closed."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced single glazed window.  Consists of a giant sheet of reinforced "
+"glass inserted into a window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced single glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced single glazed window with closed
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced single glazed window with a fancy curtain on the inside "
+"that is drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced single glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced single glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced window with a fancy curtain on the inside that can be "
+"drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced single glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced single glazed window with
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced window with a fancy curtain on the inside that can be drawn "
+"closed to block visibility and shut out any light.  It's open and can be "
+"crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped reinforced single glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped reinforced single glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced single glazed window.  Consists of a giant sheet of reinforced "
+"glass inserted into a window frame.  It's currently closed.  This one has "
+"been blocked out with duct tape.  You could remove the duct tape by cutting "
+"it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A double glazed window.  Consists of two giant sheets of glass inserted into "
+"a window frame.  It's currently closed."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A double glazed window.  Consists of two giant sheets of glass inserted into "
+"a window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "double glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "double glazed window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed double glazed window with a fancy curtain on the inside that is "
+"closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "double glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "double glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed double glazed window with a fancy curtain on the inside that can be "
+"drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open double glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open double glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A double glazed window with a fancy curtain on the inside that can be drawn "
+"closed to block visibility and shut out any light.  It's open and can be "
+"crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A double glazed window.  Consists of two giant sheets of glass inserted into "
+"a window frame.  It's currently closed.  This one has been blocked out with "
+"duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "reinforced double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced double glazed window.  Consists of two giant sheets of "
+"glass inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced double glazed window.  Consists of two giant sheets of glass "
+"inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced double glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced double glazed window with closed
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced double glazed window with a fancy curtain on the inside "
+"that is closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced double glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced double glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced double glazed window with a fancy curtain on the inside "
+"that can be drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced double glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced double glazed window with
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced double glazed window with a fancy curtain on the inside that can"
+" be drawn closed to block visibility and shut out any light.  It's open and "
+"can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped reinforced double glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped reinforced double glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced double glazed window.  Consists of two giant sheets of glass "
+"inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass.  It's currently closed.  This one has been blocked out with"
+" duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed triple glazed window.  Consists of three giant sheets of glass "
+"inserted into a window frame."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A triple glazed window.  Consists of three giant sheets of glass inserted "
+"into a window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "triple glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "triple glazed window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed triple glazed window with a fancy curtain on the inside that is "
+"closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "triple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "triple glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed triple glazed window with fancy curtains on the inside that can be "
+"drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open triple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open triple glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A triple glazed window with fancy curtains on the inside that can be drawn "
+"closed to block visibility and shut out any light.  It's open and can be "
+"crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A triple glazed window.  Consists of three giant sheets of glass inserted "
+"into a window frame.  It's currently closed.  This one has been blocked out "
+"with duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "reinforced triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced triple glazed window.  Consists of three giant glass "
+"sheets inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced triple glazed window.  Consists of three giant sheets of glass "
+"inserted inserted into a window frame.  For extra security, the outer layer "
+"is reinforced glass.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced triple glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced triple glazed window with closed
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced triple glazed window with a fancy curtain on the inside "
+"that is closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced triple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced triple glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced triple glazed window with a fancy curtain on the inside "
+"that can be drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced triple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced triple glazed window with
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced triple glazed window with a fancy curtain on the inside that can"
+" be drawn closed to block visibility and shut out any light.  It's open and "
+"can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped reinforced triple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped reinforced triple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced triple glazed window.  Consists of three giant sheets of glass "
+"inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass.  It's currently closed.  This one has been blocked out with"
+" duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "quadruple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "quadruple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed quadruple glazed window.  Consists of four giant sheets of glass "
+"inserted into a window frame."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open quadruple glass window"
+msgstr ""
+
+#. ~ Description of terrain "open quadruple glass window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A quadruple glazed window.  Consists of four giant sheets of glass inserted "
+"into a window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "quadruple glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "quadruple glazed window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed quadruple glazed window with a fancy curtain on the inside that is "
+"closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Description of terrain "quadruple glazed glass window with a curtain"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed quadruple glazed window with a fancy curtain on the inside that can "
+"be drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open quadruple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open quadruple glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A quadruple glazed window with fancy curtains on the inside that can be drawn"
+" closed to block visibility and shut out any light.  It's open and can be "
+"crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped quadruple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped quadruple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A quadruple glazed window.  Consists of four giant sheets of glass inserted "
+"into a window frame.  It's currently closed.  This one has been blocked out "
+"with duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced quadruple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "reinforced quadruple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed quadruple glazed window.  Consists of four giant sheets of glass "
+"inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced quadruple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced quadruple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A quadruple glazed window.  Consists of four giant sheets of glass inserted "
+"into a window frame.  For extra security, the outer layer is reinforced "
+"glass.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced quadruple glazed window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced quadruple glazed window with closed
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced quadruple glazed window with a fancy curtain on the "
+"inside that is closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced quadruple glazed window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced quadruple glazed window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced quadruple glazed window with a fancy curtain on the "
+"inside that can be drawn closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced quadruple glazed glass window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced quadruple glazed glass window with
+#. curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced quadruple glazed window with a fancy curtain on the inside that "
+"can be drawn closed to block visibility and shut out any light.  It's open "
+"and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "taped reinforced quadruple glazed window"
+msgstr ""
+
+#. ~ Description of terrain "taped reinforced quadruple glazed window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced quadruple glazed window.  Consists of four giant sheets of glass"
+" inserted into a window frame.  For extra security, the outer layer is "
+"reinforced glass.  It's currently closed.  This one has been blocked out with"
+" duct tape.  You could remove the duct tape by cutting it off."
+msgstr ""
+
+#. ~ Description of terrain "plastic window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed makeshift window comprised of a sheet of translucent, rigid plastic "
+"secured in a wooden frame.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open plastic window"
+msgstr ""
+
+#. ~ Description of terrain "open plastic window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A makeshift window comprised of a sheet of translucent, rigid plastic secured"
+" in a wooden frame.  It'll do in a pinch.  It's open and can be crawled "
+"through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "plastic window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "plastic window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed makeshift window with a closed curtain.  It's a sheet of "
+"translucent, rigid plastic secured in a wooden frame.  There's a sheet drawn "
+"across it to block the light.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "plastic window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "plastic window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed makeshift window with an opened curtain.  It's a sheet of "
+"translucent, rigid plastic secured in a wooden frame, with a sheet strung "
+"about it to block the light as required.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open plastic window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open plastic window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A makeshift window with an open curtain.  It's a sheet of translucent, rigid "
+"plastic secured in a wooden frame, with a sheet strung about it to block the "
+"light as required.  It'll do in a pinch.  It's open and can be crawled "
+"through."
+msgstr ""
+
+#. ~ Description of terrain "reinforced plastic window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed reinforced makeshift window comprised of three sheets of "
+"translucent, rigid plastic secured in a wooden frame.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced plastic window"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced plastic window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A reinforced makeshift window comprised of three sheets of translucent, rigid"
+" plastic secured in a wooden frame.  It'll do in a pinch.  It's open and can "
+"be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced plastic window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced plastic window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed makeshift reinforced window with a closed curtain.  It's three "
+"sheets of translucent, rigid plastic secured in a wooden frame.  There's a "
+"sheet drawn across it to block the light.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "reinforced plastic window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "reinforced plastic window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed makeshift reinforced window with an opened curtain.  It's three "
+"sheets of translucent, rigid plastic secured in a wooden frame, with sheets "
+"strung about it to block the light as required.  It'll do in a pinch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open reinforced plastic window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open reinforced plastic window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A makeshift reinforced window with an opened curtain.  It's three sheets of "
+"translucent, rigid plastic secured in a wooden frame, with a sheet strung "
+"about it to block the light as required.  It'll do in a pinch.  It's open and"
+" can be crawled through."
+msgstr ""
+
+#. ~ Description of terrain "tempered glass window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed tempered glass window.  Consists of a giant sheet of tempered glass "
+"inserted into a window frame."
+msgstr ""
+
+#. ~ Description of terrain "open tempered glass window"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A tempered glass window.  Consists of a giant sheet of tempered glass "
+"inserted into a window frame.  It's open and can be crawled through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "tempered glass window with closed curtains"
+msgstr ""
+
+#. ~ Description of terrain "tempered glass window with closed curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed tempered window with a fancy curtain on the inside that is closed to"
+" block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "tempered glass window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "tempered glass window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A closed tempered window with a fancy curtain on the inside that can be drawn"
+" closed to block visibility and shut out any light."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid "open tempered glass window with curtains"
+msgstr ""
+
+#. ~ Description of terrain "open tempered glass window with curtains"
+#: data/json/furniture_and_terrain/terrain-windows.json
+msgid ""
+"A tempered window with a fancy curtain on the inside that can be drawn closed"
+" to block visibility and shut out any light.  It's open and can be crawled "
+"through."
+msgstr ""
+
+#. ~ Description of terrain "porthole"
+#. ~ Description of terrain "view port"
+#: data/json/furniture_and_terrain/terrain-windows.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A thick, round window surrounded with a strong metal frame.  It's sealed "
+"closed."
+msgstr ""
+
+#. ~ Description of terrain "wooden stairs"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "A wooden staircase leading up."
+msgstr ""
+
+#. ~ Description of terrain "manhole"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid ""
+"A manhole.  The heavy iron cover has been removed, revealing an entrance to "
+"the underworld of hidden tunnels beneath the streets where sewage and "
+"rainwater frolic freely.  Or maybe it just leads to a lower floor."
+msgstr ""
+
+#. ~ Description of terrain "manhole cover"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid ""
+"A heavy iron manhole cover, zealously blocking the entrance to a sewer or "
+"other underground area.  Impossible to lift by hand, you'll need some kind of"
+" heavy-duty prying tool."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "scaffolding up"
+msgstr ""
+
+#. ~ Description of terrain "scaffolding up"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "Scaffolding leading up."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "scaffolding down"
+msgstr ""
+
+#. ~ Description of terrain "scaffolding down"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "Scaffolding leading down."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "scaffolding up/down"
+msgstr ""
+
+#. ~ Description of terrain "scaffolding up/down"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "Scaffolding leading up and down."
+msgstr ""
+
+#. ~ Description of terrain "downward slope"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "A downward-facing slope."
+msgstr ""
+
+#. ~ Description of terrain "upward slope"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "An upward-facing slope."
+msgstr ""
+
+#. ~ Description of terrain "rope leading up"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid ""
+"A dangling end of rope, the other end tied securely to something above you.  "
+"You could climb up it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "concrete ramp down (high end)"
+msgstr ""
+
+#. ~ Description of terrain "concrete ramp down (high end)"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "The upper end of a concrete ramp leading down."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "concrete ramp down (low end)"
+msgstr ""
+
+#. ~ Description of terrain "concrete ramp down (low end)"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "The lower end of a concrete ramp leading down."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "concrete ramp up (high end)"
+msgstr ""
+
+#. ~ Description of terrain "concrete ramp up (high end)"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "The upper end of a concrete ramp leading up."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "concrete ramp up (low end)"
+msgstr ""
+
+#. ~ Description of terrain "concrete ramp up (low end)"
+#: data/json/furniture_and_terrain/terrain-zlevel-transitions.json
+msgid "The lower end of a concrete ramp leading up."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "bone floor"
+msgstr ""
+
+#. ~ Description of terrain "bone floor"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"An impossibly hard, impregnable bone structure covers the internals of the "
+"beast."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "bone wall"
+msgstr ""
+
+#. ~ Description of terrain "bone wall"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"An amazingly durable, impregnable wall of bone stands before you, forming the"
+" outer shell of the eldritch monster."
+msgstr ""
+
+#. ~ Terrain name
+#. ~ Item name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+#: data/json/items/tool/misc.json
+msgid "monster teeth"
+msgid_plural "monster teeth"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of terrain "monster teeth"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"A fractal array of uncountable, bristling teeth that seem impossibly sharp, "
+"even at a conceptual level.  An iridescent haze surrounds it, as if light "
+"itself cannot help but be separated in their presence.  You surmise you could"
+" extract some for your own use, if you had an appropriate tool to remove them"
+" from the wall they're imbedded in."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "flesh floor"
+msgstr ""
+
+#. ~ Description of terrain "flesh floor"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"Walking over the innards of this monstrous beast, you can still feel movement"
+" underneath your feet."
+msgstr ""
+
+#. ~ Description of terrain "flesh wall"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"Warm to the touch, the tainted flesh of this monstrous being still twitches."
+msgstr ""
+
+#. ~ Description of terrain "flesh wall"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"A thick wall of fleshy cartilage.  With the proper tools, you could smash "
+"right through it."
+msgstr ""
+
+#. ~ Description of terrain "flesh wall"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"This section of flesh seems hollowed out.  You can see silky, translucent "
+"larvae wriggling inside, consuming flesh at a prodigious pace."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "monster hemolymph"
+msgstr ""
+
+#. ~ Description of terrain "monster hemolymph"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid ""
+"A shallow stream of glowing yellow ichor streaks through the beast.  Peering "
+"into it, you can see dark shadows moving under the surface."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "cartilage"
+msgstr ""
+
+#. ~ Description of terrain "cartilage"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "A thin, transparent cartilage webbing."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "Riiiiip!"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "nether brain"
+msgstr ""
+
+#. ~ Description of terrain "nether brain"
+#: data/json/furniture_and_terrain/terrain_nether_monster.json
+msgid "An oozing pile of wrinkled, decomposing flesh."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass ground"
+msgstr ""
+
+#. ~ Description of terrain "black glass ground"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A patch of black glass, roughly textured and entirely solid.  The little of "
+"it you can see through reveals larger, darker pebbles underneath."
+msgstr ""
+
+#. ~ Description of terrain "black grass"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A patch of thick, luxuriant midnight black grass.  Every blade is a razor."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass floor"
+msgstr ""
+
+#. ~ Description of terrain "black glass floor"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A floor of black glass, textured with the knots and whorls of old and well-"
+"loved wood boards."
+msgstr ""
+
+#. ~ Description of terrain "black glass floor"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "A black glass floor formed from tessellated octagonal tiles."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass wall"
+msgstr ""
+
+#. ~ Description of terrain "black glass wall"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A heavy wall of black glass, textured with the knots and whorls of old and "
+"well-loved wood boards."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "edge of a vastness"
+msgstr ""
+
+#. ~ Description of terrain "edge of a vastness"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"Beyond this point stretches an endless expanse of smooth black.  You are so "
+"small, in comparison.  And why would you even want to leave?"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass door"
+msgstr ""
+
+#. ~ Description of terrain "black glass door"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A door made from black glass, fused shut on useless hinges.  If you look very"
+" closely, you can see the tiny ridges of fingerprints on the knob."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black fiberglass fence"
+msgstr ""
+
+#. ~ Description of terrain "black fiberglass fence"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A network of delicate glass threads strung between thicker posts.  The wind "
+"blowing across them produces a faint, eerie whine."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "sharp tinkling!"
+msgstr ""
+
+#. ~ Bashing failed sound
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "resonant tinkling!"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "spined glasswire fence"
+msgstr ""
+
+#. ~ Description of terrain "spined glasswire fence"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"Rolling coils of thin black glass covered in delicate barbs.  It's "
+"reminiscent of snowflakes."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "translucent black glass wall"
+msgstr ""
+
+#. ~ Description of terrain "translucent black glass wall"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"An area of black glass translucent enough to allow murky shapes to be seen "
+"through it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass dust"
+msgstr ""
+
+#. ~ Description of terrain "black glass dust"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A pile of glass ground so finely that the slightest breeze bears it aloft "
+"into mesmerizing clouds."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass curtains"
+msgstr ""
+
+#. ~ Description of terrain "black glass curtains"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"The shape of a window and trim, covered in drapings of black glass.  "
+"Presumably it was once transparent; now the opaque curtains are solid and "
+"immobile."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "jagged glass aperture"
+msgstr ""
+
+#. ~ Description of terrain "jagged glass aperture"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A ragged hole smashed through a thin portion of black glass.  The biggest "
+"shards could probably be snapped off to make it safer to pass through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass pole"
+msgstr ""
+
+#. ~ Description of terrain "black glass pole"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A spar of glass fused into the ground, still bearing the jagged edges of the "
+"structure it once supported."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass well"
+msgstr ""
+
+#. ~ Description of terrain "black glass well"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"This was formerly a well shaft and pump mechanism; it is now so obscured with"
+" bubbles of black glass that only a faint outline of the original shape can "
+"be seen."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass bars"
+msgstr ""
+
+#. ~ Description of terrain "black glass bars"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "Thick spars of black glass extending from floor to ceiling."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "a tremendous shattering!"
+msgstr ""
+
+#. ~ Bashing failed sound
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "clonk!"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass column"
+msgstr ""
+
+#. ~ Description of terrain "black glass column"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "A tremendous spar of black glass."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "shallow black pool"
+msgstr ""

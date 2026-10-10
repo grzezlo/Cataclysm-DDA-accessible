@@ -1,0 +1,1343 @@
+# Batch 1 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Mutation name
+#: src/accessibility_format.cpp data/mods/Magiclysm/mutations/mutations.json
+msgid "Empty"
+msgstr ""
+
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining horde!"
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining evolved zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMMID" placed on map update on start
+#. of mission "Kill the warp-draining evolved zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining evolved horde!"
+#. ~ Name of the monster group "GROUP_SI_ZOMMID" placed on map update on start
+#. of mission "Kill the warp-draining evolved horde!"
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining fearsome zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMMID" placed on map update on start
+#. of mission "Kill the warp-draining fearsome zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMHARD" placed on map update on start
+#. of mission "Kill the warp-draining fearsome zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMMID" placed on map update on start
+#. of mission "Kill the warp-draining elite zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMHARD" placed on map update on start
+#. of mission "Kill the warp-draining elite zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMELITE" placed on map update on
+#. start of mission "Kill the warp-draining elite zombies!"
+#. ~ Name of the monster group "GROUP_SI_ZOMBOSS" placed on map update on start
+#. of mission "Kill the warp-draining zombie lord!"
+#. ~ Name of the monster group "GROUP_SI_ZOMBOSS" placed on map update on start
+#. of mission "Kill the warp-draining zombie superteam!"
+#. ~ Name of the monster group "GROUP_SI_ZOMBOSS" placed on map update on start
+#. of mission "Kill the warp-draining zombie leader!"
+#. ~ Name of the monster group "GROUP_SI_ZOMELITE" placed on map update on
+#. start of mission "Kill the warp-draining zombie leader!"
+#. ~ Name of the monster group "GROUP_SI_ZOMBOSS" placed on map update on start
+#. of mission "Kill the warp-draining zombie horde lord!"
+#. ~ Name of the monster group "GROUP_SI_ZOMEASY" placed on map update on start
+#. of mission "Kill the warp-draining zombie horde lord!"
+#. ~ Name of the monster group "GROUP_SI_MIGO" placed on map update on start of
+#. mission "Kill the warp-draining mi-go threat!"
+#. ~ Name of the monster group "GROUP_SI_MIGO" placed on map update on start of
+#. mission "Kill the warp-draining mi-go overlord!"
+#. ~ Name of the monster group "GROUP_SI_MIGO_ELITE" placed on map update on
+#. start of mission "Kill the warp-draining mi-go overlord!"
+#: src/accessibility_format.cpp data/mods/Sky_Island/missions_and_mapgen.json
+msgid "Marked"
+msgstr ""
+
+#. ~ Faction whose zones the zones manager shows.
+#: src/accessibility_format.cpp src/accessibility_gameplay.cpp
+#: src/debug_menu.cpp src/mission_ui.cpp
+#, c-format
+msgid "Faction: %s"
+msgstr ""
+
+#. ~ Overmap terrain vision level name
+#: src/accessibility_format.cpp data/json/overmap/vision_levels.json
+msgid "city"
+msgstr ""
+
+#. ~ Overmap terrain vision level name
+#: src/accessibility_format.cpp data/json/overmap/vision_levels.json
+msgid "camp"
+msgstr ""
+
+#. ~ %1$s: Name of monster spotted ("headless zombie")
+#. ~ %2$s: Distance to monster ("17 tiles")
+#. ~ %3$s: Description of where the monster is ("to the east")
+#: src/accessibility_format.cpp src/game.cpp
+#, c-format
+msgctxt "monster description"
+msgid "%1$s %2$s %3$s"
+msgstr ""
+
+#: src/accessibility_format.cpp src/mutation_ui.cpp
+msgid "Hiding"
+msgstr ""
+
+#. ~Description of a character's main stats. Should not exceed 18 characters
+#. of width.
+#: src/accessibility_format.cpp src/newcharacter.cpp
+msgid "incapacitated"
+msgstr ""
+
+#. ~ Name of a fault
+#: src/accessibility_gameplay.cpp data/json/faults/faults_melee.json
+msgid "Broken"
+msgstr ""
+
+#: src/accessibility_gameplay.cpp src/overmap_ui.cpp
+msgid "You can only make out vague details of what's here."
+msgstr ""
+
+#: src/accessibility_gameplay.cpp src/overmap_ui.cpp
+msgid "You can only make out outlines of what's here."
+msgstr ""
+
+#: src/accessibility_gameplay.cpp src/overmap_ui.cpp
+msgid "You can make out some details of what's here."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "Your %s is little more than an awkward club now."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "Your %s is too hot, and little screen signalizes the gun is inoperable."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "You're no longer able to make progress smashing here."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "You deftly maneuver around %s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "<npcname> deftly maneuvers around %s."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You lose track of some hauled items as they didn't fit on the current tile."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "You scan %d %s into your device."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "%s scans %d %s into their device."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "%s stops scanning books."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "The %s ran out of batteries!"
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "No devices needed to be processed."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "You failed to %s %d device(s)."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "You successfully %s %d/%d device(s)."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "File size exceeds available memory; canceling file move."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "You stop processing the remaining devices."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "%s stops processing devices."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid " files off of"
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid " files onto"
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "The grabbed furniture has been lost."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "Can't drag to there."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "item would spill"
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"The parent container does not have enough space to fit more items.  Would you"
+" like to first wield %s to fit more?"
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"The parent container does not have enough space to fit more than %i %s.  "
+"Would you like to first wield %s to fit more?"
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"Your %1$s doesn't have enough charges to complete the job.  Continue anyway?"
+msgstr ""
+
+#: src/activity_actor.cpp src/item.cpp
+#, c-format
+msgid "You reel in the %s and wind it up."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "You'll need the outfit in your hands before you can change outfits."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "Your %s seems to enjoy the interaction, but you feel nothing."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "%s can't reach the source tile."
+msgstr ""
+
+#: src/activity_actor.cpp src/iuse.cpp
+msgid "You need more energy to heat these items."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid "Some of the food you selected is gone."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You cannot pulp acid-filled corpses, and need to be slowly dismembered to "
+"prevent acid spraying on your skin."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You cannot pulp this corpse, for you have no tool heavy enough to deal with "
+"it quickly."
+msgid_plural ""
+"You cannot pulp these corpses, for you have no tool heavy enough to deal with"
+" it quickly."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+msgid "<npcname> cannot pulp this corpse without a heavier tool."
+msgid_plural "<npcname> cannot pulp these corpses without a heavier tool."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You interrupted pulping of this corpse, for you have no tool heavy enough to "
+"deal with it quickly."
+msgid_plural ""
+"You interrupted pulping of these corpses, for you have no tool heavy enough "
+"to deal with it quickly."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"<npcname> left one corpse unpulped, for %1$s has no tool heavy enough to deal"
+" with it."
+msgid_plural ""
+"<npcname> left some corpses unpulped, for %1$s has no tool heavy enough to "
+"deal with it."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+msgid "You finished pulping the corpse."
+msgid_plural "You finished pulping the corpses."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "It took you some time, messing corpses with your trusty %1$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"It took you some time, stomping corpses with nothing but your %1$s, and "
+"occasionally cutting it with a %2$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"It took you some time, bashing corpses with your %1$s, with occasional cuts "
+"with a %2$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"It took you some time, mixing your %1$s with powerful stomps, and occasional "
+"cuts with a %2$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "It took you some time, stomping corpses with nothing but your %1$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid "It took you some time, bashing corpses with just your %1$s."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"Heavy breathing, you think your form is far from perfect for such activities."
+msgstr ""
+
+#: src/activity_actor.cpp
+#, c-format
+msgid ""
+"You praise yourself for bringing %1$s, it helped a lot with more armoured "
+"bits."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You also consider finding something like a crowbar, you had a really hard "
+"time without it."
+msgstr ""
+
+#: src/activity_actor.cpp
+msgid ""
+"You left one corpse unpulped, for you have no tool heavy enough to deal with "
+"it."
+msgid_plural ""
+"You left some corpses unpulped, for you have no tool heavy enough to deal "
+"with it."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_handlers.cpp src/iexamine.cpp
+#, c-format
+msgid "You squeeze the last drops of %s from the tank."
+msgstr ""
+
+#: src/activity_handlers.cpp
+msgid "Select tinder to use for lighting a fire"
+msgstr ""
+
+#: src/activity_handlers.cpp
+#, c-format
+msgid "<npcname> learns a little about the spell: %s"
+msgstr ""
+
+#: src/activity_handlers.cpp
+msgid "You can no longer find the item to repair."
+msgstr ""
+
+#: src/activity_handlers.cpp
+msgid "You cannot reach that destination."
+msgstr ""
+
+#. ~ %1$s is item name, %2$s is vehicle name, %3$s is vehicle part name
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "Unable to fit %1$s in the %2$s's %3$s."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "You put some of your %1$s in the %2$s's %3$s."
+msgid_plural "You put some of your %1$s in the %2$s's %3$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "<npcname> puts some of their %1$s in the %2$s's %3$s."
+msgid_plural "<npcname> puts some of their %1$s in the %2$s's %3$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/activity_item_handling.cpp
+msgid ""
+"There's a human corpse there.  You wouldn't want to butcher it by accident."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "You don't have the skill for the %1$s task at zone %2$s."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "You don't have the skill for the %s task."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"There is something blocking the location for the %1$s task at zone %2$s."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "There is something blocking the location for the %s task."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%s is trying to find necessary items to do the %s job on zone %s, reason %s"
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "%s is trying to find necessary items to do the %s job, reason %s"
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"The required items are not available to complete the %s task at zone %s."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid "The required items are not available to complete the %s task."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+msgid ""
+"%1s failed to perform the %2$s activity because no suitable locations were "
+"found."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because no path to a suitable "
+"location could be found."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because no required zone was found."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because the target location is "
+"blocked or cannot be reached."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because of insufficient skills."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because the activity couldn't be "
+"found.  This is probably an error."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because no suitable location could "
+"be found."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because no criteria could be "
+"matched."
+msgstr ""
+
+#: src/activity_item_handling.cpp
+#, c-format
+msgid ""
+"%1$s failed to perform the %2$s activity because no path to a suitable "
+"crafting/disassembly location could be found."
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "barter value / weight"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "Source container isn't valid."
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "The %s is already in your inventory.  You may want to (U)nload"
+msgstr ""
+
+#: src/advanced_inv.cpp
+msgid "Nothing to unload."
+msgstr ""
+
+#: src/advanced_inv.cpp
+#, c-format
+msgid "No pocket can contain the %s."
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>]/[<color_yellow>%s</color>] to scroll the left pane"
+" (list of items).\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>]/[<color_yellow>%s</color>] to scroll the middle "
+"pane (item information).\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>]/[<color_yellow>%s</color>] to scroll the right "
+"pane (items grouped by body part).\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>]/[<color_yellow>%s</color>] to limit the left pane "
+"to a particular body part.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid "[<color_yellow>%s</color>] to select an item for reordering.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>] to assign special inventory letters to clothing.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid "[<color_yellow>%s</color>] to change the side on which item is worn.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>] to toggle item visibility on character sprite.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid "[<color_yellow>%s</color>] to sort worn items into natural layer order.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid "[<color_yellow>%s</color>] to equip a new item.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>] to equip a new item at the currently selected "
+"position.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+#, c-format
+msgid "[<color_yellow>%s</color>] to remove selected item.\n"
+msgstr ""
+
+#: src/armor_layers.cpp
+msgid ""
+"<color_light_gray>The first number is the summed encumbrance from all "
+"clothing on that bodypart.The second number is an additional encumbrance "
+"penalty caused by wearing either multiple items on one of the bodypart's "
+"layers or wearing items the wrong way (e.g. a shirt over a backpack).The sum "
+"of these values is the effective encumbrance value your character has for "
+"that bodypart.</color>"
+msgstr ""
+
+#: src/armor_layers.cpp
+msgid "Sort armor help"
+msgstr ""
+
+#: src/auto_pickup.cpp
+msgid "Inc/Exc"
+msgstr ""
+
+#: src/avatar.cpp
+msgid "There's no one to take control of!"
+msgstr ""
+
+#: src/avatar.cpp
+msgid "Read until this character gains a level:"
+msgstr ""
+
+#: src/avatar.cpp
+#, c-format
+msgid "A chapter of this book takes %s to read."
+msgstr ""
+
+#: src/avatar_action.cpp
+#, c-format
+msgid "Not attacking the %1$s -- safe mode is on!  (%2$s to turn it off)"
+msgstr ""
+
+#: src/avatar_action.cpp src/handle_action.cpp src/melee.cpp
+msgid "You are incapable of attacking!"
+msgstr ""
+
+#: src/avatar_action.cpp
+msgid "This grass is razor sharp and would probably shred your mouth."
+msgstr ""
+
+#: src/avatar_action.cpp
+msgid "You are incapable of throwing anything!"
+msgstr ""
+
+#: src/avatar_action.cpp
+msgid "You aren't holding something you can throw."
+msgstr ""
+
+#: src/avatar_action.cpp
+msgid "This item is still wet and it will break if you turn it on.  Proceed?"
+msgstr ""
+
+#: src/avatar_action.cpp
+#, c-format
+msgid "Couldn't pick up the %s."
+msgstr ""
+
+#: src/avatar_action.cpp src/game.cpp
+msgid "You have no container to insert items."
+msgstr ""
+
+#: src/basecamp.cpp
+msgid "You need to input the base camp name."
+msgstr ""
+
+#: src/basecamp.cpp
+#, c-format
+msgid ""
+"Through your looting of %s you found %d days worth of food and other "
+"resources."
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid "You need at least %s of bionic power to fire the %s!"
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid "There's a lot of water around you already, no need to use your %s."
+msgstr ""
+
+#: src/bionics.cpp
+msgid ""
+"You have a cable attached to your CBM but it also has to be connected to a "
+"power source."
+msgstr ""
+
+#: src/bionics.cpp
+msgid ""
+"You have a cable attached to a portable power source, but you also need to "
+"connect it to your CBM."
+msgstr ""
+
+#: src/bionics.cpp
+msgid ""
+"You have a cable attached to a vehicle, but you also need to connect it to "
+"your CBM."
+msgstr ""
+
+#: src/bionics.cpp
+msgid ""
+"You have at least one free cable in your inventory that you could use to "
+"connect yourself."
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid ""
+"Your %s activates and you feel your throat open up and air filling your "
+"lungs!"
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid ""
+"Your %s deactivates after it finds itself completely submerged in water."
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid "%s cannot be removed because installed bionic %s requires it."
+msgstr ""
+
+#: src/bionics.cpp
+#, c-format
+msgid "CBM requires prior installation of %s."
+msgstr ""
+
+#: src/bionics.cpp
+msgid "Stop power generation at"
+msgstr ""
+
+#: src/bionics_ui.cpp
+#, c-format
+msgid ""
+"[<color_yellow>%s</color>] Reassign, [<color_yellow>%s</color>] Switch tabs, "
+"[<color_yellow>%s</color>] Toggle fuel saving mode, "
+"[<color_yellow>%s</color>] Toggle sprite visibility, "
+msgstr ""
+
+#: src/bionics_ui.cpp
+msgid "(inactive)"
+msgstr ""
+
+#: src/bonuses.cpp
+msgid "SMGs"
+msgstr ""
+
+#: src/butchery.cpp
+msgid ""
+"Really desecrate the mortal remains of this being by butchering them for "
+"meat?  You feel others may take issue with your action."
+msgstr ""
+
+#: src/butchery.cpp
+msgid ""
+"Really desecrate the mortal remains of this being by butchering them for "
+"meat?"
+msgstr ""
+
+#: src/butchery.cpp
+msgid ""
+"Really take this thing apart?  You feel others may take issue with your "
+"action."
+msgstr ""
+
+#: src/butchery.cpp
+msgid "<swear!>?  Are you butchering them?  That's not okay, <name_b>."
+msgstr ""
+
+#: src/butchery.cpp
+msgid "You were trained for autopsies, not butchery."
+msgstr ""
+
+#: src/butchery.cpp
+msgid "Dissecting may yield knowledge of:"
+msgstr ""
+
+#: src/butchery.cpp
+msgid "missing proficiencies"
+msgstr ""
+
+#: src/butchery.cpp
+msgid "other type started"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "WARNING!  %s has no vital part and is invincible."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "The %1$s can't expand to fit any more %2$s."
+msgstr ""
+
+#: src/character.cpp src/newcharacter.cpp
+#, c-format
+msgid "Traits: %s"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "Removes fault: <color_green>%s</color>\n"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "Removes fault: <color_light_gray>%s</color>\n"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "Adds fault: <color_yellow>%s</color>\n"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "<color_red>Applies</color> %d damage.\n"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "Your %s needs %d kJ of bionic power."
+msgid_plural "Your %s needs %d kJ of bionic power."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/character.cpp
+msgid "You can't wield a part of your body."
+msgstr ""
+
+#: src/character.cpp
+msgid "You can't wield spilt liquids."
+msgstr ""
+
+#: src/character.cpp
+msgid "You can't wield loose gases."
+msgstr ""
+
+#: src/character.cpp
+msgid "You can't wield unbroken frozen liquids."
+msgstr ""
+
+#: src/character.cpp
+msgid "You can't unwield this."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "The %s prevents you from wielding the %s."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You can't wield the %s with only one arm."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You are too weak to wield the %s with only one arm."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You can't wield your %s while driving."
+msgstr ""
+
+#: src/character.cpp
+msgid "You don't have the tools to crush frozen liquids."
+msgstr ""
+
+#: src/character.cpp
+msgid "somethings"
+msgstr ""
+
+#: src/character.cpp
+msgid "a hammering tool"
+msgstr ""
+
+#: src/character.cpp
+msgid "a drill or both hammering tool and screwdriver"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You need %s to crush up frozen liquids in rigid container!"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You crush up %s."
+msgstr ""
+
+#: src/character.cpp
+msgid "Enchantments"
+msgstr ""
+
+#: src/character.cpp
+msgid "You can't echolocate underwater!"
+msgstr ""
+
+#: src/character.cpp
+msgid "chirp."
+msgstr ""
+
+#: src/character.cpp
+msgid "clack."
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "You detect a %1$s to the %2$s!"
+msgstr ""
+
+#: src/character.cpp
+msgid "tick."
+msgstr ""
+
+#: src/character.cpp
+msgid "pii."
+msgstr ""
+
+#: src/character.cpp
+msgid "pong."
+msgstr ""
+
+#: src/character.cpp
+msgid "bloop."
+msgstr ""
+
+#: src/character.cpp
+msgid "ch."
+msgstr ""
+
+#: src/character.cpp
+msgid "chk."
+msgstr ""
+
+#: src/character.cpp
+msgid "chhk."
+msgstr ""
+
+#: src/character.cpp
+msgid "chkch."
+msgstr ""
+
+#: src/character.cpp
+msgid "chkchh."
+msgstr ""
+
+#: src/character.cpp
+msgid "You stumble!"
+msgstr ""
+
+#: src/character.cpp
+msgid "<npcname> stumbles!"
+msgstr ""
+
+#: src/character.cpp
+msgid "The item can't be unloaded in its current state!"
+msgstr ""
+
+#: src/character.cpp
+#, c-format
+msgid "%s spilled from your hand."
+msgstr ""
+
+#: src/character.cpp
+msgid "You are not wielding anything you could use."
+msgstr ""
+
+#: src/character.cpp
+msgid ""
+"Your broken limb significantly hampers your efforts to put pressure on a "
+"bleeding wound!"
+msgstr ""
+
+#: src/character.cpp
+msgid ""
+"<npcname>'s broken limb significantly hampers their effort to put pressure on"
+" a bleeding wound!"
+msgstr ""
+
+#: src/character.cpp
+msgid ""
+"Your hands are too encumbered to effectively put pressure on a bleeding "
+"wound!"
+msgstr ""
+
+#: src/character.cpp
+msgid ""
+"<npcname>'s hands are too encumbered to effectively put pressure on a "
+"bleeding wound!"
+msgstr ""
+
+#: src/character.cpp
+msgid ""
+"Your bleeding is beyond staunching barehanded!  A tourniquet might help."
+msgstr ""
+
+#: src/character.cpp
+msgid "<npcname>'s bleeding is beyond staunching barehanded!"
+msgstr ""
+
+#: src/character_armor.cpp
+msgid "The incoming attack was made ineffective."
+msgstr ""
+
+#: src/character_armor.cpp
+msgid ""
+"The defensive forcefield surrounding you ripples as it reduces the velocity "
+"of the incoming attack."
+msgstr ""
+
+#: src/character_armor.cpp
+#, c-format
+msgid "Your %s doesn't have enough power to absorb the blow and shuts down!"
+msgstr ""
+
+#: src/character_attire.cpp
+msgid "Can't wear that, it's made from an animal!"
+msgstr ""
+
+#: src/character_attire.cpp
+msgid ""
+"You are wearing rigid armor with armor that has pockets for armor.  Until "
+"hard armor is removed inserting plates on those locations will be disabled."
+msgstr ""
+
+#: src/character_attire.cpp
+#, c-format
+msgid ""
+"<color_c_red>The %s rubs uncomfortably against your unpadded %s.</color>"
+msgstr ""
+
+#: src/character_body.cpp
+msgid "You feel cold and shiver."
+msgstr ""
+
+#: src/character_body.cpp src/medical_ui.cpp
+msgid "So-so"
+msgstr ""
+
+#: src/character_body.cpp
+msgid ""
+"It has a deep wound that looks to have a septic infection.  Antibiotics might"
+" be required."
+msgstr ""
+
+#: src/character_escape.cpp
+msgid "You deftly roll to your feet."
+msgstr ""
+
+#: src/character_escape.cpp
+msgid "<npcname> deftly rolls to their feet."
+msgstr ""
+
+#: src/character_escape.cpp
+msgid ""
+"As you struggle to escape the grab something comes loose and falls to the "
+"ground!"
+msgstr ""
+
+#: src/character_escape.cpp
+msgid ""
+"As <npcname> struggles to escape the grab something comes loose and falls to "
+"the ground!"
+msgstr ""
+
+#: src/character_escape.cpp
+#, c-format
+msgid "You break %s grab on your %s!"
+msgstr ""
+
+#: src/character_escape.cpp
+#, c-format
+msgid "<npcname> breaks %s grab on their %s!"
+msgstr ""
+
+#: src/character_escape.cpp
+#, c-format
+msgid "You try to break %s grab on your %s, but fail!"
+msgstr ""
+
+#: src/character_inventory.cpp
+#, c-format
+msgid "The %s would spill if stored there.  Remove its contents first?"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Ignore items in this area when sorting?"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Detach MOLLE attached pouches?"
+msgstr ""
+
+#: src/clzones.cpp
+msgid ""
+"Detach mods from weapons?  (Be careful as you may not have the skills to "
+"reattach them)"
+msgstr ""
+
+#: src/clzones.cpp
+msgid ""
+"Avoid unloading items stacks (not charges) greater than a certain amount?  "
+"(Amount defined in next window)"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "What is the maximum stack size to unload?"
+msgstr ""
+
+#: src/clzones.cpp
+msgid ""
+"Always unload?  (Unload even if the container has a valid sorting location)"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Unload: "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "mods, "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "MOLLE, "
+msgstr ""
+
+#: src/clzones.cpp
+#, c-format
+msgid "ignore stacks over %i, "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "unload all"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "unload unmatched"
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Ignore contents: "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Filter: "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "mods "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "MOLLE "
+msgstr ""
+
+#: src/clzones.cpp
+msgid "Zones tied to vehicles cannot be displayed"
+msgstr ""
+
+#: src/color.cpp
+msgid "Load a <C>olor theme"
+msgstr ""
+
+#: src/color.cpp
+msgid "Color themes:"
+msgstr ""
+
+#: src/computer_session.cpp
+msgid "Choose mutation category"
+msgstr ""
+
+#: src/computer_session.cpp
+msgid "Changes to:"
+msgstr ""
+
+#: src/computer_session.cpp
+msgid ""
+"You wouldn't gain anything from installing this repeater.  However, someone "
+"else in the wasteland might reward you for doing so."
+msgstr ""
+
+#: src/computer_session.cpp
+#, c-format
+msgid "Electronic storage device with %s free required!"
+msgstr ""
+
+#: src/computer_session.cpp
+msgid "ERROR: Please only use fresh blood samples."
+msgstr ""
+
+#: src/computer_session.cpp
+msgid "A secubot emerges from a compartment in the floor."
+msgstr ""
+
+#: src/construction.cpp
+msgid ""
+"There is already an unfinished construction there, examine it to continue "
+"working on it."
+msgstr ""
+
+#: src/construction.cpp
+msgid "Also reveal all nearby wirings?"
+msgstr ""
+
+#: src/construction.cpp
+#, c-format
+msgid ""
+"%s\n"
+"Confirm deconstruct?"
+msgstr ""
+
+#: src/consumption.cpp
+msgid "You're still not going to eat animal products."
+msgstr ""
+
+#: src/consumption.cpp
+msgid "You eat the human flesh, and in doing so, devour their spirit."
+msgstr ""
+
+#: src/consumption.cpp
+msgid "Mmh.  Tastes like venison."
+msgstr ""
+
+#: src/consumption.cpp
+msgid ""
+"Even as you indulge your darkest impulses, you dread what judgement may come."
+msgstr ""
+
+#: src/consumption.cpp
+msgid ""
+"You worry that your hunger for human flesh is going to be a liability one of "
+"these days."
+msgstr ""
+
+#: src/consumption.cpp
+msgid "The human blood tastes as good as any other."
+msgstr ""
+
+#: src/consumption.cpp
+msgid ""
+"Despite your cravings, you still can't help feeling weird about drinking "
+"somebody's blood."
+msgstr ""
+
+#: src/consumption.cpp
+msgid "You feel thirstier than before you consumed that!"
+msgstr ""
+
+#: src/crafting.cpp
+#, c-format
+msgid "%s's morale is too low to craft such a difficult thing…"
+msgstr ""
+
+#: src/crafting.cpp
+#, c-format
+msgid "%s can't see to craft!"
+msgstr ""
+
+#: src/crafting.cpp
+msgid "You can't craft while driving!"
+msgstr ""
+
+#: src/crafting.cpp
+msgid ""
+"<npcname> refuses to violate road safety guidelines by crafting while "
+"driving!"
+msgstr ""
+
+#: src/crafting.cpp
+#, c-format
+msgid ""
+"The %s is too large and/or heavy to work on.  You may want to use a workbench"
+" or a lifting tool."
+msgstr ""
+
+#: src/crafting.cpp
+msgid "You can't continue due the immense pain in your body."
+msgstr ""
+
+#: src/crafting.cpp
+msgid "Your progress is so slow that you give up in frustration."
+msgstr ""
+
+#: src/crafting.cpp
+msgid "<npcname> can no longer make that craft!"
+msgstr ""
+
+#: src/crafting.cpp
+#, c-format
+msgid "%1s could assist %2s with a batch…"
+msgstr ""
+
+#: src/crafting.cpp
+#, c-format
+msgid "%1s watches %2s crafts…"
+msgstr ""

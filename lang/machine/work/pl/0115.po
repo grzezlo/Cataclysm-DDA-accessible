@@ -1,0 +1,1893 @@
+# Batch 115 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Talking might help distract me from feeling like crap."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Any new discoveries?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Anything exciting happen to you lately?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Anything you're looking forward to?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ever feel like there's still some good out there?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ever feel like we're living in a bad dream?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ever wonder how we ended up here?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Fancy a chat?  I'm all ears."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Feeling chatty?  I'm here for it."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Got any good news to share?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Got any good stories from the road?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Heard any good rumors?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Hey, <name_g>, what's been on your mind?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "How do you stay positive?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "How's your day been so far?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I've been thinking a lot lately.  How about you?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I've got a few minutes.  What's new with you?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's catch up.  What's been happening?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's chat about something light.  What's up?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's swap stories.  What's yours?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's take a breather.  Anything interesting going on?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's take a mental break.  Got anything fun to share?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Life's a mess, huh?  How're you holding up?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Life's been rough.  What's keeping you going?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "So, tell me something good."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Sometimes, a good talk can make a day better.  What's up?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Surviving's tough, but chatting helps.  How are you?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Tell me about your last adventure."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "What's a goal you're working towards?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "What's been your biggest challenge recently?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "What's the latest, <name_g>?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "What's the strangest thing you've encountered?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat>"
+#. ~ General chit chat messages
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You got a story to share?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think the military's still out there somewhere?  Holed up, planning a "
+"comeback?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think the oceans are safe?  Or is there stuff down there now, too?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there are still radio stations out there, broadcasting to no "
+"one?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there are still secret labs out there, doing god knows what?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there's a place where people have rebuilt?  Like, a hidden "
+"utopia?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there's any hope left?  Or are we just clinging to a lost cause?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there's anyone out there who knows the full story?  Someone with"
+" all the answers?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think we'll ever find a place where we can just… be safe?  Truly safe?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think we'll ever have a moment of peace?  Just one day where we don't "
+"have to worry."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Do you think we'll ever rebuild?  Like, really rebuild?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think we'll ever see a world without fear again?  A place where kids "
+"can play outside?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think we'll ever understand the full extent of what happened?  All the"
+" whys and hows?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever hear about those places that supposedly have a natural immunity to the "
+"virus?  Wonder if they're real."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how future generations will look at us?  If there even are "
+"future generations."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how the animals are coping with all this?  Mutants are one "
+"thing, but what about the regular ones?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how weird it is that we're still here, fighting to survive?"
+"  Like, why us?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ever think about what you'd do differently if you knew this was coming?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever wonder if the animals have it better than us now?  Less to worry about, "
+"just surviving."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever wonder if the plants and trees know what's happening?  If they feel it "
+"too?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever wonder if there are places out there that haven't been touched by all "
+"this?  Little pockets of normality?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever wonder if we're just in some kind of experiment?  Like, some twisted lab"
+" rat scenario?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I can't help but think there's more to this than we know.  Like, some big "
+"secret waiting to be uncovered."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I can't shake the feeling that someone's watching us.  Like, we're not alone "
+"in this."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I can't stop thinking about those conspiracy theories.  Aliens, government "
+"experiments gone wrong…what if some of it's true?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I heard a story about a place where the dead don't rise.  Sounds too good to "
+"be true, right?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I miss the little things, like traffic jams and crowded malls.  Never thought"
+" I'd say that."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I miss the simple things.  Like a hot shower.  Think we'll ever have that "
+"again?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I miss the taste of fresh food.  Think we'll ever have that again?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I sometimes think about all the places I wanted to visit.  Wonder what "
+"they're like now."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I sometimes wonder if it's better to not know the full truth about what "
+"caused all this."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I used to be scared of the dark.  Now it's the least of my worries."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I used to dream about adventures.  This… this isn't what I had in mind."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I used to think the apocalypse would be more… glamorous, you know?  Less "
+"dirt, more Mad Max."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I used to think the end of the world would bring people together.  Guess I "
+"was wrong."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I used to think the world was big.  Now it feels so small, so fragile."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I wonder if there are other dimensions where things didn't go to hell.  "
+"Parallel worlds where everything's fine."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I wonder if we'll ever see real civilization again, or if this is just the "
+"new normal."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I've heard rumors about entire towns just vanishing overnight.  No bodies, no"
+" signs of struggle.  Creepy, huh?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I've heard whispers about groups out there, still trying to control things.  "
+"Like some shadow government or something."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "People used to laugh at preppers.  Who's laughing now, huh?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Remember those stories about underground cities?  Wonder if anyone's living "
+"down there now."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Remember when people thought the internet would last forever?  Feels like a "
+"joke now."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Some say the world ending was nature's way of hitting the reset button.  What"
+" do you think?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I think about those survivalist nutjobs.  Bet they're having the "
+"last laugh now."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if the stars look different now.  Like, did they change "
+"too?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if the world ended for a reason.  Like, maybe we needed a "
+"reset."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if this is all some sort of punishment.  But for what, who"
+" knows?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if this is some kind of test.  Like, we're being judged on"
+" how we handle it."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if we're just delaying the inevitable.  Like, what's the "
+"point?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"There's so much we don't know about what caused this.  You think we'll ever "
+"get answers?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Think any famous people made it through all this?  Celebrities hiding out "
+"somewhere?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"What do you think happened to all the rich and powerful?  Think they had a "
+"plan for this?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"What if the cause of all this is still out there, waiting to finish the job?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"What if there are survivors out there who have no idea what happened?  "
+"Completely cut off from everything."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever feel like the whole time before <the_cataclysm> was just a dream "
+"you're waking up from?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever feel like the whole world is just… tired?  Like it's ready to give "
+"up?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You ever feel like the whole world is one big haunted house now?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever hear about that weird cult that was stockpiling supplies?  Bet "
+"they're feeling pretty smug now."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever hear about those secret bunkers?  Bet they're laughing at us from "
+"their safe havens."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think about all the tech we lost?  I mean, we were so close to AI, "
+"now we're just scraping by."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think about all the things we took for granted?  Running water, "
+"electricity, safety."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think we'll see the sun rise on a world that's not falling apart?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever wonder if the scientists who caused this are still out there, hiding"
+" somewhere?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think any of those doomsday bunkers actually worked?  Might be folks "
+"underground right now, clueless about what's happened."
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think there are any places left untouched by all this?  Like, some hidden"
+" paradise?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think there are still places where people live normal lives?  Kids going "
+"to school, adults going to work?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think there's a chance this was all just one big mistake?  Some accident "
+"that spiraled out of control?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think those sci-fi movies got anything right about how this would go "
+"down?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think we'll ever find a cure for the zombification?  Or is this it for "
+"humanity?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think we'll ever find a way to make sense of all this?  Or are we just "
+"stumbling in the dark?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think we'll ever get to a point where we can relax again?  Not just "
+"survive, but live?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think we'll ever hear music again?  Real music, not just the sound of our"
+" own fears?"
+msgstr ""
+
+#. ~ Snippet in category "<thoughtfulchitchat>"
+#. ~ General chit chat messages for NPCs having big thoughts.  Tends to be more
+#. about establishing game lore.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think we'll ever laugh again?  Like, really laugh, without any fear or "
+"worry?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think any of the old world leaders survived?  If they did, what would "
+"they be doing now?  Hiding, trying to rebuild, or something else entirely?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever notice how some people seem almost unaffected mentally?  Like they're "
+"perfectly adjusted to this new world.  Makes you wonder if they knew more "
+"than they let on before everything went to hell."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how some people seem to thrive in this chaos?  It's almost "
+"like they were made for it.  Makes you wonder what they were like before "
+"everything went to hell."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Have you noticed how some zombies seem to be smarter than others?  It's like "
+"there's a hierarchy among them, but that shouldn't be possible, right?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I can't shake the feeling that this was all planned.  Not the outbreak "
+"itself, but the way it spread so quickly and efficiently."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I can't stop wondering who fucked up to make all this happen.  Obviously we "
+"can't trust the news, they claimed the zombies were 'rioters' for weeks.  "
+"Why?  Where did this come from?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I keep seeing these weird symbols in old buildings.  They look ancient, but "
+"they're in places they shouldn't be.  Makes you wonder if someone was "
+"preparing for this long before it happened."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I keep thinking about how fast society collapsed.  It was almost as if "
+"something was waiting for the perfect moment to strike."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I read somewhere that human behavior changes in the presence of certain "
+"frequencies.  What if someone was broadcasting those right before the "
+"Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I used to think the world was big and complicated.  Now it feels like all the"
+" complexity was just a facade, and the real rules of the game were hidden "
+"from us."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I've been thinking about the old myths and legends.  Zombies, monsters, the "
+"end of the world… what if those stories were based on something real, "
+"something that happened before?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I've been thinking about those old sci-fi movies where they talked about "
+"alternate dimensions and parallel universes.  Maybe what happened here is "
+"connected to something like that."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I've noticed the stars look different lately.  Maybe it's just me, but I "
+"swear there are constellations I've never seen before."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Is it just me, or does it feel like we're being watched sometimes?  Not just "
+"by other survivors, but something else, something more… omnipresent."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder if we're not alone in this.  Not just other survivors, but"
+" something bigger, observing us, maybe even experimenting."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"The idea that this is all some kind of massive reset, a way for the Earth to "
+"cleanse itself of us, keeps nagging at me.  What if it's true?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"The more I see of this new world, the more I think we're missing some big "
+"piece of the puzzle.  There's something out there we haven't figured out yet."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"The way plants have started growing in some areas, almost aggressively… it's "
+"like nature is trying to take back control in a hurry."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"There's got to be more to the story about those 'safe zones' the government "
+"talked about.  Why did they stop broadcasting?  What happened to them?"
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"There's something off about the way animals are mutating.  It's like they're "
+"evolving at an accelerated pace, but not randomly.  There seems to be some "
+"kind of pattern."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"What if the government knew this was coming and just didn't tell us?  Maybe "
+"they thought they could control it and failed."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever wonder if there's a cure out there, somewhere?  Not just for the "
+"zombies, but for everything that's happened to the world."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever wonder why some people went feral and others didn't?  There has to "
+"be more to it than just stress and fear."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think all those conspiracy theorists were onto something?  The ones "
+"talking about secret experiments and shadow governments?  It's starting to "
+"look less crazy now."
+msgstr ""
+
+#. ~ Snippet in category "<insightfulchitchat>"
+#. ~ General chit chat messages for intelligent or perceptive NPCs' perspective
+#. on the world
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think the Earth itself is reacting to all this?  Like, on a geological "
+"level?  Earthquakes, weather patterns, everything seems more intense."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think any of those doomsday preppers made it?  Bet they're feeling "
+"pretty smug right about now."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think there are still places untouched by all this?  Like some remote "
+"island or hidden valley where people are just living normal lives?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Do you think we'll ever get back to a point where we can have holidays again?"
+"  Celebrating seems like a distant dream."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how lucky we are to have found each other?  In a world this "
+"messed up, having friends is everything."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Ever think about how quiet it is now?  No cars, no planes, just the wind and "
+"the groans of the dead."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I miss fresh fruit.  There's something about biting into a juicy apple that "
+"canned stuff just can't replicate."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I miss music.  Remember concerts?  The energy of the crowd, the live sound.  "
+"Wonder if any musicians survived."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I miss the little things.  Like the smell of fresh bread, or the sound of a "
+"coffee machine in the morning."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I never thought I'd miss doing laundry.  Wearing the same clothes day after "
+"day gets old fast."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I used to complain about going to work.  Now I'd give anything for a boring "
+"day at the office."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I used to hate bugs, but now I see them as a sign of life.  Weird how "
+"perspective changes."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I was never much of a cook before, but now I can make a mean stew out of "
+"almost anything.  Survival skills, I guess."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I wonder if anyone's tried to start a farm again.  Gotta be tough with all "
+"the zombies, but food doesn't grow on trees."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I wonder if kids born after all this will even understand what the world used"
+" to be like.  Seems like a fairytale now."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"I wonder if the power will ever come back on.  Can't imagine how much stuff "
+"we took for granted before all this."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"It's funny, I never appreciated the sunrise as much as I do now.  Every day "
+"we're still here feels like a gift."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"It's funny, I used to hate the rain.  Now it's like a blessing, makes "
+"everything feel a bit cleaner."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"It's strange how some buildings are completely untouched, like time just "
+"stopped in them.  Then you go next door, and it's a total wreck."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"It's strange how the stars seem brighter now without all the city lights.  "
+"Almost beautiful, if it weren't so damn scary."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"It's weird to think about all the things we used to stress over.  Traffic, "
+"bills, deadlines.  None of that seems to matter now."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Sometimes I wonder what the future will look like.  Will we rebuild, or is "
+"this just how it is now?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Think we'll ever figure out what really caused all this?  Sometimes I feel "
+"like knowing would just make it worse."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think about all the pets that were left behind?  Poor things didn't "
+"ask for this any more than we did."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think about space?  I mean, what's happening up there?  Are "
+"astronauts just floating around, not knowing what happened down here?"
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You ever think about what the first thing you'll do if things ever get back "
+"to normal?  I think I'd just sit in a park and watch the world go by."
+msgstr ""
+
+#. ~ Snippet in category "<neutralchitchat_later>"
+#. ~ General chit chat messages for further past the apocalypse
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"You think animals sense the zombies differently than we do?  They always seem"
+" to know when something's off."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Could be.  What do you think?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ever considered…?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Good observation."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Got any more thoughts on that?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I can relate to that."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I can see where you're coming from."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#. ~ Response to NPC dialogue
+#: data/json/npcs/snippets/talk_tags_chat.json
+#: data/mods/Aftershock/npcs/Salvor_Market/uica_vehicle_marchant_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/uica_vehicle_marchant_talk.json
+msgid "I know what you mean."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I never thought of it that way."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Interesting.  What else?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I've been pondering that too."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I was just thinking about that."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Now that you mention it…"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Tell me more about that."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's a good point."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's an interesting take."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's a solid perspective."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's one way to look at it."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's pretty insightful."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's something to think about."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "That's worth discussing."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "What do you think about…?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Yeah, I get that."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Yeah, that's been on my mind too."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You bring up a good point."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You ever wonder why that is?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You might be onto something."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You're definitely not alone in that."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_player_responses>"
+#. ~ General chit chat responses from the player
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "You're not wrong."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Alert status raised, be on your toes!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Alright, gloves off, it's go time!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Get your game face on!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Guns up, we're in the thick of it now!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hold onto your hats, we're in for a wild ride!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hope you brought your A-game, things just got serious!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I hope you're ready for action, because here it comes!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Incoming trouble, stay sharp!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's a good day to die<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's going south pretty fast."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Let's show these suckers what we're made of!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Lights, camera, action!  Time to shine!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Lock and load, it's time to dance!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like the calm before the storm is over!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like the universe decided to spice things up a bit!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "No time for lollygagging, danger's here!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Red alert, people!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Suit up, it's showtime!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is it, folks, no turning back now!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is the moment we've been training for, let's make it count!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is where it gets interesting!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This just turned into a real party!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to earn our keep!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to put our training to the test!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Wake up and smell the gunfire!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Wakey wakey!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger>"
+#. ~ NPC complaint when the threat level increases from very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We've got company!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fuck me gently, we're in deep now."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fuck me sideways, we're in for a <freaking> time."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Freaking storm's brewing, better brace yourself."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Buckle up, it's gonna be a <freaking> ride."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Get ready to <freaking> rumble!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Grab your <freaking> weapons, it's about to get messy."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hold onto your <freaking> hats, it's about to go down!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hope you're ready to <freaking> fight, because here they come!"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is the way the <freaking> world ends."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is what happens when you poke the <freaking> bear."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We're knee-deep in shit now, folks."
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, ain't this a <freaking> party?"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, ain't this a <freaking> surprise?"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "What the hell is going on here?"
+msgstr ""
+
+#. ~ Snippet in category "<general_danger_h>"
+#. ~ Hostile, swear-filled NPC complaint when the threat level increases from
+#. very low to dangerous.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna rot in hell, you <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Ain't life grand?"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Another day, another near-death experience.  Story of my life."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Another victory for the history books."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Beautiful work."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Clearing the world, one <name_b> at a time."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Easy-peasy."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Guess we're tougher than we look."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hell of a day, huh?  But we made it."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I don't know about you, but I could use a moment of peace."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I don't know about you, but I'm gonna savor this moment of peace."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I don't think I've ever been happier to see things quiet down."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I guess we live to fight another day."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I think I can finally breathe easy."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I think I'm gonna need a vacation after this."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I think we deserve a round of applause for that performance."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I think we've earned ourselves a break, don't you?"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'd say we came out on top, wouldn't you?"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I'll believe it's safe when I'm sipping a cold one on a beach somewhere."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna enjoy this moment of calm while it lasts."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm starting to think I'm invincible, at this rate."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I've got a knack for survival, what can I say?"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I've stared death in the face before, and I'll do it again."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Let's hope this peace lasts longer than a snowflake in hell."
+msgstr ""

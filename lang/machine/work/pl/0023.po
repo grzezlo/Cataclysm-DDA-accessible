@@ -1,0 +1,1977 @@
+# Batch 23 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "trapper pack"
+#: data/json/items/armor/storage.json
+msgid ""
+"An L-shaped wooden frame with a waterproofed cloth sack attached to it.  "
+"There's a drawstring to hold things in and straps to carry it on your back."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage.json
+msgid "pack frame"
+msgid_plural "pack frames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pack frame"
+#: data/json/items/armor/storage.json
+msgid "An L-shaped wooden frame with straps to secure a large item to it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage.json
+msgid "big pack frame"
+msgid_plural "big pack frames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "big pack frame"
+#: data/json/items/armor/storage.json
+msgid ""
+"A sturdy L-shaped wooden frame with leather straps to secure an oversized "
+"item to it. It has straps to wear it on your back."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "small gym bag"
+msgid_plural "small gym bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid ""
+"A little bag for carrying items to the gym.  Basically an extremely small "
+"duffel bag."
+msgstr ""
+
+#. ~ Description of a pocket in item "small gym bag"
+#. ~ Description of a pocket in item "light gym bag"
+#. ~ Description of a pocket in item "gym bag"
+#. ~ Description of a pocket in item "large gym bag"
+#. ~ Description of a pocket in item "big gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A zippered front pocket."
+msgstr ""
+
+#. ~ Description of a pocket in item "small gym bag"
+#. ~ Description of a pocket in item "light gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "Mesh pocket for small items."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "light gym bag"
+msgid_plural "light gym bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "light gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid ""
+"A light bag for carrying items to the gym.  Basically a very small duffel "
+"bag."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "gym bag"
+msgid_plural "gym bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A bag for carrying items to the gym.  Basically a small duffel bag."
+msgstr ""
+
+#. ~ Description of a pocket in item "gym bag"
+#. ~ Description of a pocket in item "large gym bag"
+#. ~ Description of a pocket in item "big gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "Mesh pocket for a water bottle."
+msgstr ""
+
+#. ~ Description of "gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A bag for carrying items to the gym.  Basically a duffel bag."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "large gym bag"
+msgid_plural "large gym bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A bag for carrying items to the gym.  Basically a large duffel bag."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "big gym bag"
+msgid_plural "big gym bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "big gym bag"
+#: data/json/items/armor/storage_duffel.json
+msgid ""
+"A very spacious bag for carrying things to the gym.  Basically a very large "
+"duffel bag."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "large duffel bag"
+msgid_plural "large duffel bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid ""
+"A large duffel bag.  Provides lots of storage, but is severely encumbering."
+msgstr ""
+
+#. ~ Description of a pocket in item "large duffel bag"
+#. ~ Description of a pocket in item "big duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A zippered side pocket."
+msgstr ""
+
+#. ~ Description of a pocket in item "large duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "Awkwardly looped through the straps."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/storage_duffel.json
+msgid "big duffel bag"
+msgid_plural "big duffel bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "big duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid ""
+"A big nylon duffel bag.  Provides tons of storage, but is extremely "
+"encumbering."
+msgstr ""
+
+#. ~ Description of a pocket in item "big duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "A tiny zippered interior pouch."
+msgstr ""
+
+#. ~ Description of a pocket in item "big duffel bag"
+#: data/json/items/armor/storage_duffel.json
+msgid "Awkwardly looped through the carry handles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Variant name of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "small backpack"
+msgid_plural "small backpacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A small simple backpack, probably sized for a kid."
+msgstr ""
+
+#. ~ Description of variant "small backpack" of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A little <color> backpack, probably sized for a kid."
+msgstr ""
+
+#. ~ Variant name of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "boy's backpack"
+msgid_plural "boy's backpacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "boy's backpack" of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A boy's backpack.  <boy_brand>"
+msgstr ""
+
+#. ~ Variant name of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "girl's backpack"
+msgid_plural "girl's backpacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "girl's backpack" of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A girl's backpack.  <girl_brand>"
+msgstr ""
+
+#. ~ Variant name of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "kid's backpack"
+msgid_plural "kid's backpacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "kid's backpack" of item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A kid's backpack.  <kid_brand>"
+msgstr ""
+
+#. ~ Description of a pocket in item "small backpack"
+#: data/json/items/armor/storage_packs.json
+msgid "A zipper pocket, meant for pens and pencils."
+msgstr ""
+
+#. ~ Description of "bondage suit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A suit of snug black leather.  Has no pockets, but does feature an abundance "
+"of unusually located zippers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "Lycra bodysuit"
+msgid_plural "Lycra bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A tight-fitting bodysuit made of Lycra.  Covers the whole body from neck to "
+"toe."
+msgstr ""
+
+#. ~ Description of variant "futuristic black bodysuit" of item "Lycra
+#. bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"It's colored black and has a bright blue symbol on the back.  Perfect for "
+"hunting space pirates and parasitic aliens."
+msgstr ""
+
+#. ~ Description of variant "black infiltration bodysuit" of item "Lycra
+#. bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"It's colored black and seems to fade into the background.  Commonly used by "
+"special agents when on a mission."
+msgstr ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "blue super hero bodysuit"
+msgid_plural "blue super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "black super hero bodysuit"
+msgid_plural "black super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "spider super hero bodysuit"
+msgid_plural "spider super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "spider super hero bodysuit" of item "Lycra
+#. bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"It's colored red and blue and has web-like lines all over it, as well as a "
+"big spider symbol on the front and back.  It makes you want to climb "
+"buildings and shoot webs."
+msgstr ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "green super hero bodysuit"
+msgid_plural "green super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "purple super hero bodysuit"
+msgid_plural "purple super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "pink super hero bodysuit"
+msgid_plural "pink super hero bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "Lycra bondage bodysuit"
+msgid_plural "Lycra bondage bodysuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "skeleton bodysuit" of item "Lycra bodysuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"It's colored jet-black and has a skeleton design printed on it.  Maybe the "
+"zombies would ignore you in this."
+msgstr ""
+
+#. ~ Description of variant "flag bodysuit" of item "Lycra bodysuit"
+#. ~ Description of variant "flag bikini top" of item "bikini top"
+#. ~ Description of variant "flag swimsuit" of item "swimsuit"
+#: data/json/items/armor/suits_clothes.json data/json/items/armor/swimming.json
+msgid "It's printed with an American flag pattern."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "pair of denim overalls"
+msgid_plural "pairs of denim overalls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of denim overalls"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"The basic denim overalls that is the symbol of the Proletariat (and some "
+"hipsters).  It covers the legs and a large portion of the torso, secured "
+"around the shoulders with straps.  It has many pockets and is relatively "
+"protective."
+msgstr ""
+
+#. ~ Description of "flag jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A jumpsuit embroidered with a pattern of the American flag.  Provides decent "
+"storage and is not very encumbering."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "pocketless jumpsuit"
+msgid_plural "pocketless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pocketless jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A thin, short-sleeved jumpsuit without pockets, similar to those worn by "
+"prisoners.  Not very encumbering."
+msgstr ""
+
+#. ~ Variant name of item "pocketless jumpsuit"
+#. ~ Variant name of item "jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "white jumpsuit"
+msgid_plural "white jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pocketless jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "orange jumpsuit"
+msgid_plural "orange jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A thin, short-sleeved jumpsuit similar to those worn by prisoners.  Provides "
+"decent storage and is not very encumbering."
+msgstr ""
+
+#. ~ Variant name of item "jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "green jumpsuit"
+msgid_plural "green jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skeleton jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A black jumpsuit with a skeleton pattern printed on it.  It can be zipped all"
+" the way up to cover your head and face in a skull pattern too.  Use it to "
+"zip the head portion closed."
+msgstr ""
+
+#. ~ Description of "skeleton jumpsuit (zipped)"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A black jumpsuit with a skeleton pattern printed on it.  It covers all the "
+"way up to your head and displays a skull pattern over your face.  Use it to "
+"unzip the head portion."
+msgstr ""
+
+#. ~ Description of "mummy jumpsuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"An off-white jumpsuit printed to look like the tattered wrappings of an "
+"ancient mummy.  Very easy to move in, but it doesn't offer any type of "
+"protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "work coveralls"
+msgid_plural "work coveralls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "work coveralls"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A fully covering jumpsuit made of waterproof canvas.  Offers solid protection"
+" from everyday dangers on the job and plenty of storage pockets."
+msgstr ""
+
+#. ~ Description of a pocket in item "work coveralls"
+#. ~ Description of a pocket in item "heavy work coveralls"
+#: data/json/items/armor/suits_clothes.json
+msgid "Chest pocket."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "heavy work coveralls"
+msgid_plural "heavy work coveralls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy work coveralls"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A thick, fully covering jumpsuit made of waterproof canvas lined with extra "
+"fabric for warmth in brisk weather.  Offers solid protection from everyday "
+"dangers on the job and plenty of storage pockets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_clothes.json
+msgid "fursuit"
+msgid_plural "fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A full-body fursuit in the form of an anthropomorphic animal.  It is quite "
+"encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "wolf fursuit"
+msgid_plural "wolf fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "wolf fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A cartoonish full-body fursuit made to resemble an anthropomorphic wolf.  It "
+"is quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "dog fursuit"
+msgid_plural "dog fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "dog fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+" A fuzzy full-body fursuit made to resemble an anthropomorphic domestic "
+"canine of unknown breed.  It is quite encumbering and has little storage but "
+"is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "tiger fursuit"
+msgid_plural "tiger fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "tiger fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"An intricately designed full-body fursuit made to resemble an anthropomorphic"
+" bengal tiger, you can't imagine how long it took for it's maker to sew all "
+"those stripes onto it.  It is quite encumbering and has little storage but is"
+" very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "feline fursuit"
+msgid_plural "feline fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "feline fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A fluffy full-body fursuit made to resemble an anthropomorphic feline of "
+"indistinguishable breed.  It is quite encumbering and has little storage but "
+"is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "otter fursuit"
+msgid_plural "otter fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "otter fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A dopey-looking full-body fursuit made to resemble an anthropomorphic otter."
+"  It is quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "beaver fursuit"
+msgid_plural "beaver fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "beaver fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A full-body fursuit made to resemble a nervous-looking anthropomorphic "
+"beaver.  It is quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "dragon fursuit"
+msgid_plural "dragon fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "dragon fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A detailed full-body fursuit made to resemble a western dragon, complete with"
+" a set of small stubby wings on its back.  It is quite encumbering and has "
+"little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "lizard fursuit"
+msgid_plural "lizard fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "lizard fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A sleek full-body fursuit made to resemble an anthropomorphic lizard.  It is "
+"quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "shark fursuit"
+msgid_plural "shark fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "shark fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A gnarly looking full-body costume in the form of an anthropomorphic bull "
+"shark.  It is quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "orca fursuit"
+msgid_plural "orca fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "orca fursuit" of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"A sleek looking full-body costume in the form of an anthropomorphic orca "
+"whale.  It is quite encumbering and has little storage but is very warm."
+msgstr ""
+
+#. ~ Variant name of item "fursuit"
+#: data/json/items/armor/suits_clothes.json
+msgid "dinosaur fursuit"
+msgid_plural "dinosaur fursuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Variant name of item "devil onesie"
+#: data/json/items/armor/suits_clothes.json
+msgid "devil onesie"
+msgid_plural "devil onesies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "devil onesie"
+#. ~ Description of variant "devil onesie" of item "devil onesie"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"An encumbering red wool suit with a hood adorned with cartoonish devil horns "
+"and a devil's tail on the back.  It's for those who want to feel devilishly "
+"warm in their sleep."
+msgstr ""
+
+#. ~ Variant name of item "devil onesie"
+#: data/json/items/armor/suits_clothes.json
+msgid "bunny onesie"
+msgid_plural "bunny onesies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bunny onesie" of item "devil onesie"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"An encumbering and fluffy bunny onesie with a hood and adorned with a pair of"
+" bunny ears.  Very fluffy."
+msgstr ""
+
+#. ~ Description of "zentai"
+#: data/json/items/armor/suits_clothes.json
+msgid ""
+"Short for 'zenshin taitsu', a zentai is a form-fitting full-body nylon and "
+"spandex garment.  Though it covers your face, you can see through the thin "
+"fabric.  With a couple of these and some friends, you could put on some "
+"kabuki or harass a rival sports team."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "faux fur body armor"
+msgid_plural "faux fur body armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "faux fur body armor"
+#: data/json/items/armor/suits_protection.json
+msgid "Thick body armor made from faux furs."
+msgstr ""
+
+#. ~ Description of "leather body armor"
+#: data/json/items/armor/suits_protection.json
+msgid "A full suit of thick leather body armor.  Light and comfortable."
+msgstr ""
+
+#. ~ Description of "junk plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A suit of Gothic plate armor.  The metal shows signs of rust and corrosion, "
+"and the leather straps are tattered."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "sheet metal armor"
+msgid_plural "sheet metal armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sheet metal armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of armor hammered out from sheet metal and tied in place with "
+"leather straps and belts.  It's crude, heavy, and uncomfortable, but damn "
+"protective.  Now, you're a true Post-Apocalyptic Warrior."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "hardened sheet metal armor"
+msgid_plural "hardened sheet metal armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened sheet metal armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of armor hammered out from sheet metal and hardened for added "
+"protection.  Perfect for keeping all your fleshy bits safe from zombie teeth."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "heavy sheet metal armor"
+msgid_plural "heavy sheet metal armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy sheet metal armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of armor hammered out from sheet metal and tied in place with "
+"leather straps and belts, with a doubly-thick chest guard to keep all your "
+"important organs safe.  You might be as mobile as a refrigerator wearing all "
+"this, but that's the price to pay to keep your flesh attached."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "heavy hardened sheet metal armor"
+msgid_plural "heavy hardened sheet metal armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy hardened sheet metal armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of armor hammered out from sheet metal and hardened for extra "
+"protection, with a doubly-thick chest guard.  The Ned Kelly gang would be "
+"proud."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "junkyard plate armor"
+msgid_plural "junkyard plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "junkyard plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of steel armor made from sheet metal hammered into shape and "
+"attached with chainmail covering the gaps.  For the modern knight on a "
+"budget."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "heavy junkyard plate armor"
+msgid_plural "heavy junkyard plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy junkyard plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of steel armor made from sheet metal hammered into shape and "
+"attached with chainmail covering the gaps, with an extra-thick chestpiece.  "
+"About as heavy as a car but nowhere near as mobile, this suit is nonetheless "
+"quite protective."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "hardened junkyard plate armor"
+msgid_plural "hardened junkyard plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened junkyard plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of steel armor made from sheet metal hammered into shape, attached"
+" with chainmail, and case-hardened for extra strength.  It might be crude and"
+" uncomfortably heavy, but it was clearly made by a skilled metalworker and "
+"offers excellent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "heavy hardened junkyard plate armor"
+msgid_plural "heavy hardened junkyard plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy hardened junkyard plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full set of steel armor made from sheet metal hammered into shape, attached"
+" with chainmail, with a double-thick chestpiece, and case-hardened for extra "
+"strength.  Top-of-the-line in armor that looks like it was made from banged-"
+"up lockers, for the skilled metalworker that values protection over being "
+"able to move."
+msgstr ""
+
+#. ~ Description of "high steel light plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A light suit of plate armor with a 2 mm thick chestpiece.  Made with high "
+"steel, offering excellent protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "hardened steel light plate armor"
+msgid_plural "hardened steel light plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel light plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A light suit of plate armor with a 2 mm thick chestpiece.  The mild steel has"
+" been hardened, offering superior protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "tempered steel light plate armor"
+msgid_plural "tempered steel light plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tempered steel light plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A light suit of plate armor with a 2 mm thick chestpiece.  The medium steel "
+"has been quenched and tempered, offering top-of-the-line protection."
+msgstr ""
+
+#. ~ Description of "high steel plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A suit of plate armor with a 4 mm thick chestpiece.  Made with high steel, "
+"offering excellent protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "hardened steel plate armor"
+msgid_plural "hardened steel plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A suit of plate armor with a 4 mm thick chestpiece.  The mild steel has been "
+"hardened, offering superior protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "tempered steel plate armor"
+msgid_plural "tempered steel plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tempered steel plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A suit of plate armor with a 4 mm thick chestpiece.  The medium steel has "
+"been quenched and tempered, offering top-of-the-line protection."
+msgstr ""
+
+#. ~ Description of "high steel heavy plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A heavy suit of plate armor with a 6 mm thick chestpiece.  Made with high "
+"steel, offering excellent protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "hardened steel heavy plate armor"
+msgid_plural "hardened steel heavy plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel heavy plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A heavy suit of plate armor with a 6 mm thick chestpiece.  The mild steel has"
+" been hardened, offering superior protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/suits_protection.json data/json/recipes/nested.json
+msgid "tempered steel heavy plate armor"
+msgid_plural "tempered steel heavy plate armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tempered steel heavy plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A heavy suit of plate armor with a 6 mm thick chestpiece.  The medium steel "
+"has been quenched and tempered, offering top-of-the-line protection."
+msgstr ""
+
+#. ~ Description of "junk ornamental plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"An extremely heavy suit of ornamental armor.  The metal shows signs of rust "
+"and corrosion, and the leather straps are tattered."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "riot armor suit"
+msgid_plural "riot armor suits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "riot armor suit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full suit of black plastic body armor plates used by riot police.  Cleverly"
+" placed velcro straps secure each piece, resulting in slightly less "
+"encumbrance than its constituent parts.  MOLLE webbing is attached to the "
+"torso and the word POLICE is emblazoned across the front."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "ō-yoroi"
+msgid_plural "ō-yoroi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chainmail hauberk"
+#. ~ Description of "chainmail sleeveless jumpsuit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A fully customized chainmail outfit, covering torso and arms.  Combine with a"
+" aketon or other padded layer for optimal protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "mild steel chainmail hauberk"
+msgid_plural "mild steel chainmail hauberks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "mild steel chainmail sleeveless jumpsuit"
+msgid_plural "mild steel chainmail sleeveless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "medium steel chainmail sleeveless jumpsuit"
+msgid_plural "medium steel chainmail sleeveless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "high steel chainmail sleeveless jumpsuit"
+msgid_plural "high steel chainmail sleeveless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "hardened steel chainmail sleeveless jumpsuit"
+msgid_plural "hardened steel chainmail sleeveless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "tempered steel chainmail sleeveless jumpsuit"
+msgid_plural "tempered steel chainmail sleeveless jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "mild steel chainmail jumpsuit"
+msgid_plural "mild steel chainmail jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "medium steel chainmail jumpsuit"
+msgid_plural "medium steel chainmail jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "high steel chainmail jumpsuit"
+msgid_plural "high steel chainmail jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "hardened steel chainmail jumpsuit"
+msgid_plural "hardened steel chainmail jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "tempered steel chainmail jumpsuit"
+msgid_plural "tempered steel chainmail jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "mild steel chainmail armor"
+msgid_plural "mild steel chainmail armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "faraday chainmail suit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A fully customized chainmail suit that can be worn over your normal clothing."
+"  The suit is conductively interconnected with a cage covering the face, "
+"protecting against electricity."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "canine bite suit"
+msgid_plural "canine bite suits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canine bite suit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"Designed to stop the injuries of dog bites, this thick, one piece suit is "
+"often used in the rehabilitation of abused animals and in training dogs by "
+"the police and military.  A base layer of aramid fabric has had strips of "
+"soft body armor sewn into it to mimic quilting, and to soften the blunt of "
+"animals jumping, slashing, or pouncing on the wearer."
+msgstr ""
+
+#. ~ Description of "activity suit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A single-piece brown and orange environmental suit, tailored in a way that "
+"slightly recalls a military flight suit.  The letters \"X.E.D.R.A\" are "
+"inscribed on its back, and a white shoulder patch on the right arm shows an "
+"arrow reaching within rings of concentric circles.  It requires a separate "
+"gas mask for full protection."
+msgstr ""
+
+#. ~ Description of "track touring suit"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A leather bodysuit with padding in high-impact areas, meant for motorcyclists"
+" out on the track.  The leather is stiff but makes the armor much sturdier "
+"and more protective than lighter counterparts."
+msgstr ""
+
+#. ~ Description of "nomad plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full body multilayered suit of plate armor with a 4 mm thick chest piece.  "
+"The medium steel has been quenched, tempered and affixed over a full-body "
+"layered suit of weight-distributing straps.  The armor has an integrated "
+"breathable Lycra jumpsuit and the torso has a spall liner of aramid panels.  "
+"Electronics run below the surface and circulate cool air to the skin, drawing"
+" power from your internal CBM reservoir."
+msgstr ""
+
+#. ~ Description of "nomad light plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full body multilayered light suit of plate armor with a 2 mm thick chest "
+"piece.  The medium steel has been quenched, tempered and affixed over a full-"
+"body layered suit of weight-distributing straps.  The armor has an integrated"
+" breathable Lycra jumpsuit and the torso has a spall liner of aramid panels."
+"  Electronics run below the surface and circulate cool air to the skin, "
+"drawing power from your internal CBM reservoir."
+msgstr ""
+
+#. ~ Description of "nomad heavy plate armor"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full body multilayered heavy suit of plate armor with a 6 mm thick chest "
+"piece.  The medium steel has been quenched, tempered and affixed over a full-"
+"body layered suit of weight-distributing straps.  The armor has an integrated"
+" breathable Lycra jumpsuit and the torso has a spall liner of aramid panels."
+"  Electronics run below the surface and circulate cool air to the skin, "
+"drawing power from your internal CBM reservoir."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "nomad chainmail"
+msgid_plural "suits of nomad chainmail"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nomad chainmail"
+#: data/json/items/armor/suits_protection.json
+msgid ""
+"A full body multilayered chainmail outfit.  The medium steel has been "
+"quenched, tempered and affixed over a full-body layered suit of weight-"
+"distributing straps.  The armor has an integrated breathable Lycra jumpsuit "
+"and the torso has a spall liner of aramid panels.  Electronics run below the "
+"surface and circulate cool air to the skin, drawing power from your internal "
+"CBM reservoir."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/suits_protection.json
+msgid "nomad chainmail (on)"
+msgid_plural "suits of nomad chainmail (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bikini bottoms"
+#. ~ Description of variant "bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "Simple bikini bottoms."
+msgstr ""
+
+#. ~ Description of variant "black bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored black."
+msgstr ""
+
+#. ~ Description of variant "white bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored white."
+msgstr ""
+
+#. ~ Description of variant "red bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored red."
+msgstr ""
+
+#. ~ Description of variant "blue bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored blue."
+msgstr ""
+
+#. ~ Description of variant "flag bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're printed with an American flag pattern."
+msgstr ""
+
+#. ~ Description of variant "pink bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored neon pink.  Pretty flashy."
+msgstr ""
+
+#. ~ Description of variant "tropical bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're green and has a tropical design."
+msgstr ""
+
+#. ~ Description of variant "floral bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're colored yellow and has a floral design."
+msgstr ""
+
+#. ~ Description of variant "camo bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "They're has a camouflage pattern, perfect for a soldier on beach leave."
+msgstr ""
+
+#. ~ Description of variant "skull bikini bottoms" of item "bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid ""
+"They're colored black and printed with a skull pattern.  Works wonders to "
+"communicate your happiness on the beach."
+msgstr ""
+
+#. ~ Description of "short bikini bottoms"
+#: data/json/items/armor/swimming.json
+msgid "A very short pair of bikini bottoms, commonly called a thong."
+msgstr ""
+
+#. ~ Description of variant "camo bikini top" of item "bikini top"
+#. ~ Description of variant "camo swimsuit" of item "swimsuit"
+#: data/json/items/armor/swimming.json
+msgid "It has a camouflage pattern, perfect for a soldier on beach leave."
+msgstr ""
+
+#. ~ Description of variant "skull bikini top" of item "bikini top"
+#: data/json/items/armor/swimming.json
+msgid ""
+"It's colored black and printed with a skull pattern.  Works wonders to "
+"communicate your happiness on the beach."
+msgstr ""
+
+#. ~ Description of "short bikini top"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A very short bikini top.  It doesn't cover much, but was in fashion before "
+"the world ended."
+msgstr ""
+
+#. ~ Description of variant "lifeguard swimsuit" of item "swimsuit"
+#. ~ Description of variant "lifeguard rashguard shirt" of item "rashguard
+#. shirt"
+#: data/json/items/armor/swimming.json
+msgid ""
+"It's bright red and has a white cross with the word \"Lifeguard\" on the "
+"front."
+msgstr ""
+
+#. ~ Description of variant "flag rashguard shirt" of item "rashguard shirt"
+#: data/json/items/armor/swimming.json
+msgid ""
+"It's printed with an American flag pattern.  You feel as if the flag itself "
+"protects your skin."
+msgstr ""
+
+#. ~ Description of variant "jungle rashguard shirt" of item "rashguard shirt"
+#: data/json/items/armor/swimming.json
+msgid ""
+"It has jungle decorations and motifs of animals fighting among themselves."
+msgstr ""
+
+#. ~ Description of variant "camo rashguard shirt" of item "rashguard shirt"
+#: data/json/items/armor/swimming.json
+msgid "It has a camouflage pattern and outlines your muscles."
+msgstr ""
+
+#. ~ Description of variant "gothic rashguard shirt" of item "rashguard shirt"
+#: data/json/items/armor/swimming.json
+msgid "It has a jet-black color with dark red decorations.  Looks creepy."
+msgstr ""
+
+#. ~ Description of "speedo"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of very short black swim briefs.  Commonly used by male competitive "
+"swimmers and bodybuilders."
+msgstr ""
+
+#. ~ Description of "swim briefs"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of blue swim briefs.  Commonly used by male competitive swimmers."
+msgstr ""
+
+#. ~ Description of "swim cap"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A tightly fitted, skin-tight head garment made of Lycra.  Commonly used by "
+"recreational and competitive swimmers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "pair of diving socks"
+msgid_plural "pairs of diving socks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of diving socks"
+#: data/json/items/armor/swimming.json
+msgid "A pair of 3 mm split-toe neoprene diving socks with thin rubber soles."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "pair of thick diving boots"
+msgid_plural "pairs of thick diving boots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of thick diving boots"
+#: data/json/items/armor/swimming.json
+msgid "A pair of 5 mm thick neoprene diving boots with thick soles."
+msgstr ""
+
+#. ~ Description of a pocket in item "pair of thick diving boots"
+#: data/json/items/armor/swimming.json
+msgid "mounting for a pair of fins."
+msgstr ""
+
+#. ~ Description of "pair of swim fins"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of rubber flippers worn on the feet, which improve swimming speed "
+"while greatly impeding the wearer's ability to walk."
+msgstr ""
+
+#. ~ Description of "wetsuit"
+#: data/json/items/armor/swimming.json
+msgid "A full-body 3 mm thick neoprene wetsuit with nylon lining."
+msgstr ""
+
+#. ~ Description of a pocket in item "wetsuit"
+#. ~ Description of a pocket in item "spring suit"
+#. ~ Description of a pocket in item "Kevlar wetsuit"
+#. ~ Description of a pocket in item "light Kevlar wetsuit oversuit"
+#. ~ Description of a pocket in item "thick Kevlar wetsuit"
+#: data/json/items/armor/bespoke_armor/custom_bodysuits.json
+#: data/json/items/armor/swimming.json
+msgid "Back pocket."
+msgstr ""
+
+#. ~ Description of "thick wetsuit"
+#: data/json/items/armor/swimming.json
+msgid "A full-body 5 mm thick neoprene wetsuit with nylon lining."
+msgstr ""
+
+#. ~ Description of a pocket in item "thick wetsuit"
+#. ~ Description of a pocket in item "thick Kevlar wetsuit"
+#: data/json/items/armor/bespoke_armor/custom_bodysuits.json
+#: data/json/items/armor/swimming.json
+msgid "Hip pocket."
+msgstr ""
+
+#. ~ Description of "wetsuit hood"
+#: data/json/items/armor/swimming.json
+msgid "A 3 mm neoprene hood, commonly worn by divers."
+msgstr ""
+
+#. ~ Description of "thick wetsuit hood"
+#: data/json/items/armor/swimming.json
+msgid "A 5 mm thick neoprene hood, commonly worn by divers in cold weather."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "thin wetsuit long-sleeved shirt"
+msgid_plural "thin wetsuit long-sleeved shirts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thin wetsuit long-sleeved shirt"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A thin long-sleeved neoprene shirt.  Good for surfing and other water sports."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "thin wetsuit pants"
+msgid_plural "thin wetsuit pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thin wetsuit pants"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of light and stretchy thin neoprene pants.  Good for surfing and other"
+" water sports."
+msgstr ""
+
+#. ~ Description of "wetsuit pants"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of light and stretchy neoprene pants.  Good for surfing and other "
+"water sports."
+msgstr ""
+
+#. ~ Description of "wetsuit shorts"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of light and stretchy neoprene shorts.  Good for use on the beach."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "wetsuit technical shorts"
+msgid_plural "wetsuit technical shorts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wetsuit technical shorts"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of stretchy neoprene shorts with large pockets.  Can be worn alone or "
+"adjusted to be worn over a wetsuit."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "wetsuit technical shorts (loose)"
+msgid_plural "wetsuit technical shorts (loose)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wetsuit technical shorts (loose)"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of stretchy neoprene shorts with large pockets.  Can be worn over a "
+"wetsuit or adjusted to be worn alone."
+msgstr ""
+
+#. ~ "msg" action message of item "wetsuit technical shorts (loose)"
+#: data/json/items/armor/swimming.json
+#, c-format
+msgid "You tighten your %s."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "faraday sharksuit"
+msgid_plural "faraday sharksuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "faraday sharksuit"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A one-piece chainmail suit used by SCUBA divers for protection against shark "
+"bites.  It has been conductively interconnected, protecting against "
+"electricity."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "sharksuit"
+msgid_plural "sharksuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sharksuit"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A-one piece chainmail suit used by SCUBA divers for protection against shark "
+"bites."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "pair of diving gloves"
+msgid_plural "pairs of diving gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of diving gloves"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A pair of flexible neoprene-silicone rubber gloves, suitable for underwater "
+"use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "pair of thick diving gloves"
+msgid_plural "pairs of thick diving gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "full-face diving mask"
+msgid_plural "full-face diving masks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "full-face diving mask"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A full-face diving mask that covers the face and eyes.  Can be equipped with "
+"any common scuba regulator to protect from drowning and other dangers, though"
+" the process needs some time and knowledge."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/swimming.json
+msgid "modular full-face diving mask"
+msgid_plural "modular full-face diving masks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "modular full-face diving mask"
+#: data/json/items/armor/swimming.json
+msgid ""
+"A high-end modular full-face diving mask that covers the face and eyes.  Can "
+"be equipped with proprietary adapters for scuba tanks or rebreather "
+"cartridges to protect from drowning and other dangers."
+msgstr ""
+
+#. ~ Description of "bell cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid "An ancient Greek breastplate made of bronze."
+msgstr ""
+
+#. ~ Description of "bronze cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A solid, single-piece cuirass made from bronze.  It isn't particularly well "
+"designed, but it does its job."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "leather lamellar cuirass"
+msgid_plural "leather lamellar cuirasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "mild steel lamellar cuirass"
+msgid_plural "mild steel lamellar cuirasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mild steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A cuirass made of small strips of sheet metal laced together, something of an"
+" intermediary between chain mail and plate armor.  It's less Mad Max and more"
+" Garage Mongolian, but the classics are classic for a reason."
+msgstr ""
+
+#. ~ Description of "mild steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A cuirass made of small strips of sheet metal laced together, something of an"
+" intermediary between chain mail and plate armor.  The perfect size for an "
+"orc or bipedal grizzly bear."
+msgstr ""
+
+#. ~ Description of "mild steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A cuirass made of small strips of sheet metal laced together, something of an"
+" intermediary between chain mail and plate armor.  Perfectly sized for a "
+"particularly angry rat-person, yes-yes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "hardened steel lamellar cuirass"
+msgid_plural "hardened steel lamellar cuirasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A cuirass made of small strips of sheet metal laced together, something of an"
+" intermediary between chain mail and plate armor.  This one has been hardened"
+" for extra protection."
+msgstr ""
+
+#. ~ Description of "hardened steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A hardened cuirass made of small strips of sheet metal laced together, "
+"something of an intermediary between chain mail and plate armor.  Built "
+"larger for a minotaur guarding their labyrinth."
+msgstr ""
+
+#. ~ Description of "hardened steel lamellar cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A hardened cuirass made of small strips of sheet metal laced together, "
+"something of an intermediary between chain mail and plate armor.  Just the "
+"right size for a fantasy dwarf."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "carpet cuirass"
+msgid_plural "carpet cuirasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "carpet cuirass"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A rectangular length of tough carpet with a hole cut out for your head and "
+"tied around the waist.  It's decently protective for its weight and quite the"
+" fashion statement."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "ichcahuipilli"
+msgid_plural "ichcahuipillis"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ichcahuipilli"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A Mesoamerican armor of Nahuatl origin, somewhat similar to a European "
+"gambeson.  It is made of unspun cotton between two layers of quilted cotton "
+"crystalized by brine, edged with leather around its holes.  It is extremely "
+"thick and offers superb protection, but is also heavy.  This bad boy once "
+"stopped Spanish bullets and Aztec missiles alike, now its time has come to "
+"stop zombie bites."
+msgstr ""
+
+#. ~ Description of "cataphract armor"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"This armor, made of interlocking plates of burnished bronze, appears to be "
+"either a high-quality recreation or a genuine artifact.  Despite having an "
+"ancient design, it is in mint condition aside from some battle damage.  It "
+"covers from the shoulders to the hips and is of extremely high quality."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "sheet metal chest guard"
+msgid_plural "sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"Two sheets of metal hammered to fit your torso and riveted to leather belts "
+"to act as straps.  Heavy, uncomfortable, and difficult to move in, but it "
+"should help keep your blood inside your body."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "hardened sheet metal chest guard"
+msgid_plural "hardened sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A chest guard made of hammered sheet metal, hardened for added protection.  "
+"It's not any easier to move in, but it is much sturdier now."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "heavy sheet metal chest guard"
+msgid_plural "heavy sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A double-decker chest guard made from two sheets of metal layered over each "
+"other and hammered to fit your torso.  Monstrously heavy, but it's quite "
+"protective and the thicker material makes it sturdier."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "hardened heavy sheet metal chest guard"
+msgid_plural "hardened heavy sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened heavy sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"Double-thick, hardened sheet metal hammered to fit your torso.  Offers the "
+"best protection a junkyard knight could ask for."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "light sheet metal chest guard"
+msgid_plural "light sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "light sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"One sheet of metal, cut in half to only cover your upper torso and back and "
+"riveted to leather belts to act as straps.  It's heavy and uncomfortable, but"
+" at least you can bend at the waist."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "hardened light sheet metal chest guard"
+msgid_plural "hardened light sheet metal chest guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened light sheet metal chest guard"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"Sheet metal cut to only cover your upper torso and hardened for extra "
+"protection.  Provides a decent compromise between protection and being able "
+"to move."
+msgstr ""
+
+#. ~ Description of "tireplate"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"Armor fashioned from overlapping chunks of tire and rolls of duct tape, "
+"covering the shoulders and torso."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "cloth-padded shirt"
+msgid_plural "cloth-padded shirts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cloth-padded shirt"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A thick cotton sweatshirt that an amateur tailor sewed ever-increasing "
+"amounts of cloth onto, providing noticeable, if haphazard padding."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/torso_armor.json
+msgid "cloth-padded sleeveless shirt"
+msgid_plural "cloth-padded sleeveless shirts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cloth-padded sleeveless shirt"
+#: data/json/items/armor/torso_armor.json
+msgid ""
+"A thick cotton shirt with the sleeves cut off and large amounts of cloth sewn"
+" in to make a padded vest.  It would be fashionable, if not for all the "
+"disparate colors from the patchwork cotton cannibalized from other random "
+"clothes."
+msgstr ""

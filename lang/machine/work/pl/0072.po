@@ -1,0 +1,1589 @@
+# Batch 72 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of terrain "covered well"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A deep well, collecting groundwater.  You won't be able to get any water "
+"unless you add some mechanism for drawing it up to the surface."
+msgstr ""
+
+#. ~ Description of terrain "covered salt water well"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A deep well, collecting salt water from a surrounding swamp.  You won't be "
+"able to get any water unless you add some mechanism for drawing it up to the "
+"surface."
+msgstr ""
+
+#. ~ Description of terrain "pit filled with straw"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A shallow pit filled with some straw.  Very crude.  Itchy and uncomfortable, "
+"but better than the bare ground."
+msgstr ""
+
+#. ~ Description of terrain "improvised shelter"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"An improvised shelter providing a little bit of protection, that can be used "
+"to take refuge from the elements or to protect a campfire from the rain."
+msgstr ""
+
+#. ~ Description of terrain "improvised shelter"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"An improvised shelter which has been made a bit more comfortable by filling "
+"it with dry plant matter, which should provide some more insulation.  Trying "
+"to contain a fire here would be a bad idea."
+msgstr ""
+
+#. ~ Description of terrain "pine lean-to"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A small shelter, roofed with pine branches, that can be used to take refuge "
+"from the elements or to protect a campfire from the rain."
+msgstr ""
+
+#. ~ Description of terrain "tarp lean-to"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A small shelter, covered by a waterproof tarp, that can be used to take "
+"refuge from the elements or to protect a campfire from the rain."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "brick oven base"
+msgstr ""
+
+#. ~ Description of terrain "brick oven base"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "A flat assembly of carefully stacked bricks that is not quite an oven."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "exposed brick oven"
+msgstr ""
+
+#. ~ Description of terrain "exposed brick oven"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A large brick oven that could make several pizzas at once.  This one seems to"
+" be missing its door, and cannot be used in such a state."
+msgstr ""
+
+#. ~ Terrain name
+#. ~ Item name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+#: data/json/items/tool/pseudo.json
+msgid "brick oven"
+msgid_plural "brick ovens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of terrain "brick oven"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "A large brick oven that could make several pizzas at once."
+msgstr ""
+
+#. ~ Description of terrain "mechanical winch"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A gate control winch.  If it's functioning, it can be used to open or close a"
+" nearby gate or door."
+msgstr ""
+
+#. ~ Description of terrain "mechanical winch"
+#. ~ Description of terrain "control lever"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A gate control winch.  If it's functioning, it can be used to open or close a"
+" nearby gate."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "boom barrier controls"
+msgstr ""
+
+#. ~ Description of terrain "boom barrier controls"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"Controls for a boom barrier.  If they were functioning, it could have been "
+"used to raise or lower a nearby boom barrier."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "barn door pulley"
+msgstr ""
+
+#. ~ Description of terrain "barn door pulley"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A system of ropes and pulleys that allows a single person to raise heavy "
+"doors."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "gate pulley"
+msgstr ""
+
+#. ~ Description of terrain "gate pulley"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A system of ropes and pulleys that allows a single person to raise heavy "
+"doors or gates."
+msgstr ""
+
+#. ~ Description of terrain "gate pulley"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A system of ropes and wooden pulleys that allows a single person to raise "
+"heavy doors or gates."
+msgstr ""
+
+#. ~ Description of terrain "intercom"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A rudimentary intercom panel.  This one looks to be set up in a hurry with "
+"the microphone and speaker just dangling."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom inside a flask "
+"that is universally known to indicate SCIENCE.  An ominous red LED reminds "
+"you of a robot gone haywire from an old sci-fi flick.  You could swipe a "
+"scientific ID badge near it if you do not fear the machine."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom inside a flask "
+"that is universally known to indicate SCIENCE.  The stark red LED blinks "
+"askance at your geek cred.  You could swipe a scientific ID badge near it to "
+"unlock the gates to discovery."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  The universal symbol of an eagle driving a tank, biting "
+"a grenade pin, stands rampant in front of an American flag.  A small, red LED"
+" remains constant, as if watching you, waiting.  You could swipe a military "
+"ID card in front of the reader if you dared."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  The symbol of a gear in front of a bulging bicep is "
+"emblazoned on the matte black surface with an illegible heavy industrial "
+"company title.  A red LED blinks on the card reader.  Perhaps an industrial "
+"ID card could still open it."
+msgstr ""
+
+#. ~ Description of terrain "Facility entrance card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom inside a flask "
+"that is universally known to indicate SCIENCE.  You could swipe a visitor's "
+"pass near it to unlock the gates."
+msgstr ""
+
+#. ~ Query message for terrain "Facility entrance card reader"'s examine action
+#. ~ Query message for terrain "Maintenance: ocher zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Maintenance: blue zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Security: yellow zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Security: magenta zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Security: black zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Systems: slate zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Researcher: light green zone card reader"'s
+#. examine action
+#. ~ Query message for terrain "Researcher: pink zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Researcher: cyan zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Medical: red zone card reader"'s examine action
+#. ~ Query message for terrain "Old TSKBEM Card Reader"'s examine action
+#. ~ Query message for terrain "Old Enforcer Card Reader"'s examine action
+#. ~ Query message for terrain "Old Mercurial Card Reader"'s examine action
+#. ~ Query message for terrain "Locker room card reader"'s examine action
+#. ~ Query message for terrain "Armory card reader"'s examine action
+#. ~ Query message for terrain "Exobay card reader"'s examine action
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Are you sure you want to open this door?"
+msgstr ""
+
+#. ~ Message when terrain "Facility entrance card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Maintenance: ocher zone card reader"'s examine
+#. action succeeds
+#. ~ Message when terrain "Maintenance: blue zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Security: yellow zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Security: magenta zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Security: black zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Systems: slate zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Researcher: light green zone card reader"'s examine
+#. action succeeds
+#. ~ Message when terrain "Researcher: pink zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Researcher: cyan zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Medical: red zone card reader"'s examine action
+#. succeeds
+#. ~ Message when terrain "Old TSKBEM Card Reader"'s examine action succeeds
+#. ~ Message when terrain "Old Enforcer Card Reader"'s examine action succeeds
+#. ~ Message when terrain "Old Mercurial Card Reader"'s examine action succeeds
+#. ~ Message when terrain "Locker room card reader"'s examine action succeeds
+#. ~ Message when terrain "Armory card reader"'s examine action succeeds
+#. ~ Message when terrain "Exobay card reader"'s examine action succeeds
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "You opened the door!"
+msgstr ""
+
+#. ~ Message when terrain "Facility entrance card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Maintenance: ocher zone card reader"'s examine
+#. action would be redundant
+#. ~ Message when terrain "Maintenance: blue zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Security: yellow zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Security: magenta zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Security: black zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Systems: slate zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Researcher: light green zone card reader"'s examine
+#. action would be redundant
+#. ~ Message when terrain "Researcher: pink zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Researcher: cyan zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Medical: red zone card reader"'s examine action
+#. would be redundant
+#. ~ Message when terrain "Old TSKBEM Card Reader"'s examine action would be
+#. redundant
+#. ~ Message when terrain "Old Enforcer Card Reader"'s examine action would be
+#. redundant
+#. ~ Message when terrain "Old Mercurial Card Reader"'s examine action would be
+#. redundant
+#. ~ Message when terrain "Locker room card reader"'s examine action would be
+#. redundant
+#. ~ Message when terrain "Armory card reader"'s examine action would be
+#. redundant
+#. ~ Message when terrain "Exobay card reader"'s examine action would be
+#. redundant
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "The door is already open."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  A sticky note plastered above it reads 'CO-OP MEMBERS "
+"ONLY'."
+msgstr ""
+
+#. ~ Description of terrain "Maintenance: green zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a wrench on"
+" a green background.  You could swipe a maintenance employee badge near it to"
+" unlock the gates."
+msgstr ""
+
+#. ~ Query message for terrain "Maintenance: green zone card reader"'s examine
+#. action
+#. ~ Query message for terrain "Freight hauler access card reader"'s examine
+#. action
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "Are you sure you want to open this gate?"
+msgstr ""
+
+#. ~ Message when terrain "Maintenance: green zone card reader"'s examine
+#. action succeeds
+#. ~ Message when terrain "Freight hauler access card reader"'s examine action
+#. succeeds
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "You opened the gate!"
+msgstr ""
+
+#. ~ Message when terrain "Maintenance: green zone card reader"'s examine
+#. action would be redundant
+#. ~ Message when terrain "Freight hauler access card reader"'s examine action
+#. would be redundant
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "The gate is already open."
+msgstr ""
+
+#. ~ Description of terrain "Maintenance: ocher zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a wrench on"
+" a ocher background.  You could swipe a maintenance employee badge near it to"
+" unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Maintenance: blue zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a wrench on"
+" a blue background.  You could swipe a maintenance employee badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Freight hauler access card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a truck.  "
+"You could swipe a transporter's badge near it to unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Security: yellow zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a taser on "
+"a yellow background.  You could swipe a security employee badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Security: magenta zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a pistol on"
+" a magenta background.  You could swipe a security employee badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Security: black zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a rifle on "
+"a black background.  You could swipe a security employee badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "Systems: slate zone card reader"
+msgstr ""
+
+#. ~ Description of terrain "Systems: slate zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a node "
+"graph on a slate background.  You could swipe a security employee badge near "
+"it to unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Researcher: light green zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a flask on "
+"a light green background.  You could swipe a researcher scientist badge near "
+"it to unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Researcher: pink zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a flask on "
+"a pink background.  You could swipe a researcher scientist badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Researcher: cyan zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a flask on "
+"a cyan background.  You could swipe a researcher scientist badge near it to "
+"unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "Medical: red zone card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader.  It sports the stylized symbol of an atom and a syringe "
+"on a red background.  You could swipe a researcher scientist badge near it to"
+" unlock the gates."
+msgstr ""
+
+#. ~ Description of terrain "broken card reader"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A smartcard reader that doesn't seem to be functioning.  Probably because "
+"there's no more blinking red LED."
+msgstr ""
+
+#. ~ Description of terrain "elevator controls"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"The control face for an elevator.  You could press the appropriate button to "
+"travel to your choice of floor."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ROBOFAC_ELEVATOR_UP" in terrain
+#. "elevator controls"'s examine action
+#. ~ Player message in effect in EoC "EOC_ROBOFAC_ELEVATOR_DOWN" in terrain
+#. "elevator controls"'s examine action
+#. ~ Player message in effect in EoC "EOC_ISO_ELEVATOR"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+#: data/mods/Isolation-Protocol/EOC/elevator_eoc.json
+msgid "The elevator starts moving before you can touch the panel."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ROBOFAC_ELEVATOR_UP" in terrain
+#. "elevator controls"'s examine action
+#. ~ Player message in false effect in EoC "EOC_ROBOFAC_ELEVATOR_DOWN" in
+#. terrain "elevator controls"'s examine action
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"The control panels' screen flashes before displaying \"UNAUTHORIZED\" in bold"
+" red letters."
+msgstr ""
+
+#. ~ Description of terrain "powerless controls"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid "The control face for an elevator.  It's currently unpowered."
+msgstr ""
+
+#. ~ Description of terrain "nuclear reactor core"
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"A naval A1B reactor, used in Gerald R. Ford-class aircraft carriers.  It can "
+"produce enough steam to generate 125 megawatts of energy."
+msgstr ""
+
+#. ~ Description of terrain "resin wall"
+#: data/json/furniture_and_terrain/terrain-migo.json
+msgid ""
+"A wall made of a glistening, nearly opaque, plastic-like substance.  Deep "
+"within, you can barely see a network of pulsating green conduits, snaking "
+"through it like blood vessels.  The material is hard, warm to the touch, and "
+"slightly damp."
+msgstr ""
+
+#. ~ Description of terrain "resin cage"
+#: data/json/furniture_and_terrain/terrain-migo.json
+msgid ""
+"A resin wall that opens into a series of small honeycomb-like hexagons, "
+"allowing the passage of air and light.  While still made of the same sturdy "
+"material, it is thinner and more delicate in appearance."
+msgstr ""
+
+#. ~ Description of terrain "resin floor"
+#: data/json/furniture_and_terrain/terrain-migo.json
+msgid ""
+"A nearly opaque, plastic-like floor.  It has a gentle curve from wall to "
+"wall, but in the central areas is quite flat.  The material is hard, warm to "
+"the touch, and slightly damp."
+msgstr ""
+
+#. ~ Description of terrain "resin floor"
+#: data/json/furniture_and_terrain/terrain-migo.json
+msgid ""
+"A nearly opaque, plastic-like floor that is smooth and flat.  The material is"
+" hard, warm to the touch, and slightly damp."
+msgstr ""
+
+#. ~ Description of terrain "resin-lined hole"
+#: data/json/furniture_and_terrain/terrain-migo.json
+msgid "An open hole in the resin wall, large enough for you to crawl through."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-nether.json
+msgid "black glass"
+msgstr ""
+
+#. ~ Description of terrain "black glass"
+#: data/json/furniture_and_terrain/terrain-nether.json
+msgid ""
+"An endless expanse of black glass.  It perfectly reflects the darkness around"
+" it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-nether.json
+msgid "perfect basalt wall"
+msgstr ""
+
+#. ~ Description of terrain "perfect basalt wall"
+#: data/json/furniture_and_terrain/terrain-nether.json
+msgid ""
+"Hexagonal columns of basalt spring from the dark floor.  Each a perfect copy "
+"of the next."
+msgstr ""
+
+#. ~ Description of terrain "gravel"
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid ""
+"An area of small, uniformly-sized stones.  Often used for roads, as railroad "
+"ballast, and in many other applications."
+msgstr ""
+
+#. ~ Description of terrain "railroad track"
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid ""
+"Trains used to chug along on these.  These rail tracks stand unused in the "
+"face of the Cataclysm.  You could probably reclaim lengths of the track "
+"itself with a metalcutting tool like a hacksaw."
+msgstr ""
+
+#. ~ Description of terrain "railroad tie"
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid "A crosstie, used to support train rails."
+msgstr ""
+
+#. ~ Description of terrain "railroad track"
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid ""
+"Trains used to chug along on these.  These rail tracks stand unused in the "
+"face of the Cataclysm.  A crosstie sits underneath, supporting the rails.  "
+"You could probably reclaim lengths of the track itself with a metalcutting "
+"tool like a hacksaw."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid "recessed railroad track"
+msgstr ""
+
+#. ~ Description of terrain "recessed railroad track"
+#: data/json/furniture_and_terrain/terrain-railroads.json
+msgid ""
+"Trains used to chug along on these.  These rail tracks sit flush with the "
+"road.  You could probably reclaim lengths of the track itself with a "
+"metalcutting tool like a hacksaw."
+msgstr ""
+
+#. ~ Description of terrain "slide"
+#: data/json/furniture_and_terrain/terrain-recreational.json
+msgid "A children's slide.  It's too small for you to slide on comfortably."
+msgstr ""
+
+#. ~ Description of terrain "monkey bars"
+#: data/json/furniture_and_terrain/terrain-recreational.json
+msgid ""
+"A set of monkey bars to be used by children to train their arm strength, or, "
+"in happier days, to just have fun."
+msgstr ""
+
+#. ~ Description of terrain "gutter drop"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A spot in the gutter where the water flows into a downspout.  It looks "
+"flimsy.  You may be able to climb down here."
+msgstr ""
+
+#. ~ Description of terrain "shingle flat roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A flat section of rooftop covered with shingles."
+msgstr ""
+
+#. ~ Description of terrain "tile flat roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A section of flat, tiled rooftop."
+msgstr ""
+
+#. ~ Description of terrain "skylight"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A giant sheet of glass inserted into the roof to let light pass through."
+msgstr ""
+
+#. ~ Description of terrain "warped roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A section of flat, stone-like rooftop.  It is patterned with grooves and "
+"lines that constantly shift."
+msgstr ""
+
+#. ~ Description of terrain "flat roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A flat surface made of ambiguous pulpy matter, covered in sticky wasp saliva."
+msgstr ""
+
+#. ~ Description of terrain "flat roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A flat surface made of hardened, ambiguous pulpy matter, covered in sticky "
+"wasp saliva."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "concrete roof"
+msgstr ""
+
+#. ~ Description of terrain "concrete roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A flat section of concrete rooftop."
+msgstr ""
+
+#. ~ Description of terrain "wooden roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A flat section of wooden rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "treated wooden roof"
+msgstr ""
+
+#. ~ Description of terrain "treated wooden roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A flat section of flame-resistant wooden rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "metal roof"
+msgstr ""
+
+#. ~ Description of terrain "metal roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A high-quality and sturdy section of metallic rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "red metal roof"
+msgstr ""
+
+#. ~ Description of terrain "red metal roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"A sturdy section of metallic rooftop, painted red for visibility and weather "
+"resistance."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "sod roof"
+msgstr ""
+
+#. ~ Description of terrain "sod roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A section of rooftop made out of sod."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "brick roof"
+msgstr ""
+
+#. ~ Description of terrain "brick roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A section of brick rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "canvas roof"
+msgstr ""
+
+#. ~ Description of terrain "canvas roof"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "A section of canvas rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "treetop"
+msgstr ""
+
+#. ~ Description of terrain "treetop"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "The upper branches of a tree.  There's just enough room to perch here."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "dead treetop"
+msgstr ""
+
+#. ~ Description of terrain "dead treetop"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"The bare upper branches of a dead tree.  There's just enough room to perch "
+"here."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "giant fern top"
+msgstr ""
+
+#. ~ Description of terrain "giant fern top"
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid ""
+"The top of some unearthly gigantic fern.  There is enough room to perch up "
+"here, but only just."
+msgstr ""
+
+#. ~ Description of terrain "corpse filled pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A giant trench full of corpses, maybe even a mass graveyard.  The bodies "
+"could be dug out, but nothing in here looks remotely usable."
+msgstr ""
+
+#. ~ Description of terrain "covered pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A deep pit with a plank placed across it, looks sturdy enough to cross "
+"safely.  The plank could be removed to make it dangerous again."
+msgstr ""
+
+#. ~ Description of terrain "covered spiked pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"Menacing with sharp spears along the bottom, this pit has a plank across it "
+"to allow someone or something to cross safely.  The plank could be removed to"
+" make it dangerous again."
+msgstr ""
+
+#. ~ Description of terrain "glass pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"Looks like a ton of broken glass was dumped into this pit.  Might not fatal "
+"to fall in, but it wouldn't be pleasant to try to crawl out."
+msgstr ""
+
+#. ~ Description of terrain "covered glass pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A plank has been placed carefully to allow traversal over this ditch full of "
+"large glass shards.  The plank could be removed to make it dangerous again."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "dead drop pit"
+msgstr ""
+
+#. ~ Description of terrain "dead drop pit"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A seemingly innocuous shallow pit.  Careful inspection reveals a black "
+"canister half-buried in the exposed soil."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_BEM_human_sample_deliver" in terrain
+#. "dead drop pit"'s examine action
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "You prepare the drop as instructed"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_BEM_human_sample_deliver" in
+#. terrain "dead drop pit"'s examine action
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "You don't have anything to deliver."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "small den"
+msgstr ""
+
+#. ~ Description of terrain "small den"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A small den that burrowing animals such as groundhogs or hares call home."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "large den"
+msgstr ""
+
+#. ~ Description of terrain "large den"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid "A large den that burrowing animals such as bears and foxes call home."
+msgstr ""
+
+#. ~ Description of terrain "slime"
+#: data/json/furniture_and_terrain/terrain-traps.json
+msgid ""
+"A disgusting, slippery mess.  Could be used to stash things, because who'd "
+"want to touch it?"
+msgstr ""
+
+#. ~ Description of terrain "closed bramble roots"
+#: data/json/furniture_and_terrain/terrain-triffid.json
+msgid ""
+"A bramble of roots covering a large hole.  They could easily be pulled apart."
+msgstr ""
+
+#. ~ Description of terrain "open bramble roots"
+#: data/json/furniture_and_terrain/terrain-triffid.json
+msgid "A bramble of roots, pulled apart to reveal a hole."
+msgstr ""
+
+#. ~ Description of terrain "wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A standard wall consisting of a wooden support structure filled with "
+"insulation and drywalled.  Painted a neutral off-white or cream color, it "
+"could use some more vibrant paint.  Looks flammable."
+msgstr ""
+
+#. ~ Description of terrain "pony wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A short divider wall consisting of a wooden support structure with drywall.  "
+"Painted an all-too-common and neutral off-white or cream color.  Looks "
+"flammable."
+msgstr ""
+
+#. ~ Description of terrain "wooden wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A finished wall of planks and support beams, capable of supporting an upper "
+"level or roof.  Highly flammable."
+msgstr ""
+
+#. ~ Description of terrain "red wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted red."
+msgstr ""
+
+#. ~ Description of terrain "white wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted white."
+msgstr ""
+
+#. ~ Description of terrain "blue wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted blue."
+msgstr ""
+
+#. ~ Description of terrain "green wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted green."
+msgstr ""
+
+#. ~ Description of terrain "yellow wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted yellow."
+msgstr ""
+
+#. ~ Description of terrain "pink wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted pink."
+msgstr ""
+
+#. ~ Description of terrain "purple wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted purple."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "orange wall"
+msgstr ""
+
+#. ~ Description of terrain "orange wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted orange."
+msgstr ""
+
+#. ~ Description of terrain "gray wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted gray."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "brown wall"
+msgstr ""
+
+#. ~ Description of terrain "brown wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "cyan wall"
+msgstr ""
+
+#. ~ Description of terrain "cyan wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted cyan."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "black wall"
+msgstr ""
+
+#. ~ Description of terrain "black wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wall, painted black."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "blue wood wall"
+msgstr ""
+
+#. ~ Description of terrain "blue wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted blue."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "green wood wall"
+msgstr ""
+
+#. ~ Description of terrain "green wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted green."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "red wood wall"
+msgstr ""
+
+#. ~ Description of terrain "red wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted red."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "white wood wall"
+msgstr ""
+
+#. ~ Description of terrain "white wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted white."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "purple wood wall"
+msgstr ""
+
+#. ~ Description of terrain "purple wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted purple."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "pink wood wall"
+msgstr ""
+
+#. ~ Description of terrain "pink wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted pink."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "yellow wood wall"
+msgstr ""
+
+#. ~ Description of terrain "yellow wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted yellow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "orange wood wall"
+msgstr ""
+
+#. ~ Description of terrain "orange wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted orange."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "gray wood wall"
+msgstr ""
+
+#. ~ Description of terrain "gray wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted gray."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "brown wood wall"
+msgstr ""
+
+#. ~ Description of terrain "brown wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "cyan wood wall"
+msgstr ""
+
+#. ~ Description of terrain "cyan wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted cyan."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "black wood wall"
+msgstr ""
+
+#. ~ Description of terrain "black wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A wooden wall, painted black."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "blue concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "blue concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted blue."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "green concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "green concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted green."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "red concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "red concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted red."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "white concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "white concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted white."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "purple concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "purple concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted purple."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "pink concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "pink concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted pink."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "yellow concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "yellow concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted yellow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "orange concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "orange concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted orange."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "gray concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "gray concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted gray."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "brown concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "brown concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "cyan concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "cyan concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted cyan."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "black concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "black concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A concrete wall, painted black."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced blue concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced blue concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted blue."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced green concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced green concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted green."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced red concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced red concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted red."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced white concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced white concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted white."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced purple concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced purple concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted purple."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced pink concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced pink concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted pink."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced yellow concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced yellow concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted yellow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced orange concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced orange concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted orange."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced gray concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced gray concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted gray."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced brown concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced brown concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "Reinforced concrete wall painted brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced cyan concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced cyan concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted cyan."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "reinforced black concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "reinforced black concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A reinforced concrete wall, painted black."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple blue concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple blue concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted blue."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple green concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple green concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted green."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple red concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple red concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted red."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple white concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple white concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted white."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple purple concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple purple concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted purple."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple pink concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple pink concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted pink."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple yellow concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple yellow concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted yellow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple orange concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple orange concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted orange."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple gray concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple gray concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted gray."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple brown concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple brown concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple cyan concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple cyan concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted cyan."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "simple black concrete wall"
+msgstr ""
+
+#. ~ Description of terrain "simple black concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A simple concrete wall, painted black."
+msgstr ""
+
+#. ~ Description of terrain "half-built brick wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"Half of a brick wall.  It requires some more resources and effort before it'd"
+" be considered a suitable wall."
+msgstr ""
+
+#. ~ Description of terrain "brick wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A solid brick wall, sturdy enough to support a roof with enough walls and to "
+"keep out any unwanted visitors."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "whitewashed stone masonry wall"
+msgstr ""
+
+#. ~ Description of terrain "whitewashed stone masonry wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A wall of carefully cut and laid stones, joined with mortar.  The exterior "
+"has been finished with plaster and whitewashed."
+msgstr ""
+
+#. ~ Description of terrain "half-built stone wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"Half of a sturdy stone wall.  Some work still needs to be done before it can "
+"be considered a suitable wall."
+msgstr ""
+
+#. ~ Description of terrain "half-built adobe wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"Half of an adobe brick wall.  It requires some more resources and effort "
+"before it'd be considered a suitable wall."
+msgstr ""
+
+#. ~ Description of terrain "adobe wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A solid adobe brick wall that's both sturdy enough to support a roof and keep"
+" out any unwanted visitors."
+msgstr ""
+
+#. ~ Description of terrain "concrete wall with ropes"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "A boxlike wall of concrete with ropes attached to the exterior edges."
+msgstr ""
+
+#. ~ Description of terrain "corrugated metal wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A wall made from a thin sheet of corrugated steel held in a frame, weather- "
+"and windproof but not very insulating or durable."
+msgstr ""
+
+#. ~ Description of terrain "half-built simple concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A partially-poured concrete wall that could probably keep anything behind it "
+"quite safe if it were finished."
+msgstr ""
+
+#. ~ Description of terrain "half-built reinforced concrete wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"Poured concrete with methodically placed rebar sticking out, which isn't "
+"practical for supporting roofs or shelter.  It needs more resources before it"
+" could be considered complete."
+msgstr ""
+
+#. ~ Description of terrain "simple metal wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A relatively simple wall made of cobbled-together scrap metal.  It's still "
+"capable of blocking intruders and supporting a roof with adjacent walls."
+msgstr ""
+
+#. ~ Description of terrain "half-built simple metal wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A partially-built makeshift metal wall that could potentially support a roof "
+"if it were completed."
+msgstr ""
+
+#. ~ Description of terrain "chipped wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A wall of aligned planks that's starting to crack and break open.  Some "
+"replacement wood and a number of nails could patch this up quick."
+msgstr ""
+
+#. ~ Description of terrain "broken wood wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A number of planks are missing and the structure is beginning to sag and fall"
+" apart.  It's going to need quite a bit of work to repair."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid "burnt wall"
+msgstr ""
+
+#. ~ Description of terrain "burnt wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"Whatever this wall used to be made of, it's little more than charred remains "
+"now."
+msgstr ""
+
+#. ~ Description of terrain "chipped log wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A moderately damaged log wall, it could probably be patched up with some "
+"planks and nails."
+msgstr ""
+
+#. ~ Description of terrain "broken log wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A destroyed log wall, with only a supporting log left, ready to collapse.  "
+"Looks repairable if the damage was replaced and patched together with nails "
+"and planks."
+msgstr ""
+
+#. ~ Description of terrain "wattle-and-daub wall"
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"A relatively primitive wall made by daubing together a lattice of wooden "
+"strips using some combination of wet soil, clay, sand, animal dung, and "
+"straw."
+msgstr ""

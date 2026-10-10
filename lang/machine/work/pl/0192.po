@@ -1,0 +1,1628 @@
+# Batch 192 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Verb in activity "ACT_IERDE_NO_SLEEP_MEDITATE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "watching"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_IERDE_NO_SLEEP_MEDITATE_TURN"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "You are fully refreshed and end your vigil."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_IERDE_EARTHEN_SHIELD_SPELL"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "You must be on living earth or stone to create the earthen shield."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_IERDE_SINK_INTO_EARTH_activate"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "You must be on living earth or stone to sink into it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_IERDE_SLEEP_IN_EARTH_2" in nested
+#. EOCs in effect in EoC "EOC_IERDE_SLEEP_IN_EARTH"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "The earth parts beneath you and you sink down into the stone."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Earthen Stairs Up"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Earthen Stairs Down"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Churn Earth for Planting"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Create furrows in the earth suitable for planting crops"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Turn dirt and earth into solid rock."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_RESHAPE_THE_EARTH_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Turn solid rock into loose soil or dirt."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_IERDE_TUNNEL_TRANSLOCATE_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid ""
+"You must be standing deep underground and on the living earth to translocate."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_IERDE_TUNNEL_ATTUNEMENT_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid ""
+"You must be deep underground on and on the living earth  to cast this spell."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_IERDE_STONE_FORM_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid ""
+"Your body stiffens as your flesh turns to stone and your joints to earth."
+msgstr ""
+
+#. ~ Name of spell "ierde_stomp_ground_smash_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Earthquake Stomp"
+msgstr ""
+
+#. ~ Description of spell "ierde_stomp_ground_smash_spell ( Earthquake Stomp )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"Stomp on the ground and cause a minor local earthquake, damaging buildings "
+"and knocking anyone nearby off their feet."
+msgstr ""
+
+#. ~ Sound description of spell "ierde_stomp_ground_smash_spell ( Earthquake
+#. Stomp )"
+#. ~ Sound description of spell "ierde_create_pits_spell ( Earthen Grasp )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "the ground shakes!"
+msgstr ""
+
+#. ~ Message of spell "ierde_stomp_ground_smash_spell ( Earthquake Stomp )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "You stomp the ground and it quakes!"
+msgstr ""
+
+#. ~ Name of spell "ierde_iron_armor_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Invulnerable Iron Skin"
+msgstr ""
+
+#. ~ Description of spell "ierde_iron_armor_spell ( Invulnerable Iron Skin )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"While on living earth or stone, the Ierde may infuse their body with fae "
+"iron, slowing their movement and attacks but rendering them much safer from "
+"harm."
+msgstr ""
+
+#. ~ Message of spell "ierde_iron_armor_spell ( Invulnerable Iron Skin )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "You infuse yourself with the resilience of the earth."
+msgstr ""
+
+#. ~ Name of spell "ierde_knockback_punch_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Mountain-Toppling Punch"
+msgstr ""
+
+#. ~ Description of spell "ierde_knockback_punch_spell ( Mountain-Toppling
+#. Punch )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"With the force of a landslide behind it, punch a single target and knock them"
+" backwards."
+msgstr ""
+
+#. ~ Message of spell "ierde_knockback_punch_spell ( Mountain-Toppling Punch )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "You wide up and deliver a punch with the strength of a rockslide."
+msgstr ""
+
+#. ~ Name of spell "ierde_reveal_earth_map_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Knowing Every Furrow"
+msgstr ""
+
+#. ~ Description of spell "ierde_reveal_earth_map_spell ( Knowing Every Furrow
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"Commune with the earth, whispering to it to reveal its secrets to you.  This "
+"spell will reveal natural features within a large radius around the Ierde.  "
+"The spell must be cast while standing on the living earth."
+msgstr ""
+
+#. ~ Name of spell "ierde_reshape_the_earth_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Reshape the Living Earth"
+msgstr ""
+
+#. ~ Description of spell "ierde_reshape_the_earth_spell ( Reshape the Living
+#. Earth )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"You can mold earth like clay, turning it to stone and back, or raising it and"
+" lowering it into pits or ramps or walls."
+msgstr ""
+
+#. ~ Message of spell "ierde_reshape_the_earth_spell ( Reshape the Living Earth
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "The earth moves at your command"
+msgstr ""
+
+#. ~ Name of spell "ierde_slow_enemies_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Rigidity of Stone"
+msgstr ""
+
+#. ~ Description of spell "ierde_slow_enemies_spell ( Rigidity of Stone )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"Infuse your enemies with the rigidity of stone, slowing their movements."
+msgstr ""
+
+#. ~ Description of spell "ierde_buff_armor_allies_spell ( Skin of the
+#. Mountains )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"Infuse the resilience of the earth into one of your allies.  Their skin will "
+"repel some of the physical damage they take, and they will be more resistant "
+"to losing blood, but they will be slightly slower due to the magicks."
+msgstr ""
+
+#. ~ Description of spell "ierde_earthen_shield_spell ( Impenetrable Earthen
+#. Shield )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"While standing on the living earth or stone, infuse your skin with the "
+"hardness of bedrock.  You will take no damage at all while the spell is in "
+"effect, though repeated blows can wear through the shield until it breaks."
+msgstr ""
+
+#. ~ Name of spell "ierde_entrap_target_in_stone"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "Lithic Gaol"
+msgstr ""
+
+#. ~ Description of spell "ierde_entrap_target_in_stone ( Lithic Gaol )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"Summon up a series of spikes around a single target, imprisoning them in a "
+"cage of stone.  The target must be on earth or stone for the spell to take "
+"effect."
+msgstr ""
+
+#. ~ Name of spell "ierde_summon_earth_spirit"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Calling the Children of the Stones"
+msgstr ""
+
+#. ~ Description of spell "ierde_summon_earth_spirit ( Calling the Children of
+#. the Stones )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "A lesser earth elemental is summoned to support you."
+msgstr ""
+
+#. ~ Name of spell "ierde_create_pits_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Earthen Grasp"
+msgstr ""
+
+#. ~ Description of spell "ierde_create_pits_spell ( Earthen Grasp )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid "Open the ground beneath your enemies' feet, dumping them into pits."
+msgstr ""
+
+#. ~ Name of spell "ierde_tunnel_translocation_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Traveling the Veins of the Earth"
+msgstr ""
+
+#. ~ Description of spell "ierde_tunnel_translocation_spell ( Traveling the
+#. Veins of the Earth )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"The earth is crisscrossed with fissures, with layers of rock and veins of "
+"metal, and deeper, with flows of molten rock.  The Ierde can flow along those"
+" paths, traveling deep within the earth to any point they have previously "
+"been to."
+msgstr ""
+
+#. ~ Description of spell "ierde_cultivate_goblin_fruit ( Cultivate Goblin
+#. Fruit )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutation_spells.json
+msgid ""
+"You may spin a bit of fae magic into the earth, bringing forth a goblin "
+"fruit.  Goblin fruit have a variety of effects, never predictable but always "
+"at least somewhat beneficial.  This spell may only be cast on earth or stone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Clay of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Clay of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Your skin has turned the color of manganese stained soil.  Your skin is now a"
+" purplish black.  This has no gameplay effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Pebbled Skin"
+msgstr ""
+
+#. ~ Description of mutation "Pebbled Skin"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Your skin has toughened and formed pebble-like growths in some places, acting"
+" as natural armor.  Somewhat reduces wet effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Stone Skin"
+msgstr ""
+
+#. ~ Description of mutation "Stone Skin"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Your skin has developed into strong granite-like covering that retains some "
+"flexibility and has grown to cover most of your body, acting as natural "
+"armor.  While difficult to penetrate, it also limits your flexibility.  "
+"Greatly reduces wet effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Ierde Eyes"
+msgstr ""
+
+#. ~ Description of mutation "Ierde Eyes"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde's eyes begin reflecting their mood: a "
+"pale white streaked with rose when happy; pale green or grey when calm, and "
+"pure obsidian black when angry.  Glare no longer impacts them and they are "
+"not bothered by light levels when sleeping."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Ierde Ears"
+msgstr ""
+
+#. ~ Description of mutation "Ierde Ears"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's ears are longer and pointed, like the peak of a high mountain.  "
+"They can hear slightly better and are unphased by loud sounds."
+msgstr ""
+
+#. ~ Description of mutation "Fists of Stone"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's stony skin makes their fists hit like hammers.  Though their "
+"attacks are slower, the Ierde does more bashing damage with punches and can "
+"use their hands to replace some simple tools."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Stone-Hardened Panoply"
+msgstr ""
+
+#. ~ Description of mutation "Stone-Hardened Panoply"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Just as their body is now one with the stone, the Ierde can infuse the "
+"strength of the earth into their equipment, rendering it more resilient.  "
+"While on natural earth or stone or underground, the Ierde's equipment is "
+"twice as difficult to damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Unsleeping Earth Vigil"
+msgstr ""
+
+#. ~ Description of mutation "Unsleeping Earth Vigil"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to, while underground, "
+"rest and recover energy as though sleeping.  Activate to begin the vigil."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Soil Knows Those Who Tread Upon It"
+msgstr ""
+
+#. ~ Description of mutation "The Soil Knows Those Who Tread Upon It"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to sense the movements "
+"of nearby creatures, as long as they maintains contact with natural earth or "
+"stone, or are underground."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Sense the Smallest Tremor"
+msgstr ""
+
+#. ~ Description of mutation "Sense the Smallest Tremor"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's ability to sense small movements is heightened to such a degree "
+"that with small movements of their fingers, they can sense the exact shape "
+"and position of objects nearby.  They can craft in darkness, as long as \"The"
+" Soil Knows Those Who Tread Upon It\" is active."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Avalanche Blow"
+msgstr ""
+
+#. ~ Description of mutation "Avalanche Blow"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"With a brief moment to stabilize themselves, the Ierde strikes a wall, door, "
+"or other terrain feature with the force of a falling boulder, doing many "
+"times their normal damage."
+msgstr ""
+
+#. ~ Description of mutation "Earthquake Stomp"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to stomp on the ground "
+"and cause a minor local earthquake."
+msgstr ""
+
+#. ~ Description of mutation "Mountain-Toppling Punch"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to strike an enemy with"
+" a blow that does extra damage and knocks them backwards."
+msgstr ""
+
+#. ~ Description of mutation "Knowing Every Furrow"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to learn the terrain "
+"layout in a large area around themselves."
+msgstr ""
+
+#. ~ Description of mutation "Earthen Grasp"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to create large pits on"
+" diggable ground, dumping their enemies into them."
+msgstr ""
+
+#. ~ Description of mutation "Rigidity of Stone"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde may infuse the rigidity of stone into "
+"their enemies, slowing their movements."
+msgstr ""
+
+#. ~ Description of mutation "Reshape the Living Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde may reshape the earth, raising or "
+"lowering earth or stone or turning the one into the other."
+msgstr ""
+
+#. ~ Description of mutation "Calling the Children of the Stones"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Allows the Ierde to summon a minor earth elemental to support them in the "
+"world for a short time."
+msgstr ""
+
+#. ~ Description of mutation "Invulnerable Iron Skin"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Stone endures but armor is made of metal.  While standing on natural earth or"
+" stone, the Ierde can infuse their skin with metal, slowing their movement "
+"and encumbering them but rendering them much harder to damage."
+msgstr ""
+
+#. ~ Description of mutation "Impenetrable Earthen Shield"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"While standing on natural earth or stone, the Ierde can summon up an earthen "
+"shield to protect themselves.  They will be invulnerable until the shield "
+"breaks."
+msgstr ""
+
+#. ~ Description of mutation "Skin of the Mountains"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"When gaining this ability, the Ierde gains the ability to infuse the "
+"resilience of the earth into one of their allies."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ The name is a reference to Chapter 63 of Bleak House by Charles Dickens
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "An Iron Taste and an Iron Smell"
+msgstr ""
+
+#. ~ Description of mutation "An Iron Taste and an Iron Smell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde has taken the essence of iron into themselves.  They no longer "
+"smell anything like a human, smelling only like a faint whiff of iron if they"
+" have any scent at all, and can produce all their iron their body needs "
+"themselves."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Tireless Strength of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Tireless Strength of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde can draw on the boundless strength of the earth, increasing their "
+"stamina."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Unceasing Strength of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Unceasing Strength of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde can draw even deeper on the boundless strength of the earth, "
+"greatly increasing their stamina."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Inexhaustible Strength of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Inexhaustible Strength of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde can draw from boundless strength of the very depths of the earth, "
+"enormously increasing their stamina."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Stone Does Not Grow Weary"
+msgstr ""
+
+#. ~ Description of mutation "Stone Does Not Grow Weary"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+#, no-c-format
+msgid ""
+"When underground or on natural earth, the Ierde recovers Stamina 50% faster."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Stone Endures"
+msgstr ""
+
+#. ~ Description of mutation "The Stone Endures"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+#, no-c-format
+msgid ""
+"When underground or on natural earth, the Ierde recovers Stamina 50% faster "
+"and heals 33% faster."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Stone Does Not Cry Out"
+msgstr ""
+
+#. ~ Description of mutation "Stone Does Not Cry Out"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Like the stone, the Ierde suffers little from blows.  All pain is halved."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "In the Earthmother's Embrace"
+msgstr ""
+
+#. ~ Description of mutation "In the Earthmother's Embrace"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to sink into the living"
+" earth, where they will heal faster, they will not need to eat or drink, and "
+"sleep will be more restful for them."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Sleeping in the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Sleeping in the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"You are resting in the depths of the earth.  You should never actually see "
+"this."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Blood of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Blood of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's blood has turned black and grown thick and tar-like.  They will "
+"bleed much more slowly."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Black Blood of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Black Blood of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's blood has turned into a black sludge that barely flows.  They no "
+"longer bleed at all."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Mountain Does Not Move"
+msgstr ""
+
+#. ~ Description of mutation "The Mountain Does Not Move"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Though the earth shivers and shakes, the mountain stands tall.  The Ierde is "
+"immune to knockback."
+msgstr ""
+
+#. ~ Description of mutation "The Root of the Mountain"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"When standing on the living earth or underground, the Ierde can root "
+"themselves in place.  While doing so, they cannot move, but they are immune "
+"to being stunned, dazed, or downed, and gain additional armor."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Durability of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Durability of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+#, no-c-format
+msgid "The Ierde has some of the toughness of the earth.  +15% hit points."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Durability of the Stone"
+msgstr ""
+
+#. ~ Description of mutation "Durability of the Stone"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+#, no-c-format
+msgid "The Ierde has some of the toughness of the stone.  +30% hit points."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Durability of the Mountain"
+msgstr ""
+
+#. ~ Description of mutation "Durability of the Mountain"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+#, no-c-format
+msgid ""
+"The Ierde has the toughness of the enduring mountains.  +45% hit points."
+msgstr ""
+
+#. ~ Description of mutation "Cultivate Goblin Fruit"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to grow a goblin fruit "
+"from a earth or stone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Vigor of the Soil"
+msgstr ""
+
+#. ~ Description of mutation "Vigor of the Soil"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Like the bountiful soil, the Ierde is filled with power.  +3 Strength."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Vigor of the Stone"
+msgstr ""
+
+#. ~ Description of mutation "Vigor of the Stone"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Like the stone, the Ierde can withstand any punishment.  +5 Strength."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Vigor of the Mountain"
+msgstr ""
+
+#. ~ Description of mutation "Vigor of the Mountain"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Like the mountain, the Ierde is unmoved by calamity.  +7 Strength."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Vigor of the Bedrock"
+msgstr ""
+
+#. ~ Description of mutation "Vigor of the Bedrock"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Like the bedrock, the Ierde's might can support the entire world.  +9 "
+"Strength."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Hills Overlook the Valleys"
+msgstr ""
+
+#. ~ Description of mutation "The Hills Overlook the Valleys"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Like an observer on a mountaintop, the Ierde sees more than most.  +3 "
+"Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Mountain Is Unflinching"
+msgstr ""
+
+#. ~ Description of mutation "The Mountain Is Unflinching"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"While on living earth or stone or underground, the Ierde is as impassive as "
+"the mountains and feels no pain at all."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "The Stone Does Not Rot"
+msgstr ""
+
+#. ~ Description of mutation "The Stone Does Not Rot"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The stones do not rot as the trees or humans do, and neither is the Ierde "
+"affected by the frailties of the flesh.  They are immune to disease and "
+"cannot suffer from parasites."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Mind of Iron"
+msgstr ""
+
+#. ~ Description of mutation "Mind of Iron"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde's mind has the resilience of iron, and they cannot be affected by "
+"delusions, hallucinations, or other mental problems."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Stone Meditations"
+msgstr ""
+
+#. ~ Description of mutation "Stone Meditations"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde meditates on the nature of stone and removes themselves from the "
+"highs and lows of mortal emotions."
+msgstr ""
+
+#. ~ Description of mutation "Traveling the Veins of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"Upon gaining this ability the Ierde gains the ability to travel through stone"
+" to another underground location they have previously been to."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Form of the Solid Earth"
+msgstr ""
+
+#. ~ Description of mutation "Form of the Solid Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde may transform into rock and earth.  They become incredibly "
+"resilient and nearly immune to some forms of damage, but will be much, much "
+"slower."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Earthen Form"
+msgstr ""
+
+#. ~ Description of mutation "Earthen Form"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"You are a mass of stone and earth.  You are incredibly resilient, but you are"
+" extremely slow."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid "Body of Adamant"
+msgstr ""
+
+#. ~ Description of mutation "Body of Adamant"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_mutations.json
+msgid ""
+"The Ierde is so infused with the power of stone they are approaching "
+"invincibility.  There is a small chance that attacks against them simply "
+"rebound off their rocky skin, and their limbs are so resilient that they will"
+" never break."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_STOMP_GROUND_SMASH"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_CREATE_PITS"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_KNOCKBACK_PUNCH"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_IRON_ARMOR"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_REVEAL_EARTH_MAP"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_RESHAPE_THE_EARTH"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_SLOW_ENEMIES"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_ENTRAP_TARGET_IN_STONE"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_EARTHEN_SHIELD"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_BUFF_ARMOR_ALLIES"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_SUMMON_EARTH_SPIRIT"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_TUNNEL_TRANSLOCATE"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_CULTIVATE_GOBLIN_FRUIT"
+#. ~ Player message in effect in EoC "EOC_LEVELER_IERDE_MAKE_GOSSAMER"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_spell_learning_eocs.json
+msgid ""
+"Your time spent surrounded by the living earth has increased your facility "
+"with your fae magicks."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PARACLESIAN_FAE_SIGHT_PROCESSING"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_eocs.json
+msgid "You do not have enough mana to fuel your fae sight!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_SUCCESSFUL_ROLL_REMAINDER_GOSSAMER_RECIPE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_eocs.json
+msgid "Your dreams have revealed to you a recipe for gossamer raiment."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PARACLESIAN_TURN_COTTON_TO_GOSSAMER"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_eocs.json
+msgid ""
+"The moonlight permeates the cotton and it begins to shimmer like an opal in "
+"the sunlight."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PARACLESIAN_TURN_COTTON_TO_GOSSAMER"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_eocs.json
+msgid "You must be outdoors under the moonlight to turn cotton into gossamer."
+msgstr ""
+
+#. ~ Message in nested effect in else statement in effect in EoC
+#. "EOC_WANTS_TO_TALK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_eocs.json
+msgid "You cannot lead this person to talk to you anymore."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_FAE_BAN_CUT_TREE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You feel a stabbing pain as the tree falls.  One of your own, murdered by "
+"your hand."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_FAE_BAN_LIGHT_FIRE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"Your heart races as you spark the fire.  A fire, outdoors, in the view of the"
+" trees and the grasses.  Visions of charred wood, of blackened trunks and "
+"broken branches, fill your mind."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_ARVORE_FAE_BAN_SLEPT_IN_CITY"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You awaken with a groggy head, blinking bleary eyes.  Sleeping near the "
+"remnants of civilization away from the bounty of nature, your sleep was not "
+"as restful as it should have been."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_IERDE_FAE_BAN_DIDNT_SLEEP_UNDERGROUND"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You awaken in pain, your muscles stiff, your body groaning in protest.  Away "
+"from the depths of the living earth, your sleep was not as restful as it "
+"should have been."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_IERDE_FAE_BAN_USED_TOOLS_ON_THE_EARTH"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You feel a stabbing pain as your tools dig into the living earth.  Tools made"
+" of material torn from the earth by humans.  You should not be using them."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_HOMULLUS_FAE_BAN_KILL_HUMAN"
+#. ~ Player message in effect in EoC "EOC_HOMULLUS_FAE_BAN_KILL_HUMAN_MONSTER"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You feel a stab of pain as the human collapses in a puddle of their own "
+"blood.  A human, slain by your hand, in defiance of your nature."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_HOMULLUS_FAE_BAN_DIDNT_SLEEP_NEAR_HUMANS"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You awaken with a start as a terrible feeling of crushing loneliness grips "
+"you.  You were meant to live in close contact with humans, not wake up to an "
+"empty home."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_FAE_BAN_GET_WET"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"Accursed water!  The touch of it burns you like acid, reminding you of your "
+"nature.  Your flames must not be dowsed."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SYLPH_FAE_BAN_DIDNT_SLEEP_OUTSIDE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You gasp as you awaken, the still air barely moving into your lungs.  You "
+"long for the blowing winds."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_SYLPH_FAE_BAN_TOO_LONG_UNDERGROUND_APPLY_PENALTY"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"The walls seem like they're closing in on you.  You were born to fly free, to"
+" dance on the winds, not to cower underground like a worm.  You have to get "
+"out to the open sky."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_UNDINE_FAE_BAN_SLEEP_ON_LAND"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_fae_bans.json
+msgid ""
+"You gasp as you awaken, thin air barely filling your lungs as you struggle to"
+" breath.  You long for the soothing embrace of the waters."
+msgstr ""
+
+#. ~ Name of spell "cloud_of_steam_sylph"
+#. ~ Name of spell "cloud_of_steam_undine"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Cloud of Steam"
+msgstr ""
+
+#. ~ Description of spell "cloud_of_steam_sylph ( Cloud of Steam )"
+#. ~ Description of spell "cloud_of_steam_undine ( Cloud of Steam )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "You bring forth a cloud of boiling water."
+msgstr ""
+
+#. ~ Name of spell "paraclesian_spell_dodge_bonus_arvore"
+#. ~ Name of spell "paraclesian_spell_dodge_bonus_sylph"
+#. ~ Mutation name
+#. ~ Name of spell "paraclesian_spell_dodge_bonus"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/mutations.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/spells.json
+msgid "The Wind Blows, the Willow Bends"
+msgstr ""
+
+#. ~ Description of spell "paraclesian_spell_dodge_bonus_arvore ( The Wind
+#. Blows, the Willow Bends )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid ""
+"Like the flitting wind or the flexible willow, the spell allows you to avoid "
+"attacks much more easily.  It has <color_yellow>reduced effects</color> when "
+"on artificial terrain."
+msgstr ""
+
+#. ~ Description of spell "paraclesian_spell_dodge_bonus_sylph ( The Wind
+#. Blows, the Willow Bends )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid ""
+"Like the flitting wind or the flexible willow, the spell allows you to avoid "
+"attacks much more easily.  It has <color_yellow>reduced effects</color> "
+"indoors."
+msgstr ""
+
+#. ~ Name of spell "paraclesian_spell_make_gossamer"
+#. ~ Name of spell "paraclesian_spell_make_gossamer_real"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "Weave Gossamer"
+msgstr ""
+
+#. ~ Description of spell "paraclesian_spell_make_gossamer ( Weave Gossamer )"
+#. ~ Description of spell "paraclesian_spell_make_gossamer_real ( Weave
+#. Gossamer )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "Under the light of the moon, you can weave cotton into gossamer."
+msgstr ""
+
+#. ~ Name of spell "homullus_spell_wish_to_converse"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "Wish to Converse"
+msgstr ""
+
+#. ~ Description of spell "homullus_spell_wish_to_converse ( Wish to Converse
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid ""
+"When this spell is cast, the target will somehow begin to care about you very"
+" much and can't not help but talk to."
+msgstr ""
+
+#. ~ Name of effect type id "effect_wants_to_talk"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "Seeming to want to talk to you"
+msgstr ""
+
+#. ~ Description of effect type "Seeming to want to talk to you"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutation_spells.json
+msgid "This person wants to talk with you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Born of the Earth"
+msgstr ""
+
+#. ~ Description of mutation "Born of the Earth"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "A spirit of earth and stone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Root and Branch"
+msgstr ""
+
+#. ~ Description of mutation "Root and Branch"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "A spirit of leaf and bark."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Touched by Fire"
+msgstr ""
+
+#. ~ Description of mutation "Touched by Fire"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "A spirit of fire."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Rain and Wave"
+msgstr ""
+
+#. ~ Description of mutation "Rain and Wave"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "You are born of the deep waters."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Child of Dolls"
+msgstr ""
+
+#. ~ Description of mutation "Child of Dolls"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "A spirit of the image of humans given life."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Born of the Air"
+msgstr ""
+
+#. ~ Description of mutation "Born of the Air"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "A spirit of air and wind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Fae Prowess"
+msgstr ""
+
+#. ~ Description of mutation "Fae Prowess"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You have gained a portion of the might of your fae ancestors.  +1 Strength "
+"and Dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Fae Puissance"
+msgstr ""
+
+#. ~ Description of mutation "Fae Puissance"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You have gained the might of your fae ancestors.  +2 Strength and Dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Fae Discernment"
+msgstr ""
+
+#. ~ Description of mutation "Fae Discernment"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You have gained a portion of the wits of your fae ancestors.  +1 Intelligence"
+" and Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Fae Acumen"
+msgstr ""
+
+#. ~ Description of mutation "Fae Acumen"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You have gained the wits of your fae ancestors.  +2 Intelligence and "
+"Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Fae Sight"
+msgstr ""
+
+#. ~ Description of mutation "Fae Sight"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You can sense other nearby creatures from the Bright Lands.  Activate to "
+"enable your fae senses.  It has a small chance to cost some of your mana each"
+" turn it is in use."
+msgstr ""
+
+#. ~ Description of mutation "Wyrd Sight"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"You can sense other nearby creatures from the Bright Lands.  Activate to "
+"enable your fae senses."
+msgstr ""
+
+#. ~ Description of mutation "Cloud of Steam"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Upon gaining this ability the Sylph gains the ability to create a cloud of "
+"damaging steam."
+msgstr ""
+
+#. ~ Description of mutation "Cloud of Steam"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Upon gaining this ability the Undine gains the ability to create a cloud of "
+"damaging steam."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Create Light"
+msgstr ""
+
+#. ~ Description of mutation "Create Light"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Upon gaining this ability the Sylph gains the ability to create light."
+msgstr ""
+
+#. ~ Description of mutation "Create Light"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Upon gaining this ability the Salamander gains the ability to create light."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Born of the Elements"
+msgstr ""
+
+#. ~ Description of mutation "Born of the Elements"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Your connection to this world is deep and rewards you with additional mana."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Change with the Seasons"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Walking Ley Line"
+msgstr ""
+
+#. ~ Description of mutation "The Wind Blows, the Willow Bends"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/mutations.json
+msgid ""
+"Upon gaining this ability, you gain the ability to enhance your dodge "
+"capabilities."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Gossamer Artisan"
+msgstr ""
+
+#. ~ Description of mutation "Gossamer Artisan"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Like your fae ancestors, you can turn gossamer into clothing and armor.  "
+"Activate this trait to learn a gossamer recipe (once per week)."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Gossamerwright"
+msgstr ""
+
+#. ~ Description of mutation "Gossamerwright"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"Your manipulation of gossamer has advanced to the point where you can make it"
+" yourself out of mundane cotton and moonlight."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Desire for Conversation"
+msgstr ""
+
+#. ~ Description of mutation "Desire for Conversation"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid ""
+"The Dollkin casts this spell to force a conversation with anyone, once.  If "
+"they've heard the Dollkin out and decided they wish not to speak again it "
+"will not work."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "FINAL DISCUSSION"
+msgstr ""
+
+#. ~ Description of mutation "FINAL DISCUSSION"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "This person won't speak with them again if this goes poorly."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_GOBLIN_FRUIT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You pull a goblin fruit from the flames."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_GOBLIN_FRUIT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid ""
+"You must have a nearby source of flames or heat to call forth a goblin fruit."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_FIRE_FLY"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You must be standing in flames to cast Burning Ascension."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_WATER_TO_BOOZE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid ""
+"From the fiery depths of your spirit, knowledge of how to turn various other "
+"water into strong alcohol fills your mind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_WATER_TO_FUEL"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid ""
+"From the fiery depths of your spirit, knowledge of how to turn various other "
+"water into lamp oil fills your mind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_REBORN_IN_FLAMES"
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_REBORN_IN_FLAMES_COOLDOWN"
+#. in nested EOCs in false effect in EoC "EOC_SALAMANDER_REBORN_IN_FLAMES"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid ""
+"As your body takes its final wound, your fae spirit drinks in the heat of the"
+" flames and your flesh is renewed."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SALAMANDER_GRANT_COOKING_HEAT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "Your hands grow warm."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_GRANT_COOKING_HEAT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "The heat from your hands fades away."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_HEALTH_FOR_MANA"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You have no need to restore your mana now!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_SMOKE_FORM_ASCEND"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You must be in warm air to ascend!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_SALAMANDER_SMOKE_FORM_ASCEND_OUTSIDE_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You soar upward on the rising smoke."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_SALAMANDER_SMOKE_FORM_ASCEND_OUTSIDE_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "The ceiling above blocks your attempt to rise!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_BERSERK_STANCE_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You are already under the effects of Wildfire Soul!"
+msgstr ""
+
+#. ~ Name of spell "salamander_make_fire"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Enkindle"
+msgstr ""
+
+#. ~ Description of spell "salamander_make_fire ( Enkindle )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Born from fire, it is easy for a Salamander to bring forth that fire and set "
+"something alight."
+msgstr ""
+
+#. ~ Name of spell "salamander_flame_punch_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Blazing Blow"
+msgstr ""
+
+#. ~ Description of spell "salamander_flame_punch_spell ( Blazing Blow )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Wreathe your fist in flames and punch a single target, causing fire damage "
+"and knocking them backward."
+msgstr ""
+
+#. ~ Name of spell "salamander_flaming_whip_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "A Hundred Tongues of Flame"
+msgstr ""
+
+#. ~ Description of spell "salamander_flaming_whip_spell ( A Hundred Tongues of
+#. Flame )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "Summon a flaming whip to scourge your enemies."
+msgstr ""
+
+#. ~ Name of spell "salamander_smoke_teleport_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "In a Cloud of Smoke"
+msgstr ""
+
+#. ~ Description of spell "salamander_smoke_teleport_spell ( In a Cloud of
+#. Smoke )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Like fire leaping over a firebreak, you can vanish and reappear somewhere "
+"nearby, leaving a thick cloud of smoke in your former location."
+msgstr ""
+
+#. ~ Name of spell "salamander_cure_conditions"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Burning Away Your Impurities"
+msgstr ""
+
+#. ~ Description of spell "salamander_cure_conditions ( Burning Away Your
+#. Impurities )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"As fire burns dead wood, you can burn away poison or sickness in your target."
+"  However, just as fire is dangerous to touch, it damages the target as well."
+msgstr ""
+
+#. ~ Name of spell "salamander_fire_dot_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "The Fire in the Marrow"
+msgstr ""
+
+#. ~ Description of spell "salamander_fire_dot_spell ( The Fire in the Marrow
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Kindle a flame within the target, slowly burning them from the inside.  This "
+"spell does damage only slowly, but there is little defense against being "
+"burned from the inside out."
+msgstr ""
+
+#. ~ Name of spell "salamander_increase_speed_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Fanning the Spark"
+msgstr ""
+
+#. ~ Description of spell "salamander_increase_speed_spell ( Fanning the Spark
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "You can infuse yourself or an ally with the blazing speed of fire."
+msgstr ""
+
+#. ~ Name of spell "salamander_emit_heat"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "Stoking the Inner Furnace"
+msgstr ""
+
+#. ~ Description of spell "salamander_emit_heat ( Stoking the Inner Furnace )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "Like a bonfire, you can throw off large quantities of heat."
+msgstr ""
+
+#. ~ Name of spell "salamander_summon_fire_spirit"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "Calling the Children of the Inferno"
+msgstr ""
+
+#. ~ Description of spell "salamander_summon_fire_spirit ( Calling the Children
+#. of the Inferno )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "A lesser fire spirit is summoned to support you."
+msgstr ""
+
+#. ~ Name of spell "salamander_summon_firebird_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Flame of the Firebird"
+msgstr ""
+
+#. ~ Description of spell "salamander_summon_firebird_spell ( Flame of the
+#. Firebird )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Summon a delicate bird made of pure flame.  The bird will last only a few "
+"moments, but if it sees an enemy it will eagerly dive upon them and erupt "
+"into a fireball."
+msgstr ""
+
+#. ~ Name of spell "salamander_ash_breath_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Exhalation of Ashes"
+msgstr ""
+
+#. ~ Description of spell "salamander_ash_breath_spell ( Exhalation of Ashes )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"You can breathe out a cloud of thick smoke, concealing your presence or "
+"causing humans to choke."
+msgstr ""
+
+#. ~ Name of spell "salamander_fire_breath"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Breath of the Firedragon"
+msgstr ""
+
+#. ~ Description of spell "salamander_fire_breath ( Breath of the Firedragon )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Like the legendary dragon, you can spray fire in a cone in front of you."
+msgstr ""
+
+#. ~ Name of spell "salamander_dash_boom_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Fiery Charge"
+msgstr ""
+
+#. ~ Description of spell "salamander_dash_boom_spell ( Fiery Charge )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Hurl yourself forward in a burst of speed, causing an explosion at your "
+"arrive point."
+msgstr ""
+
+#. ~ Name of spell "salamander_explosion_trap_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Sigil of Detonation"
+msgstr ""
+
+#. ~ Description of spell "salamander_explosion_trap_spell ( Sigil of
+#. Detonation )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "Place a magical rune on a the ground that will explode when stepped on."
+msgstr ""
+
+#. ~ Description of spell "salamander_cultivate_goblin_fruit ( Cultivate Goblin
+#. Fruit )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"You may spin a bit of fae magick into the flames, bringing forth a goblin "
+"fruit.  Goblin fruit have a variety of effects, never predictable but always "
+"at least somewhat beneficial.  This spell may only be cast outdoors in "
+"natural surroundings."
+msgstr ""
+
+#. ~ Name of spell "salamander_fire_fly"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Burning Ascension"
+msgstr ""
+
+#. ~ Description of spell "salamander_fire_fly ( Burning Ascension )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Like the rising heat of fire, you can ascend into the air and walk with the "
+"smoke for a short time before falling safely back to the earth."
+msgstr ""
+
+#. ~ Name of spell "salamander_ally_flame_immune_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Anointed with Incandescence"
+msgstr ""
+
+#. ~ Description of spell "salamander_ally_flame_immune_spell ( Anointed with
+#. Incandescence )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"You draw on your own fiery nature and infuse a portion of it into an ally, "
+"rendering them immune to warm temperatures and fire."
+msgstr ""
+
+#. ~ Name of spell "salamander_explosion_and_heal_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "The Phoenix's Last Cry"
+msgstr ""
+
+#. ~ Description of spell "salamander_explosion_and_heal_spell ( The Phoenix's
+#. Last Cry )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid ""
+"Like the rebirth of the legendary phoenix, you explode into flames, causing "
+"fire to engulf the entire nearby area.  You will heal faster for six hours "
+"after casting this spell."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Salamander Skin"
+msgstr ""
+
+#. ~ Description of mutation "Salamander Skin"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid ""
+"Your skin has turned the color of an autumnal bonfire.  Your skin is now an "
+"orange red with dark freckles.  This has no gameplay effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutations.json
+msgid "Burning Coals Skin"
+msgstr ""

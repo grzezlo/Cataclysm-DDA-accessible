@@ -1,0 +1,2071 @@
+# Batch 15 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "hardened steel arm guard"
+msgid_plural "hardened steel arm guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel arm guard"
+#: data/json/items/armor/arms_armor.json
+msgid ""
+"An armguard, 1.75 mm at the thickest.  The mild steel has been hardened, "
+"offering superior protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "tempered steel arm guard"
+msgid_plural "tempered steel arm guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high steel heavy arm guard"
+#: data/json/items/armor/arms_armor.json
+msgid ""
+"A heavy armguard, 2.25 mm at the thickest.  Made with high steel offering "
+"excellent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "hardened steel heavy arm guard"
+msgid_plural "hardened steel heavy arm guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel heavy arm guard"
+#: data/json/items/armor/arms_armor.json
+msgid ""
+"A heavy armguard, 2.25 mm at the thickest.  The mild steel has been hardened,"
+" offering superior protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "tempered steel heavy arm guard"
+msgid_plural "tempered steel heavy arm guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "leather-padded sleeves"
+msgid_plural "leather-padded sleeves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "leather-padded sleeves"
+#: data/json/items/armor/arms_armor.json
+msgid ""
+"Armor made of combined pre-Cataclysm clothing.  Sections from leather "
+"clothing are tightened and affixed to the sleeves of a thick cotton shirt, "
+"excluding the joints."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/arms_armor.json
+msgid "pair of riot arm guards"
+msgid_plural "pairs of riot arm guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of riot arm guards"
+#: data/json/items/armor/arms_armor.json
+msgid "Hard arm guards used by riot police."
+msgstr ""
+
+#. ~ Description of "EOD jacket"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A thick armored jacket constructed from Kevlar, Nomex, and foam padding, for "
+"use by explosive ordnance disposal technicians.  It features a central pocket"
+" for a large plate, and near complete coverage in fragmentation resistant "
+"materials.  Aside from the plate, it offers insufficient protection from "
+"ballistic threats."
+msgstr ""
+
+#. ~ Description of a pocket in item "EOD jacket"
+#. ~ Description of a pocket in item "tactical EOD jacket"
+#: data/json/items/armor/ballistic_armor.json
+msgid "Pocket for a huge armor plate."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "tactical EOD jacket"
+msgid_plural "tactical EOD jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tactical EOD jacket"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"An armored jacket constructed from Kevlar, Nomex, and foam padding, for use "
+"by explosive ordnance disposal technicians in 'non-permissive environments'."
+"  It is lighter than normal EOD armor to allow for wearing a plate carrier "
+"beneath it.  It features two pockets in the arms covering the deltoids for "
+"additional optional protection."
+msgstr ""
+
+#. ~ Description of a pocket in item "tactical EOD jacket"
+#: data/json/items/armor/ballistic_armor.json
+msgid "Pockets for deltoid armor plates."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "EOD fragmentation plate"
+msgid_plural "EOD fragmentation plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "EOD fragmentation plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A polygonal fragmentation plate with a slightly concave profile, made of thin"
+" layers of steel, UHMW polyethylene, foam, and Kevlar.  Though certified to "
+"provide protection from fragmentation, it will not provide much protection "
+"from firearms.  This is intended to be inserted into an EOD suit, and can't "
+"be worn on its own."
+msgstr ""
+
+#. ~ Description of "heavy steel ballistic plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A heavy concave ballistic plate made of tempered steel, designed to stop "
+"small-caliber rounds.  \"NIJ III PROTECTION\" is etched into the back of the "
+"plate.  This is intended to be inserted into a ballistic vest, and can't be "
+"worn on its own."
+msgstr ""
+
+#. ~ Description of "scrap ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A flat piece of salvaged steel, crudely cut and bent into the shape of an "
+"ESAPI ballistic plate.  It's wrapped in rags to cover the sharp edges.  "
+"Better than nothing, but it's heavier than the real thing, and not very "
+"strong.  This is intended to be inserted into a ballistic vest, and can't be "
+"worn on its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "mild ESAPI plate"
+msgid_plural "mild ESAPI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mild ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Mild steel forged into a ballistic plate.  While it is more professionally "
+"done than scrap plates, it still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "medium ESAPI plate"
+msgid_plural "medium ESAPI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "medium ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Medium steel forged into a ballistic plate.  While it is more professionally "
+"done than scrap plates, it still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "high ESAPI plate"
+msgid_plural "high ESAPI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"High steel forged into a ballistic plate.  While it is more professionally "
+"done than most scrap plates, it still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "hard ESAPI plate"
+msgid_plural "hard ESAPI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hard ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Hardened steel forged into a ballistic plate.  While it is more "
+"professionally done than most scrap plates, it still has a fair amount of "
+"jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "tempered ESAPI plate"
+msgid_plural "tempered ESAPI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tempered ESAPI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Tempered steel forged into a ballistic plate.  While it is more "
+"professionally done than most scrap plates, it still has a fair amount of "
+"jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "deltoid ballistic plates"
+msgid_plural "deltoid ballistic plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "deltoid ballistic plates"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A pair of NIJ Level III ballistic plates with a concave profile, made of UHMW"
+" polyethylene.  \"STRIKE FACE\" is printed on its outer surface.  These "
+"plates are designed to be worn in the shoulder pockets of suitable plate "
+"carriers or combat shirts, and can resist several high-energy rifle rounds "
+"before breaking.  Deltoid plates such as these are very infrequently worn due"
+" to their marginal utility in improving survivability."
+msgstr ""
+
+#. ~ Description of "scrap ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A flat piece of salvaged steel, crudely cut and bent into the shape of an "
+"ESBI ballistic plate.  It's wrapped in rags to cover the sharp edges.  Better"
+" than nothing, but it's heavy, and not very strong.  This is intended to be "
+"inserted into a ballistic vest, and can't be worn on its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "mild ESBI plate"
+msgid_plural "mild ESBI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mild ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A hexagonal piece of mild steel forged into a side plate and padded with "
+"synthetic fabric.  While it is more professionally done than scrap plates, it"
+" still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "medium ESBI plate"
+msgid_plural "medium ESBI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "medium ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A hexagonal piece of medium steel forged into a side plate and padded with "
+"synthetic fabric.  While it is more professionally done than scrap plates, it"
+" still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "high ESBI plate"
+msgid_plural "high ESBI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A hexagonal piece of high steel forged into a side plate and padded with "
+"synthetic fabric.  While it is more professionally done than scrap plates, it"
+" still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "hard ESBI plate"
+msgid_plural "hard ESBI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hard ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A hexagonal piece of hardened steel forged into a side plate and padded with "
+"synthetic fabric.  While it is more professionally done than scrap plates, it"
+" still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "tempered ESBI plate"
+msgid_plural "tempered ESBI plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tempered ESBI plate"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A hexagonal piece of tempered steel forged into a side plate and padded with "
+"synthetic fabric.  While it is more professionally done than scrap plates, it"
+" still has a fair amount of jerry-rigging."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "US heavy ballistic vest"
+msgid_plural "US heavy ballistic vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "US heavy ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Heavier ballistic armor used by the US Army, known as the IOTV.  It has "
+"pockets on the front, back, and sides for armor plates; additional protection"
+" for the lower back; and attachment points for optional shoulder, groin, and "
+"neck protection."
+msgstr ""
+
+#. ~ Description of variant "heavy ballistic vest" of item "US heavy ballistic
+#. vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid "It's a dark olive color."
+msgstr ""
+
+#. ~ Variant name of item "US heavy ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid "XEDRA containment armor"
+msgid_plural "XEDRA containment armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "XEDRA containment armor" of item "US heavy
+#. ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"It's black with IR reflective markings and a large XE on the right shoulder."
+msgstr ""
+
+#. ~ Description of a pocket in item "US heavy ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid "Attachment for shoulder protectors."
+msgstr ""
+
+#. ~ Description of a pocket in item "US heavy ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid "Attachment for a groin protector."
+msgstr ""
+
+#. ~ Description of a pocket in item "US heavy ballistic vest"
+#. ~ Description of a pocket in item "mercenary bolero"
+#: data/json/items/armor/ballistic_armor.json
+#: data/mods/Aftershock/items/armor/cyberpunk.json
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "Attachment for a collar."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "FBI ballistic vest"
+msgid_plural "FBI ballistic vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "FBI ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"A ranger green soft ballistic vest with MOLLE rigging used by federal law "
+"enforcement agencies.  Soft armor plates inside the vest provide solid "
+"defense against shrapnel and small-caliber rounds.  \"FBI\" is emblazoned "
+"across the front and back in large, yellow lettering, and it includes a "
+"pocket for storing evidence.  Use it to attach or detach pouches."
+msgstr ""
+
+#. ~ Description of "hard armor vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Armored panels give this vest solid defense against small caliber firearms, "
+"and front and back pockets for hard armor panels give protection from higher "
+"calibers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "ballistic vest"
+msgid_plural "ballistic vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ballistic vest"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"An enormous handmade ballistic vest built with of lots of salvaged ballistic "
+"Kevlar panels.  It's bulkier than a factory made US Army vest, but it is "
+"customized for the benefit of an abnormally large mutant who couldn't wear "
+"such armors otherwise.  Coated in MOLLE webbing to support modular loadouts "
+"for the tacticool mutant.  It could be outfitted with steel plates for "
+"further protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "ballistic vest (mild steel plates)"
+msgid_plural "ballistic vests (mild steel plates)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ballistic vest (mild steel plates)"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"An enormous handmade ballistic vest built with lots of salvaged ballistic "
+"Kevlar panels and homemade \"ballistic inserts\" made of mild steel.  The "
+"thin metal isn't the most protective, but it's probably better than just "
+"plain Kevlar."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "ballistic vest (tempered steel plates)"
+msgid_plural "ballistic vests (tempered steel plates)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ballistic vest (tempered steel plates)"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"An enormous handmade ballistic vest made of lots of salvaged ballistic Kevlar"
+" panels and ten NIJ IIIA plates inserted into custom-made pockets - four each"
+" for your front and back and one each for your sides.  Monstrously heavy but "
+"extremely protective."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+msgid "pair of ballistic shoulder protectors"
+msgid_plural "pairs of ballistic shoulder protectors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of ballistic shoulder protectors"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Nylon armor with soft armor inserts protecting the deltoid and upper arm.  "
+"Designed to be attached to heavy military body armor."
+msgstr ""
+
+#. ~ Description of "ballistic groin protector"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Front and back nylon armor with soft armor inserts for groin and butt "
+"protection.  Designed to be attached to heavy military body armor."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/ballistic_armor.json
+#: data/mods/Aftershock/items/armor/military_armor.json
+#: data/mods/aftershock_exoplanet/items/armor/military_armor.json
+msgid "ballistic collar"
+msgid_plural "ballistic collars"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ballistic collar"
+#: data/json/items/armor/ballistic_armor.json
+msgid ""
+"Front and back nylon collar assemblies with soft armor inserts for neck "
+"protection.  Designed to be attached to heavy military body armor."
+msgstr ""
+
+#. ~ Description of "wrist bandolier"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A small fabric bandolier for rifle cartridges, designed to be worn around the"
+" wrist."
+msgstr ""
+
+#. ~ Description of "grenade pouch"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A small pouch for storing cartridge grenades, with straps for attaching it to"
+" your belt or other webbing."
+msgstr ""
+
+#. ~ Description of "large grenade pouch"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A pouch for holding up to four full-sized grenades of various types, with "
+"straps for attaching it to your belt or other webbing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/bandolier.json
+msgid "military 5.56 bandolier"
+msgid_plural "military 5.56 bandoliers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "military 5.56 bandolier"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A simple bag on a strap, partitioned into pouches for four STANAG 30-round "
+"magazines or twelve 10-round 5.56x45mm stripper clips.  When full, this "
+"bandolier is more encumbering than proper kit and slower to reload from, but "
+"it at least offers a quick and cheap means of resupplying ammunition."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/bandolier.json
+msgid "5.56x45 belt pouch"
+msgid_plural "5.56x45 belt pouches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5.56x45 belt pouch"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A large cotton pouch, designed to store a spare ammo belt for the M249 SAW."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/bandolier.json
+msgid "7.62x51 belt pouch"
+msgid_plural "7.62x51 belt pouches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "7.62x51 belt pouch"
+#: data/json/items/armor/bandolier.json
+msgid ""
+"A large cotton pouch, designed to store a spare ammo belt for the M240 or M60"
+" machine guns."
+msgstr ""
+
+#. ~ Description of a pocket in item "firefighter belt"
+#. ~ Description of a pocket in item "leather belt"
+#. ~ Description of a pocket in item "longsword scabbard"
+#: data/json/items/armor/belts.json data/json/items/armor/sheath.json
+msgid "Clipped directly to side of the belt."
+msgstr ""
+
+#. ~ Description of a pocket in item "leather belt"
+#. ~ Description of a pocket in item "longsword scabbard"
+#: data/json/items/armor/belts.json data/json/items/armor/sheath.json
+msgid "Clipped directly to back of the belt."
+msgstr ""
+
+#. ~ Description of "police duty belt"
+#: data/json/items/armor/belts.json
+msgid ""
+"A black leather belt used by police officers.  It has several pouches and a "
+"holder for a baton."
+msgstr ""
+
+#. ~ Description of a pocket in item "police duty belt"
+#: data/json/items/armor/belts.json
+msgid "flashlight storage"
+msgstr ""
+
+#. ~ Description of a pocket in item "police duty belt"
+#: data/json/items/armor/belts.json
+msgid "radio storage"
+msgstr ""
+
+#. ~ Description of a pocket in item "tool belt"
+#: data/json/items/armor/belts.json
+msgid "Pouch to store multiple items."
+msgstr ""
+
+#. ~ Description of a pocket in item "tool belt"
+#: data/json/items/armor/belts.json
+msgid "Clipped directly to the belt."
+msgstr ""
+
+#. ~ Description of a pocket in item "tool belt"
+#: data/json/items/armor/belts.json
+msgid "In a sheath."
+msgstr ""
+
+#. ~ Description of a pocket in item "MOLLE webbing belt"
+#: data/json/items/armor/belts.json
+msgid "Clipped directly to the back of the belt."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "cord sandals (pair)"
+msgid_plural "cord sandals (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "boots (pair)"
+msgid_plural "boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "occult boots (pair)"
+msgid_plural "occult boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "occult boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Leather boots covered with tiny, finely-carved bones.  With each step, the "
+"bones collide with each other and produce a melodic clicking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "turnout boots (pair)"
+msgid_plural "turnout boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "chitinous boots (pair)"
+msgid_plural "chitinous boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "biosilicified chitin boots (pair)"
+msgid_plural "biosilicified chitin boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "biosilicified chitin boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Boots crafted from the carefully cleaned and pruned biosilicified "
+"exoskeletons of acidic ants.  Acid-resistant but brittle."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "combat boots (pair)"
+msgid_plural "combat boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "denim boots (pair)"
+msgid_plural "denim boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "denim boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of boots extending towards your lower leg, completely lined with "
+"denim.  Looks cool and has above average protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "EOD foot protectors (pair)"
+msgid_plural "EOD foot protectors (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "toecaps (pair)"
+msgid_plural "toecaps (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "fur boots (pair)"
+msgid_plural "fur boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "faux fur boots (pair)"
+msgid_plural "faux fur boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "hiking boots (pair)"
+msgid_plural "hiking boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "leather armor boots (pair)"
+msgid_plural "leather armor boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "armored boots (pair)"
+msgid_plural "armored boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "rubber boots (pair)"
+msgid_plural "rubber boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "scrap boots (pair)"
+msgid_plural "scrap boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrap boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Boots made of random metal scraps attached to simple cloth wraps.  They're "
+"uncomfortable, but provide decent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "sheet metal sabatons (pair)"
+msgid_plural "sheet metal sabatons (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sheet metal sabatons (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Some sheets of metal hammered to fit over the top of your foot and around "
+"your ankles, meant to be worn over boots.  They make walking a fair bit more "
+"awkward, but they'll keep your toes from being stomped on."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "hardened steel sheet metal sabatons (pair)"
+msgid_plural "hardened steel sheet metal sabatons (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel sheet metal sabatons (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Sabatons made of sheet metal, hardened to protect your feet if you drop "
+"something heavy on them.  No relation to the band, aside from being very "
+"metal."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "steeltoed boots (pair)"
+msgid_plural "steeltoed boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "steeltoed sneakers (pair)"
+msgid_plural "steeltoed sneakers (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "steeltoed sneakers (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A descendant of the classic steeltoed boot, this modern footwear has become "
+"popular among working class people over the last couple of decades."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "western boots (pair)"
+msgid_plural "western boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "western boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Stiff leather boots with intricate embroidery and one-inch heels.  They look "
+"good, but these boots are made for walking, not running for your life.  Each "
+"boot is large enough to conceal a small holdout pistol."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "winter boots (pair)"
+msgid_plural "winter boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "cleats (pair)"
+msgid_plural "cleats (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cleats (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Sport shoes with hard undersides and studs on the bottom designed to dig into"
+" grass."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "golf shoes (pair)"
+msgid_plural "golf shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "golf shoes (pair)"
+#: data/json/items/armor/boots.json
+msgid "Snug sport shoes with hard ridges on the bottom."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "wooden clogs (pair)"
+msgid_plural "wooden clogs (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "clown shoes (pair)"
+msgid_plural "clown shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "dance shoes (pair)"
+msgid_plural "dance shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "dress shoes (pair)"
+msgid_plural "dress shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dress shoes (pair)"
+#: data/json/items/armor/boots.json
+msgid "Fancy patent leather shoes.  Not designed for running."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "flip-flops (pair)"
+msgid_plural "flip-flops (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "expensive flip-flops (pair)"
+msgid_plural "expensive flip-flops (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "foot rags (pair)"
+msgid_plural "foot rags (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "foot rags (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Rags tied around your feet.  Not much of an improvement over being barefoot, "
+"but still better than nothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "fur foot wraps (pair)"
+msgid_plural "fur foot wraps (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fur foot wraps (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Fur pelts tied around your feet.  Not much of an improvement over being "
+"barefoot, but still better than nothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "faux fur foot wraps (pair)"
+msgid_plural "faux fur foot wraps (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "faux fur foot wraps (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Faux fur patches tied around your feet.  Not much of an improvement over "
+"being barefoot, but still better than nothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "leather foot wraps (pair)"
+msgid_plural "leather foot wraps (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "leather foot wraps (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Leather patches tied around your feet.  Not much of an improvement over being"
+" barefoot, but still better than nothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "wool foot wraps (pair)"
+msgid_plural "wool foot wraps (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool foot wraps (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Felt patches tied around your feet.  Not much of an improvement over being "
+"barefoot, but still better than nothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "geta (pair)"
+msgid_plural "geta (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "geta (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A simple pair of geta.  Traditional wooden Japanese sandals with a fabric "
+"thong similar to flip flops."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "heels (pair)"
+msgid_plural "heels (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid "stiletto heels (pair)"
+msgid_plural "stiletto heels (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "stiletto heels (pair)" of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A traditional pair of tall, high-heeled shoes with a tapered, slender heel, "
+"which makes strutting fashionable, walking a challenge, and running an "
+"impossibility.  These days, they'd probably be more useful to stab a zombie's"
+" eyes out than as footwear."
+msgstr ""
+
+#. ~ Variant name of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid "block heels (pair)"
+msgid_plural "block heels (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "block heels (pair)" of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"These are a pair of chunky, broad-based shoes with a sturdy block-like heel, "
+"and while they don't do you any favors in the mobility department, they're at"
+" least more comfortable to trudge about in than their peers and won't likely "
+"cause irreversible damage to your feet."
+msgstr ""
+
+#. ~ Variant name of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid "wedges (pair)"
+msgid_plural "wedges (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "wedges (pair)" of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of tall, high-heeled, open-toed shoes with thick wedges running the "
+"length of the shoe, serving as its heels."
+msgstr ""
+
+#. ~ Variant name of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid "platform heels (pair)"
+msgid_plural "platform heels (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "platform heels (pair)" of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of heavy, thick-soled high-heeled shoes with a ridiculously tall heel "
+"supported by an ankle strap and chunky soles.  A great choice for when you've"
+" given up on basic biomechanical function and decided that you're more than "
+"willing to risk long-term damage to your feet for the sake of a ridiculous "
+"fashion statement in the ruins of America."
+msgstr ""
+
+#. ~ Variant name of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid "liberty's heels (pair)"
+msgid_plural "liberty's heels (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "liberty's heels (pair)" of item "heels (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"The shoes of patriotic ladies around the nation, these open-toed heels "
+"glitter with small golden stars embroidered along their sides, with a pair of"
+" decorative flaps styled with the image of a miniature American flag "
+"unfurling from each ankle, like wings.  The footwear's heels consist of an "
+"adorably tiny reproduction of the Statue of Liberty situated beneath each "
+"sole, with their arms razed and supporting the shoe's heels.  Each of the "
+"statues' dresses is inscribed with the legend, \"America Gives You Wings!\""
+msgstr ""
+
+#. ~ Item name
+#. ~ Variant name of item "knee-high boots (pair)"
+#: data/json/items/armor/boots.json
+msgid "knee-high boots (pair)"
+msgid_plural "knee-high boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "knee-high boots (pair)"
+#. ~ Description of variant "knee-high boots (pair)" of item "knee-high boots
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Very long leather boots that cover the lower legs, they are cumbersome to "
+"wear."
+msgstr ""
+
+#. ~ Variant name of item "knee-high boots (pair)"
+#: data/json/items/armor/boots.json
+msgid "jackboots (pair)"
+msgid_plural "jackboots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "jackboots (pair)" of item "knee-high boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of sturdy, over-the-knee, laceless boots fitted with a rubberized "
+"sole: these imposing combat boots provide good traction despite their "
+"encumbering nature.  Most commonly associated with totalitarian regimes due "
+"to their use by Nazi soldiers, this style of boot is warm, protective, and "
+"produces a deeply satisfying sound while marching."
+msgstr ""
+
+#. ~ Variant name of item "knee-high boots (pair)"
+#: data/json/items/armor/boots.json
+msgid "Chelsea boots (pair)"
+msgid_plural "Chelsea boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Chelsea boots (pair)" of item "knee-high boots
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of knee-length, laceless boots formed from calfskin with an elastic "
+"side panel that's designed to stretch away to facilitate simple donning and "
+"doffing, these stylish stompers are a time-old gift from Victorian-age "
+"England.  Intended for you to fashionably saunter down roadways rather than "
+"sprint for your life, this style of boot became a style staple within London "
+"during the 1960s, where they were synonymous with the mod crowd."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "motorcycle police boots (pair)"
+msgid_plural "motorcycle police boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "motorcycle police boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Custom-made knee-high leather boots issued to motor officers.  Warm, durable "
+"and quite tough."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "leather sandals (pair)"
+msgid_plural "leather sandals (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "lowtop tennis shoes (pair)"
+msgid_plural "lowtop tennis shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "moccasins (pair)"
+msgid_plural "moccasins (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moccasins (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A type of traditional Native American footwear sewn out of prepared leather "
+"or pelts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "motorcycle boots (pair)"
+msgid_plural "motorcycle boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "motorcycle boots (pair)"
+#: data/json/items/armor/boots.json
+msgid "A pair of durable boots used by dirt bikers and motorcyclists."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "rollerblades (pair)"
+msgid_plural "rollerblades (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rollerblades (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of inline skates.  Very fast on flat floors, but they make it hard to "
+"move on rough terrain, take hits, or dodge effectively."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "rollerskates (pair)"
+msgid_plural "rollerskates (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "birchbark shoes (pair)"
+msgid_plural "birchbark shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "bowling shoes (pair)"
+msgid_plural "bowling shoes (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "denim sneakers (pair)"
+msgid_plural "denim sneakers (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "denim sneakers (pair)"
+#: data/json/items/armor/boots.json
+msgid "A pair of denim shoes.  They are cool and that's about it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "slippers (pair)"
+msgid_plural "slippers (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "sneakers (pair)"
+msgid_plural "sneakers (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "straw sandals (pair)"
+msgid_plural "straw sandals (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "thigh-high boots (pair)"
+msgid_plural "thigh-high boots (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thigh-high boots (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Very long leather boots that reach past the knees, they are cumbersome to "
+"wear."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "heelys (off) (pair)"
+msgid_plural "heelys (off) (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heelys (off) (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of sneakers with integrated wheels.  Currently the wheels are "
+"retracted, making these essentially normal lace-up athletic shoes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "heelys (on) (pair)"
+msgid_plural "heelys (on) (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heelys (on) (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"A pair of sneakers with integrated wheels, currently the wheels are out, "
+"allowing you to swiftly roll around on flat terrain.  You should probably pop"
+" them back in before you try fighting or going off-road."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "chainmail chausses (pair)"
+msgid_plural "chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "mild steel chainmail chausses (pair)"
+msgid_plural "mild steel chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "medium steel chainmail chausses (pair)"
+msgid_plural "medium steel chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "high steel chainmail chausses (pair)"
+msgid_plural "high steel chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "hardened steel chainmail chausses (pair)"
+msgid_plural "hardened steel chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "tempered steel chainmail chausses (pair)"
+msgid_plural "tempered steel chainmail chausses (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "flame-resistant socks (pair)"
+msgid_plural "flame-resistant socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "socks (pair)"
+msgid_plural "socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "ankle socks (pair)"
+msgid_plural "ankle socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "bag socks (pair)"
+msgid_plural "bag socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "disposable bowling socks (pair)"
+msgid_plural "disposable bowling socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disposable bowling socks (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"Cheap socks designed to be worn once and then thrown away.  They keep your "
+"feet clean, but are too thin to give any protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "wool socks (pair)"
+msgid_plural "wool socks (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/boots.json
+msgid "stockings (pair)"
+msgid_plural "stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "black stockings (pair)"
+msgid_plural "black stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "white stockings (pair)"
+msgid_plural "white stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "striped stockings (pair)"
+msgid_plural "striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "striped stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid ""
+"This one is black, with white stripes.  Or is it white with black stripes?"
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "red stockings (pair)"
+msgid_plural "red stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "red polka dot stockings (pair)"
+msgid_plural "red polka dot stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "red polka dot stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored red with a polka dot pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "red floral stockings (pair)"
+msgid_plural "red floral stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "red floral stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored in various shades of red with a floral pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "yellow stockings (pair)"
+msgid_plural "yellow stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "yellow stockings (pair)" of item "stockings
+#. (pair)"
+#. ~ Description of variant "yellow skirt" of item "skirt"
+#. ~ Description of variant "yellow hoodie" of item "hoodie"
+#. ~ Description of variant "yellow cropped hoodie" of item "cropped hoodie"
+#. ~ Description of variant "yellow t-shirt" of item "t-shirt"
+#. ~ Description of variant "yellow crop top" of item "crop top"
+#. ~ Description of variant "yellow condom" of item "condom"
+#: data/json/items/armor/boots.json data/json/items/armor/legs_clothes.json
+#: data/json/items/armor/torso_clothes.json
+#: data/json/items/containers/containers.json
+msgid "This one is colored yellow."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "green stockings (pair)"
+msgid_plural "green stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "orange striped stockings (pair)"
+msgid_plural "orange striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "orange striped stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored orange with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "blue stockings (pair)"
+msgid_plural "blue stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "blue striped stockings (pair)"
+msgid_plural "blue striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "blue striped stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored blue and white with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "blue floral stockings (pair)"
+msgid_plural "blue floral stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "blue floral stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored in various shades of blue with a floral pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "blue checkered stockings (pair)"
+msgid_plural "blue checkered stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "blue checkered stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored blue and black with a checkered pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "purple stockings (pair)"
+msgid_plural "purple stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "purple striped stockings (pair)"
+msgid_plural "purple striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "purple striped stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored purple and white with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "purple polka dot stockings (pair)"
+msgid_plural "purple polka dot stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "purple polka dot stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored purple with a polka dot pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "purple floral stockings (pair)"
+msgid_plural "purple floral stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "purple floral stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored in various shades of purple with a floral pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "pink stockings (pair)"
+msgid_plural "pink stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "pink striped stockings (pair)"
+msgid_plural "pink striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pink striped stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored pink and white with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "pink polka dot stockings (pair)"
+msgid_plural "pink polka dot stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pink polka dot stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored pink with a polka dot pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "green striped stockings (pair)"
+msgid_plural "green striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "green striped stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored green and white with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "gray striped stockings (pair)"
+msgid_plural "gray striped stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "gray striped stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored gray and white with a striped pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "brown stockings (pair)"
+msgid_plural "brown stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "brown stockings (pair)" of item "stockings (pair)"
+#. ~ Description of variant "brown skirt" of item "skirt"
+#. ~ Description of variant "brown hoodie" of item "hoodie"
+#. ~ Description of variant "brown cropped hoodie" of item "cropped hoodie"
+#. ~ Description of variant "brown t-shirt" of item "t-shirt"
+#. ~ Description of variant "brown crop top" of item "crop top"
+#: data/json/items/armor/boots.json data/json/items/armor/legs_clothes.json
+#: data/json/items/armor/torso_clothes.json
+msgid "This one is colored brown."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "brown polka dot stockings (pair)"
+msgid_plural "brown polka dot stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "brown polka dot stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one is colored brown with a polka dot pattern."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "pride flag stockings (pair)"
+msgid_plural "pride flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pride flag stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the pride flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "lesbian flag stockings (pair)"
+msgid_plural "lesbian flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "lesbian flag stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the lesbian flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "bisexual flag stockings (pair)"
+msgid_plural "bisexual flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bisexual flag stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the bisexual flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "transgender flag stockings (pair)"
+msgid_plural "transgender flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "transgender flag stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the transgender flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "asexual flag stockings (pair)"
+msgid_plural "asexual flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "asexual flag stockings (pair)" of item "stockings
+#. (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the asexual flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "aromantic flag stockings (pair)"
+msgid_plural "aromantic flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "aromantic flag stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the aromantic flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "pansexual flag stockings (pair)"
+msgid_plural "pansexual flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pansexual flag stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the pansexual flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "genderqueer flag stockings (pair)"
+msgid_plural "genderqueer flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "genderqueer flag stockings (pair)" of item
+#. "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "This one has patterns akin to the genderqueer flag."
+msgstr ""
+
+#. ~ Variant name of item "stockings (pair)"
+#: data/json/items/armor/boots.json
+msgid "genderfluid flag stockings (pair)"
+msgid_plural "genderfluid flag stockings (pair)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

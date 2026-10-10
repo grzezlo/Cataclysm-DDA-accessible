@@ -1,0 +1,1959 @@
+# Batch 130 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "diamond-matrix glass"
+msgstr ""
+
+#. ~ Description of terrain "diamond-matrix glass"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The diamond cubic lattice distorts distant light sources into eight pointed "
+"stars.  The galactic core is visible through the glass, but no spacer would "
+"ever give it more than a passing glance."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Port Augustmoon hull"
+msgstr ""
+
+#. ~ Description of terrain "Port Augustmoon hull"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The ancient hull of Port Augustmoon, spun into orbit several lifetimes ago."
+msgstr ""
+
+#. ~ Description of terrain "escape pod guidance system"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The rudimentary descent guidance system and easy-use control console of an "
+"escape pod.  Can be activated to launch the pod."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "escape pod floor"
+msgstr ""
+
+#. ~ Description of terrain "escape pod floor"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A relatively flat slab of heat-treated metal, designed to withstand the "
+"crushing pressure of space and the searing heat of reentry."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Locker room card reader"
+msgstr ""
+
+#. ~ Description of terrain "Locker room card reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"This is a smartcard reader.  Bold lettering proclaims that this controls "
+"access to the locker room.  You could swipe an appropriate crew ID card near "
+"it to unlock the gates."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Armory card reader"
+msgstr ""
+
+#. ~ Description of terrain "Armory card reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"This is a smartcard reader.  Bold lettering proclaims that this controls "
+"access to the armory.  You could swipe an appropriate crew ID card near it to"
+" unlock the gates."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Exobay card reader"
+msgstr ""
+
+#. ~ Description of terrain "Exobay card reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"This is a smartcard reader.  Bold lettering proclaims that this controls "
+"access to the exosuit bay.  You could swipe an appropriate crew ID card near "
+"it to unlock the gates."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Shuttle Guidance Console"
+msgstr ""
+
+#. ~ Description of terrain "Shuttle Guidance Console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The simplified guidance interface of a drone shuttle.  Activating it will "
+"transport you to Port Augustmoon."
+msgstr ""
+
+#. ~ Description of terrain "intermodal shipping crate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A sealed metal crate used to ferry cargo to and from orbit.  Any items placed"
+" inside will be taken with you to and from Port Augustmoon."
+msgstr ""
+
+#. ~ Description of terrain "intermodal shipping crate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A sealed metal crate used to ferry cargo to and from orbit."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "shuttle pod guidance system"
+msgstr ""
+
+#. ~ Description of terrain "shuttle pod guidance system"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The complex controls of a shuttlepod.  Doesn't seem to be working right now."
+msgstr ""
+
+#. ~ Computer name placed on map afs_freight_transport_a1,
+#. afs_freight_transport_a2
+#: data/mods/Aftershock/maps/mapgen/freight_transport.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/freight_transport.json
+msgid "MALAMUTE REACTOR CONTROL"
+msgstr ""
+
+#. ~ Interactive menu name in computer "MALAMUTE REACTOR CONTROL" placed on map
+#. afs_freight_transport_a1, afs_freight_transport_a2
+#. ~ Interactive menu name in computer "SETUN-2120 INDUSTRIAL CONTROLLER"
+#. placed on map maintenance_outpost_a1, maintenance_outpost_a2,
+#. maintenance_outpost_b1, maintenance_outpost_b2
+#: data/mods/Aftershock/maps/mapgen/freight_transport.json
+#: data/mods/Aftershock/maps/mapgen/maintenance_outpost.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/freight_transport.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/maintenance_outpost.json
+msgid "UNLOCK REACTOR DOORS"
+msgstr ""
+
+#. ~ Computer name placed on map afs_freight_transport_a1,
+#. afs_freight_transport_a2
+#: data/mods/Aftershock/maps/mapgen/freight_transport.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/freight_transport.json
+msgid "MALAMUTE ARMORY CONTROL"
+msgstr ""
+
+#. ~ Interactive menu name in computer "MALAMUTE ARMORY CONTROL" placed on map
+#. afs_freight_transport_a1, afs_freight_transport_a2
+#: data/mods/Aftershock/maps/mapgen/freight_transport.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/freight_transport.json
+msgid "UNLOCK ARMORY DOORS"
+msgstr ""
+
+#. ~ Signage placed on map afs_gene_clinic_1_a1
+#: data/mods/Aftershock/maps/mapgen/gene_clinic_1.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/gene_clinic_1.json
+msgid ""
+"Mercurial Gene Clinic: Welcome <city> to the better you.  Genetech: Embrace "
+"the next evolution."
+msgstr ""
+
+#. ~ Computer name placed on map maintenance_outpost_a1,
+#. maintenance_outpost_a2, maintenance_outpost_b1, maintenance_outpost_b2
+#: data/mods/Aftershock/maps/mapgen/maintenance_outpost.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/maintenance_outpost.json
+msgid "SETUN-2120 INDUSTRIAL CONTROLLER"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain/overmap_terrain_port_augustmoon.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain/overmap_terrain_port_augustmoon.json
+msgid "Corporate Spire"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Aftershock/missions/bounty_hunter_missions.json
+#: data/mods/aftershock_exoplanet/missions/bounty_hunter_missions.json
+msgid "The bounty is on Salus IV"
+msgstr ""
+
+#. ~ Description of mission "The bounty is on Salus IV"
+#: data/mods/Aftershock/missions/bounty_hunter_missions.json
+msgid ""
+"You've chased your bounty all the way to the ass end of the galaxy here in "
+"the Salus system.  A place of so little value to UICA that it's left to "
+"pirates and hermits.  While you don't know where exactly your bounty is in "
+"this desolate wasteland you do have a lead on one of his associates.  Maybe "
+"he'll be able to tell you where to go."
+msgstr ""
+
+#. ~ Name of the monster "afs_mon_reaver_rifle" placed on map update on start
+#. of mission "The bounty is on Salus IV"
+#: data/mods/Aftershock/missions/bounty_hunter_missions.json
+#: data/mods/aftershock_exoplanet/missions/bounty_hunter_missions.json
+msgid "Friend of Bounty"
+msgstr ""
+
+#. ~ Name of the monster "afs_mon_reaver" placed on map update on start of
+#. mission "The bounty is on Salus IV"
+#: data/mods/Aftershock/missions/bounty_hunter_missions.json
+msgid "The Colaborator"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/PrepPhyle_mobs.json
+#: data/mods/aftershock_exoplanet/monsters/PrepPhyle_mobs.json
+msgid "Cyber Mastiff"
+msgid_plural "Cyber Mastiffs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "labbit"
+#: data/mods/Aftershock/mobs/aliens.json
+#: data/mods/aftershock_exoplanet/monsters/aliens.json
+msgid ""
+"A rabbit from Earth, genetically modified to eat the lichen of Salus IV.  Its"
+" fur is rust-colored and its ears are shortened to preserve warmth."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/aliens.json
+#: data/mods/aftershock_exoplanet/monsters/aliens.json
+msgid "labbit kit"
+msgid_plural "labbit kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "labbit kit"
+#: data/mods/Aftershock/mobs/aliens.json
+#: data/mods/aftershock_exoplanet/monsters/aliens.json
+msgid ""
+"A tiny rabbit kit, spawned from a rabbit genetically modified to eat the "
+"lichen of Salus IV.  It's coat is a vibrant crimson that will turn a rust "
+"orange when it reaches adulthood."
+msgstr ""
+
+#. ~ Description of monster "labbit"
+#: data/mods/Aftershock/mobs/aliens.json
+#: data/mods/aftershock_exoplanet/monsters/aliens.json
+msgid ""
+"A rabbit from Earth, genetically modified to eat the lichen of Salus IV.  Its"
+" fur is rust-colored and its ears are shortened to preserve warmth.  This one"
+" seems well-acclimated to the presence of nearby humans."
+msgstr ""
+
+#. ~ Description of monster "labbit kit"
+#: data/mods/Aftershock/mobs/aliens.json
+#: data/mods/aftershock_exoplanet/monsters/aliens.json
+msgid ""
+"A tiny rabbit kit, spawned from a rabbit genetically modified to eat the "
+"lichen of Salus IV.  It's coat is a vibrant crimson that will turn a rust "
+"orange when it reaches adulthood.  This one seems well-acclimated to the "
+"presence of nearby humans."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid "skittish scavenger"
+msgid_plural "skittish scavengers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "skittish scavenger"
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid ""
+"A scavenger willing to engage in violence to scavenge your remains.  Will run"
+" after a reasonable show of force from their would be victims."
+msgstr ""
+
+#. ~ Targeting sound of special attack of monster "skittish scavenger"
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid "\"Let's see what loot you are carrying!\""
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid "opportunistic bandit"
+msgid_plural "opportunistic bandits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "opportunistic bandit"
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid ""
+"Armed with a rifle, this bandit seems to feel quite sure of their impending "
+"victory."
+msgstr ""
+
+#. ~ Targeting sound of special attack of monster "opportunistic bandit"
+#: data/mods/Aftershock/mobs/reavers_and_bandits.json
+#: data/mods/aftershock_exoplanet/monsters/reavers_and_bandits.json
+msgid "\"I bet you're worth a pretty penny!\""
+msgstr ""
+
+#. ~ Description of monster "brain blaster"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"The mi-go have set up some defenses here.  This horrifying techno-organic "
+"amalgamation appears to use brains in jars as their operating system.  On the"
+" plus side it looks like an easy headshot."
+msgstr ""
+
+#. ~ Description of monster "Wraitheon Regulator"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"Designed by Wraitheon, the Regulator is effectively an automated battle tank "
+"designed for high-risk urban fighting.  Armed with an anti-material missile "
+"launcher, a 40mm grenade launcher, and several anti-personnel weapons, it's "
+"designed to match the fervor of freedom fighters with the industrial might of"
+" Earth."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "rampant Udarnik"
+msgid_plural "rampant Udarniks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "rampant Udarnik"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"An erratic and dangerous Udarnik that mistakenly attempts to hammer "
+"everything on its sights.  Although this corrupted robot is not built for "
+"combat, its sheer size and hydraulic strength make it extremely dangerous up "
+"close."
+msgstr ""
+
+#. ~ Monster name
+#. ~ Its in Russian.  Not a typo.
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "TsKBEM Zenit"
+msgid_plural "TsKBEM Zenit"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "TsKBEM Zenit"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"An ancient security drone intended to safeguard extractive outposts in "
+"hostile environments.  Its construction vaguely recalls an alien crustacean, "
+"with a single sensory oculus and four spade-like legs mounted underneath a "
+"disk of space-ship grade armor.  Zenit units can mount a wide variety of "
+"\"deterrent\" weapon modules, and its difficult to tell what this rogue unit "
+"is capable of."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "Croplord 2SPL"
+msgid_plural "Croplord 2SPLs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Croplord 2SPL"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"Twin linked rotors allow this ubiquitous EINAC drone to comfortably hover "
+"above fields and deploy pesticides at prodigious rates.  They have no ability"
+" to detect humans within their work areas and will readily disperse lethal "
+"pesticides near them."
+msgstr ""
+
+#. ~ Death message of monster "Croplord 2SPL"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "The Croplord crashes into the ground."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "UICA Imaginifer MP"
+msgid_plural "UICA Imaginifer MP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "UICA Imaginifer MP"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"A supposedly non-combat refit of Wraitheon's Imaginifer series, outfitted for"
+" crowd control and riot suppression.  This unit is outfitted with a beanbag "
+"shotgun and a taser and has been painted in the white and blue scheme of "
+"UICA's military police."
+msgstr ""
+
+#. ~ Description of monster "Wraitheon Imaginifer"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"Imaginifers are Wraitheon Industries standard military humaniforms, company parlance for an android designed to seamlessly integrate into standard infantry units.  Although originally designed for UICA's expeditionary forces they are now commonly employed by any faction that can afford them.  This particular unit seems to belong to the Company itself.\n"
+"\n"
+"Wraitheon humaniforms are designed to take full advantage of a humanoid shape, not to look human; programmed for game theory, not for sapience."
+msgstr ""
+
+#. ~ Description of monster "Wraitheon Hashashiyyin"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"An imaginifer variant of unorthodox design, the Hashashiyyin dispenses with "
+"most of its armor in favor of active-camo systems and a lightweight, more "
+"agile frame.  Commonly employed in scouting and counter-sniping roles.  This "
+"unit is equipped for close range ambush, and weilds a 35x50mm dart gun."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "Wraitheon Fulgent"
+msgid_plural "Wraitheon Fulgent"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Wraitheon Isohypsa"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"A bulky aerial drone that mounts an advanced AI overwatch unit within it "
+"bulbous carapace-like armor.  As an autonomous drone control platform, the "
+"Isohypsa is principally meant to coordinate and enhance the combat "
+"capabilities of simpler Wraitheon robots in lieu of human operators."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "Wraitheon Kabura-ya"
+msgid_plural "Wraitheon Kabura-ya"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "shock-mine"
+msgid_plural "shock-mines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shock-mine"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"A bulky device that will constantly discharge electricity in a small radius "
+"around it."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "STEED"
+msgid_plural "STEEDs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "STEED"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"Found on nearly every frontier planet, the ubiquitous TSKBEM STEED (Surface "
+"Traversing Equine Emulating Drone) is an incredibly rugged quadrupedal "
+"machine based on old Earth horses and mules.  Capable of crossing the "
+"roughest terrain, powered by a compact atomic reactor, generous storage "
+"capacity, light armor, and a lifetime warranty, the STEED is a priceless tool"
+" for prospectors and homesteaders.  This version has been ruggedized against "
+"Salus IV's extreme cold, but does not keep you warm while riding."
+msgstr ""
+
+#. ~ Feed message of monster "STEED"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+#, c-format
+msgid ""
+"The %s activates as you swipe the registry key.  A nearly inaudible hum is "
+"the only indication the STEED is active."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "broken STEED"
+msgid_plural "broken STEEDs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "broken STEED"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"A broken STEED, it looks beyond repair.  At least the atomic core shielding "
+"should be intact."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "UICA Irradiant"
+msgid_plural "UICA Irradiants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "UICA Regulator"
+msgid_plural "UICA Regulators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid "UICA Imaginifer"
+msgid_plural "UICA Imaginifers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "UICA Imaginifer"
+#: data/mods/Aftershock/mobs/robots.json
+#: data/mods/aftershock_exoplanet/monsters/robots.json
+msgid ""
+"Imaginifers are Wraitheon Industries standard military humaniforms, company parlance for an android designed to seamlessly integrate into standard infantry units.  This particular unit is currently equipped with light blue UICA livery and wields a SR-P77.  Its rugged design and technological sophistication make it far more formidable than the human soldiers its nominally meant to support.\n"
+"\n"
+"The Wraitheon humaniforms are designed to take full advantage of a humanoid shape, not to look human; programmed for game theory, not for sapience."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/scavbots.json
+#: data/mods/aftershock_exoplanet/monsters/scavbots.json
+msgid "Scavbot Skorpion"
+msgid_plural "Scavbot Skorpions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Scavbot Skorpion"
+#: data/mods/Aftershock/mobs/scavbots.json
+#: data/mods/aftershock_exoplanet/monsters/scavbots.json
+msgid ""
+"The Scavbot Skorpion is a refurb of colonial perimeter defense bots found "
+"across many systems.  Because they are designed to defend against pirates, "
+"raiders, feral uplifts, hungry scavengers, rival mining clans, and any other "
+"enemy that is unlikely to attack with heavily armored units, these "
+"reprogrammed and refurbed versions are often found in the employ of the very "
+"types of people it was originally purposed to fight.  Often found as the core"
+" of a light patrol or attack squad."
+msgstr ""
+
+#. ~ Targeting sound of special attack of monster "Scavbot Skorpion"
+#: data/mods/Aftershock/mobs/scavbots.json
+#: data/mods/aftershock_exoplanet/monsters/scavbots.json
+msgid "\"Target Aquired.\""
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/turrets.json
+#: data/mods/aftershock_exoplanet/monsters/turrets.json
+msgid "SOL XII laser turret"
+msgid_plural "SOL XII laser turrets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "SOL XII laser turret"
+#: data/mods/Aftershock/mobs/turrets.json
+#: data/mods/aftershock_exoplanet/monsters/turrets.json
+msgid ""
+"The Sol Systems model 12 laser turret was once a popular choice for home and "
+"business security.  It's integrated laser rifle boasts a cost-effective "
+"deterrent to any would-be trespasser."
+msgstr ""
+
+#. ~ Targeting sound of special attack of monster "SOL XII laser turret"
+#: data/mods/Aftershock/mobs/turrets.json
+#: data/mods/aftershock_exoplanet/monsters/turrets.json
+msgid "\"Trespasser Detected.\""
+msgstr ""
+
+#. ~ Description of monster "Schwarz Walder"
+#: data/mods/Aftershock/mobs/uplifted_monsters.json
+#: data/mods/aftershock_exoplanet/monsters/uplifted_monsters.json
+msgid ""
+"Schwarz Walders are a bipedal uplifted animal originally developed by a "
+"German company as forest rangers for the expanded Black Forest Conservation "
+"Area.  Like all Uplifts they have a human level of intelligence and are "
+"indentured laborers to the corporation that grew and raised them, until they "
+"reach age of enfranchisement dictated by UICA regulations or they earn their "
+"citizenship early.  Shortly afterward the creation of the first Schwarz "
+"Walders it was determined that they also made excellent long range "
+"reconnaissance units that could operate independently indefinitely.  This was"
+" one of the most popular Uplift models before the Discontinuity, and many "
+"frontier planets still retain significant feral and otherwise independent "
+"populations.  They are skilled marksmen and this one appears to be armed with"
+" an SMG."
+msgstr ""
+
+#. ~ Description of monster "MoxPhore Tangler"
+#: data/mods/Aftershock/mobs/zombies.json
+#: data/mods/aftershock_exoplanet/monsters/zombies.json
+msgid ""
+"A human stands here, several rust-colored limbs jutting out of its back, the "
+"limbs moving around and grabbing at the air while the person looks blankly "
+"around…"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Aftershock/mobs/zombies.json
+#: data/mods/aftershock_exoplanet/monsters/zombies.json
+msgid "MoxPhore Emetic"
+msgid_plural "MoxPhore Emetics"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Message in effect in EoC "avatar_sees_zenit_def" in nested EOCs in effect
+#. in EoC "eoc_zenit_def"
+#: data/mods/Aftershock/mobs/monster_attacks/zenit.json
+#: data/mods/aftershock_exoplanet/monster_attacks/zenit.json
+msgid ""
+"The Zenit crouches forward, hiding most of its body behind its upper armor "
+"plate."
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_zenit_undef" in nested EOCs in
+#. effect in EoC "eoc_zenit_undef"
+#: data/mods/Aftershock/mobs/monster_attacks/zenit.json
+#: data/mods/aftershock_exoplanet/monster_attacks/zenit.json
+msgid "The Zenit raises its body."
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_zenit_shock_att" in nested EOCs in
+#. effect in EoC "eoc_zenit_shock_att"
+#: data/mods/Aftershock/mobs/monster_attacks/zenit.json
+#: data/mods/aftershock_exoplanet/monster_attacks/zenit.json
+msgid "The Zenit emits an explosion of arcing electricity."
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_zenit_shock_mines" in nested EOCs in
+#. effect in EoC "eoc_zenit_shock_mines"
+#: data/mods/Aftershock/mobs/monster_attacks/zenit.json
+#: data/mods/aftershock_exoplanet/monster_attacks/zenit.json
+msgid "Several mines are expelled from the Zenit's munitions bay"
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_zenit_smoke" in nested EOCs in
+#. effect in EoC "eoc_zenit_smoke"
+#: data/mods/Aftershock/mobs/monster_attacks/zenit.json
+#: data/mods/aftershock_exoplanet/monster_attacks/zenit.json
+msgid "Several bomblets are expelled from the Zenit's munitions bay"
+msgstr ""
+
+#. ~ Sentence fragment describing the "power_plant" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the main power plant"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "power_plant" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s power plants sparks and smokes."
+msgstr ""
+
+#. ~ Sentence fragment describing the "cpu" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the AI core"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "cpu" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s processor is completely destroyed!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "governor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the motive governor"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "governor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s stumbles"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "governor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s collapses to the ground as its limbs fail!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "main_sensor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the main sensory array"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "main_sensor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s sensor mount is completely destroyed!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "power_plant" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the exposed reactor"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "power_plant" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s sounds a nuclear alarm horn as its power plant detunes!  Run!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "weak_point" weakpoint
+#. ~ Message describing the effect of hitting the "heavy_armor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s armor plating is shredded!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "heavy_armor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "a dense segment of armor"
+msgstr ""
+
+#. ~ Sentence fragment describing the "internal_exposed" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "an exposed internal component"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "leg" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s collapses as its leg fails!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "arm" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The %s lets its weapon hang limp when its arm fails!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "android_head" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+#, c-format
+msgid "The attack cleanly decapitates the %s!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "exposed_back" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "its weakly armored backside"
+msgstr ""
+
+#. ~ Sentence fragment describing the "joint_servo" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "an exposed servo"
+msgstr ""
+
+#. ~ Sentence fragment describing the "heavy_armor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "an armored limb"
+msgstr ""
+
+#. ~ Sentence fragment describing the "main_sensor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the oculus"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "main_sensor" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "The oculus shatters"
+msgstr ""
+
+#. ~ Sentence fragment describing the "main_sensor_broken" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the oculus fixture"
+msgstr ""
+
+#. ~ Sentence fragment describing the "upper_armor" weakpoint
+#. ~ Sentence fragment describing the "upper_armor_defensive" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the upper armor disk"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "upper_armor" weakpoint
+#. ~ Message describing the effect of hitting the "upper_armor_defensive"
+#. weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "The Zenit's armor disk is shredded!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "upper_armor_weak" weakpoint
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "the exposed circuitry"
+msgstr ""
+
+#. ~ Description of species "AFTERSHOCK_DM"
+#: data/mods/Aftershock/mod_interactions/defense_mode/species.json
+#: data/mods/aftershock_exoplanet/mod_interactions/defense_mode/species.json
+msgid "a monster"
+msgstr ""
+
+#. ~ Dream of mutation category "MASTODON"
+#: data/mods/Aftershock/mutations/dreams.json
+#: data/mods/aftershock_exoplanet/mutations/dreams.json
+msgid "Your dreams give you a strange, languorous, heavy feeling."
+msgstr ""
+
+#. ~ Description of mutation "Esper"
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid ""
+"You are an esper, capable of accessing the hidden powers of the human mind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid "Electrokinetic"
+msgstr ""
+
+#. ~ Description of mutation "Electrokinetic"
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid "The ability to control electricity with your mind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid "Telekinetic"
+msgstr ""
+
+#. ~ Description of mutation "Telekinetic"
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid "The ability to move objects without touching them."
+msgstr ""
+
+#. ~ Description of mutation "Telepath"
+#. ~ Description of mutation "Awakened Telepath"
+#: data/mods/Aftershock/mutations/esper.json
+#: data/mods/MindOverMatter/mutations/traits.json
+#: data/mods/aftershock_exoplanet/mutations/esper.json
+msgid "The ability to read thoughts and influence others' minds."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Genemod: Improved Physical Capability"
+msgstr ""
+
+#. ~ Description of mutation "Genemod: Improved Physical Capability"
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid ""
+"Your strength, coordination, and sensory acuity have been increased through "
+"genemod treatments."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Genemod: Improved Mental Flexibility"
+msgstr ""
+
+#. ~ Description of mutation "Genemod: Improved Mental Flexibility"
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid ""
+"Your concentration and memorization abilities have been increased through "
+"genemod treatments."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Genemod: Improved Health"
+msgstr ""
+
+#. ~ Description of mutation "Genemod: Improved Health"
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid ""
+"Your resistance to disease and infection, as well as your ability to recover "
+"from injuries, have been improved through genemod treatments."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Genemod: Efficient System"
+msgstr ""
+
+#. ~ Description of mutation "Genemod: Efficient System"
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid ""
+"The efficiency of your metabolic processes, from the length of your sleep "
+"cycle to losing fatigue after exercise, have been improved through genemod "
+"treatments."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Genemod: Beauty"
+msgstr ""
+
+#. ~ Description of mutation "Genemod: Beauty"
+#: data/mods/Aftershock/mutations/human_plus.json
+#: data/mods/aftershock_exoplanet/mutations/human_plus.json
+msgid "Your physical appearance has been improved through genemod treatments."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Aftershock/mutations/integrated.json
+#: data/mods/aftershock_exoplanet/mutations/integrated.json
+msgid "wooly fur"
+msgid_plural "wooly furs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wooly fur"
+#: data/mods/Aftershock/mutations/integrated.json
+#: data/mods/aftershock_exoplanet/mutations/integrated.json
+msgid ""
+"A course thick matt of fur, somewhere between a ballistic vest and attic "
+"insulation."
+msgstr ""
+
+#. ~ Description of "sparse scales"
+#: data/mods/Aftershock/mutations/integrated.json
+#: data/mods/aftershock_exoplanet/mutations/integrated.json
+msgid ""
+"Your dermis has toughened and thickened to provide additional protection."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_RAD_ADAP_activated"
+#: data/mods/Aftershock/mutations/mutation_eocs.json
+#: data/mods/aftershock_exoplanet/mutations/mutation_eocs.json
+msgid ""
+"You think about activating your immune system and your body warms with "
+"exertion."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_RAD_ADAP_activated"
+#. ~ Player message in false effect in EoC "EOC_RAD_FLUSH_activated"
+#: data/mods/Aftershock/mutations/mutation_eocs.json
+#: data/mods/aftershock_exoplanet/mutations/mutation_eocs.json
+msgid "You are too exhausted to focus your immune system."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_RAD_FLUSH_activated"
+#: data/mods/Aftershock/mutations/mutation_eocs.json
+#: data/mods/aftershock_exoplanet/mutations/mutation_eocs.json
+msgid ""
+"You think quite pointedly about activating your immune system and your body "
+"hums with exertion."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Earthling"
+msgstr ""
+
+#. ~ Description of mutation "Earthling"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"Your mannerisms and accent are a dead giveaway that you were raised on Earth."
+"  Whatever your thoughts about the homeworld might be, the simple fact that "
+"you can call it home is likely to affect relationships with people liable to "
+"care about such things."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Local System Security"
+msgstr ""
+
+#. ~ Description of mutation "Local System Security"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You are a duly sworn law enforcement officer, with jurisdiction that "
+"technically extends to the Salus System.  Whether you can find anyone who "
+"that matters to is questionable."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Pinkerton"
+msgstr ""
+
+#. ~ Description of mutation "Pinkerton"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You are an UICA affiliated private-security professional, with jurisdiction "
+"that technically extends to the Salus System.  Whether you can find anyone "
+"who that matters to is questionable."
+msgstr ""
+
+#. ~ Description of mutation "MD"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You're a doctor who went out to space and has somehow ended up out on the "
+"frontier in the Salus System.  At least out here you get a lot more hands on "
+"life or death work compared to the core UICA worlds."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Rediscovered Tribal"
+msgstr ""
+
+#. ~ Description of mutation "Rediscovered Tribal"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"Some worlds maintained human life but lost technologically advanced "
+"civilization.  As these worlds get rediscovered some organizations leave the "
+"worlds to develop, while others see a source of cheap labor.  Whether you "
+"snuck onto a ship or were Shanghaied onto one you've somehow ended up on the "
+"hell that is Salus IV.  At least you have some experience surviving outside "
+"of what these spacers call 'civilization'."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "UICA Inspector"
+msgstr ""
+
+#. ~ Description of mutation "UICA Inspector"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You are a UICA Inspector from a civilized part of space.  You have the "
+"authority to investigate under a variety of different legal frameworks, UICA,"
+" planetary, corporate, system, pre-Discontinuity legal systems for worlds "
+"that have only recently been re-discovered.  All of this means that you are "
+"nearly a law unto yourself, though you wonder how much that matters in a "
+"place like Salus IV outside of maybe Port Augustmoon."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "UICA Astrographic and Gatepoint Agent"
+msgstr ""
+
+#. ~ Description of mutation "UICA Astrographic and Gatepoint Agent"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"As a member of the Astrographic and Gatepoint Division you are responsible "
+"for spreading the boundaries of the Frontiers and protecting interstellar "
+"travel.  This gives you wide ranging latitude when it comes to addressing "
+"threats to interstellar travel.  Does this technically make you a member of "
+"UICA's very own secret police?  Yes, yes it does."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Radioactive Environment Adaptation"
+msgstr ""
+
+#. ~ Description of mutation "Radioactive Environment Adaptation"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You think you know how to instruct your body to process radioactive particles"
+" out of itself faster than normal."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Radiation Flush "
+msgstr ""
+
+#. ~ Description of mutation "Radiation Flush "
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You can instruct your immune system to flush out radioactive particles at an "
+"enviable speed."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "fungivoral immune system"
+msgstr ""
+
+#. ~ Description of mutation "fungivoral immune system"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"The immune system of these beings transcends anything seen in humanity and "
+"appear to be able to target even directed infections such as fungal "
+"infestations."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Thick Hide"
+msgstr ""
+
+#. ~ Description of mutation "Thick Hide"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"Your skin has thickened and toughened further, acting as natural armor.  "
+"Somewhat reduces wet effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Rhomboidal Denticles"
+msgstr ""
+
+#. ~ Description of mutation "Rhomboidal Denticles"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"Your skin has thick diamond shaped enamel scutes that both armor your body "
+"and allow you to move more smoothly in water.  While difficult to penetrate, "
+"it also limits your flexibility.  Greatly reduces wet effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Uplifted Consciousness"
+msgstr ""
+
+#. ~ Description of mutation "YUGGOTH"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "The death throes of this world are the birthing pangs of yours."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Wooly Fur"
+msgstr ""
+
+#. ~ Message when player with mutation "Tusks" attacks
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+#, c-format
+msgid "You gore %s with your tusks!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Tusks" attacks
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+#, c-format
+msgid "%1$s gores %2$s with their tusks!"
+msgstr ""
+
+#. ~ Message when player with mutation "Pointed Tusks" attacks
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+#, c-format
+msgid "You stab %s with your pointed tusks!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Pointed Tusks" attacks
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+#, c-format
+msgid "%1$s stabs %2$s with their pointed tusks!"
+msgstr ""
+
+#. ~ Description of mutation "Empathic Leadership"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You have a natural talent for leadership and can easily see yourself in "
+"others.  Quite literally.  In fact, you can swap control to any other "
+"character that follows you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid "Skullgun Stupidity"
+msgstr ""
+
+#. ~ Description of mutation "Skullgun Stupidity"
+#: data/mods/Aftershock/mutations/mutations.json
+#: data/mods/aftershock_exoplanet/mutations/mutations.json
+msgid ""
+"You took the bionic skullgun out of your noggin, but that didn't replace the "
+"brain cells you lost when you installed it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/TALK_COMMON_OVERRIDES.json
+#: data/mods/aftershock_exoplanet/npcs/TALK_COMMON_OVERRIDES.json
+msgid "Switch to controlling this follower"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/TALK_COMMON_OVERRIDES.json
+#: data/mods/aftershock_exoplanet/npcs/TALK_COMMON_OVERRIDES.json
+msgid "Switch to controlling your party leader."
+msgstr ""
+
+#. ~ Dialogue line in mission "A-Mi-go, You-go find me some brains"
+#. ~ Dialogue line in mission "Humming Hearts"
+#: data/mods/Aftershock/npcs/cyrus_whately.json
+#: data/mods/Aftershock/npcs/milly_whately_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/cyrus_whately.json
+#: data/mods/aftershock_exoplanet/npcs/milly_whately_dialogue.json
+msgid "I can't be Dr. Frankenstein unless you get me these."
+msgstr ""
+
+#. ~ Description of NPC faction "PrepNet Phyle"
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid ""
+"A multitude of frontier homesteading groups brought together by their use of "
+"the PrepNet communication protocols.  Spread out onto the edges of the "
+"frontier, enthusiastically squatting and building tiny kingdoms often "
+"consisting of just a couple families or like-minded individuals.  Their "
+"mutual aid societies are wildly varied in their laws; influenced by the "
+"people who set them up, but they all share in a distrust for those that wish "
+"to impose restrictions upon new colonization efforts."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid "United Interstellar Coordination Agency"
+msgstr ""
+
+#. ~ Description of NPC faction "United Interstellar Coordination Agency"
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid ""
+"A loose confederation and military alliance composed by Solar Corporations, Governments, and other politically relevant organizations united by their desire to restore Earth's dominion over the Orion Arm.  Due to the disinterest of the Salus Charter owners and the recent rediscovery of the system, UICA administers Salus IV using a combination of military and civilian law designed to maximize wealth extraction, with the bulk of their forces concentrated within Port Augustmoon.\n"
+"\n"
+"Corruption and nepotism are rampant across UICA's frontier administrations, management is generally more interested in lining their own pockets than in any sort of solar revanchist rhetoric."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid "Wraitheon Industries ltd."
+msgstr ""
+
+#. ~ Description of NPC faction "Wraitheon Industries ltd."
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid ""
+"A massive, multi-system corporation with major investments across artificial "
+"intelligence, shipbuilding, military cybernetics and applied robotics.  Among"
+" the oldest of the Solar Corporations, it is a major player in the Orion Arm,"
+" and a key military supplier of UICA's military hardware.  It is best known "
+"for its normally secretive and highly advanced research and archaeology "
+"division."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid "Mercurial Genomics ltd."
+msgstr ""
+
+#. ~ Description of NPC faction "Mercurial Genomics ltd."
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid ""
+"A massive, multi-system corporation specializing in genetic engineering, "
+"terraforming, and biotechnology.  Before the discontinuity, it heavily "
+"invested in extrasolar colonization and the study of alien life.  "
+"Theoretically it holds the planetary colonization charter for Salus IV, per "
+"UICA's constitional treaty, but the corporation's interests currently lie "
+"elsewhere."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid "Independents"
+msgstr ""
+
+#. ~ Description of NPC faction "Independents"
+#: data/mods/Aftershock/npcs/factions.json
+#: data/mods/aftershock_exoplanet/npcs/factions.json
+msgid ""
+"A loose group of salvors, mercenaries and frontiersmen working as free agents"
+" or in representation of interest groups too small or remote to have official"
+" presence in the system.  Equally likely to cooperate among themselves as "
+"they are to fight each other."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Aftershock/npcs/milly_whately_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/milly_whately_dialogue.json
+msgid "Mi-go biology"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Aftershock/npcs/milly_whately_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/milly_whately_dialogue.json
+msgid "Mi-go Resin"
+msgstr ""
+
+#. ~ Description of mission "Mi-go Resin"
+#: data/mods/Aftershock/npcs/milly_whately_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/milly_whately_dialogue.json
+msgid "Find 50 chunks of mi-go resin."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/prepnet_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/prepnet_dialogue.json
+msgid ""
+"This food has to go back to our core communities.  But maybe we can trade "
+"some food for services."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/prepnet_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/prepnet_dialogue.json
+msgid ""
+"You have to earn the right to trade with us.  Plus we created our own "
+"currency before the Cataclysm."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/prepnet_dialogue.json
+#: data/mods/aftershock_exoplanet/npcs/prepnet_dialogue.json
+msgid ""
+"Here?  Fruits and berries.  Maybe the occasional piece of farm equipment, but"
+" you'll need crypto coins."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Sadie's injection"
+#: data/mods/Aftershock/npcs/sadie.json
+#: data/mods/aftershock_exoplanet/npcs/sadie.json
+msgid ""
+"Several hundred lines of text list a series of complex biological molecules "
+"with unknown interactions.  Many appear to be associated with healing and "
+"immune response.  Only a few are known to be poisonous and many are known "
+"carcinogens.  Several have psychological and hormonal effects."
+msgstr ""
+
+#. ~ Name of the monster "mon_flesh_golem_afs" placed on map update on start of
+#. mission "Heart for Sadie"
+#: data/mods/Aftershock/npcs/sadie.json
+#: data/mods/aftershock_exoplanet/npcs/sadie.json
+msgid "Billy"
+msgstr ""
+
+#. ~ Unique name of a male NPC
+#. ~ Name of an NPC class
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "Mercurial Medical Agent"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"Clinic is open, yes.  If you need medical assistance, this is the place."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "[1200$, 30m] I need you to patch me up."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "[2400$, 1h] I need you to patch my friends up."
+msgstr ""
+
+#. ~ Name of an NPC class
+#. ~ All guns are more expensive here.
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+msgid "Gun trader "
+msgstr ""
+
+#. ~ Job description of "Gun trader " NPC class
+#. ~ All guns are more expensive here.
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+msgid "Gun trader"
+msgstr ""
+
+#. ~ Refusal reason for a shop item group
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+msgid "You need an armament license to buy this."
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+msgid "gun trader"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+msgid ""
+"&You find the clerk leaning before an almost impressive collection of "
+"weaponry, most of it neatly displayed in racks or hanging from the curved "
+"prefab ceiling.  <mypronoun> barely acknowledges your approach, it doesn't "
+"seem like customer service is a priority here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_gun_trader.json
+msgid "You sell guns here right?"
+msgstr ""
+
+#. ~ Name of an NPC class
+#. ~ All guns are more expensive here.
+#. ~ Job description of "Outfitter Clerk" NPC class
+#. ~ Job description of "gadget store clerk" NPC class
+#. ~ Job description of "Mercurial augmentation tech." NPC class
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid "Outfitter Clerk"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+msgid "outfitter clerk"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+msgid ""
+"&You find the clerk in between stacked second hand outfits of all kinds."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_outfitter.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+msgid "I'm want to buy some gear."
+msgstr ""
+
+#. ~ Name of an NPC class
+#. ~ Name suffix of an NPC
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+msgid "gadget store clerk"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_tool_trader.json
+msgid ""
+"&The store is full of high tech gadgets, both new and salvaged.  The clerk "
+"behind the counter looks up as you enter, and gives you a nod."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Backgrounds/BGBR_Sadie.json
+#: data/mods/aftershock_exoplanet/npcs/Backgrounds/BGBR_Sadie.json
+msgid ""
+"I love swampy places like this.  The smell of the pussy willows, the sound of"
+" the crickets, the giant mutant mosquitoes hungry for our blood.  It's like "
+"we're in a sexy vampire romance novel."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Backgrounds/BGRS_migo_2.json
+#: data/mods/aftershock_exoplanet/npcs/Backgrounds/BGRS_migo_2.json
+msgid ""
+"Some kind of hideous alien was standing over my neighbors disemboweled "
+"corpse.  It looked at me and said 'You're a great neighbor' then everything "
+"faded to black.  I feel like everything in my body fits differently now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Backgrounds/BGRS_migo_3.json
+#: data/mods/aftershock_exoplanet/npcs/Backgrounds/BGRS_migo_3.json
+msgid ""
+"The eggheads kept saying we needed to find a way out of here before "
+"everything went sideways.  So we needed to open more portals even if we "
+"hadn't had time to take all the precautions."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "&<mypronoun> looks you up and down, sizing you up."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "What do you want?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "You lost or something?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "Like what you see?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid ""
+"&<mypronoun> simply ignores you as they flick a spent cigarette into the "
+"snow."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "Mind your own business."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "&<mypronoun> gives you a dismissive look."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "I'm not here to chat.  What do you want?"
+msgstr ""
+
+#. ~ Job description of "Mercenary" NPC class
+#. ~ Independent mercenaries with high quality combat gear and augments.
+#: data/mods/Aftershock/npcs/Independents/GENERIC/nc_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/GENERIC/nc_solo.json
+msgid "Just fighting for the almighty dollar."
+msgstr ""
+
+#. ~ Name of an NPC class
+#. ~ Name suffix of an NPC
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid "Mercurial augmentation tech."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid ""
+"&The Mercurial store is attended by a massive clerk, sleek scales adorn their"
+" massive forearms and slightly pointed ears.  They greet you with a voice "
+"that is both deep and melodious, \"Welcome to Mercurial Genetech, where we "
+"can help you unlock your potential.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid "I'm looking into augments"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid "How does this Genetech stuff works?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Mercurial/clerk.json
+#: data/mods/aftershock_exoplanet/npcs/Mercurial/clerk.json
+msgid ""
+"&The clerk smiles, \"Our Genetech is a marvel of modern science, capable of "
+"rewriting your very DNA.  We offer a wide range of treatments, from the "
+"mundanely medical to the exotic.  You need only select one of our templates "
+"and visit one of our editing machines in both ends of this store.  If you "
+"ever have doubts, remember that all our treatments are reversible.\""
+msgstr ""
+
+#. ~ Name of an NPC class
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator.json
+msgid "salvage merchant"
+msgstr ""
+
+#. ~ Job description of "salvage merchant" NPC class
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator.json
+msgid "Salvor Fabricator"
+msgstr ""
+
+#. ~ Unique name of a female NPC
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator.json
+msgid "Veronica Donaldson"
+msgstr ""
+
+#. ~ Name suffix of a female NPC
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator.json
+msgid "salvor fabricator"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"&As you approach the counter, you can't help but notice the chaotic scene "
+"before you: Juxtaposed to the makeshift structure, an awkward marriage of "
+"ship hulls and foamcrete walls, stands neatly arranged shelving, and near-"
+"pristine furniture.  The tools and parts lining the shelves have each been "
+"meticulously arranged.  A Salvor sits behind the counter with her arm perched"
+" on the surface, supporting her head in her hand.  In her other hand, she "
+"idly waves a cigarette, making small circles in the air.  Gray hairs peek out"
+" from the edges of her Cryo suit, and her wrinkle-creased face wears a "
+"permanent scowl."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "[Approach the counter]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Great, another Earther descends from the heavens.  Did you come all the way "
+"here to grace us with your presence?  If you've any brains in that thick "
+"skull: you take whatever money you have left and get your sorry ass off this "
+"rock.  Salus ain't for you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "I can't do that."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "You got some kind of problem with Earthers?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Your kind are all the same.  Born on the ol' celestial throne Sol, silver "
+"spoon in your mouth.  Everywhere you go, you're walk'n and talk'n like you "
+"own the place.  Bumbling through the stars without a clue.  Spit'n out the "
+"Corpo bullshit they been feeding you till you die for the glory of ol' Earth."
+"  I've seen enough Earth kids come through here to know you type.  Here to "
+"bite it just like they did?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "I didn't come here to die."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Course you didn't.  But death's all you'll find here.  You step into those "
+"icy wastes and you ain't wandering back.  A bot'll blow your brains out or a "
+"Wraith splatter you into some many pieces that even the med bots can't put "
+"your carcass back together.  And if you ain't lucky the moxies'll mob you.  "
+"Now the way they tear a person apart, it ain't a sight that ever leaves you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Leaving isn't an option for me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Another new face.  So what'll it be this time?  Corpo Business?  Treasure "
+"Hunting?  Bounty Hunt?  Or maybe you heard about the lovely weather here and "
+"just had to experience it yourself?  Save yourself the trouble, there ain't "
+"nothing for you on Salus.  Want my advice?  Get off world 'fore some bot "
+"plasters your brains all over the snow."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Whatever you think your reasons are they ain't worth it.  Salus'll chew you "
+"up and spit you back out.  A quick death here is a mercy.  Get off world no "
+"matter what it costs you: That's how you survive."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "I'm not backing down."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Do you talk to all your customers like this?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Veronica looks you up and down discerningly and a small smile creases her lips.\n"
+"So you got some spine, good.  Some of the kids that come through here fold the minute the pressure's on.  They don't have a damn clue what's waiting for them out there.  You, well come back alive and you can call me impressed."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "So, what do you actually do here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Veronica looks you up and down discerningly and scoffs.\n"
+"You don't have what it takes kid.  But I won't beat a dead horse.  If you're set on this: best you get geared up before you head out there.  Got some good stuff here that might save your life."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"A small smile tugs at the edge of Veronica's lips.\n"
+"Tch.  No, just the ones I like.  If you ain't changing your mind then at least take a look around.  Best not to go into those frigid wastes unprepared."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Right then, this here's my shop, and round the back there's my workroom.  "
+"I've enough tech here to whip up whatever you need, 'cept for that real fancy"
+" glittertech shit.  I sell the sorts of tools folk like you need to do your "
+"work.  Stuff that'll get you into places you ain't supposed to be and break "
+"apart anything interesting you find.  I'll buy any scraps you get out there "
+"and I'll shoot you straight on the prices.  So if you find anything "
+"interesting you bring it here first ya hear?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Good to know.  Can I take a look at your stock?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Good to know.  I don't need anything right now though."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Welcome back.  Planning on buying something or did you just come here to "
+"gawk?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Show me what you have in stock."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "What brought you to Salus?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"Came in with a crew trying to cozy up 'ere on the DL.  It was a shit plan "
+"from the start, told 'em as much.  But those scrap-for brains couldn't see "
+"the forest for the trees.  Figured they pull a fortune of ship parts from the"
+" graveyards and skip planet fat and happy."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "What happened to your crew?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid "Did you ever find anything interesting?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Aftershock/npcs/Salvor_Market/salvor_fabricator_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/salvor_fabricator_talk.json
+msgid ""
+"They're pushing daisies in the great beyond.  Not a single one of them made "
+"it off this hell.  Not like I didn't warn them.  They just kept fooling "
+"around in places one of us had any business being."
+msgstr ""

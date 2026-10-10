@@ -1,0 +1,1386 @@
+# Batch 76 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Message describing the effect of hitting the "capacitor" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's glowing organ sputters out!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "mandible" weakpoint
+#. ~ Sentence fragment describing a weakpoint for monster "giant antlion larva"
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#: data/json/monsters/insect_spider.json
+msgid "the mandibles"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "mandible" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's mandibles are maimed!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "mandible" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's mandibles are destroyed!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "tail" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the tail"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tail" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's tail is maimed!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tail" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's tail is disabled!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "wing" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's wings are maimed!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "wing" weakpoint
+#. ~ Message describing the effect of hitting the "wings_down" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's wings are disabled!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "mouth" weakpoint
+#. ~ Sentence fragment describing the "mouth_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the mouth"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "mouth" weakpoint
+#. ~ Message describing the effect of hitting the "mouth_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's mouth hangs slack!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "mouth" weakpoint
+#. ~ Message describing the effect of hitting the "mouth_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's mouth is crippled!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "foreleg" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the fore leg"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "foreleg" weakpoint
+#. ~ Message describing the effect of hitting the "hindleg" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's leg goes limp!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "hindleg" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the hind leg"
+msgstr ""
+
+#. ~ Sentence fragment describing the "tongue_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the tongue"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tongue_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's tongue recoils in pain!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tongue_grabbing" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's tongue is crippled!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tail" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's tail goes limp!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "tail" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s's tail is permanently damaged!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "electric_organ" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+msgid "the electric organ"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "electric_organ" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s twitches and spasms!  It's zapping itself!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "electric_organ" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s electrifies itself!  It begins seizing!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "electric_organ" weakpoint
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#, c-format
+msgid "The %s begins seizing!  It is electrocuting itself!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "abdomen" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "abdomen"
+msgstr ""
+
+#. ~ Sentence fragment describing the "body_joint" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "a gap in the exoskeleton"
+msgstr ""
+
+#. ~ Sentence fragment describing the "armor_thick" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "a thick part of the exoskeleton"
+msgstr ""
+
+#. ~ Sentence fragment describing the "antenna" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "the antennae"
+msgstr ""
+
+#. ~ Sentence fragment describing the "abdomen" weakpoint
+#. ~ Sentence fragment describing a weakpoint for monster "dermatik"
+#. ~ Sentence fragment describing a weakpoint for monster "dermatik midwife"
+#. ~ Sentence fragment describing a weakpoint for monster "giant ant"
+#. ~ Sentence fragment describing a weakpoint for monster "giant acidic ant"
+#. ~ Sentence fragment describing a weakpoint for monster "giant acidic queen
+#. ant"
+#. ~ Sentence fragment describing a weakpoint for monster "giant acidic soldier
+#. ant"
+#. ~ Sentence fragment describing a weakpoint for monster "giant queen ant"
+#. ~ Sentence fragment describing a weakpoint for monster "giant soldier ant"
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#: data/json/monsters/insect_spider.json
+msgid "the abdomen"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "abdomen" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s retracts its stinger!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "stinger" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "the stinger"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "stinger" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's stinger is disabled!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "wings_stagger" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's wings flutter uselessly"
+msgstr ""
+
+#. ~ Sentence fragment describing the "abdomen" weakpoint
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "the underside"
+msgstr ""
+
+#. ~ Sentence fragment describing the "small_gap" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "a small gap in the armored plates"
+msgstr ""
+
+#. ~ Sentence fragment describing the "weak_joint" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "a joint in the armored plates"
+msgstr ""
+
+#. ~ Sentence fragment describing the "hard_point" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "a particularly thick patch of armor"
+msgstr ""
+
+#. ~ Sentence fragment describing the "part_grasping_appendage" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_alien_being.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "the grasping appendage"
+msgstr ""
+
+#. ~ Sentence fragment describing the "cyborg_leg" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "the cybernetic leg"
+msgstr ""
+
+#. ~ Sentence fragment describing the "motive_power" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "the motive power box"
+msgstr ""
+
+#. ~ Sentence fragment describing the "vid_eye_aperture" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "the video aperture"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "vid_eye_aperture" weakpoint
+#: data/json/monster_weakpoints/cyborg_weakpoints.json
+#: data/mods/Xedra_Evolved/weakpoints/wp_combat_cyborg.json
+msgid "Sparks fly from the aperture!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "gap" weakpoint
+#: data/json/monster_weakpoints/fungaloid_weakpoints.json
+msgid "a small gap in the thick wall"
+msgstr ""
+
+#. ~ Sentence fragment describing the "joint" weakpoint
+#: data/json/monster_weakpoints/fungaloid_weakpoints.json
+msgid "a soft fold in the thick wall"
+msgstr ""
+
+#. ~ Sentence fragment describing the "hard_hide" weakpoint
+#: data/json/monster_weakpoints/fungaloid_weakpoints.json
+msgid "a particularly thick patch of the wall"
+msgstr ""
+
+#. ~ Sentence fragment describing the "gap" weakpoint
+#: data/json/monster_weakpoints/generic_weakpoints.json
+msgid "a small fissure between the metal plates"
+msgstr ""
+
+#. ~ Sentence fragment describing the "joint" weakpoint
+#: data/json/monster_weakpoints/generic_weakpoints.json
+msgid "an exposed joint unprotected by the metal plates"
+msgstr ""
+
+#. ~ Sentence fragment describing the "hard_point" weakpoint
+#: data/json/monster_weakpoints/generic_weakpoints.json
+msgid "a strong, rigid chunk of metal"
+msgstr ""
+
+#. ~ Sentence fragment describing the "armour_plate_bullet" weakpoint
+#. ~ Sentence fragment describing the "armour_plate_melee" weakpoint
+#: data/json/monster_weakpoints/humanoid_weakpoints.json
+msgid "the body armor"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "armour_plate_bullet"
+#. weakpoint
+#: data/json/monster_weakpoints/humanoid_weakpoints.json
+#, c-format
+msgid "The %s's armor is shattered!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "armour_plate_melee"
+#. weakpoint
+#: data/json/monster_weakpoints/humanoid_weakpoints.json
+msgid "The armor is shattered!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "armour_shattered" weakpoint
+#: data/json/monster_weakpoints/humanoid_weakpoints.json
+msgid "the shattered armor plating"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "leg" weakpoint
+#: data/json/monster_weakpoints/migo_weakpoints.json
+#, c-format
+msgid "The %s is tripped off-balance!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "wing" weakpoint
+#: data/json/monster_weakpoints/migo_weakpoints.json
+#, c-format
+msgid "The %s is pushed off-balance!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "vulnerable spot" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "a spot that's more vulnerable than the rest"
+msgstr ""
+
+#. ~ Sentence fragment describing the "huntsman_arm" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "appendage"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "huntsman_arm" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+#, c-format
+msgid "The %s makes a pained screech as the appendage goes limp!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "huntsman_armor" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "its porous armor plate"
+msgstr ""
+
+#. ~ Sentence fragment describing the "huntsman_armor_alt" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "its armored limb"
+msgstr ""
+
+#. ~ Sentence fragment describing the "huntsman_armor_gap" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "a vulnerable spot between the armor"
+msgstr ""
+
+#. ~ Sentence fragment describing the "eye" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+msgid "the photoreceptors"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "eye" weakpoint
+#: data/json/monster_weakpoints/netherium_weakpoints.json
+#, c-format
+msgid "The %s's photoreceptors are obliterated!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "frond" weakpoint
+#: data/json/monster_weakpoints/power_leech_weakpoints.json
+msgid "the frond"
+msgstr ""
+
+#. ~ Sentence fragment describing the "rhizome" weakpoint
+#: data/json/monster_weakpoints/power_leech_weakpoints.json
+msgid "the rhizome"
+msgstr ""
+
+#. ~ Sentence fragment describing the "crown" weakpoint
+#: data/json/monster_weakpoints/power_leech_weakpoints.json
+msgid "the crown"
+msgstr ""
+
+#. ~ Sentence fragment describing the "" weakpoint
+#: data/json/monster_weakpoints/quadruped_weakpoints_animal.json
+msgid "the chest"
+msgstr ""
+
+#. ~ Sentence fragment describing the "" weakpoint
+#: data/json/monster_weakpoints/quadruped_weakpoints_animal.json
+msgid "the vitals"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "" weakpoint
+#: data/json/monster_weakpoints/quadruped_weakpoints_animal.json
+#, c-format
+msgid "The %s is shot in the vitals!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "body" weakpoint
+#: data/json/monster_weakpoints/slime_weakpoints.json
+msgid "the body"
+msgstr ""
+
+#. ~ Sentence fragment describing the "insensitive_spot" weakpoint
+#: data/json/monster_weakpoints/slime_weakpoints.json
+msgid "a spot with virtually nothing to damage"
+msgstr ""
+
+#. ~ Sentence fragment describing the "organ" weakpoint
+#: data/json/monster_weakpoints/slime_weakpoints.json
+msgid ""
+"an organ inside the slime, causing the slime to freeze up briefly as it "
+"reconstitutes it"
+msgstr ""
+
+#. ~ Sentence fragment describing the "fragment" weakpoint
+#: data/json/monster_weakpoints/slime_weakpoints.json
+msgid ""
+"the body, separating a fragment that you manage to keep from rejoining the "
+"slime until the fragment melts away"
+msgstr ""
+
+#. ~ Sentence fragment describing the "pseudopod" weakpoint
+#: data/json/monster_weakpoints/slime_weakpoints.json
+msgid ""
+"a pseudopod reaching out to strike you when you deftly counter strike it"
+msgstr ""
+
+#. ~ Sentence fragment describing the "branch" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "the branch"
+msgstr ""
+
+#. ~ Sentence fragment describing the "root" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "the root"
+msgstr ""
+
+#. ~ Sentence fragment describing the "flower" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "the flower"
+msgstr ""
+
+#. ~ Sentence fragment describing the "gap" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "a small gap in the bark"
+msgstr ""
+
+#. ~ Sentence fragment describing the "joint" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "a soft fold in the thick bark"
+msgstr ""
+
+#. ~ Sentence fragment describing the "thick bark" weakpoint
+#: data/json/monster_weakpoints/triffid_weakpoints.json
+msgid "a particularly thick patch of the bark"
+msgstr ""
+
+#. ~ Sentence fragment describing the "main_motor" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+msgid "the main motor"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "main_motor" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s's motor starts to jam up!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "main_motor" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s's motor grinds to a halt!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "camera" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+msgid "the camera"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "camera" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s's camera is lightly scratched!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "camera" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s's camera is cracked!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "camera" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s's camera lens shatters into pieces!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "turret_gun" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+msgid "the weapon"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "turret_gun" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "The %s struggles to clear its jammed weapon!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "turret_gun" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+#, c-format
+msgid "A round gets stuck in the %s's misshapen barrel, disabling the weapon!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "turret_shaft" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+msgid "the shaft"
+msgstr ""
+
+#. ~ Sentence fragment describing the "spotlight" weakpoint
+#: data/json/monster_weakpoints/turret_weakpoints.json
+msgid "the spotlight"
+msgstr ""
+
+#. ~ Sentence fragment describing the "crystal" weakpoint
+#: data/json/monster_weakpoints/yrax_weakpoints.json
+msgid "a crystalline facet"
+msgstr ""
+
+#. ~ Sentence fragment describing the "weak_joint" weakpoint
+#. ~ Sentence fragment describing the "weak_point" weakpoint
+#: data/json/monster_weakpoints/yrax_weakpoints.json
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "a lightly armored segment"
+msgstr ""
+
+#. ~ Sentence fragment describing the "heavy_armor" weakpoint
+#: data/json/monster_weakpoints/yrax_weakpoints.json
+#: data/mods/Aftershock/mobs/monster_weakpoints/robot_weakpoints.json
+#: data/mods/aftershock_exoplanet/monsters/monster_weakpoints/robot_weakpoints.json
+msgid "a segment of sloped armor"
+msgstr ""
+
+#. ~ Sentence fragment describing the "weak_point" weakpoint
+#: data/json/monster_weakpoints/yrax_weakpoints.json
+msgid "a weak segment"
+msgstr ""
+
+#. ~ Description of mutation "Hair: extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: black, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long black hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long blond hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long blue hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long brown hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long gray hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: green, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long green hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long pink hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long purple hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: red, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long red hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of variant "Hair: white, extremely long" of mutation"Hair:
+#. extremely long"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have extremely long white hair, which goes down to your knees."
+msgstr ""
+
+#. ~ Description of mutation "Hair: body-length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: black, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your black hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your blond hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your blue hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your brown hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your gray hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: green, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your green hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your pink hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your purple hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: red, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your red hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: white, body-length" of mutation"Hair: body-
+#. length"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your white hair is now so long that it reaches the floor."
+msgstr ""
+
+#. ~ Description of variant "Hair: black, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long black mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long blond mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, mohawk" of mutation"Hair: long mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long blue mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long brown mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, mohawk" of mutation"Hair: long mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long gray mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: green, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long green mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, mohawk" of mutation"Hair: long mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long pink mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long purple mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: red, mohawk" of mutation"Hair: long mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long red mohawk."
+msgstr ""
+
+#. ~ Description of variant "Hair: white, mohawk" of mutation"Hair: long
+#. mohawk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have a long white mohawk."
+msgstr ""
+
+#. ~ Description of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Business in the front, party in the back!"
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: black, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long black hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long blond hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long blue hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long brown hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long gray hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long green hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long pink hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long purple hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: red, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: red, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long red hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: white, mullet"
+msgstr ""
+
+#. ~ Description of variant "Hair: white, mullet" of mutation"Hair: mullet"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You have long white hair, in the style of a mullet."
+msgstr ""
+
+#. ~ Description of variant "Hair: red, short" of mutation"Hair: short"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Short red hair style."
+msgstr ""
+
+#. ~ Description of variant "Hair: white, short" of mutation"Hair: short"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Short white hair style."
+msgstr ""
+
+#. ~ Description of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: black, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long black locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long blond locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long blue locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long brown locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long gray locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long green locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long pink locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long purple locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: red, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: red, long punk" of mutation"Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long red locks."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: long punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: white, long punk"
+msgstr ""
+
+#. ~ Description of variant "Hair: white, long punk" of mutation"Hair: long
+#. punk"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "You are rockin' with these long white locks."
+msgstr ""
+
+#. ~ Description of mutation "Hair: curls"
+#. ~ Description of variant "Hair: black, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, curls"
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute blond curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute blue curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute brown curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute gray curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute green curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute pink curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute purple curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: red, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: red, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute red curls."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: white, curls"
+msgstr ""
+
+#. ~ Description of variant "Hair: white, curls" of mutation"Hair: curls"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your face is framed by cute white curls."
+msgstr ""
+
+#. ~ Description of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: black, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, black."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, blond."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, blue."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, brown."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, gray."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, green."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, pink."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, purple."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: red, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: red, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, red."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: white, modern"
+msgstr ""
+
+#. ~ Description of variant "Hair: white, modern" of mutation"Hair: modern"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your modern and plain cut common among college students, white."
+msgstr ""
+
+#. ~ Description of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: black, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long black hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long blond hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long blue hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long brown hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long gray hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long green hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long pink hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long purple hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: red, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: red, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long red hair is bound into a bun."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: white, bun"
+msgstr ""
+
+#. ~ Description of variant "Hair: white, bun" of mutation"Hair: bun"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long white hair is bound into a bun."
+msgstr ""
+
+#. ~ Description of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: black, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: black, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long black hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blond, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: blond, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long blond hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: blue, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: blue, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long blue hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: brown, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: brown, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long brown hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: gray, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: gray, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long gray hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: green, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: green, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long green hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: pink, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: pink, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long pink hair is bound in a braid."
+msgstr ""
+
+#. ~ Variant name of mutation "Hair: princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Hair: purple, princess braid"
+msgstr ""
+
+#. ~ Description of variant "Hair: purple, princess braid" of mutation"Hair:
+#. princess braid"
+#: data/json/mutations/appearance_hair_styles.json
+msgid "Your long purple hair is bound in a braid."
+msgstr ""

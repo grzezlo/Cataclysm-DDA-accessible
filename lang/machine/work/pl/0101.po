@@ -1,0 +1,1764 @@
+# Batch 101 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Lexi Lute-Thor"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"RESIDENT NAME: Pablo Shepherds\n"
+" RESIDENT STATUS: Missing\n"
+" ASSIGNED ROOM: A01\n"
+" SOCIAL SECURITY NUMBER: xxx-xx-xxxx\n"
+" PAYMENT STATUS: Current\n"
+" PRIMARY PHYSICIAN: Peter St. Travers\n"
+"\n"
+" NOTES: Patient absent as of xx-xx-xxxx."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Resident Healthcare Records"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Resident Legal Records"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"RESIDENT NAME: Nina Palmero\n"
+" RESIDENT STATUS: Resident\n"
+" ASSIGNED ROOM: B02\n"
+" SOCIAL SECURITY NUMBER: xxx-xx-xxxx\n"
+" PAYMENT STATUS: Current\n"
+" PRIMARY PHYSICIAN: Peter St. Travers\n"
+"\n"
+" NOTES: Patient has specialized prescription; must be administered by Primary Physician daily."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Pending Lawsuits"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Closed Lawsuits"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO LEGAL FILES"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Pablo Shepherds"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Vorm E. Thracks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Mord R. Yuni-Korne"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Nina Palmero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Niklaus Kaje"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Lexi Lute-Thor"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Robbie D. Nero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Jimbob Jones"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Heather Feathers"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Shania Moses"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Elle Jackson-Samuels"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Walter Pinkman"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending: Gustavo Hermanos"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Corporation.\n"
+" You are logged in as: Peter St. Travers, SVP Research & Development.\n"
+"\n"
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Project Database"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Nursing Home.\n"
+" You are logged in as: Peter St. Travers, SVP Research & Development.\n"
+"\n"
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR B231; UNABLE TO CONNECT TO MESSAGING SERVER.\n"
+" ERROR REFRESHING MESSAGES.  NOT ALL MESSAGES MAY BE DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Shepherds"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: This is bad!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Fix this"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Results"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Security"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Kristi Gordee, SVP Operations\n"
+" TO: Peter St. Travers, SVP Research & Development\n"
+" RE: Shepherds\n"
+"\n"
+" Peter,\n"
+" Leah Shepherds keeps sending me emails, and we just received the papers for yet another lawsuit.\n"
+" I don't know what you're thinking but this one is going to be really difficult and could cost us.\n"
+" The Board is going to be furious."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Vincent Fuels, Researcher\n"
+" TO: Peter St. Travers, SVP Research & Development\n"
+" RE: This is bad!\n"
+"\n"
+" While you were gone last night, the old man started to wake up and become cranky.\n"
+" We had to give him another dose of that elephant tranquilizer!\n"
+" I think he might actually be strong enough to break out of his cell now.\n"
+" We really need to do something before he kills someone!\n"
+" I know this experiment meant a lot to you, but it isn't worth the risk anymore!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Kristi Gordee, SVP Operations\n"
+" TO: Peter St. Travers, SVP Research & Development\n"
+" RE: Budget\n"
+"\n"
+" Peter,\n"
+" You need to find a way to reverse what you did ASAP.\n"
+" What exactly do you expect me to do to get us out of this?\n"
+" The police are investigating us now for foul play."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Unknown Sender\n"
+" TO: Peter St. Travers, SVP Research & Development\n"
+" RE: Results\n"
+"\n"
+" Looking forward to your report at the next meeting.\n"
+" I put a lot on the line for you, don't disappoint me, Peter.\n"
+" Get me results."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Will Higgins, VP Information Technology\n"
+" TO: Peter St. Travers, SVP Research & Development\n"
+" RE: Security\n"
+"\n"
+" Hello sir,\n"
+" I understand your concerns about security.  Rest assured, myself and my team take this very seriously.  I assure you that high-level encryption protects all of our systems.\n"
+" Nobody will be able to access any of our PCs without use of the owner's fingerprint authentication, even in the event that the main power supply is cut.\n"
+" Nobody unauthorized will ever be able to read our emails or documents."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Corporation.\n"
+" You are logged in as: Peter St. Travers, SVP Research & Development.\n"
+"\n"
+" WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" ERROR D766; UNABLE TO CONNECT TO MAIN SERVER.\n"
+" ERROR REFRESHING DATABASE.  ONLY CACHED INFORMATION DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Project Procedures"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pablo Shepherds"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Nina Palmero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Vorm E. Thracks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Mord R. Yuni-Korne"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"PROJECT PROCEDURES: Big Pappy\n"
+" PAGE 1\n"
+"\n"
+" 1) Review patients for possible induction.  As a failsafe, patients selected for this program should have minimal or no contact with outside individuals and should additionally not be removed from their assigned rooms for longer than two days.  See 'Chapter 1: Induction' for greater detail.\n"
+" 2) Administer standard alchemical dosage according to patient profile.  See 'Chapter 2: Dosages' on typical process.\n"
+" 3) Monitor results over 7 days.  Patient will remain in general population outside of scheduled physicals unless determined otherwise by SVP Research & Development.\n"
+" 4) Patients deemed unworthy for general population are to remain in Secure lab room for special monitoring.  Official documentation will denote hospitalization in this circumstance to mitigate chance of suspicion.\n"
+" 5) To ensure unbiased compliance, selected patients and their families will not be informed of this process."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Primary Goals"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Chapter 1: Induction"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Chapter 2: Dosages"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Chapter 3: Approved Serums"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Chapter 4: Failsafe Protocol"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO PROJECTS"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"PROJECT PROCEDURES: Big Pappy\n"
+" Goals\n"
+"\n"
+" 1) Study effects of cognitive and physical decline in geriatric residents.\n"
+" 2) Study effects of advanced medical and mutagenic serums on select patients.\n"
+" 3) Eliminate, or reverse, the physical and mental aging process in humans."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO PROCEDURES"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"PROJECT CODE NAME: 'Big Pappy'\n"
+" PROJECT RESIDENT: Pablo Shepherds\n"
+" PROJECT STATUS: Active\n"
+" PROJECT START DATE: xx-xx-xxxx\n"
+"\n"
+" Entry Log 1: Started subject on assigned dosage.  Will monitor over 7 days.\n"
+" Entry Log 2: Subject within expected parameters.  Subject will remain in general population.\n"
+" Entry Log 3: Subject within expected parameters.  Subject will remain in general population.\n"
+" Entry Log 4: Subject showing signs of severe dementia.  Unexpected result.  Following removal protocol.  Moving patient to Secure room for 2 day period.\n"
+" Entry log 5: Subject stabilizing.  Attempting RA21E dosage.\n"
+" Entry Log 6: Subject within expected parameters.  Returning to general population.\n"
+" Entry Log 7: Subject within expected parameters.  Attempting Mutagenic Serum dose.  Following removal protocol.  Moving patient to Secure room for 2 day period.\n"
+" Entry Log 8: Subject has shown tremendous increase in girth and power.  Reduction in cognitive decline.  Symptoms of dementia nearly eliminated.\n"
+" Entry Log 9: Subject becoming belligerent.  Unknown cause.  Purifier Serum failing.  Initiated sedation protocol.  15mg Carfentanil required.  Initiating Failsafe protocol; subject cannot be returned to general population.\n"
+" Entry Log 10: Subject remains sedated.  Maintaining Failsafe protocol.  Attempting purifier serum trial."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Add Entry Log"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Patient Medical History"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Dosages"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Mutagenic Serums"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"PROJECT CODE NAME: 'Big Pappy'\n"
+" PROJECT RESIDENT: Nina Palmero\n"
+" PROJECT STATUS: Active\n"
+" PROJECT START DATE: xx-xx-xxxx\n"
+"\n"
+" Entry Log 1: Started subject on assigned dosage.  Will monitor over 7 days.\n"
+" Entry Log 2: Subject added to growing list of recent residents that are rejecting the dosage due to an unknown cause.  Attempting supplement of benzoylmethylecgonine to study possible results.  Will monitor over 7 days.  Maintaining subject in general population.\n"
+" Entry Log 3: Subject appears to have become obsessed with baked goods, unknown reason."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO LAST PAGE"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO PROJECT"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"You are logged in as: User.\n"
+"\n"
+" WARNING!  ERROR A104; YOUR COMPUTER HAS RECOVERED FROM AN UNEXPECTED SHUTDOWN.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Messages"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "My Documents"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Script: Open Door"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"Select the message you would like to view.\n"
+"\n"
+" WARNING!  ERROR B231; UNABLE TO CONNECT TO MESSAGING SERVER.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "To: monica evers  Subject: Interest in property"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "From: monica evers  Subject: RE: Interest in property"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "From: Ryan  Subject: RE: Airport Facility"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "To: Ryan  Subject: RE: RE: Airport Facility"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "To: Ryan  Subject: RE: RE: RE: Airport Facility"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Send/Receive Emails"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&To: monica evers\n"
+"Subject: Interest in property\n"
+"\n"
+"Hello, Monica!  I got your information from Tony because I'm in talks to buy one of your properties out of town.  I have a small development firm ready to break ground, but I was wondering if you had any details on radioactive materials or other geology in the area?  I know this is a strange question but certain things will prevent me from building at all.\n"
+"\n"
+"Also, given the recent developments in the area since the listing, would it be possible to reduce the price at all?  I asked Tony but he said he would have to run it by you.  Thank you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&From: monica evers\n"
+"Subject: RE: Interest in property\n"
+"\n"
+"Thanks for reaching out!  I'm glad Tony gave you my details because that bit of land has been on my mind for a long time.  He's an amazing broker.  It's hard to get attention on a lot this size and this far out of town unless there's oil underneath, but Tony knows everyone!  Since I haven't had a buyer in a while, I'm willing to come down maybe another thousand but that's it.\n"
+"\n"
+"I apologize, but I'm afraid I don't have any information on radiation or magnetism in the area, only basic topographical data the survey team collected after I first bought the property, which I can definitely send, if you like.  Thank you again for your interest!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&From: Ryan\n"
+"Subject: RE: Airport Facility\n"
+"\n"
+"yes its possible.  most airports have tunnels underneath for staff and others to move around.  obviously ordinary people cant go in and most airports are just normal but there are definitely some international hubs of travel with hidden chambers in them and some even with tunnels out to the surrounding area.  so elites dont have to go anywhere else to do their work and risk being seen.  they have to be staffed by spies or people who dont know whats really going on."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&To: Ryan\n"
+"Subject: RE: RE: Airport Facility\n"
+"\n"
+"He only goes to the airport and nowhere else.  I think he has to be one of the people running it.  I remember bragg_eagle saying there were managers in Denver who would spend time where normal employees couldn't go and I don't see ANYONE else going in there.  He dresses like a construction worker or something.  It's not like anything I've ever seen at an airport."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&To: Ryan\n"
+"Subject: RE: RE: RE: Airport Facility\n"
+"\n"
+"Yeah I deleted it, don't worry.  Look, this is what he looks like.\n"
+"\n"
+"ATTACHMENTS: MVI 0022.mov"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"WARNING!  ERROR B231; UNABLE TO CONNECT TO MESSAGING SERVER.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Select the document you would like to view."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "everything.txt"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "robert williamson.txt"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "shopping list.txt"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "MVI 0022.mov"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"Enigma code cracked by Turing -> modern encryption technology -> internet "
+"sentience arises and gives birth to AI in Chinese lab using new forms of "
+"computation, aka: BIO-TECHNOLOGY, human AND robotic components TOGETHER.  "
+"State media announces as 'fusion technology'.  Bio-weapon escapes lab, OF "
+"COURSE.  Self-replicating bio-technology = imminent replacement of humanity."
+"  US gov now ACTIVELY manufacturing cover-ups for escaped bio-weapon to "
+"maintain peace.  Follows same pattern as Roswell, Trinity (what they told the"
+" public), oil pollution coverup (in my opinion).  Recent New York 'mass "
+"psychosis events' instigated by them as cover.  PAID ACTORS on speed dial but"
+" the THREAT IS REAL.  They are buying time, but what is the play?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"Gov assigns names based off numerological conversions of house numbers.  "
+"Robert Williamson: 205 W Orchard Avenue.  Robert (78) + Williamson (127) = "
+"205.  Despite the beautiful weather, he keeps the curtains closed and no one "
+"has even visited yet.  And he's been here for more than two weeks!  I only "
+"ever see him when he's coming or going from work.  I assume it's work, even "
+"if the hours are strange sometimes.  Black car, out of state plates, looks "
+"brand new.  Fed behavior, if you ask me… Is he actually going somewhere or "
+"just trying to convince me he's legitimate?  Is he on the job when he leaves "
+"or on the job when he's here?  Further investigation required."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"Non-perishables, MREs, canned soup, dehydrated milk, oats/rice, lemon juice, "
+"protein powder.  Ammo, in crates if possible - just ask Rachel at RFA?  Large"
+" drums (HDPE), reusable containers, spare fuel can.  More novels and TV from "
+"home.  Iodine, colloidal silver, gas mask and filters for fallout."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&A video file starts playing.  It's quite low resolution, very shaky, and the"
+" sound is somewhat muffled as the cameraperson appears to be filming inside "
+"from their car.  On screen a man is walking away from the camera towards a "
+"nondescript white building with large windows.  The glare of the sunlight "
+"makes it hard to tell but it looks like… an airport terminal!  The man is "
+"very far away, wearing an orange safety vest and a hard hat, and he appears "
+"to be carrying a laptop bag.  You hear the person behind the camera mutter, "
+"\"I've only ever seen him come and go through that door.  No one else in the "
+"entire time I've been watching…\"  The man walks straight into the building, "
+"only looking back briefly as he swipes a keycard at the door and enters."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Continue watching…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid ""
+"&The cameraperson sighs.  The view slowly zooms out for a few seconds, but "
+"then suddenly jerks to the left.  \"Ay… hey, look at these motherfuckers!\"  "
+"The camera zooms in on two teenagers next to a car in the parking lot.  "
+"They're both laughing and shouting very loudly, almost seemingly intoxicated…"
+"  One kid takes a step back, then kicks in the taillight of the car.  The "
+"other appears from around the other side of it, dragging their keys along it,"
+" scratching up the paint.  The boy who was kicking begins violently punching "
+"the window with his bare fist.  The cameraperson lets out an astonished gasp,"
+" \"Like New York…\"  One punch, two punch, and with a third smash his arm "
+"goes through the glass!  He stares at the other teenager and they both let "
+"out a burst of laughter that lasts a little too long.  The cameraperson "
+"mutters a concerned \"Uhhh…\" and sets the camera on the seat.  The recording"
+" abruptly ends."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+msgid "Error: 'open': command not found."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"Shady Hills Corporation.\n"
+" You are logged in as: Randolph VanBuren, Community Manager.\n"
+"\n"
+" WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "Access Main Drives"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RETURN TO DESKTOP"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Seriously!?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Noise complaint"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Horrible smell"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Jamie Forest, Community Resident, Unit A02\n"
+"  TO: Shady Hills Corporation, Service Portal\n"
+"  RE: Seriously!?\n"
+"\n"
+" My son just told me he keeps receiving advertisements in the mail for a nursing home.  He told me that your company runs it!  Are you trying to get rid of me!?  You're sick!  I demand you have your CEO call me!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Larry Landborn, Unit B11\n"
+"  TO: Shady Hills Corporation, Service Portal\n"
+"  RE: Noise complaint\n"
+"\n"
+"  Hello.  I am once again requesting your help with my neighbor in B10.  There are loud sounds from all times of day.  She claims her grandkids are visiting but the noises have been non-stop for weeks!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Sandra Shells, Unit B06\n"
+"  TO: Shady Hills Corporation, Service Portal\n"
+"  RE: Horrible smell\n"
+"\n"
+"  There's a bad smell coming from unit B07.  Please look into it.  Thanks."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"MY PC.\n"
+" You are logged in as: ADMINISTRATOR.\n"
+"\n"
+"  WARNING!  ERROR IN POWER SUPPLY DETECTED.  RESERVE POWER ACTIVATED.  SAVE ALL WORK AND SAFELY SHUT DOWN THIS DEVICE IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "Connect to BINGO CHAMPIONSHIPS ONLINE"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"The webpage cannot be found :( Check your connection and try again, or "
+"contact your Internet Service Provider."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"Error connecting to server.  You will be unable to send or receive new "
+"messages.  Check your connection and try again, or contact your Internet "
+"Service Provider."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Security Gate"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Survivor's Club"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RE: Your Daily BINGO News!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Randolph VanBuren, Shady Hills Community Manager\n"
+"\n"
+"  RE: Security Gate\n"
+"\n"
+"  Greetings everyone in our fine community.  I wanted to give you an update on Shady Hills' official stance on the security and safety of our esteemed residents.  We are doing everything in our power to keep you safe from harm.  We understand the news has been frightening lately with talk of violence in the streets.  Rest assured you are safe inside of our neighborhood.  Out of an abundance of caution we are installing a new front gate to the entrance of the neighborhood.  This gate will keep back even the most violent of criminals.  Should you have any questions or concerns, please contact our service portal.\n"
+"\n"
+"  Thank you for your trust in Shady Hills,\n"
+" Randolph VanBuren"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Jamie Forest, Community Resident, Unit A02\n"
+"\n"
+"  RE: Survivor's Club!?\n"
+"\n"
+"  Hey there!  Thanks for your interest in our club.  We are really excited to have you!  I'll have to come check out your panic room sometime!  A few of us are going to check out the cave in the park if you want to join us.  Officially, it's supposed to be off limits, but what are they going to do about it?  I heard it even connects to the sewers, maybe if the world really goes to hell like they're all thinking, we can make use of it!  I'm kidding, I don't believe that crap."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: BINGO CHAMPIONSHIPS ONLINE\n"
+"\n"
+"  Your Daily BINGO News!\n"
+"\n"
+"  Thank you for being a member of BINGO CHAMPIONSHIPS ONLINE!  Today we have an interview with our latest champion, WINIFRED SMITH!  Click the link below to hear her incredible story!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json
+msgid "Request Monorail"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json
+msgid "Download Train Data"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json
+msgid "Power off."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json
+msgid ""
+"UNABLE TO CONTACT MONORAIL LINE.  PLEASE SEE YOUR ADMINISTRATOR FOR "
+"ASSISTANCE."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json data/mods/Perk_melee/menu.json
+msgid "Go back."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_TRAIN_DATA.json
+msgid "TRANSFER COMPLETE."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/common_talk.json
+msgid "Can you give me directions?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid "&You listen to the directions, and jot them down in your map"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid ""
+".  Liam looks over your shoulder, and nods.  \"I've got a good feeling about "
+"this one.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid "&You listen to the directions, and jot them down in your map."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid ".  The Merc looks at the map with an eyeroll.  \"This ain't it, chief.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid ""
+".  Yusuke studies the drawing for a moment, then raises an eyebrow.  \"I've "
+"been out that way scavenging before, and I don't remember seeing anything "
+"like the warehouse we're looking for.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/common_talk.json
+msgid ""
+".  Chris watches over your shoulder, frowning slightly.  \"I think I know "
+"that area, and I'm not quite sure that's what we're looking for.\""
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/exodii/common_talk.json
+msgid "Possible directions to Exodii warehouse"
+msgstr ""
+
+#. ~ Description of mission "Possible directions to Exodii warehouse"
+#: data/json/npcs/exodii/common_talk.json
+msgid ""
+"You've gotten directions to what might be the warehouse Rubik asked you to "
+"find."
+msgstr ""
+
+#. ~ Name of an NPC class
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Cyborg, type 2"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Inikwani dehina metahi tegwazhi."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&You see a tall golden figure with female features.  Strapped to the back of "
+"the head with copper wire is a glass cylinder containing long frizzy black "
+"hair.  The body stands still and emits an unpleasant beeping sound.  On the "
+"back there is a large red button with strange markings.  There is a golden "
+"harp of some kind in their hand."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Push the big red button.]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Use Stethoscope] Is this alive?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Do nothing.]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Do you speak English?  [slowly and loudly]  ENGLISH?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"[You point to your chest.]  <u_name>.  [You point at the golden figure.]  "
+"What is your name?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"I heard you playing that.  [You point at the golden harp she holds]  La la "
+"la.  Do you like music, Luliya?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "I can't understand you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&You hear a loud static discharge, a rough mechanical chugging sound, and "
+"then high-pitched shrieking with strange distortions and modulations in the "
+"sound.  The golden figure shudders, arms flailing.  \"ቆዳዬ! ቆዳዬ በእሳት ላይ ነው! "
+"እየሞትኩ ነው!\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Hello.  Are you all right?  I just hit the button on your back."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "I'm not understanding that.  Can you try again?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"Speak English ya <freaking> robot.  We don't take kindly to that kind of "
+"thing here.  [You frown menacingly]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "State your name and function machine."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"[INT 11]  Huh.  That sounds a little familiar, a little like Arabic.  "
+"Earabiun?  [slowly and clearly]  EARABIUN?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "No, I'm done with this."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&You press your stethoscope to the chest of the figure and hear a clear, "
+"strong heartbeat and a strange whirring sound that sounds like clockwork."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "So she's alive then."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Probably fine then.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "&A long pause, then she shakes her head  \"Inigilizinya yelemi.  No.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "All right then.  You seem to understand what I mean.  And the word no."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Fine.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&A long pause.  You can't see her eyes but it seems like she is studying your"
+" face.  \"Sime Luliya ibalalehu.\"  She points to her own chest.  \"Luliya.\""
+"  She points to your chest.  \"<u_name>.  Siletewawekini desi bilonyali, "
+"<u_name>.\"  She strums a pleasant melody on her krar."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "We're getting somewhere.  Pleased to meet you Luliya."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "&A long pause, then she shakes her head.  \"Ayi arebinya alinagerimi.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "All right then.  It seems like you do kind of understand it though."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&She nods enthusiastically and strums a few notes on her krar.  \"Awo muzika "
+"iwedalehu.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Use Guitar] I happen to have a nice guitar, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Use Trumpet] I happen to have a nice trumpet, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"[Use Saxophone] I happen to have a nice saxophone, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Use Violin] I happen to have a nice violin, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"[Use Harmonica] I happen to have a nice harmonica, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "[Use Cowbell] I happen to have a nice cowbell, want to play with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"Huh, you know music, good to know.  I'll try and find something to play and "
+"come back."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid ""
+"&You perform on your musical instrument with everything you have, giving a "
+"strong performance.  Luliya sways and begins to play her instrument and sing "
+"along.  The music and her voice are beautiful, she sounds like she has had "
+"some formal musical training."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Fun, thank you for playing with me, Luliya."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_Luliya.json
+msgid "Fun, thank you.  <end_talking_leave>"
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/npcs/exodii/exodii_merchant_definitions.json
+msgid "Rubik's Exodii battle rifle"
+msgid_plural "Rubik's Exodii battle rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "Rubik's Exodii battle rifle"
+#. ~ Variant name of item "Rubik's Exodii battle rifle"
+#: data/json/npcs/exodii/exodii_merchant_definitions.json
+msgid "Rubik's PA md. 68 battle rifle"
+msgid_plural "Rubik's PA md. 68 battle rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Mission name
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Bring 1000 units of anesthetic to Rubik"
+msgstr ""
+
+#. ~ Dialogue line in mission "Bring 1000 units of anesthetic to Rubik"
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"If'n us'll to add the metal an' plastic for ye, us'll need a thousand unit o'"
+" them anus-feticks, half for your thinkin'-meat an' half for our stock."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Investigate the Mysterious Bunker"
+msgstr ""
+
+#. ~ Dialogue line in mission "Investigate the Mysterious Bunker"
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What've ye scolted, then, o'the clunker?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Investigate the Mysterious Bunker"
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Aye and fine!  One for the paper-claim an' so.  An I'm ken, these'n's could "
+"be a right thorn.  For ol' Rubik's sake, let's hope they be'n't for to drive "
+"us out o' your otherlands."
+msgstr ""
+
+#. ~ Dialogue line in mission "Investigate the Mysterious Bunker"
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Hm.  The escoltin' our way be less.  This'n'll yark at the Scythy mayhaps."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Find the lost Exodii warehouse and reboot its locator antenna."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find the lost Exodii warehouse and reboot its
+#. locator antenna."
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What ye'r searching is safehouse-like, sand, stone, metal an' all."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find the lost Exodii warehouse and reboot its
+#. locator antenna."
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Us'n waits patient-like for that'."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Just because you asked, I think we can work something out.  Yes, the
+#. Scythean has been bugging me about something.  It's not something a cyborg
+#. like me can do, but a mercenary would probably fit the bill.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Them as offer as can, an it be so.  Aye, there's summat the old Scythy been "
+"larkin' up Rubik's tailpipe.  B'ain't tass right for a clanker like this'n, "
+"but a pop-an-work like you'n, maybe well and suited."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What's \"the ol' Scythy\"?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Why can't one of you do this?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Tell me more about this job that you can't do."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "<end_talking_leave>  See you later, Rubik."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Have you seen our big stompy quads?  There's a lot of things we're good
+#. at, but sneaky and subtle we aren't.  If we want a meet cute, first we've
+#. got to lay out the hempen mats.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Hat ye kennt our great clanks an' stompers?  There be many a thing we can do "
+"right good, but for the supple an' smooth, we b'ain't.  Wish'n we to make a "
+"meet-cute, must we first lay out the hempen mats."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Hold up, did you just say \"meet cute\"?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"I am guessing it doesn't matter, but what do you mean about hempen mats?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "OK, fine.  Tell me more about this job that you can't do."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ It's a bit hard to explain, but I'll do my best.  The forces we send far
+#. out, what I'd call 'escolts'… explorers?  They've scouted a place with a bit
+#. of promise, as far as I can tell.  A wall of concrete around a bunker.
+#. That's not so odd in a place like this, but this one has people coming and
+#. going.  There's something still in there, and I wonder who.  Are they
+#. friendly or not?  What would you think about doing some scouting yourself?
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"It be a right coddle to yark, but ol' Rubik'll do as can.  Them as we send "
+"a'far, what I'd assert as 'escolts'… explorers?  They's escolted a place with"
+" a mite o' promise, an I'm ken.  A wall o' crete-stone, abreast a rattlin' "
+"clunker… a 'bunker'.  Not so odd in a deadlands alas, but this'n gots the "
+"comin's and goin's.  Sommat's still in there, an' ol' Rubik wonders who.  Be "
+"they friend or foe?  What say ye t'helpin' with a mite o' escoltin' y'self?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Well, today's your lucky day, my metal friend.  I already know the place "
+"quite well."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"What exactly do you want me to do?  Scout out this bunker and contact the "
+"people in it?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ No, my friend, no!  Don't make contact, understand?  This is a covert op.
+#. If you see that it's safe you can go in closer and look around, but for
+#. goodness' sake, don't talk to anyone and don't linger.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"No, me fruit gum, no!  Make no contact, y'ken?  This be covert.  If ye kennit"
+" be safe, traipse along an' for a kennabout, but upon the chimes, speak none "
+"and tarry little."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I get the impression this is important, but I don't know what you mean."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "This sounds insanely dangerous.  They could just shoot me on sight."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"So you want me to go there, see what's inside the walls, look around a "
+"little, and then let you know if I see anything, but if someone tries to talk"
+" to me, not mention you or your people?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I'm gonna need to think on this one.  See you later, Rubik."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"*pauses for a moment, and lets out a slow sigh, speaking hesitantly as they "
+"catch themselves in idioms.  \"Make no contact.  We ken… we think the abroad "
+"o'… the outside o' the bunker be safe an'… be safe to explore, for one such "
+"as ye, who harks as from this'n land.  A wander in and escolt… a look around "
+"we ken as no… no risk.  If ye think ye been spotted, wave along and make no "
+"mention of ol' Rubik and the Exodii.  Not afore we be razzed some more o' "
+"this rattlin'… this bunker."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "How can you know that it's safe?  What if I'm shot on sight?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Our scouts have seen people who look like you wandering in the area
+#. safely.  If the scavengers can make it in and out, you should be fine.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Them as we've escolted seems a fair kin, an' we've eyed a scav or two "
+"wanderin' the premise unscathed.  If'n the scavs o' the dust can make it in "
+"an' out, so should ye be."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Aye, ye kennit well."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"This is insane.  I can't tell if you're leading me into a trap or not.  "
+"What's in it for me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Sure.  Don't know what good it'll do you, but I might be willing.  What are "
+"you paying?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ I didn't know you'd be such a hard bargain!  Tell ya what, when you come
+#. back, I'll let you in on some of these fancy knick-kacks.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Rightly a trig barter, an I'm ken.  By ol' Rubik's word, on your saintly "
+"march home, for you'll have the pick of the bright and steelies roun' ol' "
+"Rubik's shop, choice o' your own finely.  What say?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I'll go check it out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ That's quite the spirit!  For an exchange, I'll give you some of these
+#. shiny tools, whatever you want.  How's that sound?
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Ah, 'tis a fine spark.  F'r a switch an' clock, ol' Rubik can share y'like o'"
+" these bright and steelies roun' the shop, choice o' your finely.  What say?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I'll go check it out.  Thanks, Rubik."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I'm gonna need to think on this one.  I'll see you later, Rubik."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Ah, would you be willing to tell me about it?
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Ah, would ye be willin' ta yark with me about it?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "*Tell him."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Maybe later, can we talk about something else?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Not right now.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ That's great!  What would you like as payment?
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "'Tis a fine an' dandy!  What can ol' Rubik stand ye for, then?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Let's see what you have in stock."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Could I become a cyborg, like yourself?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I'm just glad to help, I don't need any payment."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ We are unable to locate one of our warehouses since the last jump.  We
+#. would need you to go find it and reactivate its locator
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Well an surely, fruit gum!  Aye, ye kennit well.  'Tis a store-cabin, mayhap "
+"the likes you've seen.  This'n be older'n most, clade o' iron and crete-"
+"stone.  Abreast the ceil, high atop, there be a steely jut, piercin' the "
+"heavens.  In times ordinary, Great Grey could call out and screed the jut, "
+"kennit, and send aloft an escolt to razz 'er.  Oft times, the jut is wibbled "
+"on the wobble, an' it be coals'n coke.  Ol' Rubik can give you'n a dandy to "
+"pop 'er back aloft, and that's a fig and a fiddle."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ We are unable to locate one of our warehouses since the last jump.  We
+#. would need you to go find it and reactivate its locator
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Well an surely, fruit gum!  Mayhap this be a chance to show y'self a true, "
+"for Rubik's got sommat to ask yet again.  The way o' the Exode is t'shimmy "
+"an' wobble, an' on thislike wobble, a few bits wobbled off, kennit?  'Tis "
+"rightful common, alack.  One such is hidden for our escolts an' our screeds."
+"  Mayhap as y'know the lands, ye'd have a see of it?  Aye, ye kennit well.  "
+"'Tis a store-cabin, mayhap the likes you've seen.  This'n be older'n most, "
+"clade o' iron and crete-stone.  Abreast the ceil, high atop, there be a "
+"steely jut, piercin' the heavens.  In times ordinary, Great Grey could call "
+"out and screed the jut, kennit, and send aloft an escolt to razz 'er.  Oft "
+"times, the jut is wibbled on the wobble, an' it be coals'n coke.  Ol' Rubik "
+"can give you'n a dandy to pop 'er back aloft, and that's a fig and a fiddle."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ We are unable to locate one of our warehouses since the last jump.  We
+#. would need you to go find it and reactivate its locator
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Well an surely, fruit gum!  For an' such as ye've done us a good.  Aye, ye "
+"kennit well.  'Tis a store-cabin, mayhap the likes you've seen.  This'n be "
+"older'n most, clade o' iron and crete-stone.  Abreast the ceil, high atop, "
+"there be a steely jut, piercin' the heavens.  In times ordinary, Great Grey "
+"could call out and screed the jut, kennit, and send aloft an escolt to razz "
+"'er.  Oft times, the jut is wibbled on the wobble, an' it be coals'n coke.  "
+"Ol' Rubik can give you'n a dandy to pop 'er back aloft, and that's a fig and "
+"a fiddle."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"I think I got most of that.  A metal and concrete building with some kind of "
+"metal pole on top that you want me to fix?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What?  A jut?  Fig and a fiddle?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ A jut is a long, thin pole.  The warehouse is made of concrete and rusty
+#. iron, and atop it there's a glistening pole.  The pole is broken, turned
+#. off.  I got a tool for you to turn it back on.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"A jut be a long, thin post, kennit.  The store-cabin be made o' con-crete an'"
+" rusty iron, and atop it be a glintin' post.  The post be broken, I'd razz.  "
+"Turnt off.  Rubik's got a tool for you to pop, make it turnt on."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"OK, got it.  A metal and concrete building with some kind of metal pole on "
+"top that you want me to fix"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Exactly.  This is some talking fit for my beloved jaryi.  What do you
+#. think?
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Just so.  'Tis like yarkin' fit f'r me beloved jaryi, y'kennit so fine.  What"
+" say you?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"What, now that I think on it, I am not sure what you meant about juts and "
+"figs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Shouldn't your quads be able to do that?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Any clues on how to find it?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What's in this for me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Then I'll find it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Beloved jaryi?  What did you just call me?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ No, I'm not calling you jaryi.  Jaryi is my mother's mother.  It's a
+#. King's Landing word for a grandmother, I'm making a little joke at you.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Ha, not callin' y'me jaryi.  Jaryi be the mother-twice.  'Tis but a King's "
+"Landing assert f'r a grandmother, Rubik's makin' a chestnut at ye."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"That word doesn't sound like any of the other Anglic words you've used, "
+"though.  What's it from?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "What were you talking about before?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ That's right, I did.  My mother's mother was a woman of the old kind, and
+#. so was my father's father.  My father's mother, she was a grandma, a little
+#. piece of old London-Town, but I had a jaryi and a taita and a tamoi (these
+#. are words for grandparents in a guarani dialect).  They were all there,
+#. right to the end.  Standing by, we were, one and all.  No time for stories,
+#. though.  Back to the here and now.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Right so, a fine notice.  Rubik's mother-twice, she were a woman o'th'old "
+"kind.  And were her mate, and Rubik's father-twice.  Rubik's father-mother, "
+"she were a gran, a fitty bit of ol' London-Town, right so, but Rubik had a "
+"jaryi and a taita and a tamoi.\" Rubik's voice goes distant for a moment.  "
+"\"An' they was all there, right to the end.  Standin' by, we were, one and "
+"all.\" They pause, then seem to snap back.  \"No time for stories, kennit?  "
+"Back to the here an' now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Yeah, let's talk about business again."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Without any indication of its location, there's too much ground to cover,
+#. and we have many other things to look for.  This one is pretty easy to see,
+#. so maybe some of the locals can help find it.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"'Tis a gull's errand, with narry a sign.  Our stompers cannot cover each "
+"squarrel, and they've many a dropsy to search.  This'n be a right easy spot "
+"for keen eyes, so mayhap your sameworlds can be of a snap."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "I need a moment.  <done_conversation_section>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ that's up to you, I think.  If I could find it myself, I'd send quads out
+#. there.  Maybe it would be worth asking around to other survivors?  Seems
+#. like a good job for a local guide.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"That's be for your assert, an I'm ken.  If ol' Rubik could find 'er, us'n'd "
+"send out the stompers.  For a yark an' a lark, though, couldst ask another of"
+" your sameworld?  Mercants or traveler-such?  It be a fine slick to a local "
+"guide."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You'll win my endless happiness?  Of course not.  I can find you something
+#. special from the CBM vaults.  Maybe I can give you a choice?  Three
+#. different ones.  Think on it and decide when it's done.
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Ye'll win the endless delight of ol' Rubik?\"  You hear a tinny chuckle from behind Rubik's faceplate.  \"O'course.  Ol' Rubik can find f'r ye something a mite special, from the ol' CBM vaults.  Mayahp a choice?  We're kickin' a thriceways.\"  Rubik reaches into the desk in front of them and pulls out a tiny, green-glowing CRT that, amid all the strange alien technology, looks bizarrely familiar, like something from a 1970's sci-fi movie.  They scroll rapidly down a list to find three items, which they tap to emphasize.  'air filtration CBM', 'blood analysis CBM', and 'radiation scrubber system CBM'.\n"
+"\n"
+"\"Think on it, decide on a last."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"An' a fine farthing ye did, on that.  Thankee sai.  We've a crib on the "
+"walkway already."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"*gives you a long look, and somehow you know they're doing a slow blink "
+"inside their metal shell.  \"An' did ye forget sommat?  The booter?  Me heart"
+" and skelpy, 'tis not so hard a job.  Alas and alack, give us some directions"
+" then.\"  They pull out a notepad and pass a pencil your way."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Long days and pleasant nights, Rubik.  Let's talk payment."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"[Detail the road to the warehouse.  This will advance time by ten minutes.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"Ol' Rubik's gone down into the stores an' slicked up a handful o' some "
+"dandies for ye.\"  They reach below the counter and take out three clear "
+"plastic bags, each containing a different cybernetic module.  \"Us'n can only"
+" spare one o', though.  Which'll it be?  We can slip an' crank 'em in as "
+"y'like.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"[Install Air Filtration CBM] I like the look of that air filtration thingy.  "
+"Does it come with pine-fresh scent?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"[Install Blood Analysis CBM] I've always wondered what's in my veins.  Let's "
+"try that blood analysis module."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"[Install Radiation Scrubber CBM] I have nightmares about ending up like Marie"
+" Curie.  Radiation scrubber it has to be."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "How about store credit instead?  [adds $1500 in store credit]."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid ""
+"How about instead, we turn this into a mutually beneficial relationship in "
+"the future.  I don't need anything from you at the moment, but now you know I"
+" get the job done."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/exodii/exodii_merchant_missions.json
+msgid "Pay Back The Riot Gear to Rubik"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+#: data/json/npcs/exodii/netherum/alphatest_dialogue.json
+msgid ""
+"[PLAYTEST] Send me to the Labyrinthine Structure alpha test 0.1, I know it's "
+"low on content and lacking combat balance, but I still want to check it out!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "[PLAYTEST] Tell me more about the Labyrinthine Structure alpha test."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "Can you do something for me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "I'm here to talk about a job."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid ""
+"What's with those weird metal zombies I've been seeing?  They resemble some "
+"of the robots around here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "Any chance I can buy some riot armor?  I need five complete sets."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid "Remember that riot gear you gave me?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid ""
+"And a fine return, matey.\"  Rubik puts a hand on the countertop, and "
+"gestures you closer with the other."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid ""
+"Fine and you still ain't dead.\"  Their gravelly voice is cheerful.  \"What "
+"brings ye roun' Rubik's neckawoods?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid ""
+"Bright and sunny, you're back!\"  There's a bit of a friendly chuckle in "
+"Rubik's gravelly voice.  \"Rubik's got goods for ye, if you got goods for "
+"Rubik."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+msgid ""
+"&Before you stands a towering mass of metal, at least seven feet high, with a"
+" large reflective glass plate in the center of its torso.  It turns as you "
+"enter the room, and raises its hand in a surprisingly natural motion of "
+"greeting.  A gravelly voice resonates from unseen speakers in the steel "
+"frame.  Its tone is bizarrely normal, in complete contrast with everything "
+"else around you.  \"Oy, you ain't dead.  Lookin' t'trade?\"  The accent "
+"sounds vaguely British, but not familiar; like a terrible imitation of "
+"Cockney."
+msgstr ""

@@ -1,0 +1,1667 @@
+# Batch 187 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid "grasping globule"
+msgid_plural "grasping globules"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "grasping globule"
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid ""
+"A large, irregular mass of greenish slime.  It forms tendrils as it perceives"
+" you, likely to try and bring you closer of its stronger allies."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid "bashing globule"
+msgid_plural "bashing globules"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bashing globule"
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid ""
+"A large, irregular mass of reddish slime, forming appendages to bash its "
+"targets.  It wanders blindly, waiting for something to come close enoug for "
+"it to notice and crush with its mass."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid "spewing globule"
+msgid_plural "spewing globules"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "spewing globule"
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid ""
+"This mass of pale slime quivers as you approach.  Beneath the surface, you "
+"see shapes trying to find a way out of it."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "spewing globule"
+#: data/mods/Xedra_Evolved/monsters/monster.json
+#, c-format
+msgid "%s opens itself, and some small globules crawl out of it!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid "small globule"
+msgid_plural "small globules"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "small globule"
+#: data/mods/Xedra_Evolved/monsters/monster.json
+msgid ""
+"This small, swift ball of slime moves to attack you without hesitation.  "
+"Despite its size and lack of strength, its speed must not be underestimated."
+msgstr ""
+
+#. ~ Sound description of spell "mon_luna_attuned_revenant_beam ( Lunar Line )"
+#. ~ Sound description of spell "mon_luna_attuned_revenant_lash_out ( Lasing-
+#. Out Lunar Line )"
+#: data/mods/Xedra_Evolved/monsters/monster_spells.json
+msgid "A crackling sound!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s tries to impale your %2$s, but fails to penetrate your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s tries to impale <npcname>, but fails to penetrate their armor!"
+msgstr ""
+
+#. ~ Sound description of spell "sapient_light_damage ( Sapient Damage )"
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+msgid "a loud whisper"
+msgstr ""
+
+#. ~ Description of spell "xedra_monster_erosion_attack ( Monster Erosion -
+#. Attack )"
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+msgid ""
+"This causes the dot when attacking targets with the erosion buff.  Having the"
+" spell is a bug.  Monster version"
+msgstr ""
+
+#. ~ Message of spell "xedra_monster_erosion_attack ( Monster Erosion - Attack
+#. )"
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+msgid "monster erosion attack"
+msgstr ""
+
+#. ~ Description of spell "xedra_monster_erosion_buff ( Monster Erosion - Buff
+#. )"
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+msgid ""
+"This gives the monster the erosion buff.  Having the spell is a bug.  Monster"
+" version"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "flying shark"
+msgid_plural "flying sharks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "flying shark"
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid ""
+"It would be funny watching a shark swim through the air, between trees and "
+"other objects like kelp under the water.  If it didn't mean the shark was "
+"still completely real and capable of flying after you.  Something is very "
+"wrong about things here."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "endless snake"
+msgid_plural "endless snakes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "endless snake"
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid ""
+"The tail of this snake doesn't seem to end.  Clearly there are places that "
+"are not part of the tail of this snake, but when you watch it move you only "
+"see the front of the body move forward while the rear stays in it's place "
+"eternally elongating.  But that can't be true so your eyes snap to somewhere "
+"else and that seems to be an appropriately length snake, isn't it?"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "swarm of teeth"
+msgid_plural "swarms of teeth"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "swarm of teeth"
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "A buzzing whining sound accompanies this swarm of loose teeth."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "twin"
+msgid_plural "twins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "twin"
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid "Ethereal copy of you."
+msgstr ""
+
+#. ~ Description of monster "you"
+#: data/mods/Xedra_Evolved/monsters/nightmares_and_chimeras.json
+msgid ""
+"It is you.  It looks like you, it is equipped like you, it is even has a "
+"weapon like you."
+msgstr ""
+
+#. ~ Description of species "NIGHT_CREATURE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "One of the children of the night"
+msgstr ""
+
+#. ~ Description of species "CHANGELING_NOBLE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "one of the leaders of the people under the hill"
+msgstr ""
+
+#. ~ Description of species "IERDE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "an earth elemental spirit"
+msgstr ""
+
+#. ~ Description of species "UNDINE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "a water elemental spirit"
+msgstr ""
+
+#. ~ Description of species "ARVORE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "a plant elemental spirit"
+msgstr ""
+
+#. ~ Description of species "SALAMANDER"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "a fire elemental spirit"
+msgstr ""
+
+#. ~ Description of species "HOMULLUS"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "an elemental spirit of humanity"
+msgstr ""
+
+#. ~ Description of species "SYLPH"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "an air elemental spirit"
+msgstr ""
+
+#. ~ Description of species "RENFIELD"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid ""
+"a variety of creatures that have partaken of the unholy blood of the vampyr"
+msgstr ""
+
+#. ~ Description of species "VAMPIRE_ANATHEMA"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "a being who devoured vampires to become better at killing them."
+msgstr ""
+
+#. ~ Description of species "NIGHTMARE"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "creatures made from dreams, technically not alive"
+msgstr ""
+
+#. ~ Description of species "GRACKEN"
+#: data/mods/Xedra_Evolved/monsters/species.json
+msgid "Grackens from the nether"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "armored warrior with mace"
+msgid_plural "armored warriors with maces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "armored warrior with mace"
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"Clad in ancient armor and with a mace in hand, this warrior was summoned by "
+"magic to defend you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "armored warrior with axe"
+msgid_plural "armored warriors with axes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "armored warrior with axe"
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"Clad in ancient armor and with a battleaxe in hand, this warrior was summoned"
+" by magic to defend you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "warrior with spear"
+msgid_plural "warriors with spears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "warrior with spear"
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"Clad in leather armor and with a spear in hand, this warrior was summoned by "
+"magic to defend you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "warrior with sword"
+msgid_plural "warriors with sword"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "warrior with sword"
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"Clad in leather armor and with a sword in hand, this warrior was summoned by "
+"magic to defend you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "shadowy warrior"
+msgid_plural "shadowy warriors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shadowy warrior"
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"A shadowy figure, only barely visible as more than a mist, but the silhouette"
+" of armor and weapons are obvious."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid "monochrome zombie"
+msgid_plural "monochrome zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "monochrome zombie"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid ""
+"What stands in front of you is one of the healthiest zombies you've ever "
+"seen.  If not for the black muck oozing from its orifices and shambling gait,"
+" you might even think it human.  Every part of this zombie, even its clothes,"
+" is colored some shade of gray, and every couple of seconds it flickers."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "monochrome zombie"
+#. ~ Monster message of special attack of monster "distorted zombie"
+#. ~ Monster message of special attack of monster "zombie timewound"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+#, c-format
+msgid "%1$s flickers and all of its injuries disappear!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid "distorted zombie"
+msgid_plural "distorted zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "distorted zombie"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid ""
+"This zombie is partially obscured by the gray, distorted air around it.  From"
+" what you can see it doesn't have a single wound on its body, and it moves "
+"much quicker than a zombie should.  Every few seconds the distortions surge."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid "zombie timewound"
+msgid_plural "zombie timewounds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie timewound"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid ""
+"Every bit of color around this zombie has been sapped a distorted gray.  In "
+"contrast with its healthy appearance, the surrounding environment seems to "
+"slowly erode, even after it swiftly moves away.  It sharply flickers every "
+"few seconds."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "zombie timewound"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+#, c-format
+msgid "The ground around %1$s starts eroding into nothingness."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid "monochrome boomer"
+msgid_plural "monochrome boomers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "monochrome boomer"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+msgid ""
+"A rotund human body, bloated beyond belief.  Its entire body is tainted gray,"
+" and it seems to emit a pulsating distortion that saps color from the world "
+"around it.  Every few seconds the world around it seems to freeze, and its "
+"likely that any damage will easily detonate the distorted time the zombie "
+"barely holds within itself."
+msgstr ""
+
+#. ~ Death message of monster "monochrome boomer"
+#: data/mods/Xedra_Evolved/monsters/zombies.json
+#, c-format
+msgid "Everything around the %s suddenly stops!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid "Living Paradox"
+msgstr ""
+
+#. ~ Description of mutation "Living Paradox"
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid ""
+"You have an intimate sense for the flow of time, and you can use your power "
+"to manipulate it.  Activate this trait to spend learned insight."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid "Time Looped Knife Wound"
+msgstr ""
+
+#. ~ Description of mutation "Time Looped Knife Wound"
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid ""
+"You have suffered a time looped wound, forcing you to repeatedly endure the "
+"harm of an earlier wound.  Every 24 hours you are impaled by a non-existent "
+"knife."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid "Slowed Timestream"
+msgstr ""
+
+#. ~ Description of mutation "Slowed Timestream"
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+#, no-c-format
+msgid ""
+"Your timestream remains slightly slower than baseline reality.  You act 10% "
+"slower."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid "Unstable Chronomancy"
+msgstr ""
+
+#. ~ Description of mutation "Unstable Chronomancy"
+#: data/mods/Xedra_Evolved/mutations/chronomancer_traits.json
+msgid ""
+"Your chronomantic powers have inherent instability.  While attempting to "
+"maintain them over long periods of time, your powers may randomly fail."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid "Dreamer"
+msgstr ""
+
+#. ~ Description of mutation "Dreamer"
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid ""
+"Dreamers are people who are able to tap into the power of dreams and nearby "
+"dimensions and create fantastical effects as a result.  They can even pull "
+"some of this dream material into our world to build other things with it.  "
+"Sometimes they hear outside voices that offer help and presents, and with "
+"enough power, dreamers can pull them right from beyond.  Their power scales "
+"with their natural perception and intellect."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid "Eater of Dreams"
+msgstr ""
+
+#. ~ Description of mutation "Eater of Dreams"
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid ""
+"These people are aware of this cross-dimensional contamination and while they"
+" can't pull anything over and make new things, they can eat anything they "
+"find in our world that doesn't belong and gain abilities and powers from that"
+" consumption.  They have larger than normal mana pools but regen that mana "
+"much slower as a result, they can cast a spell to convert dreamdross scraps "
+"directly into mana.  Their power scales with their natural strength and "
+"dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid "Dreamsmith"
+msgstr ""
+
+#. ~ Description of mutation "Dreamsmith"
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid ""
+"Dreamsmiths can forge dreamdross into a more durable form and create "
+"permanent items that can be repaired."
+msgstr ""
+
+#. ~ Description of mutation "Mad Genius"
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid ""
+"The Mad Genius uses their connection to other dimensions in order to "
+"manipulate or even replace the physics of this realm with that of another.  "
+"They turn toys and nonsense inventions into machines of incredible "
+"sophistication and power, temporarily."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid "Hedgecraft"
+msgstr ""
+
+#. ~ Description of mutation "Hedgecraft"
+#: data/mods/Xedra_Evolved/mutations/classes.json
+msgid ""
+"The craft of the wise, provenance of cunning men, wise women, soothsayers, "
+"knowers, herb-witches, and curse-lifters throughout history.  With the proper"
+" components, and at the proper times and places, they can perform miracles."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/cybernetic_traits.json
+msgid "XEDRA Neurobionic Interface"
+msgstr ""
+
+#. ~ Description of mutation "XEDRA Neurobionic Interface"
+#: data/mods/Xedra_Evolved/mutations/cybernetic_traits.json
+msgid ""
+"The compact bionic command and control interface interwoven with your nervous"
+" system had a previous life inside of a cybernetic tribesperson.  Best case "
+"scenario, none of them are on this Earth."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_DHAMPIR_UPDATE_BLOOD_SPENT_AMOUNTS"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid "This round's blood spent was <context_val:temp_value>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DHAMPIR_CHECK_FOR_POWER_UPGRADES"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid ""
+"Odds of gaining a new power are "
+"<u_val:dhampir_blood_spent_compare_value_for_powers> in "
+"<context_val:target_value>."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DHAMPIR_GAIN_NEW_POWER_MESSAGE"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid "You have unlocked a new ability from your use of your tainted blood."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DHAMPIR_GAIN_NEW_WEAKNESS_MESSAGE"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid "You use of your vampiric powers has caused you to gain a new frailty."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DHAMPIR_WEAKNESS_BLOODLUST_CHECKS"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid ""
+"Crimson clouds your vision as you are overcome with an urge to drink blood."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DHAMPIR_AVOID_EAT_SLEEP_DRINK_activated"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid "You have not enough power in your blood to sustain yourself."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_DHAMPIR_AVOID_EAT_SLEEP_DRINK_deactivated"
+#: data/mods/Xedra_Evolved/mutations/dhampir_eocs.json
+msgid ""
+"You feel a wave of tiredness as you allow mortal needs to assert their will "
+"once again."
+msgstr ""
+
+#. ~ Message of spell "gracken_arm_push_spell ( Gracken Long Arms Spell )"
+#: data/mods/Xedra_Evolved/mutations/gracken_spells.json
+#, c-format
+msgid "You extend your arms and push the %s away from you!"
+msgstr ""
+
+#. ~ value of variable 'message_success' in effect in EoC
+#. "EOC_GRACKEN_ARM_PUSH1_activated"
+#: data/mods/Xedra_Evolved/mutations/gracken_trait_eocs.json
+msgid "You lash out and push your target away!"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Ierde"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Soil and stone."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Ierde" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Returned to the earth."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Ierde" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Returned to the earth."
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Sylph"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Wind and weather."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Sylph" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Dissipated into the atmosphere."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Sylph" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Dissipated into the atmosphere."
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Undine"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Rain and wave."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Undine" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Dissolved into the sea."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Undine" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Dissolved into the sea."
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Arvore"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Growth in adversity."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Arvore" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Fell with a great sound."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Arvore" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Fell with a great sound."
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Arvorian Canker"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Arvorian Canker"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Gorged with verdant power."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Arvorian Canker" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Withered and rotted away."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Arvorian Canker" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Withered and rotted away."
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Salamander"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Touched by fire."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Salamander" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Snuffed out."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Salamander" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Snuffed out."
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Homullus"
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Wish upon a star."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Homullus" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Real enough for you?"
+msgstr ""
+
+#. ~ Memorial message of mutation class "Homullus" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Real enough for you?"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Fair Folk Noble"
+msgstr ""
+
+#. ~ Memorial message of mutation class "Fair Folk Noble" for male
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Brownie" for male
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Pooka" for male
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Selkie" for male
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Trow" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "Empty your heart of its mortal dream."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Fair Folk Noble" for female
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Brownie" for
+#. female
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Pooka" for female
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Selkie" for female
+#. ~ Memorial message of mutation class "Fair Folk Commoner, Trow" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "Empty your heart of its mortal dream."
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Fair Folk Commoner, Brownie"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Fair Folk Commoner, Pooka"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Fair Folk Commoner, Selkie"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Fair Folk Commoner, Trow"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgid "Lilin"
+msgstr ""
+
+#. ~ Memorial message of mutation class "Lilin" for male
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_male"
+msgid "The dawn breaks, and the owl lays down for its final rest."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Lilin" for female
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+msgctxt "memorial_female"
+msgid "The dawn breaks, and the owl lays down for its final rest."
+msgstr ""
+
+#. ~ Player message in effect in EoC "eoc_eggsac_survivable_or_fatal" in nested
+#. EOCs in effect in EoC "eggsac_mantain"
+#. ~ Player message in false effect in EoC "eoc_eggsac_survivable_or_fatal" in
+#. nested EOCs in effect in EoC "eggsac_mantain"
+#. ~ Player message in effect in EoC "eoc_eggsac_remove_survivable_or_fatal" in
+#. nested EOCs in effect in EoC "eggsac_remove"
+#. ~ Player message in false effect in EoC
+#. "eoc_eggsac_remove_survivable_or_fatal" in nested EOCs in effect in EoC
+#. "eggsac_remove"
+#: data/mods/Xedra_Evolved/mutations/mutation_eocs.json
+msgid "Spiders erupt from your body!"
+msgstr ""
+
+#. ~ Description of mutation "Ierde"
+#. ~ Description of mutation "Arvore"
+#. ~ Description of mutation "Undine"
+#. ~ Description of mutation "Salamander"
+#. ~ Description of mutation "Sylph"
+#. ~ Description of mutation "Homullus"
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+msgid "You have ascended into your fae nature."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Dreamless"
+msgstr ""
+
+#. ~ Description of mutation "Dreamless"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You live firmly in reality and never experience extremely vivid dreams about "
+"choices that have real world consequences.  ( You will be unable to gain "
+"Dream magicks from sleeping after strange events)"
+msgstr ""
+
+#. ~ Description of mutation "Transformed into Goblin"
+#. ~ Description of mutation "Transformed into Spider"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You feel like you've left behind your old life and form."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Transformed into Spider"
+msgstr ""
+
+#. ~ Description of mutation "Ki Strike"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Who needs weapons?  You deal more melee damage while fighting barehanded and "
+"without gloves.  This damage improves as your unarmed skill increases."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Extended Life"
+msgstr ""
+
+#. ~ Description of mutation "Extended Life"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You swallow the potion and feel younger already.  Though the taste lingers "
+"long past when you'd hope it would pass."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Dhampir"
+msgstr ""
+
+#. ~ Description of mutation "Dhampir"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You are a dhampir, the child of a vampire.  You have inherited a portion of their vampiric power, as well as the ability to drink blood.  Hopefully you can keep your urges under control.\n"
+"\n"
+"As a dhampir, your blood naturally slowly fills with power over time, which you can use to fuel your abilities."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Blood Calls to Blood"
+msgstr ""
+
+#. ~ Description of mutation "Blood Calls to Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can use the connection of your heritage to sense nearby vampires and "
+"their minions."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "vampire_sense"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You sense one of the vampires' servants here."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "vampire_sense"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You sense a vampire here."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Dhampir Fangs"
+msgstr ""
+
+#. ~ Description of mutation "Dhampir Fangs"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You have a set of small fangs, not as long as a true vampire's, but on the "
+"other hand, you can retract them to more easily conceal them.  Activate to "
+"extend your fangs."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Cold as the Grave"
+msgstr ""
+
+#. ~ Description of mutation "Cold as the Grave"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your half-dead flesh is inured to winter's chill.  As long as you have "
+"empowered blood in your body, you suffer much less from colder temperatures."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "One Foot in the Grave"
+msgstr ""
+
+#. ~ Description of mutation "One Foot in the Grave"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The deathly energies that course through your veins are inimical to mundane "
+"poisons and diseases.  As long as you have empowered blood in your body, you "
+"are more resistant to disease, poison, and infection."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Light as the Last Breath"
+msgstr ""
+
+#. ~ Description of mutation "Light as the Last Breath"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"While unable to ignore gravity like a true vampire, it has less of a hold on "
+"you.  You can fall one story without ill effect and take greatly-reduced fall"
+" damage as long as you have empowered blood in your body."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Half-Dead Flesh"
+msgstr ""
+
+#. ~ Description of mutation "Half-Dead Flesh"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Being born closer to death, you feel the sensations of the living less "
+"strongly.  You suffer much less pain from your injuries than a human would, "
+"and the pain affects your capabilities less."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "A Thousand Years of Night"
+msgstr ""
+
+#. ~ Description of mutation "A Thousand Years of Night"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You are only half-alive now, sustained as much by the energy in your blood as"
+" by biological processes.  You age far slower than a mortal, and when your "
+"limbs break, they heal more quickly in proportion to how much empowered blood"
+" you have."
+msgstr ""
+
+#. ~ Description of mutation "The Blood is the Life"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"While you must normally eat, sleep, and drink as a mortal must, in times of need you can put that off.  Activate this trait to reduce your need for food, water, and sleep to zero.  While active, the Blood is the Life will continually expend the power in your blood, and when it wears off, you will become exhausted in proportion to how long the trait was active.  You spend <color_yellow>much more blood</color> if outdoors in the sunlight.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 1 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 1 ml per minute"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Sun Sensitivity"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Sun Sensitivity"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"While you won't burn in the sunlight like a true vampire, it's not "
+"comfortable.  You suffer a -1 penalty to all stats when outdoors during the "
+"daytime, and an additional -2 if it's sunny or clear."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Nocturnal"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Nocturnal"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You aren't forced to slumber the day away, but you sure want to.  Your "
+"sleepiness accumulates much faster while the sun is in the sky, but you have "
+"an easier time sleeping during the day."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Slow Healing"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Slow Healing"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#, no-c-format
+msgid ""
+"Being so close to death has slowed down the processes of your living cells "
+"considerably.  You heal at 50% of the normal rate."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Animal Hatred"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Animal Hatred"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Animals can sense your dead blood and they hate it.  They may run or be "
+"aggressive to you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Burned by Water"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Burned by Water"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"While running water is not deadly to you, it is uncomfortable.  Moving "
+"through running water without a boat will cause pain."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Corpselike Pallor"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Corpselike Pallor"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your skin has the obviously-unnatural grayish-white tinge of a corpse, and "
+"mortals will react appropriately to seeing it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Overwhelming Arrogance"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Overwhelming Arrogance"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The vampires are right about one thing; they are better than humans, and your"
+" vampire blood makes you better as well."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Bloodlust"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Bloodlust"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You have tasted blood and that taste forever lingers in the back of your "
+"mind.  You will get cravings for blood that only time or drinking more blood "
+"can sate."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Thirst of the Damned"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Thirst of the Damned"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#, no-c-format
+msgid ""
+"Fresh blood has an energy that mortal food simply cannot compare to.  You "
+"gain 33% reduced kcal from the food you eat, but additional calories from "
+"drinking blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Weakness: Decreased Blood Empowerment"
+msgstr ""
+
+#. ~ Description of mutation "Weakness: Decreased Blood Empowerment"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The power of fresh stolen blood lingers in your veins.  The natural rate that"
+" your blood empowers itself is cut in half."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Infected with the vampire disease"
+msgstr ""
+
+#. ~ Description of mutation "Infected with the vampire disease"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You have developed a thirst for the blood of your fellow humans."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Blood Arts"
+msgstr ""
+
+#. ~ Description of mutation "Blood Arts"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"This provides the school trait for vampire blood powers.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Gleaming Eyes"
+msgstr ""
+
+#. ~ Description of mutation "Gleaming Eyes"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your eyes gleam lightly red as the light catches in them and with a few drops of the stolen blood in your veins you are able to see in the dark.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 100 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 50 ml"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Sanguine Ecstasy"
+msgstr ""
+
+#. ~ Description of mutation "Sanguine Ecstasy"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your palate adapted to your new condition.  Drinking human blood will make "
+"you feel great."
+msgstr ""
+
+#. ~ Description of mutation "Vigor Mortis"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your stolen blood reinforces your muscles, making your grip crack bone and your punches dent steel.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 150 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 75 ml"
+msgstr ""
+
+#. ~ Description of mutation "Sanguine Resilience"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your cold flesh is not as vulnerable as it once was.  Activate to render it even more resistant to physical damage.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 150 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 75 ml"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Predator's Senses"
+msgstr ""
+
+#. ~ Description of mutation "Predator's Senses"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your senses are heightened, allowing you to see more clearly, hear even tiny "
+"sounds, and smell nearby fresh human blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Blush of Health"
+msgstr ""
+
+#. ~ Description of mutation "Blush of Health"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The power of stolen blood keeps you feel amazing.  As long as you are not "
+"suffering from the Withering, you gain a bonus to your health."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Silent as Death"
+msgstr ""
+
+#. ~ Description of mutation "Silent as Death"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Your movements don't make nearby as much noise as they used to."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Blood Lungs"
+msgstr ""
+
+#. ~ Description of mutation "Blood Lungs"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your fingers have developed bloodsucking properties, you can now suck up "
+"blood through them.  You're not sure where the blood goes but with a thought "
+"you can use these deposits."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_stamina_for_blood_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Unholy Endurance"
+msgstr ""
+
+#. ~ Description of mutation "Unholy Endurance"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your exhaust some of the blood in your veins to boost and recover some of "
+"your spent stamina."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_commune_with_night_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Learn from the Children of the Night"
+msgstr ""
+
+#. ~ Description of mutation "Learn from the Children of the Night"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You call out to the creatures that inhabit the night.  Wolves, bats, rats and"
+" more.  They tell you about what terrain surrounds you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Sense the Children of the Night"
+msgstr ""
+
+#. ~ Description of mutation "Sense the Children of the Night"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You can sense the presence of nearby predatory night creatures."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "night_creature_sense"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You sense one of the creatures of the night."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Walking the shadowed path of blood"
+msgstr ""
+
+#. ~ Description of mutation "Walking the shadowed path of blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You have new fangs to go along with your thirst for blood."
+msgstr ""
+
+#. ~ Description of mutation "Coagulant Weave"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your body prepares to prevent the loss of any blood to combat damage.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 500 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 250 ml"
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "spell_blood_heal"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Sanguine Restoration"
+msgstr ""
+
+#. ~ Description of mutation "Sanguine Restoration"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your flesh heals visibly while blood disintegrates hidden inside your veins."
+msgstr ""
+
+#. ~ Description of mutation "Flow Like Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can move faster than the eye can see, avoiding the claws and teeth and weapons of your enemies.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 250 (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 125 ml"
+msgstr ""
+
+#. ~ Description of mutation "Cloak of Shadows"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"When indoors or at night, you can cloud the minds of nearby enemies, making it harder for them to spot you.  This does not make you invisible.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 100 (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 50 ml"
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_fear_gaze_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Predator's Mien"
+msgstr ""
+
+#. ~ Description of mutation "Predator's Mien"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"With a bit of stolen blood and a savage expression, you can send your enemies"
+" fleeing."
+msgstr ""
+
+#. ~ Description of mutation "Corpse's Countenance"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You are close enough to death now that you can easily imitate it; your "
+"heartbeat slows to a near-stop, your breathing ceases, your flesh grows pale,"
+" and you show no signs of life.  You will be unable to move or act while "
+"feigning death, but enemies will generally ignore you.  You will be unable to"
+" feign death twice in a short time if you are seen ending your masquerade."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Spider's Walk"
+msgstr ""
+
+#. ~ Description of mutation "Spider's Walk"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Gravity seems to have less of an effect than it used it.  With barely an "
+"effort you can ascend or descend even sheer walls, and you can fall any "
+"distance and land on your feet uninjured."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Claws of the Beast"
+msgstr ""
+
+#. ~ Description of mutation "Claws of the Beast"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can twist your fingernails into sharp claws, allowing you to inflict extra damage in unarmed combat.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 125 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 62 ml"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Crimson Vision"
+msgstr ""
+
+#. ~ Description of mutation "Crimson Vision"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your vision has improved and now you can see flowing blood in the vein, like "
+"bright trails in the dark."
+msgstr ""
+
+#. ~ Description of mutation "Carmine Vitality"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Blood fills you with a surge of power.  You gain a bonus to your strength and"
+" dexterity for one hour after drinking blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Mortal hungers are replaced with immortal hungers"
+msgstr ""
+
+#. ~ Description of mutation "Mortal hungers are replaced with immortal
+#. hungers"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You replace some of your regular caloric intake with blood and begin to see "
+"some of the more esoteric abilities inherent to vampirism."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "spell_hypnotic_gaze"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Hypnotic Gaze"
+msgstr ""
+
+#. ~ Description of mutation "Hypnotic Gaze"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can mesmerize your prey, gazing into their eyes and freezing them in "
+"their tracks."
+msgstr ""
+
+#. ~ Description of mutation "Blood-Driven Speed"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your body exceeds normal human reaction limits as blood turns to ash in your veins.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 750 ml (<u_val:blood_amount_for_graph> ml current)\n"
+"<color_light_red>Periodic Blood Cost:</color> 375 ml"
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_magic_for_blood_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Blood-Fueled Magic"
+msgstr ""
+
+#. ~ Description of mutation "Blood-Fueled Magic"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your exhaust some of the blood in your veins to recover some of your spent "
+"mana."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_command_beast_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Cowing the Beast"
+msgstr ""
+
+#. ~ Description of mutation "Cowing the Beast"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You are a supreme predator, and other predators bow at your feet."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_earth_slumber_spell"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Earthen Slumber"
+msgstr ""
+
+#. ~ Description of mutation "Earthen Slumber"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can sleep within the earth itself, avoiding the hateful light of the sun."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Incarnadine Energy"
+msgstr ""
+
+#. ~ Description of mutation "Incarnadine Energy"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The stolen blood within your body provides you with a fountain of energy.  "
+"You gain a bonus to your Cardio rating."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Wakeful Slumber"
+msgstr ""
+
+#. ~ Description of mutation "Wakeful Slumber"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your senses are so fine they can alert you to danger even while you slumber."
+"  Activate to cause yourself to wake up if danger approaches while you sleep."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Fortitude of the Damned"
+msgstr ""
+
+#. ~ Description of mutation "Fortitude of the Damned"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your flesh is more resilient and you can suffer much more damage than a "
+"mortal before expiring.  Your hit points are increased."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Discarded their mortality"
+msgstr ""
+
+#. ~ Description of mutation "Discarded their mortality"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You have become a true vampire and are beginning to see some of the most "
+"potent abilities vampirism has to offer."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "True Vampire's Potence"
+msgstr ""
+
+#. ~ Description of mutation "True Vampire's Potence"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Your new status as a true vampire has empowered your other abilities."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of effect type id "effect_vampire_torpor"
+#. ~ Name of spell "vampire_torpor"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Torpor"
+msgstr ""
+
+#. ~ Description of mutation "Torpor"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can enter a deathlike stake known as torpor, in which your wounds will "
+"close faster, your fatigue will fully recover and your blood thirst will be "
+"less intense.  Be careful, though, as nothing will be able to wake you up "
+"until eight hours have passed."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "vampire_dominate"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/spells/vampire_spells.json
+msgid "Dominating Gaze"
+msgstr ""
+
+#. ~ Description of mutation "Dominating Gaze"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can focus your gaze and take control of your target.  Only works against "
+"targets that have a mind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Facultative Breathing"
+msgstr ""
+
+#. ~ Description of mutation "Facultative Breathing"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You do not need to breathe air to live anymore.  It prevents you from being "
+"drowned or suffocated and allows you to ignore inhaled gases."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Corpse-like Flesh"
+msgstr ""
+
+#. ~ Description of mutation "Corpse-like Flesh"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your undead body is now much more dead than alive.  It prevents mundane "
+"illnesses and parasites from affecting you, while granting you a total "
+"immunity against radiation.  In addition, your scent is now something most "
+"mundane creatures cannot understand."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Shape of the Night Flier"
+msgstr ""
+
+#. ~ Description of mutation "Shape of the Night Flier"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You can transform yourself into a bat and take wing on the night air."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Shape of the Pack Hunter"
+msgstr ""
+
+#. ~ Description of mutation "Shape of the Pack Hunter"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You can transform yourself into a wolf and stalk your enemies."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Shape of the Billowing Mists"
+msgstr ""
+
+#. ~ Description of mutation "Shape of the Billowing Mists"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You can transform yourself into a cloud of mist and flee any dangers."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Fully fueled by the Blood"
+msgstr ""
+
+#. ~ Description of mutation "Fully fueled by the Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"By reaching the final stage of vampirism, you have freed yourself from your "
+"mundane needs.  The only sustenance you need now is blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Master the Mortal Mind"
+msgstr ""
+
+#. ~ Description of mutation "Master the Mortal Mind"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your ability to influence others has amplified.  You can now spend blood "
+"while talking with someone else to make them like you more, with the "
+"costliest application of this power being able to turn them into your "
+"obsessed servants.  Not all can be influenced by this power, for anger, panic"
+" and strong ties to a group that isn't yours will disrupt the process.  Other"
+" vampires and the rare saint-blooded are also immune to it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Distillate the Inner Blood"
+msgstr ""
+
+#. ~ Description of mutation "Distillate the Inner Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Unlike lesser vampires who bloat as they gorge on blood, you concentrate the "
+"blood you consume, making it fit nicely in your veins.  This removes the "
+"penalties for containing too much blood, but doesn't expand your maximal "
+"capacity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Shape of the Shadowed Path"
+msgstr ""

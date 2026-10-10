@@ -1,0 +1,1734 @@
+# Batch 143 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of spell "druid_wood_living_tree_spell"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Shape Wood"
+msgstr ""
+
+#. ~ Description of spell "druid_wood_living_tree_spell ( Shape Wood )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Using druidic magic, shape living wood into a log that you can use for other "
+"projects without harming the tree.  You must cast this spell on a living "
+"tree."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_EOC_DRUID_SHAPE_WOOD"
+#. ~ Message in effect in EoC "EOC_ARVORE_TREE_SINGING"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Select nearby tree"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_EOC_DRUID_SHAPE_WOOD"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"The wood of the tree grows and forms as you cast the spell and when it ends, "
+"there is a log lying on the ground, entirely covered in bark but otherwise "
+"straight and ready to be used in other projects."
+msgstr ""
+
+#. ~ Name of spell "druid_anti_heat"
+#. ~ Name of effect type id "effect_druid_anti_heat"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Water's Cooling Touch"
+msgstr ""
+
+#. ~ Description of spell "druid_anti_heat ( Water's Cooling Touch )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Draw on some of the essence of water, providing protection against the "
+"summer's heat."
+msgstr ""
+
+#. ~ Name of spell "druid_breathing_underwater"
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/items/ethereal_items.json
+msgid "Aquatic Mantle"
+msgid_plural "Aquatic Mantles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of spell "druid_breathing_underwater ( Aquatic Mantle )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Cover yourself in a thin layer of magical seaweed, preventing you from "
+"getting wet and allowing you to breathe underwater."
+msgstr ""
+
+#. ~ Name of spell "druid_disinfectant"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Wash the Wounds Clean"
+msgstr ""
+
+#. ~ Description of spell "druid_disinfectant ( Wash the Wounds Clean )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Transform a bit of water into a magical disinfectant as you pour it over your"
+" wounds."
+msgstr ""
+
+#. ~ Name of spell "druid_water_walking"
+#. ~ Name of effect type id "effect_druid_water_walking"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Water Strider's Walk"
+msgstr ""
+
+#. ~ Description of spell "druid_water_walking ( Water Strider's Walk )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Enchant yourself so that the water will buoy you up and prevent you from "
+"sinking, allowing you to walk on its surface."
+msgstr ""
+
+#. ~ Name of spell "druid_traverse_the_wilds"
+#. ~ Name of effect type id "effect_druid_traverse_the_wilds"
+#. ~ Name of spell "arvore_traverse_the_wilds"
+#. ~ Mutation name
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Traverse the Wilds"
+msgstr ""
+
+#. ~ Description of spell "druid_traverse_the_wilds ( Traverse the Wilds )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Blend in the wilds and urge them to speed your passage.  Trees bend out of "
+"the way, bushes do not hinder you, and even grass subtly moves your feet "
+"along.  The spell cannot be cast near civilization and similarly will fade if"
+" your travels take you out of the wilds."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DRUID_TRAVERSE_THE_WILDS"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "You must be surrounded by the wilds to traverse them."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_TRAVERSE_THE_WILDS_REMOVER"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "As you approach civilization, your spell fades."
+msgstr ""
+
+#. ~ Name of spell "druid_bearmantle"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Bearmantle"
+msgstr ""
+
+#. ~ Description of spell "druid_bearmantle ( Bearmantle )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Adopt some of the aspect of the bear, protecting you from cold and preparing "
+"you for winter."
+msgstr ""
+
+#. ~ Name of spell "druid_goodberry"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Goodberry"
+msgstr ""
+
+#. ~ Description of spell "druid_goodberry ( Goodberry )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Enchant a set of berries, transforming them into magical fruit that will "
+"provide a hearty meal's worth of nutrition and a small amount of healing when"
+" eaten.  The goodberries will rot away within 24 hours if not eaten."
+msgstr ""
+
+#. ~ Name of spell "druid_create_temporary_spring"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Fountain of the Depths"
+msgstr ""
+
+#. ~ Description of spell "druid_create_temporary_spring ( Fountain of the
+#. Depths )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Call to the waters beneath the earth and bring them to the surface, creating "
+"a natural spring.  The waters will subside when the spell's duration ends."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_DRUID_TEMPORARY_SPRING"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Select natural earth"
+msgstr ""
+
+#. ~ Name of spell "druid_turn_tree_into_treant"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Awakening of the Forest Guardian"
+msgstr ""
+
+#. ~ Description of spell "druid_turn_tree_into_treant ( Awakening of the
+#. Forest Guardian )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Grant a nearby tree awareness and mobility, letting it shake free from the soil and rise up to crush your enemies.  It will root itself again when the spell expires.\n"
+"\n"
+"You must be <color_yellow>standing next to a tree</color> for the spell to take effect."
+msgstr ""
+
+#. ~ Name of spell "stonefist_plus"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Improved Stonefist"
+msgstr ""
+
+#. ~ Description of spell "stonefist_plus ( Improved Stonefist )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Encases your arms and hands in a sheath of magical stone, you can punch and "
+"defend yourself with it in melee combat.  Now you know this spell like the "
+"back of your hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_stoneskin_plus"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Improved Stoneskin"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_stoneskin_plus ( Improved Stoneskin )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Envelops your entire body in armor formed from living rock, encumbering yet "
+"protective.  Now you know this spell like the back of your hand, and have "
+"started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "pertifying_touch"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Petrifying Touch"
+msgstr ""
+
+#. ~ Description of spell "pertifying_touch ( Petrifying Touch )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"With a simple touch, you transform the body of your enemy into pure stone.  "
+"The effect is temporary, but the target will be totally immobile while the "
+"spell lasts."
+msgstr ""
+
+#. ~ Name of spell "reactive_armor"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Reactive Armor"
+msgstr ""
+
+#. ~ Description of spell "reactive_armor ( Reactive Armor )"
+#. ~ Description of "Scroll of Reactive Armor"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid "Explode your stone skin, to deal massive damage to all enemies around."
+msgstr ""
+
+#. ~ Name of spell "eshaper_impalement"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Impalement"
+msgstr ""
+
+#. ~ Description of spell "eshaper_impalement ( Impalement )"
+#. ~ Description of "Scroll of Impalement"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Summon a stone spikes underground, that penetrate your enemies, and nail them"
+" for a while."
+msgstr ""
+
+#. ~ Name of spell "eshaper_spawn_tools"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Utility Molding"
+msgstr ""
+
+#. ~ Description of spell "eshaper_spawn_tools ( Utility Molding )"
+#. ~ Description of "Scroll of Utility Molding"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Shape the basic working tools, using your own magic abilities and earth "
+"nearby.  Activate to change the shape of a tool."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Hammer"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Pickaxe"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Axe"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Knife"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Shovel"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Transform the living earth into a hammer."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Transform the living earth into a pickaxe."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Transform the living earth into an axe."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Transform the living earth into a knife."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_EARTHSHAPER_UTILITY_MOLDING"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Transform the living earth into a shovel."
+msgstr ""
+
+#. ~ Name of spell "eshaper_melee_damage"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Weighting"
+msgstr ""
+
+#. ~ Description of spell "eshaper_melee_damage ( Weighting )"
+#. ~ Description of "Scroll of Weighting"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Fill yourself with the power of Earth, and make each your attacks as "
+"devastating as an earthquake."
+msgstr ""
+
+#. ~ Name of spell "eshaper_crystal_wrap"
+#. ~ Name of effect type id "eshaper_crystal_wrap"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Crystal Wrapping"
+msgstr ""
+
+#. ~ Description of spell "eshaper_crystal_wrap ( Crystal Wrapping )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"You cover your body with a layer of small, razor-sharp crystals.  It makes "
+"monsters that attack you take some damage in return, and gives you some "
+"additional cut damage in melee."
+msgstr ""
+
+#. ~ Name of spell "shape_of_dust"
+#. ~ Name of effect type id "effect_shape_of_dust"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Shape of Dust"
+msgstr ""
+
+#. ~ Description of spell "shape_of_dust ( Shape of Dust )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Hide yourself within sand-filled winds.  It's harder to hit you, and monsters"
+" can't spot you.  Attacking a target will break the spell."
+msgstr ""
+
+#. ~ Name of spell "summon_eshaper_golem"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Earthshaper's Golem"
+msgstr ""
+
+#. ~ Description of spell "summon_eshaper_golem ( Summon Earthshaper's Golem )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Shape a strong golem out of stone.  It may help for a while, but you haven't "
+"enough energy to support it forever."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_boulder"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Summon Boulder"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_boulder ( Summon Boulder )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Pull forth a table of smooth rock from the underground bedrock, using your "
+"forces of earthshaping.  You can use it as a table or as a primitive anvil."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_reveal_world_map"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Reading the Earthbones"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_reveal_world_map ( Reading the
+#. Earthbones )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"You extend your senses into the ground, becoming aware of every hill and "
+"valley within a large area.  It will only work when in contact with the "
+"earth."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_EARTHSHAPER_MAP"
+#. ~ Player message in false effect in EoC "EOC_EARTHSHAPER_DANGERSENSE"
+#. ~ Player message in false effect in EoC "EOC_IERDE_REVEAL_MAP"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "Without a direct connection to the living earth, the spell fails."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_danger_sense"
+#. ~ Name of effect type id "effect_tremorsense"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Tremorsense"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_danger_sense ( Tremorsense )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"By sensing their movements upon the earth, you can detect nearby sources of "
+"danger.  You must maintain a connection to the earth for the spell to "
+"function."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EARTHSHAPER_DANGERSENSE_CHECKER"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"As you break your connection to the living earth, your magical senses fade "
+"away."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_fortitude_of_stone"
+#. ~ Name of effect type id "earthshaper_fortitude_of_stone"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Stones' Fortitude"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_fortitude_of_stone ( Stones' Fortitude
+#. )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Draw on the eternal endurance of the stones, slowing your metabolism and "
+"staving off hunger and thirst.  However, while the enchantment is in effect, "
+"you will not heal."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_turning_of_earth"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "The Turning of the Earth"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_turning_of_earth ( The Turning of the
+#. Earth )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Ask the earth spirits to prepare the earth for growth and planting."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_granite_aegis"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Granite Aegis"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_granite_aegis ( Granite Aegis )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"In an extremity of danger, summon a hollow shell of rock around yourself.  It"
+" lasts only a few moments, but sometimes that's all you need.  You must be "
+"standing on the living earth to invoke it."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_EARTHSHAPER_GRANITE_AEGIS"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Without a connection to the living earth or a flat surface of solid rock, the"
+" spell fails."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_harden_earth"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Harden Earth"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_harden_earth ( Harden Earth )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"Compress dirt together so it becomes as hard as rock.  A great way to turn "
+"makeshift barricades into a fortress."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_sleep_in_earth"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Stone Slumber"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_sleep_in_earth ( Stone Slumber )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"When standing on earth or stone, sink into the ground.  While submerged, you "
+"will heal faster, sleep will be more restorative, and you will not need to "
+"eat or drink.  Cast this spell again to return to the surface."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_EARTHSHAPER_SLEEP_IN_EARTH_2" in nested EOCs in effect in EoC
+#. "EOC_EARTHSHAPER_SLEEP_IN_EARTH"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"As you complete the spell, the earth parts beneath you and you sink down into"
+" the stone."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_EARTHSHAPER_SLEEP_IN_EARTH_2" in nested EOCs in effect in EoC
+#. "EOC_EARTHSHAPER_SLEEP_IN_EARTH"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"As you nearly complete the spell, you stop in your tracks.  There's something"
+" odd about the ground below you, and sinking into it would be too dangerous."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_EARTHSHAPER_SLEEP_IN_EARTH_2"
+#. in nested EOCs in effect in EoC "EOC_EARTHSHAPER_SLEEP_IN_EARTH"
+#. ~ Player message in false effect in EoC "EOC_IERDE_SLEEP_IN_EARTH_2" in
+#. nested EOCs in effect in EoC "EOC_IERDE_SLEEP_IN_EARTH"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/ierde_eocs.json
+msgid "You must be standing on the living earth to sink into the stone!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_EARTHSHAPER_SLEEP_IN_EARTH"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"As you recite the words of release, you feel yourself rising until you stand "
+"in the clear air once again."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_repair_metal_stone"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Fault-Mending Chant"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_repair_metal_stone ( Fault-Mending Chant
+#. )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"While holding an item made of natural metal or stone, mold it with your "
+"hands, work to repairing any flaws and restoring its condition.  Note that "
+"some items may still not be repaired."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_EARTHSHAPER_REPAIR_METAL_STONE_ITEM" in nested EOCs on true condition
+#. in effect in EoC "EOC_EARTHSHAPER_REPAIR_METAL_STONE"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"The magic simply does not take hold.  The item cannot be repaired, even with "
+"sorcery."
+msgstr ""
+
+#. ~ Name of spell "earthshaper_diggable_teleport"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Earth Gate"
+msgstr ""
+
+#. ~ Description of spell "earthshaper_diggable_teleport ( Earth Gate )"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid ""
+"While standing on natural earth, sink into it and emerge from any other patch"
+" of natural earth within the spell's range."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in effect in EoC
+#. "EOC_EARTHSHAPER_EARTH_GATE_TELEPORT_CHECK"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "Select nearby earth to gate to."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in nested effect in then statement in effect in EoC
+#. "EOC_EARTHSHAPER_EARTH_GATE_TELEPORT_CHECK"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "You sink into the earth and re-emerge nearby."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in then
+#. statement in nested effect in then statement in effect in EoC
+#. "EOC_EARTHSHAPER_EARTH_GATE_TELEPORT_CHECK"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "You must select a patch of earth to transport to."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_EARTHSHAPER_EARTH_GATE_TELEPORT_CHECK"
+#: data/mods/Magiclysm/Spells/earthshaper.json
+msgid "You must be on the living earth to use Earth Gate."
+msgstr ""
+
+#. ~ Name of spell "goblin_tame_warg_spell"
+#: data/mods/Magiclysm/Spells/fantasy_species.json
+msgid "Warg-Friend"
+msgstr ""
+
+#. ~ Description of spell "goblin_tame_warg_spell ( Warg-Friend )"
+#: data/mods/Magiclysm/Spells/fantasy_species.json
+msgid ""
+"Goblins and wargs have had an innate bond from time immemorial, and even wild"
+" wargs will easily heel when a goblin calls…as long as the goblin has some "
+"raw meat to feed them with."
+msgstr ""
+
+#. ~ Message of spell "goblin_tame_warg_spell ( Warg-Friend )"
+#. ~ Message of spell "telepathic_animal_mind_control ( [Ψ]Beastmaster )"
+#: data/mods/Magiclysm/Spells/fantasy_species.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "You take control of the animal's mind!"
+msgstr ""
+
+#. ~ Sound description of spell "feral_animist_summon_zombie ( Summon Zombie )"
+#. ~ Sound description of spell "feral_animist_summon_tough_zombie ( Summon
+#. Tough Zombie )"
+#. ~ Sound description of spell "feral_animist_summon_zombie_brute ( Summon
+#. Zombie Brute )"
+#. ~ Sound description of spell "feral_animist_summon_zombie_hulk ( Radiation
+#. Mage Summon Zombie )"
+#: data/mods/Magiclysm/Spells/feral_wizards.json
+msgid "a roar"
+msgstr ""
+
+#. ~ Message of spell "flask_regeneration_effect ( Renovamen Healing Effect )"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "You start regenerating!"
+msgstr ""
+
+#. ~ Name of spell "mag_open_beetle_ball_large"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call Stag Beetles"
+msgstr ""
+
+#. ~ Description of spell "mag_open_beetle_ball_large ( Call Stag Beetles )"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call upon stag beetles for various tasks."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_STAG_BEETLE_SELECTOR"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call stag beetle for riding"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_STAG_BEETLE_SELECTOR"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call beetles for foraging"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_STAG_BEETLE_SELECTOR"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid ""
+"Call a stag beetle for riding.  Will respond if you haven't called for one in"
+" awhile."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_STAG_BEETLE_SELECTOR"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call local beetles to forage hidden areas around you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CALL_STAG_BEETLE"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid ""
+"The wildwood beetle makes its call.  You feel something large coming, and it "
+"is coming fast."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_CALL_STAG_BEETLE"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid ""
+"The wildwood beetle makes its call, but only some small beetles respond.  "
+"They'll bring you a small gift."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUMMON_STAG_BEETLE"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid ""
+"The stag beetle arrives, it is massive and powerful.  It can be used to carry"
+" you and your belongings so long as you have a wildwood rune and the skill to"
+" ride it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CALL_FORAGING_BEETLES"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "The beetles come swiftly, bearing some mushrooms."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LOSE_STAG_BEETLE_BOND"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Your bond with the stag beetle fades.  Another can answer the call now."
+msgstr ""
+
+#. ~ Name of spell "mag_call_stag_beetle_real"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid "Call Stag Beetle"
+msgstr ""
+
+#. ~ Description of spell "mag_call_stag_beetle_real ( Call Stag Beetle )"
+#: data/mods/Magiclysm/Spells/item_only.json
+msgid ""
+"A stag beetle responds to the call, arriving in the location you are in.  It "
+"can be used to carry you and your belongings so long as you have a wildwood "
+"rune and the skill to ride it."
+msgstr ""
+
+#. ~ Description of spell "point_flare ( Point Flare )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Generates strong heat at the targeted location, damaging anything susceptible"
+" to high temperatures."
+msgstr ""
+
+#. ~ Description of spell "nova_flare ( Nova Flare )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Generates an intense heat at the location, greatly damaging anything "
+"susceptible to high temperatures."
+msgstr ""
+
+#. ~ Description of spell "create_lighter ( Finger Firelighter )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Summons a small flame that does not affect you, but can be used to light "
+"things on fire.  It seems to need you to have some intent to light things on "
+"fire, since you are able to put it in your pocket with no issue."
+msgstr ""
+
+#. ~ Description of spell "ice_spike ( Ice Spike )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Causes jagged icicles to form in the air above the target, falling and "
+"damaging them."
+msgstr ""
+
+#. ~ Description of spell "fireball ( Fireball )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"You hurl a pea-sized glowing orb that produces a pressure-less blast of "
+"searing heat when it hits an obstacle or reaches the target."
+msgstr ""
+
+#. ~ Name of spell "glide_ice_plus"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Enhanced Glide on Ice"
+msgstr ""
+
+#. ~ Description of spell "glide_ice_plus ( Enhanced Glide on Ice )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Encases your feet in a magical coating of ice, allowing you to glide along "
+"smooth surfaces faster.  Now you know this spell like the back of your hand, "
+"and have started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "ice_shield ( Ice Shield )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Creates a magical shield of ice on your arm, with which you can defend "
+"yourself in melee and use it to bash."
+msgstr ""
+
+#. ~ Name of spell "ice_shield_plus"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Enhanced Ice Shield"
+msgstr ""
+
+#. ~ Description of spell "ice_shield_plus ( Enhanced Ice Shield )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Creates a magical shield of ice on your arm, with which you can defend "
+"yourself and use it to bash.  Now you know this spell like the back of your "
+"hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "frost_armor ( Frost Armor )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Covers you in a thin layer of reactive magical ice to attack those who harm "
+"you."
+msgstr ""
+
+#. ~ Name of spell "frost_armor_plus"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Enhanced Frost Armor"
+msgstr ""
+
+#. ~ Description of spell "frost_armor_plus ( Enhanced Frost Armor )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Covers you in a thin layer of reactive magical ice to attack those who harm "
+"you.  Now you know this spell like the back of your hand, and have started to"
+" design your own version."
+msgstr ""
+
+#. ~ Description of spell "create_rune_kelvinist ( Kelvinist Rune )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"This ritual freezes a small fire in order to create a rune attuned to "
+"Kelvinists.  You can use the rune as a catalyst for recipes."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_summon_flamesword_plus"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Enhanced Flamesword"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_summon_flamesword_plus ( Enhanced
+#. Flamesword )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"This spell ignites a wooden sword, creating a flaming blade able to burn, "
+"bruise, and chop.  Now you know this spell like the back of your hand, and "
+"have started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_anti_cold"
+#. ~ Name of effect type id "effect_kelvinist_anti_cold"
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_pyrokinetic_cloak"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Cloak of Warmth"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_anti_cold ( Cloak of Warmth )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Heat the nearby air, keeping you warm and providing some protection against "
+"ice and cold."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_anti_heat"
+#. ~ Name of effect type id "effect_kelvinist_anti_heat"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Cloak of Chill"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_anti_heat ( Cloak of Chill )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Cool the nearby air, keeping you cool and providing some protection against "
+"heat and flame."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_persuasion_spell"
+#. ~ Name of effect type id "effect_kelvinist_flames_of_passion"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Flames of Passion"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_persuasion_spell ( Flames of Passion )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Like the bonfire gathers revelers around it, the kelvinist becomes the life "
+"of the party, as their eyes shine with passion and their voice burns with the"
+" heat of their conviction.  You will be more convincing while this spell is "
+"in effect.  Before the Cataclysm, this was one of the most common spells that"
+" apprentices were desperate to learn and master mages were reluctant to "
+"teach."
+msgstr ""
+
+#. ~ Description of spell "kelvinist_extinguish_fire_spell ( Extinguish )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Just as the kelvinist can start a fire, they can extinguish it, by "
+"transmuting the heat of the fire directly into cold and leaving nothing left "
+"to continue the flames."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_summon_freezer_spell"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Freezer Field"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_summon_freezer_spell ( Freezer Field )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Summon a sphere of ice that will preserve anything placed inside while the "
+"container lasts."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_no_emotion_spell"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "The Rime-Covered Heart"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_no_emotion_spell ( The Rime-Covered Heart
+#. )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Draw on the essence of ice to freeze out all emotion, rendering you "
+"comfortably numb.  This spell used to get you on several lists if the "
+"government learned that you knew it, back when there was a government to care"
+" about that."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_firebolt"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Firebolt"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_firebolt ( Firebolt )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"A simple spell that hurls a bolt of fire to the target location.  While not "
+"as damaging as some more complex spells, it is quick to cast and will ignite "
+"anything flammable at the target."
+msgstr ""
+
+#. ~ Sound description of spell "kelvinist_firebolt ( Firebolt )"
+#. ~ Sound description of spell "pyrokinetic_eruption ( [Ψ]Fountain of Flames
+#. )"
+#. ~ Sound description of spell "pyrokinetic_flamethrower ( [Ψ]Flamethrower )"
+#. ~ Sound description of spell "salamander_aoe_explosion ( Salamander AoE
+#. Explosion )"
+#. ~ Sound description of spell "salamander_make_fire ( Enkindle )"
+#. ~ Sound description of spell "salamander_flame_punch_spell ( Blazing Blow )"
+#. ~ Sound description of spell "salamander_fire_breath ( Breath of the
+#. Firedragon )"
+#. ~ Sound description of spell "salamander_explosion_trap_spell_activated (
+#. Salamander Trap Explosion )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "a crackle!"
+msgstr ""
+
+#. ~ Name of spell "kelvinist_heat_food"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Baking Hands"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_heat_food ( Baking Hands )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"With the tiniest amount of heat, unfreeze an item of food or drink and heat "
+"it up to a comfortable temperature."
+msgstr ""
+
+#. ~ Name of spell "kelvinist_set_everyone_on_fire"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid "Flames of the Apocalypse"
+msgstr ""
+
+#. ~ Description of spell "kelvinist_set_everyone_on_fire ( Flames of the
+#. Apocalypse )"
+#: data/mods/Magiclysm/Spells/kelvinist.json
+msgid ""
+"Force a large amount of burning mana into every hostile target affected by "
+"the spell, causing them to explode in flames.  Knowledge of this spell "
+"required licensing and registration before the Cataclysm, but you're pretty "
+"sure the ATF isn't going to be hassling you any time soon."
+msgstr ""
+
+#. ~ Description of spell "shadow_field ( Shadow Field )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Shroud an area in intense shadows."
+msgstr ""
+
+#. ~ Description of spell "phase_door ( Phase Door )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Teleports you a short distance in a random direction."
+msgstr ""
+
+#. ~ Description of spell "gravity_well ( Gravity Well )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Summons a well of gravity centered on the targeted location.  Dealing bashing"
+" damage to all creatures in the affected area."
+msgstr ""
+
+#. ~ Description of spell "magus_slow ( Slow )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"This spell weakens your target, resulting in a decrease of speed lasting a "
+"short period of time."
+msgstr ""
+
+#. ~ Description of spell "create_rune_magus ( Magus Rune )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"This ritual forces small amounts of mana to crystallize out into intricate "
+"patterns, making a rune attuned to Magi.  You can use the rune as a catalyst "
+"for recipes."
+msgstr ""
+
+#. ~ Description of spell "cats_grace ( Cat's Grace )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"You align your senses to be closer to those of a cat, becoming more graceful,"
+" agile, and coordinated."
+msgstr ""
+
+#. ~ Name of spell "magus_summon_impact_sling_plus"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Enhanced Impact Sling"
+msgstr ""
+
+#. ~ Description of spell "magus_summon_impact_sling_plus ( Enhanced Impact
+#. Sling )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"This spell infuses a sling with tremendous force, delivering devastating "
+"pebble shots until the energy tears it apart.  Now you know this spell like "
+"the back of your hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "magus_slowfall"
+#. ~ Name of effect type id "effect_magus_slowfall"
+#. ~ Name of effect type id "effect_telekinetic_slowfall"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Slowfall"
+msgstr ""
+
+#. ~ Description of spell "magus_slowfall ( Slowfall )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Reduce the velocity of your falls by a great amount, or to zero if at high "
+"mastery."
+msgstr ""
+
+#. ~ Name of spell "magus_spiderclimb"
+#. ~ Name of effect type id "effect_magus_spiderclimb"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Spider Climb"
+msgstr ""
+
+#. ~ Description of spell "magus_spiderclimb ( Spider Climb )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Ascend even the most sheer wall with ease as you cling to surfaces."
+msgstr ""
+
+#. ~ Name of spell "magus_teleport_mark"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Magus's Mark"
+msgstr ""
+
+#. ~ Description of spell "magus_teleport_mark ( Magus's Mark )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Mark a particular patch of ground to allow you to return to it later."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_MAGUS_MARK"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"As you make the gestures and recite the incantation, a brief glow fills your "
+"surroundings."
+msgstr ""
+
+#. ~ Name of spell "magus_word_of_recall"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Word of Recall"
+msgstr ""
+
+#. ~ Description of spell "magus_word_of_recall ( Word of Recall )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Immediately return to the place you marked with Magus's Mark, no matter how "
+"far away it is."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_MAGUS_RECALL"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "You shout out the word of recall and suddenly you are somewhere else."
+msgstr ""
+
+#. ~ Name of spell "magus_stop_attack_shield"
+#. ~ Name of effect type id "effect_magus_mageshield"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Mageshield"
+msgstr ""
+
+#. ~ Description of spell "magus_stop_attack_shield ( Mageshield )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"A simple but powerful spell, Mageshield will render the caster immune to any "
+"single attack.  It is indiscriminate: whether hit by an anti-tank missile or "
+"the caster stubbing their toe, it will absorb all energy of the attack and "
+"then fade."
+msgstr ""
+
+#. ~ Name of spell "magus_far_hand_pull"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Sorcerer's Hand"
+msgstr ""
+
+#. ~ Description of spell "magus_far_hand_pull ( Sorcerer's Hand )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Pull a target or set of items to you."
+msgstr ""
+
+#. ~ Name of spell "magus_ranged_increase"
+#. ~ Name of effect type id "effect_magus_ranged_increase"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Arrowflight"
+msgstr ""
+
+#. ~ Description of spell "magus_ranged_increase ( Arrowflight )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"A popular military spell since ancient times, Arrowflight increases the range"
+" of bows and, as it later turned out, firearms."
+msgstr ""
+
+#. ~ Name of spell "magus_diamond_imbuement"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Diamond Imbuement"
+msgstr ""
+
+#. ~ Description of spell "magus_diamond_imbuement ( Diamond Imbuement )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Magically infuse a melee weapon with the hardness and resilience of a diamond"
+" as well as its industrial cutting capability, making it supremely sharp and "
+"durable.  However, like a diamond, any damage the weapon suffers afterwards "
+"cannot be repaired."
+msgstr ""
+
+#. ~ Name of spell "magus_silence"
+#. ~ Name of effect type id "effect_magus_silence"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Silence"
+msgstr ""
+
+#. ~ Description of spell "magus_silence ( Silence )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Affect the air around the target and their vocal cords, preventing them from "
+"making any noise whatsoever.  This makes them much more stealthy, but they "
+"cannot cast any spells requiring speech."
+msgstr ""
+
+#. ~ Name of spell "magus_light_target"
+#. ~ Name of effect type id "effect_magus_faerie_fire"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Faerie Fire"
+msgstr ""
+
+#. ~ Description of spell "magus_light_target ( Faerie Fire )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Cause the air around the target to glow slightly, revealing their location "
+"and making it slightly harder for them to dodge attacks."
+msgstr ""
+
+#. ~ Name of spell "magus_permanent_light"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Imperishable Light"
+msgstr ""
+
+#. ~ Description of spell "magus_permanent_light ( Imperishable Light )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Enchant the air in a location to glow, producing a orb of soft light.  While "
+"not particularly bright, the light will last years if you're not lucky and "
+"millennia if you are."
+msgstr ""
+
+#. ~ Name of spell "magus_cannot_move_attack_or_damage_target"
+#. ~ Name of effect type id "effect_magus_cannot_move_attack_or_damage_target"
+#: data/mods/Magiclysm/Spells/magus.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Adamantine Gaol"
+msgstr ""
+
+#. ~ Description of spell "magus_cannot_move_attack_or_damage_target (
+#. Adamantine Gaol )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Create an impenetrable shell of force around the target, preventing them from moving or acting for the spell's duration.  The shell works in two directions and the target is also immune to all harm.\n"
+"\n"
+"Adamantine Gaol <color_yellow>cannot be dispelled</color>."
+msgstr ""
+
+#. ~ Name of spell "magus_push_nearby_enemies_back"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid "Repulsion Wave"
+msgstr ""
+
+#. ~ Description of spell "magus_push_nearby_enemies_back ( Repulsion Wave )"
+#: data/mods/Magiclysm/Spells/magus.json
+msgid ""
+"Unleash a wave of force, hurling all nearby targets away from you.  Heavier "
+"targets are harder to affect."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_efficiency_01"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "First Circle: Lesser Mana Efficiency."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_efficiency_01 ( First Circle: Lesser
+#. Mana Efficiency. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the efficiency by which your body processes mana, granting you the Lesser Mana Efficiency trait.  The ritual must end when the sun is in the sky and you are at least one story above the ground.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_ADD1_PART2" in
+#. nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_ADD1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_ADD2_PART2" in
+#. nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_ADD2"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_REGEN1_PART2"
+#. in nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_REGEN1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_REGEN2_PART2"
+#. in nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_REGEN2"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_MULT1_PART2"
+#. in nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_MULT1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_MULT2_PART2"
+#. in nested EOCs in effect in EoC "EOC_SPELL_GRANT_MANA_MULT2"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"As you intone the final words of the spell, you wait for the change, but "
+"nothing happens.  You must need more practice."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_ADD1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_ADD2"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_REGEN1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_REGEN2"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_MULT1"
+#. ~ Player message in false effect in EoC "EOC_SPELL_GRANT_MANA_MULT2"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"You intone the final words of the spell, but without the proper conditions "
+"being fulfilled it has no effect."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_efficiency_02"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "Second Circle: Mana Efficiency."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_efficiency_02 ( Second Circle: Mana
+#. Efficiency. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the efficiency by which your body processes mana, granting you the Mana Efficiency trait.  You must already have the Lesser Mana Efficiency trait for the spell to take full effect.  The ritual must end within one hour of noon and you are at least four stories above the ground.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_regeneration_01"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "First Circle: Lesser Mana Regeneration."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_regeneration_01 ( First Circle: Lesser
+#. Mana Regeneration. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the speed by which your body restores its mana, granting you the Lesser Mana Regeneration trait.  The ritual must be performed while standing in a river or a stream.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_regeneration_02"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "Second Circle: Mana Regeneration."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_regeneration_02 ( Second Circle: Mana
+#. Regeneration. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the speed by which your body restores its mana, granting you the Mana Regeneration trait.  You must already have the Lesser Mana Regeneration trait for the spell to take full effect.  The ritual must be performed while standing in a river.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_sensitivity_01"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "First Circle: Lesser Mana Sensitivity."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_sensitivity_01 ( First Circle: Lesser
+#. Mana Sensitivity. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the sensitivity that your body has to mana, granting you the Lesser Mana Sensitivity trait.  The ritual must take place in a natural location away (at least 4 OM tiles) from buildings, roads, or other evidence of civilization.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Name of spell "mana_upgrade_sensitivity_02"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid "Second Circle: Mana Sensitivity."
+msgstr ""
+
+#. ~ Description of spell "mana_upgrade_sensitivity_02 ( Second Circle: Mana
+#. Sensitivity. )"
+#: data/mods/Magiclysm/Spells/mana_upgrades.json
+msgid ""
+"Perform a magical ritual to increase the sensitivity that your body has to mana, granting you the Mana Sensitivity trait.  You must already have the Lesser Mana Sensitivity trait for the spell to take full effect.  The ritual must take place in a natural location far away (at least 15 OM tiles) from buildings, roads, or other evidence of civilization.\n"
+"\n"
+"The chance of the ritual's success depends in your spell level and Spellcraft skill."
+msgstr ""
+
+#. ~ Name of spell "spell_ravenfolk_leap"
+#: data/mods/Magiclysm/Spells/mutation_spells.json
+msgid "Wing Leap"
+msgstr ""
+
+#. ~ Description of spell "spell_ravenfolk_leap ( Wing Leap )"
+#. ~ value of variable 'message_success' in effect in EoC "EOC_RAVENFOLK_LEAP"
+#: data/mods/Magiclysm/Spells/mutation_spells.json
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "You launch yourself into a powerful wing-assisted leap."
+msgstr ""
+
+#. ~ Description of spell "lightning_bolt ( Lightning Bolt )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"The go-to spell for many Stormshapers, this iconic spell does just what you "
+"expect: shoot lightning from your fingertips.  However, this lightning is "
+"more directed than most lightning, and travels in a line through most non-"
+"solid targets."
+msgstr ""
+
+#. ~ Description of spell "windstrike ( Windstrike )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "A powerful blast of wind slams into anything in front of your body."
+msgstr ""
+
+#. ~ Name of spell "storm_hammer_plus"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Enhanced Call Stormhammer"
+msgstr ""
+
+#. ~ Description of spell "storm_hammer_plus ( Enhanced Call Stormhammer )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Creates a crackling magical warhammer full of lightning to smite your foes "
+"with, and of course, smash things to bits!  Now you know this spell like the "
+"back of your hand, and start to design your own version."
+msgstr ""
+
+#. ~ Description of spell "create_rune_stormshaper ( Stormshaper Rune )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"This ritual creates a rune attuned to Stormshapers, which looks similar to "
+"what you'd expect lightning in a glass pebble to look like.  You can use the "
+"rune as a catalyst for recipes."
+msgstr ""
+
+#. ~ Description of spell "lightning_blast ( Lightning Blast )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"You fire a small concentrated ball of lightning at the target.  The "
+"electricity diffuses rapidly, so it doesn't do much damage, but you're able "
+"to fire off several ones quickly."
+msgstr ""
+
+#. ~ Name of spell "stormshaper_repelling_arc_plus"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Enhanced Repelling Arc"
+msgstr ""
+
+#. ~ Description of spell "stormshaper_repelling_arc_plus ( Enhanced Repelling
+#. Arc )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Manifests an aura of crackling electricity around you to strike attackers "
+"with baleful lightning.  Now you know this spell like the back of your hand, "
+"and start to design your own version."
+msgstr ""
+
+#. ~ Name of spell "stormfist_plus"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Enhanced Stormfist"
+msgstr ""
+
+#. ~ Description of spell "stormfist_plus ( Enhanced Stormfist )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Encases your arm and hand in a sheath of crackling magical lightning, you can"
+" punch and defend yourself with it in melee combat.  Now you know this spell "
+"like the back of your hand, and start to design your own version."
+msgstr ""
+
+#. ~ Name of spell "create_electric_lighter"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Fire Spark"
+msgstr ""
+
+#. ~ Description of spell "create_electric_lighter ( Fire Spark )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Summons a small electric spark, that doesn't harm anything.  You can use it "
+"to ignite something flammable."
+msgstr ""
+
+#. ~ Name of spell "storm_shipwrecker"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Shipwrecker"
+msgstr ""
+
+#. ~ Description of spell "storm_shipwrecker ( Shipwrecker )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"As the sound of the spell moves out of your mouth, it creates a crushing "
+"shockwave that shatters everything in its path."
+msgstr ""
+
+#. ~ Name of spell "explosive_decompression"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Explosive Decompression"
+msgstr ""
+
+#. ~ Description of spell "explosive_decompression ( Explosive Decompression )"
+#. ~ Description of "Scroll of Explosive Decompression"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Create a high-pressure zone originating from the selected point.  Shortly "
+"after, a massive pressure wave will crush everything inside, inflicting "
+"barotraumatic injuries on everyone affected."
+msgstr ""
+
+#. ~ Name of spell "vacuum_decompression"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Vacuum Decompression"
+msgstr ""
+
+#. ~ Description of spell "vacuum_decompression ( Vacuum Decompression )"
+#. ~ Description of "Scroll of Vacuum Decompression"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Create a high-pressure zone originating from the selected point.  Shortly "
+"after, a massive pressure wave will crush everything inside, inflicting "
+"barotraumatic injuries on everyone affected.  The pressure differential will "
+"also pull unprepared creatures inside the zone before collapsing."
+msgstr ""
+
+#. ~ Name of spell "air_bubble"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Air Bubble"
+msgstr ""
+
+#. ~ Description of spell "air_bubble ( Air Bubble )"
+#. ~ Description of "Scroll of Air Bubble"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Cover your head with an air bubble, allowing you to breathe underwater or "
+"prevent breathing of toxic gases."
+msgstr ""
+
+#. ~ Name of spell "storm_superconductor"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Superconductor"
+msgstr ""
+
+#. ~ Description of spell "storm_superconductor ( Superconductor )"
+#. ~ Description of "Scroll of Superconductor"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Create arcs of devastating electric charge in an area around you, roasting "
+"everything within."
+msgstr ""
+
+#. ~ Name of spell "shocking_dash"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Shocking Dash"
+msgstr ""
+
+#. ~ Description of spell "shocking_dash ( Shocking Dash )"
+#. ~ Description of "Scroll of Shocking Dash"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid "Fill your legs with energy and quickly dash to a target destination."
+msgstr ""
+
+#. ~ Name of spell "shocking_teleport"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Shocking Teleport"
+msgstr ""
+
+#. ~ Description of spell "shocking_teleport ( Shocking Teleport )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Briefly become lightning to teleport to a chosen spot, ignoring all obstacles"
+" in-between."
+msgstr ""
+
+#. ~ Name of spell "toxtricity"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Toxtricity"
+msgstr ""
+
+#. ~ Description of spell "toxtricity ( Toxtricity )"
+#. ~ Description of "Scroll of Toxtricity"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Inject a corrosive electric energy into targets within the affected area, "
+"weakening them and dealing huge damage over time."
+msgstr ""
+
+#. ~ Name of spell "electric_eye"
+#. ~ Name of effect type id "electric_eye"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Electric Eye"
+msgstr ""
+
+#. ~ Description of spell "electric_eye ( Electric Eye )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Enhance your sight with your powers which allows you to see creatures of the "
+"same energy around you.  This enhanced perception speed enables you to see "
+"more attacks incoming, allowing for an additional block or dodge attempt."
+msgstr ""
+
+#. ~ Name of spell "electric_waves"
+#. ~ Name of effect type id "electric_waves"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Electric Waves"
+msgstr ""
+
+#. ~ Description of spell "electric_waves ( Electric Waves )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Your hands start to store a vast amount of energy, which you release with "
+"each attack.  You feel the spell will get stronger with a higher mastery."
+msgstr ""
+
+#. ~ Name of spell "electric_arts"
+#. ~ Name of effect type id "electric_arts"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Electric Arts"
+msgstr ""
+
+#. ~ Description of spell "electric_arts ( Electric Arts )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"A spell designed for scholars who have recently started to learn "
+"stormshaping, allowing them to reduce the damage their often capricious new "
+"abilities may cause to themselves."
+msgstr ""
+
+#. ~ Name of spell "summon_teravolt"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Summon Teravolt"
+msgstr ""
+
+#. ~ Description of spell "summon_teravolt ( Summon Teravolt )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Summon a Teravolt, a small, semi-intelligent spirit that homes in on hostile "
+"creatures before exploding into a huge spark cloud."
+msgstr ""
+
+#. ~ Name of spell "stormshaper_cloak_of_fog"
+#. ~ Name of effect type id "effect_cloak_of_fog"
+#. ~ Name of effect type id "effect_selkie_fog_cloak"
+#. ~ Mutation name
+#. ~ Name of spell "selkie_fog_cloak_spell"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Cloak of Fog"
+msgstr ""
+
+#. ~ Description of spell "stormshaper_cloak_of_fog ( Cloak of Fog )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Call out to the sky spirits for aid and ask them to conceal you from your "
+"enemies.  The fog will hide your passage, but you do not have any special "
+"ability to see through it yourself."
+msgstr ""
+
+#. ~ Name of spell "stormshaper_heart_of_hurricane"
+#. ~ Name of effect type id "effect_heart_of_hurricane"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Heart of the Hurricane"
+msgstr ""
+
+#. ~ Description of spell "stormshaper_heart_of_hurricane ( Heart of the
+#. Hurricane )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Compress the fury of hurricane winds into a thin shell of raging air around "
+"yourself.  This will make it harder for you to lose your footing or be "
+"knocked down and occasionally throw attackers away from you, but the whirling"
+" winds are loud."
+msgstr ""
+
+#. ~ Message of spell "stormshaper_heart_of_hurricane_throw ( Heart of the
+#. Hurricane Throw )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "The winds lash out and hurl <npcname> away!"
+msgstr ""
+
+#. ~ Name of spell "stormshaper_cloak_of_frog"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "Cloak of Frog"
+msgstr ""
+
+#. ~ Description of spell "stormshaper_cloak_of_frog ( Cloak of Frog )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Someone's personal notes were added to this spell.  You're positive that they"
+" changed both the name and the function."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LOSE_CLOAK_OF_FROG_MUTATIONS"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid "It wasn't easy being green."
+msgstr ""
+
+#. ~ Name of spell "stormshaper_loud_voice_spell"
+#. ~ Name of effect type id "effect_stormshaper_loud_voice"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Thundering Voice"
+msgstr ""
+
+#. ~ Description of spell "stormshaper_loud_voice_spell ( Thundering Voice )"
+#: data/mods/Magiclysm/Spells/stormshaper.json
+msgid ""
+"Increase the volume of the caster's voice, allowing every word to resound "
+"like a peal of thunder.  As a useful side effect, it makes the caster immune "
+"to hearing damage caused by loud noises."
+msgstr ""
+
+#. ~ Description of spell "bless ( Bless )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "A blessing that gives you energy and boosts your abilities."
+msgstr ""
+
+#. ~ Description of spell "invisibility ( Invisibility )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"Creates a magical field that hides your visual presence to others.  "
+"Colloquially known as invisibility, but without all the science mumbo jumbo."
+"  Attacking a target will break the invisibility."
+msgstr ""
+
+#. ~ Name of spell "holy_blade"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Mage Blade"
+msgstr ""
+
+#. ~ Name of spell "holy_blade_plus"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Enhanced Mage Blade"
+msgstr ""
+
+#. ~ Description of spell "holy_blade_plus ( Enhanced Mage Blade )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This blade of light will cut through any evil it makes contact with!  Now you"
+" know this spell like the back of your hand, and have started to design your "
+"own version."
+msgstr ""
+
+#. ~ Name of spell "spirit_armor"
+#. ~ Name of effect type id "effect_feral_technomancer_mage_armor"
+#. ~ Name of effect type id "effect_feral_high_technomancer_mage_armor"
+#: data/mods/Magiclysm/Spells/technomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Mage Armor"
+msgstr ""
+
+#. ~ Name of spell "spirit_armor_plus"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Enhanced Mage Armor"
+msgstr ""
+
+#. ~ Description of spell "spirit_armor_plus ( Enhanced Mage Armor )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"Evil will not make it through your defenses if your faith is strong enough!  "
+"Now you know this spell like the back of your hand, and have started to "
+"design your own version."
+msgstr ""
+
+#. ~ Description of spell "recover_bionic_power ( Manatricity )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"You have found a way to convert your mana into power you can use for your "
+"bionics."
+msgstr ""
+
+#. ~ Description of spell "create_rune_technomancer ( Technomancer Rune )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This ritual inscribes circuit-like ley-lines into a rune, attuned to "
+"Technomancers.  You can use the rune as a catalyst for recipes."
+msgstr ""
+
+#. ~ Description of spell "taze ( Taze )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This spell arcs two small bolts of electricity into a target, shocking them."
+msgstr ""
+
+#. ~ Description of spell "synaptic_stimulation ( Synaptic Stimulation )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This spell stimulates the synapses in your brain beyond normal processing "
+"speeds, giving you a large boost in mental processing capability.  It "
+"enhances your reflexes, speed, and raw intellectual power.  Use responsibly!"
+msgstr ""
+
+#. ~ Name of spell "summon_magic_comcycle"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Summon Co-op cycle"
+msgstr ""

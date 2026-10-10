@@ -1,0 +1,1378 @@
+# Batch 145 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of effect type id "effect_pfruit_no_drunk"
+#. ~ Name of effect type id "effect_goblin_fruit_no_drunk"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Remove intoxicants"
+msgstr ""
+
+#. ~ Description of effect type "Remove intoxicants"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You are being rapidly sobered up."
+msgstr ""
+
+#. ~ Apply message of effect type "Remove intoxicants"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your head pounds, but you feel much more alert."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Black Dragon Mutation, Black
+#. Dragon Transformation, Black Dragon Metamorphosis"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Black Dragon Mutagen Contamination"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Mana Mutation, Mana
+#. Transformation, Mana Metamorphosis"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Concentrated Mana Mutagen Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "effect_iron_allergy_wearing_iron"
+#. ~ Name of effect type id "effect_arvore_sylph_undine_wearing_iron"
+#. ~ Name of effect type id "effect_ierde_salamander_wearing_iron"
+#. ~ Name of effect type id "effect_changeling_wearing_iron"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Touching Iron"
+msgstr ""
+
+#. ~ Description of effect type "Touching Iron"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are in contact with iron.  It will cause you pain and discomfort until "
+"removed."
+msgstr ""
+
+#. ~ Apply message of effect type "Touching Iron"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "As the iron touches you, your skin begins to burn."
+msgstr ""
+
+#. ~ Remove message of effect type "Touching Iron"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The burning from the iron finally fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_iron_allergy_wearing_steel"
+#. ~ Name of effect type id "effect_arvore_sylph_undine_wearing_steel"
+#. ~ Name of effect type id "effect_ierde_salamander_wearing_steel"
+#. ~ Name of effect type id "effect_changeling_wearing_steel"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Touching Steel"
+msgstr ""
+
+#. ~ Description of effect type "Touching Steel"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are in contact with steel.  It will cause you pain and discomfort until "
+"removed."
+msgstr ""
+
+#. ~ Apply message of effect type "Touching Steel"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "As the steel touches you, your skin begins to itch."
+msgstr ""
+
+#. ~ Remove message of effect type "Touching Steel"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The itching from the steel finally fades."
+msgstr ""
+
+#. ~ Apply message of effect type "Vegetative Grasp"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Roots and vines burst from the ground and entangle you!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_obfuscating_aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Obfuscating Aura"
+msgstr ""
+
+#. ~ Description of effect type "Obfuscating Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Light is distorting around you and making it easier for you to avoid attacks."
+msgstr ""
+
+#. ~ Apply message of effect type "Obfuscating Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The edges of your vision ripple slightly."
+msgstr ""
+
+#. ~ Remove message of effect type "Obfuscating Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The aura of light distortion around you vanishes."
+msgstr ""
+
+#. ~ Description of effect type "Shape of Dust"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Clouds of dust around you are hiding you from your enemies."
+msgstr ""
+
+#. ~ Apply message of effect type "Shape of Dust"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Dust springs up and hides your presence."
+msgstr ""
+
+#. ~ Remove message of effect type "Shape of Dust"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The clouds of dust around you die down"
+msgstr ""
+
+#. ~ Name of effect type id "effect_acid_res_aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Acid Resist Aura"
+msgstr ""
+
+#. ~ Description of effect type "Acid Resist Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are protected from acid damage."
+msgstr ""
+
+#. ~ Apply message of effect type "Acid Resist Aura"
+#. ~ Apply message of effect type "Greater Acid Resist Aura"
+#. ~ Apply message of effect type "Teleport Anchor"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your body tingles."
+msgstr ""
+
+#. ~ Remove message of effect type "Acid Resist Aura"
+#. ~ Remove message of effect type "Greater Acid Resist Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The tingling fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_acid_res_aura_greater"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Greater Acid Resist Aura"
+msgstr ""
+
+#. ~ Description of effect type "Greater Acid Resist Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are greatly protected from acid damage."
+msgstr ""
+
+#. ~ Name of effect type id "effect_thorns_electric"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Aura of Repelling Arc"
+msgstr ""
+
+#. ~ Description of effect type "Aura of Repelling Arc"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Anyone who attacks you will be electrified."
+msgstr ""
+
+#. ~ Apply message of effect type "Aura of Repelling Arc"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The air around you sparks with electricity."
+msgstr ""
+
+#. ~ Remove message of effect type "Aura of Repelling Arc"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The air around you loses its charge."
+msgstr ""
+
+#. ~ Description of effect type "Slowed"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your speed is magically inhibited."
+msgstr ""
+
+#. ~ Apply message of effect type "Slowed"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Everyone else suddenly seems to speed up!"
+msgstr ""
+
+#. ~ Name of effect type id "feather_fall"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Pluma"
+msgstr ""
+
+#. ~ Name of effect type id "effect_catoblepas_gaze"
+#. ~ Name of effect type id "effect_catoblepas_gaze_monster"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Rotting Gaze"
+msgstr ""
+
+#. ~ Description of effect type "Rotting Gaze"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You flesh is rotting off!"
+msgstr ""
+
+#. ~ Apply message of effect type "Rotting Gaze"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Searing pain fills your body."
+msgstr ""
+
+#. ~ Description of effect type "Caustic Aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"An aura of thin acid, swirling around your body ready to corrode your enemies"
+" when struck or while striking."
+msgstr ""
+
+#. ~ Description of effect type "Mental Boost"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your mind is working incredibly fast and your body struggles to keep up."
+msgstr ""
+
+#. ~ Name of effect type id "effect_earthshaper_petrifying_touch"
+#. ~ Name of effect type id "effect_petrified"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/migration_and_obsoletion/effects.json
+msgid "Petrified"
+msgstr ""
+
+#. ~ Description of effect type "Petrified"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are made of stone.  Fortunately it's temporary."
+msgstr ""
+
+#. ~ Remove message of effect type "Nature's Commune"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your communion with Mother Nature fades."
+msgstr ""
+
+#. ~ Remove message of effect type "Biomechanism"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your body returns to its normal state."
+msgstr ""
+
+#. ~ Name of effect type id "eshaper_melee_damage"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Heft"
+msgstr ""
+
+#. ~ Description of effect type "Heft"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your body is heavy as the heaviest rocks.  Your attack speed is slowed down, "
+"but your melee damage increased drastically."
+msgstr ""
+
+#. ~ Apply message of effect type "Heft"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel your body compress and harden."
+msgstr ""
+
+#. ~ Remove message of effect type "Heft"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You no longer feel encumbered."
+msgstr ""
+
+#. ~ Remove message of effect type "Invisible"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your invisibility fades."
+msgstr ""
+
+#. ~ Description of effect type "Machine Mind"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You have an intuitive understanding of computers."
+msgstr ""
+
+#. ~ Remove message of effect type "Machine Mind"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your mind no longer easily grasps the flow of electrons."
+msgstr ""
+
+#. ~ Description of effect type "The Body Mechanical"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your body functions through pain with mechanical efficiency."
+msgstr ""
+
+#. ~ Remove message of effect type "The Body Mechanical"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Pain suddenly hampers you again."
+msgstr ""
+
+#. ~ Description of effect type "Crystal Wrapping"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Thin layer of almost living crystals, that rapidly grows and moves on the "
+"body."
+msgstr ""
+
+#. ~ Apply message of effect type "Crystal Wrapping"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel a light, purple material cover your body and clothes."
+msgstr ""
+
+#. ~ Remove message of effect type "Crystal Wrapping"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The crystals crumble."
+msgstr ""
+
+#. ~ Description of effect type "Electric Eye"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Enhance your sight with your powers.  It allows you to see creatures of the "
+"same energy around you, and some minor bonuses."
+msgstr ""
+
+#. ~ Apply message of effect type "Electric Eye"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your sight is enhanced."
+msgstr ""
+
+#. ~ Remove message of effect type "Electric Eye"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your sight turn back to usual state."
+msgstr ""
+
+#. ~ Description of effect type "Electric Waves"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your body will release a massive electric charges when you attack monsters."
+msgstr ""
+
+#. ~ Apply message of effect type "Electric Waves"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "A powerful energy streams out of your hands."
+msgstr ""
+
+#. ~ Remove message of effect type "Electric Waves"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The energy streams calm down."
+msgstr ""
+
+#. ~ Description of effect type "Electric Arts"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Make you less vulnerable to electric damage."
+msgstr ""
+
+#. ~ Apply message of effect type "Electric Arts"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel a small sparks under your skin.  They do not harm you."
+msgstr ""
+
+#. ~ Remove message of effect type "Electric Arts"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Sparks under your skin vanish."
+msgstr ""
+
+#. ~ Name of effect type id "ice_age_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Glaciation"
+msgstr ""
+
+#. ~ Description of effect type "Glaciation"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You are frozen, your bones are fragile; cracking in the cold, and your "
+"muscles are cut by razor sharp ice."
+msgstr ""
+
+#. ~ Name of effect type id "flower_fern_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Positivity"
+msgstr ""
+
+#. ~ Description of effect type "Positivity"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your feel yourself a bit better."
+msgstr ""
+
+#. ~ Name of effect type id "glowing_mushroom_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Lightness"
+msgstr ""
+
+#. ~ Description of effect type "Lightness"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You feel yourself a bit lighter.  You doubt you can lose weight from this."
+msgstr ""
+
+#. ~ Name of effect type id "flask_speed_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Velocitas"
+msgstr ""
+
+#. ~ Description of effect type "Velocitas"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Make you faster, and allow to hold this state for a while."
+msgstr ""
+
+#. ~ Apply message of effect type "Velocitas"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel your legs can work much better than before"
+msgstr ""
+
+#. ~ Remove message of effect type "Velocitas"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your speed slows down."
+msgstr ""
+
+#. ~ Name of effect type id "flask_healing_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Sanatio"
+msgstr ""
+
+#. ~ Description of effect type "Sanatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Improve your organism's ability to heal himself."
+msgstr ""
+
+#. ~ Name of effect type id "flask_stamina_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Constantia"
+msgstr ""
+
+#. ~ Description of effect type "Constantia"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can't get tired."
+msgstr ""
+
+#. ~ Apply message of effect type "Constantia"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel an energy in your muscles, jazzed up and full of vitality."
+msgstr ""
+
+#. ~ Remove message of effect type "Constantia"
+#. ~ Remove message of effect type "Circulatory"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The energy in your body fades away."
+msgstr ""
+
+#. ~ Name of effect type id "flask_excitement"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Motus"
+msgstr ""
+
+#. ~ Description of effect type "Motus"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your reaction now is way better than before."
+msgstr ""
+
+#. ~ Apply message of effect type "Motus"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can feel the fly wings movement now."
+msgstr ""
+
+#. ~ Remove message of effect type "Motus"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your reflexes turn back to normal."
+msgstr ""
+
+#. ~ Name of effect type id "flask_resistance"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Resistentia"
+msgstr ""
+
+#. ~ Description of effect type "Resistentia"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"A thin layer of energy covers your body, and allows you to take more physical"
+" damage than before."
+msgstr ""
+
+#. ~ Apply message of effect type "Resistentia"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your touch sense are blunted for a bit, but your skin feels more dense."
+msgstr ""
+
+#. ~ Remove message of effect type "Resistentia"
+#. ~ Remove message of effect type "Endurance"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The sturdy feeling is gone."
+msgstr ""
+
+#. ~ Name of effect type id "flask_illumination"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Illuminatio"
+msgstr ""
+
+#. ~ Description of effect type "Illuminatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your body emit a lot of light around."
+msgstr ""
+
+#. ~ Apply message of effect type "Illuminatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your skin glow like an old lantern.  You feel no discomfort for some reason."
+msgstr ""
+
+#. ~ Remove message of effect type "Illuminatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your skin turn back to normal state."
+msgstr ""
+
+#. ~ Name of effect type id "flask_mana_regen"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Recuperatio"
+msgstr ""
+
+#. ~ Description of effect type "Recuperatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Increase the amount of ley-lines your body can process at once, making you "
+"restore your mana pool faster."
+msgstr ""
+
+#. ~ Apply message of effect type "Recuperatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can feel the thinnest ley lines around you."
+msgstr ""
+
+#. ~ Remove message of effect type "Recuperatio"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The mana senses blunts."
+msgstr ""
+
+#. ~ Name of effect type id "flask_max_mana"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Augere"
+msgstr ""
+
+#. ~ Description of effect type "Augere"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Increase the amount of mana you can operate."
+msgstr ""
+
+#. ~ Apply message of effect type "Augere"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel a deep mana well inside your body."
+msgstr ""
+
+#. ~ Remove message of effect type "Augere"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your well feels empty now."
+msgstr ""
+
+#. ~ Description of effect type "Regeneration"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Slowly regenerate your damaged body."
+msgstr ""
+
+#. ~ Apply message of effect type "Regeneration"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your flesh and bones start to regenerate before your eyes."
+msgstr ""
+
+#. ~ Name of effect type id "technomancer_cl_booster_effect"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Technomancer boost"
+msgstr ""
+
+#. ~ Description of effect type "Technomancer boost"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your technomancer spells are empowered."
+msgstr ""
+
+#. ~ Remove message of effect type "Technomancer boost"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your technomancer boost fades."
+msgstr ""
+
+#. ~ Name of effect type id "biomancer_cl_booster_effect"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Biomancer boost"
+msgstr ""
+
+#. ~ Description of effect type "Biomancer boost"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your biomancer spells are empowered."
+msgstr ""
+
+#. ~ Remove message of effect type "Biomancer boost"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your biomancer boost fades."
+msgstr ""
+
+#. ~ Description of effect type "Stones' Fortitude"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel little hunger or thirst."
+msgstr ""
+
+#. ~ Remove message of effect type "Stones' Fortitude"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your stomach suddenly rumbles as you feel a pang of hunger."
+msgstr ""
+
+#. ~ Description of effect type "Tremorsense"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can feel them moving around you."
+msgstr ""
+
+#. ~ Remove message of effect type "Tremorsense"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can no longer discern the vibrations of the living earth."
+msgstr ""
+
+#. ~ Name of effect type id "effect_sense_outsiders"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Sense Outsider"
+msgstr ""
+
+#. ~ Description of effect type "Sense Outsider"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can sense the presence of things that should not be."
+msgstr ""
+
+#. ~ Remove message of effect type "Sense Outsider"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your awareness of outsiders fades."
+msgstr ""
+
+#. ~ Description of effect type "Witchsight"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can sense nearby magic-wielders."
+msgstr ""
+
+#. ~ Remove message of effect type "Witchsight"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your awareness of the magically-inclined fades."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "wizard_sense"
+#. ~ Description of creature revealed by special vision "fae_sense"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/items/bionics.json
+msgid "You see the ley lines of a wielder of magic."
+msgstr ""
+
+#. ~ Description of effect type "Guardian Spirit"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "A protective spirit is looking out for you."
+msgstr ""
+
+#. ~ Remove message of effect type "Guardian Spirit"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "With a soft whisper, the guardian spirit returns from whence it came."
+msgstr ""
+
+#. ~ Description of effect type "The Inner Voice"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your soul gives voice to your magical prowess."
+msgstr ""
+
+#. ~ Remove message of effect type "The Inner Voice"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your soul no longer speaks directly."
+msgstr ""
+
+#. ~ Description of effect type "Water's Cooling Touch"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your skin feels like you just splashed cool water on it."
+msgstr ""
+
+#. ~ Remove message of effect type "Water's Cooling Touch"
+#. ~ Remove message of effect type "Cloak of Chill"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "A warm breeze hits your skin."
+msgstr ""
+
+#. ~ Description of effect type "Cloak of Warmth"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The air around you is warmer thanks to your magic."
+msgstr ""
+
+#. ~ Remove message of effect type "Cloak of Warmth"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "A cool breeze hits your skin."
+msgstr ""
+
+#. ~ Description of effect type "Cloak of Chill"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The air around you is cooler thanks to your magic."
+msgstr ""
+
+#. ~ Description of effect type "Flames of Passion"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You burn with the intensity of your conviction."
+msgstr ""
+
+#. ~ Remove message of effect type "Flames of Passion"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The world seems dreary as your spell fades."
+msgstr ""
+
+#. ~ Description of effect type "Slowfall"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You won't hit the ground nearly as hard anymore."
+msgstr ""
+
+#. ~ Remove message of effect type "Slowfall"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can feel gravity take hold of you again."
+msgstr ""
+
+#. ~ Description of effect type "Spider Climb"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can quickly ascend sheer surfaces."
+msgstr ""
+
+#. ~ Remove message of effect type "Spider Climb"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your enhanced climbing ability vanishes."
+msgstr ""
+
+#. ~ Description of effect type "Arrowflight"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your ranged weapons travel much further than physics claims they should."
+msgstr ""
+
+#. ~ Remove message of effect type "Arrowflight"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your weapons return to their normal range."
+msgstr ""
+
+#. ~ Description of effect type "Faerie Fire"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are glowing."
+msgstr ""
+
+#. ~ Remove message of effect type "Faerie Fire"
+#. ~ Remove message of effect type "Illuminated"
+#. ~ Remove message of effect type "Witchfire"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The glow around you fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biomancer_swim_speed"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Frog Limbs"
+msgstr ""
+
+#. ~ Description of effect type "Frog Limbs"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your hands and feet have grown webbing, enabling faster swimming."
+msgstr ""
+
+#. ~ Remove message of effect type "Frog Limbs"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"With an unpleasant twisting sensation your hands and feet return to normal."
+msgstr ""
+
+#. ~ Description of effect type "Lashing Tentacles"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Two tentacles sprout from your shoulders, ready to attack your enemies."
+msgstr ""
+
+#. ~ Apply message of effect type "Lashing Tentacles"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your shoulders itch before two barbed tentacles erupt from them!"
+msgstr ""
+
+#. ~ Remove message of effect type "Lashing Tentacles"
+#. ~ Player message in effect in EoC "EOC_LASHING_TENTACLES_MUTATION_REMOVE"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/migration_and_obsoletion/eocs.json
+msgid "The tentacles recede back into your body."
+msgstr ""
+
+#. ~ Description of effect type "Caustic Blood"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You have transformed your blood into acid."
+msgstr ""
+
+#. ~ Apply message of effect type "Caustic Blood"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your entire body burns for a moment."
+msgstr ""
+
+#. ~ Remove message of effect type "Caustic Blood"
+#. ~ Player message in effect in EoC "EOC_BIO_CAUSTIC_BLOOD_MUTATION_REMOVE"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/migration_and_obsoletion/eocs.json
+msgid "The faint burning sensation fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biomancer_remove_instability"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Increased Stability"
+msgstr ""
+
+#. ~ Description of effect type "Increased Stability"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are defended against the possible effects of XE037 overexposure."
+msgstr ""
+
+#. ~ Description of effect type "Increased Stability"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You are still defended against the effects of XE037 overexposure but now you "
+"feel awful!"
+msgstr ""
+
+#. ~ Apply message of effect type "Increased Stability"
+#. ~ Apply message of effect type "Morphogenic Mastery"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel…strange."
+msgstr ""
+
+#. ~ Remove message of effect type "Increased Stability"
+#. ~ Remove message of effect type "Morphogenic Mastery"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The strange feeling passes and you feel more like yourself."
+msgstr ""
+
+#. ~ Description of effect type "Morphogenic Mastery"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You are able to exert conscious control over any mutations to your body."
+msgstr ""
+
+#. ~ Description of effect type "Carrion Feast"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You can eat rotten food without any trouble, if you can stand the taste."
+msgstr ""
+
+#. ~ Apply message of effect type "Carrion Feast"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your have a hunger for some overly-aged meat."
+msgstr ""
+
+#. ~ Remove message of effect type "Carrion Feast"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You can't believe you even considered eating that!  Yuck!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_classless_watch"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Know the Day and the Hour"
+msgstr ""
+
+#. ~ Description of effect type "Know the Day and the Hour"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You know exactly what time it is."
+msgstr ""
+
+#. ~ Remove message of effect type "Know the Day and the Hour"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your perfect sense of time fades away."
+msgstr ""
+
+#. ~ Description of effect type "Peaceful Rest"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel pretty sleepy."
+msgstr ""
+
+#. ~ Description of effect type "Burning Trail"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Fire trails in your wake."
+msgstr ""
+
+#. ~ Remove message of effect type "Burning Trail"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The flames you leave behind die down."
+msgstr ""
+
+#. ~ Description of effect type "Cloak of Fog"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The fog shields you from sight."
+msgstr ""
+
+#. ~ Remove message of effect type "Cloak of Fog"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The fog begins to dissipate."
+msgstr ""
+
+#. ~ Description of effect type "Heart of the Hurricane"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Barely-controlled winds rage around you."
+msgstr ""
+
+#. ~ Remove message of effect type "Heart of the Hurricane"
+#. ~ Remove message of effect type "Hindering Winds"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The wind around you dies down."
+msgstr ""
+
+#. ~ Description of effect type "Thundering Voice"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Every word you speak resounds like a crash of thunder."
+msgstr ""
+
+#. ~ Remove message of effect type "Thundering Voice"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your voice returns to normal."
+msgstr ""
+
+#. ~ Description of effect type "Corporeal Reconstitution"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are healing unbelievably quickly."
+msgstr ""
+
+#. ~ Remove message of effect type "Corporeal Reconstitution"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your rapid regeneration slows and stops."
+msgstr ""
+
+#. ~ Description of effect type "Halt Bleeding"
+#. ~ Description of effect type "Coagulation"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You bleed less than normal."
+msgstr ""
+
+#. ~ Description of effect type "Halt Bleeding"
+#. ~ Description of effect type "Coagulation"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You bleed much less than normal."
+msgstr ""
+
+#. ~ Description of effect type "Halt Bleeding"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You do not bleed.  At all."
+msgstr ""
+
+#. ~ Description of effect type "Gluttonous Consumption"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel like you could eat a horse."
+msgstr ""
+
+#. ~ Name of effect type id "effect_flesh_rending"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Rending"
+msgstr ""
+
+#. ~ Description of effect type "Rending"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your flesh is twisting itself apart!"
+msgstr ""
+
+#. ~ Apply message of effect type "Rending"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your flesh writhes where you were hit!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleport_anchor"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Teleport Anchor"
+msgstr ""
+
+#. ~ Description of effect type "Teleport Anchor"
+#. ~ Description of effect type "Teleport Lock"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You're not going anywhere."
+msgstr ""
+
+#. ~ Name of effect type id "effect_flame_immunity"
+#. ~ Name of effect type id "effect_monster_pyrokinetic_fire_immunity"
+#. ~ Name of effect type id "effect_pyrokinetic_flame_immunity"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Flame Immunity"
+msgstr ""
+
+#. ~ Description of effect type "Flame Immunity"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are immune to heat and fire."
+msgstr ""
+
+#. ~ Name of effect type id "effect_spirit_walking"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Spirit Walking"
+msgstr ""
+
+#. ~ Description of effect type "Spirit Walking"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You have shed your physical form."
+msgstr ""
+
+#. ~ Remove message of effect type "Mageshield"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your mageshield fades as the attack impacts it."
+msgstr ""
+
+#. ~ Description of effect type "Silence"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You are completely silent."
+msgstr ""
+
+#. ~ Remove message of effect type "Silence"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your footsteps make noise again."
+msgstr ""
+
+#. ~ Description of effect type "Traverse the Wilds"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Nature is speeding your passage."
+msgstr ""
+
+#. ~ Remove message of effect type "Traverse the Wilds"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Nature no longer speeds your movements."
+msgstr ""
+
+#. ~ Description of effect type "Water Strider's Walk"
+#. ~ Description of effect type "Warped Waterwalking"
+#: data/mods/Magiclysm/effects/effects.json data/mods/Sky_Island/effects.json
+msgid "You can walk on the surface of the water"
+msgstr ""
+
+#. ~ Remove message of effect type "Water Strider's Walk"
+#. ~ Remove message of effect type "Warped Waterwalking"
+#: data/mods/Magiclysm/effects/effects.json data/mods/Sky_Island/effects.json
+msgid "You can no longer walk on the water."
+msgstr ""
+
+#. ~ Name of effect type id "effect_ring_of_flight"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Flying"
+msgstr ""
+
+#. ~ Description of effect type "Flying"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You're flying."
+msgstr ""
+
+#. ~ Remove message of effect type "Flying"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your magical flight ends."
+msgstr ""
+
+#. ~ Name of effect type id "effect_bracers_of_the_blinding_strike"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Blinding Strikes"
+msgstr ""
+
+#. ~ Description of effect type "Blinding Strikes"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your attacks come incredibly quickly."
+msgstr ""
+
+#. ~ Apply message of effect type "Blinding Strikes"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your strikes speed up immensely."
+msgstr ""
+
+#. ~ Remove message of effect type "Blinding Strikes"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your quick strikes slow to normal speed."
+msgstr ""
+
+#. ~ Name of effect type id "effect_manatouched_external_mana_luminance"
+#. ~ Mutation name
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/mutations/mutation_paths/manatouched.json
+msgid "Eldritch Glow"
+msgstr ""
+
+#. ~ Description of effect type "Eldritch Glow"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The air around you shimmers in a multitude of colors."
+msgstr ""
+
+#. ~ Description of effect type "Dispel Magic"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Enchantments are being stripped away from you."
+msgstr ""
+
+#. ~ Remove message of effect type "Dispel Magic"
+#. ~ NPC message in effect in EoC "EOC_ENERVATION_DRAIN_2"
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/damage_types.json
+msgid "You feel a sudden sense of loss."
+msgstr ""
+
+#. ~ Description of effect type "Disjunction"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "All enchantments are being stripped away from you."
+msgstr ""
+
+#. ~ Remove message of effect type "Disjunction"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You feel a sudden acute sense of loss."
+msgstr ""
+
+#. ~ Name of effect type id "effect_thaumic_zombie_magical_disruption"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Mana Blockage"
+msgstr ""
+
+#. ~ Description of effect type "Mana Blockage"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "It's harder for you to draw on your mana than it should be."
+msgstr ""
+
+#. ~ Name of effect type id "effect_dust_reborn"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Divided"
+msgstr ""
+
+#. ~ Description of effect type "Divided"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"Your body was split before, which makes you really fragile, but allow you to "
+"accept more mana than before."
+msgstr ""
+
+#. ~ Remove message of effect type "Divided"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your body turns back to normal state."
+msgstr ""
+
+#. ~ Name of effect type id "golemancer_block"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Golemancer's block"
+msgstr ""
+
+#. ~ Description of effect type "Golemancer's block"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Decrease any damage taken in the next 1 second."
+msgstr ""
+
+#. ~ Name of effect type id "sun_mage_buff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Sol"
+msgstr ""
+
+#. ~ Description of effect type "Sol"
+#: data/mods/Magiclysm/effects/effects.json
+msgid ""
+"You feel your mana connected to the Sun, and it makes you better than ever."
+msgstr ""
+
+#. ~ Remove message of effect type "Sol"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You don't feel Solar energy in your body anymore."
+msgstr ""
+
+#. ~ Name of effect type id "freeze_aura"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Freeze burn"
+msgstr ""
+
+#. ~ Description of effect type "Freeze burn"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your skin is frozen."
+msgstr ""
+
+#. ~ Name of effect type id "withering_eff"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Withering"
+msgstr ""
+
+#. ~ Description of effect type "Withering"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Consume their nature for your own purposes."
+msgstr ""
+
+#. ~ Apply message of effect type "Withering"
+#: data/mods/Magiclysm/effects/effects.json
+msgid "You take a withering effect!"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_dwarf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Dwarven Purification"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_dwarf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Dwarven Reversion"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_dwarf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Dwarven Regression"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Dwarven Purification, Dwarven
+#. Reversion, Dwarven Regression"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Dwarven Primer Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_elf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Elven Purification"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_elf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Elven Reversion"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_elf"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Elven Regression"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Elven Purification, Elven
+#. Reversion, Elven Regression"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Elven Primer Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_goblin"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Goblin Purification"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_goblin"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Goblin Reversion"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_goblin"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Goblin Regression"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Goblin Purification, Goblin
+#. Reversion, Goblin Regression"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Goblin Primer Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_lizardfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Lizardfolk Purification"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_lizardfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Lizardfolk Reversion"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_lizardfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Lizardfolk Regression"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Lizardfolk Purification,
+#. Lizardfolk Reversion, Lizardfolk Regression"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Lizardfolk Primer Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_ravenfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Ravenfolk Purification"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_ravenfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Ravenfolk Reversion"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_species_ravenfolk"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Ravenfolk Regression"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Ravenfolk Purification,
+#. Ravenfolk Reversion, Ravenfolk Regression"
+#: data/mods/Magiclysm/effects/effects_fantasy_species.json
+msgid "Ravenfolk Primer Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "effect_demon_spider_speed"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Flaming Speed"
+msgstr ""
+
+#. ~ Description of effect type "Flaming Speed"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Your speed is boosted enormously thanks to drinking those flames."
+msgstr ""
+
+#. ~ Name of effect type id "effect_demon_spider_venom"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Burning Venom"
+msgstr ""
+
+#. ~ Description of effect type "Burning Venom"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Your veins are on fire."
+msgstr ""
+
+#. ~ Description of effect type "Guardian Spirit"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "A spirit warns you that attacks are coming."
+msgstr ""
+
+#. ~ Name of effect type id "effect_feral_animist_inner_voice"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Inner Voice"
+msgstr ""
+
+#. ~ Description of effect type "Inner Voice"
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "You can talk with your soul."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/mods/Magiclysm/enchantments/Fantasy_species.json
+msgid "Goblin Eyes"
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Magiclysm/furniture_and_terrain/furniture.json
+msgid "Translocation Portal"
+msgstr ""
+
+#. ~ Description of furniture "Translocation Portal"
+#: data/mods/Magiclysm/furniture_and_terrain/furniture.json
+msgid ""
+"A portal that allows translocation.  You may use this portal to teleport to "
+"attuned locations or teleport to it if it is attuned."
+msgstr ""
+
+#. ~ Description of furniture "Magic Circle"
+#: data/mods/Magiclysm/furniture_and_terrain/furniture.json
+msgid ""
+"This is a rough magic circle, carved into the ground and decorated with "
+"blood, candles, and other small knick-knacks.  It has been enhanced with "
+"silver to channel more mana."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/mods/Magiclysm/furniture_and_terrain/furniture.json
+#: data/mods/Magiclysm/items/furniture.json
+msgid "orrery"
+msgid_plural "orreries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Furniture name
+#: data/mods/Magiclysm/furniture_and_terrain/furniture.json
+msgid "everburning street lamp"
+msgstr ""

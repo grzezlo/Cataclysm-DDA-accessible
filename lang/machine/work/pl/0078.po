@@ -1,0 +1,1940 @@
+# Batch 78 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Message when player with mutation "Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You headbutt %s with your horns!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s headbutts %2$s with their horns!"
+msgstr ""
+
+#. ~ Message when player with mutation "Curled Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You headbutt %s with your curled horns!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Curled Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s headbutts %2$s with their curled horns!"
+msgstr ""
+
+#. ~ Message when player with mutation "Pointed Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You stab %s with your pointed horns!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Pointed Horns" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s stabs %2$s with their pointed horns!"
+msgstr ""
+
+#. ~ Message when player with mutation "Antlers" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You butt %s with your antlers!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Antlers" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s butts %2$s with their antlers!"
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "antennae_sense"
+#. ~ Description of creature revealed by special vision "moving_creature"
+#: data/json/mutations/mutations.json
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You sense something here."
+msgstr ""
+
+#. ~ Message when player with mutation "Thick Tail" attacks
+#. ~ Message when player with mutation "Short Dragon Tail" attacks
+#: data/json/mutations/mutations.json
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "You whap %s with your tail!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Thick Tail" attacks
+#. ~ Message when NPC with mutation "Short Dragon Tail" attacks
+#: data/json/mutations/mutations.json
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "%1$s whaps %2$s with their tail!"
+msgstr ""
+
+#. ~ Description of mutation "Dromeosaur Muzzle"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your face has drastically mutated, with the bones of your jaws having "
+"extended forth into a long, tapered snout.  The palate of your mouth is "
+"considerably vaulted, with curved, serrated teeth lining your saurian maw and"
+" reptilian scales covering your muzzle's exterior.  While paleobiology has "
+"evidently not evolved with mouth gear in mind (making such items unwearable),"
+" the bite wounds you can now inflict promise the ferocity of long-dead "
+"beasts."
+msgstr ""
+
+#. ~ Message when player with mutation "Dromeosaur Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You dart your head and snap at %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Dromeosaur Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s darts their head and snaps at %2$s!"
+msgstr ""
+
+#. ~ Description of mutation "Raptor Tail"
+#: data/json/mutations/mutations.json
+msgid ""
+"Formed from a network of interlocking bones, a long tail has mutated from the"
+" base of your spine, with ossified tendons assisting in keeping the limb "
+"stiff and rigid.  A plume of lengthy feathers sprouts from the reptilian "
+"flesh along your new tail, drawing the eye.  While it is useless in combat "
+"and prevents you from wearing non-fabric pants, you find it's pretty handy "
+"for maintaining your balance."
+msgstr ""
+
+#. ~ Message when player with mutation "Spiked Tail" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You sting %s with your tail!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Spiked Tail" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s stings %2$s with their tail!"
+msgstr ""
+
+#. ~ Message when player with mutation "Club Tail" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You club %s with your tail!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Club Tail" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s clubs %2$s with their tail!"
+msgstr ""
+
+#. ~ Description of mutation "Bird Wings"
+#: data/json/mutations/mutations.json
+msgid ""
+"You have a pair of large, feathered wings.  Your body is too heavy to be able"
+" to fly, but if you're not too weighed down, you might be able to glide from "
+"a ledge or lessen the impact of a fall."
+msgstr ""
+
+#. ~ Description of mutation "Insect Wings"
+#: data/json/mutations/mutations.json
+msgid ""
+"A large pair of translucent wings grow from your back.  They are too small to"
+" lift you, but if you're not weighed down, they can help a bit if you fall.  "
+"You can flutter them quickly to improve your move speed, but this is noisy "
+"and tires you out."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Insect Wings" to
+#. "WINGS_INSECT_active"
+#: data/json/mutations/mutations.json
+msgid "You begin buzzing your wings."
+msgstr ""
+
+#. ~ Description of mutation "Insect Wings (Buzzing)"
+#: data/json/mutations/mutations.json
+msgid ""
+"You're fluttering your wings as fast as you can.  This doesn't generate "
+"enough lift to move you, but it does increase your movement speed.  If you're"
+" not burdened, you can fall short distances without harm."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Insect Wings (Buzzing)" to
+#. "WINGS_INSECT"
+#: data/json/mutations/mutations.json
+msgid "Your wings go still."
+msgstr ""
+
+#. ~ Message when player with mutation "Mandibles" attacks
+#. ~ Message when player with mutation "Folding Fangs" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You bite %s with your fangs!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Mandibles" attacks
+#. ~ Message when NPC with mutation "Folding Fangs" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s bites %2$s with their fangs!"
+msgstr ""
+
+#. ~ Description of mutation "Crab Legs"
+#: data/json/mutations/mutations.json
+msgid ""
+"You have four prong-tipped legs, splayed out and articulated like a crab's.  "
+"They're a little quieter than human feet."
+msgstr ""
+
+#. ~ Description of mutation "Gastropod Balance"
+#: data/json/mutations/mutations.json
+msgid ""
+"By pushing your whole 'foot' against the ground you are able to move across "
+"rough terrain without losing your 'footing'.  You're also able to cling to "
+"the ground underwater, allowing you to move along the bottom more easily."
+msgstr ""
+
+#. ~ Message when player with mutation "Acidic Secretion" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You smear slime on %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Acidic Secretion" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s smears slime on %2$s!"
+msgstr ""
+
+#. ~ Description of mutation "Very Short"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are significantly shorter than the general population.  You can't carry "
+"quite as much as a person of average height and you need special "
+"accommodations to drive a car, but otherwise being little isn't too much of a"
+" bother."
+msgstr ""
+
+#. ~ Description of mutation "Very Tall"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are significantly taller than the general population.  This leaves you "
+"with high blood pressure, a big appetite, and some minor health concerns, but"
+" you can carry a bit more than normal."
+msgstr ""
+
+#. ~ Message when player with mutation "Whipping Tongue" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You swipe %s with your tongue!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Whipping Tongue" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s swipes %2$s with their tongue!"
+msgstr ""
+
+#. ~ Description of mutation "Rigid Eyestalks"
+#: data/json/mutations/mutations.json
+msgid ""
+"You have compound eyes on rigid stalks that can fold back against your head "
+"to protect them from danger.  This gives you better all-around vision and "
+"allows you to see underwater, but interferes with eyewear.  Perception +1"
+msgstr ""
+
+#. ~ Description of mutation "Bat Wings"
+#: data/json/mutations/mutations.json
+msgid ""
+"Most of your fingers have grown to tremendous length, becoming a broad pair "
+"of leathery wings.  This allows you to arrest a fall or glide from a ledge if"
+" you aren't too weighed down, but naturally impedes your fine motor skills.  "
+"They even keep you warm when you sleep."
+msgstr ""
+
+#. ~ Description of mutation "Bovine Snout"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your face resembles that of a bull, with a significant snout.  It looks "
+"fearsome but makes it difficult to find gear that covers your face."
+msgstr ""
+
+#. ~ Message when player with mutation "Lupine Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You nip at %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Lupine Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s nips and harries %2$s!"
+msgstr ""
+
+#. ~ Message when player with mutation "Ursine Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You bite %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Ursine Muzzle" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s bites %2$s!"
+msgstr ""
+
+#. ~ Message when player with mutation "Reptilian Muzzle" attacks
+#. ~ Message when player with mutation "Scaled Mouth" attacks
+#. ~ Message when player with mutation "Black Dragon Maw" attacks
+#: data/json/mutations/mutations.json
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "You bite a chunk out of %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Reptilian Muzzle" attacks
+#. ~ Message when NPC with mutation "Scaled Mouth" attacks
+#. ~ Message when NPC with mutation "Black Dragon Maw" attacks
+#: data/json/mutations/mutations.json
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "%1$s bites a chunk out of %2$s!"
+msgstr ""
+
+#. ~ Description of mutation "Wide Mouth"
+#: data/json/mutations/mutations.json
+msgid ""
+"You have an unsettlingly wide mouth, like a frog.  This looks hideous, but "
+"allows you to swallow your food whole."
+msgstr ""
+
+#. ~ Description of mutation "Dense Bones"
+#: data/json/mutations/mutations.json
+#, no-c-format
+msgid ""
+"Your bones are particularly dense and durable.  Your tougher frame grants 5% "
+"more HP and 15% more carry capacity plus bashing attacks injure you less, but"
+" your higher weight makes attacking and moving 5% slower.  Also, dodging and "
+"swimming are harder."
+msgstr ""
+
+#. ~ Description of mutation "Webbed Hands"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your hands are heavily webbed, reducing your Dexterity by 1 and causing "
+"problems with gloves.  However, you can swim much faster.  Slightly decreases"
+" wet penalties."
+msgstr ""
+
+#. ~ Description of mutation "Webbed Feet"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your feet are heavily webbed, allowing you to swim faster if you aren't "
+"wearing footwear."
+msgstr ""
+
+#. ~ Description of mutation "Paws"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your hands have fused into quasi-paws.  Fine manipulation is a challenge: "
+"permanent hand encumbrance of 10, difficulty with delicate craftwork, and "
+"your gloves don't fit.  But they handle water better and bear weight well, "
+"allowing you to move on all fours when crouching and unarmed."
+msgstr ""
+
+#. ~ Trigger message of mutation "Paws"
+#. ~ Trigger message of mutation "Broad Paws"
+#. ~ Trigger message of mutation "Little Paws"
+#. ~ Trigger message of mutation "Quadruped"
+#: data/json/mutations/mutations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You come out of your quadrupedal posture."
+msgstr ""
+
+#. ~ Description of mutation "Broad Paws"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your paws are much larger now.  Manual dexterity is difficult: permanent hand"
+" encumbrance of 20, serious problems crafting, and no gloves.  In return, "
+"though, you can swim better and move on all fours when crouching and unarmed."
+msgstr ""
+
+#. ~ Message when player with mutation "Beak" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You peck %s!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Beak" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s pecks %2$s!"
+msgstr ""
+
+#. ~ Message when player with mutation "Woodpecker Beak" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You jackhammer into %s with your beak!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Woodpecker Beak" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s jackhammer into %2$s with their beak!"
+msgstr ""
+
+#. ~ Description of mutation "Catastrophic Mutation"
+#: data/json/mutations/mutations.json
+msgid ""
+"Exposure to portal storms and related phenomena causes you to mutate in a "
+"mostly predictable fashion."
+msgstr ""
+
+#. ~ Description of mutation "Slimy"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your body is coated with a fine slime which makes uncovered skin harder to "
+"grab and protects from long-term effects of acid, though not short-term ones."
+"  Greatly increases wet benefits."
+msgstr ""
+
+#. ~ Description of mutation "Viscous"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your body's slime output has become sticky and gel-like, making uncovered "
+"skin harder to grab and offering some protection from acid.  Greatly "
+"increases wet benefits."
+msgstr ""
+
+#. ~ Description of mutation "Carnivore"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your body's ability to digest fruits, vegetables, grains and nuts is severely"
+" hampered.  You cannot eat anything besides meat.  While your vitamin C needs"
+" are lowered, it's still needed and can be found often in organ meat."
+msgstr ""
+
+#. ~ Description of mutation "Hemovore"
+#: data/json/mutations/mutations.json
+msgid ""
+"You can still eat other food, but you crave the taste of blood over "
+"everything else.  Without a steady supply or some kind of iron supplement, "
+"you're prone to developing anemia."
+msgstr ""
+
+#. ~ Description of mutation "Bloodfeeder"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your craving for blood borders on obsession.  You need the stuff too much to "
+"care about whether it came from a human, and your body can filter out most of"
+" the toxins in mutant blood."
+msgstr ""
+
+#. ~ Message when player with mutation "Vine Limbs" attacks
+#. ~ Message when player with mutation "Vine Sprouter" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You lash %s with one of your vines!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Vine Limbs" attacks
+#. ~ Message when NPC with mutation "Vine Sprouter" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s lashes %2$s with one of their vines!"
+msgstr ""
+
+#. ~ Description of mutation "Screeching Voice"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your voice sounds like a bird trying to imitate a human.  Persuading NPCs "
+"will be more difficult, but threatening them will be easier."
+msgstr ""
+
+#. ~ Description of mutation "Feathered Arms"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your arms have sprouted feathers, and you find you can no longer fully extend"
+" your elbows.  This gets in the way a bit, but the feathers offer minor "
+"protection from damage and the elements."
+msgstr ""
+
+#. ~ Description of mutation "Tentacle Arms"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your arms have transformed into tentacles, resulting in a +1 bonus to "
+"Dexterity, permanent hand encumbrance of 30, and an inability to wear gloves."
+"  Reduces penalties for attacking while prone and somewhat decreases wet "
+"penalties."
+msgstr ""
+
+#. ~ Message when player with mutation "Tentacle Arms" attacks
+#. ~ Message when player with mutation "4 Tentacles" attacks
+#. ~ Message when player with mutation "8 Tentacles" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You slap %s with one of your tentacles!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Tentacle Arms" attacks
+#. ~ Message when NPC with mutation "4 Tentacles" attacks
+#. ~ Message when NPC with mutation "8 Tentacles" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s slaps %2$s with one of their tentacles!"
+msgstr ""
+
+#. ~ Message when player with mutation "Tentacle Arms" attacks
+#. ~ Message when player with mutation "4 Tentacles" attacks
+#. ~ Message when player with mutation "8 Tentacles" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You rake %s with one of your tentacles!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Tentacle Arms" attacks
+#. ~ Message when NPC with mutation "4 Tentacles" attacks
+#. ~ Message when NPC with mutation "8 Tentacles" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s rakes %2$s with one of their tentacles!"
+msgstr ""
+
+#. ~ Description of mutation "4 Tentacles"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your arms have transformed into four tentacles, resulting in a +1 bonus to "
+"Dexterity, permanent hand encumbrance of 30, and an inability to wear gloves."
+"  You can make up to 3 extra attacks with them, and you suffer reduced "
+"penalties to attacking while prone.  Somewhat decreases wet penalties."
+msgstr ""
+
+#. ~ Description of mutation "8 Tentacles"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your arms have transformed into eight tentacles, resulting in a +1 bonus to "
+"Dexterity, permanent hand encumbrance of 30, and an inability to wear gloves."
+"  You can make up to 7 extra attacks with them, and suffer reduced penalties "
+"to attacking while prone.  Somewhat decreases wet penalties."
+msgstr ""
+
+#. ~ Description of mutation "Tentacle Bracing"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your lower tentacles have developed suckers, perfect for walking along lake "
+"beds and ocean floors.  They make land movement marginally more tiring, do a "
+"good job of keeping you set in place."
+msgstr ""
+
+#. ~ Description of mutation "Scuttle"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your hook-shaped feet curl inward to grip the ground, allowing you to easily "
+"walk along the bottom when you're underwater.  They're also a bit quicker at "
+"climbing over obstacles, even on dry land."
+msgstr ""
+
+#. ~ Description of mutation "Chaos"
+#: data/json/mutations/mutations.json
+msgid ""
+"You can't tell what you are anymore.  Everything and yet nothing, like you "
+"weren't meant to exist.  But you do, and you're a force, no matter what "
+"happens.  Unlocks gaining post-threshold traits from most other mutation "
+"categories."
+msgstr ""
+
+#. ~ Description of mutation "Crustacean"
+#: data/json/mutations/mutations.json
+msgid "Who needs skin when you can have a hard carapace?"
+msgstr ""
+
+#. ~ Description of mutation "Chiropteran"
+#: data/json/mutations/mutations.json
+msgid "You long for a colony, the cover of darkness, and a meal on the wing."
+msgstr ""
+
+#. ~ Message when player with mutation "Shark Teeth" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You tear into %s with your teeth!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Shark Teeth" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s tears into %2$s with their teeth!"
+msgstr ""
+
+#. ~ Description of mutation "MD"
+#: data/json/mutations/mutations.json
+msgid ""
+"You trained as a medical professional in a clinic or hospital.  You can put "
+"\"Dr.\" in front of your name and everything."
+msgstr ""
+
+#. ~ Description of mutation "Kickboxer"
+#: data/json/mutations/mutations.json
+msgid ""
+"You have some training in the art of kickboxing.  It's just boxing with "
+"kicks, right?"
+msgstr ""
+
+#. ~ Description of mutation "Debug Big Head"
+#. ~ Description of mutation "Debug Torso Replacement"
+#: data/json/mutations/mutations.json
+#: data/mods/Limb_WIP/mutations/mutations.json
+msgid "They said college what make me smart, this is a lot to lug around!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "Debug Half Weight"
+msgstr ""
+
+#. ~ Description of mutation "Debug Half Weight"
+#: data/json/mutations/mutations.json
+msgid "Better than GLP1 drugs!"
+msgstr ""
+
+#. ~ Description of mutation "Debug Genetic Instability"
+#: data/json/mutations/mutations.json
+msgid ""
+"You just can't wait to turn into a bug!  Triggers a mutation using the normal"
+" mutation rules (requiring primer but no catalyst) every five seconds."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "Debug Night and Map Vision"
+msgstr ""
+
+#. ~ Description of mutation "Debug Night and Map Vision"
+#: data/json/mutations/mutations.json
+msgid ""
+"Grants flawless night vision and the ability to see all of the overmaps "
+"without having to reveal them manually.  As such, you can clearly see that "
+"this is for dev purposes only."
+msgstr ""
+
+#. ~ Description of mutation "Debug Clairvoyance"
+#: data/json/mutations/mutations.json
+msgid ""
+"Being able to see through walls and the floor is clearly for dev purposes "
+"only."
+msgstr ""
+
+#. ~ Description of mutation "Debug Clairvoyance Super"
+#: data/json/mutations/mutations.json
+msgid ""
+"Much bigger range than the other Debug Clairvoyance trait.  Unsure which one "
+"to use?  Use them both!  You can see all the bugs with this one."
+msgstr ""
+
+#. ~ Description of mutation "Debug Life Support"
+#: data/json/mutations/mutations.json
+msgid ""
+"Holds hunger, thirst, and sleepiness stable.  You can debug all year long "
+"with this one!"
+msgstr ""
+
+#. ~ Description of mutation "Debug 9000 HP"
+#: data/json/mutations/mutations.json
+msgid "If you need to survive the deadliest bug attacks."
+msgstr ""
+
+#. ~ Description of mutation "Debug Regeneration"
+#: data/json/mutations/mutations.json
+msgid "Heal yourself from this stupid bug attacks."
+msgstr ""
+
+#. ~ Description of mutation "Debug Mana"
+#: data/json/mutations/mutations.json
+msgid "To cast bug killing spells.  Also increase the cast speed of spells."
+msgstr ""
+
+#. ~ Description of mutation "Debug Mana Furnace"
+#: data/json/mutations/mutations.json
+msgid "Using mana to incinerate all bugs, activate to start burning."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Debug Mana Furnace" to
+#. "DEBUG_MANA_FURNACE_active"
+#: data/json/mutations/mutations.json
+msgid "You start using mana to burning bugs."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "Debug Mana Furnace (ON)"
+msgstr ""
+
+#. ~ Description of mutation "Debug Mana Furnace (ON)"
+#: data/json/mutations/mutations.json
+msgid ""
+"You're burning mana like crazy to burn of all bugs, also making you glow "
+"softly."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Debug Mana Furnace (ON)" to
+#. "DEBUG_MANA_FURNACE"
+#: data/json/mutations/mutations.json
+msgid "You stop incinerate bugs with mana."
+msgstr ""
+
+#. ~ Description of mutation "Debug Light"
+#: data/json/mutations/mutations.json
+msgid "You start to emit a light, so you can debug in the darkest nights."
+msgstr ""
+
+#. ~ Description of mutation "Debug Crafting Speed"
+#: data/json/mutations/mutations.json
+msgid "Craft the bug out 50 times faster."
+msgstr ""
+
+#. ~ Description of mutation "Debug Speed"
+#: data/json/mutations/mutations.json
+msgid "With this, you'll be fixing those bugs faster than ever!"
+msgstr ""
+
+#. ~ Description of mutation "Debug Stamina"
+#: data/json/mutations/mutations.json
+msgid "Your energy to squash bugs is endless!"
+msgstr ""
+
+#. ~ Description of mutation "Debug Prevent Death"
+#: data/json/mutations/mutations.json
+msgid "You are prevented from death."
+msgstr ""
+
+#. ~ Description of mutation "Mute (Bird)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your mouth and larynx have changed dramatically, rendering you incapable of "
+"human speech.  With enough practice you could relearn imitating their weird "
+"ape chirps, but it will take time.  <color_red>Look for a new practice recipe"
+" to lose this setback.</color>"
+msgstr ""
+
+#. ~ Description of mutation "Speech Mimicry (Bird)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your throat cramps, your beak twitches, but you can speak human again if you "
+"want."
+msgstr ""
+
+#. ~ Description of mutation "Mute (Cephalopod)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your beak and new lungs have diverged too much from your human form to be "
+"capable of human speech.  <color_red>Look for a new practice recipe to lose "
+"this setback.</color>"
+msgstr ""
+
+#. ~ Description of mutation "Speech Mimicry (Cephalopod)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Contorting your voice to match your surroundings is just as necessary as "
+"changing your color, even if learning it was a pain."
+msgstr ""
+
+#. ~ Description of mutation "Mute (Snail)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Just losing your teeth would have been an adjustment, but with your new "
+"tongue human speech is straight-up impossible.  <color_red>Look for a new "
+"practice recipe to lose this setback.</color>"
+msgstr ""
+
+#. ~ Description of mutation "Speech Mimicry (Snail)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Fine control of your radula was hard to learn, but now that you mapped out "
+"which calcified not-tooth on there makes what pitch you can open your mouth "
+"and…speak.  Yes, let's call it speaking."
+msgstr ""
+
+#. ~ Description of mutation "Mute (Insect)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your mandibles already made speech hard, but now that you don't even have a "
+"tongue…<color_red>Look for a new practice recipe to lose this "
+"setback.</color>"
+msgstr ""
+
+#. ~ Description of mutation "Speech Mimicry (Insect)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Using all this new anatomy cramps you up, and there's spittle flying "
+"everywhere, but you can manage short sentences of whistling almost-words."
+msgstr ""
+
+#. ~ Description of mutation "Mute (Slime)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your mouth is gone.  Oh, wait, there's one, isn't there?  If only it stopped "
+"moving around you might start to relearn something like human speech.  "
+"<color_red>Look for a new practice recipe to lose this setback.</color>"
+msgstr ""
+
+#. ~ Description of mutation "Speech Mimicry (Slime)"
+#: data/json/mutations/mutations.json
+msgid ""
+"Each word its own custom bubble under your membrane, waiting for its turn to "
+"pop.  It sounds like something small and furry drowning in sourdough, but if "
+"you manage to convince somebody to listen to you they will probably "
+"understand."
+msgstr ""
+
+#. ~ Description of mutation "Brawler"
+#: data/json/mutations/mutations.json
+msgid ""
+"Whether from personal choice or childhood trauma, using ranged weapons is "
+"off-limits to you, even if your life depended on it."
+msgstr ""
+
+#. ~ Description of mutation "Gun-Shy"
+#: data/json/mutations/mutations.json
+msgid ""
+"Using a firearm is off limits, due to personal philosophy or a traumatic "
+"event.  You can still use bows and slings."
+msgstr ""
+
+#. ~ Description of mutation "Rabbit Ears"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your ears have grown into tall and flexible rabbit ears.  They're are slender"
+" and enhance your hearing beyond the normal range."
+msgstr ""
+
+#. ~ Description of mutation "Rabbit Tail"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your stubby tail has become fuzzy and more round, but doesn't seem to serve "
+"any purpose."
+msgstr ""
+
+#. ~ Message when player with mutation "Rabbit Feet" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "You kick %s with your large feet!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Rabbit Feet" attacks
+#: data/json/mutations/mutations.json
+#, c-format
+msgid "%1$s kicks %2$s with their large feet!"
+msgstr ""
+
+#. ~ Description of mutation "Little Paws"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your hands have elongated and look a bit more like paws.  It makes fine "
+"manipulation a little more difficult, but you can still probably manage.  "
+"Plus, they allow you to move on all fours when crouching and unarmed."
+msgstr ""
+
+#. ~ Description of mutation "Hunted"
+#: data/json/mutations/mutations.json
+msgid ""
+"Something has been hunting you relentlessly.  You can outrun it, but it "
+"always seems to find you eventually."
+msgstr ""
+
+#. ~ Description of mutation "Nyctophobia"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are terribly afraid of the dark.  You refuse to enter very dark areas.  "
+"If you somehow still happen to stay in dark areas, you suffer from various "
+"detrimental mental and physical effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "Cold Intolerance"
+msgstr ""
+
+#. ~ Description of mutation "Cold Intolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You fare worse than most in colder climates and are more bothered by lower "
+"temperatures.  Note that while it will take less cold and exposure for you to"
+" suffer the effects of frostbite, you aren't any worse at dealing with the "
+"symptoms."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "High Cold Intolerance"
+msgstr ""
+
+#. ~ Description of mutation "High Cold Intolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are now even more bothered by the cold and it is easier for you to freeze"
+" or to even get chilly.  When you do though, it'll hit just as hard as it did"
+" before."
+msgstr ""
+
+#. ~ Description of mutation "Cold Tolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You fare better than most in colder climates and are less bothered by lower "
+"temperatures.  Note that while it will take more cold and exposure for you to"
+" suffer the effects of frostbite, you aren't any better at dealing with the "
+"symptoms."
+msgstr ""
+
+#. ~ Description of mutation "High Cold Tolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are now even less bothered by the cold and it is harder for you to freeze"
+" or to even get chilly.  When you do though, it'll hit just as hard as it did"
+" before."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "Heat Intolerance"
+msgstr ""
+
+#. ~ Description of mutation "Heat Intolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You fare worse than most in warmer climates and are more bothered by hotter "
+"temperatures.  Note that while it will take less heat and exposure for you to"
+" suffer the effects of sunstroke, you aren't any worse at dealing with the "
+"symptoms."
+msgstr ""
+
+#. ~ Mutation name
+#: data/json/mutations/mutations.json
+msgid "High Heat Intolerance"
+msgstr ""
+
+#. ~ Description of mutation "High Heat Intolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are now even more bothered by the heat and it is easier for you to "
+"overheat or even sweat.  When you do though, it'll hit just as hard as it did"
+" before."
+msgstr ""
+
+#. ~ Description of mutation "Heat Tolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You fare better than most in warmer climates and are less bothered by hotter "
+"temperatures.  Note that while it will take more heat and exposure for you to"
+" suffer the effects of sunstroke, you aren't any better at dealing with the "
+"symptoms."
+msgstr ""
+
+#. ~ Description of mutation "High Heat Tolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are now even less bothered by the heat and it is harder for you to "
+"overheat or even sweat.  When you do though, it'll hit just as hard as it did"
+" before."
+msgstr ""
+
+#. ~ Description of mutation "Colorful Skin"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your skin is covered in shifting patterns of dots, lines, and swirls.  This "
+"is outside of your control and does not help your stealth.  In fact, it makes"
+" you more noticeable."
+msgstr ""
+
+#. ~ Description of mutation "Camouflage Skin"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your can change your skin patterns to match your environment, somewhat "
+"increasing your stealthiness."
+msgstr ""
+
+#. ~ Description of mutation "Cephalopod Mind"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your mind has been altered in such a way that you now find it very difficult "
+"to understand humans.  Your capability to persuade and lie to them suffers "
+"slightly, even if it is mitigated by your intelligence.  In addition, while "
+"you find it much easier to learn by doing now, the plasticity of your psyche "
+"means you forget skills much faster."
+msgstr ""
+
+#. ~ Description of mutation "Temperature Tolerance"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are now not at all bothered by the heat and it is harder for you to "
+"overheat or freeze at all.  When you do though, it'll hit just as hard as it "
+"did before."
+msgstr ""
+
+#. ~ Description of mutation "Highly Vain"
+#: data/json/mutations/mutations.json
+msgid ""
+"You know you're beautiful, and the world deserves to know it too.  You prefer"
+" to show off your stunningly good looks to the world and will be unhappy if "
+"you cover up your face."
+msgstr ""
+
+#. ~ Description of mutation "Picky Eater"
+#: data/json/mutations/mutations.json
+msgid ""
+"You're a very picky eater.  You refuse to eat any food that tastes bad unless"
+" you're starving."
+msgstr ""
+
+#. ~ Description of mutation "Extrovert"
+#: data/json/mutations/mutations.json
+msgid ""
+"You don't mind being alone, but you get a slight mood boost from being around"
+" friends."
+msgstr ""
+
+#. ~ Description of mutation "Sociable"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are a social creature.  Spending time with friends will improve your "
+"mood, but if you're alone too long, you'll start to feel unhappy."
+msgstr ""
+
+#. ~ Description of mutation "Alpha Member of the Group"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are the natural leader of any group.  It's just part of who you are, "
+"groups naturally form around you and you need these groups to energize you.  "
+"Sometimes however, you give in to your worst impulses and this trait will "
+"flip."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Alpha Member of the Group" to
+#. "DARK_TRIAD"
+#: data/json/mutations/mutations.json
+msgid "You give in to your worst instincts."
+msgstr ""
+
+#. ~ Description of mutation "Dark Triad"
+#: data/json/mutations/mutations.json
+msgid ""
+"You are a god among mortals and they are all so very disappointing.  Why "
+"should you even bother to hide your disappointment in their failures?"
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Dark Triad" to "AMOG"
+#: data/json/mutations/mutations.json
+msgid "Maybe you can make better decisions this time."
+msgstr ""
+
+#. ~ Description of mutation "Introvert"
+#: data/json/mutations/mutations.json
+msgid ""
+"You can tolerate others, but you prefer to be alone.  Spending time by "
+"yourself will boost your mood slightly."
+msgstr ""
+
+#. ~ Description of mutation "Loner"
+#: data/json/mutations/mutations.json
+msgid ""
+"You'd really rather be by yourself.  Being alone will improve your mood, but "
+"spending too much time around other people can grate on your nerves."
+msgstr ""
+
+#. ~ Description of mutation "Superiority Complex"
+#: data/json/mutations/mutations.json
+msgid ""
+"You can't stand to prostrate yourself before your lessers and hate it when "
+"they don't immediately do what you say.  Persuasion is much more difficult, "
+"but you're better at lying and intimidating."
+msgstr ""
+
+#. ~ Description of mutation "Comfortably Fluid"
+#: data/json/mutations/mutations.json
+msgid ""
+"You can hear your heartbeat in your ears, feel the blood sloshing around in "
+"your veins.  The uneven hitches in your breath, the aches in your joints, the"
+" rumbling of your stomach.  It's nasty and messy and ugly.  And you are "
+"extremely grateful for that."
+msgstr ""
+
+#. ~ Description of mutation "Oversensitive System"
+#: data/json/mutations/mutations.json
+msgid ""
+"While it doesn't cause you any problems in daily life, your immune system and"
+" body chemistry are overly sensitive to foreign implants.  You cannot have "
+"any CBMs installed."
+msgstr ""
+
+#. ~ Description of mutation "Bloodletter"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your saliva contains powerful anticoagulants.  If you have a bite attack, it "
+"will prolong the bleeding of most animals, including humans and the undead.  "
+"It may be less effective against insects and stranger creatures."
+msgstr ""
+
+#. ~ Description of mutation "Fangs"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your teeth have grown into long, sharp fangs.  If your mouth is uncovered, "
+"you'll sometimes bite your enemies."
+msgstr ""
+
+#. ~ Description of mutation "Vampire Fangs"
+#: data/json/mutations/mutations.json
+msgid ""
+"Your teeth are so sharp, you can use them to shave the fur from your victims "
+"before you feed.  What's more, anticoagulants in your saliva will keep their "
+"blood flowing long after it should have clotted."
+msgstr ""
+
+#. ~ Description of mutation "Survivor at any cost"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> is certainly a survivor.  You can only wonder how many they've "
+"abandoned to save themself."
+msgstr ""
+
+#. ~ Description of mutation "Timid"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> tries to avoid conflict, even when they have good reason not to."
+msgstr ""
+
+#. ~ Description of mutation "Hardass"
+#: data/json/mutations/npc_personality.json
+msgid "<npc_name> loves to fight a good fight, but only for themself."
+msgstr ""
+
+#. ~ Description of mutation "Freedom fighter"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> believes in fighting… mostly for others, even at risk to their own"
+" wellbeing."
+msgstr ""
+
+#. ~ Description of mutation "Volatile"
+#: data/json/mutations/npc_personality.json
+msgid "<npc_name> is just looking for an excuse."
+msgstr ""
+
+#. ~ Description of mutation "Coward"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> flinches at the thought of fighting, whether it be other people or"
+" the undead."
+msgstr ""
+
+#. ~ Description of mutation "Craven"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> is afraid of the dark, spiders, and unexplained sounds.  So are "
+"you, but only because you've lived through the apocalypse.  <npc_name> has "
+"always been like this."
+msgstr ""
+
+#. ~ Description of mutation "Brave"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> knows the name of fear, but only as a long-defeated foe.  Little "
+"can shake them."
+msgstr ""
+
+#. ~ Description of mutation "Hero"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> is an ideal ally to those they call friend, always willing to help"
+" others."
+msgstr ""
+
+#. ~ Description of mutation "Miser"
+#: data/json/mutations/npc_personality.json
+msgid "<npc_name> loves their trinkets, and hates giving them away."
+msgstr ""
+
+#. ~ Description of mutation "Kind"
+#: data/json/mutations/npc_personality.json
+msgid "<npc_name> just wants to help."
+msgstr ""
+
+#. ~ Description of mutation "Self-centered"
+#: data/json/mutations/npc_personality.json
+msgid ""
+"<npc_name> steers every interaction into discussing how it will help them."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "PPSh-41 submachine gun"
+msgid_plural "PPSh-41 submachine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"A bulky and simple Second World War submachine gun of Russian manufacture, "
+"composed from a basic wooden buttstock, steel barrel shroud, and the hopes "
+"and prayers of Soviet soldiers under threat of German invasion.  Designed for"
+" mass production with limited materials, the weapon is notable for its high-"
+"capacity drum magazines, capability of rapidly depleting said magazines, and "
+"vicious 7.62x25mm chambering."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"The Portable Plasma Accelerator Model Five, developed by Lockheed Martin "
+"Corporation.  This device uses highly advanced capacitor banks to create a "
+"torus of superheated hydrogen plasma and accelerate it to incredible speed.  "
+"It was designed to take down heavy vehicles, and was expected to fully enter "
+"US Army service not long before the Cataclysm."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"Boeing developed this focused plasma weaponry together with DARPA.  It heats "
+"solid hydrogen to create plasma, and envelops it with polymers to reduce "
+"blooming.  While powerful, it suffers from short range.  Powered by UPS."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 165-round magazine"
+msgid_plural ".22 165-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"An unusually-shaped pan magazine for use with .22 caliber submachine guns."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "An unusually-shaped pan magazine for the American-180."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 165-round polymer magazine"
+msgid_plural ".22 165-round polymer magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"An unusually-shaped polymer constructed pan magazine for use with .22 caliber"
+" submachine guns."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "American-180 polymer 165-round magazine"
+msgid_plural "American-180 polymer 165-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "An unusually-shaped, polymer pan magazine for the American-180."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 177-round magazine"
+msgid_plural ".22 177-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 220-round polymer magazine"
+msgid_plural ".22 220-round polymer magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"An unusually-shaped polymer pan magazine for use with .22 caliber submachine "
+"guns."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "American-180 polymer 220-round magazine"
+msgid_plural "American-180 polymer 220-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "An unusually-shaped polymer pan magazine for the American-180."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 275-round polymer magazine"
+msgid_plural ".22 275-round polymer magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "American-180 polymer 275-round magazine"
+msgid_plural "American-180 polymer 275-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ".22 caliber submachine gun"
+msgid_plural ".22 caliber submachine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"A dramatically uncommon automatic weapon, making use of high-capacity pan "
+"magazines and firing the low power .22 caliber cartridge: an unusual "
+"ammunition choice for a submachine gun.  With negligible recoil on account of"
+" its modest cartridge and a suppressively high rate of fire, a burst of .22 "
+"LR rounds from this little machine gun can be best likened with a swarm of "
+"hornets… an incredibly angry swarm of hornets."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "American-180 submachine gun"
+msgid_plural "American-180 submachine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"The American-180 is a submachine gun developed in the 1960s that fires .22 "
+"LR, unusual for an SMG.  Though the round is low-powered, the high rate of "
+"fire and large magazine makes the 180 a formidable weapon."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "extended bullpup shotgun"
+msgid_plural "extended bullpup shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"This pump-action shotgun uses a system of twin magazines to carry 24 total "
+"rounds of 12-gauge shotgun shells.  Each tube must be loaded separately, but "
+"this offers the option of loading different ammunition for different "
+"situations.  As the weapon's trigger is situated forwards of the chamber in "
+"what is termed as a 'bullpup' design, the firearm's still only as long as "
+"conventional shotguns despite having a comparatively far higher capacity."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "Kel-Tec KSG-25 shotgun"
+msgid_plural "Kel-Tec KSG-25 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"The integrated second tube magazine of the Kel-Tec KSG-25, which holds 12 "
+"shots.  It's irremovable."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless LMG"
+msgid_plural "caseless LMGs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless 250-round drum magazine"
+msgid_plural "caseless 250-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless 500-round drum magazine"
+msgid_plural "caseless 500-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless battle rifle"
+msgid_plural "caseless battle rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless hunting shotgun"
+msgid_plural "caseless hunting shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"Designed by Rivtech and utilizing a powerful and unusual caliber, this "
+"caseless pump-action shotgun was designed for hunting big game, with "
+"durability and ease of use as priorities."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "RM20 caseless autoshotgun"
+msgid_plural "RM20 caseless autoshotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"Designed by Rivtech and utilizing a powerful and unusual caliber, this "
+"caseless automatic combat shotgun was designed with durability and "
+"overwhelming power in mind."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "compact caseless shotgun"
+msgid_plural "compact caseless shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"Designed by Rivtech and designated the RM228 PDW, chambering the powerful "
+"20x66mm caseless shotgun cartridge, this gun was designed for the civilian "
+"personal defense market with durability and ease of use as priorities.  While"
+" lauded for its small size and light weight, its hefty price tag kept it out "
+"of the reach of casual collectors."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "compact caseless 10-round magazine"
+msgid_plural "compact caseless 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "20x66 abstract"
+msgid_plural "20x66 abstract"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"A 20x66mm caseless shotgun round, loaded with 18 buffered pellets of premium "
+"plated 00 buck.  Proprietary ammunition for Rivtech shotguns."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid "caseless aux shotgun"
+msgid_plural "caseless aux shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/gun.json
+msgid ""
+"Designated the Rivtech RM121 auxiliary weapon system, this is a magazine-fed "
+"semi-automatic caseless shotgun, which can be mounted under the barrel of "
+"many rifles.  Accepts RMSA10 box magazines."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid "Spent Phenotype"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid "Depleted Phenotype"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid "Bankrupt Phenotype"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid ""
+"Mutation has left you with a persistent mild discomfort.  It seems harmless "
+"for now, but you can't predict if it'll get worse."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid ""
+"There's an enervating sense of dysmorphia throughout your whole body.  It "
+"waxes and wanes, but never quite goes away.  Mutating this much can't be good"
+" for you…"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/migration_mutation.json
+msgid ""
+"You're haunted by phantom pains across your entire body now.  Everything "
+"aches from an exhaustion that never seems to fade.  Any further mutation "
+"right now is very unlikely to have a happy ending."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid ""
+"Commonly known as pinkeye, this minor infection can be treated with "
+"antihistamines.  If it's bacterial, antibiotics may help, but you can't tell "
+"without a lab analysis."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Your itchy eye leaks a filmy discharge."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgctxt "memorial_male"
+msgid "Got pinkeye."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgctxt "memorial_female"
+msgid "Got pinkeye."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgctxt "memorial_male"
+msgid "Got over a pinkeye infection."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgctxt "memorial_female"
+msgid "Got over a pinkeye infection."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Slick Surface"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Slippery Terrain"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Dangerously Slippery"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "There's a slippery surface here, running may be a bad idea."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "It's quite slippery, it may not be safe to stand here."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "This area is extremely slippery."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Bile Splashed"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "The monster is greedily drinking your blood!"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Hemorrhage"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "The monster is sucking up your blood!"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid "mutant tree"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid ""
+"This bizarre tree spreads its twisted branches at odd angles toward the sky."
+"  If you squint, it almost looks like a human figure with its arms raised to "
+"catch the sun."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid "mutant sapling"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid ""
+"A twisted and gnarled little tree.  Its shape is at once alien and familiar."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid "sprout"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_furniture.json
+msgid "A tiny little sprout that has just begun to grow."
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_npc_class.json
+msgid "Motorhead"
+msgstr ""
+
+#. ~ [DEPRECATED] Don't translate this line.
+#. ~ This string is from an obsolete source and will no longer be used in the
+#. game.
+#: data/json/obsoletion_and_migration_0.I/obsolete_npc_class.json
+msgid "I'm just about ready to ride off into the sunset…"
+msgstr ""
+
+#. ~ HP bar UI text of body part "right prosthetic leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "R. PROS"
+msgstr ""
+
+#. ~ Name of body part
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "left prosthetic leg"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgctxt "bodypart_accusative"
+msgid "l. leg prosthetic"
+msgstr ""
+
+#. ~ Encumbrance text of body part "left prosthetic leg"
+#. ~ Encumbrance text of body part "left peg leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "You're using a prosthetic left leg."
+msgstr ""
+
+#. ~ Heading of body part "left prosthetic leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "left leg prosthetic"
+msgstr ""
+
+#. ~ Heading of body part "left prosthetic leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "left leg prosthetics"
+msgstr ""
+
+#. ~ HP bar UI text of body part "left prosthetic leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "L. PROS"
+msgstr ""
+
+#. ~ Name of body part
+#. ~ Heading of body part "right peg leg"
+#. ~ Item name
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/armor/legs_prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "right peg leg"
+msgid_plural "right peg legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Accusative name of body part
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgctxt "bodypart_accusative"
+msgid "r. peg leg"
+msgstr ""
+
+#. ~ Heading of body part "right peg leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "right peg legs"
+msgstr ""
+
+#. ~ HP bar UI text of body part "right peg leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "R. PEG"
+msgstr ""
+
+#. ~ Name of body part
+#. ~ Heading of body part "left peg leg"
+#. ~ Item name
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/armor/legs_prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "left peg leg"
+msgid_plural "left peg legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Accusative name of body part
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgctxt "bodypart_accusative"
+msgid "l. peg leg"
+msgstr ""
+
+#. ~ Heading of body part "left peg leg"
+#: data/json/obsoletion_and_migration_0.I/prosthetics.json
+#: data/mods/Limb_WIP/mutations/mutation_limbs.json
+msgid "left peg legs"
+msgstr ""

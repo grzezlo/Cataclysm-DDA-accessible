@@ -1,0 +1,1349 @@
+# Batch 158 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of effect type id "effect_telekin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Yellow Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Yellow Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"The concoction's effects fade and you suddenly feel like something is "
+"pressing down on you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telekin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Yellow Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepath_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "White Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "White Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects fade and it gets hard to think straight."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepath_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "White Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleport_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Blue Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Blue Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"The concoction's effects fade and you suddenly feel stretched, like something"
+" unseen is pulling at you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleport_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Blue Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Green Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Green Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"The concoction's effects fade and you stagger as you suddenly feel faint."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Green Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_noetic_resilience"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Noetic Resilience"
+msgstr ""
+
+#. ~ Description of effect type "Noetic Resilience"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "You are fortified against too strong a connection with the Nether."
+msgstr ""
+
+#. ~ Remove message of effect type "Noetic Resilience"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Your protection against too much connection to the Nether fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_noetic_resilience_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Noetically Fragile"
+msgstr ""
+
+#. ~ Description of effect type "Noetically Fragile"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"Your psionic capacity, and physical stamina, are reduced by the aftereffects "
+"of the noetic resilience treatment."
+msgstr ""
+
+#. ~ Apply message of effect type "Noetically Fragile"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "You feel a sudden weakness in your body."
+msgstr ""
+
+#. ~ Remove message of effect type "Noetically Fragile"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"You feel your strength and ability to channel your powers finally return to "
+"normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_intense_concentration"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Intense Concentration"
+msgstr ""
+
+#. ~ Description of effect type "Intense Concentration"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "It's taking a lot of concentration to maintain your powers."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_power_surge"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Power Surge"
+msgstr ""
+
+#. ~ Description of effect type "Power Surge"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are filled with power!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_physical"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Enhanced Prowess"
+msgstr ""
+
+#. ~ Description of effect type "Enhanced Prowess"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are enhancing your physical prowess."
+msgstr ""
+
+#. ~ Remove message of effect type "Enhanced Prowess"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The surge of power fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_pkill_1"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Overcoming Minor Pain"
+msgstr ""
+
+#. ~ Description of effect type "Overcoming Minor Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers are slightly lessening the pain you feel."
+msgstr ""
+
+#. ~ Remove message of effect type "Overcoming Minor Pain"
+#. ~ Remove message of effect type "Overcoming Pain"
+#. ~ Remove message of effect type "Overcoming Major Pain"
+#. ~ Remove message of effect type "Overcoming Extreme Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your wounds ache once again."
+msgstr ""
+
+#. ~ Decay message of effect type "Overcoming Minor Pain"
+#. ~ Decay message of effect type "Overcoming Pain"
+#. ~ Decay message of effect type "Overcoming Major Pain"
+#. ~ Decay message of effect type "Overcoming Extreme Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The pain you've been keeping away is starting to creep back in."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_pkill_2"
+#. ~ Name of effect type id "effect_biokin_pkill_3"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Overcoming Pain"
+msgstr ""
+
+#. ~ Description of effect type "Overcoming Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers are lessening the pain you feel."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_pkill_4"
+#. ~ Name of effect type id "effect_biokin_pkill_5"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Overcoming Major Pain"
+msgstr ""
+
+#. ~ Description of effect type "Overcoming Major Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers are greatly lessening the pain you feel."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_pkill_6"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Overcoming Extreme Pain"
+msgstr ""
+
+#. ~ Description of effect type "Overcoming Extreme Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers are enormously lessening the pain you feel."
+msgstr ""
+
+#. ~ Description of effect type "Oxygen Absorption"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can absorb oxygen through your skin."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_flexibility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Flexibility"
+msgstr ""
+
+#. ~ Description of effect type "Flexibility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are enhancing your range of motion."
+msgstr ""
+
+#. ~ Remove message of effect type "Flexibility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your joints creak as your limbs lose their flexibility."
+msgstr ""
+
+#. ~ Remove message of effect type "Heightened Reflexes"
+#. ~ Remove message of effect type "Chronal Acceleration"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The world speeds up again."
+msgstr ""
+
+#. ~ Description of effect type "Hardened Skin"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your skin is more resilient thanks to psionic energy."
+msgstr ""
+
+#. ~ Remove message of effect type "Hardened Skin"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The slight itching and waxiness in your skin fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_climate_control"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Climate Controlled"
+msgstr ""
+
+#. ~ Description of effect type "Climate Controlled"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are better at dealing with extremes of heat and cold."
+msgstr ""
+
+#. ~ Remove message of effect type "Climate Controlled"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The temperature feels uncomfortable again."
+msgstr ""
+
+#. ~ Decay message of effect type "Climate Controlled"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The temperature is really starting to get to you."
+msgstr ""
+
+#. ~ Decay message of effect type "Climate Controlled"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your adaptation to extreme temperatures is fading."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_enhance_mobility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Enhanced Mobility"
+msgstr ""
+
+#. ~ Description of effect type "Enhanced Mobility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You find it much easier to move in encumbering gear."
+msgstr ""
+
+#. ~ Remove message of effect type "Enhanced Mobility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your gear suddenly seems to weigh you down."
+msgstr ""
+
+#. ~ Description of effect type "Hammerhand"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your bare hands substitute for several common tools."
+msgstr ""
+
+#. ~ Remove message of effect type "Hammerhand"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You're no longer capable of hammering in a nail with your thumb."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_sealed"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Sealed System"
+msgstr ""
+
+#. ~ Description of effect type "Sealed System"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are protected from the dangers of the world."
+msgstr ""
+
+#. ~ Remove message of effect type "Sealed System"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You let out your breath in a rush."
+msgstr ""
+
+#. ~ Decay message of effect type "Sealed System"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You need to take a new breath, and soon!"
+msgstr ""
+
+#. ~ Decay message of effect type "Sealed System"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your lungs are straining with the effort of holding your breath."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_metabolism_enhance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Hyperenhanced Metabolism"
+msgstr ""
+
+#. ~ Description of effect type "Hyperenhanced Metabolism"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your metabolism is far more efficient than before."
+msgstr ""
+
+#. ~ Remove message of effect type "Hyperenhanced Metabolism"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your stomach rumbles."
+msgstr ""
+
+#. ~ Description of effect type "Combat Dance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are a dynamo of death."
+msgstr ""
+
+#. ~ Remove message of effect type "Combat Dance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your movements return to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_guided_evolution_backfire"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Evolving Backfire"
+msgstr ""
+
+#. ~ Description of effect type "Evolving Backfire"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"Your biology is running out of control.  Perhaps extensively drawing on the "
+"netherium was a bad idea."
+msgstr ""
+
+#. ~ Apply message of effect type "Evolving Backfire"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"Netherium energy surges through your cells, changing them in an unknowable "
+"way.  Something is about to change."
+msgstr ""
+
+#. ~ Description of effect type "Guided Evolution"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"Whenever you mutate, you may pick the resulting mutation from a selection of "
+"options."
+msgstr ""
+
+#. ~ Remove message of effect type "Guided Evolution"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are no longer controlling your evolution."
+msgstr ""
+
+#. ~ Description of effect type "Perfected Motion"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You feel like you can outrun a locomotive."
+msgstr ""
+
+#. ~ Remove message of effect type "Perfected Motion"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The world returns to normal speed."
+msgstr ""
+
+#. ~ Decay message of effect type "Perfected Motion"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your movements are slower and slower now."
+msgstr ""
+
+#. ~ Decay message of effect type "Perfected Motion"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The world begins speeding up around you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_hurricane_blows"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Hurricane Blows"
+msgstr ""
+
+#. ~ Description of effect type "Hurricane Blows"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can attack faster than thought."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_vitaminosis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Vitaminosis"
+msgstr ""
+
+#. ~ Description of effect type "Vitaminosis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are steadily converting calories into vitamins."
+msgstr ""
+
+#. ~ Description of effect type "Heightened Senses"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are enhancing your mundane senses."
+msgstr ""
+
+#. ~ Remove message of effect type "Heightened Senses"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your enhance senses fade away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_better_senses_pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Sensory Pain"
+msgstr ""
+
+#. ~ Description of effect type "Sensory Pain"
+#. ~ Apply message of effect type "Sensory Pain"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your senses are overwhelmed!"
+msgstr ""
+
+#. ~ Description of effect type "Night Eyes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/MindOverMatter/obsolete/effects.json
+msgid "You can sense your surroundings in the dark."
+msgstr ""
+
+#. ~ Remove message of effect type "Night Eyes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/MindOverMatter/obsolete/effects.json
+msgid "The darkness hides your surroundings again."
+msgstr ""
+
+#. ~ Description of effect type "Speed Reader"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are absorbing knowledge from books like a sponge absorbs water."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_premonition"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Sensing Danger"
+msgstr ""
+
+#. ~ Description of effect type "Sensing Danger"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You know there's something out there."
+msgstr ""
+
+#. ~ Remove message of effect type "Sensing Danger"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The sense of danger fades away, but you know the danger remains."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "moving_creature"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You sense a danger here."
+msgstr ""
+
+#. ~ Description of effect type "Aura Sight"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Swirling colors are visible around others, revealing their emotions."
+msgstr ""
+
+#. ~ Remove message of effect type "Aura Sight"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The colors fade away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_weak_point"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Weaknesses Discerned"
+msgstr ""
+
+#. ~ Description of effect type "Weaknesses Discerned"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your vulnerabilities have been laid open."
+msgstr ""
+
+#. ~ Apply message of effect type "Weaknesses Discerned"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You suddenly feel terribly vulnerable."
+msgstr ""
+
+#. ~ Remove message of effect type "Weaknesses Discerned"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You no longer feel so exposed."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_ranged_enhance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Dead Aim"
+msgstr ""
+
+#. ~ Description of effect type "Dead Aim"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers make aiming much easier for you."
+msgstr ""
+
+#. ~ Remove message of effect type "Dead Aim"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The world lurches as apparent distances snap back into place."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_sense_rads_self"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Sensing Radiation"
+msgstr ""
+
+#. ~ Description of effect type "Sensing Radiation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can detect environmental radiation."
+msgstr ""
+
+#. ~ Remove message of effect type "Sensing Radiation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your radiation sense is gone."
+msgstr ""
+
+#. ~ Decay message of effect type "Sensing Radiation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The ambient glow of radiation is almost invisible now."
+msgstr ""
+
+#. ~ Decay message of effect type "Sensing Radiation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your ability to sense radiation is fading."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_dodge"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Anticipating Attack"
+msgstr ""
+
+#. ~ Description of effect type "Anticipating Attack"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can see your enemies' attacks in advance."
+msgstr ""
+
+#. ~ Remove message of effect type "Anticipating Attack"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The fore-images of your enemies fade away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_craft_bonus"
+#. ~ Mutation name
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/MindOverMatter/mutations/temporary.json
+msgid "Intuitive Artistry"
+msgstr ""
+
+#. ~ Description of effect type "Intuitive Artistry"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You just know what you need to do next.  It's harder for you to pay attention"
+" to anything else due to the shifting futures, however, and you will lose "
+"awareness of the outside world entirely when making something."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_perfect_shot"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "One Perfect Shot"
+msgstr ""
+
+#. ~ Description of effect type "One Perfect Shot"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Do it.  Take the shot."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_clear_sight"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Truesight"
+msgstr ""
+
+#. ~ Description of effect type "Truesight"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your powers allow you to see the true shape of reality."
+msgstr ""
+
+#. ~ Remove message of effect type "Truesight"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The world seems wrapped in gauze compared to before."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_astral_projection"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Astrally Projecting"
+msgstr ""
+
+#. ~ Description of effect type "Astrally Projecting"
+#. ~ Description of effect type "Etheric Form"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your spirit wanders the world."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_group_tactics_other"
+#. ~ Name of effect type id "effect_clair_group_tactics_self"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Prescient Tactics"
+msgstr ""
+
+#. ~ Description of effect type "Prescient Tactics"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You're being informed of the best way to fight."
+msgstr ""
+
+#. ~ Description of effect type "Prescient Tactics"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You're calling out tactics to your followers.  It's much harder to "
+"concentrate on your own defense."
+msgstr ""
+
+#. ~ Remove message of effect type "Prescient Tactics"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "As the visions fade, you stop calling out orders."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_omniscence"
+#. ~ Name of effect type id "effect_goblin_fruit_super_clairvoyance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Omniscience"
+msgstr ""
+
+#. ~ Description of effect type "Omniscience"
+#. ~ Message of spell "clair_omniscience ( [Ψ]Omniscence )"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/MindOverMatter/powers/clairsentience.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can see forever."
+msgstr ""
+
+#. ~ Remove message of effect type "Omniscience"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your senses snap back to your physical body."
+msgstr ""
+
+#. ~ Description of effect type "Voltaic Strikes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your melee attacks unleash electrical blasts."
+msgstr ""
+
+#. ~ Remove message of effect type "Voltaic Strikes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your hands no longer spark with electricity."
+msgstr ""
+
+#. ~ Description of effect type "Hacking Interface"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You have constructed an electrical interface to hack nearby devices."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokin_paralysis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Neural Spasms"
+msgstr ""
+
+#. ~ Description of effect type "Neural Spasms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your muscles are twitching and won't obey you!"
+msgstr ""
+
+#. ~ Remove message of effect type "Neural Spasms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your spasms stop."
+msgstr ""
+
+#. ~ Description of effect type "Pain Suppression"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "When it hurts, it won't hurt as much."
+msgstr ""
+
+#. ~ Remove message of effect type "Pain Suppression"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your nerves burn for a moment as a surge of pain hits them."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokinetic_pain_immune"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Analgesic Block"
+msgstr ""
+
+#. ~ Description of effect type "Analgesic Block"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You can't feel anything.  That means everything is fine, right?  Everything "
+"is fine."
+msgstr ""
+
+#. ~ Remove message of effect type "Analgesic Block"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "All of your pain rushes back in!"
+msgstr ""
+
+#. ~ Decay message of effect type "Analgesic Block"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your wounds are starting to ache."
+msgstr ""
+
+#. ~ Decay message of effect type "Analgesic Block"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your wounds sting a bit."
+msgstr ""
+
+#. ~ Description of effect type "Neuro-Accelerated"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are enhancing your nervous system."
+msgstr ""
+
+#. ~ Description of effect type "Galvanic Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Anyone nearby risks being blasted by lightning."
+msgstr ""
+
+#. ~ Remove message of effect type "Galvanic Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The thrum in the air around you dissipates."
+msgstr ""
+
+#. ~ Decay message of effect type "Galvanic Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The crackling aura around you is fading quickly."
+msgstr ""
+
+#. ~ Decay message of effect type "Galvanic Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The lightning blasts are growing less powerful."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokinetic_lightning_aura_aftershock"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Galvanic Aftershock"
+msgstr ""
+
+#. ~ Description of effect type "Galvanic Aftershock"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You still remain immune to the effects of electricity, if only briefly."
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokin_light_local"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Candle's Light"
+msgstr ""
+
+#. ~ Description of effect type "Candle's Light"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air above your hand glows faintly."
+msgstr ""
+
+#. ~ Apply message of effect type "Candle's Light"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "A faint light springs up over your hand."
+msgstr ""
+
+#. ~ Remove message of effect type "Candle's Light"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The glow above your hand fades."
+msgstr ""
+
+#. ~ Description of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air around you is glowing."
+msgstr ""
+
+#. ~ Apply message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are outlined in light."
+msgstr ""
+
+#. ~ Description of effect type "Trick of the Light"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are surrounded by shifting illusions, and your enemies struggle to see "
+"where your true form is."
+msgstr ""
+
+#. ~ Remove message of effect type "Trick of the Light"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The illusions around you suddenly vanish!"
+msgstr ""
+
+#. ~ Description of effect type "Chameleoflage"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You bending nearby light to make yourself more difficult to spot."
+msgstr ""
+
+#. ~ Remove message of effect type "Chameleoflage"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You stop bending light around your location."
+msgstr ""
+
+#. ~ Description of effect type "Lucent Barrier"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are protected from extremes of light and radiation."
+msgstr ""
+
+#. ~ Remove message of effect type "Lucent Barrier"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The surrounding air shimmers once more as your light barrier fades."
+msgstr ""
+
+#. ~ Description of effect type "Mirror-Mask"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You're just another survivor.  There's definitely nothing odd about you at "
+"all."
+msgstr ""
+
+#. ~ Remove message of effect type "Mirror-Mask"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The illusions around you fall away."
+msgstr ""
+
+#. ~ Description of effect type "Radio Transception"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can interpret and transmit radio waves."
+msgstr ""
+
+#. ~ Remove message of effect type "Radio Transception"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You stop paying attention to the radio waves around you."
+msgstr ""
+
+#. ~ Remove message of effect type "Invisibility"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The obscuring veil of light fades, revealing your presence."
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokin_arms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "refraction of arms"
+msgstr ""
+
+#. ~ Description of effect type "refraction of arms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"Your arms refract light to create the illusion of having multiple arms and "
+"their wielded items."
+msgstr ""
+
+#. ~ Remove message of effect type "refraction of arms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The light around your arms returns to normal."
+msgstr ""
+
+#. ~ Decay message of effect type "refraction of arms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your illusionary arms are obviously translucent."
+msgstr ""
+
+#. ~ Decay message of effect type "refraction of arms"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your illusionary arms are losing some of their solid appearance."
+msgstr ""
+
+#. ~ Apply message of effect type "Blind"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are blinded!"
+msgstr ""
+
+#. ~ Description of effect type "Blinding Radiance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are glowing like the sun."
+msgstr ""
+
+#. ~ Remove message of effect type "Blinding Radiance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The last light finally dies."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_post_cauterize"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Cauterized"
+msgstr ""
+
+#. ~ Description of effect type "Cauterized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You used your powers to cauterize a wound here.  Whether it worked or not, it"
+" still stings terribly."
+msgstr ""
+
+#. ~ Description of effect type "Banked Flames"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "A flame is burning over one of your palms."
+msgstr ""
+
+#. ~ Description of effect type "Cloak of Warmth"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air around you has its temperature controlled."
+msgstr ""
+
+#. ~ Description of effect type "Incandescent Lance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "A thin beam of searing plasma extends from one finger."
+msgstr ""
+
+#. ~ Description of effect type "Blazing Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are surrounded by flames."
+msgstr ""
+
+#. ~ Remove message of effect type "Blazing Aura"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The flames surrounding you gutter out."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pyrokinetic_aura_damage"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Burning Air"
+msgstr ""
+
+#. ~ Description of effect type "Burning Air"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air is intolerably hot."
+msgstr ""
+
+#. ~ Remove message of effect type "Burning Air"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air cools down."
+msgstr ""
+
+#. ~ Description of effect type "Flame Immunity"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are completely immune to fire."
+msgstr ""
+
+#. ~ Remove message of effect type "Flame Immunity"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are once again vulnerable to fire."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telekinetic_water_walking"
+#. ~ Name of effect type id "effect_hedge_walk_on_water_magic_square"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Water-Walking"
+msgstr ""
+
+#. ~ Description of effect type "Water-Walking"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can walk over liquids without sinking into them."
+msgstr ""
+
+#. ~ Remove message of effect type "Water-Walking"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your feet are firm on the ground."
+msgstr ""
+
+#. ~ Description of effect type "Slowfall"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The ground isn't as eager to receive you."
+msgstr ""
+
+#. ~ Remove message of effect type "Slowfall"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You suddenly feel much heavier."
+msgstr ""
+
+#. ~ Description of effect type "Lifting Field"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You can hover a single item nearby, at the ready."
+msgstr ""
+
+#. ~ Remove message of effect type "Lifting Field"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your lifting field dissipates."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telekinetic_strength"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Telekinetic Strength"
+msgstr ""
+
+#. ~ Description of effect type "Telekinetic Strength"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are greatly enhancing your ability to lift and break things."
+msgstr ""
+
+#. ~ Remove message of effect type "Telekinetic Strength"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The force supporting your muscles suddenly vanishes."
+msgstr ""
+
+#. ~ Remove message of effect type "Inertial Barrier"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The barrier of force around you falls apart."
+msgstr ""
+
+#. ~ Description of effect type "Levitation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are floating in defiance of gravity."
+msgstr ""
+
+#. ~ Remove message of effect type "Levitation"
+#. ~ Remove message of effect type "Smoke-Walking"
+#. ~ Remove message of effect type "Wind-Walking"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your feet touch the ground once again."
+msgstr ""
+
+#. ~ Decay message of effect type "Levitation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are sinking despite your best efforts."
+msgstr ""
+
+#. ~ Decay message of effect type "Levitation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You wobble briefly downward before recovering."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telekinetic_aegis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Aegis"
+msgstr ""
+
+#. ~ Description of effect type "Aegis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are nearly invincible."
+msgstr ""
+
+#. ~ Remove message of effect type "Aegis"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air loses its structure and you are vulnerable once again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepathic_learning_bonus"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Trance State"
+msgstr ""
+
+#. ~ Description of effect type "Trance State"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are in a focused mental state, increasing the ease of learning."
+msgstr ""
+
+#. ~ Remove message of effect type "Trance State"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You shake your head as you become aware of the outside world again."
+msgstr ""
+
+#. ~ Decay message of effect type "Trance State"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your enhanced concentration is fading like a dream."
+msgstr ""
+
+#. ~ Decay message of effect type "Trance State"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The outside world is impinging itself on your awareness."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepath_mesmerize_tracker"
+#. ~ Name of effect type id "effect_vampire_hypnotism"
+#. ~ Name of effect type id "effect_lilin_mesmerize_tracker"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Mesmerized"
+msgstr ""
+
+#. ~ Description of effect type "Mesmerized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are in a daze."
+msgstr ""
+
+#. ~ Remove message of effect type "Mesmerized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You snap out of your trance."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepathic_morale"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Stabilized Mood"
+msgstr ""
+
+#. ~ Description of effect type "Stabilized Mood"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are editing out your most negative thoughts.  When you think about it, is"
+" the Cataclysm really the worst thing that could have happened?"
+msgstr ""
+
+#. ~ Remove message of effect type "Stabilized Mood"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You let your thoughts return to their normal flow."
+msgstr ""
+
+#. ~ Name of effect type id "telepathic_ignorance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Ignorance"
+msgstr ""
+
+#. ~ Description of effect type "Ignorance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You're positive that no one is there."
+msgstr ""
+
+#. ~ Remove message of effect type "Ignorance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Wait a minute, there *is* someone there!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepathic_primal_terror"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Terrorized"
+msgstr ""
+
+#. ~ Description of effect type "Terrorized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are overcome with overwhelming dread."
+msgstr ""
+
+#. ~ Apply message of effect type "Terrorized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your heart races as a sudden feeling of dread grips you."
+msgstr ""
+
+#. ~ Remove message of effect type "Terrorized"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The heart-freezing terror fades as suddenly as it began."
+msgstr ""
+
+#. ~ Name of effect type id "effect_telepath_network_effect"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Telepathic Network"
+msgstr ""
+
+#. ~ Description of effect type "Telepathic Network"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are in constant communication with your allies, looking out for each "
+"other in combat."
+msgstr ""
+
+#. ~ Remove message of effect type "Telepathic Network"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Silence fills your mind."
+msgstr ""
+
+#. ~ Decay message of effect type "Telepathic Network"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The inner voices of your allies are only a whisper now."
+msgstr ""
+
+#. ~ Decay message of effect type "Telepathic Network"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The inner voices of your allies begin to fade."
+msgstr ""
+
+#. ~ Description of effect type "Ephemeral Walk"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You exist slightly outside of baseline reality, allowing you to effortlessly "
+"walk through solid matter."
+msgstr ""
+
+#. ~ Remove message of effect type "Ephemeral Walk"
+#. ~ Remove message of effect type "Reactive Displacement"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The surrounding matter feels real again."
+msgstr ""
+
+#. ~ Description of effect type "Loci Establishment"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are concentrating on your locus.  You can teleport there at will with the"
+" [Ψ]Loci Technique."
+msgstr ""
+
+#. ~ Remove message of effect type "Loci Establishment"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You've forgotten your locus!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleport_slow"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Stutterstepping"
+msgstr ""
+
+#. ~ Description of effect type "Stutterstepping"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your steps aren't taking you as far as your eyes tell you they should."
+msgstr ""
+
+#. ~ Apply message of effect type "Stutterstepping"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The air ripples and you stumble."
+msgstr ""
+
+#. ~ Remove message of effect type "Stutterstepping"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your eyes and your legs agree with each other again."
+msgstr ""
+
+#. ~ Description of effect type "Extended Stride"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Every step takes you further than your eyes tell you it should."
+msgstr ""
+
+#. ~ Remove message of effect type "Extended Stride"
+#. ~ Remove message of effect type "Muffled"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your steps are normal once again."
+msgstr ""
+
+#. ~ Description of effect type "Warped Strikes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your melee attacks extend much further than would normally be possible."
+msgstr ""
+
+#. ~ Remove message of effect type "Warped Strikes"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your reach goes back to normal."
+msgstr ""
+
+#. ~ Description of effect type "Flickerflash Stance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"Through constant teleports and warping of space, your combat prowess is "
+"increased."
+msgstr ""
+
+#. ~ Remove message of effect type "Flickerflash Stance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your constant teleporting slows to a stop."
+msgstr ""
+
+#. ~ Remove message of effect type "Coagulation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "For just a moment, you feel your blood rushing through your veins."
+msgstr ""
+
+#. ~ Description of effect type "Coagulation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You bleed much less than normal and sometimes not at all."
+msgstr ""
+
+#. ~ Description of effect type "Healthy Glow"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You feel amazing."
+msgstr ""
+
+#. ~ Remove message of effect type "Healthy Glow"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "The surge of vitality leaves you in a rush."
+msgstr ""
+
+#. ~ Description of effect type "Leukocyte Accumulation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#, c-format
+msgid "Your %s is receiving the bulk of your body's healing resources."
+msgstr ""
+
+#. ~ Remove message of effect type "Leukocyte Accumulation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You stop concentrating your healing."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vita_cure_disease"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Immunostimulated"
+msgstr ""
+
+#. ~ Description of effect type "Immunostimulated"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are not going to get sick.  You absolutely refuse.  And if you do, you're"
+" going to get better."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_healing_trance"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Revitalizing Meditation"
+msgstr ""
+
+#. ~ Description of effect type "Revitalizing Meditation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Thanks to your meditations you are healing much more quickly"
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_hurt"
+#. ~ Mutation name
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Enervating Touch"
+msgstr ""
+
+#. ~ Description of effect type "Enervating Touch"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "This reduces monsters' regeneration.  It's a bug if you have it."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_purge_rads"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Radiation Purge"
+msgstr ""
+
+#. ~ Description of effect type "Radiation Purge"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are using your powers to cleanse yourself of radiation."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_purge_rads_sideeffects"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Radiation Purge Side Effects"
+msgstr ""
+
+#. ~ Description of effect type "Radiation Purge Side Effects"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You are using your powers to cleanse yourself of radiation, but there are "
+"some side effects."
+msgstr ""
+
+#. ~ Description of effect type "Anabolic Rejuvenation"
+#. ~ Description of effect type "effect_vita_super_heal_return_from_death"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are healing extraordinarily quickly."
+msgstr ""
+
+#. ~ Remove message of effect type "Anabolic Rejuvenation"
+#. ~ Remove message of effect type "effect_vita_super_heal_return_from_death"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your body aches as your preternatural healing slows to a stop."
+msgstr ""

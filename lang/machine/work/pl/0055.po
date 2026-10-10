@@ -1,0 +1,2114 @@
+# Batch 55 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "zombie military police"
+msgid_plural "zombie military polices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie military police"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"Once a soldier, it is dressed head to toe in combat gear and carries itself "
+"rather steadily for a zombie.  Over its uniform is a vest reading \"military "
+"police\"."
+msgstr ""
+
+#. ~ Sound description of spell "LIXA_reshuffle_cone ( an arc of coordinate
+#. reassignment )"
+#: data/json/monsters/LIXA_monsters.json
+msgid "snapping geometry"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "eigenspectre"
+msgid_plural "eigenspectres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"This is the opposite of a human silhouette; every facet of every detail on "
+"display, with no shape to make sense of them.  You can see both sides of an "
+"ID badge on a white labcoat.  You can see every muscle and nerve in eyes "
+"blown wide with horror."
+msgstr ""
+
+#. ~ Death message of monster "eigenspectre"
+#. ~ Death message of monster "shifting eigenspectre"
+#. ~ Death message of monster "titanic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid "The %s becomes part of the endless chamber."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "photonic eigenspectre"
+msgid_plural "photonic eigenspectres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "photonic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"The endless details of this figure are mercifully obscured by the viscous "
+"light coursing 'through' it.  It cannot contain anything, but the smears of "
+"light follow the shapes of stomach and intestines, and are splattered across "
+"what must be the lips and chin."
+msgstr ""
+
+#. ~ Death message of monster "photonic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid ""
+"The %s becomes part of the endless chamber, and congealed light splashes away"
+" from the spot it occupied."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "photonic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid "The %s emits a torrent of congealed light!"
+msgstr ""
+
+#. ~ Description of special attack of monster "photonic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid "The %s flings a gobbet of congealed light!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "shifting eigenspectre"
+msgid_plural "shifting eigenspectres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shifting eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"This distorted figure is a kaleidoscope of borders.  Every part of a human, "
+"flattened into place, warps wildly from second to second.  The word your mind"
+" conjures to describe it is 'rotating', though you're not sure why."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "shifting eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid "The %s is in two places at once, and leaves something of itself behind."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "titanic eigenspectre"
+msgid_plural "titanic eigenspectres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "titanic eigenspectre"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"There is somehow more of this figure than the others.  Every side of every "
+"surface is on display, but each of those seems like the thin edge of a larger"
+" shape.  There is an eternity here, where a scientist used to be."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/LIXA_monsters.json
+msgid "unfolded impossibility"
+msgid_plural "unfolded impossibilities"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "unfolded impossibility"
+#: data/json/monsters/LIXA_monsters.json
+msgid ""
+"This is the entirety of the infinite chamber you are in, which perfectly "
+"contains itself.  If you look very closely, you might see yourself looking "
+"back.  You are sure that at any other time, seeing this would crack your "
+"brain like an eggshell.  But you understand it just fine right now.  And you "
+"can see it breathing."
+msgstr ""
+
+#. ~ Description of special attack of monster "unfolded impossibility"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid "The %s rapidly rearranges the coordinates of the infinite chamber."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "unfolded impossibility"
+#: data/json/monsters/LIXA_monsters.json
+#, c-format
+msgid ""
+"The %s rearranges the parts of itself you occupy, dilating them around you."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "gray chick"
+msgid_plural "gray chicks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gray chick"
+#: data/json/monsters/bird.json
+msgid ""
+"A tiny dull-colored chick, it could be from a number of different species."
+msgstr ""
+
+#. ~ Pet message of monster "chicken"
+#. ~ Pet message of monster "mon_duck_chick"
+#. ~ Pet message of monster "domestic duck"
+#. ~ Pet message of monster "mon_duck_domestic_chick"
+#. ~ Pet message of monster "mon_turkey_chick"
+#. ~ Pet message of monster "domestic turkey"
+#. ~ Pet message of monster "mon_turkey_domestic_chick"
+#. ~ Pet message of monster "yellow chick"
+#. ~ Pet message of monster "mon_crow_chick"
+#. ~ Pet message of monster "mon_pheasant_chick"
+#. ~ Pet message of monster "feral pigeon"
+#. ~ Pet message of monster "mon_pigeon_chick"
+#. ~ Pet message of monster "domestic goose"
+#. ~ Pet message of monster "mon_goose_chick"
+#. ~ Pet message of monster "domestic guineafowl"
+#. ~ Pet message of monster "strange chick"
+#. ~ Pet message of monster "pigeon passenger"
+#. ~ Pet message of monster "mon_pigeon_passenger_chick"
+#. ~ Pet message of monster "mon_crow"
+#. ~ Pet message of monster "mon_raven"
+#. ~ Pet message of monster "mon_bluejay_chick"
+#. ~ Pet message of monster "mon_bluejay"
+#. ~ Pet message of monster "mon_cardinal_chick"
+#. ~ Pet message of monster "mon_cardinal"
+#. ~ Pet message of monster "mon_robin_chick"
+#. ~ Pet message of monster "mon_robin"
+#. ~ Pet message of monster "mon_sparrow_chick"
+#. ~ Pet message of monster "mon_sparrow"
+#. ~ Pet message of monster "mon_chickadee_chick"
+#. ~ Pet message of monster "mon_chickadee"
+#. ~ Pet message of monster "mon_waxwing_chick"
+#. ~ Pet message of monster "mon_waxwing"
+#. ~ Pet message of monster "mon_duck"
+#. ~ Pet message of monster "mon_goose_canadian_chick"
+#. ~ Pet message of monster "mon_turkey"
+#. ~ Pet message of monster "mon_pheasant"
+#. ~ Pet message of monster "mon_grouse_chick"
+#. ~ Pet message of monster "mon_hummingbird_chick"
+#. ~ Pet message of monster "mon_woodpecker_chick"
+#. ~ Pet message of monster "mon_coot_chick"
+#. ~ Pet message of monster "mon_cormorant_chick"
+#. ~ Pet message of monster "mon_moorhen_chick"
+#. ~ Pet message of monster "mon_grebe_chick"
+#. ~ Pet message of monster "mon_hare"
+#. ~ Pet message of monster "mon_lemming"
+#. ~ Pet message of monster "mon_raccoon"
+#. ~ Pet message of monster "mon_parrot_chick"
+#. ~ Pet message of monster "mon_macaw_chick"
+#: data/json/monsters/bird.json
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/Tamable_Wildlife/bird.json data/mods/Tamable_Wildlife/mammal.json
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+#, c-format
+msgid "The %s runs around your leg."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "ruffed grouse"
+msgid_plural "ruffed grouses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "American crow"
+msgid_plural "American crows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "American crow"
+#: data/json/monsters/bird.json
+msgid ""
+"Sleek and glossy feathers cover this dark bird.  Its pointed bill and more "
+"streamlined body distinguish it from the larger, stouter raven.  They call "
+"with loud caws and if captured can be taught to mimic human speech."
+msgstr ""
+
+#. ~ Description of monster "raven"
+#: data/json/monsters/bird.json
+msgid ""
+"Slightly smaller than a chicken, this glossy black bird has a heavy beak and "
+"dark, sparkly eyes.  It emits a variety of sounds including croaks and a "
+"knocking sound."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "American robin"
+msgid_plural "American robins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "house sparrow"
+msgid_plural "house sparrows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "black-capped chickadee"
+msgid_plural "black-capped chickadees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "black-capped chickadee"
+#: data/json/monsters/bird.json
+msgid ""
+"A tiny species of tit native to North America, with a distinctive black cap "
+"on its head."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "cedar waxwing"
+msgid_plural "cedar waxwings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "cedar waxwing"
+#: data/json/monsters/bird.json
+msgid ""
+"A small species of waxwing with a distinctive feathered crest and a black "
+"mask pattern on its face."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "mallard"
+msgid_plural "mallards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mallard"
+#: data/json/monsters/bird.json
+msgid ""
+"A common species of duck often seen around rivers and other bodies of water."
+"  It feeds primarily on insects, seeds, roots, and, pre-Cataclysm, bread "
+"scraps."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "domestic duck"
+msgid_plural "domestic ducks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "domestic duck"
+#: data/json/monsters/bird.json
+msgid "A domestic variety of the common mallard sporting while plumage."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "Canada goose"
+msgid_plural "Canada geese"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Canada goose"
+#: data/json/monsters/bird.json
+msgid "A common type of waterfowl that regrets leaving Canada."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "wild turkey"
+msgid_plural "wild turkeys"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "domestic turkey"
+msgid_plural "domestic turkeys"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "domestic turkey"
+#: data/json/monsters/bird.json
+msgid ""
+"A domesticated relative of the common wild turkey.  Lost most of its colors "
+"and the ability to fly, but at least it got bigger!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "ring-necked pheasant"
+msgid_plural "ring-necked pheasants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ring-necked pheasant"
+#: data/json/monsters/bird.json
+msgid ""
+"A medium-sized game bird that can have bright feathers depending on the sex."
+"  Introduced from Asia to New England."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "feral pigeon"
+msgid_plural "feral pigeons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "domestic goose"
+msgid_plural "domestic geese"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "domestic goose"
+#: data/json/monsters/bird.json
+msgid ""
+"A type of waterfowl well known for its loud honking and relatively aggressive"
+" behavior."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "ruby-throated hummingbird"
+msgid_plural "ruby-throated hummingbirds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ruby-throated hummingbird"
+#: data/json/monsters/bird.json
+msgid ""
+"A very small hummingbird of varied colorful feathers.  It flies at incredible"
+" speeds while seeking nectar among flowers."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "downy woodpecker"
+msgid_plural "downy woodpeckers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "downy woodpecker"
+#: data/json/monsters/bird.json
+msgid ""
+"A small bird with woody colors and a colored crest on its head.  Well known "
+"for its ability to poke holes on trees while looking for grubs."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "American coot"
+msgid_plural "American coots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "American coot"
+#: data/json/monsters/bird.json
+msgid ""
+"A bird belonging to the same family as rails.  Its relatives can be found "
+"worldwide in freshwater habitats."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "double-crested cormorant"
+msgid_plural "double-crested cormorants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "double-crested cormorant"
+#: data/json/monsters/bird.json
+msgid ""
+"An aquatic bird with a long snake-like neck.  While often considered coastal "
+"birds, they feel just as at home in freshwater habitats."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "common gallinule"
+msgid_plural "common gallinules"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "common gallinule"
+#: data/json/monsters/bird.json
+msgid ""
+"A bird belonging to the same family as rails.  A relative of the coot with a "
+"distinctive red coloration on its heads and brownish plumage."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "horned grebe"
+msgid_plural "horned grebes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "horned grebe"
+#: data/json/monsters/bird.json
+msgid ""
+"A medium-sized aquatic bird with a long neck.  They can be distinguished by "
+"their strange leg placement which makes them great at diving."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/bird.json
+msgid "domestic guineafowl"
+msgid_plural "domestic guineafowl"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "panicked person"
+msgid_plural "panicked persons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "panicked person"
+#: data/json/monsters/civilians.json
+msgid ""
+"This hysterical individual has a faint, yet fading, glint of intelligence in "
+"their bloodshot eyes.  They sometimes scream in fear and behave clearly "
+"irrationally.  This will quite likely cause their demise at the hands of the "
+"undead horde rather quickly."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "petrified person"
+msgid_plural "petrified persons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "petrified person"
+#: data/json/monsters/civilians.json
+msgid ""
+"They just stand there, staring into the void, with a vacant expression on "
+"their face.  Barely moving, they will probably fall to the undead horde soon."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "overconfident officer"
+msgid_plural "overconfident officers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "overconfident officer"
+#: data/json/monsters/civilians.json
+msgid ""
+"Gun in hand, this police officer is determined to make a last stand against "
+"the horde."
+msgstr ""
+
+#. ~ Description of special attack of monster "overconfident officer"
+#: data/json/monsters/civilians.json
+msgid "The officer fires their Glock 22!"
+msgstr ""
+
+#. ~ Description of monster "overconfident officer"
+#: data/json/monsters/civilians.json
+msgid ""
+"Rifle in hand, this police officer is determined to make a last stand against"
+" the horde."
+msgstr ""
+
+#. ~ Description of special attack of monster "overconfident officer"
+#: data/json/monsters/civilians.json
+msgid "The officer fires their AR-15!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "futile fighter"
+msgid_plural "futile fighters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "futile fighter"
+#: data/json/monsters/civilians.json
+msgid ""
+"Obviously, this aggravated yet rallied person has lost their wits and tries "
+"to fight the undead with just a knife in their hands."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "armed fighter"
+msgid_plural "armed fighters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "armed fighter"
+#: data/json/monsters/civilians.json
+msgid ""
+"Handgun in hand, this person is determined to make a last stand against the "
+"horde."
+msgstr ""
+
+#. ~ Description of special attack of monster "armed fighter"
+#: data/json/monsters/civilians.json
+msgid "The gunman fires their sidearm!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "hospitalized person"
+msgid_plural "hospitalized persons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "hospitalized person"
+#: data/json/monsters/civilians.json
+msgid ""
+"This person is severely ill in some form or another, requiring intensive care"
+" that is not available anymore after the Cataclysm.  There is nothing you can"
+" do for them."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/civilians.json
+msgid "terrified parent"
+msgid_plural "terrified parents"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "terrified parent"
+#: data/json/monsters/civilians.json
+msgid ""
+"Obsessed with finding their offspring, they scour the environment for certain"
+" death."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/cyborgs.json
+msgid "zomborg devourer"
+msgid_plural "zomborg devourers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zomborg devourer"
+#: data/json/monsters/cyborgs.json
+msgid ""
+"Human bodies, robots, and cybernetic enhancements fused together into a "
+"colossus, with heads and limbs both biological and robotic sticking out of "
+"its bloated body at grotesque angles.  The nature of the thing makes it "
+"difficult to estimate how close it is to dying."
+msgstr ""
+
+#. ~ Description of monster "autonomous TALON UGV Liberty Edition"
+#: data/json/monsters/defense_bot.json
+msgid ""
+"A TALON unmanned ground vehicle equipped with a fireworks cannon in place of "
+"its usual M16A4.  It is a small tracked UGV with an array of motors and "
+"sensors covering its weapon mount.  This one has been plastered with an "
+"American flag decal."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/defense_bot.json
+msgid "refurbished autonomous TALON UGV Liberty Edition"
+msgid_plural "refurbished autonomous TALON UGVs Liberty Edition"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "refurbished autonomous TALON UGV Liberty Edition"
+#: data/json/monsters/defense_bot.json
+msgid ""
+"Once a Talon UGV bot converted to shoot fireworks at trespassers, this has "
+"been refurbished and uses it's M16A4 once more.  It still has the American "
+"flag decal from it's service as a trespass deterrent."
+msgstr ""
+
+#. ~ Description of monster "skitterbot"
+#: data/json/monsters/defense_bot.json
+msgid ""
+"An insectoid robot the size of a small dog, originally designed to perform "
+"routine inspections within industrial sites.  Up-armed with two close-range "
+"tasers, it can skate across the ground with great speed."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/drones.json
+msgid "taser hack"
+msgid_plural "taser hacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "taser hack"
+#: data/json/monsters/drones.json
+msgid ""
+"An automated drone, this small quadcopter robot appears to have a taser "
+"strapped to the front.  While extremely fast, it is very fragile."
+msgstr ""
+
+#. ~ Description of monster "feral troglobite"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"This person is still alive but completely crazed, changed by something they "
+"were exposed to down here.  Their face is dominated by unnaturally large, "
+"faintly glowing eyes and needle-sharp teeth poking through their lips.  They "
+"remind you of something out of a campy monster movie - and of the good times "
+"when underground cannibals were less of a real concern."
+msgstr ""
+
+#. ~ Description of monster "feral security guard"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"This security guard still breathes, but has been lost to some terrible "
+"madness.  They move among the undead, with a baton in their arms and saucer "
+"pupils scanning for threats in a mockery of their former duty."
+msgstr ""
+
+#. ~ Description of monster "feral prepper"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"A quick glance at this person would suggest that they have prepared well "
+"enough for the apocalypse, with their armor equipped and some makeshift mace "
+"in their hands.  Unfortunately, their bloodshot eyes, and the excluding "
+"treatment by the undead, shows that they have turned feral."
+msgstr ""
+
+#. ~ Description of monster "feral prepper"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"A quick glance at this person would suggest that they have prepared well "
+"enough for the apocalypse, with their armor equipped and some military-grade "
+"knife in their hands.  Unfortunately, their bloodshot eyes, and the excluding"
+" treatment by the undead, shows that they have turned feral."
+msgstr ""
+
+#. ~ Description of monster "mad militia"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Wearing a tactical camo uniform with a Kevlar vest, this person seems to have"
+" been a militia member, now turned feral.  Their hands grip unto a semi-"
+"automatic rifle as their bloodshot eyes scan for threats; a flashlight "
+"strapped to their helmet illuminates their presence and surroundings."
+msgstr ""
+
+#. ~ Description of monster "feral biker"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"A rough-looking feral human, clad in black leather and wielding a pump-action"
+" shotgun, that seems to be empty already.  It seems body-armor wasn't one of "
+"their priorities however."
+msgstr ""
+
+#. ~ Description of monster "feral swimmer"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Clad in swimwear and with a stick in hand, this once normal person is now a "
+"bloodthirsty maniac."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/feral_humans.json
+msgid "feral crewman"
+msgid_plural "feral crewmen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral crewman"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Clad in a grimy and tattered naval uniform, this former sailor clutches a "
+"massive wrench as some form of makeshift weapon.  At a distance, you could "
+"mistake them as being another survivor.  However, upon closer inspection you "
+"make note of how their veins are visibly bulging, their wide open eyes have a"
+" primal, animalistic quality to their gaze, and their breaths come in ragged,"
+" wheezing pants.  Whatever the Cataclysm has done to the military crewman "
+"that this twitching shell of their former self once was, you're certain that "
+"they're not fully human anymore."
+msgstr ""
+
+#. ~ Description of monster "mon_feral_sailor_axe"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Spattered from head to toe in large swaths of dried viscera, the deep blue of"
+" this person's tattered naval uniform has been stained the color of rust.  "
+"Having seemingly had enough presence of mind to consider arming itself, this "
+"former crewman carries a crash axe in its shaking hands.  The veins on the "
+"back of their neck are visibly bulging, their eyes bloodshot, and a mass of "
+"crisscrossing blackened veins stand out against the pale skin of their face "
+"as they regard the area around them for perceived threats."
+msgstr ""
+
+#. ~ Description of monster "mon_feral_sailor_mop"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Clutching a stout mop in their quivering hands, this crewman was presumably "
+"assigned to basic deck sweeping in their final moments, before the Cataclysm "
+"struck and stripped them of their humanity.  Dressed in basic naval fatigues,"
+" you'd be forgiven for believing them to be another survivor.  However, their"
+" bloodshot eyes, blackened veins, and spastic twitching tell a far different "
+"story."
+msgstr ""
+
+#. ~ Description of monster "mon_feral_sailor_lug_wrench"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Still dressed in a grease spattered uniform, this crewman appears to have "
+"once been a naval engineer.  With tangled hair, oil stained working attire, "
+"and a lug wrench clenched in their fist, you assume that they were either "
+"assigned to shipside maintenance or responsible for servicing onboard "
+"aircraft.  Now all that's left of the crewman that this person once was is a "
+"madly twitching, psychopathic monster."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/feral_humans.json
+msgid "feral marine"
+msgid_plural "feral marines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral marine"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"This twitching, bloodied person is still clad in a ragged naval uniform, the "
+"insignia of the marines visible on their coat and a corresponding tattoo on "
+"their forearm.  Clutching a rifle in their quivering hands, you see them "
+"repeatedly pull the weapon's trigger, constantly muttering incoherently and "
+"yanking back on the gun's charging handle every time the rifle fails to fire."
+"  Seemingly having lost the capability to comprehend that their weapon is "
+"empty, you'd feel relatively safe were it not for the gleaming bayonet still "
+"attached to the end of their firearm."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/feral_humans.json
+msgid "feral officer"
+msgid_plural "feral officers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral officer"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"This person, clad in the tattered uniform of a naval officer, twitches "
+"erratically as their bloodshot eyes dart about and their breaths come in "
+"ragged pants.  The Cataclysm has clearly done something horrible to this "
+"military professional, inaudible mutterings emanating from their lips as they"
+" creep about like a skittish animal.  In their quivering hands they clutch a "
+"service pistol, the officer's fingers nervously fidgeting with the weapon.  "
+"They may not be an undead corpse, but you doubt that they're any more "
+"rational than the zombies which now infest the world."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/feral_humans.json
+msgid "feral cop"
+msgid_plural "feral cops"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral cop"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"Another of the crazed humans among the dead.  This police officer angrily "
+"mutters to themselves, wandering about with a truncheon in hand in search of "
+"someone to brutalize."
+msgstr ""
+
+#. ~ Description of monster "mon_feral_cop_fungal_infected"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"A maddened and crazed police officer infected by the fungus.  Their body "
+"armor is overgrown with fungal matter.  Though obviously in pain they don't "
+"seem any less keen to batter you to death with their baton."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/feral_humans.json
+msgid "feral prisoner"
+msgid_plural "feral prisoners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral prisoner"
+#: data/json/monsters/feral_humans.json
+msgid ""
+"This frenzied prisoner has somehow avoided turning into one of the undead "
+"thus far, though seeing how zombies seem to ignore this shiv-wielding, blood-"
+"stained maniac, they are likely not far off from that fate."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "fish fry"
+msgid_plural "fish fry"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fish fry"
+#: data/json/monsters/fish.json
+msgid ""
+"A minuscule half-translucent fish larva.  Impossible to identify which "
+"species it belongs to."
+msgstr ""
+
+#. ~ Death message of monster "fish fry"
+#. ~ Death message of monster "tadpole"
+#. ~ Death message of monster "stingray fry"
+#: data/json/monsters/fish.json data/json/monsters/reptile_amphibian.json
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+#, c-format
+msgid "The %s is smashed to non-recognizable pieces."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "mutant fish fry"
+msgid_plural "mutant fish fry"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mutant fish fry"
+#: data/json/monsters/fish.json
+msgid ""
+"A half-translucent fish larva… though this one is far larger than the usual."
+"  Impossible to identify which species it belongs to but you can safely tell "
+"that it is going to outgrow normal fish you're used to seeing."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "Atlantic salmon"
+msgid_plural "Atlantic salmon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "kokanee salmon"
+msgid_plural "kokanee salmon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "lake whitefish"
+msgid_plural "lake whitefish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "lake whitefish"
+#: data/json/monsters/fish.json
+msgid ""
+"A lake whitefish, closely related to salmon.  One can assume they taste just "
+"as nice when smoked."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "round whitefish"
+msgid_plural "round whitefish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "round whitefish"
+#: data/json/monsters/fish.json
+msgid ""
+"A round whitefish, closely related to salmon.  One can assume they taste just"
+" as nice when smoked."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "yellow perch"
+msgid_plural "yellow perches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "banded sunfish"
+msgid_plural "banded sunfish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "banded sunfish"
+#: data/json/monsters/fish.json
+msgid "A banded sunfish.  A small fish related to bass and bluegill."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "pumpkinseed"
+msgid_plural "pumpkinseeds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "black crappie"
+msgid_plural "black crappie"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "black crappie"
+#: data/json/monsters/fish.json
+msgid "A black crappie.  A medium-sized fish also known as a 'calico bass'."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "brown bullhead"
+msgid_plural "brown bullheads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "brown bullhead"
+#: data/json/monsters/fish.json
+msgid ""
+"A brown bullhead, a type of catfish.  Delicious when battered and fried."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "yellow bullhead"
+msgid_plural "yellow bullheads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "yellow bullhead"
+#: data/json/monsters/fish.json
+msgid ""
+"A yellow bullhead, a type of catfish.  Delicious when battered and fried, "
+"though smaller than its brown cousin."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgctxt "fish"
+msgid "northern pike"
+msgid_plural "northern pikes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "chain pickerel"
+msgid_plural "chain pickerels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "chain pickerel"
+#: data/json/monsters/fish.json
+msgid "A chain pickerel.  It looks like a pike, but slightly smaller."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "American pickerel"
+msgid_plural "American pickerels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "American pickerel"
+#: data/json/monsters/fish.json
+msgid ""
+"An American pickerel.  It looks like a pike, but unlike its chain pickerel "
+"cousin, this one is way smaller."
+msgstr ""
+
+#. ~ Description of monster "muskellunge"
+#: data/json/monsters/fish.json
+msgid ""
+"A muskellunge.  Closely related to pike but even larger, it shares the same "
+"aggression and sharp teeth."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "European carp"
+msgid_plural "European carp"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "goldfish"
+#: data/json/monsters/fish.json
+msgid ""
+"Yes, this is that common pet fish.  Though, given its size and the fact that "
+"it's still alive, you can take a wild guess that this one is feral."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "longnose gar"
+msgid_plural "longnose gar"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "longnose gar"
+#: data/json/monsters/fish.json
+msgid "A large ancient type of fish with a mean jaw and poisonous eggs."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "burbot"
+msgid_plural "burbots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "burbot"
+#: data/json/monsters/fish.json
+msgid ""
+"A relatively large fish that looks like a cross between a catfish and an eel,"
+" and is the only freshwater fish from the order that cods hail from."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "lake sturgeon"
+msgid_plural "lake sturgeon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "lake sturgeon"
+#: data/json/monsters/fish.json
+msgid ""
+"A very large armored bottom-feeder, the lake sturgeon is one of the largest "
+"unmutated fish one can find in the freshwater regions of New England."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "shortnose sturgeon"
+msgid_plural "shortnose sturgeon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shortnose sturgeon"
+#: data/json/monsters/fish.json
+msgid ""
+"While the shortnose sturgeon is still large, it is nothing compared to its "
+"cousin - the lake sturgeon.  What really sets it apart, however, is its "
+"signature shorter snout."
+msgstr ""
+
+#. ~ Description of monster "fallfish"
+#: data/json/monsters/fish.json
+msgid "A fallfish.  These fish are small cyprinids, related to carp."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "crustacean larva"
+msgid_plural "crustacean larvae"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "crustacean larva"
+#: data/json/monsters/fish.json
+msgid ""
+"A minuscule half-translucent crustacean larva.  Impossible to identify which "
+"species it belongs to."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "American eel"
+msgid_plural "American eels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant crayfish"
+#: data/json/monsters/fish.json
+msgid ""
+"A mutant, terrestrial variety of crayfish, this massive crustacean resembles "
+"a humongous lobster."
+msgstr ""
+
+#. ~ Description of monster "giant crayfish larva"
+#: data/json/monsters/fish.json
+msgid ""
+"A large crayfish larva already larger than non-mutated adults of its kind."
+msgstr ""
+
+#. ~ Description of monster "giant salmon"
+#: data/json/monsters/fish.json
+msgid ""
+"A mutated salmon roughly the size of a person.  Quite dangerous to the "
+"inexperienced angler."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "huge salmon"
+msgid_plural "huge salmon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "huge salmon"
+#: data/json/monsters/fish.json
+msgid "A huge mutant salmon grown almost to the size of an alligator."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "leaper salmon"
+msgid_plural "leaper salmon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "leaper salmon"
+#: data/json/monsters/fish.json
+msgid ""
+"A huge mutant salmon, one that outgrows even the other ones present.  On its "
+"sides, beneath the fins, are visible two flesh-colored tubes which propel "
+"water as it leaps."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "Atlantic mackerel"
+msgid_plural "Atlantic mackerel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Atlantic mackerel"
+#: data/json/monsters/fish.json
+msgid "An Atlantic mackerel, known for its distinctive striped pattern."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "summer flounder"
+msgid_plural "summer flounder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "summer flounder"
+#: data/json/monsters/fish.json
+msgid ""
+"A flatfish, the summer flounder, also known as a fluke, likes to stay "
+"camouflaged against the ocean floor."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "black sea bass"
+msgid_plural "black sea bass"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "black sea bass"
+#: data/json/monsters/fish.json
+msgid ""
+"A small, robust fish, the black sea bass is known for its dark, mottled color"
+" and meaty texture."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "scup"
+msgid_plural "scup"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scup"
+#: data/json/monsters/fish.json
+msgid ""
+"Also known as porgy, the scup is a small fish commonly found in Atlantic "
+"coastal waters, recognizable by its silver body with blue and purple tinges."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "bluefish"
+msgid_plural "bluefish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bluefish"
+#: data/json/monsters/fish.json
+msgid ""
+"The bluefish, a moderately proportioned marine fish, is known for its "
+"aggressive nature and sharp teeth.  It sports a distinct blue-green "
+"coloration."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "Atlantic cod"
+msgid_plural "Atlantic cod"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Atlantic cod"
+#: data/json/monsters/fish.json
+msgid ""
+"A large, white-meat fish known for its mild flavor and flaky texture.  Highly"
+" prized in both commercial and recreational fishing."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "haddock"
+msgid_plural "haddock"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "haddock"
+#: data/json/monsters/fish.json
+msgid ""
+"A popular food fish, the haddock is recognized by its dark lateral line and a"
+" black blotch above the pectoral fin."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "Atlantic bluefin tuna"
+msgid_plural "Atlantic bluefin tuna"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Atlantic bluefin tuna"
+#: data/json/monsters/fish.json
+msgid ""
+"One of the largest and fastest fish in the waters of New England, the bluefin"
+" tuna is a streamlined predator with a dark blue back and silvery sides."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "Atlantic halibut"
+msgid_plural "Atlantic halibut"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Atlantic halibut"
+#: data/json/monsters/fish.json
+msgid ""
+"The largest flatfish in the ocean, known for its dense, firm texture and mild"
+" flavor."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fish.json
+msgid "pollock"
+msgid_plural "pollock"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "pollock"
+#: data/json/monsters/fish.json
+msgid ""
+"A member of the cod family, pollock is a versatile fish known for its white, "
+"delicate meat and mild taste."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus.json
+msgid "fungal wasp"
+msgid_plural "fungal wasps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal wasp"
+#: data/json/monsters/fungus.json
+msgid ""
+"A huge wasp the size of a large cat.  It's bright yellow markings have faded "
+"and ripped to show a disgusting mass of mold and rot beneath.  Her wings jut "
+"into extremely odd angles, making flight impossible.  Even still, it chases "
+"anything without any sense of self-preservation."
+msgstr ""
+
+#. ~ Description of monster "fungal wasp guard"
+#: data/json/monsters/fungus.json
+msgid ""
+"A wasp worker split down the middle.  While it's condition looks fatal, it "
+"doesn't seem to die, supposedly by the large mushroom growing from once it's "
+"wings were.  It's emotionless face still seems to cry with pain and anger."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus.json
+msgid "fungal wasp queen"
+msgid_plural "fungal wasp queens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal wasp queen"
+#: data/json/monsters/fungus.json
+msgid ""
+"A mutated wasp queen that has been consumed by a sickly gray mold covering "
+"it's body.  Abandoning it's duty to laying eggs, it seemingly searches for "
+"anything to attack, as a mist of spores emit from it's mandibles."
+msgstr ""
+
+#. ~ Description of monster "giant fungal wasp"
+#: data/json/monsters/fungus.json
+msgid ""
+"A gigantic wasp worker, It's body now a host for a plethora of mushrooms and "
+"spores.  Her abdomen glows faintly with a blue light, each pulse bringing a "
+"new crack for fungal growths to escape from.  It's stinger seems to have a "
+"soul of it's own, reaching out towards anything that isn't infested like "
+"itself."
+msgstr ""
+
+#. ~ Description of monster "giant fungal wasp guard"
+#: data/json/monsters/fungus.json
+msgid ""
+"A wasp worker which seems to move like a puppet on strings.  It ambles "
+"backwards, its stinger, grotesquely swollen and pulsating, serving as a "
+"perverse compass guiding it forward, seeking relentlessly for "
+"something—anything—to pierce.  It periodically contracts and then abruptly "
+"expands, ejecting a fine mist of spores into the surrounding air."
+msgstr ""
+
+#. ~ Description of monster "giant fungal wasp queen"
+#: data/json/monsters/fungus.json
+msgid ""
+"The head of this colossal queen wasp appears to be attached by only a few "
+"slender threads, wobbling precariously as additional tendrils sprout from the"
+" silky white exoskeleton.  Her batch of eggs has decayed due to lack of "
+"proper care, yet they seem to twitch, as if something within is attempting to"
+" break free from the hardened shells."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus.json
+msgid "fungal bee"
+msgid_plural "fungal bees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal bee"
+#: data/json/monsters/fungus.json
+msgid ""
+"A mutant bee the size of a small dog.  It's fur, once used to collect pollen "
+"has been trapped with thousands of spores.  it moves erratically on the "
+"ground, seemingly having great difficulty to keep any sense of coordination "
+"as visible growths of mold worsen underneath the thin hairs."
+msgstr ""
+
+#. ~ Description of monster "giant fungal bee"
+#: data/json/monsters/fungus.json
+msgid ""
+"A sickly-sweet smelling gray goo pours from the mandibles of this dog-sized "
+"insect, stirs an odd sense of hunger within you.  However, the writhing "
+"syringe-looking needle and thick plumes of spores around quickly quell your "
+"appetite."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus.json
+msgid "alpha fungal bee"
+msgid_plural "alpha fungal bees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "alpha fungal bee"
+#: data/json/monsters/fungus.json
+msgid ""
+"This oversized insect's every move is coerced by a seemingly invisible "
+"entity, like a puppet on strings.  Thousands of live spores fume from it's "
+"mandibles, forming thick clouds.  A stark blue gel leaks from it's "
+"splintering limbs, bubbling and sizzling, revealing soft, pulsing gray "
+"material beneath."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus.json
+msgid "whispering fungi"
+msgid_plural "whispering fungis"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "whispering fungi"
+#: data/json/monsters/fungus.json
+msgid ""
+"Large, yellow, coral-like fungi grow from this spot, their spires riddled "
+"with intersecting holes.  Despite lack of wind, it seems to wave at a set "
+"rhythm, occasionally pulsing out spores.  A chorus of weak, whistly voices, "
+"mixed with different accents and languages—some you recognize, others that "
+"seem like meaningless gibberish—emanates from it."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted zombie"
+msgid_plural "dusted zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid "This shambling corpse has been heavily dusted with a thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk zombie"
+msgid_plural "fungal stalk zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This writhing corpse has grown a short stalk of gray fungus bursting from the"
+" skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted gasbag zombie"
+msgid_plural "dusted gasbag zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted gasbag zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This grotesquely swollen corpse has been heavily dusted with a thick gray "
+"powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal cherry bomb"
+msgid_plural "fungal cherry bombs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal cherry bomb"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This grotesquely swollen corpse has grown a short stalk of gray fungus "
+"bursting from the skull.  The overall visual effect is similar to a cherry or"
+" upside down lollipop."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted smoker zombie"
+msgid_plural "dusted smoker zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted smoker zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This smoke-shrouded corpse has been heavily dusted with a thick gray powder "
+"lighter in color than smoke and ash."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk smoker"
+msgid_plural "fungal stalk smokers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk smoker"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This smoke-shrouded corpse has grown a short stalk of gray fungus bursting "
+"from the skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted skeletal zombie"
+msgid_plural "dusted skeletal zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted skeletal zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This moving corpse covered in knobby bone growths has been heavily dusted "
+"with a thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk skeleton"
+msgid_plural "fungal stalk skeletons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk skeleton"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This already horrific moving corpse covered in bony growths has also grown a "
+"short stalk of gray fungus bursting from the skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted skeletal brute"
+msgid_plural "dusted skeletal brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted skeletal brute"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This moving corpse covered in twisted bone growths has been heavily dusted "
+"with a thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungalizing bone brute"
+msgid_plural "fungalizing bone brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungalizing bone brute"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This already horrific moving corpse covered in twisted bony growths has also "
+"grown a short stalk of gray fungus bursting from the skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal bone brute"
+msgid_plural "fungal bone brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted skeletal hulk"
+msgid_plural "dusted skeletal hulks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted skeletal hulk"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This towering creature covered in plated bone has been heavily dusted with a "
+"thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk juggernaut"
+msgid_plural "fungal stalk juggernauts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk juggernaut"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"Layers of plates of bone rise high above, ending in a short stalk of gray "
+"fungus bursting from the enormous bulging skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted zombie child"
+msgid_plural "dusted zombie children"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted zombie child"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This small, stumbling child has been dusted with a thick gray powder.  "
+"Something about the way it moves is uncanny."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk child"
+msgid_plural "fungal stalk children"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk child"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This child moves slowly, as though sleepy.  A short stalk of gray fungus has "
+"burst from the top of the little head."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted boomer"
+msgid_plural "dusted boomers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted boomer"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This rotund and bloated corpse has been heavily dusted with a thick gray "
+"powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk boomer"
+msgid_plural "fungal stalk boomers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk boomer"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This rotund and bloated corpse has grown a short stalk of gray fungus "
+"bursting from the skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted zombie wretch"
+msgid_plural "dusted zombie wretches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted zombie wretch"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This small child lies on the ground shaking gently, dusted with a thick gray "
+"powder.  The chest of the child appears to have broken open like a gory "
+"flower and there is strange pulsing movement and also unpleasant wet sounds "
+"within."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk wretch"
+msgid_plural "fungal stalk wretches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk wretch"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This small child lies on the ground smiling serenely, a short stalk of gray "
+"fungus bursting triumphantly from the top of the little head.  The chest of "
+"the child appears to have broken open like a gory flower and there is strange"
+" pulsing movement and also unpleasant wet sounds within."
+msgstr ""
+
+#. ~ Description of monster "fungal wretch"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This severely deformed child lies on its back, its ribs exposed to the sky.  "
+"With its limbs contorted in ways only possible through a lack of bones, the "
+"child's ribcage stretches far beyond the boundaries of human biology, "
+"appearing akin to a bony hive coated in quivering fungal matter.  Spores "
+"occasionally waft from its hollowed interior, and, periodically, you can "
+"catch sight of weak movement within the abomination's guts."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "fungal wretch"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"Through a plume of fungal spores, a small beast struggles to take flight from"
+" the wretch's abdomen!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted raptor"
+msgid_plural "dusted raptors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted raptor"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"Heavily dusted with a thick gray powder, this small, winged predator darts "
+"through the air on three spongy wings that look like stretched human hands.  "
+"A sheer, jagged spike juts out from the point where the wings meet."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk raptor"
+msgid_plural "fungal stalk raptors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk raptor"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This small, winged predator darts through the air on three spongy wings that "
+"look like stretched human hands.  A sheer, jagged spike juts out from the "
+"point where the wings meet, joined by a short stalk of gray fungus reaching "
+"upward."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted zombie runner"
+msgid_plural "dusted zombie runners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted zombie runner"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This recently-risen body has been heavily dusted with a thick gray powder, "
+"but still moves quickly."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk runner"
+msgid_plural "fungal stalk runners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk runner"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This recently-risen body has grown a short stalk of gray fungus bursting from"
+" the skull.  This appears to slow it down in some way."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal runner"
+msgid_plural "fungal runners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal runner"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"Fungal sprouts seem to support the host's broken legs like crude splints.  "
+"Even with its eyes shrouded with tiny spores, it darts towards anything that "
+"seems to move in a small radius."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted decayed zombie"
+msgid_plural "dusted decayed zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted decayed zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This badly decayed corpse has been heavily dusted with a thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk rotter"
+msgid_plural "fungal stalk rotters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk rotter"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This badly decayed corpse has grown a short stalk of gray fungus bursting "
+"from the skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal rotter"
+msgid_plural "fungal rotters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal rotter"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"The rotten skin that flakes from the host's body seems to be covered in tiny "
+"blue dots; occasional popping and crackling sounds are heard, like cracking "
+"wood.  This corpse can't be discerned as human by the naked eye."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "dusted tough zombie"
+msgid_plural "dusted tough zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusted tough zombie"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This muscular moving corpse has been heavily dusted with a thick gray powder."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal stalk bulk"
+msgid_plural "fungal stalk bulks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal stalk bulk"
+#: data/json/monsters/fungus_zombie.json
+msgid ""
+"This muscular corpse has grown a short stalk of gray fungus bursting from the"
+" skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/fungus_zombie.json
+msgid "fungal bulk"
+msgid_plural "fungal bulks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

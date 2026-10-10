@@ -1,0 +1,1161 @@
+# Batch 5 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/iuse.cpp
+#, c-format
+msgid "Deactivate the %s"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "Reload the %s"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "The %s recoils in pain!"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "Purifying %i water using %i %s"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You need %i tablets to purify that.  You only have %i"
+msgstr ""
+
+#. ~ radio noise
+#: src/iuse.cpp
+msgid "ksssh"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select a station"
+msgstr ""
+
+#: src/iuse.cpp
+msgctxt "radio station"
+msgid " (selected)"
+msgstr ""
+
+#. ~ Selected radio station, %d is a number in sequence (1,2,3...),
+#. ~ %s is ' (selected)' if this is the radio station playing, else nothing
+#: src/iuse.cpp
+#, c-format
+msgid "Station %d%s"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "Your %s is getting hard to breathe in!"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "<npcname>'s gas mask is getting hard to breathe in!"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select the firearm to repair:"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "The %s lacks charge to function."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You prepare to manipulate nearby robots!"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "This device has no files!"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select operation:"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Browse + move files from all devices"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Browse devices"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Read files on this device"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Read files on external devices"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Move files onto this device"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Move files off of this device"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Copy files onto this device"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Copy files off of this device"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Wipe files from devices"
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is on <color_red>fire</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_red>bleeding</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " looks <color_green>happy</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_blue>stunned</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_blue>dazed</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is stuck in beartrap."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " have tiny <color_red>red dot</color> on body."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " has <color_magenta>bile</color> covering their eyes."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_yellow>glowing goo</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_green>thick goo</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_magenta>bile</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_light_green>acid</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is coated in <color_brown>sap</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_dark_gray>webs</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is covered in <color_green>spores</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " lies under <color_dark_gray>collapsed debris</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " looks <color_dark_gray>very tired</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_dark_blue>sleeping</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_yellow>lit</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_dark_gray>saddled</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is being <color_dark_gray>harnessed</color> by a vehicle."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_dark_gray>wearing armor</color>."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " have <color_dark_gray>bag</color> attached."
+msgstr ""
+
+#: src/iuse.cpp
+msgid " is <color_dark_gray>tied</color>."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgctxt "effects_description_for_creature"
+msgid "%s%s  "
+msgstr ""
+
+#. ~ Item action name of "VIEW_PHOTOS"
+#: src/iuse.cpp data/json/item_actions.json
+msgid "View photos"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Your camera cannot hold any more photos."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "View which photos?"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Recipe list:"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Create buoy where?"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "The %s, emits a short angry beep."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "Space warps momentarily as the %s is created."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You need an item with %s of 1 or more to upgrade this."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid ""
+"Incident light: %.1f\n"
+"Natural light: %.1f\n"
+"Sunlight: %.1f\n"
+"Sun irradiance: %.1f\n"
+"Incident irradiance %.1f"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select an appliance."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "There is no appliance nearby."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You haven't selected any appliance."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "This isn't an appliance."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "The appliance doesn't have a proper heater."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select a built-in heater."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You haven't selected any heater."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You put %1$s on fire to start heating."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You use %1$s to start heating."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "The %s has been used up."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Select a tool to heat (or cancel to select an appliance):"
+msgstr ""
+
+#: src/iuse.cpp
+msgid ""
+"You don't have a proper heating tool.  Try selecting an appliance with a "
+"heater."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "The appliance doesn't have enough power."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You put %1$s on %2$s to start heating."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "ITEMS TO HEAT"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Heat menu"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "To heat x items, type a number before selecting."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You have nothing to heat."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You need more space to contain these items."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "You need an empty container to heat items."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Post to which wall?"
+msgstr ""
+
+#: src/iuse.cpp
+msgid "There is no applicable wall nearby."
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "You put up the %s."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "The device doesn't have enough power to function!"
+msgstr ""
+
+#: src/iuse.cpp
+msgid ""
+"The device indicates none of the items on your person resonate with "
+"registered nether phenomena."
+msgstr ""
+
+#: src/iuse.cpp
+msgid ""
+"The device found these items have resonant properties.\n"
+"Choose one to scan."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Calculating."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Calculating…"
+msgstr ""
+
+#: src/iuse.cpp
+#, c-format
+msgid "Detected resonance approximately equal to %i units."
+msgstr ""
+
+#: src/iuse.cpp
+msgid "Your writing tools do not have enough charges."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You need to empty the %1$s before activating it."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Can transform into one of several items"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "<bold>Turns into</bold>: "
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "%s (%d %s)"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Place NPC where?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "There is no square to spawn NPC in!"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You attempt to become one with the %s.  It doesn't work."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid ""
+"Deploying %s there will make it fall down %i stories.  Do you still want to "
+"deploy it?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "The %s at that location is blocking the %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You can't deploy the %s on other people's belongings!"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You mopped up the spill with a nearby mop when deploying a %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You need a mop to clean up liquids before deploying the %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid ""
+"Can be <info>activated</info> to deploy as an appliance (<stat>%s</stat>)."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You didn't learn anything new from the %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid ""
+"Are you sure you want to start fire here?  There's a fireplace adjacent."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "Cutting the %s may anger the people who own it, continue?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You stop playing your %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<npcname> stops playing their %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You start playing your %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<npcname> starts playing their %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You need to hold or wear %s to play it."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't play multiple musical instruments at once."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't play music underwater."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "<npcname> can't play music underwater."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<npcname> needs to hold or wear %s to play it."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You feel too weak to play your %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<npcname> feels too weak to play their %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You produce an annoying sound."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "%s produces an annoying sound."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You can't unwield your %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You don't have enough clean %s to do that.  Have: %d, need: %d"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Heal actor is missing any valid healing effect"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't use first aid on a bionic limb."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You can't place a %s there.  It contains a deployed object already."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You saw down the stock of your %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "The stock is already sawn-off."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "This gun doesn't have a stock."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Can't cut off modern composite stocks (must have an empty stock mount)."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Can't cut off modified stocks."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Can't cut off accessorized stocks."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "vehicle battery"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "appliance"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "solar pack"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "<bold>Can tow a vehicle</bold>."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<bold>Can be plugged into</bold>: %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<bold>Cable length</bold>: %d"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid " (%d without extensions)"
+msgstr ""
+
+#. ~ Power in Watts. %+4.1f is a 4 digit number with 1 decimal point (ex:
+#. 4737.3 W)
+#: src/iuse_actor.cpp
+msgid "<bold>Wattage</bold>: "
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "electrical device cables"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "<bold>Can extend</bold>: %s"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "What to do with the %s?%s"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid ""
+"\n"
+"Attached to: %s"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach to dashboard, electronics control unit or appliance"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach to vehicle battery or appliance"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach tow cable to towing vehicle"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach tow cable to towed vehicle"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach to Cable Charger System CBM"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach to UPS"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach to solar pack"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Extend another cable"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Extend with another cable"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Remove cable extensions"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Re-spool"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Detach"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Detach and re-spool"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach loose end to towing vehicle"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach loose end to towed vehicle"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid ""
+"\n"
+"Attached to "
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Unified Power Supply"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "solar backpack"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid ""
+"\n"
+"Connecting Cable Charger System to "
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid ""
+"\n"
+"Connecting UPS to "
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid ""
+"\n"
+"Connecting solar backpack to "
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "What to do with the %s?%s%s"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach loose end to vehicle controls or appliance"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach loose end to vehicle battery or appliance"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach loose end to Cable Charger System CBM"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You detach the %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You gather the %s up with it."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You are now plugged into the UPS."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You are now plugged into the solar backpack."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You need an active UPS."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You link up the UPS and the solar backpack."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You link up the UPS and the vehicle."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Choose solar pack:"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You need an unfolded solar pack."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You are now plugged into the solar pack."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You link up the solar pack and the UPS."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You link up the solar pack and the vehicle."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach the cable where?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't attach it there - try the dashboard or electronics controls."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't attach it there - try the battery."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You can't attach it there."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You are now plugged into the %s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You connect the %1$s to the %2$s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You merge the two power grids."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Attach cable to the vehicle that will be towed."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Extend which cable?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "You don't have a compatible cable."
+msgstr ""
+
+#: src/iuse_actor.cpp
+msgid "Extend with which cable?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "The %1$s can't contain the %2$s with the %3$s attached.  Continue?"
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You extend the %1$s with the %2$s."
+msgstr ""
+
+#: src/iuse_actor.cpp
+#, c-format
+msgid "You disconnect the %1$s from the %2$s."
+msgstr ""
+
+#: src/magic.cpp
+msgctxt "Valid spell target"
+msgid "vehicle"
+msgstr ""
+
+#: src/magic.cpp
+#, c-format
+msgid "<npcname> learned %s!"
+msgstr ""
+
+#: src/magic.cpp
+msgid "<npcname> can't learn this spell."
+msgstr ""
+
+#: src/magic.cpp
+msgid "Can't use a reserved hotkey."
+msgstr ""
+
+#: src/magic.cpp
+msgid "Hotkey already used.  Swap hotkeys?"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a psionic power"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is an evocation spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a channeling spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a conjuration spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is an enhancement spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is an enervation spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a conveyance spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a restoration spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "is a transformation spell"
+msgstr ""
+
+#: src/magic.cpp
+msgid "can be channeled through walls"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Power Level"
+msgstr ""
+
+#: src/magic.cpp
+msgid " (MAX)"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Channeling Cost (impeded)"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Channeling Cost"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Not Enough"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Channeling Time"
+msgstr ""
+
+#: src/magic.cpp
+msgid "Channeling Time (impeded)"
+msgstr ""
+
+#: src/magic_spell_effect.cpp
+msgid "There's no battery there."
+msgstr ""
+
+#: src/magic_spell_effect.cpp
+#, c-format
+msgid "You feel awful about killing %s."
+msgstr ""
+
+#: src/magic_spell_effect.cpp
+#, c-format
+msgid "You feel uneasy about killing %s."
+msgstr ""
+
+#: src/magic_spell_effect.cpp
+#, c-format
+msgid "%s failed, you are too weak!"
+msgstr ""
+
+#: src/magic_teleporter_list.cpp
+msgid "Choose Translocation Location"
+msgstr ""
+
+#: src/main.cpp
+#, c-format
+msgid "Unable to make directory \"%s\".  Check permissions."
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "Version: 0.I-1 (Ito-1) Stable Release"
+msgstr ""
+
+#: src/main_menu.cpp
+msgctxt "Main Menu|World"
+msgid "Toggle World <C|c>ompression"
+msgstr ""
+
+#: src/main_menu.cpp
+msgctxt "Main Menu|Settings"
+msgid "ImGui <S|s>tyles"
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "Disable save compression?"
+msgstr ""
+
+#: src/main_menu.cpp
+msgid "Enable save compression?"
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "Falling %1$s misses %2$s!"
+msgstr ""
+
+#. ~First positional argument: Item name. Second: Name of a person (e.g.
+#. "Jane") or player (e.g. "you"). Third: Body part name, accusative.
+#: src/map.cpp
+#, c-format
+msgid "Falling %1$s hits %2$s on the %3$s for %4$i damage!"
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "Falling %1$s hits %2$s for %3$i damage!"
+msgstr ""
+
+#: src/map.cpp
+msgid "glass shattering."
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "You notice a %1$s has rotted away, leaving a %2$s."
+msgstr ""
+
+#: src/map.cpp
+msgid "You attach yourself to the nearby wall."
+msgstr ""
+
+#: src/map.cpp
+msgid "<npcname> clings to the wall."
+msgstr ""
+
+#: src/map.cpp src/trapfunc.cpp
+msgid "You spread your wings to slow your fall."
+msgstr ""
+
+#: src/map.cpp src/trapfunc.cpp
+msgid "<npcname> spreads their wings to slow their fall."
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "You ignite your %s and use it to break the fall."
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "<npcname> uses their %s to break the fall."
+msgstr ""
+
+#: src/map.cpp
+#, c-format
+msgid "You attempt to break the fall with your %s but it is out of fuel!"
+msgstr ""
+
+#: src/map_field.cpp
+#, c-format
+msgid "The acid burns your %s!"
+msgstr ""
+
+#: src/map_field.cpp
+#, c-format
+msgid "The acid burns <npcname>'s %s!"
+msgstr ""
+
+#: src/mapdata.cpp
+#, c-format
+msgid ""
+"Bashing the %s would yield:\n"
+"%s"
+msgstr ""
+
+#: src/mapdata.cpp
+#, c-format
+msgid ""
+"Deconstructing the %s would yield:\n"
+"%s\n"
+"You feel you might also learn something about <color_cyan>%s</color>."
+msgstr ""
+
+#: src/mapdata.cpp
+#, c-format
+msgid ""
+"Deconstructing the %s would yield:\n"
+"%s"
+msgstr ""
+
+#: src/mapdata.cpp
+#, c-format
+msgid "<header>That is a %s.</header>"
+msgstr ""
+
+#: src/mapgen.cpp
+msgid "Viewing all palettes"
+msgstr ""
+
+#: src/mapgen.cpp
+msgid "invalid position (not vehicle/appliance)"
+msgstr ""
+
+#: src/martialarts.cpp
+msgid "<bold>Skill required: </bold>"
+msgid_plural "<bold>Skills required: </bold>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/martialarts.cpp
+msgctxt "martial arts buff desc"
+msgid "<bold>Bonus:</bold> "
+msgid_plural "<bold>Bonus/stack:</bold> "
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/martialarts.cpp
+#, c-format
+msgid "* Will <info>last</info> for <stat>%d turn</stat>"
+msgid_plural "* Will <info>last</info> for <stat>%d turns</stat>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/martialarts.cpp
+#, c-format
+msgid ""
+"* Will give a <good>+%s</good> bonus to <info>dodge</info> for the stack"
+msgid_plural ""
+"* Will give a <good>+%s</good> bonus to <info>dodge</info> per stack"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/martialarts.cpp
+#, c-format
+msgid "* Will give a <bad>%s</bad> penalty to <info>dodge</info> for the stack"
+msgid_plural ""
+"* Will give a <bad>%s</bad> penalty to <info>dodge</info> per stack"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

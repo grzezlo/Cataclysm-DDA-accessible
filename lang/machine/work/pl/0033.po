@@ -1,0 +1,2034 @@
+# Batch 33 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "maple syrup candy"
+msgid_plural "maple syrup candy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "maple syrup candy"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A handful of golden, translucent leaf candies made with pure maple syrup.  "
+"They melt slowly in your mouth as you savor the taste of real maple."
+msgstr ""
+
+#. ~ Description of "graham cracker"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"These dry, sugary crackers will leave you thirsty, but they go well with some"
+" chocolate and marshmallows."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "graham cracker chunks"
+msgid_plural "graham cracker chunks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "graham cracker chunks"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"These dry, sugary cracker pellets will leave you thirsty, and they're not the"
+" right size to make s'mores with.  Made by SugarRush!"
+msgstr ""
+
+#. ~ Description of "cookie"
+#: data/json/items/comestibles/junkfood.json
+msgid "A sweet, delicious cookie, just like grandma used to bake."
+msgstr ""
+
+#. ~ Description of "cookie egg"
+#: data/json/items/comestibles/junkfood.json
+msgid "A sweet, delicious cookie, shaped like an egg.  Made by SugarRush!"
+msgstr ""
+
+#. ~ Description of "maple syrup"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Boiling the sap of a maple tree has concentrated it into this sweet, "
+"delicious maple syrup."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "simple syrup"
+msgid_plural "simple syrup"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "simple syrup"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A simple syrup, made of just sugar and water.  Used usually as a sweetener "
+"for stuff like cocktails."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "corn syrup"
+msgid_plural "corn syrup"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "corn syrup"
+#: data/json/items/comestibles/junkfood.json
+msgid "A syrup made from corn."
+msgstr ""
+
+#. ~ Description of "cake"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Delicious sponge cake with buttercream icing.  Happy Birthday is written on "
+"top in frosting."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "unholy debug angel cake"
+msgid_plural "unholy debug angel cakes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "unholy debug angel cake"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"This unholy confection of delight does not lie, it packs a heavenly amount of"
+" calories in each sinful bite.  For debug use only."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "chocolate-covered coffee beans"
+msgid_plural "chocolate-covered coffee beans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chocolate-covered coffee beans"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Roasted coffee beans coated with dark chocolate, a natural source of "
+"concentrated caffeine."
+msgstr ""
+
+#. ~ Description of "fast-food French fries"
+#: data/json/items/comestibles/junkfood.json
+msgid "Salty, deep-fried potatoes from a fast food restaurant."
+msgstr ""
+
+#. ~ Description of "French fries"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Homemade deep-fried potatoes or other tubers, with a touch of salt.  Crunchy "
+"and delicious."
+msgstr ""
+
+#. ~ Conditional name for "French fries" when COMPONENT_ID matches
+#. groundnut_prepared
+#: data/json/items/comestibles/junkfood.json
+msgid "ground nut fries"
+msgid_plural "ground nut fries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "Julienne fries"
+msgid_plural "Julienne fries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Julienne fries"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Homemade deep-fried potatoes cut long and thin, with a touch of salt.  These "
+"were somewhat of a fad before the world ended.  Crunchy and delicious."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "poutine"
+msgid_plural "poutine"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "poutine"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A serving of fries, covered in cheese curds and hot gravy.  While cheese "
+"curds are more appropriate and traditional, some other cheeses may be used.  "
+"A Canadian staple."
+msgstr ""
+
+#. ~ Description of "peppermint patty"
+#: data/json/items/comestibles/junkfood.json
+msgid "A handful of soft, chocolate-covered peppermint patties… yum!"
+msgstr ""
+
+#. ~ Description of "Necco wafers"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A handful of candy wafers in assorted flavors: orange, lemon, lime, clove, "
+"chocolate, wintergreen, cinnamon, and licorice.  Yum!"
+msgstr ""
+
+#. ~ Description of "candy cigarette"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Flavored sugar sticks designed to look like cigarettes.  Anti-smoking reports"
+" from the Surgeon General have caused a pretty big drop in their popularity "
+"since the 1960s."
+msgstr ""
+
+#. ~ Description of "caramel"
+#: data/json/items/comestibles/junkfood.json
+msgid "Some caramel.  Sticky and sweet, but not very exciting by itself."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "caramel apple"
+msgid_plural "caramel apples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "caramel apple"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A caramel-covered apple.  Best served on an autumn day, at a harvest fair, on"
+" a stick - but those days are long gone."
+msgstr ""
+
+#. ~ Description of "tortilla chips"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas.  They're not bad on their own, but "
+"they could really use some cheese, maybe some meat."
+msgstr ""
+
+#. ~ Description of "cheese nachos"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas, with cheese melted on top.  Could "
+"stand to have some meat."
+msgstr ""
+
+#. ~ Description of "meat nachos"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas, with ground meat on top.  Could "
+"probably use some cheese, though."
+msgstr ""
+
+#. ~ Description of "meat nachos with cheese"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas smothered in cheese and ground meat.  "
+"Delicious."
+msgstr ""
+
+#. ~ Description of "vegetarian nachos"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas, with beans on top.  Could probably use"
+" some cheese, though."
+msgstr ""
+
+#. ~ Description of "vegetarian nachos with cheese"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Salted chips made from corn tortillas, smothered in cheese and beans.  "
+"Delicious, even if you're not a vegetarian."
+msgstr ""
+
+#. ~ Description of "microwave burrito"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A small, microwavable steak & cheese burrito, like those found at gas "
+"stations."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "uncooked TV dinner"
+msgid_plural "uncooked TV dinner"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "uncooked TV dinner"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Now with ONE POUND of meat and ONE POUND of carbs!  Not as appetizing as it "
+"would be if heated up."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "cooked TV dinner"
+msgid_plural "cooked TV dinner"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cooked TV dinner"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Now with ONE POUND of meat and ONE POUND of carbs!  Now that it's been heated"
+" up, it's much tastier but will also spoil more quickly."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "deep-fried chicken"
+msgid_plural "deep-fried chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "deep-fried chicken"
+#: data/json/items/comestibles/junkfood.json
+msgid "Fast-food chicken, deep-fried in oil.  It's greasy and delicious."
+msgstr ""
+
+#. ~ Description of "chili dog"
+#: data/json/items/comestibles/junkfood.json
+msgid "A hot dog with chili con carne on top.  Yum!"
+msgstr ""
+
+#. ~ Description of "uncooked corn dog"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A heavily processed sausage, dipped in batter and deep-fried.  It would taste"
+" much better cooked."
+msgstr ""
+
+#. ~ Description of "cooked corn dog"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A heavily processed sausage, dipped in batter and deep-fried.  Now that it's "
+"been cooked, this corn dog tastes much better, but will spoil faster."
+msgstr ""
+
+#. ~ Description of "homemade corn dog"
+#: data/json/items/comestibles/junkfood.json
+msgid "A homemade sausage, dipped in batter and deep fried."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "onion rings"
+msgid_plural "onion rings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "uncooked hot dog"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A heavily processed sausage, commonplace at baseball games before the "
+"Cataclysm.  It would taste much better cooked."
+msgstr ""
+
+#. ~ Description of "campfire hot dog"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A simple hot dog, cooked over an open fire.  Would be better on a bun, but "
+"it's quite an improvement over eating it uncooked."
+msgstr ""
+
+#. ~ Description of "cooked hot dog"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Surprisingly, not made from dog.  Now that it's been cooked, this hot dog "
+"tastes much better, but will spoil faster."
+msgstr ""
+
+#. ~ Description of "new york wiener"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"What's better than a hot dog?  A hot dog smothered in ground meat and chopped"
+" onions, of course!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "malted milk balls"
+msgid_plural "malted milk balls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "freeze-dried meal"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A sealed plastic bag containing a full dehydrated meal.  This one contains a "
+"hearty beef and egg breakfast."
+msgstr ""
+
+#. ~ Description of "rehydrated freeze-dried meal"
+#: data/json/items/comestibles/junkfood.json
+msgid "A rehydrated beef and egg breakfast meal meant for camping or hiking."
+msgstr ""
+
+#. ~ Description of "military chocolate bar"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A thick, dense bar of military chocolate.  While tough to chew and not very "
+"appetizing, it provides almost a day's worth of calories in portable form."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "gelatin dessert powder"
+msgid_plural "gelatin dessert powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "gelatin dessert powder"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A serving of sugary, fruit-flavored gelatin dessert powder.  Just add water "
+"and set."
+msgstr ""
+
+#. ~ Description of "unflavored gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"An unflavored jiggly, sugary treat made from gelatin and sugar.  It would "
+"taste better with some flavor."
+msgstr ""
+
+#. ~ Description of "processed gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A jiggly, sugary, fruit-flavored treat made from boxed mix.  A kid favorite "
+"pre-Cataclysm."
+msgstr ""
+
+#. ~ Description of "homemade gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A homemade jiggly, sugary treat made from gelatin and sugar, flavored with "
+"fruit juice.  A kid favorite pre-Cataclysm."
+msgstr ""
+
+#. ~ Description of "fruit filled gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A jiggly, sugary treat made from gelatin and sugar, flavored with fruit juice"
+" and set with fruit.  A kid favorite pre-Cataclysm and a healthy treat."
+msgstr ""
+
+#. ~ Description of "vegan gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A vegan friendly homemade jiggly, sugary treat made from agar and sugar, "
+"flavored with fruit juice.  A kid favorite pre-Cataclysm.  They'll never know"
+" the difference."
+msgstr ""
+
+#. ~ Description of "fruit filled vegan gelatin dessert"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"A vegan friendly jiggly, sugary treat made from agar and sugar, flavored with"
+" fruit juice and set with fruit.  A kid favorite pre-Cataclysm and a healthy "
+"treat."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "pasta carbonara"
+msgid_plural "pasta carbonara"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pasta carbonara"
+#: data/json/items/comestibles/junkfood.json
+msgid "A famous Italian pasta dish made with egg, pecorino and bacon."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "amatriciana pasta"
+msgid_plural "amatriciana pasta"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "amatriciana pasta"
+#: data/json/items/comestibles/junkfood.json
+msgid "A famous Italian pasta dish made with red sauce, pecorino and bacon."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "plain crepe"
+msgid_plural "plain crepes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "plain crepe"
+#. ~ Description of "crepe"
+#: data/json/items/comestibles/junkfood.json
+msgid ""
+"Krampouezh, known worldwide as 'crepe' is a traditional, thin Breton pancake."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "crepe"
+msgid_plural "crepes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/junkfood.json
+msgid "marshmallow fluff"
+msgid_plural "marshmallow fluff"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "marshmallow fluff"
+#: data/json/items/comestibles/junkfood.json
+msgid "Delicious and creamy delight, half of the famous Fluffernutter."
+msgstr ""
+
+#. ~ Description of "cooked sausage"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A hefty cooked sausage.  Better eat it hot and fresh."
+msgstr ""
+
+#. ~ Description of "meat confit"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Salted meat slowly cooked in butter or melted fat, a form of food "
+"preservation from the days before canning.  Rich and fatty, it will last for "
+"a long time."
+msgstr ""
+
+#. ~ Description of "sweet sausage"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A sweet and delicious maple-flavored sausage.  Better eat it hot and fresh."
+msgstr ""
+
+#. ~ Description of "bratwurst"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A type of German sausage made of finely-chopped meat, meant to be pan-fried "
+"or roasted.  Better eat it hot and fresh."
+msgstr ""
+
+#. ~ Description of "royal beef"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A chunk of meat coated with royal jelly.  It's a lot like a honey-baked ham."
+msgstr ""
+
+#. ~ Description of "glazed tenderloins"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A tender piece of meat, perfectly seasoned with a thin sweet glaze and a "
+"vegetable accompaniment.  A gourmet dish that is both healthy and delicious."
+msgstr ""
+
+#. ~ Description of "lobster platter"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Fresh lobster meat, perfectly seasoned with lemon juice and a vegetable "
+"accompaniment.  A gourmet dish that is both healthy and delicious."
+msgstr ""
+
+#. ~ Description of "currywurst"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Sausage covered in a curry ketchup sauce.  Spicy and delicious!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "aspic"
+msgid_plural "aspic"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pickled fish"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A serving of crisply brined and canned fish.  Tasty and nutritious."
+msgstr ""
+
+#. ~ Description of "canned fish"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Low-sodium boiled and canned fish.  Contains most of the nutrition, but "
+"little of the savor of cooked fish."
+msgstr ""
+
+#. ~ Description of "canned lobster"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Low-sodium boiled and canned lobster.  Contains most of the nutrition, but "
+"little of the savor of cooked lobster."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "pair of fried frog legs"
+msgid_plural "pairs of fried frog legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of fried frog legs"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A delicious pair of golden-brown crispy fried frog legs."
+msgstr ""
+
+#. ~ Description of "batter fried fish"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A delicious golden-brown serving of crispy fried fish."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "stuffed clams"
+msgid_plural "stuffed clams"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "lunch meat"
+msgid_plural "lunch meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bologna"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Formally known as Bologna sausage, this is a finely-ground preserved meat "
+"that comes in circular slices.  Its first name isn't Oscar.  You can eat it "
+"cold."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "lutefisk"
+msgid_plural "lutefisk"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lutefisk"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Preserved fish that has been dried in a lye solution.  Vile and soap-like yet"
+" highly nutritious, it is reminiscent of the afterbirth of a dog or the "
+"world's largest chunk of phlegm."
+msgstr ""
+
+#. ~ Description of "SPAM"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A canned pork product that is unnaturally pink, oddly rubbery, and not very "
+"tasty.  Quite filling, but completely unappetizing cold."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "holy SPAM of debugging"
+msgid_plural "holy SPAM of debugging"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "canned sardine"
+msgid_plural "canned sardine"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "sausage gravy"
+msgid_plural "sausage gravy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sausage gravy"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Biscuits, meat, and delicious mushroom soup all crammed together into a "
+"wonderfully greasy and tasty mush."
+msgstr ""
+
+#. ~ Conditional name for "sausage gravy" when VITAMIN matches
+#. human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Mannwurst gravy"
+msgid_plural "Mannwurst gravy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "sausage gravy" when FLAG matches
+#. STRICT_HUMANITARIANISM
+#: data/json/items/comestibles/meat_dishes.json
+msgid "killbasa gravy"
+msgid_plural "killbasa gravy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pemmican"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A concentrated mixture of fat and protein, first said to have been used as a "
+"nutritious high-energy food by the Querecho and Teya people of what is Texas "
+"today.  Composed of meat, tallow, and edible berries, it provides excellent "
+"nutrition in an easy to carry form."
+msgstr ""
+
+#. ~ Description of "pemmican"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A concentrated mixture of fat and protein, first said to have been used as a "
+"nutritious high-energy food by the Querecho and Teya people of what is Texas "
+"today.  Composed of meat, tallow, and edible plants or mushrooms, it provides"
+" excellent nutrition in an easy to carry form."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "pemmican (meat only)"
+msgid_plural "pemmican (meat only)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pemmican (meat only)"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A concentrated mixture of fat and protein, first said to have been used as a "
+"nutritious high-energy food by the Querecho and Teya people of what is Texas "
+"today.  Composed of meat and tallow, it provides excellent nutrition in an "
+"easy to carry form.  Contains no fruits or veggies."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "hamburger helper"
+msgid_plural "hamburger helper"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hamburger helper"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Some mac and cheese with ground meat added, enhancing the flavor and "
+"nutritional value."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "ravioli"
+msgid_plural "ravioli"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ravioli"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Meat encased in little dough satchels.  Tastes fine straight from the can."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "chili con carne"
+msgid_plural "chili con carne"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "chili con carne" when VITAMIN matches
+#. human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "chili con Cabron"
+msgid_plural "chili con Cabron"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "chili con carne" when FLAG matches
+#. STRICT_HUMANITARIANISM
+#: data/json/items/comestibles/meat_dishes.json
+msgid "chili con Sindar"
+msgid_plural "chili con Sindar"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "chili con carne" when COMPONENT_ID_SUBSTRING matches
+#. mutant
+#: data/json/items/comestibles/meat_dishes.json
+msgid "chili con chupacabra"
+msgid_plural "chili con chupacabra"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pork and beans"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Greasy Prospector brand improved pork and beans with hickory smoked pig fat "
+"chunks."
+msgstr ""
+
+#. ~ Description of "canned salmon"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Bright pink fish-paste from a can."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "canned chicken"
+msgid_plural "canned chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canned chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Off-white chicken-paste from a can."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "canned clam"
+msgid_plural "canned clam"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "clam chowder"
+msgid_plural "clam chowder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "clam chowder"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Delicious, lumpy, white soup made of meat (traditionally clams) and potatoes "
+"in a milk base.  A taste of the lost glory of New England."
+msgstr ""
+
+#. ~ Conditional name for "clam chowder" when COMPONENT_ID_SUBSTRING matches
+#. meat
+#: data/json/items/comestibles/meat_dishes.json
+msgid "meat chowder"
+msgid_plural "meat chowder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "clam chowder" when COMPONENT_ID_SUBSTRING matches
+#. mutant
+#: data/json/items/comestibles/meat_dishes.json
+msgid "monster chowder"
+msgid_plural "monster chowder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "meat pie"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A delicious baked pie with a hearty meat filling."
+msgstr ""
+
+#. ~ Conditional name for "meat pie" when VITAMIN matches human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "prick pie"
+msgid_plural "prick pies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "meat pie" when FLAG matches STRICT_HUMANITARIANISM
+#: data/json/items/comestibles/meat_dishes.json
+msgid "talking animal pie"
+msgid_plural "talking animal pies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "meat pizza" when VITAMIN matches human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "poser pizza"
+msgid_plural "poser pizzas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "meat pizza" when FLAG matches STRICT_HUMANITARIANISM
+#: data/json/items/comestibles/meat_dishes.json
+msgid "protesting pizza"
+msgid_plural "protesting pizzas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "deluxe scrambled eggs"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Fluffy and delicious scrambled eggs made even better with the addition of "
+"tasty meat or fish."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "canned meat"
+msgid_plural "canned meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canned meat"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Low-sodium boiled and canned meat.  Contains most of the nutrition, but "
+"little of the savor of cooked meat."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "salted meat slice"
+msgid_plural "salted meat slice"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "lasagne"
+msgid_plural "lasagne"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lasagne"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A very old type of pasta made with several layers of lasagne sheets "
+"alternated with cheese, sauce and meat."
+msgstr ""
+
+#. ~ Description of "fried SPAM"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Now that it's been fried, this SPAM is actually pretty tasty."
+msgstr ""
+
+#. ~ Conditional name for "cheeseburger" when COMPONENT_ID_SUBSTRING matches
+#. egg
+#: data/json/items/comestibles/meat_dishes.json
+msgid "breakfast cheeseburger"
+msgid_plural "breakfast cheeseburgers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "hamburger" when VITAMIN matches human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "bobburger"
+msgid_plural "bobburgers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "hamburger" when FLAG matches STRICT_HUMANITARIANISM
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Moreauburger"
+msgid_plural "Moreauburgers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Conditional name for "hamburger" when COMPONENT_ID_SUBSTRING matches egg
+#: data/json/items/comestibles/meat_dishes.json
+msgid "breakfast burger"
+msgid_plural "breakfast burgers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sloppy joe"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A sandwich consisting of ground meat and tomato sauce served on bread."
+msgstr ""
+
+#. ~ Conditional name for "sloppy joe" when VITAMIN matches human_flesh_vitamin
+#: data/json/items/comestibles/meat_dishes.json
+msgid "sloppy Joseph"
+msgid_plural "sloppy Josephs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Indian taco"
+msgid_plural "Indian tacos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Indian taco"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Frybread topped with beans, meat, and lettuce.  Originally conceived by the "
+"Navajo in the 19th century, only having available basic foodstuffs provided "
+"by the US-government after forced expulsion from their homelands, this dish "
+"became popular with many Native Americans and is often served at Powwows or "
+"other festivities."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "pickled meat"
+msgid_plural "pickled meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pickled meat"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A serving of crisply brined and canned meat.  Tasty and nutritious."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "dehydrated meat"
+msgid_plural "dehydrated meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "pair of dehydrated frog legs"
+msgid_plural "pairs of dehydrated frog legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of dehydrated frog legs"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A pair of dehydrated frog legs.  With proper storage, this dried food will "
+"remain edible for an incredibly long time."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "dehydrated chicken"
+msgid_plural "dehydrated chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dehydrated chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Dehydrated flakes of bird meat.  With proper storage, this dried food will "
+"remain edible for an incredibly long time."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "rehydrated frog leg"
+msgid_plural "rehydrated frog legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rehydrated frog leg"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Reconstituted frog legs, which are much more enjoyable to eat now that they "
+"have been rehydrated."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "rehydrated chicken"
+msgid_plural "rehydrated chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rehydrated chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Reconstituted bird meat, which are much more enjoyable to eat now that they "
+"have been rehydrated."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "rehydrated meat"
+msgid_plural "rehydrated meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "haggis"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"This traditional Scottish savory pudding is made of meat and offal mixed with"
+" oatmeal, sewn into an animal's stomach and boiled.  Surprisingly tasty and "
+"quite filling, it is best served with boiled root vegetables and strong "
+"whisky."
+msgstr ""
+
+#. ~ Description of "fish makizushi"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Delicious slivers of thinly-sliced raw fish, wrapped in tasty sushi rice and "
+"rolled up in a healthy green vegetable."
+msgstr ""
+
+#. ~ Description of "meat temaki"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Delicious slivers of raw meat, wrapped in tasty sushi rice and rolled up in a"
+" healthy green vegetable."
+msgstr ""
+
+#. ~ Description of "sashimi"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Delicious slivers of thinly sliced raw fish, served with tasty vegetables."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "dehydrated tainted meat"
+msgid_plural "dehydrated tainted meat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dehydrated tainted meat"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Pieces of poisonous meat that have been dried to prevent them from rotting "
+"away.  They're still unsafe to eat."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "pelmeni"
+msgid_plural "pelmeni"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "homemade burrito"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A traditional Mexican dish of meat, beans or rice, and vegetables spread on a"
+" corn tortilla and rolled into a tube shape.  The fresh ingredients make this"
+" one taste way better than those gas station knockoffs."
+msgstr ""
+
+#. ~ Conditional name for "homemade burrito" when COMPONENT_ID_SUBSTRING
+#. matches egg
+#: data/json/items/comestibles/meat_dishes.json
+msgid "breakfast burrito"
+msgid_plural "breakfast burritos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "meatball"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A seasoned and fried round lump of meat.  Just like mom used to make!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Valencian paella"
+msgid_plural "Valencian paella"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Valencian paella"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A traditional dish originating from Spain, more specifically from the region "
+"of Valencia.  A very tasty and filling dish made traditionally of rabbit, "
+"beans, rice, chicken, spices and sometimes snails."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "escargot"
+msgid_plural "escargot"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "escargot"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A traditional dish originating from France, more specifically from the region"
+" of Bourgogne.  It consists of prepared snails that have then been cooked in "
+"butter and parsley inside their own shells, very low on fat but high on "
+"protein."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "kiymali pide"
+msgid_plural "kiymali pide"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "kiymali pide"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Turkish flatbread topped with ground lamb or beef mixed with peppers, onions,"
+" and tomatoes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "lahmacun"
+msgid_plural "lahmacuns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lahmacun"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Turkish flatbread topped with minced meat, minced vegetables, and herbs "
+"including onions, garlic, tomatoes, red peppers, and parsley, flavored with "
+"spices such as chili pepper and paprika, then baked."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "iskender kebab"
+msgid_plural "iskender kebab"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "iskender kebab"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A Turkish dish that consists of sliced döner kebab meat topped with hot "
+"tomato sauce over pieces of pita bread and generously slathered with melted "
+"special sheep's milk butter and yogurt."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "manti"
+msgid_plural "manti"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "manti"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Dumplings that typically consist of a spiced meat mixture, usually lamb or "
+"ground beef, wrapped in a thin dough sheet which is then boiled or steamed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "sarma"
+msgid_plural "sarma"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sarma"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A traditional Turkish dish prepared by rolling rice and minced meat in grape "
+"leaves."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "fried chicken"
+msgid_plural "fried chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fried chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid "A delicious golden-brown serving of crispy fried chicken."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "buttermilk fried chicken"
+msgid_plural "buttermilk fried chicken"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "buttermilk fried chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Brined in buttermilk, seasoned and breaded to perfection, and fried until "
+"crispy and golden.  This fried chicken is so good you can almost forget about"
+" the end of the world.  Vinegar leg is on the right!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "tandoori chicken"
+msgid_plural "tandoori chickens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tandoori chicken"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"Originating from Punjabi cuisine, this deep-red and spicy baked chicken is "
+"marinated with a yogurt-based sauce and is traditionally baked directly on "
+"the walls of a wood-fired clay oven."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "Hinanese chicken rice"
+msgid_plural "Hinanese chicken rice"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Hinanese chicken rice"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"This delicious serving of poached chicken with rice is one of the national "
+"dishes of Singapore."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "chicken parmesan"
+msgid_plural "chicken parmesan"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chicken parmesan"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A classic Italian-American dish of breaded and fried chicken atop a bed of "
+"pasta, enrobed with tomato sauce and cheese."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/meat_dishes.json
+msgid "scrapple"
+msgid_plural "scrapple"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrapple"
+#: data/json/items/comestibles/meat_dishes.json
+msgid ""
+"A dry mush of meat scraps and grain, sliced and pan-fried; better than it "
+"sounds and looks.  A staple food of the Mid-Atlantic United States."
+msgstr ""
+
+#. ~ Description of "melatonin tablet"
+#: data/json/items/comestibles/med.json
+msgid ""
+"An over-the-counter melatonin supplement, commonly prescribed to treat sleep "
+"deprivation and to mitigate its effects.  One tablet a day combined with a "
+"good night's sleep will help you recover faster."
+msgstr ""
+
+#. ~ Description of "prescription stimulant"
+#. ~ Description of variant "Adderall" of item "prescription stimulant"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Medical-grade amphetamine salts mixed with dextroamphetamine salts, commonly "
+"prescribed to treat hyperactive attention deficits.  It suppresses the "
+"appetite, and is quite addictive."
+msgstr ""
+
+#. ~ Variant name of item "prescription stimulant"
+#: data/json/items/comestibles/med.json
+msgid "Adderall"
+msgid_plural "Adderall"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "epinephrine autoinjector"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A syringe filled with a shot of epinephrine, also called adrenalin.  It "
+"serves as a powerful stimulant when you inject yourself with it.  Asthmatics "
+"can use it in an emergency to clear an asthma attack."
+msgstr ""
+
+#. ~ Description of "antibiotics"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Antibacterial medication designed to prevent or stop the spread of infection."
+"  It's the safest way to cure any infections you might have.  One dose lasts "
+"twelve hours."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "antifungal drug"
+msgid_plural "antifungal drug"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "antifungal drug"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A powerful chemical tablet designed to eliminate fungal infections in living "
+"creatures.  One dose lasts four hours."
+msgstr ""
+
+#. ~ Description of "antiparasitic drug"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A broad-spectrum chemical tablet designed to eliminate parasitic infestations"
+" in living creatures.  Though designed for use on pets and livestock, it will"
+" likely work on humans as well."
+msgstr ""
+
+#. ~ Description of "aspirin"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Acetylsalicylic acid, a mild anti-inflammatory and blood thinner.  Take to "
+"relieve pain and swelling.  Careful - it can increase bleeding."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "ibuprofen"
+msgid_plural "ibuprofen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ibuprofen"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Ibuprofen, a mild NSAID-based painkiller.  Take to relieve pain and swelling."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "naproxen"
+msgid_plural "naproxen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "naproxen"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Naproxen, a mild long-lasting NSAID-based painkiller.  Take to relieve pain "
+"and swelling."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "acetaminophen"
+msgid_plural "acetaminophen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "acetaminophen"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Acetaminophen, a mild painkiller that works well in conjunction with NSAID-"
+"based painkillers like aspirin.  Take to relieve pain and swelling."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "metaprolol"
+msgid_plural "metaprolol"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "metaprolol"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Metaprolol, a classic beta blocker.  It lowers blood pressure and decouples "
+"heart rate from stressful events such as anxiety or pain."
+msgstr ""
+
+#. ~ Description of "caffeine pill"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A No-doz brand caffeine pill, maximum strength.  Useful in pulling an all-"
+"nighter, one pill is equivalent to a strong cup of coffee."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "chewing tobacco"
+msgid_plural "chewing tobacco"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chewing tobacco"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Mint-flavored chewing tobacco.  While absolutely terrible for your health, it"
+" was once a favorite among baseball players, cowboys, and other macho types."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "skunk spray neutralizing solution"
+msgid_plural "skunk spray neutralizing solution"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skunk spray neutralizing solution"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A combination of hydrogen peroxide, baking soda, and dish soap that works "
+"together to transform skunk spray thiocetates into odorless acids."
+msgstr ""
+
+#. ~ "activation_message" action message of item "skunk spray neutralizing
+#. solution"
+#: data/json/items/comestibles/med.json
+msgid ""
+"You cover yourself in the solution everywhere the spray touched your body."
+msgstr ""
+
+#. ~ Description of "cigarette"
+#. ~ Description of variant "cigarette" of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A mixture of dried tobacco leaf, pesticides, and chemical additives, rolled "
+"into a filtered paper tube.  Stimulates mental acuity and reduces appetite.  "
+"Highly addictive and hazardous to health, but lung cancer is kind of the "
+"least of your concerns at this point."
+msgstr ""
+
+#. ~ Variant name of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid "menthol cigarette"
+msgid_plural "menthol cigarettes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "menthol cigarette" of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A cigarette with a menthol flavor, the only type of flavored cigarette "
+"permitted for sale in the US.  The FDA had previously proposed a ban on them,"
+" but the world ended before it could be implemented.  It feels somewhat nicer"
+" to smoke than a regular cigarette."
+msgstr ""
+
+#. ~ Variant name of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid "\"light\" cigarette"
+msgid_plural "\"light\" cigarettes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant ""light" cigarette" of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A cigarette with reduced tar and nicotine content, designed to appeal to "
+"quitters and health-conscious smokers.  While not actually less harmful than "
+"regular cigarettes, the amount of nicotine absorbed per cigarette is indeed "
+"lower.  Marketing cigarettes as \"light\" has been illegal since 2007, but "
+"the term has persisted as a shorthand."
+msgstr ""
+
+#. ~ Variant name of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid "quality cigarette"
+msgid_plural "quality cigarettes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "quality cigarette" of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A premium brand cigarette rolled from strong, high-quality tobacco.  While "
+"discerning smokers may prefer its flavor to that of average cigarettes, the "
+"higher tar and nicotine content won't do you any favors.  Then again, you "
+"probably have bigger concerns than lung cancer."
+msgstr ""
+
+#. ~ Variant name of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid "little cigar"
+msgid_plural "little cigars"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "little cigar" of item "cigarette"
+#: data/json/items/comestibles/med.json
+msgid ""
+"A compact, slim cigar in the form of a cigarette.  It's a popular choice for "
+"those who want a taste of luxury without the time commitment of a full-sized "
+"cigar.  Addictive and hazardous to health."
+msgstr ""
+
+#. ~ Description of "cigar"
+#: data/json/items/comestibles/med.json
+msgid "Rolled, cured tobacco leaf, addictive and hazardous to health."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "debug chloroform soaked rag"
+msgid_plural "debug chloroform soaked rags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "methacola"
+msgid_plural "methacola"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "myopia contact lenses (weekly)"
+msgid_plural "myopia contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "myopia contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>nearsightedness</color>, and should be "
+"discarded after <color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ "description" action message of item "myopia contact lenses (weekly)"
+#. ~ "description" action message of item "myopia transition contact lenses
+#. (weekly)"
+#. ~ "description" action message of item "myopia contact lenses (daily)"
+#. ~ "description" action message of item "myopia transition contact lenses
+#. (daily)"
+#: data/json/items/comestibles/med.json
+msgid "You can use this to mitigate your nearsightedness."
+msgstr ""
+
+#. ~ "menu_text" action message of item "myopia contact lenses (weekly)"
+#. ~ "menu_text" action message of item "myopia transition contact lenses
+#. (weekly)"
+#. ~ "menu_text" action message of item "myopia contact lenses (daily)"
+#. ~ "menu_text" action message of item "myopia transition contact lenses
+#. (daily)"
+#. ~ "menu_text" action message of item "hyperopia contact lenses (weekly)"
+#. ~ "menu_text" action message of item "hyperopia transition contact lenses
+#. (weekly)"
+#. ~ "menu_text" action message of item "hyperopia contact lenses (daily)"
+#. ~ "menu_text" action message of item "hyperopia transition contact lenses
+#. (daily)"
+#. ~ "menu_text" action message of item "bifocal contact lenses (weekly)"
+#. ~ "menu_text" action message of item "bifocal transition contact lenses
+#. (weekly)"
+#. ~ "menu_text" action message of item "bifocal contact lenses (daily)"
+#. ~ "menu_text" action message of item "bifocal transition contact lenses
+#. (daily)"
+#. ~ "menu_text" action message of item "plano transition contact lenses
+#. (weekly)"
+#. ~ "menu_text" action message of item "plano transition contact lenses
+#. (daily)"
+#: data/json/items/comestibles/med.json
+msgid "Apply contact lenses"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "myopia transition contact lenses (weekly)"
+msgid_plural "myopia transition contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "myopia transition contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  This high-tech pair darkens in response to light, making it"
+" easier to see in bright environments.  They sit comfortably on the surface "
+"of the eye.  The lenses are designed to help anyone with "
+"<color_light_blue>nearsightedness</color>, and should be discarded after "
+"<color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "myopia contact lenses (daily)"
+msgid_plural "myopia contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "myopia contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two daily-use soft contact lenses, buffered in saline"
+" solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>nearsightedness</color>, and should be "
+"discarded after <color_light_blue>16 hours</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "myopia transition contact lenses (daily)"
+msgid_plural "myopia transition contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "myopia transition contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two transition daily-use soft contact lenses, "
+"buffered in saline solution.  This high-tech pair darkens in response to "
+"light, making it easier to see in bright environments.  They are a great "
+"replacement for wearing glasses and sit comfortably on the surface of the "
+"eye.  The lenses are designed to help anyone with "
+"<color_light_blue>nearsightedness</color>, and should be discarded after "
+"<color_light_blue>16 hours</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "hyperopia contact lenses (weekly)"
+msgid_plural "hyperopia contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hyperopia contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>farsightedness</color>, and should be discarded"
+" after <color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ "description" action message of item "hyperopia contact lenses (weekly)"
+#. ~ "description" action message of item "hyperopia transition contact lenses
+#. (weekly)"
+#. ~ "description" action message of item "hyperopia contact lenses (daily)"
+#. ~ "description" action message of item "hyperopia transition contact lenses
+#. (daily)"
+#: data/json/items/comestibles/med.json
+msgid "You can use this to mitigate your farsightedness."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "hyperopia transition contact lenses (weekly)"
+msgid_plural "hyperopia transition contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hyperopia transition contact lenses (weekly)"
+#. ~ Description of "hyperopia transition contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two transition extended-wear soft contact lenses, "
+"buffered in saline solution.  This high-tech pair darkens in response to "
+"light, making it easier to see in bright environments.  The lenses are "
+"designed to help anyone with <color_light_blue>farsightedness</color>, and "
+"should be discarded after <color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "hyperopia contact lenses (daily)"
+msgid_plural "hyperopia contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hyperopia contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>farsightedness</color>, and should be discarded"
+" after <color_light_blue>16 hours</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "hyperopia transition contact lenses (daily)"
+msgid_plural "hyperopia transition contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "bifocal contact lenses (weekly)"
+msgid_plural "bifocal contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bifocal contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two extended-wear soft contact lenses, buffered in "
+"saline solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>both nearsightedness and "
+"farsightedness</color>, and should be discarded after <color_light_blue>a "
+"week</color> of use."
+msgstr ""
+
+#. ~ "description" action message of item "bifocal contact lenses (weekly)"
+#. ~ "description" action message of item "bifocal transition contact lenses
+#. (weekly)"
+#. ~ "description" action message of item "bifocal contact lenses (daily)"
+#. ~ "description" action message of item "bifocal transition contact lenses
+#. (daily)"
+#: data/json/items/comestibles/med.json
+msgid "You can use this to mitigate your nearsightedness or farsightedness."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "bifocal transition contact lenses (weekly)"
+msgid_plural "bifocal transition contact lenses (weekly)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bifocal transition contact lenses (weekly)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two transition extended-wear soft contact lenses, "
+"buffered in saline solution.  This high-tech pair darkens in response to "
+"light, making it easier to see in bright environments.  They are a great "
+"replacement for wearing glasses and sit comfortably on the surface of the "
+"eye.  The lenses are designed to help anyone with <color_light_blue>both "
+"nearsightedness and farsightedness</color>, and should be discarded after "
+"<color_light_blue>a week</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "bifocal contact lenses (daily)"
+msgid_plural "bifocal contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bifocal contact lenses (daily)"
+#: data/json/items/comestibles/med.json
+msgid ""
+"Small plastic case with two daily-use soft contact lenses, buffered in saline"
+" solution.  They are a great replacement for wearing glasses and sit "
+"comfortably on the surface of the eye.  The lenses are designed to help "
+"anyone with <color_light_blue>both nearsightedness and "
+"farsightedness</color>, and should be discarded after <color_light_blue>16 "
+"hours</color> of use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/comestibles/med.json
+msgid "bifocal transition contact lenses (daily)"
+msgid_plural "bifocal transition contact lenses (daily)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

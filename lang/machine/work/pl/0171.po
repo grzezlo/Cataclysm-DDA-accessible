@@ -1,0 +1,1598 @@
+# Batch 171 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Message of martial technique "Execution (Great Hammer)"
+#: data/mods/Perk_melee/techniques/executions.json
+#, c-format
+msgid "<npcname> knocks down and crushes %s with a powerful blow"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/executions.json
+msgid "Execution (Great Axe)"
+msgstr ""
+
+#. ~ Message of martial technique "Execution (Great Axe)"
+#: data/mods/Perk_melee/techniques/executions.json
+#, c-format
+msgid "You cleave the %s asunder with a furious slash"
+msgstr ""
+
+#. ~ Message of martial technique "Execution (Great Axe)"
+#. ~ Message of martial technique "Vulgar Opening"
+#: data/mods/Perk_melee/techniques/executions.json
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> cleaves into %s with a powerful blow"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Staggering Strike"
+msgstr ""
+
+#. ~ Description of martial technique "Staggering Strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Stun for 1 turn"
+msgstr ""
+
+#. ~ Condition description of martial technique "Staggering Strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned</info> target of <info>similar or "
+"smaller</info> size."
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Brutal Swing"
+msgstr ""
+
+#. ~ Description of martial technique "Brutal Swing"
+#. ~ Description of martial technique "Brutal Swing (Stunned target)"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Three tile knockback"
+msgstr ""
+
+#. ~ Message of martial technique "Brutal Swing"
+#. ~ Message of martial technique "Brutal Swing (Stunned target)"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You send %s reeling with a brutal strike"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Brutal Swing (Stunned target)"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Shoulder tackle"
+msgstr ""
+
+#. ~ Message of martial technique "Shoulder tackle"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You ground %s with a shoulder bash"
+msgstr ""
+
+#. ~ Message of martial technique "Shoulder tackle"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> drops %s with a shoulder bash"
+msgstr ""
+
+#. ~ Condition description of martial technique "Shoulder tackle"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>similar or"
+" smaller</info> size incapable of flight. Requires <info>momentum(3)</info> "
+"or higher to trigger."
+msgstr ""
+
+#. ~ Message of martial technique "Vulgar Opening"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You cleave into %s with a mighty strike"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Coiling strike"
+msgstr ""
+
+#. ~ Description of martial technique "Coiling strike"
+#. ~ Description of martial technique "Lunge"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "A quick reach attack that scales heavily with perception."
+msgstr ""
+
+#. ~ Message of martial technique "Coiling strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You quickly stab %s with a sideways thrust"
+msgstr ""
+
+#. ~ Message of martial technique "Coiling strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> stabs %s with a quick thrust"
+msgstr ""
+
+#. ~ Message of martial technique "Make Way"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You swing through %s and everything nearby with an overhead attack"
+msgstr ""
+
+#. ~ Message of martial technique "Make Way"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> swings at %s and everything nearby with an overhead attack"
+msgstr ""
+
+#. ~ Message of martial technique "Fulcrum Kick"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You use your polearm as a springboard to kick %s"
+msgstr ""
+
+#. ~ Condition description of martial technique "Fulcrum Kick"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>similar or"
+" smaller</info> size incapable of flight."
+msgstr ""
+
+#. ~ Message of martial technique "Estocada"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You thrust your weapon into %s"
+msgstr ""
+
+#. ~ Message of martial technique "Estocada"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> thrusts their weapon into %s"
+msgstr ""
+
+#. ~ Condition description of martial technique "Estocada"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "* Requires <info>momentum(1)</info> to trigger."
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Lunge"
+msgstr ""
+
+#. ~ Message of martial technique "Lunge"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You step and stab the %s with an elegant motion"
+msgstr ""
+
+#. ~ Message of martial technique "Lunge"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> steps closer to %s and stabs them with a quick motion"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Knife Counter"
+msgstr ""
+
+#. ~ Message of martial technique "Knife Counter"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "You slash at the %s as you dodge"
+msgstr ""
+
+#. ~ Message of martial technique "Knife Counter"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid "<npcname> slashes at %s as they dodge"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Slaying Strike"
+msgstr ""
+
+#. ~ Condition description of martial technique "Slaying Strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "* Requires <info>tempo(3)</info> to trigger."
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid "Compound strike"
+msgstr ""
+
+#. ~ Message of martial technique "Compound strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid ""
+"You cleanly transition from your last attack into a powerful finishing strike"
+" against %s"
+msgstr ""
+
+#. ~ Message of martial technique "Compound strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+#, c-format
+msgid ""
+"<npcname> cleanly transitions their last attack into a powerful finishing "
+"strike against %s"
+msgstr ""
+
+#. ~ Condition description of martial technique "Compound strike"
+#: data/mods/Perk_melee/techniques/techniques.json
+msgid ""
+"* Can only trigger on the attack that achieves <info>tempo(3)</info>.  The "
+"attacked target must be the same as the previous two attacks."
+msgstr ""
+
+#. ~ MOD name
+#: data/mods/Personal_Portal_Storms/modinfo.json
+msgid "Portal Storms Ignore NPCs"
+msgstr ""
+
+#. ~ Description of MOD "Portal Storms Ignore NPCs"
+#: data/mods/Personal_Portal_Storms/modinfo.json
+msgid ""
+"Makes Portal Storm enemies only attack the player.  Without this critical "
+"NPCs can die to Portal Storm enemies in very unfair ways.  More work needs to"
+" be done on AI and faction base security before it will be safe to disable "
+"this."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficultysafeguard"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You haven't selected a difficulty.  This could be because you're playing an old save.\n"
+"\n"
+"Your current difficulty has been set to Normal.  In this setting, you will have 4 hours in every expedition to reach the exit and leave safely.  After this, warp sickness sets in and applies heavy debuffs until you exit.  After 6 hours, warp disintegration begins, and you will rapidly lose health until you exit or die."
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC "EOC_initiate_randomport"
+#: data/mods/Sky_Island/EOCs.json
+msgid "It seems the portal couldn't find a valid location."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_award_material_tokens"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You've returned home safely using a designated exit point.  You have earned "
+"<global_val:owed_material_tokens> material tokens for your success."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_progressgate1"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You've proved you can survive a few excursions to the world below.  Something in the warp pulls at you, quickening your pulse and turning your vision red.  The sensation is indescribable.  You feel… powerful.\n"
+"The Heart of the Island may have further use for you.\n"
+"\n"
+"Healing at the Heart of the Island is no longer free.  Be cautious in your future endeavors."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_progressgate2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You've drank deep of the warpstream and survived to tell the tale, though your unique isolation makes finding ears to listen difficult.  The fragments of this reality have risen against you, and you have weathered the storm… for now.\n"
+"You feel confident, powerful.  Your mouth tastes of blood.  As the familiar world takes shape around you once more, you understand the Heart of the Island will surely be interested in your continued growth."
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"This will teleport you back to your sky island.  Any items inside the room "
+"will be teleported home alongside you.  Are you ready to leave?"
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"This will teleport you back to your sky island.  You will spend your vortex "
+"token to return any items in the room home alongside you.  Are you ready to "
+"leave?"
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"This will teleport you back to your sky island.  Any items not on your person"
+" WILL BE LOST.  Are you ready to leave?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_return_OM_teleport_item"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Now teleporting back home.  Please wait…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_youdied"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Moments before your last breath leaves your body, the mote of warp essence on"
+" you jolts with a brilliant energy.  Its thin filament immediately snaps "
+"tight, reeling you home faster than you can process what it was that just "
+"saved your life.  The mote is spent, but you arrive home alive and well."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_deathconfirmed"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You died at home?  What's the matter with you?  Stop this.  You are restored."
+"  The powers that be have made you temporarily incorporeal, in case you were "
+"stuck in a deadly loop."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_deathconfirmed"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You feel the icy grip of death begin to take you, and the world whirls and "
+"rushes past.  Reality bends and at the peak of your last mortal moment, "
+"something snags you and hauls you through space and time.  Your mind has been"
+" preserved, at cost, and your body is not far behind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_HEAL_NEWBIE"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"The island's grace heals you at no charge.\n"
+"This effect will only be free until you have survived 10 expeditions."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in false effect in EoC
+#. "EOC_HEAL_NEWBIE"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"The warp shards you were holding dissipate into a mist and swirl in tiny "
+"vortices around your body.  The price is paid, and you are healed."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in false effect in EoC
+#. "EOC_HEAL_NEWBIE"
+#: data/mods/Sky_Island/EOCs.json
+msgid "You must have the required payment on your person to be healed."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_healall"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Your body mends itself in the blink of an eye.  Underlying health issues may "
+"persist, but your structural integrity is restored."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_healall"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"The effect is wasted and you don't feel any better.  You have to be in your "
+"sanctuary to be healed by this!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "scenario_warp_begins"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Welcome to Sky Islands.\n"
+"\n"
+"Speak to the Heart of the Island to get your bearings, accept missions, manage upgrades, change your difficulty settings, and more."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Casual"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"In Casual difficulty, time limits are more relaxed.\n"
+"Warp pulses occur every 30 minutes.  This means warp sickness sets in after 4 hours of being earthside, and disintegration at 6 hours.  You will have more time for activities and reaching the extract should generally not be a problem."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"In Normal Difficulty, pulses occur every 15 minutes.  This means on every expedition, you will have 2 hours to explore, fight, loot, and find the exit before warp sickness sets in, and 3 hours total before disintegration begins.\n"
+"This is the intended way to play.  Getting to the exit is not a cakewalk, but you should have time to explore while earthside."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"In Hard difficulty, time limits are strict.\n"
+"Warp pulses occur every 10 minutes.  This means warp sickness sets in after only 1 hour 20 minutes of being earthside, and disintegration at 2 hours.  You will have much less time to spare and must make getting to the exit your immediate priority."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"In Impossible difficulty, time limits are extremely tight.\n"
+"Warp pulses occur every 5 minutes.  This means warp sickness sets in after only 40 minutes of being earthside, and disintegration at 1 hour.  Reaching the extract alive will take all the time you can spare, and warp sickness will be common.  You will not be given mercy!"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_difficultycheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Select a Difficulty"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficulty_DEFAULTS"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"All difficulty settings set to default.  You can speak to the Heart of the "
+"Island to change these at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficulty0"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Difficulty set to Casual.  You can speak to the Heart of the Island to change"
+" this at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficulty1"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Difficulty set to Normal.  You can speak to the Heart of the Island to change"
+" this at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficulty2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Difficulty set to Hard.  You can speak to the Heart of the Island to change "
+"this at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_difficulty3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Difficulty set to Impossible.  You can speak to the Heart of the Island to "
+"change this at any time."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Whole Room"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Whole Room for a Cost"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Self Only"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the behavior of the return obelisk.\n"
+"With this option, everything in the room with you will return to your sky island.  Getting resources will generally not be a problem as long as you make it to the extraction point."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the behavior of the return obelisk.\n"
+"With this option, if you have a warp vortex token with you, everything in the room with you will return to your sky island.  Otherwise, only what you are carrying on your person will return with you.  You may have to make difficult choices about what to bring back."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the behavior of the return obelisk.\n"
+"With this option, only what you are carrying on your person will return with you.  You will always have to make difficult choices about what to bring back."
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_difficultycheck_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Adjust Return Obelisk Behavior"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warphome_adjuster_1"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warp home behavior set to whole room.  You can use the Difficulty Adjuster if"
+" you wish to change your setting at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warphome_adjuster_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warp home behavior set to whole room at a cost.  You can use the Difficulty "
+"Adjuster if you wish to change your setting at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warphome_adjuster_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warp home behavior set to self only.  You can use the Difficulty Adjuster if "
+"you wish to change your setting at any time."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Get the Warp Home spell"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Get the Warped Return spell"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Get the Warped Skyward Beacon recipe"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Get nothing"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the possibility of returning home without the extraction point.\n"
+"With this option, you will receive a spell that will return you home at any time for no cost.  It takes one minute to cast.  Using this will remove most of the challenge of the mod."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the possibility of returning home without the extraction point.\n"
+"With this option, you will receive a spell that will return you home at any time by paying 1 warp shard.  It takes one minute to cast.  You may not be near any enemies when the spell is successfully cast or it will have no effect."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the possibility of returning home without the extraction point.\n"
+"With this option, you will receive a recipe to craft a Warped Skyward Beacon.  This costs 5 warp shards and when used, casts the Warped Return spell."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Set the possibility of returning home without the extraction point.\n"
+"With this option, your only choice is to find the extraction point.  Good luck!"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_difficultycheck_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Select Emergency Return Options"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warpspell_adjuster_1"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warp Home spell granted.  You may find it in your spellcasting menu.  You can"
+" use the Difficulty Adjuster if you wish to change your setting at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warpspell_adjuster_2"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warped Return spell granted.  You may find it in your spellcasting menu.  You"
+" can use the Difficulty Adjuster if you wish to change your setting at any "
+"time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warpspell_adjuster_3"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Warped Skyward Beacon recipe granted.  You may find it in the Warp crafting "
+"menu.  You can use the Difficulty Adjuster if you wish to change your setting"
+" at any time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_warpspell_adjuster_4"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"All additional returning options removed.  You can use the Difficulty "
+"Adjuster if you wish to change your setting at any time."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "View Expedition Stats"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "View Upgrades"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "View Construction"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Displays statistics on how your expeditions have gone so far and how your "
+"warp sickness works."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Displays your current progress on permanent upgrades."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Displays your current progress on constructions."
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_claritystone"
+#: data/mods/Sky_Island/EOCs.json
+msgid "What do you wish to learn?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_progresscheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Island Rank: <global_val:islandrank_readable> of 2\n"
+"Expedition Lengths: <global_val:longerraids> of 2\n"
+"Expedition Starts: <global_val:totalstarts> of 4\n"
+"Bonus Pulses: <global_val:bonuspulses> of 4\n"
+"Target reveal distance: <global_val:scoutingdistancetargets> of 10\n"
+"Landing reveal distance: <global_val:scoutingdistancelanding> of 24\n"
+"Warpcloak duration in seconds: <global_val:invistime> of 120\n"
+"Slaughter missions unlocked: <global_val:slaughterunlocked> of 1\n"
+"Exits per expedition: <global_val:totalexits> of 3\n"
+"Missions per expedition: <global_val:bonusmissions> of 3\n"
+"Mission tiers unlocked: <global_val:hardmissions_readable> of 3"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_statcheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Total expeditions: <global_val:raidstotal>\n"
+"Wins: <global_val:raidswon>\n"
+"Losses: <global_val:raidslost>\n"
+"Missions complete: <u_val:missionswon>\n"
+"Slaughter missions complete: <global_val:slaughterswon>\n"
+"\n"
+"Current difficulty settings:\n"
+"Warpsickness at: <global_val:readablepulselimit> pulses.\n"
+"Disintegration at: <global_val:readabledisintegrationlimit> pulses.\n"
+"Default pulse length: <global_val:readablesicknessintervals> minutes."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_buildcheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Entrance: <global_val:skyisland_build_base> of 1\n"
+"Main Room: <global_val:skyisland_build_bigroom> of 4"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_skyisland_versioncheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Your save was last used with an older version of Sky Island.  Attempting to "
+"update…"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_skyisland_versioncheck"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Error.  Update not applied.\n"
+"\n"
+"Reason: Cannot update while on expedition.  Return home, save and close your game, and try loading this save again."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Your save was made with a pre-Milestone 1 version of Sky Island, which means "
+"it lacks upgrades and the Heart of the Island.  Attempting to update…"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Milestone 1 applied.  You have been given a Heartseed.  Activate it while on "
+"your island to create the new Heart of the Island.  Interact with the Heart "
+"to access new upgrade options."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"You have been retroactively awarded <global_val:owed_material_tokens> "
+"material tokens for your past successful expeditions."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"The stat stone, healing salve, difficulty adjuster, and similar items are removed.  These options are instead accessed by speaking to the Heart of the Island.\n"
+"\n"
+"Warped bags and quickheals are obsolete.  If you already have any, they can still be used, or salvaged for a refund of warp shards.\n"
+"\n"
+"Any further changes are documented in the patch notes."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Your save is post-Milestone 1.  Skipping update 1…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_skyisland_versionupdate"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Your save should be up to date now."
+msgstr ""
+
+#. ~ Name of spell "warp_home"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Warp Home"
+msgstr ""
+
+#. ~ Description of spell "warp_home ( Warp Home )"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Take a full minute of concentration and return to the safety of your home "
+"base."
+msgstr ""
+
+#. ~ Name of spell "warped_return"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Warped Return"
+msgstr ""
+
+#. ~ Description of spell "warped_return ( Warped Return )"
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"Take a full minute of concentration, pay one warp shard, and return to the "
+"safety of your home base."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_warped_return_shard_check_2" in
+#. nested EOCs in effect in EoC "EOC_warped_return_shard_check"
+#. ~ Player message in false effect in EoC "EOC_WARPED_ENEMY_CHECK_RETURN"
+#: data/mods/Sky_Island/EOCs.json
+msgid "You cannot warp home with enemies nearby!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_warped_return_shard_check"
+#: data/mods/Sky_Island/EOCs.json
+msgid "You have no warp shards!"
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Sky_Island/EOCs.json
+msgid ""
+"This will warp you home directly, bypassing the mission structure and need to"
+" find an exit point.  Do you want to warp home directly?"
+msgstr ""
+
+#. ~ Name of spell "warp_home_real"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Warp Home Real"
+msgstr ""
+
+#. ~ Description of spell "warp_home_real ( Warp Home Real )"
+#: data/mods/Sky_Island/EOCs.json
+msgid "The actual warp home spell.  It's a bug if you have it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_WARPED_WATERWALKING"
+#: data/mods/Sky_Island/EOCs.json
+msgid "You feel somehow lighter."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Select nearby water source"
+msgstr ""
+
+#. ~ EOC option description in nested effect in then statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Place a pond in the northwest."
+msgstr ""
+
+#. ~ EOC option description in nested effect in then statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Place a pond in the northeast."
+msgstr ""
+
+#. ~ EOC option description in nested effect in then statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Place a pond in the southwest."
+msgstr ""
+
+#. ~ EOC option description in nested effect in then statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Place a pond in the southeast."
+msgstr ""
+
+#. ~ EOC selection title in nested effect in then statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "Choose the location for a pond"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_WARPED_POND_CREATION"
+#: data/mods/Sky_Island/EOCs.json
+msgid "You must be near a water source to created a warped pond."
+msgstr ""
+
+#. ~ Verb in activity "ACT_WARP_HOME"
+#: data/mods/Sky_Island/activity_types.json
+msgid "warping"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Cover soil with grass"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Warp floor into a wood floor"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Warp floor into a worked stone floor"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Warp floor into fine sand"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Store Autodoc onto copyplate"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Place Autodoc from copyplate"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Convert sofa into Autodoc couch"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Build sofa"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Apple Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Cherry Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Maple Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Pear Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Plum Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Peach Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Oak Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Pine Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Birch Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Grow a Warped Mulberry Tree"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Warp water into a pond"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Sky_Island/constructions.json
+msgid "Deepen a warped pond"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Ask what you will."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Can you summarize this for me, briefly?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Explain expeditions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Explain missions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Explain upgrades."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Explain warp shards and rewards."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Explain services."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Let's return to discussing upgrades."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"This floating island is your base of operations, isolated and safe.  When you are ready, use the Warp Obelisk to teleport down to the surface and begin an expedition.  Scavenge, kill, explore, and reach the exit to return here.\n"
+"\n"
+"Should you die, you will be saved from death and returned to the island, though you will lose EVERYTHING that you were carrying.\n"
+"\n"
+"Go on expeditions, clear missions, stockpile supplies, upgrade this island, and prepare yourself for your next outing with the equipment you have retrieved.  Repeat until you are an unstoppable force!\n"
+"Good luck."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"Use the Warp Obelisk to reach the surface and begin an expedition to a random place on the surface.  Find the exit marked on your map and get there in time with all the loot you can carry and to bring it back to the island!\n"
+"Dying on expedition will return you home safely, but you will lose EVERYTHING you had with you.  Keep spare gear at home so you can quickly resupply!\n"
+"\n"
+"The time limit is enforced by warp pulses, which hit you at regular intervals.  After 8 pulses, you suffer warpsickness, which rapidly reduces your stats with each pulse.  After 12 pulses, your body begins to disintegrate, taking damage until you die.  Get home safely to reset the pulses!\n"
+"\n"
+"Certain upgrades can unlock new varieties of expeditions, or improve your survivability."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"After you have unlocked them, missions are generated randomly once an expedition begins.  These mostly involve finding and killing targeted enemies, and any remaining missions fail when you return home.  There is no penalty for failing missions, so if they are too far out of the way or too difficult, you can try for better luck in the next expedition.  Completed missions reward warp shards.  Harder missions give more shards!\n"
+"\n"
+"You can also unlock slaughter missions, which require a total amount of kills in a single expedition.  These can be completed anywhere, but reward a smaller amount of shards."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"You can unlock and upgrade many features here.  For the right price, you can improve things like how much map is revealed around you, how many missions are available per trip, what sort of expeditions you can go on, and even instantly construct things on this island.\n"
+"\n"
+"To upgrade, simply accept a mission here, then turn in the required materials by just crafting the associated recipe.  Find them under the warp upgrades category of your crafting menu.\n"
+"\n"
+"Some upgrades and recipes will not be available to unlock until you have reached a higher rank.  To increase your rank, survive enough expeditions and you will be notified that a rank up mission has become available."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"Warp shards are rewarded for completing missions.  They can be spent on special warp-related recipes in your crafting menu, and are also required for various upgrades.  If you need, warp shards can be spent here to heal yourself instantly.\n"
+"\n"
+"You will also acquire material tokens, rewarded any time you complete an expedition, even if you did no missions.  Longer expeditions yield more tokens.  These tokens can be crafted into common raw resources, like wood, sand, scrap metal, and so on, as long as you have an infinity source nearby.  Infinity sources come in three varieties, each providing different resources, and are acquired by crafting.  Find them under the warp tools category of your crafting menu."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"This statue offers a variety of services.  You can be instantly healed, dispel an ongoing portal storm, check your current statistics and progress, and tweak your expedition difficulty settings.\n"
+"\n"
+"Healing is free until you have survived 10 expeditions.  After this point, healing costs 4 warp shards per treatment.\n"
+"\n"
+"Expedition difficulty is set to default when you start a new game, but here you can change many finer details to suit your own playstyle."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Here you may spend your treasures on upgrades."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock: RANK UP 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock: RANK UP 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Empower the warp obelisk."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Make the island more hospitable."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Upgrade expeditions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Construction options."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "I need your services."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "I have some questions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Another time.  Goodbye."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "How may I help?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Heal me.  (Free)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Heal me.  (Costs 4 Warp Shards)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "End an active portal storm."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "The air crackles with static electricity, then stabilizes."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "View my expedition stats."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "View my upgrade stats."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "View my construction stats."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Change my difficulty settings."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "That's all.  Goodbye."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"By empowering the warp obelisk, you can expand the quality and variety of "
+"available expeditions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Large Expeditions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Extended Expeditions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock Start Location: Basements"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock Start Location: Rooftops"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock Start Location: Labs"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mutation name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/secure_container.json
+msgid "Security Alpha"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mutation name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/secure_container.json
+msgid "Security Beta"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mutation name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/secure_container.json
+msgid "Security Gamma"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mutation name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/secure_container.json
+msgid "Security Epsilon"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mutation name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/secure_container.json
+msgid "Security Kappa"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"There are many ways that the island could be made more hospitable for you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock: Personal Sunblock"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock: Personal Windblocker"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Unlock: Personal Temperature Adjustement"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid ""
+"There are many abilities to learn that will help you on your expeditions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 3"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 4"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 5"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 6"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Stability 7"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 3"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 4"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 5"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 6"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 7"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting 8"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Upgrade: Scouting Clairvoyance"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting Clairvoyance 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 3"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 4"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 5"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 6"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 7"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing 8"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Upgrade: Landing Water-Walking"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Upgrade: Landing Flight"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Upgrade: Landing Phasing"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Slaughter Missions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Two Exits per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Three Exits per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Four Exits per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Five Exits per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Expedition Missions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Two Missions per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Three Missions per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Four Missions per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Five Missions per Expedition"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Harder Missions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock: Hardest Missions"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "Nevermind…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Sky_Island/dialog_statue.json
+msgid "The Island is your home now.  It will be prudent to make it livable."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: Bunker Entrance"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: Main Room 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: Main Room 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: Main Room 3"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: Main Room 4"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: West Room 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: West Room 2"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: West Room 3"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Mission name
+#: data/mods/Sky_Island/dialog_statue.json
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Construct: West Room Gallery"
+msgstr ""

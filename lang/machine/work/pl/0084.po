@@ -1,0 +1,1532 @@
+# Batch 84 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of recipe crafting "fbmh_0_core_shack_se"
+#. ~ Description of recipe crafting "fbmh_0_core_room_se"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_1/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a core and dining hall.  We should build the "
+"southeast quarter of one."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_0_core_shack_sw"
+#. ~ Description of recipe crafting "fbmh_0_core_room_sw"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_1/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a core and dining hall.  We should build the "
+"southwest quarter of one."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_0_core_center_south"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_1/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a core and dining hall.  We should build "
+"between the southeast and southwest rooms."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_ENE"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the southern room to the northeast will allow us to house "
+"two more people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_ESE"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the east northern room to the southeast will allow us to "
+"house two more people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_SE"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the south eastern room will allow us to house two more "
+"people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_SW"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the south western room will allow us to house two more "
+"people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_WSW"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the northern room to the southwest will allow us to house "
+"two more people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_WNW"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the southern room to the northwest will allow us to house "
+"two more people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_bed_NW"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_common.json
+msgid ""
+"A pair of beds in the north western room will allow us to house two more "
+"people."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_2"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room north of the center on the east"
+" side of the camp."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_room_2"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "east north east room"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_3"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room south of the center on the east"
+" side of the camp."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_room_3"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "east south east room"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_4"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room on the southeast side of the "
+"camp."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_wood_room_5"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room on the southwest side of the "
+"camp."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_6"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room south of the center on the west"
+" side of the camp."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_room_6"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "west south west room"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_7"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room north of the center on the west"
+" side of the camp."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_room_7"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "west north west room"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_room_8"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"We should expand our housing by adding a room on the northwest side of the "
+"camp."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_room_8"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "northwest room"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_center_east"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a kitchen and dining hall.  We should build the"
+" easternmost quarter of it."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_center_east"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "central building, east section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_center_mideast"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a core and dining hall.  We should build the "
+"mideastern quarter of it."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_center_mideast"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "central building, mideast section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_center_midwest"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a core and dining hall.  We should build the "
+"midwestern quarter of it."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_center_midwest"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "central building, midwest section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_center_west"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid ""
+"A central building can act as a kitchen and dining hall.  We should build the"
+" westernmost quarter of it."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_center_west"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "central building, west section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_wall_north"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "A wall to the north provides a protected courtyard."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_wall_north"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "courtyard wall north"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmh_2_wall_south"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "A wall to the south provides a protected courtyard."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmh_2_wall_south"
+#: data/json/recipes/basecamps/base/recipe_modular_hub/version_2/recipe_modular_field_construction.json
+msgid "courtyard wall south"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_beds_SE"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_common.json
+msgid "Let's furnish the southeast bedroom with beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_beds_E"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_common.json
+msgid "Let's furnish the east bedroom with beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_beds_SW"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_common.json
+msgid "Let's furnish the southwest bedroom with beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_beds_W"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_beds_W1"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_beds_W2"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_beds_W3"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_common.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_common.json
+msgid "Let's furnish the west bedroom with beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_beds_NW"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_common.json
+msgid "Let's furnish the northwest bedroom with beds."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_shelter_bedroom1"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_construction.json
+msgid "build SE bedroom walls"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_shelter_bedroom2"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom8"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom9"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom10"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build E bedroom walls"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_shelter_bedroom3"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_1_bedroom5"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom5"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build SW bedroom walls"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_shelter_bedroom4"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_1_bedroom2"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_1_bedroom3"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom2"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom3"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom4"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build W bedroom walls"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_shelter_bedroom5"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_1_bedroom1"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom1"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter/recipe_modular_shelter_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build NW bedroom walls"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_bed_NW"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_common.json
+msgid "Let's furnish the southeast bedroom with a set of beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_bed_SW"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_bed_SW"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_common.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_common.json
+msgid "Let's furnish the southwest bedroom with a set of beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_beds_S1"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_common.json
+msgid "Let's furnish the southern bedroom with beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_1_beds_S2"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_common.json
+msgid "Let's furnish the southwestern bedroom with beds."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_1_bedroom6"
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom6"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_1/recipe_modular_shelter_1_construction.json
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build S bedroom walls"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_bed_NW"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_common.json
+msgid "Let's furnish the northwest bedroom with a set of beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_W1"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_W2"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_W3"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_common.json
+msgid "Let's furnish the west bedroom with a set of beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_S1"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_S2"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_common.json
+msgid "Let's furnish the southern bedroom with a set of beds."
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_E1"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_E2"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_E3"
+#. ~ Description of recipe crafting "faction_base_modular_shelter_2_beds_E4"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_common.json
+msgid "Let's furnish the eastern bedroom with a set of beds."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shelter_2_bedroom7"
+#: data/json/recipes/basecamps/base/recipe_modular_shelter_2/recipe_modular_shelter_2_construction.json
+msgid "build central E bedroom walls"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_canteen_pantry_furniture"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_common.json
+msgid "Let's furnish the pantry and build 2 root cellars."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_room_center_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's start building the central kitchen."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_room2_center_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's finish the central kitchen."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_room2_center_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "finish the central kitchen room"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_smoking_area_construction"
+#. ~ Description of recipe crafting "fbmk_2_smoking_area"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid ""
+"Let's get this smoking area covered to protect the workers from the weather."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_smoking_area_construction"
+#. ~ Blueprint name of recipe crafting "fbmk_2_smoking_area"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build a roofed area for smoking racks"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_canteen_pantry_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's build a pantry west of the kitchen."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_pantry_construction"
+#. ~ Blueprint name of recipe crafting "fbmk_2_pantry"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build a pantry"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_dining_west_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's build the west third of the dining hall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_dining_west_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "build west dining hall third"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_dining_east_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's build the east third of the dining hall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_dining_east_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "build east dining room third"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_canteen_dining_center_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "Let's build the center third of the dining hall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_canteen_dining_center_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_1/recipe_modular_canteen_construction.json
+msgid "build center third of the dining hall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_cellar"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's build 2 root cellars in the kitchen."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_pantry_furniture"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's furnish the pantry."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_planters_2"
+#. ~ Description of recipe crafting "fbmk_2_planters_3"
+#. ~ Description of recipe crafting "fbmk_2_planters_4"
+#. ~ Description of recipe crafting "fbmk_2_planters_5"
+#. ~ Description of recipe crafting "fbmk_2_planters_6"
+#. ~ Description of recipe crafting "fbmk_2_planters_7"
+#. ~ Description of recipe crafting "fbmk_2_planters_8"
+#. ~ Description of recipe crafting "fbmk_2_planters_9"
+#. ~ Description of recipe crafting "fbmk_2_planters_10"
+#. ~ Description of recipe crafting "fbmk_2_planters_11"
+#. ~ Description of recipe crafting "fbmk_2_planters_12"
+#. ~ Description of recipe crafting "fbmk_2_planters_13"
+#. ~ Description of recipe crafting "fbmk_2_planters_14"
+#. ~ Description of recipe crafting "fbmk_2_planters_15"
+#. ~ Description of recipe crafting "fbmk_2_planters_16"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid ""
+"Let's expand the chef's garden in the 'free' area.  (Stop expanding if you "
+"want to use the area for something else)"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_vat"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's install some vats in the brewery."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_display"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's install some racks for storage in the brewery."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_still"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's install a still in the brewery."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_windmill"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's build a windmill to allow us to grind flour efficiently."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_bath"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_common.json
+msgid "Let's build a bench and a bird bath outside the kitchen for relaxation."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_room_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's start building the kitchen walls."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmk_2_room_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build the kitchen"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_room_2_center"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's finish the kitchen walls."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmk_2_room_2_center"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "finish the kitchen"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_pantry"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's build a pantry beside the kitchen."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_dining_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's build the first part of the dining hall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmk_2_dining_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build first dining hall section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_dining_2"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's build the second half of the dining hall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmk_2_dining_2"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build second half of the dining hall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmk_2_brewery"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "Let's build a brewery."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmk_2_brewery"
+#: data/json/recipes/basecamps/expansion/recipe_modular_canteen/version_2/recipe_modular_canteen_construction.json
+msgid "build brewery"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Corn Kernels"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Barley (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Buckwheat (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Canola (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Lentils (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Oats (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Wheat (with flail)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Barley (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Buckwheat (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Canola (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Lentils (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Oats (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Wheat (winnowing)"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Barley"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Buckwheat"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Canola"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Lentils"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Oats"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Threshed Wheat"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Barley"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Buckwheat"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Canola"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Lentils"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Oats"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/modular_farm_recipe_groups.json
+msgid " Wheat"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmf_2_fallback_recipe_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/recipe_modular_farm_common.json
+msgid "Add crafting recipes to the farm expansion."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmf_2_fallback_recipe_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_farm/version_2/recipe_modular_farm_common.json
+msgid "fallback recipe addition"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_furniture"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_common.json
+msgid ""
+"Now that we have some cover, let's build some counters and racks for tools "
+"and parts, allowing us to use the Chop Shop."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "Let's start building the first garage wall section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmg_2_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "build the first garage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid ""
+"Let's build a second garage wall section to block the wind from the other "
+"direction, making a garage wide enough to handle two normal vehicles or one "
+"super sized one."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmg_2_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "build the second garage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_wall_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid ""
+"Let's build a wall to block the wind from blowing straight through the "
+"garage."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmg_2_wall_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "build an inner wall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_4_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid ""
+"Now that we're able to work on short vehicles, let's extend the garage to "
+"allow for long ones."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmg_2_4_construction"
+#. ~ Blueprint name of recipe crafting "fbmg_2_7_construction"
+#. ~ Blueprint name of recipe crafting "fbmg_2_10_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "extend the first wall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_5_construction"
+#. ~ Description of recipe crafting "fbmg_2_8_construction"
+#. ~ Description of recipe crafting "fbmg_2_11_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "Let's extend the second wall to match the first one."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmg_2_5_construction"
+#. ~ Blueprint name of recipe crafting "fbmg_2_8_construction"
+#. ~ Blueprint name of recipe crafting "fbmg_2_11_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid "extend the second wall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_7_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid ""
+"Now that we're able to work on long vehicles, let's extend the garage to "
+"allow for really long ones, or multiple vehicles."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmg_2_10_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_garage/version_2/recipe_modular_garage_construction.json
+msgid ""
+"Let's extent the garage to hangar size, allowing us to work on monster "
+"vehicles or a large number of normal ones."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_livestock_coop_construction_northeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_1/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a coop to contain our chickens and other birds, so build a shack"
+" on the northeast side of the livestock field."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_livestock_shack_construction_southeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_1/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a storage room for feed, animal gear and tools, so build a shack"
+" on the southeast side of the livestock field."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_livestock_stable0_construction_southwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_1/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a stable for larger livestock, so build a stable on the "
+"southwest side of the livestock field."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbml_2_coop_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a coop to contain our chicken and other birds, so build a shack "
+"on the remote side of the livestock field."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbml_2_shack_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a storage room for feed, animal gear and tools, so build a shack"
+" on the near side of the livestock field."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_shack_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "storage shack"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbml_2_stall_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a stable for larger livestock, so build a stall section on the "
+"near side of the livestock field."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_stall_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "stable section 1"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbml_2_stall_2_construction"
+#. ~ Description of recipe crafting "fbml_2_stall_3_construction"
+#. ~ Description of recipe crafting "fbml_2_stall_4_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "We could use a larger stable, so extend the stable with another stall."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_stall_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "stable section 2"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_stall_3_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "stable section 3"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_stall_4_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "stable section 4"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbml_2_stall_5_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid ""
+"We could use a larger stable, so finish the stable with two smaller stalls."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbml_2_stall_5_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_livestock/version_2/recipe_modular_livestock_construction.json
+msgid "finished stable"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_saltpan_northeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid ""
+"We could divert saltwater from the swamp nearby to create a steady supply of "
+"salt for our needs in building."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "faction_base_modular_saltpan_northeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid "NE wall saltpan"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_shack_construction_southeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid ""
+"We could use a storage room for chemicals and tools, so build a shack on the "
+"southeast side of the saltworks field."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_shack_construction_southeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid "SE storage room"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_brewery0_construction_southwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid ""
+"We could take advantage of the designation of this area to build a brewery."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_brewery0_construction_southwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_saltworks/version_1/recipe_modular_saltworks_construction.json
+msgid "SW brewery"
+msgstr ""
+
+#. ~ Description of recipe crafting "faction_base_modular_furniture1_west"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_common.json
+msgid ""
+"We could use some storage containers.  Let's build some bookcases to in the "
+"western alcove."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_east"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Begin by building the east "
+"wing."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_west"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the west"
+" wing."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_northwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"northwest corner."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_southwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"southwest corner."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_northeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"northeast corner."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_southeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"southeast corner."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_south"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"southern entrance."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_north"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by building the "
+"northern entrance."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_storehouse_construction_center"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_1/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large central storage building.  Continue by filling in the "
+"floor."
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid ""
+"We could use a large storage building.  Let's start with a first section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "first storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a second section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "second storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_3_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a third section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_3_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "third storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_4_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a fourth section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_4_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "fourth storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_5_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a fifth section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_5_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "fifth storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_6_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid ""
+"Let's finish our storage building with a last section.  We could then go on "
+"to double the volume with another six sections, but if that seems excessive "
+"we could use the space to unload loot instead."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_6_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "last storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_7_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid ""
+"Let's start the construction of an adjoining warehouse with a seventh section"
+" to eventually double our storage space."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_7_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "seventh storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_8_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with an eighth section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_8_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "eighth storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_9_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a ninth section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_9_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "ninth storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_10_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with a tenth section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_10_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "tenth storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_11_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "Let's extend our storage building with an eleventh section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_11_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "eleventh storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_12_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid ""
+"Let's extend our storage building with the absolutely very last section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_12_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_construction.json
+msgid "absolutely very last storage section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbms_2_storage_1"
+#. ~ Description of recipe crafting "fbms_2_storage_2"
+#. ~ Description of recipe crafting "fbms_2_storage_3"
+#. ~ Description of recipe crafting "fbms_2_storage_4"
+#. ~ Description of recipe crafting "fbms_2_storage_5"
+#. ~ Description of recipe crafting "fbms_2_storage_6"
+#. ~ Description of recipe crafting "fbms_2_storage_7"
+#. ~ Description of recipe crafting "fbms_2_storage_8"
+#. ~ Description of recipe crafting "fbms_2_storage_9"
+#. ~ Description of recipe crafting "fbms_2_storage_10"
+#. ~ Description of recipe crafting "fbms_2_storage_11"
+#. ~ Description of recipe crafting "fbms_2_storage_12"
+#. ~ Description of recipe crafting "fbms_2_storage_13"
+#. ~ Description of recipe crafting "fbms_2_storage_14"
+#. ~ Description of recipe crafting "fbms_2_storage_15"
+#. ~ Description of recipe crafting "fbms_2_storage_16"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "Place 12 pieces of storage furniture providing 1 ½ aisle of storage."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_1"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section A"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_2"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section B"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_3"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section C"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_4"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section D"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_5"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section E"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_6"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section F"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_7"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section G"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_8"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section H"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_9"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section I"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_10"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section J"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_11"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section K"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_12"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section L"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_13"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section M"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_14"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section N"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_15"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section O"
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbms_2_storage_16"
+#: data/json/recipes/basecamps/expansion/recipe_modular_storehouse/version_2/recipe_modular_storehouse_storage.json
+msgid "place 1 ½ aisles of storage in section P"
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_workshop_room0_construction_northeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid ""
+"We can use a workshop.  Let's start by building a spot to protect the workers"
+" from the rain."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_workshop_room4_construction_east"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid "Let's expand our production by adding another charcoal kiln with walls."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_workshop_room5_construction_center"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid ""
+"Let's expand work area with a wall, and add a bookshelf for our reference "
+"books."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_workshop_room6_construction_north"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid "Let's expand our production by adding a walled pottery kiln area."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "faction_base_modular_workshop_room7to9_construction_northwest"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid "Let's enclose this pottery with walls and get some more storage set up."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting
+#. "faction_base_modular_workshop_room11to12_construction_southeast"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_1/recipe_modular_workshop_construction.json
+msgid "open air, covered work space"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/modular_workshop_recipe_groups.json
+msgid " Craft: Stone Chisel"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/modular_workshop_recipe_groups.json
+msgid " Craft: Makeshift Hammer"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/modular_workshop_recipe_groups.json
+msgid " Craft: Stone Hammer"
+msgstr ""
+
+#. ~ Description for recipe group
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/modular_workshop_recipe_groups.json
+msgid " Craft: Casting Mold (for metal)"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_common_pottery"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_common.json
+msgid "Let's build a kiln in the pottery to allow us to make a clay crucible."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_common_pottery"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_common.json
+msgid "pottery kiln"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_smithy_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid ""
+"We can use a smithy.  Let's start by building a spot to protect the workers "
+"from the rain."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_smithy_1_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "smithy wall"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_smithy_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid ""
+"Let's build a roof with pillars to protect future charcoal kilns from the "
+"rain."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_smithy_2_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "charcoal kiln protection"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_smithy_3_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "Let's build the final section of the smithy."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_smithy_3_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "final smithy section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_pottery_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "Let's build a pottery section."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_pottery_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "pottery section"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_glassblower_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "Let's start building a glassblower's cottage."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_glassblower_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "glassblower's cottage"
+msgstr ""
+
+#. ~ Description of recipe crafting "fbmw_2_tanner_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "Let's start building a tannery cottage."
+msgstr ""
+
+#. ~ Blueprint name of recipe crafting "fbmw_2_tanner_construction"
+#: data/json/recipes/basecamps/expansion/recipe_modular_workshop/version_2/recipe_modular_workshop_construction.json
+msgid "tannery cottage"
+msgstr ""
+
+#. ~ Custom name for recipe crafting "bread_flour"
+#: data/json/recipes/food/milling.json
+#, c-format
+msgid "%s with quern"
+msgstr ""
+
+#. ~ Custom name for recipe crafting "bread_flour"
+#: data/json/recipes/food/milling.json
+#, c-format
+msgid "%s with food processor"
+msgstr ""
+
+#. ~ Recipe name learnt from book
+#: data/json/recipes/food/spice.json
+msgid "Improvised Fruit Sugar"
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/applied_science.json
+msgid "biochemistry"
+msgstr ""
+
+#. ~ Description of practice "biochemistry"
+#: data/json/recipes/practice/applied_science.json
+msgid ""
+"Researching the chemical properties of dangerous blood from mutated "
+"creatures.  It also gives a slight insight into the vulnerabilities these "
+"substances cause to the monsters."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/athletics.json
+msgid "athlete's form (expert)"
+msgstr ""
+
+#. ~ Description of practice "athlete's form (expert)"
+#: data/json/recipes/practice/athletics.json
+msgid "Improve your athletic form using workout equipment."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/athletics.json
+msgid "athlete's form (master)"
+msgstr ""
+
+#. ~ Description of practice "athlete's form (master)"
+#: data/json/recipes/practice/athletics.json
+msgid "Refine your athletic form with a high-intensity workout."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "redsmithing (beginner)"
+msgstr ""
+
+#. ~ Description of practice "redsmithing (beginner)"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice the basics of redsmithing by working copper into some simple forms "
+"and designs."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "redsmithing (advanced)"
+msgstr ""
+
+#. ~ Description of practice "redsmithing (advanced)"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice the more advanced techniques of redsmithing by working bronze into "
+"different and complex forms and designs."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "blacksmithing"
+msgstr ""
+
+#. ~ Description of practice "blacksmithing"
+#: data/json/recipes/practice/fabrication.json
+msgid "Practice working metal into some simple but useful forms and designs."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "armorsmithing"
+msgstr ""
+
+#. ~ Description of practice "armorsmithing"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice working metal into the form of various armor pieces, and test their "
+"articulation with you using some cotton for padding along with the armor "
+"pieces."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "bladesmithing"
+msgstr ""
+
+#. ~ Description of practice "bladesmithing"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice working metal into the form of useful blades of all sizes and "
+"designs, grind them until you learn how much is too much."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "manual tooling"
+msgstr ""
+
+#. ~ Description of practice "manual tooling"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice working metal into the complex forms and designs of several tools "
+"like hammers and screwdrivers."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "case hardening"
+msgstr ""
+
+#. ~ Description of practice "case hardening"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice heating steel packed in charcoal at different high temperatures and "
+"times, and then comparing the properties of the resulting hard case."
+msgstr ""
+
+#. ~ Practice name
+#: data/json/recipes/practice/fabrication.json
+msgid "quenching & tempering"
+msgstr ""
+
+#. ~ Description of practice "quenching & tempering"
+#: data/json/recipes/practice/fabrication.json
+msgid ""
+"Practice heating chunks of steel and quickly cooling them down with water, "
+"and then, to reduce brittleness and restore ductility, heating them again to "
+"maximize its properties."
+msgstr ""
+
+#. ~ Description of practice "melee (beginner)"
+#: data/json/recipes/practice/melee.json
+msgid ""
+"Swing around a weapon-shaped object to try and get a feel for what fighting "
+"might be like.  It's difficult without any instruction to guide you, but "
+"hopefully this practice will help you to swing at your enemies without "
+"falling on your face or panicking too much."
+msgstr ""
+
+#. ~ Description of practice "melee (intermediate)"
+#: data/json/recipes/practice/melee.json
+msgid ""
+"Practice the basics of combat with the guidance of a manual or prior "
+"knowledge.  Even without a sparring partner you can practice your footwork, "
+"form, and flow drills to help avoid overswinging and stumbling."
+msgstr ""
+
+#. ~ Description of practice "cutting (beginner)"
+#: data/json/recipes/practice/melee.json
+msgid ""
+"Practice some of the basics of combat with cutting weapons, such as how to "
+"keep your edge lined up and how to not chop your own leg off."
+msgstr ""

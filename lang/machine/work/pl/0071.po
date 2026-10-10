@@ -1,0 +1,1666 @@
+# Batch 71 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of terrain "boarded up door with peephole"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A boarded up door made of ordinary wood, except this one has a peephole.  "
+"Although it's been covered up in planks, you could still look through the "
+"peephole if you were close enough."
+msgstr ""
+
+#. ~ Description of terrain "boarded up reinforced door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An additionally reinforced door of layered planks that has been boarded up "
+"with more wood to prevent it from opening.  It's still susceptible to fire."
+msgstr ""
+
+#. ~ Description of terrain "boarded up damaged door with peephole"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A wrecked door made of ordinary wood, except this one has a peephole and some"
+" partly-splintered boards nailed across it.  The peephole is damaged and "
+"can't be used to see through."
+msgstr ""
+
+#. ~ Description of terrain "metal wall"
+#: data/json/furniture_and_terrain/terrain-doors.json
+#: data/json/furniture_and_terrain/terrain-walls.json
+msgid ""
+"An industrially fabricated thick sheet carefully positioned and joined "
+"seamlessly with perimeter sealant, this wall is capable of resisting extreme "
+"elements as well as hostile forces.  Blast load rated and extremely fire-"
+"retardant, breaching it will require specialized tools or an industrial "
+"vehicle."
+msgstr ""
+
+#. ~ Description of terrain "concrete wall"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A faux concrete wall positioned and joined seamlessly with the wall, this "
+"wall is capable of resisting extreme elements as well as hostile forces.  "
+"Blast load rated and extremely fire-retardant, breaching it will require "
+"specialized tools or an industrial vehicle."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-doors.json
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid "electronic locked metal door"
+msgstr ""
+
+#. ~ Description of terrain "electronic locked metal door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of assorted steel, carved and pounded into "
+"shape.  It is locked by an electronic keypad."
+msgstr ""
+
+#. ~ Description of terrain "closed metal door with peephole"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of assorted steel, carved and pounded into "
+"shape.  If you examined it more closely, you'd be able to peek through the "
+"peephole."
+msgstr ""
+
+#. ~ Description of terrain "open metal door with peephole"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of assorted steel, carved and pounded into "
+"shape.  If you examined it more closely, you'd be able to peek through the "
+"peephole.  No need right now though, since the door is open anyway."
+msgstr ""
+
+#. ~ Description of terrain "open bar door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A detention door made up of crisscrossed stainless steel bars.  It's wide "
+"open.  Freedom!"
+msgstr ""
+
+#. ~ Description of terrain "closed bar door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A detention door made up of crisscrossed stainless steel bars.  The locking "
+"mechanism appears to be engaged.  You could pick it open with enough skill."
+msgstr ""
+
+#. ~ Description of terrain "closed bulkhead door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of cast metal, it is watertight and opened "
+"using the fly wheel."
+msgstr ""
+
+#. ~ Description of terrain "open bulkhead door"
+#: data/json/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of cast metal, it is watertight, or would be"
+" if it was closed."
+msgstr ""
+
+#. ~ Description of terrain "stone wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"The small opening on this stone wall allows you to shoot and use reach "
+"weapons against enemies on the other side, while also providing cover for "
+"you."
+msgstr ""
+
+#. ~ Description of terrain "wooden wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"This wooden wall has a hole that lets you shoot and use reach weapons against"
+" enemies on the other side.  Highly flammable."
+msgstr ""
+
+#. ~ Description of terrain "wooden wall with a wide opening"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"This wooden wall previously had an embrasure, but the hole has been smashed "
+"wide enough that you can climb through it, rendering it kind of pointless.  "
+"Highly flammable."
+msgstr ""
+
+#. ~ Description of terrain "log wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"This timber wall has a hole that lets you shoot through and use reach weapons"
+" against enemies on the other side, while also protecting you.  Quite "
+"flammable."
+msgstr ""
+
+#. ~ Description of terrain "log wall with a wide opening"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"This timber wall previously had an embrasure, but now the hole is so big that"
+" you can climb through it, rendering it kind of pointless.  Quite flammable."
+msgstr ""
+
+#. ~ Description of terrain "palisade wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"An age-old type of fortification consisting of hefty lumber staked into the "
+"ground and cabled together.  This section in particular has an embrasure, so "
+"you can shoot or use reach weapons through it while staying safe."
+msgstr ""
+
+#. ~ Description of terrain "simple concrete wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"A durable and uniform concrete wall.  This one has an embrasure, so you can "
+"shoot or use reach weapons through it while staying safe."
+msgstr ""
+
+#. ~ Description of terrain "reinforced concrete wall with embrasure"
+#: data/json/furniture_and_terrain/terrain-embrasures.json
+msgid ""
+"A section of wall with a nice small hole, letting you shoot your machine gun "
+"from the safety of your reinforced bunker."
+msgstr ""
+
+#. ~ Description of terrain "palisade gate"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A large doorway consisting of long logs cabled together, best used as part of"
+" a longer wall.  Can act as a door if some type of pulley system were rigged "
+"on an adjacent palisade wall."
+msgstr ""
+
+#. ~ Description of terrain "open palisade gate"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A hanging palisade gate, hoisted by a nearby pulley system.  You probably "
+"shouldn't be underneath when it comes down."
+msgstr ""
+
+#. ~ Description of terrain "makeshift portcullis"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"An immense gateway cobbled together from various bits of steel and metal "
+"scraps."
+msgstr ""
+
+#. ~ Description of terrain "open screen door"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid "A simple wooden doorway with screen mesh.  The door is open."
+msgstr ""
+
+#. ~ Description of terrain "chain link fence"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A tall fence made of woven wires.  There aren't any gaps big enough for you "
+"to fit through, so you'll have to cut it, climb it, or find a way around."
+msgstr ""
+
+#. ~ Description of terrain "metal post"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid "A set of metal posts that can hold more serious fences."
+msgstr ""
+
+#. ~ Description of terrain "chickenwire fence"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A tall, rather flimsy fence made of planks and woven wire, suitable for "
+"containing small livestock like chickens."
+msgstr ""
+
+#. ~ Description of terrain "screen mesh wall"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A tall, rather flimsy wall made of planks and screen mesh, suitable for "
+"keeping the bugs out."
+msgstr ""
+
+#. ~ Description of terrain "chickenwire fence post"
+#. ~ Description of terrain "fence post"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A couple of posts that can support a fence.  They look lonely without the "
+"fence."
+msgstr ""
+
+#. ~ Description of terrain "barbed wire fence"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A barrier made of sharp barbed wire.  The more persuasive brother of the wire"
+" fence."
+msgstr ""
+
+#. ~ Description of terrain "split rail fence"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A rather stout fence made of planks and fence posts, suitable for containing "
+"livestock like horses, cows and pigs."
+msgstr ""
+
+#. ~ Description of terrain "wooden privacy fence"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A rather stout fence made of planks and fence posts, it is tall enough to "
+"prevent people from seeing into your yard."
+msgstr ""
+
+#. ~ Description of terrain "closed wooden privacy gate"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A commercial quality gate made of wood with a latch system.  It is tall "
+"enough to prevent people from seeing into your yard."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid "lowered boom barrier"
+msgstr ""
+
+#. ~ Description of terrain "lowered boom barrier"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid "A lowered boom barrier."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid "cattle feeder"
+msgstr ""
+
+#. ~ Description of terrain "cattle feeder"
+#: data/json/furniture_and_terrain/terrain-fences-gates.json
+msgid ""
+"A section of tall steel with a solid base and feed spaces above to allow "
+"livestock to reach the contained food."
+msgstr ""
+
+#. ~ Description of terrain "overgrown wall"
+#: data/json/furniture_and_terrain/terrain-flesh.json
+msgid ""
+"A concrete wall overgrown by a grotesque grid of veins and knotted flesh."
+msgstr ""
+
+#. ~ Description of terrain "concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A bare and cold concrete floor that can support a roof, could still insulate "
+"from the outdoors but roof collapse is possible if supporting walls are "
+"broken down."
+msgstr ""
+
+#. ~ Description of terrain "concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A bare and cold concrete floor with painted stripes of black and yellow, "
+"could still insulate from the outdoors but roof collapse is possible if "
+"supporting walls are broken down."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "brick floor"
+msgstr ""
+
+#. ~ Description of terrain "brick floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A relatively flat area made of tightly placed bricks.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "dirt floor, overhead light"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A floor consisting of finely mixed earth that has been tamped down, with a "
+"still-functioning light attached to the ceiling above."
+msgstr ""
+
+#. ~ Description of terrain "metal floor, with overhead light"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"High-quality and tough checkered metal flooring to reduce the risk of slips "
+"and falls, with a still-functioning light attached to the ceiling above."
+msgstr ""
+
+#. ~ Description of terrain "strong concrete floor, overhead light"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"An extremely resilient floor made from carefully placed rebar and poured "
+"concrete, with a still-functioning light attached to the ceiling above."
+msgstr ""
+
+#. ~ Description of terrain "small rebar roof cage"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A series of structural supports crafted from rebar in order to allow the "
+"pouring of concrete for a more stable floor and roof support."
+msgstr ""
+
+#. ~ Description of terrain "reinforced concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"An extremely resilient floor made from carefully placed rebar and poured "
+"concrete, capable of providing protection from the elements.  It can support "
+"a roof, but that still requires supporting walls, otherwise it may very well "
+"cave in."
+msgstr ""
+
+#. ~ Description of terrain "fractured concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Thin strands of violet light shimmer in the air above this concrete floor, "
+"like cracks upon a pane of glass.  It can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "rebar roof cage"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A network of architecturally sound rebar in order to support a floor and roof"
+" support, looks like it's missing the poured concrete."
+msgstr ""
+
+#. ~ Description of terrain "half-built reinforced concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"An unfinished construction of rebar and poured concrete; the floor hasn't "
+"been smoothed and the roof support isn't quite filled in yet."
+msgstr ""
+
+#. ~ Description of terrain "rock floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A relatively flat area of rock and stone.  Looks stable enough to be mined "
+"with the proper mining gear.  Can support a roof."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "marble floor"
+msgstr ""
+
+#. ~ Description of terrain "marble floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A smooth and flat flooring made of marble tiles.  Beautiful and expensive.  "
+"Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "warped stone floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A rough stone floor.  Its patterns constantly shift as if your mind can't "
+"quite understand what it's really seeing.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "metal floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"High-quality and tough checkered metal flooring to reduce the risk of slips "
+"and falls.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "primitive floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "A timber floor and supports that can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "simple metal floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A crudely welded-together metal floor with steel trusses and supporting "
+"girders.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "waxed floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Hardwood flooring that has been treated with chemicals to improve slip "
+"resistance and sliding, commonly for recreational sports.  It can support a "
+"roof."
+msgstr ""
+
+#. ~ Description of terrain "dirt floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A floor consisting of finely mixed earth that has been tamped down.  It can "
+"support a roof."
+msgstr ""
+
+#. ~ Description of terrain "utility light"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"An industrial floodlight set up to illuminate the surroundings.  Smashing it "
+"doesn't seem like it'd produce any worthwhile salvage."
+msgstr ""
+
+#. ~ Description of terrain "carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet on a wooden floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet on a wooden floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet on a wooden floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet on a wooden floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a red color on a concrete floor.  "
+"Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a yellow color on a concrete floor."
+"  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a green color on a concrete floor."
+"  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a purple color on a concrete floor."
+"  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "bunker red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, totally non-flammable carpet in a red color, with an "
+"insulation layer beneath on a metal floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "bunker yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, totally non-flammable carpet in a yellow color, with an "
+"insulation layer beneath on a metal floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "bunker green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, totally non-flammable carpet in a green color, with an "
+"insulation layer beneath on a metal floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "bunker carpet purple"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, totally non-flammable carpet in a purple color, with an "
+"insulation layer beneath on a metal floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a red color on a reinforced "
+"concrete floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a yellow color on a reinforced "
+"concrete floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a green color on a reinforced "
+"concrete floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "industrial purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a purple color on a reinforced "
+"concrete floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "Carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Base rock carpet!"
+msgstr ""
+
+#. ~ Description of terrain "red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet on a natural rock floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet on a natural rock floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet on a natural rock floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet on a natural rock floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "Carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Base primitive floor carpet!"
+msgstr ""
+
+#. ~ Description of terrain "red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet on a timber floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet on a timber floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet on a timber floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet on a timber floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "Carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Base gray linoleum floor carpet!"
+msgstr ""
+
+#. ~ Description of terrain "red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet on a gray linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet on a gray linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet on a gray linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet on a gray linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "Carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Base white linoleum floor carpet!"
+msgstr ""
+
+#. ~ Description of terrain "red carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft red carpet on a white linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "yellow carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft yellow carpet on a white linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "green carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft green carpet on a white linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "purple carpet"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "Soft purple carpet on a white linoleum floor.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "linoleum tile"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A section of flooring made out of a tough, rubbery material.  Colored a "
+"simple white.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "linoleum tile"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A section of flooring made out of a tough, gray, rubbery material.  Can "
+"support a roof."
+msgstr ""
+
+#. ~ Description of terrain "painted waxed floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"This section of wax flooring has been painted yellow.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "radiation platform"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A dual-purpose platform that exposes items placed on it to a radioactive "
+"source by temporarily hoisting the radioactive material stored within, while "
+"also safely containing all objects to avoid contaminating its surroundings.  "
+"Operated from an external console."
+msgstr ""
+
+#. ~ Description of terrain "junk metal floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A simple roof of rusty scrap metal bolted and wire-tied to a makeshift frame."
+"  Very fashionable in post-apocalyptic shantytowns.  Hope you like the sound "
+"of rain on corrugated metal.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "sidewalk"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"An area of common poured concrete, damaged by frost heaves and large cracks "
+"due to lack of maintenance, covered by a canvas floor.  May support a roof."
+msgstr ""
+
+#. ~ Description of terrain "dirt"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"It's dirt.  Looks like some fine soil for tillage.  Could also be dug out for"
+" construction projects.  Can support a roof."
+msgstr ""
+
+#. ~ Description of terrain "moss"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A patch of moist, spongy moss."
+msgstr ""
+
+#. ~ Description of terrain "clay"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A large area of malleable clay, suitable for kiln firing if it was extracted "
+"properly."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "burnt floor"
+msgstr ""
+
+#. ~ Description of terrain "burnt floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"Whatever this floor used to be made of, it's little more than charred remains"
+" now."
+msgstr ""
+
+#. ~ Bashing failed sound
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "twang!"
+msgstr ""
+
+#. ~ Description of terrain "paper floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A floor made of ambiguous pulpy matter, covered in sticky wasp saliva.  It "
+"has, or at least had, a roof of similar a material."
+msgstr ""
+
+#. ~ Description of terrain "paper floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid "A floor made of ambiguous pulpy matter, covered in sticky wasp saliva."
+msgstr ""
+
+#. ~ Description of terrain "hard paper floor"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+msgid ""
+"A hardened cardboard floor made of chewed-up trees and resin mixed with wasp "
+"saliva.  It has, or at least had, a roof of a similar material."
+msgstr ""
+
+#. ~ Description of terrain "open air"
+#: data/json/furniture_and_terrain/terrain-floors-indoor.json
+#: data/json/furniture_and_terrain/terrain-roofs.json
+msgid "An area of open air."
+msgstr ""
+
+#. ~ Terrain name
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid "forest floor"
+msgstr ""
+
+#. ~ Description of terrain "glassed sand"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A patch of sand with a crust of natural glass atop it from exposure to "
+"intense heat."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "upturned dirt"
+msgstr ""
+
+#. ~ Description of terrain "upturned dirt"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"An area of loose dirt, not easily traversable.  If examined more closely, "
+"it's quite favorable for planting seeds and the like."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "mound of upturned dirt"
+msgstr ""
+
+#. ~ Description of terrain "odd fault"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"An unnaturally humanoid-shaped hole, it seems oddly familiar.  You feel a "
+"strange urge to examine it closer, as if it belongs to you somehow."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TERRAIN_FAULT" in terrain "odd
+#. fault"'s examine action
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"This wall is perfectly vertical.  Odd, twisted holes are set in it, leading "
+"as far back into the solid rock as you can see.  The holes are humanoid in "
+"shape, but with long, twisted, distended limbs."
+msgstr ""
+
+#. ~ Description of terrain "grave"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A fresh grave, covered with stones, either to keep something from digging it "
+"up or to keep one inside from digging out of it.  Or both.  Two planks mark "
+"this place of someone's eternal rest."
+msgstr ""
+
+#. ~ Description of terrain "concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "A bare and cold concrete floor."
+msgstr ""
+
+#. ~ Description of terrain "reinforced concrete floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"An extremely resilient floor made from carefully placed rebar and poured "
+"concrete, capable of providing protection from the elements.  As for the "
+"matching roof, it still requires supporting walls, otherwise it may very well"
+" cave in."
+msgstr ""
+
+#. ~ Description of terrain "wooden floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A wooden floor created from boards, packed tightly together and nailed down."
+"  Common on patios."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "wooden floor gangway"
+msgstr ""
+
+#. ~ Description of terrain "wooden floor gangway"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A wooden gangway bridging a short gap.  Sturdy enough to act as a floor, but "
+"not sufficient to support additional flooring."
+msgstr ""
+
+#. ~ Description of terrain "metal floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"High-quality and tough checkered metal flooring to reduce the risk of slips "
+"and falls."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "metal floor gangway"
+msgstr ""
+
+#. ~ Description of terrain "metal floor gangway"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A metal gangway bridging a short gap.  Sturdy enough to act as a floor, but "
+"not sufficient to support additional flooring."
+msgstr ""
+
+#. ~ Description of terrain "dirt floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "A floor consisting of finely mixed earth that has been tamped down."
+msgstr ""
+
+#. ~ Description of terrain "orifice"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A large round orifice, with trails of fresh and dried-up strange green liquid"
+" with a strongly acidic odor covering its inner sides."
+msgstr ""
+
+#. ~ Description of terrain "elevator"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "An elevator section of the flight deck."
+msgstr ""
+
+#. ~ Description of terrain "deck coating"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A thick metal hull coating, covered with a military-grade epoxy mix.  Used "
+"for runways, and can't be melted by jet engine nozzles."
+msgstr ""
+
+#. ~ Description of terrain "yellow deck coating"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A thick metal hull covering, covered with a military-grade epoxy mix and "
+"painted yellow."
+msgstr ""
+
+#. ~ Description of terrain "red deck coating"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A thick metal hull covering, covered with a military-grade epoxy mix, and "
+"painted red."
+msgstr ""
+
+#. ~ Description of terrain "white deck coating"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A thick metal hull covering, covered with a military-grade epoxy mix and "
+"painted white."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "stone masonry floor"
+msgstr ""
+
+#. ~ Description of terrain "stone masonry floor"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid "A floor of carefully cut and laid stones, joined with mortar."
+msgstr ""
+
+#. ~ Description of terrain "metal grate"
+#: data/json/furniture_and_terrain/terrain-floors-outdoors.json
+msgid ""
+"A walkway that can be used as a protective covering over drains, or even as a"
+" filter."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "butternut tree"
+msgstr ""
+
+#. ~ Description of terrain "butternut tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A massive tree belonging to the 'Juglans' genus, but with lighter bark and "
+"more elongated fruits than the more common black walnut.  If you look "
+"closely, you can see some unharvested butternuts."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A massive tree belonging to the 'Juglans' genus, but with lighter bark and "
+"more elongated fruits than the more common black walnut."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A deciduous tree of the genus 'Quercus', with bark cracked into rectangular "
+"black plates split by narrow orange fissures.  All the usable bark has been "
+"stripped off."
+msgstr ""
+
+#. ~ Description of terrain "alder tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A deciduous flowering tree with serrated, scalloped, round-obovate leaves, "
+"commonly forming dense groves alongside water."
+msgstr ""
+
+#. ~ Description of terrain "basswood tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"The American linden.  It has pretty and sweet-smelling flowers in the summer,"
+" and you might be able to eat its young leaves in the spring."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"The American linden.  It has pretty and sweet-smelling flowers in the summer,"
+" and its edible young leaves have already been harvested."
+msgstr ""
+
+#. ~ Description of terrain "cottonwood tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A large tree belonging to the 'Populus' genus, commonly found throughout the "
+"New England region.  You see some cottonwood tree bolls that can be "
+"harvested."
+msgstr ""
+
+#. ~ Description of terrain "cottonwood tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A large tree belonging to the 'Populus' genus, commonly found throughout the "
+"New England region.  All the cottonwood tree bolls have been harvested."
+msgstr ""
+
+#. ~ Description of terrain "dead tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An indiscernible tree that has withered away due to weather, fire, or "
+"otherworldly causes."
+msgstr ""
+
+#. ~ Description of terrain "dead tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An indiscernible tree that has withered away due to weather, fire, or "
+"otherworldly causes.  Someone or something has broken most of its dead "
+"branches, leaving little but its gnarled trunk."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "warped dead tree"
+msgstr ""
+
+#. ~ Description of terrain "warped dead tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This deciduous tree's branches are warped into a spiral.  This appears to "
+"have killed it."
+msgstr ""
+
+#. ~ Description of terrain "mega fern"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A gigantic fern like nothing you've seen before.  The leaves are a bright "
+"scarlet with a net-like structure of green veins.  The multipronged trunks "
+"have the texture of balsa wood."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "crabapple tree"
+msgstr ""
+
+#. ~ Description of terrain "crabapple tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is a member of the 'Malus' genus, though unlike popular cultivars, "
+"its fruits are small and sour.  If you examined the branches more closely, "
+"you could probably find a few mature ones in autumn."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is a member of the 'Malus' genus, though unlike popular cultivars, "
+"its fruits are small and sour.  There do not appear to be any ripe crabapples"
+" now."
+msgstr ""
+
+#. ~ Description of terrain "pear tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This is 'Pyrus communis', or the common pear tree, which produces fruit in "
+"the fall.  If you examined the branches more closely, you could probably find"
+" a few mature ones."
+msgstr ""
+
+#. ~ Description of terrain "pear tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This is 'Pyrus communis', or the common pear tree, which produces fruit in "
+"the fall.  Looks like all the ripe pears have been picked."
+msgstr ""
+
+#. ~ Description of terrain "coffee tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This is 'Gymnocladus dioicus', or the Kentucky coffee tree, which produces "
+"roastable coffee pods and brewable leaves in the fall.  If you examined the "
+"branches more closely, you could probably find a few mature ones."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This is 'Gymnocladus dioicus', or the Kentucky coffee tree, which produces "
+"roastable coffee pods and brewable leaves in the fall.  Looks like all the "
+"ripe pods have been picked."
+msgstr ""
+
+#. ~ Description of terrain "juniper tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"One of the species of 'Juniperus' that grows in New England, juniper berries "
+"grow over two to three years.  It flowers in the first year, produces a green"
+" berry the second, and in the third produces the more famed blue varieties.  "
+"If you examined the foliage more closely, you could probably find some viable"
+" clusters."
+msgstr ""
+
+#. ~ Description of terrain "juniper tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"One of the species of 'Juniperus' that grows in New England, juniper berries "
+"grow over two to three years.  It flowers in the first year, produces a green"
+" berry the second, and in the third produces the more famed blue varieties.  "
+"Looks like all the ripe bunches of berries have been picked."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "tupelo tree"
+msgstr ""
+
+#. ~ Description of terrain "tupelo tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Its name, originating from Native American tongues and garbled by the "
+"settlers, approximately means \"swamp tree\".  During autumn it bears cherry-"
+"like fruits."
+msgstr ""
+
+#. ~ Description of terrain "tupelo tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Its name, originating from Native American tongues and garbled by the "
+"settlers, approximately means \"swamp tree\".  During autumn it bears cherry-"
+"like fruits, but someone picked this one clean already."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "nannyberry tree"
+msgstr ""
+
+#. ~ Description of terrain "nannyberry tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This small tree, it could almost be a large shrub, bears clusters of dark "
+"blue berries in autumn."
+msgstr ""
+
+#. ~ Description of terrain "nannyberry tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This small tree, it could almost be a large shrub, bears clusters of dark "
+"blue berries in autumn, but someone picked this one clean already."
+msgstr ""
+
+#. ~ Description of terrain "pine tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A towering coniferous tree that belongs to the 'Pinus' genus, with the New "
+"England species varying from 'P. strobus', 'P. resinosa' and 'P. rigida'.  If"
+" you examined the tree more closely, you might find usable sticky whorls, "
+"resin clumps, and pinecones."
+msgstr ""
+
+#. ~ Description of terrain "pine tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A towering coniferous tree that belongs to the 'Pinus' genus, with the New "
+"England species varying from 'P. strobus', 'P. resinosa' and 'P. rigida'.  "
+"Some of the branches and resin clumps have been stripped away and many of the"
+" pinecones aren't developed fully yet, but given a season, it could be "
+"harvestable again."
+msgstr ""
+
+#. ~ Description of terrain "dead pine tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A towering coniferous tree that belongs to the 'Pinus' genus, with the New "
+"England species varying from 'P. strobus', 'P. resinosa' and 'P. rigida'.  "
+"This tree's branches are bare, and it appears to be dead."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "warped dead pine tree"
+msgstr ""
+
+#. ~ Description of terrain "warped dead pine tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"The branches of this pine tree have been twisted into a shape that remind you"
+" of Sierpinski triangles.  It did not survive being warped like this."
+msgstr ""
+
+#. ~ Description of terrain "willow tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A tall, wide deciduous tree of the 'Salix' genus, with long, thin, leafy "
+"branches that hang down like curtains.  You could tear off some bark."
+msgstr ""
+
+#. ~ Description of terrain "willow tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A tall, wide deciduous tree of the 'Salix' genus, with long, thin, leafy "
+"branches that hang down like curtains.  Looks like all usable bark has been "
+"torn off, and new rhytidomes have not formed yet."
+msgstr ""
+
+#. ~ Description of terrain "maple tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A large deciduous tree of the 'Acer' genus.  The leaves are distinctively "
+"shaped with five prongs.  It could be tapped in order to extract maple sap."
+msgstr ""
+
+#. ~ Description of terrain "maple tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A large deciduous tree of the 'Acer' genus.  The leaves are distinctively "
+"shaped with five prongs.  A spigot is wedged into the trunk, and sweet maple "
+"sap can be extracted."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "sassafras tree"
+msgstr ""
+
+#. ~ Description of terrain "sassafras tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is a member of the 'Sassafras' genus, known for its aromatic "
+"qualities.  In the winter and spring, the sap rich roots can be harvested to "
+"make a sweet beverage."
+msgstr ""
+
+#. ~ Description of terrain "sassafras tree"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is a member of the 'Sassafras' genus, known for its aromatic "
+"qualities.  This tree's roots have been harvested, any more and the tree will"
+" die."
+msgstr ""
+
+#. ~ Description of terrain "bee hive"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A hive of bees located in a cavity inside a tree, swarming in and out at a "
+"feverish pace.  There's probably honey inside."
+msgstr ""
+
+#. ~ Description of terrain "apiary"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A man-made wooden box designed to hold honeybees and facilitate the care for "
+"a hive.  The modular construction allows for inspecting the bees and "
+"harvesting their bounty without destroying the hive completely.  This year's "
+"harvest should be ready by now."
+msgstr ""
+
+#. ~ Description of terrain "apiary"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A man-made wooden box designed to host honeybees and facilitate the care for "
+"a hive.  The modular construction allows for inspecting the bees and "
+"harvesting their bounty without destroying the hive completely.  It will be "
+"some time before this one is ready to harvest."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "autumn olive"
+msgstr ""
+
+#. ~ Description of terrain "autumn olive"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An invasive species from Japan which is also called silverberry.  Widely "
+"planted in the 1940s to combat erosion, it spread far and wide, often even "
+"displacing native plants.  As it name says, it bears fruits in autumn, which "
+"are quite unlike olives."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An invasive species from Japan which is also called silverberry.  Widely "
+"planted in the 1940s to combat erosion, it spread far and wide, often even "
+"displacing native plants.  As it name says, it bears fruits in autumn, which "
+"are quite unlike olives, but this particular plant has been harvested "
+"already."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "hobblebush"
+msgstr ""
+
+#. ~ Description of terrain "hobblebush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Called hobblebush because it may hinder and trip, hobbles, unwary hikers with"
+" its branches bending over and taking root.  It also bears surprisingly sweet"
+" berries in autumn."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Called hobblebush because it may hinder and trip, hobbles, unwary hikers with"
+" its branches bending over and taking root.  It also bears surprisingly sweet"
+" berries in autumn, if it hadn't been picked clean already."
+msgstr ""
+
+#. ~ Description of terrain "huckleberry bush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A small bush of huckleberries, often mistaken for blueberries."
+msgstr ""
+
+#. ~ Description of terrain "grape bush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A bush of a different species invaded by grape vines."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A bush of a different species invaded by grape vines, but they're fruitless."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "spicebush"
+msgstr ""
+
+#. ~ Description of terrain "spicebush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A bush that features small, red berries."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A bush that usually features small, red berries but it was picked clean."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "black chokeberry bush"
+msgstr ""
+
+#. ~ Description of terrain "black chokeberry bush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Drooping black berries adorn the shrub during autumn.  These have a "
+"distinctive star-shaped fold and look quite juicy."
+msgstr ""
+
+#. ~ Description of terrain ""
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Drooping black berries adorned this shrub, but the shrub was picked clean."
+msgstr ""
+
+#. ~ Description of terrain "lilac bush"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A wide bush of bright pinkish-purple lilacs."
+msgstr ""
+
+#. ~ Description of terrain "tree stump"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A tree stump, a remnant of a tree that has been cut down."
+msgstr ""
+
+#. ~ Description of terrain "white grass"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An area of Kentucky bluegrass covered in white latex-based paint, with neat "
+"lines designed for recreational sports."
+msgstr ""
+
+#. ~ Description of terrain "tall grass"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "An area of tall grass about head high."
+msgstr ""
+
+#. ~ Description of terrain "dead grass"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "An area of long, shaggy grass that hasn't been cut recently."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "grazed grass"
+msgstr ""
+
+#. ~ Description of terrain "grazed grass"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"An area of extremely short green stubble protruding from the dirt.  Something"
+" has been clearly grazing here."
+msgstr ""
+
+#. ~ Description of terrain "golf green"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "An area of grass mowed very short and neat."
+msgstr ""
+
+#. ~ Description of terrain "golf hole"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A small plastic cup embedded in an area of very short, neat grass."
+msgstr ""
+
+#. ~ Description of terrain "long bamboo shoots"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "An area of long bamboo shoots about shin high."
+msgstr ""
+
+#. ~ Description of terrain "tall bamboo"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "A tall bamboo thicket about head high."
+msgstr ""
+
+#. ~ Description of terrain "dead bamboo"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "An area of long, brown, dead bamboo shoots covered in white fungus."
+msgstr ""
+
+#. ~ Description of terrain "fern"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A short plant with thousands of leaves which grow in a fractal pattern.  All "
+"of the curled shoots have been harvested."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid "mushroom colony"
+msgstr ""
+
+#. ~ Description of terrain "mushroom colony"
+#: data/json/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A large pile of organic matter which has molded over with fungus.  The caps "
+"of many mundane mushrooms spring from the top, you can even recognize some.  "
+"The fungi growing here don't seem edible, though."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid "surf"
+msgstr ""
+
+#. ~ Description of terrain "surf"
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid "A broad area of fine sand, washed by waves coming in from the sea."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid "submersed salt water"
+msgstr ""
+
+#. ~ Description of terrain "submersed salt water"
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid ""
+"You are submerged below the surface of the water, your feet can't touch the "
+"ground.  With a watertight container, you could gather salt water from here."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid "flood water"
+msgstr ""
+
+#. ~ Description of terrain "flood water"
+#: data/json/furniture_and_terrain/terrain-liquids.json
+msgid ""
+"The water isn't too deep here, it seems to have either pooled here or risen "
+"from a pipe leaking nearby.  With a watertight container, you could gather "
+"fresh water from here.  Not safe to drink as is."
+msgstr ""
+
+#. ~ Description of terrain "diesel pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A diesel fuel pump.  This roadside attraction provides all the thick, gloopy "
+"liquid POWER you need to move your sensibly oversized APOCALYPTIC SUPERTRUCK "
+"from point A to points beyond.  If it doesn't dispense fuel immediately, try "
+"banging on it or grunt your way over the nearby payment terminal."
+msgstr ""
+
+#. ~ Description of terrain "JP8 pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A pump that dispenses JP8.  If this gas dispenser doesn't give up the goods "
+"for free, you may have to pay at a nearby terminal."
+msgstr ""
+
+#. ~ Description of terrain "avgas pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A pump that dispenses avgas.  If this gas dispenser doesn't give up the goods"
+" for free, you may have to pay at a nearby terminal."
+msgstr ""
+
+#. ~ Description of terrain "ticket vendor"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A machine with a little screen and slots, intended to take your money and "
+"provide you with a ticket."
+msgstr ""
+
+#. ~ Description of terrain "ticket machine"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A machine that will provide you access to whatever lies beyond it - for the "
+"price of a ticket, of course."
+msgstr ""
+
+#. ~ Description of terrain "ventilation shutters"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A large wall-mounted panel, covered with fragile metal sheets that regulate "
+"airflow."
+msgstr ""
+
+#. ~ Description of terrain "missile"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A section of an ICBM, an Intercontinental Ballistic Missile.  This isn't the "
+"kind of rocket that goes to the moon."
+msgstr ""
+
+#. ~ Description of terrain "blown-out missile"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A section of an ICBM, an Intercontinental Ballistic Missile.  This isn't the "
+"kind of rocket that's going anywhere."
+msgstr ""
+
+#. ~ Description of terrain "radio tower"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "The structure of a radio transmission tower."
+msgstr ""
+
+#. ~ Description of terrain "radio controls"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A console that appears to control a nearby radio transmission tower.  It "
+"doesn't seem to be fully operational."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "truss pillar"
+msgstr ""
+
+#. ~ Description of terrain "truss pillar"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A hollow metal pillar composed of interconnected beams that distribute loads "
+"efficiently while maintaining stability and strength."
+msgstr ""
+
+#. ~ Description of terrain "high gauge pipe"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "A section of high gauge pipe."
+msgstr ""
+
+#. ~ Description of terrain "high gauge pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"An unpowered pump that previously would have moved fluids around in a hurry."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "drilling machinery"
+msgstr ""
+
+#. ~ Description of terrain "drilling machinery"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"All the machinery required to operate and control de drill string and the "
+"drill bit down below.  It is now inactive."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "drill string"
+msgstr ""
+
+#. ~ Description of terrain "drill string"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"An extremely resistant length of mechanical tubing used to reach deep under "
+"water and drill into pockets of oil."
+msgstr ""
+
+#. ~ Description of terrain "CVD control panel"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A VERY expensive-looking apparatus that's labeled 'Chemical Vapor Deposition "
+"Machine'.  With the input of certain exceptionally rare chemicals and "
+"elements, one could conceivably coat one's weapon with diamond.  While the "
+"process is extremely complicated, a previous user has helpfully sketched: "
+"Hydrogen + charcoal = smiley face."
+msgstr ""
+
+#. ~ Description of terrain "water pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A deep well, collecting groundwater.  An installed pump allows you to draw "
+"water from it."
+msgstr ""
+
+#. ~ Description of terrain "wooden well"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A deep well, collecting groundwater.  A wooden frame with a rope and bucket "
+"allows you to draw water from it, with some elbow grease."
+msgstr ""
+
+#. ~ Description of terrain "salt water pump"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A water pump connected to a pipe supplying it with salt water.  Not good to "
+"drink, but it has other uses."
+msgstr ""
+
+#. ~ Description of terrain "telecom cabinet"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A cabinet full of telecom equipment.  With the lines down, you might be able "
+"to take it apart for its useful electronics."
+msgstr ""
+
+#. ~ Description of terrain "damaged telecom cabinet"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"A damaged telecom cabinet.  You might still be able to salvage some useful "
+"electronic scrap from it."
+msgstr ""
+
+#. ~ Description of terrain "potential transformer"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "A specialized type of electrical transformer."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid "rocky obstacle"
+msgstr ""
+
+#. ~ Description of terrain "rocky obstacle"
+#: data/json/furniture_and_terrain/terrain-manufactured.json
+msgid ""
+"Some larger rocks arranged and crudely rammed into the ground to slow down "
+"who or whatever is trying to cross."
+msgstr ""

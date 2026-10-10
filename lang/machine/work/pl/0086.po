@@ -1,0 +1,757 @@
+# Batch 86 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/seats.json
+msgid "cloth seat"
+msgstr ""
+
+#. ~ Description of vehicle part "cloth seat"
+#: data/json/vehicleparts/seats.json
+msgid "A simple fabric seat, suspended from the frame itself."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "vehicle tank (2 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "vehicle tank (10 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "vehicle tank (20 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "vehicle tank (60 L)"
+msgstr ""
+
+#. ~ Description of vehicle part "refrigerated tank (60 L)"
+#: data/json/vehicleparts/tanks.json
+msgid ""
+"A 60 L refrigerated tank.  When turned on, it will cool the liquid inside, "
+"extending the time until the food spoils."
+msgstr ""
+
+#. ~ Description of vehicle part "refrigerated tank (100 L)"
+#: data/json/vehicleparts/tanks.json
+msgid ""
+"A 100 L refrigerated tank.  When turned on, it will cool the liquid inside, "
+"extending the time until the food spoils."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "heated tank (60 L)"
+msgstr ""
+
+#. ~ Description of vehicle part "heated tank (60 L)"
+#: data/json/vehicleparts/tanks.json
+msgid ""
+"A 60 L heated tank.  When turned on, it will prevent the contents from "
+"freezing."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "external tank (100 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "roof-mounted external tank (100 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "external tank (200 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "roof-mounted external tank (200 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "wooden barrel (100 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "medium pressurized tank"
+msgstr ""
+
+#. ~ Description of vehicle part "medium pressurized tank"
+#: data/json/vehicleparts/tanks.json
+msgid "A medium tank for pressurized gasses."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "external aluminum tank (100 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "roof-mounted external aluminum tank (100 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "external aluminum tank (200 L)"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/tanks.json
+msgid "roof-mounted external aluminum tank (200 L)"
+msgstr ""
+
+#. ~ Description of vehicle part "mounted electric forge"
+#: data/json/vehicleparts/utilities.json
+msgid ""
+"An electric forge for metalworking, powered by the vehicle's batteries.  With"
+" a hammer and other tools, you could use this for metalworking.  If you "
+"attempt to craft an item that needs a forge, you will be given the option of "
+"selecting it as a tool."
+msgstr ""
+
+#. ~ Item name
+#: data/json/vehicleparts/utilities.json
+msgid "door lock set"
+msgid_plural "door lock sets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "door lock set"
+#: data/json/vehicleparts/utilities.json
+msgid ""
+"Some wires and gears for connecting door handles and an unlocking knob to a "
+"latching mechanism, and a sturdy lock to go on the outer surface.  It is "
+"meant to be installed in a vehicle door or hatch."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/utilities.json
+msgid "binoculars"
+msgstr ""
+
+#. ~ Description of vehicle part "binoculars"
+#: data/json/vehicleparts/utilities.json
+msgid "Binoculars secured near the seat."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/utilities.json
+msgid "concrete mixer drum"
+msgstr ""
+
+#. ~ Description of vehicle part "concrete mixer drum"
+#: data/json/vehicleparts/utilities.json
+msgid "A plastic 100-liter drum of a portable concrete mixer."
+msgstr ""
+
+#. ~ Description of vehicle part "reinforced yoke and harness"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"Attach this part to a beast of burden to allow it to pull your vehicle.  This"
+" one is reinforced with heavy chains and steel."
+msgstr ""
+
+#. ~ Description of vehicle part "floor trunk"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"An aisle.  A hatch lets you access a cargo space beneath it, keeping items "
+"stored here out of the way."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "sedan trunk"
+msgstr ""
+
+#. ~ Description of vehicle part "hand controls"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"A pair of adjustable rods with a simple trigger.  They easily can be easily "
+"installed on top of vehicle controls and will allow a car or similar vehicle "
+"to be driven by those who can't use their legs to do so, whether due to "
+"disability or small stature.  These are designed for automobiles and will not"
+" work on bicycle style foot pedals."
+msgstr ""
+
+#. ~ Description of vehicle part "pedal extenders"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"Thick rubber pads which can be easily clamped onto gas and brake pedals to "
+"allow vehicle controls to be used even by people who are very short."
+msgstr ""
+
+#. ~ Description of vehicle part "makeshift pedal extenders"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"Blocks of wood, taped to the pedals to allow vehicle controls to be used even"
+" by people who are very short."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "small integrated heater"
+msgstr ""
+
+#. ~ Description of vehicle part "small integrated heater"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"Set of tubes, that move heat from the engine into the vehicle cabin, heating "
+"it up."
+msgstr ""
+
+#. ~ Description of vehicle part "small integrated cooler"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "Small set of mechanisms, that cool the vehicle out when turned on."
+msgstr ""
+
+#. ~ Description of vehicle part "advanced solar panel"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "A high-performance solar panel."
+msgstr ""
+
+#. ~ Description of vehicle part "advanced reinforced solar panel"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"A high-performance solar panel.  Reinforced with armored glass to make it "
+"more resistant to damage."
+msgstr ""
+
+#. ~ Description of vehicle part "advanced Stirling radioisotope generator"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"A military ASRG covered in heavy plating.  Provides constant albeit low power"
+" to your car."
+msgstr ""
+
+#. ~ Description of vehicle part "outdoor extension cord"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"An extra long 30 m orange extension cord for connecting outdoor appliances.  "
+"Currently plugged in."
+msgstr ""
+
+#. ~ Description of vehicle part "flimsy wooden seat"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "A place to sit, barely."
+msgstr ""
+
+#. ~ Description of vehicle part "reinforced security camera"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"A small camera encased in a protective metal cage.  Will relay what it can "
+"see to a camera control station."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "makeshift clock"
+msgstr ""
+
+#. ~ Description of vehicle part "reaper"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"An automatic reaper.  Use the vehicle controls to turn it on or off.  When "
+"on, it will cut down plants that it travels over.  It should be placed in "
+"front of any plows in the vehicle for efficient operation.  It does not "
+"include cargo space, so harvested plants will end up on the ground."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "door lock"
+msgstr ""
+
+#. ~ Description of vehicle part "door lock"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid ""
+"A lock and latching mechanism.  If installed on a door, this can be used to "
+"lock it."
+msgstr ""
+
+#. ~ Description of vehicle part "aluminum boat hull"
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "An aluminum hull that keeps the water out of your boat."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CABLE_PORTS"
+#: data/json/vehicleparts/vp_flags.json
+msgid "You can connect electrical cables to this part."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "FURNITURE_TIEDOWN"
+#: data/json/vehicleparts/vp_flags.json
+msgid "You can tie down a furniture here."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "NO_LEAK"
+#: data/json/vehicleparts/vp_flags.json
+msgid "Causes a boat hull to float even when damaged."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ENHANCED_VISION"
+#: data/json/vehicleparts/vp_flags.json
+msgid "Can be used to <color_cyan>scout things far away</color> when seated."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "TURRET"
+#: data/json/vehicleparts/vp_flags.json
+msgid ""
+"This weapon is mounted in a turret.  It can be fired from the vehicle "
+"controls."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WIND_TURBINE"
+#: data/json/vehicleparts/vp_flags.json
+#, no-c-format
+msgid ""
+"Provides <color_green>%sW</color> of electrical power to the vehicle for "
+"every 1 m/s of wind the vehicle is exposed to."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LOCKABLE_DOOR"
+#: data/json/vehicleparts/vp_flags.json
+msgid ""
+"This can be locked if equipped with a locking mechanism, preventing access "
+"from outside the vehicle."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "VEH_TOOLS"
+#: data/json/vehicleparts/vp_flags.json
+msgid ""
+"You can 'e'xamine the tile to <color_cyan>connect tools</color> to the "
+"vehicle's batteries and tanks."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CARGO_PASSABLE"
+#: data/json/vehicleparts/vp_flags.json
+msgid "Items stored here won't get in the way of any passengers."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HUGE_OK"
+#: data/json/vehicleparts/vp_flags.json
+msgid ""
+"Even when roofed, this part is roomy enough to comfortably admit very large "
+"creatures, like cows and horses."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "NEED_LEG"
+#: data/json/vehicleparts/vp_flags.json
+msgid "Operating this part will require at least one working leg."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "INOPERABLE_SMALL"
+#: data/json/vehicleparts/vp_flags.json
+msgid "People who are very short may be unable to make use of this part."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/wheel.json
+msgid "small casters"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/wheel.json
+msgid "medium casters"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/wheel.json
+msgid "large casters"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/wheel.json
+msgid "skateboard wheels"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/vehicleparts/wheel.json
+msgid "skateboard trucks"
+msgstr ""
+
+#. ~ Description of vehicle part "skateboard trucks"
+#: data/json/vehicleparts/wheel.json
+msgid "A pair of skateboard trucks, for attaching wheels to."
+msgstr ""
+
+#. ~ Label of vehicle part variant "scooter_front"
+#: data/json/vehicleparts/wheel.json
+msgctxt "vpart_variants"
+msgid "Scooter Front"
+msgstr ""
+
+#. ~ Label of vehicle part variant "scooter_rear"
+#: data/json/vehicleparts/wheel.json
+msgctxt "vpart_variants"
+msgid "Scooter Rear"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_horizontal"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Horizontal"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_cover_left"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Cover Left"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_cover_right"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Cover Right"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_nw_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Front Left Corner"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_ne_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Front Right Corner"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_sw_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Rear Left Corner"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_se_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Rear Right Corner"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_vertical"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Vertical"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_vertical_2_left"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Left Thick Vertical"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_vertical_2_right"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Right Thick Vertical"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_horizontal_front_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Front Edge Horizontal"
+msgstr ""
+
+#. ~ Label of vehicle part variant "full_horizontal_rear_edge"
+#: data/json/vehicleparts/windshields.json
+msgctxt "vpart_variants"
+msgid "Full Rear Edge Horizontal"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/bikes.json
+msgid "Three-Wheel Motorcycle"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Station Wagon"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Station Wagon with Bike Rack"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Station Wagon"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Microcar"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Hybrid Microcar"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Microcar"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Supercompact Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Hybrid Supercompact Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Supercompact Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Supercompact Tandem Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Supercompact Tandem Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Tandem Cabin Motorcycle"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Tandem Cabin Motorcycle"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Tandem Three-Wheeled Supercompact Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Tandem Three-Wheeled Supercompact Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Shooting Brake"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Premium Shooting Brake"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Shooting Brake"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V8 Sports Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V12 Sports Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V6 Sports Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Electric Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Sports Sedan"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Town Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Budget Town Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Muscle Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V12 Sports Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V6 Sports Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Luxury Electric Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Sports Coupe"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Supercar"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "V12 Super Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/cars.json
+msgid "Electric Super Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/carts.json
+msgid "Rolling Trash Can"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/carts.json
+msgid "small hospital bed"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/carts.json
+msgid "Medical Cart"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/farm.json
+msgid "Horse Trailer"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/farm.json
+msgid "Disconnected directed floodlight"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/trains.json
+msgid "Debug Rail Motorcycle"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/trains.json
+msgid "Diesel Locomotive"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/trains.json
+msgid "Small Passenger Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/trains.json
+msgid "Train Chassis"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/utility.json
+msgid "Electric Forklift"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/utility.json
+msgid "Heavy-Duty Forklift"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/json/vehicles/vehicles.json
+msgid "empty prototype"
+msgstr ""

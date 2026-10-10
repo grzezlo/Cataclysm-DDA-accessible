@@ -1,0 +1,1583 @@
+# Batch 74 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of terrain "shallow black pool"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"At first glance, this looks like a smooth pool of black water.  Closer "
+"examination reveals it to be fine glass dust."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "tree of glass apples"
+msgstr ""
+
+#. ~ Description of terrain "tree of glass apples"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A flourishing tree, its branches heavy with apples.  Every black leaf is "
+"razor-edged; every heavy fruit turns to dust at the touch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass tree"
+msgstr ""
+
+#. ~ Description of terrain "black glass tree"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"The glass skeleton of a once-leafy tree.  It looks more like coral, now."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass bush"
+msgstr ""
+
+#. ~ Description of terrain "black glass bush"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"What was once a small shrub has grown wild, each of its branches twisting "
+"into delicate glass spirals."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass stairs"
+msgstr ""
+
+#. ~ Description of terrain "black glass stairs"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A set of smooth glass stairs, with countless years of bare footprints worn "
+"into them."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass downspout"
+msgstr ""
+
+#. ~ Description of terrain "black glass downspout"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A drainpipe of black glass.  There are holes down its length, from which "
+"occasionally trickle little dustings of black sand."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass roof"
+msgstr ""
+
+#. ~ Description of terrain "black glass roof"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"A roof of black glass tiles.  They are very smooth, and some break away at "
+"the touch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "black glass drain"
+msgstr ""
+
+#. ~ Description of terrain "black glass drain"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "A funnel of smooth glass, filled almost to the brim with sand."
+msgstr ""
+
+#. ~ Description of terrain "shallow black pool"
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid ""
+"At first glance, this looks like a rippling pool of black water.  Closer "
+"examination reveals it to be fine glass dust, blown in slow waves by the "
+"breeze."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+msgid "soft glass soil"
+msgstr ""
+
+#. ~ Description of terrain "soft glass soil"
+#. ~ NPC dialogue line
+#: data/json/furniture_and_terrain/terrain_vitrified.json
+#: data/json/npcs/EOC_talkers/vitrified_farm.json
+msgid ""
+"This little mound of soil is unlike the jagged dirt around it.  It is smooth,"
+" welcoming, and pleasant to the touch."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_any.json
+msgid "swirling mist"
+msgstr ""
+
+#. ~ Description of terrain "swirling mist"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_any.json
+msgid ""
+"A swirling, exotic pattern of shapes, floating in an ill-defined darkness.  "
+"Staring at it too long hurts your brain."
+msgstr ""
+
+#. ~ Description of terrain "sparkling chasm"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_any.json
+msgid ""
+"At a glance this just looks like darkness.  Then, gazing deeper, you think it"
+" might be full of stars.  Still deeper, perhaps those stars are eyes?"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "Obelisk0"
+msgstr ""
+
+#. ~ Description of terrain "Obelisk0"
+#. ~ Description of terrain "Obelisk1"
+#. ~ Description of terrain "Obelisk2"
+#. ~ Description of terrain "Obelisk3"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "Obelisk"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_0_have" in terrain
+#. "Obelisk0"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "You already know the Thief's Pass.  The obelisk is inert."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_0_grant" in terrain
+#. "Obelisk0"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a tall, olive green, metallic pillar covered in swirling patterns.  "
+"As you focus on it, you feel a burning sensation on your skin.  You have "
+"learned the Thief's Passcode."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_0_firsttime" in terrain
+#. "Obelisk0"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a tall, olive green, metallic pillar covered in swirling patterns.  "
+"As you focus on it, you feel a burning sensation on your skin.  "
+"<ls_obelisk_firsttime1> a tattoo of your own face, smirking; it's the "
+"'Thief's Passcode'.  <ls_obelisk_firsttime2>"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "Obelisk1"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_1_have" in terrain
+#. "Obelisk1"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "You already know the Circle of Wings Passcode.  The obelisk is inert."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_1_grant" in terrain
+#. "Obelisk1"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a squat, angry-looking, indigo metallic pillar covered carved in "
+"relief with the image of flying birds.  As you focus on it, you feel a "
+"burning sensation on your skin.  You have learned the Circle of Wings "
+"Passcode."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_1_firsttime" in terrain
+#. "Obelisk1"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a squat, angry-looking, indigo metallic pillar covered carved in "
+"relief with the image of flying birds.  As your eyes are drawn to it, you "
+"feel a burning sensation on your skin.  <ls_obelisk_firsttime1> a tattoo of "
+"wings in a circle, running into themselves like an ouroboros; it's the "
+"'Circle of Wings Passcode'.  <ls_obelisk_firsttime2>"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "Obelisk2"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_2_have" in terrain
+#. "Obelisk2"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "You already know the Hard Nails Passcode.  The obelisk is inert."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_2_grant" in terrain
+#. "Obelisk2"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a thick, powerful, gold-burnished pillar covered in what look like "
+"deep fingernail scratches.  As you focus on it, you feel a burning sensation "
+"on your skin.  You have learned the Hard Nails Passcode."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_2_firsttime" in terrain
+#. "Obelisk2"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a thick, powerful, gold-burnished pillar covered in what look like "
+"deep fingernail scratches.  As your eyes are drawn to it, you feel a burning "
+"sensation on your skin.  <ls_obelisk_firsttime1> a tattoo of a hand clawing "
+"down a sheet of metal; it's the 'Hard Nails Passcode'.  "
+"<ls_obelisk_firsttime2>"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "Obelisk3"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_3_have" in terrain
+#. "Obelisk3"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "You already know the Laughing Man Passcode.  The obelisk is inert."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_3_grant" in terrain
+#. "Obelisk3"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a beautiful pillar the color of roses or blood, absolutely perfect in"
+" its proportions.  As your eyes are drawn to it, you feel a burning sensation"
+" on your skin.  You have learned the Laughing Man Passcode."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Obelisk_3_firsttime" in terrain
+#. "Obelisk3"'s examine action
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You see a beautiful pillar the color of roses or blood, absolutely perfect in"
+" its proportions.  As your eyes are drawn to it, you feel a burning sensation"
+" on your skin.  <ls_obelisk_firsttime1> a tattoo of a handsome man laughing."
+"  At first glance it appears charming and friendly, but the longer you "
+"examine it, the more it appears to be inhumanly cold and cruel; it's the "
+"'Laughing Man Passcode'.  <ls_obelisk_firsttime2>"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "mysterious closed door"
+msgstr ""
+
+#. ~ Description of terrain "mysterious closed door"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A dark door of twisted metal, etched with symbols and writing that you can't "
+"piece together."
+msgstr ""
+
+#. ~ Prying message of terrain "mysterious closed door"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "With great effort, you pry open the door."
+msgstr ""
+
+#. ~ Prying failure of terrain "mysterious closed door"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"You pry, but it seems like your tools will give out before the door does."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "mysterious open door"
+msgstr ""
+
+#. ~ Description of terrain "mysterious open door"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A dark door of twisted metal, etched with symbols and writing that you can't "
+"piece together.  It has been swung open."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "metallic wall"
+msgstr ""
+
+#. ~ Description of terrain "metallic wall"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A durable wall of ordinary looking sheet metal, at first.  Staring closer, "
+"the welds and joins seem to form strange fractal patterns."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "metal wailing!"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "scrap metal wall"
+msgstr ""
+
+#. ~ Description of terrain "scrap metal wall"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A relatively simple wall made of cobbled-together scrap metal.  The wires and"
+" bolts holding it together seem to be in just slightly different "
+"configurations whenever you look back at it."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "metal crying!"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "metallic floor"
+msgstr ""
+
+#. ~ Description of terrain "metallic floor"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"Diamond-treaded metallic flooring.  Something seems off about the diamond "
+"tread; you keep imagining that the bumps spell out words, but when you look "
+"closer they're in very ordinary patterns."
+msgstr ""
+
+#. ~ Description of terrain "broken metal floor"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"Something has cratered this metal flooring.  It will be difficult to move "
+"things across.  Through the cracks and dents emanates a faint eery glow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "scrap metal floor"
+msgstr ""
+
+#. ~ Description of terrain "scrap metal floor"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A floor assembled from various scraps of metal.  Though their placement seems"
+" random, you keep seeing spots where they form faces."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "catwalk"
+msgstr ""
+
+#. ~ Description of terrain "catwalk"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "This catwalk extends over a deep chasm of swirling shadow."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid "swirling metal roof"
+msgstr ""
+
+#. ~ Description of terrain "swirling metal roof"
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_cybernetic.json
+msgid ""
+"A section of sturdy metal roofing that seems to swirl and twist with an "
+"unfamiliar, ever-shifting pattern."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "brown laminate floor"
+msgstr ""
+
+#. ~ Description of terrain "brown laminate floor"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"A section of flooring made out of a tough, smooth material, colored in an "
+"atrocious mottled brown."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "bullet trailer roof"
+msgstr ""
+
+#. ~ Description of terrain "bullet trailer roof"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A smooth roof of gleaming chrome, slightly dusty from the road."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "bullet trailer exterior wall"
+msgstr ""
+
+#. ~ Description of terrain "bullet trailer exterior wall"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A smooth wall of gleaming chrome, slightly dusty from the road."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "bullet trailer interior wall"
+msgstr ""
+
+#. ~ Description of terrain "bullet trailer interior wall"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"A simple wall paneled in a coarsely textured gray laminate of some sort."
+msgstr ""
+
+#. ~ Description of furniture "f_bullettrailer_table_top"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A small trailer table, designed to convert into a bed when not in use."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "trailer cabinets"
+msgstr ""
+
+#. ~ Description of furniture "trailer cabinets"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"Cramped trailer cabinets, with some inbuilt appliances taking up even more of"
+" the limited space."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "trailer sink"
+msgstr ""
+
+#. ~ Description of furniture "trailer sink"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A tiny metal sink and connected cabinet."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "mini desk"
+msgstr ""
+
+#. ~ Description of furniture "mini desk"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A small wooden desk with a little attached bookshelf."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "trailer bathroom door"
+msgstr ""
+
+#. ~ Description of terrain "trailer bathroom door"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"A gray textured door, rimmed in chrome, like a very tacky version of a ship's"
+" hatch."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+#: data/json/items/tool/misc.json
+msgid "travel toilet"
+msgid_plural "travel toilets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "travel toilet"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"A tiny plastic toilet for use in a travel trailer.  Unlike a normal toilet, "
+"it doesn't store water locally for you to siphon out."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "plastic cracking!"
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "trailer sofa"
+msgstr ""
+
+#. ~ Description of furniture "trailer sofa"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid ""
+"A folding trailer sofa with a durable, somewhat comfortable weave of coarse "
+"red fabric."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "trailer bed"
+msgstr ""
+
+#. ~ Description of furniture "trailer bed"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A small but comfy-looking double bed."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "plywood sign for 'Dana's Bakery'"
+msgstr ""
+
+#. ~ Description of furniture "plywood sign for 'Dana's Bakery'"
+#: data/json/furniture_and_terrain/special_use/bullet_trailer.json
+msgid "A spraypainted plywood sign reads 'Dana's Bakery' in red letters."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged aisle"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged aisle"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged aisle.  It has started to degrade after some time spent "
+"underwater.  Absolutely unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged board"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged board"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged metal wall.  Keeps zombies outside the vehicle and prevents "
+"people from seeing through it.  It has started to degrade after some time "
+"spent underwater.  Absolutely unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged quarterpanel"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged quarterpanel"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged half-height metal wall.  Keeps zombies outside the vehicle but "
+"allows people to see over it.  It has started to degrade after some time "
+"spent underwater.  Absolutely unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged windshield"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged windshield"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged sheet of glass that lets you see outside the vehicle.  It has "
+"started to degrade after some time spent underwater.  Absolutely "
+"unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged frame"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged frame"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged metal framework.  Other vehicle components can be mounted on "
+"it, and it can be attached to other frames to increase the vehicle's size.  "
+"It has started to degrade after some time spent underwater.  Absolutely "
+"unrecoverable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged bucket seat"
+msgstr ""
+
+#. ~ Description of furniture "waterlogged bucket seat"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A waterlogged soft upholstered car seat, contoured to hold one person.  It "
+"has started to degrade after some time spent underwater.  Absolutely "
+"unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged roof"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged roof"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "A waterlogged metal roof.  Absolutely unrecoverable."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid "waterlogged heavy-duty military Blackhawk rotors"
+msgstr ""
+
+#. ~ Description of terrain "waterlogged heavy-duty military Blackhawk rotors"
+#: data/json/furniture_and_terrain/special_use/sunken_helicopter_furniture.json
+msgid ""
+"A set of four military-grade helicopter rotor blades, used to provide lift by"
+" rotation.  It has started to degrade after some time spent underwater.  "
+"Absolutely unrecoverable."
+msgstr ""
+
+#. ~ Signage placed on map LIXA_surface_1a, LIXA_surface_1b, LIXA_surface_2a,
+#. LIXA_surface_2b
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "LIXA"
+msgstr ""
+
+#. ~ Computer name placed on map LIXA_surface_1a, LIXA_surface_1b,
+#. LIXA_surface_2a, LIXA_surface_2b
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "Presentation Computer"
+msgstr ""
+
+#. ~ Signage placed on map LIXA_road_guard
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "NO TRESPASSING:  By order of the United States Department of Energy"
+msgstr ""
+
+#. ~ Computer name placed on map LIXA_workfloor_1a, LIXA_workfloor_1b,
+#. LIXA_workfloor_2a, LIXA_workfloor_2b
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "Personal Computer"
+msgstr ""
+
+#. ~ Access denied message on computer "Personal Computer" placed on map
+#. LIXA_workfloor_1a, LIXA_workfloor_1b, LIXA_workfloor_2a, LIXA_workfloor_2b
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "Credentials Unrecognized."
+msgstr ""
+
+#. ~ Computer name placed on map LIXA_workfloor_1a, LIXA_workfloor_1b,
+#. LIXA_workfloor_2a, LIXA_workfloor_2b
+#: data/json/mapgen/LIXA_mapgen.json
+msgid "Experiment Control Computer"
+msgstr ""
+
+#. ~ Computer name placed on map rural_church_steeple
+#: data/json/mapgen/church_rural.json
+msgid "Church Bells 1.0"
+msgstr ""
+
+#. ~ Interactive menu name in computer "Church Bells 1.0" placed on map
+#. rural_church_steeple
+#: data/json/mapgen/church_rural.json
+msgid "Toll Bells"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/json/mapgen/debug.json
+msgid "debug_item_group_test"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie" placed on map farm_dairy_twd_1,
+#. farm_dairy_twd_2, null, null, farm_dairy_twd_5, farm_dairy_twd_6,
+#. farm_dairy_twd_7, farm_dairy_twd_8, farm_dairy_twd_9, farm_dairy_twd_10,
+#. farm_dairy_twd_11, farm_dairy_twd_12
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Danny"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_tough" placed on map farm_dairy_twd_1,
+#. farm_dairy_twd_2, null, null, farm_dairy_twd_5, farm_dairy_twd_6,
+#. farm_dairy_twd_7, farm_dairy_twd_8, farm_dairy_twd_9, farm_dairy_twd_10,
+#. farm_dairy_twd_11, farm_dairy_twd_12
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Andy"
+msgstr ""
+
+#. ~ Name of the monster "mon_cow" placed on map farm_dairy_twd_1,
+#. farm_dairy_twd_2, null, null, farm_dairy_twd_5, farm_dairy_twd_6,
+#. farm_dairy_twd_7, farm_dairy_twd_8, farm_dairy_twd_9, farm_dairy_twd_10,
+#. farm_dairy_twd_11, farm_dairy_twd_12
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Maybelle"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_brainless" placed on map farm_dairy_twd_1,
+#. farm_dairy_twd_2, null, null, farm_dairy_twd_5, farm_dairy_twd_6,
+#. farm_dairy_twd_7, farm_dairy_twd_8, farm_dairy_twd_9, farm_dairy_twd_10,
+#. farm_dairy_twd_11, farm_dairy_twd_12
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Larry"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_fat" placed on map farm_dairy_twd_3,
+#. farm_dairy_twd_4
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Brenda"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_crawler" placed on map
+#. farm_dairy_twd_second_floor_3, farm_dairy_twd_second_floor_4
+#: data/json/mapgen/farm_dairy_2.json
+msgid "Mark"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_HAUNTING"
+#: data/json/mapgen/haunting.json
+msgid "The sound of footsteps fade.  It's no longer tracking you."
+msgstr ""
+
+#. ~ Graffiti placed on map irradiator_1_3, irradiator_1_2, irradiator_1_1,
+#. irradiator_1_6, irradiator_1_5, irradiator_1_4, irradiator_1_9,
+#. irradiator_1_8, irradiator_1_7
+#: data/json/mapgen/irradiator_1.json
+msgid "Decontamination"
+msgstr ""
+
+#. ~ Signage placed on map lmoe_prepperquest
+#: data/json/mapgen/lmoe.json
+msgid ""
+"PRIVATE PROPERTY!\n"
+"NO SOLICITING!\n"
+"\n"
+"ATTEMPT TO ENTER\n"
+"AND YOU WILL BE SHOT!"
+msgstr ""
+
+#. ~ Graffiti placed on map silo_3
+#: data/json/mapgen/missile_silo.json
+msgid ""
+"Entrance is restricted to authorized environmental-protected personnel with "
+"clearance level 4 or above only!"
+msgstr ""
+
+#. ~ Graffiti placed on map silo_4
+#. ~ Graffiti placed on map silo_finale
+#: data/json/mapgen/missile_silo.json
+#: data/mods/No_Hope/Mapgen/missile_silo.json
+msgid ""
+"Warning!  Automatic security measures engaged due to the lockdown order!"
+msgstr ""
+
+#. ~ Graffiti placed on map
+#: data/json/mapgen/motel.json
+msgid "A large pink smudged X is drawn in chalk"
+msgstr ""
+
+#. ~ Graffiti placed on map
+#: data/json/mapgen/motel.json
+msgid "A hopscotch court is drawn in chalk"
+msgstr ""
+
+#. ~ Graffiti placed on map
+#: data/json/mapgen/motel.json
+msgid "An orange sun and a yellow flower are drawn in chalk"
+msgstr ""
+
+#. ~ Signage placed on map nursing_home_sh1, nursing_home_sh2,
+#. nursing_home_sh3, nursing_home_sh4, nursing_home_sh5, nursing_home_sh6,
+#. nursing_home_sh7, nursing_home_sh8, nursing_home_sh9, nursing_home_sh10,
+#. nursing_home_sh11, nursing_home_sh12
+#: data/json/mapgen/nursing_home.json
+msgid ""
+"Shady Hills of <city>, Nursing Home\n"
+"\n"
+" ~Make Life Better~"
+msgstr ""
+
+#. ~ Signage placed on map post_office
+#: data/json/mapgen/post_office.json
+msgid "SHIPPING SUPPLIES"
+msgstr ""
+
+#. ~ Signage placed on map retirement_community_road
+#: data/json/mapgen/retirement_community.json
+msgid ""
+"Shady Hills of <city>, Retirement Community\n"
+"\n"
+" ~Make Life Better~"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/retirement_community.json
+msgid "Shady Hills Corporation: Community Manager"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/retirement_community.json
+msgid "Welcome to MY PC"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Crossing"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "Kevin's Crossing"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "Meghan's Megamart"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Bazaar"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<family_name> Bazaar"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Marketplace"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<family_name> Marketplace"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<family_name> Plaza"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Plaza"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Shopping Center"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Business Village"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Business Mall"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "Ye Olde <city> Shoppes"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "Slappin' Jimmy's <city> Strip Mall"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<city> Discount Shops"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "<family_name>'s Discount Shops"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "The <family_name> Strip"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/strip_mall.json
+msgid "The <city> Strip"
+msgstr ""
+
+#. ~ Snippet in category "trailhead_graffiti"
+#: data/json/mapgen/trailhead.json
+msgid "N = R x fp x ne x fl x fi x fc x L  drake was right"
+msgstr ""
+
+#. ~ Signage placed on map zoo_0_0, zoo_1_0, zoo_2_0, zoo_3_0, zoo_0_1,
+#. zoo_1_1, zoo_2_1, zoo_3_1, zoo_0_2, zoo_1_2, zoo_2_2, zoo_3_2, zoo_0_3,
+#. zoo_1_3, zoo_2_3, zoo_3_3
+#. ~ Signage placed on map dinozoo_0_0, dinozoo_1_0, dinozoo_2_0, dinozoo_3_0,
+#. dinozoo_0_1, dinozoo_1_1, dinozoo_2_1, dinozoo_3_1, dinozoo_0_2,
+#. dinozoo_1_2, dinozoo_2_2, dinozoo_3_2, dinozoo_0_3, dinozoo_1_3,
+#. dinozoo_2_3, dinozoo_3_3
+#: data/json/mapgen/zoo.json data/mods/DinoMod/mapgen/zoo.json
+msgid "Authorized access only"
+msgstr ""
+
+#. ~ Signage placed on map zoo_0_0, zoo_1_0, zoo_2_0, zoo_3_0, zoo_0_1,
+#. zoo_1_1, zoo_2_1, zoo_3_1, zoo_0_2, zoo_1_2, zoo_2_2, zoo_3_2, zoo_0_3,
+#. zoo_1_3, zoo_2_3, zoo_3_3
+#. ~ Signage placed on map dinozoo_0_0, dinozoo_1_0, dinozoo_2_0, dinozoo_3_0,
+#. dinozoo_0_1, dinozoo_1_1, dinozoo_2_1, dinozoo_3_1, dinozoo_0_2,
+#. dinozoo_1_2, dinozoo_2_2, dinozoo_3_2, dinozoo_0_3, dinozoo_1_3,
+#. dinozoo_2_3, dinozoo_3_3
+#: data/json/mapgen/zoo.json data/mods/DinoMod/mapgen/zoo.json
+msgid "<city> Zoo"
+msgstr ""
+
+#. ~ Signage placed on map exodii_base_x0y0z1, exodii_base_x1y0z1,
+#. exodii_base_x2y0z1, exodii_base_x3y0z1, exodii_base_x0y1z1,
+#. exodii_base_x1y1z1, exodii_base_x2y1z1, exodii_base_x3y1z1,
+#. exodii_base_x0y2z1, exodii_base_x1y2z1, exodii_base_x2y2z1,
+#. exodii_base_x3y2z1, exodii_base_x0y3z1, exodii_base_x1y3z1,
+#. exodii_base_x2y3z1, exodii_base_x3y3z1
+#: data/json/mapgen/exodii/exodii_base.json
+msgid "<- Traders Hither"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/lab/lab_modular/lab_nests_modular/lab_nested_mutagen.json
+msgid "Mutations Terminal"
+msgstr ""
+
+#. ~ Interactive menu name in computer "Mutations Terminal" placed on map
+#: data/json/mapgen/lab/lab_modular/lab_nests_modular/lab_nested_mutagen.json
+msgid "List mutation categories"
+msgstr ""
+
+#. ~ Computer name placed on map microlab_portal_MSU14
+#: data/json/mapgen/microlab/microlab_portal/microlab_MSU14.json
+msgid "MSU 14 Unit"
+msgstr ""
+
+#. ~ Signage placed on map microlab_portal_elevator_physics_glass
+#: data/json/mapgen/microlab/microlab_portal/microlab_portal_unique.json
+msgid ""
+"Warning:\n"
+"Do not proceed if red lights are on.\n"
+"\n"
+"Regulation EX-127 applies."
+msgstr ""
+
+#. ~ Signage placed on map mil_base_minefield_n
+#. ~ Signage placed on map mil_base_minefield_ne
+#. ~ Signage placed on map mil_base_minefield_e
+#. ~ Signage placed on map mil_base_minefield_se
+#. ~ Signage placed on map mil_base_minefield_s
+#. ~ Signage placed on map mil_base_minefield_sw
+#. ~ Signage placed on map mil_base_minefield_w
+#. ~ Signage placed on map mil_base_minefield_nw
+#. ~ Signage placed on map mil_base_minefield_gate_left
+#. ~ Signage placed on map mil_base_minefield_gate_right
+#: data/json/mapgen/military/mil_base/mil_base_z0.json
+msgid ""
+"RESTRICTED AREA\n"
+"AUTHORIZED PERSONNEL ONLY\n"
+"USE OF DEADLY FORCE AUTHORIZED"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/nested/lmoe_nested.json
+msgid "Personal Computer: User"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/nested/nursing_home_nested.json
+msgid "Shady Hills: Receptionist"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/nested/nursing_home_nested.json
+msgid "Shady Hills: Reception Manager"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/nested/nursing_home_nested.json
+msgid "Shady Hills: SVP Operations"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/nested/nursing_home_nested.json
+msgid "Shady Hills: Research & Development"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "Sample Shop"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> Family Laundry"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> of <city>, Insurance Co."
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name>'s Shoe Emporium"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> Worlds, Gaming Center"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name> & <given_name>'s World Class Pizza"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "FOR LEASE"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name>'s Beauty Parlor"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid ""
+"Shady Hills Corporation, <city> Branch\n"
+"\n"
+" ~Make Life Better~"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<full_name>, Branch Manager"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name>'s Undisclosed"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "18+ ONLY Beyond This Point"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name>'s Electronics Unlimited"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> Family Books"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> Discount Furniture"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name> & <family_name>, Attorneys At Law"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<city>'s Finest Clothiers"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<given_name>'s Sundae Fundae"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "Ultimate Explorers of <city>"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<full_name>'s School of Self Defense"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<city> Furnishings"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid ""
+"<family_name> & <family_name> & <family_name> & <family_name>, Attorneys At "
+"Law"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "Clothing Family <family_name>"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name>'s Humble Pies"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "<family_name>, The Huntsman"
+msgstr ""
+
+#. ~ Signage placed on map
+#: data/json/mapgen/nested/strip_mall_nested.json
+msgid "Champion <given_name>'s Fitness Center"
+msgstr ""
+
+#. ~ Computer name placed on map labyrinth_entrance
+#: data/json/mapgen/netherum/labyrinth_mapgen_1ofakind_maps.json
+msgid "Exit Controls"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/netherum/labyrinth_mapgen_nests_templated_rooms.json
+msgid "Door controls"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/mapgen/netherum/labyrinth_mapgen_treasure_rooms.json
+msgid "Bridge Controls"
+msgstr ""
+
+#. ~ Graffiti placed on map prison_alcatraz_5, prison_alcatraz_4,
+#. prison_alcatraz_3, prison_alcatraz_2, prison_alcatraz_1, prison_alcatraz_10,
+#. prison_alcatraz_9, prison_alcatraz_8, prison_alcatraz_7, prison_alcatraz_6,
+#. prison_alcatraz_15, prison_alcatraz_14, prison_alcatraz_13,
+#. prison_alcatraz_12, prison_alcatraz_11
+#: data/json/mapgen/prison/prison_alcatraz.json
+msgid "Dufresne was here"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_brute_shocker" placed on map
+#. prison_island_1_1, prison_island_1_2, prison_island_1_3, prison_island_1_4,
+#. prison_island_1_5, prison_island_1_6, prison_island_1_7, prison_island_1_8,
+#. prison_island_1_9, prison_island_1_10, prison_island_1_11,
+#. prison_island_1_12, prison_island_1_13, prison_island_1_14,
+#. prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Foreman"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_master" placed on map prison_island_1_1,
+#. prison_island_1_2, prison_island_1_3, prison_island_1_4, prison_island_1_5,
+#. prison_island_1_6, prison_island_1_7, prison_island_1_8, prison_island_1_9,
+#. prison_island_1_10, prison_island_1_11, prison_island_1_12,
+#. prison_island_1_13, prison_island_1_14, prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Warden"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_kevlar_2" placed on map prison_island_1_1,
+#. prison_island_1_2, prison_island_1_3, prison_island_1_4, prison_island_1_5,
+#. prison_island_1_6, prison_island_1_7, prison_island_1_8, prison_island_1_9,
+#. prison_island_1_10, prison_island_1_11, prison_island_1_12,
+#. prison_island_1_13, prison_island_1_14, prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Chief"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_scientist" placed on map
+#. prison_island_1_1, prison_island_1_2, prison_island_1_3, prison_island_1_4,
+#. prison_island_1_5, prison_island_1_6, prison_island_1_7, prison_island_1_8,
+#. prison_island_1_9, prison_island_1_10, prison_island_1_11,
+#. prison_island_1_12, prison_island_1_13, prison_island_1_14,
+#. prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Doctor"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_necro" placed on map prison_island_1_1,
+#. prison_island_1_2, prison_island_1_3, prison_island_1_4, prison_island_1_5,
+#. prison_island_1_6, prison_island_1_7, prison_island_1_8, prison_island_1_9,
+#. prison_island_1_10, prison_island_1_11, prison_island_1_12,
+#. prison_island_1_13, prison_island_1_14, prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Priest"
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_prisoner_brute" placed on map
+#. prison_island_1_1, prison_island_1_2, prison_island_1_3, prison_island_1_4,
+#. prison_island_1_5, prison_island_1_6, prison_island_1_7, prison_island_1_8,
+#. prison_island_1_9, prison_island_1_10, prison_island_1_11,
+#. prison_island_1_12, prison_island_1_13, prison_island_1_14,
+#. prison_island_1_15
+#: data/json/mapgen/prison/prison_island.json
+msgid "The Bully"
+msgstr ""
+
+#. ~ Signage placed on map sand_pit_NW, sand_pit_N, sand_pit_NE, sand_pit_W,
+#. sand_pit_M, sand_pit_E, sand_pit_SW, sand_pit_S, sand_pit_SE
+#: data/json/mapgen/sand_pit/sand_pit.json
+msgid ""
+"No trespassing\n"
+"No dumping trash"
+msgstr ""
+
+#. ~ Signage in mapgen palette
+#: data/json/mapgen_palettes/road.json
+msgid "<statue_plaque>"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a pipe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a pipe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/ogre.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#: data/mods/Xedra_Evolved/monsters/changeling.json
+#, c-format
+msgid "%1$s tries to hit you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/ogre.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#: data/mods/Xedra_Evolved/monsters/changeling.json
+#, c-format
+msgid "%1$s tries to hit <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/ogre.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s without penetrating your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/ogre.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s without penetrating their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a crowbar!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a crowbar!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a baton!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a baton!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a stick!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a stick!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with an axe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with an axe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a shotgun!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a shotgun!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a broom!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a broom!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a knife!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a knife!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a candlestick!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a candlestick!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a rapier!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a rapier!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a battle axe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a battle axe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a mace!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a mace!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a wrench!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a wrench!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a lug wrench!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a lug wrench!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a mop!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a mop!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts a spear at your %2$s, slashing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts a spear at <npcname>'s %2$s, slashing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%s thrusts a spear at you, but you evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%s thrusts a spear at <npcname>, but they evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts a spear at your %2$s, but glances off your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts a spear at <npcname>'s %2$s, but glances off armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a hammer!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a hammer!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a shovel!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a shovel!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a machete!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a machete!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a scalpel!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a scalpel!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a flashlight!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a flashlight!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a gun!"
+msgstr ""

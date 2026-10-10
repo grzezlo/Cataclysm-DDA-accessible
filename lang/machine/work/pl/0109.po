@@ -1,0 +1,2052 @@
+# Batch 109 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:f"
+msgid ""
+", looking thoughtful.  \"You know, around the time things really went bad, I "
+"remember a really awful portal storm.  A while later, I saw something like "
+"that in the distance.  Could be what you're talking about.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:m"
+msgid ""
+", looking thoughtful.  \"You know, around the time things really went bad, I "
+"remember a really awful portal storm.  A while later, I saw something like "
+"that in the distance.  Could be what you're talking about.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:n"
+msgid ""
+", looking thoughtful.  \"You know, around the time things really went bad, I "
+"remember a really awful portal storm.  A while later, I saw something like "
+"that in the distance.  Could be what you're talking about.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+#: data/json/npcs/random_encounters/camper_van_traveler.json
+#: data/json/npcs/random_encounters/refugee_caravans.json
+#: data/json/npcs/refugee_center/surface_staff/NPC_free_merchant_teamster.json
+#: data/json/npcs/refugee_center/surface_staff/Smokes/free_merchant_shopkeep_talk.json
+#: data/json/npcs/scrap_trader/scrap_trader.json
+msgid "Oh well.  Thanks anyway.  I'll go ask around."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"You mean you're still looking for wood?  Crazy… but we had a suspicion folks "
+"might show up in an emergency.  Talk to the manager if you want to make an "
+"order."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"Well, the machinery works just fine.  We were always self-sufficient and "
+"<the_cataclysm> only really made that more apparent.  So if you want to place"
+" an order and help keep the operation running, talk to the manager.  We'll "
+"trade you for our wood."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:f"
+msgid ""
+"I'll be honest, I don't remember a whole lot about what I was doing here.  I "
+"know that I cut trees, but not much else.  Good thing I have friends here, "
+"they've helped me out a lot."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:m"
+msgid ""
+"I'll be honest, I don't remember a whole lot about what I was doing here.  I "
+"know that I cut trees, but not much else.  Good thing I have friends here, "
+"they've helped me out a lot."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:n"
+msgid ""
+"I'll be honest, I don't remember a whole lot about what I was doing here.  I "
+"know that I cut trees, but not much else.  Good thing I have friends here, "
+"they've helped me out a lot."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:f"
+msgid ""
+"Not much to it.  I worked here as a logger before <the_cataclysm> began.  "
+"When all went to hell, I was on the job and had to hole up here with my "
+"coworkers.  Good news is we all came out fine, and the boss decided to keep "
+"the mill running.  I don't know how much longer we can last, though; not "
+"unless we make some contact with other people.  Customers, I guess you might "
+"call 'em."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:m"
+msgid ""
+"Not much to it.  I worked here as a logger before <the_cataclysm> began.  "
+"When all went to hell, I was on the job and had to hole up here with my "
+"coworkers.  Good news is we all came out fine, and the boss decided to keep "
+"the mill running.  I don't know how much longer we can last, though; not "
+"unless we make some contact with other people.  Customers, I guess you might "
+"call 'em."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:n"
+msgid ""
+"Not much to it.  I worked here as a logger before <the_cataclysm> began.  "
+"When all went to hell, I was on the job and had to hole up here with my "
+"coworkers.  Good news is we all came out fine, and the boss decided to keep "
+"the mill running.  I don't know how much longer we can last, though; not "
+"unless we make some contact with other people.  Customers, I guess you might "
+"call 'em."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"Well, I'm a logger here.  Seasonal work but good pay… or it was, at least.  "
+"Before that first <zombie> showed up and made it clear how bad things were "
+"really getting."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"I'm a lumberjack out here.  Things were quiet for a long time.  We're pretty "
+"far out in the woods so it was kind of a shock to find out just how bad it'd "
+"gotten in civilization.  We had a couple close run-ins ourselves.  My friend "
+"over there almost got eaten!  But we still have resources that I'm sure "
+"people can use."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"My comrades and I were lucky to be in the right place at the right time, I "
+"suppose.  We keep really busy out here, so we didn't expect <the_cataclysm> "
+"to land right in our lap like that.  Luckily these axes can chop more than "
+"wood.  They'll take a good chunk out of anything nasty that threatens our "
+"mill."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid ""
+"Well, I work here.  Welcome to the mill.  Used to be trucks in and out of "
+"here all the time but you're the first face we've seen in a while."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:f"
+msgid ""
+"New to the job… or, well, whatever's happening now.  I still cut trees and "
+"run logs through the saw from time to time, so I guess you'd call me a "
+"logger.  Things have only gotten weirder after those fucking <zombies> nearly"
+" killed us.  I'm not sure how much longer we'll last…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:m"
+msgid ""
+"New to the job… or, well, whatever's happening now.  I still cut trees and "
+"run logs through the saw from time to time, so I guess you'd call me a "
+"logger.  Things have only gotten weirder after those fucking <zombies> nearly"
+" killed us.  I'm not sure how much longer we'll last…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgctxt "npc:n"
+msgid ""
+"New to the job… or, well, whatever's happening now.  I still cut trees and "
+"run logs through the saw from time to time, so I guess you'd call me a "
+"logger.  Things have only gotten weirder after those fucking <zombies> nearly"
+" killed us.  I'm not sure how much longer we'll last…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_logger.json
+msgid "Hope it goes well."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Hello there.  Nice to see you again."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid "A new face at the mill?  Who might you be?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+#: data/json/npcs/other/TALK_shelter_survivors.json
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "So, what's up?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+#: data/json/npcs/refugee_center/surface_staff/Smokes/free_merchant_shopkeep_talk.json
+msgid "When will you have new stuff in stock?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid "Can I order a batch of lumber?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid "How is my order going?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid "Can I use the gate?  I'd like to bring a vehicle for trade."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid ""
+"I'll tell the guys to open one of the gates, but you gotta promise to be "
+"careful.  We've got a simple rule here: You break it, you buy it!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid "Workers will bring in a new shipment of lumber in <interval>."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid ""
+"I mean, I don't remember a whole lot about this job I had, I just know that I"
+" managed this lumbermill and sold wood to… somebody.  I think it was some "
+"sort of company.  I'm just glad I remember my coworkers here, my <name_g>s.  "
+"They're helping me to try and remember who I was before all this.  You see, "
+"that's the weird thing; I remember what my job was and how to do it the right"
+" way, but I don't know where I learned that, or who taught me.  I just know "
+"that we're in this together, and we're gonna make it through Hell if we have "
+"too."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+msgid ""
+"I'm the manager here at the mill.  It's a tight-knit crew, unionized "
+"operation.  When <the_cataclysm> broke out, we were all running scared when "
+"some <zombies> broke onto the yard, had to fight them off.  Now, we've just "
+"held up here.  I imagine any folks left out there might be needing our "
+"machinery and skills to keep civilization alive.  Might make new customers "
+"yet."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/lumbermill_employees/TALK_lumbermill_merchant.json
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "Hm."
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/lumbermill_employees/lumbermill_employees.json
+msgid "logger"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/lumbermill_employees/lumbermill_employees.json
+msgid "manager"
+msgstr ""
+
+#. ~ Job description of "Lumberjack" NPC class
+#: data/json/npcs/lumbermill_employees/lumbermill_employees.json
+msgid "I felled trees before the apocalypse.  Zombies shouldn't be as tough."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Find Drive Belts"
+msgstr ""
+
+#. ~ Description of mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Obtain 3 drive belts in exchange for credit with the loggers."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "I need three drive belts."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"Some of our machinery received some damage before <the_cataclysm> and we were"
+" waiting on replacement parts.  Now everything's changed and those parts are "
+"more important than ever.  Get us three drive belts and I'll give you some "
+"credit with us."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#. ~ Dialogue line in mission "Get 1,000 Nails"
+#. ~ Dialogue line in mission "Find 25 Magnetrons"
+#. ~ Dialogue line in mission "Obtain 300 Charcoal"
+#. ~ Dialogue line in mission "Obtain 100 Solder"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+#: data/json/npcs/scrap_trader/scrap_trader_missions.json
+msgid "Someone's got to do it."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"If you can't find actual drive belts on engines, a good replacement can be "
+"made from a belt and some duct tape.  Nothing difficult."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Do you have the belts?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Wonderful!  Thanks, <name_g>, we'll be fine for a long while from now."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#. ~ Dialogue line in mission "Get 1,000 Nails"
+#. ~ Dialogue line in mission "Find 25 Magnetrons"
+#. ~ Dialogue line in mission "Obtain 300 Charcoal"
+#. ~ Dialogue line in mission "Obtain 100 Solder"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+#: data/json/npcs/scrap_trader/scrap_trader_missions.json
+msgid "Where are they?  I don't believe you."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Drive Belts"
+#. ~ Dialogue line in mission "Get 1,000 Nails"
+#. ~ Dialogue line in mission "Get 6,800 Nails"
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "That's unfortunate.  I guess we'll have to find someone else to do it."
+msgstr ""
+
+#. ~ Description of mission "Get 1,000 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Obtain 1,000 nails in exchange for credit with the loggers."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 1,000 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"Along with those drive belts, we were waiting for some nails for structural "
+"repairs.  Due to <the_cataclysm>, we obviously never received them.  So, I "
+"need you to get us 1,000 nails.  We'll pay you fairly."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 1,000 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Taking apart some furniture in town should get what you need."
+msgstr ""
+
+#. ~ Description of mission "Get 6,800 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Obtain 6,800 nails in exchange for credit with the loggers."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 6,800 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"While fairly sturdy, the metal fence around this place won't hold out for "
+"long.  So, we've decided to replace it with a wall.  However, the nails we "
+"had were used to repair our existing structures, and they weren't nearly "
+"enough.  After some calculations, we need 6,800 nails to do it.  That may "
+"seem like a lot, but we're willing to give you a TON of credit for it."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 6,800 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Well, I suppose that's reasonable."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 6,800 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"You might have to do more than just scrapping a bunch of furniture.  "
+"Dismantling a building somewhere in town could get you what you need."
+msgstr ""
+
+#. ~ Dialogue line in mission "Get 6,800 Nails"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "That's absolutely amazing!  I can't thank you enough for this!"
+msgstr ""
+
+#. ~ Description of mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Obtain 6 blankets or quilts in exchange for credit with the loggers."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"Now that we should be safe from harm, I decided to start adding a few things "
+"to this place.  Right now, we don't have anywhere to comfortably sleep, so "
+"we're building a small sleeping quarter.  We just need 6 big, warm blankets "
+"or quilts to finish our project."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "I figure any hotel or motel in town should have lots of blankets."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Did you find us some bedding yet?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"Thanks!  Feel free to sleep here if you want.  It's the least we can do for "
+"the help."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find 6 Blankets"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "How is this supposed to help us?"
+msgstr ""
+
+#. ~ Description of mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"Establish trade relations between the loggers and a refugee center, and bring"
+" back a writ of the agreement."
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid ""
+"While some of us were out scavenging, we spotted an old evac shelter that "
+"looks like it might have some people inside.  I want you to go over there, "
+"find whoever runs the joint, and see if we can make a deal with them for some"
+" processed lumber.  This will be invaluable to our survival."
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Please give it a try?  This is really important to us."
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "What did they say about the deal?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+msgid "Thank you!  We're set for life on this one!"
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+#: data/json/npcs/scrap_trader/scrap_trader_missions.json
+msgid "How does this help us?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Establish A Trade Route"
+#: data/json/npcs/lumbermill_employees/lumbermill_missions.json
+#: data/json/npcs/scrap_trader/scrap_trader_missions.json
+msgid ""
+"That's unfortunate.  I guess we'll have to find someone else to trade with."
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ A member of the Gray Moose Lodge, trying to safe in their isolated
+#. location
+#: data/json/npcs/militia/GM_Militia_Guard.json
+msgid "Militia Guard"
+msgstr ""
+
+#. ~ Job description of "Guard" NPC class
+#: data/json/npcs/militia/GM_Militia_Guard.json
+msgid "I'm a local guard."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Guard.json
+msgid "I'm busy on watch duty.  Talk to the Boss upstairs."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Guard.json
+msgid "I'm on watch duty.  Talk to the Boss.  He's upstairs."
+msgstr ""
+
+#. ~ Unique name of an NPC
+#. ~ A member of the Gray Moose Militia, trying to safe in their isolated
+#. location
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid "Darby Sutton"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid ""
+"Welcome to our camp.  Behave yourself while you are here.  What can I do for "
+"you?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+#: data/mods/Aftershock/npcs/Salvor_Market/uica_vehicle_marchant_talk.json
+#: data/mods/aftershock_exoplanet/npcs/Salvor_Market/uica_vehicle_marchant_talk.json
+msgid "What do you do here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid "What's the story behind this place?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid "Time for me to leave"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid ""
+"I'm the most senior member at this point so I'm what passes for the leader "
+"here now.  I'm just trying to make plans to keep us alive since everything "
+"fell apart."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid ""
+"Well, that's a long story.  We are what's left of the Grey Moose militia.  We"
+" had plans for when things went south cause of crazy politicians or war, but "
+"we didn't expect people to go crazy then turn zombie.  Only a handful of our "
+"members actually made it through all that madness.  What's worse is that we "
+"lost so much of our supplies and gear due to military checkpoints and trigger"
+" happy soldiers.  It didn't matter that half of us were former military the "
+"checkpoint guards just saw weapons, panicked and then confiscated everything "
+"but the clothes on our back.  So here we are at our planned escape location "
+"with not even a fraction of our manpower or supplies."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid ""
+"I can't say I can think of anything at the moment.  Our remoteness is our "
+"defense.  We want to keep a low profile and try to keep out of any trouble in"
+" this isolated location.  We are willing to trade for weapons and ammo "
+"though.  Keeping the nearby area clear and hunting is always eating away at "
+"our supplies."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid "Keeping a low profile is good."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/militia/GM_Militia_Merchant.json
+msgid "Stay safe out there.  Not enough of us are around anymore."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:f"
+msgid ""
+"Ah, home sweet home.  It feels like I haven't been here for ages.  Fuck, it "
+"looks so horrible now.  I guess it's because of <the_cataclysm>.  Thank you "
+"for bringing me here, <name_g>.  Let's eat the cake."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:m"
+msgid ""
+"Ah, home sweet home.  It feels like I haven't been here for ages.  Fuck, it "
+"looks so horrible now.  I guess it's because of <the_cataclysm>.  Thank you "
+"for bringing me here, <name_g>.  Let's eat the cake."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:n"
+msgid ""
+"Ah, home sweet home.  It feels like I haven't been here for ages.  Fuck, it "
+"looks so horrible now.  I guess it's because of <the_cataclysm>.  Thank you "
+"for bringing me here, <name_g>.  Let's eat the cake."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:f"
+msgid ""
+"I'm just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather was "
+"a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole life,"
+" until some American <name_b>s ruined my business!  I couldn't do anything "
+"about this, but now, with <the_cataclysm> and <zombies> around, I have a "
+"chance to get my revenge!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:m"
+msgid ""
+"I'm just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather was "
+"a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole life,"
+" until some American <name_b>s ruined my business!  I couldn't do anything "
+"about this, but now, with <the_cataclysm> and <zombies> around, I have a "
+"chance to get my revenge!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgctxt "npc:n"
+msgid ""
+"I'm just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather was "
+"a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole life,"
+" until some American <name_b>s ruined my business!  I couldn't do anything "
+"about this, but now, with <the_cataclysm> and <zombies> around, I have a "
+"chance to get my revenge!"
+msgstr ""
+
+#. ~ Description of mission "Angry pizzaiolo"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Bring the pizzaiolo to <color_light_blue>their rival's house</color> and "
+"don't forget to <color_yellow>bring at least 200 units of gasoline</color>.  "
+"After you got there, talk to the pizzaiolo to start burning the house."
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pizzaiolo"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"I'm so angry!  I have an enemy that ruined my life, and I want revenge for "
+"it!  I don't care about <the_cataclysm>, I just want to burn his <freaking> "
+"restaurant!  Will you help me?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pizzaiolo"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Good.  Let's go to his restaurant and fucking burn it!  Oh, by the way, could"
+" you bring gasoline with you, <name_g>?  I was so angry I forgot to bring it "
+"with me…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pizzaiolo"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Sweet, sweet revenge!  It smells so nice!  His restaurant burns, his legacy "
+"is now ruined!  Even if he became a <zombie>, it still good."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find TrueFoodperson"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Ah, it's you, <name_g>.  Wanna continue on my revenge to all American "
+"<name_b>s?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find TrueFoodperson"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Good.  Next stop, Foodplace.  I always hated that place, especially that "
+"<freaking> <name_b> in his idiotic mask.  I know he's still alive, hiding in "
+"his dumb parody of a restaurant.  Take this bat.  Let's take a visit to him, "
+"<name_g>, and kick his <freaking> ass!"
+msgstr ""
+
+#. ~ Dialogue line in mission "Pizza parlor"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"I need to make a last step to achieve my revenge, and the step is - my pizza "
+"parlor.  Before <the_cataclysm>, the bank took my place, and now, some "
+"<freaking> <name_b>s occupied it and made it their base!  Just unbelievable, "
+"I tell ya.  It's time for me to fight back, deal with this <freaking> "
+"<name_b>s and regain my honor.  Are you with me, <name_g>?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Pizza parlor"
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid ""
+"Nice, very fucking nice.  Fuck, this placed is thrashed.  <freaking> "
+"<name_b>s thrashed my restaurant!  Okay, calm down, calm down, will ya… At "
+"least I retrieved my place.  Thank you, <name_g>.  I couldn't make it without"
+" you."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/json/npcs/other/NPC_pizzaiolo.json
+msgid "You learn how to craft cake."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "Finally, someone who isn't part of those <zombies>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid ""
+"Yeah, today's your lucky day.  Hand over your stuff, or you'll be one "
+"yourself."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid "Hey, nice to meet you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "Wanna buy something, maybe sell off what you don't need?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "Could I buy one of your pets?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgctxt "npc:f"
+msgid ""
+"I worked here before <the_cataclysm> dumped everything in the <freaking> bin."
+"  I took care of all the animals here, and when the <zombies> started roaming"
+" the streets, I gathered every pet or stray I could.  I still take care of "
+"them, just gotta worry about the <zombies> now on top of disease, "
+"cleanliness, etc."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgctxt "npc:m"
+msgid ""
+"I worked here before <the_cataclysm> dumped everything in the <freaking> bin."
+"  I took care of all the animals here, and when the <zombies> started roaming"
+" the streets, I gathered every pet or stray I could.  I still take care of "
+"them, just gotta worry about the <zombies> now on top of disease, "
+"cleanliness, etc."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgctxt "npc:n"
+msgid ""
+"I worked here before <the_cataclysm> dumped everything in the <freaking> bin."
+"  I took care of all the animals here, and when the <zombies> started roaming"
+" the streets, I gathered every pet or stray I could.  I still take care of "
+"them, just gotta worry about the <zombies> now on top of disease, "
+"cleanliness, etc."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "That's quite noble of you, but how do you take care of so many animals?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid ""
+"To be honest with you, it's been pretty difficult.  I sneak out at night or "
+"whenever there's an opening to grab whatever I need and come back before "
+"something notices me.  I've been held up for quite a while whenever a horde "
+"decides to pass by.  Good thing we had some spare bookcases lying around, or "
+"I'd be a goner by now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid ""
+"I hate to see them go, but I think you'd be able to take better care of one "
+"than I can right now.  I can sell you a cat or dog of your choosing, for $25 "
+"and $50, respectively."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "I've changed my mind, let's talk about something else."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "I'll have a dog."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_ANIMAL_SHELTER_SURVIVOR.json
+msgid "I'll have a cat."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "u:f"
+msgid "Hey stranger.  How's life treatin' ya these days?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "u:m"
+msgid "Hey stranger.  How's life treatin' ya these days?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "u:n"
+msgid "Hey stranger.  How's life treatin' ya these days?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Hand over your stuff!  Don't make any sudden moves, or you die!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid "What brings you around here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid "Would you be interested in trading at all?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgid "Can I stay here for a while?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+#: data/json/npcs/other/TALK_shelter_survivors.json
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgid "Why don't you come with me?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "npc:f"
+msgid ""
+"I'm just an average person, really.  When a horde of those <freaking> "
+"<zombies> came knockin' on my door, I ran for it.  Good for me that someone "
+"left this store open in the chaos, I ran inside and locked the place down.  "
+"There isn't a thing in all of <city> that can bust through these walls and "
+"barred windows, I'd reckon I'm the luckiest <name_b> in town."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "npc:m"
+msgid ""
+"I'm just an average person, really.  When a horde of those <freaking> "
+"<zombies> came knockin' on my door, I ran for it.  Good for me that someone "
+"left this store open in the chaos, I ran inside and locked the place down.  "
+"There isn't a thing in all of <city> that can bust through these walls and "
+"barred windows, I'd reckon I'm the luckiest <name_b> in town."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgctxt "npc:n"
+msgid ""
+"I'm just an average person, really.  When a horde of those <freaking> "
+"<zombies> came knockin' on my door, I ran for it.  Good for me that someone "
+"left this store open in the chaos, I ran inside and locked the place down.  "
+"There isn't a thing in all of <city> that can bust through these walls and "
+"barred windows, I'd reckon I'm the luckiest <name_b> in town."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid "Why would someone leave a gun store open in all this chaos?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid ""
+"Well, they weren't really around to lock it up.  Whoever got here first blew "
+"their head off with a 12-gauge, but they were up and movin', tried to kill me"
+" too.  They're out in the dumpster now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_GUN_STORE_SURVIVOR.json
+msgid "I'm sorry to hear that.  Maybe we should change the subject."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Freeze you <freaking> <zombies>!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "&Hold up your hands.  \"Don't worry, I'm not going to hurt you\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "u:f"
+msgid ""
+"Oh, you're not one of the <zombies>.  Come on in, just don't cause any "
+"trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "u:m"
+msgid ""
+"Oh, you're not one of the <zombies>.  Come on in, just don't cause any "
+"trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "u:n"
+msgid ""
+"Oh, you're not one of the <zombies>.  Come on in, just don't cause any "
+"trouble."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+msgid "What are you doing in this deathtrap?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+msgctxt "npc:f"
+msgid ""
+"I used to live here before <the_cataclysm>.  I was asleep when a horde of "
+"<zombies> busted through the front, and in the chaos I wound up here.  When "
+"the screaming stopped, I peaked out the door to find my neighbor stumbling "
+"about with his face half-eaten, and I haven't left since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+msgctxt "npc:m"
+msgid ""
+"I used to live here before <the_cataclysm>.  I was asleep when a horde of "
+"<zombies> busted through the front, and in the chaos I wound up here.  When "
+"the screaming stopped, I peaked out the door to find my neighbor stumbling "
+"about with his face half-eaten, and I haven't left since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+msgctxt "npc:n"
+msgid ""
+"I used to live here before <the_cataclysm>.  I was asleep when a horde of "
+"<zombies> busted through the front, and in the chaos I wound up here.  When "
+"the screaming stopped, I peaked out the door to find my neighbor stumbling "
+"about with his face half-eaten, and I haven't left since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:f u:f"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:f u:m"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:f u:n"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:m u:f"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:m u:m"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:m u:n"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:n u:f"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:n u:m"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:n u:n"
+msgid "Hey, stranger.  Glad to see a new face around here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgid "Glad to see you too.  Now, hand over your things."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:f"
+msgid ""
+"I was out here camping when <the_cataclysm> disturbed me.  I didn't know "
+"anything was wrong until two <zombies> stumbled up here, and tried to kill "
+"me.  I figured staying here would be my best bet, away from the cities."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:m"
+msgid ""
+"I was out here camping when <the_cataclysm> disturbed me.  I didn't know "
+"anything was wrong until two <zombies> stumbled up here, and tried to kill "
+"me.  I figured staying here would be my best bet, away from the cities."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_CAMPER.json
+msgctxt "npc:n"
+msgid ""
+"I was out here camping when <the_cataclysm> disturbed me.  I didn't know "
+"anything was wrong until two <zombies> stumbled up here, and tried to kill "
+"me.  I figured staying here would be my best bet, away from the cities."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:f"
+msgid "Haven't seen someone new in a while.  What brings you around here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:m"
+msgid "Haven't seen someone new in a while.  What brings you around here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:n"
+msgid "Haven't seen someone new in a while.  What brings you around here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgid "Just wandering, <name_g>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgid ""
+"I'll make this real simple for you.  Hand over your stuff, and no one gets "
+"hurt, capiche?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgid "Can I purchase any of your liquor?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgid "It's a bit dangerous to be out here alone.  Why don't you come with me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgid "Anything I could do for you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:f"
+msgid ""
+"I run this distillery you're standing in, before <the_cataclysm> it wasn't so"
+" legal with the law.  I was in <city> making a deal on my product when a "
+"horde of rioters busted in, so I ran for it.  I thought my business would be "
+"a nice place to stay, so I came out here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:m"
+msgid ""
+"I run this distillery you're standing in, before <the_cataclysm> it wasn't so"
+" legal with the law.  I was in <city> making a deal on my product when a "
+"horde of rioters busted in, so I ran for it.  I thought my business would be "
+"a nice place to stay, so I came out here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_MOONSHINER.json
+msgctxt "npc:n"
+msgid ""
+"I run this distillery you're standing in, before <the_cataclysm> it wasn't so"
+" legal with the law.  I was in <city> making a deal on my product when a "
+"horde of rioters busted in, so I ran for it.  I thought my business would be "
+"a nice place to stay, so I came out here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgid "Would you be interested in bartering?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "npc:f"
+msgid ""
+"They all said I was crazy for preparing for <the_cataclysm>.  Now, they're "
+"all dead, and I'm still kickin'.  When the riots turned to hordes, I was "
+"ready; all I had to do was dodge a few <zombies> to get back to my bastion.  "
+"I've been living safely here ever since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "npc:m"
+msgid ""
+"They all said I was crazy for preparing for <the_cataclysm>.  Now, they're "
+"all dead, and I'm still kickin'.  When the riots turned to hordes, I was "
+"ready; all I had to do was dodge a few <zombies> to get back to my bastion.  "
+"I've been living safely here ever since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgctxt "npc:n"
+msgid ""
+"They all said I was crazy for preparing for <the_cataclysm>.  Now, they're "
+"all dead, and I'm still kickin'.  When the riots turned to hordes, I was "
+"ready; all I had to do was dodge a few <zombies> to get back to my bastion.  "
+"I've been living safely here ever since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+msgid ""
+"Well, I guess you could borrow one of the spare beds, just don't hog it.  I "
+"kept a few in case someone else joined me, but no one I knew came here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "u:f"
+msgid ""
+"Oh, you're not one of them.  Those <zombies>, I mean.  Come on in, just don't"
+" cause any trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "u:m"
+msgid ""
+"Oh, you're not one of them.  Those <zombies>, I mean.  Come on in, just don't"
+" cause any trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "u:n"
+msgid ""
+"Oh, you're not one of them.  Those <zombies>, I mean.  Come on in, just don't"
+" cause any trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "npc:f"
+msgid ""
+"I found this emergency shelter when I was running from the chaos back in the "
+"cities.  Fortunately, the place hadn't been looted yet and there weren't any "
+"<zombies> lurking around; just the spot to stay 'till who knows when."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "npc:m"
+msgid ""
+"I found this emergency shelter when I was running from the chaos back in the "
+"cities.  Fortunately, the place hadn't been looted yet and there weren't any "
+"<zombies> lurking around; just the spot to stay 'till who knows when."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/TALK_shelter_survivors.json
+msgctxt "npc:n"
+msgid ""
+"I found this emergency shelter when I was running from the chaos back in the "
+"cities.  Fortunately, the place hadn't been looted yet and there weren't any "
+"<zombies> lurking around; just the spot to stay 'till who knows when."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/camp_start.json
+msgctxt "npc:f"
+msgid ""
+"Hey, I did some surveying and I believe this is a good spot to set up at."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/camp_start.json
+msgctxt "npc:m"
+msgid ""
+"Hey, I did some surveying and I believe this is a good spot to set up at."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/camp_start.json
+msgctxt "npc:n"
+msgid ""
+"Hey, I did some surveying and I believe this is a good spot to set up at."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/camp_start.json
+msgid "Let's stay here, then.  I trust your decisions."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/meteorologist.json
+msgid "Find high-quality lenses for the meteorologist"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find high-quality lenses for the meteorologist"
+#: data/json/npcs/other/meteorologist.json
+msgid "Try looking for telescopes or microscopes to dismantle."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/meteorologist.json
+msgid "Find a radio controller for the meteorologist"
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/meteorologist.json
+msgid "Find the meteorologist's crashed drone"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find the meteorologist's crashed drone"
+#: data/json/npcs/other/meteorologist.json
+msgid ""
+"Hmm, I see that the drone is not with you.  Maybe at least the memory module "
+"remains?  Okay, show it to me… hmm, situation is worse than I expected, much,"
+" much worse… I'm not feeling good.  I don't feel safe in this place anymore."
+"  I have to run, run somewhere.  But where to run if these monsters are "
+"everywhere…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:f"
+msgid ""
+"I was homeless before everything went down, just camping out here for a "
+"while.  Stuck up <name_b>s shunned me for my condition, but they're all dead "
+"now.  I guess I'm better off than they are."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:m"
+msgid ""
+"I was homeless before everything went down, just camping out here for a "
+"while.  Stuck up <name_b>s shunned me for my condition, but they're all dead "
+"now.  I guess I'm better off than they are."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:n"
+msgid ""
+"I was homeless before everything went down, just camping out here for a "
+"while.  Stuck up <name_b>s shunned me for my condition, but they're all dead "
+"now.  I guess I'm better off than they are."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "u:f"
+msgid ""
+"I guess you probably wouldn't have noticed this place before shit hit the "
+"fan, but I've been down here for quite a while."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "u:m"
+msgid ""
+"I guess you probably wouldn't have noticed this place before shit hit the "
+"fan, but I've been down here for quite a while."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "u:n"
+msgid ""
+"I guess you probably wouldn't have noticed this place before shit hit the "
+"fan, but I've been down here for quite a while."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgid ""
+"Nothing to it.  Before <the_cataclysm>, it didn't take much to find yourself "
+"here.  And I guess it just made sense to stay.  We seem to be doing better "
+"than most, anyway."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgid "Surviving, as I always have.  Is that what you mean?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:f"
+msgid ""
+"It's hard to say exactly what I'm doing out here, but I guess one thing just "
+"leads to another and… well, you're just being nice when you ask, aren't you?"
+"  It doesn't matter now anyway.  I'm here and I'm still alive."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:m"
+msgid ""
+"It's hard to say exactly what I'm doing out here, but I guess one thing just "
+"leads to another and… well, you're just being nice when you ask, aren't you?"
+"  It doesn't matter now anyway.  I'm here and I'm still alive."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/TALK_homeless_survivor.json
+msgctxt "npc:n"
+msgid ""
+"It's hard to say exactly what I'm doing out here, but I guess one thing just "
+"leads to another and… well, you're just being nice when you ask, aren't you?"
+"  It doesn't matter now anyway.  I'm here and I'm still alive."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "Who are you?  Would you like to trade?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Where might your friends be?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Can I stay here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "Can I purchase some of your wares?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "How's that smoker coming along?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgctxt "npc:f"
+msgid ""
+"I was homeless for a while before <the_cataclysm>.  I met some buddies out on"
+" the road and we were camping out here.  Now we're just scraping by on what "
+"we can find, mostly.  We're willing to trade, though.  Who knows, you might "
+"find yourself a good deal."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgctxt "npc:m"
+msgid ""
+"I was homeless for a while before <the_cataclysm>.  I met some buddies out on"
+" the road and we were camping out here.  Now we're just scraping by on what "
+"we can find, mostly.  We're willing to trade, though.  Who knows, you might "
+"find yourself a good deal."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgctxt "npc:n"
+msgid ""
+"I was homeless for a while before <the_cataclysm>.  I met some buddies out on"
+" the road and we were camping out here.  Now we're just scraping by on what "
+"we can find, mostly.  We're willing to trade, though.  Who knows, you might "
+"find yourself a good deal."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"Making ends meet, even in the worst circumstances.  We've been camping out "
+"here now, trading with whoever passes by.  If something catches your eye, let"
+" me know."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"We got tired of being out on the road and decided to stay here for a bit.  "
+"We've found a lot of useful stuff out and about, so if you see anything you "
+"need I'll make you a deal."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"They should be around here somewhere.  We usually go out in teams to "
+"scavenge, and they haven't told me about anything yet.  They might have "
+"something for you to do."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"Well, I don't see anything wrong with it.  We should have a spare bed in that"
+" tent you could sleep on.  Just don't cause any trouble."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"Sure!  It turned out well enough for us, and it's one of the few fresh meats "
+"we can find.  I'll pay fairly for it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "I have nothing."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "I have nothing.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid ""
+"It's wonderful!  We've been preserving a lot more of what we manage to "
+"scavenge so we won't have to worry about our food going bad for a while.  "
+"We'd be willing to sell some of the excess, if you want."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "I think I'll buy 10 slices.  [$20]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "You think 20 slices would be alright?  [$40]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_broker.json
+msgid "I'll take 50 slices of the stuff.  [$100]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Who are you, and what are you doing here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Nice to meet you.  I mean no harm."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "What's with that guy in the tent?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid "Want to trade?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid ""
+"Oh, they're right over there, and one of us is in that tent over there.  They"
+" handle any stuff we manage to scavenge, so feel free to trade for what you "
+"want."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid ""
+"Thanks for the offer, but I don't have anything to spare right now.  One of "
+"my buddies over in that tent handles stuff like this, though.  You might find"
+" something."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+msgid ""
+"Well, they were the brightest of us when all hell broke loose.  They managed "
+"to get us some food and weapons early on.  I guess that just kinda made them "
+"the leader."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Sticky Situation"
+msgstr ""
+
+#. ~ Description of mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Kill some slimes in exchange for credit with some of the traders and bring "
+"back six of their slime scraps."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#. ~ Dialogue line in mission "Refurbishments Pt. IV"
+#. ~ Dialogue line in mission "Refurbishments Pt. V"
+#. ~ Dialogue line in mission "Refurbishments Pt. VI"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "I need some help."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"We've had some trouble with slimes not far from us.  It's been hard going "
+"through there with all them around, so I want you to go take care of it."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "I'll be here when you get back."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "No problem.  I'm sure one of us will get to it anyway."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Sure, they can be cut, but I'd say it's better to splatter them with "
+"something large and heavy."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Are those slimes dead yet?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Nice.  I'll just take those off your hands.  Might be good for greasing the "
+"bike chains and door hinges around here even though it is a bit… abnormal."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "You don't look nearly as sticky as you're supposed to.  Get back to it."
+msgstr ""
+
+#. ~ Dialogue line in mission "Sticky Situation"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Did they give you the slip?  It's worse than I thought, then."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Arthropod Hunting"
+msgstr ""
+
+#. ~ Description of mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Kill some ants and bring back ten slices of their meat in exchange for credit"
+" with some of the traders."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"The last time we went out scouting we found some gargantuan ants crawling "
+"around.  We thought we might see how they taste, if they could be cooked and "
+"whatnot.  I want you to go kill one and bring back some of its meat."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Alright, I can understand that."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "A shotgun of some sort might work well."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Do you have the meat?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Nice.  I'll get these cooked up.  Who knows, we might want some more in the "
+"future."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "You sure?  I don't see my meat anywhere."
+msgstr ""
+
+#. ~ Dialogue line in mission "Arthropod Hunting"
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#. ~ Dialogue line in mission "Refurbishments Pt. IV"
+#. ~ Dialogue line in mission "Refurbishments Pt. VI"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Ah, well.  It's no big deal."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Refurbishments"
+msgstr ""
+
+#. ~ Description of mission "Refurbishments"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Obtain 100 planks."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"My buddies and I have decided to stay here for a while.  This is about the "
+"only safe place out here, and it's kinda become our home.  Anyway, we're "
+"going to build a wall.  Our old logs have provided a bunch of the wood, but "
+"we still need quite a few planks.  About 100 of them.  If you could get it "
+"for us, I'd be grateful."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#. ~ Dialogue line in mission "Refurbishments Pt. IV"
+#. ~ Dialogue line in mission "Refurbishments Pt. V"
+#. ~ Dialogue line in mission "Refurbishments Pt. VI"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Thank you.  We'll be sure to compensate your efforts."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#. ~ Dialogue line in mission "Refurbishments Pt. IV"
+#. ~ Dialogue line in mission "Refurbishments Pt. V"
+#. ~ Dialogue line in mission "Refurbishments Pt. VI"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Alright, I can understand that.  I guess I'll have to get it myself."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Any nearby forest should have all you need.  Otherwise, you might try "
+"breaking down some furniture in town."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Do you have my lumber?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Thank you.  We'll start right away."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments"
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#. ~ Dialogue line in mission "Refurbishments Pt. IV"
+#. ~ Dialogue line in mission "Refurbishments Pt. V"
+#. ~ Dialogue line in mission "Refurbishments Pt. VI"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "I can tell you're lying.  I don't see shit."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Refurbishments Pt. II"
+msgstr ""
+
+#. ~ Description of mission "Refurbishments Pt. II"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Obtain 150 planks."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments Pt. II"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Now that we've got the wall done, we decided to move out of these old tents."
+"  We still have some leftover nails but we need more wood.  So, if you could "
+"get us 150 planks, we'd be grateful."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Refurbishments Pt. III"
+msgstr ""
+
+#. ~ Description of mission "Refurbishments Pt. III"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Obtain 6 ropes."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"Our entrance is wide open so we're building a gate over it.  Problem is we "
+"don't have any ropes.  If you could find some for us, we'll pay you."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid ""
+"If you can't find any rope around, one of our books should have something on "
+"rope-making.  Most plants can be woven into a halfway decent rope."
+msgstr ""
+
+#. ~ Dialogue line in mission "Refurbishments Pt. III"
+#: data/json/npcs/other/homeless/group_camp/group_camp_missions.json
+msgid "Do you have my ropes?"
+msgstr ""

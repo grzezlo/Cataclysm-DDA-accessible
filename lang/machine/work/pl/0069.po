@@ -1,0 +1,1637 @@
+# Batch 69 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of furniture "X-ray scanner"
+#: data/json/furniture_and_terrain/furniture-medical.json
+msgid "A table with a movable head, often used for medical examinations."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-medical.json
+msgid "dental X-ray machine"
+msgstr ""
+
+#. ~ Description of furniture "dental X-ray machine"
+#: data/json/furniture_and_terrain/furniture-medical.json
+msgid "A device for creating radiographic images of the teeth."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-medical.json
+msgid "exam chair"
+msgstr ""
+
+#. ~ Description of furniture "exam chair"
+#: data/json/furniture_and_terrain/furniture-medical.json
+msgid "A medical exam chair with an overhead light, bolted to the floor."
+msgstr ""
+
+#. ~ Description of furniture "pallet of bricks"
+#: data/json/furniture_and_terrain/furniture-pallet.json
+msgid ""
+"A massive, packed-together block of bricks wrapped with plastic packaging.  "
+"It makes for easy storage of building materials for masonry constructions."
+msgstr ""
+
+#. ~ Description of furniture "pallet of adobe bricks"
+#: data/json/furniture_and_terrain/furniture-pallet.json
+msgid ""
+"A massive, packed-together block of adobe bricks wrapped with plastic "
+"packaging.  It makes for easy storage of building materials for masonry "
+"constructions."
+msgstr ""
+
+#. ~ Description of furniture "pallet of cement bags"
+#: data/json/furniture_and_terrain/furniture-pallet.json
+msgid ""
+"A massive, packed-together block of cement bags wrapped with plastic "
+"packaging.  It makes for easy storage of building materials for masonry "
+"constructions."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-plumbing.json
+msgid "sink with gravity-feed tank"
+msgstr ""
+
+#. ~ Description of furniture "sink with gravity-feed tank"
+#: data/json/furniture_and_terrain/furniture-plumbing.json
+msgid ""
+"A water basin with flowing water, fed by a tank suspended above.  A luxury "
+"when the water main is unavailable.  This one has a hand pump to refill from "
+"groundwater."
+msgstr ""
+
+#. ~ Description of furniture "water heater"
+#. ~ Description of furniture "family–sized water heater"
+#: data/json/furniture_and_terrain/furniture-plumbing.json
+msgid ""
+"An insulated metal tank with a small fire used to maintain near-boiling "
+"temperatures.  There's no longer any way to power it, but any water left in "
+"the large tank from before the power went out should be pretty clean, and it "
+"could be used to store large quantities of other liquids too."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-plumbing.json
+msgid "family–sized water heater"
+msgstr ""
+
+#. ~ Description of furniture "water purifier"
+#: data/json/furniture_and_terrain/furniture-plumbing.json
+msgid ""
+"This device effectively sterilizes water.  You can plug it into a power grid "
+"to use it."
+msgstr ""
+
+#. ~ Description of furniture "pool table"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A large wooden table with green felt carpeting on top, and a set of "
+"symmetrical holes that carry billiard balls to an opening on one side.  While"
+" not a good substitute for a normal table, you could take it apart for a "
+"substantial amount of wood."
+msgstr ""
+
+#. ~ Description of furniture "target"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A long sheet of metal, cut into a roughly human shape and held upright by a "
+"pipe frame.  There are two bullseye targets painted onto it, a large one on "
+"the torso, and a smaller one on the head.  It is peppered with small dents "
+"and holes, and a large amount of the paint has flaked or chipped off."
+msgstr ""
+
+#. ~ Description of furniture "mechanical ergometer"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"An exercise machine with a set of handles and plates meant to emulate rowing "
+"a boat.  This an older model with mechanical resistance adjustments, so it "
+"works without power."
+msgstr ""
+
+#. ~ Description of furniture "gravity treadmill"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A gravity-driven conveyor belt with a mechanical control panel for running in"
+" place.  The belt is positioned on an adjustable incline, so it slides back "
+"under your weight without needing to be powered."
+msgstr ""
+
+#. ~ Description of furniture "heavy punching bag"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A hefty, oblong leather bag, suspended from a ceiling mount with a steel "
+"chain.  It can be used for exercise and combat training, with the notable "
+"advantage that it doesn't fight back."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-recreation.json
+#: data/json/items/furniture/decorative.json
+msgid "piano"
+msgid_plural "piano"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "piano"
+#. ~ Description of "piano"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+#: data/json/items/furniture/decorative.json
+msgid ""
+"An elegant piano, capable of producing beautiful music if used by a skilled "
+"player.  A set of off-white and black keys are linked to a set of hammers, "
+"which strike their corresponding tightly-coiled wire to produce sound."
+msgstr ""
+
+#. ~ Description of furniture "speaker cabinet"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"An upright wood-panel case of large speakers, built to produce a potentially "
+"deafening volume level.  While it would be a terrible idea to use this now, "
+"it could hold useful parts."
+msgstr ""
+
+#. ~ Description of furniture "pipe organ"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A majestic pipe organ.  Dubbed \"the king of instruments\", it is capable of "
+"producing powerful sound harmonies if used by a skilled player.  Rows of off-"
+"white and black keys are linked to a set of iron pipes, which resonate at a "
+"specific pitch when pressurized air is driven through them."
+msgstr ""
+
+#. ~ Description of furniture "training dummy"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A hand-made humanoid figure, useful for training in close quarters combat.  "
+"This one is made from wood and has some duct tape to mark the striking "
+"points.  It has been erected in the ground on its post."
+msgstr ""
+
+#. ~ Description of furniture "armored training dummy"
+#: data/json/furniture_and_terrain/furniture-recreation.json
+msgid ""
+"A hand-made humanoid figure, useful for training in close quarters combat.  "
+"This one is covered in scrap armor and looks on guard.  It has been erected "
+"in the ground on its post."
+msgstr ""
+
+#. ~ Description of furniture "airplane seat"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A cheaply-upholstered folding airplane seat, it has a simple across-the-lap "
+"seatbelt.  You likely wouldn't be the first to sleep in this."
+msgstr ""
+
+#. ~ Description of furniture "wooden chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple wooden chair with four legs, a seat, and a back.  It's nice to rest "
+"your feet for once, and if coupled with a suitable table, you could eat a "
+"meal properly and almost pretend that things were normal again."
+msgstr ""
+
+#. ~ Description of furniture "sofa"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A wide upholstered bench, large enough for two people to comfortably sit "
+"alongside one another, or for one person to lay down on.  It's not quite a "
+"bed, but it's a hell of a lot more comfortable than the floor."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "wooden stool"
+msgid_plural "wooden stools"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "wooden stool"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple stool with four legs and a seat.  While it's a touch more "
+"maneuverable to sit on, the lack of back support means it's significantly "
+"less comfortable than a normal chair."
+msgstr ""
+
+#. ~ Description of furniture "camp chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A somewhat uncomfortable folding chair, with fabric strung across a metal "
+"frame.  Not the best, but better than nothing, and very easy to pack up for "
+"transport."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "log stool"
+msgid_plural "log stools"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "log stool"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A short section of a tree trunk with one of the flat ends smoothed down.  "
+"Makes for a decent place to sit, but not quite a real chair."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/tool/deployable.json
+msgid "deck chair"
+msgid_plural "deck chairs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "deck chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A folding deck chair with fabric sheets mounted to a wooden frame.  While "
+"it's built to handle outdoor conditions and is an improvement over the "
+"ground, it's not particularly comfortable."
+msgstr ""
+
+#. ~ Description of furniture "metal bench"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A bench made of metal.  Not the most comfortable furniture you've ever sat "
+"on."
+msgstr ""
+
+#. ~ Description of furniture "wooden bench"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple wooden bench made of two thick, makeshift legs and a flat piece of "
+"wood on top.  Certainly nowhere near as good as a bed, but sitting on it "
+"makes you feel like you're out camping."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid "park bench"
+msgstr ""
+
+#. ~ Description of furniture "park bench"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A wooden bench with a metal frame and a back support.  Cold and uncomfortable"
+" to sleep on, but sitting on it is not terrible."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "bar stool"
+msgid_plural "bar stools"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "bar stool"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A bar stool with a leather seat on a steel support.  Not practical for "
+"sleeping at all, but it does feel nicer than sitting on the ground."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/tool/deployable.json
+msgid "folding chair"
+msgid_plural "folding chairs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "folding chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A black foldable plastic chair on a steel frame.  Not particularly "
+"comfortable, but at least you have something to sit on."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "plywood chair"
+msgid_plural "plywood chairs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "plywood chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple chair made of plywood on a steel frame.  Quite uncomfortable, but it"
+" works for sleeping if it's the only option available."
+msgstr ""
+
+#. ~ Description of furniture "black wooden chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple wooden chair with four legs, a seat, and a back.  It's nice to rest "
+"your feet for once, and if coupled with a suitable table, you could eat a "
+"meal properly and almost pretend that things were normal again.  This "
+"particular chair is painted black."
+msgstr ""
+
+#. ~ Description of furniture "white wooden chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"A simple wooden chair with four legs, a seat, and a back.  It's nice to rest "
+"your feet for once, and if coupled with a suitable table, you could eat a "
+"meal properly and almost pretend that things were normal again.  This "
+"particular chair is painted white."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid "barber chair"
+msgstr ""
+
+#. ~ Description of furniture "barber chair"
+#: data/json/furniture_and_terrain/furniture-seats.json
+msgid ""
+"a stationary chair made of cloth and steel.  With adjustable height and the "
+"ability to swing."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "bean bag"
+msgid_plural "bean bags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "bean bag"
+#. ~ Description of "bean bag"
+#: data/json/furniture_and_terrain/furniture-seats.json
+#: data/json/items/furniture/seating.json
+msgid "A large cushion filled with beads often used as a seat."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid "evac shelter info board"
+msgstr ""
+
+#. ~ Description of furniture "evac shelter info board"
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid ""
+"A wide wooden frame surrounding a sheet of cork, on to which a number of "
+"full-page notices have been neatly tacked.  Most seem to provide emergency "
+"information, or instructions now woefully outdated considering the state of "
+"things, but a map pointing to the nearest refugee center catches your eye.  "
+"You should take a closer look."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EVAC_BOARD_FALSE" in furniture "evac
+#. shelter info board"'s examine action
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid ""
+"You study the board.  It shows a similar set of directions to the ones you "
+"already have.  You cross-reference them and don't learn anything new."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EVAC_BOARD" in furniture "evac
+#. shelter info board"'s examine action
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid ""
+"You study the board.  One of the pages has a map and address for a nearby "
+"refugee center alongside minutia you no longer need trouble yourself with now"
+" that society has collapsed, like 'operating hours' and 'acceptable forms of "
+"ID'.  You take careful note of the map on the board and mark down the "
+"coordinates."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid "stop sign"
+msgstr ""
+
+#. ~ Description of furniture "stop sign"
+#: data/json/furniture_and_terrain/furniture-signs.json
+msgid "An octagonal red sign on a long metal pole, marked with the word STOP."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-sleep.json
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+msgid "down bed"
+msgstr ""
+
+#. ~ Description of furniture "down bed"
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid ""
+"A down mattress on a sturdy wooden frame.  Even without blankets or pillows, "
+"and despite being a completely ordinary mattress, it's a sight for sore, "
+"tired eyes."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid "down bunkbed"
+msgstr ""
+
+#. ~ Description of furniture "down bunkbed"
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid ""
+"A bunk bed with a sturdy wooden frame built to hold two single-person "
+"mattresses above one another.  While these usually mean sleeping closer than "
+"you'd like to somebody you wouldn't normally want to share a mattress with, a"
+" bed's a bed.  This one has two down mattresses."
+msgstr ""
+
+#. ~ Description of furniture "triple berth"
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid ""
+"This bunk bed can hold three people at once - a perfect sleeping solution for"
+" places where empty space is at a premium."
+msgstr ""
+
+#. ~ Description of furniture "mattress"
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid ""
+"An ordinary mattress lying on the floor.  While it's not as comfortable as a "
+"proper bed with a frame, it's pretty close.  If it's somewhere actually safe "
+"to sleep, this is practically a luxury in and of itself."
+msgstr ""
+
+#. ~ Description of furniture "down mattress"
+#: data/json/furniture_and_terrain/furniture-sleep.json
+msgid ""
+"A squishy, feather-stuffed mattress lying on the floor.  While it's not as "
+"comfortable as a proper bed with a frame, it's pretty close.  If it's "
+"somewhere actually safe to sleep, this is practically a luxury in and of "
+"itself."
+msgstr ""
+
+#. ~ Description of furniture "large cardboard box"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large box made of brown corrugated paper.  Could contain a number of "
+"things, and you could even hide inside.  Considering it only has two small "
+"flaps for carrying, it's very hard to see out of, and won't do anything to "
+"protect you if you're found."
+msgstr ""
+
+#. ~ Description of furniture "reinforced large cardboard box"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large box made of brown corrugated paper that was doubled up for extra "
+"strength.  Could contain a number of things, and you could even hide inside."
+"  Considering it only has two small flaps for carrying, it's very hard to see"
+" out of, and won't do anything to protect you if you're found."
+msgstr ""
+
+#. ~ Description of furniture "open gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large, heavy container with thick metal walls, designed to securely store "
+"firearms, weapon mods, and ammunition.  This one is wide open."
+msgstr ""
+
+#. ~ Description of furniture "closed gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large, heavy container with thick metal walls and a rotary combination "
+"lock, designed to securely store firearms, weapon mods, and ammunition.  This"
+" one is closed, but not locked."
+msgstr ""
+
+#. ~ Description of furniture "locked gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large, heavy container with thick metal walls and a rotary combination "
+"lock, designed to securely store firearms, weapon mods, and ammunition.  If "
+"you had something to pick its lock with, you could probably open it."
+msgstr ""
+
+#. ~ Lockpick message of furniture "locked gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the lock on the gun safe door opens."
+msgstr ""
+
+#. ~ Description of furniture "jammed gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large, heavy container with thick metal walls and a rotary combination "
+"lock, designed to securely store firearms, weapon mods, and ammunition.  "
+"Unfortunately, the lock is completely broken, and short of some pretty "
+"serious machinery, you have no possible way of opening it."
+msgstr ""
+
+#. ~ Description of furniture "electronic gun safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A large, heavy container with thick metal walls and an electronic locking "
+"system, designed to securely store firearms, weapon mods, and ammunition.  If"
+" you had some way of hacking into it, you could probably crack it open."
+msgstr ""
+
+#. ~ Lockpick message of furniture "locked display rack"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the lock opens."
+msgstr ""
+
+#. ~ Description of furniture "safe"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A small, heavy, and near-unbreachable metal box with a rotary combination "
+"lock.  This one isn't actually locked, just closed."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/containers/generic.json
+msgid "trash can"
+msgid_plural "trash cans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "Torah Ark"
+msgstr ""
+
+#. ~ Description of furniture "Torah Ark"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"An ornately-carved cabinet designed to hold a Torah scroll.  This one is "
+"decorated with a tree motif, referencing Proverbs 3:18."
+msgstr ""
+
+#. ~ Description of furniture "filing cabinet"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A rack of metal drawers designed to hold various files and paperwork.  "
+"Paperwork that has more than likely lost all relevance and value by now."
+msgstr ""
+
+#. ~ Description of furniture "display case"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A secure wooden case at about waist-height, with glass paneling on top.  "
+"Useful for storing valuable things while still showing them off.  Not "
+"actually as secure as it looks, as the display windows are easily broken."
+msgstr ""
+
+#. ~ Lockpick message of furniture "display case"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the lock and the display case opens."
+msgstr ""
+
+#. ~ Description of furniture "open display case"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A secure wooden case at about waist-height, with glass paneling on top.  "
+"Useful for storing valuable things while still showing them off.  Not "
+"actually as secure as it looks, as the display windows are easily broken.  "
+"This one has had its lock picked and is open."
+msgstr ""
+
+#. ~ Description of furniture "broken display case"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A secure wooden case at about waist-height, with glass paneling on top.  "
+"Would be useful for storing valuable things while still showing them off, if "
+"the glass hadn't been shattered.  Careful not to cut yourself when looting."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "map board"
+msgstr ""
+
+#. ~ Description of furniture "map board"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "A secure metal board with a locked glass panel used to display a map."
+msgstr ""
+
+#. ~ Lockpick message of furniture "map board"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the locked glass panel opens."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "open map board"
+msgstr ""
+
+#. ~ Description of furniture "open map board"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A successfully picked metal board with an open glass panel used to display a "
+"map."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "broken map board"
+msgstr ""
+
+#. ~ Description of furniture "broken map board"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "A metal board with a smashed glass panel used to display a map."
+msgstr ""
+
+#. ~ Lockpick message of furniture "fireman's cabinet"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "With a satisfying click, the lock on the cabinet opens."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "bulk storage tank"
+msgstr ""
+
+#. ~ Description of furniture "bulk storage tank"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A 2 meters high tank that can store up to 1500 liters of liquid.  That's a "
+"lot."
+msgstr ""
+
+#. ~ Description of furniture "sealed metal crate"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A huge, tightly sealed storage crate made from welded and riveted sheet "
+"metal.  The sealing mechanism is too tight to open bare-handed and would need"
+" some kind of prying instrument to release."
+msgstr ""
+
+#. ~ Prying action message of furniture "sealed metal crate"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "You wrench open the metal crate."
+msgstr ""
+
+#. ~ Prying failure message of furniture "sealed metal crate"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "The lid is sealed more tightly than you thought."
+msgstr ""
+
+#. ~ Description of furniture "open metal crate"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"This large metal crate's lid is unsealed, and hinges open easily to reveal a "
+"number of storage shelves inside.  Once open, the side panels also swing "
+"wider for easy access."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/furniture/storage.json
+msgid "steel foot locker"
+msgid_plural "steel foot lockers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "steel foot locker"
+#. ~ Description of "steel foot locker"
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/furniture/storage.json
+msgid ""
+"A steel storage box, capable of holding any number of things.  The lid has a "
+"small lock."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/furniture/storage.json
+msgid "aluminum foot locker"
+msgid_plural "aluminum foot lockers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "aluminum foot locker"
+#. ~ Description of "aluminum foot locker"
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/furniture/storage.json
+msgid ""
+"An aluminum storage box, capable of holding any number of things.  The lid "
+"has a small lock."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/containers/military.json
+msgid "big collapsible drum"
+msgid_plural "big collapsible drums"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "big collapsible drum"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A black collapsible drum with a valve and D-Rings.  Yellow text on its top "
+"clearly says \"FLAMMABLE\"."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "packed pallet"
+msgstr ""
+
+#. ~ Description of furniture "packed pallet"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A wooden pallet loaded with cargo, wrapped with a watertight cover, and "
+"belted to secure the contents."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "rip!"
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid "damaged pallet"
+msgstr ""
+
+#. ~ Description of furniture "damaged pallet"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"A wooden pallet, containing cargo and possessing a torn cover.  You can reach"
+" the contents, but it's awfully hard due to the belts still being in place."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/json/furniture_and_terrain/furniture-storage.json
+#: data/json/items/tool/workshop.json
+msgid "Exodii kiln"
+msgid_plural "Exodii kilns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "Exodii kiln"
+#: data/json/furniture_and_terrain/furniture-storage.json
+msgid ""
+"An imposing kiln produced by the Exodii, used to produce their ceramic armor"
+msgstr ""
+
+#. ~ Description of furniture "counter"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A plain wooden countertop, either free-standing or affixed to a wall.  Makes "
+"a decent surface for storage or crafting."
+msgstr ""
+
+#. ~ Description of furniture "cupboard"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid "Store your cups.  Or other things, if you're feeling wild."
+msgstr ""
+
+#. ~ Description of furniture "closed counter gate"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A commercial-quality swinging door made of wood that allows passage behind "
+"counters.  It's currently closed."
+msgstr ""
+
+#. ~ Description of furniture "open counter gate"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A commercial-quality swinging door made of wood that allows passage behind "
+"counters.  It's open, allowing passage."
+msgstr ""
+
+#. ~ Description of furniture "desk"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A wooden desk with drawers.  You could decorate it with trinkets, eat a meal "
+"off it, use it as a workbench, read a book, write in a journal, put a laptop "
+"on it, put your feet up, rest your head for a nap if you're sitting down… who"
+" knew desks were so useful?"
+msgstr ""
+
+#. ~ Description of furniture "leather tarp"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A large sheet of leather lying on the ground.  You could use it as a picnic "
+"blanket, but it's more valuable as a surface for butchering as it does not "
+"soak up blood."
+msgstr ""
+
+#. ~ Description of furniture "plastic groundsheet"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A large sheet of thick plastic lying on the ground.  It could be a useful "
+"surface for butchering, perhaps."
+msgstr ""
+
+#. ~ Description of furniture "fiber mat"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A large mat woven from fibrous material.  You could use it as a picnic "
+"blanket, but it's more valuable as a surface for butchering.  Too thin to be "
+"used as a comfortable sleeping mat."
+msgstr ""
+
+#. ~ Description of furniture "folding table"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A small metal folding table, ideal for off-road trips.  Can be used as a "
+"workbench in a pinch."
+msgstr ""
+
+#. ~ Description of furniture "table"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A standard wooden table.  You could sit down at it to eat like a civilized "
+"person."
+msgstr ""
+
+#. ~ Description of furniture "fancy table"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A fancy table for a fancy person.  Functions as both a table and status "
+"symbol."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid "coffee table"
+msgstr ""
+
+#. ~ Description of furniture "coffee table"
+#: data/json/furniture_and_terrain/furniture-surfaces.json
+msgid ""
+"A low table usually found in living rooms, it makes an ideal surface for "
+"playing games, showing off some tasteful books, or presumably for putting "
+"coffee cups on.  No one cares if you use a coaster anymore."
+msgstr ""
+
+#. ~ Description of furniture "tatami mat"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A type of mat used as a flooring material in traditional Japanese-style "
+"rooms."
+msgstr ""
+
+#. ~ Description of furniture "cardboard fort"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A fort built by tipping a cardboard box on its side, lining it with blankets,"
+" and partly weather-sealing it with a plastic sheet."
+msgstr ""
+
+#. ~ Description of furniture "cardboard wall"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of cardboard boxes that have been filled with rags and junk and "
+"stacked together like bricks to form a wall."
+msgstr ""
+
+#. ~ Description of furniture "cardboard floor"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A flat floor made of sheets of cardboard duct-taped together, covering a "
+"plastic sheet on the ground."
+msgstr ""
+
+#. ~ Description of furniture "cardboard roof"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A sloped roof made of cardboard boxes, stuffed with scrap cardboard and paper"
+" and layered atop each other.  Sheets of plastic are carefully arranged on "
+"top to shed water.  It looks like it could last a season or two at least "
+"before crumbling."
+msgstr ""
+
+#. ~ Description of furniture "cardboard door"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of cardboard boxes that have been filled with rags and junk and "
+"stacked together like bricks to form a wall.  The largest box has been cut "
+"open and folded to form a makeshift door, which is open."
+msgstr ""
+
+#. ~ Description of furniture "cardboard door"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of cardboard boxes that have been filled with rags and junk and "
+"stacked together like bricks to form a wall.  The largest box has been cut "
+"open and folded to form a makeshift door, which is closed."
+msgstr ""
+
+#. ~ Description of furniture "beaded curtain"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A curtain of wooden beads, thick enough that you can't see through them.  "
+"They could be pulled aside effortlessly."
+msgstr ""
+
+#. ~ Description of furniture "open beaded curtain"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A curtain of wooden beads that has been pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "canvas floor"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"Flooring made out of stretched, waterproof cloth.  Helps keep dirt out of the"
+" tent."
+msgstr ""
+
+#. ~ Description of furniture "canvas wall"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A tent wall made of stretched, waterproof cloth."
+msgstr ""
+
+#. ~ Description of furniture "canvas wall"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A tent wall made of stretched, heavy-duty, waterproof cloth."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "large skin wall"
+msgstr ""
+
+#. ~ Description of furniture "large skin wall"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A large tent wall made out of stretched animal skin.  It'll keep the rain "
+"out, but anything trying to get in could rip through it fairly easily."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "large skin groundsheet"
+msgstr ""
+
+#. ~ Description of furniture "large skin groundsheet"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A large animal-skin groundsheet to keep your feet dry inside the shelter."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "large animalskin flap"
+msgstr ""
+
+#. ~ Description of furniture "large animalskin flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A large animal-skin flap that can be pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "open animalskin flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A large animal-skin flap that has been pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "canvas flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A canvas flap door that can be pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "open canvas flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A canvas flap door that has been pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "canvas flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A heavy canvas flap door that can be pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "open canvas flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A heavy canvas flap door that has been pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "groundsheet"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A plastic groundsheet to keep your feet dry inside the tent."
+msgstr ""
+
+#. ~ Description of furniture "groundsheet"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A large plastic groundsheet to keep your feet dry inside the tent."
+msgstr ""
+
+#. ~ Description of furniture "groundsheet"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A government-issue plastic groundsheet to keep your feet dry, it was clearly "
+"made by the lowest bidder."
+msgstr ""
+
+#. ~ Description of furniture "animalskin wall"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A tent wall made out of stretched animal skin.  It'll keep the rain out, but "
+"anything trying to get in could rip through it fairly easily."
+msgstr ""
+
+#. ~ Description of furniture "animalskin flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An animal-skin flap that can be pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "open animalskin flap"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An animal-skin flap that has been pulled aside."
+msgstr ""
+
+#. ~ Description of furniture "animalskin floor"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An animal-skin groundsheet to keep your feet dry inside the shelter."
+msgstr ""
+
+#. ~ Description of furniture "pile of rubble"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of various metals, bricks, and other building materials.  You could "
+"clear it with a shovel."
+msgstr ""
+
+#. ~ Description of furniture "pile of rocky rubble"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A loose pile of rocks.  Useless?"
+msgstr ""
+
+#. ~ Description of furniture "pile of trashy rubble"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of trash topped with dirt and grass.  It smells gross, but one man's "
+"trash…"
+msgstr ""
+
+#. ~ Description of furniture "metal wreckage"
+#. ~ Description of furniture "metal wreckage from a plane"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of various bent and twisted metals.  Some of it looks pretty rusty, "
+"you wouldn't want to cut yourself on this."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "metal wreckage from a plane"
+msgstr ""
+
+#. ~ Description of furniture "radioactive slag"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pile of melted slag from a destroyed nuclear reactor.  What are you doing "
+"looking at it?  Get the hell out of here, you nutcase!"
+msgstr ""
+
+#. ~ Description of furniture "pile of ash"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A pile of ash, from wood or possibly corpses."
+msgstr ""
+
+#. ~ Description of furniture "small boulder"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A big rock.  Should be easy to roll around, but too heavy to carry with you."
+"  It can be used as a primitive anvil, or broken into a bunch of smaller "
+"rocks."
+msgstr ""
+
+#. ~ Description of furniture "medium boulder"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A pretty big boulder, but still small enough to see and climb over.  It would"
+" be a struggle to move it.  It can be used as a primitive anvil, or broken "
+"into a bunch of smaller rocks."
+msgstr ""
+
+#. ~ Description of furniture "large boulder"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A boulder that's taller than you.  Now how are you going to move this?"
+msgstr ""
+
+#. ~ Description of furniture "street light"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A raised light source which used to illuminate streets and their surrounding "
+"area, but it's useless without electricity."
+msgstr ""
+
+#. ~ Description of furniture "traffic light"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A signaling device positioned at road intersections and pedestrian crossings "
+"to control the flow of traffic, but it's useless without electricity."
+msgstr ""
+
+#. ~ Description of furniture "bike rack"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"A loop of metal in the shape of an upside down U used to securely park bikes."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "flagpole"
+msgstr ""
+
+#. ~ Description of furniture "flagpole"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A 6-meter tall metal flagpole.  You could hoist up a flag here."
+msgstr ""
+
+#. ~ Description of furniture "flagpole"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A 5-meter tall wooden flagpole.  You could hoist up a flag here."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "room divider"
+msgstr ""
+
+#. ~ Description of furniture "room divider"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A tall piece of furniture used to divide rooms into separate areas."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of dirt"
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of dirt with seed"
+msgstr ""
+
+#. ~ Description of furniture "short mound of dirt with seed"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of heaped dirt, not easily traversable.  Someone has planted a seed "
+"here."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of dirt with seedling"
+msgstr ""
+
+#. ~ Description of furniture "short mound of dirt with seedling"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of heaped dirt, not easily traversable.  There is a seed here, that "
+"has just begun to sprout its first roots."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of dirt with mature plant"
+msgstr ""
+
+#. ~ Description of furniture "short mound of dirt with mature plant"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of heaped dirt, not easily traversable.  There is a matured plant "
+"here, that should be ready for harvest before long."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of dirt with harvestable plant"
+msgstr ""
+
+#. ~ Description of furniture "short mound of dirt with harvestable plant"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of heaped dirt, not easily traversable.  There is a fully grown "
+"plant, and will need closer examination to harvest."
+msgstr ""
+
+#. ~ Description of furniture "mound of dirt"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of dirt heaped up to your shoulders, not easily traversable.  If "
+"examined more closely, it's quite favorable for planting seeds and the like."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of dirt with seed"
+msgstr ""
+
+#. ~ Description of furniture "mound of dirt with seed"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of dirt heaped up to your shoulders, not easily traversable.  Someone"
+" has planted a seed here."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of dirt with seedling"
+msgstr ""
+
+#. ~ Description of furniture "mound of dirt with seedling"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of dirt heaped up to your shoulders, not easily traversable.  There "
+"is a seed here, that has just begun to sprout its first roots."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of dirt with mature plant"
+msgstr ""
+
+#. ~ Description of furniture "mound of dirt with mature plant"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of dirt heaped up to your shoulders, not easily traversable.  There "
+"is a matured plant here, that should be ready for harvest before long."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of dirt with harvestable plant"
+msgstr ""
+
+#. ~ Description of furniture "mound of dirt with harvestable plant"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of dirt heaped up to your shoulders, not easily traversable.  There "
+"is a fully grown plant, and will need closer examination to harvest."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of dirt"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of dirt"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of dirt heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of sand"
+msgstr ""
+
+#. ~ Description of furniture "short mound of sand"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped sand, not easily traversable."
+msgstr ""
+
+#. ~ Description of furniture "mound of sand"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of sand heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of sand"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of sand"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of sand heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of gravel"
+msgstr ""
+
+#. ~ Description of furniture "short mound of gravel"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped gravel, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of gravel"
+msgstr ""
+
+#. ~ Description of furniture "mound of gravel"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of gravel heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of gravel"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of gravel"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of gravel heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of pebbles"
+msgstr ""
+
+#. ~ Description of furniture "short mound of pebbles"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped pebbles, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of pebbles"
+msgstr ""
+
+#. ~ Description of furniture "mound of pebbles"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of pebbles heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of pebbles"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of pebbles"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of pebbles heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of clay"
+msgstr ""
+
+#. ~ Description of furniture "short mound of clay"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped clay, not easily traversable."
+msgstr ""
+
+#. ~ Description of furniture "mound of clay"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of clay heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of clay"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of clay"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of clay heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of broken glass"
+msgstr ""
+
+#. ~ Description of furniture "short mound of broken glass"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of heaped glass shards, not safely traversable.  Just looking at it "
+"feel like you'll get tetanus."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of broken glass"
+msgstr ""
+
+#. ~ Description of furniture "mound of broken glass"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of broken glass shards heaped up to your shoulders, not safely "
+"traversable.  Just looking at it feel like you'll get tetanus."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of broken glass"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of broken glass"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of broken glass heaped well above your head, unsafe to climb.  Just "
+"looking at it feel like you'll get tetanus."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of rocks"
+msgstr ""
+
+#. ~ Description of furniture "short mound of rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped rocks, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of rocks"
+msgstr ""
+
+#. ~ Description of furniture "mound of rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of rocks heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of rocks"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of rocks heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short mound of large rocks"
+msgstr ""
+
+#. ~ Description of furniture "short mound of large rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "An area of heaped large rocks, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "mound of large rocks"
+msgstr ""
+
+#. ~ Description of furniture "mound of large rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of large rocks heaped up to your shoulders, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall mound of large rocks"
+msgstr ""
+
+#. ~ Description of furniture "tall mound of large rocks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid ""
+"An area of large rocks heaped well above your head, difficult to climb over."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short stack of logs"
+msgstr ""
+
+#. ~ Description of furniture "short stack of logs"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A short stack of logs, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "stack of logs"
+msgstr ""
+
+#. ~ Description of furniture "stack of logs"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A stack of logs as high as your shoulders."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall stack of logs"
+msgstr ""
+
+#. ~ Description of furniture "tall stack of logs"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "Logs stacked well above your head."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short stack of planks"
+msgstr ""
+
+#. ~ Description of furniture "short stack of planks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A short stack of planks, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "stack of planks"
+msgstr ""
+
+#. ~ Description of furniture "stack of planks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A stack of planks as high as your shoulders."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall stack of planks"
+msgstr ""
+
+#. ~ Description of furniture "tall stack of planks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "Planks stacked well above your head."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short stack of sticks"
+msgstr ""
+
+#. ~ Description of furniture "short stack of sticks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A short stack of sticks, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "stack of sticks"
+msgstr ""
+
+#. ~ Description of furniture "stack of sticks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A stack of sticks as high as your shoulders."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "tall stack of sticks"
+msgstr ""
+
+#. ~ Description of furniture "tall stack of sticks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "Sticks stacked well above your head."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "short stack of long sticks"
+msgstr ""
+
+#. ~ Description of furniture "short stack of long sticks"
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "A short stack of long sticks, not easily traversable."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/furniture-terrains.json
+msgid "stack of long sticks"
+msgstr ""

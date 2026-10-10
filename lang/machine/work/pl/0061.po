@@ -1,0 +1,1507 @@
+# Batch 61 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of effect type "Drank blood"
+#: data/json/effects.json
+msgid "The star vampire has drunk blood and is now visible."
+msgstr ""
+
+#. ~ Name of effect type id "star_vampire_blood_drink_feral"
+#. ~ Name of effect type id "star_vampire_blood_drink"
+#: data/json/effects.json
+#: data/json/obsoletion_and_migration_0.I/obsolete_effect.json
+msgid "Exsanguination"
+msgstr ""
+
+#. ~ Description of effect type "Exsanguination"
+#: data/json/effects.json
+msgid "The monster is drinking your blood, you vile feral!"
+msgstr ""
+
+#. ~ Name of effect type id "ink_gland_ink"
+#: data/json/effects.json
+msgid "Depleted ink"
+msgstr ""
+
+#. ~ Name of effect type id "ink_gland_ink"
+#: data/json/effects.json
+msgid "Deflated ink glands"
+msgstr ""
+
+#. ~ Name of effect type id "ink_gland_ink"
+#: data/json/effects.json
+msgid "Inky glands"
+msgstr ""
+
+#. ~ Name of effect type id "ink_gland_ink"
+#: data/json/effects.json
+msgid "Bulged ink glands"
+msgstr ""
+
+#. ~ Description of effect type "Depleted ink"
+#: data/json/effects.json
+msgid ""
+"Your ink glands are empty.  Given some time and hydration they will recharge."
+msgstr ""
+
+#. ~ Description of effect type "Deflated ink glands"
+#: data/json/effects.json
+msgid ""
+"Your ink glands are almost empty.  Given some time and hydration they will "
+"recharge."
+msgstr ""
+
+#. ~ Description of effect type "Inky glands"
+#: data/json/effects.json
+msgid ""
+"Your ink glands have some ink inside.  Given some time and hydration, more "
+"ink will be generated."
+msgstr ""
+
+#. ~ Description of effect type "Bulged ink glands"
+#: data/json/effects.json
+msgid "Your ink glands are bulged and full.  No more ink is being created."
+msgstr ""
+
+#. ~ Name of effect type id "cramped_space"
+#: data/json/effects.json
+msgid "Cramped Space"
+msgstr ""
+
+#. ~ Description of effect type "Cramped Space"
+#. ~ Apply message of effect type "Cramped Space"
+#: data/json/effects.json
+msgid "Your movements are restricted by the surroundings."
+msgstr ""
+
+#. ~ Remove message of effect type "Cramped Space"
+#: data/json/effects.json
+msgid "You are able to move freely again."
+msgstr ""
+
+#. ~ Miss message of effect type "Cramped Space"
+#: data/json/effects.json
+msgid "You don't have any room to move!"
+msgstr ""
+
+#. ~ Name of effect type id "gliding"
+#: data/json/effects.json
+msgid "Gliding"
+msgstr ""
+
+#. ~ Description of effect type "Gliding"
+#: data/json/effects.json
+msgid "You are gliding through the air."
+msgstr ""
+
+#. ~ Name of effect type id "slow_descent"
+#: data/json/effects.json
+msgid "Slow Descent"
+msgstr ""
+
+#. ~ Description of effect type "Slow Descent"
+#: data/json/effects.json
+msgid "You are descending at a safe speed."
+msgstr ""
+
+#. ~ Description of effect type "Mute"
+#: data/json/effects.json
+msgid "You can't talk."
+msgstr ""
+
+#. ~ Name of effect type id "social_satisfied"
+#: data/json/effects.json
+msgid "Good Company"
+msgstr ""
+
+#. ~ Description of effect type "Good Company"
+#: data/json/effects.json
+msgid "It feels good to spend time around others."
+msgstr ""
+
+#. ~ Name of effect type id "social_dissatisfied"
+#: data/json/effects.json
+msgid "Very Lonely"
+msgstr ""
+
+#. ~ Name of effect type id "social_dissatisfied"
+#: data/json/effects.json
+msgid "All Alone"
+msgstr ""
+
+#. ~ Description of effect type "Lonely"
+#: data/json/effects.json
+msgid "You feel a little lonely."
+msgstr ""
+
+#. ~ Description of effect type "Very Lonely"
+#: data/json/effects.json
+msgid "You could really use a friend right now."
+msgstr ""
+
+#. ~ Description of effect type "All Alone"
+#: data/json/effects.json
+msgid "What's the point of surviving if you're all alone?"
+msgstr ""
+
+#. ~ Name of effect type id "asocial_satisfied"
+#: data/json/effects.json
+msgid "Alone"
+msgstr ""
+
+#. ~ Description of effect type "Alone"
+#: data/json/effects.json
+msgid "Being on your own makes you feel good."
+msgstr ""
+
+#. ~ Name of effect type id "asocial_dissatisfied"
+#: data/json/effects.json
+msgid "Irritable"
+msgstr ""
+
+#. ~ Name of effect type id "asocial_dissatisfied"
+#: data/json/effects.json
+msgid "Annoyed"
+msgstr ""
+
+#. ~ Description of effect type "Irritable"
+#: data/json/effects.json
+msgid "Being around others has left you feeling drained."
+msgstr ""
+
+#. ~ Description of effect type "Annoyed"
+#: data/json/effects.json
+msgid "OK, that's enough social time.  You'd really rather be alone now."
+msgstr ""
+
+#. ~ Description of effect type "Crowded"
+#: data/json/effects.json
+msgid ""
+"Your nerves are frayed from all this socializing.  You need some alone time "
+"to recharge."
+msgstr ""
+
+#. ~ Name of effect type id "natural_stance"
+#: data/json/effects.json
+msgid "Natural Stance"
+msgstr ""
+
+#. ~ Description of effect type "Natural Stance"
+#: data/json/effects.json
+msgid ""
+"You are positioned to take advantage of your mutated anatomy, and will "
+"receive no penalties for crouching in melee combat.  Wielding a weapon will "
+"cause you to lose this effect."
+msgstr ""
+
+#. ~ Name of effect type id "subaquatic_sonar"
+#: data/json/effects.json
+msgid "Subaquatic SONAR"
+msgstr ""
+
+#. ~ Description of effect type "Subaquatic SONAR"
+#: data/json/effects.json
+msgid ""
+"Every few seconds, an ultrasonic pulse is broadcast from your location.  If "
+"you're underwater and your hearing is good enough, you may be able to "
+"navigate by the pings that come back."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "anticoagulant_draculin"
+#: data/json/effects.json
+msgid "Draculin"
+msgstr ""
+
+#. ~ Name of effect type id "a_winner_is_u"
+#: data/json/effects.json
+msgid "Winning!"
+msgstr ""
+
+#. ~ Name of effect type id "triffid_fiber_indigestion"
+#: data/json/effects.json
+msgid "Uneasy stomach"
+msgstr ""
+
+#. ~ Name of effect type id "triffid_fiber_indigestion"
+#: data/json/effects.json
+msgid "Bloated stomach"
+msgstr ""
+
+#. ~ Name of effect type id "triffid_fiber_indigestion"
+#: data/json/effects.json
+msgid "Strained stomach"
+msgstr ""
+
+#. ~ Name of effect type id "triffid_fiber_indigestion"
+#: data/json/effects.json
+msgid "Overloaded stomach"
+msgstr ""
+
+#. ~ Description of effect type "Uneasy stomach, Bloated stomach, Strained
+#. stomach, Overloaded stomach"
+#: data/json/effects.json
+msgid ""
+"Your stomach constantly feels like it's full, even when you haven't eaten in "
+"awhile."
+msgstr ""
+
+#. ~ Apply message of effect type "Uneasy stomach, Bloated stomach, Strained
+#. stomach, Overloaded stomach"
+#: data/json/effects.json
+msgid "Your stomach starts to feel strange and bloated."
+msgstr ""
+
+#. ~ Remove message of effect type "Uneasy stomach, Bloated stomach, Strained
+#. stomach, Overloaded stomach"
+#: data/json/effects.json
+msgid "Your stomach feels normal again."
+msgstr ""
+
+#. ~ Decay message of effect type "Uneasy stomach, Bloated stomach, Strained
+#. stomach, Overloaded stomach"
+#: data/json/effects.json
+msgid "Your gut feels less bloated."
+msgstr ""
+
+#. ~ Decay message of effect type "Uneasy stomach, Bloated stomach, Strained
+#. stomach, Overloaded stomach"
+#: data/json/effects.json
+msgid "You feel the strain in your stomach lessen."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_tiny"
+#: data/json/enchantments.json
+msgid "You see a tiny figure radiating heat."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_small"
+#: data/json/enchantments.json
+msgid "You see a small figure radiating heat."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_medium"
+#: data/json/enchantments.json
+msgid "You see a medium figure radiating heat."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_large"
+#: data/json/enchantments.json
+msgid "You see a large figure radiating heat."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_huge"
+#: data/json/enchantments.json
+msgid "You see a huge figure radiating heat."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_medium"
+#: data/json/enchantments.json
+msgid "You sense a creature with your thermal nostrils."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "electric_creature_sense"
+#: data/json/enchantments.json data/mods/Aftershock/effects_esper.json
+#: data/mods/BombasticPerks/perks.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You sense something emitting electricity here."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Night Vision Goggles"
+msgstr ""
+
+#. ~ Description of enchantment "Night Vision Goggles"
+#: data/json/enchantments.json
+msgid ""
+"You are wearing night vision goggles which allow you to see really well in "
+"the dark."
+msgstr ""
+
+#. ~ Description of enchantment "Night Vision Goggles"
+#: data/json/enchantments.json
+msgid ""
+"You are wearing night vision goggles which allow you to see quite well in the"
+" dark."
+msgstr ""
+
+#. ~ Description of enchantment "Night Vision Goggles"
+#: data/json/enchantments.json
+msgid ""
+"You are wearing night vision goggles which allow you to see in the dark."
+msgstr ""
+
+#. ~ Description of enchantment "Night Vision Goggles"
+#: data/json/enchantments.json
+msgid ""
+"You are wearing night vision goggles which allow you to poorly see in the "
+"dark."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json data/mods/Aftershock/items/item_enchants.json
+#: data/mods/aftershock_exoplanet/items/item_enchants.json
+msgid "Cold Climate Control"
+msgstr ""
+
+#. ~ Description of enchantment "Cold Climate Control"
+#. ~ Description of enchantment "Complete Climate Control"
+#. ~ Description of enchantment "Cold Climate Control Helmet"
+#: data/json/enchantments.json data/mods/Aftershock/items/item_enchants.json
+#: data/mods/aftershock_exoplanet/items/item_enchants.json
+msgid "You are wearing equipment that helps handle harsh climates."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Complete Climate Control"
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "EXO Frame Strength"
+msgstr ""
+
+#. ~ Description of enchantment "EXO Frame Strength"
+#: data/json/enchantments.json
+msgid "You are wearing equipment that gives 10 strength."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Hyperdense"
+msgstr ""
+
+#. ~ Description of enchantment "Hyperdense"
+#: data/json/enchantments.json
+msgid ""
+"Your armor's massive weight makes it nearly impossible to be knocked over or "
+"pushed back."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Detect Evil"
+msgstr ""
+
+#. ~ Description of enchantment "Detect Evil"
+#: data/json/enchantments.json
+msgid "Your armor lets you detect otherworldly presence with ease."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "nether_creature_sense"
+#. ~ Description of creature revealed by special vision "moving_creature"
+#: data/json/enchantments.json
+#: data/mods/BombasticPerks/perkdata/sight_beyond_sight.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/MindOverMatter/mutations/psi_passives.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/enchantments/mutations.json
+msgid "You sense an otherworldy danger here."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Dampened Steps"
+msgstr ""
+
+#. ~ Description of enchantment "Dampened Steps"
+#: data/json/enchantments.json
+msgid "You are wearing equipment that muffles your footsteps."
+msgstr ""
+
+#. ~ Description of enchantment "Insect Wings (Buzzing)"
+#: data/json/enchantments.json
+msgid "Your rapidly buzzing wings propel you with extra speed."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Inactive exoskeleton"
+msgstr ""
+
+#. ~ Description of enchantment "Inactive exoskeleton"
+#: data/json/enchantments.json
+msgid ""
+"The exoskeleton is inactive and makes moving in it difficult and exhausting."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Active combat exoskeleton mk.1"
+msgstr ""
+
+#. ~ Description of enchantment "Active combat exoskeleton mk.1"
+#: data/json/enchantments.json
+msgid ""
+"Now powered, the exoskeleton provides <color_white>significant</color> "
+"improvements to your carry weight and movement exertion while the life "
+"support system shields you against harmful gas, cools you down, and dampens "
+"harmful sounds."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Active combat exoskeleton mk.2"
+msgstr ""
+
+#. ~ Description of enchantment "Active combat exoskeleton mk.2"
+#: data/json/enchantments.json
+msgid ""
+"Now powered, the exoskeleton provides <color_white>moderate</color> "
+"improvements to your carry weight and movement exertion while the life "
+"support system shields you against harmful gas, cools you down, and dampens "
+"harmful sounds."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/json/enchantments.json
+msgid "Active combat exoskeleton mk.3"
+msgstr ""
+
+#. ~ Description of enchantment "Active combat exoskeleton mk.3"
+#: data/json/enchantments.json
+msgid ""
+"Now powered, the exoskeleton provides <color_white>slight</color> "
+"improvements to your carry weight and movement exertion while the life "
+"support system shields you against harmful gas, cools you down, and dampens "
+"harmful sounds."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "In memory of: <u_name>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Survived: <time_survived>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Kills: <total_kills>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "In memory of: <color_green><u_name></color>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "You <color_pink>won</color>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "<u_name>..."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "...<u_name>, who's that?"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Not your problem anymore."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "What a <color_pink>success</color>."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Something struggled for: <time_survived>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "...<u_name>, do you feel complete?"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Of course you do."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "It was <color_pink>beautiful</color>."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "You spread joy for: <time_survived>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "...<u_name>, do you feel incomplete?"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "what a <color_red>waste</color>."
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "You wandered for: <time_survived>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Subject: <color_green><u_name></color>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "Patient: <color_blue><u_name></color>"
+msgstr ""
+
+#. ~ String from the end screen, used in ASCII-art, so be aware of the string
+#. length.
+#: data/json/end_screen.json
+msgid "In memory of: <color_light_blue><u_name></color>"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "thin cobwebs"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "thin webs"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "starlit webs"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "glittering embers"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "spark shower"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "wall of flames"
+msgstr ""
+
+#. ~ Player message on effect of field extinguisher mist
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the extinguisher mist."
+msgstr ""
+
+#. ~ Player message on effect of field extinguisher cloud
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the extinguisher cloud."
+msgstr ""
+
+#. ~ Player message on effect of field thick extinguisher cloud
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the thick extinguisher cloud."
+msgstr ""
+
+#. ~ Player message on effect of field hazy cloud
+#: data/json/field_type.json
+msgid "Your eyes itching from hazy cloud."
+msgstr ""
+
+#. ~ Player message on effect of field hazy cloud
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the hazy cloud."
+msgstr ""
+
+#. ~ Player message on effect of field toxic gas
+#: data/json/field_type.json
+msgid "Your eyes burn from toxic gas."
+msgstr ""
+
+#. ~ Player message on effect of field toxic gas
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the toxic gas."
+msgstr ""
+
+#. ~ Player message on effect of field thick toxic gas
+#: data/json/field_type.json
+msgid "You eyes burn from the thick toxic gas."
+msgstr ""
+
+#. ~ Player message on effect of field thick toxic gas
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the thick toxic gas."
+msgstr ""
+
+#. ~ Player message on effect of field triffid pollen
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the triffid pollen."
+msgstr ""
+
+#. ~ Player message on effect of field hazy cloud
+#: data/json/field_type.json
+msgid "Hazy cloud got into your eyes."
+msgstr ""
+
+#. ~ Player message on effect of field tear gas
+#: data/json/field_type.json
+msgid "Tear gas got into your eyes."
+msgstr ""
+
+#. ~ Player message on effect of field tear gas
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the tear gas."
+msgstr ""
+
+#. ~ Player message on effect of field thick tear gas
+#: data/json/field_type.json
+msgid "Thick tear gas got into your eyes."
+msgstr ""
+
+#. ~ Player message on effect of field thick tear gas
+#: data/json/field_type.json
+msgid "You feel sick from inhaling the thick tear gas."
+msgstr ""
+
+#. ~ Field NPC complaint
+#: data/json/field_type.json
+msgid "<weed_smoke>"
+msgstr ""
+
+#. ~ Field NPC complaint
+#: data/json/field_type.json
+msgid "<crack_smoke>"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "hallucinogenic cloud"
+msgstr ""
+
+#. ~ Player message on effect of field hallucinogenic cloud
+#: data/json/field_type.json
+msgid "You feel the ground spinning from inhaling the hallucinogenic cloud."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "hallucinogenic gas"
+msgstr ""
+
+#. ~ Player message on effect of field hallucinogenic gas
+#: data/json/field_type.json
+msgid ""
+"You feel the ground spinning from inhaling the thick hallucinogenic gas."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "hallucinogenic acid gas"
+msgstr ""
+
+#. ~ Player message on effect of field hallucinogenic acid gas
+#: data/json/field_type.json
+msgid ""
+"You feel the ground swirling and fracturing from inhaling the thick "
+"hallucinogenic gas."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "churned earth"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "Construction site"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "smear of congealed light"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "streak of congealed light"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "pool of congealed light"
+msgstr ""
+
+#. ~ Name of effect type id "LIXA_illuminated"
+#: data/json/field_type.json
+msgid "illuminated"
+msgstr ""
+
+#. ~ Description of effect type "illuminated"
+#: data/json/field_type.json
+msgid "You're covered in congealed light!"
+msgstr ""
+
+#. ~ Apply message of effect type "illuminated"
+#: data/json/field_type.json
+msgid "The sticky globs of light cover you, and begin to burn!"
+msgstr ""
+
+#. ~ Name of effect type id "LIXA_decompressed"
+#: data/json/field_type.json
+msgid "In Decompressed Space"
+msgstr ""
+
+#. ~ Description of effect type "In Decompressed Space"
+#: data/json/field_type.json
+msgid ""
+"For an instant, every inch of this infinite space is itself infinite, slowing"
+" you drastically."
+msgstr ""
+
+#. ~ Apply message of effect type "In Decompressed Space"
+#: data/json/field_type.json
+msgid "Space unfolds and extends around you!"
+msgstr ""
+
+#. ~ Miss message of effect type "In Decompressed Space"
+#: data/json/field_type.json
+msgid "You cannot make any progress in all this vastness."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/field_type.json
+msgid "decompressed space"
+msgstr ""
+
+#. ~ Name of effect type id "LIXA_unfolded_eff"
+#: data/json/field_type.json
+msgid "Unfolded"
+msgstr ""
+
+#. ~ Description of effect type "Unfolded"
+#: data/json/field_type.json
+msgid ""
+"There is no longer an inside or outside of you.  It is all one side; flat, "
+"infinite, and everything you have ever been.  You wonder if you're having no "
+"trouble understanding it because your brain works better spread out like "
+"this."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_CHAINMAIL_ARMS"
+#. ~ Description of JSON flag "ABLATIVE_CHAINMAIL_ELBOWS"
+#. ~ Description of JSON flag "ABLATIVE_CHAINMAIL_LEGS"
+#. ~ Description of JSON flag "ABLATIVE_CHAINMAIL_KNEES"
+#. ~ Description of JSON flag "ABLATIVE_CHAINMAIL_TORSO"
+#: data/json/flags.json
+msgid ""
+"You can use this armor <info>with chainmail</info> without encumbrance "
+"penalty."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "ABLATIVE_CHAINMAIL_ARMS"
+#. ~ Description of restriction of JSON flag "ABLATIVE_CHAINMAIL_ELBOWS"
+#. ~ Description of restriction of JSON flag "ABLATIVE_CHAINMAIL_LEGS"
+#. ~ Description of restriction of JSON flag "ABLATIVE_CHAINMAIL_KNEES"
+#. ~ Description of restriction of JSON flag "ABLATIVE_CHAINMAIL_TORSO"
+#: data/json/flags.json
+msgid "Item must be a chainmail compatible armor piece"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_LARGE"
+#: data/json/flags.json
+msgid "This plate will fit in <info>large</info> armor pockets."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_MANTLE"
+#: data/json/flags.json
+msgid "This will hook to a <info>Hub 01 proprietary</info> mantle connector."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "STAR_PLATE"
+#. ~ Description of JSON flag "STAR_SHOULDER"
+#. ~ Description of JSON flag "STAR_SKIRT"
+#: data/json/flags.json
+msgid "This can be supported by the ryūsei battle kit."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "STAR_PLATE"
+#: data/json/flags.json
+msgid "Item must be resonance plate"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "STAR_SHOULDER"
+#: data/json/flags.json
+msgid "Item must be resonance shoulder"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "STAR_SKIRT"
+#: data/json/flags.json
+msgid "Item must be resonance skirt"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_MEDIUM"
+#: data/json/flags.json
+msgid "This plate will fit in <info>medium</info> armor pockets."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_SKIRT"
+#: data/json/flags.json
+msgid "This will hook to a <info>Hub 01 proprietary</info> skirt connector."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ABLATIVE_HELMET"
+#: data/json/flags.json
+msgid "This will hook to a <info>Hub 01 proprietary</info> helmet connector."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "ABLATIVE_HELMET"
+#: data/json/flags.json
+msgid "Item must be an armored helmet"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ALLOWS_BODY_BLOCK"
+#: data/json/flags.json
+msgid ""
+"This item <info>won't prevent you from blocking with your body, such as arms "
+"or legs</info> when wielded as a weapon."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ALLOWS_NATURAL_ATTACKS"
+#: data/json/flags.json
+msgid ""
+"This clothing won't hinder special attacks that involve <info>mutated or "
+"cybernetic anatomy</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CAN_USE_IN_DARK"
+#: data/json/flags.json
+msgid "This item can use all of its features in darkness."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ALWAYS_AIMED"
+#: data/json/flags.json
+msgid "This gun is <good>always fully aimed</good>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CALORIE_BURN"
+#: data/json/flags.json
+msgid ""
+"This item enables you to keep track of calorie consumption.  Includes "
+"CALORIES_INTAKE."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "OVERHEATS"
+#: data/json/flags.json
+msgid ""
+"Continuously firing this weapon will cause it to <bad>overheat</bad> and "
+"<info>can potentially damage it</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "GEMSTONE"
+#: data/json/flags.json
+msgid ""
+"This item is a precious gemstone, used for ornamentation.  This is mostly "
+"useless post-Cataclysm."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EASY_CLEAN"
+#: data/json/flags.json
+msgid ""
+"This gun is made of <info>relatively simple parts</info> which makes powder "
+"fouling <good>easier to clean</good>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EMP_IMMUNE"
+#: data/json/flags.json
+msgid ""
+"This gear <good>completely protects</good> you from <info>EMP blasts</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_FACE_SHIELD"
+#: data/json/flags.json
+msgid ""
+"This item is attachable in the front of <info>hard hats and helmets</info> to"
+" protect your eyes or face."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_FACE_SHIELD"
+#: data/json/flags.json
+msgid "Item must be some kind of face shield"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_FRONT_ATTACHMENT"
+#: data/json/flags.json
+msgid "This item is attachable in the front of <info>military helmets</info>."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_FRONT_ATTACHMENT"
+#: data/json/flags.json
+msgid "Item must be some kind of frontal helmet attachment"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_EAR_ATTACHMENT"
+#: data/json/flags.json
+msgid ""
+"This item is attachable in <info>hard hats and helmets</info> to cover the "
+"ears."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_EAR_ATTACHMENT"
+#: data/json/flags.json
+msgid "Item must be some kind of ear attachment"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_NAPE_PROTECTOR"
+#: data/json/flags.json
+msgid ""
+"This item is attachable in <info>hard hats and helmets</info> as a nape "
+"protector."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_NAPE_PROTECTOR"
+#: data/json/flags.json
+msgid "Item must be some kind of nape protector"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_MANDIBLE_GUARD"
+#: data/json/flags.json
+msgid ""
+"This item is attachable as a mandible guard in military <info>helmets</info> "
+"or headgear specifically adapted with rails for attachments."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_MANDIBLE_GUARD"
+#: data/json/flags.json
+msgid "Item must be some kind of rail-mounted mandible guard"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_MANDIBLE_GUARD_STRAPPED"
+#: data/json/flags.json
+msgid ""
+"This item is attachable as a mandible guard in <info>hard hats and "
+"helmets</info>."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_MANDIBLE_GUARD_STRAPPED"
+#: data/json/flags.json
+msgid "Item must be some kind of strapped mandible guard"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_BACK_POUCH"
+#: data/json/flags.json
+msgid ""
+"This item is attachable in the back of <info>hard hats and helmets</info> as "
+"a counterweight pouch."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_BACK_POUCH"
+#: data/json/flags.json
+msgid "Item must be some kind of back pouch"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_HEAD_ATTACHMENT"
+#: data/json/flags.json
+msgid ""
+"This item is attachable in <info>tactical helmets</info> as a flashlight."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_HEAD_ATTACHMENT"
+#: data/json/flags.json
+msgid "Item must be some kind of flashlight"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HELMET_AVENTAIL"
+#: data/json/flags.json
+msgid ""
+"This item is attachable to metal cap helmets as a face and neck protective "
+"layer."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HELMET_AVENTAIL"
+#: data/json/flags.json
+msgid "Item must be some kind of chainmail veil"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BOOT_FINS"
+#: data/json/flags.json
+msgid "This item is attachable to commercial diving boots as fins."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "BOOT_FINS"
+#: data/json/flags.json
+msgid "Item must be some kind of fins"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BOOT_FINS_CUSTOM"
+#: data/json/flags.json
+msgid "This item is attachable to custom diving boots as fins."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "BOOT_FINS_CUSTOM"
+#: data/json/flags.json
+msgid "Item must be some kind of custom fins"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HEAD_STRAP_MOUNT"
+#: data/json/flags.json
+msgid ""
+"This item is attachable to straps and mountings on some masks and hoods."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "HEAD_STRAP_MOUNT"
+#: data/json/flags.json
+msgid ""
+"Item must be some kind of item that can be attached to straps on masks and "
+"hoods"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WRIST_MOUNT_ATTACHMENT"
+#: data/json/flags.json
+msgid "This item is attachable to a proprietary wrist mount."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "WRIST_MOUNT_ATTACHMENT"
+#: data/json/flags.json
+msgid ""
+"Item must be some kind of item that can be attached to a proprietary wrist "
+"mount"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXTRA_PLATING"
+#: data/json/flags.json
+msgid "This item is wearable over some armors as an extra layer of plating."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "EXTRA_PLATING"
+#: data/json/flags.json
+msgid "Item must be some kind of strapped additional plating"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "POST_UP"
+#: data/json/flags.json
+msgid "This item can be put up on a wall, like a poster."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "MC_MOBILE"
+#: data/json/flags.json
+msgid "Can be used to <info>store data</info> for other devices."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "MC_HAS_DATA"
+#: data/json/flags.json
+msgid "Some of your data is <info>stored</info> here."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "IRRADIATED"
+#: data/json/flags.json
+msgid "This food item has been irradiated, and will spoil 4 times slower."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WATERPROOF"
+#: data/json/flags.json
+msgid ""
+"This clothing <info>won't let water through</info>.  Even if you jump into a "
+"river."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ALWAYS_TWOHAND"
+#: data/json/flags.json
+msgid "<bad>You must</bad> have two free hands to wield this item."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "REMOVED_STOCK"
+#: data/json/flags.json
+msgid "This item has had its stock removed, it will be hard to shoot with."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "MORPHIC"
+#: data/json/flags.json
+msgid "This is <info>naturally sized to the body</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "MOUNTED_GUN"
+#: data/json/flags.json
+msgid ""
+"This weapon is <bad>too unwieldy</bad> to fire on its own and <info>must be "
+"mounted</info> on a vehicle or furniture (window, table, mound of dirt, etc.)"
+" before use."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SPEEDLOADER"
+#: data/json/flags.json
+msgid ""
+"This item can quickly reload rounds into gun or magazine that <info>have "
+"enough space</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SPEEDLOADER_CLIP"
+#: data/json/flags.json
+msgid ""
+"This item can quickly reload rounds into gun or magazine that <info>don't "
+"have enough space</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "FIRE_TWOHAND"
+#: data/json/flags.json
+msgid "<bad>You must</bad> have two free hands to fire this item."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "GRENADE"
+#: data/json/flags.json
+msgid "Item must be a grenade"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BATTERY_HEAVY"
+#: data/json/flags.json
+msgid "This item fits in items that use tool batteries."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "METHANOL_TANK"
+#: data/json/flags.json
+msgid "This item fits in items that use methanol fuel cells."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LASER_SIGHT"
+#: data/json/flags.json
+msgid ""
+"Laser sights are invalid when the target position is <bad>too far</bad> or "
+"<bad>too bright</bad>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ALL_TERRAIN_NAVIGATION"
+#: data/json/flags.json
+msgid "Allows movement over rough and sharp terrain without penalty."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_UNDERLAYER"
+#: data/json/flags.json
+msgid "This is meant for exosuit underlayers."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_HELMET_PLATE"
+#: data/json/flags.json
+msgid "This is meant for exoskeleton helmet plating."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_TORSO_PLATE"
+#: data/json/flags.json
+msgid "This is meant for exoskeleton torso plating."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_ARM_PLATE"
+#. ~ Description of JSON flag "EXO_GLOVE_PLATE"
+#: data/json/flags.json
+msgid "This is meant for exoskeleton arm plating."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_LEG_PLATE"
+#: data/json/flags.json
+msgid "This is meant for exoskeleton leg plating."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EXO_BOOT_PLATE"
+#: data/json/flags.json
+msgid "This is meant for exoskeleton foot plating."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ENERGY_SHIELD"
+#: data/json/flags.json
+msgid ""
+"This piece of armor is an energy barrier and will break after absorbing a "
+"certain amount of damage."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ROBOFAC_ROBOT_MEDIUM"
+#: data/json/flags.json
+msgid "A medium drone sold by Hub 01."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ROBOFAC_ROBOT_SMALL"
+#: data/json/flags.json
+msgid "A small drone sold by Hub 01."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SHREDDED"
+#: data/json/flags.json
+msgid "This is a small fragment."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SINGLE_USE"
+#: data/json/flags.json
+msgid "This item is removed after use."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BIONIC_FUEL_SOURCE"
+#: data/json/flags.json
+msgid "Contents of this item are used for fueling bionics."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "AFS_CS_LOCKER_CARD"
+#: data/json/flags.json
+msgid "ID card granting access to the crashing ship's locker room."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "AFS_CS_ARMORY_CARD"
+#: data/json/flags.json
+msgid "ID card granting access to the crashing ship's armory."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "AFS_CS_EXOBAY_CARD"
+#: data/json/flags.json
+msgid "ID card granting access to the crashing ship's exobay."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "PAPER_SHAPED"
+#: data/json/flags.json
+msgid "Item must be shaped like paper"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "CREDIT_CARD_SHAPED"
+#: data/json/flags.json
+msgid "Item must be shaped like a credit card"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "BANK_NOTE_SHAPED"
+#: data/json/flags.json
+msgid "Item must be shaped like a bank note"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "COIN_SHAPED"
+#: data/json/flags.json
+msgid "Item must be shaped like a coin"
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "BANK_NOTE_STRAP_SHAPED"
+#: data/json/flags.json
+msgid "Item must be shaped like a bank note strap"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "GASFILTER_SM"
+#: data/json/flags.json
+msgid "A small-sized gasmask filter."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "GASFILTER_MED"
+#: data/json/flags.json
+msgid "A medium-sized gasmask filter."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "PANORAMIC_OUTSERT"
+#: data/json/flags.json
+msgid ""
+"This item is meant to be externally attached to the eyepiece of a single-lens"
+" gas mask."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "PANORAMIC_OUTSERT"
+#: data/json/flags.json
+msgid ""
+"Item must be designed to clip onto the external Lenz brackets of a panoramic-"
+"view gas mask."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "PANORAMIC_INSERT"
+#: data/json/flags.json
+msgid ""
+"This item is intended to be inserted behind the visor of a single-lens gas "
+"mask."
+msgstr ""
+
+#. ~ Description of restriction of JSON flag "PANORAMIC_INSERT"
+#: data/json/flags.json
+msgid ""
+"Item must be able to clip into place within a gas mask that has a single, "
+"panoramic eyepiece."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "REBREATHER_CART"
+#: data/json/flags.json
+msgid "A filter for a rebreather."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "USE_POWER_WHEN_HIT"
+#: data/json/flags.json
+msgid "This armor <info>expends energy when hit</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ETHEREAL"
+#: data/json/flags.json
+msgid ""
+"You feel like you would keep all your items if you somehow became "
+"incorporeal."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CLIMB_FLYING"
+#: data/json/flags.json
+msgid "You can ascend straight up even with no physical surface to climb on."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "TREE_COMMUNION_PLUS"
+#: data/json/flags.json
+msgid ""
+"You gain greatly enhanced effects from the Mycorrhizal Communion mutation"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ROOTS2"
+#: data/json/flags.json
+msgid "The character has roots, which helps with the TREE_COMMUNION mutation."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ROOTS3"
+#: data/json/flags.json
+msgid ""
+"The character has extensive roots, which helps with the TREE_COMMUNION "
+"mutation."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "VINE_RAPPEL"
+#: data/json/flags.json
+msgid "The character can use vines to safely rappel down sheer drops."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ANIMALDISCORD"
+#: data/json/flags.json
+msgid "The character is disliked by natural animals."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ANIMALDISCORD2"
+#: data/json/flags.json
+msgid "The character is intensely disliked by natural animals."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ANIMALEMPATH"
+#: data/json/flags.json
+msgid "The character is liked by natural animals."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ANIMALEMPATH2"
+#: data/json/flags.json
+msgid "The character is intensely liked by natural animals."
+msgstr ""

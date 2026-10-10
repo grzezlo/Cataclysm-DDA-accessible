@@ -1,0 +1,2026 @@
+# Batch 185 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/inventor/gun.json
+msgid "blocky pistol"
+msgid_plural "blocky pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "blocky pistol"
+#. ~ Description of "blocky pistol"
+#: data/mods/Xedra_Evolved/items/inventor/gun.json
+msgid ""
+"A square abomination resembling a pistol, but with a collapsible outer "
+"magazine under the barrel.  This overengineered piece of metal is able to "
+"vary the size of chamber, which makes it able to shoot any round up to "
+"shotgun shells.  You spent a really long time to make it fit into a common "
+"holster."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "projectile accelerator"
+msgid_plural "projectile accelerators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "projectile accelerator"
+#. ~ Description of "projectile accelerator"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A small cylinder, reminiscent of a muzzle booster.  It can be mounted onto "
+"the end of your barrel, which somehow increases the speed of the projectile."
+"  It also makes the gun much louder and difficult to hold after each shot."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "rocket bullets"
+msgid_plural "rocket bullets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rocket bullets"
+#. ~ Description of "rocket bullets"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"You can't properly explain how this thing works, but the end result should be"
+" clear - faster bullet with better damage, but awful dispersion."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "force silencer"
+msgid_plural "force silencers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "force silencer"
+#. ~ Description of "force silencer"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"This barrel attachment drastically decreases any sound that your gun emits.  "
+"Sadly, the damage and range of the weapon decrease respectively."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "wide-shot shotgun choke"
+msgid_plural "wide-shot shotgun chokes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "wide-shot shotgun choke"
+#. ~ Description of "wide-shot shotgun choke"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A choke that makes the pellets spread out wide to hit multiple enemies.  The "
+"pellets will have shorter range but somehow deals higher damage."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "pistol booster"
+msgid_plural "pistol boosters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "pistol booster"
+#. ~ Description of "pistol booster"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of mechanisms, that alter the action of the blocky pistol enough to "
+"make it something in-between a machine pistol and a submachine gun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgctxt "gun_type_type"
+msgid "inventor_pistol"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "beam array"
+msgid_plural "beam arrays"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "beam array"
+#. ~ Description of "beam array"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of modified weapon lens that increase the output energy of the laser at"
+" expense of its range."
+msgstr ""
+
+#. ~ Description of gun mod "focusing lens"
+#. ~ Description of "focusing lens"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of modified weapon lens that increases the range of the weapon at the "
+"price of its damage."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "improved capacitors"
+msgid_plural "improved capacitors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "improved capacitors"
+#. ~ Description of "improved capacitors"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of powerful capacitors that increase the damage of a beam at the price "
+"of doubling power consumption."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "high-powered capacitors"
+msgid_plural "high-powered capacitors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "high-powered capacitors"
+#. ~ Description of "high-powered capacitors"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of extremely powerful capacitors which can turn a common laser beam "
+"into powerful anti-materiel penetrator.  It spends five times more energy "
+"than the default capacitor, so you need a lot of batteries to use it."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "energy-effective pump sources"
+msgid_plural "energy-effective pump sources"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "energy-effective pump sources"
+#. ~ Description of "energy-effective pump sources"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of improved electric discharges, that uses energy more efficiently then"
+" standard.  It makes you spend much less energy per shot, but the overall "
+"output of a system is a bit smaller."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "advanced heat exchanger"
+msgid_plural "advanced heat exchangers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "advanced heat exchanger"
+#. ~ Description of "advanced heat exchanger"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A set of fins in mathematically precise order, that make heat transferring "
+"much more efficient than your original implementation."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "freezing heat sink"
+msgid_plural "freezing heat sinks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "freezing heat sink"
+#. ~ Description of "freezing heat sink"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"A small piece of completely frozen metal.  It grants a massive cooling "
+"improvement, but the weapon circuits don't work properly with this mod, "
+"making you spend more energy per shot."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "heat recuperator"
+msgid_plural "heat recuperators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "heat recuperator"
+#. ~ Description of "heat recuperator"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Put some amount of the heat exchange from the gun back into platform loop.  "
+"Decrease amount of energy used, and increase the heat output of the weapon, "
+"but also its heat generation within the loop."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "glass cannon energy conversion"
+msgid_plural "glass cannon energy conversions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "glass cannon energy conversion"
+#. ~ Description of "glass cannon energy conversion"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Alter the energy loop in the platform - instead of doing multiple shots, it "
+"store all the power, and use most of it in a single shot.  Effectively "
+"transform the weapon into one or two shot recoilless rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "secondary radiator"
+msgid_plural "secondary radiators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "secondary radiator"
+#. ~ Description of "secondary radiator"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Additional radiator for your energy weapon.  Someone may say it's because you"
+" don't know how to use your gun properly."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "huge radiator"
+msgid_plural "huge radiators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "huge radiator"
+#. ~ Description of "huge radiator"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Replace the entire radiator in the platform into this hefty and bulky piece "
+"of metal, trading a portability of a gun for a massive overheat buffer."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "skeletonized heat sink"
+msgid_plural "skeletonized heat sinks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "skeletonized heat sink"
+#. ~ Description of "skeletonized heat sink"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Replace a large part of the weapon's radiator with an additional cooling "
+"unit.  The gun overheats faster, but recovers from it at a faster rate."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid "additional capacitors"
+msgid_plural "additional capacitors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "additional capacitors"
+#. ~ Description of "additional capacitors"
+#: data/mods/Xedra_Evolved/items/inventor/gunmods.json
+msgid ""
+"Replace a large portion of the radiator with additional capacitors.  The gun "
+"will barely cool off, but the damage output may be worth it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "wolf sledge"
+msgid_plural "wolf sledges"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wolf sledge"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A long, solid, crafted steel haft, and a bulky, comma-like head.  It feels "
+"really massive, but it is surprisingly easy to swing, and you will do more "
+"damage as your level increases.  You can throw it like a boomerang, and the "
+"damage of throw depend on your throwing skill level."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "chainsaw spear (off)"
+msgid_plural "chainsaw spears (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chainsaw spear (off)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A hand-made lightened engine, with chain blades on a long stick.  The only "
+"reason it works without falling apart is because your calculations can't be "
+"wrong."
+msgstr ""
+
+#. ~ "msg" action message of item "chainsaw spear (off)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "You turn on the chainsaw spear."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "chainsaw spear (off)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "The chainsaw spear battery is dead."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "chainsaw spear (on)"
+msgid_plural "chainsaw spears (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "msg" action message of item "chainsaw spear (on)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "You turn off the chainsaw spear."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "megachette (folded)"
+msgid_plural "megachettes (folded)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "megachette (folded)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "Probably a great weapon, it is folded now."
+msgstr ""
+
+#. ~ "msg" action message of item "megachette (folded)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "With a quiet click, the megachette is unfolded."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "megachette (extended)"
+msgid_plural "megachettes (extended)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "megachette (extended)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A completely flat, single-edged blade.  While very visually appealing, it is "
+"no less deadly.  It can be folded more times than makes sense."
+msgstr ""
+
+#. ~ "msg" action message of item "megachette (extended)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "With a few moves, the megachette is folded."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "binary sword"
+msgid_plural "binary swords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "binary sword"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A relatively heavy two-handed sword with \"100111100\" inscribed on the "
+"blade, perhaps to appear fancier than it truly is.  Still, it is a "
+"surprisingly good weapon."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "\"Neon Angle\" (off)"
+msgid_plural "\"Neon Angles\" (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ""Neon Angle" (off)"
+#. ~ Description of ""Neon Angle" (on)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A light, hollow aluminum bar with an installed plasma torch on the end in the"
+" form of a circle, emitting 28000 centrigrades of heat on demand.  This "
+"probably violates dozens of OSHA regulations."
+msgstr ""
+
+#. ~ "msg" action message of item ""Neon Angle" (off)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "You turn on your \"Neon Angle\"."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item ""Neon Angle" (off)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "The \"Neon Angle\" battery is dead."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "\"Neon Angle\" (on)"
+msgid_plural "\"Neon Angles\" (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "msg" action message of item ""Neon Angle" (on)"
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid "You turn off your \"Neon Angle\"."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "ultra-light modified battery"
+msgid_plural "ultra-light modified batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "ultra-light modified battery"
+#. ~ Description of "ultra-light modified battery"
+#. ~ Description of magazine "light modified battery"
+#. ~ Description of "light modified battery"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A light battery cell that was modified and replaced with much more effective "
+"cells inside."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "light modified battery"
+msgid_plural "light modified batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "medium modified battery"
+msgid_plural "medium modified batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "medium modified battery"
+#. ~ Description of "medium modified battery"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A medium battery cell that was modified and replaced with much more effective"
+" cells inside."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "modified tool battery"
+msgid_plural "modified tool batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "modified tool battery"
+#. ~ Description of "modified tool battery"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A tool battery cell that was modified and replaced with much more effective "
+"cells inside."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "inventor's welder"
+msgid_plural "inventor's welders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inventor's welder"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A lightweight, battery-powered tool to weld metal pieces together using a "
+"plasma-inducted electric arc.  A decent tool, but you think you can do more "
+"with some modifications."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "\"Heater\""
+msgid_plural "\"Heaters\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ""Heater""
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"An extremely small and light tool that creates and transfers the heat in an "
+"extremely effective way.  You think it would be interesting to develop it "
+"further."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "IA software"
+msgid_plural "IA software"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "IA software"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A simple intelligent agent to provide support in parsing big layers of "
+"information."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "Netherium-Reality Smoothing Device"
+msgid_plural "Netherium-Reality Smoothing Devices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Netherium-Reality Smoothing Device"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"An enormous industrial press shaped device, covered in sensors, circuits, and"
+" other doodads.  Two inverted teleporters are located on each side of the "
+"hammers, poised to perfectly align at the end of a strike.  Doing so will "
+"smoothen the overall local barrier between Earth and other realities, filling"
+" in any holes at the expense of weakening it in a much wider area.  This is "
+"an overall positive effect, allowing you to heal tears that would never "
+"naturally close, but expect large temporary side-effects."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid "Time Piercing Device"
+msgid_plural "Time Piercing Devices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Time Piercing Device"
+#: data/mods/Xedra_Evolved/items/inventor/misc.json
+msgid ""
+"A small remote with a sharp spike at the end.  You can activate this device "
+"while poking it into a zone of frozen time in order to unfreeze the area "
+"you're touching."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "intricate and opulent clock"
+msgid_plural "intricate and opulent clocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "intricate and opulent clock"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"An incredibly intricate clock where every visible surface appears to be gilded or chrome.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "crystalline rod"
+msgid_plural "crystalline rods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline rod"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"This crystal rod changes hue at random.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "baroque monitor"
+msgid_plural "baroque monitors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "baroque monitor"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A strange monitor with a variety of knobs and dials.  When you turn it on, it crackles and then begins tracking things that either aren't there or aren't visible to the naked eye.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "a mess of tubes and wires"
+msgid_plural "several messes of tubes and wires"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "a mess of tubes and wires"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"What is it for?  What could it do?\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "abstract sculpture"
+msgid_plural "abstract sculptures"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "abstract sculpture"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"It's a sculpture, but you can't identify what it depicts.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "humming disc"
+msgid_plural "humming discs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "humming disc"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"It hums louder when you touch it.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid "an instrument"
+msgid_plural "instruments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "an instrument"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"This looks like a musical instrument.  But how would you play it?\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "very thin sheet"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A sheet so light and thin that viewing it horizontally makes it almost invisible.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "spiked sphere"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A prickly ball that, no matter the force you apply, somehow never feels as if it could cut.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "malleable blob"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"Despite its looseness, this mass of goo keeps its shape as you fold it in your hands.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "spiraling rod"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A rod with a bulbous, spiralling knob on the end that seems to spin as you look.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "small pin"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"One of those pins you wear on your shirt, but this one has indecipherable symbols in place of a witty slogan.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "hollow tube"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A tube of unknown material.  A strange noise from nowhere can be heard when you place it next to your ear, as if something's inside.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "regular tetrahedron"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A triangular pyramid, inconspicuous in every way.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "translucent crystal"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A beautiful crystal, which seems to suck in detail rather than merely obscuring it as light passes through.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "twisted, knotted cord"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"A bit of spiralling rope, disorienting you as your eyes vainly try to complete following the loop.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Description of "crescent-shaped stone"
+#: data/mods/Xedra_Evolved/items/inventor/spark_artifact_items.json
+msgid ""
+"The sound of the tide can be heard from this stone, as if it were a miniature moon moving the oceans.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/traps.json
+msgid "stunning QR trap"
+msgid_plural "stunning QR traps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "stunning QR trap"
+#: data/mods/Xedra_Evolved/items/inventor/traps.json
+msgid ""
+"A jagged and eldritch looking QR code ready to be placed wherever you are "
+"concerned about mechanical eyes.  Will trap robots if they wander into it."
+msgstr ""
+
+#. ~ "done_message" action message of item "stunning QR trap"
+#. ~ "done_message" action message of item "stunning arg trap"
+#: data/mods/Xedra_Evolved/items/inventor/traps.json
+msgid "You set the QR code."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/inventor/traps.json
+msgid "stunning arg trap"
+msgid_plural "stunning arg traps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "stunning arg trap"
+#: data/mods/Xedra_Evolved/items/inventor/traps.json
+msgid ""
+"A jagged and eldritch looking QR code ready to be placed wherever you are "
+"concerned about mechanical eyes.  Will trap cyborgs if they wander into it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_classless.json
+msgid "magician's hat"
+msgid_plural "magician's hats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "magician's hat"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_classless.json
+msgid ""
+"An old-school cylinder hat, used by illusionists around the world.  Maybe it "
+"still remembers some cool tricks?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_classless.json
+msgid "warm ball"
+msgid_plural "warm balls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "warm ball"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_classless.json
+msgid ""
+"A small and light ball of glass with flickering flames inside.  The surface "
+"feels scalding hot, yet the temperature does not change."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "magick 8-Ball"
+msgid_plural "magick 8-Balls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "magick 8-Ball"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A fortune-telling device from the 1950s.  If you shake it and look at the "
+"bottom it will give you detailed step by step instructions on how to do… "
+"something."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "glass dagger paperweight"
+msgid_plural "glass dagger paperweights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "glass dagger paperweight"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"This paperweight in the shape of a small glass dagger emits a wet wheeze like"
+" a punctured lung when held."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "Caravaggio on his deathbed"
+msgid_plural "copies of Caravaggio on his deathbed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Caravaggio on his deathbed"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A previously unknown painting in Caravaggio's style of the artist himself "
+"lying prone on his deathbed as black ichor seeps from a sword wound in his "
+"side.  His own sword rests near his hand and his ever dying breath asks you "
+"to take up his blade."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgctxt "'hand mirror' but upside down"
+msgid "ɹoɹɹᴉɯ puɐɥ"
+msgid_plural "sɹoɹɹᴉɯ puɐɥ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ɹoɹɹᴉɯ puɐɥ"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "·ɓuoɹʍ ɓuᴉɥʇǝɯoS  ·ɹoɹɹᴉɯ puɐɥ ʅʅɐɯs Ɐ"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "pair of glasses"
+msgid_plural "pairs of glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of glasses"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A pair of a common glasses.  They have no lens or glass inside, only casing."
+"  There is a strange engraving of vines, snakes, and foxes covering every "
+"surface of the frames.  You think that maybe the engravings are moving when "
+"you aren't looking at them."
+msgstr ""
+
+#. ~ Description of "family photo"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A photo of a smiling family on a camping trip.  The background is always the "
+"same, but people are not.  Do you recall them?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "sphere"
+msgid_plural "spheres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sphere"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A small, black sphere.  It constantly changes its position.  It even tries to"
+" roll out of corners you wedge it into."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "flashlight"
+msgid_plural "flashlights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "flashlight"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"This looks like a typical household flashlight.  It has no battery holder and"
+" it hums when you touch it."
+msgstr ""
+
+#. ~ Description of "nail"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "A pin-shaped piece of iron.  You feel the need to hammer it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "bubble"
+msgid_plural "bubbles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bubble"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A small, transparent bubble.  It divides itself into two, then four, eight, "
+"sixteen, endlessly, before turning back to single bubble and repeating the "
+"process."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "shard of amber"
+msgid_plural "shards of amber"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "shard of amber"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A small shard of amber.  Looking carefully, you think you see some manner of "
+"creature trapped within."
+msgstr ""
+
+#. ~ Description of "wallet"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A small, flat case used to carry currency.  Each time you open it, it reveals"
+" new pockets, but all of them hold the same one coin, which you can't remove."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "angel figurine"
+msgid_plural "angel figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "angel figurine"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "A delicate figurine of a renaissance angel.  It looks oddly human."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "action figurine"
+msgid_plural "action figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "action figurine"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A small action figurine of a man with an old computer.  It appears he is "
+"attempting to hack it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "stone feather"
+msgid_plural "stone feathers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "stone feather"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"You see an incredibly detailed stone feather, almost lifelike in appearance."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "monochrome arrow"
+msgid_plural "monochrome arrows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "monochrome arrow"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"You see a blocky arrow, unerringly pointed in some far off direction.  It is "
+"completely colorless."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "odd circle"
+msgid_plural "odd circles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "odd circle"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"A circular unit of energy, surrounded by a few other circles that almost "
+"connect around the center."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "presence"
+msgid_plural "presences"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "presence"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid ""
+"You feel like something took a glance at this place, and it was so menacing "
+"that the world itself curled up."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "lizard tail"
+msgid_plural "lizard tails"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lizard tail"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamer.json
+msgid "A small lizard tail that was ripped off.  Looks like someone's joke."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamsmith.json
+msgid "set of brass cylinders"
+msgid_plural "sets of brass cylinders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "set of brass cylinders"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_dreamsmith.json
+msgid ""
+"These brass cylinders are engraved with cuneiform and could be rolled across "
+"wet clay to create a page of writing per cylinder.  When you touch one of the"
+" cylinders you hear a faint voice whisper 'Enki'."
+msgstr ""
+
+#. ~ Description of "deck of tarot cards"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A deck of intricately designed tarot cards.  When you lay out your future "
+"they seem to be trying to tell you to take a leap of faith."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "occult seal"
+msgid_plural "occult seals"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "occult seal"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"An intricate occult seal.  When you glance at the bottom left corner you hear"
+" the sound of the ocean and smell the salty air of the sea, and sense a river"
+" flowing through each point of the seal."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "hurricane lamp with thorns"
+msgid_plural "hurricane lamps with thorns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hurricane lamp with thorns"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"An old style hurricane lamp.  The handle appears to made of vines covered in "
+"sharp thorns."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "box of glass berries"
+msgid_plural "boxes of glass berries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "box of glass berries"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A box full of glass berries, when you get distracted you find yourself "
+"crunching them in your mouth.  Each one tastes like a mouthful of blood that "
+"slowly changes to espresso."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "polaroid of a missing person"
+msgid_plural "polaroids of a missing person"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "polaroid of a missing person"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A polaroid of someone you remember going missing before the Cataclysm.  It "
+"caught a ton of media attention due to them being seen near what was shortly "
+"after identified as a thin place between dimensions.  The more you stare at "
+"the picture, the more you begin to see wounds appear and disappear on the "
+"person.  Sometimes they match your old scars."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "strange cup of coffee"
+msgid_plural "strange cups of coffee"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange cup of coffee"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A small jar with coffee, moving in weird patterns with no apparent cause.  "
+"After watching the swirls for some time, you are sure that it loops back on "
+"its movements, like some sort of message."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "red devil blindfold"
+msgid_plural "red devil blindfolds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "red devil blindfold"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A red fabric blindfold with a cartoonish devil over the eyes.  You feel some "
+"anger when you put it on.  Did that devil just wink at you?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "mother of pearl heart"
+msgid_plural "mother of pearl hearts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mother of pearl heart"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A human heart grown in mother of pearl.  It beats loudly when you raise it to"
+" your ear."
+msgstr ""
+
+#. ~ Description of "right eye"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A tiny human eye.  You can clearly see the green iris and red capillaries.  "
+"While holding it in the dark you feel it watching you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "cerebellum"
+msgid_plural "cerebellums"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cerebellum"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A small, smooth part of the human brain.  Looks slippery.  Feels like rubber."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "skull"
+msgid_plural "skulls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skull"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "A tiny human skull.  His empty orbits are watching you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "ring of Gyges"
+msgid_plural "rings of Gyges"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ring of Gyges"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A small ring.  There is nothing special about it, except the word "
+"\"Republic\" embossed on it."
+msgstr ""
+
+#. ~ Description of "left eye"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A tiny human eye.  You can clearly see it has a blue iris and red "
+"capillaries.  You feel it can see you no matter how you hide."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "Enemy of the World"
+msgid_plural "copies of Enemy of the World"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Enemy of the World"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A small Korean novel that describes the journey of an incredibly strong "
+"protagonist attempting to save the world."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "horn"
+msgid_plural "horns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "horn"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A large, straight horn of some unknown creature.  It could easily injure a "
+"careless person."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "muscles"
+msgid_plural "muscles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "muscles"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A long fleshy tendon with joints on both sides.  They contract from time to "
+"time."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "pile of pain"
+msgid_plural "pile of pains"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pile of pain"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "There is nothing here.  It's uncomfortable to hold it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "pair of spheres"
+msgid_plural "pairs of spheres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of spheres"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"Two perfect spheres.  The first does not move at all, and the second "
+"constantly rotates around.  You feel a connection to both of them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "fist"
+msgid_plural "fists"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fist"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A solid, full size cast of a human fist, made out of some gray metal.  Looks "
+"menacing."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "anchor"
+msgid_plural "anchors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "anchor"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A miniature anchor with an earthly sheen.  You feel more stable looking at "
+"it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid "clumped sand"
+msgid_plural "clumped sands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "clumped sand"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_eater.json
+msgid ""
+"A pile of gray sand that is clumped together.  When you separate the pieces "
+"they seem to flow back together."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_inventor.json
+msgid "String Theory For Dummies"
+msgid_plural "copies of String Theory For Dummies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "String Theory For Dummies"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_inventor.json
+msgid ""
+"A small hardcover book describing a quite preposterous version of string "
+"theory."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_inventor.json
+msgid "taped jumper cable"
+msgid_plural "taped jumper cables"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "taped jumper cable"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spell_learning_items_inventor.json
+msgid ""
+"A 3-ft (or about 1 m) jumper cable, wrapped with blue insulating tape.  Both "
+"sides lack connectors."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Goody Osborne's Booke of Remedies"
+msgid_plural "copies of Goody Osborne's Booke of Remedies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Goody Osborne's Booke of Remedies"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This purports to be the 'Reale and True Acounting of the Works and Devices of"
+" Sarah Osbourne, a Most Puissant Wiche', but you're pretty sure it's all a "
+"front and it was actually written within the last couple decades.  There are "
+"some pretty detailed descriptions of rituals in here, mixed among diary "
+"entries and accounts of fanciful meetings in the woods."
+msgstr ""
+
+#. ~ "description" action message of item "Goody Osborne's Booke of Remedies"
+#. ~ "description" action message of item "Malleus Maleficarum"
+#. ~ "description" action message of item "The Cunning Book of Home and Hearth"
+#. ~ "description" action message of item "Bloodstoppers and Bearwalkers: Folk
+#. Traditions of Michigan's Upper Peninsula"
+#. ~ "description" action message of item "Ward your Dreams for a Good Night's
+#. Sleep!"
+#. ~ "description" action message of item "Monas Hieroglyphica"
+#. ~ "description" action message of item "The Bathhouse at Midnight: An
+#. Historical Survey of Magic and Divination in Russia"
+#. ~ "description" action message of item "The Book of the Sacred Magic of
+#. Abramelin the Mage"
+#. ~ "description" action message of item "Psychic Self-Defense: The Classic
+#. Instruction Manual for Protecting Yourself Against Paranormal Attack"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Study the occult text."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Malleus Maleficarum"
+msgid_plural "copies of Malleus Maleficarum"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Malleus Maleficarum"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"A hardcover translation of the infamous 15th century book used as a reference"
+" work for witchcraft trials for centuries.  This translation seems to have "
+"some handwritten notes in some of the margins."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "The Cunning Book of Home and Hearth"
+msgid_plural "copies of The Cunning Book of Home and Hearth"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "The Cunning Book of Home and Hearth"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This mass-market paperback purports to pass down the ancient traditional "
+"secrets of English cunning folk, though if that were true, they probably "
+"could have gotten more than $12.95 for it.  There are a lot of descriptions "
+"of rituals and procedures in here, though--maybe some of them deserve further"
+" investigation."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"Bloodstoppers and Bearwalkers: Folk Traditions of Michigan's Upper Peninsula"
+msgid_plural ""
+"copies of Bloodstoppers and Bearwalkers: Folk Traditions of Michigan's Upper "
+"Peninsula"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Bloodstoppers and Bearwalkers: Folk Traditions of
+#. Michigan's Upper Peninsula"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This is an anthropological collection of American folk beliefs in the Upper "
+"Peninsula of Michigan, consisting of stories, legends, descriptions of "
+"rituals, tall tales, and anything else the author heard during his period of "
+"study.  The \"Bloodstoppers\" of the title are individuals believed to be "
+"able to stop the flow of blood from a wound, with an incantation or ritual or"
+" sheer force of will, and the bearwalkers were allegedly sorcerers who could "
+"assume the shape of a bear and cause misfortune."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Ward your Dreams for a Good Night's Sleep!"
+msgid_plural "copies of Ward your Dreams for a Good Night's Sleep!"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ward your Dreams for a Good Night's Sleep!"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This is a very thin booklet, more of a pamphlet, about various ways to "
+"protect from nightmares.  There are quite a few techniques in here, though "
+"you're a bit skeptical about whether the author took the end of the world "
+"into their calculations."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Monas Hieroglyphica"
+msgid_plural "copies of Monas Hieroglyphica"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Monas Hieroglyphica"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This is a thin reproduction of John Dee's Monas Hieroglyphica.  A complicated"
+" work whose meaning has long been lost without access to the occult oral "
+"tradition of it's time.  It's possible that some remnants of that oral "
+"tradition still exist today, but it is unknown if they would be able to fully"
+" interpret this spellbook."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "Parchment of sight beyond sight"
+msgid_plural "Parchments of sight beyond sight"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Parchment of sight beyond sight"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"A short parchment that will supposedly teach you how to see through walls."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"The Bathhouse at Midnight: An Historical Survey of Magic and Divination in "
+"Russia"
+msgid_plural ""
+"copies of The Bathhouse at Midnight: An Historical Survey of Magic and "
+"Divination in Russia"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "The Bathhouse at Midnight: An Historical Survey of Magic
+#. and Divination in Russia"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"This encyclopediac tome by W. F. Ryan concerns a wide variety of folk magic "
+"practices in pre-modern Russia, including their social context, the way that "
+"the Church had to work against folk practices like leaving items on the altar"
+" for six weeks so they would gain protective powers, the dangers of being "
+"alone in the bathhouse, ways to find and keep a husband or wife, when to "
+"throw an axe handle over your shoulder when walking into the forest, and how "
+"the government mostly suppressed magic because magical power (real or "
+"imagined) would have been a threat to secular power.  The description of some"
+" of these rituals are extremely detailed."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid "The Book of the Sacred Magic of Abramelin the Mage"
+msgid_plural "copies of The Book of the Sacred Magic of Abramelin the Mage"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "The Book of the Sacred Magic of Abramelin the Mage"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"Translated from the French edition by Samuel L MacGregor Mathers, this tome "
+"compiles the journeys of a man named Abraham of Worms to Egypt, where he "
+"learned occult secrets from the wizard Abramelin who lived in a small town "
+"near the Nile.  The magic contained within focuses mostly on the creation of "
+"magic squares which, when used in ceremonies by an initiate, provide magical "
+"effects."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"Psychic Self-Defense: The Classic Instruction Manual for Protecting Yourself "
+"Against Paranormal Attack"
+msgid_plural ""
+"copies of Psychic Self-Defense: The Classic Instruction Manual for Protecting"
+" Yourself Against Paranormal Attack"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Psychic Self-Defense: The Classic Instruction Manual for
+#. Protecting Yourself Against Paranormal Attack"
+#: data/mods/Xedra_Evolved/items/spell_learning_items/spellbooks_hedge.json
+msgid ""
+"A very popular 20th century occult book about protecting yourself against "
+"psychic attack, haunting, vampirism (the psychic kind, not the kind with "
+"fangs), and other otherworldly phenomenon."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/mapgen/abyssal_hunger_zone.json
+msgid "Hole to elsewhere"
+msgstr ""
+
+#. ~ Name of spell "abyssal_hunger_next_level"
+#. ~ Description of spell "abyssal_hunger_next_level ( abyssal hunger next
+#. level )"
+#: data/mods/Xedra_Evolved/mapgen/abyssal_hunger_zone.json
+msgid "abyssal hunger next level"
+msgstr ""
+
+#. ~ Name of map extra
+#: data/mods/Xedra_Evolved/mapgen/cryptids.json
+msgid "Half-eaten corpses"
+msgstr ""
+
+#. ~ Description of map extra "Half-eaten corpses"
+#: data/mods/Xedra_Evolved/mapgen/cryptids.json
+msgid "Piles of gore surround a trail of bloody footsteps."
+msgstr ""
+
+#. ~ Name of map extra
+#: data/mods/Xedra_Evolved/mapgen/cryptids.json
+msgid "Bloodsoaked acid streaks"
+msgstr ""
+
+#. ~ Description of map extra "Bloodsoaked acid streaks"
+#: data/mods/Xedra_Evolved/mapgen/cryptids.json
+msgid "A hole in the ground surrounds piles of acid-burned gore."
+msgstr ""
+
+#. ~ Description of map extra "Spiders"
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "This area is covered with webs.  There probably are spiders nearby."
+msgstr ""
+
+#. ~ Description of map extra "Homeless camp"
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "A camp of the homeless."
+msgstr ""
+
+#. ~ Description of map extra "strange plants"
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "A group of strange plants are growing here."
+msgstr ""
+
+#. ~ Name of map extra
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "a ring of mushrooms"
+msgstr ""
+
+#. ~ Description of map extra "a ring of mushrooms"
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "A group of mushrooms growing in a ring."
+msgstr ""
+
+#. ~ Name of the monster "mon_dream_shadowman" placed on map
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "Crowing Shadowman"
+msgstr ""
+
+#. ~ Name of map extra
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid "a shadowy wound in reality"
+msgstr ""
+
+#. ~ Description of map extra "a shadowy wound in reality"
+#: data/mods/Xedra_Evolved/mapgen/map_extras.json
+msgid ""
+"What you can only describe as a wound in reality appears to be leaking "
+"shadows."
+msgstr ""
+
+#. ~ Signage placed on map museum
+#: data/mods/Xedra_Evolved/mapgen/musuems.json
+msgid "Museum of Curiosities"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "ancient building"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "monochrome meadow"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "salamander eruption"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "salamander eruption roof"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "salamander tunnels entrance"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "salamander tunnels"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Xedra_Evolved/mapgen/overmap_terrain.json
+msgid "acid-scarred field"
+msgstr ""
+
+#. ~ Name of starting location "sloc_undine"
+#. ~ Mutation class name
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+msgid "Undine"
+msgstr ""
+
+#. ~ Name of starting location "sloc_arvore"
+#. ~ Mutation class name
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+msgid "Arvore"
+msgstr ""
+
+#. ~ Name of starting location "sloc_salamander"
+#. ~ Mutation class name
+#. ~ Mutation name
+#. ~ Name of a enchantment
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+#: data/mods/Xedra_Evolved/spells/integrated_armor_spells.json
+msgid "Salamander"
+msgstr ""
+
+#. ~ Name of starting location "sloc_sylph"
+#. ~ Mutation class name
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+msgid "Sylph"
+msgstr ""
+
+#. ~ Name of starting location "sloc_homullus"
+#. ~ Mutation class name
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+#: data/mods/Xedra_Evolved/mutations/mutation_category.json
+#: data/mods/Xedra_Evolved/mutations/mutation_thresh.json
+msgid "Homullus"
+msgstr ""
+
+#. ~ Name of starting location "sloc_xedra_chronomancer"
+#: data/mods/Xedra_Evolved/mapgen/start_locations.json
+msgid "Monochrome Meadow"
+msgstr ""
+
+#. ~ Computer name placed on map field_office_5, field_office_6,
+#. field_office_7, field_office_8
+#. ~ Computer name placed on map field_office_ex_5, field_office_ex_6,
+#. field_office_ex_7, field_office_ex_8
+#. ~ Computer name placed on map dm_field_office_5, dm_field_office_6,
+#. dm_field_office_7, dm_field_office_8
+#: data/mods/Xedra_Evolved/mapgen/xedra_field_office.json
+#: data/mods/Xedra_Evolved/mod_interactions/defense_mode/overmap_specials.json
+msgid "Border Patrol OS v0.A17 - Armory Access"
+msgstr ""
+
+#. ~ Interactive menu name in computer "Border Patrol OS v0.A17 - Armory
+#. Access" placed on map field_office_5, field_office_6, field_office_7,
+#. field_office_8
+#. ~ Interactive menu name in computer "Border Patrol OS v0.A17 - Armory
+#. Access" placed on map field_office_ex_5, field_office_ex_6,
+#. field_office_ex_7, field_office_ex_8
+#. ~ Interactive menu name in computer "Border Patrol OS v0.A17 - Armory
+#. Access" placed on map dm_field_office_5, dm_field_office_6,
+#. dm_field_office_7, dm_field_office_8
+#: data/mods/Xedra_Evolved/mapgen/xedra_field_office.json
+#: data/mods/Xedra_Evolved/mod_interactions/defense_mode/overmap_specials.json
+msgid "Unlock Armory"
+msgstr ""
+
+#. ~ Computer name placed on map field_office_5, field_office_6,
+#. field_office_7, field_office_8
+#. ~ Computer name placed on map field_office_ex_5, field_office_ex_6,
+#. field_office_ex_7, field_office_ex_8
+#. ~ Computer name placed on map dm_field_office_5, dm_field_office_6,
+#. dm_field_office_7, dm_field_office_8
+#: data/mods/Xedra_Evolved/mapgen/xedra_field_office.json
+#: data/mods/Xedra_Evolved/mod_interactions/defense_mode/overmap_specials.json
+msgid "Border Patrol OS v0.A17 - Evidence Locker Access"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/mods/Xedra_Evolved/mapgen/microlabs/offworld_acquisitions_materials.json
+msgid "Offworld Acquisitions - Open Raw Materials Storage Chambers"
+msgstr ""
+
+#. ~ Interactive menu name in computer "Offworld Acquisitions - Open Raw
+#. Materials Storage Chambers" placed on map
+#: data/mods/Xedra_Evolved/mapgen/microlabs/offworld_acquisitions_materials.json
+msgid "Open Raw Materials Storage Chambers"
+msgstr ""
+
+#. ~ Access denied message on computer "Offworld Acquisitions - Open Raw
+#. Materials Storage Chambers" placed on map
+#: data/mods/Xedra_Evolved/mapgen/microlabs/offworld_acquisitions_materials.json
+msgid ""
+"ERROR, access denied.  Raw materials access requires appropriate clearance.  "
+"Please contact your supervisor if you have received this message in error."
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/mods/Xedra_Evolved/mapgen/microlabs/offworld_acquisitions_materials.json
+msgid "Offworld Acquisitions - Raw Materials"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/mods/Xedra_Evolved/mapgen/microlabs/offworld_acquisitions_materials.json
+msgid "Offworld Acquisitions - Assets"
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/mods/Xedra_Evolved/mapgen/nested/field_office_nests.json
+msgid "Border Patrol Containment Room Controls"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Xedra_Evolved/martial_arts/shapeshifter.json
+msgid "Claw Slash"
+msgstr ""
+
+#. ~ Message of martial technique "Claw Slash"
+#: data/mods/Xedra_Evolved/martial_arts/shapeshifter.json
+#, c-format
+msgid "You deliver a slash to %s with your claws"
+msgstr ""

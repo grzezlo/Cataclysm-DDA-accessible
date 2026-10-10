@@ -1,0 +1,1866 @@
+# Batch 132 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of spell "afs_electrokinetic_recharge_vehicle ( [Ψ]Re-energize
+#. )"
+#. ~ Description of spell "electrokinetic_recharge_vehicle ( [Ψ]Re-energize )"
+#: data/mods/Aftershock/spells/psionics/electrokinesis.json
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/electrokinesis.json
+msgid ""
+"Turn your own energy into power for a vehicle or appliance.  You need merely "
+"touch the vehicle or any part of the power grid to recharge the batteries."
+msgstr ""
+
+#. ~ Message of spell "afs_electrokinetic_recharge_vehicle ( [Ψ]Re-energize )"
+#. ~ Message of spell "electrokinetic_recharge_vehicle ( [Ψ]Re-energize )"
+#: data/mods/Aftershock/spells/psionics/electrokinesis.json
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/electrokinesis.json
+msgid "Power flows into your target."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_AFS_ELECTROKIN_SEE_ELECTRICITY_INITIATE"
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_SEE_ELECTRICITY_INITIATE"
+#: data/mods/Aftershock/spells/psionics/electrokinesis_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/electrokinesis_concentration_eocs.json
+msgid "You open your senses to the flow of current."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_AFS_ELECTROKIN_HACKING_INTERFACE_INITIATE"
+#. ~ Player message in effect in EoC
+#. "EOC_ELECTROKIN_HACKING_INTERFACE_INITIATE"
+#: data/mods/Aftershock/spells/psionics/electrokinesis_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/electrokinesis_concentration_eocs.json
+msgid "You now have the ability to hack into nearby electronics."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_AFS_ELECTROKIN_PERSONAL_BATTERY_INITIATE"
+#. ~ Player message in effect in EoC
+#. "EOC_ELECTROKIN_PERSONAL_BATTERY_INITIATE_REAL"
+#: data/mods/Aftershock/spells/psionics/electrokinesis_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/electrokinesis_concentration_eocs.json
+msgid "The hair on your body stands up on end."
+msgstr ""
+
+#. ~ Name of spell "afs_telekinetic_move_item"
+#. ~ Name of spell "telekinetic_pull"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "[Ψ]Far Hand"
+msgstr ""
+
+#. ~ Description of spell "afs_telekinetic_move_item ( [Ψ]Far Hand )"
+#. ~ Description of spell "telekinetic_pull ( [Ψ]Far Hand )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "Move a set of items towards or away from you."
+msgstr ""
+
+#. ~ Name of spell "afs_telekinetic_move_creature"
+#. ~ Name of spell "telekinetic_push"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "[Ψ]Force Shove"
+msgstr ""
+
+#. ~ Description of spell "afs_telekinetic_move_creature ( [Ψ]Force Shove )"
+#. ~ Description of spell "telekinetic_push ( [Ψ]Force Shove )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid ""
+"Shove a target away or pull it towards you with a burst of psionic force.  "
+"The distance the target can be moved depends on its weight versus your power "
+"level; heavier things will not go as far, and if your target is too heavy, "
+"you may not be able to move it at all."
+msgstr ""
+
+#. ~ Name of spell "afs_telekinetic_momentum"
+#. ~ Name of spell "telekinetic_momentum"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "[Ψ]Momentum Alteration (C)"
+msgstr ""
+
+#. ~ Description of spell "afs_telekinetic_momentum ( [Ψ]Momentum Alteration
+#. (C) )"
+#. ~ Description of spell "telekinetic_momentum ( [Ψ]Momentum Alteration (C) )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid ""
+"Edit the momentum of yourself and nearby objects to your benefit, slowing damaging force and slightly increasing your speed.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "afs_telekinetic_wave"
+#. ~ Name of spell "telekinetic_wave"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "[Ψ]Wave of Force"
+msgstr ""
+
+#. ~ Description of spell "afs_telekinetic_wave ( [Ψ]Wave of Force )"
+#. ~ Description of spell "telekinetic_wave ( [Ψ]Wave of Force )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid ""
+"Unleash a telekinetic wave around you that indiscriminately knocks everything"
+" back."
+msgstr ""
+
+#. ~ Message of spell "afs_telekinetic_wave ( [Ψ]Wave of Force )"
+#. ~ Message of spell "telekinetic_wave ( [Ψ]Wave of Force )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "You knock everything nearby backwards!"
+msgstr ""
+
+#. ~ Name of spell "afs_telekinetic_hammer"
+#. ~ Name of spell "telekinetic_hammer"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "[Ψ]Mindhammer"
+msgstr ""
+
+#. ~ Description of spell "afs_telekinetic_hammer ( [Ψ]Mindhammer )"
+#. ~ Description of spell "telekinetic_hammer ( [Ψ]Mindhammer )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "Smash a single target or small area with a fist of telekinetic force."
+msgstr ""
+
+#. ~ Sound description of spell "afs_telekinetic_hammer ( [Ψ]Mindhammer )"
+#. ~ Sound description of spell "telekinetic_hammer ( [Ψ]Mindhammer )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "a heavy thud!"
+msgstr ""
+
+#. ~ Message of spell "afs_telekinetic_hammer ( [Ψ]Mindhammer )"
+#. ~ Message of spell "telekinetic_hammer ( [Ψ]Mindhammer )"
+#: data/mods/Aftershock/spells/psionics/telekinesis.json
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis.json
+msgid "You smash your target with a fist of force."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_TELEKIN_MOMENTUM_INITIATE"
+#. ~ Player message in effect in EoC "EOC_TELEKIN_MOMENTUM_INITIATE"
+#: data/mods/Aftershock/spells/psionics/telekinesis_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_concentration_eocs.json
+msgid "The air around you feels more yielding."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_AFS_TELEKINETIC_FAR_HAND_SELECTOR"
+#. ~ EOC option name in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#. ~ EOC option name in effect in EoC "EOC_TELEKINETIC_FAR_HAND_SELECTOR"
+#. ~ EOC option name in effect in EoC "EOC_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#. ~ EOC option name in effect in EoC
+#. "EOC_TELEKINETIC_MOVE_LARGE_WEIGHT_SELECTOR"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Pull"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FAR_HAND_SELECTOR"
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_FAR_HAND_SELECTOR"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Pull a set of items to you."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FAR_HAND_SELECTOR"
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_FAR_HAND_SELECTOR"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Push a set of items away from you."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Shove a target away from you."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Grab a target and pull them towards you."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in nested effect in else
+#. statement in effect in EoC "EOC_AFS_TELEKINETIC_FORCE_SHOVE_PUSH_CHECKER"
+#. ~ NPC message in nested effect in then statement in nested effect in else
+#. statement in nested effect in else statement in effect in EoC
+#. "EOC_TELEKINETIC_THROW_WEIGHT_HANDLER"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "You hurl your target."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_AFS_TELEKINETIC_PUSH_DIRECTION_PICKER" in
+#. nested EOCs in nested effect in then statement in nested effect in else
+#. statement in effect in EoC "EOC_AFS_TELEKINETIC_FORCE_SHOVE_PUSH_CHECKER"
+#. ~ Message in effect in EoC "EOC_TELEKINETIC_PUSH_DIRECTION_PICKER" in nested
+#. EOCs in nested effect in then statement in nested effect in else statement
+#. in nested effect in else statement in effect in EoC
+#. "EOC_TELEKINETIC_THROW_WEIGHT_HANDLER"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "Select direction."
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_AFS_TELEKINETIC_PUSH_DOWN_CHECKER"
+#. ~ NPC message in effect in EoC "EOC_TELEKINETIC_PUSH_DOWN_CHECKER"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "You shove your target off their feet."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC "EOC_AFS_TELEKINETIC_PUSH_DOWN_CHECKER"
+#. ~ NPC message in false effect in EoC "EOC_TELEKINETIC_PUSH_DOWN_CHECKER"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "You attempt to shove your target but they are too heavy!"
+msgstr ""
+
+#. ~ NPC message in nested effect in else statement in effect in EoC
+#. "EOC_AFS_TELEKINETIC_FORCE_SHOVE_PULL_CHECKER"
+#: data/mods/Aftershock/spells/psionics/telekinesis_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telekinesis_eocs.json
+msgid "You pull your target towards you."
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_shield"
+#. ~ Name of spell "telepathic_shield"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Telepathic Shield (C)"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_shield ( [Ψ]Telepathic Shield (C) )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"You can protect your mind from the dangers of Salus IV.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_mind_sense"
+#. ~ Name of spell "telepathic_mind_sense"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Sense Minds (C)"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_mind_sense ( [Ψ]Sense Minds (C) )"
+#. ~ Description of spell "telepathic_mind_sense ( [Ψ]Sense Minds (C) )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"You can use your powers to detect the tell-tale hum of a living, sapient mind, no matter how strange or alien it may be.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_suggestion"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Telepathic Suggestion (C)"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_suggestion ( [Ψ]Telepathic Suggestion
+#. (C) )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"You can subtly influence the thoughts of others, making them more amenable to your point of view.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_confusion"
+#. ~ Name of spell "telepathic_confusion"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Sensory Deprivation"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_confusion ( [Ψ]Sensory Deprivation )"
+#. ~ Description of spell "telepathic_confusion ( [Ψ]Sensory Deprivation )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"Disconnect a target's brain from its senses, leaving it blinded and confused."
+msgstr ""
+
+#. ~ Message of spell "afs_telepathic_confusion ( [Ψ]Sensory Deprivation )"
+#. ~ Message of spell "telepathic_confusion ( [Ψ]Sensory Deprivation )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "You lock your target's mind away!"
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_confusion_blind"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Sensory Deprivation blind Effect"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_confusion_blind ( [Ψ]Sensory
+#. Deprivation blind Effect )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"The is the part of the Sensory Deprivation that blinds the target.  It's a "
+"bug if you have it."
+msgstr ""
+
+#. ~ Name of spell "afs_telepathic_blast"
+#. ~ Name of spell "telepathic_blast"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "[Ψ]Synaptic Overload"
+msgstr ""
+
+#. ~ Description of spell "afs_telepathic_blast ( [Ψ]Synaptic Overload )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid ""
+"Short-circuit and overwhelm a target's brain, causing extreme damage or "
+"death.  Does not work on targets without living minds, such as robots."
+msgstr ""
+
+#. ~ Message of spell "afs_telepathic_blast ( [Ψ]Synaptic Overload )"
+#. ~ Message of spell "telepathic_blast ( [Ψ]Synaptic Overload )"
+#: data/mods/Aftershock/spells/psionics/telepathy.json
+#: data/mods/MindOverMatter/powers/telepathy.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy.json
+msgid "You assault the mind of your target!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_TELEPATH_SHIELD_INITIATE"
+#. ~ Player message in effect in EoC "EOC_TELEPATH_SHIELD_INITIATE"
+#: data/mods/Aftershock/spells/psionics/telepathy_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/telepathy_concentration_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy_concentration_eocs.json
+msgid "You begin shielding your thoughts."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_TELEPATH_SENSE_MINDS_INITIATE"
+#. ~ Player message in effect in EoC "EOC_TELEPATH_SENSE_MINDS_INITIATE"
+#: data/mods/Aftershock/spells/psionics/telepathy_concentration_eocs.json
+#: data/mods/MindOverMatter/powers/telepathy_concentration_eoc.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy_concentration_eocs.json
+msgid "You reach out with your powers, looking for nearby minds."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_TELEPATH_SUGGESTION_INITIATE"
+#: data/mods/Aftershock/spells/psionics/telepathy_concentration_eocs.json
+#: data/mods/aftershock_exoplanet/spells/psionics/telepathy_concentration_eocs.json
+msgid "You prepare to subtly influence others' thoughts."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/mods/Aftershock/vehicles/vehicle_parts.json
+#: data/mods/aftershock_exoplanet/vehicles/vehicle_parts.json
+msgid "heavy ablative plating"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/mods/Aftershock/vehicles/vehicles.json
+#: data/mods/aftershock_exoplanet/vehicles/vehicles.json
+msgid "Enforcer Patrol Car"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/mods/Aftershock/vehicles/vehicles.json
+#: data/mods/aftershock_exoplanet/vehicles/vehicles.json
+msgid "Light Cycle"
+msgstr ""
+
+#. ~ Vehicle name
+#: data/mods/Aftershock/vehicles/vehicles.json
+#: data/mods/aftershock_exoplanet/vehicles/vehicles.json
+msgid "Lynx Explorer"
+msgstr ""
+
+#. ~ Item name
+#. ~ Variant name of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid "strange object"
+msgid_plural "strange objects"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid "An object of uncertain origin, unusually heavy for its size."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It looks like a glob of white plastic streaked with bits of red and black has"
+" melted over a jagged chunk of mixed scrap metals.  There are two large and "
+"sharp pieces of metal jutting out from the side in parallel.  The metal is "
+"very slightly, inexplicably slimy to the touch.  If you hold it up to your "
+"ear, it emits a low, oscillating hum very quietly.  Unsettling…"
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It's a brown, flaky rock just bigger than your fist.  Horrifically, what seem"
+" to be small animal bones stick out of it at weird angles.  Something that "
+"looks suspiciously like blood very slowly oozes out from between the layers "
+"in the rock - almost imperceptibly slow - almost as if something living were "
+"freshly crushed between the sedimentary layers.  But that would be "
+"impossible…"
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It's a small wooden cuboid with a large rectangular hole running from one side to the other.  The wood is well-treated and it seems completely mundane at first.\n"
+"\n"
+"If you look through the hole, everything looks normal.  It's only when you wave your hand in front that you realize that you can't see yourself!  If you stick your finger inside the hole, it doesn't seem to come out the other side.  How is that possible?!"
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"You could be wrong, but it appears to be maybe 6 or 7 colorful glass bongs "
+"fused together in a ball-shaped mess of melted glass, reminding you strangely"
+" of an art exhibition you saw once.  When you pick up the object, you notice "
+"a pale purple ooze trapped in the middle of the glass meld.  It's iridescent,"
+" colloidal, and slightly viscous, although it doesn't remind you of any fluid"
+" you've ever seen before."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It's colored jet black and looks suspiciously like the ridged horn of a goat,"
+" only seemingly studded with red gems and carved with inscriptions.  You're "
+"no expert, but these inscriptions are unlike anything you've ever seen humans"
+" make, with many geometric shapes inside squares that could be words or "
+"characters.  There are thin, intricate lines weaving all over the horn, "
+"curving in a way that you're sure could only be achieved with laser engraving"
+" technology yet you feel certain they were not."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It appears like a normal book with a bright blue cover from a distance, but "
+"when you pick the object up you notice it's simply a thick slab of some dense"
+" material shaped like a book.  It's oddly stocky and brightly colored, "
+"textured with low-resolution images almost like an object that fell straight "
+"out of an old video game.  On the cover is just the number \"19\" and below "
+"it the words \"A new bible by\" but there's no author listed.  In fact, "
+"there's no other text on the entire object."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It seems to be a heavy chunk of light pink amber.  Suspended inside the amber are… fossils?  You're unsure what to call them.\n"
+"\n"
+"One appears to be a small ball of hair with copper wires reaching out in one direction, reminiscent of an amoeba reaching for something.  Another appears to be a tiny fern, only made out of a highly iridescent metal, with blades quite literally as thin as a razor.  A third, particularly horrifying one appears to be the shrunken head of a human with a network of dark red nerves instead of hair."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It seems almost like a children's toy has somehow melted into a solid chunk "
+"of brass.  There are bright red, green, and yellow plastic pieces fused into "
+"the sides and a very distinct purple button in the middle.  When you press "
+"it, however, there's a sickening squelch and you can't help but feel like "
+"you're pressing into a pile of ground meat protected by this metal outer "
+"shell.  Disgusting."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It seems like a small, jagged rock uniformly and evenly covered in bright red"
+" velvet.  You feel certain that the rock came to be this way through some "
+"supernatural process.  When you hold it to your ear, it emits a very low, "
+"oscillating hum.  Very strange."
+msgstr ""
+
+#. ~ Description of variant "strange object" of item "strange object"
+#: data/mods/Backrooms/artifacts.json
+msgid ""
+"It appears to be a small black box made out of some kind of hard metal.  Although it has no discernable openings, you call it a box because when you shake it you can feel things moving around inside.  Strangely, though, what's inside always seems to be… changing.  One moment it's a liquid, the next it feels like marbles or rocks, and then the next it feels like sand.\n"
+"\n"
+"Although probably inconsequential, the object emits a fairly strong odor of ginger at all times."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded wall"
+msgstr ""
+
+#. ~ Description of terrain "faded wall"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"A yellowed, numbingly monotonous wallpaper decorates these thin walls.  They "
+"smell of mildew and have a faintly damp feel."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded gray wall"
+msgstr ""
+
+#. ~ Description of terrain "faded gray wall"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"A drab gray drywall barrier with no finishing.  Feels almost damp to the "
+"touch and smells faintly of cleaner chemicals."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded carpet, overhead light"
+msgstr ""
+
+#. ~ Description of terrain "faded carpet, overhead light"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"A slightly moist carpet, stained yellow with age.  Overhead, a fluorescent "
+"light hums a little too loudly."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded carpet"
+msgstr ""
+
+#. ~ Description of terrain "faded carpet"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "A slightly moist carpet, stained yellow with age."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded tile, overhead light"
+msgstr ""
+
+#. ~ Description of terrain "faded tile, overhead light"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"These cheap white tiles, which seem to be plastic rather than actual ceramic,"
+" are grayed with age and slightly warped at their corners.  Overhead, a "
+"fluorescent light hums a little too loudly."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "faded tile"
+msgstr ""
+
+#. ~ Description of terrain "faded tile"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"These cheap white tiles, which seem to be plastic rather than actual ceramic,"
+" are grayed with age and slightly warped at their corners."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "water cooler"
+msgstr ""
+
+#. ~ Description of furniture "water cooler"
+#: data/mods/Backrooms/furniture_terrain.json
+msgid ""
+"A plastic jug of water mounted on a dispenser.  Normally dispenses hot water "
+"in addition to cold, but not with the power out.  You could probably salvage "
+"the unwieldy jug on top with little effort, but any water still in it would "
+"spill."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/mods/Backrooms/furniture_terrain.json
+msgid "wobbling plastic!"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Backrooms/items.json
+msgid "water cooler jug"
+msgid_plural "water cooler jugs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "water cooler jug"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A sizable blue plastic jug meant to hold and supply water in a water cooler "
+"or similar dispenser.  Holds a lot of liquid, but unfortunately it doesn't "
+"come with a cap, making it hard to carry around when full."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Backrooms/items.json
+msgid "almond water"
+msgid_plural "almond waters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "almond water"
+#: data/mods/Backrooms/items.json
+msgid "A bottle of what looks like slightly-cloudy water."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Backrooms/items.json
+msgid "almond water bottle"
+msgid_plural "almond water bottles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "almond water bottle"
+#: data/mods/Backrooms/items.json
+msgid "A sealed glass bottle, holding a slightly-cloudy liquid."
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  The date on it is so old it seems "
+"actually impossible for it to have lasted this long in such good condition.  "
+"Most of the information on there is shockingly uninteresting for an artifact "
+"so old, but one thing catches your eye briefly."
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  The date on it suggests it's decades"
+" old, but miraculously it appears to be much newer.  Most of the information "
+"on there is terribly trivial, or out of date, but one thing catches your eye "
+"briefly."
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  It doesn't look like any newspaper "
+"you're familiar with and the text on it makes no sense…"
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  It was printed a few years ago.  "
+"Most of the information on there is terribly trivial, or out of date, but one"
+" thing catches your eye briefly."
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  There seems to be an important "
+"article about a missing person."
+msgstr ""
+
+#. ~ Description of "newspaper page"
+#: data/mods/Backrooms/items.json
+msgid ""
+"A single sheet of newspaper broadsheet.  It was printed within the last few "
+"months.  Most of the information on there is terribly trivial, or out of "
+"date, but one thing catches your eye briefly."
+msgstr ""
+
+#. ~ Description of map extra "Red room"
+#: data/mods/Backrooms/map_extras.json
+msgid "There's a red room here."
+msgstr ""
+
+#. ~ Description of map extra "Autodoc room"
+#: data/mods/Backrooms/map_extras.json
+msgid "There's an autodoc here."
+msgstr ""
+
+#. ~ Description of MOD "The Backrooms"
+#: data/mods/Backrooms/modinfo.json
+msgid ""
+"A strange place between dimensions traps you.  Can you survive among endless halls of yellowed carpet and harshly humming fluorescents?\n"
+"\n"
+"Replaces all normal worldgen: no wilderness, no rivers, no cities, no farms, no sky.  Just endless, winding indoor halls of mildewy carpeting, faded drywall, desolate breakrooms and abandoned boardrooms.\n"
+"\n"
+"Recommended city size is 0.  Play Now!  (Default Scenario) is not supported."
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Backrooms/overmap_terrain.json
+msgid "backroom stairs"
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid "\"I took all the supplies.  I'm sorry.\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"\"Someday I will wake up.  Someday I will wake up.  Someday I will wake up.  "
+"Someday I will\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid "\"eat the walls\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid "\"pray that you find the same peace I have found\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"\"225 steps from the vending machines to the couch room…  Turn left…  141 "
+"steps from the couch room to the portal…\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_note"
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"\"know because I was wearing my watch.  Today was another bad day.  They "
+"nearly saw me as I hauled wood back to the big room, and I lost half of it "
+"running away.  Tomorrow, I plan\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_ancient_news"
+#. ~ This category is for news before 1950 and should adopt the tone of voice
+#. of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"CIGARET SHORTAGE EASILY EXPLAINED!  The cigaret industry says Americans are "
+"smoking at the fastest rate in history - that's why there's a shortage!  The "
+"final production figure will be 257 million in 1943, compared with 243 "
+"million in 1942.  Add to this tax-free shipments to armed forces - which were"
+" 32 million this year and increasing, up from 8 million in 1942 - and "
+"civilians would be struggling this year were it not for excellent crops!"
+msgstr ""
+
+#. ~ Snippet in category "backrooms_ancient_news"
+#. ~ This category is for news before 1950 and should adopt the tone of voice
+#. of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"STRIKE ORE NEAR KENDALL!  A special of the 15th to the Miner from Lewistown "
+"states that there is much excitement around Kendall over the reported "
+"striking of a hitherto unknown ore in the Fergus tract, extending out on the "
+"flat from the Bullard property, and claims are being located in all "
+"directions!  Potential experts on the unknown metal are to arrive in the "
+"week."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_ancient_news"
+#. ~ This category is for news before 1950 and should adopt the tone of voice
+#. of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"THE WEATHER: Fair tonight and Wednesday.  THIS IS REAL COMFORT!  That is what"
+" they say when they try one of TROUTMANS' Vudor chair hammocks, $3.50; ask to"
+" see them!  Buy one of these for the Fourth of July: Flag, size 5x8 feet, "
+"pole and rope ready to hang; price, while they last, $1.75 -- TROUTMANS'!"
+msgstr ""
+
+#. ~ Snippet in category "backrooms_very_old_news"
+#. ~ This category is for news after 1950 until the time of Cataclysm lore and
+#. should adopt the tone of voice of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"ABRAMS CONFIDENT S. VIET TAKEOVER IS SUCCESS:  Gen. Creighton W. Adams, "
+"commander of US troops in South Vietnam, praised the South Vietnamese army "
+"today and said its forces have \"tremendous confidence\" in their continued "
+"success.  The disappearance of Gen. Bessemer last month has \"not "
+"disheartened the troops\", although Adams has admitted his death at enemy "
+"hands is \"likely\"."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_very_old_news"
+#. ~ This category is for news after 1950 until the time of Cataclysm lore and
+#. should adopt the tone of voice of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"LUNCH MENUS:  MONDAY, February 16 - NO SCHOOL.  TUESDAY, February 17 - Corn "
+"dog with catsup and mustard, potatoes au gratin, bread and butter, buttered "
+"spinach, apple half, milk.  WEDNESDAY February 18 - Wildcat goulash, buttered"
+" green beans, hot rolls and butter, orange jello with pears, milk.  THURSDAY,"
+" February 19 - Tacos with cheese and lettuce, applesauce, milk.  FRIDAY, "
+"February 20 - Creamed turkey over mashed potatoes, peanutbutter sandwiches, "
+"cherry shortcake, chocolate milk."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_very_old_news"
+#. ~ This category is for news after 1950 until the time of Cataclysm lore and
+#. should adopt the tone of voice of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"ADMINISTRATIVE ASSISTANT SOUGHT:  Eberhard Technologies, Inc. is looking for "
+"a full-time (37.5 hours) Administrative Assistant.  This position requires a "
+"person with excellent organizational and computer skills, capable of "
+"professional discretion in their daily life.  Extensive benefits offered.  "
+"Send resume to thaskins@eberhardphoenix.com."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_very_old_news"
+#. ~ This category is for news after 1950 until the time of Cataclysm lore and
+#. should adopt the tone of voice of its era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"SEARCH FOR PILOT WHO SAW UFO, DISAPPEARED:  Authorities Wednesday called of a"
+" ground, air, and sea search for a pilot who vanished after radioing that his"
+" lightplane was being pursued by an unidentified flying object.  An air force"
+" reconnaissance plane searched 1,000 square miles of ocean for George "
+"Valentina and his Cessna 182.  At one point, Valentina radioed, \"It's not an"
+" aircraft…  It's…\" before the transmission broke off.  Residents of King "
+"Island have reported sightings of bright and trailing lights over the past "
+"six weeks."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_recent_news"
+#. ~ This category roughly lines up with Cataclysm's news segments newer than a
+#. few months and contains some of the same snippets.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"HALLOWAY ANNOUNCES SWEEPING BUDGET BILL.  As rhetoric surrounding national "
+"defense spending ramps up, Senate Majority Leader Halloway has announced a "
+"controversial bill that would cut over $700 billion from multiple federal "
+"organizations, including arts funding and welfare.  He introduced the bill by"
+" saying, \"We stand on the edge of a new age of science and discovery, and a "
+"new age of danger from enemies abroad.  Hardworking Americans can benefit "
+"most by getting involved in our new civilian science programs and making a "
+"difference there.  No more sitting at home playing video games!\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_recent_news"
+#. ~ This category roughly lines up with Cataclysm's news segments newer than a
+#. few months and contains some of the same snippets.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"COUNTRY MUSIC FESTIVAL STILL ON.  Predictions of inclement weather won't stop"
+" Huey Brooks, owner of Brooks Entertainment, from putting on his famous "
+"country music festival.  The event has moved to the Springfield Masonic "
+"Center and begins two hours earlier, at 5PM.  As the whereabouts of self-"
+"admitted \"party boy\" Jerry Kenny remain unknown, local legend Poppy "
+"Summerfield has been brought in to fill his slot."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_lost_people_news"
+#. ~ This category is for 'lost person' classified ads and newspaper snippets
+#. about people that have fallen into to the Backrooms, from any era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"KIDNAPPING IN WESTFIELD?  After a week of intense searching, chasing leads "
+"across the state, the Oriole County Sheriff's Department have still uncovered"
+" no leads in the disappearance of Kasey Akron, 31, postal worker and mother "
+"of two.  Akron disappeared without a trace while on the job in Westfield, a "
+"small village with a population of only 824, on September 24th.  Her vehicle "
+"was found still running, undelivered mail left inside.  Her mother tearfully "
+"testified to the Oriole Free Press, \"Kasey was a happy and loved woman.  "
+"Wherever she is, we know she wants to come home!\"  Detectives previously "
+"suggested that Akron may have departed with someone she knew, but have not "
+"made any arrests so far."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_lost_people_news"
+#. ~ This category is for 'lost person' classified ads and newspaper snippets
+#. about people that have fallen into to the Backrooms, from any era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"MYSTERY IN DRESDEN: Nefarious happenings are nothing new for the ever-"
+"tumultuous GDR, but the peculiar mystery of two missing actors has captured "
+"international attention.  Nani Wolf and Angela Weiss were slated to perform "
+"in mere moments, spotted entering their dressing room with fellow company "
+"members testifying to every minute and every angle, but when the curtain call"
+" came, they were nowhere to be found!  Region police are baffled, but have "
+"concluded there was no sign of foul play.  The girls just disappeared!"
+msgstr ""
+
+#. ~ Snippet in category "backrooms_lost_people_news"
+#. ~ This category is for 'lost person' classified ads and newspaper snippets
+#. about people that have fallen into to the Backrooms, from any era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"MISSING MAN: Gerald Bienkowski, age 47.  Disappeared: April 14.  Last seen "
+"leaving Tony's Watering Hole in Burlington.  Believed to be of sound mind, "
+"but possibly in danger.  If seen, contact local police.  Do not approach."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_lost_people_news"
+#. ~ This category is for 'lost person' classified ads and newspaper snippets
+#. about people that have fallen into to the Backrooms, from any era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"MISSING WOMAN: Anne Demir, age 33.  Disappeared: May 3.  Last seen driving "
+"SOUTH of Dallas on I-45 at 8:45pm.  NEW DETAILS HAVE RE-OPENED THIS "
+"INVESTIGATION.  New witness footage confirms Demir's car driving SOUTH rather"
+" than north, as previously reported."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_lost_people_news"
+#. ~ This category is for 'lost person' classified ads and newspaper snippets
+#. about people that have fallen into to the Backrooms, from any era.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"NO TRACE FOUND in search for missing Lisa Hawthorne and her boyfriend Shaun "
+"after 58 Civil Air Patrol members spent three days scouring the area near "
+"Twelve Mile Trail.  The couple's car was found roadside near the northern "
+"trailhead and they were reported missing shortly after.  The couple were \"on"
+" a daily hike in a place completely known to them\", says detective Aretha "
+"Wesson, who personally knew the two intrepid young athletes."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"\"St. Mary bingo will be hel777 B24G43A23K19T99 assistance with bond. The "
+"empty ap… , , , thsi empty abyss, floating on a salt laboratory "
+"abbbbbbbooooooooooooooannaannan.\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"\"NEWS REPORTED: The absolute fucking apathy!  I hav ?????:D:D don f a    snn"
+"          ksk             t  special compartment designed for defacation "
+"inside the twentieth centurset sd dddddddddd and THEY DON'T UNDERSTAND WHAT'S"
+" HAPPENING BUT I could tell uuuuuuuuuu the smoke outlawed inside\""
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"You've never seen anything i never scene 4444442 2222 nsnrwsnennelalkknwns i "
+"haven't sen sent the break forest knight calber song ontological corporaction"
+" nwensnnnnnnnnnfnnnnnnnnnnnndf ff XD usee?"
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+#, no-c-format
+msgid ""
+"12,32193334 missing platters.  arbitrary statisticality somnolencences "
+"somaekllllld 321 was a stinker but they sdneoll the %%%% anaans k.  fol sd  k"
+"            so dow n     the          dragin.  alice and her rabid fated to "
+"apel,, unex plain."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"    snNOOO I D s. s      an i   s so oo o o    seen the eyes thru th   s d e"
+"    .  I tolder once tah     i n        a bear."
+msgstr ""
+
+#. ~ Snippet in category "backrooms_unknown_news"
+#. ~ This category is for snippets that don't make any logical sense.  They
+#. have been 'corrupted' by their movement into the Backrooms.
+#: data/mods/Backrooms/snippets.json
+msgid ""
+"fffeehis thy exclusive eng88 Julietwoiclaim fully sought303 Romeo "
+"tirvengeTownto   sk      662ords Fiona PRESSKRRTmLoth.  wnan  oleads have "
+"been uncorded."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Backrooms/teleport.json
+msgid "waycircle"
+msgstr ""
+
+#. ~ Description of furniture "waycircle"
+#: data/mods/Backrooms/teleport.json
+msgid ""
+"A ritualistic, circular glyph painted onto a sizable boulder and surrounded "
+"with primitive decor, with the intent of channeling the natural of ley lines "
+"into a functional landing spot for teleportation.  Theoretically, it could "
+"receive any manner of targeted teleport, be it magical, ritualistic, or "
+"technological.  Examine to link."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Backrooms/teleport.json
+msgid "Waystone"
+msgid_plural "Waystones"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Waystone"
+#: data/mods/Backrooms/teleport.json
+msgid ""
+"This large chunk of stone, cut from a paired waycircle, has been enchanted "
+"with primitive, ritual power to link it to a network of empowered ley lines."
+"  As a result, it is capable of sending the user to any linked waycircle, or "
+"to any similar teleport location, be it magical or technological, after "
+"performing a brief somatic ritual.  The stone is many, many times heavier "
+"than it seems to have any right to be, as if pulled powerfully to the Earth "
+"by unseen forces.  Further, though it is only somewhat bulky, it seems to "
+"defy proper transport, its own dimensions defying any container or reasonable"
+" transport.  Best to craft this where you intend to leave it.  Requires a "
+"nearby waycircle to craft."
+msgstr ""
+
+#. ~ Name of spell "prim_warp"
+#: data/mods/Backrooms/teleport.json
+msgid "Red Room Recall"
+msgstr ""
+
+#. ~ Description of spell "prim_warp ( Red Room Recall )"
+#: data/mods/Backrooms/teleport.json
+msgid "Transports the user to a viable landing pad via strange forces."
+msgstr ""
+
+#. ~ MOD name
+#: data/mods/BombasticPerks/modinfo.json
+msgid "Bombastic Perks"
+msgstr ""
+
+#. ~ Description of MOD "Bombastic Perks"
+#: data/mods/BombasticPerks/modinfo.json
+msgid ""
+"Killing enemies allows you to level up, unlocking powerful and fun perks for "
+"your character.  Just after game start a configuration menu should open to "
+"let you enable the mod."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Lifestyle Perks:\n"
+"Level <u_val:current_level>.\n"
+"<u_val:num_perks> perk points to spend.\n"
+"Current EXP: <u_val:available_exp>.\n"
+"EXP to next level: <u_val:exp_to_perk>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires perception 13"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires strength 13"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires dexerity 13"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires preception 13"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires athletics 3"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must not have <trait_name:perk_way_closedfist>, "
+"<trait_name:perk_way_pinchedfingers>.  Requires unarmed 2 and cutting 1"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must not have <trait_name:perk_way_openpalm>, "
+"<trait_name:perk_way_pinchedfingers>.  Requires unarmed 2 and bashing 1"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must not have <trait_name:perk_way_closedfist>, "
+"<trait_name:perk_way_openpalm>.  Requires unarmed 2 and piercing 1"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must not have <trait_name:perk_bloody_mess>.  Melee or guns 2"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires handguns 2"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must have the <trait_name:SOCIAL1> or <trait_name:SOCIAL2> trait\n"
+"\n"
+"Must not have the <trait_name:PRED1>, <trait_name:PRED2>, <trait_name:PRED3>, <trait_name:PRED4>, or <trait_name:SAPIOVORE> traits"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must have the <trait_name:perk_built_tough> perk.\n"
+"\n"
+"Must not have the <trait_name:MORE_PAIN>, <trait_name:MORE_PAIN2>, or <trait_name:MORE_PAIN3> Traits"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must have the <trait_name:perk_tingly> perk"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must have the <trait_name:PACIFIST> trait"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Must not have the <trait_name:SQUEAMISH>, <trait_name:VEGETARIAN>, "
+"<trait_name:HERBIVORE>, or <trait_name:VEGAN> traits."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must have <trait_name:perk_blood_drinker>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires perception 10"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires the Spiritual trait"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires health care 4"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires dexterity 12"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Cannot have the Hates Books or Illiterate traits"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires Melee 1"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must have the <trait_name:PROF_DICEMASTER> trait"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Playstyle Perks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Metamagic Perks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Psionic Perks"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Playstyle Perks:\n"
+"Level <u_val:current_level>.\n"
+"<u_val:num_perks> perk points to spend.\n"
+"Current EXP: <u_val:available_exp>.\n"
+"EXP to next level: <u_val:exp_to_perk>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires electronics 4, and health care 4"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must not have the <trait_name:GOURMAND> trait"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Playstyle Perks: Stormwrought"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Lifestyle Perks"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Stormwrought Playstyle Perks:\n"
+"Level <u_val:current_level>.\n"
+"<u_val:num_perks> perk points to spend.\n"
+"Current EXP: <u_val:available_exp>.\n"
+"EXP to next level: <u_val:exp_to_perk>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Must not have another Stormwrought perk."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"Metamagic Perks:\n"
+"Level <u_val:current_level>.\n"
+"<u_val:num_perks> perk points to spend.\n"
+"Current EXP: <u_val:available_exp>.\n"
+"EXP to next level: <u_val:exp_to_perk>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires a spell known of level 2 or above"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires a spell known"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/BombasticPerks/perkmenu.json
+msgid "Requires a spell known of level 8 or above"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json data/mods/Perk_melee/menu.json
+msgid "You don't have a perk point, or meet the prerequisites for this perk."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/perkmenu.json
+#: data/mods/Magiclysm/mod_interactions/bombastic_perks/perkmenu.json
+#: data/mods/Perk_melee/menu.json
+#: data/mods/Xedra_Evolved/mod_interactions/bombastic_perks/perks/perk_menu.json
+msgid "Select Perk."
+msgstr ""
+
+#. ~ Failure explanation for NPC dialogue response
+#: data/mods/BombasticPerks/perkmenu.json data/mods/Perk_melee/menu.json
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+#: data/mods/Xedra_Evolved/mod_interactions/bombastic_perks/perks/perk_menu.json
+msgid "Requirements Not Met"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/perkmenu.json
+msgid ""
+"<context_val:trait_name>: \"<context_val:trait_description>\"\n"
+"Costs <u_val:playstyle_cost> + 1 perk points, <context_val:trait_requirement_description>.\n"
+"<context_val:trait_additional_details>"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Open Perk Menu"
+msgstr ""
+
+#. ~ Description of mutation "Open Perk Menu"
+#: data/mods/BombasticPerks/perks.json
+msgid "Direct access to the perk menu."
+msgstr ""
+
+#. ~ Description of mutation "Stronger"
+#: data/mods/BombasticPerks/perks.json
+msgid "Have you been working out?  +1 Strength."
+msgstr ""
+
+#. ~ Description of mutation "Even Stronger"
+#: data/mods/BombasticPerks/perks.json
+msgid "You HAVE been working out.  +2 Strength."
+msgstr ""
+
+#. ~ Description of mutation "Faster"
+#: data/mods/BombasticPerks/perks.json
+msgid "Have you been doing cardio?  +1 Dexterity."
+msgstr ""
+
+#. ~ Description of mutation "Even Faster"
+#: data/mods/BombasticPerks/perks.json
+msgid "You HAVE been doing cardio.  +2 Dexterity."
+msgstr ""
+
+#. ~ Description of mutation "Smarter"
+#: data/mods/BombasticPerks/perks.json
+msgid "Have you been reading?  +1 Intelligence."
+msgstr ""
+
+#. ~ Description of mutation "Even Smarter"
+#: data/mods/BombasticPerks/perks.json
+msgid "You HAVE been reading.  +2 Intelligence."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Sharper"
+msgstr ""
+
+#. ~ Description of mutation "Sharper"
+#: data/mods/BombasticPerks/perks.json
+msgid "Have you been staring out into the middle distance?  +1 Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Even Sharper"
+msgstr ""
+
+#. ~ Description of mutation "Even Sharper"
+#: data/mods/BombasticPerks/perks.json
+msgid "You HAVE been staring out into the middle distance.  +2 Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Sight Beyond Sight"
+msgstr ""
+
+#. ~ Description of mutation "Sight Beyond Sight"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You have an instinctive sense for the uncanny and unearthy.  Activate this "
+"perk to close your eyes and become aware of nearby Nether creatures."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Mighty Thews"
+msgstr ""
+
+#. ~ Description of mutation "Mighty Thews"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Your rippling muscles enable you to split the skulls of your enemies.  +5% to"
+" Lifting, Grip, and Manipulator limb scores."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Pantherish Grace"
+msgstr ""
+
+#. ~ Description of mutation "Pantherish Grace"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Your movements bring to mind a multitude of cat-based metaphors.  +5% to "
+"Balance, Footing, and Reaction limb scores."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Eagle Eyes"
+msgstr ""
+
+#. ~ Description of mutation "Eagle Eyes"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Your sharp gazes misses little.  +25% to Vision and Night Vision limb scores."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Holdout Pocket"
+msgstr ""
+
+#. ~ Description of mutation "Holdout Pocket"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Never leave home without it!  You have a secret pocket no one knows about "
+"that can easily store a weapon."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Built Tough"
+msgstr ""
+
+#. ~ Description of mutation "Built Tough"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid "You're like a walking tank!  Take 5% less damage from all sources."
+msgstr ""
+
+#. ~ Description of mutation "Hauler"
+#: data/mods/BombasticPerks/perks.json
+msgid "All that hauling has paid off.  You can carry 10kg of additional items."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Vacationer"
+msgstr ""
+
+#. ~ Description of mutation "Vacationer"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Every day in the apocalypse is just like the beach.  You are more comfortable"
+" in cold and warm weather."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Gym Rat"
+msgstr ""
+
+#. ~ Description of mutation "Gym Rat"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Your time exercising has gotten you used to being drenched in your own sweat."
+"  Being wet doesn't bother you as much anymore."
+msgstr ""
+
+#. ~ Mutation name
+#. ~  'To have your bell rung' means to be hit on the head.
+#: data/mods/BombasticPerks/perks.json
+msgid "Bellringer"
+msgstr ""
+
+#. ~ Description of mutation "Bellringer"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You're very good at the follow-through when your enemies are reeling.  When "
+"in melee combat with an enemy that is dazed or stunned, you do +33% extra "
+"bash damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Thick Skull"
+msgstr ""
+
+#. ~ Description of mutation "Thick Skull"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've taken so many blows to the head you've lost count.  You've got "
+"additional skull armor."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Way of the Open Palm"
+msgstr ""
+
+#. ~ Description of mutation "Way of the Open Palm"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've dealt enough blows that your hands have callused, and your knifehand "
+"strikes are sharp enough to draw blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Way of the Closed Fist"
+msgstr ""
+
+#. ~ Description of mutation "Way of the Closed Fist"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've dealt enough blows that your hands have callused, and your hammerfist "
+"strikes are as strong as a real hammer."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Way of the Pinched Fingers"
+msgstr ""
+
+#. ~ Description of mutation "Way of the Pinched Fingers"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've dealt enough blows that your hands have callused, your spearhand "
+"strikes can pierce armor, and your grip can turn bolts barehanded."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Quickdraw"
+msgstr ""
+
+#. ~ Description of mutation "Quickdraw"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Practicing with handguns has improved your draw speed with pretty much "
+"everything.  Retrieve objects 25% faster from containers."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of a enchantment
+#: data/mods/BombasticPerks/perkdata/vengeful.json
+#: data/mods/BombasticPerks/perks.json
+msgid "Vengeful"
+msgstr ""
+
+#. ~ Description of mutation "Vengeful"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Oh, they're not getting away with THAT.  You do +15% damage for two turns "
+"after you're hit."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a pun, based on undying literally meaning 'does not die' but also
+#. the figurative meaning of an emotion that lasts forever.
+#. ~ Name of effect type id "effect_perk_undying_loyalty"
+#: data/mods/BombasticPerks/perkdata/undying_loyalty.json
+#: data/mods/BombasticPerks/perks.json
+msgid "Undying Loyalty"
+msgstr ""
+
+#. ~ Description of mutation "Undying Loyalty"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You inspire your allies to protect you when you're seriously injured.  If "
+"attacked when your head or torso health are at 50% or lower, all allies "
+"within 15 meters will take 20% reduced damage for one minute.  This effect "
+"can only trigger once every five minutes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Ghost"
+msgstr ""
+
+#. ~ Description of mutation "Ghost"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You've gotten pretty good at sneaking up on people.  When you have no allies "
+"within 20 squares, enemies' vision detection range is reduced by 15%."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Big Eater"
+msgstr ""
+
+#. ~ Description of mutation "Big Eater"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You can really put it away.  You eat food 10% faster and can eat 33% more "
+"food at a time."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Tuck and Roll"
+msgstr ""
+
+#. ~ Description of mutation "Tuck and Roll"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"At some point you got really good at falling off rooftops.  Take 40% less "
+"fall damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Grit Your Teeth"
+msgstr ""
+
+#. ~ Description of mutation "Grit Your Teeth"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"When you have to you can wipe the blood off your chin, grit your teeth, and get it done.  Use to reduce your pain by 30 or half (whichever is greater) for 3 minutes.\n"
+"\n"
+"The cooldown on this perk scales based on your pain at the time you used it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Surgical Strikes"
+msgstr ""
+
+#. ~ Description of mutation "Surgical Strikes"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Careful aim allows you to take down game with little tissue damage.  Enemies "
+"you kill tend to stay intact."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Bloody Mess"
+msgstr ""
+
+#. ~ Description of mutation "Bloody Mess"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"For whatever reason you seem to always make a real mess of things.  Enemies "
+"you kill tend to explode into a mess of viscera."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Perfect Timing"
+msgstr ""
+
+#. ~ Description of mutation "Perfect Timing"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You used to annoy your friends before the Cataclysm by always being *exactly*"
+" on time and you've maintained that characteristic to this day.  You always "
+"know what time it is and can set alarms even without a watch or a phone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "All Terrain"
+msgstr ""
+
+#. ~ Description of mutation "All Terrain"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You have a persistent sense of how to move around in sharp and rough terrain."
+"  You'll never accidently snag or cut yourself on protrusions from the "
+"ground."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Bedtime Stories"
+msgstr ""
+
+#. ~ Description of mutation "Bedtime Stories"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You've always loved reading, especially before you fall asleep, and have "
+"gotten very good at tearing through books as a way to wind down.  You read "
+"books 50% faster, but only when you read them between 8 p.m. and 1 a.m."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Tingly"
+msgstr ""
+
+#. ~ Description of mutation "Tingly"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Ever since the apocalypse you get a funny feeling during storms and have "
+"trouble trusting small appliances.  You usually have a pretty good idea where"
+" they are though."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Static Stockpile"
+msgstr ""
+
+#. ~ Description of mutation "Static Stockpile"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You can't touch a door without zapping yourself.  Whenever there is a shocker"
+" or a robot within 15 squares, or you are outside during a storm, you gain "
+"500J of bionic power per second and your melee attacks will do a small amount"
+" of extra electrical damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Jumpy"
+msgstr ""
+
+#. ~ Description of mutation "Jumpy"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've not been the same since the apocalypse, almost everything makes you "
+"jump.  You are just a bit quicker to act though."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Quick Recovery"
+msgstr ""
+
+#. ~ Description of mutation "Quick Recovery"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You get knocked down, but you get up again.  There is a 75% chance when you "
+"are downed that you will stand up again immediately."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Easy Sleeper"
+msgstr ""
+
+#. ~ Description of mutation "Easy Sleeper"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always been able to fall asleep within a few minutes of closing your "
+"eyes, no matter what else is going on around you.  You have a much easier "
+"time falling asleep."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Early to Rise"
+msgstr ""
+
+#. ~ Description of mutation "Early to Rise"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"That health, wealth, and wisdom is coming any day now.  When you wake up "
+"between 4 and 7 a.m., you gain a mood boost for that morning."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Duck and Weave"
+msgstr ""
+
+#. ~ Description of mutation "Duck and Weave"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Run without rhythm.  After a short wind-up period, you gain 5 effective dodge"
+" and +1 bonus dodge attempt as long as you keep running."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Hobbyist"
+msgstr ""
+
+#. ~ Description of mutation "Hobbyist"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"No work, no social obligations, lots of time to focus on your hobbies.  You "
+"feel like you've been picking up skills faster recently."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Non-Combatant"
+msgstr ""
+
+#. ~ Description of mutation "Non-Combatant"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Hey, that's against the Geneva Convention!  When not wielding a weapon, or "
+"object that could be used as an improvised weapon, you take -25% reduced "
+"damage."
+msgstr ""

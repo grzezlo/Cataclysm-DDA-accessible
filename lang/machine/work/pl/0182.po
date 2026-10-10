@@ -1,0 +1,2067 @@
+# Batch 182 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/armor/integrated.json
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "water pocket"
+msgid_plural "water pockets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "water pocket"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid ""
+"A large pouch of churning water on your back, containing a sealed air bubble."
+"  It shifts and adjusts itself to minimize encumbrance."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "Tongues of Flame"
+msgid_plural "Tongues of Flames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Tongues of Flame"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid ""
+"A long whip made of red-hot fire.  It crackles menacingly and casts a "
+"flickering red glow."
+msgstr ""
+
+#. ~ "message" action message of item "undine waters map"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "The waters reveal themselves to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "vegetal sphere"
+msgid_plural "vegetal spheres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "vegetal sphere"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid ""
+"A large, hollow sphere of plant matter, bark, and wood.  Food placed inside "
+"will rot one-fifth as fast as it would if left out in the open air."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "invulnerable iron skin"
+msgid_plural "invulnerable iron skin"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "invulnerable iron skin"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "Fae iron essence."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "Under the Noonday Sun"
+msgid_plural "Under the Noonday Suns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Under the Noonday Sun"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "You are protected from extremely bright lights."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid "blood-storing sphere"
+msgid_plural "blood-storing spheres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "blood-storing sphere"
+#: data/mods/Xedra_Evolved/items/ethereal_items.json
+msgid ""
+"A magical transparent sphere.  You can use it to store any type of blood, at "
+"least until the sphere vanishes."
+msgstr ""
+
+#. ~ Description of "treesung wardrobe"
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid ""
+"A very large wooden cabinet for storing clothes, effectively an upright "
+"closet.  It's all made of a single, solid piece of wood, with twists and "
+"curves like it grew in place rather than being made."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung wooden table"
+msgid_plural "treesung wooden tables"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Shade Arms"
+msgid_plural "Gracken Shade Arms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Shade Arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their arms back to a base "
+"state."
+msgstr ""
+
+#. ~ Player message in effect in EoC "shade_arms"
+#. ~ Player message in effect in EoC "strong_arms"
+#. ~ Player message in effect in EoC "long_arms"
+#. ~ Player message in effect in EoC "gracken_shade_hands"
+#. ~ Player message in effect in EoC "shade_legs"
+#. ~ Player message in effect in EoC "long_legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You exchanged your previous arms for this."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "shade_arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have Gracken arms."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Strong Arms"
+msgid_plural "Gracken Strong Arms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Strong Arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their arms to a stronger "
+"form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "strong_arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have strong arms."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Long Arms"
+msgid_plural "Gracken Long Arms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Long Arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their arms to a longer form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "long_arms"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have long arms."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Shade Hands"
+msgid_plural "Gracken Shade Hands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Shade Hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their hands back to a base "
+"state."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "gracken_shade_hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have normal Gracken hands."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Sharp Nails"
+msgid_plural "Gracken Sharp Nails"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Sharp Nails"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their hands to a sharper "
+"form."
+msgstr ""
+
+#. ~ Player message in effect in EoC "sharp_nails"
+#. ~ Player message in effect in EoC "dextrous_hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You exchanged your previous hands for this."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "sharp_nails"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have sharpened nails."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Dextrous Hands"
+msgid_plural "Gracken Dextrous Hands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Dextrous Hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their hands to a more agile "
+"form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "dextrous_hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have dextrous hands."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Herbivorous Stomach"
+msgid_plural "Gracken Herbivorous Stomach"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Herbivorous Stomach"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their diet to an herbivorous"
+" one."
+msgstr ""
+
+#. ~ Player message in effect in EoC "herbivorous_stomach"
+#. ~ Player message in effect in EoC "omnivorous_stomach"
+#. ~ Player message in effect in EoC "carnivorous_stomach"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You exchanged your previous stomach for this."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "herbivorous_stomach"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already an herbivore."
+msgstr ""
+
+#. ~ Description of "Gracken Dextrous Hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their diet to an omnivorous "
+"one."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "omnivorous_stomach"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already an omnivore."
+msgstr ""
+
+#. ~ Description of "Gracken Dextrous Hands"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their diet to an carnivorous"
+" one."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "carnivorous_stomach"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already a carnivore."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Shade Legs"
+msgid_plural "Gracken Shade Legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Shade Legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their legs back to a base "
+"state."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "shade_legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have Gracken legs."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Short Legs"
+msgid_plural "Gracken Short Legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Short Legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their legs to a shorter "
+"form."
+msgstr ""
+
+#. ~ Player message in effect in EoC "short_legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You exchanged your previous legs for this."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "short_legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have short legs."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "Gracken Long Legs"
+msgid_plural "Gracken Long Legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Gracken Long Legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid ""
+"An organ that allows a mature Gracken to convert their legs to a longer form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "long_legs"
+#: data/mods/Xedra_Evolved/items/gracken_trait_improvements.json
+msgid "You are already have long legs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/gun_magazine.json
+msgid "AA-12 8-round box magazine"
+msgid_plural "AA-12 8-round box magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Xedra_Evolved/items/gun_magazine.json
+msgid "AA-12 32-round drum magazine"
+msgid_plural "AA-12 32-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "FN integral suppressor"
+#. ~ Description of "FN integral suppressor"
+#: data/mods/Xedra_Evolved/items/gunmod.json
+msgid ""
+"This is the integrated suppressor for the FN Five-seveN suppressed.  Its "
+"large expansion chamber decelerates ammunition via several ports in the "
+"barrel, rendering most ammo subsonic at the cost of terminal performance.  It"
+" is not as effective as modern designs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/guns.json
+msgid "FN Five-seveN suppressed"
+msgid_plural "FN Five-seveN suppresseds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/guns.json
+msgid "SR-1 Vektor Gyurza"
+msgid_plural "SR-1 Vektor Gyurza"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Rain Ward"
+msgid_plural "Rain Wards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Rain Ward"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Thanks to the words of the charm you spoke, you won't get wet."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Witchlight"
+msgid_plural "Witchlights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Witchlight"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "A bobbing ball of blueish-green light, just bright enough to read by."
+msgstr ""
+
+#. ~ "description" action message of item "Witchlight"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Dismiss the witchlight"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "life of the crops"
+msgid_plural "life of the crops"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "life of the crops"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Use this to fertilize your crops."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of spell "hedge_light_fire"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+#: data/mods/Xedra_Evolved/spells/hedge_magic_spells.json
+msgid "To Kindle the Flames"
+msgid_plural "To Kindle the Flames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "To Kindle the Flames"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"The item that starts fires when using To Kindle the Flames.  This should be "
+"summoned and deleted as part of the spell, so you should never actually see "
+"it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Faesight Charm"
+msgid_plural "Faesight Charms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Faesight Charm"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A small sack with herbs in it to warn you if the Fair Folk are nearby.  You "
+"had better wear it under your clothes.  You wouldn't want them to know you're"
+" avoiding them.  It's awaiting you to speak the final words of the charm and "
+"activate it."
+msgstr ""
+
+#. ~ "msg" action message of item "Faesight Charm"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "You recite that last part of the charm."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Faesight Charm (active)"
+msgid_plural "Faesight Charms (active)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Faesight Charm (active)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A small sack with herbs in it to warn you if the Fair Folk are nearby.  You "
+"had better wear it under your clothes.  You wouldn't want them to know you're"
+" avoiding them."
+msgstr ""
+
+#. ~ Dying message of tool "Faesight Charm (active)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Your otherworldly senses fade."
+msgstr ""
+
+#. ~ Description of "Faesight Charm"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A small sack with herbs in it to warn you if the Fair Folk are nearby.  You "
+"had better wear it under your clothes.  You wouldn't want them to know you're"
+" avoiding them.  This charm seems lifeless somehow, its energy spent."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "betweener's maze"
+msgid_plural "betweener's mazes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "betweener's maze"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A yarn contraption similar to a cat's cradle that looks like a three "
+"dimensional maze.  When placed properly, it can fascinate the changeling "
+"blooded."
+msgstr ""
+
+#. ~ "done_message" action message of item "betweener's maze"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "You place the betweener's maze."
+msgstr ""
+
+#. ~ Description of "Blood-and-Ash Paste"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A disgusting mixture of blood, ashes, and certain herbs.  Using it will allow"
+" you to see otherworldly creatures even through walls or in darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Curative tea"
+msgid_plural "Curative teas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Curative tea"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"Tea with herbs, iron, and a bit of magick.  If you're sick, there's nothing "
+"better for your body than this."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "drained bearskin talisman"
+msgid_plural "drained bearskin talismans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "drained bearskin talisman"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A heavy fur mantle attached to the skull of a bear.  The charm worked into it"
+" has been expended."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "bearskin talisman"
+msgid_plural "bearskin talismans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bearskin talisman"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"A heavy fur mantle attached to the skull of a bear.  When you put it on, the "
+"charm will take effect and grant you the bear's power."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "magic square (To Walk Upon the Water)"
+msgid_plural "magic squares (To Walk Upon the Water)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "magic square (To Walk Upon the Water)"
+#. ~ Description of "magic square (To Operate Under the Water)"
+#. ~ Description of "magic square (To Demolish Buildings and Strongholds)"
+#. ~ Description of "magic square (To Cause Armed Men to Appear)"
+#. ~ Description of "magic square (To Cause the Spirits to Bring us Anything We
+#. May Wish to Eat or to Drink)"
+#. ~ Description of "magic square (To Render Oneself Invisible Unto Every
+#. Person)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "A piece of paper.  A magic square is carefully written on it."
+msgstr ""
+
+#. ~ "description" action message of item "magic square (To Walk Upon the
+#. Water)"
+#. ~ "description" action message of item "magic square (To Operate Under the
+#. Water)"
+#. ~ "description" action message of item "magic square (To Demolish Buildings
+#. and Strongholds)"
+#. ~ "description" action message of item "magic square (To Cause Armed Men to
+#. Appear)"
+#. ~ "description" action message of item "magic square (To Cause the Spirits
+#. to Bring us Anything We May Wish to Eat or to Drink)"
+#. ~ "description" action message of item "magic square (To Render Oneself
+#. Invisible Unto Every Person)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Activate the charm using the magic square."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "magic square (To Operate Under the Water)"
+msgid_plural "magic squares (To Operate Under the Water)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "magic square (To Demolish Buildings and Strongholds)"
+msgid_plural "magic squares (To Demolish Buildings and Strongholds)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "magic square (To Cause Armed Men to Appear)"
+msgid_plural "magic squares (To Cause Armed Men to Appear)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Player sees monster spawns in effect in EoC
+#. "EOC_HEDGE_ARMED_MEN_MAGIC_SQUARE" in use action of item "magic square (To
+#. Cause Armed Men to Appear)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "An armed warrior appears."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC
+#. "EOC_HEDGE_ARMED_MEN_MAGIC_SQUARE" in use action of item "magic square (To
+#. Cause Armed Men to Appear)"
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Several armed warriors appear."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid ""
+"magic square (To Cause the Spirits to Bring us Anything We May Wish to Eat or"
+" to Drink)"
+msgid_plural ""
+"magic squares (To Cause the Spirits to Bring us Anything We May Wish to Eat "
+"or to Drink)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "magic square (To Render Oneself Invisible Unto Every Person)"
+msgid_plural "magic squares (To Render Oneself Invisible Unto Every Person)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "glasknife"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"This is a knife that seems to be made of glass, but significantly more "
+"durable, like some sort of crystal with the strength of metal."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "witchwood sword"
+msgid_plural "witchwood swords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "witchwood sword"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"This sword is made all of a single piece of wood and so black any details are"
+" lost.  Some kind of shimmering leather is wrapped around the grip."
+msgstr ""
+
+#. ~ Description of "redcap club"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A giant bloodstained club, barely human wieldable with two hands.  You see "
+"shadowy tendrils of blood whenever it connects with an enemy, sticking to "
+"whatever it hits and burning like acid."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "salamagman hand axe"
+msgid_plural "salamagman hand axes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "salamagman hand axe"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "A one-handed combat axe, the blade is slightly larger than a tomahawk."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "salamagman battle axe"
+msgid_plural "salamagman battle axes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "salamagman battle axe"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A huge axe designed for warfare.  Made of forged dreamdross, and enchanted to"
+" channel heat into those it wounds."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "obsidian macuahuitl"
+msgid_plural "obsidian macuahuitls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "obsidian macuahuitl"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"Astute observers of Mesoamerican history may recognize this as a macuahuitl, "
+"the favored weapon of the Aztecs.  This macuahuitl looks as though it was "
+"made deep inside of a black mirror."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "dreamdross knife"
+msgid_plural "dreamdross knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamdross knife"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"Covered with thin layer of dreamdross, this knife is a light and sharp tool "
+"to work with."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "dreamdross club"
+msgid_plural "dreamdross clubs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamdross club"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"It was a good tool before, but now it's covered with a thick layer of "
+"dreamdross, and it works as a light but deadly weapon."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "dreamdrossed quarterstaff"
+msgid_plural "dreamdrossed quarterstaves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamdrossed quarterstaff"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long stick that's been covered with dreamdross, but lacks any magical "
+"properties."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_q_staff_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged quarterstaff"
+msgid_plural "dreamforged quarterstaves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged quarterstaff"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long quarterstaff, forged entirely from dreamdross.  Twice as heavy than a "
+"wooden one, but lot sturdier, and still useful as a weapon.  The dreamdross "
+"grants it some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "dreamforged longsword"
+msgid_plural "dreamforged longswords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged longsword"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A longsword, forged entirely from dreamdross.  It is much lighter than one "
+"made of steel, but applies much less force to its target.  The dreamdross "
+"grants it some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_warhammer_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged warhammer"
+msgid_plural "dreamforged warhammers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged warhammer"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A warhammer, forged entirely from dreamdross.  The dreamdross grants it some "
+"minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_spear_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged spear"
+msgid_plural "dreamforged spears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged spear"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A spear, forged entirely from dreamdross.  The dreamdross grants it some "
+"minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_halberd_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged halberd"
+msgid_plural "dreamforged halberds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged halberd"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A two-handed halberd, forged entirely from dreamdross.  The dreamdross grants"
+" it some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_glaive_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged glaive"
+msgid_plural "dreamforged glaives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged glaive"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A two-handed glaive, forged entirely from dreamdross.  The dreamdross grants "
+"it some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_naginata_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged naginata"
+msgid_plural "dreamforged naginata"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged naginata"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A sturdy naginata, forged entirely from dreamdross.  The dreamdross grants it"
+" some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_mace_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged mace"
+msgid_plural "dreamforged maces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged mace"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A light mace, forged entirely from dreamdross.  The dreamdross grants it some"
+" minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_morningstar_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged morningstar"
+msgid_plural "dreamforged morningstars"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged morningstar"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A light morningstar, forged entirely from dreamdross.  So light that you "
+"can't properly apply any force on it.  The dreamdross grants it some minor "
+"magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_estoc_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged estoc"
+msgid_plural "dreamforged estocs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged estoc"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"An estoc, forged entirely from dreamdross.  So light that you can't properly "
+"apply any force on it.  The dreamdross grants it some minor magical "
+"properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_arming_sword_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged arming sword"
+msgid_plural "dreamforged arming swords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged arming sword"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"An arming sword, forged entirely from dreamdross.  So light that you can't "
+"properly apply any force on it.  The dreamdross grants it some minor magical "
+"properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_broadsword_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged broadsword"
+msgid_plural "dreamforged broadswords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged broadsword"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A broadsword, forged entirely from dreamdross.  So light that you can't "
+"properly apply any force on it.  The dreamdross grants it some minor magical "
+"properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_battleaxe_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged battle axe"
+msgid_plural "dreamforged battle axes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged battle axe"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A battle axe, forged entirely from dreamdross.  The dreamdross grants it some"
+" minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_katana_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged katana"
+msgid_plural "dreamforged katana"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged katana"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A katana, forged entirely from dreamdross.  So light that you can't properly "
+"apply any force on it.  The dreamdross grants it some minor magical "
+"properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "dreamforged army knife"
+msgid_plural "dreamforged army knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged army knife"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A small military knife, forged entirely from dreamdross.  You barely feel any"
+" weight.  The dreamdross grants it some minor magical properties, but you "
+"can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_kris_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged kris"
+msgid_plural "dreamforged krises"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged kris"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A small curved knife, forged entirely from dreamdross.  You barely feel any "
+"weight.  The dreamdross grants it some minor magical properties, but you "
+"can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_kukri_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged kukri"
+msgid_plural "dreamforged kukris"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged kukri"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A small kukri, forged entirely from dreamdross.  You barely feel any weight."
+"  The dreamdross grants it some minor magical properties, but you can't "
+"control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_nodachi_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged nodachi"
+msgid_plural "dreamforged nodachi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged nodachi"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long nodachi, forged entirely from dreamdross.  The dreamdross grants it "
+"some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_rapier_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged rapier"
+msgid_plural "dreamforged rapiers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged rapier"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A short rapier, forged entirely from dreamdross.  The dreamdross grants it "
+"some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_tanto_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged tanto"
+msgid_plural "dreamforged tanto"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged tanto"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long tanto, forged entirely from dreamdross.  The dreamdross grants it some"
+" minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_wakizashi_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged wakizashi"
+msgid_plural "dreamforged wakizashi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged wakizashi"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long wakizashi, forged entirely from dreamdross.  The dreamdross grants it "
+"some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_zweihander_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged zweihänder"
+msgid_plural "dreamforged zweihänders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged zweihänder"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A huge two-handed sword, forged entirely from dreamdross.  The dreamdross "
+"grants it some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_khopesh_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged khopesh"
+msgid_plural "dreamforged khopeshes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged khopesh"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A light khopesh, forged entirely from dreamdross.  The dreamdross grants it "
+"some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_lucerne_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged lucerne hammer"
+msgid_plural "dreamforged lucerne hammers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged lucerne hammer"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A lucerne hammer, forged entirely from dreamdross.  The dreamdross grants it "
+"some minor magical properties, but you can't control their effects."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting "dreamforged_knuckle_ench"
+#: data/mods/Xedra_Evolved/items/melee.json
+#: data/mods/Xedra_Evolved/recipes/dreamforged_weapon.json
+msgid "dreamforged knuckles"
+msgid_plural "dreamforged knuckles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged knuckles"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A pair of thick dreamdross plates covering your proximal phalange.  The "
+"dreamdross grants it some minor magical properties, but you can't control "
+"their effects."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "berserker knuckles"
+msgid_plural "berserker knuckles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "berserker knuckles"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A pair of fiery-red knuckles with tiny blades on the end.  They are fed with "
+"your energy and the blood of your enemies, and will fuel different items with"
+" berserk properties."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "glaive of life"
+msgid_plural "glaives of life"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "glaive of life"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A two-handed glaive, forged entirely from dreamdross.  It can steal life from"
+" creatures it attacks, healing you a bit."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "tsurugi of speed"
+msgid_plural "tsurugi of speed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tsurugi of speed"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A classic Japanese tsurugi sword with a razor sharp blade.  You start to "
+"think you need to move faster, and the effect intensifies when you are "
+"surrounded."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "bō of practice"
+msgid_plural "bō of practice"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bō of practice"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A long, straight stick.  A simple weapon empowered by your experience in "
+"fighting against dreadful creatures."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid "monochrome knife"
+msgid_plural "monochrome knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "monochrome knife"
+#: data/mods/Xedra_Evolved/items/melee.json
+msgid ""
+"A well designed steel knife that used to be stuck in your belly.  It lightly "
+"flickers in the air and is tainted an unnatural gray.  Despite your best "
+"efforts, you aren't even able to smear the gray streaks of your blood that "
+"remain frozen along the edge, much less damage the actual metal."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "Sidereal Eclipse"
+msgid_plural "Sidereal Eclipse"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Sidereal Eclipse"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"Shimmering like a beam of moonlight, this sword seems to minutely shift its "
+"position when not looked at directly.  It exerts a slight pull on your hand "
+"when you hold it, moving your body to the proper position."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears baselard"
+msgid_plural "moon's tears baselard"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears baselard"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A dagger forged from some silvery metal that seems to shine with a soft "
+"internal light.  It's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears broadsword"
+msgid_plural "moon's tears broadsword"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears broadsword"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A broad sword forged from some silvery metal that seems to shine with a soft "
+"internal light.  It's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears arming sword"
+msgid_plural "moon's tears arming sword"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears arming sword"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A classic medieval sword, just the right size to use one-handed, and forged "
+"from some silvery metal that seems to shine with a soft internal light.  It's"
+" surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears mace"
+msgid_plural "moon's tears mace"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears mace"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A medieval weapon consisting of a wood handle with a heavy metal head forged "
+"from some silvery metal that seems to shine with a soft internal light.  It "
+"looks delicate but hits very hard."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears shamshir"
+msgid_plural "moon's tears shamshir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears shamshir"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A curved sword associated with various Middle Eastern and Central Asian "
+"countries, forged from some silvery metal that seems to shine with a soft "
+"internal light.  It's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears estoc"
+msgid_plural "moon's tears estoc"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears estoc"
+#. ~ Description of "moon's tears katana"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A thin thrusting sword, a sort of predecessor to the rapier, forged from some"
+" silvery metal that seems to shine with a soft internal light.  It's "
+"surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears spear"
+msgid_plural "moon's tears spear"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears spear"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A stout wooden pole with a spearhead forged from some silvery metal that "
+"seems to shine with a soft internal light.  It's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears battle axe"
+msgid_plural "moon's tears battle axe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon's tears battle axe"
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid ""
+"A huge axe designed for warfare, forged from some silvery metal that seems to"
+" shine with a soft internal light.  It's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/melee_moons_tears.json
+msgid "moon's tears katana"
+msgid_plural "moon's tears katana"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung spear"
+msgid_plural "treesung spears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung spear"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A stout wooden pole sharpened on one end, all formed from a single piece of "
+"wood, with twists and curves like it grew in place rather than being made."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung long spear"
+msgid_plural "treesung long spears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung long spear"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A giant spear over three meters long, all formed from a single piece of wood,"
+" with twists and curves like it grew in place rather than being made."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung mace"
+msgid_plural "treesung maces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung mace"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A weapon with a long wooden handle connected to a knobby wooden head, all "
+"formed from a single piece of wood, with twists and curves like it grew in "
+"place rather than being made."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung quarterstaff"
+msgid_plural "treesung quarterstaves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung quarterstaff"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A sturdy staff all formed from a single piece of wood, with twists and curves"
+" like it grew in place rather than being carved."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung warhammer"
+msgid_plural "treesung warhammers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung warhammer"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A long hammer with a spike on one end, all formed from a single piece of "
+"wood, with twists and curves like it grew in place rather than being carved."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung sword-spear"
+msgid_plural "treesung sword-spears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung sword-spear"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A sturdy polearm with a curved blade, all formed from a single piece of wood,"
+" with twists and curves like it grew in place rather than being carved.  "
+"You're not sure how long it will hold its edge, but it's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung baselard"
+msgid_plural "treesung baselards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung baselard"
+#: data/mods/Xedra_Evolved/items/melee_treesung.json
+msgid ""
+"A large knife, all formed from a single piece of wood, with twists and curves"
+" like it grew in place rather than being carved.  You're not sure how long it"
+" will hold its edge, but it's surprisingly sharp."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Ierde destiny draught"
+msgid_plural "Ierde destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ierde destiny draught"
+#. ~ Description of "Arvore destiny draught"
+#. ~ Description of "Undine destiny draught"
+#. ~ Description of "Salamander destiny draught"
+#. ~ Description of "Homullus destiny draught"
+#. ~ Description of "Sylph destiny draught"
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid ""
+"This magical potion will further your transformation from newly sentient "
+"creature to elemental powerhouse."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Arvore destiny draught"
+msgid_plural "Arvore destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Undine destiny draught"
+msgid_plural "Undine destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Salamander destiny draught"
+msgid_plural "Salamander destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Homullus destiny draught"
+msgid_plural "Homullus destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen.json
+msgid "Sylph destiny draught"
+msgid_plural "Sylph destiny draughts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "ierde sample"
+msgid_plural "ierde samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ierde sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of rare earths."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "arvore sample"
+msgid_plural "arvore samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "arvore sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of verdant plant life."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "salamander sample"
+msgid_plural "salamander samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "salamander sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of fiery passion."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "undine sample"
+msgid_plural "undine samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "undine sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of deep waters."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "homullus sample"
+msgid_plural "homullus samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "homullus sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of lifelike dolls."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "sylph sample"
+msgid_plural "sylph samples"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sylph sample"
+#: data/mods/Xedra_Evolved/items/mutagen_ingredients.json
+msgid "A sample of untamed air."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "Report CO001141"
+msgid_plural "copies of Report CO001141"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Report CO001141"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A page from a report."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "border patrol files"
+msgid_plural "border patrol files"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "border patrol files"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A folder filled with pages."
+msgstr ""
+
+#. ~ Description of "post-it note"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A bright green post-it note."
+msgstr ""
+
+#. ~ Description of "post-it note"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A bright gray post-it note."
+msgstr ""
+
+#. ~ Description of "post-it note"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A bright pink post-it note."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "museum plaque"
+msgid_plural "museum plaques"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "museum plaque"
+#: data/mods/Xedra_Evolved/items/notes_and_news.json
+msgid "A paper plaque.  It has words printed on it."
+msgstr ""
+
+#. ~ Description of "purity crackers"
+#: data/mods/Xedra_Evolved/items/pets.json
+msgid ""
+"An incredibly hard cracker.  Squeezing it in your hand it feels as though "
+"your teeth might break before the cracker does.  The packaging on the side "
+"shows a tall being feeding these crackers to a horned and four legged "
+"creature."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "dreamforged bow"
+msgid_plural "dreamforged bows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "dreamforged bow"
+#. ~ Description of "dreamforged bow"
+#: data/mods/Xedra_Evolved/items/range.json
+msgid ""
+"A six-foot bow, forged entirely from dreamdross, including its strings.  "
+"Primitive look, devastating power."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "dreamforged arrow"
+msgid_plural "dreamforged arrows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged arrow"
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "A dreamforged arrow with a razor-sharp tip."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "dreamforged crossbow"
+msgid_plural "dreamforged crossbows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "dreamforged crossbow"
+#. ~ Description of "dreamforged crossbow"
+#: data/mods/Xedra_Evolved/items/range.json
+msgid ""
+"A medieval crossbow, forged entirely from dreamdross, including its strings."
+"  Probably not the optimal weapon in our modern world, but still capable of "
+"doing devastating damage while being completely silent."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "dreamforged bolt"
+msgid_plural "dreamforged bolts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dreamforged bolt"
+#: data/mods/Xedra_Evolved/items/range.json
+msgid "A dreamforged crossbow bolt with broadhead tip."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+msgid "treesung bow"
+msgid_plural "treesung bows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "treesung bow"
+#. ~ Description of "treesung bow"
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+msgid ""
+"A wooden shortbow with a thin vine for a string, all formed from a single "
+"piece of wood, with twists and curves like it grew in place rather than being"
+" made."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung greatbow"
+msgid_plural "treesung greatbows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "treesung greatbow"
+#. ~ Description of "treesung greatbow"
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+msgid ""
+"A truly enormous wooden bow with a thin vine for a string, all formed from a "
+"single piece of wood, with twists and curves like it grew in place rather "
+"than being made."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+msgid "treesung arrow"
+msgid_plural "treesung arrows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "treesung arrow"
+#: data/mods/Xedra_Evolved/items/range_treesung.json
+msgid ""
+"An arrow all formed from a single piece of wood, with twists and curves like "
+"it grew in place rather than being made.  It even has leaves for fletching."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/resources.json
+msgid "moon tear wire"
+msgid_plural "moon tear wires"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "moon tear wire"
+#: data/mods/Xedra_Evolved/items/resources.json
+msgid "A length of thin, relatively stiff moon tear wire."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/resources.json
+msgid "scrap moon tears"
+msgid_plural "scraps of moon tears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrap moon tears"
+#: data/mods/Xedra_Evolved/items/resources.json
+msgid ""
+"A bulky assortment of small bits of scrap moon tears, useful for forging into"
+" ingots and wire."
+msgstr ""

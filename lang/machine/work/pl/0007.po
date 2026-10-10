@@ -1,0 +1,1061 @@
+# Batch 7 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/ranged.cpp
+#, c-format
+msgid "You shoot your %1$s.  %2$s"
+msgstr ""
+
+#: src/ranged.cpp
+msgid "swoosh!"
+msgstr ""
+
+#: src/ranged.cpp
+msgid "No hostile creature in reach."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "Really attack yourself?"
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "[%s] to unload the %s after quitting."
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "[%s] to keep the %s loaded after quitting."
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "Pfft.  You are a brawler; using this %s is beneath you."
+msgstr ""
+
+#: src/ranged.cpp
+msgid "You're too gun-shy to use this."
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "You need at least %2$d kJ of bionic power to fire the %1$s!"
+msgstr ""
+
+#: src/ranged.cpp
+#, c-format
+msgid "You need a UPS with at least %2$d kJ to fire the %1$s!"
+msgstr ""
+
+#: src/recipe.cpp
+#, c-format
+msgid "<color_%s>%s</color> (<color_%s>%.2f skill bonus</color>%s)"
+msgstr ""
+
+#: src/recipe.cpp
+#, c-format
+msgid "<color_%s>%s</color> (<color_%s>%.2fx time, %.2f skill bonus</color>%s)"
+msgstr ""
+
+#: src/recipe.cpp
+msgid "[bad param name]"
+msgstr ""
+
+#: src/recipe.cpp
+msgid "[bad argument value]"
+msgstr ""
+
+#: src/scenario.cpp
+msgid ""
+"\n"
+"This scenario can only be unlocked through achievements."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "Your scores"
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "Achievements and conducts are disabled for debug characters."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "This game has no valid conducts."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "This game has no valid achievements."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid ""
+"Note that only conducts that existed when you started this game and still "
+"exist now will appear here."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid ""
+"Note that only achievements that existed when you started this game and still"
+" exist now will appear here."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "This game has no valid scores."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid ""
+"Note that only scores that existed when you started this game and still exist"
+" now will appear here."
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "Stats through kills:"
+msgstr ""
+
+#: src/scores_ui.cpp
+#, c-format
+msgid "Experience: %d (%d points available)"
+msgstr ""
+
+#: src/scores_ui.cpp
+#, c-format
+msgid "Monster kills (%d):"
+msgstr ""
+
+#: src/scores_ui.cpp
+#, c-format
+msgid "NPC kills (%d):"
+msgstr ""
+
+#: src/scores_ui.cpp
+msgid "You haven't killed any NPCs yet!"
+msgstr ""
+
+#: src/suffer.cpp
+#, c-format
+msgid "You don't have enough mana to keep your %s going."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You're crushed against the walls!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You start having withdrawals!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> starts wheezing and coughing."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You fear the sunlight!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid ""
+"Your flesh tingles with an air of danger, yet it is strangely pleasurable."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "Emergency!  User's lungs are not powered!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid ""
+"Your fear of the dark is so intense that your hands start shaking "
+"uncontrollably."
+msgstr ""
+
+#: src/suffer.cpp
+msgid ""
+"Your fear of the dark is so intense that you start breathing rapidly, and you"
+" feel like your heart is ready to jump out of your chest."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You feel a twinge of panic as darkness engulfs you."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You attract the attention of something horrible."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> attracts the attention of something horrible."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "Reality gives way under your feet like rotten scaffolding."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "Reality gives way under <npcname>'s feet like rotten scaffolding."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You suddenly lose all substance and corporeality."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> suddenly loses all substance and corporeality."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You are suddenly beset with agonizing, unbearable pain."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> suddenly cries out in agony."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "The air folds and distorts around you."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "The air folds and distorts around <npcname>."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You're bombarded with radioactive energy!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> is bombarded with radioactive energy!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You suddenly shift slightly."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "<npcname> suddenly shifts slightly."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You hear a painfully loud grinding noise from your location."
+msgstr ""
+
+#: src/suffer.cpp
+msgid ""
+"A painfully loud grinding noise suddenly blares from the location of "
+"<npcname>."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "A horribly loud grinding sound!"
+msgstr ""
+
+#: src/suffer.cpp
+msgid "The air suddenly crackles around you."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "The air suddenly crackles around <npcname>."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You suddenly feel a sharp, stabbing pain with no apparent source."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "Your vision becomes blurry and you suddenly feel like you're falling."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You suddenly feel very queasy."
+msgstr ""
+
+#: src/suffer.cpp
+msgid "You feel the water runs on your skin, making you feel better."
+msgstr ""
+
+#: src/talker_npc.cpp
+msgid "<npc_name> seems to be:"
+msgstr ""
+
+#: src/talker_npc.cpp
+msgid ""
+"\n"
+"Normal person - <npc_name> seems to be pretty normal."
+msgstr ""
+
+#: src/teleport.cpp
+#, c-format
+msgid "%s flickers but remains exactly where they are."
+msgstr ""
+
+#: src/teleport.cpp
+msgid "You're blasted with strange energy!"
+msgstr ""
+
+#: src/teleport.cpp
+#, c-format
+msgid ""
+"You collide with %s mid teleport, and you are both knocked away by a violent "
+"explosion of energy."
+msgstr ""
+
+#: src/teleport.cpp
+#, c-format
+msgid ""
+"<npcname> collides with %s mid teleport, and they are both knocked away by a "
+"violent explosion of energy."
+msgstr ""
+
+#: src/teleport.cpp
+#, c-format
+msgid ""
+"%1$s collides with %2$s mid teleport, and they are both knocked away by a "
+"violent explosion of energy!"
+msgstr ""
+
+#: src/trade_ui.cpp
+msgid "Your promises of digital payment mean nothing here."
+msgstr ""
+
+#: src/trade_ui.cpp
+#, c-format
+msgid "Bank Balance: %s"
+msgstr ""
+
+#: src/trade_ui.cpp
+#, c-format
+msgid "%s to balance trade with bank account balance"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "A bear trap closes on your %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "A bear trap closes on <npcname>'s %s!"
+msgstr ""
+
+#. ~Player with an animal mount. e.g. "Your horse stepped on a spiked board!"
+#: src/trapfunc.cpp
+#, c-format
+msgid "Your %s stepped on a %s!"
+msgstr ""
+
+#. ~NPC with an animal mount. e.g. "Jane's horse stepped on a spiked board!"
+#: src/trapfunc.cpp
+#, c-format
+msgid "%s %s stepped on a %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "You step on a %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "%s steps on a %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "%s destroys a %s as they move over it!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "You destroy the %s as you step on it!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "You step on a sharp %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "%s steps on a sharp %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "You harmlessly pass a %1$s."
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "A %1$s catches your %2$s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "Your %1$s is caught by a %2$s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "%1$s is caught by a %2$s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "The acidic goo eats away at your %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid "The acidic goo eats away at <npcname>'s %s!"
+msgstr ""
+
+#: src/trapfunc.cpp
+#, c-format
+msgid ""
+"Failed to generate the new map, probably due to collision with %s "
+"vehicle/appliance."
+msgstr ""
+
+#: src/try_parse_integer.cpp
+#, c-format
+msgid ""
+"Error interpreting coordinate: expected two or three comma-separated values; "
+"got %zu"
+msgstr ""
+
+#: src/try_parse_integer.cpp
+#, c-format
+msgid ""
+"Error interpreting coordinate: expected an integer or two integers separated "
+"by '; got %s"
+msgstr ""
+
+#: src/try_parse_integer.cpp
+#, c-format
+msgid "Error interpreting coordinate: %s"
+msgstr ""
+
+#: src/turret.cpp
+msgid "Pfft.  You are a brawler; using turrets is beneath you."
+msgstr ""
+
+#: src/turret.cpp
+msgid "You refuse to use a firearm even when it's mounted."
+msgstr ""
+
+#: src/ui_extended_description.cpp
+msgid "Inscription: ???"
+msgstr ""
+
+#: src/ui_extended_description.cpp
+msgid "You can't see vehicles or appliances here."
+msgstr ""
+
+#: src/veh_appliance.cpp
+msgid "You merge it into the adjacent power grid."
+msgstr ""
+
+#: src/veh_appliance.cpp
+msgid "Appliance has no connection to a battery."
+msgstr ""
+
+#: src/veh_appliance.cpp
+msgid "Grid battery power flow: "
+msgstr ""
+
+#: src/veh_appliance.cpp
+msgid "Appliance power consumption: "
+msgstr ""
+
+#. ~ An addendum to Plug In's description, as in: Plug in appliance / merge
+#. power grid".
+#: src/veh_appliance.cpp
+msgid " / merge power grid"
+msgstr ""
+
+#: src/veh_appliance.cpp src/vehicle_use.cpp
+msgid "Remove other cables first"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid "Unracking is required before installing any parts here."
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid ""
+"<color_white>Cannot install due to:</color>\n"
+"> "
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid ""
+"\n"
+"Unracking is required before replacing this part.\n"
+msgstr ""
+
+#: src/veh_interact.cpp src/veh_shape.cpp
+msgid "Choose cosmetic variant:"
+msgstr ""
+
+#: src/veh_interact.cpp
+msgid ""
+"<color_red>Unsuitable terrain</color> for working on part that requires "
+"jacking."
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "(Effective lifting strength is %d)"
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "Cargo: <color_light_blue>%s</color> / <color_light_blue>%s</color> %s"
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "<npcname> doesn't meet the requirements to install the %s."
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "<npcname> fails to recover %1$d %2$s."
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "<npcname> fails to recover %1$s."
+msgstr ""
+
+#: src/veh_interact.cpp
+#, c-format
+msgid "You disconnect the %s's power connection."
+msgstr ""
+
+#: src/veh_shape.cpp
+msgid "Confirm to select or quit to select another tile."
+msgstr ""
+
+#: src/veh_shape.cpp
+msgid "Only one shape"
+msgstr ""
+
+#: src/veh_shape.cpp
+msgid "Part is obscured"
+msgstr ""
+
+#: src/veh_shape.cpp
+msgid "Confirm to save or exit to revert"
+msgstr ""
+
+#: src/veh_type.cpp
+#, c-format
+msgctxt "mounted turret prefix"
+msgid "mounted %s"
+msgstr ""
+
+#: src/veh_type.cpp
+msgid "Provides: "
+msgstr ""
+
+#: src/veh_type.cpp
+msgid "Allows connecting: "
+msgstr ""
+
+#. ~ Name for an array of electronic power grid appliances, like batteries and
+#. solar panels
+#: src/vehicle.cpp
+msgid "power grid"
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid ""
+"the %s emitting a beep and saying \"Autonomous driving protocols suspended!\""
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "There's no structure to support it."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "%s is in the way."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "%s is already installed here."
+msgstr ""
+
+#. ~ %1$s - already installed part name, %2$s - part location name
+#: src/vehicle.cpp
+#, c-format
+msgid "The installed %1$s already occupies the '%2$s' location."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid ""
+"There can't be two cargo parts on the same tile.  Part conflicts with "
+"existing %1$s."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Mirrors cannot be mounted on opaque parts."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Opaque parts cannot be mounted on mirror parts."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Only one turret mount can be installed."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Part needs to be adjacent to or on existing structure."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Engine conflict: %s."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Part requires %s."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Part requires any of: %s."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Unracking is required before removing this part."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Unlock this part first."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Remove other parts before removing last structure part."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "Can't merge into %s, the resulting grid would be too big."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "You separate the %s from the power grid"
+msgstr ""
+
+#. ~ %s is the vehicle being loaded onto the bicycle rack
+#: src/vehicle.cpp
+#, c-format
+msgid "The %s is being unloaded from the bike rack."
+msgstr ""
+
+#: src/vehicle.cpp
+msgid "Smart controller engine may turn on engine back.  Disable it?"
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "The %s's %s was detached!"
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "You detach items connected to the %s."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "You detach the %s and take it."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "You detach the %s and drop it."
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "The %1$s's %2$s is disconnected!"
+msgstr ""
+
+#: src/vehicle.cpp
+#, c-format
+msgid "It will take %s to unfold."
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "Smart controller can not detect any controllable engine."
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "Smart controller detects only a single electric engine."
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "An electric engine does not need optimization."
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "You turn slower than you meant to."
+msgstr ""
+
+#: src/vehicle_move.cpp
+#, c-format
+msgid "You oversteer the %s!"
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "It takes you a very long time to steer the vehicle!"
+msgstr ""
+
+#: src/vehicle_move.cpp
+msgid "It takes you a long time to steer the vehicle!"
+msgstr ""
+
+#. ~Invalid here means it doesn't refer to a real furn_str_id, i.e. something
+#. is wrong with the game. This is not a state the player should normally
+#. encounter.
+#: src/vehicle_part.cpp
+msgid " holding invalid furniture"
+msgstr ""
+
+#: src/vehicle_part.cpp
+msgid " (leaking)"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Lock"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Unlock"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Disable pre-collision system"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Enable pre-collision system"
+msgstr ""
+
+#. ~ Key binding name
+#: src/vehicle_use.cpp data/raw/keybindings/vehicle.json
+msgid "Toggle pre-collision system"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "You turn off pre-collision system."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "You turn on pre-collision system."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "You cannot use %s without at least two legs."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "You need at least one leg to control the %s."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "You are too short to reach the pedals!"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid ""
+"You pour some detergent into the dishwasher, close its lid, and turn it on.  "
+"The dishwasher is being filled from the water tanks."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid ""
+"Can't put furniture there.  There is a vehicle or another furniture in the "
+"way."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Select where to place the %s."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Select a furniture to load into the vehicle."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "No adjacent furniture."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "That furniture can't be moved."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Even working together, you are unable to lift the %s."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "You aren't able to lift the %s on your own."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "The %s is broken and cannot be used."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Can't store furniture while there are items in the way."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Attach the %s to the rack"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "This vehicle already has '%s' racked.  Please rename before racking."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Bike rack is empty"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Nothing to take off or put on the rack is nearby."
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Examine vehicle effects"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Try to smash alarm"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Disconnect power connections"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Disconnect items and tow cables"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Disconnect items"
+msgstr ""
+
+#: src/vehicle_use.cpp
+msgid "Disconnect tow cables"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "The %s is no longer compatible with %s and pops out."
+msgstr ""
+
+#. ~ Key binding name
+#: src/vehicle_use.cpp data/raw/keybindings/vehicle.json
+msgid "Tie down or remove a furniture"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Attach a tool to %s"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "You attach %s to %s."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Detach a tool from %s"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "There are no tools attached to %s"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "You detach %s from %s."
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Lock %s"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Unlock %s"
+msgstr ""
+
+#: src/vehicle_use.cpp
+#, c-format
+msgid "Check the lock on %s"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Id:"
+msgstr ""
+
+#: src/wish.cpp
+#, c-format
+msgid ""
+"Current power level: %s\n"
+"Max power: %s\n"
+"Bionics installed: %d"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Install from CBM…"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Uninstall…"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Uninstall all"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Edit power capacity (kJ)"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Edit power capacity (J)"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Edit power level (kJ)"
+msgstr ""
+
+#: src/wish.cpp
+msgid "Edit power level (J)"
+msgstr ""
+
+#: src/wish.cpp
+#, c-format
+msgid "Set the value to (in kJ)?  Currently: %s"
+msgstr ""
+
+#: src/wish.cpp
+#, c-format
+msgid "Set the value to (in J)?  Currently: %s"
+msgstr ""
+
+#: src/wish.cpp
+msgid ""
+"Is this a population-based horde, based on an existing monster group?  Select"
+" \"No\" to manually assign monsters."
+msgstr ""
+
+#: src/wish.cpp
+msgid "Spawn group how many times?"
+msgstr ""
+
+#: src/wish.cpp
+#, c-format
+msgid "Potential result of spawning %s %d %s:"
+msgstr ""
+
+#: src/wish.cpp
+msgid "times"
+msgstr ""
+
+#: src/wish.cpp
+#, c-format
+msgid "%s set to %d"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "Unable to create new world, some active mods are incompatible."
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid " --- INCOMPATIBLE!"
+msgstr ""
+
+#: src/worldfactory.cpp
+msgid "world timestamp"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Compressing maps [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Compressing overmaps [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Compressing map memory [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Compressing main save files [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Cleaning up [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Decompressing maps [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Decompressing overmaps [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Decompressing map memory [%d/%d]"
+msgstr ""
+
+#: src/worldfactory.cpp
+#, c-format
+msgid "Decompressing main save files [%d/%d]"
+msgstr ""

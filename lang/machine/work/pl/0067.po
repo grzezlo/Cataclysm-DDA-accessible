@@ -1,0 +1,1589 @@
+# Batch 67 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Player message in effect in EoC "seasonal_affective_fall"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "It's only fall, but you already miss the summer sun."
+msgstr ""
+
+#. ~ Player message in effect in EoC "seasonal_affective_winter"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "The long, cold nights really get you feeling down."
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "CHIMERA"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "INSECT"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "ALPHA"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "URSINE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "CHIROPTERAN"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "BIRD"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "LUPINE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "RAT"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "SLIME"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "PLANT"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "BATRACHIAN"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "RAPTOR"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "MOUSE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "CEPHALOPOD"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "ELFA"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "FISH"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "HUMAN"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "RABBIT"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "GASTROPOD"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "BEAST"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "FELINE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "CATTLE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "LIZARD"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "TROGLOBITE"
+msgstr ""
+
+#. ~ Snippet in category "<radiation_category>"
+#. ~ Snippet in category "<random_category>"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+#: data/json/monster_special_attacks/spells.json
+msgid "CRUSTACEAN"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ink_grand_spray"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "Your ink glands spray some ink into your attacker's eyes!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_insect_wings_shutoff"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "You don't have the stamina to keep buzzing."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_social2_penalty"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "You could use some friendly company."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_asocial2_penalty"
+#: data/json/effects_on_condition/mutation_eocs/mutation_effect_eocs.json
+msgid "You'd really rather be by yourself."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LIXA_UNFOLD_ENTRY"
+#: data/json/effects_on_condition/nether_eocs/LIXA_EOCs_spells_traps.json
+msgid ""
+"You step into a space that unfolds around you, becoming endless and "
+"completely flat.  Every side of every surface is on display.  You look down "
+"at your hands; you can see the front, the back, the insides and outsides of "
+"every vein and bone, all in the same place on one surface.  You can't imagine"
+" what has happened to your eyes to let you understand what you are seeing.  "
+"Or your brain."
+msgstr ""
+
+#. ~ Success message in teleportation in nested effect in switch statement in
+#. effect in EoC "EOC_LIXA_BACK"
+#. ~ Success message in teleportation in nested effect in switch statement in
+#. effect in EoC "EOC_LIXA_FORWARD"
+#: data/json/effects_on_condition/nether_eocs/LIXA_EOCs_spells_traps.json
+msgid "You walk for a long while."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LIXA_unfold_return"
+#: data/json/effects_on_condition/nether_eocs/LIXA_EOCs_spells_traps.json
+msgid ""
+"There is a soft sound, like a champagne cork popping in an empty concert "
+"hall.  The world is as it was again.  The LIXA device still hums quietly as "
+"it finishes powering down."
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_LS_Teleport_to_labyrinth"
+#: data/json/effects_on_condition/nether_eocs/labyrinth_effect_on_condition.json
+msgid "Nope!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Teleport_to_labyrinth"
+#: data/json/effects_on_condition/nether_eocs/labyrinth_effect_on_condition.json
+msgid "Zwoink."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Exit_labyrinth"
+#: data/json/effects_on_condition/nether_eocs/labyrinth_effect_on_condition.json
+msgid "Zworunk"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LS_Exit_labyrinth_sparkling_chasm"
+#: data/json/effects_on_condition/nether_eocs/labyrinth_effect_on_condition.json
+msgid ""
+"As you fall into the chasm, you see a multitude of stars, spots, and other "
+"shapes.  It's like your sinking ever further into a liquid solution, and "
+"falling through the air at the same time.  Your head throbs with pain as the "
+"pressure increases, and you black out.  When you come to, you're back in "
+"reality disoriented but unharmed."
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC "EOC_nether_glass_lost_tp"
+#. in nested EOCs in effect in EoC "EOC_nether_glass_event"
+#. ~ Fail message in teleportation in effect in EoC "EOC_PORTAL_STORM_DUNGEON"
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_PORTAL_STORM_DUNGEON_NEXT_LEVEL"
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_PORTAL_STORM_DUNGEON_EXIT"
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_ENTER_ABYSSAL_HUNGER_DUNGEON"
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_ENTER_ABYSSAL_HUNGER_NEXT_LEVEL"
+#. ~ Fail message in teleportation in false effect in EoC
+#. "EOC_ENTER_ABYSSAL_HUNGER_NEXT_LEVEL"
+#. ~ Fail message in teleportation in effect in EoC "EOC_ABYSSAL_HUNGER_EXIT"
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_UNDINE_WARP_POOL_BOTTOM_FLOOR"
+#: data/json/effects_on_condition/nether_eocs/nether_glass_effect_on_condition.json
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+#: data/mods/Xedra_Evolved/eocs/elemental_eruptions.json
+msgid "Something is very wrong!"
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC
+#. "EOC_nether_glass_yrax_encounter" in nested EOCs in effect in EoC
+#. "EOC_nether_glass_event"
+#: data/json/effects_on_condition/nether_eocs/nether_glass_effect_on_condition.json
+msgid "The emptiness yields before an all-encompassing construct."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC
+#. "EOC_nether_glass_yrax_encounter" in nested EOCs in effect in EoC
+#. "EOC_nether_glass_event"
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_ARTIFACT_MEDIUM"
+#: data/json/effects_on_condition/nether_eocs/nether_glass_effect_on_condition.json
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Reality twists and deforms as wriggling chunks of it fall on the ground."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in switch
+#. statement in effect in EoC "EOC_YUGG_DEATH"
+#: data/json/effects_on_condition/nether_eocs/nether_monster_death.json
+msgid ""
+"As it stops moving, the creature quickly begins to darken and turn "
+"translucent, shattering like glass soon after."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in switch
+#. statement in effect in EoC "EOC_YUGG_DEATH"
+#: data/json/effects_on_condition/nether_eocs/nether_monster_death.json
+msgid ""
+"As it stops moving, the creature's skin turns darker and it falls limp like a"
+" pool noodle."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in switch
+#. statement in effect in EoC "EOC_YUGG_DEATH"
+#: data/json/effects_on_condition/nether_eocs/nether_monster_death.json
+msgid ""
+"As it stops moving, the creature seems to lose all detail and falls limply on"
+" the ground with a wet thud."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in switch
+#. statement in effect in EoC "EOC_YUGG_DEATH"
+#: data/json/effects_on_condition/nether_eocs/nether_monster_death.json
+msgid ""
+"As it stops moving, the creature seems to stiffen as it skins seems to harden"
+" and take a form not dissimilar to stone."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in switch
+#. statement in effect in EoC "EOC_YUGG_DEATH"
+#: data/json/effects_on_condition/nether_eocs/nether_monster_death.json
+msgid ""
+"As it falls to the ground, strands of fog seem to tear away from the corpse."
+"  The giant worm dissolves in the air in front of your eyes."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_PORTAL_DEPENDENT_ACCEPTANCE_4"
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_5"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You suddenly feel a profound sense of belonging take root inside you, "
+"spreading throughout your body.  It fades quickly, but something warm "
+"remains…"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_PORTAL_DEPENDENT_ACCEPTANCE_4"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You suddenly feel a profound sense of belonging take root inside you, but "
+"then abruptly grow cold.  You reach out for it, but it's gone now, taken away"
+" by the indoors.  You long for the sky…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_0"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You feel invigorated by what you just experienced, so…  What is this feeling "
+"of regret for leaving that place?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_1"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You feel like the shackles of your body are loosening a little.  The world "
+"seems to accept your distorted presence for now.  You wonder if what you "
+"currently feel would have been greater if only you had gone deeper…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_2"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You suddenly feel in calm, your body a little faster, and your surroundings "
+"less hostile than what you remember.  Before this new sensation passes away "
+"though, you hear a little voice in your head saying \"deeper…\""
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_3"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You return to your reality with a sense of ecstasy, your body feels great, "
+"your shackles have come loose and you feel powerful because of it.  But you "
+"can feel it, this exhilarating feeling is only the beginning, you need to go "
+"deeper…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_4"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You feel in communion with the world around you, the world is no longer "
+"rejecting you, at least for now, YOU are rejecting IT.  Your whole body "
+"craves for what you could have gained if only you had gone a little deeper…"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_PORTAL_DEPENDENT_DUNGEON_REWARD_5"
+#: data/json/effects_on_condition/nether_eocs/portal_dependent_effect_on_condition.json
+msgid ""
+"You suddenly feel a profound sense of belonging take root inside you, "
+"temporally amplifying your grasp of reality.  For some time you will be the "
+"master of your surroundings."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CAUSE_EARLY_PORTAL_STORM"
+#. ~ Player message in effect in EoC "EOC_CAUSE_EARLY_PORTAL_STORM_ACTUAL"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+#: data/mods/Defense_Mode/effects_on_condition/altered_eocs.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"You suddenly register a buzzing in your senses.  It's getting louder, and "
+"your head starts to throb.  Somewhere nearby, a tiny cataclysm has begun "
+"(check mission log for details)."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_SHIFTING_MASS"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Small gashes in reality open nearby, revealing an endless expanse of black "
+"water.  An alien being spills through before the portals close."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_SHIFTING_MASS"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Small gashes in reality open nearby, revealing an endless expanse of black "
+"water.  Several alien beings spill out before the portals close."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_ARTIFACT_WEAK"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "A chunk of reality gets loose and falls on the ground."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_ARTIFACT_WEAK"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Chunks of reality get loose and fall on the ground."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_ARTIFACT_MEDIUM"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Reality twists and deforms as a wriggling chunk of it falls on the ground."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_ARTIFACT_STRONG"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "A chunk of reality tears itself asunder and takes shape on the ground."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_ARTIFACT_STRONG"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Chunks of reality tear themselves asunder and take shape on the ground."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_IMPOSSIBLE_SHAPE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"You cannot remember how the impossible shape came to be here.  The pain in "
+"your head suggests that that's a good thing."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_IMPOSSIBLE_SHAPE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"You cannot remember how the impossible shapes came to be here.  The pain in "
+"your head suggests that that's a good thing."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_FLATLANDER"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"something glides into your field of vision out of thin air, slipping between "
+"the space between atoms."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_FLATLANDER"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"several things glide into your field of vision out of thin air, slipping "
+"between the spaces between atoms."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_GIANT_APPENDAGE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "A gigantic limb tears its way into reality."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_GIANT_APPENDAGE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Gigantic limbs tear their way into reality around you."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_MEMORIES"
+#. ~ Player sees monster spawns in effect in EoC "EOC_conjure_memories"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+#: data/json/mapgen/haunting.json
+msgid "A flickering silhouette appears nearby."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_PORTAL_MEMORIES"
+#. ~ Player sees monsters spawn in effect in EoC "EOC_conjure_memories"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+#: data/json/mapgen/haunting.json
+msgid "Human silhouettes appear and surround you."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_ABSENCE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"The very notion of empty space is made a cruel joke.  Nearby nothing becomes "
+"even less."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_PORTAL_SWARM_STRUCTURE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The swarm structure was always here, right?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_YRAX_ATTENTION"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "An alien construct emerges from the storm."
+msgstr ""
+
+#. ~ Player makes sound in effect in EoC "EOC_PORTAL_TAUNT"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The voice was loud, it might have drawn attention to you!"
+msgstr ""
+
+#. ~ Player makes sound in false effect in EoC "EOC_PORTAL_TELEPORT_STUCK_LOOP"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "a loud tearing sound."
+msgstr ""
+
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_PORTAL_TELEPORT_STUCK"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "You feel an intense sense of deja vu."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_PORTAL_LIGHT"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The sun is snuffed out like a candle."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in then
+#. statement in effect in EoC "EOC_PORTAL_LIGHT"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Some of the stars grow so bright that they hurt to look at."
+msgstr ""
+
+#. ~ Player makes sound in effect in EoC "EOC_PORTAL_GRASS_CHANGE"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "a high-pitched squeal."
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC "EOC_PORTAL_STORM_CELL"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "that sucks"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_STORM_CELL_TELEPORT" in nested
+#. EOCs in effect in EoC "EOC_PORTAL_STORM_CELL"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "You came back.  This time."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_STORM_MAPGEN"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"You can feel the presence of something nearby, cracked in a way you can't put"
+" into words (check mission log for details)."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_STORM_DUNGEON_NEXT_LEVEL"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Weren't you just here?  It feels thicker somehow though."
+msgstr ""
+
+#. ~ Player sees monster spawns in nested effect in switch statement in effect
+#. in EoC "EOC_PORTAL_STORM_DUNGEON_REFLECTION_SPAWN"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Something your mind can't fully parse appears, despite the distance and "
+"obstacles you know where it is.  You can feel its presence as if it was a "
+"part of you."
+msgstr ""
+
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_PORTAL_STORM_DUNGEON_EXIT"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "You are safely back in the apocalypse."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC
+#. "EOC_PORTAL_STORM_SHADOW_SPAWN"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Your shadow is no longer attached to you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEATH_PORTAL_DUNGEON"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid ""
+"Your ultimate fate is hard to sum up in words but suffice to say, the thing "
+"that used to be you wishes it had hidden from the storm."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORTAL_DUNGEON_REWARD_ITEM"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "A strange item comes back with you."
+msgstr ""
+
+#. ~ Player sees NPC spawns in effect in EoC "EOC_PORTAL_NPC"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "A person steps nearby from somewhere else."
+msgstr ""
+
+#. ~ Player sees NPCs spawn in effect in EoC "EOC_PORTAL_NPC"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Several identical people walk nearby from nowhere."
+msgstr ""
+
+#. ~ Player message in effect in EoC "MAKAYLA_MUTATOR_portal_storm"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "Everything feels fuzzy."
+msgstr ""
+
+#. ~ Player message in effect in EoC "cat_ears_portal_storm" in nested EOCs in
+#. effect in EoC "MAKAYLA_MUTATOR_portal_storm"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "It didn't take very long for the ears to be back."
+msgstr ""
+
+#. ~ Player message in effect in EoC "large_printout_portal_storm_data_ping" in
+#. nested EOCs in effect in EoC "record_portal_storm_data"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The NRE recorder emits a three beep sequence!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "medium_printout_portal_storm_data_ping"
+#. in nested EOCs in false effect in EoC
+#. "large_printout_portal_storm_data_ping" in nested EOCs in effect in EoC
+#. "record_portal_storm_data"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The NRE recorder emits a two beep sequence!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "large_printout_portal_storm_data" in
+#. nested EOCs in effect in EoC "print_nre_data"
+#. ~ Player message in effect in EoC "medium_printout_portal_storm_data" in
+#. nested EOCs in effect in EoC "print_nre_data"
+#. ~ Player message in effect in EoC "small_printout_portal_storm_data" in
+#. nested EOCs in effect in EoC "print_nre_data"
+#. ~ Player message in effect in EoC "printout_nre_anomaly_data" in nested EOCs
+#. in effect in EoC "print_nre_data"
+#: data/json/effects_on_condition/nether_eocs/portal_storm_effect_on_condition.json
+msgid "The recorder whirs as it starts printing the recorded data."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_quietfarm_nearby"
+#: data/json/effects_on_condition/nether_eocs/vitrification_effect_on_condition.json
+msgid ""
+"<color_red>There is a soft, sonorous tone filling the air, like wind over "
+"brittle ice.  It sets your teeth on edge.</color>"
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC "EOC_vitrified_farm_init"
+#. ~ Fail message in teleportation in effect in EoC "EOC_unvitrified_return"
+#: data/json/effects_on_condition/nether_eocs/vitrification_effect_on_condition.json
+msgid "Oops!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_vitrified_farm_init"
+#. ~ Snippet in category "Vitrifaction_Threshold"
+#: data/json/effects_on_condition/nether_eocs/vitrification_effect_on_condition.json
+#: data/json/snippets/vitrified_snippets.json
+msgid ""
+"You arrive at the farmhouse, after what feels like an eternity.  It's not "
+"quite what you were expecting, but it's very peaceful."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_unvitrified_return"
+#: data/json/effects_on_condition/nether_eocs/vitrification_effect_on_condition.json
+msgid ""
+"You suck in a deep, ragged draught of air that burns in your chest.  Have you"
+" been holding your breath?  You must have been.  All you can hear for a "
+"moment is your heart hammering in your ears.  It takes a while to settle "
+"down."
+msgstr ""
+
+#. ~ Morale text
+#: data/json/effects_on_condition/nether_eocs/vitrification_effect_on_condition.json
+msgid "Content amidst the glass"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_DIVING_INTO_WATER_CHECK"
+#: data/json/effects_on_condition/npc_eocs/generic_npc_eocs.json
+msgid "You scrub your body extensively, and spores are finally gone."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_DIVING_INTO_WATER_CHECK"
+#: data/json/effects_on_condition/npc_eocs/generic_npc_eocs.json
+msgid "You wash the bile from your face."
+msgstr ""
+
+#. ~ Player message in effect in EoC "shaking"
+#: data/json/effects_on_condition/npc_eocs/hallucination_eocs.json
+msgid "You begin to shake uncontrollably."
+msgstr ""
+
+#. ~ Player message in effect in EoC "visuals"
+#: data/json/effects_on_condition/npc_eocs/hallucination_eocs.json
+msgid "Your vision becomes very distorted…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "isherwood_mission_barry_return_home"
+#: data/json/effects_on_condition/npc_eocs/isherwood_barry_rescue_eocs.json
+msgid ""
+"Barry raises a hand to signal you to stop.  \"This is it.  Thank you so much."
+"  I can't believe I'm here, alive.  It almost feels like I'm dreaming, like "
+"it can't be real.\"  He stares at you, his eyes glistening.  \"Whoever you "
+"are, thank you.  I'm going to head the rest of the way now and catch up to my"
+" family.  Come by and talk to me later when I've had a moment to rest.\""
+msgstr ""
+
+#. ~ Player message in effect in EoC "isherwood_mission_player_leaves_map"
+#: data/json/effects_on_condition/npc_eocs/isherwood_barry_rescue_eocs.json
+msgid ""
+"Chris sees you leaving the tower, and gives you a harsh look.  \"Where are "
+"you going?  Dammit, we're backing out?  Fine.  I'll make sure everyone "
+"knows.\""
+msgstr ""
+
+#. ~ Player message in effect in EoC "isherwood_mission_damage_flee_message"
+#: data/json/effects_on_condition/npc_eocs/isherwood_barry_rescue_eocs.json
+msgid ""
+"You hear a horn honk, and one of the Isherwoods calling out from their truck."
+"  \"We're swarmed out here!  We're going to have to head back and regroup!\""
+"  The horn bleats again, and there's a sound of an engine revving, followed "
+"by the fleshy 'smack' of something large hitting a windshield."
+msgstr ""
+
+#. ~ Name of fault_fix "Grind the edge."
+#: data/json/faults/fault_fixes_melee.json
+msgid "Grind the edge."
+msgstr ""
+
+#. ~ Success message of fault_fix "Grind the edge."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid "You grind and polish the edge of %s till it's nice and sharp."
+msgstr ""
+
+#. ~ Name of fault_fix "Grind the spearhead."
+#: data/json/faults/fault_fixes_melee.json
+msgid "Grind the spearhead."
+msgstr ""
+
+#. ~ Success message of fault_fix "Grind the spearhead."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid "You grind and polish the head of %s till it's nice and sharp."
+msgstr ""
+
+#. ~ Name of fault_fix "Straighten the spear socket."
+#: data/json/faults/fault_fixes_melee.json
+msgid "Straighten the spear socket."
+msgstr ""
+
+#. ~ Success message of fault_fix "Straighten the spear socket."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid ""
+"You spend some time straightening the socket of a %s until it is straight and"
+" can be used again."
+msgstr ""
+
+#. ~ Name of fault_fix "Duct-tape everything."
+#: data/json/faults/fault_fixes_melee.json
+msgid "Duct-tape everything."
+msgstr ""
+
+#. ~ Success message of fault_fix "Duct-tape everything."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid "You duct-tape your %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Glue the cracks."
+#: data/json/faults/fault_fixes_melee.json
+msgid "Glue the cracks."
+msgstr ""
+
+#. ~ Success message of fault_fix "Glue the cracks."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid "You thoroughly glue your %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Replace a handle."
+#: data/json/faults/fault_fixes_melee.json
+#: data/json/faults/fault_fixes_tools.json
+msgid "Replace a handle."
+msgstr ""
+
+#. ~ Success message of fault_fix "Replace a handle."
+#: data/json/faults/fault_fixes_melee.json
+#: data/json/faults/fault_fixes_tools.json
+#, c-format
+msgid "You securely install a new handle on your %s."
+msgstr ""
+
+#. ~ Success message of fault_fix "Glue the cracks."
+#: data/json/faults/fault_fixes_melee.json
+#, c-format
+msgid "You thoroughly glue the entire %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Duct-tape the handle."
+#: data/json/faults/fault_fixes_tools.json
+msgid "Duct-tape the handle."
+msgstr ""
+
+#. ~ Success message of fault_fix "Duct-tape the handle."
+#: data/json/faults/fault_fixes_tools.json
+#, c-format
+msgid "You duct-tape the handle of your %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Glue the handle cracks."
+#: data/json/faults/fault_fixes_tools.json
+msgid "Glue the handle cracks."
+msgstr ""
+
+#. ~ Success message of fault_fix "Glue the handle cracks."
+#: data/json/faults/fault_fixes_tools.json
+#, c-format
+msgid "You thoroughly glue the handle of your %s."
+msgstr ""
+
+#. ~ Prefix for item's name "Already deployed"
+#: data/json/faults/faults_bionics.json
+msgid "salvaged"
+msgstr ""
+
+#. ~ Success message of fault_fix "Replace blown fuse"
+#: data/json/faults/faults_electronic.json
+#, c-format
+msgid "You replace the blow capacitor of the %s."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Fatal containment failure"
+msgstr ""
+
+#. ~ Description of fault "Fatal containment failure"
+#: data/json/faults/faults_guns.json
+msgid "It got hot."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Emergency venting"
+msgstr ""
+
+#. ~ Description of fault "Emergency venting"
+#: data/json/faults/faults_guns.json
+msgid "This weapon can uncontrollably vent coolant when overheated."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Fused internals"
+msgstr ""
+
+#. ~ Description of fault "Fused internals"
+#: data/json/faults/faults_guns.json
+msgid "Excessive heat has rendered this weapon inoperable."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Overheat safety"
+msgstr ""
+
+#. ~ Description of fault "Overheat safety"
+#: data/json/faults/faults_guns.json
+msgid "This weapon will attempt to enter a cooling cycle when overheated."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Fail to feed"
+msgstr ""
+
+#. ~ Description of fault "Fail to feed"
+#: data/json/faults/faults_guns.json
+msgid "This gun did not load the round in the chamber properly."
+msgstr ""
+
+#. ~ Description of fault "Spent casing in chamber"
+#: data/json/faults/faults_guns.json
+msgid "This gun currently has an empty casing in the chamber."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Stovepipe"
+msgstr ""
+
+#. ~ Description of fault "Stovepipe"
+#: data/json/faults/faults_guns.json
+msgid ""
+"The casing of the cartridge is stuck in the ejection port without being "
+"properly ejected, forming an exhaust pipe shape."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_guns.json
+msgid "Double feed"
+msgstr ""
+
+#. ~ Description of fault "Double feed"
+#: data/json/faults/faults_guns.json
+msgid "Magazine of the gun tried to put two rounds in the chamber at once."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Rolled edge"
+msgstr ""
+
+#. ~ Description of fault "Rolled edge"
+#: data/json/faults/faults_melee.json
+msgid "Edge of the blade got rolled, making it harder to cut."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Chipped edge"
+msgstr ""
+
+#. ~ Description of fault "Chipped edge"
+#: data/json/faults/faults_melee.json
+msgid "The small piece of blade edge was broken off, making it much duller."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Crack"
+msgstr ""
+
+#. ~ Description of fault "Crack"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"There is a deep crack on the blade.  A sure sign that the entire sword will "
+"break apart sooner or later.  Any attempt to repair it would only further "
+"damage the blade, so the days for this %s are numbered."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Broken blade"
+msgstr ""
+
+#. ~ Description of fault "Broken blade"
+#: data/json/faults/faults_melee.json
+msgid ""
+"The small part of this blade broke away.  You still can use it, but it's much"
+" less effective."
+msgstr ""
+
+#. ~ Description of fault "Broken blade"
+#: data/json/faults/faults_melee.json
+msgid ""
+"The blade shattered completely, making it just a stub.  The only way to "
+"repair such damage to make a new weapon."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Broken tip"
+msgstr ""
+
+#. ~ Description of fault "Broken tip"
+#: data/json/faults/faults_melee.json
+msgid "The tip of the blade you could use to thrust is no more."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Bent tip"
+msgstr ""
+
+#. ~ Description of fault "Bent tip"
+#: data/json/faults/faults_melee.json
+msgid "The tip of the blade you could use to thrust rolled into a spiral."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Tip fracture"
+msgstr ""
+
+#. ~ Description of fault "Tip fracture"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid "The tip of %s snapped off, making the thrusts weaker."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Tip warp"
+msgstr ""
+
+#. ~ Description of fault "Tip warp"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid "The tip of %s started to warp, making the thrusts weaker."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Tip chipping"
+msgstr ""
+
+#. ~ Description of fault "Tip chipping"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"Small pieces of %s started to chip off, making the thrusts less damaging."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Bent socket"
+msgstr ""
+
+#. ~ Description of fault "Bent socket"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"The %s's socket was bent off, making the tip not lined with a shaft, and "
+"making the weapon very hard to thrust properly."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Broken head"
+msgstr ""
+
+#. ~ Description of fault "Broken head"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"The head of %s is completely broken.  The only way to repair such damage is "
+"to make a new one."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Chipping"
+msgstr ""
+
+#. ~ Description of fault "Chipping"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid "Small pieces of %s are chipping off."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_melee.json
+msgid "Cracks"
+msgstr ""
+
+#. ~ Description of fault "Cracks"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"There is a nasty crack on this %s.  Better to fix it before the entire thing "
+"snaps in half!"
+msgstr ""
+
+#. ~ Description of fault "Broken"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid "The entire %s just snapped, leaving only long splinters."
+msgstr ""
+
+#. ~ Description of fault "Cracks"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"There is a nasty crack on this %s.  Better to fix it before the entire shaft "
+"snaps in half!"
+msgstr ""
+
+#. ~ Description of fault "Broken"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid ""
+"This %s is snapped in half.  You still can use it, albeit much less "
+"effectively."
+msgstr ""
+
+#. ~ Description of fault "Broken"
+#: data/json/faults/faults_melee.json
+#, c-format
+msgid "This %s is completely broken."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_tools.json
+msgid "Chipping handle"
+msgstr ""
+
+#. ~ Description of fault "Chipping handle"
+#: data/json/faults/faults_tools.json
+msgid "Small pieces of the handle are chipping off."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_tools.json
+msgid "Cracked handle"
+msgstr ""
+
+#. ~ Description of fault "Cracked handle"
+#: data/json/faults/faults_tools.json
+msgid ""
+"There is a nasty crack on a handle.  Better to fix it before the entire shaft"
+" snaps in half!"
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_tools.json
+msgid "Broken handle"
+msgstr ""
+
+#. ~ Description of fault "Broken handle"
+#: data/json/faults/faults_tools.json
+msgid "Instead of a handle, there is just a small piece of wood that was left."
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_tools.json
+msgid "No handle"
+msgstr ""
+
+#. ~ Description of fault "No handle"
+#: data/json/faults/faults_tools.json
+msgid "The handle that was here before snapped away."
+msgstr ""
+
+#. ~ Description of fault "Broken handle"
+#: data/json/faults/faults_tools.json
+msgid ""
+"The handle is snapped in half.  You still can use it, albeit less "
+"effectively."
+msgstr ""
+
+#. ~ Description of fault "Broken handle"
+#: data/json/faults/faults_tools.json
+msgid "The handle is completely broken."
+msgstr ""
+
+#. ~ Description of fault "No handle"
+#: data/json/faults/faults_tools.json
+msgid "The head of the tool completely separated off the shaft."
+msgstr ""
+
+#. ~ Prefix for item's name "Worn drive belt"
+#. ~ Prefix for item's name "Faulty glow plugs"
+#. ~ Prefix for item's name "Active immobilizer"
+#. ~ Prefix for item's name "Faulty diesel pump"
+#. ~ Prefix for item's name "Expired air filter"
+#. ~ Prefix for item's name "Expired fuel filter"
+#. ~ Prefix for item's name "Faulty fuel pump"
+#. ~ Prefix for item's name "Faulty starter motor"
+#: data/json/faults/faults_vehicles.json
+msgid "faulty"
+msgstr ""
+
+#. ~ Name of a fault
+#: data/json/faults/faults_vehicles.json
+msgid "Active immobilizer"
+msgstr ""
+
+#. ~ Description of fault "Active immobilizer"
+#: data/json/faults/faults_vehicles.json
+msgid ""
+"An immobilizer device prevents starting of the vehicle without the "
+"appropriate key."
+msgstr ""
+
+#. ~ Description of fault "Faulty diesel pump"
+#: data/json/faults/faults_vehicles.json
+msgid "Required to pump and pressurize diesel from a vehicle's tank."
+msgstr ""
+
+#. ~ Description of fault "Faulty fuel pump"
+#: data/json/faults/faults_vehicles.json
+msgid "Required to pump gasoline from a vehicle's tank."
+msgstr ""
+
+#. ~ Description of fault "Wet"
+#: data/json/faults/faults_water.json
+msgid "Item is too wet to use and has to be dried."
+msgstr ""
+
+#. ~ Prefix for item's name "Wet"
+#: data/json/faults/faults_water.json
+msgid "waterlogged"
+msgstr ""
+
+#. ~ Name of fault_fix "Passively dry"
+#: data/json/faults/faults_water.json
+msgid "Passively dry"
+msgstr ""
+
+#. ~ Success message of fault_fix "Passively dry"
+#: data/json/faults/faults_water.json
+#, c-format
+msgid "You dry the %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Dry with hot air in an oven.  Requires good temperature
+#. control."
+#: data/json/faults/faults_water.json
+msgid "Dry with hot air in an oven.  Requires good temperature control."
+msgstr ""
+
+#. ~ Success message of fault_fix "Dry with hot air in an oven.  Requires good
+#. temperature control."
+#: data/json/faults/faults_water.json
+#, c-format
+msgid "You heat up and dry the %s."
+msgstr ""
+
+#. ~ Name of fault_fix "Dry with hot air."
+#: data/json/faults/faults_water.json
+msgid "Dry with hot air."
+msgstr ""
+
+#. ~ Success message of fault_fix "Dry with hot air."
+#: data/json/faults/faults_water.json
+#, c-format
+msgid "You dry the %s with hot air."
+msgstr ""
+
+#. ~ Name of fault_fix "Clean fouling"
+#: data/json/faults/fixes_gun.json
+msgid "Clean fouling"
+msgstr ""
+
+#. ~ Name of fault_fix "Swab gun"
+#: data/json/faults/fixes_gun.json
+msgid "Swab gun"
+msgstr ""
+
+#. ~ Success message of fault_fix "Swab gun"
+#: data/json/faults/fixes_gun.json
+#, c-format
+msgid ""
+"You quickly swab your %s to remove black powder residue and prevent further "
+"corrosion."
+msgstr ""
+
+#. ~ Name of fault_fix "Clean fouling and lubricate"
+#: data/json/faults/fixes_gun.json
+msgid "Clean fouling and lubricate"
+msgstr ""
+
+#. ~ Name of fault_fix "Manual cycle"
+#: data/json/faults/fixes_gun.json
+msgid "Manual cycle"
+msgstr ""
+
+#. ~ Success message of fault_fix "Manual cycle"
+#: data/json/faults/fixes_gun.json
+#, c-format
+msgid "You manually cycle your %s to put round in the chamber."
+msgstr ""
+
+#. ~ Success message of fault_fix "Eject spent casing"
+#: data/json/faults/fixes_gun.json
+#, c-format
+msgid "You eject the spent casing from the %s's chamber."
+msgstr ""
+
+#. ~ Success message of fault_fix "Eject spent casing"
+#: data/json/faults/fixes_gun.json
+#, c-format
+msgid "You eject the spent casing stuck in the %s's slide."
+msgstr ""
+
+#. ~ Name of fault_fix "Clean double feed"
+#: data/json/faults/fixes_gun.json
+msgid "Clean double feed"
+msgstr ""
+
+#. ~ Success message of fault_fix "Clean double feed"
+#: data/json/faults/fixes_gun.json
+#, c-format
+msgid "You eject the second round stuck in the %s's chamber."
+msgstr ""
+
+#. ~ Name of fault_fix "Deactivate immobilizer"
+#: data/json/faults/fixes_vehicles.json
+msgid "Deactivate immobilizer"
+msgstr ""
+
+#. ~ Success message of fault_fix "Deactivate immobilizer"
+#: data/json/faults/fixes_vehicles.json
+#, c-format
+msgid "You successfully deactivate the immobilizer of the %s."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json data/mods/Magiclysm/field.json
+msgid "dust"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json
+msgid "dust and grime"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json
+msgid "wood debris"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json
+msgid "dirty water splatter"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json
+msgid "dirty water stain"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/fields/debris.json
+msgid "puddle of dirty water"
+msgstr ""
+
+#. ~ Description of terrain "industrial green carpet"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"Firm, low-pile, high-durability carpet in a green color, for laying down on "
+"bare concrete, with a still-functioning light attached to the ceiling above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "folded wall"
+msgstr ""
+
+#. ~ Description of terrain "folded wall"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"When looked at out of the side of the eye, this wall seems to bend and curve "
+"in on itself and when looked at head on it seems to be a repeating pattern of"
+" solid concrete hexagons."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "unfolded wall"
+msgstr ""
+
+#. ~ Description of terrain "unfolded wall"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "This wall tessellates as you view it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "laser chamber"
+msgstr ""
+
+#. ~ Description of terrain "laser chamber"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"A large section of metal tubing, balanced on spring supports to prevent any "
+"vibration from affecting the laser inside."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "spatial compressor"
+msgstr ""
+
+#. ~ Description of terrain "spatial compressor"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"A dizzyingly complex series of devices and readouts is on the outside of this"
+" machine's casing.  You imagine the inside would be incomprehensible."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "fractal compressor"
+msgstr ""
+
+#. ~ Description of terrain "fractal compressor"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"This space is infinite, and has no beginning or end.  But you can see both "
+"right here, in this churning mass of angles."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "unfolded laser chamber"
+msgstr ""
+
+#. ~ Description of terrain "unfolded laser chamber"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"You can see the inside surface of this tube, and what it contains.  Thick, "
+"slimy red light oozes within it."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"a hollow pop, followed by a sickly wet squelching as congealed light slowly "
+"leaks out of the tube."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "leaking laser chamber"
+msgstr ""
+
+#. ~ Description of terrain "leaking laser chamber"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"Gobbets of congealed light drip from the gash in the side of this chamber "
+"like hot marmalade."
+msgstr ""
+
+#. ~ Description of terrain "concrete floor"
+#. ~ Description of terrain "reinforced concrete wall"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"You can see every side of every crack in this worn concrete, all the way "
+"down.  You can't look at it for too long."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "A smartcard reader.  It bears the letters LIXA in proud silver."
+msgstr ""
+
+#. ~ Message when terrain "card reader"'s examine action succeeds
+#. ~ Message when terrain "rewired card reader"'s examine action succeeds
+#. ~ Message when terrain "PPE locker card reader"'s examine action succeeds
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+#: data/json/furniture_and_terrain/terrain-mechanisms.json
+msgid ""
+"You insert your ID card.\n"
+"<color_light_green>The nearby doors unlock.</color>"
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "rewired card reader"
+msgstr ""
+
+#. ~ Description of terrain "rewired card reader"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "A smartcard reader.  The casing is damaged, and repaired with tape."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "PPE locker card reader"
+msgstr ""
+
+#. ~ Description of terrain "PPE locker card reader"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "A smartcard reader.  The label above it reads 'SECURE PPE LOCKER'."
+msgstr ""
+
+#. ~ Description of terrain "card reader"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"A smartcard reader.  It is a forbidding black, with no symbols of any sort to"
+" identify it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "precision laser emitter"
+msgstr ""
+
+#. ~ Description of terrain "precision laser emitter"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"A huge casing for a device that generates and focuses a laser of an "
+"incredibly precise wavelength."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "wall of flat space"
+msgstr ""
+
+#. ~ Description of furniture "wall of flat space"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"From a distance, this looks like where the chamber ends; a flat wall, with a "
+"very detailed painting of a tunnel behind it.  But as you get closer, you can"
+" see how it ripples, like lazy water, and notice angles of the space beyond "
+"that a flat image could never give."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "unfolded machinery"
+msgstr ""
+
+#. ~ Description of furniture "unfolded machinery"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"This inscrutable device is filled with wires, boards, and connections.  You "
+"can see every one of them, and it gives you a headache."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "photonic conduit"
+msgstr ""
+
+#. ~ Description of furniture "photonic conduit"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"You can see through the metal casing of this tube, into the blazing light "
+"coursing through it."
+msgstr ""
+
+#. ~ Furniture name
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid "whiteboard"
+msgstr ""
+
+#. ~ Description of furniture "whiteboard"
+#: data/json/furniture_and_terrain/LIXA_furniture_and_terrain.json
+msgid ""
+"A wide space of whiteboard, for writing on with washable markers.  No one has"
+" washed it in a long time, though; it is covered in dense scrawls of "
+"equations and waveform diagrams."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/furniture_and_terrain/appliances.json
+msgid "kitchen station"
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/json/furniture_and_terrain/appliances.json
+msgid "workshop station"
+msgstr ""

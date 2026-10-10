@@ -1,0 +1,2535 @@
+# Batch 97 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"This computer is somehow still powered; an alarming buzz emanates from its "
+"wall plug.  The desktop is cluttered with dozens of unsorted powerpoint "
+"files.  After some investigation, you find one labeled \"LAYMAN BRIEFING\"."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "Open LAYMAN BRIEFING."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"The screen bears the letters LIXA in big bold font.  Underneath it, in "
+"smaller letters, are the words \"Laser Interferometer eXospatial resonance "
+"Array\".  The slides are neatly tabulated under grouped headers down the "
+"side."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "\"LIGO and spatial compression.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "\"What is laser interferometry?\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "\"How does LIXA work?\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "\"But what are we measuring???\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "\"LIXA funding.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "Close the presentation."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"LIXA, or 'Liza' as we like to call her, is the forefront of exospatial "
+"research.  It has been confirmed that matter from our local n-space (the 4d "
+"coordinates in which we exist) can transit through exodimensions.  But it "
+"cannot do it safely!  To understand the behavior of exospace, we must first "
+"learn about how it works.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "Title slide."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"LIXA is based off a proposition for a device called LIGO (Laser "
+"Interferometer Gravitational wave Observatory).  It was originally designed "
+"to confirm the existence of Gravitational Waves, a spreading distortion in "
+"spacetime caused by ultramassive events.  The design has been repurposed for "
+"the exciting field of exospatial research, where we already know we can find "
+"spatial distortions!\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"Laser interferometry is the technique LIXA uses to measure changes in local"
+" exospace.  The principle is simple!  A laser is directed down a long, "
+"vacuum-sealed chamber for an exact multiple of its wavelength.  It strikes a "
+"mirror and returns down another chamber.  If the spacetime through which the "
+"laser moved has not changed, the waveforms will be IN PHASE, and the signal "
+"will be at full amplitude!\"  Here there is a diagram of two waves, with "
+"peaks at the same places, and a third wave beneath them."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "The next slide is titled \"But what if?\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"BUT, if the spacetime through which the laser has distorted with effects "
+"parallel to the beam, the waveforms will be OUT OF PHASE, and the signal "
+"amplitude will be lower than normal!\"  There is a diagram of two waves which"
+" do not synch up, and a third wave underneath it that is smaller than either "
+"of them."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"LIXA works using the principle of LOCAL EXODIMENSIONAL FLUX, the phenomenon"
+" in which ambient spacetime around exospatial breaches moves through the "
+"\"portal\".  LIXA is equipped with several LOCAL DIMENSIONAL COMPRESSORS.  "
+"These devices turn 'portals' on and off hundreds of times a second, which "
+"results in the FLUX repeatedly drawing tiny segments of our local n-space "
+"into exospace.  This creates a compression effect, 'storing' an enormous "
+"amount of 4d-space in those segments in the neighboring exospace.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"The compressed n-space 'stored' in local exospace is in segments too small "
+"for any exospace flux, but is still IN exospace.  Through repeated frequency "
+"alterations, we can 'rotate' the n-space through the infinite n-planes of "
+"exospace, and detect the way in which they shift relative to each other.  "
+"This is the first step towards countermeasures, and may one day lead to "
+"actual safe transit!!!\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"This is a series of several slides.  All of them contain financial data so "
+"full of references to other projects and definitions that it is basically "
+"incomprehensible.  It all adds up to a very large amount of money."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"This is a personal computer, the frame around the screen decorated with whale"
+" stickers.  It has undergone a severe fault, and its file structure is "
+"completely scrambled."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "Attempt to open a file."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "<LIXA_personal_snip_1>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "<LIXA_personal_snip_2>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "<LIXA_personal_snip_3>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "<LIXA_personal_snip_4>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"\"ERROR: file path corrupted.  Please contact your sysadmin.\"  The computer "
+"then freezes, and reboots."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "WARNING:  multiple system faults detected!  SHUT DOWN IMMEDIATELY."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "ERROR: Flux Limiters"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "ERROR: Power Draw"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "SYSTEM SHUTDOWN"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/LIXA_talk.json
+msgid "Copy research archives to external device."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "ERROR:  access denied!  Reason: insufficient clearance level."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "ERROR:  no external drive detected."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid "Backup complete!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"Safe exodimensional flux threshold exceeded!  Current flux compression:  "
+"ERROR STACK OVERFLOW m/s"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"Power draw experiencing instability.  Current power input:  negative ERROR "
+"STACK OVERFLOW kJ/s."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/LIXA_talk.json
+msgid ""
+"Emergency shutdown halted:  ERROR unsafe power discharge, ERROR active "
+"compressors"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/Backgrounds/confused_1.json
+#: data/json/npcs/Backgrounds/no_past_1.json
+#: data/json/npcs/TALK_ALLY_TUTORIAL.json
+#: data/json/npcs/TALK_TRUE_FOODPERSON.json
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+#: data/json/npcs/common_chat/TALK_FRIEND_CONVERSATION.json
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+#: data/json/npcs/isolated_road/isolated_road_cody_prototype.json
+#: data/json/npcs/refugee_center/surface_staff/Smokes/free_merchant_shopkeep_missions.json
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/json/npcs/scrap_trader/scrap_trader.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_crop_overseer.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_doctor.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_scrapper.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_sickly_laborer.json
+#: data/json/npcs/your_followers/liam_main_dialogue.json
+#: data/json/npcs/your_followers/luo_follower.json
+msgid "<end_talking_nevermind>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_ALLY_TUTORIAL.json
+msgid "Skip it.  <lets_go>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_ALLY_TUTORIAL.json
+msgid ""
+"If there's a friendly horse with a saddle nearby, you tell me to mount up, I'll go over and get on it.  You may need to feed a feral horse some cattle fodder to get it act tame and friendly, and e'x'amine it while you have a saddle in your inventory in order to put the saddle on.  You can also ride yourself, if you know how how.\n"
+"  You want me to get off a horse, you just tell me.  You can get off a horse with the vehicle control key (keybind '^').\n"
+"  While we're on horses, we'll just move normally, but a lot faster.  It's a good way to get places more quickly than we could on our own two feet."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_CYBORG_1.json
+msgid "Yeah, *beeeeep* I don't think so.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Nothing.  <done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Nothing.  Let's get back to work."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Interesting.  <done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Well, then.  Let's get back to work."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"The faction camp system allows you to use companions to take over existing "
+"buildings or construct new buildings and use them to extend the usefulness of"
+" your allies.  When you have a faction camp, you can order your companions to"
+" perform missions, such as crafting new items, building up the camp, hunting "
+"for food, or recruiting more allies.  Faction camps also simplify some "
+"aspects of managing your companions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+#: data/json/npcs/exodii/exodii_merchant_talk.json
+#: data/json/npcs/godco/members/NPC_Darryl_Johnstone.json
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+#: data/json/npcs/refugee_center/surface_staff/NPC_free_merchant_teamster.json
+msgid "<end_talking_nevermind>  <done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+#: data/json/npcs/your_followers/liam_main_dialogue.json
+#: data/json/npcs/your_followers/luo_follower.json
+msgid "<end_talking_later_follower>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"Each faction camp starts with the companion surveying the land and constructing a bulletin board, with the exception of the bare bones camp, where it is up to you to construct the board yourself anywhere within the camp's perimeter.  You can then 'e'xamine the bulletin board to get a list of available missions with descriptions, and to assign a companion to work on a mission.  The bulletin board is the primary way to access the camp.\n"
+"  If both you and a companion have two-way radios, you can assign missions to the companion remotely by talking on the radio.\n"
+"  When you ask a companion to start a camp they'll survey the land and mark it as a faction camp (visible on the overmap) to establish it.  The companion will also build a bulletin board for all faction camps except the bare bones one.  A faction camp has a central tile where the bulletin board is, and possibly one or more expansions that are in adjacent tiles.\n"
+"  All of your faction camps can be stocked with food, and your companions will eat from that food when performing camp missions, or even when they're just hungry and near the camp.\n"
+"  Currently, the bare bones faction camp can be created anywhere, while the modular hub ones can be built in fields, and the evac shelter one in all evac shelters.  In addition to those, there are faction camps that can be built in fire stations, mansions, fire lookout towers, helipads, lighthouses, military outposts, pottery cottages, radio towers, and small sealabs, and I may have forgotten some.  You can start a faction camp by talking to a companion who is standing on a suitable terrain, asking about faction camps, and then telling the companion to build a faction camp.  They'll immediately survey the tile and make the bulletin board (bare bones leaves the bulletin board location and construction up to you).  You'll be able to ask the companion for a list of suitable starting sites."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"When you assign a companion to a faction camp mission, they'll disappear while they go do whatever you want them to do.  When the duration of the mission has elapsed, you'll see a new mission on the bulletin board to have them return and complete the mission by upgrading your camp, returning their hunting kills, dropping off whatever they were crafting, or whatever else the mission results are.\n"
+"  There are all kinds of faction camp missions: building up the camp, recruiting new allies, hunting and trapping game, scrounging for materials, farming, disassembling cars, and more.  Not all activities can be done at every camp - you may need to build some additional buildings, or expand the camp, to get access to some missions.\n"
+"  Some faction camp missions can be duplicated by companion activities, but building up the camp can only be done via faction camp missions, as only completion of camp construction missions are recognized as fulfillment of those goals.\n"
+"  You assign missions by interacting with the bulletin board.  You'll see a list of available missions for your central camp tile.  If your camp has expansions, you can tab through the expansions to see the available missions at each expansion.\n"
+"  Remember, companions on camp missions need to be fed, and will become angry if they complete a mission but there isn't any food in the larder.\n"
+"  There is one special mission called 'Emergency Recall'.  You can use this to retrieve any companion on a faction camp mission, but this cancels the mission and wastes any resources used on it.  Only use it to recover allies when something has gone really wrong with your camp and you can't get them to come back any other way."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"Currently, there are three main types of camps that you can start building: bare bones camps, modular field camps, and established building camps which is a wide range of camps adapted to using specific buildings.  The established building list includes fire lookout towers, helipads, lighthouses, light industry, mansions, military outposts, pottery cottages, radio towers, small sealabs, and fire stations.  I may have forgotten something here, as my memory may not be completely up to date.\n"
+"  The bare bones camp is the most flexible kind of camp as it can be built anywhere and doesn't mandate any construction.  Modular field camps is the next most flexible kind of camp since you can build them on any field, hay field, farm field, or field dirt road and can locate them to have plenty of space for expansions, but you start with nothing in an open area and have to build every building, so they can require a lot of resources.  Established building camps are faster to set up since you start in an existing building, but you have to establish them in a supported type of existing building and there may be limited or no space for expansions.\n"
+"  Each camp location will have a variety of upgrade missions for it, except for the bare bones one where everything is up to you.  The various missions have descriptions.  In general, though, you can expand your camp with expansions whenever you want, assuming there are expansions suitable to the adjacent terrain (the general expansions can only be established on the same kind of open areas as field base camps can be placed on), and some missions such as hunting or recruiting will require that you have some kind of kitchen or office that you can use to help schedule activities.\n"
+"  Regardless of what kind of camp you make, you have to start it by asking a companion to build the camp.  If there are more alternatives than just the bare bones camp you'll get a list of the available alternatives."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about bare bones camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about fire lookout tower camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about helipad camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about lighthouse camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about light industry camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about mansion camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about military outpost camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about pottery cottage camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about radio tower camps."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "Tell me about small sealab camps."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"The bare bones camp is the most flexible kind of camp as you can build them "
+"anywhere while still having access to almost all camp capabilities, leaving "
+"it completely up to you how you design them (the missed functionality is tied"
+" to the construction of a radio tower).  You start by ordering the companion "
+"to build the camp, then construct a bulletin board within it yourself or by "
+"ordering your companion to make a zone construction for it, after which you "
+"can use the board to order companions to execute camp missions without "
+"construction preconditions.  You still have to meet all the usual "
+"restrictions for companion crafting missions, such as access to fire, tools, "
+"etc, but facilities constructed by you or your companions should be available"
+" for crafting provided you have covered them with Camp: Supply zones.  How "
+"you want to construct the camp in your chosen location is up to you, with "
+"construction zones available should you want to give the task to your "
+"companions."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "I want to go back to the list of possible camps."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"The modular field camp is the second most flexible kind of camp, but they require a lot of time and resources to build.  There are actually two different versions with slightly different layouts.  With both versions you start with an empty field which can be a field, hay field, farm field, or dirt road on a field, and build up from nothing.  You have a range of different building materials available from which buildings can be constructed, and different sections can be constructed from different materials to make the most of what you have available.\n"
+"  You start by building a lean-to and a bed in the northeast corner of the central camp, and then typically add a cooking facility to it, and expand out until you have a small shelter for two people.  When the first building is complete, you can expand the camp in a variety of ways:\n"
+"  1.  Version 1 allows building up to 5 more rooms or shacks with a maximum of 3 on each side of the camp that increases to a total of 8 with version 2.\n"
+"  2.  You can build a central building in the south half of the camp, between the rooms in version 1, with version 2 having the central building in the center, shaping the camp into an 'H'.  The central building will act as a command center, allowing your camp to perform hunting, recruiting, and combat patrol missions.\n"
+"  3.  In version 1 only you can dig trenches on all sides of the camp, which can possibly connect to the rooms on the sides to minimize the amount of trenching you need to do.\n"
+"  4.  You can build various small features such as root cellars to preserve food or a radio tower to make it easier to recruit more companions.\n"
+"  With each new construction in a modular camp can being able to be made from a different material you aren't constrained by what you start with.  If limited by resources, tents are a fast alternative way to provide shelter, but fragile and likely to get destroyed by the first zombie stumbling in, however the central building must still be made from a 'real' building material."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"Fire stations make good basecamps.  You start with a brick building with secure metal doors, so you're not going to see your efforts destroyed by zombies.  On the downside, you generally can't build expansions from a fire station.\n"
+"  Fire station camps are also very compact.  There isn't much living space, but you can build a small pottery or blacksmithy, a chop shop in one of the garage bays, and even tear up some of the pavement to create a garden.  The existing kitchen makes it easy to cook from the start, though you may need to spruce it up a bit."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in any kind of evac shelter.  Evac shelters are everywhere and often have fields surrounding them, so they're a little faster to start than a modular field camp but still make it easy to add expansions.\n"
+"  Evac center camps can be built up in several ways.  You basically need to decide between building more bedrooms or adding crafting and cooking space."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a fire lookout tower.  Fire lookout towers often have fields surrounding them.\n"
+"  The base camp starts in an established building, and provides a full set of base camp missions, but the number of construction upgrades is limited to a pair of dual bed rooms, a well, a root cellar, and a radio tower.  This makes it a camp that allows you to get the camp setup done with quickly so you can focus on other things."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a helipad facility, where you're provided "
+"with water purification and cooking facilities from the beginning and can "
+"expand with a root cellar, butchering rack, a radio tower, and 4 beds.  A "
+"site specific expansion is into the garage, where you're given access to the "
+"available appliances."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a lighthouse, where you're provided with "
+"water purification and cooking facilities from the beginning and can expand "
+"with a root cellar."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a light industry facility, where you're "
+"provided with cooking facilities from the beginning and can expand with a "
+"root cellar, butchering rack, well, a radio tower, and beds.  One site "
+"specific expansion that's always available is the workshop, where you're "
+"given access to the available appliances and can add a drop hammer for "
+"companion crafting."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a mansion.  You have four different starting "
+"positions available, namely the Fountain Garden, Dance Floor Room, Basketball"
+" Room, and Garden with Columns.  Depending on where you set up your base, the"
+" following site specific expansions may become available: Entrance 1, "
+"Entrance 2, Swimming Pool 1, Bedrooms 1, Unidentified Room, Kitchen 2, "
+"Library, Bedrooms 2, Swimming Pool 2, Bar, Living Rooms, Bedroom 3, and "
+"Kitchen 2.  The Entrances and Swimming Pool 1 provide farming, the Library a "
+"limited set of cooking, the Bar a different set, and the Kitchens an extended"
+" set of cooking recipes."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a military outpost, of which there are two "
+"versions, 'normal' and 'cross'.  They differ in that the normal version can "
+"be expanded with two beds, while the cross version can be expanded with four."
+"  Apart from that, they provide you with the ability to build a root cellar, "
+"a butchery rack, a water well, farm plots, a radio tower, and repair the "
+"reactor's controller."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a pottery cottage.  Setting up your base "
+"there allows you to use the char kiln and clay kiln for crafting.  You can "
+"add a butchery rack to the facilities, as well as build blacksmithing "
+"facilities."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a radio tower, both the version with and the "
+"one without an adjacent building on the ground.  Bedroom shacks can be built "
+"to host your companions.  You can build a root cellar, a water well, hook "
+"yourself up to the radio tower, and fix the tower to get access to extended "
+"capabilities."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"You can build a faction camp in a small sealab facility.  This provides you "
+"with access to the air compressor and water purifier appliances on site."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"A camp can have up to 8 expansions (one for each of the 8 adjacent overmap tiles).  Expansions add to the capabilities of your camp, such as adding a farm field or a manufactory for crafting all kinds of things.\n"
+"  Expansion missions show up in separate tabs in the bulletin board, one set of missions per location, and you'll need to hit 'tab' to see them.  Some base camps have dedicated expansions tailored to their specific facilities, and while these might be accessible from other base camps should those be constructed adjacent to one of these, the set of reasonably general expansions are currently all limited to open field locations (field, hay field, farm field, or field dirt road).  The currently available general expansions are:\n"
+"  -- Farm: This is a full tile of plowed fields that you can maintain or send companions on missions to maintain.  Plants grow here normally.  This expansion exists in two versions.\n"
+"  -- Garage: This is a large building that currently doesn't provide any functionality, and so is of limited use (it used to provide disassembly before that was supported via zones, which can still be placed inside the garage).  This expansion exists in two versions.\n"
+"  -- Canteen: This is an expanded kitchen, dining area, and pantry that provides an expanded set of companion cooking recipes.  This expansion exists in two versions.\n"
+"  -- Livestock Area: This is a modular set of buildings for holding livestock such as cows, horses, or chickens.  Animals are not included!  This expansion exists in two versions.\n"
+"  -- Fabrication Workshop: This is a large expansion for doing all kinds of crafts.  Companions can use some of the furniture in this expansion to craft some items much faster than you can do by yourself by hand.  This expansion exists in two versions.\n"
+"  -- Central Storage Building: This is a large building for storing goods.  This expansion exists in two versions, the second of which allows the construction of storage furniture with a larger capacity than storage on the ground.\n"
+"  Note that there is nothing stopping you from constructing more than one instance of an expansion, such as multiple farms for more farming, or a second Livestock expansion if you have a lot of animals.  In most cases there is not much value in having more than one of an expansion, though."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"Starting a camp doesn't take much time, and you can use a faction camp to keep your companions fed without needing to regularly give them food, so it's a good idea to establish a minimal camp anywhere you intend to be for a while.\n"
+"  How much you want to expand your camps is up to you.  A modular field camp can be very resource intensive, but building one up allows you to send companions off to hunt and farm for you, so there's quite the pay-off.  What kind of camp (or camps) you want to build depends both on what you intend to focus on and whether you want to be stationary or roaming with stops in areas only for some time before moving on.  If nothing else, you should consider building a water well as soon as you can, which may require you to perform construction prerequisites.\n"
+"  If you have access to a fire station or evac shelter, you may want to build your camp in them.  Both of those camps are very compact, but have much of the same functionality as an upgraded field camp without requiring so many resources.\n"
+"  If you are adding expansions to your camp, consider starting with a farm, canteen, or fabrication workshop.  The farm makes it easy to grow your own food if you don't have any ready plowed farms nearby, the canteen provides you with a well and root cellars after some upgrades, while the fabrication workshop can allow you to craft some of the resources you need to upgrade your camp.\n"
+"  The livestock area and the storage area probably shouldn't be your first expansions, but they both have their uses."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid "I want to go to the list of possible camps."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_FACTION_CAMP.json
+msgid ""
+"\n"
+"1.  Faction camps used to require a second companion to act as overseer and camp manager, but that's been replaced by the bulletin board and two-way radio.\n"
+"2.  It used to be impossible to upgrade faction camps if there was a vehicle, even a cart, on the same map.  You can now upgrade camps even if there is a vehicle on the map, as long as the upgrade doesn't change the area under the vehicle.\n"
+"3.  Faction camps used to upgrade by completely redrawing the map.  Damage to the camp would be replaced when the camp was upgraded.  Now upgrades only change the actual area being upgraded, and you will have to repair damage to the camp yourself.\n"
+"4.  There used to be a single path for upgrading the main camp.  Now, after you have completed the first tent, you will have many options for your next upgrade, and you can have different companions working on different upgrades of the main camp at the same time.\n"
+"5.  Companions who are near a camp will feed themselves from the camp's food stores, and if the camp has a well, they'll use it to quench their thirst.\n"
+"6.  You can now set up faction camps in select buildings.  The list of available buildings is constantly growing, so you'll have to experiment.\n"
+"7.  The oldest type of camp, known as the primitive field camp or \"Old Camp\", is no longer supported and will be removed entirely in the future.\n"
+"8.  Most camps abided by a restriction that allowed them to add expansions to the camps only when camp constructions had added a sufficient number of beds to the camp (2 per expansion), but this restriction has been removed from all camps.\n"
+"9.  Field base camps and standard expansions used to be available for fields only.  They can now be placed on fields (as before), hay fields, farm fields, and field dirt roads."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_MARLOSS_VOICE.json
+msgid "[Take Marloss berry.] Thank you."
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/json/npcs/TALK_STRIP_MALL.json
+msgid "Shady Hills Corporation: Branch Manager"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_STRIP_MALL.json
+msgid ""
+"Shady Hills Corporation.\n"
+" You are logged in as: Branch Manager.\n"
+"\n"
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "Access Messages"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+msgid "Access Main Drive"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json data/json/npcs/computers/TALK_MSU14.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_PREPPER_1_COMPUTER.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+#: data/mods/MindOverMatter/npcs/dialogue/computer_dialogue.json
+msgid "Log Off"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR B231; UNABLE TO CONNECT TO MESSAGING SERVER.\n"
+" ERROR REFRESHING MESSAGES.  NOT ALL MESSAGES MAY BE DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "[!]RE: Important Status Update"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RETURN TO MAIN PAGE"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid ""
+"FROM: Kristi Gordee, SVP Operations\n"
+"  TO: [Branch Managers], [Community Managers]\n"
+"  RE: Important Status Update\n"
+"\n"
+" Everyone,\n"
+" You are to follow your appropriate lockdown protocols at your discretion.  With the recent events as they are, we must do our utmost to ensure that our goals remain priority.\n"
+"\n"
+" Branch Managers - your deliveries will have an altered schedule.  I will send a separate email with details.  Ensure the hidden safe rooms are properly secured.\n"
+" Community Managers - Lockdown the community appropriately.  Tell the residents that it is for their protection, but do not let them leave.  We need them for the Big Pappy project to be successful.  I am going to send you some contacts who can discreetly install a heavy security gate.\n"
+"\n"
+" You will continue to receive your bonus pay as agreed upon.  Do not lose sight of our important endgame."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "RETURN TO MESSAGES"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#: data/json/npcs/computers/TALK_RET_COMM.json
+msgid "ERROR ACCESSING SERVER"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/TALK_STRIP_MALL.json
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO PREVIOUS PAGE"
+msgstr ""
+
+#. ~ Job description of "No class" NPC class
+#: data/json/npcs/classes.json
+msgid "I'm a dummy class for better NPC items later into the Cataclysm."
+msgstr ""
+
+#. ~ Name of an NPC class
+#. ~ Reasonably, this class should receive animal-specific medical
+#. proficiencies if they're ever added.
+#: data/json/npcs/classes.json
+msgid "Veterinarian"
+msgstr ""
+
+#. ~ Name of an NPC class
+#: data/json/npcs/classes.json
+msgid "Former Pilot"
+msgstr ""
+
+#. ~ Job description of "Former Pilot" NPC class
+#: data/json/npcs/classes.json
+msgid "I just want to fly away to somewhere better."
+msgstr ""
+
+#. ~ Job description of "Cyborg" NPC class
+#: data/json/npcs/classes.json
+msgid "I'm transhuman above and beyond."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/json/npcs/factions.json
+msgid "Hub 01 Ancilla"
+msgstr ""
+
+#. ~ NPC faction name
+#: data/json/npcs/factions.json
+msgid "Balthazar"
+msgstr ""
+
+#. ~ Description of NPC faction "Balthazar"
+#: data/json/npcs/factions.json
+msgid ""
+"A mysterious figure who operates out of a bunker.  They're trying to restore "
+"some semblance of infrastructure."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/json/npcs/factions.json
+msgid "Enslaved individuals"
+msgstr ""
+
+#. ~ Description of NPC faction "Enslaved individuals"
+#: data/json/npcs/factions.json
+msgid ""
+"Individuals who have been enslaved or held prisoner for a long period of "
+"time, for various reasons."
+msgstr ""
+
+#. ~ NPC faction name
+#. ~ Name of NPC faction camp
+#: data/json/npcs/factions.json data/json/overmap/overmap_special/campus.json
+msgid "The Great Library"
+msgstr ""
+
+#. ~ Description of NPC faction "The Great Library"
+#: data/json/npcs/factions.json
+msgid ""
+"A group of academics and other survivors that stand together to preserve and "
+"spread knowledge of the world."
+msgstr ""
+
+#. ~ NPC faction name
+#: data/json/npcs/factions.json
+msgid "Grey Moose Militia Community"
+msgstr ""
+
+#. ~ Description of NPC faction "Grey Moose Militia Community"
+#: data/json/npcs/factions.json
+msgid "A small community of survivors who retreated to a remote lodge."
+msgstr ""
+
+#. ~ Snippet in category "hint"
+#: data/json/npcs/hints.json
+msgid ""
+"Be extra careful on roads.  They are easy to travel on, but occasional road "
+"blocks can make you feel sorry in an instant."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Inhaler"
+#. ~ Dialogue line in mission "Find Antibiotics"
+#. ~ Dialogue line in mission "Find Spurge Tea"
+#. ~ Dialogue line in mission "Find Cattail Jelly"
+#: data/json/npcs/missiondef.json data/mods/innawood/npcs/missiondef.json
+msgid "What?!  Please, I'll be dead soon without your help!"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Inhaler"
+#: data/json/npcs/missiondef.json
+msgid ""
+"There's a town nearby.  Check pharmacies; it'll be in the back with the good "
+"stuff."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Antibiotics"
+#. ~ Dialogue line in mission "Find Cattail Jelly"
+#: data/json/npcs/missiondef.json data/mods/innawood/npcs/missiondef.json
+msgid "This infection is bad, totally bad…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find Antibiotics"
+#: data/json/npcs/missiondef.json
+msgid ""
+"There's a town nearby.  Check pharmacies; it'll be in the back, either "
+"antibiotics or broad-spectrum antibiotics will do."
+msgstr ""
+
+#. ~ Dialogue line in mission "Retrieve Military Black Box"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Survivors were talkin' 'bout seeing 'em falling out of the sky but I don't "
+"know where.  If I were a pilot I'd avoid crash landing in a city or forest "
+"though.  Black boxes are housed in the tail to survive the crash so check "
+"there when you do find one.  Now get to it!"
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/missiondef.json
+msgid "Find a Holy Symbol"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid "Any variant is fine, I am not that choosy…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid ""
+"The sky has torn apart and creatures beyond our wildest imaginations lurk in "
+"the dark now.  I beg you, find me a holy symbol.  Maybe some faith can help "
+"me sleep better at night."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid "May whatever god or spirits that now reign the world protect you."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid "I guess the stress may just be getting to me…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid ""
+"A church must be full of them and who knows, maybe some of those <zombies> "
+"carry some.  But please, do not waste your time making one yourself."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid "Any luck?  Please find me a holy symbol.  Any of them will do."
+msgstr ""
+
+#. ~ Dialogue line in mission "Find a Holy Symbol"
+#: data/json/npcs/missiondef.json
+msgid "Thank the heavens."
+msgstr ""
+
+#. ~ Description of mission "Find Relic"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Find a relic of a forgotten saint.  Places like "
+"<color_yellow>cathedrals</color> or <color_yellow>museums</color> might have "
+"one."
+msgstr ""
+
+#. ~ Description of mission "Retrieve Software"
+#: data/json/npcs/missiondef.json
+msgid "Retrieve the software in their computer marked on your map."
+msgstr ""
+
+#. ~ Description of mission "Investigate Cult"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Investigate the strange cabin in the woods and find an item that may clue you"
+" in about <color_yellow>a potential human sacrifice</color> the cult has "
+"performed, such as <color_yellow>human bones or other remains</color>."
+msgstr ""
+
+#. ~ Dialogue line in mission "Kill Jabberwock"
+#: data/json/npcs/missiondef.json
+msgid ""
+"A few days ago another survivor and I were trying to avoid the cities by "
+"staying in the woods during the day and foraging for gear at night.  It "
+"worked well against the normal zeds but one night something caught onto our "
+"trail and chased us for ten minutes or so until we decided to split up and "
+"meet-up back here.  My buddy never showed up and I don't have the means to "
+"kill whatever it was.  Can you lend a hand?"
+msgstr ""
+
+#. ~ Description of mission "Recover Priest's Diary"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Find something that may reveal what the church's stance is on these events.  "
+"Something like <color_yellow>a priest's diary</color> would suffice."
+msgstr ""
+
+#. ~ Description of mission "Recruit Tracker"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Go to the cabin in the woods where the Tracker is camping and "
+"<color_yellow>recruit them</color>."
+msgstr ""
+
+#. ~ Dialogue line in mission "Recruit Tracker"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Roger, if he's a no-show then any other gunslinger will do… but I doubt he'll"
+" quit before we even begin."
+msgstr ""
+
+#. ~ Description of mission "Prove your worth to Foodperson"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Prove your dedication to the Foodperson and Foodplace as a whole by finding "
+"<color_yellow>10 Foodplace loyalty cards</color>."
+msgstr ""
+
+#. ~ Description of mission "Gather cattail stalks to create cattail jelly"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Gather <color_light_blue>60 cattail stalks</color> from the swamp and bring "
+"them back to <color_light_red>learn how to craft cattail jelly</color>.  "
+"Raise your <color_light_blue>survival skill to at least 1</color> by "
+"harvesting cattail stalks.  <color_light_blue>Bring back the provided bag "
+"with the 60 cattail stalks in them</color> as well."
+msgstr ""
+
+#. ~ Dialogue line in mission "Gather cattail stalks to create cattail jelly"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Did you know that cattails are a source of a jelly that works as an "
+"antiseptic and analgesic?  Something like that is likely to be mighty helpful"
+" out here.  I want you to take this bag, head to the nearest swamp, collect "
+"60 cattail stalks, and bring them back here.  In exchange, I'll show you how "
+"to harvest the jelly."
+msgstr ""
+
+#. ~ Dialogue line in mission "Gather cattail stalks to create cattail jelly"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Great!  <color_yellow>This bag should be big enough to hold all of the stalks"
+" we'll need.  Don't forget to bring it back.</color>"
+msgstr ""
+
+#. ~ Dialogue line in mission "Gather cattail stalks to create cattail jelly"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Got those cattail stalks yet?  Don't forget to <color_yellow>bring back my "
+"bag with the stalks in them</color> and to work on improving your survival "
+"skill as well."
+msgstr ""
+
+#. ~ Description of mission "Angry pyromaniac"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Bring the pyromaniac to <color_light_blue>their rival's house</color> and "
+"don't forget to <color_yellow>bring at least 200 units of gasoline</color>.  "
+"After you got there, talk to the pyromaniac to start burning the house."
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pyromaniac"
+#: data/json/npcs/missiondef.json data/mods/innawood/npcs/missiondef.json
+msgid "Oh man, I want to fucking burn it so bad…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pyromaniac"
+#: data/json/npcs/missiondef.json
+msgid ""
+"I'm so fucking infuriated!  I've got an enemy that ruined my life, and now I "
+"want to get revenge!  I don't care about <the_cataclysm>, I just want to burn"
+" his house!  Would you help me, <name_g>?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pyromaniac"
+#: data/json/npcs/missiondef.json
+msgid ""
+"Good.  Let's go to his house and goddamn burn it down!  Oh, by the way, could"
+" you bring gasoline with you, <name_g>?  I was so angry I forgot to bring it "
+"with me…"
+msgstr ""
+
+#. ~ Dialogue line in mission "Angry pyromaniac"
+#: data/json/npcs/missiondef.json
+msgid "Maybe we can find some gasoline at a gas station."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/missiondef.json
+msgid "Investigate Strange Location"
+msgstr ""
+
+#. ~ Description of mission "Investigate Strange Location"
+#: data/json/npcs/missiondef.json
+msgid ""
+"You could find this place upside down, dizzy and blindfolded.  Its presence "
+"is too altered to allow the mercy of ignorance."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/missiondef.json
+msgid "Center of the storm"
+msgstr ""
+
+#. ~ Description of mission "Center of the storm"
+#: data/json/npcs/missiondef.json
+msgid ""
+"This is the center of the portal storm, you could find it upside down, dizzy "
+"and blindfolded.  Its presence is too altered to allow the mercy of "
+"ignorance."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_FACTION_SUCCESSION_IMMEDIATE"
+#: data/json/npcs/missiondef.json
+msgid ""
+"You've been badly wounded.  It might be better to rest for a while and let "
+"someone else scavenge.  (Changing characters is now available at any camp "
+"board.)"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ Generic hostile military deserter.
+#: data/json/npcs/npc.json
+msgid "Deserter"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "camper"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "scavenger"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "prepper"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "moonshiner"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "marksman"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#: data/json/npcs/npc.json
+msgid "veterinarian"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:f"
+msgid ""
+"I was just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather "
+"was a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole "
+"life, until some American <name_b>s ruined my business!  I couldn't do "
+"anything about this, but now, with <the_cataclysm> and <zombies> around, I "
+"have a chance to get my revenge!  And I got my revenge, thanks to a special "
+"someone."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:m"
+msgid ""
+"I was just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather "
+"was a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole "
+"life, until some American <name_b>s ruined my business!  I couldn't do "
+"anything about this, but now, with <the_cataclysm> and <zombies> around, I "
+"have a chance to get my revenge!  And I got my revenge, thanks to a special "
+"someone."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:n"
+msgid ""
+"I was just a regular pizzaiolo.  My father was a pizzaiolo, my grandfather "
+"was a pizzaiolo and I also became a pizzaiolo.  I was making pizza my whole "
+"life, until some American <name_b>s ruined my business!  I couldn't do "
+"anything about this, but now, with <the_cataclysm> and <zombies> around, I "
+"have a chance to get my revenge!  And I got my revenge, thanks to a special "
+"someone."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:f"
+msgid ""
+"Are you kidding?  That was the best!  When I imagine the face of that "
+"arrogant cook… mmm, sweet, sweet picture.  Oh, and how we beat up that "
+"<freaking> food-<name_b>, I dreamed about it for so long… and my restaurant, "
+"we beat the shit out of those <name_b>s.  Too bad it was trashed as hell… "
+"anyway, let's hit the dirt."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:m"
+msgid ""
+"Are you kidding?  That was the best!  When I imagine the face of that "
+"arrogant cook… mmm, sweet, sweet picture.  Oh, and how we beat up that "
+"<freaking> food-<name_b>, I dreamed about it for so long… and my restaurant, "
+"we beat the shit out of those <name_b>s.  Too bad it was trashed as hell… "
+"anyway, let's hit the dirt."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/bg_pizzaiolo.json
+msgctxt "npc:n"
+msgid ""
+"Are you kidding?  That was the best!  When I imagine the face of that "
+"arrogant cook… mmm, sweet, sweet picture.  Oh, and how we beat up that "
+"<freaking> food-<name_b>, I dreamed about it for so long… and my restaurant, "
+"we beat the shit out of those <name_b>s.  Too bad it was trashed as hell… "
+"anyway, let's hit the dirt."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/burger_flipper_1.json
+msgctxt "npc:f"
+msgid ""
+"Before this started, I had a crappy job flipping burgers at Sambal's Grille."
+"  Losing that isn't a big deal.  Losing my mom and dad hurts a lot more.  "
+"Last time I saw them alive, I just came home from school, grabbed a snack and"
+" went to work.  I don't think I even told my mom I loved her, and I was "
+"pissed at my dad for some dumb shit that really doesn't matter.  Didn't "
+"matter then, really doesn't now.  Things started going crazy while I was at "
+"work… the military rolled into town, and the evacuation alert sounded."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/burger_flipper_1.json
+msgctxt "npc:m"
+msgid ""
+"Before this started, I had a crappy job flipping burgers at Sambal's Grille."
+"  Losing that isn't a big deal.  Losing my mom and dad hurts a lot more.  "
+"Last time I saw them alive, I just came home from school, grabbed a snack and"
+" went to work.  I don't think I even told my mom I loved her, and I was "
+"pissed at my dad for some dumb shit that really doesn't matter.  Didn't "
+"matter then, really doesn't now.  Things started going crazy while I was at "
+"work… the military rolled into town, and the evacuation alert sounded."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/burger_flipper_1.json
+msgctxt "npc:n"
+msgid ""
+"Before this started, I had a crappy job flipping burgers at Sambal's Grille."
+"  Losing that isn't a big deal.  Losing my mom and dad hurts a lot more.  "
+"Last time I saw them alive, I just came home from school, grabbed a snack and"
+" went to work.  I don't think I even told my mom I loved her, and I was "
+"pissed at my dad for some dumb shit that really doesn't matter.  Didn't "
+"matter then, really doesn't now.  Things started going crazy while I was at "
+"work… the military rolled into town, and the evacuation alert sounded."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/Backgrounds/burger_flipper_1.json
+msgid "So, did you evacuate then?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/codger.json
+msgctxt "npc:f"
+msgid ""
+"Anyway, long story short, I were headin' back up to Mount Greenwood to check "
+"on th' old ranger station again when I heard them bombs fallin' and choppers "
+"flyin'.  Decided to camp out there to see it all through, but it didn't ever "
+"end, now, did it?  So here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/codger.json
+msgctxt "npc:m"
+msgid ""
+"Anyway, long story short, I were headin' back up to Mount Greenwood to check "
+"on th' old ranger station again when I heard them bombs fallin' and choppers "
+"flyin'.  Decided to camp out there to see it all through, but it didn't ever "
+"end, now, did it?  So here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/codger.json
+msgctxt "npc:n"
+msgid ""
+"Anyway, long story short, I were headin' back up to Mount Greenwood to check "
+"on th' old ranger station again when I heard them bombs fallin' and choppers "
+"flyin'.  Decided to camp out there to see it all through, but it didn't ever "
+"end, now, did it?  So here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/confused_1.json
+msgctxt "npc:f"
+msgid ""
+"I don't even fucking know anymore.  I have no freaking idea what is going on."
+"  I'm just doing what I can to stay alive.  The world ended and I bungled "
+"along not dying, until I met you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/confused_1.json
+msgctxt "npc:m"
+msgid ""
+"I don't even fucking know anymore.  I have no freaking idea what is going on."
+"  I'm just doing what I can to stay alive.  The world ended and I bungled "
+"along not dying, until I met you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/confused_1.json
+msgctxt "npc:n"
+msgid ""
+"I don't even fucking know anymore.  I have no freaking idea what is going on."
+"  I'm just doing what I can to stay alive.  The world ended and I bungled "
+"along not dying, until I met you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_1.json
+msgctxt "npc:f"
+msgid ""
+"A big-ass hole opened up right in the middle of town, and a nightmarish demon"
+" crawled out, right in front of the church.  We unloaded into it, but bullets"
+" just bounced off.  Got some civilians in the crossfire.  It started just "
+"devouring people like potato chips into a gullet that looked like a rotting "
+"asshole with teeth, and… well, I lost my nerve.  I ran.  I think I might have"
+" been the only person to escape.  I haven't been able to even look at my "
+"badge since then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_1.json
+msgctxt "npc:m"
+msgid ""
+"A big-ass hole opened up right in the middle of town, and a nightmarish demon"
+" crawled out, right in front of the church.  We unloaded into it, but bullets"
+" just bounced off.  Got some civilians in the crossfire.  It started just "
+"devouring people like potato chips into a gullet that looked like a rotting "
+"asshole with teeth, and… well, I lost my nerve.  I ran.  I think I might have"
+" been the only person to escape.  I haven't been able to even look at my "
+"badge since then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_1.json
+msgctxt "npc:n"
+msgid ""
+"A big-ass hole opened up right in the middle of town, and a nightmarish demon"
+" crawled out, right in front of the church.  We unloaded into it, but bullets"
+" just bounced off.  Got some civilians in the crossfire.  It started just "
+"devouring people like potato chips into a gullet that looked like a rotting "
+"asshole with teeth, and… well, I lost my nerve.  I ran.  I think I might have"
+" been the only person to escape.  I haven't been able to even look at my "
+"badge since then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:f"
+msgid ""
+"I was SWAT.  By all rights I should be dead.  We were called to control "
+"\"riots\", which we all know were the first <zombie> hordes.  Fat lot of good"
+" we were.  Pretty sure we killed more civilians.  Even among my crew, morale "
+"was piss poor and we were shooting wild.  Then something hit us, something "
+"big.  Might have been a bomb, I really don't remember.  I woke up pinned "
+"underneath the SWAT van.  I couldn't see anything… but I could hear it.  "
+"<swear!>  I could hear everything.  I spent hours, maybe days under that van,"
+" not even trying to get out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:m"
+msgid ""
+"I was SWAT.  By all rights I should be dead.  We were called to control "
+"\"riots\", which we all know were the first <zombie> hordes.  Fat lot of good"
+" we were.  Pretty sure we killed more civilians.  Even among my crew, morale "
+"was piss poor and we were shooting wild.  Then something hit us, something "
+"big.  Might have been a bomb, I really don't remember.  I woke up pinned "
+"underneath the SWAT van.  I couldn't see anything… but I could hear it.  "
+"<swear!>  I could hear everything.  I spent hours, maybe days under that van,"
+" not even trying to get out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:n"
+msgid ""
+"I was SWAT.  By all rights I should be dead.  We were called to control "
+"\"riots\", which we all know were the first <zombie> hordes.  Fat lot of good"
+" we were.  Pretty sure we killed more civilians.  Even among my crew, morale "
+"was piss poor and we were shooting wild.  Then something hit us, something "
+"big.  Might have been a bomb, I really don't remember.  I woke up pinned "
+"underneath the SWAT van.  I couldn't see anything… but I could hear it.  "
+"<swear!>  I could hear everything.  I spent hours, maybe days under that van,"
+" not even trying to get out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:f"
+msgid ""
+"Eventually yes.  It had been quiet for hours.  I was parched, injured, and "
+"terrified.  My training was maybe the only thing that kept me from freaking "
+"out.  I decided to try to pull myself out and see how bad my injuries were.  "
+"It was quite easy.  The side of the van was torn open, and it turned out I "
+"was basically just lying under a little debris, with the ruins of the van "
+"tented around me.  I wasn't even too badly hurt.  I grabbed as much gear as I"
+" could, and I slipped out.  It was night.  I could hear fighting farther away"
+" in the city, so I went the other way.  I made it a few blocks before I ran "
+"into any <zombies>… I ran from them.  I ran, and I ran, and I ran some more."
+"  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:m"
+msgid ""
+"Eventually yes.  It had been quiet for hours.  I was parched, injured, and "
+"terrified.  My training was maybe the only thing that kept me from freaking "
+"out.  I decided to try to pull myself out and see how bad my injuries were.  "
+"It was quite easy.  The side of the van was torn open, and it turned out I "
+"was basically just lying under a little debris, with the ruins of the van "
+"tented around me.  I wasn't even too badly hurt.  I grabbed as much gear as I"
+" could, and I slipped out.  It was night.  I could hear fighting farther away"
+" in the city, so I went the other way.  I made it a few blocks before I ran "
+"into any <zombies>… I ran from them.  I ran, and I ran, and I ran some more."
+"  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/cop_2.json
+msgctxt "npc:n"
+msgid ""
+"Eventually yes.  It had been quiet for hours.  I was parched, injured, and "
+"terrified.  My training was maybe the only thing that kept me from freaking "
+"out.  I decided to try to pull myself out and see how bad my injuries were.  "
+"It was quite easy.  The side of the van was torn open, and it turned out I "
+"was basically just lying under a little debris, with the ruins of the van "
+"tented around me.  I wasn't even too badly hurt.  I grabbed as much gear as I"
+" could, and I slipped out.  It was night.  I could hear fighting farther away"
+" in the city, so I went the other way.  I made it a few blocks before I ran "
+"into any <zombies>… I ran from them.  I ran, and I ran, and I ran some more."
+"  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:f"
+msgid ""
+"I was just sittin' in lockup.  They took me in the night before, for a "
+"bullshit parole violation.  Assholes.  I was stuck in my cell when the cops "
+"all started yelling about an emergency, geared up, and left me in there "
+"havin' a <freaking> staring contest with a security cam that probably wasn't "
+"even on.  I was stuck in there for two god-damn days, with no food and only a"
+" little water.  Then this big-ass zombie busted in.  I didn't know what the "
+"fuck to think, but if my cam wasn't working, the one in the hall sure was.  "
+"Tripped a motion sensor or some shit, alarm started going, and the big dumb "
+"fuck turned around to get at it while its arms were still stuck in the cell "
+"bars.  Ripped the whole door out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:m"
+msgid ""
+"I was just sittin' in lockup.  They took me in the night before, for a "
+"bullshit parole violation.  Assholes.  I was stuck in my cell when the cops "
+"all started yelling about an emergency, geared up, and left me in there "
+"havin' a <freaking> staring contest with a security cam that probably wasn't "
+"even on.  I was stuck in there for two god-damn days, with no food and only a"
+" little water.  Then this big-ass zombie busted in.  I didn't know what the "
+"fuck to think, but if my cam wasn't working, the one in the hall sure was.  "
+"Tripped a motion sensor or some shit, alarm started going, and the big dumb "
+"fuck turned around to get at it while its arms were still stuck in the cell "
+"bars.  Ripped the whole door out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:n"
+msgid ""
+"I was just sittin' in lockup.  They took me in the night before, for a "
+"bullshit parole violation.  Assholes.  I was stuck in my cell when the cops "
+"all started yelling about an emergency, geared up, and left me in there "
+"havin' a <freaking> staring contest with a security cam that probably wasn't "
+"even on.  I was stuck in there for two god-damn days, with no food and only a"
+" little water.  Then this big-ass zombie busted in.  I didn't know what the "
+"fuck to think, but if my cam wasn't working, the one in the hall sure was.  "
+"Tripped a motion sensor or some shit, alarm started going, and the big dumb "
+"fuck turned around to get at it while its arms were still stuck in the cell "
+"bars.  Ripped the whole door out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgid ""
+"It was just <freaking> chaos on the streets, man.  But I'm used to chaos.  "
+"You don't live as long as I've lived and not know how to keep away from a "
+"fight you can't win.  Biggest worry wasn't the zombies and the monsters, "
+"honestly.  But I swear, some cops got a nightstick so far up their ass…  I "
+"didn't have time to ditch my orange when stuff kept swipin' at me, and I "
+"swear, cops got a look at me, they decided I was the big problem.  Goddamn "
+"walking corpse next to me, who do they pick to shoot at?  Pricks."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:f"
+msgid ""
+"'cuz I know how cops think.  If you can call it that.  Early days, they were "
+"still going after alarms in case it meant, I dunno, survivors.  You smack "
+"some fucker's sports car, it starts wailing, the cops come to take a look and"
+" you can walk right behind 'em.  That's the thing about cops; they follow "
+"orders, right?  Even when the world's comin' apart.  I kept my head down "
+"until I got past the worst of it, but then, lucky me, I got sergeant "
+"brainiac.  Figured out why someone would trip an alarm on purpose, had them "
+"case all up and down the streets for me.  I wound up on the edge of town "
+"layin' low under an abandoned RV for a few hours.  By then… well, they had "
+"some other big problems to deal with.  For a little bit.  Might've survived "
+"if they hadn't blown their wads chasing me around the block."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:m"
+msgid ""
+"'cuz I know how cops think.  If you can call it that.  Early days, they were "
+"still going after alarms in case it meant, I dunno, survivors.  You smack "
+"some fucker's sports car, it starts wailing, the cops come to take a look and"
+" you can walk right behind 'em.  That's the thing about cops; they follow "
+"orders, right?  Even when the world's comin' apart.  I kept my head down "
+"until I got past the worst of it, but then, lucky me, I got sergeant "
+"brainiac.  Figured out why someone would trip an alarm on purpose, had them "
+"case all up and down the streets for me.  I wound up on the edge of town "
+"layin' low under an abandoned RV for a few hours.  By then… well, they had "
+"some other big problems to deal with.  For a little bit.  Might've survived "
+"if they hadn't blown their wads chasing me around the block."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:n"
+msgid ""
+"'cuz I know how cops think.  If you can call it that.  Early days, they were "
+"still going after alarms in case it meant, I dunno, survivors.  You smack "
+"some fucker's sports car, it starts wailing, the cops come to take a look and"
+" you can walk right behind 'em.  That's the thing about cops; they follow "
+"orders, right?  Even when the world's comin' apart.  I kept my head down "
+"until I got past the worst of it, but then, lucky me, I got sergeant "
+"brainiac.  Figured out why someone would trip an alarm on purpose, had them "
+"case all up and down the streets for me.  I wound up on the edge of town "
+"layin' low under an abandoned RV for a few hours.  By then… well, they had "
+"some other big problems to deal with.  For a little bit.  Might've survived "
+"if they hadn't blown their wads chasing me around the block."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:f"
+msgid ""
+"Bullshit, that's what.  The assholes busted me on possession, wasn't even my "
+"fuckin' stash.  I don't do crack, man, that shit's nasty, I was just carryin'"
+" it for my buddy Johnny.  Y'know, this might be a <freaking> hellhole now, "
+"but if I've seen the last power-trippin' asshole cop, it might all be worth "
+"it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:m"
+msgid ""
+"Bullshit, that's what.  The assholes busted me on possession, wasn't even my "
+"fuckin' stash.  I don't do crack, man, that shit's nasty, I was just carryin'"
+" it for my buddy Johnny.  Y'know, this might be a <freaking> hellhole now, "
+"but if I've seen the last power-trippin' asshole cop, it might all be worth "
+"it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_1.json
+msgctxt "npc:n"
+msgid ""
+"Bullshit, that's what.  The assholes busted me on possession, wasn't even my "
+"fuckin' stash.  I don't do crack, man, that shit's nasty, I was just carryin'"
+" it for my buddy Johnny.  Y'know, this might be a <freaking> hellhole now, "
+"but if I've seen the last power-trippin' asshole cop, it might all be worth "
+"it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_2.json
+msgctxt "npc:f"
+msgid ""
+"I was fricking lucky for <the_cataclysm>.  I was squatting in a warehouse out"
+" on the edge of town.  I was in a real shitty place, and my crew had mostly "
+"just been arrested in a big drug bust, but I had skipped out.  I was scared "
+"they were gonna think I ratted 'em out and come get me, but hey, no worries "
+"about that now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_2.json
+msgctxt "npc:m"
+msgid ""
+"I was fricking lucky for <the_cataclysm>.  I was squatting in a warehouse out"
+" on the edge of town.  I was in a real shitty place, and my crew had mostly "
+"just been arrested in a big drug bust, but I had skipped out.  I was scared "
+"they were gonna think I ratted 'em out and come get me, but hey, no worries "
+"about that now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/criminal_2.json
+msgctxt "npc:n"
+msgid ""
+"I was fricking lucky for <the_cataclysm>.  I was squatting in a warehouse out"
+" on the edge of town.  I was in a real shitty place, and my crew had mostly "
+"just been arrested in a big drug bust, but I had skipped out.  I was scared "
+"they were gonna think I ratted 'em out and come get me, but hey, no worries "
+"about that now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/Backgrounds/cyborg_1.json
+msgid "You're okay, it's over now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:f"
+msgid ""
+"I made it to one of those <freaking> evac shelters, but it was almost worse "
+"than what I left behind.  Escaped from there, been on the run since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:m"
+msgid ""
+"I made it to one of those <freaking> evac shelters, but it was almost worse "
+"than what I left behind.  Escaped from there, been on the run since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:n"
+msgid ""
+"I made it to one of those <freaking> evac shelters, but it was almost worse "
+"than what I left behind.  Escaped from there, been on the run since."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:f"
+msgid ""
+"Not exactly.  After a while, I got brave.  I started venturing towards the "
+"outskirts of town, picking off zombies here and there.  I learned about "
+"traveling in at night to avoid all but those <freaking> shadow-zombies, and "
+"that got me pretty far.  Eventually I cleared out a cozy little nook for "
+"myself and started really feeling comfortable.  I guess I got a bit "
+"complacent."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:m"
+msgid ""
+"Not exactly.  After a while, I got brave.  I started venturing towards the "
+"outskirts of town, picking off zombies here and there.  I learned about "
+"traveling in at night to avoid all but those <freaking> shadow-zombies, and "
+"that got me pretty far.  Eventually I cleared out a cozy little nook for "
+"myself and started really feeling comfortable.  I guess I got a bit "
+"complacent."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:n"
+msgid ""
+"Not exactly.  After a while, I got brave.  I started venturing towards the "
+"outskirts of town, picking off zombies here and there.  I learned about "
+"traveling in at night to avoid all but those <freaking> shadow-zombies, and "
+"that got me pretty far.  Eventually I cleared out a cozy little nook for "
+"myself and started really feeling comfortable.  I guess I got a bit "
+"complacent."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:f"
+msgid ""
+"I thought I had those damned <zombies> figured out.  I got braver, started "
+"heading out by day more and more.  One of those screamer zombies spotted me "
+"and called in a horde, with a giant <freaking> beastie at the head of it, the"
+" size of a Volkswagen and all covered in bone plates.  I know when I'm "
+"outclassed.  The big guy was held back by his own horde of buddies, and I "
+"managed to book it back to my place.  I closed the windows, locked it down, "
+"but it was too late.  The giant followed me and just started hammering right "
+"through the walls.  I grabbed what I could and made for the horizon.  Last I "
+"saw of my squat, it was collapsing on the bastard.  For all I know, it died "
+"in the crash, but I am not going back to find out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:m"
+msgid ""
+"I thought I had those damned <zombies> figured out.  I got braver, started "
+"heading out by day more and more.  One of those screamer zombies spotted me "
+"and called in a horde, with a giant <freaking> beastie at the head of it, the"
+" size of a Volkswagen and all covered in bone plates.  I know when I'm "
+"outclassed.  The big guy was held back by his own horde of buddies, and I "
+"managed to book it back to my place.  I closed the windows, locked it down, "
+"but it was too late.  The giant followed me and just started hammering right "
+"through the walls.  I grabbed what I could and made for the horizon.  Last I "
+"saw of my squat, it was collapsing on the bastard.  For all I know, it died "
+"in the crash, but I am not going back to find out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_1.json
+msgctxt "npc:n"
+msgid ""
+"I thought I had those damned <zombies> figured out.  I got braver, started "
+"heading out by day more and more.  One of those screamer zombies spotted me "
+"and called in a horde, with a giant <freaking> beastie at the head of it, the"
+" size of a Volkswagen and all covered in bone plates.  I know when I'm "
+"outclassed.  The big guy was held back by his own horde of buddies, and I "
+"managed to book it back to my place.  I closed the windows, locked it down, "
+"but it was too late.  The giant followed me and just started hammering right "
+"through the walls.  I grabbed what I could and made for the horizon.  Last I "
+"saw of my squat, it was collapsing on the bastard.  For all I know, it died "
+"in the crash, but I am not going back to find out."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_2.json
+msgctxt "npc:f"
+msgid ""
+"Same as most people who didn't get killed straight up during the riots.  I "
+"went to one of those stupid <freaking> evacuation death traps.  I actually "
+"lived there for a while with three others.  One guy who I guess had watched a"
+" lot of movies kinda ran the show, because he seemed to really know what was "
+"going on.  Spoiler alert: he fucking didn't."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_2.json
+msgctxt "npc:m"
+msgid ""
+"Same as most people who didn't get killed straight up during the riots.  I "
+"went to one of those stupid <freaking> evacuation death traps.  I actually "
+"lived there for a while with three others.  One guy who I guess had watched a"
+" lot of movies kinda ran the show, because he seemed to really know what was "
+"going on.  Spoiler alert: he fucking didn't."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_2.json
+msgctxt "npc:n"
+msgid ""
+"Same as most people who didn't get killed straight up during the riots.  I "
+"went to one of those stupid <freaking> evacuation death traps.  I actually "
+"lived there for a while with three others.  One guy who I guess had watched a"
+" lot of movies kinda ran the show, because he seemed to really know what was "
+"going on.  Spoiler alert: he fucking didn't."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/evacuee_4.json
+msgid ""
+"What's this, some kinda Back to the Future thing?  How could you not know "
+"what happened?  The world damn well ended, that's what.  And it didn't start "
+"with an earthquake, birds, snakes, or airplanes.  It started with riots, and "
+"they had to dispatch cops and then the military to take care of the "
+"<freaking> criminals.  The government tried to pad it claiming it was some "
+"kind of mind control, but I didn't see too much different from the usual "
+"bullshit: entitled babies looking for an excuse to break the law.  It just "
+"got way worse, this time, until it was time to get out of dodge.  I heard "
+"rumors they were even bombing some of the urban centers to try to control it "
+"- which, I have to admit, is maybe a bit too hard-core."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:f"
+msgid ""
+"My evac shelter got swarmed by some of those bees, the ones the size of dogs."
+"  I took out a few with a plank, but pretty quick I realized it was either "
+"head for the hills or get stuck like a pig.  The rest is history."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:m"
+msgid ""
+"My evac shelter got swarmed by some of those bees, the ones the size of dogs."
+"  I took out a few with a plank, but pretty quick I realized it was either "
+"head for the hills or get stuck like a pig.  The rest is history."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:n"
+msgid ""
+"My evac shelter got swarmed by some of those bees, the ones the size of dogs."
+"  I took out a few with a plank, but pretty quick I realized it was either "
+"head for the hills or get stuck like a pig.  The rest is history."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:f"
+msgid ""
+"Yeah, I'm sure you've seen them, they're everywhere.  Like something out of "
+"an old sci-fi movie.  Some of the others in the evac shelter got stung, it "
+"was no joke.  I didn't stick around to see what the lasting effect was "
+"though.  I'm not ashamed to admit I ran like a <freaking> chicken."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:m"
+msgid ""
+"Yeah, I'm sure you've seen them, they're everywhere.  Like something out of "
+"an old sci-fi movie.  Some of the others in the evac shelter got stung, it "
+"was no joke.  I didn't stick around to see what the lasting effect was "
+"though.  I'm not ashamed to admit I ran like a <freaking> chicken."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:n"
+msgid ""
+"Yeah, I'm sure you've seen them, they're everywhere.  Like something out of "
+"an old sci-fi movie.  Some of the others in the evac shelter got stung, it "
+"was no joke.  I didn't stick around to see what the lasting effect was "
+"though.  I'm not ashamed to admit I ran like a <freaking> chicken."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:f"
+msgid ""
+"Well, excuse me if I didn't stop to fucking ask what kind of killer bugs they"
+" were."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:m"
+msgid ""
+"Well, excuse me if I didn't stop to fucking ask what kind of killer bugs they"
+" were."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/evacuee_5.json
+msgctxt "npc:n"
+msgid ""
+"Well, excuse me if I didn't stop to fucking ask what kind of killer bugs they"
+" were."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/ex_pilot_1.json
+msgctxt "npc:f"
+msgid ""
+"Where was I?  I don't even know, what day do you think it all ended?  When I "
+"thought shit was hitting the fan I took some vacation time at the airline.  "
+"Next day, somebody bombed them.  No shit, just like Oklahoma city in '95.  "
+"Thought that was a good sign to get out so I emailed some family out in the "
+"country that I was coming over and got on the road.  Didn't even make it to "
+"the interstate before I ran into the cops setting up a roadblock.  I drove "
+"off the road and it all gets fuzzy from there.  Next town I got to was "
+"already lynching people from the streetlights… I didn't stop for gas.  Lost "
+"the car at some point, lost track of the days too.  Not sure I ever got a "
+"reply to my email."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/ex_pilot_1.json
+msgctxt "npc:m"
+msgid ""
+"Where was I?  I don't even know, what day do you think it all ended?  When I "
+"thought shit was hitting the fan I took some vacation time at the airline.  "
+"Next day, somebody bombed them.  No shit, just like Oklahoma city in '95.  "
+"Thought that was a good sign to get out so I emailed some family out in the "
+"country that I was coming over and got on the road.  Didn't even make it to "
+"the interstate before I ran into the cops setting up a roadblock.  I drove "
+"off the road and it all gets fuzzy from there.  Next town I got to was "
+"already lynching people from the streetlights… I didn't stop for gas.  Lost "
+"the car at some point, lost track of the days too.  Not sure I ever got a "
+"reply to my email."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/ex_pilot_1.json
+msgctxt "npc:n"
+msgid ""
+"Where was I?  I don't even know, what day do you think it all ended?  When I "
+"thought shit was hitting the fan I took some vacation time at the airline.  "
+"Next day, somebody bombed them.  No shit, just like Oklahoma city in '95.  "
+"Thought that was a good sign to get out so I emailed some family out in the "
+"country that I was coming over and got on the road.  Didn't even make it to "
+"the interstate before I ran into the cops setting up a roadblock.  I drove "
+"off the road and it all gets fuzzy from there.  Next town I got to was "
+"already lynching people from the streetlights… I didn't stop for gas.  Lost "
+"the car at some point, lost track of the days too.  Not sure I ever got a "
+"reply to my email."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/Backgrounds/ex_pilot_1.json
+msgid "You were a pilot?  Can you fly a helicopter?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ 'pot' and 'mary jane' are both slang terms for marijuana, a recreational
+#. drug that's federally illegal in the US.  In several states, possessing more
+#. than a certain quantity of marijuana is considered 'possession with intent
+#. to distribute' and can incur a felony conviction. Some states also allow
+#. conviction records of non-violent drug offenses to be 'sealed' (restricted
+#. from being publicly published or considered by the court) if the convicted
+#. person does not commit further crimes.
+#: data/json/npcs/Backgrounds/ex_pilot_1.json
+msgid ""
+"Uh, well probably?  I flew fixed-wing for work, but my interest in flying was"
+" for helitack - uh, that's helicopter transport for firefighting teams.  "
+"Anyway, I got a stupid pot conviction and that disqualified me.  Took a job "
+"with the airline to keep fresh until I could finish probation and get the "
+"records sealed.  Funny, you smoke some mary jane and they say you can't save "
+"lives with firefighting.  But they'll let you fly a plane with hundreds of "
+"people in it, not like anyone's ever crashed one of those on purpose before."
+"  So yeah, get me a helicopter and I'd be happy to fly."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgid ""
+"That guy started a frenzy.  People were already panicked.  There was an armed"
+" guy overseeing the transport, acting like a cop but really he was just some "
+"dumb-ass kid they'd handed a rifle to.  He tried to calm things down, and I "
+"guess it actually worked for a bit, although the 'kill the infected' bunch "
+"were freaked out and were clearly ready to jump the moment the granny with "
+"the cut on her arm started frothing at the mouth.  They started acting up "
+"again when we got to the camp.  That didn't go well for them.  A few heavily "
+"armed soldiers dragged them away, and I never saw them again."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "npc:f"
+msgid ""
+"That place was chaos.  I only stayed a few hours.  They had a big backhoe "
+"running, digging a huge pit in a cordoned section they wouldn't let us near."
+"  Well, I managed to sneak over that way, and saw them dumping load after "
+"load of the dead in the pit, pouring dirt back over them even as they revived"
+" and tried to climb out.  Even with all the shit I've seen since, it haunts "
+"me.  I knew then I had to get out.  Luckily for me, we were attacked the next"
+" morning by some giant horror, a kind I haven't really seen since then.  "
+"While the guards were busy with that, I grabbed some supplies I'd stocked up "
+"over the night and I fucked right out of there.  A few others tried to get "
+"the fuck out with me, but as far as I know I was the only lucky one."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "npc:m"
+msgid ""
+"That place was chaos.  I only stayed a few hours.  They had a big backhoe "
+"running, digging a huge pit in a cordoned section they wouldn't let us near."
+"  Well, I managed to sneak over that way, and saw them dumping load after "
+"load of the dead in the pit, pouring dirt back over them even as they revived"
+" and tried to climb out.  Even with all the shit I've seen since, it haunts "
+"me.  I knew then I had to get out.  Luckily for me, we were attacked the next"
+" morning by some giant horror, a kind I haven't really seen since then.  "
+"While the guards were busy with that, I grabbed some supplies I'd stocked up "
+"over the night and I fucked right out of there.  A few others tried to get "
+"the fuck out with me, but as far as I know I was the only lucky one."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "npc:n"
+msgid ""
+"That place was chaos.  I only stayed a few hours.  They had a big backhoe "
+"running, digging a huge pit in a cordoned section they wouldn't let us near."
+"  Well, I managed to sneak over that way, and saw them dumping load after "
+"load of the dead in the pit, pouring dirt back over them even as they revived"
+" and tried to climb out.  Even with all the shit I've seen since, it haunts "
+"me.  I knew then I had to get out.  Luckily for me, we were attacked the next"
+" morning by some giant horror, a kind I haven't really seen since then.  "
+"While the guards were busy with that, I grabbed some supplies I'd stocked up "
+"over the night and I fucked right out of there.  A few others tried to get "
+"the fuck out with me, but as far as I know I was the only lucky one."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "u:f"
+msgid ""
+"Woof, you ready for a real hot take?  The <freaking> government did this to "
+"us.  Intentionally, or at least sort-of intentionally."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "u:m"
+msgid ""
+"Woof, you ready for a real hot take?  The <freaking> government did this to "
+"us.  Intentionally, or at least sort-of intentionally."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgctxt "u:n"
+msgid ""
+"Woof, you ready for a real hot take?  The <freaking> government did this to "
+"us.  Intentionally, or at least sort-of intentionally."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/fema_evacuee_1.json
+msgid ""
+"Damn right.  They lied to us for god knows how long about what was going on "
+"because they didn't want us to figure it out.  It probably started as a way "
+"to keep the people in line, but it backfired somehow.  My guess is they tried"
+" to de-educate us, tried to mislead us, and when that wasn't working they "
+"tried actual drugs in the water to make us stupid or something.  Instead of "
+"just stupid, some people got violent.  Then they tried to leverage that to "
+"put in martial law, but that didn't work and they wound up fighting hordes of"
+" people.  Only they didn't realize their <freaking> brain drugs were some "
+"kind of mutagen that turn people into zombies."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:f"
+msgid ""
+"I was at work at the hospital, when it all went down.  It's a bit of a blur."
+"  For a while there were weird reports, stuff that sounded unbelievable about"
+" patients getting back up after dying, but mostly things were business as "
+"usual.  Then, towards the end, stuff just skyrocketed.  We thought it was a "
+"Chinese attack, and that's what we were being told.  People coming in crazed,"
+" covered in wounds from bullets and bites.  About halfway through my shift I…"
+" well, I broke.  I'd seen such horrible injuries, and then I…  <swear!>  I "
+"can't even talk about it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:m"
+msgid ""
+"I was at work at the hospital, when it all went down.  It's a bit of a blur."
+"  For a while there were weird reports, stuff that sounded unbelievable about"
+" patients getting back up after dying, but mostly things were business as "
+"usual.  Then, towards the end, stuff just skyrocketed.  We thought it was a "
+"Chinese attack, and that's what we were being told.  People coming in crazed,"
+" covered in wounds from bullets and bites.  About halfway through my shift I…"
+" well, I broke.  I'd seen such horrible injuries, and then I…  <swear!>  I "
+"can't even talk about it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:n"
+msgid ""
+"I was at work at the hospital, when it all went down.  It's a bit of a blur."
+"  For a while there were weird reports, stuff that sounded unbelievable about"
+" patients getting back up after dying, but mostly things were business as "
+"usual.  Then, towards the end, stuff just skyrocketed.  We thought it was a "
+"Chinese attack, and that's what we were being told.  People coming in crazed,"
+" covered in wounds from bullets and bites.  About halfway through my shift I…"
+" well, I broke.  I'd seen such horrible injuries, and then I…  <swear!>  I "
+"can't even talk about it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:f"
+msgid ""
+"Well, I still didn't have any food.  Eventually I had to climb down the side "
+"of the building… so I did, as quietly as I could.  It was night, and I have "
+"pretty good nightvision.  Apparently the zombies don't, because I was able to"
+" slip right past them and steal a bicycle that was just laying on the side of"
+" the road.  I'd kind of scouted out my route from above… I'm not from a big "
+"city, the hospital was the tallest building around.  I avoided the major "
+"military blockades, and headed out of town towards a friend's old cabin.  I "
+"had to fight off a couple of the <zombies>, but I managed to avoid any big "
+"fuss, by some miracle."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:m"
+msgid ""
+"Well, I still didn't have any food.  Eventually I had to climb down the side "
+"of the building… so I did, as quietly as I could.  It was night, and I have "
+"pretty good nightvision.  Apparently the zombies don't, because I was able to"
+" slip right past them and steal a bicycle that was just laying on the side of"
+" the road.  I'd kind of scouted out my route from above… I'm not from a big "
+"city, the hospital was the tallest building around.  I avoided the major "
+"military blockades, and headed out of town towards a friend's old cabin.  I "
+"had to fight off a couple of the <zombies>, but I managed to avoid any big "
+"fuss, by some miracle."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgctxt "npc:n"
+msgid ""
+"Well, I still didn't have any food.  Eventually I had to climb down the side "
+"of the building… so I did, as quietly as I could.  It was night, and I have "
+"pretty good nightvision.  Apparently the zombies don't, because I was able to"
+" slip right past them and steal a bicycle that was just laying on the side of"
+" the road.  I'd kind of scouted out my route from above… I'm not from a big "
+"city, the hospital was the tallest building around.  I avoided the major "
+"military blockades, and headed out of town towards a friend's old cabin.  I "
+"had to fight off a couple of the <zombies>, but I managed to avoid any big "
+"fuss, by some miracle."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid "Any chance you could point the way to that cabin for me?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid "I suppose it couldn't hurt now.  I doubt anyone's still there anyway."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid ""
+"Yeah, fat chance I'm giving up that kind of personal information to someone I"
+" barely know.  What are you trying to pull?"
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/Backgrounds/hospital_2.json
+#: data/json/npcs/random_encounters/camper_van_traveler.json
+msgid "Check out that cabin"
+msgstr ""
+
+#. ~ Description of mission "Check out that cabin"
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid "Maybe there's something left in that cabin you heard about."
+msgstr ""
+
+#. ~ Dialogue line in mission "Check out that cabin"
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid "Any luck finding the cabin?"
+msgstr ""
+
+#. ~ Dialogue line in mission "Check out that cabin"
+#: data/json/npcs/Backgrounds/hospital_2.json
+msgid ""
+"Thanks so much for coming back here with me!  I'm not sure I would have ever "
+"gotten here alive."
+msgstr ""
+
+#. ~ Dialogue line in mission "Check out that cabin"
+#. ~ Dialogue line in mission "Check out that farm"
+#: data/json/npcs/Backgrounds/hospital_2.json
+#: data/json/npcs/Backgrounds/rural_1.json
+msgid "Great!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:f"
+msgid ""
+"The morgue.  Seems like a dumb place to go at the start of a zombie "
+"apocalypse, right?  Thing is, nobody had made it to the morgue in quite a "
+"while, the bodies were reanimating too quickly and the staff were just too "
+"busy.  I was shaking and puking and I could see the world was ending… I "
+"bundled myself up, grabbed a few snacks from the pathologist's desk, and "
+"crawled into one of those drawers to contemplate the end of the world.  After"
+" breaking the handle to make sure it couldn't lock behind me, of course.  It "
+"was safe and quiet in there.  Not just my cubby, the whole morgue.  At first "
+"it was because nobody was dumb enough to come down there except me.  Later, "
+"it was because nobody was left."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:m"
+msgid ""
+"The morgue.  Seems like a dumb place to go at the start of a zombie "
+"apocalypse, right?  Thing is, nobody had made it to the morgue in quite a "
+"while, the bodies were reanimating too quickly and the staff were just too "
+"busy.  I was shaking and puking and I could see the world was ending… I "
+"bundled myself up, grabbed a few snacks from the pathologist's desk, and "
+"crawled into one of those drawers to contemplate the end of the world.  After"
+" breaking the handle to make sure it couldn't lock behind me, of course.  It "
+"was safe and quiet in there.  Not just my cubby, the whole morgue.  At first "
+"it was because nobody was dumb enough to come down there except me.  Later, "
+"it was because nobody was left."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:n"
+msgid ""
+"The morgue.  Seems like a dumb place to go at the start of a zombie "
+"apocalypse, right?  Thing is, nobody had made it to the morgue in quite a "
+"while, the bodies were reanimating too quickly and the staff were just too "
+"busy.  I was shaking and puking and I could see the world was ending… I "
+"bundled myself up, grabbed a few snacks from the pathologist's desk, and "
+"crawled into one of those drawers to contemplate the end of the world.  After"
+" breaking the handle to make sure it couldn't lock behind me, of course.  It "
+"was safe and quiet in there.  Not just my cubby, the whole morgue.  At first "
+"it was because nobody was dumb enough to come down there except me.  Later, "
+"it was because nobody was left."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:f"
+msgid ""
+"The door was good heavy steel with no window, and there was a staff room with"
+" a fully stocked fridge, so when it became clear that nothing was going to "
+"get any better on its own, I set up shop.  I stayed down there for a couple "
+"days.  I could hear explosions and screaming for the first while, then just "
+"guns and explosions, and then it got really quiet.  Eventually, I ran out of "
+"snacks, so I worked up the nerve to climb out a window and check out the city"
+" by night.  I used that place as a base for a little while, but the area "
+"around the hospital was too hot to keep it up, so I made my way out to "
+"greener pastures.  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:m"
+msgid ""
+"The door was good heavy steel with no window, and there was a staff room with"
+" a fully stocked fridge, so when it became clear that nothing was going to "
+"get any better on its own, I set up shop.  I stayed down there for a couple "
+"days.  I could hear explosions and screaming for the first while, then just "
+"guns and explosions, and then it got really quiet.  Eventually, I ran out of "
+"snacks, so I worked up the nerve to climb out a window and check out the city"
+" by night.  I used that place as a base for a little while, but the area "
+"around the hospital was too hot to keep it up, so I made my way out to "
+"greener pastures.  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/hospital_3.json
+msgctxt "npc:n"
+msgid ""
+"The door was good heavy steel with no window, and there was a staff room with"
+" a fully stocked fridge, so when it became clear that nothing was going to "
+"get any better on its own, I set up shop.  I stayed down there for a couple "
+"days.  I could hear explosions and screaming for the first while, then just "
+"guns and explosions, and then it got really quiet.  Eventually, I ran out of "
+"snacks, so I worked up the nerve to climb out a window and check out the city"
+" by night.  I used that place as a base for a little while, but the area "
+"around the hospital was too hot to keep it up, so I made my way out to "
+"greener pastures.  And here I am."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/hunter_2.json
+msgid ""
+"My brother and I were out on a hunting trip.  We saw helicopters overhead… "
+"big, military ones, loaded up with crazy high-end military stuff like you "
+"only see on TV.  Laser cannons even.  They were heading in the direction of "
+"our parent's ranch.  Something about it really shook us up, and we started "
+"heading back that way… we weren't that far off when we saw this huge, "
+"floating eyeball appear out of fucking nowhere.  Ha.  Hard to believe we're "
+"in a time where I don't feel like I need to convince you I'm telling the "
+"truth."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/Backgrounds/left_for_dead_1.json
+msgid ""
+"Okay, so, hear me out.  This might sound crazy, but we're dealing with the "
+"<freaking> walking dead, so I think I get a pass on that.  You know your "
+"Greek mythology at all?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:f"
+msgid ""
+"Yeah, you're telling me.  The rioters… they weren't even like humans, let "
+"alone protesters.  Nothing like any protest I'd ever been in before.  That "
+"didn't stop me.  I joined them, and I was as bad as a bunch of them.  Smashed"
+" windows, beat up bystanders, burnt cars.  I remember ripping riot gear off a"
+" cop and… nevermind.  I don't want to remember that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:m"
+msgid ""
+"Yeah, you're telling me.  The rioters… they weren't even like humans, let "
+"alone protesters.  Nothing like any protest I'd ever been in before.  That "
+"didn't stop me.  I joined them, and I was as bad as a bunch of them.  Smashed"
+" windows, beat up bystanders, burnt cars.  I remember ripping riot gear off a"
+" cop and… nevermind.  I don't want to remember that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:n"
+msgid ""
+"Yeah, you're telling me.  The rioters… they weren't even like humans, let "
+"alone protesters.  Nothing like any protest I'd ever been in before.  That "
+"didn't stop me.  I joined them, and I was as bad as a bunch of them.  Smashed"
+" windows, beat up bystanders, burnt cars.  I remember ripping riot gear off a"
+" cop and… nevermind.  I don't want to remember that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:f"
+msgid ""
+"So, I remember the time leading up to the riots, same as anyone.  Things were"
+" bad, there were some really awful crimes being reported in the news, and "
+"there was a lot of racial tension as usual from the way the cops were "
+"handling it.  Then people started rioting, which isn't unusual, but it was "
+"weird the kind of places that the riots were starting in.  Like, upper middle"
+" class neighborhoods, Midwestern small towns, things like that.  Anyway, I "
+"joined the riots and I don't remember a lot of clear stuff after that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:m"
+msgid ""
+"So, I remember the time leading up to the riots, same as anyone.  Things were"
+" bad, there were some really awful crimes being reported in the news, and "
+"there was a lot of racial tension as usual from the way the cops were "
+"handling it.  Then people started rioting, which isn't unusual, but it was "
+"weird the kind of places that the riots were starting in.  Like, upper middle"
+" class neighborhoods, Midwestern small towns, things like that.  Anyway, I "
+"joined the riots and I don't remember a lot of clear stuff after that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/Backgrounds/left_for_dead_3.json
+msgctxt "npc:n"
+msgid ""
+"So, I remember the time leading up to the riots, same as anyone.  Things were"
+" bad, there were some really awful crimes being reported in the news, and "
+"there was a lot of racial tension as usual from the way the cops were "
+"handling it.  Then people started rioting, which isn't unusual, but it was "
+"weird the kind of places that the riots were starting in.  Like, upper middle"
+" class neighborhoods, Midwestern small towns, things like that.  Anyway, I "
+"joined the riots and I don't remember a lot of clear stuff after that."
+msgstr ""

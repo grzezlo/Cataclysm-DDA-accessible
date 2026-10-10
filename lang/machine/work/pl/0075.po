@@ -1,0 +1,1575 @@
+# Batch 75 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a gun!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a rifle!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a rifle!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s lunges their bayonet at your %2$s, stabbing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s lunges their bayonet at <npcname>'s %2$s, stabbing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%s thrusts their bayonet at you, but you evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%s thrusts their bayonet at <npcname>, but they evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts their bayonet at your %2$s, but it glances off your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s thrusts their bayonet at <npcname>'s %2$s, but glances off armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a shiv!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/feral_weapon_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a shiv!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%s strains for a moment, and its claws are covered in a thick film of acid!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes your %2$s, covering it in acid!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at <npcname>, covering them in acid!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to slash at your %2$s, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to slash at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes your %2$s, covering the armor in acid!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at <npcname>, covering their armor in acid!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s pauses, and the swollen organ on its back starts glowing brighter!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s tries to grab you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s tries to grab <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs your %2$s with another appendage!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs <npcname>'s %2$s with another appendage!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs your %2$s with its other hand!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs <npcname>'s %2$s with its other hand!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's arms fly out at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's arms fly out at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs you by your %2$s and drags you away!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s grabs <npcname>'s %2$s and drags them away!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s drags you!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s drags <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s bites your %2$s and latches on tightly!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s bites <npcname>'s %2$s and latches on tightly!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/json/monsters/nether.json
+#, c-format
+msgid "%1$s tries to bite you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/json/monsters/nether.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s tries to bite <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s latches onto your %2$s without penetrating your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s latches onto <npcname>'s %2$s without penetrating their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's clubbed tail whips out and hits your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's tail stings <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to club you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to club <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's clubbed tail bounces off your %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to club <npcname>, but it fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s impales your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s impales <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s tries to impale your %2$s, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/monsterattacks.json
+#, c-format
+msgid "%1$s tries to impale <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to impale your %2$s, but fails to penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to impale <npcname>, but fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s buries its beak in your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s buries its beak in <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s tries to peck you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s tries to peck <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s tries to peck your %2$s, but fails to penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Magiclysm/monsters/feral_fantasy_species.json
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+#, c-format
+msgid "%1$s tries to peck <npcname>, but fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s buries its wickedly sharp beak into your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s buries its wickedly sharp beak in <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to drive its beak into you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to drive its beak into <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to drive its beak into your %2$s, but fails to penetrate your "
+"armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to drive its beak into <npcname>, but fails to penetrate their "
+"armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its tentacle at your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its tentacle at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's tentacle snaps at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's tentacle snaps at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's tentacle lashes out at you without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's tentacle lashes out at <npcname> without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its barbed tentacle at your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its barbed tentacle at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's barbed tentacle snaps at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's barbed tentacle snaps at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's barbed tentacle lashes out at you without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s's barbed tentacle lashes out at <npcname> without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its long barbed tentacle at your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s snaps its long barbed tentacle at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's long barbed tentacle snaps at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's long barbed tentacle snaps at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's long barbed tentacle lashes out at you without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s's long barbed tentacle lashes out at <npcname> without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's head shoots out, and its teeth sink into your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's head shoots out, and its teeth sink into <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's head extends to bite you, but you dodge and the head sails past!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%s's head extends to bite <npcname>, but they dodge and the head sails past!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's head hits your %2$s, but glances off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's head hits <npcname>, but glances off their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its arms at you, and its claws rake your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its arms at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s thrusts its arms at you, but you evade the stretched arm!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's thrusts its arms at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's arms hit your %2$s, but they glance off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's arms hit <npcname>, but they glance off their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lashes its arms at you, hitting your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lashes its arms at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s lashes its arms at you, but you evade them!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's lashes its arms at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s attempts to push you away with its arms."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s attempts to push <npcname> away."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s stares at you intently and a sudden wind buffets you!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s stares intently at <npcname> and a hurricane force wind hits them!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s stares at you, but the wind blows past you!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s's stares at <npcname>, but the wind blows past them!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's wind buffets your %2$s, but it doesn't catch hold."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's winds hit <npcname>, but it doesn't catch hold."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts a claw at your %2$s, slashing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts a claw at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s thrusts a claw at you, but you evade it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s thrusts a claw at <npcname>, but they evade it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts a claw at your %2$s, but glances off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts a claw at <npcname>, but glances off their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at your neck, cutting your throat!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s slashes at your neck!  You duck!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s slashes at <npcname>, but they duck!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at your neck, but glances off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slashes at <npcname>, but glances off armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s takes a powerful swing at your %2$s, pulverizing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s takes a powerful swing at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s takes a powerful swing at you, but you dodge it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s takes a powerful swing at <npcname>, who dodges it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s takes a swing at you, but it's blunted by your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s takes a swing at <npcname>, but they appear unharmed."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s brutally rams you in the %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s brutally rams <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s flicks its horns at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s flicks its horns at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s rams your %2$s, but you hold steady."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s rams <npcname>, but they hold steady."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/bloodsuckers.json
+#, c-format
+msgid "%1$s claws at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/bloodsuckers.json
+#, c-format
+msgid "%1$s tries to claw at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/bloodsuckers.json
+#, c-format
+msgid "%1$s claws at your %2$s, but fails to penetrate armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Xedra_Evolved/monsters/bloodsuckers.json
+#, c-format
+msgid "%1$s tries to claw at <npcname>, but fails to penetrate armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s claws at your %2$s while holding you!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s claws at <npcname> while holding them!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slams into your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slams into <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to slam into you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to slam into <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slams into your %2$s, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s slams into <npcname>, but their armor protects them."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s stings your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s stings <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to sting you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to sting <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to sting your %2$s, but it fails to penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to sting <npcname>, but it fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's stinger tail whips out and hits your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's stinger bounces off your %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s gores your %2$s with its antlers!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s gores <npcname> with its antlers!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to gore you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to gore <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s rams its antlers into your %2$s, but it bounces off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to gore <npcname>, but it fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s grasps at you with silk-covered legs, engulfing you in sticky webs!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s grabs <npcname> and covers them in sticky webs!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s hits your legs, causing you to get knocked on your back!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s knocks <npcname> prone!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s goes for your legs!  You duck!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s goes <npcname>'s legs, but they duck!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to knock you down, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to knock <npcname> down, but their armor protects them."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s kicks your %2$s and slams you to the ground!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s kicks <npcname> and slams them to the ground!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to kick your %2$s but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%s tries to kick and knock down <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to kick %2$s and knock you down, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to kick and knock <npcname> down, but their armor protects them."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lunges and impales your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lunges and impales <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lunges and tries to impale your %2$s, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s lunges and tries to impale <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s lunges and tries to impale your %2$s, but fails to penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %1$s sinks its ovipositor into <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s tries to land on you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %1$s tries to land on <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %1$s lands on your %2$s, but can't penetrate your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %1$s lands on <npcname>'s %2$s, but can't penetrate their armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "Using its filaments, the %s pulls you close."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "Using its filaments, the %s pulls <npcname> close."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s spews filaments at you but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s spews filaments at <npcname> but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"Using its filaments, the %s pulls you close but can't penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"Using its filaments, the %s pulls <npcname> close but can't penetrate their "
+"armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at your %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at <npcname> %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at your %2$s but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at <npcname> %2$s but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at your %2$s but can't penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s lashes at <npcname> %2$s but can't penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s wraps its filaments around your %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s wraps its filaments around <npcname>'s %2$s."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s tries to wrap its filaments around your %2$s but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s tries to wrap its filaments around <npcname> %2$s but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"The %s wraps its filaments around your %2$s but can't penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"The %s wraps its filaments around <npcname>'s %2$s but can't penetrate their "
+"armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s pulls your %2$s in its orifice and starts crushing it."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s pulls <npcname>'s %2$s in its orifice and starts crushing it."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s tries to pulls your %2$s in its orifice but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid "The %s tries to pulls <npcname>'s %2$s in its orifice but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"The %s pulls your %2$s in its orifice and starts crushing it but can't "
+"penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/monster_attacks.json
+#, c-format
+msgid ""
+"The %s pulls <npcname>'s %2$s in its orifice and starts crushing it but can't"
+" penetrate their armor."
+msgstr ""
+
+#. ~ Sound description of spell "soft_squelch ( Soft Squelch )"
+#: data/json/monster_special_attacks/spells.json
+msgid "a loud tearing!"
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_cellar_spider_leg"
+#: data/json/monster_special_attacks/spells.json
+msgid "The maimed leg wriggles loose!"
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_cellar_spider_leg"
+#: data/json/monster_special_attacks/spells.json
+msgid "The maimed legs wriggle loose!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_impossible_shape_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid ""
+"Your mind lurches, the shapes and figures dance across your vision, you feel "
+"like your head is going to explode."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_impossible_shape_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid ""
+"You can't look away from the impossible shape, staring at it is making you "
+"feel sick, you have to get away!"
+msgstr ""
+
+#. ~ Message of spell "create_noise ( Do noise )"
+#: data/json/monster_special_attacks/spells.json
+#, c-format
+msgid "The %s makes a deafening screech"
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_mon_reflection_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid "Your reflection feasts directly on your essence."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in effect in EoC
+#. "EOC_mon_reflection_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid "Your reflection uses your bond to feast on your essence."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. switch statement in effect in EoC "EOC_mon_reflection_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid "Your reflection clears the way between you two."
+msgstr ""
+
+#. ~ Player sees monster spawns in nested effect in then statement in nested
+#. effect in switch statement in nested effect in switch statement in effect in
+#. EoC "EOC_mon_reflection_attack"
+#: data/json/monster_special_attacks/spells.json
+msgid "Something deep inside you is manifested physically."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_FEAR_PARALYZE2"
+#: data/json/monster_special_attacks/spells.json
+msgid "The <npc_name> probes your mind, but is rebuffed!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_FEAR_PARALYZE3"
+#: data/json/monster_special_attacks/spells.json
+msgid "The terrifying visage of the <npc_name> paralyzes you."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_FEAR_PARALYZE3"
+#: data/json/monster_special_attacks/spells.json
+msgid "You manage to avoid staring at the horrendous <npc_name>."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_STARE2"
+#: data/json/monster_special_attacks/spells.json
+msgid "The <npc_name> stares at you, and you shudder."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_veiled_butterfly_irradiate"
+#: data/json/monster_special_attacks/spells.json
+msgid ""
+"The veiled butterfly's wings move in odd ways and a strange glow envelops "
+"you!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "void weaver effigy"
+msgid_plural "void weaver effigy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "void weaver effigy"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The severed leg of a void weaver, turned into some macabre ornament."
+msgstr ""
+
+#. ~ "description" action message of item "void weaver effigy"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "Touch the effigy."
+msgstr ""
+
+#. ~ Player message in effect in EoC "VOID_SPIDER_TEST_MAP" in use action of
+#. item "void weaver effigy"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The world warps."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#, c-format
+msgid ""
+"%1$s's immaterial limbs crawl over you and sink their fangs in your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#, c-format
+msgid "%1$s's hanging limbs try to bite you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#, c-format
+msgid "%1$s's hanging limbs try to bite <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#, c-format
+msgid ""
+"%1$s's hanging limbs try to bite your %2$s, but fails to penetrate your "
+"armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+#, c-format
+msgid ""
+"%1$s's hanging limbs try to bite <npcname>, but fails to penetrate their "
+"armor!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "webbed_place_void_spider" in nested EOCs
+#. in effect in EoC "EOC_IN_VOID_SPIDER_LAIR"
+#. ~ Player message in effect in EoC "time_place_void_spider" in nested EOCs in
+#. effect in EoC "EOC_IN_VOID_SPIDER_LAIR"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The emptiness shifts unnervingly, something is nearby."
+msgstr ""
+
+#. ~ Player makes sound in effect in EoC "void_spider_life_remaining" in nested
+#. EOCs in effect in EoC "EOC_VOID_SPIDER_CONTROL"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "the spider mimic an anguished scream"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VOID_SPIDER_DISTURBED_NEST"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The shadows of frenzied limbs slip into reality"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VOID_SPIDER_CAST_CHAOS_SWAP"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The cavern shifts under unseen pressure."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DISSOLVE_VOID_SPIDER_LAIR"
+#: data/json/monster_special_attacks/void_spider_mechanics.json
+msgid "The cavern folds itself beyond perception."
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_quadraphract_setup" in nested EOCs
+#. in effect in EoC "quadraphract_setup" in nested EOCs in effect in EoC
+#. "EOC_QUADRAPHRACT_CONTROL"
+#: data/json/monster_special_attacks/yrax_special_attacks.json
+msgid "You see the alien construct unfold itself in a single graceful motion."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "eoc_quadraphract_deltas"
+#: data/json/monster_special_attacks/yrax_special_attacks.json
+msgid "Shards of gleaming alloy detach from the quadraphract's surface!"
+msgstr ""
+
+#. ~ Message in effect in EoC "avatar_sees_quadraphract_smoke" in nested EOCs
+#. in effect in EoC "eoc_quadraphract_smoke"
+#: data/json/monster_special_attacks/yrax_special_attacks.json
+msgid "Several bomblets are expelled from the quadraphract's crown!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "leg" weakpoint
+#. ~ Sentence fragment describing a weakpoint for monster "warehouse spider"
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#: data/json/monsters/insect_spider.json
+msgid "a leg"
+msgstr ""
+
+#. ~ Sentence fragment describing the "leg_joint" weakpoint
+#. ~ Sentence fragment describing a weakpoint for monster "warehouse spider"
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#: data/json/monsters/insect_spider.json
+msgid "a joint"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "leg_joint" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's leg falls limp!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "leg_joint" weakpoint
+#. ~ Message describing the effect of hitting the "foreleg" weakpoint
+#. ~ Message describing the effect of hitting the "hindleg" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/amphibian_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's leg is disabled!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "acid_gland" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+msgid "the acid gland"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "acid_gland" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's acid glands are maimed!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "acid_gland" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's acid glands are destroyed!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "proboscis" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+msgid "the proboscis"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "proboscis" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's proboscis is maimed!"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "proboscis" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "The %s's proboscis is destroyed!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "armor_thin" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+msgid "a thin part of its armor"
+msgstr ""
+
+#. ~ Sentence fragment describing the "armor_thick" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+msgid "a thick part of its armor"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "armor_thick" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#: data/json/monster_weakpoints/arthropod_weakpoints.json
+#, c-format
+msgid "The %s's armor cracks!"
+msgstr ""
+
+#. ~ Sentence fragment describing the "capacitor" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+msgid "the glowing organ"
+msgstr ""
+
+#. ~ Message describing the effect of hitting the "capacitor" weakpoint
+#: data/json/monster_weakpoints/abomination_weakpoints.json
+#, c-format
+msgid "Sparks fly from the %s!"
+msgstr ""

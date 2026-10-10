@@ -1,0 +1,1980 @@
+# Batch 159 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of effect type id "effect_vita_degenerating_touch"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Degenerating"
+msgstr ""
+
+#. ~ Description of effect type "Degenerating"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You flesh is withering and decaying!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_vita_super_heal_pain_allayed"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Overflowing Vitality"
+msgstr ""
+
+#. ~ Description of effect type "Overflowing Vitality"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"The energy of your accelerated resuscitation is preventing you from feeling "
+"the pain you obviously should be, for the moment."
+msgstr ""
+
+#. ~ Description of effect type "Accelerated Resuscitation"
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"If you suffer potentially-fatal damage, your powers will attempt to save you."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_scenario_heart_of_fire_awake_attunement_gain"
+#. ~ Mutation name
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+#: data/mods/MindOverMatter/mutations/scenario.json
+msgid "Heart of Fire"
+msgstr ""
+
+#. ~ Description of effect type "Heart of Fire"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid ""
+"The flames in your heart have kindled, fueling a connection to the Nether.  "
+"Your Nether Attunement will not reduce with time."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_scenario_heart_of_fire_asleep_attunement_gain"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "Heart of Cinders"
+msgstr ""
+
+#. ~ Description of effect type "Heart of Cinders"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid ""
+"The flames in your heart smolder, maintaining your connection to the Nether."
+"  Your Nether Attunement will reduce with time, but more slowly."
+msgstr ""
+
+#. ~ Name of effect type id "effect_scenario_heart_of_fire_need_to_channel"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "Let the Fire Burn"
+msgstr ""
+
+#. ~ Description of effect type "Let the Fire Burn"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "The power twists inside you.  Let it out.  Let the flames rise."
+msgstr ""
+
+#. ~ Apply message of effect type "Let the Fire Burn"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "A fire burns within you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_scenario_heart_of_fire_damage"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "Inner Blaze"
+msgstr ""
+
+#. ~ Name of effect type id "effect_scenario_heart_of_fire_damage"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "Inner Inferno"
+msgstr ""
+
+#. ~ Description of effect type "Inner Blaze, Inner Inferno"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "You feel far too warm."
+msgstr ""
+
+#. ~ Description of effect type "Inner Blaze, Inner Inferno"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "You feel far, far too warm."
+msgstr ""
+
+#. ~ Description of effect type "Inner Blaze, Inner Inferno"
+#: data/mods/MindOverMatter/effects/effects_scenario.json
+msgid "You are burning up!"
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "moving_creature"
+#: data/mods/MindOverMatter/enchantments/enchantment_bionic.json
+msgid "You sense a hostile target here."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/mods/MindOverMatter/enchantments/enchantment_item.json
+msgid "Targeting assistance"
+msgstr ""
+
+#. ~ Description of enchantment "Targeting assistance"
+#: data/mods/MindOverMatter/enchantments/enchantment_item.json
+#, c-format
+msgid ""
+"Your gear relays targeting data to your weapons, reducing dispersion by 25%."
+msgstr ""
+
+#. ~ Vehicle part name
+#: data/mods/MindOverMatter/furniture_and_terrain/appliance_lighting.json
+msgid "standing matrix lamp"
+msgstr ""
+
+#. ~ Description of vehicle part "standing matrix lamp"
+#: data/mods/MindOverMatter/furniture_and_terrain/appliance_lighting.json
+msgid "An lamp enhanced with matrix technology."
+msgstr ""
+
+#. ~ Vehicle part name
+#. ~ Furniture name
+#. ~ Item name
+#: data/mods/MindOverMatter/furniture_and_terrain/appliance_misc.json
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+#: data/mods/MindOverMatter/items/medical.json
+msgid "noetic resonance detector"
+msgid_plural "noetic resonance detectors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of vehicle part "noetic resonance detector"
+#: data/mods/MindOverMatter/furniture_and_terrain/appliance_misc.json
+msgid ""
+"A strange device, a bit like one of those eyesight testing machines you look "
+"into in an optometrist's office.  The main housing has a place to rest your "
+"chin and a pair of binocular-like tubes, but there is also a headband "
+"attached to a set of wires hanging from a hook on the side and an armband "
+"hanging from the other side.  It's supposed to be used for measuring your "
+"\"noetic potential\"."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid "Transporter Beacon"
+msgstr ""
+
+#. ~ Description of furniture "Transporter Beacon"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid ""
+"A transporter beacon, placed on the ground with a stable set of coordinates."
+"  (e)xamine to finish the setup."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid "telepathic amplifier"
+msgstr ""
+
+#. ~ Description of furniture "telepathic amplifier"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid ""
+"A bulky machine with a chair and a hat-like mechanism designed to fit over "
+"the wearer's head, like something you would find in a hair salon.  You have "
+"no idea how to operate it, but you could scavenge it for parts."
+msgstr ""
+
+#. ~ Description of furniture "noetic resonance detector"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid ""
+"A table and chair topped with what looks like something you'd seen in an "
+"optometrist's office for testing vision, except this also has a headband and "
+"an armband hanging off the side connected to the main apparatus by cables.  "
+"There is a full-sized keyboard and several dials on the opposite side from "
+"the chair where the subject is supposed to sit; without a set of "
+"instructions, you'd have no idea how to operate this."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid "portal stabilizer"
+msgstr ""
+
+#. ~ Description of furniture "portal stabilizer"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+msgid ""
+"A strange machine that looks a little like a large gyroscope.  Multiple "
+"concentric rings are built around a central matrix crystal, all connected to "
+"an antenna.  How it was used is unclear, since there doesn't seem to be a "
+"keyboard or any input device."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+#: data/mods/MindOverMatter/obsolete/terrain.json
+msgid "glowing crystal"
+msgstr ""
+
+#. ~ Description of furniture "glowing crystal"
+#. ~ Description of terrain "glowing crystal"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+#: data/mods/MindOverMatter/obsolete/terrain.json
+msgid ""
+"An irregular chunk of glowing crystal.  The fitful glow sheds no illumination"
+" on the nearby terrain."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture.json
+#: data/mods/MindOverMatter/obsolete/terrain.json
+msgid "crystal shattering!"
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture_alien_meadow.json
+msgid "alien plant"
+msgstr ""
+
+#. ~ Description of furniture "alien plant"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture_alien_meadow.json
+msgid ""
+"An alien plant, a knee-high tightly-coiled bundle of reddish-yellow stalks "
+"with jagged leaves extending every which way.  It looks very difficult to "
+"walk through."
+msgstr ""
+
+#. ~ Description of furniture "alien plant"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture_alien_meadow.json
+msgid ""
+"An alien plant, a collection of delicate bluish-white strands with small "
+"white globes along their length.  They seem to float almost like seaweed, "
+"despite being a terrestrial plant."
+msgstr ""
+
+#. ~ Description of furniture "alien plant"
+#: data/mods/MindOverMatter/furniture_and_terrain/furniture_alien_meadow.json
+msgid ""
+"An alien plant, a single, cylindrical dark-red trunk with a small cluster of "
+"leaves on top.  It makes a hollow sound when struck."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid "black stone"
+msgstr ""
+
+#. ~ Description of terrain "black stone"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"A perfectly smooth patch of black stone, like carved and polished obsidian."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid "black water"
+msgstr ""
+
+#. ~ Description of terrain "black water"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An expanse of some sort of black liquid.  The air nearby is chill, and its "
+"surface is perfectly smooth and undisturbed by ripples or wind.  You have no "
+"idea how deep it is."
+msgstr ""
+
+#. ~ Description of terrain "alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like grass.  The blades are rolled up "
+"into curls, similar to ferns, but they seem to all unroll at once and then "
+"roll up again in a steady pattern.  They're a color you can only describe as "
+"\"purplish-yellow\"."
+msgstr ""
+
+#. ~ Description of terrain "alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like grass.  The blades are less than "
+"an inch high and a blue so dark it's almost black.  When you look closer, "
+"many blades seemed to be fused together at the top, forming small clusters."
+msgstr ""
+
+#. ~ Description of terrain "alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like grass.  It's the familiar green "
+"of terrestrial grass, but each blade has a large pink bulb at the top that "
+"bobs and moves in the breeze."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid "alien vines"
+msgstr ""
+
+#. ~ Description of terrain "alien vines"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like vines, or perhaps tree roots.  A "
+"thick ropy cluster of white tendrils streaked with red, twining around each "
+"other and branching off in all directions before meeting up in new clusters."
+"  Sometimes, one of the vines twitches."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid "alien moss"
+msgstr ""
+
+#. ~ Description of terrain "alien moss"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like moss.  It's a pale bluish color "
+"and clumps of it seem to be very slowly moving across the ground."
+msgstr ""
+
+#. ~ Description of terrain "alien moss"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"An area of something that almost looks like moss.  It's close to an inch "
+"thick, a dark yellowish-red, and glistens wetly."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid "alien tree"
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"A short tree, or something that's vaguely shaped like one.  It has long, "
+"needle-like leaves that twitch rhythmically and its dark reddish-purple "
+"bark(?) has a scale-like pattern, with glowing nodules irregularly spaced "
+"along its trunk.  Bluish-green globules hang from the end of some of the "
+"branches."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"A tall alien plant.  It has long, needle-like leaves that twitch rhythmically"
+" and its dark reddish-purple bark(?) has a scale-like pattern, with glowing "
+"nodules irregularly spaced along its trunk."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"A tall, thin alien plant.  From a distance it seems more like a column than a"
+" tree, but when you get closer you can see that it's made up of a series of "
+"broad, serrated leaves all folded so closely together that they form a single"
+" stalk."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien.json
+msgid ""
+"A large alien plant.  It looks like a series of bulbous mushrooms that have "
+"all grown together at the base, rising into a flaring series of branches that"
+" curve up before hanging down and ending in reddish-brown spheres."
+msgstr ""
+
+#. ~ Description of terrain "alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An area of something that vaguely resembles grass, except it's a light "
+"reddish color and the stalks are much broader.  Some kind of waxy residue "
+"seems to rub off onto your clothes when you walk through it."
+msgstr ""
+
+#. ~ Description of terrain "long alien grass"
+#. ~ Description of terrain "tall alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An area of something that vaguely resembles grass.  Dark red in color and "
+"almost waist-high, each stalk splits into two to four other stalks which "
+"similarly split on various places along their length, ending in fine fern-"
+"like fronds."
+msgstr ""
+
+#. ~ Description of terrain "tall alien grass"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An area of something that vaguely resembles grass.  Head high and such a dark"
+" red as to be nearly black, the ends of the long stalks are a burst of fine "
+"fronds all tangled into and around each other, forming a canopy."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid "alien bush"
+msgstr ""
+
+#. ~ Description of terrain "alien bush"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien plant, dark blue-green in color.  The leaves are all interwoven, "
+"forming a sphere except for spots where the leaves have been eaten away by "
+"some predator or pathogen.  It glows faintly in the dark."
+msgstr ""
+
+#. ~ Description of terrain "alien bush"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien bush, but one that looks very similar to a terrestrial bush despite "
+"the dark purple leaves.  There are even clusters of white berries growing "
+"from it."
+msgstr ""
+
+#. ~ Description of terrain "alien bush"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien bush, but one that looks very similar to a terrestrial bush despite "
+"the dark purple leaves."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid "alien shrub"
+msgstr ""
+
+#. ~ Description of terrain "alien shrub"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien plant.  The branches split and split again into very fine tendrils "
+"with bulbs on the end that float upward, holding its yellow leaves(?) up to "
+"the sun.  Every gust of wind makes the entire plant sway."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien tree, a group of individual dark-colored trunks that intertwine to "
+"the point whether you can't tell whether it's a single plant or a group of "
+"them.  The branches have nodes of dark red leaves interspersed along their "
+"lengths.  You're not entirely sure it's moving with the wind."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien tree, looking vaguely like a willow with yellow leaves.  As you look"
+" more closely, you see that the branches that touch the ground have put down "
+"roots and are forming secondary trunks."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien tree, with the trunk lifted off the ground on a cluster of roots.  "
+"Giant dark-red globes the size of watermelons hang from its branches amidst "
+"clusters of dark-red leaves."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien tree, with the trunk lifted off the ground on a cluster of roots.  "
+"The branches have clusters of long, dark-red leaves."
+msgstr ""
+
+#. ~ Description of terrain "alien tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"An alien tree, a group of thick dark-colored trunks half-fused together.  The"
+" drooping branches have nodes of dark red leaves interspersed along their "
+"lengths.  You're not entirely sure it's moving with the wind."
+msgstr ""
+
+#. ~ Description of terrain "alien roots"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"A cluster of dark roots from an alien tree are visible here.  Did one of them"
+" just move?"
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid "strange pool"
+msgstr ""
+
+#. ~ Description of terrain "strange pool"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_alien_meadow.json
+msgid ""
+"A pool of some very thick, nearly-opaque liquid.  The surface is almost "
+"perfectly smooth."
+msgstr ""
+
+#. ~ Description of terrain "oak tree"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_flora.json
+msgid ""
+"A massive deciduous tree belonging to the 'Quercus' genus, commonly found "
+"throughout the New England region.  If you look closely, you can see some "
+"acorns the squirrels haven't gotten yet.  If you look near the top, you can "
+"see a gigantic birds nest.  There are large bones sticking out of the edges "
+"of the nest."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_tanks.json
+msgid "Osiris chamber"
+msgstr ""
+
+#. ~ Description of terrain "Osiris chamber"
+#: data/mods/MindOverMatter/furniture_and_terrain/terrain_tanks.json
+msgid ""
+"A vat full of faintly-glowing solution, large enough to hold an adult human "
+"with room to spare.  It was obviously used for some kind of scientific "
+"experiments, and, based on the glowing lights on the base and the still-"
+"active computer terminal next to it, could be used for such again."
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "Pulse rifle charge"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "matrix charge"
+msgid_plural "matrix charge"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "noetic energy"
+msgid_plural "noetic energy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "LV429 pulse shot"
+msgid_plural "LV429 pulse shot"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "LV429 pulse shot"
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "A charge for the LV429."
+msgstr ""
+
+#. ~ Description of "matrix charge"
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "Power charge for matrix technology."
+msgstr ""
+
+#. ~ Description of "noetic energy"
+#: data/mods/MindOverMatter/items/ammo.json
+msgid "Power charge for psychic phenomena."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "light electronoetic battery"
+msgid_plural "light electronoetic batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "light electronoetic battery"
+#. ~ Description of "light electronoetic battery"
+#: data/mods/MindOverMatter/items/batteries.json
+msgid ""
+"A light battery but with the casing devoid of branding or symbols other than "
+"a plus and minus on opposite ends.  It's surprisingly heavy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "light refined electronoetic battery"
+msgid_plural "light refined electronoetic batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "medium electronoetic battery"
+msgid_plural "medium electronoetic batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "medium electronoetic battery"
+#. ~ Description of "medium electronoetic battery"
+#: data/mods/MindOverMatter/items/batteries.json
+msgid ""
+"A medium battery but with the casing devoid of branding or symbols other than"
+" a plus and minus on opposite ends.  It's surprisingly heavy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "medium refined electronoetic battery"
+msgid_plural "medium refined electronoetic batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "electronoetic tool battery"
+msgid_plural "electronoetic tool batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "electronoetic tool battery"
+#. ~ Description of "electronoetic tool battery"
+#: data/mods/MindOverMatter/items/batteries.json
+msgid ""
+"A battery cell, compatible with all kinds of industrial-grade equipment and "
+"portable tools, but with the casing devoid of branding or symbols other than "
+"a plus and minus on opposite ends.  It's surprisingly heavy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/MindOverMatter/items/batteries.json
+msgid "refined electronoetic tool battery"
+msgid_plural "refined electronoetic tool batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Strange Eye CBM"
+msgid_plural "Strange Eye CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Strange Eye CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"You can tell this CBM is meant to be installed around your eyes, but what "
+"exactly it will do, you have no idea."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Ohuicatlachiyaliztimeh CBM"
+msgid_plural "Ohuicatlachiyaliztimeh CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ohuicatlachiyaliztimeh CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"A set of Ohuicatlachiyaliztimeh, this CBM uses matrix technology to detect "
+"hostility from nearby targets, acting as an infallible IFF."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Ikpitikayotecontli System CBM"
+msgid_plural "Ikpitikayotecontli System CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ikpitikayotecontli System CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"An extremely-efficent form of bionic power storage, using integral matrix "
+"dust to increase the efficiency of possible storage multiple times."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Tlacuallichicahualiztli Transformer CBM"
+msgid_plural "Tlacuallichicahualiztli Transformer CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Tlacuallichicahualiztli Transformer CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"A connection between the user's metabolism and their power storage allows "
+"this CBM to convert burned calories into bionic energy."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Teōchicāhualiztli Booster CBM"
+msgid_plural "Teōchicāhualiztli Booster CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Teōchicāhualiztli Booster CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"A series of implants along the skeleton and in major muscle groups allow a "
+"dramatic increase in the user's strength and agility."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/bionics.json
+msgid "Tapayaxitilmàtli CBM"
+msgid_plural "Tapayaxitilmàtli CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Tapayaxitilmàtli CBM"
+#: data/mods/MindOverMatter/items/bionics.json
+msgid ""
+"Implants under the skin throughout the body that bend light when activated, "
+"making it much harder to spot the user from a distance."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Meditation and You"
+msgid_plural "copies of Meditation and You"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A description of simple meditation and breathing techniques, intended for a "
+"beginner."
+msgstr ""
+
+#. ~ Variant name of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid "Zen Mind, Beginner's Mind"
+msgid_plural "copies of Zen Mind, Beginner's Mind"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Zen Mind, Beginner's Mind" of item "Meditation and
+#. You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"This is a transcription of lectures given by Suzuki Shunryū, a Buddhist monk "
+"who founded the first Zen Buddhist monastery in the United States, containing"
+" discussion about Zen meditation and practice."
+msgstr ""
+
+#. ~ Variant name of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid "How to Meditate: A Practical Guide to Making Friends with Your Mind"
+msgid_plural ""
+"copies of How to Meditate: A Practical Guide to Making Friends with Your Mind"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "How to Meditate: A Practical Guide to Making
+#. Friends with Your Mind" of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A book on meditation written for a general audience, containing simple "
+"techniques on breathing and mindfulness."
+msgstr ""
+
+#. ~ Variant name of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid "The Wandering Mind: What Medieval Monks Tell Us about Distraction"
+msgid_plural ""
+"copies of The Wandering Mind: What Medieval Monks Tell Us about Distraction"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "The Wandering Mind: What Medieval Monks Tell Us
+#. about Distraction" of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A history of monastic attempts at finding calm and peace in the midst of a "
+"profane world.  There are far fewer daily distractions now than pre-Cataclysm"
+" but there's still some useful techniques you could gain here."
+msgstr ""
+
+#. ~ Variant name of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"The Miracle of Mindfulness: An Introduction to the Practice of Meditation"
+msgid_plural ""
+"copies of The Miracle of Mindfulness: An Introduction to the Practice of "
+"Meditation"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "The Miracle of Mindfulness: An Introduction to the
+#. Practice of Meditation" of item "Meditation and You"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A translation of a letter written by Thich Nhat Hanh to colleagues in Viet "
+"Nam, this book focuses on mindfulness and breathwork."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Secrets of the Zen Masters"
+msgid_plural "copies of Secrets of the Zen Masters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"This book purports to contain hidden tips that will make you serene and calm "
+"in the face of the most grievous calamities.  Cataclysms, one might say."
+msgstr ""
+
+#. ~ Variant name of item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"The Mind Illuminated: A Complete Meditation Guide Integrating Buddhist Wisdom"
+" and Brain Science for Greater Mindfulness"
+msgid_plural ""
+"copies of The Mind Illuminated: A Complete Meditation Guide Integrating "
+"Buddhist Wisdom and Brain Science for Greater Mindfulness"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "The Mind Illuminated: A Complete Meditation Guide
+#. Integrating Buddhist Wisdom and Brain Science for Greater Mindfulness" of
+#. item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"Written by a neuroscientist and meditator practitioner, this book offers a "
+"ten-step meditation program that combines science with traditional meditation"
+" techniques."
+msgstr ""
+
+#. ~ Variant name of item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"Mastering the Core Teachings of the Buddha: An Unusually Hardcore Dharma Book"
+msgid_plural ""
+"copies of Mastering the Core Teachings of the Buddha: An Unusually Hardcore "
+"Dharma Book"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Mastering the Core Teachings of the Buddha: An
+#. Unusually Hardcore Dharma Book" of item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"This book argues that meditation is not an eternal progression but can be "
+"mastered just like any other skill, and it will tell you how to do it."
+msgstr ""
+
+#. ~ Variant name of item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid "Not Always So: Practicing the True Spirit of Zen"
+msgid_plural "copies of Not Always So: Practicing the True Spirit of Zen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Not Always So: Practicing the True Spirit of Zen"
+#. of item "Secrets of the Zen Masters"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A continuation of the lessons expounded on in \"Zen Mind, Beginner's Mind\", "
+"this book contains a myriad of parables and koans to help the student grasp "
+"the nature of meditation."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Lab Journal-Otomo"
+msgid_plural "copies of Lab Journal-Otomo"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Lab Journal-Otomo"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"This notebook is mostly a series of fanciful speculations about something the"
+" author alternately calls \"Matrix Mechanics,\", \"Dimensional Metaphysics,\""
+" or \"Netherium Mathematics,\" sometimes using more than one in the same "
+"sentence.  Most of it is incoherent, but there is some experimental data "
+"about \"Conscious redirection of nether energy\" that catches your eye."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Report: Channeling Protocol PGS38"
+msgid_plural "copies of Report: Channeling Protocol PGS38"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Report: Channeling Protocol PGS38"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A formal report on a process to reduce the unpredictable effects of long-term"
+" psionic use.  It describes a special meditation technique, performed with "
+"the aid of a matrix crystal, though it does warn that the process: \"puts "
+"extreme stress on the focus object.  Further refinement is required.\""
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Training Manual: Method of Loci and Dimensional Metaphysics"
+msgid_plural ""
+"copies of Training Manual: Method of Loci and Dimensional Metaphysics"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Training Manual: Method of Loci and Dimensional
+#. Metaphysics"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A formal report on a series of training procedures to allow the practitioner "
+"to hold images and ideas in their head for long periods of time without being"
+" distracted or losing their train of thought.  The report concludes, \"While "
+"the human mind is not adept at holding static images or scenes in place, some"
+" minor variation can be allowed for without suffering any adverse effects "
+"from the flow of Netherum energy.  Method of Loci allows the mathematician to"
+" maintain their thoughts within this area of variation while still exerting "
+"effective control over the mathematics.\""
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Training Manual: VERDANT HAND Combat Protocols"
+msgid_plural "copies of Training Manual: VERDANT HAND Combat Protocols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Training Manual: VERDANT HAND Combat Protocols"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A formal report with a mostly-blank cover page, stamped with the Project "
+"PHAVIAN logo at the top and a red \"VERDANT HAND - EYES ONLY\" centered "
+"underneath.  Contrary to your initial assumption, it is not a martial arts "
+"training manual.  Instead, it describes a series of meditations and "
+"visualization exercises designed to \"increase the subject's unarmed combat "
+"prowess fivefold\".  There are several charts showing the results of a "
+"VERDANT HAND combatant against training opponents armed with weapons or "
+"firearms at various engagement distances.  It's clearly still not as good as "
+"just having a rifle, but the data look pretty promising if you can get these "
+"exercises down."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Proposal: TURQUOISE KEYSTONE"
+msgid_plural "copies of Proposal: TURQUOISE KEYSTONE"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Proposal: TURQUOISE KEYSTONE"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A formal report with a mostly-blank cover page, stamped with the Project "
+"PHAVIAN logo at the top and a red \"TURQUOISE KEYSTONE - EYES ONLY\" centered"
+" underneath.  Skimming through it, you see a lot of very worrying phrases in "
+"light of recent events, like \"…the sudden but so-far unexplained increase in"
+" our mathematicians' prowess…\" or \"…E71 is now capable of passing through "
+"two meters of solid matter.\"  The main topic of the document seems to be "
+"using teleportation (\"LOST RAIN\", as the report calls it) in combat.  By "
+"lengthening the space between the teleporter and their target to build up "
+"momentum on their strikes, warping space to make near-misses turn into hits, "
+"or teleporting fractions of a meter to avoid incoming attacks or put "
+"themselves in a better position to make strikes, the TURQUOISE KEYSTONE "
+"practitioner can vastly increase their prowess in close-quarters combat.  "
+"Written at the bottom of the last page is, \"We had better test this soon--I "
+"think we're going to need it.\""
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/books.json
+msgid "Lab Report: PATIENT MOSAIC process"
+msgid_plural "copies of Lab Report: PATIENT MOSAIC process"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Lab Report: PATIENT MOSAIC process"
+#: data/mods/MindOverMatter/items/books.json
+msgid ""
+"A thick lab report with a mostly-blank cover page, stamped with the Project "
+"PHAVIAN logo at the top and a red \"PATIENT MOSAIC - EYES ONLY\" centered "
+"underneath.  According to the summary, the report details how a powerful GRAY"
+" DAWN participant may use a specifically attuned focusing tool to allow "
+"themselves to induce permanent changes in their personality and other "
+"segments of their brain.  The report details little success in GRAY DAWN "
+"participant applying this process to others."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/chemicals.json
+msgid "psychoreactive catalyst"
+msgid_plural "psychoreactive catalyst"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "psychoreactive catalyst"
+#: data/mods/MindOverMatter/items/chemicals.json
+msgid ""
+"A thick liquid, mixed with ground matrix crystal and ready to be catalyzed.  "
+"In total darkness, it glows very faintly."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestible_overrides.json
+msgid "compound XV471 \"Panaceus\""
+msgid_plural "doses of compound XV471 \"Panaceus\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "pink crystalline elixir"
+msgid_plural "pink crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pink crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"pink glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "gray crystalline elixir"
+msgid_plural "gray crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "gray crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"grayish glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "cyan crystalline elixir"
+msgid_plural "cyan crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cyan crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"sky-blue glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "golden crystalline elixir"
+msgid_plural "golden crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "golden crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"golden glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "red crystalline elixir"
+msgid_plural "red crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "red crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint red"
+" glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "yellow crystalline elixir"
+msgid_plural "yellow crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "yellow crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"yellow glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "white crystalline elixir"
+msgid_plural "white crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "white crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"white glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "blue crystalline elixir"
+msgid_plural "blue crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "blue crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"blue glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "green crystalline elixir"
+msgid_plural "green crystalline elixir"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "green crystalline elixir"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"Refined matrix crystal mixed directly into water.  The liquid has a faint "
+"green glow."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "alien fruit"
+msgid_plural "alien fruits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "alien fruit"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"A bluish-green ovoid globule, firm to the touch but looking more like gelatin"
+" than something you plucked from a tree.  It has a strong acrid odor."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "black liquid"
+msgid_plural "black liquid"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "black liquid"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"You don't know what this is but now that you've gotten a closer look it's "
+"definitely not water.  It's completely opaque and freezing cold to the touch,"
+" but when you pull your fingertip out of it, your skin is dry as a bone."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid "handful of alien berries"
+msgid_plural "handfuls of alien berries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "handful of alien berries"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"A handful of white berries plucked from an otherworldly bush.  You're not "
+"sure if eating them is a good idea, but they sure look tasty."
+msgstr ""
+
+#. ~ Description of "alien fruit"
+#: data/mods/MindOverMatter/items/comestibles.json
+msgid ""
+"A large fruit pulled from an alien tree.  The rind is extremely hard and "
+"you'll need to cut into it to eat it."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "private note"
+msgid_plural "private notes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "private note"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"Some paper with what looks to be private communication on it.  The writer "
+"would be very annoyed at you for reading this if they weren't almost-"
+"certainly shambling around looking for brains."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (BURNT NOVEMBER)"
+msgid_plural "copies of report (BURNT NOVEMBER)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (BURNT NOVEMBER)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"BURNT NOVEMBER\".  Most of it is rather trivial, "
+"but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (NOBLE HORIZON)"
+msgid_plural "copies of report (NOBLE HORIZON)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (NOBLE HORIZON)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"NOBLE HORIZON\".  Most of it is rather trivial, "
+"but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (RUBY LOOP)"
+msgid_plural "copies of report (RUBY LOOP)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (RUBY LOOP)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"RUBY LOOP\".  Most of it is rather trivial, but "
+"certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (CRYPTIC FORGE)"
+msgid_plural "copies of report (CRYPTIC FORGE)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (CRYPTIC FORGE)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"CRYPTIC FORGE\".  Most of it is rather trivial, "
+"but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (COPPER PRIME)"
+msgid_plural "copies of report (COPPER PRIME)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (COPPER PRIME)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"COPPER PRIME\".  Most of it is rather trivial, "
+"but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (JUNIPER GOLD)"
+msgid_plural "copies of report (JUNIPER GOLD)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (JUNIPER GOLD)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"JUNIPER GOLD\".  Most of it is rather trivial, "
+"but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (GRAY DAWN)"
+msgid_plural "copies of report (GRAY DAWN)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (GRAY DAWN)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"GRAY DAWN\".  Most of it is rather trivial, but "
+"certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (LOST RAIN)"
+msgid_plural "copies of report (LOST RAIN)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (LOST RAIN)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"LOST RAIN\".  Most of it is rather trivial, but "
+"certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (SMOKE USHER)"
+msgid_plural "copies of report (SMOKE USHER)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (SMOKE USHER)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with the heading \"SMOKE USHER\".  Most of it is rather trivial, but"
+" certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "note with strange writing"
+msgid_plural "notes with strange writing"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "note with strange writing"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A piece of half-crumpled paper with writing on it.  You'd need to take a "
+"closer look to figure out what it says."
+msgstr ""
+
+#. ~ "description" action message of item "note with strange writing"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "Examine the note."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (matrix technology)"
+msgid_plural "copies of report (matrix technology)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (matrix technology)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports.  Most of it is rather trivial, but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "OS647-P Proposal Response"
+msgid_plural "copies of OS647-P Proposal Response"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "OS647-P Proposal Response"
+#. ~ Description of "QD944-P Progress Update"
+#. ~ Description of "IG882-P Report"
+#. ~ Description of "Project PHAVIAN memo"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "A note written on official XEDRA letterhead."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a snippet in category "lab_file_QD944_P"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+#: data/mods/MindOverMatter/snippets/snippets_new.json
+msgid "QD944-P Progress Update"
+msgid_plural "copies of QD944-P Progress Update"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a snippet in category "lab_file_IG882_P"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+#: data/mods/MindOverMatter/snippets/snippets_new.json
+msgid "IG882-P Report"
+msgid_plural "copies of IG882-P Report"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "Project PHAVIAN memo"
+msgid_plural "copies of Project PHAVIAN memo"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid "report (OBSIDIAN RING)"
+msgid_plural "copies of report (OBSIDIAN RING)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "report (OBSIDIAN RING)"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A folder full of what appear to be transcripts of experimental results or "
+"reports, with a large \"Project OBSIDIAN RING\" on the front.  Most of it is "
+"rather trivial, but certain passages catch your eye…"
+msgstr ""
+
+#. ~ Description of "visitor's pass"
+#: data/mods/MindOverMatter/items/files_and_post_it.json
+msgid ""
+"A visitor's pass to some sort of facility.  The reverse side describes the "
+"protocol for using it; this could grant one-time access at a card reader, if "
+"you can find one.  It also lists the addresses of nearby facilities; activate"
+" it to add their locations to your map.  There is a prominent symbol stamped "
+"on it with the word \"PHAVIAN\" underneath."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, pink"
+msgid_plural "strange crystal, pink"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, pink"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing pink "
+"light in its depths.  Holding it, you feel more capable."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, pink"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The pink glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, pink"
+msgid_plural "crystalline dust, pink"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, pink"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint pink shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, pink"
+msgid_plural "refined matrix crystal powder, pink"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, pink"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters pink even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, gray"
+msgid_plural "strange crystal, gray"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, gray"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing gray "
+"light in its depths.  Holding it, you feel more perceptive."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, gray"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The gray glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, gray"
+msgid_plural "crystalline dust, gray"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, gray"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint gray shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, gray"
+msgid_plural "refined matrix crystal powder, gray"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, gray"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters gray even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, cyan"
+msgid_plural "strange crystal, cyan"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, cyan"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing cyan "
+"light in its depths.  Holding it, you feel more energetic."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, cyan"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The cyan glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, cyan"
+msgid_plural "crystalline dust, cyan"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, cyan"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint cyan shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, cyan"
+msgid_plural "refined matrix crystal powder, cyan"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, cyan"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters cyan even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, golden"
+msgid_plural "strange crystal, golden"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, golden"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing golden "
+"light in its depths.  Holding it, you feel radiant."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, golden"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The golden glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, golden"
+msgid_plural "crystalline dust, golden"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, golden"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint golden shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, golden"
+msgid_plural "refined matrix crystal powder, golden"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, golden"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters gold even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, red"
+msgid_plural "strange crystal, red"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, red"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing red "
+"light in its depths.  Holding it, you feel hot."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, red"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The red glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, red"
+msgid_plural "crystalline dust, red"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, red"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint red shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, red"
+msgid_plural "refined matrix crystal powder, red"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, red"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters red even in complete darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, yellow"
+msgid_plural "strange crystal, yellow"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, yellow"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing yellow "
+"light in its depths.  Holding it, you feel lighter."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, yellow"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The yellow glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, yellow"
+msgid_plural "crystalline dust, yellow"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, yellow"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint yellow shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, yellow"
+msgid_plural "refined matrix crystal powder, yellow"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, yellow"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters yellow even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, white"
+msgid_plural "strange crystal, white"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, white"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing white "
+"light in its depths.  Holding it, you feel pensive."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, white"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The white glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, white"
+msgid_plural "crystalline dust, white"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, white"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint white shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, white"
+msgid_plural "refined matrix crystal powder, white"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, white"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters white even in complete "
+"darkness."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "strange crystal, blue"
+msgid_plural "strange crystal, blue"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "strange crystal, blue"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"A strange-looking, surprisingly-heavy crystal with a faintly-glowing blue "
+"light in its depths.  Holding it, you feel more mobile."
+msgstr ""
+
+#. ~ "description" action message of item "strange crystal, blue"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "The blue glow calls to you."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "crystalline dust, blue"
+msgid_plural "crystalline dust, blue"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystalline dust, blue"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "A bit of crystalline dust with a faint blue shimmer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid "refined matrix crystal powder, blue"
+msgid_plural "refined matrix crystal powder, blue"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refined matrix crystal powder, blue"
+#: data/mods/MindOverMatter/items/matrix_crystals.json
+msgid ""
+"Concentrated matrix crystal dust.  It glitters blue even in complete "
+"darkness."
+msgstr ""

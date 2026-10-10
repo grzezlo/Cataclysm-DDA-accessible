@@ -1,0 +1,1348 @@
+# Batch 59 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of achievement
+#: data/json/achievements.json
+msgid "Bunker Robot(s)"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Bunker Robot(s)"
+#: data/json/achievements.json
+msgid "Find the bunker complex"
+msgstr ""
+
+#. ~ Description of the "caffeine" addiction's effects as it appears in the
+#. player's status
+#: data/json/addictions.json
+msgid "Strength - 1;   Slight sluggishness;   Occasional cravings."
+msgstr ""
+
+#. ~ Description of the "nicotine" addiction's effects as it appears in the
+#. player's status
+#: data/json/addictions.json
+msgid "Intelligence - 1;   Occasional cravings."
+msgstr ""
+
+#. ~ Description of the "alcohol" addiction's effects as it appears in the
+#. player's status
+#: data/json/addictions.json
+msgid ""
+"Perception - 1;   Intelligence - 1;   Occasional Cravings;\n"
+"Risk of delirium tremens."
+msgstr ""
+
+#. ~ The name of the "diazepam" addiction's source
+#. ~ Variant name of item "prescription sedative"
+#: data/json/addictions.json data/json/items/comestibles/med.json
+msgid "diazepam"
+msgid_plural "diazepam"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Subcutaneous Protective Mesh - Arms"
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Subcutaneous Protective Mesh - Head"
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Subcutaneous Protective Mesh - Legs"
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Subcutaneous Protective Mesh - Torso"
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "WearMan"
+msgstr ""
+
+#. ~ Description of bionic "WearMan"
+#: data/json/bionics.json
+msgid ""
+"Surgically implanted into your skull near the eardrums are two speakers, as "
+"well as a small port behind the left earlobe.  They can pick up local radio "
+"waves and play downloaded music in concert hall quality.  It came pre-"
+"installed with \"Rubik's Mickse\"."
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "AudioVox"
+msgstr ""
+
+#. ~ Description of bionic "AudioVox"
+#: data/json/bionics.json
+msgid ""
+"Hailing from a world choked with neon smog, and appreciated by Exodii "
+"artists, the AudioVox implant allows you to change, remodulate, and even "
+"autotune your voice.  It also causes vocalizations /(such as shouts and "
+"singing/) to be much louder.  It consists of an electronic voice box, "
+"synthetic larynx and multiple speakers implanted throughout your throat."
+msgstr ""
+
+#. ~ Description of bionic "Respirator"
+#: data/json/bionics.json
+msgid ""
+"A complex respiration augmentation system.  Improves respiration ability in "
+"air and allows breathing water.  Will automatically activate when drowning.  "
+"Turn on to recharge stamina faster, at moderate power cost.  Asthmatics may "
+"also use it to stop asthma attacks."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "ground_sonar_sense"
+#: data/json/bionics.json
+msgid "You sense some creature moving underground here."
+msgstr ""
+
+#. ~ Description of bionic "Endocrine Enervator"
+#: data/json/bionics.json
+msgid ""
+"Through a combination of psychochemical manipulation and old fashioned "
+"electrical nerve stimulation, this malfunctioning bionic alters your brain "
+"chemistry in such a way as to cause sleepiness.  You will find yourself "
+"tiring a bit faster than before."
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Subaquatic Navigation System"
+msgstr ""
+
+#. ~ Description of bionic "Subaquatic Navigation System"
+#: data/json/bionics.json
+msgid ""
+"While active, a tiny device in your inner ear periodically generates "
+"ultrasonic pulses which aid in navigation, provided you are underwater and "
+"able to hear."
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Integrated Multimeter"
+msgstr ""
+
+#. ~ Description of bionic "Integrated Multimeter"
+#: data/json/bionics.json
+msgid ""
+"Your fingers and arms have been implanted with retractable electrical probes "
+"connected to a multimeter embedded in your arm, allowing you to measure "
+"electrical voltage, resistance, and current by touch.  This also provides "
+"your hands and arms with a modicum of protection against electric shocks."
+msgstr ""
+
+#. ~ Name of a bionic
+#: data/json/bionics.json
+msgid "Integrated Circuitry Toolset"
+msgstr ""
+
+#. ~ Description of bionic "Integrated Circuitry Toolset"
+#: data/json/bionics.json
+msgid ""
+"Your fingers and arms have been implanted a soldering iron, a multimeter, and"
+" a set of small screwdrivers, providing all the tools required for working "
+"with bench-scale electrical circuits.  This also provides your hands and arms"
+" with a modicum of protection against electric shocks."
+msgstr ""
+
+#. ~ Description of bionic "Soporific Induction"
+#: data/json/bionics.json
+msgid ""
+"An electrode has been implanted into your brain's ventrolateral preoptic "
+"nucleus.  It turns on whenever you're trying to fall asleep, creating an "
+"artificial but effective sensation of sleepiness."
+msgstr ""
+
+#. ~ Menu text for descent with ""
+#: data/json/climbing.json
+msgid "Clamber down."
+msgstr ""
+
+#. ~ Query: really descend with ""?
+#: data/json/climbing.json
+msgid "Clamber down?"
+msgstr ""
+
+#. ~ Message after descent with ""
+#: data/json/climbing.json
+msgid "You clamber down."
+msgstr ""
+
+#. ~ Menu text for descent with ""
+#: data/json/climbing.json
+msgid "Use your talents to climb down."
+msgstr ""
+
+#. ~ Query: really descend with ""?
+#: data/json/climbing.json
+msgid "Use your talents to climb down?"
+msgstr ""
+
+#. ~ Message after descent with ""
+#: data/json/climbing.json
+msgid "You descend effortlessly."
+msgstr ""
+
+#. ~ Menu text for descent with "vehicle"
+#: data/json/climbing.json
+msgid "Climb down onto the vehicle here."
+msgstr ""
+
+#. ~ Query: really descend with "vehicle"?
+#: data/json/climbing.json
+msgid "Climb down onto the vehicle?"
+msgstr ""
+
+#. ~ Message after descent with "vehicle"
+#: data/json/climbing.json
+msgid "You climb down onto the vehicle."
+msgstr ""
+
+#. ~ Menu text for descent with "furn_CLIMBABLE"
+#. ~ Menu text for descent with "furn_LADDER"
+#: data/json/climbing.json
+#, c-format
+msgid "Climb down %s here."
+msgstr ""
+
+#. ~ Message after descent with "furn_CLIMBABLE"
+#: data/json/climbing.json
+msgid "You climb down."
+msgstr ""
+
+#. ~ Menu text for descent with "furn_CLIMB_SIMPLE"
+#: data/json/climbing.json
+#, c-format
+msgid "Clamber down onto %s here."
+msgstr ""
+
+#. ~ Query: really descend with "furn_CLIMB_SIMPLE"?
+#: data/json/climbing.json
+#, c-format
+msgid "Clamber down onto %s?"
+msgstr ""
+
+#. ~ Message after descent with "furn_CLIMB_SIMPLE"
+#: data/json/climbing.json
+#, c-format
+msgid "You clamber down onto %s."
+msgstr ""
+
+#. ~ Menu text for descent with "item_stepladder"
+#: data/json/climbing.json
+msgid "Place your wooden stepladder below and climb down."
+msgstr ""
+
+#. ~ Menu disables descent with "item_stepladder"
+#. ~ Menu disables descent with "item_aluminum_stepladder"
+#: data/json/climbing.json
+msgid "Can't place your stepladder (needs open space one story below)."
+msgstr ""
+
+#. ~ Query: really descend with "item_stepladder"?
+#. ~ Query: really descend with "item_aluminum_stepladder"?
+#: data/json/climbing.json
+msgid "Climb down with your stepladder?"
+msgstr ""
+
+#. ~ Message after descent with "item_stepladder"
+#: data/json/climbing.json
+msgid "You lower the ladder into place and climb down."
+msgstr ""
+
+#. ~ Menu text for descent with "item_aluminum_stepladder"
+#: data/json/climbing.json
+msgid "Place your aluminum stepladder below and climb down."
+msgstr ""
+
+#. ~ Menu text for descent with "furn_ROPE"
+#: data/json/climbing.json
+#, c-format
+msgid "Rappel down with the %s here."
+msgstr ""
+
+#. ~ Query: really descend with "furn_ROPE"?
+#: data/json/climbing.json
+#, c-format
+msgid "Rappel down with the %s?"
+msgstr ""
+
+#. ~ Menu text for descent with "item_grapnel"
+#: data/json/climbing.json
+msgid "Attach your grappling hook and rappel down."
+msgstr ""
+
+#. ~ Menu disables descent with "item_grapnel"
+#: data/json/climbing.json
+msgid "Can't attach your grappling hook (something is in the way)."
+msgstr ""
+
+#. ~ Query: really descend with "item_grapnel"?
+#: data/json/climbing.json
+msgid "Use your grappling hook to rappel down?"
+msgstr ""
+
+#. ~ Message before descent with "item_grapnel"
+#: data/json/climbing.json
+msgid "You tie the rope around your waist and begin to rappel down."
+msgstr ""
+
+#. ~ Menu text for descent with "ability_WALL_CLING"
+#: data/json/climbing.json
+msgid "Crawl down the wall."
+msgstr ""
+
+#. ~ Query: really descend with "ability_WALL_CLING"?
+#: data/json/climbing.json
+msgid "Crawl down the wall?"
+msgstr ""
+
+#. ~ Message after descent with "ability_WALL_CLING"
+#: data/json/climbing.json
+msgid "You crawl down the wall."
+msgstr ""
+
+#. ~ Menu text for descent with "ability_WEB_RAPPEL"
+#: data/json/climbing.json
+msgid "Spin your webs to descend."
+msgstr ""
+
+#. ~ Menu disables descent with "ability_WEB_RAPPEL"
+#: data/json/climbing.json
+msgid "Can't spin your webs (something is in the way)."
+msgstr ""
+
+#. ~ Menu text for descent with "ability_INSECT_ARMS_OK"
+#: data/json/climbing.json
+msgid "Crawl down using all your arms."
+msgstr ""
+
+#. ~ Query: really descend with "ability_INSECT_ARMS_OK"?
+#: data/json/climbing.json
+msgid "Crawl down?"
+msgstr ""
+
+#. ~ Message after descent with "ability_INSECT_ARMS_OK"
+#: data/json/climbing.json
+msgid "You crawl down using all your arms."
+msgstr ""
+
+#. ~ Menu text for descent with "ability_VINES2"
+#. ~ Menu text for descent with "ability_VINES3"
+#: data/json/climbing.json
+msgid "Climb down using your vines."
+msgstr ""
+
+#. ~ Query: really descend with "ability_VINES2"?
+#. ~ Query: really descend with "ability_VINES3"?
+#: data/json/climbing.json
+msgid "Use your vines to descend?"
+msgstr ""
+
+#. ~ Menu text for descent with "ability_VINES2_deploy"
+#: data/json/climbing.json
+msgid ""
+"Detach a vine so you can climb back up (<color_yellow>this will "
+"hurt</color>)."
+msgstr ""
+
+#. ~ Menu disables descent with "ability_VINES2_deploy"
+#. ~ Menu disables descent with "ability_VINES3_deploy"
+#: data/json/climbing.json
+msgid "Can't detach a vine (something is in the way)."
+msgstr ""
+
+#. ~ Query: really descend with "ability_VINES2_deploy"?
+#. ~ Query: really descend with "ability_VINES3_deploy"?
+#: data/json/climbing.json
+msgid "Detach a vine to descend?"
+msgstr ""
+
+#. ~ Message after descent with "ability_VINES3"
+#: data/json/climbing.json
+msgid "You effortlessly descend using your vines."
+msgstr ""
+
+#. ~ Menu text for descent with "ability_VINES3_deploy"
+#: data/json/climbing.json
+msgid "Detach a vine so you can climb back up (this is harmless)."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Residential speed limit"
+#: data/json/conducts.json
+msgid "Do not exceed 35 mph when driving land vehicles"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Rural road speed limit"
+#: data/json/conducts.json
+msgid "Do not exceed 50 mph when driving land vehicles"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Freeway speed limit"
+#: data/json/conducts.json
+msgid "Do not exceed 65 mph when driving land vehicles"
+msgstr ""
+
+#. ~ Construction category name
+#: data/json/construction_category.json
+msgid "Stacks and Piles"
+msgstr ""
+
+#. ~ Construction category name
+#: data/json/construction_category.json
+msgid "Deconstructions"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Built Wooden Window Shutters"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Arc Furnace"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Down Bed/Bunk bed"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Concrete Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Concrete Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Show Jump End"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Show Jump"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Wooden Fermenting Vat"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Small Scale Anaerobic Digestion System"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Junk Metal Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Log Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place a log stool"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Metal Charcoal Kiln"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Scrap Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build An Apiary"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Reinforced Concrete Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Standard Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Dirt Floor (can support roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Storage Tank"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place a wooden stool"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Wooden Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Wooden Gangway"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Metal Gangway"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Deconstruct Terrain/Furniture"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Deconstruct Simple Terrain/Furniture"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Dig out pit completely and remove anything remaining"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Dig Downstairs"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Extract Dirt"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Extrude Resin Floor (supports roof)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Extrude Resin Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Jackhammer Resin Cage"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Make stooking spot"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Make Gravel Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Make Rubber Mulch Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Make Woodchip Floor (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Mine Downstairs"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Mine Resin Cage"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Mine Upstairs"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Kitchen Station"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Workshop Station"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Household Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Food Truck Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Single Glass Door Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Double Glass Door Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Heavy-Duty Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Display Fridge"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Home Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Food Truck Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Chest Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Heavy Duty Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Glass Door Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Display Freezer"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Glassblower's Crucible"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Router Table"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Catalytic Cracking Reactor"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Wall Light"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Small Solar Panel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Small Advanced Solar Panel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Advanced Solar Panel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Advanced Reinforced Solar Panel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Wind Turbine"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Large Wind Turbine"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Water Wheel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Large Water Wheel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Motorbike Battery"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Small Motorbike Battery"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Standing Directed Floodlight"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Wall Wirings"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Small Anvil"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Mount Ingot Anvil"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Mount Scavenged Anvil"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Screw Press"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Flagpole"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place ASRG"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Hang Simple Rope Hoist"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Rope & Tackle Hoist"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Chain & Tackle Hoist"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place a barstool"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Travel Toilet"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Oxygen Concentrator"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place High Pressure Compressor Unit"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Rocky Obstacle"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Turn forest floor into dirt (no roof support)"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Dirt"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Sand"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Gravel"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Pebbles"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Clay"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Rocks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Large Rocks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Mound of Broken Glass"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Logs"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Planks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Sticks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Long Sticks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Bricks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Adobe Bricks"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Rebar"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build a Stack of Pipes"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Piano"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place Scaffolding"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Remove Scaffolding"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Brick Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Flat Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Log and Sod Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Flat Metal Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Extrude Resin Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Shingle Flat Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Treated Wood Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Wood Roof"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Chimney"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Build Vent Pipe"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Cover Empty Window With Sheet"
+msgstr ""
+
+#. ~ Construction group name
+#: data/json/construction_group.json
+msgid "Place a bean bag"
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream about the moon."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream you're safely at home with a bustling family."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream of chasing a beautiful butterfly."
+msgstr ""
+
+#. ~ Dream of mutation category "CRUSTACEAN"
+#: data/json/dreams.json
+msgid "Your dreams give you a strange shelled feeling."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream of flying."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"You have an upsetting dream about falling and being unable to get back up."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"Tinnitus follows you into your dreams, where it becomes a chorus of crickets."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream of warm breath and fresh blood."
+msgstr ""
+
+#. ~ Dream of mutation category "SPIDER"
+#: data/json/dreams.json
+msgid "You have a strange dream of spinning webs."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"You have a nightmare of being all alone, but then your family flies home to "
+"comfort you."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream of sneaking into someone's home to listen to them sleep."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You taste iron all night long, like you've bitten your tongue."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid "You dream in sounds and smells, not images."
+msgstr ""
+
+#. ~ Dream of mutation category "CRUSTACEAN"
+#: data/json/dreams.json
+msgid "Your vivid dream of living as a crustacean frightens you."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"In your dreams, your fangs slip through flesh like scalpels.  You quickly "
+"crawl away to let your clumsy prey bleed out."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"You flutter through the air, listening for echoes to guide you through your "
+"dream."
+msgstr ""
+
+#. ~ Dream of mutation category "CHIROPTERAN"
+#: data/json/dreams.json
+msgid ""
+"You dream of friends and family crowded around, chattering noisily, grooming "
+"one another, and sharing blood."
+msgstr ""
+
+#. ~ Dream of mutation category "CRUSTACEAN"
+#: data/json/dreams.json
+msgid "You dream of pinching zombies with your claws."
+msgstr ""
+
+#. ~ Dream of mutation category "CRUSTACEAN"
+#: data/json/dreams.json
+msgid "You have a vivid dream of shedding your carapace.  It feels good."
+msgstr ""
+
+#. ~ Dream of mutation category "CRUSTACEAN"
+#: data/json/dreams.json
+msgid "You dream of tearing apart some hapless fish with your pincers."
+msgstr ""
+
+#. ~ Name of effect type id "critter_well_fed"
+#: data/json/effects.json
+msgid "Well Fed"
+msgstr ""
+
+#. ~ Name of effect type id "shattered"
+#: data/json/effects.json
+msgid "Shattered Armor"
+msgstr ""
+
+#. ~ Description of effect type "Shattered Armor"
+#: data/json/effects.json
+msgid "Your armor has been shattered by a heavy attack."
+msgstr ""
+
+#. ~ Apply message of effect type "Shattered Armor"
+#: data/json/effects.json
+msgid "Your armor has been shattered."
+msgstr ""
+
+#. ~ Description of effect type "Staggered"
+#: data/json/effects.json
+msgid "You've been knocked off-balance by an attack."
+msgstr ""
+
+#. ~ Name of effect type id "sneezing"
+#: data/json/effects.json
+msgid "Sneezing"
+msgstr ""
+
+#. ~ Description of effect type "Sneezing"
+#: data/json/effects.json
+msgid ""
+"It's hard to pay attention to anything when you're in the middle of sneezing!"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_acid_gland"
+#: data/json/effects.json
+msgid "Maimed Acid Glands"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_huntsman_arm"
+#: data/json/effects.json
+msgid "Broken Appendage"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_capacitor"
+#: data/json/effects.json
+msgid "Maimed Capacitor"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_tail"
+#: data/json/effects.json
+msgid "Maimed Tail"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_claws"
+#: data/json/effects.json
+msgid "Maimed Claws"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_armor"
+#: data/json/effects.json
+msgid "Cracked Shell"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_mandible"
+#: data/json/effects.json
+msgid "Maimed Mandibles"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_tongue"
+#: data/json/effects.json
+msgid "Injured Tongue"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_leg"
+#: data/json/effects.json
+msgid "Maimed Legs"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_stinger"
+#: data/json/effects.json
+msgid "Maimed Stinger"
+msgstr ""
+
+#. ~ Name of effect type id "maimed_wings"
+#: data/json/effects.json
+msgid "Maimed Wings"
+msgstr ""
+
+#. ~ Name of effect type id "photophobia"
+#: data/json/effects.json
+msgid "Photophobia"
+msgstr ""
+
+#. ~ Name of effect type id "Shadow_Reveal"
+#: data/json/effects.json
+msgid "Revealed"
+msgstr ""
+
+#. ~ Name of effect type id "winded_leg_l"
+#: data/json/effects.json
+msgid "Winded (Left Leg)"
+msgstr ""
+
+#. ~ Description of effect type "Winded (Left Leg)"
+#: data/json/effects.json
+msgid ""
+"You're short of breath.  Your left leg has impaired function until you "
+"recover."
+msgstr ""
+
+#. ~ Name of effect type id "winded_leg_r"
+#: data/json/effects.json
+msgid "Winded (Right Leg)"
+msgstr ""
+
+#. ~ Description of effect type "Winded (Right Leg)"
+#: data/json/effects.json
+msgid ""
+"You're short of breath.  Your right leg has impaired function until you "
+"recover."
+msgstr ""
+
+#. ~ Name of effect type id "winded_arm_l"
+#: data/json/effects.json
+msgid "Winded (Left Arm)"
+msgstr ""
+
+#. ~ Description of effect type "Winded (Left Arm)"
+#: data/json/effects.json
+msgid ""
+"You're short of breath.  Your left arm has impaired function until you "
+"recover."
+msgstr ""
+
+#. ~ Name of effect type id "winded_arm_r"
+#: data/json/effects.json
+msgid "Winded (Right Arm)"
+msgstr ""
+
+#. ~ Description of effect type "Winded (Right Arm)"
+#: data/json/effects.json
+msgid ""
+"You're short of breath.  Your right arm has impaired function until you "
+"recover."
+msgstr ""
+
+#. ~ Name of effect type id "immobilization"
+#. ~ Name of effect type id "effect_robot_immobilized"
+#: data/json/effects.json data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Immobilized"
+msgstr ""
+
+#. ~ Description of effect type "Immobilized"
+#: data/json/effects.json
+msgid "You can't move!"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Short of Breath"
+#: data/json/effects.json
+msgid "Unknown Organic Toxin"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Poisoned Wound"
+#: data/json/effects.json
+msgid "Necrotizing Venom"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Weakening Poison"
+#: data/json/effects.json
+msgid "Systemic Inflammatory Agents"
+msgstr ""
+
+#. ~ Name of effect type id "venom_pain"
+#: data/json/effects.json
+msgid "Distracting Wound"
+msgstr ""
+
+#. ~ Name of effect type id "venom_pain"
+#: data/json/effects.json
+msgid "Searing Wound"
+msgstr ""
+
+#. ~ Description of effect type "Distracting Wound, Painful Wound, Searing
+#. Wound"
+#: data/json/effects.json
+msgid "The wound throbs with sharp pain."
+msgstr ""
+
+#. ~ Apply message of effect type "Distracting Wound, Painful Wound, Searing
+#. Wound"
+#: data/json/effects.json
+msgid "A dull pain starts spreading from the wound!"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Slowed, Sluggish, Partially
+#. Paralyzed, Totally Paralyzed"
+#: data/json/effects.json
+msgid "Paralyzing Poison"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Melatonin Supplements"
+#: data/json/effects.json
+msgid "Melatonin"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Changing, Warping, Mutagen
+#. Overdose"
+#: data/json/effects.json
+msgid "Mutagen Contamination"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Mutagenic Slurry"
+#: data/json/effects.json
+msgid "Mutagenic Toxins Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_chelator"
+#: data/json/effects.json
+msgid "Mutagen Chelator"
+msgstr ""
+
+#. ~ Description of effect type "Mutagen Chelator"
+#: data/json/effects.json
+msgid ""
+"You took a dose of chelator.  Any mutagenic drugs in your body are being "
+"purged."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Mutagen Chelator"
+#: data/json/effects.json
+msgid "Mutagen Chelator Contamination"
+msgstr ""
+
+#. ~ Description of effect type "Alpha Mutation"
+#: data/json/effects.json
+msgid "You consumed alpha primer."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Alpha Mutation, Alpha
+#. Transformation, Alpha Metamorphosis"
+#: data/json/effects.json
+msgid "Alpha Primer Contamination"
+msgstr ""
+
+#. ~ Description of effect type "Frog Mutation"
+#: data/json/effects.json
+msgid "You consumed frog primer."
+msgstr ""

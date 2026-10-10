@@ -1,0 +1,2216 @@
+# Batch 18 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "maritime tactical jacket"
+msgid_plural "maritime tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "maritime tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"Resplendent in a wide assortment of blue and light gray tones, this versatile"
+" outerwear is the garment of choice for ocean-side activities, namely ocean "
+"activities with less fun sea-side paddling and more marine security and over-"
+"the-beach gunfights."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "river-camo tactical jacket"
+msgid_plural "river-camo tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "river-camo tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"The fabric of this particular jacket is festooned with a camouflage pattern —"
+" a muddle of greens, light blues, browns, and gray — that would make it at "
+"home with any river-based huntsman or angler.  Its water-repellent "
+"construction ensures that one's possessions are protected from river spray."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "poler-camo tactical jacket"
+msgid_plural "poler-camo tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "poler-camo tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"Fit for utility in light snowfall and in the colder months, this jacket, "
+"while not as insulating as thicker winter overcoats, is resplendent with a "
+"mixed camo palette of snowy white, gray, and a hint of light brown."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "wolf tactical jacket"
+msgid_plural "wolf tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "wolf tactical jacket" of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"Subtle and unassuming, save for the purely ludicrous number of pockets it's "
+"coated in, this hardy overgarment's outer shell is dyed a muted tone of gray "
+"verging into beige."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "coyote-brown tactical jacket"
+msgid_plural "coyote-brown tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "coyote-brown tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"Modest and relatively plain, as far as tactical equipment goes, this "
+"particular jacket is dyed a solid shade of earthen brown."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "olive-drab tactical jacket"
+msgid_plural "olive-drab tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "olive-drab tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"The venerable shade of old military equipment, modern reproductions, and "
+"prepper camo-closets, this particular jacket is completely dyed a traditional"
+" shade of olive green."
+msgstr ""
+
+#. ~ Variant name of item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "urban-black tactical jacket"
+msgid_plural "urban-black tactical jackets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "urban-black tactical jacket" of item "tactical
+#. jacket"
+#: data/json/items/armor/coats.json
+msgid ""
+"Pitch-black, from its mandarin collar to its hems, this jacket is a coat for "
+"the aspiring nocturnal operator, tacticool edge lord, and those in the "
+"business to be afoot during the small hours of the night."
+msgstr ""
+
+#. ~ Description of a pocket in item "tactical jacket"
+#. ~ Description of a pocket in item "synleather jacket"
+#. ~ Description of a pocket in item "diode bomber"
+#. ~ Description of a pocket in item "mercenary bolero"
+#: data/json/items/armor/coats.json
+#: data/mods/Aftershock/items/armor/cyberpunk.json
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "Zip-up chest pocket."
+msgstr ""
+
+#. ~ Description of a pocket in item "tactical jacket"
+#: data/json/items/armor/coats.json
+msgid "Upper arm pocket."
+msgstr ""
+
+#. ~ Description of a pocket in item "tactical jacket"
+#. ~ Description of a pocket in item "synleather jacket"
+#. ~ Description of a pocket in item "diode bomber"
+#. ~ Description of a pocket in item "mercenary bolero"
+#: data/json/items/armor/coats.json
+#: data/mods/Aftershock/items/armor/cyberpunk.json
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "Zip-up left sleeve pocket."
+msgstr ""
+
+#. ~ Description of a pocket in item "tactical jacket"
+#. ~ Description of a pocket in item "synleather jacket"
+#. ~ Description of a pocket in item "diode bomber"
+#: data/json/items/armor/coats.json
+#: data/mods/Aftershock/items/armor/cyberpunk.json
+#: data/mods/aftershock_exoplanet/items/armor/cyberpunk.json
+msgid "rear channel pocket."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/coats.json
+msgid "abaya"
+msgid_plural "abayas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "abaya"
+#: data/json/items/armor/coats.json
+msgid ""
+"A loose-fitting, full-length outer garment generally worn over clothing by "
+"Muslim women."
+msgstr ""
+
+#. ~ Description of a pocket in item "abstract combat exoskeleton"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "Compartment for a tool battery."
+msgstr ""
+
+#. ~ Description of a pocket in item "abstract combat exoskeleton"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "Attachment points for exoskeleton head armor."
+msgstr ""
+
+#. ~ Description of a pocket in item "abstract combat exoskeleton"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "Attachment points for exoskeleton torso armor."
+msgstr ""
+
+#. ~ Description of a pocket in item "abstract combat exoskeleton"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "Attachment points for exoskeleton arm armor."
+msgstr ""
+
+#. ~ Description of a pocket in item "abstract combat exoskeleton"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "Attachment points for exoskeleton leg armor."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk1"
+msgid_plural "combat exoskeletons mk1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "combat exoskeleton mk1"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"Colloquially known as a 'tank suit' in the media, these first-generation "
+"exoskeletons were tested in military service a few years back and determined "
+"to be too expensive for regular use.  The exoskeleton itself is strapped on "
+"an environmental suit with an integrated life-support system.  A variety of "
+"webbing, magnets, and clips allows the attachment of special armor plating "
+"onto the frame."
+msgstr ""
+
+#. ~ "msg" action message of item "combat exoskeleton mk1"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"You turn the exoskeleton on.\n"
+">>Initiating boot sequence…\n"
+"//Loading DoubleOS v1.38…\n"
+"//Loading calibration profile…\n"
+"//Activating atmospheric filtration…\n"
+"//Activating liquid cooling…\n"
+"//Activating sound dampeners…\n"
+">>Boot successful."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "combat exoskeleton mk1"
+#. ~ "need_charges_msg" action message of item "combat exoskeleton mk2"
+#. ~ "need_charges_msg" action message of item "combat exoskeleton mk3"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "The exoskeleton batteries are empty."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk1 (on)"
+msgid_plural "combat exoskeletons mk1 (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "msg" action message of item "combat exoskeleton mk1 (on)"
+#. ~ "msg" action message of item "combat exoskeleton mk2 (on)"
+#. ~ "msg" action message of item "combat exoskeleton mk3 (on)"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"You turn the exoskeleton off.\n"
+">>Initiating shutdown sequence…\n"
+">>Shutting down."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk2"
+msgid_plural "combat exoskeletons mk2"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "combat exoskeleton mk2"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"These were the second wave of military combat exoskeleton, and got a lot of "
+"media attention, with popular Navy commercials featuring them heavily.  The "
+"exoskeleton itself is strapped on an environmental suit with an integrated "
+"life-support system.  A variety of webbing, magnets, and clips allows the "
+"attachment of special armor plating onto the frame."
+msgstr ""
+
+#. ~ "msg" action message of item "combat exoskeleton mk2"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"You turn the exoskeleton on.\n"
+">>Initiating boot sequence…\n"
+"//Loading DoubleOS v2.86…\n"
+"//Loading calibration profile…\n"
+"//Activating atmospheric filtration…\n"
+"//Activating liquid cooling…\n"
+"//Activating sound dampeners…\n"
+">>Boot successful."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk2 (on)"
+msgid_plural "combat exoskeletons m2 (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk3"
+msgid_plural "combat exoskeletons mk3"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "combat exoskeleton mk3"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"The final iteration of military power armor before the fall of civilization, "
+"this version was designed for actual widespread combat use and was seen on "
+"the front lines during the last days of the Cataclysm, unfortunately, the "
+"world ended before it could roll out in significant numbers.  The exoskeleton"
+" itself is strapped on an environmental suit with an integrated life-support "
+"system.  A variety of webbing, magnets, and clips allows the attachment of "
+"special armor plating onto the frame."
+msgstr ""
+
+#. ~ "msg" action message of item "combat exoskeleton mk3"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"You turn the exoskeleton on.\n"
+">>Initiating boot sequence…\n"
+"//Loading DoubleOS v3.51…\n"
+"//Loading calibration profile…\n"
+"//Activating atmospheric filtration…\n"
+"//Activating liquid cooling…\n"
+"//Activating sound dampeners…\n"
+">>Boot successful."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "combat exoskeleton mk3 (on)"
+msgid_plural "combat exoskeletons mk3 (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton.json
+msgid "salvaged combat exoskeleton mk3"
+msgid_plural "salvaged combat exoskeleton mk3s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "salvaged combat exoskeleton mk3"
+#: data/json/items/armor/combat_exoskeleton.json
+msgid ""
+"This is supposed to be a combat exoskeleton of third generation but its "
+"environmental suit is severely damaged and the mechanical components are non "
+"functional.  A variety of webbing, magnets, and clips allows the attachment "
+"of special armor plating onto the frame."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "heavy combat exoskeleton head armor"
+msgid_plural "heavy combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy combat exoskeleton head armor"
+#. ~ Description of "heavy combat exoskeleton torso armor"
+#. ~ Description of "heavy combat exoskeleton arm armor"
+#. ~ Description of "heavy combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"Put the tank in tank suit with this 6mm thick exoskeleton armor, it even "
+"feels like wearing a real tank, you should stay wary of anti-material rounds "
+"though."
+msgstr ""
+
+#. ~ Description of a pocket in item "heavy combat exoskeleton head armor"
+#. ~ Description of a pocket in item "hard hat"
+#. ~ Description of a pocket in item "summer hard hat"
+#. ~ Description of a pocket in item "army helmet"
+#. ~ Description of a pocket in item "tactical helmet"
+#. ~ Description of a pocket in item "airsoft helmet"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+#: data/json/items/armor/hats.json data/json/items/armor/helmets.json
+msgid "Pocket for a flashlight attachment."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "heavy combat exoskeleton torso armor"
+msgid_plural "heavy combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "heavy combat exoskeleton arm armor"
+msgid_plural "heavy combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "heavy combat exoskeleton leg armor"
+msgid_plural "heavy combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "medium combat exoskeleton head armor"
+msgid_plural "medium combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "medium combat exoskeleton head armor"
+#. ~ Description of "medium combat exoskeleton torso armor"
+#. ~ Description of "medium combat exoskeleton arm armor"
+#. ~ Description of "medium combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"This 4mm thick exoskeleton armor will allow you to withstand a lead storm "
+"while also giving you the mobility to escape it, if the hail ends up being "
+"made of heavier calibers than standard rifle rounds."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "medium combat exoskeleton torso armor"
+msgid_plural "medium combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "medium combat exoskeleton arm armor"
+msgid_plural "medium combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "medium combat exoskeleton leg armor"
+msgid_plural "medium combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "light combat exoskeleton head armor"
+msgid_plural "light combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "light combat exoskeleton head armor"
+#. ~ Description of "light combat exoskeleton torso armor"
+#. ~ Description of "light combat exoskeleton arm armor"
+#. ~ Description of "light combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"This 2mm thick exoskeleton armor was designed when the testing of heavier "
+"versions concluded that mobility is actually the most important attribute on "
+"the battlefield, especially when you can still brush off small caliber "
+"rounds."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "light combat exoskeleton torso armor"
+msgid_plural "light combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "light combat exoskeleton arm armor"
+msgid_plural "light combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "light combat exoskeleton leg armor"
+msgid_plural "light combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced heavy combat exoskeleton head armor"
+msgid_plural "reinforced heavy combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "reinforced heavy combat exoskeleton head armor"
+#. ~ Description of "reinforced heavy combat exoskeleton torso armor"
+#. ~ Description of "reinforced heavy combat exoskeleton arm armor"
+#. ~ Description of "reinforced heavy combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"Put the tank in tank suit with this 6mm thick exoskeleton armor, it even "
+"feels like wearing a real tank, you should stay wary of anti-material rounds "
+"though.  This armor has been reinforced with chainmail to fill its gaps."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced heavy combat exoskeleton torso armor"
+msgid_plural "reinforced heavy combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced heavy combat exoskeleton arm armor"
+msgid_plural "reinforced heavy combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced heavy combat exoskeleton leg armor"
+msgid_plural "reinforced heavy combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced medium combat exoskeleton head armor"
+msgid_plural "reinforced medium combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "reinforced medium combat exoskeleton head armor"
+#. ~ Description of "reinforced medium combat exoskeleton torso armor"
+#. ~ Description of "reinforced medium combat exoskeleton arm armor"
+#. ~ Description of "reinforced medium combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"This 4mm thick exoskeleton armor will allow you to withstand a lead storm "
+"while also giving you the mobility to escape it, if the hail ends up being "
+"made of heavier calibers than standard rifle rounds.  This armor has been "
+"reinforced with chainmail to fill its gaps."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced medium combat exoskeleton torso armor"
+msgid_plural "reinforced medium combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced medium combat exoskeleton arm armor"
+msgid_plural "reinforced medium combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced medium combat exoskeleton leg armor"
+msgid_plural "reinforced medium combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced light combat exoskeleton head armor"
+msgid_plural "reinforced light combat exoskeleton head armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "reinforced light combat exoskeleton head armor"
+#. ~ Description of "reinforced light combat exoskeleton torso armor"
+#. ~ Description of "reinforced light combat exoskeleton arm armor"
+#. ~ Description of "reinforced light combat exoskeleton leg armor"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid ""
+"This 2mm thick exoskeleton armor was designed when the testing of heavier "
+"versions concluded that mobility is actually the most important attribute on "
+"the battlefield, especially when you can still brush off small caliber "
+"rounds.  This armor has been reinforced with chainmail to fill its gaps."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced light combat exoskeleton torso armor"
+msgid_plural "reinforced light combat exoskeleton torso armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced light combat exoskeleton arm armor"
+msgid_plural "reinforced light combat exoskeleton arm armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/combat_exoskeleton_armor.json
+msgid "reinforced light combat exoskeleton leg armor"
+msgid_plural "reinforced light combat exoskeleton leg armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "generic migo plate"
+msgid_plural "generic migo plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "overgrown iridescent carapace plate"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A chunk of otherworldly carapace that looks like it was at one point shaped "
+"like armor, but is now bulky and overgrown with sharp pieces jutting out "
+"haphazardly.  Scarred into the outer surface you can barely make out the "
+"label \"STRIKE FACE\".  It looks like you could force it into a ballistic "
+"vest."
+msgstr ""
+
+#. ~ Description of "plate of scarred flesh"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A chunk of otherworldly flesh that seems to have been forced into the shape "
+"of a ballistic plate with a slightly concave profile.  There is no armor left"
+" on this plate, just a mass of writhing alien flesh oozing in pain.  However,"
+" it looks like it is slowly growing back."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "overgrown iridescent carapace side plate"
+msgid_plural "overgrown iridescent carapace side plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "iridescent carapace side plate"
+msgid_plural "iridescent carapace side plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "undergrown iridescent carapace side plate"
+msgid_plural "undergrown iridescent carapace side plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "small plate of scarred flesh"
+msgid_plural "small plates of scarred flesh"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "second skin"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A slimy layer of liquid has completely engulfed your body from the neck down "
+"and seems to move with you - the sensation is uncomfortable.  The liquid "
+"appears bound to the resonating collar at your neck; the inside of the collar"
+" reads \"CAREFUL CHOKING HAZARD!  THIS WAY DOWN\".  The ooze flows freely, "
+"covering your entire body but never crossing the gorget to get to your head."
+msgstr ""
+
+#. ~ Description of "resonating gorget"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A heavy-duty gorget or collar made from odd materials that hums slightly.  It"
+" feels damp to the touch and there is a mechanical button of some kind on the"
+" front.  The inside reads \"CAREFUL CHOKING HAZARD!  THIS WAY DOWN\"."
+msgstr ""
+
+#. ~ Description of "feeding kit"
+#: data/json/items/armor/exotic.json
+msgid ""
+"This is a collection of syringes with nozzles, an aerosol sprayer, and a few "
+"other attachments.  It seems designed for looking after some kind of creature"
+" that wants to stay wet."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "ryūsei battle kit"
+msgid_plural "ryūsei battle kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A strange belt wrapped with circuitry and hundreds of banded metal discs.  "
+"When you touch it, it seems to vibrate slightly."
+msgstr ""
+
+#. ~ Description of a pocket in item "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid "Synchronization point for ryūsei dō plate."
+msgstr ""
+
+#. ~ Description of a pocket in item "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid "Synchronization point for ryūsei kote plate."
+msgstr ""
+
+#. ~ Description of a pocket in item "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid "Synchronization point for ryūsei hai-date plate."
+msgstr ""
+
+#. ~ Description of a pocket in item "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid "Floating clip (seems like anything would fit)."
+msgstr ""
+
+#. ~ Description of a pocket in item "ryūsei battle kit"
+#: data/json/items/armor/exotic.json
+msgid "Large Quiver."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "filtering menpo"
+msgid_plural "filtering menpo"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "filtering menpo"
+#: data/json/items/armor/exotic.json
+msgid ""
+"A sealed mask with strange filtering components on the front turned up in the"
+" shape of horns.  Inscriptions mark the glass of the lenses creating spiral "
+"patterns that blur the vision."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "ryūsei dō"
+msgid_plural "ryūsei dō"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ryūsei dō"
+#: data/json/items/armor/exotic.json
+msgid ""
+"An impossibly large slab of dark reflective material wrapped in bands of "
+"multicolored alloy.  It seems shaped to fit over a humanoid torso."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "ryūsei kote"
+msgid_plural "ryūsei kote"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ryūsei kote"
+#: data/json/items/armor/exotic.json
+msgid ""
+"An impossibly large slab of dark reflective material wrapped in bands of "
+"multicolored alloy.  It seems shaped as though it would tie to the upper "
+"arms."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/exotic.json
+msgid "ryūsei hai-date"
+msgid_plural "ryūsei hai-date"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ryūsei hai-date"
+#: data/json/items/armor/exotic.json
+msgid ""
+"An impossibly large slab of dark reflective material wrapped in bands of "
+"multicolored alloy.  It has been forced into a conical shape as though it "
+"could somehow be worn as a skirt."
+msgstr ""
+
+#. ~ Variant name of item "pair of bifocal glasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round bifocal glasses"
+msgid_plural "pairs of round bifocal glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of round bifocal glasses" of item "pair of
+#. bifocal glasses"
+#. ~ Description of variant "pair of round eyeglasses" of item "pair of
+#. eyeglasses"
+#. ~ Description of variant "pair of round sunglasses" of item "pair of
+#. sunglasses"
+#. ~ Description of variant "pair of round bifocal sunglasses" of item "pair of
+#. bifocal sunglasses"
+#. ~ Description of variant "pair of round corrective sunglasses" of item "pair
+#. of corrective sunglasses"
+#. ~ Description of variant "pair of round reading sunglasses" of item "pair of
+#. reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "This pair has rounded lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of bifocal glasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square bifocal glasses"
+msgid_plural "pairs of square bifocal glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of square bifocal glasses" of item "pair of
+#. bifocal glasses"
+#. ~ Description of variant "pair of square eyeglasses" of item "pair of
+#. eyeglasses"
+#. ~ Description of variant "pair of square sunglasses" of item "pair of
+#. sunglasses"
+#. ~ Description of variant "pair of square bifocal sunglasses" of item "pair
+#. of bifocal sunglasses"
+#. ~ Description of variant "pair of square corrective sunglasses" of item
+#. "pair of corrective sunglasses"
+#. ~ Description of variant "pair of square reading sunglasses" of item "pair
+#. of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "This pair has square lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of bifocal glasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of aviator bifocal glasses"
+msgid_plural "pairs of aviator bifocal glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of aviator bifocal glasses" of item "pair of
+#. bifocal glasses"
+#. ~ Description of variant "pair of aviator eyeglasses" of item "pair of
+#. eyeglasses"
+#. ~ Description of variant "pair of aviators" of item "pair of sunglasses"
+#. ~ Description of variant "pair of bifocal aviators" of item "pair of bifocal
+#. sunglasses"
+#. ~ Description of variant "pair of corrective aviators" of item "pair of
+#. corrective sunglasses"
+#. ~ Description of variant "pair of reading aviators" of item "pair of reading
+#. sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "This pair has aviator-styled lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of eyeglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round eyeglasses"
+msgid_plural "pairs of round eyeglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of eyeglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square eyeglasses"
+msgid_plural "pairs of square eyeglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of eyeglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of aviator eyeglasses"
+msgid_plural "pairs of aviator eyeglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "monocle"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"An essential article of the gentleman's apparel.  Also corrects near-"
+"sightedness.  The concave lens diffuses the sunlight, rendering it useless "
+"for starting fires."
+msgstr ""
+
+#. ~ Variant name of item "pair of sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round sunglasses"
+msgid_plural "pairs of round sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square sunglasses"
+msgid_plural "pairs of square sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of aviators"
+msgid_plural "pairs of aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round bifocal sunglasses"
+msgid_plural "pairs of round bifocal sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square bifocal sunglasses"
+msgid_plural "pairs of square bifocal sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of bifocal aviators"
+msgid_plural "pairs of bifocal aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round bifocal transition glasses"
+msgid_plural "pairs of round bifocal transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of round bifocal transition glasses" of item
+#. "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition bifocal glasses for those who are both near-sighted and "
+"far-sighted.  Contains photochromic dyes that cause the lenses to darken when"
+" exposed to ultraviolet rays from sunlight.  When the UV light diminishes, "
+"the lenses fade back.  This pair has rounded lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square bifocal transition glasses"
+msgid_plural "pairs of square bifocal transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of square bifocal transition glasses" of item
+#. "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition bifocal glasses for those who are both near-sighted and "
+"far-sighted.  Contains photochromic dyes that cause the lenses to darken when"
+" exposed to ultraviolet rays from sunlight.  When the UV light diminishes, "
+"the lenses fade back.  This pair has square lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of bifocal transition aviators"
+msgid_plural "pairs of bifocal transition aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of bifocal transition aviators" of item "pair
+#. of bifocal sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition bifocal glasses for those who are both near-sighted and "
+"far-sighted.  Contains photochromic dyes that cause the lenses to darken when"
+" exposed to ultraviolet rays from sunlight.  When the UV light diminishes, "
+"the lenses fade back.  This pair has aviator-styled lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round corrective sunglasses"
+msgid_plural "pairs of round corrective sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square corrective sunglasses"
+msgid_plural "pairs of square corrective sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of corrective aviators"
+msgid_plural "pairs of corrective aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round corrective transition glasses"
+msgid_plural "pairs of round corrective transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of round corrective transition glasses" of
+#. item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition glasses for the near-sighted.  Contains photochromic "
+"dyes that cause the lenses to darken when exposed to ultraviolet rays from "
+"sunlight.  When the UV light diminishes, the lenses fade back.  This pair has"
+" rounded lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square corrective transition glasses"
+msgid_plural "pairs of square corrective transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of square corrective transition glasses" of
+#. item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition glasses for the near-sighted.  Contains photochromic "
+"dyes that cause the lenses to darken when exposed to ultraviolet rays from "
+"sunlight.  When the UV light diminishes, the lenses fade back.  This pair has"
+" square lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of corrective transition aviators"
+msgid_plural "pairs of corrective transition aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of corrective transition aviators" of item
+#. "pair of corrective sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of transition glasses for the near-sighted.  Contains photochromic "
+"dyes that cause the lenses to darken when exposed to ultraviolet rays from "
+"sunlight.  When the UV light diminishes, the lenses fade back.  This pair has"
+" aviator-styled lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round reading sunglasses"
+msgid_plural "pairs of round reading sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square reading sunglasses"
+msgid_plural "pairs of square reading sunglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of reading aviators"
+msgid_plural "pairs of reading aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of round reading transition glasses"
+msgid_plural "pairs of round reading transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of round reading transition glasses" of item
+#. "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of glasses for the far-sighted.  Useless for anyone else.  Contains "
+"photochromic dyes that cause the lenses to darken when exposed to ultraviolet"
+" rays from sunlight.  When the UV light diminishes, the lenses fade back.  "
+"This pair has rounded lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of square reading transition glasses"
+msgid_plural "pairs of square reading transition glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of square reading transition glasses" of item
+#. "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of glasses for the far-sighted.  Useless for anyone else.  Contains "
+"photochromic dyes that cause the lenses to darken when exposed to ultraviolet"
+" rays from sunlight.  When the UV light diminishes, the lenses fade back.  "
+"This pair has square lenses."
+msgstr ""
+
+#. ~ Variant name of item "pair of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid "pair of reading transition aviators"
+msgid_plural "pairs of reading transition aviators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pair of reading transition aviators" of item "pair
+#. of reading sunglasses"
+#: data/json/items/armor/eyewear.json
+msgid ""
+"A pair of glasses for the far-sighted.  Useless for anyone else.  Contains "
+"photochromic dyes that cause the lenses to darken when exposed to ultraviolet"
+" rays from sunlight.  When the UV light diminishes, the lenses fade back.  "
+"This pair has aviator-styled lenses."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "padded gambeson"
+msgid_plural "padded gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "padded gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A padded greatcoat assembled by quilting readily available fabric and "
+"stuffing the layers with waste fabric or horse hair that was intended as "
+"standalone armor, being too thick to comfortably fit a cuirass over.  Likely "
+"either a historical artifact or a low-quality reproduction.  Though inferior "
+"to a proper layered aketon or gambeson it still offers decent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "padded gambeson vest"
+msgid_plural "padded gambeson vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "padded gambeson vest"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick padded surcoat assembled by quilting readily available fabric and "
+"stuffing the layers with waste fabric or horse hair that was intended as "
+"standalone armor, being too thick to comfortably fit a cuirass over.  Likely "
+"either a historical artifact or a low-quality reproduction.  Though inferior "
+"to a proper layered gambeson its sheer thickness is still quite protective."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "padded arming pants"
+msgid_plural "pairs of padded arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "padded coif"
+msgid_plural "padded coifs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "padded coif"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A cloth coif with neck and forehead protection.  Resting on your shoulders, "
+"it serves as padding for a helmet.  Though it's pretty warm, it is "
+"constructed of stuffed cloth layers and provides moderate protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas aketon"
+msgid_plural "canvas aketons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas aketon"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth jack, intended to be worn below metal armor.  This one is made "
+"of over a dozen layers of tough canvas, and it provides fairly decent "
+"protection on its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas aketon vest"
+msgid_plural "canvas aketon vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas aketon vest"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth vest, intended to be worn below metal armor.  This one is made "
+"of over a dozen layers of tough canvas, and it provides fairly decent "
+"protection on its own."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "canvas arming pants"
+msgid_plural "pairs of canvas arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough cloth pants worn alongside an aketon underneath metal armor.  These are"
+" made of many layers of canvas offering solid protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas coif"
+msgid_plural "canvas coifs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas coif"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A cloth coif with neck and forehead protection.  Resting on your shoulders, "
+"it serves as padding for a helmet.  Though it's pretty warm, it is "
+"constructed of tough canvas and provides substantial protection even on its "
+"own."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "canvas arming gloves"
+msgid_plural "pairs of canvas arming gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas arming gloves"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough gloves made of canvas cloth, thin enough to wear under metal gauntlets."
+"  They help to keep your hands safe during a fight."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas gambeson"
+msgid_plural "canvas gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough canvas, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a bit thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "thin-sleeved canvas gambeson"
+msgid_plural "thin-sleeved canvas gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thin-sleeved canvas gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough canvas, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a lot thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "sleeveless canvas gambeson"
+msgid_plural "sleeveless canvas gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sleeveless canvas gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth surcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough canvas, this will protect you from almost everything, "
+"but it's very heavy and warm.  It drapes below your legs, providing "
+"additional protection there, and it lacks sleeves entirely."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas heavy arming pants"
+msgid_plural "pairs of canvas heavy arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas heavy arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough, extremely thick cloth pants worn on their own alongside a gambeson.  "
+"These are made of a huge number of canvas layers offering very solid "
+"protection, though they're too thick to easily add metal armor on top and are"
+" both stuffy and restrictive."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "canvas arming mittens"
+msgid_plural "pairs of canvas arming mittens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas arming mittens"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Very thick canvas gauntlets worn in lieu of metal or leather armor.  Though "
+"they make it hard to do anything other than swing a weapon, and they're very "
+"warm, they offer excellent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon aketon"
+msgid_plural "nylon aketons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon aketon"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth jack, intended to be worn below metal armor.  This one is made "
+"of over a dozen layers of tough nylon, and it provides fairly decent "
+"protection on its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon aketon vest"
+msgid_plural "nylon aketon vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon aketon vest"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth vest, intended to be worn below metal armor.  This one is made "
+"of over a dozen layers of tough nylon, and it provides fairly decent "
+"protection on its own in addition to being quite light."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "nylon arming pants"
+msgid_plural "pairs of nylon arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough cloth pants worn alongside an aketon underneath metal armor.  These are"
+" made of many layers of nylon offering solid protection and the modern "
+"material is much lighter than organic fabrics."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon coif"
+msgid_plural "nylon coifs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon coif"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A cloth coif with neck and forehead protection.  Resting on your shoulders, "
+"it serves as padding for a helmet.  It is constructed of tough nylon and "
+"provides decent protection even on its own in addition to being fairly light."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "nylon arming gloves"
+msgid_plural "pairs of nylon arming gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon arming gloves"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough gloves made of nylon cloth, thin enough to wear under metal gauntlets."
+"  They help to keep your hands safe during a fight."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon gambeson"
+msgid_plural "nylon gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough nylon, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a bit thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "thin-sleeved nylon gambeson"
+msgid_plural "thin-sleeved nylon gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thin-sleeved nylon gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough nylon, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a lot thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "sleeveless nylon gambeson"
+msgid_plural "sleeveless nylon gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sleeveless nylon gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth surcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thirty layers of tough nylon, this will protect you from almost everything, "
+"but it's very heavy and warm.  It drapes below your legs, providing "
+"additional protection there, and it lacks sleeves entirely."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon heavy arming pants"
+msgid_plural "pairs of nylon heavy arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon heavy arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough, extremely thick nylon pants worn on their own alongside a gambeson.  "
+"These are made of a huge number of canvas layers offering very solid "
+"protection, though they're too thick to easily add metal armor on top and are"
+" both stuffy and restrictive."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "nylon arming mittens"
+msgid_plural "pairs of nylon arming mittens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nylon arming mittens"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Very thick nylon gauntlets worn in lieu of metal or leather armor.  Though "
+"they make it hard to do anything other than swing a weapon, and they're very "
+"warm, they offer excellent protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool aketon"
+msgid_plural "wool aketons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool aketon"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth jack, intended to be worn below metal armor.  This one is made "
+"of layered wool quilting and it provides fairly decent protection on its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool aketon vest"
+msgid_plural "wool aketon vests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool aketon vest"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth vest, intended to be worn below metal armor.  This one is made "
+"of layered wool quilting and it provides fairly decent protection on its own."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "wool arming pants"
+msgid_plural "pairs of wool arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough cloth pants worn alongside an aketon underneath metal armor.  This one "
+"is made of layered wool quilting and it provides fairly decent protection on "
+"its own."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool coif"
+msgid_plural "wool coifs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool coif"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A cloth coif with neck and forehead protection.  Resting on your shoulders, "
+"it serves as padding for a helmet.  Though it's pretty warm, it is "
+"constructed of layered wool quilting and provides substantial protection even"
+" on its own."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/armor/gambesons.json data/json/recipes/nested.json
+msgid "wool arming gloves"
+msgid_plural "pairs of wool arming gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool arming gloves"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough cloth gloves made of layered wool quilting, thin enough to wear under "
+"metal gauntlets.  They help to keep your hands safe during a fight."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool gambeson"
+msgid_plural "wool gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thickly layered wool quilting, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a bit thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "thin-sleeved wool gambeson"
+msgid_plural "thin-sleeved wool gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thin-sleeved wool gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth greatcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thickly layered wool quilting, this will protect you from almost everything, "
+"but it's very heavy and warm.  The sleeves are a lot thinner for flexibility "
+"and it drapes below your legs, providing additional protection there."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "sleeveless wool gambeson"
+msgid_plural "sleeveless wool gambesons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sleeveless wool gambeson"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"A thick cloth surcoat intended to be worn as standalone armor, as it's a "
+"little too thick to comfortably add chainmail or a cuirass on top.  Made of "
+"thickly layered wool quilting, this will protect you from almost everything, "
+"but it's very heavy and warm.  It drapes below your legs, providing "
+"additional protection there, and it lacks sleeves entirely."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool heavy arming pants"
+msgid_plural "pairs of wool heavy arming pants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool heavy arming pants"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Tough, extremely thick cloth pants worn on their own alongside a gambeson.  "
+"These are made of thickly layered wool quilting offering very solid "
+"protection, though they're too thick to easily add metal armor on top and are"
+" both stuffy and restrictive."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gambesons.json
+msgid "wool arming mittens"
+msgid_plural "pairs of wool arming mittens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wool arming mittens"
+#: data/json/items/armor/gambesons.json
+msgid ""
+"Very thick wool gauntlets worn in lieu of metal or leather armor.  Though "
+"they make it hard to do anything other than swing a weapon, and they're very "
+"warm, they offer excellent protection."
+msgstr ""
+
+#. ~ Description of "pair of boxing gloves"
+#: data/json/items/armor/gloves.json
+msgid "A pair of big, red, 8 oz. boxing gloves made from thick leather."
+msgstr ""
+
+#. ~ Description of "pair of chainmail gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of customized chainmail gloves that fully enclose the hands.  The "
+"metal shows signs of rust and corrosion."
+msgstr ""
+
+#. ~ Description of "pair of mild steel chainmail gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of customized steel chainmail gloves that fully enclose the hands."
+msgstr ""
+
+#. ~ Description of "pair of claw gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of well-made black stretch vinyl gloves, with black steel claws "
+"connected to the fingers.  Used in BDSM performances or as part of a costume."
+msgstr ""
+
+#. ~ Description of "fencing gauntlet"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A single suede glove with a sturdy cotton wrist, padded back, and well-"
+"fitting fingers."
+msgstr ""
+
+#. ~ Description of "fencing gauntlet (left)"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A single suede glove with a sturdy cotton wrist, padded back, and well-"
+"fitting fingers.  This one is left-handed."
+msgstr ""
+
+#. ~ Description of "pair of leather armor gauntlets"
+#: data/json/items/armor/gloves.json
+msgid "A pair of heavy fingerless leather gloves."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of fingerless leather gloves"
+msgid_plural "pairs of fingerless leather gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of armored fingerless leather gloves"
+msgid_plural "pairs of armored fingerless leather gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of sheet metal gauntlets"
+msgid_plural "pairs of sheet metal gauntlets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of sheet metal gauntlets"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of small sheets of metal, one attached to the back of the hand, and "
+"one tied to the back of your fingers, leaving the index finger untied for "
+"trigger pulling.  Your handwriting will suffer, but they'll keep your fingers"
+" attached."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of hardened steel sheet metal gauntlets"
+msgid_plural "pairs of hardened steel sheet metal gauntlets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of hardened steel sheet metal gauntlets"
+#: data/json/items/armor/gloves.json
+msgid ""
+"These crude mitten gauntlets have been hardened to keep the zombie dogs from "
+"biting your fingers off."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of faux fur gloves"
+msgid_plural "pairs of faux fur gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of faux fur gloves"
+#: data/json/items/armor/gloves.json
+msgid "A pair of warm faux fur gloves."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of denim gloves"
+msgid_plural "pairs of denim gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of denim gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of denim gloves.  Not very comfortable but slightly warmer and more "
+"sturdier than ones that would be made from cotton."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of fingerless denim gloves"
+msgid_plural "pairs of fingerless denim gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of fingerless denim gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of fingerless denim gloves.  Much less cumbersome this way, but not as"
+" protective or warm."
+msgstr ""
+
+#. ~ Description of "pair of medical gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of thin latex gloves, designed to limit the spread of disease.  Too "
+"fragile to protect you from much else."
+msgstr ""
+
+#. ~ Description of "pair of tactical gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of flame- and cut-resistant aramid fabric gloves.  Commonly used by "
+"police and military units."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of fingerless wool gloves"
+msgid_plural "pairs of fingerless wool gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of fingerless wool gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A warm pair of wool gloves without fingers.  Less encumbering, but provides "
+"significantly less warmth."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of cut-resistant gloves"
+msgid_plural "pairs of cut-resistant gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of cut-resistant gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of cut-resistant gloves, useful for butchery or routine work with "
+"bladed objects."
+msgstr ""
+
+#. ~ Description of "pair of hand wraps"
+#: data/json/items/armor/gloves.json
+msgid ""
+"Long pieces of cloth that are meant to be wrapped around your hands.  They "
+"provide small amounts of protection while punching and performing other "
+"general mischief."
+msgstr ""
+
+#. ~ Description of "pair of fur hand wraps"
+#: data/json/items/armor/gloves.json
+msgid ""
+"Pieces of animal pelt that are meant to be wrapped around your hands.  They "
+"provide small amounts of protection while punching and performing other "
+"general mischief."
+msgstr ""
+
+#. ~ Description of "pair of leather hand wraps"
+#: data/json/items/armor/gloves.json
+msgid ""
+"Pieces of leather that are meant to be wrapped around your hands.  They "
+"provide small amounts of protection while punching and performing other "
+"general mischief."
+msgstr ""
+
+#. ~ Description of "pair of wool hand wraps"
+#: data/json/items/armor/gloves.json
+msgid ""
+"Long pieces of wool that are meant to be wrapped around your hands.  They "
+"provide small amounts of protection while punching and performing other "
+"general mischief."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of Santa gloves"
+msgid_plural "pairs of Santa gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of EOD overhand protectors"
+msgid_plural "pairs of EOD overhand protectors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of EOD overhand protectors"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of fragmentation resistant pads for wearing over the backs of one's "
+"hands, providing protection from shrapnel in case things go wrong.  Sold as "
+"an accessory for explosive ordnance disposal suits, but not often used due to"
+" the difficulty in armoring the entire hand and retaining dexterity."
+msgstr ""
+
+#. ~ Description of "pair of mild steel demi-gauntlets"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of leather gloves with chainmail protecting the fingers and palm, and "
+"plating over the back of the hand and wrist."
+msgstr ""
+
+#. ~ Description of "pair of mild steel mitten gauntlets"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of leather mittens with chainmail protecting the fingers and palm, and"
+" steel plating over the back of the hand, fingers, and wrist for additional "
+"protection."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/gloves.json
+msgid "pair of airsoft gloves"
+msgid_plural "pairs of airsoft gloves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of airsoft gloves"
+#: data/json/items/armor/gloves.json
+msgid ""
+"A pair of fingerless gloves with hard plastic reinforcing the backs of the "
+"hands to protect against BB pellets and other light projectiles."
+msgstr ""
+
+#. ~ Description of "chaplet"
+#: data/json/items/armor/hats.json
+msgid "A wreath headdress made from plant material woven into a ring."
+msgstr ""
+
+#. ~ Variant name of item "cowboy hat"
+#: data/json/items/armor/hats.json
+msgid "American cowboy hat"
+msgid_plural "American cowboy hat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "American cowboy hat" of item "cowboy hat"
+#: data/json/items/armor/hats.json
+msgid ""
+"This hat has traded its original classic looks for a red, white, and blue "
+"pattern with a band of golden stars embossed about its lip; suitable headwear"
+" for only the most serious of patriots."
+msgstr ""
+
+#. ~ Description of "drinking hat"
+#: data/json/items/armor/hats.json
+msgid ""
+"An improvised harness that can be worn over other headgear or by itself, made"
+" from two small liquid containers, a rubber hose, a bundle of steel wire, and"
+" some cordage.  A convenient and simple device for hands-free drinking, "
+"though it's not watertight and would spill if you put it into your backpack."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/hats.json
+msgid "eboshi"
+msgid_plural "eboshi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "eight point cap"
+#: data/json/items/armor/hats.json
+msgid ""
+"Also known as a utility cover or utility cap, this is an eight pointed hat "
+"with a baseball-style visor at the front.  Commonly worn by Marines and "
+"sailors, this hat is the standard headwear of both the United States Marine "
+"Corps and Navy."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/armor/hats.json
+msgid "patrol cap"
+msgid_plural "patrol caps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patrol cap"
+#: data/json/items/armor/hats.json
+msgid ""
+"A simple round cap in a camouflage pattern.  Often used by the military when "
+"helmets aren't needed.  Its brim helps keep the sun out of your eyes."
+msgstr ""
+
+#. ~ Variant name of item "baseball cap"
+#: data/json/items/armor/hats.json
+msgid "dollar sign cap"
+msgid_plural "dollar sign caps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "dollar sign cap" of item "baseball cap"
+#: data/json/items/armor/hats.json
+msgid ""
+"A snapback golden-colored baseball cap displaying a golden dollar sign symbol"
+" at the front.  It shields your eyes from the sun and provides a little bit "
+"of warmth.  Makes you fell like a rapper."
+msgstr ""

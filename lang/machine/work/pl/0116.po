@@ -1,0 +1,1602 @@
+# Batch 116 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like I'm harder to kill than I thought."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like the shitstorm's passed for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like the storm's passed for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like the universe decided to cut us a break, for once."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like we can put our guard down… for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like we're in the clear… for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Maybe now we can get some sleep… if we're lucky."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Seems like the coast is clear… for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "That was a real nail-biter."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "That was intense.  Let's hope it stays quiet for a while."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to take a breather, if we can find one."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We made it through in one piece.  That's something to celebrate."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, if that ain't a stroke of luck."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, if that's the worst of it, I'd say we came out pretty lucky."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, that was a wild ride.  Time to catch our breath."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, that was an adrenaline rush."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Well, that's one crisis averted.  Here's to hoping for smooth sailing ahead."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe>"
+#. ~ NPC complaint when the danger level drops from significant to very low, so
+#. things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, that's one less thing to worry about… for now."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  What a shitty day."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "And they thought they stood a chance against me?  Ha!"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Another day, another <freaking> dollar."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Can't say I'm surprised, I always come out on top."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll be damned if I let some <freaking> apocalypse take me down."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Looks like I'm too stubborn to die, ain't that a bitch?"
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Piss in my boots, we made it through."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "That's right, bow down to the king of the <freaking> hill."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "They thought they could take us down?  Ha!  Not even close."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "They thought they had me, but they thought wrong."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, I'll be damned.  Looks like I'm still kickin'."
+msgstr ""
+
+#. ~ Snippet in category "<its_safe_h>"
+#. ~ Hostile NPC complaint when the danger level drops from significant to very
+#. low, so things are 'safe'
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, that was a load of crap."
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  A"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  Here comes a <freaking>"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  It's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Awww, <freaking>"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Batten down the hatches!  We've got a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Brace yourself, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "By the <freaking> gods, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's a <freaking> nightmare, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's a <freaking>"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's a real <freaking> mess over there, we've got a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's like a <freaking> horror movie, there's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Look out!  It's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Oh great, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Stay alert, there's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is bad, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is gonna get messy, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is some <freaking> bad news, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Watch your back, we've got a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We're not alone, there's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We've got company, and it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, this just went to south, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning>"
+#. ~ This is a warning about a dangerous monster, and the code always follows
+#. it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "What in the hell is that?  It's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning_h>"
+#. ~ Hostile NPCs are foul-mouthed.  This is a warning about a dangerous
+#. monster, and the code always follows it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  I'm doomed!  There's a <freaking>"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning_h>"
+#. ~ Hostile NPCs are foul-mouthed.  This is a warning about a dangerous
+#. monster, and the code always follows it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Better grab your <freaking> pants, we're facing a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning_h>"
+#. ~ Hostile NPCs are foul-mouthed.  This is a warning about a dangerous
+#. monster, and the code always follows it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Get ready to dance with the <freaking> devil, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning_h>"
+#. ~ Hostile NPCs are foul-mouthed.  This is a warning about a dangerous
+#. monster, and the code always follows it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "We're in for a <freaking> rough ride with that"
+msgstr ""
+
+#. ~ Snippet in category "<monster_warning_h>"
+#. ~ Hostile NPCs are foul-mouthed.  This is a warning about a dangerous
+#. monster, and the code always follows it with the name of the monster.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Well, fuck my socks, it's a"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Afterlife time!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fucking die already!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll crush you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll destroy you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll kick your ass!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll kill you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll leave nothing but a stain!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make you disappear!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make you suffer!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll rip you apart!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll send you straight to hell!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll send you to the afterlife!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll tear you a new one!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to end you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to erase you from existence!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna kick your ass!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna wreck your shit!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm taking you down!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm your huckleberry!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's the end for you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's time to pay for your sins!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Let's dance<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Make peace with your gods!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Momma said knock you out!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Prepare thyself for punishment!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Prepare to fucking die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Prepare to meet your doom!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Say goodbye, <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Say your last words!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Say your prayers!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Sorry, but you have to go down<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is the end of the line for you<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is your last breath<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time for you to die<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to meet your maker!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You did this, not me!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You <freaking> <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You'll taste my <mywp>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You <name_b>, you're dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your ass is grass!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your demise is imminent!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your doom is sealed!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to be annihilated!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to be history!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to be nothing but a memory!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to be obliterated!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to face my wrath!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to face the consequences!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to get fucked up!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to get what's coming to you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to meet your end!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to meet your maker!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're a dead man!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're as good as dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're dead as fuck!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're finished!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucked!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucking dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucking done!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucking finished!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucking over!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're fucking toast!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna fucking die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna rot in hell for this, <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your end is nigh!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're next!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your fate is sealed!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your fucking time is up!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your life ends now!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your life is forfeit!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your number's up, <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your time has come!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your time is up!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc>"
+#. ~ Friendly NPC complaint that they're attacking a particular hostile NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You've got a date with death!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Consider yourself dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Consider yourself marked for death!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Eat shit and die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Eat shit!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fuck you, you're dead!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fucking <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fucking prepare yourself!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fucking say your prayers!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hey, <name_b>!  I'm gonna fucking murder you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I hope you're ready to die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fuck you so hard!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fuck you up bad!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fuck you up good!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fucking destroy you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fucking end you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fucking kill you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fucking obliterate you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm bringing the pain!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm ending your fucking life!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to make you bleed!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to make you my bitch!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna beat the fuck outta you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna fucking kill you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm the last thing you'll ever see<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm your worst nightmare!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'ma cut those fuckin' tentacles off, <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Only one of us is leaving here alive<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is the last mistake you'll ever make!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This is where your story ends<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Who ordered a dirt nap for?!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You fucked with the wrong person!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You just signed your death warrant!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You won't fucking survive this!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You won't make it out alive!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You won't survive this!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You'll regret crossing me!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're a <freaking> <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna fucking regret this!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna get ass fucked for this, you <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're gonna wish you were never born!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're in for a world of hurt!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're not getting out of this alive!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're not leaving here alive!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're on my hit list!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You've made your last mistake!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Your days are numbered!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Believe me, I'll be dancing on your grave!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Believe me, I'm gonna make your death slow and painful, just for you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Trust me, I'll be the one laughing as I watch you burn for all eternity!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Trust me, I'm gonna tear you apart with a smile on my face!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Trust me, there ain't no coming back from this one!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Trust me, your death ain't gonna be quick or painless!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Come closer, I can't beat the shit out of you from a distance!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I won't even break a sweat!  Taking you down is gonna be easier than shooting"
+" fish in a barrel!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll bash your fucking skull in!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll be the one laughing as I watch you squirm!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll break every bone in your body!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll enjoy watching you die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll fucking tear you apart!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make sure you never bother us again<punc…!>"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make sure you regret crossing me!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make sure you suffer before I put you out of your misery!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make sure you suffer before you die!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I'll make sure your sorry carcass rots in the fiery depths of hell, where you"
+" belong!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll make you regret being born!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll rip your fucking heart out!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'll tear your fucking head off!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I'll wipe the floor with your sorry ass before you even know what hit you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I'm about to unleash hell on your <freaking> ass, and there's no escaping it!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to rip out your tongue and wipe my ass with it!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm going to wear your ears as a necklace!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm gonna beat you so bad, even the people who look like you will hurt!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "If you worship any gods, now is a good time to start praying!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"One final showdown, and guess who's coming out on top?  Spoiler alert: It "
+"ain't gonna be you!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to punch your ticket to the afterlife, you <freaking> <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "When I'm through with you, there won't be enough left to identify!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You think you can mess with me and get away with it?  Think again!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "You're about to become worm food, you <freaking> <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"You're about to get a one-way ticket to pain and suffering, courtesy of yours"
+" truly!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_generic_h_flavor>"
+#. ~ Hostile NPC complaint that they're attacking.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"You're on borrowed time now!  And I'm the one collecting the debt, you FUCK!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc_h>"
+#. ~ Hostile NPC complaint that they're attacking a particular friendly NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I'm going to fuck you up!  And I'll enjoy every goddamn moment of it, you "
+"sorry excuse for a survivor!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc_h>"
+#. ~ Hostile NPC complaint that they're attacking a particular friendly NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Is this Reno?  Because I need to watch you die!  And I'm gonna enjoy every "
+"goddamn moment of it!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc_h>"
+#. ~ Hostile NPC complaint that they're attacking a particular friendly NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Let's dance!  But trust me, it's gonna be a solo dance of death!"
+msgstr ""
+
+#. ~ Snippet in category "<kill_npc_h>"
+#. ~ Hostile NPC complaint that they're attacking a particular friendly NPC.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"You're going to pay for that, <name_b>!  And the price?  Your sorry excuse "
+"for a life!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  Fire in the hole!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  Get cover!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  I'm getting my ass out of here!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  Someone's playing with fire over there!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "<swear!>  You're standing on a ticking bomb!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Anyone fancy a sprint?  We need to get away from that bomb!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Better clear the area, we've got explosives nearby!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Don't linger, that bomb won't wait for an invitation!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Don't say I didn't warn you when that thing goes off!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "For the love of survival, move away from that explosive!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hit the floor!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I really need to get some distance."
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'd suggest a brisk jog away from that bomb!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'd suggest taking cover, that explosive looks ready to blow!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I'm standing way too close to this <freaking> firecracker."
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I've got a bad feeling about that explosive, keep your distance!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "It's time to put some distance between us and that ticking time bomb!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Let's err on the side of caution and get as far away from that bomb as "
+"possible!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Let's not stick around, there's a live grenade in play!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This <freaking> shit is gonna blow!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "This situation is about to go from bad to worse, evacuate now!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole>"
+#. ~ Friendly NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Time to move fast, that explosive won't defuse itself!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Fire in the <freaking> hole, motherfuckers!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Heads up, <name_b>!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Hit the <freaking> dirt!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "I really need to get some <freaking> distance."
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "If I were you, I'd vacate the premises, pronto!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Watch your step, we've got some volatile company here!"
+msgstr ""
+
+#. ~ Snippet in category "<fire_in_the_hole_h>"
+#. ~ Hostile NPC warning about a live explosive in the vicinity.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Whoever's toying with explosives, stop it before it's too late!"
+msgstr ""
+
+#. ~ Snippet in category "<heal_self>"
+#. ~ NPC complaint that they are wounded but have medical equipment and are
+#. stopping to heal themselves.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Patch, bandage, move on.  That's the survival mantra in this godforsaken "
+"world."
+msgstr ""
+
+#. ~ Snippet in category "<heal_self>"
+#. ~ NPC complaint that they are wounded but have medical equipment and are
+#. stopping to heal themselves.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"I think I need to see a doctor.  They're all dead, I hope these work.  Just "
+"me and my luck now."
+msgstr ""
+
+#. ~ Snippet in category "<heal_self>"
+#. ~ NPC complaint that they are wounded but have medical equipment and are
+#. stopping to heal themselves.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid ""
+"Got a few scratches here.  Let's fix them before they attract more unwanted "
+"attention."
+msgstr ""
+
+#. ~ Snippet in category "<heal_self_warning>"
+#. ~ NPC warn that they are wounded but have medical equipment and are stopping
+#. to heal themselves.
+#: data/json/npcs/snippets/talk_tags_combat.json
+msgid "Bandaging this up!"
+msgstr ""

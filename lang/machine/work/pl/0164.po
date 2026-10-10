@@ -1,0 +1,1594 @@
+# Batch 164 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of spell "clair_danger_sense"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Premonition (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_danger_sense ( [Ψ]Premonition (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"You can sense the presence of the things that wish to do you harm.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_night_vision"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Night Eyes (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_night_vision ( [Ψ]Night Eyes (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"You are able to sense your surroundings in areas of low light, and you can even \"see\" in pitch darkness.  Strictly speaking, this is not vision, and you cannot discern fine details or read.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_spot_weakness"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Discern Weakness"
+msgstr ""
+
+#. ~ Description of spell "clair_spot_weakness ( [Ψ]Discern Weakness )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "Your powers let you pinpoint exactly where your enemies are weak."
+msgstr ""
+
+#. ~ Message of spell "clair_spot_weakness ( [Ψ]Discern Weakness )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "The vulnerabilities of your enemy are revealed."
+msgstr ""
+
+#. ~ Name of spell "clair_see_auras"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Aura Sight (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_see_auras ( [Ψ]Aura Sight (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"You can see people's emotions and physical state as a hazy swirl of color around their body.  This makes it much easier to get them to do what you want.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_sense_rads"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Radiation Sense"
+msgstr ""
+
+#. ~ Description of spell "clair_sense_rads ( [Ψ]Radiation Sense )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "You can open your tenses to the tell-tale glow of radiation."
+msgstr ""
+
+#. ~ Name of spell "clair_ranged_enhance"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Marksman's Eye (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_ranged_enhance ( [Ψ]Marksman's Eye (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"With your enhanced senses, you can increase the effective range and accuracy of your ranged attacks.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_voyance"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Clairvoyance"
+msgstr ""
+
+#. ~ Description of spell "clair_voyance ( [Ψ]Clairvoyance )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"The classic example of a clairsentient's powers, you can see through walls "
+"and reveal everything nearby."
+msgstr ""
+
+#. ~ Message of spell "clair_voyance ( [Ψ]Clairvoyance )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "You open your inner eye."
+msgstr ""
+
+#. ~ Name of spell "clair_dodge_power"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Combat Sense (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_dodge_power ( [Ψ]Combat Sense (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"By gazing just a few moments into the future, you can be wherever your enemies are not attacking.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_craft_bonus"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Intuitive Artisan (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_craft_bonus ( [Ψ]Intuitive Artisan (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"Opening yourself up to the immediate future, you can see the best option to take when crafting or working on a task.  However, due to the intensity of the visions you will be <color_red>blind</color> to the outside world while crafting anything.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_perfect_shot"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]One Perfect Shot"
+msgstr ""
+
+#. ~ Description of spell "clair_perfect_shot ( [Ψ]One Perfect Shot )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"Gaze into the future and, taking your enemy's future movements into account, "
+"fire at the perfect moment.  This power will only last for a single attack."
+msgstr ""
+
+#. ~ Message of spell "clair_perfect_shot ( [Ψ]One Perfect Shot )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "It's time to take the shot."
+msgstr ""
+
+#. ~ Name of spell "clair_see_map"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Satellite View"
+msgstr ""
+
+#. ~ Description of spell "clair_see_map ( [Ψ]Satellite View )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"You can extend your senses over the landscape, becoming aware of every hill, "
+"building, and valley within a large area."
+msgstr ""
+
+#. ~ Message of spell "clair_see_map ( [Ψ]Satellite View )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"You close your eyes and concentrate, and you can see the landscape spread out"
+" as though you were a bird on the wing."
+msgstr ""
+
+#. ~ Name of spell "clair_clear_sight"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Clarity (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_clear_sight ( [Ψ]Clarity (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"Thanks to your powers, nothing can stop you from seeing the world as it is.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "clair_astral_projection"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Astral Projection"
+msgstr ""
+
+#. ~ Description of spell "clair_astral_projection ( [Ψ]Astral Projection )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"After a short period of concentration and meditation, cast your spirit forth "
+"from your body, wandering the world disembodied.  You will move at the speed "
+"of thought but cannot use further powers or interact with the world while "
+"your spirit is wandering.  Follow your silver cord to return back to your "
+"body."
+msgstr ""
+
+#. ~ Name of spell "clair_astral_projection_return"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Follow the Silver Cord"
+msgstr ""
+
+#. ~ Description of spell "clair_astral_projection_return ( [Ψ]Follow the
+#. Silver Cord )"
+#. ~ Description of spell "hedge_astral_projection_return ( Follow the Silver
+#. Cord )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+#: data/mods/Xedra_Evolved/spells/hedge_magic_spells.json
+msgid "Follow the silver cord back to your body."
+msgstr ""
+
+#. ~ Name of spell "clair_group_tactics"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Prescient Tactician (C)"
+msgstr ""
+
+#. ~ Description of spell "clair_group_tactics ( [Ψ]Prescient Tactician (C) )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"Gazing into the near future, you can call out warnings to your followers so they can avoid attacks before they occur.  This will greatly increase their defensive capability, though it will be harder for you to defend yourself.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It requires <color_yellow>even more concentration</color> than usual."
+msgstr ""
+
+#. ~ Name of spell "clair_omniscience"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid "[Ψ]Omniscence"
+msgstr ""
+
+#. ~ Description of spell "clair_omniscience ( [Ψ]Omniscence )"
+#: data/mods/MindOverMatter/powers/clairsentience.json
+msgid ""
+"Extend your senses to a supernal degree, perceiving everything within the "
+"nearby area.  Every creature, every object, every blade of grass, everything."
+"  <color_red>EVERYTHING</color>."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_BETTER_SENSES_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "All of your senses are enhanced."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_REMOVE_BETTER_SENSES"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "The world now seems separated from you by a thin veil."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_NIGHT_EYES_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "You open your senses to the world."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_SPEED_READING_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "You feel like sitting down with a good book."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_REMOVE_SPEED_READ"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "Your eyes ache a bit.  Maybe it's time to put the book down."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_SEE_AURAS_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "Swirling colors coalesce around others' bodies"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_DANGER_SENSE_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "You open your senses to the dangers of the world."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RANGED_ENHANCE_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid ""
+"Distances seem to narrow and your enemies' movements seem to slow as their "
+"vulnerabilities are laid bare."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_DODGE_POWER_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid ""
+"You can see a premonition of your enemies' attacks like a ghostly image."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_CRAFT_BONUS_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "You can see how it all fits together, and how it *should* fit together."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_CLEAR_SIGHT_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid "Your senses sharpen and all distractions vanish."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_GROUP_TACTICS_INITIATE"
+#: data/mods/MindOverMatter/powers/clairsentience_concentration_eocs.json
+msgid ""
+"As the visions overtake you, you start involuntarily calling out warnings to "
+"your allies."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CLAIR_RAD_SENSE"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid "Check yourself"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CLAIR_RAD_SENSE"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid "Check your surroundings"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CLAIR_RAD_SENSE"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Cast your subtle senses over yourself, seeing if you are contaminated with "
+"radiation."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CLAIR_RAD_SENSE"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Open your inner eye, searching your environment for dangerous radiation."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see none of the insidious glow typical "
+"of radiation.  You are in the clear, for now."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_2" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see a few dull glimmers, hidden deep in "
+"your flesh.  The damage is minimal for now, but you had best not let it "
+"fester."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_3" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_2" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see a dull glow along your core.  Your "
+"radiation is climbing, though it's still not in the danger zone."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_4" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_3" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_2" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see a faint glow spreading outward from "
+"your core to your limbs.  You're getting closer to dangerous levels--you "
+"should deal with it before it gets worse."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_5" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_4" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_3" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_2" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see a glow along your bones.  You had "
+"best seek treatment, and soon."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_6" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_5" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_4" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_3" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT_2" in
+#. nested EOCs in false effect in EoC "EOC_CLAIR_RAD_SENSE_SELF_REPORT"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid ""
+"Turning your senses on yourself, you see a steady glow all along your muscles"
+" and bones.  You are in real trouble if you don't deal with your radiation "
+"immediately."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CLAIR_CRAFTING_ADD_BLINDNESS_WHEN_CRAFTING"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid "You close your eyes as the visions overtake you."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CLAIR_CRAFTING_REMOVE_BLINDNESS_WHEN_DONE_CRAFTING"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+msgid "You open your eyes as the visions fade."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CLAIR_ASTRAL_PROJECTION_INITIATE"
+#. ~ Player message in effect in EoC "EOC_HEDGE_ASTRAL_PROJECTION"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+#: data/mods/Xedra_Evolved/spells/hedge_magic_eocs.json
+msgid "As you meditate, you feel your spirit slipping free from your body."
+msgstr ""
+
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_CLAIR_ASTRAL_PROJECTION_DEACTIVATE"
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_HEDGE_ASTRAL_PROJECTION_DEACTIVATE"
+#: data/mods/MindOverMatter/powers/clairsentience_eoc.json
+#: data/mods/Xedra_Evolved/spells/hedge_magic_eocs.json
+msgid "You snap back into your body once again."
+msgstr ""
+
+#. ~ Message of spell "classless_toggleable_concentration_end ( [Ψ]Stop
+#. Concentrating )"
+#: data/mods/MindOverMatter/powers/classless.json
+msgid "You stop concentrating on your powers."
+msgstr ""
+
+#. ~ Name of spell "classless_specific_concentration_end"
+#: data/mods/MindOverMatter/powers/classless.json
+msgid "[Ψ]Stop Concentrating (Individual)"
+msgstr ""
+
+#. ~ Description of spell "classless_specific_concentration_end ( [Ψ]Stop
+#. Concentrating (Individual) )"
+#: data/mods/MindOverMatter/powers/classless.json
+msgid ""
+"End your concentration on a specific power.\n"
+"\n"
+"Channeling this power <color_green>always succeeds</color>."
+msgstr ""
+
+#. ~ Message of spell "classless_specific_concentration_end ( [Ψ]Stop
+#. Concentrating (Individual) )"
+#: data/mods/MindOverMatter/powers/classless.json
+msgid "You stop concentrating on one of your powers."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_zap_enemies"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Electrical Discharge (C)"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_zap_enemies ( [Ψ]Electrical Discharge
+#. (C) )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Build up a charge in your body, zapping anyone who attempts to attack you.  It will also protect you from EMP attacks.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_melee_attacks"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Voltaic Strikes (C)"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_melee_attacks ( [Ψ]Voltaic Strikes
+#. (C) )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Unleash electrical blasts on those you strike in melee.  It also provides protection against electrical damage.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_melee_attacks ( [Ψ]Voltaic Strikes (C) )"
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_MELEE_ATTACKS_INITIATE"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+msgid "Lightning crackles between your fingers!"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_personal_battery ( [Ψ]Electron
+#. Overflow (C) )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Generate power for battery-powered devices on your person.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_paralysis"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Neural Spasms"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_paralysis ( [Ψ]Neural Spasms )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Cause an electrical burst in the target's nervous system (or the remains of "
+"it), incapacitating them briefly.  It will only work on targets that have, or"
+" had, a nervous system."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_reduce_pain"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Pain Suppression (C)"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_reduce_pain ( [Ψ]Pain Suppression (C)
+#. )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"With your control over electricity, reduce the strength of the pain signals in your own body.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_lightning_bolt"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Electrocutioner"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_lightning_bolt ( [Ψ]Electrocutioner
+#. )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "Launch a bolt of lightning at a nearby target."
+msgstr ""
+
+#. ~ Sound description of spell "electrokinetic_lightning_bolt (
+#. [Ψ]Electrocutioner )"
+#. ~ Sound description of spell "electrokinetic_kill_robot_sparks ( [Ψ]Short
+#. Circuit Lightning Burst )"
+#. ~ Sound description of spell "electrokinetic_lightning_blast ( [Ψ]Ion Blast
+#. )"
+#. ~ Sound description of spell "sylph_massive_lightning_bolt_spell ( Fist of
+#. Heaven's Fury )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/sylph_mutation_spells.json
+msgid "zzzzaaaaaapp!"
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_lightning_bolt ( [Ψ]Electrocutioner )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "You unleash a bolt of lightning."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_pain_immune"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Analgesic Block"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_pain_immune ( [Ψ]Analgesic Block )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"By clamping down on all pain signals you can completely eliminate your ability to feel pain briefly.  This does not eliminate the source of pain, and when the power ends all of the original pain and more will return.\n"
+"\n"
+"Analgesic Block is <color_red>incompatible</color> with Neuro-Acceleration."
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_pain_immune ( [Ψ]Analgesic Block )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "The pain just… disappears."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_speed_boost"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Neuro-acceleration"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_speed_boost ( [Ψ]Neuro-acceleration
+#. )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"You can improve the efficiency of your or an ally's nervous system, allowing for much faster response times.  This also increases the target's ability to retain information.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  Neuro-acceleration is <color_red>incompatible</color> with Analgesic Block.  When used on <color_green>allies</color>, the power has <color_yellow>one-half the normal duration</color>."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_kill_robot"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Short Circuit"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_kill_robot ( [Ψ]Short Circuit )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "Cause a massive power surge within a robot or cyborg, disabling it."
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_kill_robot ( [Ψ]Short Circuit )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "You channel a surge of power into your target!"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_robot_interface ( [Ψ]Robotic
+#. Interface )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Use your powers to remotely interface with a robot's internal circuitry, "
+"allowing you to hack it if you have the skill."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_lightning_aura"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Galvanic Aura (C)"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_lightning_aura ( [Ψ]Galvanic Aura (C)
+#. )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Charge the air around you with power, unleashing blasts at anyone nearby.  This power does not discriminate between friend and foe.  It will also protect you from electricity while active.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>"
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_lightning_aura ( [Ψ]Galvanic Aura (C) )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "The air around you hums with power."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_lightning_blast"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Ion Blast"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_lightning_blast ( [Ψ]Ion Blast )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Launch a blast of lightning at a nearby target, causing a secondary explosion"
+" at the location."
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_lightning_blast ( [Ψ]Ion Blast )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "You unleash an explosive blast of lightning."
+msgstr ""
+
+#. ~ Name of spell "electrokinetic_revive"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "[Ψ]Revivification"
+msgstr ""
+
+#. ~ Description of spell "electrokinetic_revive ( [Ψ]Revivification )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid ""
+"Manipulate the nervous system of a corpse, causing it to rise and protect "
+"you.  This protection will only last a short time."
+msgstr ""
+
+#. ~ Message of spell "electrokinetic_revive ( [Ψ]Revivification )"
+#: data/mods/MindOverMatter/powers/electrokinesis.json
+msgid "You charge a nearby corpse with lightning."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ELECTROKIN_PERSONAL_BATTERY_INITIATE"
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+msgid "The power you channel vanishes into nothingness."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_REDUCE_PAIN_INITIATE"
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+msgid "The aches and pains of post-Cataclysmic life fade, just a little."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_SPEED_BOOST_INITIATE"
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+msgid "You enhance the functioning of your neurons."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_LIGHTNING_AURA_INITIATE"
+#: data/mods/MindOverMatter/powers/electrokinesis_concentration_eocs.json
+msgid "The air around you begins crackling with electricity!"
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in effect in EoC
+#. "EOC_ELECTROKIN_PARALYSIS"
+#: data/mods/MindOverMatter/powers/electrokinesis_eoc.json
+msgid "You overload the target's neurons!"
+msgstr ""
+
+#. ~ NPC message in nested effect in else statement in effect in EoC
+#. "EOC_ELECTROKIN_PARALYSIS"
+#: data/mods/MindOverMatter/powers/electrokinesis_eoc.json
+msgid "You attempt to overload the target's neurons but nothing happens!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ELECTROKIN_PAIN_IMMUNE_ON"
+#: data/mods/MindOverMatter/powers/electrokinesis_eoc.json
+msgid "You are already under the effects of Analgesic Block!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_local"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Candle's Glow (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_local ( [Ψ]Candle's Glow (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Create a simple patch of light nearby, sufficient to read or perform simple tasks with.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_create_light"
+#. ~ Name of spell "photokinetic_create_light_01"
+#. ~ Name of spell "photokinetic_create_light_02"
+#. ~ Name of spell "photokinetic_create_light_03"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Field of Light"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_create_light ( [Ψ]Field of Light )"
+#. ~ Description of spell "photokinetic_create_light_01 ( [Ψ]Field of Light )"
+#. ~ Description of spell "photokinetic_create_light_02 ( [Ψ]Field of Light )"
+#. ~ Description of spell "photokinetic_create_light_03 ( [Ψ]Field of Light )"
+#. ~ Description of spell "photokinetic_light_up_enemy ( [Ψ]Illuminate )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Create photons to illuminate an entire area."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_create_light ( [Ψ]Field of Light )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Sudden light bursts forth!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_up_enemy"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Illuminate"
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_up_enemy ( [Ψ]Illuminate )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Your target is outlined in light."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_snuff_light"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Blackout"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_snuff_light ( [Ψ]Blackout )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Interrupt the flow of photons to create an area of darkness."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_snuff_light ( [Ψ]Blackout )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "As you concentrate, an area nearby is plunged into darkness!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_dodge"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Trick of the Light (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_dodge ( [Ψ]Trick of the Light (C)
+#. )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Manipulate the light around your body, creating shifting illusions, blurring your outline and position, and becoming harder to hit.  An enemy successfully hitting you will pinpoint your location and <color_red>disrupt the power</color>.\n"
+"\n"
+"his power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_beam"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Photon Beam"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_beam ( [Ψ]Photon Beam )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Concentrate photons into a high-energy beam."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_beam ( [Ψ]Photon Beam )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "You fire a searing beam of light!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_camouflage"
+#. ~ Combination of chameleon and camouflage
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Chameleoflage (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_camouflage ( [Ψ]Chameleoflage (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"By blending the light reflecting from you with the light reflecting from nearby surfaces, you can make yourself much harder to spot from a distance.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_rad_immunity"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Lucent Barrier (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_rad_immunity ( [Ψ]Lucent Barrier (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Create a barrier of light around yourself to protect against radiation and light damage.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_arms"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Refracted Arms"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_arms ( [Ψ]Refracted Arms )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Create the illusion of extra arms and wielded items to trick your enemies, "
+"forcing them off balance and rendering them open to attack."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_arms ( [Ψ]Refracted Arms )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Light around your arms shimmers and refracts, creating the illusion of "
+"multiple arms."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_hide_ugly"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Mirror-Mask (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_hide_ugly ( [Ψ]Mirror-Mask (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Hide your true form behind unassuming illusions, preventing baseline humans from reacting poorly to your presence if you are mutated or a cyborg.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_image"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Lucid Shadows"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_image ( [Ψ]Lucid Shadows )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Form images of yourself to confuse and distract enemies."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_image ( [Ψ]Lucid Shadows )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "Identical copies of you suddenly appear!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_radio"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Radio Transception (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_radio ( [Ψ]Radio Transception (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Attune your senses to radio waves, allowing you to listen to transmissions and send them yourself.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_sterilize_food"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Gamma Sterilization"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_sterilize_food ( [Ψ]Gamma Sterilization
+#. )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Use a focused emission of high-power radiation to eliminating microorganisms "
+"in food and allowing it to last much longer before rotting.  This power is "
+"<color_red>extremely taxing</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_stun_robots"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Sensor Jamming"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_stun_robots ( [Ψ]Sensor Jamming )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Unleash a localized burst of electromagnetic radiation, overloading any "
+"electronic sensory equipment in the area."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_stun_robots ( [Ψ]Sensor Jamming )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "You unleash an electromagnetic wave!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_invisibility"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Veil of Light (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_invisibility ( [Ψ]Veil of Light (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Refract light around yourself to become invisible.  Moving too quickly has a chance to disrupt the effect, and attacking in melee will invariably do so.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_flash"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Star Flash"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_flash ( [Ψ]Star Flash )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Create a destructive flash of light in a line, damaging all targets caught in"
+" the beam."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_flash ( [Ψ]Star Flash )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "You fire a searing wave of light!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_blinding_glare"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Blinding Radiance (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_blinding_glare ( [Ψ]Blinding Radiance
+#. (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"You can emit so much light that anyone trying to attack you risks being blinded.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_disintegrate"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Luminous Disintegration"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_disintegrate ( [Ψ]Luminous
+#. Disintegration )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Concentrate a massive amount of light into a single target, causing it to "
+"disintegrate."
+msgstr ""
+
+#. ~ Message of spell "photokinetic_light_disintegrate ( [Ψ]Luminous
+#. Disintegration )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "You focus a pointpoint burst of light on your target!"
+msgstr ""
+
+#. ~ Name of spell "photokinetic_light_army"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid "[Ψ]Phantom Legion (C)"
+msgstr ""
+
+#. ~ Description of spell "photokinetic_light_army ( [Ψ]Phantom Legion (C) )"
+#: data/mods/MindOverMatter/powers/photokinesis.json
+msgid ""
+"Create a myriad of illusions around yourself to mislead and confuse your enemies.  The illusions will explode into blinding flashes if damaged.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It requires <color_yellow>even more concentration</color> than usual.  Concentration will <color_green>automatically end</color> if all illusions are destroyed."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_LIGHT_LOCAL_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "A soft glow springs up around you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_LIGHT_DODGE_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "You are surrounded by shifting illusions."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_RAD_IMMUNITY_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid ""
+"The air around you shimmers as an invisible barrier of light forms around "
+"you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_CAMOUFLAGE_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "You twist nearby light to help conceal you from distant observers."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_HIDE_UGLY_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "You shroud your true form behind unassuming illusions."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_RADIO_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "You attune your senses to passing radio waves."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_INVISIBILITY_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid ""
+"Suddenly, the world around you seems like it's on the other side of the "
+"surface of water."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_BLINDING_GLARE_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "You begin glowing as brightly as the sun!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_LIGHT_ARMY_INITIATE"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "A myriad of duplicates of yourself appear nearby!"
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_PHOTOKIN_REMOVE_LIGHT_ARMY"
+#: data/mods/MindOverMatter/powers/photokinesis_concentration_eoc.json
+msgid "The remaining light duplicates disappear."
+msgstr ""
+
+#. ~ Player inventory menu title in effect in EoC
+#. "EOC_PHOTOKINETIC_STERILIZE_FOODS"
+#: data/mods/MindOverMatter/powers/photokinesis_eocs.json
+msgid "What food or drink do you want to sterilize?"
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_eruption"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Fountain of Flames"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_eruption ( [Ψ]Fountain of Flames )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "Cause a burst of flames at the target location."
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_eruption ( [Ψ]Fountain of Flames )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "You summon flames!"
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_flash"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Brilliant Flash"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_flash ( [Ψ]Brilliant Flash )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"By strongly exciting the air at a particular point, you produce a burst of "
+"light."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_cauterize"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Cauterize"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_cauterize ( [Ψ]Cauterize )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Using an extremely focused application of pyrokinesis, sear a wound shut to "
+"stop the bleeding.  This is liable to be painful and is almost certainly "
+"likely to just cause more damage if you don't have any medical knowledge.  If"
+" the bleeding is too strong, cauterization will be ineffective, and there is "
+"a <color_red>chance of infection</color> whether you are successful or not."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_call_flames"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Banked Flames (C)"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_call_flames ( [Ψ]Banked Flames (C) )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Call up flames over your outstretched hand.  You can use them to heat up food, boil water, start fires, or anything else fire can accomplish.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_quell_flames"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Quell Fire"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_quell_flames ( [Ψ]Quell Fire )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "As you can create fire, you can also extinguish it."
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_quell_flames ( [Ψ]Quell Fire )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "You disperse the flames harmlessly."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_cloak"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Cloak of Warmth (C)"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_cloak ( [Ψ]Cloak of Warmth (C) )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Control the temperature of the nearby air, warming you and protecting you against flames.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_flamethrower"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Flamethrower"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_flamethrower ( [Ψ]Flamethrower )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "Spray fire in a cone in front of you."
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_flamethrower ( [Ψ]Flamethrower )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "You hurl a spray of flames."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_lance"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Incandescent Lance (C)"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_lance ( [Ψ]Incandescent Lance (C) )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Concentrate heat into a thin, searing beam capable of cutting through solid metal or welding it together.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_thermogenesis"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Thermogenesis"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_thermogenesis ( [Ψ]Thermogenesis )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Heat the air nearby and maintain it, taking off the chill or turning winter "
+"to warm summer."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_aura"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Blazing Aura (C)"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_aura ( [Ψ]Blazing Aura (C) )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Surround yourself with a cloud of flames, damaging anyone in melee combat with you.  The flames also produce light.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_flame_immunity"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Flameshield (C)"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_flame_immunity ( [Ψ]Flameshield (C) )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Your power over fire is such that you can now step directly into raging flames and walk through them unharmed, feeling no more than a pleasant warmth.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_blast"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Conflagration"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_blast ( [Ψ]Conflagration )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "Create an expanding fireball that catches multiple targets in its wake."
+msgstr ""
+
+#. ~ Sound description of spell "pyrokinetic_blast ( [Ψ]Conflagration )"
+#. ~ Sound description of spell "pyrokinetic_aoe_blast ( [Ψ]Hellfire )"
+#. ~ Sound description of spell "pyrokinetic_incineration ( [Ψ]Crucible )"
+#. ~ Sound description of spell "salamander_explosion_and_heal_spell ( The
+#. Phoenix's Last Cry )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_mutation_spells.json
+msgid "the roar of flames!"
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_blast ( [Ψ]Conflagration )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "You call forth a raging inferno!"
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_aoe_blast"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Hellfire"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_aoe_blast ( [Ψ]Hellfire )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Send forth raging flames and turn the ground around you into an inferno.  You"
+" will be <color_yellow>briefly</color> immune to the aftereffects of your own"
+" power as well."
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_aoe_blast ( [Ψ]Hellfire )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "The ground around you explodes in flames!"
+msgstr ""
+
+#. ~ Name of spell "pyrokinetic_incineration"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "[Ψ]Crucible"
+msgstr ""
+
+#. ~ Description of spell "pyrokinetic_incineration ( [Ψ]Crucible )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid ""
+"Concentrate the entirety of your power into a single white-hot point, searing"
+" your target with the heat of a volcano."
+msgstr ""
+
+#. ~ Message of spell "pyrokinetic_incineration ( [Ψ]Crucible )"
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "You focus all of your power onto a single point!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CALL_FLAME_INITIATE"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "Flames begin dancing in the air above your hand."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYRO_REMOVE_FIRE_TOOL"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "The flames over your hand gutter and die out."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_WARMTH_CLOAK_INITIATE"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "You heat the nearby air to a comfortable temperature."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_TORCH_WELD_INITIATE"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "A searing line of flame springs forth from your finger."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYRO_REMOVE_TORCH_WELD"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "The line of fire vanishes in an instant."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_BLAZING_AURA_INITIATE"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "You set the air around yourself ablaze."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_FLAME_IMMUNITY_INITIATE"
+#: data/mods/MindOverMatter/powers/pyrokinesis_concentration_eoc.json
+msgid "The nearby air loses any heat."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the left arm."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the right arm."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the head."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the left leg."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the right leg."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_PYROKIN_CAUTERIZE_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Cauterize wounds on the torso."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD_2" in nested
+#. EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_CAUTERIZE_BODY_2" in nested
+#. EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_BODY"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"There is a moment of searing pain, and when you look at the wound, The "
+"bleeding has stopped."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_2"
+#. in nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_2"
+#. in nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_2"
+#. in nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_2"
+#. in nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_BODY_2" in
+#. nested EOCs in effect in EoC "EOC_PYROKIN_CAUTERIZE_BODY"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"There is a moment of searing pain, but when you look at the wound, you're "
+"still bleeding.  You'll have to try again."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_CAUTERIZE_BODY"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The bleeding is too much for you to stop with your powers."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your left arm is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_ARM_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your left arm you tried to cauterize is starting to itch and "
+"swell.  It's probably infected."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your right arm is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_ARM_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your right arm you tried to cauterize is starting to itch and "
+"swell.  It's probably infected."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_HEAD_INFECTION_CHECK_CHECK_2" in nested EOCs in
+#. effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your head is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_HEAD_INFECTION_CHECK_CHECK_2" in nested EOCs in
+#. effect in EoC "EOC_PYROKIN_CAUTERIZE_HEAD_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your head you tried to cauterize is starting to itch and swell."
+"  It's probably infected."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your left leg is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_LEFT_LEG_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your left leg you tried to cauterize is starting to itch and "
+"swell.  It's probably infected."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your right leg is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_INFECTION_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_PYROKIN_CAUTERIZE_RIGHT_LEG_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your right leg you tried to cauterize is starting to itch and "
+"swell.  It's probably infected."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_TORSO_INFECTION_CHECK_2" in nested EOCs in effect in
+#. EoC "EOC_PYROKIN_CAUTERIZE_TORSO_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The infection on your torso is getting worse."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PYROKIN_CAUTERIZE_TORSO_INFECTION_CHECK_2" in nested EOCs in effect in
+#. EoC "EOC_PYROKIN_CAUTERIZE_TORSO_INFECTION_CHECK"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid ""
+"The wound on your torso you tried to cauterize is starting to itch and swell."
+"  It's probably infected."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Minor thermogenesis"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Lesser thermogenesis"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Greater thermogenesis"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Major thermogenesis"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Banish all thermogenesis nodes"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Raise the temperature a few degrees."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Raise the temperature from a summer night to a summer day."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Raise the temperature from winter to early fall."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Raise the temperature from winter to summer."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_SPELL_PYROKIN_THERMOGENESIS_SELECTOR"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Stop all current thermogenesis."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_SPELL_PYROKIN_SUMMON_HEAT_1"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The air nearby grows slightly warmer."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_SPELL_PYROKIN_SUMMON_HEAT_2"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Warm air swirls from the spot."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_SPELL_PYROKIN_SUMMON_HEAT_3"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "Hot air swirls from the spot."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_SPELL_PYROKIN_SUMMON_HEAT_4"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The air grows as hot as a summer day."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SPELL_PYROKIN_BANISH_HEAT"
+#: data/mods/MindOverMatter/powers/pyrokinesis_eoc.json
+msgid "The heated air you have been maintaining returns to normal."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_noise"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Noisemaker"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_noise ( [Ψ]Noisemaker )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Using a focused burst of telekinesis, slam two objects together, or an object"
+" into the ground, or simply hit the ground with your powers, causing a loud "
+"noise."
+msgstr ""
+
+#. ~ Sound description of spell "telekinetic_noise ( [Ψ]Noisemaker )"
+#. ~ Sound description of spell "trow_make_noise_spell ( The One Who Knocks )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "a loud thump"
+msgstr ""
+
+#. ~ Message of spell "telekinetic_noise ( [Ψ]Noisemaker )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "You lash out at the ground with your powers."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_slam_down"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Knockdown"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_slam_down ( [Ψ]Knockdown )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Slam something to the ground with a burst of telekinetic force, doing a small"
+" amount of damage and downing them."
+msgstr ""
+
+#. ~ Message of spell "telekinetic_slam_down ( [Ψ]Knockdown )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "Your target is knocked to the ground."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_slowfall"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Slowfall"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_slowfall ( [Ψ]Slowfall )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Counteract the pull of gravity with telekinetic force, greatly reducing or "
+"even eliminating damage from falling and becoming much more buoyant."
+msgstr ""
+
+#. ~ Message of spell "telekinetic_slowfall ( [Ψ]Slowfall )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "You feel lighter."
+msgstr ""

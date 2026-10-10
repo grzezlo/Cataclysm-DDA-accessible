@@ -1,0 +1,1811 @@
+# Batch 126 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Introduction"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Viewing"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Hunger, thirst, and sleep"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Pain and stimulants"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Healing and medication"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Addiction"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Morale and learning"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Radioactivity and mutation"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Items overview"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Martial arts styles"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Survival tips"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Vehicles and Driving"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Skills and proficiencies"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "List of item types and data"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Description of map symbols"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Description of gun types"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "Description of book colors"
+msgstr ""
+
+#. ~ Help menu
+#: data/core/help.json
+msgid "FAQ (contains spoilers!)"
+msgstr ""
+
+#. ~ Explaination for removal of mod "Graphical_Overmap"
+#: data/core/mod_migrations.json
+msgid ""
+"Superseded by proper support for overmap tilesets through \"Use tiles to "
+"display overmap\" option under Graphics -> Tileset Options."
+msgstr ""
+
+#. ~ Explaination for removal of mod "no_fungal_growth"
+#: data/core/mod_migrations.json
+msgid "Changes merged with vanilla making this mod redundant."
+msgstr ""
+
+#. ~ Explaination for removal of mod "StatsThroughSkills"
+#: data/core/mod_migrations.json
+msgid ""
+"Hardcode that enabled this was removed and it doesn't meet repo inclusion "
+"criteria, non-hardcoded alternatives are available out of repo."
+msgstr ""
+
+#. ~ Explaination for removal of mod "stats_through_kills"
+#: data/core/mod_migrations.json
+msgid ""
+"Does not meet repo requirements of offering a different, curated gameplay "
+"experience."
+msgstr ""
+
+#. ~ Explaination for removal of mod "sees_player_retro"
+#. ~ Explaination for removal of mod "sees_player_hitbutton"
+#: data/core/mod_migrations.json
+msgid ""
+"Superseded by \"Show overlay icons over creatures\" option under Graphics -> "
+"Tileset Options."
+msgstr ""
+
+#. ~ Explaination for removal of mod "No_Rail_Stations"
+#: data/core/mod_migrations.json
+msgid ""
+"Railway stations removed from vanilla and moved to \"Railroads\" mod making "
+"this mod redundant."
+msgstr ""
+
+#. ~ Explaination for removal of mod "speedydex"
+#: data/core/mod_migrations.json
+msgid ""
+"Does not meet repo requirements of offering a different, curated gameplay "
+"experience.  Mod can trivially be reproduced in JSON with enchantments."
+msgstr ""
+
+#. ~ Description of a slider position in the "Cities" option slider
+#: data/core/world_option_sliders.json
+#, c-format
+msgid "Cities are 50% larger and 25% closer to each other."
+msgstr ""
+
+#. ~ Description of a slider position in the "Difficulty" option slider
+#: data/core/world_option_sliders.json
+msgid ""
+"Monsters are weaker, appear in smaller numbers, and evolve at a slower rate."
+msgstr ""
+
+#. ~ Description of a slider position in the "Difficulty" option slider
+#: data/core/world_option_sliders.json
+#, c-format
+msgid "Monsters are stronger, appear 50% more often, and evolve faster."
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Confirm and continue"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Change Cataclysm start date"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Randomize trait"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle post-process generators"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Edit radiation"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Throw wielded item"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Blind throw wielded item"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle debug dialogue show hidden responses"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Debug Toggle hour timer"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Supernatural abilities"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Repeat last supernatural ability"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Unload item from container"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Scroll item description down"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle monster group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle NPC group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle general info group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle buffs group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle techniques group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings.json
+msgid "Toggle weapons group"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Use workbench"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Set autopilot to patrol nearby zone"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Set autopilot to follow you"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Set autopilot to stop all activities"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Toggle autoclave"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Toggle washing machine"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Toggle dishwasher"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Unload turret"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Reload turret"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Peek through closed curtains"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Fill container with water from faucet"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Drink from faucet"
+msgstr ""
+
+#. ~ Key binding name
+#: data/raw/keybindings/vehicle.json
+msgid "Disconnect attached cables"
+msgstr ""
+
+#. ~ Name of the damage type as displayed in item info
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "Laser"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "laser"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgctxt "damage_type"
+msgid "melting"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "toxic piercing"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/MindOverMatter/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "buffeting"
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_TELEPATHIC_DAMAGE_PSYSHIELD_CHECK_2" in
+#. nested EOCs in effect in EoC "EOC_TELEPATHIC_DAMAGE_PSYSHIELD_CHECK"
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/MindOverMatter/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid ""
+"Your head prickles.  It feels like spiders crawling across the surface of "
+"your brain."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC
+#. "EOC_TELEPATHIC_DAMAGE_PSYSHIELD_CHECK_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATHIC_DAMAGE_PSYSHIELD_CHECK"
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/MindOverMatter/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "Your minds reels!"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Aftershock/damage_types.json
+#: data/mods/MindOverMatter/damage_types.json
+#: data/mods/aftershock_exoplanet/damage_types.json
+msgid "mindblasting"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "migo_rad_away"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"Strange proteins are ingesting radioactive particles and flushing themselves "
+"from the host."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "migo_rad_flush"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"Strange proteins are ingesting radioactive particles and containing all "
+"emmissions."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Mastodon Mutation, Mastodon
+#. Transformation, Mastodon Metamorphosis"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Mastodon Mutagen Contamination"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Mi-go Mutation, Mi-go
+#. Transformation, Mi-go Metamorphosis"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Mi-go Mutagen Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "afs_badpoison"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Fatally Poisoned"
+msgstr ""
+
+#. ~ Description of effect type "Fatally Poisoned"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"The world is spinning around you, and you feel like you're going to die."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Synthblood Comedown,
+#. Synthblood"
+#. ~ Blood analysis description of effect type "Synthblood"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Synthetic blood"
+msgstr ""
+
+#. ~ Description of effect type "Synthblood"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"Your breaths instinctively grow shallow as the synthetic blood carries oxygen"
+" throughout your body, increasing your speed, stamina, and general endurance."
+msgstr ""
+
+#. ~ Name of effect type id "afs_rocket_flight"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Rocket Flight"
+msgstr ""
+
+#. ~ Description of effect type "Rocket Flight"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "You are flying with a rocket powered device."
+msgstr ""
+
+#. ~ Description of effect type "Immobilized"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "You are completely immobile"
+msgstr ""
+
+#. ~ Remove message of effect type "Immobilized"
+#. ~ Remove message of effect type "The Adamantine Gaol of Emthys"
+#. ~ Remove message of effect type "Adamantine Gaol"
+#. ~ Remove message of effect type "Baleful Gaze"
+#. ~ Remove message of effect type "Grip of Winter"
+#: data/mods/Aftershock/effects.json
+#: data/mods/Isolation-Protocol/Player/sorcery_effects.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "You can move again."
+msgstr ""
+
+#. ~ Description of effect type "Crawling"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"Even if its been critically damaged, this android continues to crawl towards "
+"its target."
+msgstr ""
+
+#. ~ Name of effect type id "afs_weapon_disabled"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Disabled weaponry"
+msgstr ""
+
+#. ~ Description of effect type "Disabled weaponry"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "The main weaponry of this creature is no longer functional."
+msgstr ""
+
+#. ~ Name of effect type id "afs_combat_stims"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Combat Stimulants"
+msgstr ""
+
+#. ~ Description of effect type "Combat Stimulants"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "You are under the effects of powerful military combat stimulants"
+msgstr ""
+
+#. ~ Name of effect type id "afs_medigel_eff"
+#. ~ Item name
+#: data/mods/Aftershock/effects.json
+#: data/mods/Aftershock/items/comestibles/medicine.json
+#: data/mods/aftershock_exoplanet/effects.json
+#: data/mods/aftershock_exoplanet/items/comestibles/medicine.json
+msgid "MediGel"
+msgid_plural "MediGels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of effect type "MediGel"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "The medical gel applied to your wounds is slowly healing them."
+msgstr ""
+
+#. ~ Name of effect type id "decreased_performance"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Decreased Performance"
+msgstr ""
+
+#. ~ Description of effect type "Decreased Performance"
+#. ~ Description of effect type "Slowed Reactions"
+#. ~ Description of effect type "Haggard and drawn"
+#. ~ Description of effect type "Weakened and worn down"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid ""
+"The performance enhancing drugs slowly wear off and leave you in a state of "
+"existential grade hangover."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Decreased Performance"
+#. ~ Blood analysis description of effect type "Haggard and drawn"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Post overdose quantities of multiple drugs in analyzed blood."
+msgstr ""
+
+#. ~ Name of effect type id "post_speed_injection"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Slowed Reactions"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Slowed Reactions"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Dangerous levels of military grade nervous system medications."
+msgstr ""
+
+#. ~ Name of effect type id "post_healing_injection"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Haggard and drawn"
+msgstr ""
+
+#. ~ Name of effect type id "post_strength_injection"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Weakened and worn down"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Weakened and worn down"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Dangerous levels of steroids."
+msgstr ""
+
+#. ~ Name of effect type id "afs_ai_defensive"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "Defensive Stance"
+msgstr ""
+
+#. ~ Description of effect type "Defensive Stance"
+#: data/mods/Aftershock/effects.json
+#: data/mods/aftershock_exoplanet/effects.json
+msgid "This creature is actively defending itself."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_esper_headache"
+#. ~ Name of effect type id "psionic_overload"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Headache"
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_esper_headache"
+#. ~ Name of effect type id "psionic_overload"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Bad Headache"
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_esper_headache"
+#. ~ Name of effect type id "psionic_overload"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Splitting Headache"
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_esper_headache"
+#. ~ Name of effect type id "psionic_overload"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Excruciating Headache"
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_esper_headache"
+#. ~ Name of effect type id "psionic_overload"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Pure Agony"
+msgstr ""
+
+#. ~ Description of effect type "Headache"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your head is pounding and you feel unwell."
+msgstr ""
+
+#. ~ Description of effect type "Bad Headache"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your head throbs and it's hard to see straight."
+msgstr ""
+
+#. ~ Description of effect type "Splitting Headache"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You can barely think through the pain in your head."
+msgstr ""
+
+#. ~ Description of effect type "Excruciating Headache"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your skull feels like it's going to explode."
+msgstr ""
+
+#. ~ Description of effect type "Pure Agony"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "The agony is the only thing in the world that matters."
+msgstr ""
+
+#. ~ Description of effect type "Stunned"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your mind is reeling."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_electrokin_see_electricity"
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokin_see_electricity"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Spark Sight"
+msgstr ""
+
+#. ~ Description of effect type "Spark Sight"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your powers reveal electrical creatures and robots to you."
+msgstr ""
+
+#. ~ Remove message of effect type "Spark Sight"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You can no longer sense the flow of current."
+msgstr ""
+
+#. ~ Description of effect type "Electrical Discharge"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your body is filled with electrical currents."
+msgstr ""
+
+#. ~ Remove message of effect type "Electrical Discharge"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "The tingling on your skin fades."
+msgstr ""
+
+#. ~ Decay message of effect type "Electrical Discharge"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "The protective electrical currents are nearly gone."
+msgstr ""
+
+#. ~ Decay message of effect type "Electrical Discharge"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Your skin is losing its charge."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_electrokin_hacking_interface"
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokin_hacking_interface"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Hacking Interface"
+msgstr ""
+
+#. ~ Description of effect type "Hacking Interface"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid ""
+"You are capable of hacking into computers with only the power of your mind."
+msgstr ""
+
+#. ~ Remove message of effect type "Hacking Interface"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You can no longer manipulate the circuitry of nearby devices."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_electrokin_personal_battery"
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokin_personal_battery"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Electron Overflow"
+msgstr ""
+
+#. ~ Description of effect type "Electron Overflow"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You are generating a wireless aura of electrical power."
+msgstr ""
+
+#. ~ Remove message of effect type "Electron Overflow"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You stop the flow of electricity to your devices."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_telekinetic_momentum"
+#. ~ Name of effect type id "effect_telekinetic_momentum"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Altered Momentum"
+msgstr ""
+
+#. ~ Description of effect type "Altered Momentum"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid ""
+"Your powers are affecting movement around you; dangerous objects are slowed "
+"and your own speed is increased."
+msgstr ""
+
+#. ~ Remove message of effect type "Altered Momentum"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "Nearby movement returns to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_telepath_sense_minds"
+#. ~ Name of effect type id "effect_telepath_sense_minds"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Sensing Minds"
+msgstr ""
+
+#. ~ Description of effect type "Sensing Minds"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "You are looking out for other minds."
+msgstr ""
+
+#. ~ Remove message of effect type "Sensing Minds"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Your awareness of other minds fades away."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "sense_minds"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+msgid "You sense something sapient here."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_telepathic_suggestion"
+#. ~ Name of effect type id "effect_telepathic_suggestion"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Mind Trick"
+msgstr ""
+
+#. ~ Description of effect type "Mind Trick"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid ""
+"You are preparing to influence the minds of others to make them more amenable"
+" to your point of view."
+msgstr ""
+
+#. ~ Name of effect type id "effect_afs_telepathic_psi_armor"
+#. ~ Name of effect type id "effect_telepathic_psi_armor"
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "eff_monster_immune_to_telepathy"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Telepathic Shield"
+msgstr ""
+
+#. ~ Description of effect type "Telepathic Shield"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Your mind is warded against telepathic attack or detection."
+msgstr ""
+
+#. ~ Remove message of effect type "Telepathic Shield"
+#: data/mods/Aftershock/effects_esper.json
+#: data/mods/Aftershock/obsoletion/effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/aftershock_exoplanet/effects_esper.json
+#: data/mods/aftershock_exoplanet/obsoletion/effects.json
+msgid "Your thoughts are once again unguarded."
+msgstr ""
+
+#. ~ Player message in effect in EoC "afs_motion_sensor_audio_warning_high" in
+#. nested EOCs in effect in EoC "afs_motion_sensor_eoc"
+#: data/mods/Aftershock/effects_on_condition.json
+#: data/mods/aftershock_exoplanet/effects_on_condition.json
+msgid "The motion detector whines distressingly!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "afs_motion_sensor_audio_warning_medium"
+#. in nested EOCs in false effect in EoC "afs_motion_sensor_audio_warning_high"
+#. in nested EOCs in effect in EoC "afs_motion_sensor_eoc"
+#: data/mods/Aftershock/effects_on_condition.json
+#: data/mods/aftershock_exoplanet/effects_on_condition.json
+msgid "The motion detector emits a short series of warning beeps."
+msgstr ""
+
+#. ~ Player message in effect in EoC "afs_motion_sensor_audio_warning_low" in
+#. nested EOCs in false effect in EoC "afs_motion_sensor_audio_warning_medium"
+#. in nested EOCs in false effect in EoC "afs_motion_sensor_audio_warning_high"
+#. in nested EOCs in effect in EoC "afs_motion_sensor_eoc"
+#: data/mods/Aftershock/effects_on_condition.json
+#: data/mods/aftershock_exoplanet/effects_on_condition.json
+msgid "The motion detector emits a single warning beep."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ESCAPE_POD_CHAIR"
+#: data/mods/Aftershock/effects_on_condition.json
+#: data/mods/aftershock_exoplanet/effects_on_condition.json
+msgid ""
+"You make sure that all equipment is strapped down and loose items are put "
+"away to avoid projectiles during launch before you strap yourself into the "
+"escape pod seat and press the launch button.  With an incredibly loud roar "
+"and a massive acceleration that presses you into the seat, the escape pod "
+"fires from the ship, plummeting towards the planet below."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CRASHING_SHIP_U_DIE"
+#: data/mods/Aftershock/effects_on_condition.json
+#: data/mods/aftershock_exoplanet/effects_on_condition.json
+msgid ""
+"A large boom rocks the hull, fire engulfs the decks.  You can do nothing but "
+"watch as a wall of burning gas rushes towards you, consumes you as fast as it"
+" came, and then all is black."
+msgstr ""
+
+#. ~ Bashing message of fields "foamcrete", "foamcrete lump", "foamcrete half-
+#. wall"
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "You destroy the foamcrete."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "toxic foam"
+msgstr ""
+
+#. ~ Player message on effect of field toxic foam
+#. ~ Player message on effect of field dense toxic foam
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "You feel the toxic foam burn through your skin."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "dense toxic foam"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "radiative glimmer"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Aftershock/field_type.json
+#: data/mods/aftershock_exoplanet/field.json
+msgid "intense radiative glimmer"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "OLD_TSKBEM_CARD"
+#: data/mods/Aftershock/flags.json data/mods/aftershock_exoplanet/flags.json
+msgid "This item is an access card for ancient industrial locations."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "OLD_ENFORCER_CARD"
+#: data/mods/Aftershock/flags.json data/mods/aftershock_exoplanet/flags.json
+msgid "This item is an access card for ancient police locations."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "OLD_MERCURIAL_CARD"
+#: data/mods/Aftershock/flags.json data/mods/aftershock_exoplanet/flags.json
+msgid "This item is an access card for ancient Mercurial locations."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "TEEPSHIELD"
+#: data/mods/Aftershock/flags.json data/mods/MindOverMatter/json_flags.json
+#: data/mods/aftershock_exoplanet/flags.json
+msgid "You are immune to telepathy."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SHIELD_GENERATOR"
+#: data/mods/Aftershock/flags.json data/mods/aftershock_exoplanet/flags.json
+msgid "This item is capable of projecting a Riemann protective shield."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s injects you with a syringe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s injects <npcname> with a syringe!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to inject you, but fails to penetrate your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s tries to inject <npcname>, but fails to penetrate their armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s crushes your %2$s with a vicious stomp!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s crushes <npcname> underfoot!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "You roll out of the way of %1$s's stomp!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "<npcname> rolls out of the way of %1$s's stomp!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's attempt to crush your %2$s is deflected by your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%1$s's attempt to crush <npcname> is deflected by their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s tries to grasp you, but it slides off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Aftershock/monster_attacks.json
+#: data/mods/aftershock_exoplanet/monster_attacks/monster_attacks.json
+#, c-format
+msgid "%s tries to grasp <npcname>, but its legs slide of their armor."
+msgstr ""
+
+#. ~ Description of profession "Standard Bionic Interface" for male
+#: data/mods/Aftershock/profession_groups.json
+msgctxt "prof_desc_male"
+msgid ""
+"Like most people on Earth you have previously received cybernetic enhancement"
+" to make life easier.  Your enhancements include a universal data link, some "
+"basic power storage, and a charging cable to top up."
+msgstr ""
+
+#. ~ Description of profession "Standard Bionic Interface" for female
+#: data/mods/Aftershock/profession_groups.json
+msgctxt "prof_desc_female"
+msgid ""
+"Like most people on Earth you have previously received cybernetic enhancement"
+" to make life easier.  Your enhancements include a universal data link, some "
+"basic power storage, and a charging cable to top up."
+msgstr ""
+
+#. ~ Skill name
+#: data/mods/Aftershock/skills.json data/mods/aftershock_exoplanet/skills.json
+msgid "smart guns"
+msgstr ""
+
+#. ~ Description of skill "smart guns"
+#: data/mods/Aftershock/skills.json data/mods/aftershock_exoplanet/skills.json
+msgid ""
+"Back in the 21st century marksmanship was an art whose mastery meant arduous "
+"years of constant training and preparation.  There are computers for that "
+"now."
+msgstr ""
+
+#. ~ Skill name
+#: data/mods/Aftershock/skills.json data/mods/MindOverMatter/skills.json
+#: data/mods/aftershock_exoplanet/skills.json
+msgid "metaphysics"
+msgstr ""
+
+#. ~ Description of skill "metaphysics"
+#: data/mods/Aftershock/skills.json data/mods/aftershock_exoplanet/skills.json
+msgid "Your ability to manipulate psionic energy."
+msgstr ""
+
+#. ~ Message of spell "vahagn_extra_shots ( Vahagn fire )"
+#: data/mods/Aftershock/spells.json
+#: data/mods/aftershock_exoplanet/spells/spells.json
+msgid "Casted"
+msgstr ""
+
+#. ~ Name of starting location "sloc_afs_glacial_tunnels"
+#: data/mods/Aftershock/start_locations.json
+msgid "Somewhere Underground"
+msgstr ""
+
+#. ~ Message after transforming to "t_door_metal_c"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The door's PIN pad chimes happily as the locking mechanism releases."
+msgstr ""
+
+#. ~ Message after transforming to "t_afs_security_door_frame"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The security gate recedes into the cieling."
+msgstr ""
+
+#. ~ Message after transforming to "f_intermodal_crate_open"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The shipping crate bolts slide back and the lid pops open."
+msgstr ""
+
+#. ~ Message after transforming to "f_reinforced_displaycase_o"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "A panel of reinforced glass receeds into the case."
+msgstr ""
+
+#. ~ Message after transforming to "f_e_safe_c"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The safe's display chimes happily as the locking mechanism releases."
+msgstr ""
+
+#. ~ Message after transforming to "t_door_metal_locked"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The door's PIN pad chimes unhappily before powering down."
+msgstr ""
+
+#. ~ Message after transforming to "f_sealed_intermodal_crate_locked"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The shipping crate beeps unhappily before powering down."
+msgstr ""
+
+#. ~ Message after transforming to "f_e_safe_l_down"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The safe beeps unhappily before powering down."
+msgstr ""
+
+#. ~ Message after transforming to "f_security_panel_locked"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid ""
+"You trip the security failsafe and the panel fries it's own electronics."
+msgstr ""
+
+#. ~ Message after transforming to "f_reinforced_displaycase_locked"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The display case beeps unhappily before powering down."
+msgstr ""
+
+#. ~ Message after transforming to "t_prison_grate_r"
+#: data/mods/Aftershock/ter_fur_transform.json
+#: data/mods/aftershock_exoplanet/ter_fur_transform.json
+msgid "The grating retracts into the floor and ceiling."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Aftershock/traps.json data/mods/aftershock_exoplanet/traps.json
+msgid "escape pod launch button"
+msgstr ""
+
+#. ~ Label of UI widget "shield_layout"
+#. ~ Label of UI widget "shield_layout_2"
+#. ~ Label of UI widget "shield_layout_1"
+#: data/mods/Aftershock/ui.json data/mods/aftershock_exoplanet/ui.json
+msgid "SHIELD"
+msgstr ""
+
+#. ~ Label of UI widget "shield_gauge"
+#: data/mods/Aftershock/ui.json data/mods/aftershock_exoplanet/ui.json
+msgid "INTGR"
+msgstr ""
+
+#. ~ Clause text "empty" of UI widget "shield_gauge"
+#. ~ Clause text "empty" of UI widget "shield_power_gauge"
+#. ~ Clause text "empty" of UI widget "cryosuit_power_graph"
+#: data/mods/Aftershock/ui.json data/mods/aftershock_exoplanet/ui.json
+msgid "<color_red>      OFFLINE      </color>"
+msgstr ""
+
+#. ~ Default clause of UI widget "shield_rad_warning"
+#. ~ Clause text "danger" of UI widget "shield_rad_warning"
+#: data/mods/Aftershock/ui.json data/mods/aftershock_exoplanet/ui.json
+msgid "  ☢DNGR☢"
+msgstr ""
+
+#. ~ Text in UI widget "shield_title"
+#: data/mods/Aftershock/ui.json data/mods/aftershock_exoplanet/ui.json
+msgid "SHIELDING:"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Aftershock/vitamin.json
+#: data/mods/aftershock_exoplanet/vitamin.json
+msgid "Aftershock Maintained Powers Counter"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid "Reach the Port Augustmoon shuttle"
+msgstr ""
+
+#. ~ Description of mission "Reach the Port Augustmoon shuttle"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid ""
+"Your shuttle has landed nearby.  It will wait for up to 3 hours before "
+"returning to port, you might what to reach it before then."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_CALL_AUGUSTMOON_SHUTTLE"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid "Order Received: Shuttle inbound to your location."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_AFS_CALL_AUGUSTMOON_SHUTTLE"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid "WARNING: Cannot schedule landing, shuttle already inbound."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_LAND_AUGUSTMOON_SHUTTLE"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid ""
+"You see the engine plume of your landing drone shuttle in the distance.  "
+"You'll have about four hours to reach it before it leaves."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_AUGUSTMOON_SHUTTLE_TP"
+#. ~ Player message in effect in EoC "EOC_AFS_AUGUSTMOON_SPACEPORT_TP"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid ""
+"The shuttle's ascent is a little rough, but you're soon on your way to Port "
+"Augustmoon."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PORT_TO_LANDING_PAD_TP"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid ""
+"An orbital drop in a rackety cargo shuttle preceded by an almost interminable wait within Port Augustmoon customs level leads you to the planetary wastes below.\n"
+"\n"
+" What passes by the spaceport is nothing but a small radio outpost surrounded by chainlink fencing.  Beyond it, any guarantees of civilization are left behind."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VALIDATE_PORT_AUGUSTMOON"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid "MANUALLY FINDING PORT AUGUSTMOON AS A FALLBACK.  (PRESS SPACE)."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VALIDATE_LANDING_PAD"
+#: data/mods/Aftershock/EOC/agustmoon_travel_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/agustmoon_travel_eocs.json
+msgid "MANUALLY FINDING THE LANDING PAD AS A FALLBACK.  (PRESS SPACE)."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_PSIONICS_ADVERSE_EVENT_NOSEBLEED"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid "As you unleash your powers, blood drips from your nose."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_PSIONICS_ADVERSE_EVENT_HEADACHE"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid "As you unleash your powers, your head begins to throb."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_AFS_PSIONICS_ADVERSE_EVENT_HEALTH_PENALTY"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid "As you unleash your powers, you feel enervated."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_ESPER_STUNNED_ENDS_POWERS"
+#. ~ Player message in effect in EoC "EOC_PSIONICS_STUNNED_ENDS_POWERS"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_misc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid ""
+"As your head rings and your mind reels, you lose control of your powers!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_AFS_ESPER_DAZED_ENDS_POWERS_2"
+#. in nested EOCs in effect in EoC "EOC_AFS_ESPER_DAZED_ENDS_POWERS"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid "Your head is swimming.  You can no longer maintain your powers!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_ESPER_WEARINESS_ENDS_POWERS"
+#. ~ Player message in effect in EoC "EOC_PSIONICS_WEARINESS_ENDS_POWERS"
+#: data/mods/Aftershock/EOC/esper_eoc.json
+#: data/mods/MindOverMatter/effectoncondition/eoc_misc.json
+#: data/mods/aftershock_exoplanet/EOC/esper_eoc.json
+msgid ""
+"You are almost too tired to think, and can't concentrate on maintaining your "
+"powers"
+msgstr ""
+
+#. ~ Message in effect in EoC "_EOC_return_to_partyleader_fail_msg" in nested
+#. EOCs on false condition in effect in EoC "EOC_return_to_partyleader"
+#: data/mods/Aftershock/EOC/game_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/game_eoc.json
+msgid "Unable to locate the party leader."
+msgstr ""
+
+#. ~ Player inventory menu title in effect in EoC "EOC_start_lock_hack"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "Select a Hacking tool"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_hack_with_tool"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "You connect to the lock controller."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_afs_hack_failure"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "You fail to override the device."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_afs_generic_hack_minor_failure_alarm"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "You set off the devices alarm!"
+msgstr ""
+
+#. ~ Player makes sound in effect in EoC
+#. "EOC_afs_generic_hack_minor_failure_alarm"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "Alarm Bleeping"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_afs_generic_hack_minor_failure_hurt"
+#: data/mods/Aftershock/EOC/hacking_eoc.json
+#: data/mods/aftershock_exoplanet/EOC/hacking_eoc.json
+msgid "The device shocks you!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_REACTOR_MELTDOWN"
+#: data/mods/Aftershock/EOC/monster_weakpoint_eocs.json
+#: data/mods/aftershock_exoplanet/EOC/monster_weakpoint_eocs.json
+msgid "The malfunctioning reactor is ejected."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/Aftershock/achievements/achievements.json
+#: data/mods/aftershock_exoplanet/achievements/achievements.json
+msgid "Escape from the Island of Dr. Moreau"
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/mods/Aftershock/items/ammo.json
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo/ammo.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "signaling payload"
+msgid_plural "signaling payload"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "signaling payload"
+#: data/mods/Aftershock/items/ammo.json
+#: data/mods/aftershock_exoplanet/items/ammo/ammo.json
+msgid ""
+"Single use software package that can be used to send encrypted "
+"communications."
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "3x35mm"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "25mm microjet"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "10mm microjet"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "7.50mm microjet"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/mods/Aftershock/items/ammo/flashbulb.json
+#: data/mods/Aftershock/items/ammo_type.json
+#: data/mods/aftershock_exoplanet/items/ammo/flashbulb.json
+#: data/mods/aftershock_exoplanet/items/ammo_type.json
+msgid "82x225mm flashbulb"
+msgid_plural "82x225mm flashbulbs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Vehicle part name
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+msgid "U-344 RTG (deployed)"
+msgstr ""
+
+#. ~ Description of vehicle part "U-344 RTG (deployed)"
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+msgid ""
+"A compact radioisotope thermoelectric generator, complying with UASTA 344 "
+"standards.  It provides a steady if limited supply of power."
+msgstr ""
+
+#. ~ Vehicle part name
+#. ~ Item name
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/Aftershock/items/tools.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "portable battery charger"
+msgid_plural "portable battery chargers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Vehicle part name
+#. ~ Item name
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/Aftershock/items/tools.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "portable survival heater"
+msgid_plural "portable survival heaters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Vehicle part name
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+msgid "tri-pod lamp"
+msgstr ""
+
+#. ~ Description of vehicle part "tri-pod lamp"
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+msgid ""
+"A light mounted on a tall expanded tri-pod.  Illuminates the area around "
+"itself when powered."
+msgstr ""
+
+#. ~ Vehicle part name
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/appliances.json
+#: data/mods/Aftershock/items/tools.json
+#: data/mods/aftershock_exoplanet/items/appliances.json
+#: data/mods/aftershock_exoplanet/items/tools.json
+msgid "portable survival battery"
+msgid_plural "portable survival batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "IX-2110 computer"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"The original Imagos IX-2110, a general use wrist computer originally designed"
+" to support operations within hazardous environments.  Among the most "
+"successful pieces of technology ever created, millions of these were produced"
+" and sold to the explorers that first tamed the stars during the early "
+"Hyperspace Era.  The slow attrition of technological prowess since the "
+"discontinuity has left slightly slower than its modern counterparts."
+msgstr ""
+
+#. ~ Description of variant "IX-2110 computer" of item "IX-2110 computer"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"The original Imagos IX-2110, a general use wrist computer originally designed"
+" to support operations within hazardous environments.  Among the most "
+"successful pieces of technology ever created, millions of these were produced"
+" and sold to the explorers that first tamed the stars during the early "
+"Hyperspace Era.  The slow attrition of technological prowess since the "
+"discontinuity means its only slightly less capable than its modern "
+"counterparts."
+msgstr ""
+
+#. ~ Variant name of item "IX-2110 computer"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid "IX-2330S computer"
+msgid_plural "IX-2330S computers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "IX-2330S computer" of item "IX-2110 computer"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"A rugged and radiation shielded wirst computer specifically designed to "
+"support salvage operations.  It can perform general computing tasks and might"
+" be used to interface with most ancient computer systems."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid "Cecaelia wetsuit"
+msgid_plural "Cecaelia wetsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Cecaelia wetsuit"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"A wetsuit designed for the Octopus Uplifts known as Cecaelia.  This is the "
+"explorer suit with no head or tentacle protection."
+msgstr ""
+
+#. ~ Description of "combat wetsuit"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"The combat version of the Cecaelia wetsuit; made of neoprene and Kevlar, it "
+"will provide some level of protection for deep dwellers."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid "carbide cuirass"
+msgid_plural "carbide cuirasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "carbide cuirass"
+#: data/mods/Aftershock/items/armor.json
+#: data/mods/aftershock_exoplanet/items/armor.json
+msgid ""
+"This piece of armor hearkens back to renaissance designs.  It differs in that"
+" it is cast as a single piece in deep space installations where conditions "
+"can be controlled absolutely.  Not quite bulletproof, but it will stop most "
+"small arms fire."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Aftershock/items/armor_helmets.json
+#: data/mods/aftershock_exoplanet/items/armor_helmets.json
+msgid "raider's breaching helmet"
+msgid_plural "raider's breaching helmets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/battery.json
+#: data/mods/aftershock_exoplanet/items/battery.json
+msgid "suit battery"
+msgid_plural "suit batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "suit battery"
+#. ~ Description of "suit battery"
+#: data/mods/Aftershock/items/battery.json
+#: data/mods/aftershock_exoplanet/items/battery.json
+msgid ""
+"A heavy battery cell, compatible with most industrial equipment but "
+"purposefully designed to power EVA suits  It's a bit too big to fit in most "
+"portable tools."
+msgstr ""
+
+#. ~ Description of "Alarm System CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an Alarm System CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "LED Tattoo CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an LED Tattoo CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Power Storage CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Power Storage CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Power Storage CBM Mk. II installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Power Storage CBM Mk. II, stored on a data card of proprietary form-"
+"factor, designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Internal Chronometer CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an Internal Chronometer CBM, stored on a data card of proprietary form-"
+"factor, designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Intravenous Needletip CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an Intravenous Needletip CBM, stored on a data card of proprietary form-"
+"factor, designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Blood Analysis CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Blood Analysis CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Cranial Flashlight CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Cranial Flashlight CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Electromagnetic Unit CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an Electromagnetic Unit CBM, stored on a data card of proprietary form-"
+"factor, designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Soporific Induction CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Soporific Induction CBM, stored on a data card of proprietary form-factor,"
+" designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Arms Alloy Plating CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" an Arms Alloy Plating CBM, stored on a data card of proprietary form-factor,"
+" designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Legs Alloy Plating CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Legs Alloy Plating CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""
+
+#. ~ Description of "Shotgun Arm CBM installation data"
+#: data/mods/Aftershock/items/bionics_mainline_override.json
+#: data/mods/Xedra_Evolved/items/bionics_mainline_override.json
+#: data/mods/aftershock_exoplanet/items/bionics_mainline_override.json
+msgid ""
+"Precise step-by-step instructions and other required data for installation of"
+" a Shotgun Arm CBM, stored on a data card of proprietary form-factor, "
+"designed to be used extensively by an Autodoc, and allowing bionic "
+"installation with minimal failure chance.  An integrated security subroutine "
+"renders it unusable after a single installation."
+msgstr ""

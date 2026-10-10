@@ -1,0 +1,1596 @@
+# Batch 114 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Alright, let's get going."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "It's time to hit the road."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "It's time to move on."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "It's time to move."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's continue our journey."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's get back to business."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's just get moving."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's roll out."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Time to get going<punc>"
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Time to move forward."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We have to keep moving."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We need to get back to our duties."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We need to get going."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We should be on our way."
+msgstr ""
+
+#. ~ Snippet in category "<lets_go>"
+#. ~ Typically used when the avatar ends a conversation with a follower.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Well, let's get going."
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Actually, I wanted to ask…"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can we discuss something else?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can we move on to another subject?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can we talk about something different?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How about we change subjects?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How about we change the conversation?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How about we discuss another matter?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How about we discuss something else?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd like to ask you about something different<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd like to ask you about something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd like to hear your thoughts on something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd like to shift the topic<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd like to talk about something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I have a different question<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I have another question in mind<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I have another topic in mind<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I have another topic to discuss<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'm curious about another topic<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I think it's time for a new subject<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I think it's time to change topics<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I've got another thing in mind<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I wanted to ask about something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I want to ask you something<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I want to change the subject<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I want to switch the conversation to something new<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's address a different issue<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's address another subject<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's adjust the topic<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's change the subject<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's discuss a new topic<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's discuss another point<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's dive into something different<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's explore a different question<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's pivot to another subject<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's talk about another issue<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's talk about something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's venture into another topic<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Maybe we should talk about something else<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "On a different note…"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Shall we change the topic?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What about changing the topic?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What if we moved on to something else?"
+msgstr ""
+
+#. ~ Snippet in category "<done_conversation_section>"
+#. ~ Avatar response to an NPC that can be used for TALK_NONE responses.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What if we talked about something else?"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Bye bye<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Bye<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Farewell<punc>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Goodbye<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'll see you later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "See ya later<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "See ya<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "See you around<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "See you later<punc.!>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Take care."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_bye>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Take it easy."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Another time, perhaps<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's continue this conversation later<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's continue this later<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's do this another time<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's link in later<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's pick this up later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Let's resume this chat later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll chat again soon."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll discuss this later<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll pick this up another time."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll reconnect later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll return to this later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_later>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "We'll talk more later."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Actually, I'm just heading out<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Actually, I need to head out<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Anyway, I need to move along<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I better head out<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I can't stay to talk right now<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd better get going<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I don't have time for this<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I gotta go though<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I gotta go<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I gotta run<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'm afraid I can't talk right now<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'm sorry, I gotta go<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I think I have to get going<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "It's been nice talking to you, but I need to head out<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I've got to go<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Nice talking to you, but I gotta go<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Well, I'd better be going<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_leave>"
+#. ~ Avatar response indicated that the conversation is over via TALK_DONE.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Well, I gotta go<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_nevermind>"
+#. ~ Avatar response indicated that the conversation is over.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Actually, forget it."
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_nevermind>"
+#. ~ Avatar response indicated that the conversation is over.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Nothing, nothing<punc.…>"
+msgstr ""
+
+#. ~ Snippet in category "<end_talking_nevermind>"
+#. ~ Avatar response indicated that the conversation is over.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "You know what?  Never mind."
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can you share how you survived the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can you share your story?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can you tell me about your journey through the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Can you walk me through your survival story?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you adapt to the new reality?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you adapt to the new world?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you avoid the initial dangers?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you cope with the chaos?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you endure the beginning of the end?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you find safety in the chaos?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you get through the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you handle the initial outbreak?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you handle the outbreak?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you make it this far?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you manage during those early days?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you manage to keep safe?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you manage to stay alive?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you manage to stay alive during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you navigate the initial chaos?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you overcome the initial shock of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you react when the Cataclysm started?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you secure your safety during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you stay alive during the first wave?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How did you survive the early days of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "I'd love to hear about your survival story."
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What did you do to make it through the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What did you do to survive the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What did you do when it all started?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What did you go through when it all went down?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What did you witness during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What happened when the Cataclysm began?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What helped you survive those critical first days?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What kept you going during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What steps did you take to ensure your survival?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What steps did you take to survive the first days?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was it like for you when everything collapsed?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was the most challenging part of the Cataclysm for you?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was the most difficult part of surviving the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your approach to surviving the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your experience during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your experience during the first days of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your experience in the early days of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your first move during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your game plan when the world fell apart?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your initial reaction to the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your journey through the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your plan when the Cataclysm hit?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your strategy for surviving?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your survival story like?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your survival strategy?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What was your survival strategy during the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<BGSS_intro_question>"
+#. ~ Avatar response to an NPC that opens up their history.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What were your tactics for surviving the chaos?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Any guesses on what triggered the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Any insights into what led to the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Any speculation on what caused all this?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Any theories on the origin of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Do you have any thoughts on the origin of the apocalypse?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Ever think about the reason behind the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Ever think about what might have triggered the end?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Ever wonder about the cause of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any clues about how this all started?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any explanations for the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any ideas on the cause of all this?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any theories about the start of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any thoughts on how this all started?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Got any wild theories about the apocalypse?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Have you heard any stories about how it all began?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you explain the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you figure this all began?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you make sense of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you think the Cataclysm came about?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you think the Cataclysm unfolded?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "How do you think this mess started?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What do you believe caused the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What do you believe sparked the apocalypse?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What do you suppose caused the end of the world?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What do you think brought about the end of days?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What do you think is behind the end of the world?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your best guess on the origin of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your guess on how the world fell apart?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your idea of how the Cataclysm began?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your opinion on the cause of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your perspective on the cause of the Cataclysm?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your take on the origins of the apocalypse?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your take on the whole Cataclysm situation?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "What's your theory on how the world ended?"
+msgstr ""
+
+#. ~ Snippet in category "<CWH_intro_question>"
+#. ~ Avatar response to an NPC that opens up their theories about what the
+#. Cataclysm was.
+#: data/json/npcs/snippets/talk_tags_avatar.json
+msgid "Why do you think everything went to hell?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "A cold beer would make this chat even better, don't you agree?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Beer and conversation, the perfect combo.  What do you say?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Beer first, then we can talk all you want, <name_g>."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Beer in hand, words will flow smoother, don't you think?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Bring out the brews and let's have a chat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Fancy a beer while we talk?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Got a beer?  Let's make this chat more interesting."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Got any cold ones?  Let's crack 'em open and have a chat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "How about a beer to go with our conversation?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's crack open a cold one and have a good chat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid ""
+"Let's grab a beer and forget the world's gone to shit, just for a moment."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's share a beer and shoot the breeze, <name_g>."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Nothing like a beer to go with a good conversation."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Open a beer and let's chat like it's old times."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Pop a top and let's talk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_booze>"
+#. ~ Used when chit-chatting while the avatar has a beer; goes before a general
+#. chitchat message
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Share a beer with me and let's talk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Ah, summer… remember when it meant vacations?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Another sweltering summer day, ugh."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Feels like the summer heat never lets up."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Heatwave after heatwave, this summer is brutal."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Hotter than ever this summer, huh?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Just trying to survive this summer heat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Nothing beats a cold drink in this summer heat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Summer days like these make me miss the old world."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Summer evenings are the best, don't you think?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Summer nights are getting shorter."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Summer's here, time for some shade."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Summer's here, time for some sunburns."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "These summer bugs are driving me nuts."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "This summer air is thick enough to cut."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_summer>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "This summer sun is relentless, isn't it?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Another day, another frostbite risk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Cold enough to see your breath out here."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Everything's covered in ice."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Frozen ground makes everything harder."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I miss the cozy warmth of a fireplace in winter."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "It's so cold, even the air hurts to breathe."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Shivering is my new constant state."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Snow everywhere, makes it hard to get around."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "The cold is relentless this year."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "These short days and long nights are something else."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "This winter chill cuts right through you."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Winter nights are the longest, aren't they?"
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Winter's grip is tight this year."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Winter's here, better bundle up."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_winter>"
+#. ~ A sentence regarding the season to go before a more general chitchat
+#. message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Winter winds are no joke."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Even sick, I could use some company."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Even with this bug, I'm still up for a conversation."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Feeling kinda rough, but a conversation sounds good."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Feeling like a zombie myself, but let's have a chat."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I feel like death warmed over, but a chat might help."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I'm a bit nauseous, but let's chat anyway."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I might need to lie down soon, but let's chat first."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I'm under the weather, but I'm up for a talk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "I've been better, but I'm here to talk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Let's talk, though I feel like I might keel over."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Sick as a dog, but let's talk."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Sure, but I'm battling a fever right now."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Sure, just know I might need to take a break if I start coughing."
+msgstr ""
+
+#. ~ Snippet in category "<chitchat_prefix_infected>"
+#. ~ A sentence about being sick to go before a more general chitchat message.
+#: data/json/npcs/snippets/talk_tags_chat.json
+msgid "Sure thing, but don't get too close—I might be contagious."
+msgstr ""

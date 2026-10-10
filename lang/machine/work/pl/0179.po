@@ -1,0 +1,1564 @@
+# Batch 179 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Apply message of effect type "A Fire in the Blood"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You're fired up and ready for battle."
+msgstr ""
+
+#. ~ Remove message of effect type "A Fire in the Blood"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The energy of the sun leaves you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_ring_of_flames"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Summer Champion"
+msgstr ""
+
+#. ~ Description of effect type "Summer Champion"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid ""
+"You stand in the ring of flames, facing your foe.  Woe to the vanquished."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_ring_of_flames_enemy"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Enemy Champion"
+msgstr ""
+
+#. ~ Description of effect type "Enemy Champion"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid ""
+"You are the target of Ring of Champions.  Your death will end the glamour."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_powerful_sunlight"
+#. ~ Name of spell "changeling_summer_powerful_sunlight_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Helios's Wrath"
+msgstr ""
+
+#. ~ Description of effect type "Helios's Wrath"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You blaze with the pure light of the summer sun."
+msgstr ""
+
+#. ~ Remove message of effect type "Helios's Wrath"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The blinding light fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_autumn_detect_magic_user"
+#. ~ Name of spell "changeling_autumn_detect_magic_user_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_autumn.json
+msgid "Witch's Warning"
+msgstr ""
+
+#. ~ Description of effect type "Witch's Warning"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You can sense nearby uses of magick."
+msgstr ""
+
+#. ~ Remove message of effect type "Witch's Warning"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your awareness of sorcerers fades away."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "wizard_sense"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You sense a sorcerer here."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_changeling_autumn_touch_of_frailty_character"
+#. ~ Name of effect type id "effect_changeling_autumn_touch_of_frailty_monster"
+#. ~ Name of spell "changeling_autumn_touch_of_frailty_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_autumn.json
+msgid "Touch of Frailty"
+msgstr ""
+
+#. ~ Description of effect type "Touch of Frailty"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "A glamour is prematurely aging you."
+msgstr ""
+
+#. ~ Remove message of effect type "Touch of Frailty"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your vigor returns."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_autumn_scare_humans"
+#. ~ Name of spell "changeling_autumn_scare_humans_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_autumn.json
+msgid "Scarecrow's Mien"
+msgstr ""
+
+#. ~ Description of effect type "Scarecrow's Mien"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Now they shall know fear."
+msgstr ""
+
+#. ~ Remove message of effect type "Scarecrow's Mien"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The terrifying illusions fade away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_autumn_protection_from_ranged"
+#. ~ Name of spell "changeling_autumn_protection_from_ranged_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_autumn.json
+msgid "Swirl of Autumn Leaves"
+msgstr ""
+
+#. ~ Description of effect type "Swirl of Autumn Leaves"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "A chill wind is whirling around you."
+msgstr ""
+
+#. ~ Remove message of effect type "Swirl of Autumn Leaves"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The autumn leaves fall to the ground."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_autumn_freeze_in_place_target"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Baleful Gaze"
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_changeling_winter_freeze_target_in_place_not_winter"
+#. ~ Name of effect type id
+#. "effect_changeling_winter_freeze_target_in_place_during_winter"
+#. ~ Name of spell "changeling_winter_freeze_target_in_place_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_winter.json
+msgid "Grip of Winter"
+msgstr ""
+
+#. ~ Description of effect type "Grip of Winter"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Ice coats your lower limbs, freezing you in place."
+msgstr ""
+
+#. ~ Remove message of effect type "Grip of Winter"
+#. ~ Remove message of effect type "Path of Rime"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The chill around your feet fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_walk_in_silence"
+#. ~ Name of spell "changeling_winter_walk_in_silence"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_winter.json
+msgid "Footsteps in the Snow"
+msgstr ""
+
+#. ~ Description of effect type "Footsteps in the Snow"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Like an animal in winter, you are moving in almost complete silence."
+msgstr ""
+
+#. ~ Remove message of effect type "Footsteps in the Snow"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The sound of your footsteps intrudes in your perceptions."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_walk_on_water"
+#. ~ Name of spell "changeling_winter_walk_on_water_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_winter.json
+msgid "Path of Rime"
+msgstr ""
+
+#. ~ Description of effect type "Path of Rime"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid ""
+"Each step you take leaves a tracing of frost on the ground, and liquids "
+"freeze at your touch."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_feign_death"
+#. ~ Name of spell "changeling_winter_feign_death_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_winter.json
+msgid "Stillness of the Tomb"
+msgstr ""
+
+#. ~ Description of effect type "Stillness of the Tomb"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You do not move, or breathe, or think, or live.  For now."
+msgstr ""
+
+#. ~ Remove message of effect type "Stillness of the Tomb"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Life returns to your limbs."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_feign_death_limiter"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Definitely Alive"
+msgstr ""
+
+#. ~ Description of effect type "Definitely Alive"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You can fool them once, but you can't fool them twice."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_silence"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Frozen Tongue"
+msgstr ""
+
+#. ~ Description of effect type "Frozen Tongue"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your tongue feels like solid ice."
+msgstr ""
+
+#. ~ Remove message of effect type "Frozen Tongue"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The icy feeling on your tongue vanishes."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_frozen_breath"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Chilled"
+msgstr ""
+
+#. ~ Description of effect type "Chilled"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your movements are slowed."
+msgstr ""
+
+#. ~ Remove message of effect type "Chilled"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The bone-deep chill fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_neutralize_morale"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Frozen Heart"
+msgstr ""
+
+#. ~ Description of effect type "Frozen Heart"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "All emotions are frozen out."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_see_craft_darkness"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "By Moon or By Starlight"
+msgstr ""
+
+#. ~ Description of effect type "By Moon or By Starlight"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You are at home in the dark."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_winter_cut_off_fey_nature"
+#. ~ Name of spell "changeling_winter_cut_off_fey_nature_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_winter.json
+msgid "The Soul of Iron"
+msgstr ""
+
+#. ~ Description of effect type "The Soul of Iron"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid ""
+"Your fey powers are cut off, like they're trapped behind a wall of glass."
+msgstr ""
+
+#. ~ Remove message of effect type "The Soul of Iron"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The glass wall cutting off your fey powers shatters into dust."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vampire_monster_speed"
+#. ~ Mutation name
+#. ~ Name of spell "spell_blood_haste"
+#: data/mods/Xedra_Evolved/effects/effects_monster_only.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/spells.json
+msgid "Blood-Driven Speed"
+msgstr ""
+
+#. ~ Description of effect type "Restore Flesh and Bone"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your wounds are slowly healing."
+msgstr ""
+
+#. ~ Remove message of effect type "Restore Flesh and Bone"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your regeneration slows down as the goblin fruit's magic fades."
+msgstr ""
+
+#. ~ Description of effect type "Quick Blows"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can attack faster."
+msgstr ""
+
+#. ~ Remove message of effect type "Quick Blows"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your muscles twitch as the goblin fruit's magic fades."
+msgstr ""
+
+#. ~ Description of effect type "Summer's Heat"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The magic of that goblin fruit is keeping you warm."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_nightvision"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Darkvision"
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_shadow"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Muffled"
+msgstr ""
+
+#. ~ Description of effect type "Muffled"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your movements are muffled."
+msgstr ""
+
+#. ~ Apply message of effect type "Muffled"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your footsteps feel quieter."
+msgstr ""
+
+#. ~ Description of effect type "Stopped Bleeding"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your blood is all being contained within your body."
+msgstr ""
+
+#. ~ Description of effect type "Good Vision"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The magic of that goblin fruit is helping you see better."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_featherfall"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Feather Fall"
+msgstr ""
+
+#. ~ Description of effect type "Feather Fall"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can fall any distance without damage."
+msgstr ""
+
+#. ~ Apply message of effect type "Feather Fall"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel as light as air."
+msgstr ""
+
+#. ~ Remove message of effect type "Feather Fall"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Gravity reclaims its hold on you."
+msgstr ""
+
+#. ~ Apply message of effect type "Omniscience"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your head pounds as you suddenly see in all directions simultaneously."
+msgstr ""
+
+#. ~ Remove message of effect type "Omniscience"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your senses snap back into your body."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_water_breathing"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Return to the Sea"
+msgstr ""
+
+#. ~ Description of effect type "Return to the Sea"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can breathe underwater."
+msgstr ""
+
+#. ~ Apply message of effect type "Return to the Sea"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel an urge to take a swim."
+msgstr ""
+
+#. ~ Remove message of effect type "Return to the Sea"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You need to take a breath of air, now!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_stealth"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Unnoticed"
+msgstr ""
+
+#. ~ Description of effect type "Unnoticed"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You're beneath notice, unless they get too close of you."
+msgstr ""
+
+#. ~ Apply message of effect type "Unnoticed"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You find it hard to notice your own presence."
+msgstr ""
+
+#. ~ Remove message of effect type "Unnoticed"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You become noticeable again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_combat_skill_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Violent reflection"
+msgstr ""
+
+#. ~ Description of effect type "Violent reflection"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid ""
+"You are mirroring a version of yourself that is more skilled at violence."
+msgstr ""
+
+#. ~ Apply message of effect type "Violent reflection"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your mind fills with violence and the knowledge to use it."
+msgstr ""
+
+#. ~ Remove message of effect type "Violent reflection"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your level of violence returns to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_craft_skill_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Imitated skill"
+msgstr ""
+
+#. ~ Description of effect type "Imitated skill"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You're imitating yourself, if you were better at making things."
+msgstr ""
+
+#. ~ Apply message of effect type "Imitated skill"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You start imitating a more skilled artisan."
+msgstr ""
+
+#. ~ Remove message of effect type "Imitated skill"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your talent to imitate fades."
+msgstr ""
+
+#. ~ Description of effect type "Immovable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You cannot be moved against your will by mundane means."
+msgstr ""
+
+#. ~ Apply message of effect type "Immovable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel fixed in place!"
+msgstr ""
+
+#. ~ Remove message of effect type "Immovable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You stumble a little as your immovability ceases."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_dodge_instant"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Untouchable"
+msgstr ""
+
+#. ~ Description of effect type "Untouchable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "For an instant, nothing can touch you."
+msgstr ""
+
+#. ~ Apply message of effect type "Untouchable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You start dodging everything that could touch you!"
+msgstr ""
+
+#. ~ Remove message of effect type "Untouchable"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your dodging abilities return to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_focus_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Understanding"
+msgstr ""
+
+#. ~ Description of effect type "Understanding"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "As long as it lasts, you will have an easier time learning new things."
+msgstr ""
+
+#. ~ Apply message of effect type "Understanding"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Everything feels a little easier to understand now."
+msgstr ""
+
+#. ~ Remove message of effect type "Understanding"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your mind returns to its regular level of understanding."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_heal_after_sleep"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Eventual restful sleep"
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_teleport"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Fractal teleportation"
+msgstr ""
+
+#. ~ Description of effect type "Fractal teleportation"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your position constantly changes."
+msgstr ""
+
+#. ~ Apply message of effect type "Fractal teleportation"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel your position grow uncertain."
+msgstr ""
+
+#. ~ Remove message of effect type "Fractal teleportation"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You stop teleporting all over the place."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_climb"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Sticky climb"
+msgstr ""
+
+#. ~ Description of effect type "Sticky climb"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can climb walls without trouble."
+msgstr ""
+
+#. ~ Apply message of effect type "Sticky climb"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your extremities become sticky."
+msgstr ""
+
+#. ~ Remove message of effect type "Sticky climb"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your extremities stop being this sticky."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_amplification_instant"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Pressurized amplification"
+msgstr ""
+
+#. ~ Description of effect type "Pressurized amplification"
+#. ~ Apply message of effect type "Pressurized amplification"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your muscles are filled with pressurized power!"
+msgstr ""
+
+#. ~ Remove message of effect type "Pressurized amplification"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The power leaves your muscles in an instant."
+msgstr ""
+
+#. ~ Decay message of effect type "Pressurized amplification"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The pressure inside your muscles grows!"
+msgstr ""
+
+#. ~ Name of effect type id "goblin_fruit_carry_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Lightened load"
+msgstr ""
+
+#. ~ Description of effect type "Lightened load"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You find it easier to carry heavy charges."
+msgstr ""
+
+#. ~ Apply message of effect type "Lightened load"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel lighter, as does everything you're carrying."
+msgstr ""
+
+#. ~ Remove message of effect type "Lightened load"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The weight of your belongings return to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_wild_travel_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "A path through the forest"
+msgstr ""
+
+#. ~ Description of effect type "A path through the forest"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You move a bit quicker through the wilds."
+msgstr ""
+
+#. ~ Apply message of effect type "A path through the forest"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Nearby vegetation becomes a little less daunting."
+msgstr ""
+
+#. ~ Remove message of effect type "A path through the forest"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Traversing vegetation stops being easier."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_slowing_armor"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The stone's endurance"
+msgstr ""
+
+#. ~ Description of effect type "The stone's endurance"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You are more resistant to damage but move more slowly."
+msgstr ""
+
+#. ~ Apply message of effect type "The stone's endurance"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You stiffen, becoming slower but more resistant to anything."
+msgstr ""
+
+#. ~ Remove message of effect type "The stone's endurance"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The stiffness quits your body."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_social_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Silver tongue"
+msgstr ""
+
+#. ~ Description of effect type "Silver tongue"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You are better at convincing others to do what you want."
+msgstr ""
+
+#. ~ Apply message of effect type "Silver tongue"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel more persuasive."
+msgstr ""
+
+#. ~ Remove message of effect type "Silver tongue"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your charisma returns to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_altitude_speed"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Gust of wind"
+msgstr ""
+
+#. ~ Description of effect type "Gust of wind"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The winds are assisting your movements."
+msgstr ""
+
+#. ~ Apply message of effect type "Gust of wind"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You long for the skies as winds start blowing at you."
+msgstr ""
+
+#. ~ Remove message of effect type "Gust of wind"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The skies lose their heightened luster."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_cold_resist"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Shelter from the cold"
+msgstr ""
+
+#. ~ Description of effect type "Shelter from the cold"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You withstand the cold much better than most."
+msgstr ""
+
+#. ~ Apply message of effect type "Shelter from the cold"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel much more warm."
+msgstr ""
+
+#. ~ Remove message of effect type "Shelter from the cold"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The warm feeling fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_craft_speed_boost"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Accelerated artistry"
+msgstr ""
+
+#. ~ Description of effect type "Accelerated artistry"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You make things quicker, unless someone else is looking."
+msgstr ""
+
+#. ~ Apply message of effect type "Accelerated artistry"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel better at making things, but only if nobody is watching you."
+msgstr ""
+
+#. ~ Remove message of effect type "Accelerated artistry"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your increased crafting quickness returns to normal."
+msgstr ""
+
+#. ~ Name of effect type id "effect_goblin_fruit_cure_dreamless_cooldown"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Cloudy fruit aftertaste"
+msgstr ""
+
+#. ~ Description of effect type "Cloudy fruit aftertaste"
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid ""
+"You can still faintly taste that cloudy fruit.  Any cloudy fruit you might "
+"eat before the aftertaste ends won't have any effect."
+msgstr ""
+
+#. ~ Message after transforming to "t_door_c"
+#. ~ Message after transforming to "t_door_c_peep"
+#. ~ Message after transforming to "t_door_metal_c"
+#: data/mods/Xedra_Evolved/effects/ter_transform.json
+msgid "The numpad chirps happily at you as the door unlocks."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CONSUMED_BLOOD_TREATMENT"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "You take a blood treatment."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_REDUCE_VAMPVIRUS" in nested EOCs in
+#. effect in EoC "EOC_CONSUMED_BLOOD_TREATMENT"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "The light seems less bright and the air fresher."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_REDUCE_VAMPVIRUS3" in nested EOCs in
+#. effect in EoC "EOC_CONSUMED_BLOOD_TREATMENT"
+#. ~ Player message in effect in EoC "EOC_REDUCE_VAMPVIRUS4" in nested EOCs in
+#. effect in EoC "EOC_CONSUMED_BLOOD_TREATMENT"
+#. ~ Player message in effect in EoC "learn_blood_of_saints"
+#. ~ Player message in effect in EoC "learn_blood_of_saints_2"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+#: data/mods/Xedra_Evolved/items/comestibles/med.json
+msgid ""
+"Your veins burn and ache.  What were you thinking trying this?  You are "
+"already one of the damned!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_COMPLETED_ROLL_REMAINDER_VAMPVIRUS"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "You flush with desire as you think about blood."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_COMPLETED_VAMPIRE3_REAL"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"You can advance no further without access to a mentor.  Maybe you could find "
+"one where you've found the other vampires?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_COMPLETED_VAMPIRE4"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "You can advance no further without more guidance from your mentor."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUCCESFUL_ROLL_REMAINDER"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "Suddenly you feel your heart pounding and you realize a new ability."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUCCESFUL_ROLL_REMAINDER2"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "Suddenly you feel your heart slowing and you realize a new ability."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "eoc_vampvirus_1_trait" in nested
+#. EOCs in effect in EoC "eoc_vampvirus_1_math_checker" in nested EOCs in
+#. effect in EoC "EOC_VAMPVIRUS" in nested EOCs in effect in EoC
+#. "EOC_vampire_virus_escalation"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"You suddenly understand that drinking someones blood will make you feel "
+"better than you've ever felt before in your life."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "eoc_vampvirus_2_trait" in nested
+#. EOCs in effect in EoC "eoc_vampvirus_2_math_checker" in nested EOCs in
+#. effect in EoC "EOC_VAMPVIRUS1" in nested EOCs in effect in EoC
+#. "EOC_vampire_virus_escalation"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"With a popping sound several of your teeth fall out but when you put a finger"
+" into your mouth to feel the hole, there are new sharp fangs where you "
+"expected nothing."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "eoc_vampvirus_3_trait" in nested
+#. EOCs in effect in EoC "eoc_vampvirus_3_math_checker" in nested EOCs in
+#. effect in EoC "EOC_VAMPVIRUS2" in nested EOCs in effect in EoC
+#. "EOC_vampire_virus_escalation"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"You feel the absence of your heart beating for several seconds and then it "
+"resumes at this new rhythm."
+msgstr ""
+
+#. ~ Player message in effect in EoC "eoc_blood_hunger" in nested EOCs in
+#. effect in EoC "EOC_VAMPVIRUS_HUNGER" in nested EOCs in effect in EoC
+#. "EOC_vampire_virus_blood_needs"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "You need to consume human blood to stay alive."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CONSUMED_BLOOD_ANATHEMA"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"Your hunger for blood submerges you for a moment, as the blood of the "
+"Anathema combines with your own.  Vampires, mortals, what's the difference?  "
+"You'll drink them all dry anyway."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in false effect in EoC
+#. "EOC_CONSUMED_BLOOD_ANATHEMA"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"The blood's power tries to take hold, but another sinister power prevents it "
+"from doing so!"
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in false effect in EoC
+#. "EOC_CONSUMED_BLOOD_ANATHEMA"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"The blood's power tries to take hold, but you lack the vampiric potency it "
+"requires to do so!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAMPIRE_ANATHEMA_ROLL_FOR_THRESHOLD"
+#. in nested EOCs in effect in EoC "EOC_VAMPIRE_ANATHEMA_GAINING" in nested
+#. EOCs in effect in EoC "EOC_VAMPIRE_ANATHEMA_GAIN_POWERS"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"Like the Anathema before you, there is no more limit to how powerful you can "
+"be.  Only your limited supply of vampire blood stand in your way.  Will this "
+"power be worth the heavy cost?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUCCESFUL_ROLL_REMAINDER_ANATHEMA"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid "Suddenly you feel your blood boiling and you realize a new ability."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAMPIRE_ANATHEMA_ADD_WEAKNESS"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"A vampiric curse far more dire than any other has manifested within you."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_VAMPIRE_ANATHEMA_ADD_SUN_GRACE_PERIOD" in nested EOCs in effect in EoC
+#. "EOC_VAMPIRE_ANATHEMA_ADD_WEAKNESS"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"You have a sudden feeling of dread.  In a few hours, the sun will burn you to"
+" a crisp if you ever stand under its unblocked rays."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAMPIRE_ANATHEMA_GAIN_POTENCY"
+#: data/mods/Xedra_Evolved/effects/vampvirus.json
+msgid ""
+"Your power has grown a little more thanks to all the vampire blood you drank."
+msgstr ""
+
+#. ~ Name of a enchantment
+#: data/mods/Xedra_Evolved/enchantments/armor.json
+msgid "Charm of Spring"
+msgstr ""
+
+#. ~ Description of enchantment "Charm of Spring"
+#: data/mods/Xedra_Evolved/enchantments/armor.json
+msgid ""
+"You are wearing equipment that helps handle harsh climates and protects from "
+"damaging cold."
+msgstr ""
+
+#. ~ Player message in effect in EoC "INCREASE_BERSERKER"
+#: data/mods/Xedra_Evolved/enchantments/armor.json
+msgid "BERSERK +1."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ENTER_ABYSSAL_HUNGER_DUNGEON"
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+msgid "You were devoured by the Abyssal Hunger!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ENTER_ABYSSAL_HUNGER_NEXT_LEVEL"
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+msgid "You move through the monster's innards and reach another empty space."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ENTER_ABYSSAL_HUNGER_NEXT_LEVEL"
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+msgid "You reach the Abyssal Hunger's brain."
+msgstr ""
+
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_ABYSSAL_HUNGER_EXIT"
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+msgid "You return to where you performed the ritual."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEATH_ABYSSAL_HUNGER"
+#: data/mods/Xedra_Evolved/eocs/abyssal_hunger_eocs.json
+msgid ""
+"It is unclear if you were slain by an immune system or digested but suffice "
+"to say, you are no more."
+msgstr ""
+
+#. ~ Player message in effect in EoC "become_fire_fae"
+#. ~ Player message in effect in EoC "become_doll_fae"
+#. ~ Player message in effect in EoC "become_plant_fae"
+#: data/mods/Xedra_Evolved/eocs/alchemy_eocs.json
+msgid ""
+"As you imbibe the concoction, you feel the stolen power fusing with your "
+"essence."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "become_fire_fae"
+#. ~ Player message in false effect in EoC "become_doll_fae"
+#. ~ Player message in false effect in EoC "become_air_fae"
+#. ~ Player message in false effect in EoC "become_water_fae"
+#. ~ Player message in false effect in EoC "become_earth_fae"
+#. ~ Player message in false effect in EoC "become_plant_fae"
+#: data/mods/Xedra_Evolved/eocs/alchemy_eocs.json
+msgid ""
+"The power attempts to take hold, but is rebuffed by something sinister within"
+" you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "become_air_fae"
+#: data/mods/Xedra_Evolved/eocs/alchemy_eocs.json
+msgid ""
+"You imbibed the concoction and you feel your soul merge with an alien power, "
+"becoming attuned to the winds."
+msgstr ""
+
+#. ~ Player message in effect in EoC "become_water_fae"
+#: data/mods/Xedra_Evolved/eocs/alchemy_eocs.json
+msgid ""
+"You imbibed the concoction and you feel your soul merge with an alien power, "
+"becoming attuned to the waters."
+msgstr ""
+
+#. ~ Player message in effect in EoC "become_earth_fae"
+#: data/mods/Xedra_Evolved/eocs/alchemy_eocs.json
+msgid ""
+"You imbibed the concoction and you feel your soul merge with an alien power, "
+"becoming attuned to the earth."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_KILLED_DIFFICULT_TIME_ENEMY"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You gain a large amount of insight into the workings of time!"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_KILLED_MEDIUM_TIME_ENEMY"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You gain a medium amount of insight into the workings of time."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_KILLED_NORMAL_TIME_ENEMY"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You gain a small amount of insight into the workings of time."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_on_kill_award_chrono_exp"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You gain a tiny amount of insight into the workings of time."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_PARADOX_INSIGHT"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid ""
+"Observing this paradox gave you <context_val:insight_gain> Insight into time"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_MEDITATE_EFFFECT_REMOVE"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You finish your meditations."
+msgstr ""
+
+#. ~ Verb in activity "act_xedra_time_freeze"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "frozen in time"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XEDRA_DAMAGE_REVERSAL"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "Your wound heals!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_XEDRA_DAMAGE_REVERSAL"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "You don't have a previous wound to heal."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_LOOPING_WOUND_DAMAGE"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid ""
+"You feel a sharp jolt of pain as a stab wound suddenly opens in your belly!"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_UNSTABLE_POWERS"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "Your chronomantic powers destabilize and you lose their effects!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XEDRA_TIME_LOOP_ENDED_LOOP"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "Your time loop ends!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_XEDRA_CHRONOMANCER_STABLE_TIMELOOP_LOSE_EFFECT"
+#: data/mods/Xedra_Evolved/eocs/chronomancer_eocs.json
+msgid "Time rewinds!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_MESSAGE_SCORE_TIMER" in nested EOCs
+#. on true condition in effect in EoC "EOC_DREAMSMITHS_SCORE_TIMER"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"Something sparked in your head, and you realize an interesting property of "
+"dreamdross.  Maybe you can forge something new?"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DREAMSMITHS_SCORE_TRAIN"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"You just can't seem to figure out even the simplest principles of dreamdross."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DREAMSMITH_MESSAGE_POSITIVE" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_DREAMSMITHS_RECIPES_ENCH"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"A brilliant idea about the properties of dreamdross hits your head, and you "
+"think you know how to utilize it now."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DREAMSMITHS_RECIPES_ENCH"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"Using the dreamdross, you test out a new idea.  It fails, but you're getting "
+"closer to a breakthrough.  You can feel it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DREAMSMITH_SUPER_MESSAGE_POSITIVE" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_DREAMSMITHS_RECIPES_SUPER"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"You found a pretty smart way to utilize dreamdross' abilities, and you can't "
+"wait to use it."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_DREAMSMITH_CASINGS_LC_MESSAGE_POSITIVE" in nested EOCs on true
+#. condition in effect in EoC "DREAMSMITH_CASINGS_LOW_CALIBER_RECIPE"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid "You realize you know suddenly how to make a low caliber bullet casing."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_DREAMSMITH_CASINGS_HC_MESSAGE_POSITIVE" in nested EOCs on true
+#. condition in effect in EoC "DREAMSMITH_CASINGS_LARGE_CALIBER_RECIPE"
+#: data/mods/Xedra_Evolved/eocs/dreamsmith.json
+msgid ""
+"You realize you know suddenly how to make a larger caliber bullet casing."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LIEUTENANT_SPAWN_SHADOW_MESSAGE"
+#: data/mods/Xedra_Evolved/eocs/eater_eocs.json
+msgid "The night closes in… but you were born to destroy what's coming"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_UNDINE_WARP_POOL_BOTTOM_FLOOR"
+#: data/mods/Xedra_Evolved/eocs/elemental_eruptions.json
+msgid ""
+"You swim down and down, further and further, until you're no longer sure "
+"which way is up.  You're in total darkness, still swimming, when you see a "
+"light up ahead.  With a goal at last in reach, you swim toward it as the "
+"light broadens and expands and, finally, you breach the water's surface."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_06"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Even"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_06"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Odd"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_RIDDLE_06"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Even or Odd?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_11"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Inner"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_RIDDLE_11"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Inner or Outer?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_14"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Oppressed"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_14"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Oppressor"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_RIDDLE_14"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Oppressed or Oppressor?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_15"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Rapid"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_RIDDLE_15"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Rapid or Slow?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_16"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Remember"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_16"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Forget"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_RIDDLE_16"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Remember or Forget?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_1"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Lord"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_1"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Peasant"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ED_RIDDLE_1"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Lord or Peasant?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_2"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Pawn"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ED_RIDDLE_2"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "King or Pawn?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_3"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Executed"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_3"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Executioner"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ED_RIDDLE_3"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Executed or Executioner?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ED_RIDDLE_5"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Follower"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ED_RIDDLE_5"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Leader or Follower?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_RUN_GIVE_CLASS_1_AFTERMATCH"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Since your kind is doomed…"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ID_RIDDLE_4"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Complex"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ID_RIDDLE_4"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Straightforward"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ID_RIDDLE_4"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Complex or Straightforward?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_ID_RIDDLE_5"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Certainty"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_ID_RIDDLE_5"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Knowledge or Certainty?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_RUN_GIVE_CLASS_2_AFTERMATCH"
+#: data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "Your attempts to save anything are hopeless…"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SLEEPING_SEIZED_BY_LILIT_WARNING"
+#: data/mods/Xedra_Evolved/eocs/eoc_strange_events.json
+msgid ""
+"The night was a little rough.  You tossed and turned, aware of every single "
+"noise and creak of wood in a way you never were before all of this happened, "
+"before you finally fell asleep.  You weren't attacked and woke up without "
+"trouble, but you have to wonder if it's really safe, sleeping alone like this"
+" in an abandoned building?"
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_EATER_DREAMER_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid ""
+"In your dream, you stand at the edge of two worlds, a bad feeling overcoming "
+"you."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_EATER_DREAMER_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid ""
+"One world's infinitely dense, concentrated into a singular dot with "
+"neverending gales and scorching heat."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_EATER_DREAMER_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid ""
+"The other world is limitless, full to the brim with potential and boundless "
+"possibilities.  You watched it, but can't comprehend what you saw."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_EATER_DREAMER_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid ""
+"You watch for a while but there is only you to decide and decide you must."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_EATER_DREAMER_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid ""
+"You don't remember much from your dream, but what little you do is that there"
+" was something… or someone, and you answered their questions."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "It happens again.  Otherworldly nightmares haunt you."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "Another time, another two worlds."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "You don't remember much from these two, they felt very similar."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "One was tiring and hard-working."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "The second was information, information, and nothing but information."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "It is time to choose again."
+msgstr ""
+
+#. ~ Player message in nested effect in switch statement in nested effect in
+#. then statement in effect in EoC
+#. "EOC_XE_MAGIC_SEQUENCE_INVENTOR_DREAMSMITH_COUNTER"
+#: data/mods/Xedra_Evolved/eocs/give_a_class_eoc.json
+msgid "It is that person again."
+msgstr ""
+
+#. ~ Verb in activity "ACT_XE_DECIPHERING_HEDGE_TOME"
+#: data/mods/Xedra_Evolved/eocs/hedge_research_eocs.json
+msgid "deciphering the secrets of the occult"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DECIPHERING_NEW_HEDGE_TOME_PACE_SELF"
+#: data/mods/Xedra_Evolved/eocs/hedge_research_eocs.json
+msgid "You finish your study session."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_FARM_COMPLETION" in nested EOCs in false effect
+#. in EoC "EOC_HEDGE_RESEARCH_PROGRESS_FARM_3" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_FARM_2" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_FARM"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS_COMPLETION" in nested EOCs in false
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS_3" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS_2" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK_COMPLETION" in nested EOCs in false
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK_3" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK_2" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK_COMPLETION" in nested EOCs in false
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK_3" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK_2" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS_COMPLETION" in nested EOCs in false
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS_3" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS_2" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS_COMPLETION" in nested EOCs in
+#. false effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS_3" in
+#. nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS_2" in nested EOCs in effect
+#. in EoC "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT_COMPLETION" in nested
+#. EOCs in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT_3" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT_2" in
+#. nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE_COMPLETION" in nested EOCs
+#. in false effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE_3" in
+#. nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE_2" in nested EOCs in effect
+#. in EoC "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE"
+#. ~ Player message in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE_COMPLETION" in nested EOCs in
+#. false effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE_3" in
+#. nested EOCs in effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE_2"
+#. in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE"
+#: data/mods/Xedra_Evolved/eocs/hedge_research_eocs.json
+msgid ""
+"You've done it.  All the pieces finally fall into place.  You've unlocked the"
+" occult secrets of this work, and can now study the rituals within."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_FARM_2"
+#. in nested EOCs in effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_FARM"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS_2" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DEMONS"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK_2" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_DOCTOR_BOOK"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK_2" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BLOOD_BOOK"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS_2" in nested EOCs in effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_WARD_DREAMS"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS_2" in nested EOCs in effect
+#. in EoC "EOC_HEDGE_RESEARCH_PROGRESS_SNARE_CHANGELINGS"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT_2" in nested EOCs in
+#. effect in EoC "EOC_HEDGE_RESEARCH_PROGRESS_BATHHOUSE_AT_MIDNIGHT"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE_2" in nested EOCs in effect
+#. in EoC "EOC_HEDGE_RESEARCH_PROGRESS_ABRAMELIN_THE_MAGE"
+#. ~ Player message in false effect in EoC
+#. "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE_2" in nested EOCs in effect in
+#. EoC "EOC_HEDGE_RESEARCH_PROGRESS_PSYCHIC_DEFENSE"
+#: data/mods/Xedra_Evolved/eocs/hedge_research_eocs.json
+msgid "You can't make heads of tails of this work.  You'll have to start over."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_BASE_1" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_BASE_1"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_BASE_2" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_BASE_2"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_BASE_3" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_BASE_3"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_ENERGY_1" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_ENERGY_1"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_ENERGY_2" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_ENERGY_2"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_ENERGY_3" in nested
+#. EOCs on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_ENERGY_3"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_AI_1" in nested EOCs
+#. on false condition in effect in EoC "EOC_INVENTOR_RESEARCH_AI_1"
+#. ~ Player message in effect in EoC "EOC_REMOVE_RESEARCH_DIMENSION_1" in
+#. nested EOCs on false condition in effect in EoC
+#. "EOC_INVENTOR_RESEARCH_DIMENSION_1"
+#: data/mods/Xedra_Evolved/eocs/inventor.json
+msgid ""
+"You reach the limit of what can be done at this level.  It is time to move "
+"forward."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_INVENTOR_PROCESS_SPARKS"
+#. ~ Player message in false effect in EoC "EOC_INVENTOR_PROCESS_SPARKS"
+#: data/mods/Xedra_Evolved/eocs/inventor.json
+msgid ""
+"creative_spark_research = <u_val:creative_spark_research>,\n"
+" base_difficulty_1 = <u_val:base_difficulty_1>,\n"
+" base_difficulty_2 = <u_val:base_difficulty_2>,\n"
+" base_difficulty_3 = <u_val:base_difficulty_3>,\n"
+" energy_difficulty_1 = <u_val:energy_difficulty_1>,\n"
+" energy_difficulty_2 = <u_val:energy_difficulty_2>,\n"
+" energy_difficulty_3 = <u_val:energy_difficulty_3>,\n"
+" dimension_sparks = <u_val:dimension_sparks>,\n"
+" dimension_difficulty_1 = <u_val:dimension_difficulty_1>."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_RUST_INVENTOR_ITEMS" in nested EOCs on true
+#. condition in effect in EoC "EOC_INVENTOR_CRAFTED_DEGRADATION"
+#: data/mods/Xedra_Evolved/eocs/inventor.json
+msgid "You hear a sudden crack!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_RUST_INVENTOR_ITEMS" in nested EOCs
+#. on true condition in effect in EoC "EOC_INVENTOR_CRAFTED_DEGRADATION"
+#: data/mods/Xedra_Evolved/eocs/inventor.json
+msgid ""
+"Your lack of an inventor's aura makes items created by their fevered mind "
+"rapidly degrade!"
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_RUST_INVENTOR_ITEMS" in nested EOCs on
+#. true condition in effect in EoC "EOC_INVENTOR_CRAFTED_DEGRADATION"
+#: data/mods/Xedra_Evolved/eocs/inventor.json
+msgid "My items are falling apart!  It isn't me!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_WINCH_INITIAL"
+#: data/mods/Xedra_Evolved/eocs/item_eocs.json
+msgid "You draw coordinates in a constructed beam."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ITEM_WIELDED" in nested EOCs on false
+#. condition in effect in EoC "EOC_WOLF_SLEDGE_TRHOW"
+#: data/mods/Xedra_Evolved/eocs/item_eocs.json
+msgid "You aren't wielding it."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_WOLF_SLEDGE_TRHOW"
+#: data/mods/Xedra_Evolved/eocs/item_eocs.json
+msgid "You don't have enough stamina to throw your Wolf Sledge."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_MAGIC_POTENTIAL_CONDUCTS"
+#: data/mods/Xedra_Evolved/eocs/magic_potential_eoc.json
+msgid ""
+"Got magic potential from wounds, magic_potential: "
+"<global_val:magic_potential>"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_MAGIC_POTENTIAL_CONDUCTS"
+#: data/mods/Xedra_Evolved/eocs/magic_potential_eoc.json
+msgid ""
+"Got magic potential from pain, magic_potential: <global_val:magic_potential>"
+msgstr ""

@@ -1,0 +1,2199 @@
+# Batch 44 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "UMP .45 ACP conversion kit"
+msgid_plural "UMP .45 ACP conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "UMP .45 ACP conversion kit"
+#. ~ Description of "UMP .45 ACP conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a UMP sub-machine gun allowing it to shoot "
+".45 ACP ammo.  It includes the barrel and the bolt.  Don't forget the .45 UMP"
+" magazine!"
+msgstr ""
+
+#. ~ Description of gun mod "electrolaser conversion"
+#. ~ Description of "electrolaser conversion"
+#: data/json/items/gunmod/laser_gunmods.json
+msgid ""
+"A set of high-tech electronics and optics.  Converts a laser pistol into a "
+"less-lethal electrolaser capable of stunning targets, at the cost of a "
+"decreased damage output and increased power consumption."
+msgstr ""
+
+#. ~ Description of gun mod "high density capacitor"
+#. ~ Description of "high density capacitor"
+#: data/json/items/gunmod/laser_gunmods.json
+msgid ""
+"A capacitor with a higher energy density.  Increases range and damage at the "
+"cost of markedly increased power consumption."
+msgstr ""
+
+#. ~ Description of gun mod "speedloader chute"
+#. ~ Description of "speedloader chute"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that can be installed near a shotgun's feeding port to index "
+"speedloader tubes.  Need modification before attaching."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 4-round waterfowl shotgun"
+msgid_plural "speedloader chute, 4-round waterfowl shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 4-round waterfowl shotgun"
+#. ~ Description of "speedloader chute, 4-round waterfowl shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 4-round waterfowl shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "benelli_sa"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 4-round breaching shotgun"
+msgid_plural "speedloader chute, 4-round breaching shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 4-round breaching shotgun"
+#. ~ Description of "speedloader chute, 4-round breaching shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 4-round breaching shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "remington_870_breacher"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 5-round hunting shotgun"
+msgid_plural "speedloader chute, 5-round hunting shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 5-round hunting shotgun"
+#. ~ Description of "speedloader chute, 5-round hunting shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 5-round hunting shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "remington_870"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 6-round combat shotgun"
+msgid_plural "speedloader chute, 6-round combat shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 6-round combat shotgun"
+#. ~ Description of "speedloader chute, 6-round combat shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 6-round combat shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "mossberg_500"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 8-round auto-loading shotgun"
+msgid_plural "speedloader chute, 8-round auto-loading shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 8-round auto-loading shotgun"
+#. ~ Description of "speedloader chute, 8-round auto-loading shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 8-round auto-loading shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "mossberg_930"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/loading_port.json
+msgid "speedloader chute, 9-round combat shotgun"
+msgid_plural "speedloader chute, 9-round combat shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "speedloader chute, 9-round combat shotgun"
+#. ~ Description of "speedloader chute, 9-round combat shotgun"
+#: data/json/items/gunmod/loading_port.json
+msgid ""
+"A metal ramp that is installed near a shotgun's feeding port to index "
+"speedloader tubes.  This one is for 9-round combat shotgun."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/loading_port.json
+msgctxt "gun_type_type"
+msgid "mossberg_590"
+msgstr ""
+
+#. ~ Description of gun mod "drop-in auto sear"
+#. ~ Description of "drop-in auto sear"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A vaguely 'U'-shaped piece of metal with a vaguely 'T'-shaped flapper on a "
+"pin.  Once tucked into an AR-15's lower receiver, the rifle will become "
+"selective fire-capable.  The handcrafted-sear surface isn't as good as actual"
+" full-auto parts, so precision and reliability suffer slightly."
+msgstr ""
+
+#. ~ Description of gun mod "Glock auto sear plate"
+#. ~ Description of "Glock auto sear plate"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A relatively simple switch or button mechanism that replaces the back plate "
+"of a Glock slide, allowing it to function as a select-fire machine pistol.  A"
+" highly illegal modification, but the feds are zombie food anyway.  This will"
+" fit any standard Glock pistol in 9mm, .40, .45, 10mm, or .357 caliber."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/mechanism.json
+msgid "TEC-9 full auto sear"
+msgid_plural "TEC-9 full auto sears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "TEC-9 full auto sear"
+#. ~ Description of "TEC-9 full auto sear"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A relatively simple modification of some of a TEC-9's internal fire-control "
+"components, converting it to a fully-automatic-only machine pistol.  Calling "
+"this hilariously illegal would be an understatement, but anyone who'd care is"
+" probably long gone by now."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/mechanism.json
+msgctxt "gun_type_type"
+msgid "tec9"
+msgstr ""
+
+#. ~ Description of gun mod "balanced recoil system"
+#. ~ Description of "balanced recoil system"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A complex set of parts designed to minimize recoil using a reciprocating "
+"counterweight."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/mechanism.json
+msgid "M249 select fire trigger"
+msgid_plural "M249 select fire triggers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "M249 select fire trigger"
+#. ~ Description of "M249 select fire trigger"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A trigger modification that allows the M249 to switch between semi and full "
+"automatic modes."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/mechanism.json
+msgid "pristine condenser"
+msgid_plural "pristine condensers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "pristine condenser"
+#. ~ Description of "pristine condenser"
+#: data/json/items/gunmod/mechanism.json
+msgid "A condenser unit for the Caotel Sr2.2, seemingly in perfect condition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/mechanism.json
+msgid "M240 select fire trigger"
+msgid_plural "M240 select fire triggers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "M240 select fire trigger"
+#. ~ Description of "M240 select fire trigger"
+#: data/json/items/gunmod/mechanism.json
+msgid ""
+"A trigger modification that allows the M240 to switch between semi and full "
+"automatic modes."
+msgstr ""
+
+#. ~ Description of gun mod "replaceable furniture kit"
+#. ~ Description of "replaceable furniture kit"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A kit consisting of various steel and plastic parts.  When installed, it will"
+" permanently modify and partially replace some of the weapon's furniture so "
+"that it can be easily changed if needed.  This allows installing any kind of "
+"more advanced grips or other furniture."
+msgstr ""
+
+#. ~ Description of gun mod "side mount"
+#. ~ Description of "side mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A plastic mount for attaching a rail accessory, designed to be permanently "
+"installed onto almost any weapon, along with some fasteners.  Ideal for "
+"bringing out your inner tacticool on older guns."
+msgstr ""
+
+#. ~ Description of gun mod "sights mount"
+#. ~ Description of "sights mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A plastic mount for attaching a sight, designed to be permanently installed "
+"onto almost any weapon other than launchers and pistols, along with some "
+"fasteners.  Ideal for bringing out your inner tacticool on older guns."
+msgstr ""
+
+#. ~ Description of gun mod "launcher sights mount"
+#. ~ Description of "launcher sights mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A plastic mount for attaching a sight, designed to be permanently installed "
+"onto almost any launcher, along with some fasteners.  Ideal for bringing out "
+"your inner tacticool on rocket launchers."
+msgstr ""
+
+#. ~ Description of gun mod "pistol sights mount"
+#. ~ Description of "pistol sights mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A plastic mount for attaching a sight, designed to be permanently installed "
+"onto almost any pistol, along with some fasteners.  Ideal for bringing out "
+"your inner tacticool on pocket pistols."
+msgstr ""
+
+#. ~ Description of gun mod "replaceable stock kit"
+#. ~ Description of "replaceable stock kit"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A kit consisting of various steel parts.  When installed, it will remove the "
+"weapon's original fixed stock, install a new stock mount in its place, modify"
+" the original stock to fit it and then reattach it to the gun, or simply "
+"attach a stock mount if the gun had no stock to start with.  This allows easy"
+" installation of any kind of more advanced stocks."
+msgstr ""
+
+#. ~ Description of gun mod "bottom mount"
+#. ~ Description of "bottom mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A plastic mount for attaching an underbarrel accessory, designed to be "
+"permanently installed onto almost any weapon, along with some fasteners.  "
+"Ideal for bringing out your inner tacticool on older guns."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/mount.json
+msgid "rail bayonet mount"
+msgid_plural "rail bayonet mounts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rail bayonet mount"
+#. ~ Description of "rail bayonet mount"
+#: data/json/items/gunmod/mount.json
+msgid ""
+"A one-piece mount for attaching a bayonet to a firearm's accessory rail, in "
+"case that was a thing you wanted.  Ideal for making newer guns pointier."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/muzzle.json
+msgid "compensator"
+msgid_plural "compensators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "compensator"
+#. ~ Description of "compensator"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"A compensator contains a number of holes or slits to vent some of the exhaust"
+" gasses of a gun upwards to reduce muzzle climb, while also increasing noise "
+"and bulk slightly."
+msgstr ""
+
+#. ~ Description of gun mod "muzzle brake"
+#. ~ Description of "muzzle brake"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"A muzzle brake redirects exhaust gases to reduce recoil, at the cost of "
+"increasing bulk, noise, and reducing accuracy slightly."
+msgstr ""
+
+#. ~ Description of gun mod "'solvent trap' suppressor"
+#. ~ Description of "'solvent trap' suppressor"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"An automotive filter crudely adapted to mate up with a firearm's barrel, "
+"creating an illegal, unregistered suppressor.  Good thing there don't seem to"
+" be any ATF agents around to arrest you.  While close in design to a real "
+"suppressor, it was not designed for the high pressures involved in gunfire "
+"and will eventually lose effectiveness.  The filter is large and, when "
+"attached, will interfere with your ability to aim down the base sights of the"
+" gun."
+msgstr ""
+
+#. ~ Description of gun mod "MP5SD integral suppressor"
+#. ~ Description of "MP5SD integral suppressor"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"The integrated suppressor for the H&K MP5SD.  Its large expansion chamber "
+"decelerates ammunition via several ports in the barrel, rendering most ammo "
+"subsonic at the cost of terminal performance.  It is not as effective as "
+"modern designs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/muzzle.json
+msgid "pistol suppressor"
+msgid_plural "pistol suppressors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "pistol suppressor"
+#. ~ Description of "pistol suppressor"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"A suppressor designed for pistols, submachine guns, and pistol caliber "
+"carbines.  Gunfire is extremely loud and can damage your hearing without "
+"protection; a suppressor will bring the loudness of a report down to "
+"generally safe levels."
+msgstr ""
+
+#. ~ Description of gun mod "choke"
+#. ~ Description of "choke"
+#: data/json/items/gunmod/muzzle.json
+msgid ""
+"A choke shapes the spread of a shot cloud to give a shotgun better range and "
+"accuracy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/rail.json
+msgid "offset grip"
+msgid_plural "offset grips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "offset grip"
+#. ~ Description of "offset grip"
+#: data/json/items/gunmod/rail.json
+msgid ""
+"An angled grip set at 45° that attaches to a side rail, allowing for a grip "
+"while leaving the underbarrel rail free, or on guns that have integral "
+"bipods."
+msgstr ""
+
+#. ~ Description of gun mod "holographic sight"
+#. ~ Description of "holographic sight"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"An advanced optic with an adjustable circular hologram reticle superimposed "
+"on the field of view.  Used extensively by military forces, it increases "
+"accuracy and weight.  This is a step up from a red dot sight."
+msgstr ""
+
+#. ~ Description of gun mod "iron sights"
+#. ~ Description of "iron sights"
+#: data/json/items/gunmod/sights.json
+msgid "A basic set of iron sights."
+msgstr ""
+
+#. ~ Description of gun mod "red dot sight"
+#. ~ Description of "red dot sight"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"A red dot optic meant to be attached to the top of the weapon, replacing the "
+"iron sights.  Increases accuracy and weight."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sights.json
+msgid "high end rifle scope"
+msgid_plural "high end rifle scopes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "high end rifle scope"
+#. ~ Description of "high end rifle scope"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"A 3-18x44 rifle scope.  It is adjustable for windage and elevation in 1/10th "
+"mrad increments and is remarkably small and light for its magnification.  "
+"This one has an additional rail on the top of its ring mounts for an "
+"additional backup optic."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sights.json
+msgid "sight magnifier"
+msgid_plural "sight magnifiers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "sight magnifier"
+#. ~ Description of "sight magnifier"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"A sleek compact 3x magnifier designed to sit behind a modern holographic "
+"sight.  Mounted on a lever to quickly flip in and out of the sights picture, "
+"the magnifier allows the full functionality of a high end close quarters "
+"sight while also allowing you to engage targets at range."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sights.json
+msgid "hybrid ACOG scope"
+msgid_plural "hybrid ACOG scopes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "hybrid ACOG scope"
+#. ~ Description of "hybrid ACOG scope"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"A high end 4x32 military grade ACOG scope.  This one has additional mounting "
+"brackets on top for another sight."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sights.json
+msgid "Nagoya 99 gun scope"
+msgid_plural "Nagoya 99 gun scopes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "Nagoya 99 gun scope"
+#. ~ Description of "Nagoya 99 gun scope"
+#: data/json/items/gunmod/sights.json
+msgid ""
+"A basic and antique 4x rifle optic: essentially a non-adjustable telescopic "
+"sight built by the Nagoya Arsenal during the Second World War and issued for "
+"mounting on Type 99 sniper rifles."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/sights.json data/json/items/gunmod/underbarrel.json
+#: data/json/items/melee/swords_and_blades.json
+msgctxt "gun_type_type"
+msgid "type99"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sling.json
+#: data/mods/Aftershock/items/gunmods/sling.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sling.json
+msgid "two point sling"
+msgid_plural "two point slings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "two point sling"
+#. ~ Description of "two point sling"
+#: data/json/items/gunmod/sling.json
+msgid ""
+"A shoulder strap allows the rifle to be worn over a shoulder like a piece of "
+"clothing.  However, it offers no protection."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sling.json
+msgid "adjustable sling"
+msgid_plural "adjustable slings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "adjustable sling"
+#. ~ Description of "adjustable sling"
+#: data/json/items/gunmod/sling.json
+msgid ""
+"An adjustable strap that allows the rifle to be worn over your shoulders like"
+" a piece of clothing.  However, it offers no protection."
+msgstr ""
+
+#. ~ "msg" action message of item "adjustable sling"
+#: data/json/items/gunmod/sling.json
+msgid "You shift the weapon to the front of your body."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/sling.json
+#: data/mods/Aftershock/items/gunmods/sling.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sling.json
+msgid "adjustable sling (front)"
+msgid_plural "adjustable slings (front)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "adjustable sling (front)"
+#. ~ Description of "adjustable sling (front)"
+#: data/json/items/gunmod/sling.json
+msgid ""
+"A shoulder strap allows the rifle to be worn over your shoulders like a piece"
+" of clothing.  Currently adjusted so the weapon hangs off your front."
+msgstr ""
+
+#. ~ "msg" action message of item "adjustable sling (front)"
+#: data/json/items/gunmod/sling.json
+msgid "You shift the weapon to the back of your body."
+msgstr ""
+
+#. ~ "msg" action message of item "folding stock"
+#. ~ "msg" action message of item "adjustable folding stock"
+#: data/json/items/gunmod/stock.json
+msgid "You fold the stock for transport."
+msgstr ""
+
+#. ~ Description of gun mod "folding stock (folded)"
+#. ~ Description of "folding stock (folded)"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A folding stock which reduces length.  Currently folded, making shooting this"
+" gun difficult."
+msgstr ""
+
+#. ~ "msg" action message of item "folding stock (folded)"
+#. ~ "msg" action message of item "modular folding stock (folded)"
+#. ~ "msg" action message of item "under-folding stock (folded)"
+#: data/json/items/gunmod/stock.json
+msgid "You unfold the stock for combat."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/stock.json
+msgid "adjustable folding stock"
+msgid_plural "adjustable folding stocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "adjustable folding stock"
+#. ~ Description of "adjustable folding stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A multi position, high-end folding stock which reduces length when folded.  "
+"Currently unfolded and ready to shoot."
+msgstr ""
+
+#. ~ Description of gun mod "modular folding stock (folded)"
+#. ~ Description of "modular folding stock (folded)"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A multi position, high-end folding stock which reduces length when folded.  "
+"Currently folded, making shooting this gun hard."
+msgstr ""
+
+#. ~ Description of gun mod "collapsing wire stock"
+#. ~ Description of "collapsing wire stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A collapsing wire stock which folds closely against the body of the weapon, "
+"reducing length and volume."
+msgstr ""
+
+#. ~ "msg" action message of item "collapsing wire stock"
+#: data/json/items/gunmod/stock.json
+msgid "You push the stock in for storage."
+msgstr ""
+
+#. ~ Description of gun mod "collapsing wire stock (collapsed)"
+#. ~ Description of "collapsing wire stock (collapsed)"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A collapsing wire stock which folds closely against the body of the weapon, "
+"reducing length and volume.  Currently collapsed, making shooting difficult."
+msgstr ""
+
+#. ~ "msg" action message of item "collapsing wire stock (collapsed)"
+#: data/json/items/gunmod/stock.json
+msgid "You pull the stock out for combat."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/stock.json
+msgid "Mauser C96 stock"
+msgid_plural "Mauser C96 stocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "Mauser C96 stock"
+#. ~ Description of "Mauser C96 stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"The hollow removable wooden pistol stock of the C96 Mauser pistol, which "
+"doubles as a holster.  It fits both the original clip-loaded C96 and later "
+"magazine-fed reproductions, but a gun with an extended magazine won't fit "
+"without modification."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/stock.json
+msgctxt "gun_type_type"
+msgid "mauser_c96"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/stock.json
+msgid "sawn-off stock"
+msgid_plural "sawn-off stocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "sawn-off stock"
+#. ~ Description of "sawn-off stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A quick saw cut removed the original stock from this weapon.  It is now much "
+"harder to handle, but much smaller."
+msgstr ""
+
+#. ~ Description of gun mod "pistol stock"
+#. ~ Description of "pistol stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"An add-on stock for handguns, this considerably improves control of recoil."
+msgstr ""
+
+#. ~ Description of gun mod "cheek pad"
+#. ~ Description of "cheek pad"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A stock accessory for sniper rifles and DMRs, this considerably improves eye "
+"relief efficiency, prevents slipping, and reduces recoil to the neck and "
+"cheek."
+msgstr ""
+
+#. ~ Description of gun mod "butt hook"
+#. ~ Description of "butt hook"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"An attachment to the butt of the gun that is held under the armpit, improving"
+" stability."
+msgstr ""
+
+#. ~ Description of gun mod "tail hook stock"
+#. ~ Description of "tail hook stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A foldable add-on stock for handguns and submachine guns with a pivoting hook"
+" that latches onto the forearm, allowing for greater stability."
+msgstr ""
+
+#. ~ Description of gun mod "under folding stock"
+#. ~ Description of "under folding stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A light wire-framed stock with a push button release catch on the side  which"
+" allows it to fold and be stored away under the weapon's receiver.  The wire "
+"construction means that it's less comfortable to shoulder than a regular "
+"fixed attachment.  The stock is currently locked in the open position."
+msgstr ""
+
+#. ~ "msg" action message of item "under folding stock"
+#: data/json/items/gunmod/stock.json
+msgid "You push in the release catch on the side and fold away the stock."
+msgstr ""
+
+#. ~ Description of gun mod "under-folding stock (folded)"
+#. ~ Description of "under-folding stock (folded)"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A light wire-framed stock with a push button release catch on the side  which"
+" allows it to fold and be stored away under the weapon's receiver.  It is "
+"currently folded underneath the weapon's chassis, making it more difficult to"
+" control."
+msgstr ""
+
+#. ~ "msg" action message of item "integral folding mechanism"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"You tug down on the trigger guard whilst swinging the barrel assembly up and "
+"over onto the receiver, locking it into place by the buttplate."
+msgstr ""
+
+#. ~ "msg" action message of item "integral folding mechanism (folded))"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"You release the barrel and pivot it forwards, locking it in the open firing "
+"position."
+msgstr ""
+
+#. ~ Description of gun mod "MASS compatible stock"
+#. ~ Description of "MASS compatible stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"A specially designed adjustable stock with an integrated grip to convert the "
+"M26-MASS to a standalone configuration."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/stock.json
+msgid "hollow polymer stock"
+msgid_plural "hollow polymer stocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "hollow polymer stock"
+#. ~ Description of "hollow polymer stock"
+#: data/json/items/gunmod/stock.json
+msgid ""
+"An extremely lightweight stock.  There's a hollow cavity at the bottom where "
+"a spare magazine can be stored."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/stock.json data/json/items/gunmod/underbarrel.json
+msgctxt "gun_type_type"
+msgid "steyr_scout"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "bipod hand guard"
+msgid_plural "bipod hand guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "bipod hand guard"
+#. ~ Description of "bipod hand guard"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"Bipods are commonly used on rifles and machine guns to provide a forward rest"
+" and reduce motion.  Although they greatly improve handling of recoil, they "
+"are usable only on certain surfaces (or from the prone position).  This one "
+"is integrated into a high end hand guard, replacing the factory hand guard of"
+" your weapon, allowing for comfortable shooting with or without the bipod "
+"deployed.  Currently the bipod legs are stowed."
+msgstr ""
+
+#. ~ "menu_text" action message of item "bipod hand guard"
+#. ~ "menu_text" action message of item "wire monopod, collapsed"
+#. ~ "menu_text" action message of item "integral polymer bipod"
+#: data/json/items/gunmod/underbarrel.json
+msgid "Fold out"
+msgstr ""
+
+#. ~ "msg" action message of item "bipod hand guard"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You extend the bipod legs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "bipod hand guard (deployed)"
+msgid_plural "bipod hand guards (deployed)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "bipod hand guard (deployed)"
+#. ~ Description of "bipod hand guard (deployed)"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"Bipods are commonly used on rifles and machine guns to provide a forward rest"
+" and reduce motion.  Although they greatly improve handling of recoil, they "
+"are usable only on certain surfaces (or from the prone position).  This one "
+"is integrated into a high end hand guard, replacing the factory hand guard of"
+" your weapon, allowing for comfortable shooting with or without the bipod "
+"deployed.  Currently the bipod legs are out and are ready for use."
+msgstr ""
+
+#. ~ "menu_text" action message of item "bipod hand guard (deployed)"
+#. ~ "menu_text" action message of item "wire monopod, deployed"
+#: data/json/items/gunmod/underbarrel.json
+msgid "Put away"
+msgstr ""
+
+#. ~ "msg" action message of item "bipod hand guard (deployed)"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You collapse and fold the bipod legs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "high end hand guard"
+msgid_plural "high end hand guards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "high end hand guard"
+#. ~ Description of "high end hand guard"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"A comfortable, high end hand guard with a set of optional mounts for "
+"accessories and equipment.  When installed, this replaces the original "
+"factory hand guard for the weapon, cutting down on excessive rails and "
+"weight.  This allows for comfortable, controlled firing of the weapon while "
+"keeping a sleek profile and avoiding bulky foregrips."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "wood forward grip"
+msgid_plural "wood forward grips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "wood forward grip"
+#. ~ Description of "wood forward grip"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"A wooden grip placed forward on the barrel allows for greater control.  Not "
+"as effective as a bipod but usable under all conditions.  This one was "
+"cleverly handmade by a desperate survivor or miserly enthusiast, it cannot be"
+" removed after installation."
+msgstr ""
+
+#. ~ Description of gun mod "integrated bayonet"
+#. ~ Description of "integrated bayonet"
+#: data/json/items/gunmod/underbarrel.json
+msgid "The weapon's integrated bayonet."
+msgstr ""
+
+#. ~ "msg" action message of item "integrated bayonet"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You fold in the bayonet.  It can no longer be used."
+msgstr ""
+
+#. ~ Description of gun mod "integrated bayonet (folded)"
+#. ~ Description of "integrated bayonet (folded)"
+#: data/json/items/gunmod/underbarrel.json
+msgid "The weapon's integrated bayonet has been folded for storage."
+msgstr ""
+
+#. ~ "msg" action message of item "integrated bayonet (folded)"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You fold out the bayonet.  It can be used."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "M203A1"
+msgid_plural "M203A1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "M26-MASS shotgun"
+#. ~ Description of gun mod "M26-MASS shotgun"
+#. ~ Description of "M26-MASS shotgun"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"The Modular Accessory Shotgun System is an underbarrel bolt-action shotgun "
+"that was inspired by the \"Masterkey\" and fixed most of its predecessor's "
+"problems.  It can be mounted under the barrel of a rifle, or used as a "
+"standalone weapon by attaching a pistol grip or collapsible buttstock module."
+"  It feeds from three- or five-shot detachable magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "modified M26-MASS"
+msgid_plural "modified M26-MASSes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "modified M26-MASS"
+#. ~ Description of "modified M26-MASS"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"The Modular Accessory Shotgun System is an underbarrel bolt-action shotgun "
+"that was inspired by the \"Masterkey\" and fixed most of its predecessor's "
+"problems.  This one was modified and customized to mount on pretty much any "
+"weapon other than pistols and pump-action guns."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "wire monopod, collapsed"
+msgid_plural "wire monopods, collapsed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "wire monopod, collapsed"
+#. ~ Description of "wire monopod, collapsed"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"A folding wire monopod designed to attach to a Type 99 Arisaka's front barrel"
+" band, intended to give soldiers a stabler platform from which to shoot while"
+" prone.  Less effective than an actual bipod and ungainly long, it was "
+"largely cut from active issue relatively soon into the Second World War.  "
+"This one is currently stowed in the folded position and cannot aid you while "
+"firing."
+msgstr ""
+
+#. ~ "msg" action message of item "wire monopod, collapsed"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You flip out the monopod and lock it into position."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "wire monopod, deployed"
+msgid_plural "wire monopods, deployed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "wire monopod, deployed"
+#. ~ Description of "wire monopod, deployed"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"A folding wire monopod designed to attach to a Type 99 Arisaka's front barrel"
+" band, intended to give soldiers a stabler platform from which to shoot while"
+" prone.  Less effective than an actual bipod and ungainly long, it was "
+"largely cut from active issue relatively soon into the Second World War.  "
+"This one is currently locked in the unfolded position and will provide a "
+"measure of stability while firing."
+msgstr ""
+
+#. ~ "msg" action message of item "wire monopod, deployed"
+#: data/json/items/gunmod/underbarrel.json
+msgid "You unlock the monopod and stow it in its folded position."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "integral polymer bipod"
+msgid_plural "integral polymer bipods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "integral polymer bipod"
+#. ~ Description of "integral polymer bipod"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"The Steyr Scout's integral bipod is effectively part of the rifle's housing, "
+"causing its added weight to practically be zero.  However, the polymer "
+"construction and awkward design prevent it from being as useful as a normal "
+"bipod."
+msgstr ""
+
+#. ~ "msg" action message of item "integral polymer bipod"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"You flip the bipod out from the rifle housing and lock it into position."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "integral polymer bipod, deployed"
+msgid_plural "integral polymer bipods, deployed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "msg" action message of item "integral polymer bipod, deployed"
+#: data/json/items/gunmod/underbarrel.json
+msgid "With an ugly snap, you crack the bipod legs back into the rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "muzzle weight"
+msgid_plural "muzzle weights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "muzzle weight"
+#. ~ Description of "muzzle weight"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"A small weight attached below the barrel of a firearm to reduce muzzle climb,"
+" increasing bulk but allowing for faster follow-up shots.  Mainly used on "
+"competition handguns, but it can be added to combat pistols, too."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/underbarrel.json
+msgid "heavy-duty tripod"
+msgid_plural "heavy-duty tripods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "heavy-duty tripod"
+#. ~ Description of "heavy-duty tripod"
+#: data/json/items/gunmod/underbarrel.json
+msgid ""
+"Massive tripod, used by Exodii naval rifle so it can be used by lightweight "
+"units, providing firearm support.  Allows using naval rifle while prone."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/underbarrel.json
+msgctxt "gun_type_type"
+msgid "ree_33"
+msgstr ""
+
+#. ~ Description of magazine "Glock 10mm 10-round magazine"
+#. ~ Description of "Glock 10mm 10-round magazine"
+#: data/json/items/magazine/10mm.json
+msgid ""
+"A compact light-weight steel and polymer magazine for use with Glock pistols "
+"chambered for 10mm Auto, limited to 10 rounds."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/10mm.json
+msgid "Glock 10mm 10-round carry magazine"
+msgid_plural "Glock 10mm 10-round carry magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of magazine "Glock 10mm 10-round carry magazine"
+#. ~ Variant name of item "Glock 10mm 10-round carry magazine"
+#: data/json/items/magazine/10mm.json
+msgid "Glock 29 10-round magazine"
+msgid_plural "Glock 29 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "MP5/10 30-round magazine" of magazine "BA10
+#. 30-round magazine"
+#. ~ Description of variant "MP5/10 30-round magazine" of item "BA10 30-round
+#. magazine"
+#: data/json/items/magazine/10mm.json
+msgid ""
+"A straight 30-round box magazine for use with MP5/10s and similar 10mm MP5 "
+"clones such as the Brethren Arms BA10."
+msgstr ""
+
+#. ~ Description of magazine "SIG pistol 10mm 8-round magazine"
+#. ~ Description of "SIG pistol 10mm 8-round magazine"
+#: data/json/items/magazine/10mm.json
+msgid "An 8-round steel box magazine for the SIG pistol."
+msgstr ""
+
+#. ~ Description of magazine "Glock 10mm 30-round magazine"
+#. ~ Description of "Glock 10mm 30-round magazine"
+#: data/json/items/magazine/10mm.json
+msgid ""
+"A 30-round plastic and steel box 10mm Auto magazine for use with Glock "
+"pistols and submachine guns chambered in 10mm."
+msgstr ""
+
+#. ~ Description of variant "Glock 10mm 30-round magazine" of magazine "Glock
+#. 10mm 30-round magazine"
+#. ~ Description of variant "Glock 10mm 30-round magazine" of item "Glock 10mm
+#. 30-round magazine"
+#: data/json/items/magazine/10mm.json
+msgid ""
+"A 30-round plastic and steel box 10mm Auto magazine for use with Glock "
+"pattern magazine wells, namely the Vector SDP."
+msgstr ""
+
+#. ~ Description of magazine "H&K G80 20-round magazine"
+#. ~ Description of "H&K G80 20-round magazine"
+#: data/json/items/magazine/12mm.json
+msgid ""
+"A magazine for the H&K G80 railgun which can hold up to 20 ferromagnetic "
+"projectiles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "small game rifle 19-round tube loader"
+msgid_plural "small game rifle 19-round tube loaders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "small game rifle 19-round tube loader"
+#. ~ Description of variant "Marlin 39A 19-round tube loader" of magazine
+#. "small game rifle 19-round tube loader"
+#. ~ Description of "small game rifle 19-round tube loader"
+#. ~ Description of variant "Marlin 39A 19-round tube loader" of item "small
+#. game rifle 19-round tube loader"
+#: data/json/items/magazine/22.json
+msgid ""
+"A tube which holds 19 rounds of .22, designed for quick reloading of a "
+"compatible rifle with a tubular magazine."
+msgstr ""
+
+#. ~ Variant name of magazine "small game rifle 19-round tube loader"
+#. ~ Variant name of item "small game rifle 19-round tube loader"
+#: data/json/items/magazine/22.json
+msgid "Marlin 39A 19-round tube loader"
+msgid_plural "Marlin 39A 19-round tube loaders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 10-round conversion magazine"
+msgid_plural ".22 10-round conversion magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 10-round conversion magazine"
+#. ~ Description of ".22 10-round conversion magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A black, 10-round polymer magazine for AR-platform rifles converted to fire "
+".22 Long Rifle ammunition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 28-round conversion magazine"
+msgid_plural ".22 28-round conversion magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 28-round conversion magazine"
+#. ~ Description of ".22 28-round conversion magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A black, 28-round polymer magazine for AR-platform rifles converted to fire "
+".22 Long Rifle ammunition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "Firefly 10-round magazine"
+msgid_plural "Firefly 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Firefly 10-round magazine"
+#. ~ Description of "Firefly 10-round magazine"
+#: data/json/items/magazine/22.json
+msgid "A factory specification 10-round magazine for the Firefly pistol."
+msgstr ""
+
+#. ~ Variant name of magazine "Firefly 10-round magazine"
+#. ~ Variant name of item "Firefly 10-round magazine"
+#: data/json/items/magazine/22.json
+msgid "GSG Firefly 10-round magazine"
+msgid_plural "GSG Firefly 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "GSG Firefly 10-round magazine" of magazine
+#. "Firefly 10-round magazine"
+#. ~ Description of variant "GSG Firefly 10-round magazine" of item "Firefly
+#. 10-round magazine"
+#: data/json/items/magazine/22.json
+msgid "A factory specification 10-round magazine for the GSG Firefly."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "25-round varmint magazine"
+msgid_plural "25-round varmint magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "25-round varmint magazine"
+#. ~ Description of "25-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended capacity 25-round magazine, for use with .22 caliber varmint "
+"rifles."
+msgstr ""
+
+#. ~ Description of variant "Ruger 10/22 25-round magazine" of magazine
+#. "25-round varmint magazine"
+#. ~ Description of variant "Ruger 10/22 25-round magazine" of item "25-round
+#. varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended 25-round stick magazine for the Ruger 10/22, known as the BX-25."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "10-round varmint magazine"
+msgid_plural "10-round varmint magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "10-round varmint magazine"
+#. ~ Description of "10-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A flush fitting 10-round rotary magazine, for use with .22 caliber varmint "
+"rifles."
+msgstr ""
+
+#. ~ Description of variant "Ruger 10/22 10-round rotary magazine" of magazine
+#. "10-round varmint magazine"
+#. ~ Description of variant "Ruger 10/22 10-round rotary magazine" of item
+#. "10-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A removable 10-round rotary magazine for the Ruger 10/22 which allows the "
+"magazine to fit flush with the bottom of the stock."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "15-round varmint magazine"
+msgid_plural "15-round varmint magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "15-round varmint magazine"
+#. ~ Description of "15-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended capacity 15-round magazine, for use with .22 caliber varmint "
+"rifles."
+msgstr ""
+
+#. ~ Variant name of magazine "15-round varmint magazine"
+#. ~ Variant name of item "15-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 15-round magazine"
+msgid_plural "Ruger 10/22 15-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 15-round magazine" of magazine
+#. "15-round varmint magazine"
+#. ~ Description of variant "Ruger 10/22 15-round magazine" of item "15-round
+#. varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended 15-round stick magazine for the Ruger 10/22, known as the BX-15."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "30-round varmint drum magazine"
+msgid_plural "30-round varmint drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "30-round varmint drum magazine"
+#. ~ Description of "30-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 30-round capacity drum magazine for use in varmint rifles.  While the "
+"capacity is nothing to scoff at, it is less reliable than stick magazines."
+msgstr ""
+
+#. ~ Variant name of magazine "30-round varmint drum magazine"
+#. ~ Variant name of item "30-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 30-round drum magazine"
+msgid_plural "Ruger 10/22 30-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 30-round drum magazine" of magazine
+#. "30-round varmint drum magazine"
+#. ~ Description of variant "Ruger 10/22 30-round drum magazine" of item
+#. "30-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"The ProMag 30 round drum magazine is a high capacity after-market 10/22 "
+"magazine.  While a whole lot lighter and handier than larger drum mags, the "
+"fact that the capacity isn't much higher than a stick magazine makes this an "
+"unpopular choice, as it still comes with all the reliability issues drum "
+"magazines have."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "32-round varmint magazine"
+msgid_plural "32-round varmint magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "32-round varmint magazine"
+#. ~ Description of "32-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended capacity 32-round magazine, for use with .22 caliber varmint "
+"rifles."
+msgstr ""
+
+#. ~ Variant name of magazine "32-round varmint magazine"
+#. ~ Variant name of item "32-round varmint magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 32-round magazine"
+msgid_plural "Ruger 10/22 32-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 32-round magazine" of magazine
+#. "32-round varmint magazine"
+#. ~ Description of variant "Ruger 10/22 32-round magazine" of item "32-round
+#. varmint magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An extended 32-round stick magazine for the Ruger 10/22 by ProMag.  While "
+"more reliable than a drum mag, it's surprisingly not by much."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "55-round varmint drum magazine"
+msgid_plural "55-round varmint drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "55-round varmint drum magazine"
+#. ~ Description of "55-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 55-round capacity drum magazine for use in varmint rifles.  While the "
+"capacity is nothing to scoff at, it is less reliable than stick magazines."
+msgstr ""
+
+#. ~ Variant name of magazine "55-round varmint drum magazine"
+#. ~ Variant name of item "55-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 55-round drum magazine"
+msgid_plural "Ruger 10/22 55-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 55-round drum magazine" of magazine
+#. "55-round varmint drum magazine"
+#. ~ Description of variant "Ruger 10/22 55-round drum magazine" of item
+#. "55-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"The ProMag 55 round drum magazine is a high capacity after-market 10/22 "
+"magazine.  While cumbersome, heavy, and unreliable, the capacity is no doubt "
+"a selling factor.  While usually range toys, these mags may just make "
+"surviving a little bit easier."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "70-round varmint drum magazine"
+msgid_plural "70-round varmint drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "70-round varmint drum magazine"
+#. ~ Description of "70-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 70-round capacity drum magazine for use in varmint rifles.  While the "
+"capacity is nothing to scoff at, it is less reliable than stick magazines."
+msgstr ""
+
+#. ~ Variant name of magazine "70-round varmint drum magazine"
+#. ~ Variant name of item "70-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 70-round drum magazine"
+msgid_plural "Ruger 10/22 70-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 70-round drum magazine" of magazine
+#. "70-round varmint drum magazine"
+#. ~ Description of variant "Ruger 10/22 70-round drum magazine" of item
+#. "70-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"The ProMag 70 round drum magazine is a high capacity after-market 10/22 "
+"magazine.  While cumbersome, heavy, and unreliable, the capacity is no doubt "
+"a selling factor.  While usually range toys, these mags may just make "
+"surviving a little bit easier."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "110-round varmint drum magazine"
+msgid_plural "110-round varmint drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "110-round varmint drum magazine"
+#. ~ Description of "110-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"An 110-round capacity drum magazine for use in varmint rifles.  While the "
+"capacity is nothing to scoff at, it is less reliable than stick magazines."
+msgstr ""
+
+#. ~ Variant name of magazine "110-round varmint drum magazine"
+#. ~ Variant name of item "110-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger 10/22 110-round drum magazine"
+msgid_plural "Ruger 10/22 110-round drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger 10/22 110-round drum magazine" of magazine
+#. "110-round varmint drum magazine"
+#. ~ Description of variant "Ruger 10/22 110-round drum magazine" of item
+#. "110-round varmint drum magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"The GSG-16 110 round drum magazine is the highest capacity 10/22 magazine on "
+"the (after)-market.  While cumbersome, heavy, and unreliable, the capacity is"
+" no doubt a selling factor.  While usually range toys, these mags may just "
+"make surviving a little bit easier."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 10-round Walther magazine"
+msgid_plural ".22 10-round Walther magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 10-round Walther magazine"
+#. ~ Description of ".22 10-round Walther magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 10-round handgun magazine for use with Walther's .22 caliber pocket pistol."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "high capacity 33 round magazine"
+msgid_plural "high capacity 33 round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "high capacity 33 round magazine"
+#. ~ Description of "high capacity 33 round magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 33-round capacity magazine for .22 ammunition, for use in a high capacity "
+"handgun."
+msgstr ""
+
+#. ~ Variant name of magazine "high capacity 33 round magazine"
+#. ~ Variant name of item "high capacity 33 round magazine"
+#: data/json/items/magazine/22.json
+msgid "CP33 33-round magazine"
+msgid_plural "CP33 33-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "CP33 33-round magazine" of magazine "high capacity
+#. 33 round magazine"
+#. ~ Description of variant "CP33 33-round magazine" of item "high capacity 33
+#. round magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"The CP33's magazine is a polymer body quad stack with 4 rows of .22 rounds, "
+"which gives it the ability to cram in 33 rounds into the magazine."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "high capacity 50 round magazine"
+msgid_plural "high capacity 50 round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "high capacity 50 round magazine"
+#. ~ Description of "high capacity 50 round magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A 50-round capacity magazine for .22 ammunition, for use in a high capacity "
+"handgun."
+msgstr ""
+
+#. ~ Variant name of magazine "high capacity 50 round magazine"
+#. ~ Variant name of item "high capacity 50 round magazine"
+#: data/json/items/magazine/22.json
+msgid "CP33 50-round magazine"
+msgid_plural "CP33 50-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "CP33 50-round magazine" of magazine "high capacity
+#. 50 round magazine"
+#. ~ Description of variant "CP33 50-round magazine" of item "high capacity 50
+#. round magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"CP33 33-round magazine has the ability to accept extensions, and this one has"
+" a 17-round extension to bring the total up to a staggering 50 rounds of .22 "
+"ammunition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "Ruger target pistol magazine"
+msgid_plural "Ruger target pistol magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Ruger target pistol magazine"
+#. ~ Description of "Ruger target pistol magazine"
+#: data/json/items/magazine/22.json
+msgid "A 10-round magazine for a Ruger target pistol."
+msgstr ""
+
+#. ~ Variant name of magazine "Ruger target pistol magazine"
+#. ~ Variant name of item "Ruger target pistol magazine"
+#: data/json/items/magazine/22.json
+msgid "Ruger Mark IV magazine"
+msgid_plural "Ruger Mark IV magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger Mark IV magazine" of magazine "Ruger target
+#. pistol magazine"
+#. ~ Description of variant "Ruger Mark IV magazine" of item "Ruger target
+#. pistol magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A Ruger Mark IV magazine, lightweight and with a magazine follower button to "
+"allow easier reloading.  Holds 10 rounds of .22, and is interchangeable with "
+"Mark II and Mark III varieties as well."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 1911 pistol magazine"
+msgid_plural ".22 1911 pistol magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 1911 pistol magazine"
+#. ~ Description of ".22 1911 pistol magazine"
+#: data/json/items/magazine/22.json
+msgid "A 10-round magazine for a .22 1911 pistol."
+msgstr ""
+
+#. ~ Variant name of magazine ".22 1911 pistol magazine"
+#. ~ Variant name of item ".22 1911 pistol magazine"
+#: data/json/items/magazine/22.json
+msgid "1911-22 magazine"
+msgid_plural "1911-22 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "1911-22 magazine" of magazine ".22 1911 pistol
+#. magazine"
+#. ~ Description of variant "1911-22 magazine" of item ".22 1911 pistol
+#. magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A magazine for the 1911-22 pistol, holding 10 rounds of .22 LR.  It features "
+"a magazine follower button to allow easier reloading, along with a cut-out in"
+" the side to see your round count."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 plinking handgun magazine"
+msgid_plural ".22 plinking handgun magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 plinking handgun magazine"
+#. ~ Description of ".22 plinking handgun magazine"
+#: data/json/items/magazine/22.json
+msgid "A 10-round magazine for the plinking handgun."
+msgstr ""
+
+#. ~ Variant name of magazine ".22 plinking handgun magazine"
+#. ~ Variant name of item ".22 plinking handgun magazine"
+#: data/json/items/magazine/22.json
+msgid "SR22 magazine"
+msgid_plural "SR22 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "SR22 magazine" of magazine ".22 plinking handgun
+#. magazine"
+#. ~ Description of variant "SR22 magazine" of item ".22 plinking handgun
+#. magazine"
+#: data/json/items/magazine/22.json
+msgid "A magazine for the SR22 pistol, holding 10 rounds of .22 LR."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid "Glock 44 10 round magazine"
+msgid_plural "Glock 44 10 round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Glock 44 10 round magazine"
+#. ~ Description of "Glock 44 10 round magazine"
+#: data/json/items/magazine/22.json
+msgid "A compact, light-weight polymer magazine for use with the Glock 44."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/22.json
+msgid ".22 10-round modern varmint rifle magazine"
+msgid_plural ".22 10-round modern varmint rifle magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".22 10-round modern varmint rifle magazine"
+#. ~ Description of ".22 10-round modern varmint rifle magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A black, 10-round polymer magazine for the modern varmint rifle.  It "
+"unfortunately is not compatible with AR-15 .22 conversion magazines."
+msgstr ""
+
+#. ~ Variant name of magazine ".22 10-round modern varmint rifle magazine"
+#. ~ Variant name of item ".22 10-round modern varmint rifle magazine"
+#: data/json/items/magazine/22.json
+msgid "M&P 15-22 magazine"
+msgid_plural "M&P 15-22 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "M&P 15-22 magazine" of magazine ".22 10-round
+#. modern varmint rifle magazine"
+#. ~ Description of variant "M&P 15-22 magazine" of item ".22 10-round modern
+#. varmint rifle magazine"
+#: data/json/items/magazine/22.json
+msgid ""
+"A black, 10-round polymer magazine for the M&P 15-22 rifle.  It unfortunately"
+" is not compatible with AR-15 .22 conversion magazines."
+msgstr ""
+
+#. ~ Description of magazine "Mini-14 5-round magazine"
+#. ~ Description of "Mini-14 5-round magazine"
+#: data/json/items/magazine/223.json
+msgid ""
+"A 10-round Mini-14 magazine that has been modified to only hold 5 rounds, "
+"commonly used to comply with hunting regulations."
+msgstr ""
+
+#. ~ Description of magazine "STANAG 5-round magazine"
+#. ~ Description of "STANAG 5-round magazine"
+#: data/json/items/magazine/223.json
+msgid ""
+"A 10-round STANAG magazine that has been modified to only hold 5 rounds, "
+"commonly used to comply with hunting regulations."
+msgstr ""
+
+#. ~ Description of magazine "STANAG 5-round magazine with ranger plate"
+#. ~ Description of "STANAG 5-round magazine with ranger plate"
+#: data/json/items/magazine/223.json
+msgid ""
+"A 10-round STANAG magazine that has been modified to only hold 5 rounds, "
+"commonly used to comply with hunting regulations.  The bottom has been "
+"modified with a ranger plate attachment to allow it to clip to carabiners."
+msgstr ""
+
+#. ~ Description of magazine "STANAG 60-round magazine"
+#. ~ Description of "STANAG 60-round magazine"
+#: data/json/items/magazine/223.json
+msgid ""
+"A high-capacity 60-round casket magazine for use with STANAG compatible "
+"rifles.  It is thicker, rather than longer."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/223.json
+msgid "10 round SL8 magazine"
+msgid_plural "10 round SL8 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "10 round SL8 magazine"
+#. ~ Description of "10 round SL8 magazine"
+#: data/json/items/magazine/223.json
+msgid "A single stack magazine for the SL8 rifle, holding 10 rounds."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/223.json
+msgid "ZPAP 85 30-round magazine"
+msgid_plural "ZPAP 85 30-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "ZPAP 85 30-round magazine"
+#. ~ Description of "ZPAP 85 30-round magazine"
+#: data/json/items/magazine/223.json
+msgid "A 30-round box magazine for use with the ZPAP 85 and ZPAP M90 rifles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/223.json
+msgid "5.56x45mm/.300BLK 10-round clip"
+msgid_plural "5.56x45mm/.300BLK 10-round clips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "5.56x45mm/.300BLK 10-round clip"
+#. ~ Description of "5.56x45mm/.300BLK 10-round clip"
+#: data/json/items/magazine/223.json
+msgid ""
+"A tiny piece of grooved metal designed to allow a shooter to quickly load ten"
+" 5.56x45mm or .300 AAC Blackout rounds into a magazine."
+msgstr ""
+
+#. ~ Description of magazine "M2010 5-round magazine"
+#. ~ Description of "M2010 5-round magazine"
+#: data/json/items/magazine/300.json
+msgid "A 5-round box magazine used with the M2010 ESR sniper rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/300.json
+msgid "Ruger Precision Rifle 5-round magazine"
+msgid_plural "Ruger Precision Rifle 5-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Ruger Precision Rifle 5-round magazine"
+#. ~ Description of "Ruger Precision Rifle 5-round magazine"
+#: data/json/items/magazine/300.json
+msgid ""
+"A single-stack, 5-round, detachable magazine compatible with the Ruger "
+"Precision Rifle.  Holding five rounds of.300 Winchester Magnum, the magazine "
+"is styled along the lines of Accuracy International's magnum magazines, the "
+"latter of which has become the gold standard for precision weapon magazines."
+msgstr ""
+
+#. ~ Description of magazine ".30-06 5-round clip"
+#. ~ Description of ".30-06 5-round clip"
+#: data/json/items/magazine/3006.json
+msgid ""
+"A tiny piece of grooved metal designed to allow a shooter to quickly load "
+"five .30-06 rounds into a compatible firearm."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/303.json
+msgid "10-round Enfield magazine"
+msgid_plural "10-round Enfield magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "10-round Enfield magazine"
+#. ~ Description of "10-round Enfield magazine"
+#: data/json/items/magazine/303.json
+msgid "A steel 10-round magazine, for use in .303 caliber Enfield rifles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/303.json
+msgid ".303 5-round charger clip"
+msgid_plural ".303 5-round charger clips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine ".303 5-round charger clip"
+#. ~ Description of ".303 5-round charger clip"
+#: data/json/items/magazine/303.json
+msgid ""
+"A tiny piece of grooved metal designed to allow a shooter to quickly load "
+"five .303 British rounds into a magazine."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "heavy automatic rifle 30-round magazine"
+msgid_plural "heavy automatic rifle 30-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "heavy automatic rifle 30-round magazine"
+#. ~ Description of "heavy automatic rifle 30-round magazine"
+#: data/json/items/magazine/308.json
+msgid "An extended 30-round steel box magazine for the heavy automatic rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "heavy automatic rifle 20-round magazine"
+msgid_plural "heavy automatic rifle 20-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "heavy automatic rifle 20-round magazine"
+#. ~ Description of "heavy automatic rifle 20-round magazine"
+#: data/json/items/magazine/308.json
+msgid ""
+"A military issue 20-round steel box magazine for the heavy automatic rifle."
+msgstr ""
+
+#. ~ Description of magazine "G3 20-round magazine"
+#. ~ Description of "G3 20-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A steel box magazine for the H&K G3 rifle."
+msgstr ""
+
+#. ~ Description of magazine "M14 5-round magazine"
+#. ~ Description of "M14 5-round magazine"
+#: data/json/items/magazine/308.json
+msgid ""
+"A compact aftermarket 5-round steel box magazine compatible with M14 pattern "
+"rifles.  Although it has a low capacity, it is easy to store and quick to "
+"reload."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "PAP M77 20-round magazine"
+msgid_plural "PAP M77 20-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "PAP M77 20-round magazine"
+#. ~ Description of "PAP M77 20-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A 20-round steel box magazine for the PAP M77 rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "PAP M77 10-round magazine"
+msgid_plural "PAP M77 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "PAP M77 10-round magazine"
+#. ~ Description of "PAP M77 10-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A 10-round steel box magazine for the PAP M77 rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "SCAR-H 10-round magazine"
+msgid_plural "SCAR-H 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "SCAR-H 10-round magazine"
+#. ~ Description of "SCAR-H 10-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A 10-round magazine for the FN SCAR-H or 17S rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "AR-10 10-round magazine"
+msgid_plural "AR-10 10-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "AR-10 10-round magazine"
+#. ~ Description of "AR-10 10-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A compact 10-round double stack box magazine for AR-10-based rifles."
+msgstr ""
+
+#. ~ Description of magazine "AR-10 20-round magazine"
+#. ~ Description of "AR-10 20-round magazine"
+#: data/json/items/magazine/308.json
+msgid "A 20-round double stack box magazine for AR-10-based rifles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/magazine/308.json
+msgid "AR-10 25-round magazine"
+msgid_plural "AR-10 25-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "AR-10 25-round magazine"
+#. ~ Description of "AR-10 25-round magazine"
+#: data/json/items/magazine/308.json
+msgid "An extended 25-round double stack box magazine for AR-10-based rifles."
+msgstr ""

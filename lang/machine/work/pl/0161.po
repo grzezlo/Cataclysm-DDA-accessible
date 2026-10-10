@@ -1,0 +1,1936 @@
+# Batch 161 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "transporter remote"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid ""
+"A blocky item, like an old feature cellphone crossed with a radio.  A matrix "
+"channeling array is stick out of the side like an antenna.  There is a small "
+"screen on the front, currently off."
+msgstr ""
+
+#. ~ "msg" action message of item "transporter remote"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid ""
+"You turn the transporter remote on and the screen begins displaying "
+"coordinates."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "transporter remote"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid "The transporter remote's batteries need more charge."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid "transporter remote (searching)"
+msgid_plural "transporter remote (searching)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "transporter remote (searching)"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid ""
+"A blocky item, like an old feature cellphone crossed with a radio.  A matrix "
+"channeling array is sticking out of the side like an antenna.  There is a "
+"small screen on the front, currently running what looks like a series of "
+"mathematical calculations."
+msgstr ""
+
+#. ~ "msg" action message of item "transporter remote (searching)"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid "You turn the transporter remote off."
+msgstr ""
+
+#. ~ "description" action message of item "transporter remote (searching)"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid ""
+"Begin the transportation process.  It will take several minutes for the "
+"remote to zero in on the beacon location."
+msgstr ""
+
+#. ~ "menu_text" action message of item "transporter remote (searching)"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid "Activate the remote"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid "transporter remote (burned out)"
+msgid_plural "transporter remote (burned out)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "transporter remote (burned out)"
+#: data/mods/MindOverMatter/items/tools/travel.json
+msgid ""
+"A blocky item, like an old feature cellphone crossed with a radio.  A matrix "
+"channeling array was sticking out of the side like an antenna, but it's now "
+"cracked and probably useless.  There is a small screen on the front, "
+"obviously burned out.  Parts of the plastic casing are warped as though the "
+"plastic had frozen and cracked."
+msgstr ""
+
+#. ~ Computer name placed on map
+#: data/mods/MindOverMatter/mapgen/microlab_rooms.json
+#: data/mods/MindOverMatter/mapgen/nested/skyscraper_lab_modular.json
+msgid "Project OBSIDIAN RING access"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"Psionic Perks:\n"
+"Level <u_val:current_level>.\n"
+"<u_val:num_perks> perk points to spend.\n"
+"Current EXP: <u_val:available_exp>.\n"
+"EXP to next level: <u_val:exp_to_perk>."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"Must know the Concentration (Beginner) proficiency and must not have the "
+"Easily Distracted trait."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must know the Mindhammer or Wrecking Ball powers."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"Must have the Biokinetic power Metabolic Hyperefficiency 6+ or the "
+"Vitakinetic power Wakeful Rest 5+."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"Must have the Biokinetic Power Overcome Pain 5+, the Electrokinetic power "
+"Pain Suppression 6+ or the Telepathic power Mood Stabilization 8+."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must have at least 40 levels worth of powers in a single psionic path."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"Must know at least 100 levels of powers between Biokinesis and/or "
+"Vitakinesis."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must be a telepath or a vitakinetic."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must know at least 30 levels of Pyrokinesis powers."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must have the Clairsentience power Premonition 5+."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid ""
+"================== Psionic Playstyle perks are below this line "
+"=================="
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must have the Torrential Channeling trait."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must have psionic powers."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Clear-Minded Channeling"
+msgstr ""
+
+#. ~ Description of mutation "Clear-Minded Channeling"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"This \"psychic powers\" stuff is easy, as long as nothing distracts you.  "
+"When you are concentrating on 0 powers, or have 0 pain, you have an easier "
+"time invoking your powers."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Concussive Blasts"
+msgstr ""
+
+#. ~ Description of mutation "Concussive Blasts"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Your telekinetic attacks really hammer into your target.  Damaging "
+"telekinetic powers have a much higher chance to stagger or knock down your "
+"targets."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Efficient Slumber"
+msgstr ""
+
+#. ~ Description of mutation "Efficient Slumber"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+#, no-c-format
+msgid ""
+"Some part of your Metabolic Hyperefficiency is running even when you sleep, "
+"or perhaps your wakeful meditations have made the process of sleeping more "
+"efficient.  You can stay awake for 20% longer, and sleep is 20% more "
+"restorative."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Grace Under Pain"
+msgstr ""
+
+#. ~ Description of mutation "Grace Under Pain"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+#, no-c-format
+msgid ""
+"Happy.  In Your Lane.  Focused.  Flourishing.  Your Intelligence is only "
+"penalized 66% of the normal amount from pain, and 33% of normal if you're "
+"using the Biokinetic power Overcome Pain, the Electrokinetic power Pain "
+"Suppression, or the Telepathic power Mood Stabilization."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of effect type id "effect_perk_in_the_zone"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkdata/in_the_zone.json
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "In the Zone"
+msgstr ""
+
+#. ~ Description of mutation "In the Zone"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+#, no-c-format
+msgid ""
+"Once you get going you just keep rolling.  Your next use of a psionic power "
+"within five seconds of channeling one has its stamina cost reduced by 25%."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Mastery of Form"
+msgstr ""
+
+#. ~ Description of mutation "Mastery of Form"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Your control of your own body has given you control of your own genetics, "
+"albeit a subconscious one.  You will be less likely to suffer from negative "
+"mutations when taking mutagen."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Wary Sleeper"
+msgstr ""
+
+#. ~ Description of mutation "Wary Sleeper"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Your Premonition ability has developed to such a level that you can sense "
+"movement around you even when you sleep."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Burning Bright"
+msgstr ""
+
+#. ~ Description of mutation "Burning Bright"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Nether energy easily flows through you, causing your power to rise and fall "
+"far faster than normal.  You gain far more Nether Attunement from channeling "
+"or maintaining your powers, but you lose your Nether Attunement much faster "
+"as well.  You do not lose Nether Attunement at this accelerated rate while "
+"maintaining any powers."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid "Phoenix Rising"
+msgstr ""
+
+#. ~ Description of mutation "Phoenix Rising"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Only the phoenix rises and does not descend, but you're going try your "
+"hardest.  The stamina cost of your powers is reduced beginning at Nether "
+"Attunement level 8, reaching 1/3rd of normal by Nether Attunement level 12."
+msgstr ""
+
+#. ~ Description of effect type "In the Zone"
+#: data/mods/MindOverMatter/mod_interactions/bombastic_perks/perkdata/in_the_zone.json
+#, c-format
+msgid ""
+"You are one with the Nether and the Nether is with you.  The stamina cost of "
+"channeling your next power is reduced by 25%."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_feral_human_telekin_dm"
+#. ~ Monster message of special attack of monster "feral PKer"
+#. ~ Monster message of special attack of monster "feral mindhand"
+#. ~ Monster message of special attack of monster "unstoppable force"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/mod_interactions/defense_mode/monsters.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s stares at %3$s and %3$s is lifted up and pulled towards them!"
+msgstr ""
+
+#. ~ Description of special attack of monster "mon_feral_human_telekin_dm"
+#. ~ Description of special attack of monster "feral PKer"
+#: data/mods/MindOverMatter/mod_interactions/defense_mode/monsters.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid ""
+"%1$s makes a throwing motion and one of the rocks around them suddenly "
+"launches like a bullet!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_WAVE_CONTROL_PREMENITION" in
+#. nested EOCs in effect in EoC "DEFENSE_MODE_WAVE_CONTROL"
+#: data/mods/MindOverMatter/mod_interactions/defense_mode/premonition_instances.json
+msgid ""
+"You feel a multitude of foes coming for you, bleary-eyed and full of "
+"bloodlust.  Steel yourself, for the horde is coming."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEFENSE_MODE_RANDOM_NPC_ROBBER"
+#: data/mods/MindOverMatter/mod_interactions/defense_mode/premonition_instances.json
+msgid ""
+"You feel greedy, insidious eyes watching you and rapidly getting closer.  "
+"Someone has it out for your stuff."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEFENSE_MODE_BANDIT_ATTACK"
+#: data/mods/MindOverMatter/mod_interactions/defense_mode/premonition_instances.json
+msgid ""
+"You feel a multitude of hostile eyes watching you and rapidly getting closer."
+"  The masses have it in for you."
+msgstr ""
+
+#. ~ Item name
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "OA jumpsuit"
+msgid_plural "OA jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "OA jumpsuit"
+#. ~ Description of variant "OA jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid ""
+"A brown jumpsuit with OA written in big yellow block letters on the back."
+msgstr ""
+
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "υ jumpsuit"
+msgid_plural "υ jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "υ jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "A black jumpsuit with white symbol \"υ\" on the back."
+msgstr ""
+
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "ϴ jumpsuit"
+msgid_plural "ϴ jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ϴ jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "A black jumpsuit with white symbol \"ϴ\" on the back."
+msgstr ""
+
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "ν jumpsuit"
+msgid_plural "ν jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ν jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "A black jumpsuit with white symbol \"ν\" on the back."
+msgstr ""
+
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "τ jumpsuit"
+msgid_plural "τ jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "τ jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+#: data/mods/Xedra_Evolved/items/clothes.json
+msgid "A black jumpsuit with white symbol \"τ\" on the back."
+msgstr ""
+
+#. ~ Variant name of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+msgid "Ψ jumpsuit"
+msgid_plural "Ψ jumpsuits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ψ jumpsuit" of item "OA jumpsuit"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/clothes.json
+msgid "A black jumpsuit with white symbol \"Ψ\" on the back."
+msgstr ""
+
+#. ~ Description of mutation ""
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/paraclesians.json
+msgid ""
+"The Ierde's mind has the resilience of iron, and they cannot be affected by "
+"delusions, hallucinations, or other mental problems.  In addition, they are "
+"immune to telepathic attack."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/professions.json
+msgctxt "profession_male"
+msgid "Mobile Task Force: Psi 7 \"Sleepwalkers\""
+msgstr ""
+
+#. ~ Description of profession "Mobile Task Force: Psi 7 "Sleepwalkers"" for
+#. male
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"As a member of Psi 7, your job was to take out the dangerous rogue psychics "
+"that popped up with increasing frequency as the strangeness in the world "
+"increased.  Even before the end of the world you had seen enough bizarre "
+"things to write a dozen books, but nothing compares to what you've seen "
+"during the Cataclysm."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/professions.json
+msgctxt "profession_female"
+msgid "Mobile Task Force: Psi 7 \"Sleepwalkers\""
+msgstr ""
+
+#. ~ Description of profession "Mobile Task Force: Psi 7 "Sleepwalkers"" for
+#. female
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"As a member of Psi 7, your job was to take out the dangerous rogue psychics "
+"that popped up with increasing frequency as the strangeness in the world "
+"increased.  Even before the end of the world you had seen enough bizarre "
+"things to write a dozen books, but nothing compares to what you've seen "
+"during the Cataclysm."
+msgstr ""
+
+#. ~ Name of a snippet in category "lab_file_phavian_private"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid "Note on the back of a schedule printout"
+msgstr ""
+
+#. ~ Snippet in category "lab_file_phavian_private"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid ""
+"I don't want one of those assignments ever again.  They call themselves \"Offworld Acquisitions\" but do you know what they actually do?  They're butchers!  I can only sit through so many lectures about how \"only humans have human rights\" before I want to just start trying to adjust their thought processes.  Give me an hour alone in a room with each one of them and they'll never want to hurt a fly.\n"
+"\n"
+"Mark my words, those maniacs are making enemies that we can't afford to make.  We don't know everything that's out there beyond the gates and it's pure luck we haven't made contact with a civilization that wants to hunt US for something WE have.  Unless we have and some of those immersion teams that went missing were actually captured.  They're playing with fire and we're all going to get burned."
+msgstr ""
+
+#. ~ Name of a snippet in category "lab_file_photokinesis"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid "Re: CE225"
+msgstr ""
+
+#. ~ Snippet in category "lab_file_photokinesis"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid ""
+"As instructed, we brought L85 to the subject's location and subjected it to increasingly-higher-lumen concentrations, all to no effect.  We got up to 50K lumens with no effect other than making everyone except L85 and (footage later showed) the subject blind briefly.  The subject simply laughed.\n"
+"\n"
+"It wasn't laughing when we took it down the hall and threw it into the room with the open windows, though."
+msgstr ""
+
+#. ~ Name of a snippet in category "lab_file_telepathy"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid "incident report: 223741"
+msgstr ""
+
+#. ~ Snippet in category "lab_file_telepathy"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid ""
+"At 0411 this morning, a GLASS ANVIL mathematician seconded to XEDRA-40 discovered an anomaly in one of the returning immersion teams during a routine random security scan.  While monitoring Dr. Mahika Mittal, the mathematician suddenly screamed and grabbed their head before collapsing to the floor.  In the ensuing confusion, Dr. Mittal attempted to grab Sgt Adams's rifle before making a gesture and \"causing the temperature in the room to drop to freezing\".  Following this, Dr. Mittal grabbed Dr. McDowell and dragged him back through the still-open dive aperture just before it closed.  An attempt to reopen the aperture to the previous destination was unsuccessful at producing a stable connection; further efforts are ongoing.\n"
+"\n"
+"When awakened, mathematician U72 stated that during her attempt to make contact she felt \"Something cold, icy, like a glacier.  Inhuman.  It wasn't Dr. Mahika, it was something that looked like her, or had taken her place or…I don't know.\"  When told that Dr. Mittal had escaped, U72 was emphatic that it (she only ever used the word it) had to be captured for study and to prevent similar incidents from happening again.\n"
+"\n"
+"Questioning of the other dive team members is ongoing.  None of them said Dr. Mittal showed any suspicious behavior either before or during the dive."
+msgstr ""
+
+#. ~ Name of a snippet in category "lab_file_vitakinesis"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid "a partial interview transcript"
+msgstr ""
+
+#. ~ Snippet in category "lab_file_vitakinesis"
+#: data/mods/MindOverMatter/mod_interactions/xedra_evolved/snippets.json
+msgid ""
+"\"…summary of your sensations, please.\"\n"
+"M33: \"Uh, okay.  Well, it's hard to describe this, you know, but a normal…sorry, sorry, a standard person has a kind of glow to them.  If they're sick, or tired, or injured in some way, it affects the glow.  [REDACTED]…oh, sorry, I mean, uh, the CE473 had that same glow but it was muted\"\n"
+"Interviewer: \"Muted?\"\n"
+"M33: \"Like, the glow was just…lower, you know?  Like she was sick or something, but she wasn't.  I couldn't find anything wrong with her at all.  I did a full scan, as much as I could, you know, and she was in perfect health.  Better, even.  The, uh, CE473 is in her mid-40s?\"\n"
+"Interviewer: \"That's correct.\"\n"
+"M33: \"I never would have believed that if I wasn't told it.  She doesn't just look good for her age, she's physically younger.\"\n"
+"Interviewer: \"What was your impression of the subject on your second examination?\"M33: \"Oh, at the end of the day?  Well, I'm not sure how to describe it, she was…red.\"\n"
+"Interviewer: \"What do you mean by that?\"\n"
+"M33: \"Yeah, like she was even paler than usual and there were these kind of red streaks.  And it felt, uh…\"\n"
+"*fifteen second pause*\n"
+"\n"
+"Interviewer: \"Please continue.  Your impressions are very important to the success of the experiment.\"\n"
+"*six second pause*\n"
+"M33: \"Hungry.  It felt hungry.\""
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid "guardian amalgamation"
+msgid_plural "guardian amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "guardian amalgamation"
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid ""
+"A four-legged creature with a crab-like shell, with two eyes on stubby stalks"
+" and a small mouth filled with sharp fangs.  Three additional limbs with "
+"bulbous growths on their ends wave around, seemingly randomly except when "
+"they point briefly at one of the walking dead."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "guardian amalgamation"
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+#, c-format
+msgid "%1$s waves its three appendages in the air."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid "whispering amalgamation"
+msgid_plural "whispering amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "whispering amalgamation"
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid ""
+"A smooth, round body skittering around on seven jointed legs, this "
+"abomination does not seem to have any sensory organs at all.  When you look "
+"at it, you hear faint whispers in the back of your mind."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid "enervating amalgamation"
+msgid_plural "enervating amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "enervating amalgamation"
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+msgid ""
+"An elongated body moving irregularly on five legs, with two flexible "
+"tentacles waving in the air as it moves.  It seems to have no head, with a "
+"ring of black spots on top that might be sensory organs.  Its skin is "
+"perfectly smooth and greyish-white, without a single spot or blemish."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s touches you and you feel weaker!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s touches <npcname> and they flinch!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s tries to touch you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/amalgamations.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s tries to touch <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster name
+#. ~ Named after the American folkloric monster.
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "hidebehind"
+msgid_plural "hidebehinds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "hidebehind"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"Even looking directly at this cougar and knowing that it is there, a part of "
+"your brain simply refuses to see it.  It flickers in and out of sight in a "
+"way that makes your eyes hurt, and if you turn your attention away from it "
+"even for a moment, it disappears completely."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "bandersnatch"
+msgid_plural "bandersnatches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bandersnatch"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"An American black bear.  A large omnivorous scavenger, it has powerful claws "
+"and jaws, and is an effective ambush hunter.  This one is distinguished from "
+"its fellows by its intent expression, its lack of caution in your presence, "
+"and the fact that it's hovering six inches off the ground."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "bandersnatch"
+#. ~ Monster message of special attack of monster "Dr. Brain"
+#. ~ Monster message of special attack of monster "feral mindhand"
+#. ~ Monster message of special attack of monster "unstoppable force"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "The air around %1$s distorts."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "fear hawk"
+msgid_plural "fear hawks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fear hawk"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"A hawk with striking golden eyes.  Its call seems to pierce deep into your "
+"psyche even when it's not directed at you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%1$s shrieks at you!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_special_attacks.json
+#, c-format
+msgid "%1$s shrieks at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_special_attacks.json
+#, c-format
+msgid "%s's shriek radiates at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%s's shriek radiates at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_special_attacks.json
+#, c-format
+msgid "%1$s's shriek radiates out at you without doing any damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_special_attacks.json
+#, c-format
+msgid "%1$s's shriek radiates out at <npcname> without doing any damage."
+msgstr ""
+
+#. ~ Description of monster "cow"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"The domestic cow, a baleful, ruminating farm animal.  She is quite muscular, "
+"and would be a great source of milk if domesticated or of meat and leather if"
+" slaughtered.  This one moves with an oddly fluid grace."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "cow"
+#. ~ Monster message of special attack of monster "hodag"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%1$s moves too quickly for the eye to follow!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "cow"
+#. ~ Monster message of special attack of monster "hodag"
+#. ~ Monster message of special attack of monster "baby hodag"
+#. ~ Monster message of special attack of monster "feral security guard, Ψ
+#. Division"
+#. ~ Monster message of special attack of monster "feral dervish"
+#. ~ Monster message of special attack of monster "human whirlwind"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s's skin takes on a slightly waxen appearance."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "hodag"
+msgid_plural "hodags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "hodag"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"This is very similar to a cow, though the bone spikes growing from its back "
+"and its clawed feet separate it from any cow you've ever seen.  Despite its "
+"fearsome armaments, it grazes placidly on grass."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "hodag"
+#. ~ Monster message of special attack of monster "gremlin"
+#. ~ Monster message of special attack of monster "feral dervish"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s begins moving more quickly."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "baby hodag"
+msgid_plural "baby hodags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "baby hodag"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"This is very similar to a calf, though the short bone spikes growing from its"
+" back and its clawed feet separate it from any calf you've ever seen.  "
+"Despite its fearsome armaments, it grazes placidly on grass."
+msgstr ""
+
+#. ~ Description of monster "cockatrice"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"This strange mutant bird gains its name from its odd appearance.  Although "
+"its features seem to be becoming more reptilian, it doesn't appear dangerous."
+"  However, it looks at you like it understands you in some way."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "cockatrice"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%1$s stares and lets out a silent cry!"
+msgstr ""
+
+#. ~ Description of monster "strange chick"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"A strange tiny chick, it could be from a number of different species if it "
+"weren't for the patches of scales between its feathers."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "pigeon passenger"
+msgid_plural "pigeon passengers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "pigeon passenger"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"A gentle, plump, small-billed bird with a third eye, between its bill and "
+"forehead.  On the ground, it struts about with a characteristic bobbing of "
+"the head.  It is a strong, swift flier thanks to its long wings and powerful "
+"flight muscles.  Is it following you?"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "pigeon passenger"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%1$'s third eye opens and it coos!"
+msgstr ""
+
+#. ~ Description of monster "mon_pigeon_passenger_chick"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"A tiny darkly-colored chick, it could be from a number of different species "
+"if it weren't for the third eye below the center of its forehead."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "gremlin"
+msgid_plural "gremlins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gremlin"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"The red fox, an omnivorous canine and largest of the true foxes, it is a wily"
+" hunter with a combative, suspicious temperament.  Sparks occasionally "
+"crackle over its fur and its body distorts oddly as it moves, covering more "
+"ground with each stride than the length of its legs would indicate."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "gremlin"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "Sparks flicker over %1$s's fur."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "direhound"
+msgid_plural "direhounds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "direhound"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"This large canid has grown to terrifying proportions, roughly three times the"
+" size of some of its brethren.  Its teeth give steak knives a run for their "
+"money, and it looks to be the social center of any surrounding dogs."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "direhound"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "The direhound gazes upon its allies, and lets out a howl!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "hellhound"
+msgid_plural "hellhounds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "hellhound"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"This once-average Labrador mixed-breed dog has clearly gone feral.  Though it"
+" likely still instinctively trusts humans, it's probably far from domestic by"
+" now.  The air around it wavers like the haze over summer asphalt."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "hellhound"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+#, c-format
+msgid "%1$s barks out a stream of flame!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid "hellpup"
+msgid_plural "hellpups"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "hellpup"
+#: data/mods/MindOverMatter/monsters/animal_psychics.json
+msgid ""
+"An adorable, defenseless Labrador puppy.  Much safer to tame than an adult "
+"dog.  Its breath is very hot."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_devourer_lab_sec"
+#. ~ Monster message of special attack of monster "feral slider"
+#. ~ Monster message of special attack of monster "ephemeral riftwalker"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/bosses.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s glances at %3$s and the world lurches."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_devourer_lab_sec"
+#. ~ Monster message of special attack of monster "feral slider"
+#. ~ Monster message of special attack of monster "ephemeral riftwalker"
+#. ~ Monster message of special attack of monster "triffid riftcaller"
+#: data/mods/MindOverMatter/monsters/bosses.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/triffids.json
+#, c-format
+msgid "The space around %1$s distorts."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_devourer_lab_sec"
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid "The air around %3$s wavers and shapes appear!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "mathematician A57"
+msgid_plural "mathematician A57s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid ""
+"No one could mistake this person for a human; they move with astonishing "
+"speed and grace, but every motion is precisely controlled.  As they catch "
+"sight of you, a momentary grimace mars the perfection of their unnaturally "
+"beautiful face, and as they move quickly toward you, they make a quick "
+"gesture and some debris on the floor moves out of their way."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid "Mathematician A57 hits your %2$s with a pipe in a blur of motion!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid ""
+"Mathematician A57 hits <npcname>'s %2$s with a pipe in a blur of motion!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 tries to hit you, but you barely dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 tries to hit <npcname>, but they barely dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid "Mathematician A57 hits your %2$s without penetrating your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid ""
+"Mathematician A57 hits <npcname>'s %2$s without penetrating their armor."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57's skin takes on a slightly waxen appearance."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 begins moving much more quickly."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 blurs as they explode into motion!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+#, c-format
+msgid ""
+"Mathematician A57 stares at %3$s and %3$s is lifted up and pulled towards "
+"them!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "The air around Mathematician A57Mathematician A57 wavers."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "The air around Mathematician A57 distorts."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches you and wounds open on your flesh!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches <npcname> and wounds open on their flesh!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 tries to touch you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 tries to touch <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches you but only hits your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches <npcname> but only hits their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches you and you feel weaker!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid "Mathematician A57 touches <npcname> and they flinch!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mathematician A57"
+#: data/mods/MindOverMatter/monsters/bosses.json
+msgid ""
+"Mathematician A57 closes their eyes and their wounds begin healing at a rapid"
+" pace!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "bellicose brawler"
+msgid_plural "bellicose brawlers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bellicose brawler"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This bloodshot-eyed berserker hurls themselves at the zombie horde.  Despite "
+"their crude technique, they are moving faster than you've ever seen a human "
+"move, and some of their attacks send the zombies flying."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "agitated augur"
+msgid_plural "agitated augurs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "agitated augur"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This individual looks wildly all around them, constantly muttering to "
+"themselves the entire time."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "voltaic vigilante"
+msgid_plural "voltaic vigilantes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "voltaic vigilante"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This person's skin occasionally crackles with lightning.  Their eyes have an "
+"eerie blue glow and sparks drip from their hands as they hurl themselves at "
+"the zombie hordes."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "voltaic vigilante"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+#, c-format
+msgid "%1$s unleashes a burst of sparks!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "miserable magician"
+msgid_plural "miserable magicians"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "miserable magician"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This person seems to be afraid of his own illusionary tricks, not being used "
+"to his 'magic' actually working.  He doesn't seem to be able to control it "
+"very well, or willfully."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "miserable magician"
+#. ~ Monster message of special attack of monster "feral radiant"
+#. ~ Monster message of special attack of monster "feral beacon"
+#. ~ Monster message of special attack of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s fires a photon beam!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "furious firestarter"
+msgid_plural "furious firestarters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "furious firestarter"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"The air around this person wavers slightly like summer heat, and flames "
+"occasionally flicker around their upraised hand.  There is a focused look in "
+"their eyes, and they seem to think they can kill every zombie in sight with "
+"their powers."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "furious firestarter"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+#, c-format
+msgid "%1$s summons a blast of flame!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "panic-stricken psychokinetic"
+msgid_plural "panic-stricken psychokinetics"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "panic-stricken psychokinetic"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"They stare around at the monsters nearby, occasionally making throwing "
+"motions with their hands.  Sometimes, when they make a throwing motion, one "
+"of the zombies is hurled through the air."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "manic mutterer"
+msgid_plural "manic mutterers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "manic mutterer"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"Holding their head in their hands, they barely seem aware of the world around"
+" them, but they still try to escape the zombies.  Looking at them, you feel "
+"an eerie sensation like fingers scratching at your mind."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "jittery jumper"
+msgid_plural "jittery jumpers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "jittery jumper"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This person looks vacantly around them with a blank expression on their face."
+"  Then, in an instant, they are gone."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "jittery jumper"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+#, c-format
+msgid "%1$s suddenly vanishes!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid "confused curer"
+msgid_plural "confused curers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "confused curer"
+#: data/mods/MindOverMatter/monsters/civilian_psychics.json
+msgid ""
+"This person mutters to themselves, glancing to and fro with bloodshot eyes.  "
+"They seem remarkably unscathed for someone in the midst of the apocalypse."
+msgstr ""
+
+#. ~ Message of spell "teleport_summon_monster ( [Ψ]Breach Monster )"
+#. ~ Message of spell "teleport_summon ( [Ψ]Breach )"
+#: data/mods/MindOverMatter/monsters/death_effects.json
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "The air nearby fractures and something comes through!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid "Dr. Brain"
+msgid_plural "Dr. Brains"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Dr. Brain"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid ""
+"An ordinary-looking scientist lost amid the carnage, were it not for the "
+"bloodshot eyes, the enlarged cranium, and the fact that the zombies ignore "
+"them.  Bits of paper and chemistry equipment lazily float in the air near "
+"them."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "Dr. Brain"
+#. ~ Monster message of special attack of monster "feral esper"
+#. ~ Monster message of special attack of monster "feral brainburner"
+#. ~ Monster message of special attack of monster "instiller of nightmares"
+#. ~ Monster message of special attack of monster "mi-go mindrender"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/mi_go.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "A roar fills %3$s's mind and the world is blotted out!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "Dr. Brain"
+#. ~ Monster message of special attack of monster "feral esper"
+#. ~ Monster message of special attack of monster "feral brainburner"
+#. ~ Monster message of special attack of monster "instiller of nightmares"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s stares at %3$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at you and your %2$s is hammered with psionic force!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at <npcname> and their %2$s is hammered with psionic force!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at you and you narrowly avoid an unseen attack!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares and <npcname> narrowly avoids an unseen attack!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at you, but the telekinetic attack rebounds off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid ""
+"%1$s stares at <npcname>, but the telekinetic attack rebounds off their "
+"armor."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "Dr. Brain"
+#. ~ Monster message of special attack of monster "feral PKer"
+#. ~ Monster message of special attack of monster "feral mindhand"
+#. ~ Monster message of special attack of monster "unstoppable force"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "The air around %1$s wavers."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid "feral security guard, Ψ Division"
+msgid_plural "feral security guard, Ψ Divisions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral security guard, Ψ Division"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid ""
+"A security guard gone feral, or so you thought.  As you look closer, you "
+"notice the relatively-normal appearance, the clear eyes, and the patch on "
+"their uniform with a Ψ shape in front of the logo of XEDRA.  The zombies "
+"around them ignore them as they move smoothly and purposefully through the "
+"ruins."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid "feral security captain, Ψ Division"
+msgid_plural "feral security captain, Ψ Divisions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral security captain, Ψ Division"
+#: data/mods/MindOverMatter/monsters/feral_lab_psychics.json
+msgid ""
+"A feral security guard with a military-style uniform, bearing the XEDRA logo "
+"and some kind of rank insignia.  Their movements are precise, controlled, and"
+" inhumanly smooth, and while their eyes are still bloodshot, they have a "
+"spark lacking in most ferals you've seen."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral adept"
+msgid_plural "feral adepts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral adept"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral human moves with a disturbing fluid grace.  Despite that, they "
+"bear the same crazed expression as all the others."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral dervish"
+msgid_plural "feral dervishes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral dervish"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Despite their appearance, this creature moves too quickly and smoothly to be "
+"truly human.  Bloodshot eyes are the only indicator that they are not some "
+"kind of perfectly precise android."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "human whirlwind"
+msgid_plural "human whirlwinds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "human whirlwind"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"With inhumanly precise movements, this feral moves toward you.  They are "
+"clearly still alive, but their mouth is closed and their chest does not rise "
+"or fall.  As you watch, they suddenly blur into rapid motion."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "human whirlwind"
+#. ~ Monster message of special attack of monster "avatar of the storm"
+#. ~ Monster message of special attack of monster "mi-go juggernaut"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/mi_go.json
+#, c-format
+msgid "%1$s begins moving much more quickly."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s blurs as they explode into motion!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral seer"
+msgid_plural "feral seers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral seer"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral human completely lacks the crazed look most of their compatriots "
+"have.  Instead, they fix their bloodshot eyes straight at you, seeming to "
+"gaze right into your soul, and raise their weapon."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral visionary"
+msgid_plural "feral visionaries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral visionary"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"By the time you see this feral, they have already noticed you.  They stare "
+"straight at you, regardless of obstruction or any obstacle in between, "
+"clutching a weapon in one hand."
+msgstr ""
+
+#. ~ Description of special attack of monster "feral visionary"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "The feral visionary throws a rock!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "pattern screamer"
+msgid_plural "pattern screamers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "pattern screamer"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral's eyes are closed, but they move with no hesitation, effortlessly "
+"avoiding all obstacles in their path, and clutching a large rock in one hand "
+"and a long bit of debris in the other.  When you look at them, you hear a "
+"static crackling, just on the threshold of inaudibility."
+msgstr ""
+
+#. ~ Description of special attack of monster "pattern screamer"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "With inhuman accuracy, the pattern screamer throws a rock!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "pattern screamer"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "Static fills your hearing for a moment, blotting out all other sounds!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral sparker"
+msgid_plural "feral sparkers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral sparker"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral has the standard bloodshot eyes and erratic movements, but in "
+"addition, some of their gestures unleash a shower of sparks.  They seem "
+"totally unphased by the light or the crackling sounds."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral sparker"
+#. ~ Monster message of special attack of monster "feral dynamo"
+#. ~ Monster message of special attack of monster "avatar of the storm"
+#. ~ Monster message of special attack of monster "mindhunter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/monsters/monster_overrides.json
+#, c-format
+msgid "%1$s's touches %3$s with a jolt!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral dynamo"
+msgid_plural "feral dynamos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral dynamo"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Lightning crackles across this feral's skin, occasionally discharging into "
+"the surrounding environment.  Their bloodshot eyes have an eerie blue glow."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral dynamo"
+#. ~ Monster message of special attack of monster "avatar of the storm"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s's unleashes a bolt of lightning!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral dynamo"
+#. ~ Monster message of special attack of monster "avatar of the storm"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s's waves a hand at %3$s and sparks crackle over their skin!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "avatar of the storm"
+msgid_plural "avatar of the storms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "avatar of the storm"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral is barely visible, their body constantly wreathed in bolts of "
+"lightning.  A harsh actinic glow casts their surroundings into sharp relief "
+"while leaving their own features concealed.  Crackling lightning nearly-"
+"constantly explodes from their body and grounds itself nearby."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "avatar of the storm"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s's gestures and lighting crackles around them!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral radiant"
+msgid_plural "feral radiants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral radiant"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral's skin has some sort of radiance.  Their eyes are bright with "
+"light and there's a slight shimmer around their form."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral radiant"
+#. ~ Monster message of special attack of monster "feral beacon"
+#. ~ Monster message of special attack of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s's form is shifting with illusions!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral radiant"
+#. ~ Monster message of special attack of monster "feral beacon"
+#. ~ Monster message of special attack of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s's looks at you for a moment."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral beacon"
+msgid_plural "feral beacons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral beacon"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Almost blinding light radiates from this feral's skin.  They seem to have "
+"greater control over their powers than most ferals, but they are still "
+"clearly insane."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral beacon"
+#. ~ Monster message of special attack of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s concentrates and unleashes a super-luminous flash!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral beacon"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at %3$s and %3$s is enveloped in an eerie glow!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "atom splitter"
+msgid_plural "atom splitters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral glows brighter than streetlamp, casting their surroundings into "
+"sharp relief amid the glow.  They are clearly still lucid but their "
+"expression is blank and their eyes are unfocused."
+msgstr ""
+
+#. ~ Death message of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s shrieks and unleashes a powerful blinding flash!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "atom splitter"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s stares at you and you are enveloped in an eerie glow!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral burner"
+msgid_plural "feral burners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral burner"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral human looks a little more composed than most, but only a little.  "
+"Their clothes are singed and the air around them shimmers like a summer heat "
+"haze."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and your %2$s is engulfed in flames!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and <npcname>'s %2$s is engulfed in flames!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and you narrowly avoid a burst of flame!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and <npcname> narrowly avoids a burst of flame!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid ""
+"%1$s gestures and your %2$s is engulfed in flames, but they do not burn you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid ""
+"%1$s gestures and <npcname>'s %2$s is engulfed in flames, but it does not "
+"burn them."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral burner"
+#. ~ Monster message of special attack of monster "feral inferno"
+#. ~ Monster message of special attack of monster "unending conflagration"
+#. ~ Message of spell "pyrokinetic_flash ( [Ψ]Brilliant Flash )"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#: data/mods/MindOverMatter/powers/pyrokinesis.json
+msgid "The air erupts into an eye-searing flash!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral inferno"
+msgid_plural "feral infernos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral inferno"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Through a cloud of smoke and fire, you can see a human form.  Their body is "
+"barely visible through the flames."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral inferno"
+#. ~ Monster message of special attack of monster "unending conflagration"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and summons a conflagration!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "unending conflagration"
+msgid_plural "unending conflagrations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "unending conflagration"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Occasionally through the fire and smoke, you can see a human form.  Their "
+"flesh blackens and withers in the heat, then the burns retreat and healthy "
+"skin replaces it, over and over again."
+msgstr ""
+
+#. ~ Death message of monster "unending conflagration"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s screams and the flames around them burst outward!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral PKer"
+msgid_plural "feral PKers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral PKer"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Though they still have a maniacal expression, this feral human is "
+"distinguished by the rocks floating in the around around them."
+msgstr ""
+
+#. ~ Death message of monster "feral PKer"
+#. ~ Death message of monster "feral mindhand"
+#. ~ Death message of monster "unstoppable force"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "As the %1$s dies, a wave of force explodes outward!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "feral mindhand"
+msgid_plural "feral mindhands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral mindhand"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"This feral human moves quickly across uneven terrain and, when you look more "
+"closely, you see that they are floating just above the ground.  The air "
+"around them is distorted strangely, like looking through the surface of "
+"water."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid "unstoppable force"
+msgid_plural "unstoppable forces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "unstoppable force"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+msgid ""
+"Hovering half a meter off the ground, this feral human is surrounded by a "
+"whirling cloud of rock, dust, splintered wood, and various household objects."
+"  As they move, the ground occasionally shakes."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "unstoppable force"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s gestures and the ground bursts apart!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "unstoppable force"
+#: data/mods/MindOverMatter/monsters/feral_psychics.json
+#, c-format
+msgid "%1$s closes their eyes and the ground shakes!"
+msgstr ""

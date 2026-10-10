@@ -1,0 +1,1620 @@
+# Batch 105 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid ""
+"I like what you and Corrie's put together.  I did promise payment for a "
+"proof-of-concept, what'll it be?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "I'll have some icons."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "I want Corrie to have some extra rations."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Let's negotiate some other time."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Here's your money.  Don't spend it all in one place."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid ""
+"A generous soul, are we?  That's not what I was expecting, but I'll see to "
+"it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid ""
+"Yes, I was just informed of that.  I also heard that she found a large group "
+"of people living out in an old evacuation center, who consider themselves "
+"merchants.  That would be a good place to resume our spread of the Truth, "
+"perhaps we could find others who were faithful before <the_cataclysm>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "I presume you want me to pay a visit?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Oh, I've met them before!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid ""
+"Yes, you seem like a good fit for the job.  I'll pay you a small sum for "
+"getting some information about them."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Alright, I'll go and see what's up."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Really?  I'd pay a small sum for information about them."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid "Well, they're…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Helena_Misinter.json
+msgid ""
+"You've been nothing but a leech and a stain on us, we don't want you here "
+"anymore nor your \"services\" you might provide.  Now get out."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Could you provide any medical services?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "I might have some medicine for the community.  Anything you're missing?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Are you taking care of Arturo?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Do you want to come with me?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "&Jane glaces at you, scowls, and ignores your presence."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "<u_name>, what can I do for you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"Oh, I don't think we've met before.  My name's Jane, I'm the local doctor."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Nice to meet you too, Jane."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgctxt "u:f"
+msgid "Always nice to meet a fellow outsider.  How can I help you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgctxt "u:m"
+msgid "Always nice to meet a fellow outsider.  How can I help you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgctxt "u:n"
+msgid "Always nice to meet a fellow outsider.  How can I help you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Sure, I don't see why not.  I've gotta keep my mind off stuff anyway."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I'm doing somewhat well, thanks to my occupation.  The other joinees, well, "
+"they're barely scraping by.  It's been tense, and I'm not seeing it change "
+"for the better."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I was a physician, one of the more unfortunate people who didn't call in sick"
+" during the riots.  I remember it all so clearly, the cuts, bruises, deep "
+"bites, then those oily black eyes, caustic yellow blood, spastic fungal "
+"growths… it was terrible gnarly.  Then things descended into all-new levels "
+"of fucked up, and some of my coworkers were preparing to just get the hell "
+"out.  I followed them."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Were you evaced'?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"No, not really.  I came here after I was split from my friends by a horde of "
+"<zombies>.  They let me in after I gave away some food I found.  The church "
+"distrusts my profession; I get by helping Kostas."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I really don't, actually.  Even my help is thankless here.  Bandaging cuts, "
+"setting bones, disinfecting wounds; who needs all that when they can pray "
+"anything away?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Do you have any work available?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Would you like to buy any supplies?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I do what I can, but he's mostly beyond my skillset.  Coke's a <freaking> "
+"<name_b>, really messes a person up.  Arturo was on it for several years "
+"before he tried to get help, now he has auditory hallucinations; hears voices"
+" from nowhere.  Traumatic experiences have a harsher effect on recovering "
+"addicts, but <the_cataclysm> is worse than anything we've gone through "
+"before."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"Thorazine would go us a long way, but Arturo's having trouble getting it.  "
+"They think he's the key and that my help would obstruct him.  Regardless, "
+"there's just so much anti-medical sentiment here that I've given up on "
+"prescribing anything."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "What about Kostas?  The Church seems to trust him."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"He's an alright physician, but the Church massively overrates him.  They "
+"think his 'natural medicine' can cure anything, like he's a magic medicine "
+"man.  God created everything, so what on Earth isn't natural?!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "How do you feel about him personally?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"Personally, I like him.  We've worked together for a few cases, but most "
+"people refuse to let me work; they only want to see him."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"Sure, I've got some supplies on hand, just give me a minute and you'll be "
+"right as rain.  It'll cost three icons."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "I can pay for quality work.  Here it is."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I'm up for it, Arturo's got enough medicine for two-and-half months.  It's "
+"thankless work around here, so let's blow this joint."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I'd like to leave, but I've got to take care of Arturo.  He's always low or "
+"nearly out of antipsychotics, so I do what I can."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Alright.  Wanna chat?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"I could always use more bandages, disinfectant, and the like.  What do you "
+"have?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+#: data/json/npcs/godco/members/foodguard.json
+msgid "I don't have anything right now.  <done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "I don't have anything right now.  I'll come back with something later."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid ""
+"Fuck off <name_b>.  I've had it with your tormenting antics, I don't want "
+"anything to do with you right now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jane_Schulz.json
+msgid "Fine then, have it your way."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "What are your parents like?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Were could I find work around here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "What are you doing around here <name_b>?  Get lost."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Hey, look who's back."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Oh, uh… you look new.  Didn't think we'd see new people here.  Hey."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I'm just a traveler, kid.  I won't be staying here for long."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I'm not exactly new here, kid."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+#: data/json/npcs/godco/members/NPC_Olwen_Powell.json
+msgid "What's with the attitude?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I have a name, you know.  It's Jeremiah, but people just call me Jerry."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"I thought asking about each other's emotions went out of style after "
+"<the_cataclysm>.  Uhm, okay then.  I'm fine, I guess."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I noticed you're holding a D&D handbook.  Do you play much?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I've convinced Kostas to take you on."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"My take?  You already know how things are.  People are dead, my friends are "
+"dead, so yeah.  At least there's no school, the adults just love reminding me"
+" that.  You know what?  I kinda miss school."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"I was in high school, like anyone else my age.  Then out of nowhere, my mom "
+"pulled me out of school to \"save me\".  I got packed into a bus with my "
+"parents and their old-timey friends.  We've been stuck here ever since.  "
+"Actually, it's not all that bad.  I'm studying to be a herbalist like Kostas,"
+" which is cool I guess."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"Yeah, I play.  I ran a campaign for a while with some of my friends, we'd "
+"play after school.  I don't know where they are now, though.  Do you wanna "
+"play some?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Sure, I'm up for it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"&Jeremiah leans his head towards your ear, speaking in a low whisper.  \"To "
+"be honest with you, I don't like my mom at all.  She's like a <freaking> "
+"helicopter, always telling me what to do, where to go, who I can be with.  "
+"She never thinks of me as an individual, only some idea of who she thinks I "
+"am.  My dad's alright, he's the chef around here.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"I don't know, exactly.  I think I'll stay here and do what I can for the "
+"community."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"I'd like to study herbology with Kostas, it seems like a useful skill these "
+"days.  I do feel bad for Jane though, she's a skilled doctor and nobody here "
+"cares, they all just think any illness can be prayed away."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "When do you plan on starting that apprenticeship?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"Well…  Kostas is a bit unsure about teaching me, for some reason.  If you "
+"could change his mind, I'd pay you some \"icons\", what we've started using "
+"for money around here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "No thanks.  <done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "I'll see what I can do for you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "That's great!  Thanks <name_g>, here's the money."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "You're welcome."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"Darryl should have something for you to do if you like gardening, Jane could "
+"use some medical supplies, too.  If you like to be bossed around, Helena "
+"probably has a few things that need doing.  I'd just ask around, really."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Is there anything you need?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid ""
+"You know very well what I'm upset about.  Now do like I said earlier and get "
+"lost."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Jeremiah_Weaver.json
+msgid "Fine, whatever."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "What are the advantages of being a dorm leader?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Heard you and Olwen were some kind of lovebirds?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "How did Olwen receive the rings?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Did Olwen like the dress?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Why did you join the Church?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Hey…  I'm Julian, the guy in charge of this room.  Are you… planning on "
+"sticking around or somethin'?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Why are you still around, don't you have someone else to bother?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Good to see you again <u_name>."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Hey, a new face.  I'm Julian, the guy in charge of this room.  You're "
+"planning on sticking around or somethin'?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Nice to meet you, Julian.  I'm just passing through."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Nice to meet you, Julian.  I'm seeking asylum."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "I'm a joinee actually.  Nice to meet you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Nope, just me and you pal.  What's the attitude about?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Hello, Julian.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "If you have complaints, please don't tell anyone."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "You're still staying here, joinee?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Need anything, joinee?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Need anything?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgctxt "u:f"
+msgid ""
+"You sure?  I mean, you've been traveling for a long time, haven't you?  "
+"Alright, it's your decision.  Let me know when you changed your mind."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgctxt "u:m"
+msgid ""
+"You sure?  I mean, you've been traveling for a long time, haven't you?  "
+"Alright, it's your decision.  Let me know when you changed your mind."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgctxt "u:n"
+msgid ""
+"You sure?  I mean, you've been traveling for a long time, haven't you?  "
+"Alright, it's your decision.  Let me know when you changed your mind."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Aight, here are the rules: don't commit sins, don't litter, and try not to "
+"die.  Have some mutual respect, capiche?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Actually, <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Of course, our relationship was going pretty well before <the_cataclysm>.  "
+"Olwen seems to be under the weather lately, but I want to give her a great "
+"surprise and make her smile again…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Want me to help you with that surprise?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"With a big smile and her eyes wide open!  I can't thank you enough for "
+"helping me with that, even so…  You could maybe lend your hand again to bring"
+" even more happiness to this place?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"She loved it!  I still can't believe I will be able to provide her with a "
+"proper wedding even after everything that happened, you have been a real life"
+" saver <name_g>."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Listen, I have some bad news.  I don't personally have anything against you, "
+"but many of the people here are very… discriminatory against those who look "
+"like you.  I hate to say it, but I'll have to turn you away.  I'm sorry."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Alright, let's talk about something else."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "I get the picture, screw this."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Your name is now on the books.  Here's your blanket, joinee.  Those two beds "
+"next to the window, you can choose one of them.  It's safe, don't worry.  I'm"
+" armed.  By the way, if you're hungry you can go bug Simon for a meal, up to "
+"one in a day."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Thank you.  See you around, Julian."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"&Julian suddenly appears disturbed, and looks away from you for a moment.  "
+"\"It's a long story, and not an interesting one at that.  I was a cop before."
+"  You must've heard about those riots and all that.  I'm glad we all managed "
+"to make it out alive.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "How did you make it out?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"Well, I might as well be honest with you.  I ran mostly, ran like the devil "
+"was chasin' me.  I was at one of the police stations in town, when we were "
+"called out to handle a violent mob on the loose.  When we got there, the "
+"people were crazy, smashing and killing everything in their way.  They had "
+"these bloodshot eyes and a weird goo in their mouths.  We pulled out all the "
+"stops to handle them.  When tear gas wouldn't work, the chief told us to draw"
+" guns and kill them all.  We did…  There was so much blood…  That maneuver "
+"killed a lot of them, but not all.  One snuck up behind a lady who worked "
+"with us, tore a whole section of her spine out.  She never even had time to "
+"scream, just slumped over the cruiser door…  So I jumped post and ran, never "
+"looked back.  God, I can still hear the cries…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "I'm sorry for your loss.  Maybe we should change the subject."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+#: data/json/npcs/godco/members/NPC_Russell_Connelly.json
+#: data/json/npcs/refugee_center/surface_refugees/NPC_Boris_Borichenko.json
+msgid "I'm sorry for your loss.  <end_talking_leave>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Advantages?  All I do is work!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Anything I can do to help you out?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Yeah, it must be exhausting.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"It's been a struggle, trying to keep this bunch together.  Oh things could be"
+" better here, of course.  It could always be, but sometimes we don't even "
+"realize how good we have it here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"When I was younger, I used to go to church with my family.  When I started "
+"growing up, I saw all this evil around me, people hating and persecuting "
+"others, despite the teachings of Jesus; I just stopped going one day, decided"
+" to make my own way.  I joined the NECC a few years back to rekindle my "
+"relationship with God, get back to who I was."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "I'd rather not talk about it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "Yeah, I can understand.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid ""
+"&\"You've messed me over a good bit, and I've had enough.  Goodbye.\"  Julian"
+" goes back to his business and ignores you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Julian_Ray.json
+msgid "See ya later <name_b>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Arturo?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Corrie?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Jane?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Sonia?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Zachary?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Simon?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you tell me about Jeremiah?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "You don't seem to like the joinees very much.  Why is that?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Do you know where I could find some work?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:f"
+msgid "Oh well, yet another sinner.  Don't talk to me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:m"
+msgid "Oh well, yet another sinner.  Don't talk to me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:n"
+msgid "Oh well, yet another sinner.  Don't talk to me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Please go away, I'm not in the mood to talk right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "<u_name>, bless you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:f"
+msgid "Oh well, yet another survivor.  Welcome to our group, I'm Katherine."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:m"
+msgid "Oh well, yet another survivor.  Welcome to our group, I'm Katherine."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgctxt "u:n"
+msgid "Oh well, yet another survivor.  Welcome to our group, I'm Katherine."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Hi, Katherine.  How's it going?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Nice to meet you, Katherine."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "You sure, I've got plenty of time."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Okay, I'll see you later."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Alright, fuck you then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "It's always a pleasure.  How may I help you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "We have many things to pray for, I'm afraid."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I understand.  I don't have the answers you are looking for, I'm afraid."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "I'll be on my way then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"Our prayers were heard.  We knew the day was coming, so we prepared.  Our "
+"community stockpiled months' worth of canned goods, well enough until the "
+"chaos ends.  With the food we have left, we could live peacefully, but we "
+"foolishly didn't take extra people into consideration.  With so much at risk,"
+" I don't think we can afford more people.  Though I'm not the one who makes "
+"the decisions here, and it's probably for the better."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Can you can take in joinees once there's a vacancy?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I worked for the Church, organized charities and filed paperwork.  That's how"
+" I met the Founder.  I did so much for everyone, yet they never noticed…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"You're right, I don't.  They should've come when they had the chance.  Now "
+"that our Ark has sailed, they want to jump aboard.  Such is the way of "
+"sinners, I suppose."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"If there's a vacancy.  Even then, there's the decision of which joinee to "
+"include.  Those people don't share or respect the same values as we do.  None"
+" of them are promising candidates."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Jesus warned us about false prophets."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"She knows this and that about electronics.  The generator we have here was "
+"made by her.  Nice to have one here, even though there's not much use for it "
+"yet."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I hear she knows this and that about electronics.    She keeps herself "
+"occupied by doing menial tasks around the camp, looking for payment."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"There's not an illness God can't cure.  Yet, by fate, we were given a doctor."
+"  She's now taking care of Arturo, that poor thing.  Oh well, who am I to "
+"question God's ways?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"She occasionally plays her guitar in the hall, and she's quite good at it.  "
+"Unsurprisingly, she doesn't know any hymns.  Wouldn't let her near my son."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"My dear, sweet husband.  He worked as a cook for one of the homeless "
+"shelters, that's how we met.  He's always liked to try new things.  He should"
+" be in the dining hall, if you want to see him."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"He's my son, such a wonderful boy.  He's always been the light in my life, "
+"and I've tried to teach him well.  We've been a bit distant as of late, but "
+"I'm sure he'll come around."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"He can keep his distance with his smug nothingness.  At least he's a bit more"
+" useful than some of the others.  He helped Corrie make that generator."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I'm not planning to communicate with him, that's for certain.  He can keep "
+"his distance with his smug nothingness.  At least he knows how to cut lumber."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"If you're here for an exciting story, you're talking with the wrong person.  "
+"Ever since I was born I've lived very modestly.  Did I regret it?  No, it "
+"will all be worth it in the end…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+#: data/json/npcs/godco/members/NPC_Tom_Powell.json
+msgid "Tell me about the community."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I've been a member of the New England Church Community for a quarter of a "
+"century, took part in each and every sermon and gathering they held even "
+"while I was carrying my boy Jeremiah.  Not to mention the countless times we "
+"visited those filthy homeless shelters and prisons filled with sinners.  I "
+"even met the Founder himself.  I can confidently say I'm more worthy to be "
+"here than those impostors who leech on us at this camp."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "The Founder?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"I'm sure you've met my husband, Simon.  He was also a volunteer at a homeless"
+" shelter, working as a cook.  We were brought together by the hands of fate "
+"as some would say.  We have a son together, Jeremiah, the light in my life.  "
+"Such a creative and well-behaved boy, I just wish we could find an "
+"appropriate woman for him."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"He was quite reserved when I met him, seemed distant in his thoughts.  "
+"Theresa has the answers you are looking for."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "I'll talk to her then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"Look, I'm rather upset and just need some time alone, okay?  I'm sure you're "
+"very busy."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "I don't have the time to wait, now can we get on with business?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid ""
+"&Katherine scowls with anger at you.  \"This is the exact <freaking> reason I"
+" don't want to talk to you, now go away!\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Katherine_Weaver.json
+msgid "Fuck's sake <name_b>, I'm leaving!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "I have the pine needles you asked me for."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "You learn how to craft pine tea."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "A sin against God, did you know that's what you are?  Get away from me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"&Kostas looks up at you and scorns.  \"I'm rather busy right now with an "
+"important project, go away please.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "<u_name>, how can I help you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:f"
+msgid ""
+"You must be new here, nice to meet you.  They call me Kostas, I'm the local "
+"herbalist."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:m"
+msgid ""
+"You must be new here, nice to meet you.  They call me Kostas, I'm the local "
+"herbalist."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:n"
+msgid ""
+"You must be new here, nice to meet you.  They call me Kostas, I'm the local "
+"herbalist."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Nice to meet you too, Kostas."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "I heard Jeremiah wanted to learn a few things from you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Hi, Kostas.  Care to trade?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Hey, I think we've got some time to chat, don't you?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Hey Kostas, find something interesting lately?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Hey, Kostas.  <end_talking_leave>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+#: data/mods/MindOverMatter/npcs/dialogue/refugee_guards_traitor.json
+msgid "What the hell are you talking about?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"I'm afraid I haven't gone out there for a while, maybe come back in "
+"<interval>.  These are all I have, care to take a look?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"Sorry these are all I have.  However I'll be back from my next run in "
+"<interval>.  Care to take a look in the meanwhile?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Alright, I'll take a look."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Alright, thanks for informing me.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+#: data/json/npcs/godco/visitors/TALK_CARAVAN_MERCHANT_PREDATORY.json
+msgid "What can I do for you, <name_g>?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Are there any jobs I could do?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"My story?  I'm afraid it's not as gripping as the other tales around here.  "
+"My father was an herbalist, my grandfather was an herbalist and - as "
+"ancestral pressure would have it - I also became an herbalist.  I studied "
+"from the best teachers and, through the years, a generation's knowledge "
+"passed on to me.  I've spent a good portion of my life warning others of the "
+"fakery that is plastic medicine and helping them rediscover the forgotten "
+"beauty that lies in our surroundings.  I joined the New England Church "
+"Community to express my gratitude towards the benevolence of nature.  This is"
+" where it brought me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"It's been quiet and peaceful.  Nature is recovering, and so are we.  There's "
+"something bittersweet about <the_cataclysm>, isn't there?  Our species was on"
+" the path of destruction, but Mother Nature spared us.  A sign of mercy for a"
+" creature that did not deserve it."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"You must be new to herbalism, no?  In short, I scavenge the land for herbs to"
+" supply our humble community with medicine.  And that's just one part of my "
+"job.  Say, are you interested in buying campsite gear?  I came across an "
+"abandoned camp while foraging.  One can only wonder what happened to its poor"
+" inhabitants…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Care to share your knowledge about herbalism?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"Foraging is about recognizing the abundance that is around us all the time, "
+"not seeking out rare species."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"You'll need a good book to confidently identify edible and poisonous wild "
+"foods.  I'd recommend the book 'Autobiography of a Mountain Man' for detailed"
+" descriptions."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"Never eat any wild food without first being sure of its identity.  It only "
+"takes one mistake."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"The huge diversity of wild plants and fungi can be very daunting to the "
+"novice forager.  Don't be too ambitious.  Try to enjoy the learning process "
+"without getting frustrated or taking risks around uncertain identifications."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"I can tell you this: pine needles make the best tea.  Perhaps I'll make you "
+"one someday."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Can I try your pine needle tea?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Sure.  Bring me a dozen pine boughs and I'll boil you some."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"This recipe is a gemstone of my family heritage.  Lucky for us that the most "
+"common evergreen tree in the U.S. is non-toxic.  Start by rinsing the "
+"needles, and separating any woody parts from them.  Then, cut the pine "
+"needles in half.  Add one bough's worth of chopped needles to a cup or mug "
+"and fill it with boiling water.  Let the needles steep for ten minutes, until"
+" they turn brownish and sink down to the bottom.  As a final step, you can "
+"strain the needles, but then you'd be wasting precious calories.  A drink "
+"like this is perfect for mid-winter colds."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Thank you.  See you around, Kostas."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"Yeah, yeah…  I don't think he'd be a good fit for an herbalist.  He has a bad"
+" habit of wandering off someplace, could get him killed one of these days."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"Jeremiah's a bright kid.  I'll just tell him to not wander as a stipulation."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "I know him pretty well, I'm sure he'll learn as he goes along."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"If you don't take him under your wings, I'll rip them off for you.  Capiche?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:f"
+msgid ""
+"Alright, you've convinced me.  I'll take Jeremiah on and show him the ropes."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:m"
+msgid ""
+"Alright, you've convinced me.  I'll take Jeremiah on and show him the ropes."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgctxt "u:n"
+msgid ""
+"Alright, you've convinced me.  I'll take Jeremiah on and show him the ropes."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "No, I'm still certain about this.  Jeremiah just isn't a good fit."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Alright.  See you around, Kostas."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"You think you're so tough <name_b>?  I'm not taking Jeremiah on, certainly "
+"not when his representitive is so barbaric.  I don't know how he got such a "
+"violent individual like yourself to do this, but I hope he can find someone "
+"else in the future."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Fuck you then, you judgmental <name_b>."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"I'm talking about you and your filthy, unnatural appearance.  I don't like "
+"your kind, and neither does anyone else.  Go repent before the Lord for your "
+"many sins, if he'll even listen to you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Fuck you, I'm blowing this joint."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid ""
+"&Kostas becomes visibly angry now, glaring at you.  \"Feeling pushy today, "
+"are we?  If you want to hear it plain, we're not on good terms at the moment "
+"and I would appreciate it if you didn't bother me for a while.  Understand?\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Kostas_Walsman.json
+msgid "Okay, see you later."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+#: data/json/npcs/godco/members/NPC_Sonia_Greene.json
+#: data/json/npcs/godco/members/NPC_Zachary_Montes.json
+msgid "Is everyone treating you fairly?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Ahh!  What the hell are you?  Get the freaking away from me!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Buzz off <name_b>, I'm not interested in <freaking> chatting with you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Hey <name_g>!  Nice to see you again!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Hey <u_name>!  Nice to see you again!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid ""
+"I don't think I've met you before, have I?  I'm Maria Serrano, it's nice to "
+"see an new face."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "It's a pleasure to meet you, Maria."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Hey Maria.  What's up?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Maria, why the sudden hostility?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Hey Maria.  <end_talking_leave>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+#: data/json/npcs/godco/members/NPC_Tom_Powell.json
+msgid "Alright, alright, chill out, I'm leaving!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Could you sew something for me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "How's my order going?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid ""
+"I arrived a bit later than everyone else, I was at my studio when "
+"<the_cataclysm> came.  Had to dodge a big horde of <zombies> on my way out of"
+" town, totaled my car, and hiked the rest of the way."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid ""
+"I always wanted to be a fashion designer when I was young.  I used to have a "
+"set of dolls, and I'd make dresses for them out of spare cloth I could find."
+"  I took up sewing in high school, and I was trying to get a job with Fashion"
+" Nova before <the_cataclysm> screwed that up."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid ""
+"Things are alright, could be better.  I've been mending clothes and sheets "
+"ever since I arrived, fixing this and that.  Theresa's been a big help in "
+"those regards, we've traded quilt patterns and designs quite a bit."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Could you tell me about Theresa?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid ""
+"She's a kind old lady, does a lot of knitting.  She could probably make you "
+"something if you asked nicely."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "Yeah, they are.  I just wish my work was more appreciated."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "What'll ya have?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a t-shirt."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a pair of pants."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a leather jacket."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a dress."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a duster."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/godco/members/NPC_Maria_Serrano.json
+msgid "I'll have a trench coat."
+msgstr ""

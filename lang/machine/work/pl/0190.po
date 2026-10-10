@@ -1,0 +1,1727 @@
+# Batch 190 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Player message in effect in EoC "EOC_BLIND_THE_SUN_CHECK_FOR_STORM" in
+#. nested EOCs in effect in EoC "EOC_VAMPIRE_BLIND_THE_SUN"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You feel that the anomalous energies of the storm would do quick work of any "
+"darkness you could summon, so you decide to not attempt to blot out the sun "
+"for now."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_BLIND_THE_SUN_CHECK_FOR_STORM"
+#. in nested EOCs in effect in EoC "EOC_VAMPIRE_BLIND_THE_SUN"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"Using your mastery over the Shadowed Path, you blot out the sun, covering the"
+" region around you in darkness for a short period of time."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VAMPIRE_BLIND_THE_SUN"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "You don't have enough blood to blot out the sun."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_UNBLOT_THE_SUN"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "The darkness you summoned fades away, clearing the sky."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EARTH_SLEEP_CHECK_SATISFIED" in
+#. nested EOCs in effect in EoC "EOC_EARTH_SLEEP_CHECK_REAL"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "Your sleep has been restful, thanks to the proximity of the earth."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EARTH_SLEEP_CHECK_PENALTY" in nested
+#. EOCs in false effect in EoC "EOC_EARTH_SLEEP_CHECK_REAL"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You struggle to awaken, feeling tired and weakened.  Having slept away from "
+"the earth, your sleep wasn't as restful as it should've been."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_HOLY_BURN_CHECK_2" in nested EOCs in
+#. effect in EoC "EOC_HOLY_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You are too close to a holy place!  You must flee its proximity immediately "
+"or you will die!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_HOLY_BURN_CHECK_REMOVE" in nested
+#. EOCs in false effect in EoC "EOC_HOLY_BURN_CHECK_2" in nested EOCs in effect
+#. in EoC "EOC_HOLY_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You are now far enough from the holy place.  You no longer feel like you're "
+"burning up."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAST_WATER_BURN_CHECK_2" in nested
+#. EOCs in effect in EoC "EOC_VAST_WATER_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You are too close to a vast body of water!  You must flee its proximity "
+"immediately or you will die!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAST_WATER_CHECK_REMOVE" in nested
+#. EOCs in false effect in EoC "EOC_VAST_WATER_BURN_CHECK_2" in nested EOCs in
+#. effect in EoC "EOC_VAST_WATER_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You are now far enough from the vast water.  You no longer feel like you're "
+"melting."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_BLOOD_CRAVING_START"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You feel a growing craving for blood.  If you do not drink blood soon, the "
+"craving will grow unbearable for a short time."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VAMPIRE_INVISIBLE_IN_DARK_2" in
+#. nested EOCs in effect in EoC "EOC_VAMPIRE_INVISIBLE_IN_DARK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "You cannot use this power under the sun's rays."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VAMPIRE_INVISIBLE_IN_DARK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "You don't have enough blood to shroud yourself in shadows."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUN_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You are under the sun!  You must find shelter from its rays or you will die!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SUN_BURN_CHECK_REMOVE" in nested EOCs
+#. in false effect in EoC "EOC_SUN_BURN_CHECK"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"The sun's rays cannot reach you anymore.  You no longer feel like you're "
+"burning alive."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ANATHEMA_MIND_CHAOS_ROLL_SUCCESS"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid "The chaos within your head coalesces and destabilizes your mind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ANATHEMA_MIND_CHAOS_ROLL_FAIL"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"The chaos within your head coalesces but it cannot latch on your mind, so it "
+"will remain there until it decoheres."
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_MENTOR_VANISH"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+#, c-format
+msgid "%1$s's vanishes in a fine mist."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_MENTOR_VANISH"
+#: data/mods/Xedra_Evolved/mutations/vampire_trait_eocs.json
+msgid ""
+"You're not a mentor, so you're not supposed to see this.  Please open a "
+"Github bug report."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "One with the Night"
+msgstr ""
+
+#. ~ Description of mutation "One with the Night"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You have ascended in power and can rival the mighty night-creatures of old.  "
+"The night is your home, now, out of the light of the sun."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Lilit"
+msgstr ""
+
+#. ~ Description of mutation "Lilit"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You are one of the lilin, a hunter in the night, driven to feed on the spiritual essence (some might say the soul) of your prey.  Probably you were born that way, but maybe it happened to due to a malediction, or some artifact you found in a place best forgotten.  Regardless, it is your gift and your curse now, and you must use your powers to survive.\n"
+"\n"
+"You may activate this trait to spend some ruach toward increasing your power.  You must be outside under the moonlight to have a chance of gaining new lilin powers."
+msgstr ""
+
+#. ~ Description of mutation "Enervating Touch"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"With but a touch, you can drain the vitality and spiritual essence from your "
+"targets."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Breath Stealer"
+msgstr ""
+
+#. ~ Description of mutation "Breath Stealer"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You no longer need to touch your targets to drain their ruach; you can do it "
+"at a short distance through their breath."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Ruach is the Hebrew word for 'breath,' but it can also mean 'spirit'
+#. ~ Name of spell "lilin_drain_ruach_short_ranged_spell"
+#. ~ Name of spell "lilin_drain_ruach_long_ranged_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Ruach Drinker"
+msgstr ""
+
+#. ~ Description of mutation "Ruach Drinker"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You no longer need to touch your targets to drain their ruach; you can do it "
+"at a great distance through their breath."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalm 132:4
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Given Sleep to Their Eyes"
+msgstr ""
+
+#. ~ Description of mutation "Given Sleep to Their Eyes"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"In sleep, a person's defenses are down and it is easier for the things in the"
+" night to prey upon them.  You gain additional ruach from sleeping targets."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Job 22:14
+#. ~ Name of spell "lilin_change_weather_fog_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Thick Clouds A Covering"
+msgstr ""
+
+#. ~ Description of mutation "Thick Clouds A Covering"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Call up thick clouds of fog, allowing you to hide from your enemies.  This "
+"power <color_green>lasts longer</color> when closer to the new moon."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "lilin_evil_eye_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "The Evil Eye"
+msgstr ""
+
+#. ~ Description of mutation "The Evil Eye"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"With a baleful gaze and a heart full of malice, curse a single target with "
+"misfortune."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Cry of the Night-Bird"
+msgstr ""
+
+#. ~ Description of mutation "Cry of the Night-Bird"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Let out a piercing cry, disorienting both enemies and allies nearby."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "On Silent Wings"
+msgstr ""
+
+#. ~ Description of mutation "On Silent Wings"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can transform yourself into an owl and take wing on the night air.  You "
+"won't be able to drain ruach while you are in this form."
+msgstr ""
+
+#. ~ Description of mutation "Silent in Darkness"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"When shrouded in shadows, you make as little noise as one.  Your movement is "
+"fully silent at night unless you're out of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Genesis 1:5
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "And There Was Evening"
+msgstr ""
+
+#. ~ Description of mutation "And There Was Evening"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You were born to walk the night, and have a much easier time sleeping during "
+"the day."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalms 121:4
+#. ~ Name of spell "lilin_avoid_sleep_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Neither Sleep Nor Slumber"
+msgstr ""
+
+#. ~ Description of mutation "Neither Sleep Nor Slumber"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"While sleep is restful, the ruach you gain fills you with more energy than "
+"even a good night's rest.  You may spend ruach to alleviate your sleepiness."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Proverbs 5:3
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Smoother than Oil"
+msgstr ""
+
+#. ~ Description of mutation "Smoother than Oil"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your presence is intoxicating, and humans have a hard time resisting your "
+"charms.  You gain a bonus to your persuasion chance as long as you aren't "
+"empty of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Exodus 20:16
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The False Witness"
+msgstr ""
+
+#. ~ Description of mutation "The False Witness"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You have a much easier time spinning lies and making people believe them.  "
+"You gain a bonus to your lying chance as long as you aren't empty of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Jeremiah 10:14
+#. ~ Name of spell "lilin_mesmerize_target_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Senseless and Without Knowledge"
+msgstr ""
+
+#. ~ Description of mutation "Senseless and Without Knowledge"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can temporarily beguile a single human, fey, or avian target, causing "
+"them to stand senseless or wander in a daze.  Any damage will bring the "
+"target out of their trance."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Romans 6:23
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Gift of Eternal Life"
+msgstr ""
+
+#. ~ Description of mutation "The Gift of Eternal Life"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your body has now stopped aging, massively extending your longevity.  You can"
+" still be killed but as long as your body can heal, all your wounds will "
+"eventually fully heal no matter how severe they are."
+msgstr ""
+
+#. ~ Description of mutation "Enduring Through All Generations"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"With eternal youth comes the strength to endure past anything one could face."
+"  Your speed won't be lower than its default as long as you have some ruach "
+"in you."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "lilin_aoe_line_disease_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Unleash the Night-Wind"
+msgstr ""
+
+#. ~ Description of mutation "Unleash the Night-Wind"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "You may unleash a foul miasma on your enemies, sickening them."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "lilin_disease_enhancement_damage_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Devoured by Pestilence"
+msgstr ""
+
+#. ~ Description of mutation "Devoured by Pestilence"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You may greatly enhance the power of the miasma from Unleash the Night-Wind, "
+"doing serious damage and crippling your target."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "lilin_blinding_target_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Dwelling in Deep Darkness"
+msgstr ""
+
+#. ~ Description of mutation "Dwelling in Deep Darkness"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You may cut a single target off from light, completely blinding them.  You "
+"may only do this at night, and only indoors or out in the wilderness."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name comes from Genesis 29:17
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Of Beautiful Form"
+msgstr ""
+
+#. ~ Description of mutation "Of Beautiful Form"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can use your powers to spin a web of illusion around yourself, increasing"
+" your attractiveness to a supernatural degree.  While the harsh light of the "
+"sun destroys the illusion, you need merely to move back into the shadows to "
+"restore it."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name comes from II Samuel 14:25
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Without Blemish"
+msgstr ""
+
+#. ~ Description of mutation "Without Blemish"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can use your powers to spin a web of illusion around yourself, increasing"
+" your attractiveness to a supernatural degree.  While the harsh light of the "
+"sun destroys the illusion, you need merely to move back into the shadows to "
+"restore it.  You have grown so powerful that this illusion requires almost no"
+" effort and can be <color_green>maintained for weeks</color> at a time."
+msgstr ""
+
+#. ~ Description of mutation "Might of the Nephilim"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Like the monstrous children of angels and humans, your prowess surpasses "
+"mortal limits.  Activate this trait to empower yourself."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Proverbs 30:15
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Alukah's Daughter"
+msgstr ""
+
+#. ~ Description of mutation "Alukah's Daughter"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can drain essence from your targets with your unarmed attacks.  Not well "
+"enough to absorb their ruach, should they have any, but enough to cause "
+"additional damage at night.  This damage is strongest during the half to full"
+" moon and weakest during the new moon.  It functions only slightly during the"
+" day."
+msgstr ""
+
+#. ~ Description of mutation "Reaping the Whirlwind"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"With an expenditure of ruach you can drastically enhance your speed for a "
+"short period of time."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "From Shadow to Shadow"
+msgstr ""
+
+#. ~ Description of mutation "From Shadow to Shadow"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can leap away from attacks like shadows dancing in candlelight.  You gain"
+" Uncanny Dodge while under the effects of Reaping the Whirlwind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Strigine Gaze"
+msgstr ""
+
+#. ~ Description of mutation "Strigine Gaze"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your eyes have adapted to the darkness of the night, allowing you to see "
+"further through the shadows.  This is most effective out under the moon but "
+"still has an effect indoors."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Owl's Wisdom"
+msgstr ""
+
+#. ~ Description of mutation "Owl's Wisdom"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"The owl is a symbol of wisdom in culture after culture, and you are the heir "
+"to that wisdom.  You find it easier to learn things, and even easier the more"
+" ruach you're holding on to."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Shattering the Broken Vessels"
+msgstr ""
+
+#. ~ Description of mutation "Shattering the Broken Vessels"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Attuned to darkness and disease, you can easily spot the cracks in your "
+"enemies' defenses.  You have an easier chance to hit enemy weakpoints, "
+"increasing as your ruach rises."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalms 91:6
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Pestilence that Stalks in Darkness"
+msgstr ""
+
+#. ~ Description of mutation "The Pestilence that Stalks in Darkness"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You are at home in the darkness and it clings to you to cover your movements."
+"  In a half- or smaller moon, and when out of the daylight, it is harder for "
+"your enemies to spots you."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalm 147:17
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Stand Before the Cold"
+msgstr ""
+
+#. ~ Description of mutation "Stand Before the Cold"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"As a hunter in the night, you are well-conditioned to the cold after the sun "
+"goes down.  You are resistant to chill temperatures, and more so the more "
+"ruach you have."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Proverbs 25:16
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Eating Drops of Honey"
+msgstr ""
+
+#. ~ Description of mutation "Eating Drops of Honey"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"When filled with ruach, no other food or drink compares.  The more ruach you "
+"have, the less mundane hunger or thirst troubles you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Warm Breath"
+msgstr ""
+
+#. ~ Description of mutation "Warm Breath"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your stolen ruach speeds your healing in proportion to how much of it you "
+"have."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Night's Caress"
+msgstr ""
+
+#. ~ Description of mutation "The Night's Caress"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Sometimes, you cannot passively wait for your ruach to heal your wounds, you "
+"need it to happen immediately.  You may activate this trait to greatly speed "
+"your healing at a continual cost of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Ruach Spring"
+msgstr ""
+
+#. ~ Description of mutation "Ruach Spring"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your powers have expanded and you are now capable of holding more ruach."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Ruach Well"
+msgstr ""
+
+#. ~ Description of mutation "Ruach Well"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your powers have expanded and you are now capable of holding even more ruach."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Ruach Sea"
+msgstr ""
+
+#. ~ Description of mutation "Ruach Sea"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your powers have expanded and you are now capable of holding an enormous "
+"amount of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Proverbs 23:5
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Glancing at Riches"
+msgstr ""
+
+#. ~ Description of mutation "Glancing at Riches"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#, no-c-format
+msgid ""
+"You've learned how to more efficiently use your ruach, greedily keeping some "
+"behind for yourself when you activate your powers.  Powers that cost ruach "
+"have their initial and periodic costs reduced by 15%.  This does not reduce "
+"the continual ruach cost of staying alive."
+msgstr ""
+
+#. ~ Description of mutation "Like a Cage Full of Birds"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#, no-c-format
+msgid ""
+"You jealously parcel out your ruach, only spending exactly as much as you "
+"need and no more.  Powers that cost ruach have their initial and periodic "
+"costs reduced by 15%, with an additional reduction that grows based on your "
+"total amount of ruach, to a maximum reduction of 33%.  This does not reduce "
+"the continual ruach cost of staying alive."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalms 139:12
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Night Shines Like the Day"
+msgstr ""
+
+#. ~ Description of mutation "The Night Shines Like the Day"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You have adapted so well to the night that it doesn't hinder your actions at "
+"all.  You can read and craft in any light levels."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Psalms 139:12
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Darkness is not Dark to You"
+msgstr ""
+
+#. ~ Description of mutation "The Darkness is not Dark to You"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your eyes have fully adapted to the darkness, allowing you to see as well in "
+"the dark as humans see in the light."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Jeremiah 31:35
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Moon Shall Shine at Night"
+msgstr ""
+
+#. ~ Description of mutation "The Moon Shall Shine at Night"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You are closely attuned to the moon, and some of your powers grow stronger "
+"with it.  Any ability you have that is amplified the fuller the moon is will "
+"not be weakened as much by an incomplete but non-new moon."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Like an Unclean Spirit"
+msgstr ""
+
+#. ~ Description of mutation "Like an Unclean Spirit"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"Your owl form is half spirit and half flesh.  You have a high chance to dodge"
+" any attacks against you, and may pass straight through walls as long as it "
+"is night."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Night-Hunter"
+msgstr ""
+
+#. ~ Description of mutation "The Night-Hunter"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You are at home in the night, and your prowess is heightened while the moon "
+"is up as long as you have any ruach within you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Strix's Wrath"
+msgstr ""
+
+#. ~ Description of mutation "The Strix's Wrath"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You can combine your forms, transforming into a large owl-human hybrid with "
+"wings, rending talons, and a deadly beak.  You won't be able to drain ruach "
+"while you are in this form."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Strix's Leap"
+msgstr ""
+
+#. ~ Description of mutation "Strix's Leap"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"While you cannot fly, with your bird-like legs and your wings, you can leap "
+"quite a distance."
+msgstr ""
+
+#. ~ Description of mutation "Eating Meat at Twilight"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"When filled with ruach, no other food or drink compares.  The more ruach you "
+"have, the less mundane hunger or thirst troubles you.  In addition, drinking "
+"ruach from your victims assuages your hunger and thirst."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Touch of Contagion"
+msgstr ""
+
+#. ~ Description of mutation "Touch of Contagion"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"When you wish it, your very touch bears the contamination of plague.  Your "
+"unarmed attacks have a chance to infect your targets, scaling with the amount"
+" of ruach you have."
+msgstr ""
+
+#. ~ Description of mutation "The Treasures of Darkness"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"You are a being of darkness, closer to it than almost anything else is.  It "
+"quickens your essence, and with it your actions, the longer you stay in it.  "
+"Each night, you receive an increase to your speed that is higher for each "
+"consecutive day spent without being exposed to the sun, up to ten.  The light"
+" of the sun breaks this quickening, forcing you to wait once more for the "
+"shadows to empower you in this way."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "lilin_instant_heal_spell"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "The Moon to Rule the Night"
+msgstr ""
+
+#. ~ Description of mutation "The Moon to Rule the Night"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"At night, under the moonlight, you can knit grievous wounds together in "
+"seconds with a great expenditure of ruach."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ This is a reference to Isaiah 66:24
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Their Worm Shall Not Die"
+msgstr ""
+
+#. ~ Description of mutation "Their Worm Shall Not Die"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid ""
+"When taking fatal damage, instead of dying you assume the form of an owl, "
+"allowing you to fly away from danger and recover.  This does not function "
+"during the day, if you are out of ruach, or if you are killed by fire."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_LILIN_GAIN_POWERS_AT_NIGHT_ACTIVE"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid ""
+"Under the light of the moon, you realize a new way to use your stolen ruach "
+"to empower yourself."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Empower your Strength"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Empower your Dexterity"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Empower your Perception"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Gain strength bonuses when using From Strength to Strength."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Gain dexterity and dodge bonuses when using From Strength to Strength."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_LILIN_GAINS_STRENGTH_TO_STRENGTH_CHOOSE_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_eocs.json
+msgid "Gain perception bonuses when using From Strength to Strength."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_TEMPORARY_GLORIOUS_activated_2"
+#. in nested EOCs in nested effect in then statement in effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You spin a beguiling web of illusion around yourself."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_activated_2" in nested EOCs in nested effect
+#. in then statement in effect in EoC "EOC_LILIN_TEMPORARY_GLORIOUS_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_maintenance_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach to enhance your appearance."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You are already so beautiful no illusion could enhance your appearance"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_TEMPORARY_GLORIOUS_deactivated"
+#. in nested EOCs in false effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You rend the illusions around yourself to tatters."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_maintenance_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_TEMPORARY_GLORIOUS_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"You feel a chill on your skin as you maintain your web of pleasing illusions."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_ATTRIBUTE_BONUSES_activated_2"
+#. in nested EOCs in effect in EoC "EOC_LILIN_ATTRIBUTE_BONUSES_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You draw on your ruach to enhance your physical abilities."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_activated_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_maintenance_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach to enhance your physical abilities."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_ATTRIBUTE_BONUSES_deactivated"
+#. in nested EOCs in false effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "Your physical abilities return to normal."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_maintenance_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_ATTRIBUTE_BONUSES_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"You feel a chill on your skin as you maintain your enhanced physical "
+"abilities."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_TURN_INTO_OWL_activated_2" in
+#. nested EOCs in effect in EoC "EOC_LILIN_TURN_INTO_OWL_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"Your eyes grow wide as feathers sprout from your arms and you take to the air"
+" on silent wings."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_TURN_INTO_OWL_activated_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_TURN_INTO_OWL_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach to transform into an owl."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_activated_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You pour ruach into your wounds and your body begins healing."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_activated_2" in nested EOCs in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach to heal your wounds."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_deactivated" in nested EOCs in false effect
+#. in EoC "EOC_LILIN_BONUS_HEALING_ACTIVE_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "Your accelerated healing slows to a stop."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance_2" in nested EOCs in effect in
+#. EoC "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You feel icy pinpricks on your skin as your wounds heal."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance_2" in nested EOCs in effect in
+#. EoC "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"With your body restored, you no longer need to dedicate ruach to healing it."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance_2" in nested EOCs in effect in
+#. EoC "EOC_LILIN_BONUS_HEALING_ACTIVE_maintenance"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach accelerate your healing."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_activated_2" in nested EOCs in effect
+#. in EoC "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"Wings erupt from your shoulders and talons grow from your fingers as you "
+"assume the strix form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_activated_2" in nested EOCs in effect
+#. in EoC "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid "You don't have enough ruach to transform into a strix."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_deactivated" in nested EOCs in false
+#. effect in EoC "EOC_LILIN_TRANSFORM_INTO_WAR_OWL_FORM_activated"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"Your wings, feathers, and talons all vanish as you return to your human form."
+msgstr ""
+
+#. ~ value of variable 'message_success' in effect in EoC
+#. "EOC_LILIN_STRIX_LEAP"
+#. ~ Description of spell "lilin_strix_leap_spell ( Strix Leap )"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid ""
+"You squat down, build up tension in your legs, then with a mighty beat of "
+"your wings, you leap."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LILIN_PREVENT_DEATH_INITIATE"
+#: data/mods/Xedra_Evolved/mutations/xe_lilin_trait_eocs.json
+msgid ""
+"As yours wounds overtake you, you cast forth your spirit in the form of an "
+"owl."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgctxt "profession_male"
+msgid "XE843 'Gracken' (Species)"
+msgstr ""
+
+#. ~ Description of profession "XE843 'Gracken' (Species)" for male
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgctxt "prof_desc_male"
+msgid ""
+"Species XE843 is how the Xedra scientists identified your people before they "
+"learned your people could speak to them after enough time around them to "
+"develop a way to communicate.  They had little idea that communication is "
+"your people's survival trait, coming from a much harsher environment than the"
+" humans are…were blessed with, you can make allies with almost any thinking "
+"being.  You informed the Xedra people of your race's name 'Gracken' but you "
+"didn't tell them that most of your people they found were larval forms and "
+"lacking access to the shadow materials needed would never grow up into an "
+"adult form.  Now the humans' world is as deadly or moreso than your home and "
+"the way back is mostly closed.  Time to try and find a route home that "
+"wouldn't be a death sentence, or see what this world has to offer."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgctxt "profession_female"
+msgid "XE843 'Gracken' (Species)"
+msgstr ""
+
+#. ~ Description of profession "XE843 'Gracken' (Species)" for female
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgctxt "prof_desc_female"
+msgid ""
+"Species XE843 is how the Xedra scientists identified your people before they "
+"learned your people could speak to them after enough time around them to "
+"develop a way to communicate.  They had little idea that communication is "
+"your people's survival trait, coming from a much harsher environment than the"
+" humans are…were blessed with, you can make allies with almost any thinking "
+"being.  You informed the Xedra people of your race's name 'Gracken' but you "
+"didn't tell them that most of your people they found were larval forms and "
+"lacking access to the shadow materials needed would never grow up into an "
+"adult form.  Now the humans' world is as deadly or moreso than your home and "
+"the way back is mostly closed.  Time to try and find a route home that "
+"wouldn't be a death sentence, or see what this world has to offer."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Gracken"
+msgstr ""
+
+#. ~ Description of mutation "Gracken"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"A traveler from another dimension.  A dimension of shadows with few bright "
+"lights.  Once your species matures, they gain the ability to create new "
+"alterations to their body from ingredients harvested from their kills, "
+"shadowstuff and magickal essence."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Gracken, Mature"
+msgstr ""
+
+#. ~ Description of mutation "Gracken, Mature"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"You have become a fully mature Gracken and have gained the ability to reform "
+"your body in ways previously blocked to you in your immature state."
+msgstr ""
+
+#. ~ Description of mutation "Shade Eyes"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Bright yellow eyes shine out from the shadowy crevices of your face."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Gracken Build"
+msgstr ""
+
+#. ~ Description of mutation "Gracken Build"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Gracken are about the same size as humans, though they look like shadow "
+"demons."
+msgstr ""
+
+#. ~ Description of mutation "Shade Legs"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your legs are human sized but appear to be made of swirling shadows."
+msgstr ""
+
+#. ~ Description of mutation "Short Legs"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Your legs have decreased in length providing you with a lower center of "
+"gravity and a slight improvement to agility."
+msgstr ""
+
+#. ~ Description of mutation "Long Legs"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your legs have lengthened.  You can cross flat terrain more easily."
+msgstr ""
+
+#. ~ Description of mutation "Shade Feet"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your feet are humanoid but appear to be made of swirling shadows."
+msgstr ""
+
+#. ~ Description of mutation "Shade Arms"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your arms are humanoid but appear to be made of swirling shadows."
+msgstr ""
+
+#. ~ Description of mutation "Strong Arms"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your arms have begun bulking up and become stronger.  +1 Strength"
+msgstr ""
+
+#. ~ Description of mutation "Long Arms"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your arms have lengthened.  You can push a target away from you."
+msgstr ""
+
+#. ~ Description of mutation "Shade Hands"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your hands are humanoid but appear to be made of swirling shadows."
+msgstr ""
+
+#. ~ Description of mutation "Shade Sharp Nails"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Your hands are humanoid but appear to be made of swirling shadows.  At the "
+"end of each finger you sport a razor sharp nail.  It increases your damage "
+"when unarmed."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Shade Dextrous Hands"
+msgstr ""
+
+#. ~ Description of mutation "Shade Dextrous Hands"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Your hands are humanoid but appear to be made of swirling shadows.  You sport"
+" an extra digit on every finger that improves your ability to get into tight "
+"situations.."
+msgstr ""
+
+#. ~ Description of mutation "Shade Skin"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Your skin is the color of shadows moving in the twilight."
+msgstr ""
+
+#. ~ Description of mutation "Shade Stomach"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Your dietary needs are so minimized that you could travel months or years "
+"without eating.  There are consequences to this.  One is an inability to "
+"process normal food.  Another is a pretty constant state of weariness, but "
+"this is the best way to handle interdimensional travel until you are able to "
+"develop an organ to consume local foods.  The ambient energies here are much "
+"weaker than what you normally encounter out in the Nether between universes, "
+"you need exposure to nuclear radiation to gain calories on this planet, for "
+"now."
+msgstr ""
+
+#. ~ Description of mutation "Omnivorous Stomach"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"You eat a wide variety of foods native to this world that would be "
+"appropriate for the dominant species."
+msgstr ""
+
+#. ~ Description of mutation "Carnivorous Stomach"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"You eat an exclusively meat-based diet as befits an apex predator of this "
+"planet."
+msgstr ""
+
+#. ~ Description of mutation "Herbivore Stomach"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"You eat a herbivorous diet.  The benefit of this is you never have to kill "
+"for your food.  Unless the plants were trying to kill you first."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Evolution Gland"
+msgstr ""
+
+#. ~ Description of mutation "Evolution Gland"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"You have a gland that grows a small amount of the material needed to make "
+"biological improvements to yourself.  You must gather dreamdross and "
+"components from monsters you wish to gain the abilities of and combine them "
+"with this shadowstuff into new organs and abilities."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid "Radiotrophic"
+msgstr ""
+
+#. ~ Description of mutation "Radiotrophic"
+#: data/mods/Xedra_Evolved/mutations/xe_playable_gracken.json
+msgid ""
+"Your system has adapted to radiation.  While irradiated, you will convert the"
+" radiation into calories."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_COMMUNE_WITH_NATURE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be surrounded by nature to commune with nature."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_JAGGED_CLAWS_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "The jagged wood covering your hands recedes, leaving no trace behind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_THORNSKIN_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Woody thorns push through your skin."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_THORNSKIN_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Your thorns retract, leaving smooth unbroken skin behind."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_ARVORE_SEED_BEARER_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You bring forth seeds."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in else
+#. statement in effect in EoC "EOC_ARVORE_SEED_BEARER_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Your seeds slumber and dream of spring."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in else
+#. statement in effect in EoC "EOC_ARVORE_SEED_BEARER_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You need more time before you can summon seeds again."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_SEED_BEARER_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be surrounded by the wild to call forth regional seeds."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_GOBLIN_FRUIT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be surrounded by the wild to call forth a goblin fruit."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Grow Wooden Wall"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Grow Wooden Floor"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Grow Wooden Door"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Grow Leafy Branch"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"Grow a wall of solid wood from the earth, grow or remove bark from a wall, or"
+" turn one of your wooden floors into a bark wall."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"Grow a floor of bark from the earth, roof over a bark floor, or turn one of "
+"your wooden walls into a bark floor."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"Grow a bramble door from a wooden wall or return the wall to solid wood."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_GROWING_WOOD_WALLS_SELECTOR"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"Grow a leafy branch.  It won't provide shelter but it helps it feel like "
+"home."
+msgstr ""
+
+#. ~ value of variable 'message_success' in effect in EoC
+#. "EOC_ARVORE_VINE_DRAG_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Vines lash out and drag your target in!"
+msgstr ""
+
+#. ~ value of variable 'message_fail' in effect in EoC
+#. "EOC_ARVORE_VINE_DRAG_activated"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You are too parched to lash out with any vines."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_SUMMON_PRESERVATION_CONTAINER_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be surrounded by nature to cast To Oppose Decay."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PERENNIAL_REBIRTH_INITIAL_CHECK_2" in nested EOCs in effect in EoC
+#. "EOC_PERENNIAL_REBIRTH_INITIAL_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"You need to be in the heart of the forest or at an attuned elemental altar to"
+" successfully bind your soul."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_PERENNIAL_REBIRTH_INITIAL_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"Your soul is still attaching itself to your new body.  You need to give it "
+"time before attempting to bind it to the forest again."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PERENNIAL_REBIRTH_INITIAL"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You bind your soul to the abundance of nature around you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PERENNIAL_REBIRTH"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"As your body dies, your fae spirit flies free and, drawn to the pull of the "
+"heart of the forest, rebirths itself from the bounty of nature."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_OVERGROWTH_2" in nested
+#. EOCs in effect in EoC "EOC_ARVORE_OVERGROWTH"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"You must be on the surface and not on a building's upper stories to cast "
+"Overgrowth!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_OVERGROWTH"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be outside to cast Overgrowth!"
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_ARVORE_DAMAGE_ZOMBIES_HEAL_LIVING"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Nature's power roars forth in an explosion of vital energy!"
+msgstr ""
+
+#. ~ Verb in activity "ACT_ARVORE_TREESINGING"
+#. ~ name of the nested group
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesinging"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_TREE_SINGING_COMPLETE"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"As your song fades, you open your eyes to find a large growth of wood lying "
+"on the ground in front of you, separated from the tree without violence."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_TREE_SINGING_LEARN_RECIPES"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "The trees whisper their knowledge of a recipe to you"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_ARVORE_TREE_FORM_ON"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "You must be outside on diggable ground to become one with the forest."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC "EOC_ARVORE_VERDANT_IMPRISONMENT"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Your target must be outdoors to transform them into a tree."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_ROOT_TO_ROOT_TRANSLOCATE_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_ROOT_TO_ROOT_ATTUNEMENT_CHECK"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid ""
+"You must be outdoors and within the depths of the forest to cast this spell."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "human_sense"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "The forest nervously whispers to you about the presence of humans."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision
+#. "infrared_creature_medium"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "The forest gently whispers to you about the creatures of nature."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "alien_being_sense"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "The forest whispers warnings of unnatural creatures nearby."
+msgstr ""
+
+#. ~ Description of spell "arvore_commune_with_nature ( Commune with Nature )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"You concentrate on nature around you and commune with it, improving your "
+"health and calming the nearby wildlife.  This spell may only be cast outdoors"
+" in natural surroundings."
+msgstr ""
+
+#. ~ Description of spell "arvore_cultivate_goblin_fruit ( Cultivate Goblin
+#. Fruit )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"You may spin a bit of fae magic into a plant, bringing forth a goblin fruit."
+"  Goblin fruit have a variety of effects, never predictable but always at "
+"least somewhat beneficial.  This spell may only be cast outdoors in natural "
+"surroundings."
+msgstr ""
+
+#. ~ Name of spell "arvore_tree_singing_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "Treesinging"
+msgstr ""
+
+#. ~ Description of spell "arvore_tree_singing_spell ( Treesinging )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Using your voice and your magic, bring forth living wood from a tree to "
+"provide resources without harming the forest."
+msgstr ""
+
+#. ~ Message of spell "arvore_tree_singing_spell ( Treesinging )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "You close your eyes and sing to the trees."
+msgstr ""
+
+#. ~ Description of spell "arvore_verdant_infusion ( Verdant Infusion )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"You draw on your own connection to nature and infuse some of its power into "
+"one of your allies, healing them for a small amount and increasing their "
+"overall health."
+msgstr ""
+
+#. ~ Name of spell "arvore_roots_crack_the_foundation"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Roots Crack the Foundation"
+msgstr ""
+
+#. ~ Description of spell "arvore_roots_crack_the_foundation ( Roots Crack the
+#. Foundation )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Roots can grow through even concrete given time.  With this spell, you can "
+"compress that time into a single instant to shatter walls or rip doors off "
+"their hinges."
+msgstr ""
+
+#. ~ Name of spell "arvore_summon_wood_spirit"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Call the Children of the Roots"
+msgstr ""
+
+#. ~ Description of spell "arvore_summon_wood_spirit ( Call the Children of the
+#. Roots )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "A lesser wood spirit is summoned to support you."
+msgstr ""
+
+#. ~ Name of spell "arvore_summon_preservation_container"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "To Withstand Decay"
+msgstr ""
+
+#. ~ Description of spell "arvore_summon_preservation_container ( To Withstand
+#. Decay )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"While in the wild, weave together some leaves and grasses and magick to form "
+"a container that will keep its contents from rotting for a length of time.  "
+"The container will only last a few weeks at most."
+msgstr ""
+
+#. ~ Name of spell "arvore_summon_floral_boat"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "Viridescent Vessel"
+msgstr ""
+
+#. ~ Description of spell "arvore_summon_floral_boat ( Viridescent Vessel )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Trees require water but will still drown if submerged.  This spell allows the Arvore to create a floral boat with the help of a nearby tree, letting them travel safely across water.\n"
+"\n"
+"You must be standing <color_yellow>next to a tree</color> and <color_yellow>near the water</color> for the spell to be effective."
+msgstr ""
+
+#. ~ Name of spell "arvore_summon_briars"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Briarwall"
+msgstr ""
+
+#. ~ Description of spell "arvore_summon_briars ( Briarwall )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Call up thick briars and thorns, either in a line to form a wall or an arc to"
+" trap an enemy.  They will grow to full size in moments."
+msgstr ""
+
+#. ~ Name of spell "arvore_anti_plant_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Tending the Garden"
+msgstr ""
+
+#. ~ Description of spell "arvore_anti_plant_spell ( Tending the Garden )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Invasive weeds must be rooted out, lest they choke the life from the garden."
+"  This spell inflicts a rapid withering on plants and fungus within its area "
+"of effect."
+msgstr ""
+
+#. ~ Name of spell "arvore_nurture_the_green"
+#. ~ Mutation name
+#. ~ Name of spell "changeling_spring_growing_plants_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Nurturing the Green"
+msgstr ""
+
+#. ~ Description of spell "arvore_nurture_the_green ( Nurturing the Green )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"You can greatly speed plant growth.  Grass can grow from seed in moments, "
+"crops can be brought to ripeness, and even young trees will reach their full "
+"bloom."
+msgstr ""
+
+#. ~ Name of spell "arvore_nurture_the_green_aoe"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "Spreading the Viridian Mantle"
+msgstr ""
+
+#. ~ Description of spell "arvore_nurture_the_green_aoe ( Spreading the
+#. Viridian Mantle )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Rather than fostering the growth of a single plant, you can cause a wave of "
+"growth all around you, affecting an entire field and bringing it towards "
+"ripeness."
+msgstr ""
+
+#. ~ Name of spell "arvore_growing_wood_walls"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "The Forest Offers Shelter"
+msgstr ""
+
+#. ~ Description of spell "arvore_growing_wood_walls ( The Forest Offers
+#. Shelter )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"In natural surroundings, you can create structures out of living wood--walls,"
+" floors, doors, and roofs all together."
+msgstr ""
+
+#. ~ Name of spell "arvore_climbing_vine_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Creeper Ascends the Wall"
+msgstr ""
+
+#. ~ Description of spell "arvore_climbing_vine_spell ( Creeper Ascends the
+#. Wall )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Cause a cluster of vines to burst out of diggable ground and rise up into the"
+" sky in moments.  It will be easy to climb once its growth is finished."
+msgstr ""
+
+#. ~ Message of spell "arvore_climbing_vine_spell ( Creeper Ascends the Wall )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "The soil churns as thick vines burst forth and shoots toward the sky."
+msgstr ""
+
+#. ~ Name of spell "arvore_create_living_tent_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid "Den of Brambles"
+msgstr ""
+
+#. ~ Description of spell "arvore_create_living_tent_spell ( Den of Brambles )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"When outside on diggable ground, create a small structure of wood near the "
+"Arvore, offering shelter against the elements."
+msgstr ""
+
+#. ~ Name of spell "arvore_summon_grass_field_spell"
+#. ~ Mutation name
+#. ~ Name of spell "changeling_spring_summon_grass_field_spell"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Commanding the Grasses"
+msgstr ""
+
+#. ~ Description of spell "arvore_summon_grass_field_spell ( Commanding the
+#. Grasses )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Your command over plants allows you to cause grass to grow in profusion from "
+"the soil, making the terrain very difficult for enemies to traverse."
+msgstr ""
+
+#. ~ Description of spell "arvore_roots_spell ( Hungry Thirsty Roots )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Your command over plants allows you to call forth roots from the earth to "
+"clutch and grasp at your enemies."
+msgstr ""
+
+#. ~ Name of spell "arvore_perennial_rebirth_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Perennial Rebirth"
+msgstr ""
+
+#. ~ Description of spell "arvore_perennial_rebirth_spell ( Perennial Rebirth
+#. )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Bind your soul to the heart of the forest, rebirthing yourself if you should "
+"die.  You may only perform this in thick forests or at an arvore altar, you "
+"may be reborn no more than once in a lunar month."
+msgstr ""
+
+#. ~ Name of spell "arvore_overgrowth_spell"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Overgrowth"
+msgstr ""
+
+#. ~ Description of spell "arvore_overgrowth_spell ( Overgrowth )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"While outdoors and not underground, the Arvore can create a profusion of life"
+" around themselves, causing grass to grow through pavement, bushes and "
+"flowers to sprout, and trees to grow to full height in moments."
+msgstr ""
+
+#. ~ Name of spell "arvore_cause_decay"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutations.json
+msgid "Fallen Trees Decay to Soil"
+msgstr ""
+
+#. ~ Description of spell "arvore_cause_decay ( Fallen Trees Decay to Soil )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Even the mightiest tree returns to soil in the end.  The Arvore may channel this natural process into an area around themselves, infecting everyone within with the energies of rot.\n"
+"\n"
+"<color_yellow>This spell is indiscriminate</color> and <color_red>should not be used near allies</color>."
+msgstr ""
+
+#. ~ Description of spell "arvore_traverse_the_wilds ( Traverse the Wilds )"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_mutation_spells.json
+msgid ""
+"Roots grow together and so forests are connected.  The Arvore may use this "
+"connection to quickly transport themselves tree to tree, stepping into an "
+"adjacent tree and then stepping out of another one within the spell's range."
+msgstr ""

@@ -1,0 +1,1588 @@
+# Batch 144 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of spell "summon_magic_comcycle ( Summon Co-op cycle )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "A bigger ride for bigger loot.  Or a second cowboy."
+msgstr ""
+
+#. ~ Description of spell "x-ray ( X-ray Vision )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"You fire a cone of X-rays that magically allows you to see that area for a "
+"short time."
+msgstr ""
+
+#. ~ Name of spell "technomancer_robot_shutdown"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Shutdown"
+msgstr ""
+
+#. ~ Description of spell "technomancer_robot_shutdown ( Shutdown )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"Overload the target, stunning it briefly.  Originally developed during the "
+"Roman Empire to target out-of-control golems, this spell became significantly"
+" more popular in modern times when it was discovered it also worked on robots"
+" and machinery."
+msgstr ""
+
+#. ~ Name of spell "technomancer_conjure_radio"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Speak through the Aether"
+msgstr ""
+
+#. ~ Description of spell "technomancer_conjure_radio ( Speak through the
+#. Aether )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"One of the most widely-known pre-modern technomantic spells, this allows "
+"technomancers to communicate at a distance.  Its use declined rapidly after "
+"Guglielmo Marconi invented the radio and suddenly everyone could listen in to"
+" their conversations."
+msgstr ""
+
+#. ~ Name of spell "technomancer_conjure_ups"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Power Supply"
+msgstr ""
+
+#. ~ Description of spell "technomancer_conjure_ups ( Power Supply )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"For the technomancer with no enhancements, this spell summons a power supply "
+"composed of pure mana that can be used to charge any compatible device.  Just"
+" keep it on your person and it will continually recharge your electronic "
+"devices until the duration expires."
+msgstr ""
+
+#. ~ Name of spell "technomancer_welder"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Voltaic Touch"
+msgstr ""
+
+#. ~ Description of spell "technomancer_welder ( Voltaic Touch )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"Using the principles of what were once called \"voltaic arcs\", you can "
+"electrically heat metal hot enough to weld it together."
+msgstr ""
+
+#. ~ Name of spell "technomancer_recharge_vehicle"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Imbue with Lightning"
+msgstr ""
+
+#. ~ Description of spell "technomancer_recharge_vehicle ( Imbue with Lightning
+#. )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This fancifully-named spell actually restores power to a battery or power "
+"grid.  An esoteric curiosity until electrical power became widespread, even "
+"then the power efficiency of fossil fuels rendered it a niche spell."
+msgstr ""
+
+#. ~ Name of spell "technomancer_gain_electronics_computer_spell"
+#. ~ Name of effect type id "effect_technomancer_gain_electronics_computer"
+#: data/mods/Magiclysm/Spells/technomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Machine Mind"
+msgstr ""
+
+#. ~ Description of spell "technomancer_gain_electronics_computer_spell (
+#. Machine Mind )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This spell grants the caster an intuitive understanding of electronics and "
+"computers, making their use, repair, and construction much easier."
+msgstr ""
+
+#. ~ Name of spell "technomancer_create_ups_connection"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Power Linkage"
+msgstr ""
+
+#. ~ Description of spell "technomancer_create_ups_connection ( Power Linkage
+#. )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"Enchant an item so that it is capable of drawing power wirelessly through the"
+" air from a compatible power source."
+msgstr ""
+
+#. ~ Name of spell "technomancer_far_sight"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Zoom Lens"
+msgstr ""
+
+#. ~ Description of spell "technomancer_far_sight ( Zoom Lens )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"By etching tiny runes on a lens of great quality and infusing it with their "
+"magic, the caster can use the lens to see further than even the finest "
+"mundane binoculars.  Unfortunately, the arrangement is unstable and the lens "
+"will disintegrate after a time."
+msgstr ""
+
+#. ~ Name of spell "technomancer_far_sight_plus"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid "Enhanced Zoom Lens"
+msgstr ""
+
+#. ~ Description of spell "technomancer_far_sight_plus ( Enhanced Zoom Lens )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"This lens can see farther than ever!  Now you know this spell like the back "
+"of your hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "technomancer_pain_ignore"
+#. ~ Name of effect type id "effect_technomancer_pain_ignore"
+#: data/mods/Magiclysm/Spells/technomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The Body Mechanical"
+msgstr ""
+
+#. ~ Description of spell "technomancer_pain_ignore ( The Body Mechanical )"
+#: data/mods/Magiclysm/Spells/technomancer.json
+msgid ""
+"With a word of power, you spur your body to function as a machine would, "
+"partially ignoring the effects of pain for a brief moment."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DEMON_POSSESSION"
+#: data/mods/Magiclysm/Spells/attunements/Blood_Mage.json
+msgid "Your body fills with demonic power!"
+msgstr ""
+
+#. ~ Name of spell "demonic_possession_real"
+#: data/mods/Magiclysm/Spells/attunements/Blood_Mage.json
+msgid "Demonic Possession Real"
+msgstr ""
+
+#. ~ Description of spell "demonic_possession_real ( Demonic Possession Real )"
+#: data/mods/Magiclysm/Spells/attunements/Blood_Mage.json
+msgid ""
+"Grants the aura that gives the demon traits.  You're not supposed to see "
+"this."
+msgstr ""
+
+#. ~ Description of spell "borealmage_auroral_guard ( Auroral Guard )"
+#: data/mods/Magiclysm/Spells/attunements/Boreal_Mage.json
+msgid ""
+"Create a sturdy shell that wraps around your body, bestowing a sturdy "
+"defense."
+msgstr ""
+
+#. ~ Name of spell "burning_trail"
+#. ~ Name of effect type id "effect_burning_trail"
+#: data/mods/Magiclysm/Spells/attunements/Cleansing_Flame.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Burning Trail"
+msgstr ""
+
+#. ~ Description of spell "burning_trail ( Burning Trail )"
+#: data/mods/Magiclysm/Spells/attunements/Cleansing_Flame.json
+msgid ""
+"Speak a short phrase and transform your footsteps into burning pits of flame,"
+" leaving a trail of fire behind you.  Each step will consume mana, but you "
+"will be immune to fire while the spell is in effect."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_CLEANSING_FLAME_FIRE_FOOSTEPS_3" in nested EOCs in effect in EoC
+#. "EOC_CLEANSING_FLAME_FIRE_FOOSTEPS_2"
+#. ~ Player message in false effect in EoC "EOC_SALAMANDER_FIRE_FOOSTEPS"
+#: data/mods/Magiclysm/Spells/attunements/Cleansing_Flame.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/salamander_eocs.json
+msgid "You do not have enough mana to fuel your searing footsteps!"
+msgstr ""
+
+#. ~ Name of spell "judgement_sword"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Sword of Judgement"
+msgstr ""
+
+#. ~ Description of spell "judgement_sword ( Sword of Judgement )"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"This blade of light will cut through any evil it makes contact with!  You can"
+" change its shape into a dagger, great sword, spear or mace."
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Radiant Strike"
+msgstr ""
+
+#. ~ Description of martial technique "Radiant Strike"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Attack adjacent enemies, crit only"
+msgstr ""
+
+#. ~ Message of martial technique "Radiant Strike"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Your sword bursts with radiant light, hitting everyone nearby"
+msgstr ""
+
+#. ~ Message of martial technique "Radiant Strike"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "<npcname>'s sword bursts with radiant light, hitting everyone nearby"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "sword of judgement"
+msgid_plural "swords of judgement"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"A large sword made of glowing, radiant fire.  It explodes with radiance when "
+"striking enemies."
+msgstr ""
+
+#. ~ "menu_text" action message of item "sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Transform to dagger."
+msgstr ""
+
+#. ~ "msg" action message of item "sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"Concentrating, you change your sword into a much smaller, quicker blade."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "dagger of judgement"
+msgid_plural "daggers of judgement"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dagger of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"A short blade made of glowing, radiant fire.  It explodes with radiance when "
+"striking enemies."
+msgstr ""
+
+#. ~ "menu_text" action message of item "dagger of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Transform to great sword."
+msgstr ""
+
+#. ~ "msg" action message of item "dagger of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"Concentrating, you change your dagger into a much larger, more intimidating "
+"form."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "great sword of judgement"
+msgid_plural "great swords of judgement"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "great sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"A very large sword glowing with radiant fire.  It explodes with radiance when"
+" striking enemies."
+msgstr ""
+
+#. ~ "menu_text" action message of item "great sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Transform into spear."
+msgstr ""
+
+#. ~ "msg" action message of item "great sword of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"Concentrating, you change your dagger into a longer, much more precise "
+"piercing form."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "spear of judgement"
+msgid_plural "spears of judgement"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spear of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"A very thin, nimble spear glowing with radiant fire.  It explodes with "
+"radiance when striking enemies."
+msgstr ""
+
+#. ~ "menu_text" action message of item "spear of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Transform to mace."
+msgstr ""
+
+#. ~ "msg" action message of item "spear of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Concentrating, you change your spear into a shorter, more hefty form."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "mace of judgement"
+msgid_plural "maces of judgement"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mace of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid ""
+"A short and hefty mace glowing with radiant fire.  It explodes with radiance "
+"when striking enemies."
+msgstr ""
+
+#. ~ "menu_text" action message of item "mace of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Transform to longsword."
+msgstr ""
+
+#. ~ "msg" action message of item "mace of judgement"
+#: data/mods/Magiclysm/Spells/attunements/Crusader.json
+msgid "Concentrating, you change your spear into a shorter, more robust blade."
+msgstr ""
+
+#. ~ Name of spell "dust_reborn"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid "Dust Reborn"
+msgstr ""
+
+#. ~ Description of spell "dust_reborn ( Dust Reborn )"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid ""
+"Create a cast of your own body and soul, hidden inside the earth's lines.  "
+"When the times come and your body is close to destruction, you can abandon "
+"it, transferring your consciousness into the cast.  But it brings with it a "
+"great price, and for your immortality, you pay with temporary bodily "
+"weakness."
+msgstr ""
+
+#. ~ Name of spell "terra_armor"
+#. ~ Name of effect type id "effect_terra_armor"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid "Terra Armor"
+msgstr ""
+
+#. ~ Description of spell "terra_armor ( Terra Armor )"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid ""
+"Cover yourself in dense, invisible energy of Earth.  Higher level increase "
+"your defense abilities."
+msgstr ""
+
+#. ~ Description of effect type "Terra Armor"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid "Your body is covered in dense, ethereal shell, that protect you."
+msgstr ""
+
+#. ~ Remove message of effect type "Terra Armor"
+#: data/mods/Magiclysm/Spells/attunements/Gaias_Chosen.json
+msgid "Your lost your terra shell."
+msgstr ""
+
+#. ~ Description of spell "gravitymage_graviton ( Graviton Polarization )"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid ""
+"Changes and amplifies gravitational pull towards a point you choose, even "
+"through walls.  Pulls in items and deals bashing damage in its center."
+msgstr ""
+
+#. ~ Name of spell "gravity_mage_leap"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid "Gravity Leap"
+msgstr ""
+
+#. ~ Description of spell "gravity_mage_leap ( Gravity Leap )"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid ""
+"Decrease your weight to a minimum, and use a mana flow to jump to your "
+"enemies from a long distance."
+msgstr ""
+
+#. ~ Name of spell "gravity_mage_melee"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid "Tactile Telekinesis"
+msgstr ""
+
+#. ~ Description of spell "gravity_mage_melee ( Tactile Telekinesis )"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid ""
+"When you make contact with an object, it's way easier to manipulate its "
+"gravity.  Control gravity around yourself to change your inertia in order to "
+"make quick but heavy attacks."
+msgstr ""
+
+#. ~ Name of effect type id "gravity_mage_melee"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid "Gravity Control"
+msgstr ""
+
+#. ~ Description of effect type "Gravity Control"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid "Decreases mass of weapon on swing, increases the gravity on attack."
+msgstr ""
+
+#. ~ Remove message of effect type "Gravity Control"
+#: data/mods/Magiclysm/Spells/attunements/Gravity_Mage.json
+msgid "You cease your control over gravity."
+msgstr ""
+
+#. ~ Description of spell "cold_heart ( Cold Heart )"
+#: data/mods/Magiclysm/Spells/attunements/Ice_Elemental.json
+msgid ""
+"Harshly drop the temperature inside of your enemies, slowing down their "
+"bloodstreams or even shattering organs."
+msgstr ""
+
+#. ~ Description of spell "spear_of_light ( Spear of Light )"
+#: data/mods/Magiclysm/Spells/attunements/Illusionist.json
+msgid ""
+"Shoot directed light from your fingertips that is so bright you can see "
+"through the skin of the target for an instant."
+msgstr ""
+
+#. ~ Name of spell "illusionist_hologram"
+#: data/mods/Magiclysm/Spells/attunements/Illusionist.json
+msgid "Battle Holograms"
+msgstr ""
+
+#. ~ Description of spell "illusionist_hologram ( Battle Holograms )"
+#: data/mods/Magiclysm/Spells/attunements/Illusionist.json
+msgid ""
+"Created to disrupt your enemies, they look exactly like you, and act like a "
+"real person."
+msgstr ""
+
+#. ~ Name of spell "illusionist_transposition"
+#: data/mods/Magiclysm/Spells/attunements/Illusionist.json
+msgid "Illusion Transposition"
+msgstr ""
+
+#. ~ Description of spell "illusionist_transposition ( Illusion Transposition
+#. )"
+#: data/mods/Magiclysm/Spells/attunements/Illusionist.json
+msgid ""
+"Fool reality, and swap your position with any other creature in your line of "
+"sight"
+msgstr ""
+
+#. ~ Description of spell "robot_disabler_explosion ( Surge )"
+#: data/mods/Magiclysm/Spells/attunements/Magnetism_Mage.json
+msgid ""
+"Send a wave of high-frequency alternating pulses.  It can't hurt living "
+"creatures, but is exceptional at stunning and destroying robots.  Even though"
+" it isn't an EMP."
+msgstr ""
+
+#. ~ Description of spell "overaccelerate ( Overaccelerate )"
+#: data/mods/Magiclysm/Spells/attunements/Overclocker.json
+msgid ""
+"This drastically increases the target's metabolism to dangerous levels, "
+"causing their body to tear itself apart."
+msgstr ""
+
+#. ~ Name of spell "permafrost_mage_ice_age"
+#: data/mods/Magiclysm/Spells/attunements/Permafrost_Mage.json
+msgid "Ice Age"
+msgstr ""
+
+#. ~ Description of spell "permafrost_mage_ice_age ( Ice Age )"
+#: data/mods/Magiclysm/Spells/attunements/Permafrost_Mage.json
+msgid ""
+"Cool down every creature in range 'till their flesh cracks, bones shatter, "
+"and armor fractures."
+msgstr ""
+
+#. ~ Name of spell "summon_keeper_of_the_glades"
+#: data/mods/Magiclysm/Spells/attunements/Shaman.json
+msgid "The Guardian of the Forest"
+msgstr ""
+
+#. ~ Description of spell "summon_keeper_of_the_glades ( The Guardian of the
+#. Forest )"
+#: data/mods/Magiclysm/Spells/attunements/Shaman.json
+msgid ""
+"Summons a keeper of the glades, a powerful ancient forest spirit, to defend "
+"you.  The keeper may be ridden and will unleash its fury on unnatural "
+"enemies, but is much less powerful in the cities than in the forest."
+msgstr ""
+
+#. ~ Description of spell "biomechanic ( Biomechanic )"
+#: data/mods/Magiclysm/Spells/attunements/Shapeshifter.json
+msgid ""
+"Who said the human body is weak?  You just need to compress enough mana into "
+"your flesh and bones in order to show them who is the deadliest animal in the"
+" world."
+msgstr ""
+
+#. ~ Description of spell "soul_afterburner ( Soul Afterburner )"
+#: data/mods/Magiclysm/Spells/attunements/Soulfire.json
+msgid ""
+"You burn a small portion of your soul to gain a large burst of speed.  You "
+"will have to wait until your soul has healed before burning a part of it "
+"again."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SOUL_AFTERBURNER"
+#: data/mods/Magiclysm/Spells/attunements/Soulfire.json
+msgid "You gain a sudden burst of speed!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SOUL_AFTERBURNER"
+#: data/mods/Magiclysm/Spells/attunements/Soulfire.json
+msgid ""
+"Burning your soul before it healed only resulted in some damage to your body."
+msgstr ""
+
+#. ~ Name of spell "soul_afterburner_cooldown_backlash"
+#: data/mods/Magiclysm/Spells/attunements/Soulfire.json
+msgid "Soul backlash"
+msgstr ""
+
+#. ~ Description of effect type "Soul Burn"
+#: data/mods/Magiclysm/Spells/attunements/Soulfire.json
+msgid ""
+"A little of your soul has been burned away, leaving you in a weakened state."
+"  The soul heals quickly, but your body regenerates more slowly while the "
+"soul is weak."
+msgstr ""
+
+#. ~ Name of spell "storm_elemental_electric_melee"
+#. ~ Name of effect type id "eff_storm_elemental_electric_melee"
+#: data/mods/Magiclysm/Spells/attunements/Storm_Elemental.json
+msgid "Galvanic"
+msgstr ""
+
+#. ~ Description of spell "storm_elemental_electric_melee ( Galvanic )"
+#: data/mods/Magiclysm/Spells/attunements/Storm_Elemental.json
+msgid ""
+"Fill your hands with high-voltage electricity, and deal additional electric "
+"damage in melee."
+msgstr ""
+
+#. ~ Description of effect type "Galvanic"
+#: data/mods/Magiclysm/Spells/attunements/Storm_Elemental.json
+msgid "You deal additional electric damage in melee."
+msgstr ""
+
+#. ~ Apply message of effect type "Galvanic"
+#: data/mods/Magiclysm/Spells/attunements/Storm_Elemental.json
+msgid "Electric energy is concentrated in your hands, and it's ready to go."
+msgstr ""
+
+#. ~ Remove message of effect type "Galvanic"
+#: data/mods/Magiclysm/Spells/attunements/Storm_Elemental.json
+msgid "Your hands turn back to normal condition."
+msgstr ""
+
+#. ~ Name of spell "electric_demon"
+#: data/mods/Magiclysm/Spells/attunements/Stormcaller.json
+msgid "Electric Demon"
+msgstr ""
+
+#. ~ Description of spell "electric_demon ( Electric Demon )"
+#: data/mods/Magiclysm/Spells/attunements/Stormcaller.json
+msgid "Summon a small electric imp - fast as lightning, and just as deadly."
+msgstr ""
+
+#. ~ Name of spell "electric_turret"
+#: data/mods/Magiclysm/Spells/attunements/Stormcaller.json
+msgid "Thunder Pillar"
+msgstr ""
+
+#. ~ Description of spell "electric_turret ( Thunder Pillar )"
+#: data/mods/Magiclysm/Spells/attunements/Stormcaller.json
+msgid ""
+"Summon immovable pillars, that will attack your enemies with devastating "
+"lightning bolts."
+msgstr ""
+
+#. ~ Description of spell "cold_snap ( Cold Snap )"
+#: data/mods/Magiclysm/Spells/attunements/Tundra_Mage.json
+msgid ""
+"With a snap of your fingers, the target takes cold damage and freezes in "
+"place."
+msgstr ""
+
+#. ~ Description of spell "voidmage_final_grasp ( Final Grasp )"
+#: data/mods/Magiclysm/Spells/attunements/Void_Mage.json
+msgid ""
+"In the end, everything succumbs to the grasp of nothingness and stasis.  This"
+" spell gives the target a foretaste of that."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:ARTIFICER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:ALCHEMIST>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:BIOTEK>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:BLOOD_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:BOREAL_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:CLEANSING_FLAME>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:CRUSADER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:EARTH_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:FIRE_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:FORCE_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:GAIAS_CHOSEN>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:GLACIER_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:GOLEMANCER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:GRAVITY_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:ICE_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:ILLUSIONIST>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:MAGNETISM_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:OVERCLOCKER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:PERMAFROST_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:RADIATION_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:SHAMAN>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:SHAPESHIFTER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:SOULFIRE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:STORM_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:STORMCALLER>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:SUN_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:TUNDRA_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:VOID_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:VULCANIST>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_name:WITHER_MAGE>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "Touch the altar"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "Back away"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:ARTIFICER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:ALCHEMIST>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:BIOTEK>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:BLOOD_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:BOREAL_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:CLEANSING_FLAME>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:CRUSADER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:EARTH_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:FIRE_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:FORCE_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:GAIAS_CHOSEN>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:GLACIER_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:GOLEMANCER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:GRAVITY_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:ICE_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:ILLUSIONIST>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:MAGNETISM_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:OVERCLOCKER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:PERMAFROST_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:RADIATION_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:SHAMAN>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:SHAPESHIFTER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:SOULFIRE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:STORM_ELEMENTAL>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:STORMCALLER>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:SUN_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:TUNDRA_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:VOID_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:VULCANIST>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "<trait_description:WITHER_MAGE>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "Leave the altar alone"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_CHECK_ATTUNEMENTS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid "You reach out to touch the attunement altar."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CANT_GIVE_ATTUNEMENT_NOT_A_MAGE"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid ""
+"The altar does not respond to your touch.  Only a mage can unlock its "
+"secrets."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CANT_GIVE_ATTUNEMENT_NOT_ENOUGH_SPELLS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid ""
+"The altar does not respond to your touch.  You need more breadth in your "
+"spell selection before you can attempt attunement."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CANT_GIVE_ATTUNEMENT_NOT_ENOUGH_SPELL_LEVELS"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid ""
+"The altar does not respond to your touch.  While you know many spells, your "
+"knowledge of them is still too shallow."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CANT_GIVE_ATTUNEMENT_NOT_ENOUGH_PROFICIENCIES"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid ""
+"The altar does not respond to your touch.  While your knowledge of spells is "
+"considerable, your understanding of the fundamentals of spellcasting needs "
+"work."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ATTUNEMENT_SUCCESS_MESSAGE"
+#: data/mods/Magiclysm/effect_on_conditions/attunement_choices.json
+msgid ""
+"As you touch the altar, you feel your ley lines twitch before they "
+"reconfigure themselves into new patterns.  Power flows through your body in a"
+" torrent along the new channels.  You have attained attunement, the rarest of"
+" all magical accomplishments."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DUST_REBORN_INITIAL"
+#: data/mods/Magiclysm/effect_on_conditions/attunements.json
+msgid "Part of your body and soul were divorced."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DUST_REBORN"
+#: data/mods/Magiclysm/effect_on_conditions/attunements.json
+msgid ""
+"You feel an insane pain, as your soul is pulled off, out of your body.  "
+"Second later, your mind were pulled somewhere else, in the place you visit "
+"before."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_VALIDATE_FORGE"
+#: data/mods/Magiclysm/effect_on_conditions/forge_of_wonders.json
+msgid "MANUALLY FINDING THE FORGE AS A FALLBACK (PRESS SPACE)."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_FORGE_TELEPORT"
+#: data/mods/Magiclysm/effect_on_conditions/forge_of_wonders.json
+msgid ""
+"As you recite the incantation the runes on the scroll begin to shift.  And in"
+" the blink of an eye you are suddenly somewhere else."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_FORGE_TELEPORT"
+#. ~ Player message in false effect in EoC "EOC_FORGE_RETURN_TELEPORT"
+#: data/mods/Magiclysm/effect_on_conditions/forge_of_wonders.json
+msgid "You need to be able to see, read, and speak to recite the incantation."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_FORGE_RETURN_TELEPORT"
+#: data/mods/Magiclysm/effect_on_conditions/forge_of_wonders.json
+msgid ""
+"As you recite the incantation the scroll burns away in your hands.  And in "
+"the blink of an eye you are suddenly somewhere else."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "Bear Form"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "Cougar Form"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "Deer Form"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "Raven Form"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "You learned how to transform into a bear."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "You learned how to transform into a cougar."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "You learned how to transform into a deer."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "You learned how to transform into a raven."
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_DRUID_SHIFTER_GIVE_FORM_2"
+#: data/mods/Magiclysm/effect_on_conditions/game_start.json
+msgid "Which form did you learn how to shift into?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_STARE1"
+#: data/mods/Magiclysm/effect_on_conditions/miscellaneous.json
+#: data/mods/MindOverMatter/mod_interactions/magiclysm/eoc_misc.json
+#: data/mods/Xedra_Evolved/eocs/vanilla_overwrites.json
+#: data/mods/Xedra_Evolved/mod_interactions/mindovermatter/eocs.json
+msgid ""
+"You sense <npc_name> trying to enter your mind, but your magic protects you!"
+msgstr ""
+
+#. ~ Name of spell "gain_mana_leech_shackle"
+#. ~ Name of spell "gain_mana_leech_shackle_unlocked"
+#: data/mods/Magiclysm/effect_on_conditions/miscellaneous.json
+msgid "MANA_LEECH_START"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_MANA_LEECH_UNLOCK"
+#: data/mods/Magiclysm/effect_on_conditions/miscellaneous.json
+msgid ""
+"As you complete the incantation, your mana-leech shackle becomes loose and "
+"inert.  It won't stop you from casting spells anymore."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_MANA_LEECH_UNLOCK"
+#: data/mods/Magiclysm/effect_on_conditions/miscellaneous.json
+msgid ""
+"You are not wearing a mana-leech shackle, so this spell wouldn't do anything "
+"for you."
+msgstr ""
+
+#. ~ value of variable 'message_fail' in effect in EoC "EOC_RAVENFOLK_LEAP"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "You're too tired to leap."
+msgstr ""
+
+#. ~ value of variable 'message_success' in effect in EoC
+#. "EOC_RAVENFOLK_SCREECH"
+#. ~ Player makes sound in effect in EoC "EOC_LILIN_AOE_DAZE"
+#. ~ Player message in effect in EoC "EOC_LILIN_AOE_DAZE"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+#: data/mods/Xedra_Evolved/spells/lilin_spell_eocs.json
+msgid "You let out a piercing cry!"
+msgstr ""
+
+#. ~ value of variable 'message_fail' in effect in EoC "EOC_RAVENFOLK_SCREECH"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "You change your mind about screeching."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LOVES_SHINY_OBJECTS_FOLLOWUP"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "You have <u_val:shiny_count> shiny objects."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_MANA_LUM_EXTERNAL_RANDOM_TRIGGER"
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_MANA_LUM_EXTERNAL_SPELLCASTING_FINISH"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "The air around you suddenly shimmers with a lambent glow."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_MANA_FLASH_SPELLCASTING_FINISH"
+#: data/mods/Magiclysm/effect_on_conditions/mutation_eocs.json
+msgid "Your ley lines flare up!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_MAGICLYSM_SHAPESHIFTED_ANIMALS_CANT_DO_THAT"
+#. ~ Player message in effect in EoC "EOC_XE_SHAPESHIFTED_ANIMALS_CANT_DO_THAT"
+#: data/mods/Magiclysm/effect_on_conditions/shapeshifting_restrictions.json
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+msgid "You can't perform that activity while in the form of an animal."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_BEAR_FORM_activated_3"
+#. in nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_BEAR_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_BEAR_FORM_activated"
+#. ~ Player message in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_BEAR_activated_2" in nested EOCs in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_BEAR_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid ""
+"Your body shifts and expands as fur sprouts from your skin and your mouth and"
+" teeth lengthen."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_BEAR_activated_2" in nested EOCs in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_BEAR_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "You don't have enough mana to transform into a bear."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_BEAR_FORM_deactivated"
+#. in nested EOCs in false effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated"
+#. ~ Player message in effect in EoC "EOC_WEREWOLF_WOLF_FORM_deactivated" in
+#. nested EOCs in false effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated"
+#. ~ Player message in effect in EoC "EOC_WEREWOLF_HYBRID_FORM_deactivated" in
+#. nested EOCs in false effect in EoC "EOC_WEREWOLF_HYBRID_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_HYBRID_FORM_activated"
+#. ~ Player message in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_BEAR_deactivated" in nested EOCs in false effect
+#. in EoC "EOC_POOKA_SHAPESHIFT_FULL_BEAR_activated"
+#. ~ Player message in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_DEER_deactivated" in nested EOCs in false effect
+#. in EoC "EOC_POOKA_SHAPESHIFT_FULL_DEER_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "Your body shifts and contracts and you return to your humanoid form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_BEAR_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid "You cannot transform into a bear if you are already in an animal form."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid ""
+"Your body shifts and warps as fur sprouts from your skin, whiskers from your "
+"nose, and claws and fangs from your fingers and mouth."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_COUGAR_activated_2" in nested EOCs in effect in
+#. EoC "EOC_POOKA_SHAPESHIFT_FULL_COUGAR_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "You don't have enough mana to transform into a cougar."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_deactivated" in nested EOCs in false effect
+#. in EoC "EOC_DRUID_SHIFTER_COUGAR_FORM_activated_2" in nested EOCs in effect
+#. in EoC "EOC_DRUID_SHIFTER_COUGAR_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid ""
+"Your body shifts and your fur disappears as you return to your humanoid form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_COUGAR_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid ""
+"You cannot transform into a cougar if you are already in an animal form."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_DEER_FORM_activated_3"
+#. in nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_DEER_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_DEER_FORM_activated"
+#. ~ Player message in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_DEER_activated_2" in nested EOCs in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_DEER_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid ""
+"Your body shifts and warps as your fingers and feet fuse into hooves and "
+"majestic antlers sprout from your head."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_DEER_activated_2" in nested EOCs in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_DEER_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "You don't have enough mana to transform into a deer."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_DEER_FORM_deactivated"
+#. in nested EOCs in false effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid ""
+"Your body shifts and your fingers separate as you return to your humanoid "
+"form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_DEER_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid "You cannot transform into a deer if you are already in an animal form."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_RAVEN_FORM_activated_3"
+#. in nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_RAVEN_FORM_activated_2"
+#. in nested EOCs in effect in EoC "EOC_DRUID_SHIFTER_RAVEN_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid ""
+"Your body shifts and changes as you concentrate and you take wing as a raven."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_RAVEN_activated_2" in nested EOCs in effect in
+#. EoC "EOC_POOKA_SHAPESHIFT_FULL_RAVEN_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "You don't have enough mana to transform into a raven."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DRUID_SHIFTER_RAVEN_FORM_deactivated"
+#. in nested EOCs in false effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid "Your body shifts and changes and you return to your humanoid form."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_DRUID_SHIFTER_RAVEN_FORM_activated"
+#: data/mods/Magiclysm/effect_on_conditions/transformations.json
+msgid "You cannot transform into a raven if you are already in an animal form."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_MC_CASTED_A_SPELL_LEARN_BOOST_CLASSLESS"
+#: data/mods/Magiclysm/effect_on_conditions/spellcasting/learn_boost.json
+msgid "debug_mc_additional_spell_xp: <global_val:debug_mc_additional_spell_xp>"
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_heal"
+#. ~ Name of effect type id "effect_goblin_fruit_heal"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Restore Flesh and Bone"
+msgstr ""
+
+#. ~ Description of effect type "Restore Flesh and Bone"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Thanks to that apple, your wounds are slowly healing."
+msgstr ""
+
+#. ~ Apply message of effect type "Restore Flesh and Bone"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your flesh and bones start to knit together before your eyes."
+msgstr ""
+
+#. ~ Remove message of effect type "Restore Flesh and Bone"
+#. ~ Remove message of effect type "Regeneration"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Your regeneration slows down."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_cure"
+#. ~ Name of effect type id "effect_goblin_fruit_cure"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Ward off Miasma"
+msgstr ""
+
+#. ~ Description of effect type "Ward off Miasma"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "No illness is going to get you down now."
+msgstr ""
+
+#. ~ Apply message of effect type "Ward off Miasma"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel revitalized."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_attack_speed"
+#. ~ Name of effect type id "effect_goblin_fruit_speed"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Quick Blows"
+msgstr ""
+
+#. ~ Description of effect type "Quick Blows"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Thanks to that pear, you can attack faster."
+msgstr ""
+
+#. ~ Apply message of effect type "Quick Blows"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You arms speed up."
+msgstr ""
+
+#. ~ Remove message of effect type "Quick Blows"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Your muscle's twitch as the pear's magic fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_thorns"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Blackberry Thorns"
+msgstr ""
+
+#. ~ Description of effect type "Blackberry Thorns"
+#. ~ Description of effect type "Thorns"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Anyone who attacks you will regret it."
+msgstr ""
+
+#. ~ Apply message of effect type "Blackberry Thorns"
+#. ~ Apply message of effect type "Thorns"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Long thorns grow through your skin, clothes, and armor."
+msgstr ""
+
+#. ~ Remove message of effect type "Blackberry Thorns"
+#. ~ Remove message of effect type "Thorns"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The thorns vanish without a trace, leaving your gear unharmed."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_keep_warm"
+#. ~ Name of effect type id "effect_goblin_fruit_keep_warm"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Summer's Heat"
+msgstr ""
+
+#. ~ Description of effect type "Summer's Heat"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "The magic of those strawberries is keeping you warm."
+msgstr ""
+
+#. ~ Apply message of effect type "Summer's Heat"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel a pleasant warmth."
+msgstr ""
+
+#. ~ Remove message of effect type "Summer's Heat"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You shiver as a cool breeze hits your skin."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_purge"
+#. ~ Name of effect type id "effect_goblin_fruit_purge_blood"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Ward off Toxins"
+msgstr ""
+
+#. ~ Description of effect type "Ward off Toxins"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your body will not be corrupted by these vile substances."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_dodge"
+#. ~ Name of effect type id "effect_goblin_fruit_dodge"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Flexible"
+msgstr ""
+
+#. ~ Description of effect type "Flexible"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your range of motion is greatly increased."
+msgstr ""
+
+#. ~ Apply message of effect type "Flexible"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You arms are as bendy as rubber."
+msgstr ""
+
+#. ~ Remove message of effect type "Flexible"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your limbs creak as they lose their flexibility."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_nightvision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Wintergreen Vision"
+msgstr ""
+
+#. ~ Apply message of effect type "Wintergreen Vision"
+#. ~ Apply message of effect type "Darkvision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The night doesn't seem so dark anymore."
+msgstr ""
+
+#. ~ Remove message of effect type "Wintergreen Vision"
+#. ~ Remove message of effect type "Darkvision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "The darkness of the night rushes in again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_nobleed"
+#. ~ Name of effect type id "effect_goblin_fruit_nobleed"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Stopped Bleeding"
+msgstr ""
+
+#. ~ Description of effect type "Stopped Bleeding"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "Your blood is all being held within your body."
+msgstr ""
+
+#. ~ Apply message of effect type "Stopped Bleeding"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your wounds tingle."
+msgstr ""
+
+#. ~ Remove message of effect type "Stopped Bleeding"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You feel a prickle as your wounds ache."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_vision"
+#. ~ Name of effect type id "effect_goblin_fruit_perception"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Good Vision"
+msgstr ""
+
+#. ~ Description of effect type "Good Vision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+msgid "The magic of those apricots is helping you see better."
+msgstr ""
+
+#. ~ Apply message of effect type "Good Vision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "You can pick out even minute details."
+msgstr ""
+
+#. ~ Remove message of effect type "Good Vision"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Distant objects loose their magical clarity."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pfruit_eat_poison"
+#. ~ Name of effect type id "effect_goblin_fruit_eat_poison"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Poison-Eater"
+msgstr ""
+
+#. ~ Description of effect type "Poison-Eater"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid ""
+"You can eat toxic or spoiled food without penalty.  You still should not eat "
+"zombie meat."
+msgstr ""
+
+#. ~ Apply message of effect type "Poison-Eater"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Your sense of taste dulls."
+msgstr ""
+
+#. ~ Remove message of effect type "Poison-Eater"
+#: data/mods/Magiclysm/effects/effect_potion_fruit.json
+#: data/mods/Xedra_Evolved/effects/goblin_fruit_effects.json
+msgid "Something in your mouth tastes foul."
+msgstr ""

@@ -1,0 +1,1838 @@
+# Batch 180 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_MAGIC_POTENTIAL_CONDUCTS"
+#: data/mods/Xedra_Evolved/eocs/magic_potential_eoc.json
+msgid ""
+"Got magic potential from depression, magic_potential: "
+"<global_val:magic_potential>"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_MAGIC_POTENTIAL_CONDUCTS"
+#: data/mods/Xedra_Evolved/eocs/magic_potential_eoc.json
+msgid ""
+"Got magic potential from witnessing the portal storm, magic_potential: "
+"<global_val:magic_potential>"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_MAGIC_POTENTIAL_CONDUCTS"
+#: data/mods/Xedra_Evolved/eocs/magic_potential_eoc.json
+msgid ""
+"Got magic potential from tainted mind, magic_potential: "
+"<global_val:magic_potential>"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_WEATHER_CONTROL_ABOVE_FREEZING_INITIATE" in nested EOCs in effect in
+#. EoC "EOC_WEATHER_CONTROL_ABOVE_FREEZING"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "As the clouds roll in, drops of rain begin to fall."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_WEATHER_CONTROL_ABOVE_FREEZING_INITIATE" in nested EOCs in effect in
+#. EoC "EOC_WEATHER_CONTROL_ABOVE_FREEZING"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The clouds churn as drops of rain begin to fall."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_LIGHT_DRIZZLE_TO_DRIZZLE"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The rain picks up."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_DRIZZLE_TO_RAIN"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The rain falls steadily now."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_RAIN_TO_RAINSTORM"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The rain falls in lashing sheet."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_RAINSTORM_TO_THUNDERSTORM"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "Thunder rumbles amid the driving rain."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_THUNDERSTORM_TO_LIGHTNINGSTORM"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The sky is continually illuminated by flashing lightning."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_WEATHER_CONTROL_BELOW_FREEZING_INITIATE" in nested EOCs in effect in
+#. EoC "EOC_WEATHER_CONTROL_BELOW_FREEZING"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "The sky clouds over as snow begins to drift down."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_WEATHER_CONTROL_BELOW_FREEZING_INITIATE" in nested EOCs in effect in
+#. EoC "EOC_WEATHER_CONTROL_BELOW_FREEZING"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "Snow slowly begins to drift down from the clouds above."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_FLURRIES_TO_SNOWING"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "Snow falls steadily now."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_WEATHER_CONTROL_SNOWING_TO_SNOWSTORM"
+#: data/mods/Xedra_Evolved/eocs/magic_weather_control.json
+msgid "Snow falls thickly, obscuring your vision."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CALL_DAFFODIL"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "You can't call more daffodil yet."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SHADOW_LOOT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "As the shadow dissipates, it leaves something behind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DREAM_DRAINER_LOOT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "As the mosquito fades away, it leaves something behind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LUNA_ATTUNED_LOOT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "As the revenant decoheres, it leaves something behind."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ATTEMPT_TO_MAKE_STORMWROUGHT_BLOOD_SUCCESS"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"The ritual harnesses the energies of the tear to infuse some blood with it, "
+"leaving behind a small ball of almost-solid blood.  It only needs to bath in "
+"the energies of the storms until it is fully charged and it will be ready to "
+"use."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ATTEMPT_TO_MAKE_STORMWROUGHT_BLOOD_FAIL"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"Without the proximity of a tear in reality, the ritual fails to harness any "
+"energy and the blood boils away."
+msgstr ""
+
+#. ~ Player message in effect in EoC "STORMWROUGHT_BLOOD_FULL_CHARGE" in nested
+#. EOCs in effect in EoC "CHARGE_STORMWROUGHT_BLOOD"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "As the stormwrought blood becomes fully charged, it starts simmering."
+msgstr ""
+
+#. ~ Player message in effect in EoC "STORMWROUGHT_BLOOD_HIGH_CHARGE" in nested
+#. EOCs in false effect in EoC "STORMWROUGHT_BLOOD_FULL_CHARGE" in nested EOCs
+#. in effect in EoC "CHARGE_STORMWROUGHT_BLOOD"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"The stormwrought blood boils intensely for a moment before returning to its "
+"inert state."
+msgstr ""
+
+#. ~ Player message in effect in EoC "STORMWROUGHT_BLOOD_LOW_CHARGE" in nested
+#. EOCs in false effect in EoC "STORMWROUGHT_BLOOD_HIGH_CHARGE" in nested EOCs
+#. in false effect in EoC "STORMWROUGHT_BLOOD_FULL_CHARGE" in nested EOCs in
+#. effect in EoC "CHARGE_STORMWROUGHT_BLOOD"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "The stormwrought blood boils a little, then becomes inert again."
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_SUMMON_DREAM_DRAINER_2" in nested EOCs
+#. in effect in EoC "EOC_SUMMON_DREAM_DRAINER"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"The mosquito consumes the catalyst and suddenly starts filling with air as it"
+" reshapes itself."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CHECK_TO_SUMMON_REVENANT_MOON_DARK_OUTSIDE" in nested EOCs in effect in
+#. EoC "EOC_CHECK_TO_SUMMON_REVENANT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"You utter the last words of the ritual and the revenant suddently animates, "
+"disappears and reappears nearby, a deadly glare in its eyes."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC
+#. "EOC_CHECK_TO_SUMMON_REVENANT_MOON_DARK_OUTSIDE" in nested EOCs in effect in
+#. EoC "EOC_CHECK_TO_SUMMON_REVENANT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "You see a flash of moonlight surrounding a tall, slender being."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC
+#. "EOC_CHECK_TO_SUMMON_REVENANT_MOON_DARK_OUTSIDE" in nested EOCs in effect in
+#. EoC "EOC_CHECK_TO_SUMMON_REVENANT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "You see a flash of moonlight surrounding tall, slender beings."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_CHECK_TO_SUMMON_REVENANT_MOON_DARK_OUTSIDE" in nested EOCs in effect in
+#. EoC "EOC_CHECK_TO_SUMMON_REVENANT"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"The revenant cannot be animated unless a sufficient amount of the light of a "
+"full moon shines upon it."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_SLEEP_SHIELD_SEVENOCLOCK"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid ""
+"Distrustful of the shenanigans you used to bring him at such a high altitude,"
+" the Man of the Nineteenth Hour refuses to shield you!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_VAMPIRE_BLEED_STOLEN_BLOOD"
+#: data/mods/Xedra_Evolved/eocs/misc_eoc.json
+msgid "You are losing your stolen blood through your bleeding wounds!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid ""
+"That night, you dream of your parents and the unknown place of your birth.  "
+"Who were they?"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Brownie"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Pooka"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Selkie"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Trow"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid ""
+"Your parents were brownies, the simple, down-to-earth crafters of the fae."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid "Your parents were pookas, shapechangers that can take animal forms."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid ""
+"Your parents were selkies, who spend part of the time upon land and part of "
+"the time as a seal in the sea"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid "Your parents were trow, tough as stone, who dwell beneath the earth."
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC
+#. "EOC_PLAYABLE_CHANGELING_COMMONER_CHOOSE_HERITAGE"
+#: data/mods/Xedra_Evolved/eocs/playable_changeling_advancement_eocs.json
+msgid "What is your heritage?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated_3" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated_2" in nested
+#. EOCs in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated"
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+msgid ""
+"Your body shifts and you fall on all fours as fur sprouts from your skin and "
+"your mouth and teeth lengthen."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated_3"
+#. in nested EOCs in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_WOLF_FORM_activated"
+#. ~ Player message in false effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_WOLF_activated_2" in nested EOCs in effect in EoC
+#. "EOC_POOKA_SHAPESHIFT_FULL_WOLF_activated"
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling_eocs.json
+msgid "You don't have enough mana to transform into a wolf."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_WEREWOLF_HYBRID_FORM_activated_3" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_HYBRID_FORM_activated_2" in
+#. nested EOCs in effect in EoC "EOC_WEREWOLF_HYBRID_FORM_activated"
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+msgid ""
+"Your body shifts and grows as enormous fangs and claws erupt from your skin "
+"and your mouth lengthens into a muzzle."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_WEREWOLF_HYBRID_FORM_activated_3" in nested EOCs in effect in EoC
+#. "EOC_WEREWOLF_HYBRID_FORM_activated_2" in nested EOCs in effect in EoC
+#. "EOC_WEREWOLF_HYBRID_FORM_activated"
+#: data/mods/Xedra_Evolved/eocs/shapeshifter_eocs.json
+msgid "You don't have enough mana to transform into your war form."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_GOT_A_SPELL_LVL"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid ""
+"Got a new level for eater, xe_eater_leveling: <global_val:xe_eater_leveling>"
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_XE_GOT_A_SPELL_LVL"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid ""
+"Got a new level for dreamer, xe_dreamer_leveling: "
+"<global_val:xe_dreamer_leveling>"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_XE_GIVE_SPELL_SELECTOR"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "Choose your Destiny"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "magic_potential: <global_val:magic_potential>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "allow_sequence: <global_val:allow_sequence>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "eater_dreamer_sequence: <global_val:eater_dreamer_sequence>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "inventor_dreamsmith_sequence: <global_val:inventor_dreamsmith_sequence>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "xe_eater_leveling: <global_val:xe_eater_leveling>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_XE_DEBUG_OUTPUT"
+#: data/mods/Xedra_Evolved/eocs/spell_learning_eoc.json
+msgid "xe_dreamer_leveling: <global_val:xe_dreamer_leveling>"
+msgstr ""
+
+#. ~ Player message in effect in EoC "SUITABLE_SACRIFICE_CHECK"
+#: data/mods/Xedra_Evolved/eocs/vampvirus_sacrifice_tracker.json
+msgid ""
+"You feel your thirst for blood deepen as you kill someone who fully trusted "
+"you."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Xedra_Evolved/eocs/vanilla_overwrites.json
+msgid "Survive the night"
+msgstr ""
+
+#. ~ Description of mission "Survive the night"
+#: data/mods/Xedra_Evolved/eocs/vanilla_overwrites.json
+msgid ""
+"You don't know what you're facing.  You only know that it's very dangerous."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CONDITION_XE_SUNRISE_MORALE_OVERRIDES"
+#. ~ Player message in effect in EoC "EOC_CONDITION_XE_SUNSET_MORALE_OVERRIDES"
+#: data/mods/Xedra_Evolved/eocs/vanilla_overwrites.json
+msgid "You are ineligible for sunrises."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid "hundred year old ginseng"
+msgstr ""
+
+#. ~ Description of furniture "hundred year old ginseng"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid ""
+"The ginseng plant has leaves that grow in a circle around a straight stem.  "
+"Yellowish-green, umbrella-shaped flowers grow in the center and produce red "
+"berries.  Wrinkles around the neck of the root tell how old the plant is.  "
+"This plant is over a hundred years old and if you decide to harvest it, you "
+"will need the roots."
+msgstr ""
+
+#. ~ Description of furniture "forest floor"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid ""
+"A patch of forest like any other, but you could travel here from the depths "
+"of any forest you found yourself in."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid "climbing vine"
+msgstr ""
+
+#. ~ Description of terrain "climbing vine"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture-plants.json
+msgid ""
+"A thick vine, ascending straight up into the sky.  Its whorls and twists seem"
+" almost like naturally-formed handholds.  You could climb it if you want."
+msgstr ""
+
+#. ~ Description of furniture "golden monolith"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A shiny golden monolith covered in shimmering pictograms.  There is a mist "
+"condensing near it.  A light seems to emanate from it."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "broken golden monolith"
+msgstr ""
+
+#. ~ Description of furniture "broken golden monolith"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A dully glowing golden monolith, the golden pictograms covering it have been "
+"scarred by a tremendous force."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "throne"
+msgstr ""
+
+#. ~ Description of furniture "throne"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"An ornate wooden throne, with four legs, a seat, and a back.  It's good to be"
+" king, if just for a while.  It appears to have been joined without any "
+"nails."
+msgstr ""
+
+#. ~ Description of furniture "Balefire"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "A giant blue white fire produces a cool light and almost no heat."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "bat roost"
+msgstr ""
+
+#. ~ Description of furniture "bat roost"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A series of raised horizontal slats for bats to rest on right above eye "
+"level, covered in tiny claw marks.  Below, there is a pull-out drawer that "
+"collects guano so it can be easily washed out, similar to a litter box."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "altar of elements"
+msgstr ""
+
+#. ~ Description of furniture "altar of elements"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"This is a dramatic stone altar, it glows faintly in the dark.  Each of the "
+"four corners has a place for one of the cardinal elements as well as several "
+"recessed spaces around the center of the altar."
+msgstr ""
+
+#. ~ Description of terrain "bark"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "A solid piece of bark covers the floor here, open to the sky."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "dreamforged bed of restful repose"
+msgstr ""
+
+#. ~ Description of furniture "dreamforged bed of restful repose"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A bed made solely for dreaming, by a dreamsmith.  When you lay upon this bed,"
+" your mind renews and your body recuperates.  Said to be so comfortable that "
+"if you die while in this bed, your mind detaches without pain from your body "
+"and sets forth upon the dream realms."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "civilization"
+msgstr ""
+
+#. ~ Description of furniture "civilization"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A part of one of the last bastions of civilization.  You could travel here in"
+" moments from any road you found yourself on."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "living earth"
+msgstr ""
+
+#. ~ Description of furniture "living earth"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"The rock of the living earth.  You could travel here in moments as long as "
+"you are deep underground."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "open to the sky"
+msgstr ""
+
+#. ~ Description of furniture "open to the sky"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"Above the base earth and beneath the firmament.  You could travel here in "
+"moments as long as you are high above the earth or surrounded by the blowing "
+"wind."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "memorized location"
+msgstr ""
+
+#. ~ Description of furniture "memorized location"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "You remember the exact moment of time your were at this spot."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "Rocky fang"
+msgstr ""
+
+#. ~ Description of furniture "Rocky fang"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "A thick, jagged spike of rock."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "Bloody footsteps"
+msgstr ""
+
+#. ~ Description of furniture "Bloody footsteps"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A trail of old footsteps, still visible despite the blood and rain.  Examine "
+"it to track its source."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SEVENOCLOCK_ALREADY_TRACKED" in
+#. furniture "Bloody footsteps"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "You already know where these footprints lead."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SEVENOCLOCK_TRACK" in furniture
+#. "Bloody footsteps"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "You carefully examine the footprints, determining where they lead."
+msgstr ""
+
+#. ~ Description of furniture "Suspicious hole"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A hole in the ground, bearing acid burns.  Examine it to track its source."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEATHWORM_ALREADY_TRACKED" in
+#. furniture "Suspicious hole"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "You already know where this hole leads."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEATHWORM_TRACK" in furniture
+#. "Suspicious hole"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "You carefully examine the hole, determining where it leads."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "unmoving figure"
+msgstr ""
+
+#. ~ Description of furniture "unmoving figure"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid ""
+"A person stands before you, completely motionless in spite of the horrific "
+"wound marring their body.  Every part of their figure is leeched of color, "
+"and you are completely incapable of affecting them in any way."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#. ~ Custom name for recipe crafting "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung wooden chair"
+msgid_plural "treesung wooden chairs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "treesung wooden chair"
+#. ~ Description of "treesung wooden chair"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid ""
+"A simple wooden chair with four legs, a seat, and a back.  It's all made of a"
+" single, solid piece of wood, with twists and curves like it grew in place "
+"rather than being made.  There's even a small branch with a leaf extending "
+"from the top."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid "treesung wardrobe"
+msgid_plural "treesung wardrobes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "treesung wardrobe"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+msgid ""
+"A very large wooden cabinet for storing clothes, effectively an upright "
+"closet.  It's all made of a single, solid piece of wood, with twists and "
+"curves like it grew in place rather than being made.  There's even a bit of "
+"moss growing on the sides."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+msgid "treesung table"
+msgstr ""
+
+#. ~ Description of furniture "treesung table"
+#. ~ Description of "treesung wooden table"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid ""
+"A treesung wooden table.  It's all made of a single, solid piece of wood, "
+"with twists and curves like it grew in place rather than being made."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Item name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid "treesung bed frame"
+msgid_plural "treesung bed frames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of furniture "treesung bed frame"
+#. ~ Description of "treesung bed frame"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+#: data/mods/Xedra_Evolved/items/furniture_items.json
+msgid ""
+"A sturdy wooden bed frame built to hold most standard mattresses.  It's all "
+"made of a single, solid piece of wood, with twists and curves like it grew in"
+" place rather than being made."
+msgstr ""
+
+#. ~ Description of furniture "bed"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+msgid ""
+"A standard mattress on a treesung wooden frame.  Even without blankets or "
+"pillows, and despite being a completely ordinary mattress, it's a sight for "
+"sore, tired eyes."
+msgstr ""
+
+#. ~ Description of furniture "down bed"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture_treesung.json
+msgid ""
+"A down mattress on a treesung wooden frame.  Even without blankets or "
+"pillows, and despite being a completely ordinary mattress, it's a sight for "
+"sore, tired eyes."
+msgstr ""
+
+#. ~ Description of terrain "closed wood door with an electronic lock"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A standard wooden door that doesn't look very resilient.  It'd probably burn "
+"easily, too.  This one has a deadbolt electronic lock, so it's likely locked."
+"  You could pry it open or guess the code; if you were able to deduce it, or "
+"unlock the deadbolt from the inside."
+msgstr ""
+
+#. ~ Player message in effect in EoC "eoc_unlock_elock" in terrain "closed wood
+#. door with an electronic lock"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid "The numpad glows green and emits a happy chirp as the door unlocks."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "eoc_unlock_elock" in terrain
+#. "closed wood door with an electronic lock"'s examine action
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid "The numpad flashes while beeping angrily at you."
+msgstr ""
+
+#. ~ Description of terrain "closed wood door"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A regular door made of ordinary wood, except this one has a peephole.  If you"
+" examined it more closely, you'd be able to peek through the hole.  This one "
+"has a deadbolt numpad, so it's likely locked.  You could pry it open or "
+"possibly guess the code; if you were able to deduce it, or unlock the "
+"deadbolt from the inside."
+msgstr ""
+
+#. ~ Description of terrain "closed wood door"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid ""
+"A standard wooden door that doesn't look very resilient.  It'd probably burn "
+"easily, too.  This one has an electronic keypad, so it's likely locked.  You "
+"could pry it open or try to guess the code; if you were able to deduce it."
+msgstr ""
+
+#. ~ Description of terrain "electronic locked metal door"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-doors.json
+msgid ""
+"An extremely resilient door made of assorted steel, carved and pounded into "
+"shape.  It is locked by an electronic keypad.  You could try to guess the "
+"code."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "wall of fog"
+msgstr ""
+
+#. ~ Description of terrain "wall of fog"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid ""
+"A wall of swirling fog.  Despite its constant movement, it never spreads out "
+"or escapes the rough wall-shape it's in."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "obsidian rock"
+msgstr ""
+
+#. ~ Description of terrain "obsidian rock"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid ""
+"A rough wall of igneous stone.  It does not look like polished obsidian but "
+"you can see some resemblance."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "obsidian floor"
+msgstr ""
+
+#. ~ Description of terrain "obsidian floor"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid ""
+"A relatively flat area of igneous rock.  Looks stable enough to be mined with"
+" the proper mining gear."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "obsidian column"
+msgstr ""
+
+#. ~ Description of terrain "obsidian column"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "A natural column of igneous rock."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "obsidian roof"
+msgstr ""
+
+#. ~ Description of terrain "obsidian roof"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "A section of flat igneous rock."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "salamander vein"
+msgstr ""
+
+#. ~ Description of terrain "salamander vein"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-eruption.json
+msgid "A vein of rare materials that appear during an eruption."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "fig tree"
+msgstr ""
+
+#. ~ Description of terrain "fig tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is Ficus carica, a species of small tree in the flowering plant "
+"family Moraceae, native to the Mediterranean region, together with western "
+"and southern Asia.  If you examined the branches more closely, you could "
+"probably find a few mature ones in autumn."
+msgstr ""
+
+#. ~ Description of terrain "fig tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is Ficus carica, a species of small tree in the flowering plant "
+"family Moraceae, native to the Mediterranean region, together with western "
+"and southern Asia.  There do not appear to be any ripe apples now."
+msgstr ""
+
+#. ~ Description of terrain "fig tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is Punica granatum is a fruit-bearing deciduous shrub in the family"
+" Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m (16 and 33 "
+"ft) tall.  If you examined the branches more closely, you could probably find"
+" a few mature ones in autumn."
+msgstr ""
+
+#. ~ Description of terrain "fig tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"This tree is Punica granatum is a fruit-bearing deciduous shrub in the family"
+" Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m (16 and 33 "
+"ft) tall.  There do not appear to be any ripe apples now."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "hawthorn tree"
+msgstr ""
+
+#. ~ Description of terrain "hawthorn tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Crataegus monogyna, known as common hawthorn, one-seed hawthorn, or single-"
+"seeded hawthorn, is a species of flowering plant in the rose family Rosaceae."
+msgstr ""
+
+#. ~ Description of terrain "hawthorn tree"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"Crataegus monogyna, known as common hawthorn, one-seed hawthorn, or single-"
+"seeded hawthorn, is a species of flowering plant in the rose family Rosaceae."
+"  It looks like the tree has been picked clean of hawthorns."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "strange bush"
+msgstr ""
+
+#. ~ Description of terrain "strange bush"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A strange plant, faintly luminous, with waxy purple leaves and flowers like "
+"chiming bells.  Odd-looking fruit hang from some of the branches, but you'd "
+"need to check more closely to know if they're ripe."
+msgstr ""
+
+#. ~ Description of terrain "strange bush"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A strange plant, faintly luminous, with waxy purple leaves and flowers like "
+"chiming bells."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "patch of mushrooms"
+msgstr ""
+
+#. ~ Description of terrain "patch of mushrooms"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "A cluster of mushrooms, growing all together."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid "den of brambles"
+msgstr ""
+
+#. ~ Description of terrain "den of brambles"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-flora.json
+msgid ""
+"A structure made from quickly-grown vines and brambles, almost-entirely "
+"concealing the hollow inside."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-stairs.json
+msgid "earthen stairs"
+msgstr ""
+
+#. ~ Description of terrain "earthen stairs"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-stairs.json
+msgid "A set of stone and dirt steps leading up."
+msgstr ""
+
+#. ~ Description of terrain "earthen stairs"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain-stairs.json
+msgid "A set of stone and dirt steps leading down."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "warped flesh wall"
+msgstr ""
+
+#. ~ Description of terrain "warped flesh wall"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid ""
+"Cold to the touch, the deformed flesh of this monstrous being churns as it "
+"perceives your presence."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "warped flesh floor"
+msgstr ""
+
+#. ~ Description of terrain "warped flesh floor"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid ""
+"Walking over the innards of this monstrous beast, you can feel it move "
+"underneath your feet."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "warped flesh roof"
+msgstr ""
+
+#. ~ Description of terrain "warped flesh roof"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "A section of flat, flesh-like rooftop."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "Abyssal Hunger's brain"
+msgstr ""
+
+#. ~ Description of terrain "Abyssal Hunger's brain"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "A gigantic mass of flesh similar to a brain."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid "shard-filled brain chunk"
+msgstr ""
+
+#. ~ Description of furniture "shard-filled brain chunk"
+#: data/mods/Xedra_Evolved/furniture_and_terrain/terrain_abyssal_hunger.json
+msgid ""
+"A chunk of brain matter holding some shards akin to the one you are looking "
+"for.  Examine to pick one."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Bored, the blackout rage drink"
+msgid_plural "Bored, the blackout rage drink"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Bored, the blackout rage drink"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"An incredibly alcoholic and caffeinated drink.  This probably isn't healthy."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "sixdust"
+msgid_plural "sixdust"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sixdust"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"Sixdust, for when you must scorch the earth.  A sprayable anti-fungal/anti-"
+"insecticidal ammo for the chemical thrower.  Best used with some kind of mask"
+" or mouth protection."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "small blessing of Brigit"
+msgid_plural "small blessing of Brigit"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small blessing of Brigit"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A small pill made from royal jelly, ash, and poppies.  Blessed with prayers "
+"to Brigit over several hours.  Will end any cold or flu instantaneously."
+msgstr ""
+
+#. ~ "activation_message" action message of item "small blessing of Brigit"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "You feel better almost instantly."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "prophet's LSD"
+msgid_plural "prophet's LSD"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "prophet's LSD"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A windowpane worth of Rainbow Skull LSD tabs.  These tabs are said to grant "
+"the consumer the ability to see several seconds into the future."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "alchemically altered trucker pill"
+msgid_plural "alchemically altered trucker pills"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "alchemically altered trucker pill"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"When you began the sinister path into occultism, you never imagined you'd be "
+"alchemically altering truckstop viagra into combat drugs.  But here you are, "
+"no sleep til Boston."
+msgstr ""
+
+#. ~ "activation_message" action message of item "alchemically altered trucker
+#. pill"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "You swallow a couple of the large green pills."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "snaring pentagram trap"
+msgid_plural "snaring pentagram traps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "snaring pentagram trap"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A metallic pentagram full of mystic symbols.  Will trap creatures from other "
+"dimensions if they wander into it."
+msgstr ""
+
+#. ~ "done_message" action message of item "snaring pentagram trap"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "You set the pentagram snare."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "spirit show dust"
+msgid_plural "spirit show dust"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spirit show dust"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A key ingredient for Victorian seances led by actual occultists.  This dust "
+"summons spirits from beyond to walk the earth again for a short time.  The "
+"spirits it summons are mindless and disappear upon being touched."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "charm of Marzanna"
+msgid_plural "charms of Marzanna"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "charm of Marzanna"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A tiny effigy of a woman with singed extremities and a waterlogged face."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "feline periapta"
+msgid_plural "feline periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "feline periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a cat with strange runes on "
+"it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "lupine periapta"
+msgid_plural "lupine periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lupine periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a wolf with strange runes on "
+"it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "cephalopod periapta"
+msgid_plural "cephalopod periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cephalopod periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of an octopus with strange runes"
+" on it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "tree periapta"
+msgid_plural "tree periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tree periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a tree with strange runes on "
+"it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "scorpion periapta"
+msgid_plural "scorpion periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scorpion periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a scorpion with strange runes"
+" on it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "butterfly periapta"
+msgid_plural "butterfly periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "butterfly periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a butterfly with strange "
+"runes on it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "spider periapta"
+msgid_plural "spider periaptas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spider periapta"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A shiny, gold necklace adorned with an image of a spider with strange runes "
+"on it and diamond eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Väinämöinen's Kantele, imitation"
+msgid_plural "Väinämöinen's Kanteles, imitation"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Väinämöinen's Kantele, imitation"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A traditional Finnish string instrument.  According to myth the first one was"
+" fashioned from a great pike's jawbone.  Does it glimmer in the light?  Do "
+"its notes echo and linger more than normal?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "life extension potion"
+msgid_plural "life extension potions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "life extension potion"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"A source of considerable wealth for the few alchemists talented enough to "
+"distill them, these potions are capable of adding decades to the lifespan of "
+"those who can afford the price of the rare and expensive ingredients they "
+"require.  They are however not able to prolong a life indefinitely beyond its"
+" natural years, and you will need to find other means to achieve immortality,"
+" if that is your goal."
+msgstr ""
+
+#. ~ Player message in effect in EoC "extend_life"
+#. ~ Message of spell "extend_life ( Extend Life )"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+#: data/mods/Xedra_Evolved/spells/item_spells.json
+msgid ""
+"You imbibed the concoction and you feel your chakras align and your DNA de-"
+"age."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "extend_life"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"This was a very valuable elixir that you just wasted drinking yourself.  You "
+"can't become more unaging."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "potion of wicked quick hands"
+msgid_plural "potions of wicked quick hands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "potion of wicked quick hands"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"This is a potion of wicked quick hands.  It will increase your dexterity for "
+"50 minutes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "potion of terrible strength"
+msgid_plural "potions of terrible strength"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "potion of terrible strength"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"This is a potion of terrible strength.  It will increase your strength for 50"
+" minutes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "potion of hare's leap"
+msgid_plural "potions of hare's leap"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "potion of hare's leap"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"This is a potion of hare's leap.  It allows you to jump afar from danger."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Hyde Formula"
+msgid_plural "Hyde Formula"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Hyde Formula"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"This is a transmutation potion that will bring your best attributes to the "
+"forefront."
+msgstr ""
+
+#. ~ Player message in effect in EoC "hyde_formula"
+#. ~ Message of spell "hyde_formula ( Hyde Formula )"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+#: data/mods/Xedra_Evolved/spells/item_spells.json
+msgid "You imbibed the concoction and you feel your inner self unleashed."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "hyde_formula"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"If this was a just world choosing to drink this concotion more than once "
+"would send you into an uncontrollable rage state where you rampaged until "
+"your inevitable death.  This is not a just world."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of the Trees"
+msgid_plural "Imbuement of the Trees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Imbuement of the Trees"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"In a wooden bowl, Faewild and Dreamdross are mixed together along with "
+"ground-up leaves.  The mixture has fae and human blood added to it and parts "
+"from the plant fae and then all mixed again until it's a uniform blend.  The "
+"resulting mixture will eventually dissolve into a deep green liquid."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of the Earth"
+msgid_plural "Imbuement of the Earth"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of the Waters"
+msgid_plural "Imbuement of the Waters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of the Winds"
+msgid_plural "Imbuement of the Winds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of the Flames"
+msgid_plural "Imbuement of the Flames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Imbuement of the Flames"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"Heat Faewild and Dreamdross over a roaring fire and the mix in the ashes "
+"until you have a thick paste.  That paste is mixed with parts taken from the "
+"Fair Folk and united with a dollop of fae, and human blood.  The resulting "
+"mixture will eventually dissolve into a scarlet liquid that shines with its "
+"own light."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid "Imbuement of Parchment"
+msgid_plural "Imbuement of Parchment"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Imbuement of Parchment"
+#: data/mods/Xedra_Evolved/items/alchemy.json
+msgid ""
+"While looking in a mirror, Faewild and Dreamdross are ground to dust.  That "
+"dust is mixed with parts taken from the Fair Folk and united with a dollop of"
+" fae, and human blood.  The resulting mixture will eventually dissolve into "
+"what almost looks like liquid porcelain."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (eXtra strength aspirin)"
+msgid_plural "scribbled notes (eXtra strength aspirin)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (eXtra strength aspirin)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for extra strength"
+" aspirin.  The active ingredient is apparently hallucinogenic, which is "
+"certainly one way to stop from feeling pain."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (small blessing of Brigit)"
+msgid_plural "scribbled notes (small blessing of Brigit)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (small blessing of Brigit)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a pill to cure"
+" minor illnesses.  You're not looking forward to getting that royal jelly now"
+" that you've seen what the bees are like lately."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (rage drink)"
+msgid_plural "scribbled notes (rage drink)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (rage drink)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for some kind of "
+"energy drink.  You do a double-take when you see just how much caffeine and "
+"alcohol you're supposed to add to the recipe."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (sixdust)"
+msgid_plural "scribbled notes (sixdust)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (sixdust)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an "
+"insecticide.  \"WEAR MASK DURING BREWING!!!!!\" is written at the bottom of "
+"the recipe"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (prophet's LSD)"
+msgid_plural "scribbled notes (prophet's LSD)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (prophet's LSD)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an extremely "
+"powerful hallucinogen.  The end product will supposedly allow you to \"see "
+"through time\"."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (alchemically altered trucker pill)"
+msgid_plural "scribbled notes (alchemically altered trucker pill)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (alchemically altered trucker pill)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a \"stamina "
+"enhancement\".  The ingredients make you raise your eyebrows, but the notes "
+"in the margins indicate that you won't need to sleep for quite some time "
+"after taking them."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (charm of Marzanna)"
+msgid_plural "scribbled notes (charm of Marzanna)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (charm of Marzanna)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes indicate wearing it should protect you from cold "
+"temperatures."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (spirit show dust)"
+msgid_plural "scribbled notes (spirit show dust)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (spirit show dust)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a powder to "
+"\"reveal that which is unseen\".  There are repeated references testing its "
+"effects at dusk, at crossroads, and on Halloween."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (Väinämöinen's Kantele, imitation)"
+msgid_plural "scribbled notes (Väinämöinen's Kantele, imitation)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (Väinämöinen's Kantele, imitation)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for…a musical "
+"instrument?  You didn't realize that alchemy could be used to get the band "
+"back together again."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (feline periapta)"
+msgid_plural "scribbled notes (feline periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (feline periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes have several parallel tears in them near the bottom."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (lupine periapta)"
+msgid_plural "scribbled notes (lupine periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (lupine periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes have \"take off before meals!!\" underlined at the bottom."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (cephalopod periapta)"
+msgid_plural "scribbled notes (cephalopod periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (cephalopod periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The writing gets increasingly shaky, dissolving into a series of ink"
+" blots just under the final steps of the recipe."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (plant periapta)"
+msgid_plural "scribbled notes (plant periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (plant periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes indicate that it will cause you to grow bark and to \"take"
+" off your boots first\"."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (scorpion periapta)"
+msgid_plural "scribbled notes (scorpion periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (scorpion periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  There are several stick-figure drawings of a person with a "
+"scorpion's tail in the margins."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (butterfly periapta)"
+msgid_plural "scribbled notes (butterfly periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (butterfly periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes indicate that you \"still can't fly\" even with it on."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (spider periapta)"
+msgid_plural "scribbled notes (spider periapta)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (spider periapta)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for an enchanted "
+"amulet.  The notes repeatedly mention \"Webs aren't really big enough to "
+"test, thank God.\""
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (cold iron ingot)"
+msgid_plural "scribbled notes (cold iron ingot)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (cold iron ingot)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for creating cold "
+"iron.  You note with amusement that the recipe doesn't seem to require any "
+"actual iron."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (life extension potion)"
+msgid_plural "scribbled notes (life extension potion)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (life extension potion)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for the elixir of "
+"life.  If only you had found this before the world ended."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (potion of terrible strength)"
+msgid_plural "scribbled notes (potion of terrible strength)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (potion of terrible strength)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a potion to "
+"increase your strength.  Written at the bottom is the note, \"Be very careful"
+" after drinking!\"."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (potion of wicked quick hands)"
+msgid_plural "scribbled notes (potion of wicked quick hands)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (potion of wicked quick hands)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a potion to "
+"increase your dexterity.  It looks like the undead will be catching these "
+"hands."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid "scribbled notes (potion of hare's leap)"
+msgid_plural "scribbled notes (potion of hare's leap)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scribbled notes (potion of hare's leap)"
+#: data/mods/Xedra_Evolved/items/alchemy_recipes.json
+msgid ""
+"An handwritten set of notes detailing an alchemical recipe for a potion to "
+"allow you to leap a great distance.  Hopefully it also allows you land safely"
+" after those great leaps."
+msgstr ""

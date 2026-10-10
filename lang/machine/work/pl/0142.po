@@ -1,0 +1,1598 @@
+# Batch 142 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Shifter Druid"
+msgstr ""
+
+#. ~ Description of profession "Shifter Druid" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"The ancient druidic art of taking animal forms had mostly fallen out of favor"
+" by the modern era, since most people didn't need to be a bear in their daily"
+" lives and even if they did transform into a raven, they still had to "
+"physically fly to their destination and couldn't check the internet for "
+"directions.  You, however, studied the ancient arts and gained the ability to"
+" transform yourself.  It's come in very handy since the world ended."
+msgstr ""
+
+#. ~ Proficiency category name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Spellcraft"
+msgstr ""
+
+#. ~ Description of proficiency category "Spellcraft"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Proficiencies that help with casting of magical spells."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Enchanting"
+msgstr ""
+
+#. ~ Description of proficiency "Enchanting"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You are an experienced enchanter."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Mystic Horticulture"
+msgstr ""
+
+#. ~ Description of proficiency "Mystic Horticulture"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "The art of instilling mystical energy into fruit."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Evocation"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Evocation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're familiar with how to channel magic and quickly release it with "
+"destructive potential."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Evocation"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Evocation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're proficient in quickly pooling magical energy for forceful casting."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Evocation"
+msgstr ""
+
+#. ~ Description of proficiency "Master Evocation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of casting evocative magic, able to pool large "
+"amounts of your mana for quick, powerful spells."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Channeling"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Channeling"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're familiar with the methods used to efficiently channel mana in "
+"prolonged casting."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Channeling"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Channeling"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're proficient in keeping a steady hand when channeling magic for long "
+"amounts of time."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Channeling"
+msgstr ""
+
+#. ~ Description of proficiency "Master Channeling"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of letting magic flow through you in long stretches."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Conjuration"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Conjuration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're familiar with the ideal ways of conjuring something with the power of "
+"magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Conjuration"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Conjuration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're proficient with the methods used in conjuring magical things."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Conjuration"
+msgstr ""
+
+#. ~ Description of proficiency "Master Conjuration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You've mastered the art of conjuring things with the power of magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Enhancement"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Enhancement"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're familiar with improving a creature by way of magical enhancement."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Enhancement"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Enhancement"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're proficient in boosting the capabilities of your subject with magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Enhancement"
+msgstr ""
+
+#. ~ Description of proficiency "Master Enhancement"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of improving yourself and others with the power of "
+"magical incantations."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Enervation"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Enervation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're familiar with debilitating your enemies through magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Enervation"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Enervation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're proficient in debilitating your enemies through magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Enervation"
+msgstr ""
+
+#. ~ Description of proficiency "Master Enervation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of debilitating your enemies with the power of "
+"magical incantations."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Conveyance"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Conveyance"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're familiar with how to safely move something from place to place with "
+"magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Conveyance"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Conveyance"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're proficient in moving your subjects with magic across long distances."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Conveyance"
+msgstr ""
+
+#. ~ Description of proficiency "Master Conveyance"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of moving things from place to place by magical "
+"means."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Restoration"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Restoration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're familiar with how to return a target to its normal condition."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Restoration"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Restoration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You're proficient in returning a target to its base condition, curing any "
+"ills it might suffer."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Restoration"
+msgstr ""
+
+#. ~ Description of proficiency "Master Restoration"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You've mastered the art of restoring a target to its normal condition."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Novice Transformation"
+msgstr ""
+
+#. ~ Description of proficiency "Novice Transformation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're familiar with how to turn things into other things using magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Apprentice Transformation"
+msgstr ""
+
+#. ~ Description of proficiency "Apprentice Transformation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid "You're proficient in turning things into other things using magic."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Magiclysm/proficiencies.json
+msgid "Master Transformation"
+msgstr ""
+
+#. ~ Description of proficiency "Master Transformation"
+#: data/mods/Magiclysm/proficiencies.json
+msgid ""
+"You've mastered the art of transforming the physical form of creatures and "
+"objects."
+msgstr ""
+
+#. ~ Starting location of scenario "Lost Faith"
+#: data/mods/Magiclysm/scenarios.json
+msgctxt "start_name"
+msgid "Sanctuary"
+msgstr ""
+
+#. ~ Description of species "GOBLIN_FORGE"
+#: data/mods/Magiclysm/species.json
+msgid "a short and entrepreneurial humanoid"
+msgstr ""
+
+#. ~ Description of species "WARG"
+#: data/mods/Magiclysm/species.json
+msgid "a gigantic lupine beast"
+msgstr ""
+
+#. ~ Description of species "RAVENFOLK"
+#: data/mods/Magiclysm/species.json
+msgid "a corvid-like humanoid"
+msgstr ""
+
+#. ~ Description of species "DWARF"
+#: data/mods/Magiclysm/species.json
+msgid "a short and stocky humanoid"
+msgstr ""
+
+#. ~ Description of species "ELF"
+#: data/mods/Magiclysm/species.json
+msgid "a tall and slender humanoid"
+msgstr ""
+
+#. ~ Description of species "FEY"
+#: data/mods/Magiclysm/species.json
+msgid "a small, magical humanoid"
+msgstr ""
+
+#. ~ Description of species "AIR_SPIRIT"
+#: data/mods/Magiclysm/species.json
+msgid "A magical being of wind and rain."
+msgstr ""
+
+#. ~ Description of species "FOREST_SPIRIT"
+#: data/mods/Magiclysm/species.json
+msgid "A magical being of the forest."
+msgstr ""
+
+#. ~ Description of species "EARTH_SPIRIT"
+#: data/mods/Magiclysm/species.json
+msgid "A magical being of rock and stone."
+msgstr ""
+
+#. ~ Name of starting location "sloc_last_mage_on_earth"
+#: data/mods/Magiclysm/start_locations.json
+msgid "Last Mage on Earth Shelter"
+msgstr ""
+
+#. ~ Message of martial technique "The Great Divide"
+#: data/mods/Magiclysm/techniques.json
+#, c-format
+msgid ""
+"Snicker-snack!  You slice through %s like a hot knife slices through butter"
+msgstr ""
+
+#. ~ Message of martial technique "The Great Divide"
+#: data/mods/Magiclysm/techniques.json
+#, c-format
+msgid ""
+"Snicker-snack!  <npcname> slices through %s like a hot knife slices through "
+"butter"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Goblin Bite"
+msgstr ""
+
+#. ~ Description of martial technique "Goblin Bite"
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Bite someone with goblin's naturally-sharp teeth."
+msgstr ""
+
+#. ~ Description of martial technique "Goblin Bite"
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Bite someone with a goblin's naturally-sharp teeth."
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Critical Goblin Bite"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Lizardfolk Bite"
+msgstr ""
+
+#. ~ Description of martial technique "Lizardfolk Bite"
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+msgid "Bite someone with a lizardfolk's naturally-sharp teeth."
+msgstr ""
+
+#. ~ Message of martial technique "Lizardfolk Bite"
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+#, c-format
+msgid "You viciously tear into %s"
+msgstr ""
+
+#. ~ Message of martial technique "Lizardfolk Bite"
+#: data/mods/Magiclysm/techniques_fantasy_species.json
+#, c-format
+msgid "<npcname> viciously tears %s"
+msgstr ""
+
+#. ~ Crafting recipes subcategory of "ENCHANTED" cat.
+#: data/mods/Magiclysm/tool_qualities.json
+msgid "ENCHANTING"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Magiclysm/traps.json
+msgid "glowing runes"
+msgstr ""
+
+#. ~ Message when player triggers trap "tr_rune_trap_summon_blades"
+#. ~ Message when player triggers trap "tr_rune_trap_summon_krabgek"
+#: data/mods/Magiclysm/traps.json
+msgid "As you step forward, runes begin glowing brightly!"
+msgstr ""
+
+#. ~ Message when NPC triggers trap "tr_rune_trap_summon_blades"
+#. ~ Message when NPC triggers trap "tr_rune_trap_summon_krabgek"
+#: data/mods/Magiclysm/traps.json
+msgid "As <npcname> steps forward, runes begin glowing brightly!"
+msgstr ""
+
+#. ~ Sound description of spell "migo_nethermancer_summon_nether ( Summon
+#. Nether Being )"
+#: data/mods/Magiclysm/Spells/alien_mages.json
+msgid "a high-pitched whine"
+msgstr ""
+
+#. ~ Description of spell "recover_mana ( Life Conversion )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"You channel lifeforce itself into your spiritual energy.  You consume a rune "
+"to regain mana."
+msgstr ""
+
+#. ~ Name of spell "summon_undead"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Summon Undead"
+msgstr ""
+
+#. ~ Description of spell "summon_undead ( Summon Undead )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"An ethereal-looking undead rises from the depths of the earth to fight for "
+"you.  The type of undead you summon get deadlier with increasing spell level."
+msgstr ""
+
+#. ~ Name of spell "summon_undead_swarm"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Summon Undead Swarm"
+msgstr ""
+
+#. ~ Description of spell "summon_undead_swarm ( Summon Undead Swarm )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"A group of undead animals rises from the depths of the earth to fight for "
+"you.  The type of undead you summon get deadlier with increasing spell level."
+msgstr ""
+
+#. ~ Description of spell "necrotic_gaze ( Necrotic Gaze )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Using the power of blood contained within a rune, you imbue necrotic energy "
+"into your gaze, damaging the target you look at."
+msgstr ""
+
+#. ~ Description of spell "create_rune_animist ( Animist Rune )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Performing a ritual, you turn some of your blood into an animist rune.  You "
+"can use the rune to summon creatures, or as a catalyst for recipes."
+msgstr ""
+
+#. ~ Name of spell "dominate"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Domination"
+msgstr ""
+
+#. ~ Description of spell "dominate ( Domination )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Force the undead creature you pick to obey your command, making it your ally "
+"for a short time."
+msgstr ""
+
+#. ~ Name of spell "life_detonation"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Life Detonation"
+msgstr ""
+
+#. ~ Description of spell "life_detonation ( Life Detonation )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Force life energy into an allied undead, making them explode with tremendous "
+"force."
+msgstr ""
+
+#. ~ Name of spell "convert"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Convert"
+msgstr ""
+
+#. ~ Description of spell "convert ( Convert )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Kill an allied creature, converting its life energy into a compact rune that "
+"you can use afterwards."
+msgstr ""
+
+#. ~ Description of spell "soulrend ( Soulrend )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Violently tears the spirit from the body and binds the resulting shade to "
+"your will."
+msgstr ""
+
+#. ~ Description of spell "disruption_bolt ( Disruption Bolt )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Release a resonant bolt of spiritual energy at a nearby target.  It will "
+"disrupt the natural link between matter and animus, causing heavy, non-lethal"
+" damage."
+msgstr ""
+
+#. ~ Description of spell "spirit_walk ( Spirit Walk )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Momentarily plunge into the underworld and swap positions with any spirit you"
+" command."
+msgstr ""
+
+#. ~ Description of spell "banishment_lesser ( Lesser Banishment )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Banish a monster to a lesser-known nether dimension.  If a monster is more "
+"powerful than you can handle, the spell drains your life force to make up the"
+" difference."
+msgstr ""
+
+#. ~ Description of spell "summon_wisps ( Ignus Fatuus )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Summons ghostly foxfire worked from living marsh vapor to lead your enemies "
+"astray.  With more experience, this spell can conjure multiple ghost lights."
+msgstr ""
+
+#. ~ Description of spell "bleed ( Bleed )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Agitate old wounds on a creature, causing blood to ooze out of them."
+msgstr ""
+
+#. ~ Description of spell "animist_summon_decaying_boneclub ( Decaying Boneclub
+#. )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"You link your living blood to dead bones, creating a club hungry for the "
+"flesh of the living."
+msgstr ""
+
+#. ~ Name of spell "animist_summon_decaying_boneclub_plus"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Improved Decaying Boneclub"
+msgstr ""
+
+#. ~ Description of spell "animist_summon_decaying_boneclub_plus ( Improved
+#. Decaying Boneclub )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"You link your living blood to dead bones, creating a club hungry for the "
+"flesh of the living.  Now you know this spell like the back of your hand, and"
+" have started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "rupture ( Rupture )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"You pour mana into an unwilling and unprepared vessel, causing cellular "
+"break-down, internal hemorrhaging, muddling ley lines, and overcharging "
+"electronics.  The more powerful the spell, the faster the damage happens.  "
+"Immensely gruesome and crude, it was once illegal world-wide, not that it "
+"matters now."
+msgstr ""
+
+#. ~ Name of spell "devour"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Devour"
+msgstr ""
+
+#. ~ Description of spell "devour ( Devour )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Kill an allied creature, consuming its life energy to regain some health."
+msgstr ""
+
+#. ~ Name of spell "animist_sense_outsiders"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Sense Outsiders"
+msgstr ""
+
+#. ~ Description of spell "animist_sense_outsiders ( Sense Outsiders )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "You can sense the presence of nearby beings from the Nether."
+msgstr ""
+
+#. ~ Name of spell "animist_summon_watcher"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Summon Watcher Spirit"
+msgstr ""
+
+#. ~ Description of spell "animist_summon_watcher ( Summon Watcher Spirit )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Summon a watcher spirit, whose senses overlap with your own and through whose"
+" eyes you can see.  Although they are spirits, they are fragile and dissipate"
+" easily in the face of any assault."
+msgstr ""
+
+#. ~ Name of spell "animist_mass_hiding_aoe"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "A Shadow in the Crowd"
+msgstr ""
+
+#. ~ Description of spell "animist_mass_hiding_aoe ( A Shadow in the Crowd )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Sever the connections between your spirit and the spirits of everyone around you, rendering them incapable of perceiving you; the light might hit their eyes and the sounds their ears, but they cannot recognize what those impressions mean.  Anything outside the spell's area of effect will have no trouble spotting you.\n"
+"\n"
+"This spell does not affect any target without a spirit, such as a robot."
+msgstr ""
+
+#. ~ Name of spell "animist_luck_bone"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Osseous Luck"
+msgstr ""
+
+#. ~ Description of spell "animist_luck_bone ( Osseous Luck )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Attract spirits of good fortune to a bone, granting minor bonuses as long as "
+"it is carried.  Though benevolent, the spirits are capricious, and exactly "
+"what benefits they will provide cannot be determined ahead of time.  The bone"
+" crumbles to dust when the spell duration expires and the spirits leave."
+msgstr ""
+
+#. ~ Name of spell "animist_spirit_walking"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Spirit-Walking"
+msgstr ""
+
+#. ~ Description of spell "animist_spirit_walking ( Spirit-Walking )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Transform your body to pure spirit, making you invisible and intangible.  You"
+" can move incredibly quickly while the spell is in effect and can pass by "
+"enemies unseen, but you will be unable to affect the physical world or cast "
+"spells."
+msgstr ""
+
+#. ~ Name of spell "animist_add_evasion_spell"
+#. ~ Name of effect type id "effect_animist_add_evasion"
+#. ~ Name of effect type id "effect_feral_animist_guardian_spirit"
+#: data/mods/Magiclysm/Spells/animist.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/effects/effects_monster.json
+msgid "Guardian Spirit"
+msgstr ""
+
+#. ~ Description of spell "animist_add_evasion_spell ( Guardian Spirit )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Summon a benevolent spirit to keep watch over you and warn you of imminent "
+"attacks, allowing you to dodge some of them."
+msgstr ""
+
+#. ~ Name of spell "animist_slow_food_rotting_spell"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Abjure Spirits of Rot"
+msgstr ""
+
+#. ~ Description of spell "animist_slow_food_rotting_spell ( Abjure Spirits of
+#. Rot )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Placing a warding on food or drink, preventing the spirits of decay from "
+"nesting within it.  The mage may affect as much food or drink as they can "
+"carry.  The principles by which this spell functions were not discovered "
+"until the 20th century, but some animists maintain that radiation is "
+"frightening to decay spirits."
+msgstr ""
+
+#. ~ Name of spell "animist_magic_fissile"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Magic Fissile"
+msgstr ""
+
+#. ~ Description of spell "animist_magic_fissile ( Magic Fissile )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "I cast Magic… Fissile?  At the darkness?"
+msgstr ""
+
+#. ~ Name of spell "animist_cast_spells_when_silent"
+#. ~ Name of effect type id "effect_animist_vocalize"
+#: data/mods/Magiclysm/Spells/animist.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "The Inner Voice"
+msgstr ""
+
+#. ~ Description of spell "animist_cast_spells_when_silent ( The Inner Voice )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Channel magic through your soul instead of your voice, allowing you to cast "
+"spells that require speech even when mute."
+msgstr ""
+
+#. ~ Name of spell "animist_do_psionic_damage_to_head"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid "Mind Crush"
+msgstr ""
+
+#. ~ Description of spell "animist_do_psionic_damage_to_head ( Mind Crush )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Directly assault the target's spirit, bypassing any physical protections they"
+" have."
+msgstr ""
+
+#. ~ Name of spell "animist_detect_wizards"
+#. ~ Name of effect type id "effect_animist_detect_wizards"
+#: data/mods/Magiclysm/Spells/animist.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Witchsight"
+msgstr ""
+
+#. ~ Description of spell "animist_detect_wizards ( Witchsight )"
+#: data/mods/Magiclysm/Spells/animist.json
+msgid ""
+"Open your senses up to look for the bright corporeal ley lines of those who "
+"spent their lives frequently expending their mana.  This also applies to "
+"creatures or alien beings that frequently use spells."
+msgstr ""
+
+#. ~ Name of spell "light_healing"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Knit the Rent Flesh"
+msgstr ""
+
+#. ~ Description of spell "light_healing ( Knit the Rent Flesh )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Cause the target's wounds to writhe, the flesh to crawl back together, and "
+"their injuries to heal.  Disturbing, and painful, but effective."
+msgstr ""
+
+#. ~ Description of spell "vicious_tentacle ( Vicious Tentacle )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"This spell extrudes a long and nasty whiplike tentacle of sharp bones and "
+"oozing acid from your body, which has a long reach attack and vicious damage."
+msgstr ""
+
+#. ~ Name of spell "vicious_tentacle_plus"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Evolved Vicious Tentacle"
+msgstr ""
+
+#. ~ Description of spell "vicious_tentacle_plus ( Evolved Vicious Tentacle )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"This spell extrudes a long and nasty whiplike tentacle of sharp bones and "
+"oozing acid from your body, which has a long reach attack and vicious damage."
+"  Now you know this spell like the back of your hand, and start to design "
+"your own version."
+msgstr ""
+
+#. ~ Description of spell "bio_grotesque ( Grotesque Enhancement )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"A spell that warps your body in foreign, unnatural ways to increase your "
+"physical abilities and strength."
+msgstr ""
+
+#. ~ Name of spell "bio_bonespear_plus"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Evolved Conjure Bonespear"
+msgstr ""
+
+#. ~ Description of spell "bio_bonespear_plus ( Evolved Conjure Bonespear )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"This spell creates a long shaft of bone with a wicked point and blades along "
+"its length.  Now you know this spell like the back of your hand, and have "
+"started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "create_rune_biomancer ( Biomancer Rune )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"This ritual grows a small nub of flesh on you, which quickly falls off and "
+"turns into a rune attuned to Biomancers.  You can use the rune as a catalyst "
+"for recipes."
+msgstr ""
+
+#. ~ Description of spell "biomancer_visceral_projection ( Visceral Projection
+#. )"
+#. ~ Description of "Scroll of Visceral Projection"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Projects a spray of acrid blood and gore all around you, growing to ensnare "
+"your prey in a field of twitching poisonous tendrils."
+msgstr ""
+
+#. ~ Name of spell "biomancer_caustic_aura_plus"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Improved Caustic Aura"
+msgstr ""
+
+#. ~ Description of spell "biomancer_caustic_aura_plus ( Improved Caustic Aura
+#. )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"This spell suspends acid in a layer around you, corroding melee attackers "
+"when struck and enhancing your melee damage.  Now you know this spell like "
+"the back of your hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Name of spell "biomancer_swim_frog"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Limbs of the Frog"
+msgstr ""
+
+#. ~ Description of spell "biomancer_swim_frog ( Limbs of the Frog )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Grow webbing on your hands and feet, making quick swimming a breeze."
+msgstr ""
+
+#. ~ Name of spell "biomancer_giant_growth"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Giant Growth"
+msgstr ""
+
+#. ~ Description of spell "biomancer_giant_growth ( Giant Growth )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Grow to enormous size.  Your clothing and equipment will not grow with you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_GIANT_GROWTH_MUTATION"
+#. ~ Player message in effect in EoC "EOC_DEMON_POSSESSION"
+#. ~ Player message in effect in EoC "EOC_GOBLIN_FRUIT_GIANT_GROWTH"
+#: data/mods/Magiclysm/Spells/attunements/Blood_Mage.json
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Xedra_Evolved/items/comestibles/goblin_fruits.json
+msgid "Your body swells and warps as your size increases!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_GIANT_GROWTH_MUTATION"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "You are already enormous--the spell cannot make you any larger!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_GIANT_GROWTH_MUTATION_REMOVE"
+#. ~ Player message in effect in EoC "EOC_DEMON_POSSESSION_REMOVE"
+#. ~ Player message in effect in EoC "EOC_GOBLIN_FRUIT_GIANT_GROWTH_REMOVE"
+#: data/mods/Magiclysm/Spells/attunements/Blood_Mage.json
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Xedra_Evolved/items/comestibles/goblin_fruits.json
+msgid "Your body shrinks and warps as your size decreases!"
+msgstr ""
+
+#. ~ Name of spell "biomancer_remove_instability"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Preserve Genetic Stability"
+msgstr ""
+
+#. ~ Description of spell "biomancer_remove_instability ( Preserve Genetic
+#. Stability )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"The scroll said that this spell is for \"Reducing negative consequences from "
+"XE037 exposure\", whatever that means.  According the scroll, the spell "
+"should be allowed to run its course before reapplication."
+msgstr ""
+
+#. ~ Name of spell "biomancer_carrion_feast"
+#. ~ Name of effect type id "effect_biomancer_carrion_feast"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Carrion Feast"
+msgstr ""
+
+#. ~ Description of spell "biomancer_carrion_feast ( Carrion Feast )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Alter your digestive system to consume rotten food with no ill effects.  This"
+" is either a truly ancient spell or otherwise must have been the product of "
+"some university thaumaturgical research department."
+msgstr ""
+
+#. ~ Name of spell "biomancer_lashing_tentacles"
+#. ~ Name of effect type id "effect_biomancer_lashing_tentacles"
+#. ~ Mutation name
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "Lashing Tentacles"
+msgstr ""
+
+#. ~ Description of spell "biomancer_lashing_tentacles ( Lashing Tentacles )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Grow a pair of lashing tentacles from your shoulders.  While not as long as "
+"the Vicious Tentacle, they will strike anyone in melee with you.  You cannot "
+"wear rigid armor that covers the shoulders with them."
+msgstr ""
+
+#. ~ Name of spell "biomancer_cure_disease_minor"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Purgation of Maladies"
+msgstr ""
+
+#. ~ Description of spell "biomancer_cure_disease_minor ( Purgation of Maladies
+#. )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Vomit up any minor illnesses you might be suffering from, such as colds or "
+"the flu.  This is one of the few biomantic cure spells that is castable on "
+"other people."
+msgstr ""
+
+#. ~ Name of spell "biomancer_hyper_regeneration"
+#. ~ Name of effect type id "effect_biomancer_hyper_regeneration"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Corporeal Reconstitution"
+msgstr ""
+
+#. ~ Description of spell "biomancer_hyper_regeneration ( Corporeal
+#. Reconstitution )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Possibly the most powerful of the biomantic healing spells, this causes your "
+"flesh to literally knit itself together before your eyes."
+msgstr ""
+
+#. ~ Name of spell "biomancer_slow_bleeding"
+#. ~ Name of effect type id "effect_biomancer_slow_bleeding_01"
+#. ~ Name of effect type id "effect_biomancer_slow_bleeding_02"
+#. ~ Name of effect type id "effect_biomancer_slow_bleeding_03"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Halt Bleeding"
+msgstr ""
+
+#. ~ Description of spell "biomancer_slow_bleeding ( Halt Bleeding )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "As you can control your body, you can control your blood."
+msgstr ""
+
+#. ~ Name of spell "biomancer_scalpel_fingers"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Flensing Fingers"
+msgstr ""
+
+#. ~ Description of spell "biomancer_scalpel_fingers ( Flensing Fingers )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Change each of your fingers into a myriad of tiny bone knives, allowing you "
+"to cut with surgical precision… or slice your enemies to ribbons."
+msgstr ""
+
+#. ~ Name of spell "biomancer_caustic_blood"
+#. ~ Name of effect type id "effect_biomancer_caustic_blood"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Caustic Blood"
+msgstr ""
+
+#. ~ Description of spell "biomancer_caustic_blood ( Caustic Blood )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Transmute your blood to magically-enhanced acid, making you immune to acid "
+"and also splashing anyone who spills your blood."
+msgstr ""
+
+#. ~ Name of spell "biomancer_eat_tons_of_food"
+#. ~ Name of effect type id "effect_biomancer_eat_tons_of_food"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Gluttonous Consumption"
+msgstr ""
+
+#. ~ Description of spell "biomancer_eat_tons_of_food ( Gluttonous Consumption
+#. )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Magically expand your stomach size, allowing it to consume more food without "
+"taking up any more room in your body.  Once a rarely-learned spell, it's much"
+" more useful now that you're not always sure where your next meal is coming "
+"from."
+msgstr ""
+
+#. ~ Name of spell "biomancer_get_more_blood"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid "Carmine Infusion"
+msgstr ""
+
+#. ~ Description of spell "biomancer_get_more_blood ( Carmine Infusion )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"Using water as a catalyst, restore some of your lost blood.  This spell has "
+"no effect if you're healthy and uninjured."
+msgstr ""
+
+#. ~ Name of spell "biomancer_control_mutations"
+#. ~ Name of effect type id "effect_biomancer_control_mutations"
+#: data/mods/Magiclysm/Spells/biomancer.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Morphogenic Mastery"
+msgstr ""
+
+#. ~ Description of spell "biomancer_control_mutations ( Morphogenic Mastery )"
+#: data/mods/Magiclysm/Spells/biomancer.json
+msgid ""
+"The scroll said that this spell is for \"Exerting deliberate control over "
+"morphogenic alterations\", which sounds ominous."
+msgstr ""
+
+#. ~ Message of spell "bio_ley_energy_blaster_spell ( Levinbolt Projector
+#. Targeting )"
+#: data/mods/Magiclysm/Spells/bionic_spells.json
+msgid "You unleash a levinbolt."
+msgstr ""
+
+#. ~ Description of spell "dragon_spit_acid ( Dragon Acid Spit )"
+#: data/mods/Magiclysm/Spells/black_dragon.json
+msgid ""
+"You conjure up acidic spittle that you can shoot long distances as you close "
+"in on your terrified prey."
+msgstr ""
+
+#. ~ Description of spell "ethereal_grasp ( Ethereal Grasp )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"A mass of spectral hands emerge from the ground, grabbing and slowing everything in range.  Higher levels allow a bigger AoE, and longer effect\n"
+"\n"
+"Larger targets will be <color_yellow>less affected</color> by the spell."
+msgstr ""
+
+#. ~ Name of spell "obfuscated_body_plus"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Improved Obfuscated Body"
+msgstr ""
+
+#. ~ Name of spell "protection_aura_plus"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Improved Aura of Protection"
+msgstr ""
+
+#. ~ Description of spell "protection_aura_plus ( Improved Aura of Protection
+#. )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Encases your whole body in a magical aura that protects you from the "
+"environment.  Now you know this spell like the back of your hand, and have "
+"started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "acid_resistance_greater ( Greater Acid Resistance )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Protects the user from acid.  Now you know this spell like the back of your "
+"hand, and start to design your own version, no longer requiring you to hold "
+"concentration."
+msgstr ""
+
+#. ~ Name of spell "thought_shield"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Thought Shield"
+msgstr ""
+
+#. ~ Description of spell "thought_shield ( Thought Shield )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Two small shimmering spots appear on your temples, protecting your mind from "
+"outside influences."
+msgstr ""
+
+#. ~ Name of spell "thought_shield_plus"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Thought Suit"
+msgstr ""
+
+#. ~ Description of spell "thought_shield_plus ( Thought Suit )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Why protect just your mind from outside influences?  More shields all over "
+"your body should also prevent you from being teleported forcefully"
+msgstr ""
+
+#. ~ Name of spell "sound_bomb"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Sound Bomb"
+msgstr ""
+
+#. ~ Description of spell "sound_bomb ( Sound Bomb )"
+#. ~ Description of "Scroll of Sound Bomb"
+#: data/mods/Magiclysm/Spells/classless.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Behind the cool name hides a common joke spell to spook your friends and "
+"restrain dogs.  It can be useful in some special cases."
+msgstr ""
+
+#. ~ Sound description of spell "sound_bomb ( Sound Bomb )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "a loud, high pitched sound"
+msgstr ""
+
+#. ~ Name of spell "classless_watch_spell"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Knowing the Day and the Hour"
+msgstr ""
+
+#. ~ Description of spell "classless_watch_spell ( Knowing the Day and the Hour
+#. )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Probably the single greatest example of technology rendering magic obsolete, "
+"this spell allows you know exactly what time it is."
+msgstr ""
+
+#. ~ Name of spell "classless_clean_clothing_and_self"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Freshen Up"
+msgstr ""
+
+#. ~ Description of spell "classless_clean_clothing_and_self ( Freshen Up )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Undoubtedly the single most common spell in the world before the Cataclysm, "
+"Freshen Up cleans your teeth, sweetens your breath, removes stains and sweat "
+"from your clothes, exfoliates you, and gives volume back to your hair."
+msgstr ""
+
+#. ~ Name of spell "classless_easy_sleep_spell"
+#. ~ Name of effect type id "effect_classless_easy_sleep"
+#: data/mods/Magiclysm/Spells/classless.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Peaceful Rest"
+msgstr ""
+
+#. ~ Description of spell "classless_easy_sleep_spell ( Peaceful Rest )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"A favorite of overworked mages and dilettantes who, this spell makes it much "
+"easier to fall asleep regardless of how tired you are."
+msgstr ""
+
+#. ~ Name of spell "classless_dispel_magic"
+#. ~ Name of effect type id "effect_dispel_magic"
+#: data/mods/Magiclysm/Spells/classless.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Dispel Magic"
+msgstr ""
+
+#. ~ Description of spell "classless_dispel_magic ( Dispel Magic )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Remove magical effects from your target.  It fails when faced with powerful "
+"enchantments or the unique bonuses provided by attunements."
+msgstr ""
+
+#. ~ Name of spell "classless_disjunction"
+#. ~ Name of effect type id "effect_disjunction"
+#: data/mods/Magiclysm/Spells/classless.json
+#: data/mods/Magiclysm/effects/effects.json
+msgid "Disjunction"
+msgstr ""
+
+#. ~ Description of spell "classless_disjunction ( Disjunction )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"The ultimate anti-magic spell, Disjunction will strip even attunement-related"
+" or powerful enchantments from the target."
+msgstr ""
+
+#. ~ Name of spell "classless_restore_crystal_mana"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid "Mana Extraction"
+msgstr ""
+
+#. ~ Description of spell "classless_restore_crystal_mana ( Mana Extraction )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"Return crystallized mana into raw mana and absorb it, restoring some of your "
+"mana.  The process is slow and not very efficient, but it's easier to "
+"transport than mana potions."
+msgstr ""
+
+#. ~ Message of spell "classless_restore_crystal_mana ( Mana Extraction )"
+#: data/mods/Magiclysm/Spells/classless.json
+msgid ""
+"You slowly crush the crystallized mana and as it flares into a burst of "
+"light, absorb the now-free mana."
+msgstr ""
+
+#. ~ Message of spell "flower_fern_spell ( Flower fern effect )"
+#: data/mods/Magiclysm/Spells/consumables.json
+msgid "You feel better!"
+msgstr ""
+
+#. ~ Message of spell "glowing_mushroom_spell ( Glowing mushroom effect )"
+#: data/mods/Magiclysm/Spells/consumables.json
+msgid "You feel lighter!"
+msgstr ""
+
+#. ~ Message of spell "whiskflower_spell ( Whiskflower effect )"
+#: data/mods/Magiclysm/Spells/consumables.json
+msgid "You wobble as you feel inebriated"
+msgstr ""
+
+#. ~ Message of spell "sojourners_palm_spell ( Sojourners palm effect )"
+#: data/mods/Magiclysm/Spells/consumables.json
+msgid "Your vision shifts in a flash of colors and you reappear elsewhere."
+msgstr ""
+
+#. ~ Message of spell "funnelcap_spell ( Funnelcap effect )"
+#: data/mods/Magiclysm/Spells/consumables.json
+msgid "You recover mana!"
+msgstr ""
+
+#. ~ Description of spell "druid_veggrasp ( Vegetative Grasp )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell causes roots and vines to burst forth from the ground and grab your foes, slowing them and doing a small amount of damage as they dig in.\n"
+"\n"
+"Larger targets will be <color_yellow>less affected</color> by the spell, and it has <color_red>no effect</color> on targets not on natural ground."
+msgstr ""
+
+#. ~ Description of spell "druid_rootstrike ( Root Strike )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell causes roots to spear out of the ground in a cone and stab into "
+"your foes, impaling them."
+msgstr ""
+
+#. ~ Description of spell "druid_naturebow1 ( Nature's Bow )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell conjures a magical wooden recurve bow, as well as a quiver and a "
+"set of arrows to go with it."
+msgstr ""
+
+#. ~ Name of spell "druid_naturebow1_plus"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Improved Nature's Bow"
+msgstr ""
+
+#. ~ Description of spell "druid_naturebow1_plus ( Improved Nature's Bow )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell conjures a magical wooden recurve bow, as well as a quiver and a "
+"set of arrows to go with it.  Now you know this spell like the back of your "
+"hand, and have started to design your own version."
+msgstr ""
+
+#. ~ Description of spell "recover_sleepiness ( Nature's Trance )"
+#. ~ Description of "Scroll of Nature's Trance"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Your connection to living things allows you to go into a magical trance.  "
+"This allows you to recover from fatigue quickly in exchange for mana."
+msgstr ""
+
+#. ~ Description of spell "create_rune_druid ( Druid Rune )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"A ritual in which you conjure forth roots and vines in order to make a "
+"druidic rune.  You can use the rune as a catalyst for recipes."
+msgstr ""
+
+#. ~ Description of spell "druidic_healing ( Sacrificial Healing )"
+#. ~ Description of "Scroll of Sacrificial Healing"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/items/spell_scrolls.json
+msgid ""
+"Channels some of the user's own life force into healing energy, for the sake "
+"of one's allies."
+msgstr ""
+
+#. ~ Name of spell "druid_feralform_plus"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Enhanced Feral Form"
+msgstr ""
+
+#. ~ Description of spell "druid_feralform_plus ( Enhanced Feral Form )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell unleashes your inner beast, growing claws & fangs to rend your "
+"foes limb from limb.  Now you know this spell like the back of your hand, and"
+" start to design your own version."
+msgstr ""
+
+#. ~ Name of spell "druid_natures_commune"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Communion with Nature"
+msgstr ""
+
+#. ~ Description of spell "druid_natures_commune ( Communion with Nature )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"You focus on the bounty of nature around you and commune with it, improving "
+"your health and mood and calming nearby wildlife.  This spell may only be "
+"cast outdoors away from civilization."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_NATURE_COMMUNE"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "You must be surrounded by nature to commune with nature"
+msgstr ""
+
+#. ~ Name of spell "druid_healing"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Restoration"
+msgstr ""
+
+#. ~ Description of spell "druid_healing ( Restoration )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Slowly heal your wounds by drawing on the power of nature.\n"
+"\n"
+"You must be <color_yellow>outdoors and in a natural area</color> away from civilization to cast Restoration."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DRUID_RESTORATION"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "You must be surrounded by nature to use its power to heal."
+msgstr ""
+
+#. ~ Name of spell "druid_healing_herb"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Floral Healing"
+msgstr ""
+
+#. ~ Description of spell "druid_healing_herb ( Floral Healing )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Use some magic herbs to heal yourself."
+msgstr ""
+
+#. ~ Name of spell "druid_bandage_heal"
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/items/ethereal_items.json
+msgid "Vegetative Poultice"
+msgid_plural "Vegetative Poultices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of spell "druid_bandage_heal ( Vegetative Poultice )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell turns a mixture of bark and leaves into a powerful salve capable "
+"of stopping even grievous wounds from bleeding."
+msgstr ""
+
+#. ~ Name of spell "druid_whisper_leaves"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Whisper of the Leaves"
+msgstr ""
+
+#. ~ Description of spell "druid_whisper_leaves ( Whisper of the Leaves )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell allows you to hear the trees' wisdom in the rustle of the leaves "
+"and the creaking of their roots, discerning the layout of the forest."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_GAIN_WHISPER_LEAVES"
+#. ~ Player message in false effect in EoC "EOC_GAIN_COMMUNE_OAKS"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/spells.json
+msgid ""
+"You are already in tune with the rhythms of the forest.  Further magic cannot"
+" deepen your bond."
+msgstr ""
+
+#. ~ Name of spell "druid_harvest_hunter"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Harvest of the Hunter"
+msgstr ""
+
+#. ~ Description of spell "druid_harvest_hunter ( Harvest of the Hunter )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell creates a grouping of odd-looking but functional arrows out of "
+"forest detritus."
+msgstr ""
+
+#. ~ Name of spell "druid_summon_tanglevine"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Summon Tanglevine"
+msgstr ""
+
+#. ~ Description of spell "druid_summon_tanglevine ( Summon Tanglevine )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell causes an animated vine to burst from the ground and attempt to "
+"seize a nearby target and hold it fast."
+msgstr ""
+
+#. ~ Name of spell "druid_beguile_savage_beast"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Beguiling the Savage Beast"
+msgstr ""
+
+#. ~ Description of spell "druid_beguile_savage_beast ( Beguiling the Savage
+#. Beast )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Using your connection to nature, you can sway an animal to your service.  "
+"This spell even works on mutated animals."
+msgstr ""
+
+#. ~ Name of spell "druid_bramble_spear"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Spear of Brambles"
+msgstr ""
+
+#. ~ Description of spell "druid_bramble_spear ( Spear of Brambles )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell turns a stick into a vicious spear that drips with sticky sap."
+msgstr ""
+
+#. ~ Name of spell "druid_bramble_spear_enhanced"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Enhanced Spear of Brambles"
+msgstr ""
+
+#. ~ Description of spell "druid_bramble_spear_enhanced ( Enhanced Spear of
+#. Brambles )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell turns a bit of bark or a twig into a vicious spear that drips with"
+" sticky sap.  You now know this spell like the back of your hand, and no "
+"longer need such massive spell components as you did previously."
+msgstr ""
+
+#. ~ Name of spell "druid_summon_brambles"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Stranglethorns"
+msgstr ""
+
+#. ~ Description of spell "druid_summon_brambles ( Stranglethorns )"
+#. ~ Description of spell "druid_summon_brambles_arc ( Summon Brambles Arc )"
+#. ~ Description of spell "druid_summon_brambles_line ( Summon Brambles Line )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"Call up thick, swiftly growing brambles, either in a line to form a wall or "
+"an arc to trap an enemy."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_BRAMBLES_SELECTOR"
+#. ~ EOC option name in effect in EoC "EOC_ARVORE_BRIARS_SELECTOR"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Thorny Arc"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_DRUID_BRAMBLES_SELECTOR"
+#. ~ EOC option name in effect in EoC "EOC_ARVORE_BRIARS_SELECTOR"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Wall of Brambles"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_BRAMBLES_SELECTOR"
+#. ~ EOC option description in effect in EoC "EOC_ARVORE_BRIARS_SELECTOR"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Summon a spray of brambles to entrap an enemy."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_DRUID_BRAMBLES_SELECTOR"
+#. ~ EOC option description in effect in EoC "EOC_ARVORE_BRIARS_SELECTOR"
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/arvore_eocs.json
+msgid "Summon a wall of thorns to fortify a location."
+msgstr ""
+
+#. ~ Name of spell "druid_summon_brambles_arc"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Summon Brambles Arc"
+msgstr ""
+
+#. ~ Name of spell "druid_summon_brambles_line"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Summon Brambles Line"
+msgstr ""
+
+#. ~ Name of spell "druid_thorn_skin"
+#. ~ Item name
+#: data/mods/Magiclysm/Spells/druid.json
+#: data/mods/Magiclysm/items/ethereal_items.json
+msgid "Thornskin"
+msgid_plural "Thornskins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of spell "druid_thorn_skin ( Thornskin )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"This spell transforms the druid's skin into a bark-like material covered in "
+"large thorns.  It provides excellent protection but slightly slows you and "
+"makes you vulnerable to fire."
+msgstr ""
+
+#. ~ Name of spell "druid_renew_forest_spell"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "Renewing the Forest"
+msgstr ""
+
+#. ~ Description of spell "druid_renew_forest_spell ( Renewing the Forest )"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"While outdoors and not underground, the druid can create a profusion of life around themselves, causing grass to grow through pavement, bushes and flowers to sprout, and trees to grow to full height in moments.\n"
+"\n"
+"In <color_yellow>addition to</color> mana, this spell also requires <color_red>hit points</color> to cast and <color_yellow>will fail</color> if you are too injured."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_DRUID_RENEW_FOREST_SPELL_2" in nested EOCs in effect in EoC
+#. "EOC_DRUID_RENEW_FOREST_SPELL"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "You do not have enough life force to donate it to renew the forest!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DRUID_RENEW_FOREST_SPELL_2" in
+#. nested EOCs in effect in EoC "EOC_DRUID_RENEW_FOREST_SPELL"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid ""
+"You must be on the surface and not on a building's upper stories to cast "
+"Renewing the Forest!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_DRUID_RENEW_FOREST_SPELL"
+#: data/mods/Magiclysm/Spells/druid.json
+msgid "You must be outside to cast Renewing the Forest!"
+msgstr ""

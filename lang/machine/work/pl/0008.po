@@ -1,0 +1,1884 @@
+# Batch 8 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "battery"
+#: data/json/items/ammo.json
+msgid ""
+"Some free-floating battery charge.  It can be reloaded into rechargeable "
+"battery cells, but can never be unloaded."
+msgstr ""
+
+#. ~ Description of "butane"
+#: data/json/items/ammo.json
+msgid "A common flammable liquid, used in lighters."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "notch"
+msgid_plural "notches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "notch"
+#: data/json/items/ammo.json
+msgid "A notch used with a fire drill to create an ember."
+msgstr ""
+
+#. ~ Description of "aerosol paint"
+#: data/json/items/ammo.json
+msgid ""
+"Paint that comes in a sealed, pressurized container and is released in an "
+"aerosol spray when a valve button is depressed."
+msgstr ""
+
+#. ~ Description of "permanent ink"
+#: data/json/items/ammo.json
+msgid ""
+"Ink comprised of a main carrier solvent, a glyceride, a pyrrolidone, a resin,"
+" and a colorant, making it water resistant."
+msgstr ""
+
+#. ~ Description of "candle wax"
+#: data/json/items/ammo.json
+msgid "A solid flammable substance, used to make candles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "hydrogen"
+msgid_plural "hydrogen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hydrogen"
+#: data/json/items/ammo.json
+msgid "Compressed hydrogen."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "nitrogen"
+msgid_plural "nitrogen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "nitrogen"
+#: data/json/items/ammo.json
+msgid "Compressed nitrogen."
+msgstr ""
+
+#. ~ Description of "betavoltaic cell"
+#: data/json/items/ammo.json
+msgid ""
+"Harness the power of radiation in your own home!  It looks similar to a "
+"D-cell battery, but actually contains folded layers of radioactive material "
+"inside.  It can produce electricity for several years at a steady voltage… "
+"but it's barely enough to power a small LED, and these batteries were worth "
+"hundreds of dollars.  Mostly they're a good way to brag to your neighbors "
+"that you have a nuclear power source in your house."
+msgstr ""
+
+#. ~ Description of "radioisotope thermoelectric generator"
+#: data/json/items/ammo.json
+msgid ""
+"Did your neighbors brag about their cool beta-decay-powered nightlights?  Do "
+"them one better!  The CuppaTech 4 radioisotope thermoelectric generator is a "
+"three kilogram chunk of metal - mostly lead - with a slug of cerium-244 "
+"encased within.  It is capable of generating somewhere between 100-150 Watts "
+"of thermal energy, although its electrical generation capacity is minimal at "
+"only 2 Watts.  Careful!  Curium is great at making heat, and also releases "
+"deadly gamma radiation.  Keep away from cellular life forms."
+msgstr ""
+
+#. ~ Description of "aluminum foil"
+#: data/json/items/ammo.json
+msgid ""
+"A sheet of thin foil made of aluminum.  Sometimes called 'tin foil' due to "
+"being made of tin in the past."
+msgstr ""
+
+#. ~ Description of "thread"
+#: data/json/items/ammo.json
+msgid "A small quantity of thread that could be used for sewing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "plant fiber"
+msgid_plural "plant fiber"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "plant fiber"
+#: data/json/items/ammo.json
+msgid "Tough, thin fiber taken from a plant.  Can be used as thread."
+msgstr ""
+
+#. ~ Description of "yarn"
+#: data/json/items/ammo.json
+msgid "A length of wool yarn that could be used to knit wool clothing."
+msgstr ""
+
+#. ~ Description of "soap bar"
+#: data/json/items/ammo.json
+msgid "A cleansing agent shaped into a bar."
+msgstr ""
+
+#. ~ Description of variant "face cream moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid "A moisturizer that works for all skin types and is really affordable!"
+msgstr ""
+
+#. ~ Description of variant "light cream moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"A moisturizer that's smooth like milk, just like your skin will be after "
+"applying this wonderful product."
+msgstr ""
+
+#. ~ Description of variant "simple moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid "A simple moisturizer with all-organic ingredients."
+msgstr ""
+
+#. ~ Variant name of item "moisturizer"
+#: data/json/items/ammo.json
+msgid "oil-free moisturizer"
+msgid_plural "oil-free moisturizer"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "oil-free moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid "If you have oily skin, this moisturizer is for you!"
+msgstr ""
+
+#. ~ Description of variant "hydro moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"After applying this moisturizer, your skin will feel hydrated and smooth."
+msgstr ""
+
+#. ~ Description of variant "healthy moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"Using various plants as ingredients, this moisturizer will give your skin all"
+" the vitamins it needs for the day."
+msgstr ""
+
+#. ~ Description of variant "mushroom moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"A moisturizer containing mushroom extract to help improve the wellbeing of "
+"your skin."
+msgstr ""
+
+#. ~ Description of variant "anti-aging moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"A favorite among mature customers, this moisturizer will smooth out the "
+"wrinkles on your face and make you appear younger."
+msgstr ""
+
+#. ~ Description of variant "day and night moisturizer" of item "moisturizer"
+#: data/json/items/ammo.json
+msgid ""
+"A moisturizer that works all day and night.  A perfect fit for those that "
+"decide their own sleep schedule."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "rolling paper"
+msgid_plural "rolling paper"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rolling paper"
+#: data/json/items/ammo.json
+msgid "A thin paper strip intended for the rolling of cigarettes."
+msgstr ""
+
+#. ~ Description of "copper wire"
+#: data/json/items/ammo.json
+msgid ""
+"A length of plastic-jacketed copper cable, of the type used in small "
+"electronics."
+msgstr ""
+
+#. ~ Description of "raw copper wire"
+#: data/json/items/ammo.json
+msgid "A length of copper wire ready to be covered with plastic."
+msgstr ""
+
+#. ~ Description of "plutonium fuel cell"
+#: data/json/items/ammo.json
+msgid ""
+"This is neither a fuel cell, nor nuclear, but the name stuck.  It uses "
+"plutonium-244 as a catalyst to stabilize a complicated nanocompound that can "
+"store enormous amounts of power.  Unfortunately, it cannot be recharged by "
+"conventional means: expended cells had to be sent to a central reprocessing "
+"facility that almost certainly doesn't exist anymore."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "uranium fuel cell"
+msgid_plural "uranium fuel cells"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "uranium fuel cell"
+#: data/json/items/ammo.json
+msgid ""
+"The uranium dioxide (UO2) powder is fired in a high-temperature, sintering "
+"furnace to create hard, ceramic pellets of enriched uranium dioxide."
+msgstr ""
+
+#. ~ Description of "plutonium slurry"
+#. ~ Description of "watery plutonium slurry"
+#: data/json/items/ammo.json
+msgid ""
+"Highly-radioactive slurry.  It is probably best to get far away from this."
+msgstr ""
+
+#. ~ Description of "pebble"
+#: data/json/items/ammo.json
+msgid "A small rock, useful as ammunition for a slingshot."
+msgstr ""
+
+#. ~ Description of "clay pellet"
+#: data/json/items/ammo.json
+msgid "A round projectile made of clay, useful as ammunition for a slingshot."
+msgstr ""
+
+#. ~ Description of "marble"
+#: data/json/items/ammo.json
+msgid "A glass marble, useful as ammunition for a slingshot."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "ball bearing"
+msgid_plural "ball bearings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ball bearing"
+#: data/json/items/ammo.json
+msgid "A steel ball bearing, useful as ammunition for a slingshot."
+msgstr ""
+
+#. ~ Description of "BB"
+#: data/json/items/ammo.json
+msgid ""
+"A small steel ball that can be fired from a BB gun.  Deals virtually no "
+"damage."
+msgstr ""
+
+#. ~ Description of "feather"
+#: data/json/items/ammo.json
+msgid "A feather from a bird.  Useful for fletching arrows."
+msgstr ""
+
+#. ~ Description of "down feather"
+#: data/json/items/ammo.json
+msgid "A fluffy down feather from a bird.  Useful for making cozy bedclothes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "solid hydrogen canister"
+msgid_plural "solid hydrogen canisters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "solid hydrogen canister"
+#: data/json/items/ammo.json
+msgid ""
+"A canister of pressurized hydrogen so heavily compressed it has turned solid."
+"  With proper equipment, it could be heated into plasma."
+msgstr ""
+
+#. ~ Description of "mixed smokeless gunpowder"
+#: data/json/items/ammo.json
+msgid ""
+"Firearm-quality gunpowder, mixed without concern for composition, burn rate, "
+"or shape, making it thoroughly useless for reloading ammunition.  It has been"
+" slightly ground to make its properties more uniform."
+msgstr ""
+
+#. ~ Description of "smokeless shotgun powder"
+#: data/json/items/ammo.json
+msgid "Firearm-quality gunpowder intended for use in shotgun shells."
+msgstr ""
+
+#. ~ Description of "smokeless pistol powder"
+#: data/json/items/ammo.json
+msgid "Firearm-quality gunpowder intended for use in pistol ammunition."
+msgstr ""
+
+#. ~ Description of "lye powder"
+#: data/json/items/ammo.json
+msgid "Powdered caustic soda, also known as sodium hydroxide."
+msgstr ""
+
+#. ~ Description of "shotgun primer"
+#: data/json/items/ammo.json
+msgid "A primer from a shotgun shell."
+msgstr ""
+
+#. ~ Description of "small pistol primer"
+#: data/json/items/ammo.json
+msgid "A primer from a small-caliber pistol round."
+msgstr ""
+
+#. ~ Description of "large pistol primer"
+#: data/json/items/ammo.json
+msgid "A primer from a large-caliber pistol round."
+msgstr ""
+
+#. ~ Description of "small rifle primer"
+#: data/json/items/ammo.json
+msgid "A primer from a small-caliber rifle round."
+msgstr ""
+
+#. ~ Description of "large rifle primer"
+#: data/json/items/ammo.json
+msgid "A primer from a large-caliber rifle round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "spent shotgun primer"
+msgid_plural "spent shotgun primers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent shotgun primer"
+#: data/json/items/ammo.json
+msgid ""
+"A primer from a shotgun shell.  It has been fired, and must be cleaned and "
+"reloaded to use again."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "spent small pistol primer"
+msgid_plural "spent small pistol primers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent small pistol primer"
+#: data/json/items/ammo.json
+msgid ""
+"A primer from a small-caliber pistol round.  It has been fired, and must be "
+"cleaned and reloaded to use again."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "spent large pistol primer"
+msgid_plural "spent large pistol primers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent large pistol primer"
+#: data/json/items/ammo.json
+msgid ""
+"A primer from a large-caliber pistol round.  It has been fired, and must be "
+"cleaned and reloaded to use again."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "spent small rifle primer"
+msgid_plural "spent small rifle primers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent small rifle primer"
+#: data/json/items/ammo.json
+msgid ""
+"A primer from a small-caliber rifle round.  It has been fired, and must be "
+"cleaned and reloaded to use again."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "spent large rifle primer"
+msgid_plural "spent large rifle primers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent large rifle primer"
+#: data/json/items/ammo.json
+msgid ""
+"A primer from a large-caliber rifle round.  It has been fired, and must be "
+"cleaned and reloaded to use again."
+msgstr ""
+
+#. ~ Description of "rubber slug"
+#: data/json/items/ammo.json
+msgid ""
+"A rubber slug from a shotgun beanbag round.  You could use it to make a new "
+"beanbag round."
+msgstr ""
+
+#. ~ Description of "chunk of rubber"
+#: data/json/items/ammo.json
+msgid "A chunk of useful rubber that can be molded easily."
+msgstr ""
+
+#. ~ Description of "copper"
+#: data/json/items/ammo.json
+msgid ""
+"Some scrap bits of copper.  Could be used to craft things, such as makeshift "
+"ammunition."
+msgstr ""
+
+#. ~ Description of "medical tape"
+#: data/json/items/ammo.json
+msgid ""
+"A roll of semi-opaque medical tape, intended to hold bandages in place.  Not "
+"as versatile as duct tape."
+msgstr ""
+
+#. ~ Description of "charcoal"
+#: data/json/items/ammo.json
+msgid ""
+"A flammable carbon-based material produced by slowly burning wood.  Utilized "
+"in recipes requiring a pure, hot flame.  Can also be used in filters to "
+"remove contaminants from air and water."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "coal"
+msgid_plural "coal"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "coal"
+#: data/json/items/ammo.json
+msgid ""
+"Flammable black chunks of carbon-based material, commonly used for cooking "
+"and heating."
+msgstr ""
+
+#. ~ Description of "RA21E medical ampoule"
+#: data/json/items/ammo.json
+msgid ""
+"A tiny glass vial filled with advanced fast-healing chemicals which can only "
+"be activated by a Rivtech jet injector device.  The packaged instructions "
+"describe its efficacy in dealing with infections, wounds, intoxications, "
+"envenomations, and general tiredness in enthusiastic detail.  A short safety "
+"section at the end warns - in much smaller typeface - against using more than"
+" two doses per hour."
+msgstr ""
+
+#. ~ Description of "liquid bandage"
+#: data/json/items/ammo.json
+msgid ""
+"A polymer dissolved in solvent, with antiseptic added, for topical treatment "
+"of minor cuts and scrapes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "rebreather scrubbing filler"
+msgid_plural "rebreather scrubbing filler"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rebreather scrubbing filler"
+#: data/json/items/ammo.json
+msgid ""
+"Granulated mixture of slaked lime, potassium hydroxide and/or sodium "
+"hydroxide that is used as CO2 scrubbing agent in rebreathers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "rebreather oxygen regenerator filler"
+msgid_plural "rebreather oxygen regenerator filler"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rebreather oxygen regenerator filler"
+#: data/json/items/ammo.json
+msgid ""
+"Potassium superoxide powder, used as oxygen regenerating agent in "
+"rebreathers.  Keep away from water."
+msgstr ""
+
+#. ~ Description of "filter mask cartridge"
+#: data/json/items/ammo.json
+msgid "A small, replaceable filter cartridge for an air filtration mask."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "activated carbon"
+msgid_plural "activated carbon"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "activated carbon"
+#: data/json/items/ammo.json
+msgid ""
+"A small amount of coal-derived carbon material with many small pores, used "
+"for the adsorption of harmful chemicals.  Most commonly employed within "
+"respirator filters, it traps and retains chemical gases and vapor "
+"contaminants while allowing filtered air to pass unhindered.  Once all the "
+"carbon has been bonded to intruding chemicals, the filter is expired and must"
+" be replaced."
+msgstr ""
+
+#. ~ Description of "nicotine liquid"
+#: data/json/items/ammo.json
+msgid ""
+"Liquid made up of propylene glycol, vegetable glycerin, flavorings, and "
+"nicotine.  Intended for use in an advanced electronic cigarette."
+msgstr ""
+
+#. ~ Description of "fish bait"
+#: data/json/items/ammo.json
+msgid "A handful of bait, used in traps to lure fish."
+msgstr ""
+
+#. ~ Description of "spiked homemade rocket"
+#: data/json/items/ammo.json
+msgid ""
+"A hand-built rocket, consisting of a spike welded onto a pipe filled with "
+"improvised rocket fuel.  Horribly inaccurate, as can be expected of this "
+"grade of weapon, but packs a fierce punch… if it hits."
+msgstr ""
+
+#. ~ Description of "incendiary homemade rocket"
+#: data/json/items/ammo.json
+msgid ""
+"A hand-built rocket, consisting of a container of flammable gel attached onto"
+" a pipe, filled with improvised rocket fuel.  A short-range incendiary - "
+"handle with care!"
+msgstr ""
+
+#. ~ Description of "unfinished charcoal"
+#: data/json/items/ammo.json
+msgid ""
+"The result of an interrupted charcoal-making process.  Useless, except as "
+"fuel in a charcoal kiln."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "mild steel lamella"
+msgid_plural "mild steel lamellae"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mild steel lamella"
+#: data/json/items/ammo.json
+msgid ""
+"A pile of small 3 cm by 6 cm steel rectangles with a pattern of holes drilled"
+" into it.  For use in creating or repairing lamellar armor."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "hardened steel lamella"
+msgid_plural "hardened steel lamellae"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hardened steel lamella"
+#: data/json/items/ammo.json
+msgid ""
+"A pile of small 3 cm by 6 cm steel rectangles with a pattern of holes drilled"
+" into it, then hardened.  For use in creating or repairing hardened lamellar "
+"armor."
+msgstr ""
+
+#. ~ Description of "chain link"
+#. ~ Description of "mild steel chain link"
+#: data/json/items/ammo.json
+msgid "A set of small metal rings, suitable for constructing chainmail."
+msgstr ""
+
+#. ~ Description of "nitrox"
+#: data/json/items/ammo.json
+msgid ""
+"A mixture of oxygen and nitrogen in proportions suitable for sustaining "
+"divers."
+msgstr ""
+
+#. ~ Description of "extinguishing agent"
+#: data/json/items/ammo.json
+msgid "A dry chemical solution effective at extinguishing fires."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "tear gas spray"
+msgid_plural "tear gas spray"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tear gas spray"
+#: data/json/items/ammo.json
+msgid ""
+"A noxious aerosolized irritant used to fend off attackers both human and bear"
+" alike."
+msgstr ""
+
+#. ~ Description of "RPG die"
+#: data/json/items/ammo.json
+msgid "A plastic die used to play various role-playing games."
+msgstr ""
+
+#. ~ Description of "metal RPG die"
+#: data/json/items/ammo.json
+msgid "A metal die used to play various role-playing games."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json
+msgid "chunk of bronze"
+msgid_plural "chunks of bronze"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of bronze"
+#: data/json/items/ammo.json
+msgid ""
+"Some decent-sized chunks of scrap bronze, for fashioning some old-school "
+"items."
+msgstr ""
+
+#. ~ Description of "graphite"
+#: data/json/items/ammo.json
+msgid ""
+"Graphite powder mixed with a clay binder.  Produces gray or black marks that "
+"are easily erased, but otherwise resistant to moisture, most chemicals, "
+"ultraviolet radiation, and natural aging."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of an ammunition type
+#: data/json/items/ammo.json data/json/items/ammo_types.json
+msgid "quill ink"
+msgid_plural "quill ink"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "quill ink"
+#: data/json/items/ammo.json
+msgid "Ink made from a variety of sources for use in quill style pens."
+msgstr ""
+
+#. ~ Description of "black pen ink"
+#: data/json/items/ammo.json
+msgid ""
+"Carbon black pigment infused with polymers, stabilizers, and water to help "
+"the ink flow properly."
+msgstr ""
+
+#. ~ Description of "blue pen ink"
+#: data/json/items/ammo.json
+msgid ""
+"Prussian blue, crystal violet, and phthalocyanine blue pigments infused with "
+"polymers, stabilizers, and water to help the ink flow properly."
+msgstr ""
+
+#. ~ Description of "green pen ink"
+#: data/json/items/ammo.json
+msgid ""
+"Chlorophyll pigment infused with polymers, stabilizers, and water to help the"
+" ink flow properly."
+msgstr ""
+
+#. ~ Description of "red pen ink"
+#: data/json/items/ammo.json
+msgid ""
+"Eosin dye infused with polymers, stabilizers, and water to help the ink flow "
+"properly."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json data/mods/Generic_Guns/ammo/rifle_pellet.json
+msgid "air rifle target pellet"
+msgid_plural "air rifle target pellets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "air rifle target pellet"
+#: data/json/items/ammo.json data/mods/Generic_Guns/ammo/rifle_pellet.json
+msgid ""
+"A tin of small cone-shaped pellets meant to be used in an air rifle.  "
+"Suitable for plinking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo.json data/mods/Generic_Guns/ammo/rifle_pellet.json
+msgid "air rifle hunting pellet"
+msgid_plural "air rifle hunting pellets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "air rifle hunting pellet"
+#: data/json/items/ammo.json data/mods/Generic_Guns/ammo/rifle_pellet.json
+msgid ""
+"A tin of small cone-shaped pellets meant to be used in an air rifle.  "
+"Suitable for hunting small game."
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".458 Winchester Magnum"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".50 AE"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "12.7x42mm"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".450 Bushmaster"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".338 Lapua"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "7.7x58mm Arisaka"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "yugg stinger"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "alien outgrowth"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "ballista bolts"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "strange arrows"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ name of the nested group
+#: data/json/items/ammo_types.json data/json/recipes/nested.json
+msgid "atlatl spears"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "12 gauge"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".410"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".460 S&W Magnum"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".500 Magnum"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".303 British"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid ".30 Carbine"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "60 mm mortar cartridge"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/fuel.json
+msgid "crude lamp oil"
+msgid_plural "crude lamp oil"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/fluff.json
+msgid "incense"
+msgid_plural "incense"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/fuel.json
+msgid "crude oil"
+msgid_plural "crude oil"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/chemicals_and_resources.json
+msgid "anesthetic"
+msgid_plural "anesthetic"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "super glue"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/chemicals_and_resources.json
+msgid "plutonium"
+msgid_plural "plutonium"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/chemicals_and_resources.json
+msgid "uranium"
+msgid_plural "uranium"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/fuel.json
+msgid "biogas"
+msgid_plural "biogas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "rebreather CO2 scrubber"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "rebreather O2 regenerator"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/300.json data/json/items/ammo_types.json
+msgid ".300 Winchester Magnum"
+msgid_plural ".300 Winchester Magnum"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/paintball.json data/json/items/ammo_types.json
+msgid "paintball"
+msgid_plural "paintballs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "12.3ln"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "27.3x110 Diyua"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "27.3x44 Diyua"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "27.3x44 Diyua Grenade"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "3.3 naval cartridge"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/exodii.json data/json/items/ammo_types.json
+msgid "Caotel cell"
+msgid_plural "Caotel cells"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/exodii.json data/json/items/ammo_types.json
+msgid "Khuunäöfaai firework payload"
+msgid_plural "Khuunäöfaai firework payloads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/exodii.json data/json/items/ammo_types.json
+msgid "Khuunäöfaai incendiary payload"
+msgid_plural "Khuunäöfaai incendiary payloads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo/exodii.json data/json/items/ammo_types.json
+msgid "Khuunäöfaai corrosive payload"
+msgid_plural "Khuunäöfaai corrosive payloads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "Khuunäöfaai adhesive payload"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "cannon ball"
+msgstr ""
+
+#. ~ Name of an ammunition type
+#. ~ Item name
+#: data/json/items/ammo_types.json data/json/items/fuel.json
+msgid "turpentine"
+msgid_plural "turpentine"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of an ammunition type
+#: data/json/items/ammo_types.json
+msgid "airgun pellet"
+msgstr ""
+
+#. ~ Description of "disconnected oven"
+#: data/json/items/appliances.json
+msgid ""
+"A disconnected electric convection-based oven, commonly used for heating and "
+"cooking food.  Plug it into a vehicle or power grid to get cooking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected large water purifier"
+msgid_plural "disconnected large water purifiers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected large water purifier"
+#: data/json/items/appliances.json
+msgid ""
+"A device that effectively sterilizes water, but it doesn't take batteries.  "
+"You'll need to connect it to a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected arc furnace"
+msgid_plural "disconnected arc furnaces"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected arc furnace"
+#: data/json/items/appliances.json
+msgid ""
+"An arc furnace designed to burn a powdery mix of coke and limestone to create"
+" calcium carbide.  Needs to be placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected drill press"
+msgid_plural "disconnected drill presses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected drill press"
+#: data/json/items/appliances.json
+msgid ""
+"A powerful drill mounted on a slide that lets it drop precisely down.  Useful"
+" in all kinds of projects, from industrial fabrication to home woodworking.  "
+"Needs to be placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected table saw"
+msgid_plural "disconnected table saws"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected table saw"
+#: data/json/items/appliances.json
+msgid ""
+"A rotating sawblade set into a large, flat table.  Used for making straight, "
+"measured cuts, it's a key tool in any carpenter's arsenal.  Needs to be "
+"placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected mitre saw"
+msgid_plural "disconnected mitre saws"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected mitre saw"
+#: data/json/items/appliances.json
+msgid ""
+"A circular sawblade on an arm that can slide and rotate in several "
+"directions, this is a staple tool for nearly any carpentry.  Needs to be "
+"placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected band saw"
+msgid_plural "disconnected band saws"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected band saw"
+#: data/json/items/appliances.json
+msgid ""
+"A ribbonlike sawblade runs in a single direction in this tool, allowing "
+"precise cuts at almost any angle.  Needs to be placed and plugged into a "
+"power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected router table"
+msgid_plural "disconnected router tables"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected router table"
+#: data/json/items/appliances.json
+msgid ""
+"This table has an inset router, a rotating motor with an exchangeable blade "
+"head for cutting specific profiles and grooves.  Needs to be placed and "
+"plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected planer"
+msgid_plural "disconnected planers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected planer"
+#: data/json/items/appliances.json
+msgid ""
+"A hefty tool that will take in a board and cut it smooth and flat to a "
+"specific width, particularly great if working with raw lumber stock, but also"
+" good just for shaving wood down to size.  Needs to be placed and plugged "
+"into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected jointer"
+msgid_plural "disconnected jointers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected jointer"
+#: data/json/items/appliances.json
+msgid ""
+"A table-shaped tool with a rotating blade that will cut down, smooth out, and"
+" square off a board to make it nice and smooth.  Needs to be placed and "
+"plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected hydraulic press"
+msgid_plural "disconnected hydraulic presses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected hydraulic press"
+#: data/json/items/appliances.json
+msgid ""
+"If you really want to squash something a lot, this is exactly the right "
+"industrial tool for you.  Needs to be placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected air compressor"
+msgid_plural "disconnected air compressors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected air compressor"
+#: data/json/items/appliances.json
+msgid ""
+"This durable tank is topped with a motor that will cram as much air into the "
+"tank as possible.  Needs to be placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected autoclave"
+msgid_plural "disconnected autoclaves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected autoclave"
+#: data/json/items/appliances.json
+msgid ""
+"An autoclave, used to sterilize equipment with pressurized steam.  It "
+"requires a massive amount of power, so it will need to be plugged into a "
+"power grid."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected wall light"
+msgid_plural "disconnected wall lights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected wall light"
+#: data/json/items/appliances.json
+msgid "A wall light that provides illumination when plugged into a grid."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected standing lamp"
+msgid_plural "disconnected standing lamps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected standing lamp"
+#: data/json/items/appliances.json
+msgid ""
+"A tall standing lamp that provides illumination when plugged into a power "
+"outlet."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected standing floodlight"
+msgid_plural "disconnected standing floodlights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected standing floodlight"
+#: data/json/items/appliances.json
+msgid ""
+"A large, heavy light designed to illuminate wide areas when plugged into a "
+"power outlet."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected standing directed floodlight"
+msgid_plural "disconnected standing directed floodlights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected standing directed floodlight"
+#: data/json/items/appliances.json
+msgid ""
+"A large, heavy light designed to illuminate a wide semicircle in a chosen "
+"direction when plugged into a power outlet."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected foot locker recharging station"
+msgid_plural "disconnected foot locker recharging stations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected foot locker recharging station"
+#: data/json/items/appliances.json
+msgid ""
+"A universal recharging station integrated into a steel storage compartment.  "
+"When plugged in and powered, it will steadily charge all rechargeable "
+"batteries (battery cells, lead-acid batteries, etc) placed directly within "
+"its storage space."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected box battery charger"
+msgid_plural "disconnected box battery chargers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "disconnected box battery charger"
+#: data/json/items/appliances.json
+msgid ""
+"A small device for recharging batteries integrated into a small wooden "
+"storage compartment.  When plugged in and powered, it will slowly charge all "
+"rechargeable batteries (battery cells, lead-acid batteries, etc) placed "
+"directly within its storage space."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected advanced Stirling radioisotope generator"
+msgid_plural "disconnected advanced Stirling radioisotope generators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "oxygen concentrator"
+#: data/json/items/appliances.json
+msgid ""
+"A machine capable of generating pure oxygen from the air.  Can be placed and "
+"plugged into a power source."
+msgstr ""
+
+#. ~ Description of "high pressure compressor unit"
+#: data/json/items/appliances.json
+msgid ""
+"A machine designed to compress an input gas to a very high pressure.  Can be "
+"placed and plugged into a power source."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/appliances.json
+msgid "disconnected glassblower's crucible"
+msgid_plural "disconnected glassblower's crucibles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/basecamp.json
+msgid "small anaerobic digester tank"
+msgid_plural "small anaerobic digester tanks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/battery.json
+msgid "ultra-light battery (rechargeable)"
+msgid_plural "ultra-light batteries (rechargeable)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "ultra-light battery (rechargeable)"
+#. ~ Description of "ultra-light battery (rechargeable)"
+#: data/json/items/battery.json
+msgid ""
+"A light, coin-like battery cell designed for small size over everything else."
+"  Used for watches, calculators, toys or similar low-power electronics."
+msgstr ""
+
+#. ~ Description of magazine "ultra-light battery"
+#. ~ Description of "ultra-light battery"
+#: data/json/items/battery.json
+msgid ""
+"A light, coin-like battery cell designed for small size over everything else."
+"  Used for watches, calculators, toys or similar low-power electronics.  This"
+" one can't be recharged."
+msgstr ""
+
+#. ~ Description of magazine "light battery"
+#. ~ Description of "light battery"
+#: data/json/items/battery.json
+msgid ""
+"A light battery cell, popular for any consumer-grade electronic: from remotes"
+" to mouses, from clocks to thermometers.  This one can't be recharged."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/battery.json
+msgid "light battery (rechargeable)"
+msgid_plural "light batteries (rechargeable)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "light battery (rechargeable)"
+#. ~ Description of "light battery (rechargeable)"
+#: data/json/items/battery.json
+msgid ""
+"A light battery cell, popular for any consumer-grade electronic: from remotes"
+" to mouses, from clocks to thermometers."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/battery.json
+msgid "medium battery (rechargeable)"
+msgid_plural "medium batteries (rechargeable)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "medium battery (rechargeable)"
+#. ~ Description of "medium battery (rechargeable)"
+#: data/json/items/battery.json
+msgid ""
+"A medium battery cell, wildly used in modern tools: heavy flashlights, two-"
+"way radios, security cameras, multiple of them make a tool battery, and some "
+"older generation of EV use thousands of this as the power storage."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/battery.json
+msgid "small tool battery"
+msgid_plural "small tool batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "small tool battery"
+#. ~ Description of "small tool battery"
+#: data/json/items/battery.json
+msgid ""
+"A light battery cell, universally compatible with all kinds of industrial-"
+"grade equipment and portable tools - drills, angle grinders, chainsaws."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/battery.json
+msgid "big tool battery"
+msgid_plural "big tool batteries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "big tool battery"
+#. ~ Description of "big tool battery"
+#: data/json/items/battery.json
+msgid ""
+"A heavy battery cell, universally compatible with all kinds of industrial-"
+"grade equipment and portable tools - drills, angle grinders, chainsaws."
+msgstr ""
+
+#. ~ Description of magazine "heavy plutonium fuel battery"
+#. ~ Description of "heavy plutonium fuel battery"
+#: data/json/items/battery.json
+msgid ""
+"A battery that uses a thin plutonium-244 rod to stabilize an exotic "
+"nanocompound.  It is universally compatible with all kinds of industrial-"
+"grade equipment and large tools.  Although it stores a huge amount of power, "
+"it cannot be recharged."
+msgstr ""
+
+#. ~ Description of magazine "military plutonium fuel cell"
+#. ~ Description of "military plutonium fuel cell"
+#: data/json/items/battery.json
+msgid ""
+"A battery that uses a huge plutonium-244 rod to stabilize an exotic "
+"nanocompound.  It was used in military mech-suits, was highly experimental, "
+"and had no civilian applications.  Although it stores a stupendous amount of "
+"power, it cannot be recharged."
+msgstr ""
+
+#. ~ Description of "abstract faulty bionic module"
+#: data/json/items/bionics.json
+msgid "A CBM that is broken beyond repair; you can't do anything with it."
+msgstr ""
+
+#. ~ Description of "Active Defense System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A bionic that projects a thin forcefield around the user's body.  Everything "
+"loses velocity when penetrating this field, which results in a reduced amount"
+" of dealt damage at the cost of user's bionic energy.  Bullets and stabbing "
+"attacks will lose more velocity than cutting attacks, and those in turn more "
+"than bashing attacks."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Integrated AR System CBM"
+msgid_plural "Integrated AR System CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Integrated AR System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"This bionic module integrates augmented reality interface into user's eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Subcutaneous Protective Mesh - Arms CBM"
+msgid_plural "Subcutaneous Protective Mesh - Arms CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Subcutaneous Protective Mesh - Arms CBM"
+#. ~ Description of "Subcutaneous Protective Mesh - Legs CBM"
+#: data/json/items/bionics.json
+msgid ""
+"An advanced protective mesh that weaves into the user's flesh.  Provides "
+"passive protection at the cost of mild encumbrance, and can be used in "
+"conjunction with bionic martial arts."
+msgstr ""
+
+#. ~ Description of "Protective Lenses CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A bionic package that seals the user's eye sockets with highly-protective "
+"mirrored lenses and re-routes their tear ducts to their mouth.  When the user"
+" cries, they must spit out or swallow their tears."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Subcutaneous Protective Mesh - Head CBM"
+msgid_plural "Subcutaneous Protective Mesh - Head CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Subcutaneous Protective Mesh - Head CBM"
+#: data/json/items/bionics.json
+msgid ""
+"An advanced protective mesh that weaves into the user's flesh, protecting "
+"both their head and jaw regions at the cost of mild encumbrance."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Subcutaneous Protective Mesh - Legs CBM"
+msgid_plural "Subcutaneous Protective Mesh - Legs CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Subcutaneous Protective Mesh - Torso CBM"
+msgid_plural "Subcutaneous Protective Mesh - Torso CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Subcutaneous Protective Mesh - Torso CBM"
+#: data/json/items/bionics.json
+msgid ""
+"An advanced protective mesh that weaves into the user's flesh, protecting it "
+"from physical trauma at the cost of mild encumbrance."
+msgstr ""
+
+#. ~ Description of "Bionic Claws CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of vicious, retractable claws that are implanted inside the user's "
+"fingers.  They do considerable cutting damage, but prevent the user from "
+"holding anything else while extended."
+msgstr ""
+
+#. ~ Description of "Cloaking System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A high-power system that uses a set of cameras and LEDs to make the user "
+"blend into their surroundings, rendering them fully invisible to eyes and "
+"optical sensors.  However, this doesn't prevent detection from other means "
+"such as infrared, sonar, etc."
+msgstr ""
+
+#. ~ Description of "Wired Reflexes CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of bionic nerve stimulators that greatly enhance reaction times, "
+"granting a +2 bonus to dexterity."
+msgstr ""
+
+#. ~ Description of "Expanded Digestive System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"This module contains three synthetic stomachs and industrial-grade intestines"
+" which replace the user's corresponding organs.  Not only will these extract "
+"much more nutrition from food, but also increase the user's resistance to "
+"foodborne illness, and occasionally allow the digestion of rotten food.  "
+"Installing this CBM will correct any abnormalities in the user's digestive "
+"system."
+msgstr ""
+
+#. ~ Description of "Enhanced Hearing CBM"
+#: data/json/items/bionics.json
+msgid ""
+"While this bionic is active, the user's hearing will be drastically improved,"
+" allowing them to hear ten times better than the average person.  "
+"Additionally, high-intensity sounds will be automatically dampened before "
+"they can damage the user's hearing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "AudioVox CBM"
+msgid_plural "AudioVox CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "AudioVox CBM"
+#: data/json/items/bionics.json
+msgid ""
+"An implanted set of vocal cords and speakers allowing the user to remodulate "
+"and project their voice at will."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "WearMan CBM"
+msgid_plural "WearMan CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "WearMan CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of speakers implanted into the skull, able to pick up local radiowaves "
+"and play downloaded music."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Subaquatic Navigation System CBM"
+msgid_plural "Subaquatic Navigation System CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Subaquatic Navigation System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A tiny device implanted in the inner ear.  When active, it will periodically "
+"generate ultrasonic pulses which aid in navigation, provided the user is "
+"underwater and able to hear."
+msgstr ""
+
+#. ~ Description of "Directional EMP CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of small parabolic EMP field generators that are mounted in the palm of"
+" the user's right hand.  They can be used to instantly fire a wide, but "
+"short-ranged blast which will disable electronics and robots."
+msgstr ""
+
+#. ~ Description of "EMP Projector CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A ranged EMP generator system that is implanted in the user's right arm and "
+"hand.  The system fires precise, single-target pulses that require time to "
+"aim.  Extremely effective against electronic targets, but mostly useless "
+"otherwise."
+msgstr ""
+
+#. ~ Description of "Ethanol Burner CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A reactor that burns alcohol as fuel in an extremely efficient reaction.  It "
+"can store up to 500 mL and accepts ethanol, methanol and denatured alcohol as"
+" fuel."
+msgstr ""
+
+#. ~ Description of "Aero-Evaporator CBM"
+#: data/json/items/bionics.json
+msgid ""
+"This unit draws moisture from the surrounding air, which slowly trickles "
+"directly into the user's blood stream.  It may fail in very dry environments."
+msgstr ""
+
+#. ~ Description of "Telescopic Eyes CBM"
+#: data/json/items/bionics.json
+msgid ""
+"An array of high-powered, auto-focusing lenses that replaces much of the "
+"material in the user's inner eye.  This fixes any vision problems and allows "
+"for an increased vision range akin to binoculars."
+msgstr ""
+
+#. ~ Description of "Dielectric Capacitance System CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A network of miniature piezoelectric capacitors, implanted throughout the "
+"user's body to protect from external electrical discharge."
+msgstr ""
+
+#. ~ Description of "Fingerhack CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A miniature electrohack, surgically embedded in a finger of the user's right "
+"hand.  This is an all-purpose hacking unit used to override control panels "
+"and the like, but not computers.  Computer proficiency is important, and a "
+"failed use may cause damage."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/bionics.json
+msgid "Calorie Tracker CBM"
+msgid_plural "Calorie Tracker CBMs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Calorie Tracker CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A small medical implant that passively tracks your calorie expenditure and "
+"consumption."
+msgstr ""
+
+#. ~ Description of "Cranial Flashlight CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A small, but powerful LED flashlight that is mounted between the user's eyes."
+msgstr ""
+
+#. ~ Description of "Integrated Dosimeter CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of small radiation sensors that are implanted throughout the body, "
+"allowing the user to analyze their level of absorbed radiation.  They will "
+"also alert the user whenever exposed to environmental radiation."
+msgstr ""
+
+#. ~ Description of "Terranian Sonar CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of precision sonar equipment, implanted in the user's feet to allow the"
+" detection of below-ground movement, buried traps, and unstable terrain."
+msgstr ""
+
+#. ~ Description of "Heat Drain CBM"
+#: data/json/items/bionics.json
+msgid ""
+"While fighting unarmed against a warm-blooded opponent, there is a chance "
+"that a successful hit will drain body heat, inflicting a small amount of "
+"extra damage and recharging the user's bionic power reserves slightly."
+msgstr ""
+
+#. ~ Description of "Thermal Dissipation CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of powerful heatsinks and supermaterials woven into the user's flesh.  "
+"While powered, this system will prevent external heat damage up to 2000 "
+"degrees Fahrenheit.  Note that this does not affect the internal body "
+"temperature."
+msgstr ""
+
+#. ~ Description of "Hydraulic Muscles CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A hydraulic muscle support system that when active, increases the user's "
+"strength by 20."
+msgstr ""
+
+#. ~ Description of "Infrared Vision CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A bionic module that extends the user's range of vision into the infrared, "
+"allowing them to see warm-blooded creatures in the dark and through smoke."
+msgstr ""
+
+#. ~ Description of "Cerebral Booster CBM"
+#: data/json/items/bionics.json
+msgid ""
+"A set of bionic coprocessors that are implanted in the user's brain, granting"
+" a +2 bonus to intelligence.  It takes over and replaces numerous cognitive "
+"functions once installed and cannot be removed."
+msgstr ""

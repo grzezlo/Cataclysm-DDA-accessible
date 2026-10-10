@@ -1,0 +1,2009 @@
+# Batch 12 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "pathfinding module"
+#: data/json/items/robot_parts.json
+msgid ""
+"A module that uses a combination of vector integration and egocentric mapping"
+" to find the best path available."
+msgstr ""
+
+#. ~ Description of "memory banks module"
+#: data/json/items/robot_parts.json
+msgid "A module that allows for the storage and recovery of information."
+msgstr ""
+
+#. ~ Description of "self monitoring sensors"
+#: data/json/items/robot_parts.json
+msgid ""
+"An array of sensors and diagnostic modules allowing a robot to perceive "
+"itself."
+msgstr ""
+
+#. ~ Description of "AI core"
+#: data/json/items/robot_parts.json
+msgid ""
+"A module that is responsible for decision-making, it basically runs the AI of"
+" a robot."
+msgstr ""
+
+#. ~ Description of "gun operating system"
+#: data/json/items/robot_parts.json
+msgid "A system that can operate most conventional weapons."
+msgstr ""
+
+#. ~ Description of "set of tiny spidery legs"
+#: data/json/items/robot_parts.json
+msgid "A set of tiny, pointy legs, like the ones found under a skitterbot."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/robot_parts.json
+msgid "set of small tank treads"
+msgid_plural "sets of small tank treads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "set of small tank treads"
+#: data/json/items/robot_parts.json
+msgid "A set of small tank treads, like the ones used by the \"Beagle\" mini-tank."
+msgstr ""
+
+#. ~ Description of "police bot chassis"
+#: data/json/items/robot_parts.json
+msgid ""
+"What's left when you remove all moving parts and electronics.  It's the "
+"skeleton and armor of a police bot."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "encryption codes"
+msgid_plural "encryption codes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "encryption codes"
+#: data/json/items/software.json
+msgid ""
+"There are numerous security keys with dates for potential future access to "
+"encrypted archived data."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "archive data"
+msgid_plural "archive data"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "archive data"
+#: data/json/items/software.json
+msgid ""
+"Extremely compressed research data, observation and experiment statistics.  "
+"The only pattern you manage to recognize is an increase in the amount of "
+"report closer to the Cataclysm, but also a reduction in the number of "
+"facilities still submitting reports."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "junk file"
+msgid_plural "junk files"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "junk file"
+#: data/json/items/software.json
+msgid "A useless piece of electronic data."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "questionable media file"
+msgid_plural "questionable media files"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "questionable media file"
+#: data/json/items/software.json
+msgid ""
+"You kept this file on the off-chance that it might be interesting, but you "
+"need to take a more thorough look to find out what's inside."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "map cache"
+msgid_plural "map caches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "map cache"
+#: data/json/items/software.json
+msgid "Information about nearby locations stored from previous use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "recipe catalog"
+msgid_plural "recipe catalogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "recipe catalog"
+#: data/json/items/software.json
+msgid ""
+"This is a filtered collection of PDFs, images, and texts that contains "
+"instructions for making useful items.  Any electronic recipe catalogs will be"
+" added to this one."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "scientific recipe catalog"
+msgid_plural "scientific recipe catalogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "medical recipe catalog"
+msgid_plural "medical recipe catalogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/software.json
+msgid "photo gallery"
+msgid_plural "photo galleries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "photo gallery"
+#: data/json/items/software.json
+msgid ""
+"A varied collection of detailed photos.  Any collections of this kind will be"
+" added to this one."
+msgstr ""
+
+#. ~ Description of "arm splint"
+#: data/json/items/tool_armor.json
+msgid "A tool to help set arm bones and hold them in place."
+msgstr ""
+
+#. ~ Description of "arm splint"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tool to help set arm bones and hold them in place.  It is specifically "
+"designed to fit Huge survivors."
+msgstr ""
+
+#. ~ Description of "arm splint"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tool to help set arm bones and hold them in place.  It is specifically "
+"designed to fit Tiny survivors."
+msgstr ""
+
+#. ~ Description of "tourniquet (arm)"
+#. ~ Description of "tourniquet (leg)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A first aid device used to apply pressure to a limb or extremity in order to "
+"limit blood flow.  Should be employed only to manage heavy bleeding, because "
+"prolonged use will harm the limb.  It can be adjusted in size to fit "
+"different limbs."
+msgstr ""
+
+#. ~ Description of "makeshift blindfold"
+#: data/json/items/tool_armor.json
+msgid ""
+"A crude eye covering woven from blades of grass with string attached to "
+"fasten it.  Useful for sleeping in bright areas.  Use to raise it."
+msgstr ""
+
+#. ~ "msg" action message of item "makeshift blindfold"
+#. ~ "msg" action message of item "blindfold"
+#. ~ "msg" action message of item "duct tape blindfold"
+#: data/json/items/tool_armor.json
+msgid "You uncover your eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "makeshift blindfold (raised)"
+msgid_plural "makeshift blindfolds (raised)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "makeshift blindfold (raised)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A crude eye covering woven from blades of grass with string attached to "
+"fasten it.  It's currently raised, letting you see.  Use to lower it."
+msgstr ""
+
+#. ~ Description of "blindfold"
+#: data/json/items/tool_armor.json
+msgid ""
+"A simple fabric covering tied over the eyes to block sight.  Useful for "
+"sleeping in bright areas.  Use to raise it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "blindfold (raised)"
+msgid_plural "blindfolds (raised)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "blindfold (raised)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A simple fabric covering tied over the eyes to block sight.  It's currently "
+"raised, letting you see.  Use to lower it."
+msgstr ""
+
+#. ~ Description of "duct tape blindfold"
+#: data/json/items/tool_armor.json
+msgid ""
+"A simple covering tied over the eyes to block sight, made out of duct tape.  "
+"Useful for sleeping in bright areas.  Use to raise it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "duct tape blindfold (raised)"
+msgid_plural "duct tape blindfolds (raised)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "duct tape blindfold (raised)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A simple covering tied over the eyes to block sight, made out of duct tape.  "
+"It's currently raised, letting you see.  Use to lower it."
+msgstr ""
+
+#. ~ Description of "pair of ear plugs"
+#: data/json/items/tool_armor.json
+msgid "Industrial-grade ear plugs.  They fit inside the ears."
+msgstr ""
+
+#. ~ Description of "go bag"
+#: data/json/items/tool_armor.json
+msgid ""
+"A huge duffel bag with a backpack attached, both packed to the gills.  "
+"Judging by the feel, a National Guardsman could have packed this to be ready "
+"for deployment.  Activate to unpack and enjoy."
+msgstr ""
+
+#. ~ Description of "personal go bag"
+#: data/json/items/tool_armor.json
+msgid ""
+"A huge duffel bag with a backpack attached, both packed to the gills.  You "
+"packed this to be ready for deployment.  Activate to unpack and enjoy."
+msgstr ""
+
+#. ~ Description of "leg splint"
+#: data/json/items/tool_armor.json
+msgid "A tool to help set leg bones and hold them in place."
+msgstr ""
+
+#. ~ Description of "leg splint"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tool to help set leg bones and hold them in place.  It is specifically "
+"designed to fit Huge people."
+msgstr ""
+
+#. ~ Description of "leg splint"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tool to help set leg bones and hold them in place.  It is specifically "
+"designed to fit Tiny people."
+msgstr ""
+
+#. ~ Description of "crude welding mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A crude welding mask made from shaped steel.  It will keep your face safe "
+"while welding, but it's a bit less comfortable than the real deal.  Activate "
+"it to push it up your head."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "smart watch"
+msgid_plural "smart watches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "smart watch"
+#: data/json/items/tool_armor.json
+msgid ""
+"A touchscreen watch that comes with many uses, such as a calendar, alarm, and"
+" even a fitness app, for when you want to check your health on the go!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "advanced smart watch"
+msgid_plural "advanced smart watches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "advanced smart watch"
+#: data/json/items/tool_armor.json
+msgid ""
+"A touchscreen watch that comes with many uses, such as a calendar, alarm, and"
+" even a fitness app, for when you want to check your health on the go!  This "
+"is more expensive model, featuring shock-resistant and waterproof case and a "
+"bunch of additional sensors."
+msgstr ""
+
+#. ~ Description of "fitness band"
+#: data/json/items/tool_armor.json
+msgid ""
+"A fitness band that can track your heartbeat, exercise level, and calories, "
+"and also has a clock.  Activate to see your metrics."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "diving flashlight wrist mount"
+msgid_plural "diving flashlight wrist mounts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "diving flashlight wrist mount"
+#: data/json/items/tool_armor.json
+msgid ""
+"A proprietary wrist mount for a flashlight.  Not very useful on its own."
+msgstr ""
+
+#. ~ Description of a pocket in item "diving flashlight wrist mount"
+#: data/json/items/tool_armor.json
+msgid "Proprietary mount for a diving flashlight."
+msgstr ""
+
+#. ~ Description of "fedora"
+#: data/json/items/tool_armor.json
+msgid ""
+"A high-crowned, wide-brimmed, sable-colored fedora.  Its brim helps keep the "
+"sun out of your eyes.  The perfect hat for treasure hunting."
+msgstr ""
+
+#. ~ Description of "pair of thermal electric socks"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of socks with internal battery-powered heating elements.  Use it to "
+"turn it on."
+msgstr ""
+
+#. ~ Description of "pair of thermal electric socks (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of socks with internal battery-powered heating elements.  They are "
+"currently on, and continually draining batteries.  Use it to turn them off."
+msgstr ""
+
+#. ~ Description of "thermal electric suit"
+#: data/json/items/tool_armor.json
+msgid ""
+"A full-body suit of thin thermal underwear equipped with internal battery-"
+"powered heating elements.  Use it to turn it on."
+msgstr ""
+
+#. ~ Description of "thermal electric suit (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A full-body suit of thin thermal underwear equipped with internal battery-"
+"powered heating elements.  It is currently on, and continually draining "
+"batteries.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "pair of thermal electric gloves"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of gloves with internal battery-powered heating elements.  Use it to "
+"turn it on."
+msgstr ""
+
+#. ~ Description of "pair of thermal electric gloves (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of gloves with internal battery-powered heating elements.  They are "
+"currently on, and continually draining batteries.  Use it to turn them off."
+msgstr ""
+
+#. ~ Description of "thermal electric balaclava"
+#: data/json/items/tool_armor.json
+msgid ""
+"A snug cloth mask with internal battery-powered heating elements.  Use it to "
+"turn it on."
+msgstr ""
+
+#. ~ Description of "thermal electric balaclava (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A snug cloth mask with internal battery-powered heating elements.  It is are "
+"currently on, and continually draining batteries.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "headlamp"
+#: data/json/items/tool_armor.json
+msgid ""
+"An LED headlamp with an adjustable strap so as to be comfortably worn on your"
+" head or attached to your helmet.  Use it to turn it on."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "wearable camera"
+msgid_plural "wearable cameras"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wearable camera"
+#: data/json/items/tool_armor.json
+msgid ""
+"A point-and-shoot digital camera with a digital viewfinder, a backup 'iron-"
+"sight', and flash.  You can look at your photos on the digital screen, or "
+"transfer them with a memory card.  This one can be worn over your neck."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "wearable professional camera"
+msgid_plural "wearable professional cameras"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wearable professional camera"
+#: data/json/items/tool_armor.json
+msgid ""
+"A 35 mm digital SLR (single-lens reflex) camera with optical and digital "
+"viewfinders, a zoom lens with auto-focus and stabilizer, and flash.  You can "
+"view your photos on it or transfer them with a memory card.  Before the "
+"Cataclysm, you could have taken professional-grade photos using this.  This "
+"one can be worn over your neck."
+msgstr ""
+
+#. ~ Description of "headlamp (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"An LED headlamp with an adjustable strap so as to be comfortably worn on your"
+" head or attached to your helmet.  It is turned on, and continually draining "
+"batteries.  Use it to turn it off."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "heavy-duty headlamp (on)"
+msgid_plural "heavy-duty headlamps (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy-duty headlamp (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A heavy-duty LED headlamp with a durable polymer housing.  It's impact-"
+"resistant, chemical-resistant, waterproof and certified for use in hazardous "
+"environments.  Designed for firefighters, rescue personnel and miners.  Use "
+"it to turn it off."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "heavy-duty headlamp"
+msgid_plural "heavy-duty headlamps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy-duty headlamp"
+#: data/json/items/tool_armor.json
+msgid ""
+"A heavy-duty LED headlamp with a durable polymer housing.  It's impact-"
+"resistant, chemical-resistant, waterproof and certified for use in hazardous "
+"environments.  Designed for firefighters, rescue personnel and miners.  Use "
+"it to turn it on."
+msgstr ""
+
+#. ~ Description of "atomic headlamp"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-made, reinforced headlamp powered by the magic of nuclear decay, "
+"focused for more usable brightness.  The adjustable strap allows it to be "
+"comfortably worn on your head or attached to your helmet.  Use it to close "
+"the cover and hide the light."
+msgstr ""
+
+#. ~ Description of "atomic headlamp (covered)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-made, reinforced headlamp powered by the magic of nuclear decay, "
+"focused for more usable brightness.  The adjustable strap allows it to be "
+"comfortably worn on your head or attached to your helmet.  Use it to open the"
+" cover and show the light."
+msgstr ""
+
+#. ~ Description of "pair of basic AR glasses"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of compact augmented reality glasses with some basic functionality.  "
+"There is a camera on the rim, and it has an alarm clock feature."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "pair of advanced AR glasses"
+msgid_plural "pairs of advanced AR glasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of advanced AR glasses"
+#: data/json/items/tool_armor.json
+msgid ""
+"An expensive model of augmented reality glasses, with adaptive light "
+"correction and some gadgets, designed to be compatible with corrective "
+"glasses.  An augmented reality overlay allows the user to zoom their view, "
+"and it displays handy information about local topology."
+msgstr ""
+
+#. ~ Description of "EOD helmet"
+#: data/json/items/tool_armor.json
+msgid ""
+"An armored, electronically-shielded helmet containing a camera, a two-way "
+"radio, and a headlamp, all of which can be voice-activated for redundancy.  "
+"It is designed to protect against overpressure, fragmentation, impact, and "
+"heat."
+msgstr ""
+
+#. ~ Description of "RM13 combat armor"
+#: data/json/items/tool_armor.json
+msgid ""
+"A full-body suit of sleek black military armor that represents the pinnacle "
+"of Rivtech's powered armor technology.  It has a proprietary internal battery"
+" recharged by UPS.  Use it to turn it on."
+msgstr ""
+
+#. ~ "msg" action message of item "RM13 combat armor"
+#: data/json/items/tool_armor.json
+msgid ""
+"You activate your RM13 combat armor.\n"
+"Rivtech Model 13 RivOS v2.19:   ONLINE.\n"
+"CBRN defense system:            ONLINE.\n"
+"Acoustic dampening system:      ONLINE.\n"
+"Thermal regulation system:      ONLINE.\n"
+"Vision enhancement system:      ONLINE.\n"
+"Electro-reactive armor system:  ONLINE.\n"
+"All systems nominal."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "RM13 combat armor"
+#: data/json/items/tool_armor.json
+msgid "The RM13 combat armor's battery is dead."
+msgstr ""
+
+#. ~ Description of "RM13 combat armor (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A full-body suit of sleek black military armor that represents the pinnacle "
+"of Rivtech's powered armor technology.  As you move your fingers over the "
+"surface, the armor tenses, almost as though it were alive.  Use it to turn it"
+" off."
+msgstr ""
+
+#. ~ "msg" action message of item "RM13 combat armor (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"You deactivate your RM13 combat armor.\n"
+"RivOS v2.19 shutdown sequence initiated.\n"
+"Shutting down.\n"
+"Your RM13 combat armor turns off."
+msgstr ""
+
+#. ~ "msg" action message of item "5-point anchor"
+#: data/json/items/tool_armor.json
+#, c-format
+msgid "An LED light in the %s flickers on."
+msgstr ""
+
+#. ~ Description of "5-point anchor (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"The harness' shoulder-mounted LED glows with a soft green hue.  There's no "
+"further indication of anything happening."
+msgstr ""
+
+#. ~ Description of "malfunctioning 5-point anchor"
+#: data/json/items/tool_armor.json
+msgid ""
+"A battered, disc-shaped device mounted on a harness.  The inscriptions "
+"\"X.E.D.R.A\" and \"5-point anchor\" are barely legible on its radiation-"
+"stained front and back."
+msgstr ""
+
+#. ~ "msg" action message of item "malfunctioning 5-point anchor"
+#: data/json/items/tool_armor.json
+#, c-format
+msgid ""
+"The %s emits a low-pitched clicking alarm as its mounted LED light flashes "
+"yellow."
+msgstr ""
+
+#. ~ Description of "phase immersion suit"
+#: data/json/items/tool_armor.json
+msgid ""
+"Covered in interlocking plates of reflective metal, this advanced suit "
+"resembles both plate armor and an astronaut's spacesuit.  Designed to protect"
+" its wearer during extradimensional excursions, it offers unparalleled "
+"environmental protection, both in this Earth and beyond.  Use it to turn it "
+"on."
+msgstr ""
+
+#. ~ Description of "gas mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A full-face, industrial-grade respirator made from a solid black silicon and "
+"butyl rubber blend, providing decent user comfort in addition to a clear "
+"field of view and a secure fit thanks to the mask's single-element visor and "
+"6-point head harness.  Provided that a filter canister's been screwed into "
+"the right-side filter port and the respirator's been prepared, it'll do an "
+"admirable job at preventing smoke, gas, and contaminants derived from "
+"chemical and lab work from taking up residence in your organs."
+msgstr ""
+
+#. ~ Description of a pocket in item "gas mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A number of external brackets arranged around the eyepiece to retain an outer"
+" attachment."
+msgstr ""
+
+#. ~ Description of a pocket in item "gas mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A space behind the visor designed to accommodate the installation of inserts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "half-face gas mask"
+msgid_plural "half-face gas masks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "half-face gas mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A lightweight, form-fitting mask that straps over your mouth and nose, "
+"providing full protection from the inhalation of smoke, tear gas, and "
+"chemical contaminants - though safety goggles are advised!  It must be "
+"prepared before use."
+msgstr ""
+
+#. ~ Description of "survivor firemask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-made leather gasmask faced with Nomex.  It must be prepared before "
+"use."
+msgstr ""
+
+#. ~ Description of "heavy survivor mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A gas mask handcrafted from treated leather with a steel faceplate overtop.  "
+"It must be prepared before use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "survivor half mask"
+msgid_plural "survivor half masks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "survivor half mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A half-face gasmask handcrafted from treated leather.  It provides no "
+"protection for the eyes, and must be activated before use."
+msgstr ""
+
+#. ~ Description of "survivor mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A gas mask handcrafted from treated leather.  It must be prepared before use."
+msgstr ""
+
+#. ~ Description of "pair of light amp goggles"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of battery-powered goggles that use a infrared LED in conjunction with"
+" a IR camera, allowing you to see in the dark.  Use it to turn them on."
+msgstr ""
+
+#. ~ Description of "pair of light amp goggles (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of battery-powered goggles that use a infrared LED in conjunction with"
+" a IR camera, allowing you to see in the dark.  It is turned on, and "
+"continually draining batteries.  Use it to turn them off."
+msgstr ""
+
+#. ~ Description of "wearable RX12 jet injector"
+#: data/json/items/tool_armor.json
+msgid ""
+"A modified RX12 jet injector which can be worn on the body.  A label on the "
+"side warns against using more than two doses per hour."
+msgstr ""
+
+#. ~ Description of "RX11 stimulant delivery system"
+#: data/json/items/tool_armor.json
+msgid ""
+"A Rivtech RX11 stimulant delivery system, a jet autoinjector system worn on "
+"the user's body.  A simple press of its activator injects powerful chemical "
+"stimulants into the bloodstream without using a needle."
+msgstr ""
+
+#. ~ Description of "survivor divemask"
+#. ~ Description of "survivor divemask (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-built, armored rebreather mask that covers the face and eyes.  "
+"Provides excellent protection from harm as well providing breathing gas while"
+" underwater.  Use it to turn it on."
+msgstr ""
+
+#. ~ Description of "survivor divemask (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-built, armored rebreather mask that covers the face and eyes.  "
+"Provides excellent protection from harm as well providing breathing gas while"
+" underwater.  It is turned on, and continually consuming its filter.  Use it "
+"to turn it off."
+msgstr ""
+
+#. ~ Description of "survivor divemask (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A custom-built, armored rebreather mask that covers the face and eyes "
+"regardless of your state of mutation.  Provides excellent protection from "
+"harm as well providing breathing gas while underwater.  It is turned on, and "
+"continually consuming its filter.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "radiation biomonitor"
+#: data/json/items/tool_armor.json
+msgid ""
+"A small, battery-powered biometric safety device worn on the wrist.  Activate"
+" to check your current level of radiation exposure."
+msgstr ""
+
+#. ~ Description of "towel"
+#: data/json/items/tool_armor.json
+msgid ""
+"A large, fluffy towel.  It could be used to dry yourself.  Any person that "
+"can travel the length and breadth of the apocalypse, rough it, slum it, "
+"struggle against terrible odds, win through, and still know where their towel"
+" is, is clearly a force to be reckoned with."
+msgstr ""
+
+#. ~ Description of "towel"
+#: data/json/items/tool_armor.json
+msgid ""
+"A large, sopping wet towel.  If you wait a little bit, it should dry out.  "
+"Don't panic."
+msgstr ""
+
+#. ~ Description of "straw fedora"
+#: data/json/items/tool_armor.json
+msgid ""
+"A straw fedora hat, comfortable and stylish.  Its brim helps keep the sun out"
+" of your eyes."
+msgstr ""
+
+#. ~ Description of "thermal electric outfit"
+#: data/json/items/tool_armor.json
+msgid ""
+"A suit of thin thermal underwear that covers you from head to toe and is "
+"equipped with internal battery-powered heating elements.  Use it to turn it "
+"on."
+msgstr ""
+
+#. ~ Description of "thermal electric outfit (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A suit of thin thermal underwear that covers you from head to toe and is "
+"equipped with internal battery-powered heating elements.  It is currently on,"
+" and continually draining batteries.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "turtleneck"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tasteful wool turtleneck, modeled after cashmere.  Unencumbering and warm, "
+"but lacking storage."
+msgstr ""
+
+#. ~ Description of "turtleneck shirt"
+#: data/json/items/tool_armor.json
+msgid ""
+"A tasteful cotton turtleneck shirt, thick for a shirt, thin for a sweater, "
+"and completely lacking storage."
+msgstr ""
+
+#. ~ Description of "ski mask"
+#: data/json/items/tool_armor.json
+msgid ""
+"A warm wool mask that protects the head and face from the cold.  It covers "
+"most of your head and mouth, and can be adjusted to hang around your throat "
+"instead."
+msgstr ""
+
+#. ~ "menu_text" action message of item "ski mask"
+#: data/json/items/tool_armor.json
+msgid "Wear as collar"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "ski mask (collar)"
+msgid_plural "ski masks (collar)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ski mask (collar)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A warm wool mask that protects the head and face from the cold.  It is "
+"wrapped around your throat, and can be adjusted to cover your mouth and more "
+"of your head."
+msgstr ""
+
+#. ~ "menu_text" action message of item "ski mask (collar)"
+#: data/json/items/tool_armor.json
+msgid "Wear around head"
+msgstr ""
+
+#. ~ Description of "shooter's earmuffs"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of earmuffs favored by shooters.  Without batteries or when turned "
+"off, they function like normal earmuffs and block all sound.  They will only "
+"block sounds over a certain decibel amount when turned on, to protect your "
+"ears from injury while otherwise allowing you to hear normally.  The earmuffs"
+" are currently off."
+msgstr ""
+
+#. ~ Description of "shooter's earmuffs"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of earmuffs favored by shooters.  The earmuffs are turned on, and will"
+" block sounds over a certain decibel amount while otherwise allowing you to "
+"hear normally."
+msgstr ""
+
+#. ~ Description of "shooter's ear plugs"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of in-ear drivers designed to dampen loud sounds and amplify quiet "
+"sounds.  Without batteries or when turned off, they function like normal "
+"earplugs and block most sound.  They will only block sounds over a certain "
+"decibel amount when turned on, to protect your ears from injury while "
+"otherwise allowing you to hear normally.  The earplugs are currently off."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "shooter's ear plugs"
+#: data/json/items/tool_armor.json
+msgid "The earplugs' batteries are dead."
+msgstr ""
+
+#. ~ Description of "shooter's ear plugs (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of in-ear drivers designed to dampen loud sounds and amplify quiet "
+"sounds.  The earplugs are turned on, and will block sounds over a certain "
+"decibel amount while otherwise allowing you to hear normally."
+msgstr ""
+
+#. ~ Description of "stethoscope"
+#: data/json/items/tool_armor.json
+msgid "A medical listening tool.  Use it to listen to things.  Closely."
+msgstr ""
+
+#. ~ Description of "makeshift stethoscope"
+#: data/json/items/tool_armor.json
+msgid ""
+"A relatively cumbersome DIY child's medical listening toy.  Use it to listen "
+"to things.  Closely."
+msgstr ""
+
+#. ~ Description of "solar backpack (folded)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A personal portable charging system consisting of an array of solar panels "
+"neatly folded into the form of a large backpack.  It can be worn like a "
+"normal backpack, and has an integrated cable to plug it into a cable charger "
+"system CBM."
+msgstr ""
+
+#. ~ Description of "solar backpack (unfolded)"
+#: data/json/items/tool_armor.json
+msgid ""
+"An unfolded array of portable solar panels, ready to push some power into an "
+"active cable charger system CBM."
+msgstr ""
+
+#. ~ Description of "riot helmet"
+#: data/json/items/tool_armor.json
+msgid ""
+"A riot helmet with a plastic face shield that covers your entire face.  "
+"Activate to raise the face shield."
+msgstr ""
+
+#. ~ Description of "riot helmet (raised visor)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A riot helmet with a plastic face shield, which is raised up.  Activate to "
+"lower the shield."
+msgstr ""
+
+#. ~ Description of "sallet helm"
+#. ~ Description of "sallet helm (raised)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A popular German helmet of the late medieval era, the sallet covers the head "
+"and eyes.  Activate it to toggle the visor."
+msgstr ""
+
+#. ~ Description of "armet helm"
+#. ~ Description of "armet helm (raised)"
+#: data/json/items/tool_armor.json
+msgid ""
+"An iconic knightly helm of the late Middle Ages.  When you think of a "
+"knight's helmet, it looks something like this.  Activate it to toggle the "
+"visor."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "diving cylinder"
+msgid_plural "diving cylinders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "diving cylinder"
+#. ~ Description of "diving cylinder (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A high-pressure 232 bar diving tank that can contain up to 12 L of a "
+"compressed mixture of oxygen and nitrogen.  It is equipped with an on-demand "
+"regulator and a mouthpiece designed mostly for underwater use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "diving cylinder (on)"
+msgid_plural "diving cylinders (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "small diving cylinder"
+msgid_plural "small diving cylinders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small diving cylinder"
+#. ~ Description of "small diving cylinder (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A small, high-pressure 200 bar backup diving tank that can contain 4 L of a "
+"compressed mixture of oxygen and nitrogen.  It is equipped with an on-demand "
+"regulator and a mouthpiece designed mostly for underwater use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "small diving cylinder (on)"
+msgid_plural "small diving cylinders (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "electric blanket"
+#: data/json/items/tool_armor.json
+msgid ""
+"A heated blanket made of polyester.  The most comfortable thing on Earth.  "
+"Its power drain is usually negligible, but without being able to plug it into"
+" a wall, it chews through batteries insanely quickly."
+msgstr ""
+
+#. ~ Description of "pair of attached ear plugs (in)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of industrial-grade ear plugs attached together by some string.  They "
+"are inside your ears, activate them to take them out."
+msgstr ""
+
+#. ~ Description of "pair of attached ear plugs (out)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A pair of industrial-grade ear plugs, they are attached together by some "
+"string.  They hang around your neck, use them to plug them in."
+msgstr ""
+
+#. ~ Description of "military flight helmet"
+#: data/json/items/tool_armor.json
+msgid ""
+"A military flight helmet.  Equipped with a visor, microphone, and noise "
+"dampening system.  The helmet is also fitted with plastic rail for a night-"
+"vision attachment."
+msgstr ""
+
+#. ~ Description of a pocket in item "military flight helmet"
+#. ~ Description of a pocket in item "heavy combat exoskeleton head armor"
+#. ~ Description of a pocket in item "tactical full helmet"
+#: data/json/items/armor/combat_exoskeleton_armor.json
+#: data/json/items/armor/helmets.json data/json/items/tool_armor.json
+msgid "Pocket for a front night vision attachment."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool_armor.json
+msgid "combo cover"
+msgid_plural "combo covers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "battery powered utility exoskeleton"
+#: data/json/items/tool_armor.json
+msgid ""
+"A skeletal frame of sturdy metal with attached motors to allow the user to "
+"move heavier loads with less strain on the body."
+msgstr ""
+
+#. ~ Description of "battery powered utility exoskeleton (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A skeletal frame of sturdy metal with attached motors to allow the user to "
+"move heavier loads with less strain on the body.  It is turned on and "
+"continually drawing power.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "ICE utility exoskeleton"
+#: data/json/items/tool_armor.json
+msgid ""
+"A skeletal frame of sturdy metal with attached motors to allow the user to "
+"move heavier loads with less strain on the body.  This model uses a compact "
+"internal combustion engine for power."
+msgstr ""
+
+#. ~ Description of "ICE utility exoskeleton (on)"
+#: data/json/items/tool_armor.json
+msgid ""
+"A skeletal frame of sturdy metal with attached motors to allow the user to "
+"move heavier loads with less strain on the body.  This model uses a compact "
+"internal combustion engine for power.  It is turned on and continually "
+"draining gasoline.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "UPS conversion mod"
+#: data/json/items/toolmod.json
+msgid ""
+"A device that replaces conventional battery connections with a connector port"
+" that can plug into a UPS.  Any device modified with this can be used without"
+" a battery as long as you have a charged UPS with you."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toolmod.json
+msgid "bionic power conversion mod"
+msgid_plural "bionic power conversion mods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bionic power conversion mod"
+#: data/json/items/toolmod.json
+msgid ""
+"A kit that replaces conventional battery connections with the circuitry and "
+"cables required to draw power from a Standard Neurobionics Interface (SNI).  "
+"Any device modified with this is powered by your own bionic power storage "
+"instead of conventional batteries."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toolmod.json
+msgid "tool battery mod"
+msgid_plural "tool battery mods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tool battery mod"
+#: data/json/items/toolmod.json
+msgid ""
+"A battery compartment mod that allows the use of tool batteries in tools that"
+" otherwise could not."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "plush toy"
+msgid_plural "plush toys"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A manufactured plush toy.  This is the default variant, if you see it "
+"something went wrong."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "sloth teddy bear"
+msgid_plural "sloth teddy bears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "sloth teddy bear" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A mass-produced plush black teddy bear with a mark in its face that looks "
+"like a pair of white glasses or a white bandit mask.  It is wearing a little "
+"white t-shirt and a pajama hat, but no pants."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "panda teddy bear"
+msgid_plural "panda teddy bears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "panda teddy bear" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A mass-produced plush panda teddy bear.  It is wearing a little gray t-shirt,"
+" but no pants."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "ferret plushie"
+msgid_plural "ferret plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ferret plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid "A large plush ferret with cute beady eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "T-rex plushie"
+msgid_plural "T-rex plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "T-rex plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid "A large plush t-rex."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "triceratops plushie"
+msgid_plural "triceratops plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "triceratops plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A large, round, cuddly dinosaur plushie with soft horns and a sturdy build."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "stegosaurus plushie"
+msgid_plural "stegosaurus plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "stegosaurus plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A large stegosaurus plushie with a spiky back and soft, huggable body.  Don't"
+" worry, it is completely docile!"
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "brontosaurus plushie"
+msgid_plural "brontosaurus plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "brontosaurus plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A silly, oversized and soft brontosaurus plushie with a long tail, a long "
+"neck and a small head with a friendly smile."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "penguin plushie"
+msgid_plural "penguin plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "penguin plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid "A velvety-soft plush penguin.  It makes a funny noise when you hug it."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "rabbit plushie"
+msgid_plural "rabbit plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rabbit plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid "A large plush rabbit."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "fox plushie"
+msgid_plural "fox plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "fox plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A large plush fox.  It isn't realistic enough to trick a zombie into going "
+"after it, but it's very cute and makes a comforting bedtime companion."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "moose plushie"
+msgid_plural "moose plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "moose plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly plushie of the mighty moose, with soft brown fur, floppy ears, and "
+"big antlers.  It has a special huggability feature that makes it delightfully"
+" squishy, perfect for comforting cuddles."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "bobcat plushie"
+msgid_plural "bobcat plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bobcat plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A soft, cute bobcat plushie with a cute, tufted pair of ears, a fluffy tail "
+"and soft brown fur.  It has embroidered both soft whiskers and claws that add"
+" a touch of realism to its cute and playful design."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "eagle plushie"
+msgid_plural "eagle plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "eagle plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and majestic bald eagle plushie with soft, brown and white cotton "
+"faux feathers, a hooked, soft beak, and a patriotic expression.  It has a "
+"pair of special eyes that glow as brightly as the stars and stripes of Old "
+"Glory, the perfect partner to fend off your enemies in the Cataclysm."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "seal plushie"
+msgid_plural "seal plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "seal plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly seal plushie with soft, grayish fur and big, soulful eyes.  It "
+"features a realistic texture that mimics the soft and textural quality of "
+"real seals' fur."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "otter plushie"
+msgid_plural "otter plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "otter plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A playful and fuzzy northern river otter plushie with brown fur and a curious"
+" expression.  It has a special, state-of-the-art semi-waterproof finish that "
+"makes it the perfect bathtub companion for those who love to play with their "
+"toys while they get clean."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "falcon plushie"
+msgid_plural "falcon plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "falcon plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly peregrine falcon plushie with soft, brown and white cotton faux "
+"feathers, a soft hooked beak, and an alert expression.  With a speedy and "
+"sleek plushie design, this toy plushie is sure to take imaginative people on "
+"make-believe high-flying chase scenes!"
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "chipmunk plushie"
+msgid_plural "chipmunk plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "chipmunk plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute, adorable eastern chipmunk plushie with soft, reddish-brown fur and "
+"big eyes.  It features a harmless, special crinkly texture that mimics the "
+"sound of chipmunks rustling in the leaves."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "deer plushie"
+msgid_plural "deer plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "deer plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A very huggable white-tailed deer plushie with soft, brown fur and a cute "
+"expression with adorable antlers."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "skunk plushie"
+msgid_plural "skunk plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "skunk plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute striped skunk plushie with soft, black-and-white fur and a playful "
+"expression.  Ironically, it has a weak, pleasant pine scent."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "racoon plushie"
+msgid_plural "racoon plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "racoon plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A plushie with soft, black-gray-and-white fur and a curious expression with "
+"its iconic bandit mask.  It has a special feature that makes its tails emerge"
+" from its hiding spot in the toy, reminiscent of one of the raccoon's "
+"greatest attributes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "owl plushie"
+msgid_plural "owl plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "owl plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and wise-looking owl plushie with fluffy white cotton faux feathers,"
+" orange eyes, and a cute expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "turkey plushie"
+msgid_plural "turkey plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "turkey plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and big wild turkey plushie with brown cotton faux feathers, a "
+"prominent, soft beak, and expressive, soulful eyes.  It has a special feature"
+" of making gobbling sounds when squeezed, almost perfectly mimicking the "
+"turkey's unique calls."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "crocodile plushie"
+msgid_plural "crocodile plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "crocodile plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A soft and cuddly crocodile plushie with soft green scales, a big smile, and "
+"a long snout.  When squeezed or touched, this plushie produces authentic "
+"hissing and growling sounds, just like a real crocodile.  Or is it an "
+"alligator?  It's hard to tell."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "iguana plushie"
+msgid_plural "iguana plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "iguana plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly iguana plushie with soft green scales, big eyes, and a friendly, "
+"curious expression.  It possess a special ribbed texture to mimic the skin of"
+" a real iguana."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "gecko plushie"
+msgid_plural "gecko plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "gecko plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute and colorful gecko plushie with soft, vibrant skin and big, playful "
+"eyes.  This plushie has a special cotton-based internal mechanism that makes "
+"its tail wiggle and move playfully when squeezed enough, just like a real "
+"lizard's tail."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "chameleon plushie"
+msgid_plural "chameleon plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "chameleon plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and soft chameleon plushie that can change colors, complete with "
+"big, round eyes and a cute expression.  This plushie's soft body has a simple"
+" color-changing mechanism on its fabric, that changes from green to brown if "
+"you pet it properly, enabling people, especially children, to explore and "
+"learn about the biology of this fascinating reptile."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "chicken plushie"
+msgid_plural "chicken plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "chicken plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A precious soft and cuddly chicken plushie with soft, warm brown cotton faux "
+"feathers and a gentle expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "goose plushie"
+msgid_plural "goose plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "goose plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A goose plushie with soft, white cotton faux feathers, a cute and soft orange"
+" beak, and big, playful eyes.  This plushie produces realistic honking sounds"
+" when hugged!"
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "duck plushie"
+msgid_plural "duck plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "duck plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly duck plushie with soft, yellow cotton faux feathers, cute orange "
+"feet, and a lovable quack.  This plushie has special water-repellent "
+"properties to make it float in water, just like a real duck!"
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "puppy plushie"
+msgid_plural "puppy plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "puppy plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A fluffy and cuddly plushie of a mutt puppy with soft, fuzzy fur, big, round "
+"eyes, and a playful expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "kitty plushie"
+msgid_plural "kitty plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "kitty plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute and lovable domestic kitty plushie with soft, plush fur, big, round "
+"eyes, and a gentle expression.  You can't tell if it is a short-haired one or"
+" a long-haired one."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "walrus plushie"
+msgid_plural "walrus plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "walrus plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A big, soft and cuddly walrus plushie with fluffy brown fur, cute, soft "
+"tusks, and big, wise soulful eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "crow plushie"
+msgid_plural "crow plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "crow plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A plushie with black fluffy cotton faux feathers, big curious eyes, and an "
+"inquisitive expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "frog plushie"
+msgid_plural "frog plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "frog plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A frog plushie with soft, green, and bumpy skin, big, playful eyes, and "
+"typical frog legs.  This plushie produces realistic croaking sounds when "
+"squeezed and a special texture that makes it fun to squeeze and manipulate.  "
+"Or is it a frog?  You can't really tell."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "bat plushie"
+msgid_plural "bat plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bat plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A precious bat plushie with soft, black fur, big ears, and somewhat small, "
+"curious eyes.  It produces a special squeaker sound effect when squeezed."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "gorilla plushie"
+msgid_plural "gorilla plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "gorilla plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and adorable gorilla plushie with soft, black fur, big eyes, and a "
+"friendly expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "orangutan plushie"
+msgid_plural "orangutan plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "orangutan plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A lovable and huggable orangutan plushie with soft, orange-brown fur and big,"
+" friendly eyes in a big, wise-looking face.  This plushie makes playful and "
+"cuddly jungle sounds when squeezed and hugged."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "chimpanzee plushie"
+msgid_plural "chimpanzee plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "chimpanzee plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute and cuddly chimpanzee plushie with soft, brown fur, big, curious eyes,"
+" and a playful expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "lion plushie"
+msgid_plural "lion plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "lion plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"This bright, extremely cute lion plushie features long, soft, and golden-"
+"colored fur and a extremely playful demeanor.  On the label it says that it "
+"is an ambassador of its species, and that the amounts collected in the sales "
+"of the plushies were donated to help the conservation of the species.  Surely"
+" now, without many humans, maybe these animals don't have to worry so much "
+"about their habitat being destroyed."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "tarantula plushie"
+msgid_plural "tarantula plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "tarantula plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A somewhat scary, but cuddly tarantula plushie with soft, fuzzy brown fur and"
+" big, curious eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "ant plushie"
+msgid_plural "ant plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ant plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A ant plushie with a sturdy, hard yet soft shell mimic, and big, inquisitive "
+"eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "ladybug plushie"
+msgid_plural "ladybug plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ladybug plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute and lovable ladybug plushie with soft, red and black polkadotted wings"
+" and big, friendly eyes.  This plushie features a special retractable spotted"
+" soft wing mechanic sewed directly into the body that gives it the authentic "
+"appearance of a ladybug about to fly."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "crab plushie"
+msgid_plural "crab plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "crab plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"An amazing crab plushie with soft, textured blue and red bumpy shell and big,"
+" curious eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "whale plushie"
+msgid_plural "whale plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "whale plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A large, funny, cuddly whale plushie with soft, blue-gray fur, big, friendly "
+"eyes, and a playful expression."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "camel plushie"
+msgid_plural "camel plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "camel plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cuddly and sweet camel plushie with two soft humps, tan fur and big, "
+"soulful eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "alpaca plushie"
+msgid_plural "alpaca plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "alpaca plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"A cute and loving alpaca plushie featuring soft, curly fur in shades of white"
+" and brown, shiny black eyes, and slightly short legs."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "cow plushie"
+msgid_plural "cow plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "cow plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"This very well-made cow plushie features soft, velvety fur in black and white"
+" patches, with endearing floppy ears and bright eyes, together with a pair of"
+" soft horns and the typical cow udder."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "sheep plushie"
+msgid_plural "sheep plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

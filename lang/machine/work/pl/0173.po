@@ -1,0 +1,2151 @@
+# Batch 173 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "Epsilon Secure Container"
+#: data/mods/Sky_Island/secure_container.json
+msgid ""
+"A large secure storage.  This metaphysical container is unique in that it is "
+"the only storage that will keep its contents on death.  Everything else will "
+"still be lost."
+msgstr ""
+
+#. ~ Description of mutation "Security Epsilon"
+#: data/mods/Sky_Island/secure_container.json
+msgid ""
+"You have come into possession of a large, ethereal storage container that "
+"cannot be removed or destroyed.  It can hold 1500 mL and will bring items "
+"back to the island with you, even when you die."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/secure_container.json
+msgid "Kappa Secure Container"
+msgid_plural "Kappa Secure Containers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Kappa Secure Container"
+#: data/mods/Sky_Island/secure_container.json
+msgid ""
+"The perfect secure storage.  This metaphysical container is unique in that it"
+" is the only storage that will keep its contents on death.  Everything else "
+"will still be lost."
+msgstr ""
+
+#. ~ Description of mutation "Security Kappa"
+#: data/mods/Sky_Island/secure_container.json
+msgid ""
+"You have come into possession of a very large, ethereal storage container "
+"that cannot be removed or destroyed.  It can hold 2 liters and will bring "
+"items back to the island with you, even when you die."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"Your body shivers slightly as a warp pulse passes through it.  Another pulse "
+"will hit in <global_val:readablesicknessintervals> minutes.  Warp sickness "
+"won't set in for another <global_val:readablepulsesleft> pulses."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck1"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"Goosebumps cover your skin as a warp pulse passes through you.  You're only "
+"one warp pulse from your deadline."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck2"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"A warp pulse passing through you twists your blood inside your veins and your"
+" eyes pulse in pain.  You've overstayed your welcome and need to get home."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck3"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"A warp pulse shudders through your head like a localized earthquake and your "
+"extremities surge with pain like they're peeling open.  You need to get home "
+"as soon as possible."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck4"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"Another warp pulse rocks through you and your organs wrench themselves over."
+"  Existence is fracturing.  You need to get home immediately."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck5"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"A sickening wet sound rips through you as another warp pulse hits.  You can "
+"feel your whole body trying to pull itself apart, and if you wait any longer,"
+" it just might.  If you want to live, you need to get home NOW!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_sicknesscheck6"
+#: data/mods/Sky_Island/sickness_checks.json
+msgid ""
+"As the warp pulse hits, you realize there are no words to describe how much trouble you're in.  Your body is crumbling to wet paste and your blood is twisting into a viny tangle.  All you know is pain.\n"
+"You're not just dying, you're dying horribly.\n"
+"If escape is already near you may survive against all odds, but oblivion is only moments away."
+msgstr ""
+
+#. ~ Label of UI widget "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "Expedition Timer"
+msgstr ""
+
+#. ~ Clause text "safe_at_home" of UI widget "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "HOME SAFE"
+msgstr ""
+
+#. ~ Clause text "over_deadline" of UI widget "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "DANGER"
+msgstr ""
+
+#. ~ Clause text "over_deadline_one" of UI widget "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "SEVERE DANGER"
+msgstr ""
+
+#. ~ Clause text "over_deadline_two" of UI widget "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "EXTREME DANGER"
+msgstr ""
+
+#. ~ Clause text "over_deadline_four" of UI widget
+#. "sky_island_expedition_timer"
+#: data/mods/Sky_Island/ui.json
+msgid "IMMINENT DEATH"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 1"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Scouting Lens from high quality lenses and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals slightly more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveals slightly more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  Future missions and exits will be scouted just a little"
+" better."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Scouting Lens"
+msgid_plural "Scouting Lenses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Scouting Lens"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 1"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 2"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Scouting Scope from a pair of binoculars and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a bit more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveals a bit more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  Future missions and exits will provide better map "
+"scouting."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Scouting Scope"
+msgid_plural "Scouting Scopes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Scouting Scope"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 2"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 3"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Vision Amplifier from high quality optics and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals even more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveals even more of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  Future missions and exits will provide even better "
+"scouting on your map."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Vision Amplifier"
+msgid_plural "Vision Amplifiers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Vision Amplifier"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 3"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 4"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Third Eye Charm from medical grade optics and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a lot of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveals a lot of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  Future missions and exits will be provide exceptional "
+"scouting."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Third Eye Charm"
+msgid_plural "Third Eye Charms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Third Eye Charm"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 4"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 5"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Eye of the Island from experimental optics and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a huge amount of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveals a huge amount of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  Future missions and exits will provide a huge scouting "
+"radius."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Eye of the Island"
+msgid_plural "Eye of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Eye of the Island"
+#. ~ Description of "Agglomerated Oculus"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 5"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 6"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a warpforged telescope from sensors and telescopes.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a huge amount of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warpforged Telescope"
+msgid_plural "Warpforged Telescope"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warpforged Telescope"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 6"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting 7"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Agglomerated Oculus from ocular enhancements and petrified eyes.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a huge amount of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Agglomerated Oculus"
+msgid_plural "Agglomerated Oculus"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of mission "Upgrade: Scouting 8"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Other Eye of the Island from outworldly sensors and esoteric notes.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveals a huge amount of the map around exit points and mission targets."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Other Eye of the Island"
+msgid_plural "Other Eye of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Other Eye of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting 8"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Scouting Clairvoyance 1"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting Clairvoyance 1"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Higher Viewpoint from notes on the psychic and things that belong to the dead.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: See everything near you for a short time when beginning a mission."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: See everything near you for a short time when beginning a mission."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  You will see everything near you for a short time when "
+"beginning a mission."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Higher Viewpoint"
+msgid_plural "Higher Viewpoints"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Higher Viewpoint"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting Clairvoyance 1"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Scouting Clairvoyance 2"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the All-Seeing Effigy from the remains of the observers and detection tools.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: See everything near you at the start of a mission of a longer time."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: See everything near you at the start of a mission of a longer time."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your vision expands.  You will see everything near you for a longer time at "
+"the beginning of a mission."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "All-Seeing Effigy"
+msgid_plural "All-Seeing Effigy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "All-Seeing Effigy"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Scouting Clairvoyance 2"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 1"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Landing Pad from common cushions and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a bit more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 70 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a bit more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 70 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 70 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Description of "Landing Pad"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 1"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 2"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Safety Net from common cushions and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 80 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 80 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 80 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Safety Net"
+msgid_plural "Safety Nets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Safety Net"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 2"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 3"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Warped Parachute from advanced materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal even more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 90 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal even more of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 90 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 90 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warped Parachute"
+msgid_plural "Warped Parachutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warped Parachute"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 3"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 4"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Ethereal Cushion from complex materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a lot of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 100 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a lot of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 100 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 100 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Ethereal Cushion"
+msgid_plural "Ethereal Cushions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ethereal Cushion"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 4"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 5"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Grace of the Island from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 120 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 120 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 120 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Grace of the Island"
+msgid_plural "Grace of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Grace of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 5"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 6"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Familiarity Gemstone from maps and flags.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 130 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 130 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 130 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Familiarity Gemstone"
+msgid_plural "Familiarity Gemstones"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Familiarity Gemstone"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 6"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 7"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Warm Welcome from painkillers and winter clothes.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 140 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 140 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 140 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warm Welcome"
+msgid_plural "Warm Welcomes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warm Welcome"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 7"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing 8"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Emissary's Herald from insignias and proofs of authority.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 150 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reveal a huge section of the map around your landing point, and increase the warpcloak invisibility grace period at the start of each expedition to 150 seconds."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your focus tightens.  Landing points will reveal more of the map, and your "
+"warpcloak will last 150 seconds at the beginning of every expedition."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Emissary's Herald"
+msgid_plural "Emissary's Heralds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Emissary's Herald"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing 8"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing Boost: Waterwalking"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing Boost: Waterwalking"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Cloaking Buoyancy from things from water and things that float.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can walk on water."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can walk on water."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You feel the warp ripple around you.  While under the effect of the "
+"warpcloak, you can walk on water."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Cloaking Buoyancy"
+msgid_plural "Cloaking Buoyancy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Cloaking Buoyancy"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing Boost: Waterwalking."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing Boost: Flight"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing Boost: Flight"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Inverted Gravity Bubble from things that used to fly and things that could make someone fly.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can fly."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can fly."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You feel the warp ripple around you.  While under the effect of the "
+"warpcloak, you can fly."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Inverted Gravity Bubble"
+msgid_plural "Inverted Gravity Bubbles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Inverted Gravity Bubble"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing Boost: Flight."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Upgrade: Landing Boost: Phasing"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Landing Boost: Phasing"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Universal Access Pass from different tools granting access to restricted areas.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can pass through non-thick walls."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: While under the effect of the warpcloak, you can pass through non-thick walls."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You feel the warp ripple around you.  While under the effect of the "
+"warpcloak, you can pass through non-thick walls."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Universal Access Pass"
+msgid_plural "Universal Access Pass"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Universal Access Pass"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Landing Boost: Phasing."
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 1"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Warped Tincture from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 9 pulses instead of the default 8, allowing you to stay out 12.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 9 pulses instead of the default 8, allowing you to stay out 12.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your resistance to the chaos of the warpstream increases.  In every future "
+"expedition, you will be able to endure an additional warp pulse and stay "
+"earthside longer."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warped Tincture"
+msgid_plural "Warped Tinctures"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warped Tincture"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 1"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 2"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Surreal Shield from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 10 pulses instead of the default 8, allowing you to stay out 25% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 10 pulses instead of the default 8, allowing you to stay out 25% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Surreal Shield"
+msgid_plural "Surreal Shields"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Surreal Shield"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 2"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 3"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft Warpstream Plating from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 11 pulses instead of the default 8, allowing you to stay out 37.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 11 pulses instead of the default 8, allowing you to stay out 37.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warpstream Plating"
+msgid_plural "Warpstream Platings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warpstream Plating"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 3"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 4"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Fortitude of the Island from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 12 pulses instead of the default 8, allowing you to stay out 50% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 12 pulses instead of the default 8, allowing you to stay out 50% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Fortitude of the Island"
+msgid_plural "Fortitude of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Fortitude of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 4"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 5"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Explorer's Ward from things helping to withstand harsh conditions.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 13 pulses instead of the default 8, allowing you to stay out 62.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 13 pulses instead of the default 8, allowing you to stay out 62.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Explorer's Ward"
+msgid_plural "Explorer's Wards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Explorer's Ward"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 5"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 6"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Island-Bound Armor from various armors from this world and from others.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 14 pulses instead of the default 8, allowing you to stay out 75% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 14 pulses instead of the default 8, allowing you to stay out 75% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Island-Bound Armor"
+msgid_plural "Island-Bound Armors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Island-Bound Armor"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 6"
+msgstr ""
+
+#. ~ Description of mission "Upgrade: Stability 7"
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Triune Anchor from the corpse of a yugg and rare ressources.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 15 pulses instead of the default 8, allowing you to stay out 87.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+#, c-format
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will begin every expedition with the ability to withstand 15 pulses instead of the default 8, allowing you to stay out 87.5% longer before warpsickness takes over."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Triune Anchor"
+msgid_plural "Triune Anchors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Triune Anchor"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Stability 7"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Slaughter Missions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Vengeance of the Island from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: One special slaughter mission will be assigned during each expedition, rewarding warp shards if you kill a certain number of specifically targeted enemies before returning home."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: One special slaughter mission will be assigned during each expedition, rewarding warp shards if you kill a certain number of specifically targeted enemies before returning home."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Bloodthirst surges through you like electricity.  The clarity of the world and its natural flow pierces your mind.\n"
+"In every future expedition, you will be tasked to find and extinguish living entities that have absorbed warp.  Do this and you will be rewarded."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Vengeance of the Island"
+msgid_plural "Vengeance of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Vengeance of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Slaughter Missions"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Two Exits per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Escape Charm from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have two different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have two different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You close your eyes and through the flow of turbulent warpstream, an invisible maze manifests.  A thousand potential passages brush smooth stone across your consciousness, and the meaning of this reality glimmers faintly, a dancing splinter of light in the distance.  You've been here before, you are here now, and you will be here again.\n"
+"When you open your eyes, you're back where you began.  You haven't moved, but it feels as though the world has.\n"
+"\n"
+"In every future expedition, you will now be able to find two different locations you can exit from."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Escape Charm"
+msgid_plural "Escape Charms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Escape Charm"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Two Exits per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Three Exits per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Blindfold of Egress from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have three different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have three different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Again you see in blindness, and before you stretches a vast invisible labyrinth beneath an empty sky.  You race forward, tracing paths spoken to you in dreams, and an origami spiderweb crumples and breathes out underfoot.  At last, at the seashell's center, lies the cornucopia's smallest door.\n"
+"When at last you open your eyes, you find yourself where you began, unmoved, yet changed.\n"
+"\n"
+"In every future expedition, you will now be able to find three different locations you can exit from."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Blindfold of Egress"
+msgid_plural "Blindfolds of Egress"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Blindfold of Egress"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Three Exits per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Four Exits per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Thrice-Sided Door from locks and doormats.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have four different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have four different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Again you see in blindness, and before you stretches a vast invisible labyrinth beneath an empty sky.  You race forward, tracing paths spoken to you in dreams, and an origami spiderweb crumples and breathes out underfoot.  At last, at the seashell's center, lies the cornucopia's smallest door.\n"
+"When at last you open your eyes, you find yourself where you began, unmoved, yet changed.\n"
+"\n"
+"In every future expedition, you will now be able to find four different locations you can exit from."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Thrice-Sided Door"
+msgid_plural "Thrice-Sided Doors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Thrice-Sided Door"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Four Exits per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Five Exits per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Intangible Door Stopper from door hinges and breaching tools.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have four different locations you can exit from."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Again you see in blindness, and before you stretches a vast invisible labyrinth beneath an empty sky.  You race forward, tracing paths spoken to you in dreams, and an origami spiderweb crumples and breathes out underfoot.  At last, at the seashell's center, lies the cornucopia's smallest door.\n"
+"When at last you open your eyes, you find yourself where you began, unmoved, yet changed.\n"
+"\n"
+"In every future expedition, you will now be able to find five different locations you can exit from."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Intangible Door Stopper"
+msgid_plural "Intangible Door Stoppers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Intangible Door Stopper"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Five Exits per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Expedition Missions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Warped Decree from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition now offers a randomly assigned mission, which will reward you with valuable warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition now offers a randomly assigned mission, which will reward you with valuable warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"The island speaks in your head using words you cannot translate yet already understand.  Its wishes are your commands.\n"
+"In every future expedition, you will now be given a randomly generated mission, from which you can earn valuable warp shards."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warped Decree"
+msgid_plural "Warped Decrees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warped Decree"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Expedition Missions"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Two Missions per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft Order's Blade from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have 2 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have 2 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Those who disturb the warpstream must be put down.  There is no cruelty in this.  It is the order of the Island, and it will be kept.\n"
+"In every future expedition, you will now be given 2 random missions."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Order's Blade"
+msgid_plural "Order's Blades"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Order's Blade"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Two Missions per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Three Missions per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Hand of the Island from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have 3 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have 3 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your strength is an extension of the island's will.  Let order be maintained.\n"
+"In every future expedition, you will now be given 3 random missions."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Hand of the Island"
+msgid_plural "Hand of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Hand of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Three Missions per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Four Missions per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Petrified Duty's Call from old money and a spiral stone.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have 4 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have 4 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Some disrupt the warpstream by their very existence, a problem you will solve through violence.\n"
+"In every future expedition, you will now be given 4 random missions."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Petrified Duty's Call"
+msgid_plural "Petrified Duty's Calls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Petrified Duty's Call"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Four Missions per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Five Missions per Expedition"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Oath of the Island's Enforcer from massive amounts of ink.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Every expedition will now have 53 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Every expedition will now have 5 different randomly assigned missions, increasing the possibility for earning warp shards.  Completing a mission also extends the time left on current expedition by 1 warp pulse."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your mmind fills with many transgressors that the Island has marked or will mark for death.  Carrying the Island's sentences is your responsibility, a duty you've accepted in full.\n"
+"In every future expedition, you will now be given 5 random missions."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Oath of the Island's Enforcer"
+msgid_plural "Oath of the Island's Enforcers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Oath of the Island's Enforcer"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Five Missions per Expedition"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Harder Missions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft an Ordinator's Sigil from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: New and more challenging types of missions are available to be randomly assigned in every expedition.  Harder missions will reward many more warp shards."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: New and more challenging types of missions are available to be randomly assigned in every expedition.  Harder missions will reward many more warp shards."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Greater trespasses against the flow of the warpstream reveal themselves to you.  This interference cannot go unpunished.\n"
+"The missions you are randomly assigned in each expedition are more varied, and can now pull from harder and more rewarding challenges."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Ordinator's Sigil"
+msgid_plural "Ordinator's Sigils"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Ordinator's Sigil"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Harder Missions"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Hardest Missions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Will of the Island from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: New and even more challenging types of missions are available to be randomly assigned in every expedition.  Harder missions will reward many more warp shards."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Somehow, you understand the statue is calling out for something that can strengthen its power.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: New and even more challenging types of missions are available to be randomly assigned in every expedition.  Harder missions will reward many more warp shards."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"The greatest trespasses against the island now glimmer in the dark, guiding your hand as a tool of order.  Return these chaotic energies to the tranquility of the warpstream.\n"
+"The missions you are randomly assigned in each expedition are even more varied, and can now pull from the hardest and most rewarding challenges."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Will of the Island"
+msgid_plural "Will of the Islands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Will of the Island"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Hardest Missions"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Island Rank Up 1"
+msgstr ""
+
+#. ~ Description of mission "Island Rank Up 1"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission ascends you to a new rank.\n"
+"\n"
+"Craft the Proof of Determination from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reach Rank 1.  Some upgrades and unlocks will not be available until you have ranked up.  You will also instantly learn several new warp-related crafting recipes."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You are ready to ascend to a higher tier of strength and ability.  Complete this trial and prove yourself, and you will discover new powers for yourself and the island.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reach Rank 1.  Some upgrades and unlocks will not be available until you have ranked up.  You will also instantly learn several new warp-related crafting recipes."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You have proved your ability to survive to the island, to the warpstream, and to yourself.\n"
+"More unlockable upgrades will be available as you progress, and you may experience exits and targets in new locations."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your mind expands.  You have learned to craft:\n"
+"Materialize random artifact\n"
+"Vortex token\n"
+"Warped hauler's harness\n"
+"Warped animal carrier"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Proof of Determination"
+msgid_plural "Proofs of Determination"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Proof of Determination"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Island Rank Up 1"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Island Rank Up 2"
+msgstr ""
+
+#. ~ Description of mission "Island Rank Up 2"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission ascends you to a new rank.\n"
+"\n"
+"Craft the Proof of Determination from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: Reach Rank 2.  Some upgrades and unlocks will not be available until you have ranked up.  You will also instantly learn several new warp-related crafting recipes."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You are ready to ascend to a higher tier of strength and ability.  Complete this trial and prove yourself, and you will discover new powers for yourself and the island.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: Reach Rank 2.  Some upgrades and unlocks will not be available until you have ranked up.  You will also instantly learn several new warp-related crafting recipes."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"That you are still here, fighting on, makes your determination clear.  This new existence is strange and unpredictable, but you can adapt.  It's how you made it this far, and you're not about to stop now.\n"
+"More unlockable upgrades will be available as you progress, and you may experience exits and targets in new locations."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Your mind expands.  You have learned to craft:\n"
+"Homeward mote\n"
+"Autodoc copyplate\n"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Proof of Mastery"
+msgid_plural "Proofs of Mastery"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Proof of Mastery"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Island Rank Up 2"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Large Expeditions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft a Warped Hourglass from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will be able to select Large Expeditions when leaving via the warp obelisk.  Large Expeditions last 2x as long, but mission targets and exit points are significantly farther away."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"With some success under your belt, you feel ready to tackle more ambitious expeditions, and the island seems to know it.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will be able to select Large Expeditions when leaving via the warp obelisk.  Large Expeditions last 2x as long, but mission targets and exit points are significantly farther away."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You are ready for a longer haul.\n"
+"Large Expeditions are now available at the warp obelisk.  Exits and missions will be farther away, but you will have twice as long to spend earthside.  Use this time wisely, and set your sights on bigger targets.  What will you do with your newfound time?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Warped Hourglass"
+msgid_plural "Warped Hourglasses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Warped Hourglass"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Large Expeditions"
+msgstr ""
+
+#. ~ Description of mission "Unlock: Extended Expeditions"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a permanent upgrade for all future expeditions.\n"
+"\n"
+"Craft the Watch of Flowing Time from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will be able to select Extended Expeditions when leaving via the warp obelisk.  Extended Expeditions last 3x as long, but mission targets and exit points are significantly farther away."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You've seen enough safe returns to know your way around an expedition.  Now if you could spend even more time earthside, you'd be able to tackle even bigger and more ambitious goals.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will be able to select Extended Expeditions when leaving via the warp obelisk.  Extended Expeditions last 3x as long, but mission targets and exit points are much farther away."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"You're in it to win it, and are prepared to take a long time exploring the world below.\n"
+"Extended Expeditions are now available at the warp obelisk.  Exits and missions will be much farther away, but you will have three times as long to spend earthside.  Pack supplies for a day trip and be sure to bring plenty of storage space.  Where will you go with your newfound time?"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Watch of Flowing Time"
+msgid_plural "Watch of Flowing Times"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Watch of Flowing Time"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Extended Expeditions"
+msgstr ""
+
+#. ~ Description of mission "Unlock Start Location: Basements"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a new possible location to begin future expeditions.\n"
+"\n"
+"Craft the Basement Locator from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will be able to select random Basement starts when leaving via the warp obelisk."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Being guaranteed to start in a town or city would cut down on your hikes through the wilderness.  But popping down in the middle of the street with no warning could really attract hordes.  Basements aren't always safe, but they're probably safer than walking down Main in broad daylight, and might be a good location to begin future expeditions.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will be able to select random Basement starts when leaving via the warp obelisk."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"When leaving from the warp obelisk, you can now guarantee you will begin your"
+" expedition in a basement.  Not glamorous, but at least it ensures you won't "
+"be stranded out in some desolate field."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Basement Locator"
+msgid_plural "Basement Locators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Basement Locator"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Unlock Start Location: Basements"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Unlock Start Location: Roofs"
+msgstr ""
+
+#. ~ Description of mission "Unlock Start Location: Roofs"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a new possible location to begin future expeditions.\n"
+"\n"
+"Craft the Rooftop Locator from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will be able to select random Rooftop starts when leaving via the warp obelisk."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"If basements aren't cutting it, there's always rooftops.  Starting one floor up will give you a good vantage and relative safety from the busy streets while still ensuring you begin your expedition in a town or city.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will be able to select random Rooftop starts when leaving via the warp obelisk.  In case you need to make a quick descent, bear in mind that the warpcloak effect you have briefly at the start of each expedition prevents fall damage."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"When leaving from the warp obelisk, you can now guarantee you will begin your"
+" expedition on some rooftop.  Dangerous, perhaps, but it ensures proximity to"
+" points of interest, and besides, there are all kinds of buildings this might"
+" land you on."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Rooftop Locator"
+msgid_plural "Rooftop Locators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Rooftop Locator"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Unlock Start Location: Roofs"
+msgstr ""
+
+#. ~ Description of mission "Unlock Start Location: Labs"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will unlock a new possible location to begin future expeditions.\n"
+"\n"
+"Craft the Laboratory Locator from experimental materials and miscellaneous parts.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"EFFECT: You will be able to select random Labs starts when leaving via the warp obelisk."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Labs are rare and valuable finds, and clearing them out will take the better part of a long expedition.  It would be much so easier if you could start right outside one!\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"EFFECT: You will be able to select random Lab starts when leaving via the warp obelisk.  This expedition type is unique in that it will require a Labs Catalyst in your inventory when you select the expedition, which will then be consumed on leaving."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"With this upgrade, you're guaranteed to begin your expedition at an "
+"underground lab.  Be aware that you will need to have a Labs Catalyst on you "
+"when activating the warp obelisk, and these will be consumed on leaving."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid "Laboratory Locator"
+msgid_plural "Laboratory Locators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Laboratory Locator"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"This strange metaphysical artifact will empower the island and unlock a permanent upgrade for all future runs.  Will be used automatically upon crafting, and can only be used once.\n"
+"\n"
+"ASSOCIATED UPGRADE: Unlock Start Location: Labs"
+msgstr ""
+
+#. ~ Description of mission "Construct: Bunker Entrance"
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"Completing this mission will instantly build a new structure on your home island.\n"
+"\n"
+"Craft the Mouth of the Island from simple tools and common building materials.  The Heart of the Island has already placed the recipe inside your mind.\n"
+"\n"
+"New Structure: Bunker Entrance.  A simple concrete entrance leading down into the lower levels of the island, including a small subterranean chamber."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"The island seems to be a suitable safe haven for staging future expeditions, but while there's no threat of monsters, it's still harshly exposed to the elements.  Having even minimal covered shelter would go a long way towards helping you rest and recuperate between expeditions.\n"
+"A new recipe has been learned.  Craft this artifact to permanently upgrade the island.\n"
+"\n"
+"New Structure: Bunker Entrance.  A simple concrete entrance leading down into the lower levels of the island, including a small subterranean chamber."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Sky_Island/upgrade_missions.json
+msgid ""
+"It is done.  A small bunker has been carved into the foundations of this island.  You will find the stairs nearby.\n"
+"This is only the beginning."
+msgstr ""

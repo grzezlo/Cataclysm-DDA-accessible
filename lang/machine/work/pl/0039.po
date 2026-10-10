@@ -1,0 +1,1851 @@
+# Batch 39 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "corpse"
+#: data/json/items/corpses/corpses.json
+msgid "A lifeless human body."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"The corpse of a seemingly older man.  He appears to have been shot in the "
+"forehead at very close range, leaving you a good view of his brain matter."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"The corpse of a tall woman unblemished but for the bloody hole atop her head,"
+" her thick black hair intermixed now with brain, viscera and shotgun pellets."
+msgstr ""
+
+#. ~ Description of "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"The dead body of a person.  There is a bloody bite wound on their forearm.  "
+"Dry filth surrounds it."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"The dead body of a person.  There is a bloody bite wound on their forearm.  "
+"Dry filth surrounds it but the body seems otherwise unharmed."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"One of this deceased persons shoulders is disfigured by a deep bite wound "
+"with a distinct shape, obviously caused by a human."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"This unlucky fellow has a deep, straight cut wound on their hand.  The "
+"blackened veins suggest it got infected."
+msgstr ""
+
+#. ~ Snippet of item "corpse"
+#: data/json/items/corpses/corpses.json
+msgid ""
+"This lifeless body is covered in myriads of uneven scratches.  Some of them "
+"look pretty swollen."
+msgstr ""
+
+#. ~ Description of "mummified corpse"
+#: data/json/items/corpses/corpses.json
+msgid "Waxen skin drapes the remnants of an unknowable death."
+msgstr ""
+
+#. ~ Description of "trifacet remains"
+#: data/json/items/corpses/dead_yrax.json
+msgid ""
+"A split-open facet reveals an interior full of closely-fit geometric "
+"primitives among chipped strips of milk-white quartz.  The composition of "
+"parts lends you no clues as to how this machine ever functioned."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/dead_yrax.json
+msgid "triakis remains"
+msgid_plural "triakis remains"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "triakis remains"
+#: data/json/items/corpses/dead_yrax.json
+msgid ""
+"Its broken shell reveals an interior made from a single piece of quartz, "
+"intricately carved into a series of nested tetrahedra."
+msgstr ""
+
+#. ~ Item name
+#. ~ Monster name
+#. ~ Furniture name
+#: data/json/items/corpses/dead_yrax.json data/json/monsters/yrax.json
+#: data/mods/Xedra_Evolved/furniture_and_terrain/furniture.json
+msgid "golden monolith"
+msgid_plural "golden monoliths"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "golden monolith"
+#. ~ Description of "inactive golden monolith"
+#. ~ Description of monster "golden monolith"
+#: data/json/items/corpses/dead_yrax.json
+#: data/json/items/corpses/inactive_bots.json data/json/monsters/yrax.json
+msgid ""
+"A large golden monolith.  Carefully carved asymmetric edges betray its "
+"artificial origin."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/dead_yrax.json
+msgid "inert delta"
+msgid_plural "inert deltas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inert delta"
+#: data/json/items/corpses/dead_yrax.json
+msgid ""
+"A small piece of inscrutable alloy shaped like an arrow's broadhead.  It "
+"doesn't look like much of a robot once dead."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/dead_yrax.json
+msgid "inert quadraphract leg"
+msgid_plural "inert quadraphract legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inert quadraphract leg"
+#: data/json/items/corpses/dead_yrax.json
+msgid ""
+"A great sickle-shaped leg, slumped and lifeless.  The metal is cold to the "
+"touch, and its near invisible joints are locked in place."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/dead_yrax.json
+msgid "inert quadraphract"
+msgid_plural "inert quadraphracts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inert quadraphract"
+#: data/json/items/corpses/dead_yrax.json
+msgid ""
+"A great carved piece of gold and crystal, slumped in the form of an unearthly"
+" arachnid."
+msgstr ""
+
+#. ~ Description of "inactive EMP hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive EMP hack.  Manhacks are fist-sized robots that fly through the "
+"air.  This one contains an EMP grenade and attacks by flying at its target "
+"and detonating.  Use this item to reprogram and release the EMP hack.  "
+"Electronics and computer skill determines if the targeting matrix is "
+"reprogrammed successfully."
+msgstr ""
+
+#. ~ Description of "inactive C-4 hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive C-4 hack.  Manhacks are fist-sized robots that fly through the "
+"air.  This one contains a C-4 demolition charge and attacks by flying at its "
+"target and detonating.  Use this item to reprogram and activate the C-4 hack."
+"  Electronics and computer skill determines if the targeting matrix is "
+"reprogrammed successfully."
+msgstr ""
+
+#. ~ Description of "inactive flashbang hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive flashbang hack.  Manhacks are fist-sized robots that fly through "
+"the air.  This one contains a flashbang and attacks by flying at its target "
+"and detonating.  Use this item to reprogram and activate the flashbang hack."
+"  Electronics and computer skill determines if the targeting matrix is "
+"reprogrammed successfully."
+msgstr ""
+
+#. ~ Description of "inactive tear gas hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive tear gas hack.  Manhacks are fist-sized robots that fly through "
+"the air.  This one contains a tear gas canister and attacks by flying at its "
+"target and releasing the gas.  Use this item to reprogram and activate the "
+"tear gas hack.  Electronics and computer skill determines if the targeting "
+"matrix is reprogrammed successfully."
+msgstr ""
+
+#. ~ Description of "inactive grenade hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive grenade hack.  Manhacks are fist-sized robots that fly through "
+"the air.  This one contains a grenade and attacks by flying at its target and"
+" detonating.  Use this item to reprogram and activate the grenade hack.  "
+"Electronics and computer skill determines if the targeting matrix is "
+"reprogrammed successfully."
+msgstr ""
+
+#. ~ Description of "inactive M2HB autonomous CROWS II"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive turret.  Using this item involves loading the unit with the "
+"factory-loaded .50 BMG rounds in your inventory (if you wish to divide your "
+"ammunition, set aside whatever .50 BMG rounds you do NOT want to give the "
+"turret), turning it on, and placing it on the ground, where it will attach "
+"itself.  If programmed successfully, the turret will then identify you as a "
+"friendly, and attack all enemies with its M2HB."
+msgstr ""
+
+#. ~ Description of "inactive manhack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive manhack, a fist-sized robot that flies through the air.  This one"
+" is covered with whirring blades and attacks by throwing itself against its "
+"target.  Use this item to reprogram and activate the manhack.  Electronics "
+"and computer skill determines if the targeting matrix is reprogrammed "
+"successfully."
+msgstr ""
+
+#. ~ Description of "inactive autonomous M249 CROWS II"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive turret.  Using this item involves loading the unit with the "
+"factory-loaded 5.56x45mm rounds in your inventory (if you wish to divide your"
+" ammunition, set aside whatever 5.56x45mm rounds you do NOT want to give the "
+"turret), turning it on, and placing it on the ground, where it will attach "
+"itself.  If programmed successfully, the turret will then identify you as a "
+"friendly, and attack all enemies with its M249."
+msgstr ""
+
+#. ~ Description of "inactive autonomous M240 CROWS II"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive turret.  Using this item involves loading the unit with the "
+"factory-loaded 7.62x51mm rounds in your inventory (if you wish to divide your"
+" ammunition, set aside whatever 7.62x51mm rounds you do NOT want to give the "
+"turret), turning it on, and placing it on the ground, where it will attach "
+"itself.  If programmed successfully, the turret will then identify you as a "
+"friendly, and attack all enemies with its M240."
+msgstr ""
+
+#. ~ Description of "inactive riot control turret"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive riot control turret.  Using this item involves loading the unit "
+"with the 40x46mm M1006 sponge rounds in your inventory (if you wish to divide"
+" your ammunition, set aside whatever beanbag rounds you do NOT want to give "
+"the turret), turning it on, and placing it on the ground, where it will "
+"attach itself.  If programmed successfully, the turret will then identify you"
+" as a friendly, and attack all enemies with its riot control gun."
+msgstr ""
+
+#. ~ Description of "inactive turret"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive turret.  Using this item involves loading the unit with the "
+"factory-loaded 9x19mm rounds in your inventory (if you wish to divide your "
+"ammunition, set aside whatever 9x19mm you do NOT want to give the turret), "
+"turning it on, and placing it on the ground.  If reprogrammed and rewired "
+"successfully, the turret will then identify you as a friendly, and attack all"
+" enemies with its SMG."
+msgstr ""
+
+#. ~ Description of "inactive TALON UGV"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive TALON UGV equipped with an M16A4.  Using this item involves "
+"loading the unit with the factory-loaded 5.56x45mm rounds in your inventory "
+"(if you wish to divide your ammunition, set aside whatever 5.56x45mm you do "
+"NOT want to give the robot), turning it on, and placing it on the ground.  If"
+" reprogrammed and rewired successfully, the security bot will then identify "
+"you as a friendly, roam around or follow you, and attack all enemies with its"
+" rifle."
+msgstr ""
+
+#. ~ Description of "inactive M202A1 TALON UGV"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive TALON UGV equipped with an M202A1.  Using this item involves "
+"loading the unit with the M235 rockets in your inventory (if you wish to "
+"divide your ammunition, set aside whatever M235 rockets you do NOT want to "
+"give the robot), turning it on, and placing it on the ground.  If "
+"reprogrammed and rewired successfully, the security bot will then identify "
+"you as a friendly, roam around or follow you, and attack all enemies with its"
+" M202A1."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive TALON UGV Liberty Edition"
+msgid_plural "inactive TALON UGVs Liberty Edition"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive TALON UGV Liberty Edition"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"This bot has had tubes welded above the original guns that allow it to shoot "
+"fireworks in order to blind and stun attackers.  With fireworks being harder "
+"to come by then the ammo for the original weapons, the best option would be "
+"to convert it back to it's original guns.  It should be easy enough to give "
+"it back the use of the original M16A4."
+msgstr ""
+
+#. ~ Description of "inactive nurse bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive nurse bot.  Using this item involves placing it on the ground and"
+" reactivating its mechanical body.  If reprogrammed and rewired successfully,"
+" the nurse bot will then identify you as a friendly, roam around or follow "
+"you, and assist you in surgeries."
+msgstr ""
+
+#. ~ Description of "inactive grocery bot"
+#. ~ Description of "inactive busted grocery bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive grocery bot.  Using this item involves placing it on the ground "
+"and reactivating its mechanical body.  If reprogrammed and rewired "
+"successfully, the grocery bot will then identify you as a friendly, roam "
+"around or follow you."
+msgstr ""
+
+#. ~ Description of "inactive broken cyborg"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"A deactivated broken cyborg, the last shreds of its humanity still rotting "
+"away.  Using this item involves placing it on the ground and reactivating its"
+" mechanical body.  If reprogrammed and rewired successfully, the cyborg will "
+"then follow you and attack enemies.  You monster."
+msgstr ""
+
+#. ~ Description of "inactive prototype cyborg"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"A deactivated prototype cyborg, glimpses of humanity can still be seen in its"
+" empty eyes.  Using this item involves placing it on the ground and "
+"reactivating its mechanical body.  If reprogrammed and rewired successfully, "
+"the cyborg will then follow you and attack enemies.  You monster."
+msgstr ""
+
+#. ~ Description of "inactive cleaner bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive cleaner bot.  Using this item involves placing it on the ground "
+"and turning it on.  If reprogrammed and rewired successfully, the cleaner bot"
+" will respond to future commands."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive demining bot"
+msgid_plural "inactive demining bots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive demining bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive demining robot.  Using this item involves placing it on the "
+"ground and turning it on."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive demining bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The demining bot whirs and tunnels into the ground."
+msgstr ""
+
+#. ~ "hostile_msg" action message of item "inactive demining bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The demining bot spins out of control and lunges at you.  Make way!"
+msgstr ""
+
+#. ~ Description of "inactive skitterbot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive skitterbot.  Using this item involves placing it on the ground "
+"and turning it on.  If reprogrammed and rewired successfully, the robot will "
+"race towards enemies and shock them."
+msgstr ""
+
+#. ~ "hostile_msg" action message of item "inactive skitterbot"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The skitterbot darts around you and menacingly clicks its tasers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive exterminatron"
+msgid_plural "inactive exterminatrons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive exterminatron"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive Hub 01 exterminatron.  Using this item involves placing it on the"
+" ground and turning it on.  If reprogrammed and reloaded successfully, the "
+"robot will track you while providing fire-support."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive exterminatron"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"The exterminatron gives a quick bow and starts scanning the horizon for "
+"threats."
+msgstr ""
+
+#. ~ "hostile_msg" action message of item "inactive exterminatron"
+#: data/json/items/corpses/inactive_bots.json
+msgid "You misprogram the exterminatron and it trains its gun on you.  RUN!"
+msgstr ""
+
+#. ~ Description of "inactive lab defense bot"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive experimental robot plundered from a science lab.  It resembles a "
+"human-sized spider and was designed to deploy manhacks.  Using this item "
+"involves placing it on the ground and turning it on.  If reprogrammed and "
+"rewired successfully, the robot will race towards enemies and deploy a "
+"variety of experimental devices."
+msgstr ""
+
+#. ~ Description of "inactive milspec searchlight"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive military-grade automated searchlight.  Using this item involves "
+"placing it on the ground and turning it on.  If reprogrammed and rewired "
+"successfully, the searchlight will then identify you as an ally, survey the "
+"area, and illuminate approaching hostiles.  Seems to have an unhealthy "
+"fascination with you."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive dispatch"
+#. ~ "friendly_msg" action message of item "inactive military dispatch"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The dispatch whirs onto its legs and searches for a target."
+msgstr ""
+
+#. ~ Description of "inactive loudspeaker"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive automated loudspeaker.  Using this item involves placing it on "
+"the ground and turning it on.  If reprogrammed and rewired successfully, the "
+"loudspeaker will continuously shout pre-recorded messages."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive loudspeaker"
+#. ~ "hostile_msg" action message of item "inactive loudspeaker"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The loudspeaker activates and begins its nonstop shouts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive taser hack"
+msgid_plural "inactive taser hacks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive taser hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive taser hack.  Manhacks are fist-sized robots that fly through the "
+"air.  This one has a taser and attacks by flying at its target and delivering"
+" an electric shock.  Use this item to reprogram and release the taser hack.  "
+"Electronics and computer skills determine if the targeting matrix is "
+"reprogrammed successfully."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive taser hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The taser hack flies from your hand and surveys the area!"
+msgstr ""
+
+#. ~ "hostile_msg" action message of item "inactive taser hack"
+#: data/json/items/corpses/inactive_bots.json
+msgid "You misprogram the taser hack; run!"
+msgstr ""
+
+#. ~ Description of "inactive trifacet"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"A featureless quartz pyramid that, although obviously artificial, shows no "
+"real indication of ever having been an advanced robot.  Perhaps you could try"
+" reactivating it?"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive triakis"
+msgid_plural "inactive triakis"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive triakis"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"You know this artfully craved piece of gold hued ceramics to be a robot of "
+"some kind, but it seems impossible to interact with it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive golden monolith"
+msgid_plural "inactive golden monoliths"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive delta"
+msgid_plural "inactive deltas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive delta"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"A small piece of inscrutable alloy shaped like an arrow's broadhead.  It "
+"looks like a robot boomerang."
+msgstr ""
+
+#. ~ Description of "inactive security drone"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive security drone.  They are fist-sized robots that fly through the "
+"air.  They have a scanner, lens and speaker.  Use this item to reprogram and "
+"activate the security drone.  Electronics and computer skill determines if "
+"the targeting matrix is reprogrammed successfully."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/inactive_bots.json
+msgid "inactive camspy"
+msgid_plural "inactive camspies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inactive camspy"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"An inactive camspy.  Using this item involves turning it on and launching it."
+"  If reprogrammed and rewired successfully, the camspy will then keep watch "
+"for intruders."
+msgstr ""
+
+#. ~ "friendly_msg" action message of item "inactive camspy"
+#: data/json/items/corpses/inactive_bots.json
+msgid "The camspy hums and takes to the sky."
+msgstr ""
+
+#. ~ "hostile_msg" action message of item "inactive camspy"
+#: data/json/items/corpses/inactive_bots.json
+msgid ""
+"The camspy hums and appears to reconnect to whoever was piloting it before."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/nether.json
+msgid "rubber yugg corpse"
+msgid_plural "rubber yugg corpses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rubber yugg corpse"
+#: data/json/items/corpses/nether.json
+msgid ""
+"An oversized hollow tube made of black semi-liquid rubbery substance.  It is "
+"vaguely shaped like a yugg."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/nether.json
+msgid "massive fleshy tube"
+msgid_plural "massive fleshy tubes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "massive fleshy tube"
+#: data/json/items/corpses/nether.json
+msgid ""
+"An oversized tube of faintly green raw flesh of nondescript origin.  It is "
+"vaguely shaped like a yugg."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/corpses/nether.json
+msgid "jade yugg statue"
+msgid_plural "jade yugg statues"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "jade yugg statue"
+#: data/json/items/corpses/nether.json
+msgid ""
+"A statue of a yugg, made entire out of jade.  If jade was still worth "
+"anything this could fetch a fortune.  A shame the world ended."
+msgstr ""
+
+#. ~ Description of "standing mirror"
+#: data/json/items/furniture/decorative.json
+msgid ""
+"A full-length mirror mounted in a sleek aluminum frame.  Metal stand is "
+"currently folded."
+msgstr ""
+
+#. ~ Description of "bar stool"
+#: data/json/items/furniture/seating.json
+msgid ""
+"A bar stool with a leather seat on a steel support.  Not practical for "
+"sleeping at all but it does feel nicer than sitting on the ground."
+msgstr ""
+
+#. ~ Description of "plywood chair"
+#: data/json/items/furniture/seating.json
+msgid ""
+"A simple chair made of plywood on a steel frame.  Quite uncomfortable but "
+"works for sleeping if it's the only option available."
+msgstr ""
+
+#. ~ Description of "black wooden chair"
+#: data/json/items/furniture/seating.json
+msgid ""
+"A simple wooden chair, with four legs, a seat, and a back.  It's nice to rest"
+" your feet for once, and if coupled with a suitable table, you could eat a "
+"meal properly and almost pretend that things were normal again.  This "
+"particular chair was painted black."
+msgstr ""
+
+#. ~ Description of "white wooden chair"
+#: data/json/items/furniture/seating.json
+msgid ""
+"A simple wooden chair, with four legs, a seat, and a back.  It's nice to rest"
+" your feet for once, and if coupled with a suitable table, you could eat a "
+"meal properly and almost pretend that things were normal again.  This "
+"particular chair was painted white."
+msgstr ""
+
+#. ~ Description of "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid "A small cotton tampon with a plastic applicator."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"A small cotton tampon with a plastic applicator.  Useless for some, an "
+"invaluable commodity for others."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"A 'light' cotton tampon with a plastic applicator rated for light flows."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"A 'super' cotton tampon with a plastic applicator rated for heavy flows."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid "A small, lavender-scented cotton tampon with a plastic applicator."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"A small cotton tampon with a plastic applicator proudly claiming to be anti-"
+"microbial.  Ultra-fine print indicates that this tampon has no noticeable "
+"health benefits compared to others."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"An expensive-looking tampon with a fancy, smooth plastic applicator.  The "
+"ultra-soft cotton has the appearance of a fluffy cloud."
+msgstr ""
+
+#. ~ Snippet of item "tampon"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"A cheap-looking tampon.  The cotton looks rough, the plastic applicator has a"
+" few sharp edges, and the string is somehow already knotted."
+msgstr ""
+
+#. ~ Description of "menstrual pad"
+#: data/json/items/generic/bathroom_house.json
+msgid "An absorbent pad."
+msgstr ""
+
+#. ~ Snippet of item "menstrual pad"
+#: data/json/items/generic/bathroom_house.json
+msgid "A small panty-liner only meant for the lightest flows."
+msgstr ""
+
+#. ~ Description of "hair dryer"
+#: data/json/items/generic/bathroom_house.json
+msgid ""
+"This tool dries your hair by pushing air through a coil of hot wires.  The "
+"heat can be toggled on and off."
+msgstr ""
+
+#. ~ Description of "plastic soap bottle"
+#: data/json/items/generic/bathroom_house.json
+msgid "A squeezable bottle used to hold various liquid soaps."
+msgstr ""
+
+#. ~ Description of "sheet"
+#: data/json/items/generic/bedding.json
+msgid ""
+"A 72 by 24 inch two-layer-thick fabric sheet.  It could be used as a curtain "
+"or bedsheet, or cut up for a bunch of smaller sheets."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "makeshift blanket"
+msgid_plural "makeshift blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "makeshift blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "A blanket made by you!  Embrace your inner tailor."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "sports blanket"
+msgid_plural "sports blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "sports blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"This blanket is official sports memorabilia, or so says the tag.  It features"
+" the name and mascot of the <sports_teams>!"
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "collectable sports blanket"
+msgid_plural "collectable sports blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "collectable sports blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"This blanket is an alleged collector's piece, featuring the name and mascot "
+"of the <sports_teams>!  The tag explains that only 100,000 were made and "
+"reads: #<number><number><number><number><number>."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "geometric blanket"
+msgid_plural "geometric blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "geometric blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"A standard blanket, except that the stitching across the surface is patterned"
+" in <geometric_patterns>s."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "fluffy blanket"
+msgid_plural "fluffy blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "fluffy blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"This blanket's tag lists it as \"the fluffiest blanket in the world\" and was"
+" made in the USA.  Only moderately fluffy."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "floral blanket"
+msgid_plural "floral blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "floral blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"The ever popular floral print blanket.  This one is patterned with <flowers>."
+"  Popular with grandmothers."
+msgstr ""
+
+#. ~ Variant name of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid "cartoon blanket"
+msgid_plural "cartoon blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "cartoon blanket" of item "blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"A blanket adorned with a famous animated character!  It depicts "
+"<cartoon_blanket>!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/bedding.json
+msgid "weighted blanket"
+msgid_plural "weighted blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "weighted blanket"
+#: data/json/items/generic/bedding.json
+msgid ""
+"A thick, layered blanket with glass microbeads added to increase the weight."
+msgstr ""
+
+#. ~ Variant name of item "weighted blanket"
+#: data/json/items/generic/bedding.json
+msgid "weighted geometric blanket"
+msgid_plural "weighted geometric blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "weighted geometric blanket" of item "weighted
+#. blanket"
+#: data/json/items/generic/bedding.json
+msgid "It's been stitched in a <geometric_patterns> pattern."
+msgstr ""
+
+#. ~ Description of "sleeping bag"
+#: data/json/items/generic/bedding.json
+msgid ""
+"A large sleeping bag that covers you head to toe, with a strap for carrying "
+"it on your back when not in use.  This one is medium weight.  It is currently"
+" unrolled; activate it to roll it up for easy storage."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .223 casing"
+msgid_plural "primerless .223 casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .223 casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .223 round, with its primer removed."
+msgstr ""
+
+#. ~ Description of "unused .22 short casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An unfired, like-new .22 short casing, with the priming compound still "
+"intact."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .30-06 casing"
+msgid_plural "primerless .30-06 casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .30-06 casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .30-06 round, with its primer removed."
+msgstr ""
+
+#. ~ Description of "12.3ln casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a 12.3ln round.  It looks deceptively like a .303 "
+"British casing, if those were rimless."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 12.3ln casing"
+msgid_plural "primerless 12.3ln casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 12.3ln casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a 12.3ln round.  It looks deceptively like a .303 "
+"British casing, if those were rimless.  This one has had its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "3.3 naval casing"
+msgid_plural "3.3 naval casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "3.3 naval casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a 3.3 naval round.  If it wasn't for burns and soot, it "
+"could be used as a cup."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "spent Caotel cell"
+msgid_plural "spent Caotel cells"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spent Caotel cell"
+#: data/json/items/generic/casing.json
+msgid ""
+"This is a small metallic cube of inscrutable construction.  You think it "
+"might feel slightly lighter when compared to the fresh ones."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .270 Winchester casing"
+msgid_plural "primerless .270 Winchester casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .270 Winchester casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .270 Winchester round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".303 casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .303 round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .303 casing"
+msgid_plural "primerless .303 casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .303 casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .303 round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .300 Win Mag casing"
+msgid_plural "primerless .300 Win Mag casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .300 Win Mag casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .300 Winchester Magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .308 casing"
+msgid_plural "primerless .308 casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .308 casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .308 round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 7.62x51mm casing"
+msgid_plural "primerless 7.62x51mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 7.62x51mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 7.62x51mm M80 round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .32 ACP casing"
+msgid_plural "primerless .32 ACP casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .32 ACP casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .32 ACP round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .38 Special casing"
+msgid_plural "primerless .38 Special casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .38 Special casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .38 Special round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .38 Super casing"
+msgid_plural "primerless .38 Super casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .38 Super casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .38 Super round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .40 S&W casing"
+msgid_plural "primerless .40 S&W casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .40 S&W casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .40 S&W round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 10mm Auto casing"
+msgid_plural "primerless 10mm Auto casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 10mm Auto casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 10mm Auto round, with its primer removed."
+msgstr ""
+
+#. ~ Description of "40x46mm M118 casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"A large casing from a spent 40x46mm cartridge, which used to hold an HEDP "
+"grenade.  Suitable for reloading with buckshot, slug or flechette loads."
+msgstr ""
+
+#. ~ Description of "40x46mm .22 LR hornet's nest casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty 40x46mm hornet's nest casing, able to be reloaded with ten .22 LR "
+"bullets to fire them simultaneously."
+msgstr ""
+
+#. ~ Description of "40x46mm .410 hornet's nest casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty 40x46mm hornet's nest casing, able to be reloaded with four .410 "
+"shells to fire them simultaneously."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .44 Magnum casing"
+msgid_plural "primerless .44 Magnum casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .44 Magnum casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .44 Magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .454 Casull casing"
+msgid_plural "primerless .454 Casull casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .454 Casull casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .454 Casull round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid ".460 S&W Magnum casing"
+msgid_plural ".460 S&W Magnum casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".460 S&W Magnum casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .460 S&W Magnum round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .460 S&W Magnum casing"
+msgid_plural "primerless .460 S&W Magnum casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .460 S&W Magnum casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .460 S&W Magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .45 ACP casing"
+msgid_plural "primerless .45 ACP casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .45 ACP casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .45 ACP round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .45 Colt casing"
+msgid_plural "primerless .45 Colt casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .45 Colt casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .45 Colt round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .45-70 casing"
+msgid_plural "primerless .45-70 casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .45-70 casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .45-70 Government round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".50 Beowulf casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .50 Beowulf round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .50 Beowulf casing"
+msgid_plural "primerless .50 Beowulf casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .50 Beowulf casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .50 Beowulf round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".450 Bushmaster casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .450 Bushmaster round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .450 Bushmaster casing"
+msgid_plural "primerless .450 Bushmaster casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .450 Bushmaster casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .450 Bushmaster round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 4.6x30mm casing"
+msgid_plural "primerless 4.6x30mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 4.6x30mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 4.6x30mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .500 S&W Magnum casing"
+msgid_plural "primerless .500 S&W Magnum casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .500 S&W Magnum casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .500 S&W Magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".50 BMG casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .50 BMG round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .50 BMG casing"
+msgid_plural "primerless .50 BMG casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .50 BMG casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .50 BMG round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".338 Lapua casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .338 Lapua round.  These are rare, so you might want "
+"to hold onto them."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .338 Lapua casing"
+msgid_plural "primerless .338 Lapua casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .338 Lapua casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .338 Lapua round.  These are rare, so you might want "
+"to hold onto them.  This one has had its primer removed."
+msgstr ""
+
+#. ~ Description of "7.7mm Arisaka casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 7.7x58mm Japanese round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 7.7mm Arisaka casing"
+msgid_plural "primerless 7.7mm Arisaka casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 7.7mm Arisaka casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a 7.7x58mm Japanese round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 5.45x39mm casing"
+msgid_plural "primerless 5.45x39mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 5.45x39mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 5.45x39mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 5.7x28mm casing"
+msgid_plural "primerless 5.7x28mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 5.7x28mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 5.7x28mm round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".458 WM casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .458 Winchester Magnum round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .458 WM casing"
+msgid_plural "primerless .458 WM casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .458 WM casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .458 Winchester Magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 7.62x54mmR casing"
+msgid_plural "primerless 7.62x54mmR casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 7.62x54mmR casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 7.62x54mmR round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 7.62x39mm casing"
+msgid_plural "primerless 7.62x39mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 7.62x39mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 7.62x39mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 7.62x25mm casing"
+msgid_plural "primerless 7.62x25mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 7.62x25mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 7.62x25mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 9x19mm casing"
+msgid_plural "primerless 9x19mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 9x19mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 9x19mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .357 SIG casing"
+msgid_plural "primerless .357 SIG casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .357 SIG casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .357 SIG round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .357 magnum casing"
+msgid_plural "primerless .357 magnum casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .357 magnum casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .357 magnum round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 9x18mm casing"
+msgid_plural "primerless 9x18mm casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 9x18mm casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a 9x18mm round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .380 ACP casing"
+msgid_plural "primerless .380 ACP casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .380 ACP casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .380 ACP round, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "12 gauge hull"
+msgid_plural "12 gauge hulls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "12 gauge hull"
+#: data/json/items/generic/casing.json
+msgid "An empty hull from a 12 gauge shotgun shell."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless 12 gauge hull"
+msgid_plural "primerless 12 gauge hulls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless 12 gauge hull"
+#: data/json/items/generic/casing.json
+msgid "An empty hull from a 12 gauge shotgun shell, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .410 hull"
+msgid_plural "primerless .410 hulls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .410 hull"
+#: data/json/items/generic/casing.json
+msgid "An empty hull from a .410 shotgun shell, with its primer removed."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .300BLK casing"
+msgid_plural "primerless .300BLK casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .300BLK casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .300 AAC Blackout round, with its primer removed."
+msgstr ""
+
+#. ~ Description of ".30 Carbine casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .30 Carbine round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .30 Carbine casing"
+msgid_plural "primerless .30 Carbine casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .30 Carbine casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .30 Carbine round, with its primer removed."
+msgstr ""
+
+#. ~ Description of "27.3x110 Diyua casing"
+#. ~ Description of "27.3x44 Diyua casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty giant brass shotshell, with illegible alien text on the headstamp.  "
+"These are rare, so you might want to hold onto them."
+msgstr ""
+
+#. ~ Description of ".50 AE casing"
+#: data/json/items/generic/casing.json
+msgid "An empty casing from a .50 Action Express round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/casing.json
+msgid "primerless .50 AE casing"
+msgid_plural "primerless .50 AE casings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "primerless .50 AE casing"
+#: data/json/items/generic/casing.json
+msgid ""
+"An empty casing from a .50 Action Express round, with its primer removed."
+msgstr ""
+
+#. ~ Description of "Hub 01 Gold Coin"
+#: data/json/items/generic/currency.json
+msgid ""
+"A small but surprisingly heavy gold coin.  One side is etched with circuitry "
+"and the other side reads 'Hub 01 exchange currency'."
+msgstr ""
+
+#. ~ Description of "FlatCoin"
+#: data/json/items/generic/currency.json
+msgid ""
+"A coin that has been flattened in a novelty coin flattening machine.  The "
+"machine has been somewhat crudely altered so that the design - which appears "
+"to once have been Mickey Mouse - is overlaid with a hand-drawn emblem of a "
+"book.  There is some text that faintly reads 'Campus Exchange Token'."
+msgstr ""
+
+#. ~ Description of "chit"
+#: data/json/items/generic/currency.json
+msgid "A slip of paper signed by the issuer."
+msgstr ""
+
+#. ~ Description of "icon"
+#: data/json/items/generic/currency.json
+msgid ""
+"A small picture, about the size of an ID card, symbolizing a religious "
+"figure.  On the back, there is text that faintly reads 'New England Church "
+"Community'."
+msgstr ""
+
+#. ~ Description of "nickel"
+#: data/json/items/generic/currency.json
+msgid ""
+"A five-cent coin, featuring a portrait of Thomas Jefferson.  You could flip "
+"it."
+msgstr ""
+
+#. ~ Description of "Silver Eagle coin"
+#: data/json/items/generic/currency.json
+#, no-c-format
+msgid ""
+"The official silver bullion coin of the United States, it has a nominal face "
+"value of one dollar and is guaranteed to contain one troy ounce of 99.9% pure"
+" silver."
+msgstr ""
+
+#. ~ Description of "American Buffalo coin"
+#: data/json/items/generic/currency.json
+#, no-c-format
+msgid ""
+"The official 24-karat bullion coin of the United States, it has a nominal "
+"face value of fifty dollars and is guaranteed to contain one troy ounce of "
+"99.99% pure gold."
+msgstr ""
+
+#. ~ Description of "ten-dollar bill"
+#: data/json/items/generic/currency.json
+msgid "A ten-dollar bill, featuring a portrait of Alexander Hamilton."
+msgstr ""
+
+#. ~ Description of "one-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand one-dollar bills, divided evenly between ten blue currency straps,"
+" and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "two-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand two-dollar bills, divided evenly between ten green currency "
+"straps, and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "five-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand five-dollar bills, divided evenly between ten red currency straps,"
+" and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "ten-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand ten-dollar bills, divided evenly between ten yellow currency "
+"straps, and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "twenty-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand twenty-dollar bills, divided evenly between ten violet currency "
+"straps, and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "fifty-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand fifty-dollar bills, divided evenly between ten brown currency "
+"straps, and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "hundred-dollar currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand hundred-dollar bills, divided evenly between ten mustard currency "
+"straps, and bundled together with rubber bands."
+msgstr ""
+
+#. ~ Description of "merch currency bundle"
+#: data/json/items/generic/currency.json
+msgid ""
+"A thousand Free Merchant Certified Notes, divided evenly between ten "
+"improvised currency straps, and bundled together with rubber bands.  This can"
+" be exchanged for food, water, and other services through the Free Merchants "
+"at the Refugee Center."
+msgstr ""
+
+#. ~ Description of "Tacoma drink token"
+#: data/json/items/generic/currency.json
+msgid ""
+"A ordinary-looking bottle cap with a stamped logo of the Tacoma ranch on the "
+"inside.  You can take it back to the bartender with your glass for a small "
+"refund."
+msgstr ""
+
+#. ~ Description of "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A small, <color> ceramic coffee cup."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "The side of the mug has a picture of a happy-looking family."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"World's Best Dad!\" on the side."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"Great Ideas start with Great Coffee.\" on the side."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"On the side is a glass of wine and a cup of coffee both saying \"She loves me"
+" more!\""
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"This is a designer mug.  It fuels designers.\" on the side."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "On the side is a winking woman in lingerie."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"You're my definition of perfect.  <3\" on the side."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"You've been poisoned.\" on the bottom, inside of it."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"On the side is a dog wearing a hat, sitting in a burning room, saying \"This "
+"is fine.\""
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "There's a tiny dinosaur sculpture inside of it."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "It says \"I <3 Massachusetts.\" on the side."
+msgstr ""
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "The side of the mug reads \"fuck you, <name_b>!\""
+msgstr ""

@@ -1,0 +1,1561 @@
+# Batch 157 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_NETHER_EFFECT_CHECK_SUMMON_HOUNDS"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid "You feel a horrible sensation of watching eyes."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_NETHER_EFFECT_CHECK_MUTATION"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid "You feel an internal wrenching sensation."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_NETHER_EFFECT_CHECK_RIFT"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid "The air around you twists and warps in on itself."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_NETHER_ATTUNEMENT_FEEDBACK_CHECK"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid "As you unleash your powers, you feel a burning sensation in your veins!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_NETHER_ATTUNEMENT_FEEDBACK_CHECK_CONCENTRATION"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid ""
+"As you concentrate on your powers, you feel a burning sensation in your "
+"veins!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_POWERS_IN_NETHER_HOLDING_MATRIX_CRYSTAL_WARNING"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid ""
+"As you unleash your powers, you feel a strange fluctuation in the energies, "
+"but the matrix crystal you're holding seems to dissipate it.  Still, there's "
+"something odd about this place."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_POWERS_IN_NETHER_NOT_HOLDING_MATRIX_CRYSTAL_WARNING"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid ""
+"As you unleash your powers, you feel a strange fluctuation in the energies.  "
+"There's something odd about this place."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CHANNEL_TELEPORTER_POWERS_WHILE_THE_HOUNDS_ARE_WATCHING"
+#: data/mods/MindOverMatter/effectoncondition/eoc_nether_attunement_events.json
+msgid "…but it's because the hunters have found you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PSIONICS_NETHER_AREA_ATTENTION_CHECK"
+#. in nested EOCs in effect in EoC "EOC_PSIONICS_NETHER_AREA_CHECK"
+#: data/mods/MindOverMatter/effectoncondition/eoc_observed.json
+msgid ""
+"The hairs stand up on the back of your neck.  You have a strong feeling that "
+"you're being watched."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_INVISIBILITY_CANCEL_WALK"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid ""
+"As you move, light scatters around you in coruscating shards, revealing your "
+"position!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_INVISIBILITY_CANCEL_RUN"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid ""
+"As you run, a shower of light outlines your path, revealing your position!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_BIOKINETIC_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_CLAIRSENTIENT_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_ELECTROKINETIC_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_PHOTOKINETIC_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_PYROKINETIC_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_TELEKINETIC_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC "EOC_PSIONICS_TELEPATH_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_TELEPORTER_CHANNELING_FAILURE"
+#. ~ Player message in effect in EoC
+#. "EOC_PSIONICS_VITAKINETIC_CHANNELING_FAILURE"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid "Your powers rage out of control!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ELECTRO_OVERLOAD_ZAP"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid "Your muscles suddenly seize up!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CONCENTRATION_VS_LIMIT_CALCULATIONS"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid ""
+"It's taking you a lot of concentration to maintain your powers.  You're not "
+"sure you'll be able to do it for very long."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in false effect in EoC
+#. "EOC_CONCENTRATION_VS_LIMIT_CALCULATIONS"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid ""
+"As you stop concentrating, your mind clears a bit.  It's easier to think now."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_POWER_MAINTENANCE_CONCENTRATION_CHECK"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid "Your concentration breaks!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_CONCENTRATION_CHECK_FOR_NETHER_ATTUNEMENT_BACKLASH"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid "Your concentration wavers for just a moment."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORTER_THE_HOUNDS_FOLLOW"
+#. ~ Player message in effect in EoC
+#. "EOC_TELEPORTER_THE_HOUNDS_FOLLOW_GATEWAY_2"
+#: data/mods/MindOverMatter/effectoncondition/eoc_on_power_use_events.json
+msgid ""
+"As you come out of the darkness and the cold of the teleport, you feel the "
+"prickling sensation of watching eyes and see wisps of swirling fog in the "
+"corners of your vision.  They're still on your trail."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_BIOKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_BIOKIN_POTION"
+#. ~ Player message in effect in EoC "EOC_CLAIR_POTION"
+#. ~ Player message in false effect in EoC "EOC_CLAIR_POTION"
+#. ~ Player message in effect in EoC "EOC_ELECTROKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_ELECTROKIN_POTION"
+#. ~ Player message in effect in EoC "EOC_PHOTOKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_PHOTOKIN_POTION"
+#. ~ Player message in effect in EoC "EOC_PYROKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_PYROKIN_POTION"
+#. ~ Player message in effect in EoC "EOC_TELEKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_TELEKIN_POTION"
+#. ~ Player message in effect in EoC "EOC_TELEPATH_POTION"
+#. ~ Player message in false effect in EoC "EOC_TELEPATH_POTION"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_POTION"
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_POTION"
+#. ~ Player message in effect in EoC "EOC_VITAKIN_POTION"
+#. ~ Player message in false effect in EoC "EOC_VITAKIN_POTION"
+#: data/mods/MindOverMatter/effectoncondition/eoc_potions.json
+msgid "You drink the concoction."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Overcome Pain"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Physical Enhancement"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_biokin_breathe_skin"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Oxygen Absorption"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_monster_hardened_skin"
+#. ~ Name of effect type id "effect_biokin_armor_skin"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Hardened Skin"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Temperature Adaptability"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Enhance Mobility"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_biokin_guided_evolution"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Guided Evolution"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_biokin_hammerhand"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Hammerhand"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_monster_heightened_reflex"
+#. ~ Name of effect type id "effect_monster_heightened_reflex_enhanced"
+#. ~ Name of effect type id "effect_biokin_reflex"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Heightened Reflexes"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Metabolic Hyperefficiency"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_biokin_combat_dance"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Combat Dance"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_biokin_perfected_motion"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Perfected Motion"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_clair_better_senses"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Heightened Senses"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_clair_night_eyes"
+#. ~ Name of effect type id "effect_clair_night_eyes_1"
+#. ~ Name of effect type id "effect_clair_night_eyes_2"
+#. ~ Name of effect type id "effect_clair_night_eyes_3"
+#. ~ Name of effect type id "effect_clair_night_eyes_4"
+#. ~ Name of effect type id "effect_clair_night_eyes_5"
+#. ~ Name of effect type id "effect_clair_night_eyes_6"
+#. ~ Name of effect type id "effect_clair_night_eyes_7"
+#. ~ Name of effect type id "effect_clair_night_eyes_8"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+#: data/mods/MindOverMatter/obsolete/effects.json
+msgid "Night Eyes"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_clair_speed_reader"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Speed Reader"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Premonition"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_clair_see_auras"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Aura Sight"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Marksman's Eye"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Combat Sense"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Intuitive Artisan"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Clarity"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Prescient Tactician"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokin_melee_attacks"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Voltaic Strikes"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokin_reduce_pain"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Pain Suppression"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Neuro-acceleration"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_electrokinetic_lightning_aura"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Galvanic Aura"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Candle's Glow"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokin_dodge"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Trick of the Light"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokin_light_barrier"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Lucent Barrier"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokin_camouflage"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Chameleoflage"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokin_hide_ugly"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Mirror-Mask"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokinetic_radio"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Radio Transception"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Veil of Light"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_photokin_blinding_glare"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Blinding Radiance"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_pyrokinetic_fire_tool"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Banked Flames"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_pyrokinetic_aura"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Blazing Aura"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_pyrokinetic_torch_weld"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Incandescent Lance"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Flameshield"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_monster_momentum_alteration"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Momentum Alteration"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Water Walking"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_telekinetic_lifting_field"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Lifting Field"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Enhance Strength"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_monster_inertial_barrier"
+#. ~ Name of effect type id "effect_monster_inertial_barrier_improved"
+#. ~ Name of effect type id "effect_telekinetic_armor"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Inertial Barrier"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Lift Vehicle"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_telekinetic_levitation"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Levitation"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Concentration Trance"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Mood Stabilization"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Sense Minds"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_teleport_ephemeral_walk"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Ephemeral Walk"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_teleport_stride"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Extended Stride"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_teleport_reactive_displacement_monster"
+#. ~ Name of effect type id "effect_teleport_reactive_displacement"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Reactive Displacement"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_teleport_loci_establishment"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Loci Establishment"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_monster_warped_strikes"
+#. ~ Name of effect type id "effect_teleport_warped_strikes"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Warped Strikes"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_teleport_warper_combat"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Flickerflash Stance"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_vitakin_slow_bleeding_01"
+#. ~ Name of effect type id "effect_vitakin_slow_bleeding_02"
+#. ~ Name of effect type id "effect_vitakin_slow_bleeding_03"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Coagulation"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_vita_concentrated_healing_bonus"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Leukocyte Accumulation"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_vita_health"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Healthy Glow"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Immunostimulus"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_vita_super_heal"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Anabolic Rejuvenation"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#. ~ Name of effect type id "effect_vita_return_from_death"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Accelerated Resuscitation"
+msgstr ""
+
+#. ~ EOC selection title in effect in EoC "EOC_END_PSI_POWERS_SPECIFIC"
+#: data/mods/MindOverMatter/effectoncondition/eoc_power_effects.json
+msgid "Stop concentrating on which power?"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_LIEUTENANT_SPAWN_SHADOW_PREMONITION"
+#. in nested EOCs in effect in EoC "EOC_LIEUTENANT_SPAWN_SHADOW_PREP"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"The darkness takes on a palpable sense of menace.  Something terrible is "
+"coming."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_CAUSE_EARLY_PORTAL_STORM_PREMONITION"
+#. in nested EOCs in effect in EoC "EOC_CAUSE_EARLY_PORTAL_STORM"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"The air hums like a wire stretched taut and on the verge of breaking.  Any "
+"moment, something is going to snap."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_BANDIT_ASSASSIN_1_PREMONITION" in
+#. nested EOCs in effect in EoC "EOC_BANDIT_ASSASSIN"
+#. ~ Player message in effect in EoC "EOC_BANDIT_ASSASSIN_2_PREMONITION" in
+#. nested EOCs in effect in EoC "EOC_BANDIT_ASSASSIN_2"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"You feel hostile eyes watching you and rapidly getting closer.  Someone has "
+"it in for you."
+msgstr ""
+
+#. ~ Player sees NPC spawns in effect in EoC
+#. "EOC_BANDIT_ASSASSIN_1_ACTUAL_NEAR"
+#. ~ Player sees NPC spawns in effect in EoC "EOC_BANDIT_ASSASSIN_1_ACTUAL_FAR"
+#. ~ Player sees NPC spawns in effect in EoC
+#. "EOC_BANDIT_ASSASSIN_2_ACTUAL_NEAR"
+#. ~ Player sees NPC spawns in effect in EoC "EOC_BANDIT_ASSASSIN_2_ACTUAL_FAR"
+#. ~ Player sees NPC spawns in effect in EoC
+#. "EOC_BANDIT_ASSASSIN_3_ACTUAL_NEAR"
+#. ~ Player sees NPC spawns in effect in EoC "EOC_BANDIT_ASSASSIN_3_ACTUAL_FAR"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"A rough-looking person steps out of hiding and begins rapidly approaching "
+"you."
+msgstr ""
+
+#. ~ Player sees NPCs spawn in effect in EoC
+#. "EOC_BANDIT_ASSASSIN_2_ACTUAL_NEAR"
+#. ~ Player sees NPCs spawn in effect in EoC "EOC_BANDIT_ASSASSIN_2_ACTUAL_FAR"
+#. ~ Player sees NPCs spawn in effect in EoC
+#. "EOC_BANDIT_ASSASSIN_3_ACTUAL_NEAR"
+#. ~ Player sees NPCs spawn in effect in EoC "EOC_BANDIT_ASSASSIN_3_ACTUAL_FAR"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"Rough-looking people step out of hiding and begin rapidly approaching you."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_BANDIT_ASSASSIN_3_PREMONITION" in
+#. nested EOCs in effect in EoC "EOC_BANDIT_ASSASSIN_3"
+#. ~ Player message in effect in EoC "EOC_OLD_GUARD_ASSASSIN_PREMONITION" in
+#. nested EOCs in effect in EoC "EOC_OLD_GUARD_ASSASSIN"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"You feel several sets of hostile eyes watching you and rapidly getting "
+"closer.  Someone has it in for you."
+msgstr ""
+
+#. ~ Player sees NPC spawns in effect in EoC
+#. "EOC_OLD_GUARD_ASSASSIN_ACTUAL_NEAR"
+#. ~ Player sees NPC spawns in effect in EoC
+#. "EOC_OLD_GUARD_ASSASSIN_ACTUAL_FAR"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"A professional-looking individual steps out of hiding and begins rapidly "
+"approaching you."
+msgstr ""
+
+#. ~ Player sees NPCs spawn in effect in EoC
+#. "EOC_OLD_GUARD_ASSASSIN_ACTUAL_NEAR"
+#. ~ Player sees NPCs spawn in effect in EoC
+#. "EOC_OLD_GUARD_ASSASSIN_ACTUAL_FAR"
+#: data/mods/MindOverMatter/effectoncondition/eoc_premonition_instances.json
+msgid ""
+"Professional-looking individuals step out of hiding and begin rapidly "
+"approaching you."
+msgstr ""
+
+#. ~ Name of effect type id "instability_remover"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "Morphic Reinforcement"
+msgstr ""
+
+#. ~ Description of effect type "Morphic Reinforcement"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid ""
+"You're not exactly sure what morphic reinforcement means, but it definitely "
+"itches like crazy."
+msgstr ""
+
+#. ~ Apply message of effect type "Morphic Reinforcement"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "Your entire body itches terribly!"
+msgstr ""
+
+#. ~ Remove message of effect type "Morphic Reinforcement"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "The itching finally fades away."
+msgstr ""
+
+#. ~ Name of effect type id "force_field_generated"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "Rippling Air"
+msgstr ""
+
+#. ~ Description of effect type "Rippling Air"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "The air around you is wavering strangely."
+msgstr ""
+
+#. ~ Apply message of effect type "Rippling Air"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid ""
+"The world takes on a slightly bent look, as though you're a straw inserted "
+"into a glass of water."
+msgstr ""
+
+#. ~ Remove message of effect type "Rippling Air"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "The world snaps back into focus."
+msgstr ""
+
+#. ~ Name of effect type id "effect_black_nether_water_disease"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "Unearthly Cold"
+msgstr ""
+
+#. ~ Description of effect type "Unearthly Cold"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "You are chilled from the inside out."
+msgstr ""
+
+#. ~ Apply message of effect type "Unearthly Cold"
+#: data/mods/MindOverMatter/effects/effects_items.json
+msgid "A numbing cold spreads out from your stomach to your whole body."
+msgstr ""
+
+#. ~ Apply message of effect type "Dazed"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "A roar fills your mind and you stagger!"
+msgstr ""
+
+#. ~ Apply message of effect type "Dazed"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Your body twitches under the electrical assault!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_radiation_aura"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Eerie Glow"
+msgstr ""
+
+#. ~ Description of effect type "Hardened Skin"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You are more resilient than normal."
+msgstr ""
+
+#. ~ Description of effect type "Heightened Reflexes"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "You are enhancing your speed and senses."
+msgstr ""
+
+#. ~ Name of effect type id "effect_monster_neuro_acceleration"
+#. ~ Name of effect type id "effect_monster_neuro_acceleration_enhanced"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Neuro-Acceleration"
+msgstr ""
+
+#. ~ Description of effect type "Neuro-Acceleration"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You are enhancing your speed."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokin_revive_debuff"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Revivified"
+msgstr ""
+
+#. ~ Description of effect type "Revivified"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Causes the target to eventually die.  It's a bug if you have it."
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokinetic_illuminate_enemy"
+#. ~ Name of effect type id "effect_photokinetic_illumination"
+#. ~ Name of effect type id "effect_photokin_lumination_overload"
+#. ~ Name of effect type id "effect_photokin_enemy_light"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Illuminated"
+msgstr ""
+
+#. ~ Description of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You are glowing slightly."
+msgstr ""
+
+#. ~ Apply message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "A faint glow springs up around you!"
+msgstr ""
+
+#. ~ Remove message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "The faint glow around you fades away."
+msgstr ""
+
+#. ~ Description of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid ""
+"You are glowing.  The light is a color you have no name for, a kind of "
+"actinic purple-red."
+msgstr ""
+
+#. ~ Apply message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "A harsh glow springs up around you!"
+msgstr ""
+
+#. ~ Remove message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "The harsh glow around you fades away."
+msgstr ""
+
+#. ~ Description of effect type "Flame Immunity"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You are immune to fire."
+msgstr ""
+
+#. ~ Description of effect type "Momentum Alteration"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You are altering the motion of nearby objects in your favor."
+msgstr ""
+
+#. ~ Description of effect type "Inertial Barrier"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "A barrier of telekinetic force is protecting you."
+msgstr ""
+
+#. ~ Description of effect type "Telepathic Shield"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You have a shield up to prevent telepathic detection and attack."
+msgstr ""
+
+#. ~ Name of effect type id "effect_whispering_amalgamation_whispers"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Maddening Whispers"
+msgstr ""
+
+#. ~ Description of effect type "Maddening Whispers"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid ""
+"Your mind is filled with whispers just below the threshold of understanding, "
+"making it almost impossible to think."
+msgstr ""
+
+#. ~ Apply message of effect type "Maddening Whispers"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid ""
+"A chorus of whispers just below the threshold of understanding fills your "
+"mind."
+msgstr ""
+
+#. ~ Remove message of effect type "Maddening Whispers"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "The whispers finally fall silent"
+msgstr ""
+
+#. ~ Description of effect type "Reactive Displacement"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid ""
+"You will automatically teleport enemies that strike you away from yourself."
+msgstr ""
+
+#. ~ Description of effect type "Warped Strikes"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid ""
+"Your melee attacks travel further than the range of your weapons makes it "
+"seem like they should."
+msgstr ""
+
+#. ~ Name of effect type id "effect_riftwalker_teleport"
+#. ~ Name of effect type id "effect_portal_storm_teleport"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Dimensionally Unstable"
+msgstr ""
+
+#. ~ Description of effect type "Dimensionally Unstable"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You feel like you're barely part of the world."
+msgstr ""
+
+#. ~ Remove message of effect type "Dimensionally Unstable"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "With a jolt you feel more solid again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleporting_lock"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Caught in the Angles"
+msgstr ""
+
+#. ~ Description of effect type "Caught in the Angles"
+#. ~ Apply message of effect type "Caught in the Angles"
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_BLINK_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_PHASE_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_FARSTEP_INITIATE"
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You feel a strange, inward force."
+msgstr ""
+
+#. ~ Remove message of effect type "Caught in the Angles"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "The strange, inward force suddenly vanishes."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakinetic_health_down"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Feeling Unwell"
+msgstr ""
+
+#. ~ Description of effect type "Feeling Unwell"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You feel weak and shaky."
+msgstr ""
+
+#. ~ Remove message of effect type "Feeling Unwell"
+#. ~ Remove message of effect type "Feeling Very Unwell"
+#. ~ Remove message of effect type "Feeling Extremely Unwell"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "The feeling of weakness fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakinetic_healing_down"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Feeling Very Unwell"
+msgstr ""
+
+#. ~ Description of effect type "Feeling Very Unwell"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You feel fatigued and shaky."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakinetic_healing_down_super"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Feeling Extremely Unwell"
+msgstr ""
+
+#. ~ Description of effect type "Feeling Extremely Unwell"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "You feel exhausted and shaky."
+msgstr ""
+
+#. ~ Description of effect type "Deteriorating"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Your skin seems to be slowly crumbling as you watch."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "pigeon_aura"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Blood sample contains noetic steroid particles and pigeon dander."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "pigeon_aura_prep"
+#: data/mods/MindOverMatter/effects/effects_monster.json
+msgid "Patient has allergens in blood stream."
+msgstr ""
+
+#. ~ Name of effect type id "effect_disease_psionic_drain"
+#. ~ Name of spell "psionic_drained_spell"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+#: data/mods/MindOverMatter/obsolete/nether_attunement_spells.json
+msgid "Nether-Attunement"
+msgstr ""
+
+#. ~ Description of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"You feel a little odd and your control over your powers isn't as sure as it "
+"was.  There might be unexpected results of you channeling psionics now."
+msgstr ""
+
+#. ~ Apply message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"You feel a little odd, like you've just awoken from a dream.  All that "
+"psionic channeling might have unexpected effects."
+msgstr ""
+
+#. ~ Apply message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"Your mind thrums with power.  It's intoxicating, but growing increasingly "
+"harder to control."
+msgstr ""
+
+#. ~ Apply message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"Your whole body pulses with a raging torrent of energy.  It's taking almost "
+"all of your concentration to hold on."
+msgstr ""
+
+#. ~ Remove message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"You take a deep breath as the strange feelings fade.  You are in full control"
+" of your powers once again."
+msgstr ""
+
+#. ~ Decay message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"The constant hum of power fades, just a little.  It's easier to think now."
+msgstr ""
+
+#. ~ Decay message of effect type "Nether-Attunement"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"The roar of the Nether subsides.  You can finally hear your own thoughts "
+"again."
+msgstr ""
+
+#. ~ Name of effect type id "psi_nether_attention"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Observed"
+msgstr ""
+
+#. ~ Description of effect type "Observed"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"You have the strong impression that someone, or something, is watching you."
+msgstr ""
+
+#. ~ Remove message of effect type "Observed"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "The endless feeling of being watched finally fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_raiser"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Nether Conduit"
+msgstr ""
+
+#. ~ Description of effect type "Nether Conduit"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Your skin prickles."
+msgstr ""
+
+#. ~ Remove message of effect type "Nether Conduit"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "The tingling sensation finally vanishes."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_attenuation"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Nether Attenuation"
+msgstr ""
+
+#. ~ Description of effect type "Nether Attenuation"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "You have to work extra hard to draw enough energy to use your powers."
+msgstr ""
+
+#. ~ Remove message of effect type "Nether Attenuation"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Your difficulty in drawing on the Nether fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_extra_kcal"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Gnawing Hunger"
+msgstr ""
+
+#. ~ Description of effect type "Gnawing Hunger"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Whenever you use your powers, your stomach rumbles."
+msgstr ""
+
+#. ~ Remove message of effect type "Gnawing Hunger"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Your stomach finally calms down."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_feedback"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Feedback"
+msgstr ""
+
+#. ~ Description of effect type "Feedback"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "You feel a persistent itching that will not go away."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_nether_attunement_electrokinetic_power_drain"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Power Void"
+msgstr ""
+
+#. ~ Description of effect type "Power Void"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Is it cold in here?"
+msgstr ""
+
+#. ~ Remove message of effect type "Power Void"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "The unearthly chill fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether_attunement_biokinetic_inversion"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Metabolic Inversion"
+msgstr ""
+
+#. ~ Description of effect type "Metabolic Inversion"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "You're getting pretty hungry and thirsty."
+msgstr ""
+
+#. ~ Remove message of effect type "Metabolic Inversion"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "Your gnawing hunger finally fades away."
+msgstr ""
+
+#. ~ Description of effect type "Hunted"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid ""
+"You feel the sensation of watching eyes and see prowling forms out of the "
+"corners of your vision.  Using further teleportation powers would be very "
+"unwise."
+msgstr ""
+
+#. ~ Remove message of effect type "Hunted"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "The prowling forms finally fade away."
+msgstr ""
+
+#. ~ Apply message of effect type "effect_kelvinist_anti_cold"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "A roiling fog coalesces out of the surrounding air."
+msgstr ""
+
+#. ~ Remove message of effect type "effect_kelvinist_anti_cold"
+#: data/mods/MindOverMatter/effects/effects_nether_attunement.json
+msgid "The roiling fog surrounding you dissipates."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokinetic_speed_boost_npc"
+#. ~ Name of effect type id "effect_electrokinetic_speed_boost"
+#: data/mods/MindOverMatter/effects/effects_npc.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Neuro-Accelerated"
+msgstr ""
+
+#. ~ Description of effect type "Neuro-Accelerated"
+#: data/mods/MindOverMatter/effects/effects_npc.json
+msgid "Your nervous system is enhanced."
+msgstr ""
+
+#. ~ Remove message of effect type "Neuro-Accelerated"
+#: data/mods/MindOverMatter/effects/effects_npc.json
+#: data/mods/MindOverMatter/effects/effects_psionic.json
+msgid "Your reactions return to baseline."
+msgstr ""
+
+#. ~ Description of effect type "Awakened"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid ""
+"Your exposure to the portal storm has awakened latent psionic powers in you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_null"
+#. ~ Name of effect type id "effect_psi_null_unbound"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Nullified"
+msgstr ""
+
+#. ~ Description of effect type "Nullified"
+#. ~ Description of effect type "Can't Concentrate"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You can't use your powers."
+msgstr ""
+
+#. ~ Apply message of effect type "Nullified"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You feel a dull pain behind your eyes and a terrible sense of loss."
+msgstr ""
+
+#. ~ Remove message of effect type "Nullified"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You have a sudden sense of regaining something you had lost."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_neutralized"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Neutralized"
+msgstr ""
+
+#. ~ Description of effect type "Neutralized"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Something is directly interfering with your use of psionics."
+msgstr ""
+
+#. ~ Apply message of effect type "Neutralized"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You feel terribly vulnerable."
+msgstr ""
+
+#. ~ Remove message of effect type "Neutralized"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You sense of acute vulnerability fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_too_much_pain_cant_channel"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Can't Concentrate"
+msgstr ""
+
+#. ~ Apply message of effect type "Can't Concentrate"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You're in so much pain you can't concentrate to use your powers!"
+msgstr ""
+
+#. ~ Description of effect type "Short of Breath"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You're having a hard time getting enough air."
+msgstr ""
+
+#. ~ Remove message of effect type "Short of Breath"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You finally manage to catch your breath"
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Weakened"
+msgstr ""
+
+#. ~ Description of effect type "Weakened"
+#. ~ Description of effect type "Muscle Weakness"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your muscles and coordination are impaired."
+msgstr ""
+
+#. ~ Apply message of effect type "Weakened"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your muscles tremble with weakness!"
+msgstr ""
+
+#. ~ Remove message of effect type "Weakened"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "New strength fills you!"
+msgstr ""
+
+#. ~ Description of effect type "Blind"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Darkness obscures your vision."
+msgstr ""
+
+#. ~ Description of effect type "Deaf"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You can't hear anything."
+msgstr ""
+
+#. ~ Apply message of effect type "Deaf"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "All sound is blotted out!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokin_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Jerky"
+msgstr ""
+
+#. ~ Description of effect type "Jerky"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You muscles don't seem to be reacting exactly the way you want them to."
+msgstr ""
+
+#. ~ Apply message of effect type "Jerky"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your limbs twitch involuntarily!"
+msgstr ""
+
+#. ~ Remove message of effect type "Jerky"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The twitching stops"
+msgstr ""
+
+#. ~ Description of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your skin is glowing brightly."
+msgstr ""
+
+#. ~ Remove message of effect type "Illuminated"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The glow from your skin fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokin_myopia_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Blurred Sight"
+msgstr ""
+
+#. ~ Description of effect type "Blurred Sight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Objects in the distance aren't where they seem to be."
+msgstr ""
+
+#. ~ Apply message of effect type "Blurred Sight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your vision blurs."
+msgstr ""
+
+#. ~ Remove message of effect type "Blurred Sight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You shake your head as your vision clears."
+msgstr ""
+
+#. ~ Description of effect type "Blind"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Overwhelming light obscures your vision."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pyrokin_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Feverish"
+msgstr ""
+
+#. ~ Description of effect type "Feverish"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You feel much too warm."
+msgstr ""
+
+#. ~ Remove message of effect type "Feverish"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The air feels much cooler now."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pyrokin_fever_burning"
+#. ~ Name of effect type id "effect_salamander_cure_conditions"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Burning"
+msgstr ""
+
+#. ~ Description of effect type "Burning"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The air around you is overheating!"
+msgstr ""
+
+#. ~ Remove message of effect type "Dimensionally Unstable"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "With a jolt, you feel more solid again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_teleporter_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Warped Space"
+msgstr ""
+
+#. ~ Description of effect type "Warped Space"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Nothing is quite where it seems to be."
+msgstr ""
+
+#. ~ Apply message of effect type "Warped Space"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your vision doesn't agree with where things seem to actually be"
+msgstr ""
+
+#. ~ Remove message of effect type "Warped Space"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Distances resolve themselves again."
+msgstr ""
+
+#. ~ Name of effect type id "effect_psi_teleport_lock"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Teleport Lock"
+msgstr ""
+
+#. ~ Name of effect type id "effect_telekin_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Oppressive Weight"
+msgstr ""
+
+#. ~ Description of effect type "Oppressive Weight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Everything feels so much heavier."
+msgstr ""
+
+#. ~ Apply message of effect type "Oppressive Weight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The air itself seems to press down on you!"
+msgstr ""
+
+#. ~ Remove message of effect type "Oppressive Weight"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "The oppressive weight vanishes."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vitakin_overload"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Muscle Weakness"
+msgstr ""
+
+#. ~ Remove message of effect type "Muscle Weakness"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You don't feel as bad anymore!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_asthma_disease_absorbed"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Difficulty Breathing"
+msgstr ""
+
+#. ~ Description of effect type "Difficulty Breathing"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You're having a very hard time taking in enough air."
+msgstr ""
+
+#. ~ Remove message of effect type "Difficulty Breathing"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "You can finally breathe freely."
+msgstr ""
+
+#. ~ Name of effect type id "severe_hay_fever"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Severe Hay Fever"
+msgstr ""
+
+#. ~ Description of effect type "Severe Hay Fever"
+#: data/mods/MindOverMatter/effects/effects_penalty.json
+msgid "Your eyes are burning and your nose is gushing mucus."
+msgstr ""
+
+#. ~ Name of effect type id "effect_matrix_potion_headblind"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Drank Matrix Elixir"
+msgstr ""
+
+#. ~ Description of effect type "Drank Matrix Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"You're suffering the effects of drinking the concentrated matrix crystal "
+"concoction."
+msgstr ""
+
+#. ~ Remove message of effect type "Drank Matrix Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects finally wear off."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Pink Elixir"
+msgstr ""
+
+#. ~ Description of effect type "Pink Elixir"
+#. ~ Description of effect type "Gray Elixir"
+#. ~ Description of effect type "Cyan Elixir"
+#. ~ Description of effect type "Golden Elixir"
+#. ~ Description of effect type "Red Elixir"
+#. ~ Description of effect type "Yellow Elixir"
+#. ~ Description of effect type "White Elixir"
+#. ~ Description of effect type "Blue Elixir"
+#. ~ Description of effect type "Green Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "You drank the concentrated matrix crystal concoction."
+msgstr ""
+
+#. ~ Remove message of effect type "Pink Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects fade and are replaced with a gnawing weakness."
+msgstr ""
+
+#. ~ Name of effect type id "effect_biokin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Pink Elixir Aftereffects"
+msgstr ""
+
+#. ~ Description of effect type "Pink Elixir Aftereffects"
+#. ~ Description of effect type "Gray Elixir Aftereffects"
+#. ~ Description of effect type "Cyan Elixir Aftereffects"
+#. ~ Description of effect type "Golden Elixir Aftereffects"
+#. ~ Description of effect type "Red Elixir Aftereffects"
+#. ~ Description of effect type "Yellow Elixir Aftereffects"
+#. ~ Description of effect type "White Elixir Aftereffects"
+#. ~ Description of effect type "Blue Elixir Aftereffects"
+#. ~ Description of effect type "Green Elixir Aftereffects"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"You're suffering the aftereffects of drinking the concentrated matrix crystal"
+" concoction."
+msgstr ""
+
+#. ~ Remove message of effect type "Pink Elixir Aftereffects"
+#. ~ Remove message of effect type "Gray Elixir Aftereffects"
+#. ~ Remove message of effect type "Cyan Elixir Aftereffects"
+#. ~ Remove message of effect type "Golden Elixir Aftereffects"
+#. ~ Remove message of effect type "Red Elixir Aftereffects"
+#. ~ Remove message of effect type "Yellow Elixir Aftereffects"
+#. ~ Remove message of effect type "White Elixir Aftereffects"
+#. ~ Remove message of effect type "Blue Elixir Aftereffects"
+#. ~ Remove message of effect type "Green Elixir Aftereffects"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's aftereffects finally wear off."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Gray Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Gray Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid ""
+"The concoction's effects fade and darkness creeps in at the edges of your "
+"vision."
+msgstr ""
+
+#. ~ Name of effect type id "effect_clair_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Gray Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Cyan Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Cyan Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects fade and your muscles twitch."
+msgstr ""
+
+#. ~ Name of effect type id "effect_electrokin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Cyan Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Golden Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Golden Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects fade and your vision warps."
+msgstr ""
+
+#. ~ Name of effect type id "effect_photokin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Golden Elixir Aftereffects"
+msgstr ""
+
+#. ~ Name of effect type id "effect_pyrokin_potion"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Red Elixir"
+msgstr ""
+
+#. ~ Remove message of effect type "Red Elixir"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "The concoction's effects fade and are replaced with a burning heat."
+msgstr ""
+
+#. ~ Name of effect type id "effect_pyrokin_potion_comedown"
+#: data/mods/MindOverMatter/effects/effects_potions.json
+msgid "Red Elixir Aftereffects"
+msgstr ""

@@ -1,0 +1,2498 @@
+# Batch 43 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/exodii.json
+msgid "exodii naval rifle"
+msgid_plural "exodii naval rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "exodii naval rifle"
+#. ~ Description of variant "exodii naval rifle" of gun "Ree 3.3 exodii rifle"
+#. ~ Description of "exodii naval rifle"
+#. ~ Description of variant "Ree 3.3 exodii rifle" of item "exodii naval rifle"
+#: data/json/items/gun/exodii.json
+msgid ""
+"Originally designed for naval defense of a small island country, this gun "
+"served Exodii as long as they existed, being one of its reliable tools in "
+"later stages of world decay.  Cheap ammunition, a simple mechanism, and "
+"immense power output would make it a great weapon for any survivor who is "
+"able to carry nearly a hundred kilo of its weight and is in need to penetrate"
+" a small bunker.  Unless your body is compatible with Exodii Standard Combat "
+"Bodyframe, you can only use it with a heavy-duty tripod, and only while "
+"prone.  Due to the size of a top-mounted magazine, the user needs to use a "
+"scope mounted on the side of a gun."
+msgstr ""
+
+#. ~ Variant name of gun "exodii naval rifle"
+#. ~ Variant name of item "exodii naval rifle"
+#: data/json/items/gun/exodii.json
+msgctxt ""
+"`Ree` in this case is butchered `Roe`, to carry some sort of nautical vibe"
+msgid "Ree 3.3 exodii rifle"
+msgid_plural "Ree 3.3 exodii rifle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/flammable.json
+msgid "M9-7 flamethrower"
+msgid_plural "M9-7 flamethrowers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "M9-7 flamethrower"
+#. ~ Description of "M9-7 flamethrower"
+#: data/json/items/gun/flammable.json
+msgid ""
+"A large flamethrower with substantial gas reserves.  The steel frame, with "
+"canvas accoutrements and aluminum cylinders, are all colored olive drab, like"
+" so many other pieces of equipment from the Vietnam War era."
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/json/items/gun/flammable.json
+msgid "Jet"
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/json/items/gun/flammable.json
+msgid "Gout"
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/flammable.json
+msgid "DARPA flamethrower"
+msgid_plural "DARPA flamethrowers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "DARPA flamethrower"
+#. ~ Description of "DARPA flamethrower"
+#: data/json/items/gun/flammable.json
+msgid ""
+"A modernized flamethrower, using alloy components and composite pressure "
+"tanks.  Despite having been replaced by the M202 FLASH, due to the "
+"questionable effectiveness of the flamethrower in modern combat, it appears "
+"that someone, somewhere, needed a flamethrower for the modern age, as the "
+"date code on many of the components is within the past five years.  While "
+"this resembles the Vietnam War era M9-7, the wand ignition system has been "
+"improved with a piezoelectric one, in addition to the material improvements "
+"of the system overall."
+msgstr ""
+
+#. ~ Description of gun "handmade double-barrel flintlock"
+#. ~ Description of "handmade double-barrel flintlock"
+#: data/json/items/gun/flintlock.json
+msgid ""
+"A compact muzzle-loading rifle combining a pair of rudimentary flintlock "
+"actions and two barrels.  Whereas an antique multiple-barrel flintlock is an "
+"intricate work of gunsmithing, this weapon is simpler yet still serviceable."
+msgstr ""
+
+#. ~ Variant name of gun "flintlock rifle"
+#. ~ Variant name of item "flintlock rifle"
+#: data/json/items/gun/flintlock.json
+msgid "Leadworks Pennsylvania 2068"
+msgid_plural "Leadworks Pennsylvania 2068s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "flintlock rifle" of gun "Leadworks Pennsylvania
+#. 2068"
+#. ~ Description of variant "Leadworks Pennsylvania 2068" of item "flintlock
+#. rifle"
+#: data/json/items/gun/flintlock.json
+msgid ""
+"A high quality commemorative replica of a Pennsylvania rifle.  Its engraved "
+"stock plate claims it was built for the \"Northern American Federation "
+"Tricentennial Exhibition\"."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/paintball.json
+msgid "paintball gun"
+msgid_plural "paintball guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/robofac_gun.json
+msgid "prototype gun"
+msgid_plural "prototype guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "prototype gun"
+#. ~ Description of "prototype gun"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A weapons platform you don't recognize.  With its combination of black-"
+"finished steel, brown polymer furniture, and a number of proprietary bolts "
+"and fasteners to hold the pieces in place, this weapon looks like it belongs "
+"in a science fiction movie.  The body has \"XE\" inlaid in the steel."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gun/robofac_gun.json
+msgid "rifled barrel"
+msgid_plural "rifled barrel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rifled barrel"
+#. ~ Description of "rifled barrel"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"This weapon is fitted with a long barrel with \"5.56 NATO ASSAULT\" stamped "
+"into the metal and an integrated muzzle brake."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gun/robofac_gun.json
+msgctxt "gun_type_type"
+msgid "xedra_gun"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP personal 5.7x28mm configuration"
+msgid_plural "HWP personal 5.7x28mm configuration"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "HWP personal 5.7x28mm configuration"
+#. ~ Description of "HWP personal 5.7x28mm configuration"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A Hub 01 Hybrid Weapons Platform quick swap conversion kit.  This version has"
+" a short barrel with \"5.7mm NATO PDW\" stamped into the metal and an "
+"integrated silencer."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP personal 4.6x30mm configuration"
+msgid_plural "HWP personal 4.6x30mm configuration"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "HWP personal 4.6x30mm configuration"
+#. ~ Description of "HWP personal 4.6x30mm configuration"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A Hub 01 Hybrid Weapons Platform quick swap conversion kit.  This version has"
+" a short barrel with \"4.6x30mm PDW\" stamped into the metal and an "
+"integrated silencer."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP breacher configuration"
+msgid_plural "HWP breacher configuration"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "HWP breacher configuration"
+#. ~ Description of "HWP breacher configuration"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A Hub 01 Hybrid Weapons Platform quick swap conversion kit.  This version "
+"looks like the close quarters configuration, but has a shortened barrel with "
+"\"00 BREACH\" stamped into the metal."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gun/robofac_gun.json
+msgid "unrifled barrel"
+msgid_plural "unrifled barrel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "unrifled barrel"
+#. ~ Description of "unrifled barrel"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"This weapon is fitted with long barrel with \"00 CQC\" stamped into the "
+"metal."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/robofac_gun.json
+msgid "Hub 01 FSP"
+msgid_plural "Hub 01 FSP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Hub 01 FSP"
+#. ~ Description of "Hub 01 FSP"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"The Hub 01 Fire Support Platform, or just the FSP.  Like the Hybrid Weapons "
+"Platform, it combines black-finished aluminum, blue polymer furniture, and a "
+"number of proprietary bolts and fasteners for a sci-fi aesthetic.  The barrel"
+" is stamped with \"40x46mm LV\", and the magwell looks like it accepts some "
+"truly MASSIVE magazines, which the gun appears to be capable of emptying in "
+"semi-automatic or fully-automatic fashion."
+msgstr ""
+
+#. ~ Description of gun mod "HWP EXOTIC configuration"
+#. ~ Description of "HWP EXOTIC configuration"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A Hub 01 Hybrid Weapons Platform quick swap conversion kit.  This version has"
+" a heavy barrel with an integrated bipod, threaded muzzle and \"EXODIC\" "
+"stamped into the metal.  The typo appears to be intentional."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "prototype 40-round 5.56 magazine"
+msgid_plural "prototype 40-round 5.56 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "prototype 40-round 5.56 magazine"
+#. ~ Description of "prototype 40-round 5.56 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid "A high-capacity 40-round box magazine."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP 40/50-round 4.6/5.7 magazine"
+msgid_plural "HWP 40/50-round 4.6/5.7 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "HWP 40/50-round 4.6/5.7 magazine"
+#. ~ Description of "HWP 40/50-round 4.6/5.7 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A high-capacity box magazine for use with the Hub 01 Hybrid Weapons Platform."
+"  This magazine has plates on the back that can be shifted inwards to "
+"accommodate either 4.6x30mm or 5.7x28mm."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "prototype 10-round shotgun magazine"
+msgid_plural "prototype 10-round shotgun magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "prototype 10-round shotgun magazine"
+#. ~ Description of "prototype 10-round shotgun magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid "A 10-round shotgun magazine."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP 30-round shotgun drum magazine"
+msgid_plural "HWP 30-round shotgun drum magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "HWP 30-round shotgun drum magazine"
+#. ~ Description of "HWP 30-round shotgun drum magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A plastic 30-round drum magazine, for use with the Hub 01 Hybrid Weapons "
+"Platform."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "HWP 60-round 12.3 magazine"
+msgid_plural "HWP 60-round 12.3 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "HWP 60-round 12.3 magazine"
+#. ~ Description of "HWP 60-round 12.3 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A box magazine for use with the Hub 01 Hybrid Weapons Platform, developed for"
+" the 12.3 ln round.  Physically speaking, this diverges from its Exodii "
+"counterpart with a more ergonomic design afforded by the Hub's use of modern "
+"materials.  It resembles a coffin somewhat in profile, with 4 columns of "
+"ammunition tapering down to just 2."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "FSP 3-round 40x46 magazine"
+msgid_plural "FSP 3-round 40x46 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "FSP 3-round 40x46 magazine"
+#. ~ Description of "FSP 3-round 40x46 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A large three round box magazine for use with the Hub 01 Fire Support "
+"Platform."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "FSP 5-round 40x46 magazine"
+msgid_plural "FSP 5-round 40x46 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "FSP 5-round 40x46 magazine"
+#. ~ Description of "FSP 5-round 40x46 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A large five round box magazine for use with the Hub 01 Fire Support "
+"Platform.  There's no way you're going to find a mag pouch for this."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/json/items/gun/robofac_gun.json
+msgid "FSP 10-round 40x46 magazine"
+msgid_plural "FSP 10-round 40x46 magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "FSP 10-round 40x46 magazine"
+#. ~ Description of "FSP 10-round 40x46 magazine"
+#: data/json/items/gun/robofac_gun.json
+msgid ""
+"A huge 10 round box magazine for use with the Hub 01 Fire Support Platform.  "
+"It resembles a coffin somewhat in profile, with 4 columns of ammunition "
+"tapering down to just 1.  There's no way you're going to find a mag pouch for"
+" this."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "12-gauge Gatling gun"
+msgid_plural "12-gauge Gatling guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "12-gauge Gatling gun"
+#. ~ Description of "12-gauge Gatling gun"
+#: data/json/items/gun/shot.json
+msgid ""
+"An electrically driven six barrel Gatling shotgun, fed from handmade cloth "
+"belts.  Even properly mounted, this seems like an unwieldy beast, and the six"
+" separate barrels make for difficult zeroing.  The externally driven action "
+"means this is much less likely to jam."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "compact bullpup shotgun"
+msgid_plural "compact bullpup shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "compact bullpup shotgun"
+#. ~ Description of "compact bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"This pump-action shotgun uses a system of twin magazines to carry 14 total "
+"rounds of 12-gauge shotgun shells.  As the weapon's trigger is situated "
+"forwards of the chamber in what is termed as a 'bullpup' design, the "
+"firearm's notably more compact than its peers despite having a higher "
+"capacity when compared against more classically designed shotguns."
+msgstr ""
+
+#. ~ Variant name of gun "compact bullpup shotgun"
+#. ~ Variant name of item "compact bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid "Kel-Tec KSG shotgun"
+msgid_plural "Kel-Tec KSG shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "compact bullpup shotgun" of gun "Kel-Tec KSG
+#. shotgun"
+#. ~ Description of variant "Kel-Tec KSG shotgun" of item "compact bullpup
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A bullpup pump-action shotgun, the Kel-Tec KSG uses a pair of magazine tubes "
+"to increase its capacity."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "6-round combat shotgun"
+msgid_plural "6-round combat shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "6-round combat shotgun"
+#. ~ Description of "6-round combat shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"The faithful friend of law-enforcement officers, military personnel, and "
+"zombie-hunting action heroes alike, this quaint firearm with its over 20 inch"
+" long barrel, 6-round magazine tube, and iconic pump-action design is as "
+"simple as it is effective.  One of the most popular firearm designs in all of"
+" history, this weapon can be reliably counted upon to do the job whether "
+"one's simply looking to hunt, or to, with the right loads, turn the heads of "
+"the living dead into a chunky zombie puree."
+msgstr ""
+
+#. ~ Variant name of gun "6-round combat shotgun"
+#. ~ Variant name of item "6-round combat shotgun"
+#: data/json/items/gun/shot.json
+msgid "Mossberg 500 Field shotgun"
+msgid_plural "Mossberg 500 Field shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "9-round combat shotgun"
+msgid_plural "9-round combat shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "9-round combat shotgun"
+#. ~ Description of "9-round combat shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A military oriented spin on the classic pump-action shotgun recipe, this "
+"firearm features an extended magazine tube capable of fielding nine rounds of"
+" 12 gauge shotshells.  Sporting a heavier barrel and a bayonet lug, it makes "
+"for a highly intimidating weapon, as well as a satisfying answer to most of "
+"the nasties you're liable to find in the post-apocalypse."
+msgstr ""
+
+#. ~ Variant name of gun "9-round combat shotgun"
+#. ~ Variant name of item "9-round combat shotgun"
+#: data/json/items/gun/shot.json
+msgid "Mossberg 590A1 shotgun"
+msgid_plural "Mossberg 590A1 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "magazine-fed pump shotgun"
+msgid_plural "magazine-fed pump shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "magazine-fed pump shotgun"
+#. ~ Description of "magazine-fed pump shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A classic pump-action shotgun, all save for the fact that the manufacturer "
+"has modified it to use detachable box magazines instead of a standard shotgun"
+" tube."
+msgstr ""
+
+#. ~ Variant name of gun "magazine-fed pump shotgun"
+#. ~ Variant name of item "magazine-fed pump shotgun"
+#: data/json/items/gun/shot.json
+msgid "Mossberg 590M shotgun"
+msgid_plural "Mossberg 590M shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "magazine-fed pump shotgun" of gun "Mossberg 590M
+#. shotgun"
+#. ~ Description of variant "Mossberg 590M shotgun" of item "magazine-fed pump
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A classic Mossberg 590 pump-action shotgun, modified by the manufacturer to "
+"utilize box magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "8-round auto-loading shotgun"
+msgid_plural "8-round auto-loading shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "8-round auto-loading shotgun"
+#. ~ Description of "8-round auto-loading shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A semi-automatic smooth-bore shotgun, this weapon features respectable "
+"ergonomics and room for 8 shotshells within its tubular magazine.  Suitable "
+"both for competition shooting and offensive combat roles, this firearm is "
+"faster to shoot than a traditional pump-action model, with the caveat that "
+"it's harder to maintain than its manually operated siblings as it relies on "
+"an internal gas system to cycle rounds rather than the user's own physical "
+"input."
+msgstr ""
+
+#. ~ Variant name of gun "8-round auto-loading shotgun"
+#. ~ Variant name of item "8-round auto-loading shotgun"
+#: data/json/items/gun/shot.json
+msgid "Mossberg 930 SPX shotgun"
+msgid_plural "Mossberg 930 SPX shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "5-round auto-loading combat shotgun"
+msgid_plural "5-round auto-loading combat shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "5-round auto-loading combat shotgun"
+#. ~ Description of "5-round auto-loading combat shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A semi-automatic smooth-bore shotgun, this weapon features respectable "
+"ergonomics and room for 5 shotshells within its tubular magazine.  Suitable "
+"both for competition shooting and offensive combat roles, this firearm is "
+"faster to shoot than a traditional pump-action model, with the caveat that "
+"it's harder to maintain than its manually operated siblings as it relies on "
+"an internal gas system to cycle rounds rather than the user's own physical "
+"input."
+msgstr ""
+
+#. ~ Variant name of gun "5-round auto-loading combat shotgun"
+#. ~ Variant name of item "5-round auto-loading combat shotgun"
+#: data/json/items/gun/shot.json
+msgid "M1014 shotgun"
+msgid_plural "M1014 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "5-round hunting shotgun"
+msgid_plural "5-round hunting shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "5-round hunting shotgun"
+#. ~ Description of "5-round hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A classic shotgun in nearly every respect; big, bulky, and intimidating, guns"
+" such as this one have been made for over a century in one form or another, "
+"coming in both pump-action and semi-automatic models.  Serving both "
+"competition-shooting, law-enforcement, and hunting roles, this firearm is "
+"sporting a standard-capacity 5-round magazine tube.  Despite the firearm's "
+"low magazine space, what it lacks in capacity it makes up for in sheer close-"
+"range effectiveness and stopping power."
+msgstr ""
+
+#. ~ Variant name of gun "5-round hunting shotgun"
+#. ~ Variant name of item "5-round hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid "Remington 870 Wingmaster shotgun"
+msgid_plural "Remington 870 Wingmaster shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "4-round hunting shotgun"
+msgid_plural "4-round hunting shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "4-round hunting shotgun"
+#. ~ Description of "4-round hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A 4-round pump-action shotgun, ones like these have existed for many decades,"
+" and are still very popular due to their reliability and lethality, whether "
+"for hunting or home defense."
+msgstr ""
+
+#. ~ Variant name of gun "4-round hunting shotgun"
+#. ~ Variant name of item "4-round hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid "Ithaca M37 Featherlight shotgun"
+msgid_plural "Ithaca M37 Featherlight shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "4-round hunting shotgun" of gun "Ithaca M37
+#. Featherlight shotgun"
+#. ~ Description of variant "Ithaca M37 Featherlight shotgun" of item "4-round
+#. hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A seasoned veteran of America's sporting culture, the Ithaca M37 is the "
+"oldest pump-action shotgun still in active production.  The M37 has served "
+"hunters and officers for over eight decades, featuring a bottom-feeding and "
+"ejecting design that keeps the action sealed from the elements.  An heirloom "
+"that retains its utility all the way from pre-Cataclysm hunting expeditions "
+"up into the depths of alien environments, it would be wise to keep it handy, "
+"for close encounters."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "4-round semi-auto hunting shotgun"
+msgid_plural "4-round semi-auto hunting shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "4-round semi-auto hunting shotgun"
+#. ~ Description of "4-round semi-auto hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A reliable 4 round semi-automatic hunting shotgun, capable of delivering it's"
+" lethal shot quicker than a pump action.  However, it cannot cycle lower "
+"power loads like birdshot."
+msgstr ""
+
+#. ~ Variant name of gun "4-round semi-auto hunting shotgun"
+#. ~ Variant name of item "4-round semi-auto hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid "Browning Auto 5 shotgun"
+msgid_plural "Browning Auto 5 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "4-round semi-auto hunting shotgun" of gun
+#. "Browning Auto 5 shotgun"
+#. ~ Description of variant "Browning Auto 5 shotgun" of item "4-round semi-
+#. auto hunting shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"This humble looking shotgun was the earliest successful semi-automatic "
+"shotgun, and the second most successful in U.S. history, with over 2.7 "
+"million made between 1902 and 1998.  The recoil tuning mechanism under the "
+"handguard and long dwell time of the action make for pleasant shooting.  "
+"However, despite the name, it only fits 4 in the tube and not 5."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "4-round semi-auto fowling shotgun"
+msgid_plural "4-round semi-auto fowling shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "4-round semi-auto fowling shotgun"
+#. ~ Description of "4-round semi-auto fowling shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"This is a 4 round semi-automatic shotgun, with the ability to automatically "
+"cycle birdshot as well.  Not like birdshot will do you much good against the "
+"undead."
+msgstr ""
+
+#. ~ Variant name of gun "4-round semi-auto fowling shotgun"
+#. ~ Variant name of item "4-round semi-auto fowling shotgun"
+#: data/json/items/gun/shot.json
+msgid "Remington 1100 competition shotgun"
+msgid_plural "Remington 1100 competition shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "breaching shotgun"
+#. ~ Variant name of item "breaching shotgun"
+#: data/json/items/gun/shot.json
+msgid "Remington 870 MCS shotgun"
+msgid_plural "Remington 870 MCS shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "breaching shotgun" of gun "Remington 870 MCS
+#. shotgun"
+#. ~ Description of variant "Remington 870 MCS shotgun" of item "breaching
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"This Remington 870 Modular Combat System shotgun is currently set up for "
+"breaching operations, with a 10 inch barrel and no stock.  It is small enough"
+" to carry as a secondary weapon, specifically to pop open any pesky doors you"
+" might come across.  The grip's design makes for controllable yet unpleasant "
+"recoil, and the barrel lacks any sights."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "7-round riot shotgun"
+msgid_plural "7-round riot shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "7-round riot shotgun"
+#. ~ Description of "7-round riot shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A brother of more typical hunting style shotguns, this particular model was "
+"most often seen utilized for self-defense or law-enforcement purposes.  "
+"Featuring a shortened 18.5 inch barrel and extended 7-round magazine tube, "
+"it's a very versatile and reliable weapon."
+msgstr ""
+
+#. ~ Variant name of gun "7-round riot shotgun"
+#. ~ Variant name of item "7-round riot shotgun"
+#: data/json/items/gun/shot.json
+msgid "Remington 870 Express shotgun"
+msgid_plural "Remington 870 Express shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "revolving shotgun"
+msgid_plural "revolving shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "assault shotgun"
+msgid_plural "assault shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "assault shotgun"
+#. ~ Variant name of item "assault shotgun"
+#: data/json/items/gun/shot.json
+msgid "Saiga-12 shotgun"
+msgid_plural "Saiga-12 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "double-barreled shotgun"
+msgid_plural "double-barreled shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "double-barreled shotgun"
+#. ~ Description of "double-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"The classic double-barreled shotgun, with the barrels arranged side-by-side."
+"  It consists of little more than 2 barrels, a striker to hit the shell, and "
+"a wooden stock"
+msgstr ""
+
+#. ~ Variant name of gun "double-barreled shotgun"
+#. ~ Variant name of item "double-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid "S&R Ranger 12 gauge shotgun"
+msgid_plural "S&R Ranger 12 gauge shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "double-barreled shotgun" of gun "S&R Ranger 12
+#. gauge shotgun"
+#. ~ Description of variant "S&R Ranger 12 gauge shotgun" of item "double-
+#. barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"An antique double-barreled shotgun chambered in 12 gauge.  These were made by"
+" many different manufacturers, but these inexpensive firearms were all sold "
+"in the Sears and Roebuck catalog in the days of yore."
+msgstr ""
+
+#. ~ Variant name of gun "double-barreled shotgun"
+#. ~ Variant name of item "double-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid "Parker Bros. Trojan 12 gauge shotgun"
+msgid_plural "Parker Bros. Trojan 12 gauge shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "double-barreled shotgun" of gun "Parker Bros.
+#. Trojan 12 gauge shotgun"
+#. ~ Description of variant "Parker Bros. Trojan 12 gauge shotgun" of item
+#. "double-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"An antique double-barreled shotgun chambered in 12 gauge.  Not to be confused"
+" with the board game company of the same name, Parker Bros. made shotguns "
+"from 1867 to 1942, before they were phased out of production by Remington, "
+"who had acquired the company the previous decade.  These shotguns were sold "
+"in many different \"grades\" at varying price points, with higher quality of "
+"engravings being included at higher cost.  This particular shotgun is a "
+"\"Trojan\", which was the cheapest grade Parker Bros. sold."
+msgstr ""
+
+#. ~ Variant name of gun "double-barreled shotgun"
+#. ~ Variant name of item "double-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid "CZ Bobwhite 12 gauge shotgun"
+msgid_plural "CZ Bobwhite 12 gauge shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "double-barreled shotgun" of gun "CZ Bobwhite 12
+#. gauge shotgun"
+#. ~ Description of variant "CZ Bobwhite 12 gauge shotgun" of item "double-
+#. barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A relatively modern double-barreled shotgun chambered in 12 gauge.  \"CZ\" "
+"stands for \"Česká zbrojovka\", or Czech armory.  CZ's weapons are either "
+"Czech imports or produced by their US based subsidiaries.  This specific "
+"model is the Bobwhite, with a wooden stock and black chrome barrels."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "triple-barreled shotgun"
+msgid_plural "triple-barreled shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "triple-barreled shotgun"
+#. ~ Description of "triple-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid "A pretty modern-looking shotgun that has three barrels."
+msgstr ""
+
+#. ~ Variant name of gun "triple-barreled shotgun"
+#. ~ Variant name of item "triple-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid "Triple Honcho"
+msgid_plural "Triple Honchos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "triple-barreled shotgun" of gun "Triple Honcho"
+#. ~ Description of variant "Triple Honcho" of item "triple-barreled shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Made by Charles Daly, this modern three-barrel shotgun had a unique balance "
+"between how much it cost and how little firepower it could release with its "
+"18.5-inch barrels.  Luckily, you do not need to pay the full price for it "
+"anymore."
+msgstr ""
+
+#. ~ Variant name of gun "single barrel shotgun"
+#. ~ Variant name of item "single barrel shotgun"
+#: data/json/items/gun/shot.json
+msgid "H&R Topper 58"
+msgid_plural "H&R Topper 58s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "single barrel shotgun" of gun "H&R Topper 58"
+#. ~ Description of variant "H&R Topper 58" of item "single barrel shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A single barreled 12 gauge shotgun with an 18.5 inch barrel, produced by H&R."
+"  While Harrington and Richardson has gone through many different "
+"acquisitions, name changes, and bankruptcies, it produces the same or similar"
+" weapons that it did in the early 20th century.  This particular model, the "
+"58, was mass-produced between 1974-1981."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "auto-loading bullpup shotgun"
+msgid_plural "auto-loading bullpup shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "auto-loading bullpup shotgun"
+#. ~ Description of "auto-loading bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Looking more like some form of sci-fi prop gun than an actual firearm, this "
+"weapon uses a system of three different magazines to field 15 12-gauge "
+"shotgun shells within a comparatively compact design.  As the weapon's "
+"trigger assembly is situated forwards of the chamber and magazines in what is"
+" termed as a 'bullpup' design, the firearm's notably more compact than its "
+"peers despite having a higher capacity when compared against more classically"
+" designed shotguns."
+msgstr ""
+
+#. ~ Variant name of gun "auto-loading bullpup shotgun"
+#. ~ Variant name of item "auto-loading bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid "Tavor TS12 shotgun"
+msgid_plural "Tavor TS12 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "auto-loading bullpup shotgun" of gun "Tavor TS12
+#. shotgun"
+#. ~ Description of variant "Tavor TS12 shotgun" of item "auto-loading bullpup
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A triple tube magazine fed, gas-operated bullpup shotgun of Israeli Weapon "
+"Industries make.  It is capable of loading 15 shells, all in a relatively "
+"small package.  Like many other modern IWI designs, this looks more like a "
+"sci-fi prop gun than a firearm.  An integral top rail is provided for "
+"mounting sights."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "double-barreled pump shotgun"
+msgid_plural "double-barreled pump shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "double-barreled pump shotgun"
+#. ~ Description of "double-barreled pump shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A hefty shotgun with a double-barrel configuration, though each barrel feeds "
+"from its own magazine, making the weapon actually two firearms in a single "
+"frame.  While each barrel has its own associated trigger, considering there "
+"is a single pump to actuate both mechanisms, one can't really use it "
+"precisely.  This, however, isn't to say that the weapon isn't fit for the "
+"service of shooting zombies at point blank ranges."
+msgstr ""
+
+#. ~ Variant name of gun "double-barreled pump shotgun"
+#. ~ Variant name of item "double-barreled pump shotgun"
+#: data/json/items/gun/shot.json
+msgid "DP-12"
+msgid_plural "DP-12s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "double-barreled pump shotgun" of gun "DP-12"
+#. ~ Description of variant "DP-12" of item "double-barreled pump shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A bullpup, 12-gauge, pump-action, double-barreled mouthful of a shotgun.  "
+"Each barrel feeds from its own magazine, making the weapon actually two "
+"firearms in a single frame, and, while each barrel has its own associated "
+"trigger, the presence of a single pump to actuate both mechanisms means that "
+"it cannot be used precisely.  This, however, isn't to say that the weapon "
+"isn't fit for the service of shooting zombies at point blank ranges."
+msgstr ""
+
+#. ~ Description of gun "bootleg lever-action shotgun"
+#. ~ Description of "bootleg lever-action shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A lever-action shotgun with a very short barrel and no stock, with room for 6"
+" rounds of 12 gauge shotshells.  Likely a bootlegged replica of a pre-1900 "
+"firearm, it would pair nicely with a motorcycle jacket and a Harley Davidson,"
+" and seems ready to terminate your cataclysmic adversaries."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+#: data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "6-round trenchgun"
+msgid_plural "6-round trenchguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "6-round trenchgun"
+#. ~ Description of "6-round trenchgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Whether or not you ever wondered what would happen if one was to attach a "
+"shotgun atop a sword, the result of such an inquiry now rests before you in "
+"all its metallic glory.  Coming outfitted with a large 17 inch sword bayonet "
+"and a wooden heat shield to protect the user's hands from the barrel when it "
+"heats up during firing, this pump-action shotgun practically drips menace and"
+" looks like it's straight out of the trenches of World War I.  There aren't "
+"any more trenches to clear, so the next zombie-infested town will have to "
+"suffice."
+msgstr ""
+
+#. ~ Description of variant "6-round trenchgun" of gun "M1897 Trench Gun"
+#. ~ Description of variant "M1897 Trench Gun" of item "6-round trenchgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"The Winchester 1897 was one of the first commercially-successful pump-action "
+"shotguns.  In its 'trench' configuration it has become a heavily-romanticized"
+" American icon of World War I.  With its barrel shroud, bayonet lug, and 17 "
+"inch bayonet, this shotgun is undeniably fearsome in appearance.  There "
+"aren't any more trenches to clear, so the next zombie-infested town will have"
+" to suffice."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "4-round waterfowl shotgun"
+msgid_plural "4-round waterfowl shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "4-round waterfowl shotgun"
+#. ~ Description of "4-round waterfowl shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"This is a lanky, though relatively light, semi-automatic shotgun fitted with "
+"a plastic, dimple buttstock and forend, a representative of many such guns "
+"employed in fighting the true, greatest foe: geese.  An under-slung magazine "
+"tube retains three shells in complement with a chambered cartridge, lending "
+"the gun a somewhat modest capacity despite its durability and reliable "
+"action."
+msgstr ""
+
+#. ~ Variant name of gun "4-round waterfowl shotgun"
+#. ~ Variant name of item "4-round waterfowl shotgun"
+#: data/json/items/gun/shot.json
+msgid "Benelli M2 shotgun"
+msgid_plural "Benelli M2 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "4-round waterfowl shotgun" of gun "Benelli M2
+#. shotgun"
+#. ~ Description of variant "Benelli M2 shotgun" of item "4-round waterfowl
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Workhorse, companion, and Italian hole-puncher: the M2 forms the backbone of "
+"the Benelli's venerable line of Super 90 shotguns, utilizing the company's "
+"signature inertia-driven system to snap out 12-gauge shells with alacrity.  "
+"Though possessing a 3-round magazine tube, the shotgun's dimpled, synthetic "
+"furniture, cryogenically treated barrel, and robust action capable of "
+"withstanding magnum loads make it a hardy option, even for the post-Cataclysm"
+" survivor."
+msgstr ""
+
+#. ~ Variant name of gun "4-round waterfowl shotgun"
+#. ~ Variant name of item "4-round waterfowl shotgun"
+#: data/json/items/gun/shot.json
+msgid "Benelli SBE 3 shotgun"
+msgid_plural "Benelli SBE 3 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "4-round waterfowl shotgun" of gun "Benelli SBE 3
+#. shotgun"
+#. ~ Description of variant "Benelli SBE 3 shotgun" of item "4-round waterfowl
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A relatively light, semi-automatic fowling peace finished in black furniture "
+"with trim lines and a slender forend, the Super Black Eagle (SBE) shotgun "
+"operates off of Benelli's inertia-driven recoil system.  Synonymous with "
+"versatility and reliability, it's a decades-beloved design incorporating one "
+"of the earliest actions rated to chamber 3-inch magnum shotgun shells, with "
+"this 2023 updated version coming fitted with a recoil pad."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "6-round tactical shotgun"
+msgid_plural "6-round tactical shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "6-round tactical shotgun"
+#. ~ Description of "6-round tactical shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A black-finished shotgun fit for the gentlemanly pursuit of blowing very "
+"large holes through the residence of the Cataclysm, be it zombie, goose, or "
+"tiny abomination, this semi-automatic longarm fields five shotgun shells "
+"within its tubular magazine.  Aesthetically pleasing with its dimpled "
+"buttstock and forend, the weapon features an underslung pistol-style grip and"
+" a gel cushion on the back of the stock for recoil mitigation."
+msgstr ""
+
+#. ~ Variant name of gun "6-round tactical shotgun"
+#. ~ Variant name of item "6-round tactical shotgun"
+#: data/json/items/gun/shot.json
+msgid "Benelli M2 Tactical shotgun"
+msgid_plural "Benelli M2 Tactical shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "6-round tactical shotgun" of gun "Benelli M2
+#. Tactical shotgun"
+#. ~ Description of variant "Benelli M2 Tactical shotgun" of item "6-round
+#. tactical shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Where the full-sized Benelli M2 shotgun is a hefty stallion, this mission-"
+"oriented tactical iteration is a trim race horse, with an 18.5-inch barrel, "
+"dimpled grip surfaces, and an underslung pistol grip.  Ghost-ring aperture-"
+"sights, a recoil-padded buttstock, and a cryogenically-treated barrel all "
+"join hands to ensure that you can carry out your post-Cataclysm farming "
+"duties: seeding lead shot into fields of zombies."
+msgstr ""
+
+#. ~ Description of gun "slam-fire pipe shotgun"
+#. ~ Description of "slam-fire pipe shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A crude shotgun, composed of two thick steel pipes, an end cap, and a nail.  "
+"The lack of sights make this weapon only useful at point-blank range."
+msgstr ""
+
+#. ~ Description of gun "double slam-fire pipe shotgun"
+#. ~ Description of "double slam-fire pipe shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A crude shotgun, composed of four thick steel pipes, two end caps, and two "
+"nails.  The lack of sights make this weapon only useful at point-blank range."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "rifle shotgun"
+msgid_plural "rifle shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "rifle shotgun"
+#. ~ Description of "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Despite looking like a military-issued rifle, this is, in fact, a shotgun.  "
+"It can accept a variety of magazines."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "Tokarev TAR 12P"
+msgid_plural "Tokarev TAR 12Ps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "Tokarev TAR 12P"
+#. ~ Description of variant "Tokarev TAR 12P" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Not related to the Soviet weapon designer, Tokarev, this Turkish shotgun uses"
+" an AR-12 shotgun platform to make the user comfortably hold it like a rifle "
+"and to utilize MKA 1919 magazines of different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "VR 80"
+msgid_plural "VR 80s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "VR 80"
+#. ~ Description of variant "VR 80" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"The work of Rock Island Armoury, this AR-12-style shotgun affords both the "
+"comfort of being similar to a rifle and the ability to use MKA 1919 shotgun "
+"magazines."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "BOSS 25"
+msgid_plural "BOSS 25s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "BOSS 25"
+#. ~ Description of variant "BOSS 25" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Manufactured in Turkey, this work of Farncolin Arms uses an AR-12 shotgun "
+"platform to let the user comfortably hold it like a rifle and utilize MKA "
+"1919 magazines of different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "AR-12S"
+msgid_plural "AR-12Ss"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "AR-12S"
+#. ~ Description of variant "AR-12S" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Created by Charles Daly, this shotgun uses AR-12 platform to make user "
+"comfortably hold it like a rifle, and to utilize MKA 1919 magazines of "
+"different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "AR-12A"
+msgid_plural "AR-12As"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "AR-12A"
+#. ~ Description of variant "AR-12A" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Made by Charles Daly, this shotgun uses AR-12 platform to make user "
+"comfortably hold it like a rifle, and to utilize MKA 1919 magazines of "
+"different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "GF25"
+msgid_plural "GF25s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "GF25"
+#. ~ Description of variant "GF25" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Work of GForce Arms, this shotgun uses AR-12 platform to make user "
+"comfortably hold it like a rifle, and to utilize MKA 1919 magazines of "
+"different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "MKA 1919"
+msgid_plural "MKA 1919s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "MKA 1919"
+#. ~ Description of variant "MKA 1919" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"First of its type, this Akdal Arms MKA 1919 looks like a bulky M-4 rifle, and"
+" was a parent for numerous shotguns, that soon after got a named \"AR-12 "
+"platform\", inspired by Armalite design."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "KRX"
+msgid_plural "KRXs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "KRX"
+#. ~ Description of variant "KRX" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Created by TriStar Arms, this shotgun uses AR-12 platform to make user "
+"comfortably hold it like a rifle, and to utilize MKA 1919 magazines of "
+"different sizes."
+msgstr ""
+
+#. ~ Variant name of gun "rifle shotgun"
+#. ~ Variant name of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid "VR60"
+msgid_plural "VR60s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rifle shotgun" of gun "VR60"
+#. ~ Description of variant "VR60" of item "rifle shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Work of Rock Island Armory, this AR-12 style shotgun afford both the comfort "
+"of being similar to rifle, and ability to use MKA 1919 shotgun magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "bullpup shotgun"
+msgid_plural "bullpup shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "bullpup shotgun"
+#. ~ Description of "bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid "A curious magazine-fed shotgun, made using bullpup scheme."
+msgstr ""
+
+#. ~ Variant name of gun "bullpup shotgun"
+#. ~ Variant name of item "bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid "GFY-1"
+msgid_plural "GFY-1s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bullpup shotgun" of gun "GFY-1"
+#. ~ Description of variant "GFY-1" of item "bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A work of GForce Arms, this curious bullpup shotgun is compact, familiar to "
+"any rifleman, and can use standard MKA 1919 magazines."
+msgstr ""
+
+#. ~ Variant name of gun "bullpup shotgun"
+#. ~ Variant name of item "bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid "BP-12"
+msgid_plural "BP-12s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bullpup shotgun" of gun "BP-12"
+#. ~ Description of variant "BP-12" of item "bullpup shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"Manufactured by Century Arms, it is a compact bullpup shotgun, that accept a "
+"variety of MKA 1919 magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/shot.json
+msgid "rotary-magazine shotgun"
+msgid_plural "rotary-magazine shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "rotary-magazine shotgun"
+#. ~ Description of "rotary-magazine shotgun"
+#: data/json/items/gun/shot.json
+msgid "A lengthy shotgun that accepts revolving 16-round magazines."
+msgstr ""
+
+#. ~ Variant name of gun "rotary-magazine shotgun"
+#. ~ Variant name of item "rotary-magazine shotgun"
+#: data/json/items/gun/shot.json
+msgid "SRM Arms Model 1216"
+msgid_plural "SRM Arms Model 1216s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "rotary-magazine shotgun" of gun "SRM Arms Model
+#. 1216"
+#. ~ Description of variant "SRM Arms Model 1216" of item "rotary-magazine
+#. shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"A delayed blowback semi-automatic shotgun feeding from detachable 16-round "
+"rotary magazines."
+msgstr ""
+
+#. ~ Description of gun "M26-MASS standalone shotgun"
+#. ~ Description of "M26-MASS standalone shotgun"
+#: data/json/items/gun/shot.json
+msgid ""
+"The Modular Accessory Shotgun System is an underbarrel bolt-action shotgun "
+"that was inspired by the \"Masterkey\" and which fixed most of its "
+"predecessor's problems.  This one is configured for standalone usage."
+msgstr ""
+
+#. ~ Description of gun "CMES laser cannon"
+#. ~ Description of "CMES laser cannon"
+#: data/json/items/gun/ups.json
+msgid ""
+"The integral weapon system for the CMES exoskeleton mech-suit, a rotating-"
+"barrel actively-cooled rapid-fire laser system."
+msgstr ""
+
+#. ~ Description of gun "RMES marksman system"
+#. ~ Description of "RMES marksman system"
+#: data/json/items/gun/ups.json
+msgid ""
+"The integral weapon system for the RMES exoskeleton mech-suit, a quiet and "
+"accurate marksman laser rifle."
+msgstr ""
+
+#. ~ Description of gun "V29 laser pistol"
+#. ~ Description of "V29 laser pistol"
+#: data/json/items/gun/ups.json
+msgid ""
+"The V29 laser pistol was one of the first handheld laser weapons.  It is "
+"larger than most traditional handguns, but has no recoil whatsoever."
+msgstr ""
+
+#. ~ Description of gun "salvaged CMES laser cannon"
+#. ~ Description of "salvaged CMES laser cannon"
+#: data/json/items/gun/ups.json
+msgid ""
+"This Gatling-laser has been stripped from its CMES mech-suit and is far too "
+"heavy to use on its own.  You will need to deploy it or mount it to a "
+"vehicle, but it could be devastating if you have deep battery reserves."
+msgstr ""
+
+#. ~ Description of gun "salvaged RMES marksman laser"
+#. ~ Description of "salvaged RMES marksman laser"
+#: data/json/items/gun/ups.json
+msgid ""
+"Formerly belonging to an RMES mech-suit, this powerful long-range laser rifle"
+" was never designed for human hands.  You might be able to make it work if "
+"you deployed it or mounted it to a vehicle, though, and its long range and "
+"potency could be pretty handy if you can keep it powered."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/accessories.json
+msgid "wooden arrow rest"
+msgid_plural "wooden arrow rests"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "bow dampening kit"
+#. ~ Description of "bow dampening kit"
+#: data/json/items/gunmod/accessories.json
+msgid ""
+"A set of simple pads and rubber with adhesive backing, designed to stick on "
+"the limbs and string of a bow to absorb vibrations.  This substantially "
+"reduces noise during firing and can help with accuracy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/accessories.json
+msgid "primitive bow dampening kit"
+msgid_plural "primitive bow dampening kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "primitive bow dampening kit"
+#. ~ Description of "primitive bow dampening kit"
+#: data/json/items/gunmod/accessories.json
+msgid ""
+"A set of simple pads and strips of fur with adhesive backing, designed to "
+"stick on the limbs and string of a bow to absorb vibrations.  This "
+"substantially reduces noise during firing and can help with accuracy."
+msgstr ""
+
+#. ~ Description of gun mod "belt clip"
+#. ~ Description of "belt clip"
+#: data/json/items/gunmod/accessories.json
+msgid ""
+"A belt clip that attaches to the grip or slide of a pistol to facilitate "
+"'Mexican carry', the practice of carrying without a holster.  It does not "
+"offer any protection for the trigger, so users are strongly advised to carry "
+"with the chamber empty or select a firearm with a very heavy trigger pull."
+msgstr ""
+
+#. ~ Description of gun mod "ported barrel"
+#. ~ Description of "ported barrel"
+#: data/json/items/gunmod/barrel.json
+msgid ""
+"A ported barrel redirects exhaust gases to compensate for muzzle climb, "
+"improving recoil but increasing noise and reducing accuracy slightly."
+msgstr ""
+
+#. ~ Description of gun mod "shortened barrel"
+#. ~ Description of "shortened barrel"
+#: data/json/items/gunmod/barrel.json
+msgid ""
+"A shortened barrel results in markedly reduced accuracy and a minor increase "
+"in noise, but also greatly improves the ease with which the weapon can be "
+"carried and wielded."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/brass_catcher.json
+msgid "big brass catcher"
+msgid_plural "big brass catchers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "big brass catcher"
+#. ~ Description of "big brass catcher"
+#: data/json/items/gunmod/brass_catcher.json
+msgid ""
+"A bag that hangs off the side of your gun and catches ejected casings so you "
+"don't have to pick them up.  This one is larger and made of canvas, so it can"
+" catch more casings before needing to be emptied.  Though the added "
+"convenience comes at the cost of being bulkier."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "rifle .223 upper receiver"
+msgid_plural "rifle .223 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rifle .223 upper receiver"
+#. ~ Description of "rifle .223 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit providing a weapon "
+"with a 20-inch barrel chambered for .223 Remington ammunition, commonly "
+"installed on full-length M16 rifles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "mid-length .223 upper receiver"
+msgid_plural "mid-length .223 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "mid-length .223 upper receiver"
+#. ~ Description of "mid-length .223 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers allow compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a standard 16-inch barrel chambered for .223 Remington ammunition."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+#: data/json/items/gunmod/mechanism.json
+msgctxt "gun_type_type"
+msgid "modular_ar15"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_m4_carbine"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_m16a4"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_m16_auto_rifle"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_m27_assault_rifle"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+#: data/json/items/gunmod/mechanism.json
+msgctxt "gun_type_type"
+msgid "modular_ar_pistol"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "carbine .223 upper receiver"
+msgid_plural "carbine .223 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "carbine .223 upper receiver"
+#. ~ Description of "carbine .223 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit providing a weapon "
+"with a 14.5-inch barrel chambered for .223 Remington ammunition, commonly "
+"installed on standard-issue M4 carbines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "CQB .223 upper receiver"
+msgid_plural "CQB .223 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "CQB .223 upper receiver"
+#. ~ Description of "CQB .223 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit providing a weapon "
+"with a 10.3-inch barrel chambered for .223 Remington ammunition, commonly "
+"installed on special-purpose carbines, including those used by US SOCOM "
+"forces."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "pistol .223 upper receiver"
+msgid_plural "pistol .223 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "pistol .223 upper receiver"
+#. ~ Description of "pistol .223 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit providing a weapon "
+"with a 7.5-inch barrel chambered for .223 Remington ammunition.  These are "
+"most often found on stockless AR pistol lowers, to comply with legal "
+"restrictions on short barrels on rifles.  No such laws exist now, or at least"
+" people that can enforce them."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "mid-length .300BLK upper receiver"
+msgid_plural "mid-length .300BLK upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "mid-length .300BLK upper receiver"
+#. ~ Description of "mid-length .300BLK upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a specialized 16-inch barrel chambered for .300 AAC Blackout ammunition."
+"  Fortunately, standard STANAG magazines are still compatible."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "CQB .300BLK upper receiver"
+msgid_plural "CQB .300BLK upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "CQB .300BLK upper receiver"
+#. ~ Description of "CQB .300BLK upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a specialized 10.5-inch barrel chambered for .300 AAC Blackout "
+"ammunition.  Fortunately, standard STANAG magazines are still compatible."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "SBR .300BLK upper receiver"
+msgid_plural "SBR .300BLK upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "SBR .300BLK upper receiver"
+#. ~ Description of "SBR .300BLK upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a specialized 7.5-inch barrel chambered for .300 AAC Blackout "
+"ammunition.  Fortunately, standard STANAG magazines are still compatible."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "rifle 12.7x42mm upper receiver"
+msgid_plural "rifle 12.7x42mm upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rifle 12.7x42mm upper receiver"
+#. ~ Description of "rifle 12.7x42mm upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a big-bore 18-inch barrel chambered for .50 Beowulf rounds.  Specialized"
+" or modified STANAG-style magazines are required to properly feed the much "
+"larger cartridges."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "mid-length 12.7x42mm upper receiver"
+msgid_plural "mid-length 12.7x42mm upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "mid-length 12.7x42mm upper receiver"
+#. ~ Description of "mid-length 12.7x42mm upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a big-bore 16-inch barrel chambered for .50 Beowulf rounds.  Specialized"
+" or modified STANAG-style magazines are required to properly feed the much "
+"larger cartridges."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "SBR 12.7x42mm upper receiver"
+msgid_plural "SBR 12.7x42mm upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "SBR 12.7x42mm upper receiver"
+#. ~ Description of "SBR 12.7x42mm upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a big-bore 7.5-inch barrel chambered for .50 Beowulf rounds.  "
+"Specialized or modified STANAG-style magazines are required to properly feed "
+"the much larger cartridges."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "rifle .450 upper receiver"
+msgid_plural "rifle .450 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "rifle .450 upper receiver"
+#. ~ Description of "rifle .450 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that is installable upon an AR-15-style rifle's lower "
+"frame.  Swappable uppers enable compatible firearms to be retooled for "
+"different cartridges and barrel lengths, with this kit furnishing a weapon "
+"with a high-caliber 18-inch barrel chambered for .450 Bushmaster cartridges."
+"  Special-purpose low-capacity magazines are required to feed the large "
+"rounds, but the upper turns any AR-15 into a short-range powerhouse."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "CQB .450 upper receiver"
+msgid_plural "CQB .450 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "CQB .450 upper receiver"
+#. ~ Description of "CQB .450 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that, given the right knowledge, is installable upon "
+"an AR-15-style rifle's lower frame.  Swappable uppers enable compatible "
+"firearms to be retooled for different cartridges and barrel lengths, with "
+"this kit furnishing a weapon with a high-caliber 10.5-inch barrel chambered "
+"for .450 Bushmaster cartridges.  Special-purpose low-capacity magazines are "
+"required to feed the large rounds, but the upper turns any AR-15 into a "
+"short-range powerhouse."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "SBR .450 upper receiver"
+msgid_plural "SBR .450 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "SBR .450 upper receiver"
+#. ~ Description of "SBR .450 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that, given the right knowledge, is installable upon "
+"an AR-15-style rifle's lower frame.  Swappable uppers enable compatible "
+"firearms to be retooled for different cartridges and barrel lengths, with "
+"this kit furnishing a weapon with a high-caliber 7.5-inch barrel chambered "
+"for .450 Bushmaster cartridges.  Special-purpose low-capacity magazines are "
+"required to feed the large rounds, but the upper turns any AR-15 into a "
+"short-range powerhouse."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "7.62x39mm upper receiver"
+msgid_plural "7.62x39mm upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "7.62x39mm upper receiver"
+#. ~ Description of "7.62x39mm upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a 16-inch barrel, "
+"handguard, and bolt carrier group that, given the right knowledge, is "
+"installable upon an AR-15-style rifle's lower frame.  Swappable uppers allow "
+"compatible firearms to be retooled for different cartridges and barrel "
+"lengths, with this kit bringing to life the dreams of users wishing to feed "
+"capitalism's rifle with communist lead.  Necessitating a proprietary magazine"
+" to cycle the hefty munitions, you're honestly unsure if this constitutes a "
+"brilliant idea, a bastard, or just a paradox."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid ".22 upper receiver"
+msgid_plural ".22 upper receivers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod ".22 upper receiver"
+#. ~ Description of ".22 upper receiver"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a complete upper receiver assembly containing a barrel, handguard, "
+"and bolt carrier group that, given the right knowledge, is installable upon "
+"an AR-15-style rifle's lower frame.  Swappable uppers enable compatible "
+"firearms to be retooled for different cartridges and barrel lengths, with "
+"this kit furnishing a weapon with a 16-inch barrel chambered for .22 rounds."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .223 extended-assembly"
+msgid_plural "MDRX .223 extended-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .223 extended-assembly"
+#. ~ Description of "MDRX .223 extended-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach barrel installable within the chassis "
+"of a Desert Tech MDRX rifle.  Bored for .223-caliber munitions and requiring "
+"STANAG magazines for feeding, the assembly makes the most from the weapon's "
+"bullpup design with a 20-inch barrel configuration, coaxing increased "
+"terminal performance from fired rounds."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "mdrx"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .223 standard-assembly"
+msgid_plural "MDRX .223 standard-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .223 standard-assembly"
+#. ~ Description of "MDRX .223 standard-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach barrel installable within the chassis "
+"of a Desert Tech MDRX rifle.  Bored for .223-caliber munitions, the assembly "
+"requires STANAG magazines for feeding."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .223 MICRON assembly"
+msgid_plural "MDRX .223 MICRON assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .223 MICRON assembly"
+#. ~ Description of "MDRX .223 MICRON assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach barrel installable within the chassis "
+"of a Desert Tech MDRX rifle.  Bored for .223-caliber munitions and requiring "
+"STANAG magazines for feeding, the assembly renders the MDRX into a compact "
+"CQB carbine, with an 11.5-inch barrel recessed into the weapon's bullpup "
+"layout."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .300BLK standard-assembly"
+msgid_plural "MDRX .300BLK standard-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .300BLK standard-assembly"
+#. ~ Description of "MDRX .300BLK standard-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach barrel installable within the chassis "
+"of a Desert Tech MDRX rifle.  Bored for .300 AAC Blackout munitions, the "
+"assembly requires STANAG magazines for feeding."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .308 extended-assembly"
+msgid_plural "MDRX .308 extended-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .308 extended-assembly"
+#. ~ Description of "MDRX .308 extended-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach, 20-inch barrel installable within the "
+"chassis of a Desert Tech MDRX rifle.  chambered for long-range .308 "
+"Winchester munitions and requiring AR-10 magazines for feeding, the assembly "
+"essentially retools the weapon into a designated marksman's rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "MDRX .308 standard-assembly"
+msgid_plural "MDRX .308 standard-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "MDRX .308 standard-assembly"
+#. ~ Description of "MDRX .308 standard-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"Crowned with a proprietary gas compensator and complemented by a compatible "
+"bolt assembly, this is a quick-detach, 16-inch barrel installable within the "
+"chassis of a Desert Tech MDRX rifle.  Chambered for long-range .308 "
+"Winchester munitions and requiring AR-10 magazines for feeding, the assembly "
+"essentially retools the weapon into a designated marksman's rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "AXMC .338 barrel-assembly"
+msgid_plural "AXMC .338 barrel-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "AXMC .338 barrel-assembly"
+#. ~ Description of "AXMC .338 barrel-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a specialized 27-inch .338-caliber barrel and bolt face that is "
+"installable within the main chassis of an Accuracy International AXMC rifle, "
+"converting it to fire the .338 Lapua cartridge."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "axmc"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "AXMC .300 barrel-assembly"
+msgid_plural "AXMC .300 barrel-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "AXMC .300 barrel-assembly"
+#. ~ Description of "AXMC .300 barrel-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a specialized 24-inch .300-caliber barrel and bolt face that is "
+"installable within the main chassis of an Accuracy International AXMC rifle, "
+"converting it to fire the .300 Winchester Magnum cartridge."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "AXMC .308 barrel-assembly"
+msgid_plural "AXMC .308 barrel-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "AXMC .308 barrel-assembly"
+#. ~ Description of "AXMC .308 barrel-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a specialized 24-inch .308-caliber barrel and bolt face that is "
+"installable within the main chassis of an Accuracy International AXMC rifle, "
+"converting it to fire the .308 Winchester cartridge."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "CZ .223 barrel-assembly"
+msgid_plural "CZ .223 barrel-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "CZ .223 barrel-assembly"
+#. ~ Description of "CZ .223 barrel-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a quick-detach .223-caliber barrel assembly and bolt-head, "
+"installable within the frame of a CZ 600 rifle, and secured with three "
+"fasteners.  With this assembly installed, a rifle is capable of feeding "
+"ammunition from standard STANAG-style magazines."
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "cz600"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "CZ 7.62x39mm barrel-assembly"
+msgid_plural "CZ 7.62x39mm barrel-assemblies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "CZ 7.62x39mm barrel-assembly"
+#. ~ Description of "CZ 7.62x39mm barrel-assembly"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a quick-detach 7.62mm barrel assembly and bolt head, installable "
+"within the frame of a CZ 600 rifle, and secured with three fasteners.  With "
+"this assembly installed, a rifle is rendered compatible with 7.62x39mm CZ "
+"Bren 2 magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "Desert Eagle .357 conversion kit"
+msgid_plural "Desert Eagle .357 conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "Desert Eagle .357 conversion kit"
+#. ~ Description of "Desert Eagle .357 conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a Desert Eagle pistol, allowing it to shoot "
+".357 Magnum ammunition.  It includes the barrel and the reduced-diameter "
+"bolt.  Don't forget the .357 magazine!"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_deagle"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "Desert Eagle .44 conversion kit"
+msgid_plural "Desert Eagle .44 conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "Desert Eagle .44 conversion kit"
+#. ~ Description of "Desert Eagle .44 conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a Desert Eagle pistol, allowing it to shoot "
+".44 Magnum ammunition.  It includes the barrel, sporting an integral muzzle "
+"brake, and the standard-diameter bolt.  Don't forget the .44 magazine!"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "Desert Eagle .50 conversion kit"
+msgid_plural "Desert Eagle .50 conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "Desert Eagle .50 conversion kit"
+#. ~ Description of "Desert Eagle .50 conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a Desert Eagle pistol, allowing it to shoot "
+"the infamous .50 Action Express round.  It includes the barrel, sporting an "
+"integral muzzle brake, and the standard-diameter bolt.  Don't forget the .50 "
+"magazine!"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "UMP 9x19mm conversion kit"
+msgid_plural "UMP 9x19mm conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "UMP 9x19mm conversion kit"
+#. ~ Description of "UMP 9x19mm conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a UMP sub-machine gun allowing it to shoot "
+"9x19mm ammo.  It includes the barrel and the bolt.  Don't forget the 9mm UMP "
+"magazine!"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_ump"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_ump_9"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_ump_40"
+msgstr ""
+
+#. ~ Target of gun mod
+#: data/json/items/gunmod/conversions.json
+msgctxt "gun_type_type"
+msgid "modular_ump_45"
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/json/items/gunmod/conversions.json
+msgid "UMP .40 S&W conversion kit"
+msgid_plural "UMP .40 S&W conversion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "UMP .40 S&W conversion kit"
+#. ~ Description of "UMP .40 S&W conversion kit"
+#: data/json/items/gunmod/conversions.json
+msgid ""
+"This is a caliber conversion for a UMP sub-machine gun allowing it to shoot "
+".40 S&W ammo.  It includes the barrel and the bolt.  Don't forget the .40 UMP"
+" magazine!"
+msgstr ""

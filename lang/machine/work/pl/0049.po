@@ -1,0 +1,1933 @@
+# Batch 49 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "gold"
+#. ~ Description of "platinum"
+#: data/json/items/resources/metal.json
+msgid ""
+"A soft, shiny metal.  Before the apocalypse this would've been worth a small "
+"fortune, but now its value is greatly diminished."
+msgstr ""
+
+#. ~ Description of "zinc"
+#: data/json/items/resources/metal.json
+msgid ""
+"A slightly brittle metal.  Apart from being an essential mineral that the "
+"body needs, it reacts readily with acids, alkalis, and other non-metals.  It "
+"can be crushed to make zinc powder and used in the production of batteries, "
+"among other things."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of brass"
+msgid_plural "chunks of brass"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of brass"
+#: data/json/items/resources/metal.json
+msgid "Some decent-sized chunks of scrap brass."
+msgstr ""
+
+#. ~ Description of "lead"
+#: data/json/items/resources/metal.json
+msgid ""
+"A soft, dull metal used since ancient times.  Due to its malleability, it has"
+" a wide variety of uses including the manufacture of ammunition."
+msgstr ""
+
+#. ~ Description of "magnesium powder"
+#: data/json/items/resources/metal.json
+msgid ""
+"A handful of powdered magnesium, a highly flammable alkaline earth metal.  "
+"Useful for constructing flares and similar items."
+msgstr ""
+
+#. ~ Description of "silver"
+#: data/json/items/resources/metal.json
+msgid ""
+"A soft, shiny metal.  Before the Cataclysm it was worth quite a bit, but its "
+"value is now greatly diminished."
+msgstr ""
+
+#. ~ Description of "lump of steel"
+#: data/json/items/resources/metal.json
+msgid "A heavy, formed piece of steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Description of "lump of mild steel"
+#: data/json/items/resources/metal.json
+msgid "A heavy, formed piece of mild steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Description of "lump of medium steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy, formed piece of medium steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Description of "lump of high steel"
+#: data/json/items/resources/metal.json
+msgid "A heavy, formed piece of high steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Description of "lump of hardened steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy, formed piece of hardened steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Description of "lump of tempered steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy, formed piece of tempered steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "hinge"
+msgid_plural "hinges"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hinge"
+#: data/json/items/resources/metal.json
+msgid ""
+"A small metal hinge with two metal plates with screw holes.  Useful for "
+"making doors or chests."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of copper"
+msgid_plural "chunks of copper"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "scrap tin"
+msgid_plural "scrap tin"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrap tin"
+#: data/json/items/resources/metal.json
+msgid "Some small pieces of scrap tin, usable for crafting or repairs."
+msgstr ""
+
+#. ~ Description of "tin powder"
+#: data/json/items/resources/metal.json
+msgid ""
+"A handful of fine gray tin powder, usable for making solder and lining "
+"containers to prevent corrosion."
+msgstr ""
+
+#. ~ Description of "solder"
+#: data/json/items/resources/metal.json
+msgid "A small spool of solder, useful for electronics crafting."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of mild steel"
+msgid_plural "chunks of mild steel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of mild steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A misshapen chunk of mild steel.  Makes a decent weapon in a pinch, and is "
+"also useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of medium steel"
+msgid_plural "chunks of medium steel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of medium steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A misshapen chunk of medium steel.  Makes a decent weapon in a pinch, and is "
+"also useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of high steel"
+msgid_plural "chunks of high steel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of high steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A misshapen chunk of high steel.  Makes a decent weapon in a pinch, and is "
+"also useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of hardened steel"
+msgid_plural "chunks of hardened steel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "chunk of tempered steel"
+msgid_plural "chunks of tempered steel"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1L aluminum ingot"
+msgid_plural "1L aluminum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1L aluminum ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid aluminum."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L aluminum ingot"
+msgid_plural "5 L aluminum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L aluminum ingot"
+msgid_plural "10 L aluminum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1L brass ingot"
+msgid_plural "1L brass ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1L brass ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid brass."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L brass ingot"
+msgid_plural "5 L brass ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L brass ingot"
+msgid_plural "10 L brass ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1L bronze ingot"
+msgid_plural "1L bronze ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1L bronze ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid bronze."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L bronze ingot"
+msgid_plural "5 L bronze ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L bronze ingot"
+msgid_plural "10 L bronze ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1L copper ingot"
+msgid_plural "1L copper ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1L copper ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid copper."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L copper ingot"
+msgid_plural "5 L copper ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L copper ingot"
+msgid_plural "10 L copper ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L tin ingot"
+msgid_plural "10 L tin ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10 L tin ingot"
+#: data/json/items/resources/metal.json
+msgid "A ten-liter ingot of solid tin."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L tin ingot"
+msgid_plural "5 L tin ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5 L tin ingot"
+#: data/json/items/resources/metal.json
+msgid "A five-liter ingot of solid tin."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1 L tin ingot"
+msgid_plural "1 L tin ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1 L tin ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid tin."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L zinc ingot"
+msgid_plural "10 L zinc ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10 L zinc ingot"
+#: data/json/items/resources/metal.json
+msgid "A ten-liter ingot of solid zinc."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L zinc ingot"
+msgid_plural "5 L zinc ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5 L zinc ingot"
+#: data/json/items/resources/metal.json
+msgid "A five-liter ingot of solid zinc."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1L zinc ingot"
+msgid_plural "1L zinc ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1L zinc ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid zinc."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1 L gold ingot"
+msgid_plural "1 L gold ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1 L gold ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid gold."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L gold ingot"
+msgid_plural "5 L gold ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L gold ingot"
+msgid_plural "10 L gold ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L cast iron ingot"
+msgid_plural "5 L cast iron ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5 L cast iron ingot"
+#: data/json/items/resources/metal.json
+msgid "A five-liter ingot of solid cast iron."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L cast iron ingot"
+msgid_plural "10 L cast iron ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10 L cast iron ingot"
+#: data/json/items/resources/metal.json
+msgid "A ten-liter ingot of solid cast iron."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1 L lead ingot"
+msgid_plural "1 L lead ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1 L lead ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid lead."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L lead ingot"
+msgid_plural "5 L lead ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L lead ingot"
+msgid_plural "10 L lead ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1 L platinum ingot"
+msgid_plural "1 L platinum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1 L platinum ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid platinum."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L platinum ingot"
+msgid_plural "5 L platinum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L platinum ingot"
+msgid_plural "10 L platinum ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "1 L silver ingot"
+msgid_plural "1 L silver ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1 L silver ingot"
+#: data/json/items/resources/metal.json
+msgid "A one-liter ingot of solid silver."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L silver ingot"
+msgid_plural "5 L silver ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L silver ingot"
+msgid_plural "10 L silver ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L steel ingot"
+msgid_plural "5 L steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L steel ingot"
+msgid_plural "10 L steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L budget steel ingot"
+msgid_plural "5 L budget steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L budget steel ingot"
+msgid_plural "10 L budget steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L mild steel ingot"
+msgid_plural "5 L mild steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L mild steel ingot"
+msgid_plural "10 L mild steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L medium steel ingot"
+msgid_plural "5 L medium steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L medium steel ingot"
+msgid_plural "10 L medium steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "5 L high steel ingot"
+msgid_plural "5 L high steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "10 L high steel ingot"
+msgid_plural "10 L high steel ingots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "lump of budget steel"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy, formed piece of budget steel.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "length of railroad track"
+msgid_plural "lengths of railroad track"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "length of railroad track"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy one-meter length of railroad track with a smooth top, liberated from "
+"a now-defunct rail line.  Far too heavy to be useful for much as-is, but "
+"perhaps could be shaped into something with some metalworking skill, or cut "
+"down into an anvil if sawed in half first."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "half-meter length of railroad track"
+msgid_plural "half-meter lengths of railroad track"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "half-meter length of railroad track"
+#: data/json/items/resources/metal.json
+msgid ""
+"A heavy half-meter length of railroad track with a smooth top, liberated from"
+" a now-defunct rail line.  Could be used as a makeshift anvil, especially "
+"with some modifications, or as spare steel."
+msgstr ""
+
+#. ~ Item name
+#. ~ name of the nested group
+#: data/json/items/resources/metal.json data/json/recipes/nested.json
+msgid "scrap aluminum"
+msgid_plural "scrap aluminum"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrap aluminum"
+#: data/json/items/resources/metal.json
+msgid "A handful of small pieces of aluminum, usable for crafting or repairs."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "scrap cast iron"
+msgid_plural "scrap cast iron"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scrap cast iron"
+#: data/json/items/resources/metal.json
+msgid ""
+"A handful of small pieces of scrap cast iron, usable for crafting or repairs."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "cast iron chunk"
+msgid_plural "cast iron chunk"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cast iron chunk"
+#: data/json/items/resources/metal.json
+msgid ""
+"A misshapen chunk of cast iron.  Makes a decent weapon in a pinch, and is "
+"also useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/metal.json
+msgid "cast iron lump"
+msgid_plural "cast iron lump"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cast iron lump"
+#: data/json/items/resources/metal.json
+msgid "A heavy piece of cast iron.  Useful for some crafting recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "bee stinger"
+msgid_plural "bee stingers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bee stinger"
+#: data/json/items/resources/misc.json
+msgid "A six-inch stinger from a giant bee.  Makes a poor melee weapon."
+msgstr ""
+
+#. ~ Description of "ceramic shard"
+#: data/json/items/resources/misc.json
+msgid ""
+"A broken ceramic shard.  It is relatively heavy for its size and has a "
+"somewhat sharp edge, but it's too irregular to cut properly."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "fungal fighter stinger"
+msgid_plural "fungal fighter stingers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "incendiary"
+msgid_plural "incendiary"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mattress"
+#: data/json/items/resources/misc.json
+msgid "A single, or twin, sized mattress."
+msgstr ""
+
+#. ~ "done_message" action message of item "mattress"
+#: data/json/items/resources/misc.json
+msgid "You lay the mattress flat on the ground."
+msgstr ""
+
+#. ~ Description of "down mattress"
+#: data/json/items/resources/misc.json
+msgid "A single, or twin, sized down-filled mattress."
+msgstr ""
+
+#. ~ "done_message" action message of item "down mattress"
+#: data/json/items/resources/misc.json
+msgid "You lay the down mattress flat on the ground."
+msgstr ""
+
+#. ~ Description of "rubber sole"
+#: data/json/items/resources/misc.json
+msgid ""
+"A sole made from rubber, usually found on the bottoms of boots.  Can be used "
+"for making actual boots."
+msgstr ""
+
+#. ~ Description of "thick rubber chunk"
+#: data/json/items/resources/misc.json
+msgid ""
+"A chunk of thick, semi-rigid rubber, similar to what tires are made from."
+msgstr ""
+
+#. ~ Description of "rubber tire strip"
+#: data/json/items/resources/misc.json
+msgid "A long, curled strip of thick, semi-rigid rubber cut from a tire."
+msgstr ""
+
+#. ~ Description of "grenade launcher buttstock"
+#: data/json/items/resources/misc.json
+msgid ""
+"A collapsible buttstock designed for the M320 grenade launcher.  When "
+"combined with this stock, the M320 can be used as a standalone weapon."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "wasp stinger"
+msgid_plural "wasp stingers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cannonball"
+#: data/json/items/resources/misc.json
+msgid ""
+"A four-pound cannonball.  With some gunpowder, wadding, and a fuse, it could "
+"be prepared to load into a cannon."
+msgstr ""
+
+#. ~ Description of "RC car wheel set"
+#: data/json/items/resources/misc.json
+msgid ""
+"A small set of wheels for a radio-controlled car.  Could be improvised with "
+"caster wheels if given rubber treads for grip."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "destroyed ryūsei kabuto"
+msgid_plural "destroyed ryūsei kabuto"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "destroyed ryūsei kabuto"
+#: data/json/items/resources/misc.json
+msgid ""
+"A conical shaped massive slab of inscrutable rock now in two pieces, strange "
+"metallic tubes visibly on display.  Something seems to have cracked it from "
+"the inside out."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/misc.json
+msgid "chunk of paraffin wax"
+msgid_plural "chunks of paraffin wax"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "chunk of paraffin wax"
+#: data/json/items/resources/misc.json
+msgid "A large chunk of paraffin wax."
+msgstr ""
+
+#. ~ Description of "thermoplastic resin chunk"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A piece of tough thermoplastic resin that could be used to craft, repair, or "
+"reinforce items."
+msgstr ""
+
+#. ~ Description of "epoxy chunk"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A hardy and durable piece of epoxy.  You could potentially craft items with "
+"it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "polycarbonate chunk"
+msgid_plural "polycarbonate chunks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "polycarbonate chunk"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A hardy and durable piece of polycarbonate.  You could potentially craft "
+"items with it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "10 L plastic block"
+msgid_plural "10 L plastic blocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10 L plastic block"
+#: data/json/items/resources/plastic.json
+msgid "A ten-liter block of solid plastic."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "5 L plastic block"
+msgid_plural "5 L plastic blocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5 L plastic block"
+#: data/json/items/resources/plastic.json
+msgid "A five-liter block of solid plastic."
+msgstr ""
+
+#. ~ Description of "plastic chunk"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A piece of plastic.  It could be used to fabricate, repair, or reinforce "
+"plastic items."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "synthetic fabric patch"
+msgid_plural "synthetic fabric patches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "synthetic fabric patch"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A six-inch square patch of synthetic fabric.  Unlike you and other natural "
+"materials, it won't degrade much with age.  Maybe that's less of a bad thing "
+"now."
+msgstr ""
+
+#. ~ Description of "Lycra patch"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A six-inch square patch of synthetic fabric blended with stretchy Lycra "
+"fibers.  It could be used to make flexible yet strong clothing.  Stylish, but"
+" bad for the environment; at least you're recycling it."
+msgstr ""
+
+#. ~ Description of "large plastic sheet"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A large sheet of flexible plastic, the sort that might have been used for "
+"commercial wrapping or for weather-sealing a home."
+msgstr ""
+
+#. ~ Description of "plastic sheet"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A small sheet of flexible plastic, like a cut-up garbage bag.  It might be "
+"useful for waterproofing clothes."
+msgstr ""
+
+#. ~ Description of "polycarbonate sheet"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A polycarbonate sheet that can be used for, among other things, vacuum "
+"molding."
+msgstr ""
+
+#. ~ Description of "rigid plastic sheet"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A large, rigid sheet of transparent polycarbonate, useful for all manner of "
+"things; from construction to art, or even amateur snowboarding."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "panoramic lens"
+msgid_plural "panoramic lenses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "panoramic lens"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A relatively broad strip of chemical and impact-resistant polycarbonate "
+"plastic, most commonly used for the construction of wide-view visors and "
+"single-element eye pieces that offer maximal vision."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "inhalation valve"
+msgid_plural "inhalation valves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "inhalation valve"
+#: data/json/items/resources/plastic.json
+msgid ""
+"An essential component of any gas mask, this is a small one-way valve that "
+"allows purified air to pass from a gas respirator's filter element to the "
+"mask's interior, delivering safe, breathable air to one's lungs."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/plastic.json
+msgid "40mm filter port"
+msgid_plural "40mm filter ports"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40mm filter port"
+#: data/json/items/resources/plastic.json
+msgid ""
+"A compact plastic and metal housing with a threaded exterior, designed to "
+"retain a screwed-on 40-mm canister filter and allow the airtight passage of "
+"air from the filter media to a gas mask's inhalation valve."
+msgstr ""
+
+#. ~ Description of "flaking rock"
+#: data/json/items/resources/stone.json
+msgid ""
+"A rock the size of a baseball which chips in a semi-predictable way if "
+"struck, leaving a sharp edge.  Makes a decent melee weapon, and is also good "
+"for throwing at enemies."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/stone.json
+msgid "field stone"
+msgid_plural "field stones"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "field stone"
+#: data/json/items/resources/stone.json
+msgid ""
+"A medium, flatish, heavy rock, big enough and flat enough to be used as a "
+"block in field stone walls."
+msgstr ""
+
+#. ~ Description of "large rock"
+#: data/json/items/resources/stone.json
+msgid ""
+"A large, heavy rock, big enough to be used as a primitive anvil or shaped "
+"into larger stone items."
+msgstr ""
+
+#. ~ Description of "fiber insulation batt"
+#: data/json/items/resources/stone.json
+msgid ""
+"A foil-wrapped batt of fibrous insulation; fire- and moisture-resistant, it's"
+" used for hot appliances like dishwashers and ovens."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/stone.json
+msgid "bone replica"
+msgid_plural "bone replicas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bone replica"
+#: data/json/items/resources/stone.json
+msgid "A plaster replica of a bone."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/stone.json
+msgid "large bone replica"
+msgid_plural "large bone replicas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large bone replica"
+#: data/json/items/resources/stone.json
+msgid "A plaster replica of a huge bone."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/stone.json
+msgid "bone fossil"
+msgid_plural "bone fossils"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bone fossil"
+#: data/json/items/resources/stone.json
+msgid "A fossilized bone.  Not good to eat."
+msgstr ""
+
+#. ~ Description of "large bone replica"
+#: data/json/items/resources/stone.json
+msgid "A huge fossilized bone.  Not good to eat."
+msgstr ""
+
+#. ~ Description of "grass yarn"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Primitive yarn made from coarse plant fibers like straw or grass.  Too thick "
+"to sew with, but could be woven into a crude sheet of fabric."
+msgstr ""
+
+#. ~ Description of "cotton scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of cotton, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of, but they "
+"can be recycled into some thread if you really want."
+msgstr ""
+
+#. ~ Description of "faux fur scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of faux fur, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "felt scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of felt, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of, but they "
+"can be recycled into some wool fiber if you really want."
+msgstr ""
+
+#. ~ Description of "fur scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of fur, waste material from tailoring"
+" projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "Kevlar scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of Kevlar fabric, waste material from"
+" tailoring projects.  Normally it would be disposed of, but since Kevlar is "
+"very difficult to make in a post-apocalyptic world, it might be worth "
+"recycling it for Kevlar thread."
+msgstr ""
+
+#. ~ Description of "leather scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of leather, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "Lycra scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of Lycra, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "neoprene scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of neoprene, waste material from "
+"tailoring projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "synthetic fabric scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of synthetic fabric, waste material "
+"from tailoring projects.  Not useful for much and usually disposed of."
+msgstr ""
+
+#. ~ Description of "Nomex scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A handful of oddly-shaped smallish bits of heat-resistant Nomex fabric, waste"
+" material from tailoring projects.  Normally it would be disposed of, but "
+"since Nomex is very difficult to make in a post-apocalyptic world, it might "
+"be worth recycling it for Nomex thread."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "scraps of carpet"
+msgid_plural "scraps of carpet"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scraps of carpet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A misshapen section of loose carpet.  Not useful for much on its own and can "
+"be discarded."
+msgstr ""
+
+#. ~ Description of "wool staple"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A natural cluster of wool fibers.  Could be processed into felt patches or "
+"yarn."
+msgstr ""
+
+#. ~ Description of "fur patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A small bolt of fur from an animal, roughly six inches square.  Can be made "
+"into patchwork fur sheets or used to repair fur fabric."
+msgstr ""
+
+#. ~ Description of "faux fur patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A small bolt of garishly-colored faux fur, roughly six inches square.  Can be"
+" made into patchwork faux fur sheets or used to repair faux fur fabric."
+msgstr ""
+
+#. ~ Description of "leather patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A roughly six-inch square patch of leather, could be used to repair clothing "
+"and make smaller leather crafts."
+msgstr ""
+
+#. ~ Description of "felt patch"
+#: data/json/items/resources/tailoring.json
+msgid "A small, six-inch square patch of felt."
+msgstr ""
+
+#. ~ Description of "Nomex patch"
+#: data/json/items/resources/tailoring.json
+msgid "A six-inch square patch of Nomex fire-resistant fabric."
+msgstr ""
+
+#. ~ Description of "cured hide"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A rolled-up animal hide which has been scraped of extraneous hair and flesh "
+"and treated to prevent decay.  It still requires tanning to become usable "
+"leather."
+msgstr ""
+
+#. ~ Description of "tanned hide"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A folded 12-inch by 24-inch sheet of leather made from carefully tanned "
+"animal hide.  Can be cut up or used as is."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "leather sheet"
+msgid_plural "leather sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "leather sheet"
+#: data/json/items/resources/tailoring.json
+msgid "A 12-inch by 24-inch sheet of leather.  Can be cut up or used as is."
+msgstr ""
+
+#. ~ Description of "patchwork leather sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A folded 12-inch by 24-inch sheet of leather sewn together from patches.  Can"
+" be cut up or used as is."
+msgstr ""
+
+#. ~ Description of "cured pelt"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A rolled-up animal hide which has been scraped of extraneous hair and flesh "
+"and treated to prevent decay.  It still requires tanning to become usable "
+"fur."
+msgstr ""
+
+#. ~ Description of "tanned pelt"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A folded sheet of fur made from carefully tanned animal pelt.  Can be cut up "
+"or used as is."
+msgstr ""
+
+#. ~ Description of "patchwork fur sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of fur sewn together from patches.  Can be cut up "
+"or used as is."
+msgstr ""
+
+#. ~ Description of "cotton sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of cotton fabric, suitable for making clothing.  "
+"You can use it to stop bleeding, but it is very wasteful."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork cotton sheet"
+msgid_plural "patchwork cotton sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork cotton sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of cotton sewn together from patches of various "
+"clothing parts.  Suitable for making clothing if you lack proper material "
+"sheets."
+msgstr ""
+
+#. ~ Description of "faux fur sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of colorful faux fur, suitable for making "
+"clothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork faux fur sheet"
+msgid_plural "patchwork faux fur sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork faux fur sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of faux fur sewn together from mismatched patches."
+"  Suitable for making clothing if you lack proper material sheets, but the "
+"bright, clashing colors might end up making you look like a diseased Muppet."
+msgstr ""
+
+#. ~ Description of "felt sheet"
+#: data/json/items/resources/tailoring.json
+msgid "A 12-inch by 24-inch sheet of felt, suitable for making clothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork felt sheet"
+msgid_plural "patchwork felt sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork felt sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of felt sewn together from patches.  Suitable for "
+"making clothing if you lack proper material sheets."
+msgstr ""
+
+#. ~ Description of "Kevlar sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of loose-woven Kevlar synthetic fabric, suitable "
+"for making durable cut and stab resistant clothing.  While protective, this "
+"kind of Kevlar is not suitable for making ballistic gear due to the "
+"difference in weave tightness."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork Kevlar sheet"
+msgid_plural "patchwork Kevlar sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork Kevlar sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of fabric sewn together from Kevlar patches, "
+"suitable for making durable cut and stab resistant clothing.  This would be "
+"out of the question for ballistic Kevlar but the simpler, looser weave of "
+"this variety means it is fine to use if you lack proper material sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "Kevlar patch"
+msgid_plural "Kevlar patches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Kevlar patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 6-inch square patch of loose-woven Kevlar, suitable for repairing cut and "
+"stab resistant clothing or reassembling into a patchwork sheet for sewing."
+msgstr ""
+
+#. ~ Description of "Lycra sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A sheet of synthetic fabric blended with stretchy Lycra fibers, suitable for "
+"making flexible, yet strong clothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "ballistic Kevlar panel"
+msgid_plural "ballistic Kevlar panels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ballistic Kevlar panel"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A small, 16-layer thick ballistic Kevlar panel.  This kind of Kevlar is "
+"precision-made by machine and features an extremely tight weave which cannot "
+"be replicated by hand.  Due to this, any damage incurred to your ballistic "
+"armor will necessitate complete replacement with a new panel.  It is not as "
+"effective as loose-woven Kevlar at stopping stab wounds, but it has no equal "
+"against the threat posed by firearms."
+msgstr ""
+
+#. ~ Description of "rigid Kevlar plate"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A compressed panel of Kevlar treated with epoxy or other adhesive.  It could "
+"be used to repair items made of rigid Kevlar, and makes a decent substitute "
+"for damaged carbon fiber and the like even if it isn't exactly the same."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork Lycra sheet"
+msgid_plural "patchwork Lycra sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork Lycra sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12-inch by 24-inch sheet of fabric sewn together from Lycra patches.  "
+"Suitable for making flexible, yet strong clothing if you lack proper material"
+" sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork neoprene sheet"
+msgid_plural "patchwork neoprene sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork neoprene sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A sheet of neoprene sewn together from patches, with waterproofed seams.  "
+"Suitable for making underwater gear if you lack proper material sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork Nomex sheet"
+msgid_plural "patchwork Nomex sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork Nomex sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A sheet of Nomex synthetic fabric, sewn together from patches using Nomex "
+"thread.  Suitable for making heat-resistant clothing if you lack proper "
+"material sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork synthetic fabric sheet"
+msgid_plural "patchwork synthetic fabric sheet"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "gambeson batting"
+msgid_plural "clumps of gambeson batting"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "gambeson batting"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A pile of shredded fabric, dry grass, hair or other cheap materials which "
+"could be used to stuff the fabric layers of a gambeson to create armor more "
+"cheaply and easily than properly layering and quilting the entire product."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "Kevlar thread"
+msgid_plural "Kevlar thread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Kevlar thread"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Very durable Kevlar thread that would be particularly useful for making "
+"ballistic armor, though it's fine to use in place of normal thread too, in "
+"most cases.  Making armor-grade Kevlar sheets from this would need a "
+"particularly tight weave, and so would require some specialized machinery."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "Nomex thread"
+msgid_plural "Nomex thread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Nomex thread"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Heat-resistant Nomex thread that would be particularly useful for making heat"
+" protection gear, though it's fine to use in place of normal thread too, in "
+"most cases."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "denim sheet"
+msgid_plural "denim sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "denim sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12 inch by 24 inch sheet of durable blue denim, suitable for making jeans, "
+"jorts, or jirts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "denim scraps"
+msgid_plural "denim scraps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "denim scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Oddly-shaped smallish denim patches, waste material from tailoring projects."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "denim patch"
+msgid_plural "denim patches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "denim patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A small, 6 inch square patch of blue denim.  It could be used to repair items"
+" made of denim or stitched into patchwork sheets for tailoring projects."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork denim sheet"
+msgid_plural "patchwork denim sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork denim sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A selection of various sections of denim, sewn together in a patchwork "
+"fashion.  Suitable for tailoring, though it's much less time-efficient than "
+"if using proper material sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "canvas sheet"
+msgid_plural "canvas sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A 12 inch by 24 inch sheet of durable and waterproof waxed canvas fabric, "
+"suitable for making tough bags and clothing."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "heavy duty thread"
+msgid_plural "heavy duty thread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy duty thread"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Some tough canvas-weight thread, sturdier than ordinary thread.  You could "
+"meticulously weave this into a sheet of canvas cloth.  It would also be "
+"useful for stitching such sheets together, though it's fine to use for normal"
+" tailoring projects too."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "canvas scraps"
+msgid_plural "canvas scraps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas scraps"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"Oddly-shaped smallish bits of canvas, waste material from tailoring projects."
+"  Not useful for much and usually disposed of, but can be recycled into some "
+"tough thread."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "canvas patch"
+msgid_plural "canvas patches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "canvas patch"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A small, 6 inch square patch of tough canvas.  It could be used to repair "
+"items made of canvas or stitched into patchwork sheets for tailoring "
+"projects."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "patchwork canvas sheet"
+msgid_plural "patchwork canvas sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "patchwork canvas sheet"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A selection of various sections of canvas, sewn together in a patchwork "
+"fashion.  Suitable for tailoring, though it's much less time-efficient than "
+"if using proper material sheets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/tailoring.json
+msgid "fabric strap"
+msgid_plural "fabric straps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fabric strap"
+#: data/json/items/resources/tailoring.json
+msgid ""
+"A strip of broad, flat cotton, 42 inches in length, with a metal adjustment "
+"buckle threaded in the center.  Normally used as a shoulder strap for bags, "
+"its ends are usually sown about a corresponding container's D-rings."
+msgstr ""
+
+#. ~ Description of "log"
+#: data/json/items/resources/wood.json
+msgid ""
+"A large log of wood, cut from a tree.  (a)ctivate a wood axe or wood saw to "
+"cut it into planks."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "soaking long pole"
+msgid_plural "soaking long poles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "soaking long pole"
+#: data/json/items/resources/wood.json
+msgid ""
+"A stout, ten-foot pole.  Could be used similarly to a spear.  It's currently "
+"soaked with oil and quite slippery.  Once the oil penetrates the wood it can "
+"be wiped down and used for further projects."
+msgstr ""
+
+#. ~ "msg" action message of item "soaking long pole"
+#: data/json/items/resources/wood.json
+msgid "You wipe down the long pole."
+msgstr ""
+
+#. ~ "not_ready_msg" action message of item "soaking long pole"
+#: data/json/items/resources/wood.json
+msgid "The long pole is still soaking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "soaking spear shaft"
+msgid_plural "soaking spear shafts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "soaking spear shaft"
+#: data/json/items/resources/wood.json
+msgid ""
+"A long stick carved and sanded into a smooth staff with a slight taper, for "
+"use in making spears.  It's currently soaked with oil and quite slippery.  "
+"Once the oil penetrates the wood it can be wiped down and used for further "
+"projects."
+msgstr ""
+
+#. ~ "msg" action message of item "soaking spear shaft"
+#: data/json/items/resources/wood.json
+msgid "You wipe down the spear shaft."
+msgstr ""
+
+#. ~ "not_ready_msg" action message of item "soaking spear shaft"
+#: data/json/items/resources/wood.json
+msgid "The spear shaft is still soaking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "spear shaft"
+msgid_plural "spear shafts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "spear shaft"
+#: data/json/items/resources/wood.json
+msgid ""
+"A long stick, sanded and treated with oil for integrity and carved into a "
+"smooth staff with a slight taper, for use in making spears.  It can also be "
+"used as a makeshift quarterstaff as-is, but is too thin to be very effective "
+"for just hitting people."
+msgstr ""
+
+#. ~ Description of "plank"
+#: data/json/items/resources/wood.json
+msgid ""
+"A flat, thick plank of wood, like a 2 by 4 or similar piece of dimensional "
+"lumber.  Makes a decent melee weapon if you're desperate, and can be used for"
+" all kinds of construction projects."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "tonewood"
+msgid_plural "blocks of tonewood"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tonewood"
+#: data/json/items/resources/wood.json
+msgid ""
+"A block of tonally appropriate wood that has been air dried for a year in "
+"preparation for being turned into a musical instrument."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "tuning peg"
+msgid_plural "tuning pegs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tuning peg"
+#: data/json/items/resources/wood.json
+msgid ""
+"Tuning pegs go on stringed instruments to both provide an anchor for the "
+"strings and to control the tightness of the wire which in turn controls the "
+"tune of the notes produced."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+#: data/mods/Xedra_Evolved/items/weapon_copy_extensions.json
+msgid "short plank"
+msgid_plural "short planks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "short plank"
+#: data/json/items/resources/wood.json
+msgid ""
+"A short 2 by 4 plank of wood.  While less common and smaller than its 4 foot "
+"cousin it can still be very useful in carpentry."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/resources/wood.json
+msgid "long plank"
+msgid_plural "long planks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

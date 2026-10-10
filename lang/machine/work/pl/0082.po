@@ -1,0 +1,1423 @@
+# Batch 82 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "close helms"
+msgstr ""
+
+#. ~ Description of the category "close helms"
+#. ~ Description of the category "medium steel close helms"
+#. ~ Description of the category "high steel close helms"
+#. ~ Description of the category "hardened steel close helms"
+#. ~ Description of the category "tempered steel close helms"
+#. ~ Description of the category "medium steel heavy close helms"
+#. ~ Description of the category "high steel heavy close helms"
+#. ~ Description of the category "hardened steel heavy close helms"
+#. ~ Description of the category "tempered steel heavy close helms"
+#: data/json/recipes/nested.json
+msgid "Recipes related to creating close helms to protect the head."
+msgstr ""
+
+#. ~ Description of the category "mild steel close helms"
+#. ~ Description of the category "mild steel heavy close helms"
+#: data/json/recipes/nested.json
+msgid "Recipes related to creating mild steel close helms to protect the head."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "heavy close helms"
+msgstr ""
+
+#. ~ Description of the category "heavy close helms"
+#: data/json/recipes/nested.json
+msgid "Recipes related to creating heavy close helms to protect the head."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel heavy close helms"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel heavy close helms"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel heavy close helms"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel heavy close helms"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel heavy close helms"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "firearm primers"
+msgstr ""
+
+#. ~ Description of the category "firearm primers"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing primers, the impact explosives used to "
+"initiate the combustion of gunpowder to launch bullets from firearms."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "ammunition casings"
+msgstr ""
+
+#. ~ Description of the category "ammunition casings"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing casings for ammunition."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "attachment mounts"
+msgstr ""
+
+#. ~ Description of the category "attachment mounts"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to making mounts for attachments on older or makeshift guns."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "bionic weaponry"
+msgstr ""
+
+#. ~ Description of the category "bionic weaponry"
+#: data/json/recipes/nested.json
+msgid "Recipes for practice with bionic weaponry for combat."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "axes"
+msgstr ""
+
+#. ~ Description of the category "axes"
+#: data/json/recipes/nested.json
+msgid "Recipes for combat practice with axes."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "cutting swords"
+msgstr ""
+
+#. ~ Description of the category "cutting swords"
+#: data/json/recipes/nested.json
+msgid "Recipes for combat practice of slashing swords of all sizes."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "stabbing swords"
+msgstr ""
+
+#. ~ Description of the category "stabbing swords"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes for combat practice of thrusting swords, which require a different "
+"training from just slashing with your sword."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "spears and polearms"
+msgstr ""
+
+#. ~ Description of the category "spears and polearms"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes for combat practice with long pointed objects, like spears and "
+"polearms."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "knives and shivs"
+msgstr ""
+
+#. ~ Description of the category "knives and shivs"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes for combat practice with small pointed objects, like knives and "
+"shivs."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "batons and quarterstaves"
+msgstr ""
+
+#. ~ Description of the category "batons and quarterstaves"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes for combat practice with thin, stick-like bludgeons like batons and "
+"quarterstaves."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "maces and great hammers"
+msgstr ""
+
+#. ~ Description of the category "maces and great hammers"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes for combat practice with weighty, smashing bludgeons, like maces and "
+"great hammers."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "firearms CQC"
+msgstr ""
+
+#. ~ Description of the category "firearms CQC"
+#: data/json/recipes/nested.json
+msgid "Recipes for CQC practice with firearms."
+msgstr ""
+
+#. ~ Description of the category "arming swords"
+#: data/json/recipes/nested.json
+msgid "Recipes for making arming swords."
+msgstr ""
+
+#. ~ Description of the category "broadswords"
+#: data/json/recipes/nested.json
+msgid "Recipes for making broadswords."
+msgstr ""
+
+#. ~ Description of the category "cavalry sabers"
+#: data/json/recipes/nested.json
+msgid "Recipes for making cavalry sabers."
+msgstr ""
+
+#. ~ Description of the category "cutlasses"
+#: data/json/recipes/nested.json
+msgid "Recipes for making cutlasses."
+msgstr ""
+
+#. ~ Description of the category "estocs"
+#: data/json/recipes/nested.json
+msgid "Recipes for making estocs."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "falxes"
+msgstr ""
+
+#. ~ Description of the category "falxes"
+#: data/json/recipes/nested.json
+msgid "Recipes for making falxes."
+msgstr ""
+
+#. ~ Description of the category "jian"
+#: data/json/recipes/nested.json
+msgid "Recipes for making jian."
+msgstr ""
+
+#. ~ Description of the category "katana"
+#: data/json/recipes/nested.json
+msgid "Recipes for making katana."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "kriegsmessers"
+msgstr ""
+
+#. ~ Description of the category "kriegsmessers"
+#: data/json/recipes/nested.json
+msgid "Recipes for making kriegsmessers."
+msgstr ""
+
+#. ~ Description of the category "longswords"
+#: data/json/recipes/nested.json
+msgid "Recipes for making longswords."
+msgstr ""
+
+#. ~ Description of the category "nodachi"
+#: data/json/recipes/nested.json
+msgid "Recipes for making nodachi."
+msgstr ""
+
+#. ~ Description of the category "rapiers"
+#: data/json/recipes/nested.json
+msgid "Recipes for making rapiers."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "shamshirs"
+msgstr ""
+
+#. ~ Description of the category "shamshirs"
+#: data/json/recipes/nested.json
+msgid "Recipes for making shamshirs."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "talwars"
+msgstr ""
+
+#. ~ Description of the category "talwars"
+#: data/json/recipes/nested.json
+msgid "Recipes for making talwars."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "kilijes"
+msgstr ""
+
+#. ~ Description of the category "kilijes"
+#: data/json/recipes/nested.json
+msgid "Recipes for making kilijes."
+msgstr ""
+
+#. ~ Description of the category "survival knives"
+#: data/json/recipes/nested.json
+msgid "Recipes for making survival knives."
+msgstr ""
+
+#. ~ Description of the category "trench knives"
+#: data/json/recipes/nested.json
+msgid "Recipes for making trench knives."
+msgstr ""
+
+#. ~ Description of the category "kukris"
+#: data/json/recipes/nested.json
+msgid "Recipes for making kukris."
+msgstr ""
+
+#. ~ Description of the category "wakizashi"
+#: data/json/recipes/nested.json
+msgid "Recipes for making wakizashi."
+msgstr ""
+
+#. ~ Description of the category "zweihänders"
+#: data/json/recipes/nested.json
+msgid "Recipes for making zweihänders."
+msgstr ""
+
+#. ~ Description of the category "battle axes"
+#: data/json/recipes/nested.json
+msgid "Recipes for making battle axes."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "macuahuitls"
+msgstr ""
+
+#. ~ Description of the category "macuahuitls"
+#: data/json/recipes/nested.json
+msgid "Recipes for making macuahuitls."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel bladed macuahuitls"
+msgstr ""
+
+#. ~ Description of the category "steel bladed macuahuitls"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing different qualities of steel bladed "
+"macuahuitls."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tepoztopilis"
+msgstr ""
+
+#. ~ Description of the category "tepoztopilis"
+#: data/json/recipes/nested.json
+msgid "Recipes for making tepoztopilis."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel bladed tepoztopilis"
+msgstr ""
+
+#. ~ Description of the category "steel bladed tepoztopilis"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing different qualities of steel bladed "
+"tepoztopilis."
+msgstr ""
+
+#. ~ Description of the category "atlatl spears"
+#: data/json/recipes/nested.json
+msgid "Recipes for making atlatl spears."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "methanol fuel cartridges"
+msgstr ""
+
+#. ~ Description of the category "methanol fuel cartridges"
+#: data/json/recipes/nested.json
+msgid "Recipes related to refilling methanol fuel cartridges."
+msgstr ""
+
+#. ~ Description of the category "scrap aluminum"
+#: data/json/recipes/nested.json
+msgid "Recipes related to creating scrap aluminum."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "canvas aketons"
+msgstr ""
+
+#. ~ Description of the category "canvas aketons"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to canvas cloth armor meant to be worn under other armor."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "canvas gambesons"
+msgstr ""
+
+#. ~ Description of the category "canvas gambesons"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to thicker canvas cloth armor meant to be worn standalone."
+msgstr ""
+
+#. ~ Description of the category "canvas arming pants"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth pants made of canvas."
+msgstr ""
+
+#. ~ Description of the category "canvas arming gloves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth gloves made of canvas."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "canvas coifs"
+msgstr ""
+
+#. ~ Description of the category "canvas coifs"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth hoods made of canvas."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "nylon aketons"
+msgstr ""
+
+#. ~ Description of the category "nylon aketons"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to synthetic fabric armor meant to be worn under other armor."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "nylon gambesons"
+msgstr ""
+
+#. ~ Description of the category "nylon gambesons"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to thicker synthetic fabric armor meant to be worn "
+"standalone."
+msgstr ""
+
+#. ~ Description of the category "nylon arming pants"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth pants made of synthetic fabric."
+msgstr ""
+
+#. ~ Description of the category "nylon arming gloves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth gloves made of synthetic fabric."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "nylon coifs"
+msgstr ""
+
+#. ~ Description of the category "nylon coifs"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth hoods made of synthetic fabric."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "wool aketons"
+msgstr ""
+
+#. ~ Description of the category "wool aketons"
+#: data/json/recipes/nested.json
+msgid "Recipes related to wool armor meant to be worn under other armor."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "wool gambesons"
+msgstr ""
+
+#. ~ Description of the category "wool gambesons"
+#: data/json/recipes/nested.json
+msgid "Recipes related to thicker wool armor meant to be worn standalone."
+msgstr ""
+
+#. ~ Description of the category "wool arming pants"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth pants made of wool."
+msgstr ""
+
+#. ~ Description of the category "wool arming gloves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth gloves made of wool."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "wool coifs"
+msgstr ""
+
+#. ~ Description of the category "wool coifs"
+#: data/json/recipes/nested.json
+msgid "Recipes related to armored cloth hoods made of wool."
+msgstr ""
+
+#. ~ Description of the category "pemmican"
+#: data/json/recipes/nested.json
+msgid "Recipes related to making pemmican."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "chairs"
+msgstr ""
+
+#. ~ Description of the category "chairs"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing chairs."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "stools"
+msgstr ""
+
+#. ~ Description of the category "stools"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing stools."
+msgstr ""
+
+#. ~ Description of the category "planks"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing 4 ft planks."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "short planks"
+msgstr ""
+
+#. ~ Description of the category "short planks"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing 2 ft planks."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "wooden posts"
+msgstr ""
+
+#. ~ Description of the category "wooden posts"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing 4 ft wooden posts."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "short wooden posts"
+msgstr ""
+
+#. ~ Description of the category "short wooden posts"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing 2 ft wooden posts."
+msgstr ""
+
+#. ~ Description of the category "wooden posts"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing all wooden posts."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "inactive bots"
+msgstr ""
+
+#. ~ Description of the category "inactive bots"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing deployable robots."
+msgstr ""
+
+#. ~ Description of the category "planks"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing all planks."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel splint arm guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel splint arm guards"
+#. ~ Description of the category "medium steel splint arm guards"
+#. ~ Description of the category "high steel splint arm guards"
+#. ~ Description of the category "hardened steel splint arm guards"
+#. ~ Description of the category "tempered steel splint arm guards"
+#. ~ Description of the category "steel splint arm guards"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of splint arm guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel splint arm guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel splint arm guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel splint arm guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel splint arm guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel splint arm guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel elbow guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel elbow guards"
+#. ~ Description of the category "medium steel elbow guards"
+#. ~ Description of the category "high steel elbow guards"
+#. ~ Description of the category "hardened steel elbow guards"
+#. ~ Description of the category "tempered steel elbow guards"
+#. ~ Description of the category "steel elbow guards"
+#: data/json/recipes/nested.json
+msgid "Recipes related to forging various sizes of elbow guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel elbow guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel elbow guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel elbow guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel elbow guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel elbow guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel splint vambraces"
+msgstr ""
+
+#. ~ Description of the category "mild steel splint vambraces"
+#. ~ Description of the category "medium steel splint mail vambraces"
+#. ~ Description of the category "high steel splint mail vambraces"
+#. ~ Description of the category "hardened steel splint mail vambraces"
+#. ~ Description of the category "tempered steel splint mail vambraces"
+#. ~ Description of the category "splint mail vambraces"
+#: data/json/recipes/nested.json
+msgid "Recipes related to forging various sizes of splint mail vambraces."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel splint mail vambraces"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel splint mail vambraces"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel splint mail vambraces"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel splint mail vambraces"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "splint mail vambraces"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel splint greaves"
+msgstr ""
+
+#. ~ Description of the category "mild steel splint greaves"
+#. ~ Description of the category "medium steel splint greaves"
+#. ~ Description of the category "high steel splint greaves"
+#. ~ Description of the category "hardened steel splint greaves"
+#. ~ Description of the category "tempered steel splint greaves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of splint greaves."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel splint greaves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel splint greaves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel splint greaves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel splint greaves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "splint mail greaves"
+msgstr ""
+
+#. ~ Description of the category "splint mail greaves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to forging various sizes of splint mail greaves."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel splint leg guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel splint leg guards"
+#. ~ Description of the category "medium steel splint leg guards"
+#. ~ Description of the category "high steel splint leg guards"
+#. ~ Description of the category "hardened steel splint leg guards"
+#. ~ Description of the category "tempered steel splint leg guards"
+#. ~ Description of the category "steel splint leg guards"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of splint leg guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel splint leg guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel splint leg guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel splint leg guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel splint leg guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel splint leg guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel knee guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel knee guards"
+#. ~ Description of the category "medium steel knee guards"
+#. ~ Description of the category "high steel knee guards"
+#. ~ Description of the category "hardened steel knee guards"
+#. ~ Description of the category "tempered steel knee guards"
+#. ~ Description of the category "steel knee guards"
+#: data/json/recipes/nested.json
+msgid "Recipes related to forging various sizes of knee guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel knee guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel knee guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel knee guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel knee guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel knee guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel brigandines"
+msgstr ""
+
+#. ~ Description of the category "mild steel brigandines"
+#. ~ Description of the category "medium steel brigandines"
+#. ~ Description of the category "high steel brigandines"
+#. ~ Description of the category "hardened steel brigandines"
+#. ~ Description of the category "tempered steel brigandines"
+#. ~ Description of the category "brigandines"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of brigandines."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel brigandines"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel brigandines"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel brigandines"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel brigandines"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel brigandine coats"
+msgstr ""
+
+#. ~ Description of the category "mild steel brigandine coats"
+#. ~ Description of the category "medium steel brigandine coats"
+#. ~ Description of the category "high steel brigandine coats"
+#. ~ Description of the category "hardened steel brigandine coats"
+#. ~ Description of the category "tempered steel brigandine coats"
+#. ~ Description of the category "brigandine coats"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of brigandine coats."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel brigandine coats"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel brigandine coats"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel brigandine coats"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel brigandine coats"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "brigandine coats"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel brigandines with shoulder guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel brigandines with shoulder guards"
+#. ~ Description of the category "medium steel brigandines with shoulder
+#. guards"
+#. ~ Description of the category "high steel brigandines with shoulder guards"
+#. ~ Description of the category "hardened steel brigandines with shoulder
+#. guards"
+#. ~ Description of the category "tempered steel brigandines with shoulder
+#. guards"
+#. ~ Description of the category "brigandines with shoulder guards"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of brigandines with shoulder "
+"guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel brigandines with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel brigandines with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel brigandines with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel brigandines with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "brigandines with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel brigandine coats with shoulder
+#. guards"
+#. ~ Description of the category "medium steel brigandine coats with shoulder
+#. guards"
+#. ~ Description of the category "high steel brigandine coats with shoulder
+#. guards"
+#. ~ Description of the category "hardened steel brigandine coats with shoulder
+#. guards"
+#. ~ Description of the category "tempered steel brigandine coats with shoulder
+#. guards"
+#. ~ Description of the category "brigandine coats with shoulder guards"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of brigandine coats with "
+"shoulder guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "brigandine coats with shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel shoulder guards"
+msgstr ""
+
+#. ~ Description of the category "mild steel shoulder guards"
+#. ~ Description of the category "medium steel shoulder guards"
+#. ~ Description of the category "high steel shoulder guards"
+#. ~ Description of the category "hardened steel shoulder guards"
+#. ~ Description of the category "tempered steel shoulder guards"
+#. ~ Description of the category "steel shoulder guards"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of shoulder guards."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel shoulder guards"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel brigandine gloves"
+msgstr ""
+
+#. ~ Description of the category "steel brigandine gloves"
+#. ~ Description of the category "mild steel brigandine gloves"
+#. ~ Description of the category "medium steel brigandine gloves"
+#. ~ Description of the category "high steel brigandine gloves"
+#. ~ Description of the category "hardened steel brigandine gloves"
+#. ~ Description of the category "tempered steel brigandine gloves"
+#: data/json/recipes/nested.json
+msgid "Recipes related to constructing various sizes of brigandine gloves."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel brigandine gloves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel brigandine gloves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel brigandine gloves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel brigandine gloves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel brigandine gloves"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel chain partial aventails"
+msgstr ""
+
+#. ~ Description of the category "mild steel chain partial aventails"
+#. ~ Description of the category "medium steel chain partial aventails"
+#. ~ Description of the category "high steel chain partial aventails"
+#. ~ Description of the category "hardened steel chain partial aventails"
+#. ~ Description of the category "tempered steel chain partial aventails"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of chainmail partial aventails "
+"designed to attach to a metal cap and provide extra face and neck protection."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel chain partial aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel chain partial aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel chain partial aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel chain partial aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel chain partial aventails"
+msgstr ""
+
+#. ~ Description of the category "steel chain partial aventails"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various types and sizes of chainmail partial "
+"aventails designed to attach to a metal cap and provide extra face and neck "
+"protection."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel chain aventails"
+msgstr ""
+
+#. ~ Description of the category "mild steel chain aventails"
+#. ~ Description of the category "medium steel chain aventails"
+#. ~ Description of the category "high steel chain aventails"
+#. ~ Description of the category "hardened steel chain aventails"
+#. ~ Description of the category "tempered steel chain aventails"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of chainmail aventails designed"
+" to attach to a metal cap and provide extra face, neck and shoulder "
+"protection."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel chain aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel chain aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel chain aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel chain aventails"
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel chain aventails"
+msgstr ""
+
+#. ~ Description of the category "steel chain aventails"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various types and sizes of chainmail "
+"aventails designed to attach to a metal cap and provide extra face, neck and "
+"shoulder protection."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "mild steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets "
+"out of mild steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "medium steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets "
+"out of medium steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "high steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets "
+"out of high steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "hardened steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets "
+"out of hardened steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "tempered steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets "
+"out of tempered steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel nasal helmets"
+msgstr ""
+
+#. ~ Description of the category "steel nasal helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Viking style nasal helmets."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "mild steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets "
+"out of mild steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "medium steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets "
+"out of medium steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "high steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets "
+"out of high steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "hardened steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets "
+"out of hardened steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "tempered steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets "
+"out of tempered steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel turban helmets"
+msgstr ""
+
+#. ~ Description of the category "steel turban helmets"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style turban helmets."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "mild steel face masks"
+msgstr ""
+
+#. ~ Description of the category "mild steel face masks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel facemasks"
+" out of mild steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "medium steel face masks"
+msgstr ""
+
+#. ~ Description of the category "medium steel face masks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel facemasks"
+" out of medium steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "high steel face masks"
+msgstr ""
+
+#. ~ Description of the category "high steel face masks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel facemasks"
+" out of high steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "hardened steel face masks"
+msgstr ""
+
+#. ~ Description of the category "hardened steel face masks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel facemasks"
+" out of hardened steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "tempered steel face masks"
+msgstr ""
+
+#. ~ Description of the category "tempered steel face masks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel facemasks"
+" out of tempered steel."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/json/recipes/nested.json
+msgid "steel facemasks"
+msgstr ""
+
+#. ~ Description of the category "steel facemasks"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style steel "
+"facemasks."
+msgstr ""
+
+#. ~ Description of the category "mild steel mirror armor"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style mirror armor "
+"out of mild steel."
+msgstr ""
+
+#. ~ Description of the category "medium steel mirror armor"
+#: data/json/recipes/nested.json
+msgid ""
+"Recipes related to constructing various sizes of Arabic style mirror armor "
+"out of medium steel."
+msgstr ""

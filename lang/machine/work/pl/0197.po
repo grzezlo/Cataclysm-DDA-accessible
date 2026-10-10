@@ -1,0 +1,1868 @@
+# Batch 197 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_BASE_3"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "difficult research"
+msgstr ""
+
+#. ~ Description of recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_1"
+#. ~ Description of recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_2"
+#. ~ Description of recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_3"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "Research an innovative ways to generate and use energy."
+msgstr ""
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_1"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "novice energy research"
+msgstr ""
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_2"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "intermediate energy research"
+msgstr ""
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_ENERGY_3"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "difficult energy research"
+msgstr ""
+
+#. ~ Description of recipe crafting "EOC_INVENTOR_RESEARCH_AI_1"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid ""
+"Research a practical approaches to use different intelligent agents as a tool"
+" or weapon."
+msgstr ""
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_AI_1"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "intelligent agent research"
+msgstr ""
+
+#. ~ Description of recipe crafting "EOC_INVENTOR_RESEARCH_DIMENSION_1"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "Research practical methods of using netherium based physics."
+msgstr ""
+
+#. ~ Custom name for recipe crafting "EOC_INVENTOR_RESEARCH_DIMENSION_1"
+#: data/mods/Xedra_Evolved/recipes/inventor/researches.json
+msgid "dimensionalism research"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_construction.json
+msgid "Place a treesung wooden chair"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_construction.json
+msgid "Place a treesung wardrobe"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_construction.json
+msgid "Place a treesung table"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_construction.json
+msgid "Build treesung bed"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_construction.json
+msgid "Build treesung down bed"
+msgstr ""
+
+#. ~ Description of the category "treesinging"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "Recipes related to turning sung wood into furniture and items."
+msgstr ""
+
+#. ~ Description of recipe crafting "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a chair.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 3</color> and at least <color_yellow>300 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_TREESINGING_CHAIR_SPELL_CHECK"
+#. in nested EOCs in effect in EoC "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK" in
+#. result of recipe crafting "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a wooden chair all made of a single solid "
+"piece of wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_CHAIR_SPELL_CHECK" in nested EOCs in effect in EoC
+#. "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARDROBE_SPELL_CHECK" in nested EOCs in effect in
+#. EoC "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_TABLE_SPELL_CHECK" in nested EOCs in effect in EoC
+#. "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_SPELL_CHECK" in nested EOCs in effect in
+#. EoC "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_HELM_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK" in result of
+#. recipe crafting "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_MACE_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "Your attempts to sing the wood fail, ruining it!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_CHAIR_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK" in result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK"
+#. ~ Player message in false effect in EoC
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "You do not have enough mana to treesing the wood properly."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a wardrobe.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 6</color> and at least <color_yellow>750 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung wooden wardrobe"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARDROBE_SPELL_CHECK" in nested EOCs in effect in
+#. EoC "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_WARDROBE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a wardrobe all made of a single solid piece of"
+" wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a table.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 4</color> and at least <color_yellow>400 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_ARVORE_TREESINGING_TABLE_SPELL_CHECK"
+#. in nested EOCs in effect in EoC "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK" in
+#. result of recipe crafting "EOC_ARVORE_TREESINGING_TABLE_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a table all made of a single solid piece of "
+"wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a bed frame.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 2</color> and at least <color_yellow>200 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung wooden bed frame"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_BEDFRAME_SPELL_CHECK" in nested EOCs in effect in
+#. EoC "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_BEDFRAME_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a bed frame all made of a single solid piece "
+"of wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a helmet made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 5</color> and at least <color_yellow>500 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK"
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "verdant helm"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_HELM_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_HELM_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a helmet all made of a single solid piece of "
+"wood, with a cushioning of moss and green leaves underneath it, as though it "
+"had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a cuirass made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 8</color> and at least <color_yellow>950 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_VERDANT_CUIRASS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a cuirass all made of a single solid piece of "
+"wood, with a cushioning of moss and green leaves underneath it, as though it "
+"had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a set of gauntlets made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 7</color> and at least <color_yellow>850 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "verdant gauntlets"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_GAUNTLETS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a set of gauntlets all made of a single solid "
+"piece of wood, with a cushioning of moss and green leaves underneath it, as "
+"though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a set of leg guards made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 8</color> and at least <color_yellow>850 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "verdant leg guards"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_LEG_GUARDS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a set of leg guards all made of a single solid"
+" piece of wood, with a cushioning of moss and green leaves underneath it, as "
+"though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a set of boots made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 6</color> and at least <color_yellow>750 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "verdant boots"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_BOOTS_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a set of boots all made of a single solid "
+"piece of wood, with a cushioning of moss and green leaves underneath it, as "
+"though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a cloak made of living wood and leaves.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 5</color> and at least <color_yellow>500 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_VERDANT_CLOAK_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a cloak all made of a living leaves woven "
+"together with thin branches, as though it had grown that way in the depths of"
+" the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a self bow made of living wood and a thin vine.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 2</color> and at least <color_yellow>350 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung shortbow"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_SHORTBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a bow all made of a single piece of wood with "
+"a thin vine for a string, as though it had grown that way in the depths of "
+"the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a an enormous bow made of living wood and a thin vine.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 4</color> and at least <color_yellow>600 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_GREATBOW_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold an enormous bow all made of a single piece of "
+"wood with a thin vine for a string, as though it had grown that way in the "
+"depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a set of arrows made of living wood fletched with leaves.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 2</color> and at least <color_yellow>400 mana</color> to create the item."
+msgstr ""
+
+#. ~ Custom name for recipe crafting
+#. "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid "treesung arrows"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_ARROWS_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a set of arrows fletched with leaves, as "
+"though they had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a spear made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 1</color> and at least <color_yellow>200 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK" in result of
+#. recipe crafting "EOC_ARVORE_TREESINGING_SPEAR_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a spear all made of a single piece of wood, as"
+" though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a long spear made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 3</color> and at least <color_yellow>350 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_PIKE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a long spear all made of a single piece of "
+"wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a heavy mace made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 3</color> and at least <color_yellow>350 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_MACE_TREESUNG_SPELL_CHECK" in nested EOCs in effect
+#. in EoC "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK" in result of recipe
+#. crafting "EOC_ARVORE_TREESINGING_MACE_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a mace all made of a single piece of wood, as "
+"though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a quarterstaff made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 1</color> and at least <color_yellow>150 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK" in result
+#. of recipe crafting "EOC_ARVORE_TREESINGING_Q_STAFF_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a quarterstaff all made of a single piece of "
+"wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a heavy warhammer made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 4</color> and at least <color_yellow>400 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_WARHAMMER_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a warhammer all made of a single piece of "
+"wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a long spear crowned with a blade made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 5</color> and at least <color_yellow>500 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_NAGINATA_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a long staff with a sword blade at the end all"
+" made of a single piece of wood, as though it had grown that way in the "
+"depths of the forest."
+msgstr ""
+
+#. ~ Description of recipe crafting
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"Use your magick to turn treesung wood into a large knife made of living wood.\n"
+"\n"
+"You must have <color_yellow>Treesinging level 2</color> and at least <color_yellow>200 mana</color> to create the item."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_SPELL_CHECK" in nested EOCs in
+#. effect in EoC "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK" in
+#. result of recipe crafting
+#. "EOC_ARVORE_TREESINGING_BASELARD_TREESUNG_MANA_CHECK"
+#: data/mods/Xedra_Evolved/recipes/paraclesians/arvore_recipes.json
+msgid ""
+"As your song fades, you behold a large knife all made of a single piece of "
+"wood, as though it had grown that way in the depths of the forest."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid "You need blood to survive."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid "A blood spattered charnel room flashes in front of your eyes."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid "You lick your teeth thinking about blood."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"You dream of sneaking into a home through an open window late at night.  "
+"Walking through the darkened hallways, unerringly finding your way to a "
+"bedroom.  You stand at the foot of the bed staring down at the person "
+"sleeping in it.  Are they a man, woman or child?  You can't tell, all you "
+"know is they are filled with blood and you need it."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"In your dream, an early evening storm begins with you outside.  You feel the "
+"rain hitting you but it is thicker than water, more viscous.  You smell it "
+"first, before you look at your hands and realize the rain is blood.  You lean"
+" your head back and open your mouth wide to the rain falling into it."
+msgstr ""
+
+#. ~ Snippet in category "blood_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"You float above a house late at night watching someone enter through an open "
+"window.  You blink and you are now in a bedroom seeing a disturbing scene.  "
+"Someone who's face is shadowed where you can't see them is standing over a "
+"person lying on the bed.  You startle when you realize that you are the "
+"person lying on the bed.  You scream helplessly as the shadowed person bites "
+"into sleeping you's throat and blood sprays across the room.  You wake as "
+"your struggles slow and lessen."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid "You are sure you saw movement at the edge of your vision."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"The hair on the back of your neck rises as you hear a voice you remember from"
+" just out of sight."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"Your eye twitches on it's own for several minutes.  From the top corner near "
+"your temple down into the cheek."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"You dream about watching TV, it's a documentary about some bioweapon that got"
+" loose in Newfoundland.  A doctor is talking about how containment failed and"
+" health campaigns failed to eradicate it.  You recognize the voice, it's your"
+" voice.  As the credits play you see listed '<full_name> M.D.'  This seems "
+"worrying."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"You dream of walking down a long hallway with no definite beginning or end, "
+"portraits and mirrors alternate on the sides of the hallway.  Slowly you have"
+" a sneaking suspicion that your reflections aren't quite reflecting you.  "
+"Sometimes you spot out of the corner of your eyes distorted features, a mouth"
+" full of sharp teeth, different hair styles and colors, even horns.  Each "
+"time you turn and look though it's just your own reflection looking back at "
+"you.  You try one last time to catch your reflection and while you are "
+"staring into its eyes, you see the pupils track towards the portrait "
+"reflected behind you.  You turn your eyes to focus on the portrait reflection"
+" and there you are climbing out of the portrait mouth agape, full of too many"
+" needle sharp teeth, you quickly focus back at your reflection in the mirror "
+"and see only clear glass.  Before you can turn you feel a sharp pain in your "
+"shoulder."
+msgstr ""
+
+#. ~ Snippet in category "lotus_addiction_dream"
+#: data/mods/Xedra_Evolved/snippets/addiction_snippets.json
+msgid ""
+"You lounge in sunny glades, eating lotus blossoms while others frolic through"
+" the breeze.  You wake feeling calmer than normal and go back to less "
+"pleasant sleep."
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"One more to kill.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Your blood will contribute to a great cause, the end of all vampires.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid ""
+"\"I've slain thousands, each stronger than you.  Do not believe that you can "
+"kill me.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"It is all necessary, yet they all failed to understand.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"They tried to stop me, so I killed them all.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid ""
+"\"Most hunters are siding with the vampires.  I know as they tried to kill "
+"me, calling me a vampire.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Standing against me is standing against humanity.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"So thirsty… Need to drink…\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"I'll send you where you belong!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"The mentors still elude me.  You however, do not.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Vampires cannot truly be bargained with.  They must all die.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Never trust a vampire.  It will leave you open to their mind control.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Why did they hated me?  I only wanted to help them!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Their blood was so delicious.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"I need your blood!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"They aren't uniting against me aren't they?\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid ""
+"\"I'm just trying to kill all the vampires, and everyone trying to oppose me "
+"in this goal.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid ""
+"\"I can't understand why vampire hunters could want me dead.  I'm one of "
+"them!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid ""
+"\"They have started to attack me with the vampires' help!  Traitors, all of "
+"them!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_vampire_anathema
+#: data/mods/Xedra_Evolved/snippets/anathema_snippets.json
+msgid "\"Every other vampire will die, then I'll get rid of the last one.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_fetch_child
+#: data/mods/Xedra_Evolved/snippets/changeling_speech.json
+msgid "\"Won't you take me home with you?\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"You should be sleeping by now!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"You should be sleeping by now.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I'm going to eat you!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"SLEEP!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"Jump in my bag, it will be less painful that way.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"Another one awake past its bedtime.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"Those who do not sleep won't ever wake up.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I'm going to beat you until you sleep, one way or another.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"This time is for the sleeping, not for the wakeful.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"There is no excuse.  You sleep, or you die.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I am here to guard the sleepers.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I am here to kill the awake.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I won't let you wake them up.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid ""
+"\"They say being dead is akin to being asleep.  Sleep now, or you'll know "
+"what is it to be dead.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"So hungry.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"Need to eat.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"Their flesh and dreams are rotten.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"You will be fine food.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"The wakeful threaten the sleepers.  I cannot let that be.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"It is currently the sleepers' time.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"All who are awake during the sleepers' time are mine.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I wish for all to sleep well in this time.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"You are still able to sleep.  Why do you squander this gift?\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I will ensure that all who sleep won't be disturbed.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"I will ensure that all who cannot sleep will die.\""
+msgstr ""
+
+#. ~ Speech from speaker mon_sevenoclock_active
+#: data/mods/Xedra_Evolved/snippets/cryptid_speech.json
+msgid "\"For the last time: SLEEP!\""
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You have bad dreams."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Your dreams are terrifying."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, odd creatures circle you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream a demon under your bed brushes your hand."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, your heart races like you just faced a bogeyman."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream panic seizes you suddenly with no discernible reason."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, a torrent of cold sweat runs down your back."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream; not sleeping might be the preferable option."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Fear grips you in your dreams."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, terrifying creatures surround you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"An infinitely hot wind scorches your face in your dream, leaving nothing but "
+"charred bone."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Enormous gravity crushes you against the ground in your dream until your "
+"bones are reduced to fine dust."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A strong wind lifts you up into the sky in your dream, only to let you "
+"plummet to your death."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Inhuman giants relentlessly hunt you in your dreams."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You are a toy of an unspeakable power in your dreams."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "No one is willing to help you in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A shot to the face jolts you awake from your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, you feel no better than the shambling dead."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You dream it might be better to be dead than existing in constant agony."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In your dream, there is no one to ask for help."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "The world loses all its colors in your dream, leeching yours as well."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"In your dream, pitch-black darkness surrounds you, with something pursuing "
+"you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A sea of blood drowns you in your dream, rendering you unable to scream for "
+"help."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Shadows come to life in your dream, whispering your darkest fears."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of endlessly falling through a void with no escape."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your skin peels away in your dream, revealing nothing but emptiness "
+"underneath."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A room with no doors or windows traps you in your dream, the walls closing "
+"in."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You run through a forest in your dream where the trees are twisted faces "
+"screaming in agony."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A swarm of insects crawls out of your mouth and eyes in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are buried alive in your dream, hearing the dirt being shoveled over you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Strapped to a chair in your dream, a figure with a blank face approaches."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Reliving your worst memories on an endless loop haunts you in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Snakes slowly tighten their grip around you in your sleep."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"In a house of mirrors in your dream, decaying versions of yourself stare "
+"back."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your loved ones turn into monsters right before your eyes in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Lost in a labyrinth in your dream, the paths keep shifting and changing."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A train speeds towards a broken track with no way to stop it in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Naked and vulnerable on a stage, everyone laughs at you in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A shadowy figure chases you in your dream, and you can never escape."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In a graveyard in your dream, the tombstones have your name on them."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Paralyzed and unable to move, something approaches your bed in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Looking in a mirror in your dream, a stranger stares back."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your teeth fall out one by one in your dream, leaving you unable to speak."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Surrounded by whispering voices in your dream, you can't understand what they"
+" say."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your limbs turn to stone in your dream, making you unable to run from danger."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Stuck in an elevator in your dream, it keeps dropping and rising "
+"uncontrollably."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A field of dead flowers bursts into flames around you in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Lost at sea with no land in sight, something brushes against your leg in the "
+"water in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In a dark alley in your dream, every turn leads to a dead end."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "An abandoned hospital's walls bleed in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Trapped under ice in your dream, people pass by above, unable to see you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "In a deserted city in your dream, footsteps follow you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Surrounded by laughter that turns to screams in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Covered in a thick, suffocating fog in your dream, you can't find your way "
+"out."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Running, but your legs feel like they are made of lead in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Seeing your own grave in your dream, something is digging its way out."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Locked in a cage suspended over a bottomless pit in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"In a forest in your dream, the trees have eyes that watch your every move."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A house where the floors creak and groan as if alive in your dream."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A room where the walls ooze black, tar-like substance that smells of death."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"A giant spider weaves a web around you, and you can't move as it draws "
+"closer."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your body starts to melt in your dream, and you can feel every excruciating "
+"moment."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You wake up in a morgue drawer, and you can hear the whispers of the dead "
+"around you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"In a dilapidated asylum, the patients with grotesque deformities reach out "
+"for you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You see your reflection in a puddle, but it's someone else grinning back at "
+"you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are chained to a wall as water slowly fills the room, drowning you inch "
+"by inch."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"In an old mansion, faceless children hold your hand, leading you to a dark "
+"cellar."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You find yourself in a butcher's shop, and you're the one being carved up."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Walking through a field of corpses, their eyes follow your every step."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a church, and the congregation turns to reveal hollow, gaping "
+"mouths."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You fall into a pit of writhing maggots that consume you alive."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A carousel of dismembered bodies spins faster and faster around you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your limbs are twisted and contorted, leaving you unable to escape the "
+"horrors around you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are hunted by a monstrous creature that mimics the voices of your loved "
+"ones."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "A plague of rats swarms over you, biting and clawing at your flesh."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your skin turns to glass, and every movement causes it to crack and shatter."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are trapped in a house where every door leads to a room filled with "
+"horrors."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"The floor beneath you turns to quicksand, dragging you into the depths of "
+"darkness."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are on an operating table, and the surgeon has no face, only a blank, "
+"smooth surface."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You are in a museum where the exhibits come to life and hunt you down."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "Your veins fill with ice, freezing you from the inside out."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are forced to watch as your loved ones are tortured and you are unable to"
+" help."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You find yourself in a carnival where the clowns are grotesque monsters that "
+"feast on flesh."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a forest where the trees have faces that scream in agony as you "
+"pass by."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a small boat in the middle of a storm, and the waves are made of "
+"blood."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"Your body starts to rot while you are still alive, flesh falling away in "
+"chunks."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a classroom where the teacher is a corpse, and the lesson is your "
+"own demise."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a hospital where the doctors and nurses are stitched together from"
+" different bodies."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a burning building, and the flames have faces that mock your pain."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You are in a maze where the walls close in, crushing you slowly."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are buried alive in a coffin, and you can hear the dirt being shoveled on"
+" top."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a dungeon where the torturer is a shadowy figure with no eyes."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You are in a library where the books scream when you open them."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a graveyard where the tombstones bear your name, and the graves "
+"are open."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a swamp where the water is filled with hands that try to drag you "
+"under."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a laboratory where the experiments are on you, and the pain is "
+"excruciating."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a house where the walls bleed, and the floors are made of bones."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a factory where the machines have a mind of their own, and they "
+"want to crush you."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a forest where the animals speak in riddles and threats, mocking "
+"your fear."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You are in a cave where the walls close in, and the darkness is alive."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a room where the floor is covered in spiders, and they are "
+"crawling up your legs."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are on a bridge where the ropes snap, and you fall into an abyss with no "
+"end."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a field where the scarecrows come to life and chase you with "
+"knives."
+msgstr ""
+
+#. ~ Snippet in category "XE_BAD_DREAMS"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You are in a house where the paintings change every time you look away, "
+"showing your worst fears."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of falling through darkness."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of whistling winds as you stand on a mountaintop."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of the moon growing larger and larger, filling the sky."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You dream of walking through the forest and suddenly seeing an owl fly past "
+"you, so close you could touch it."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of something sitting on your chest, suffocating you."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid ""
+"You dream of slipping under dark water, none of your attempts to swim keeping"
+" you afloat."
+msgstr ""
+
+#. ~ Snippet in category "snippet_drained_by_lilit"
+#: data/mods/Xedra_Evolved/snippets/dreams.json
+msgid "You dream of standing in a dark room, being buffeted by silent wings."
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "bombing run"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"*A half-hour-long tape that films a static building in the middle of nowhere "
+"with a bright, clean sky in the background.  The building is tall, thick, and"
+" covered in some white mush, while the windows move in a zigzag pattern.  "
+"Twenty minutes later, the camera captures a heavy aircraft that starts to "
+"move in circles around the building.  In a few minutes, a massive volley "
+"erupted from the plane, which made the building rip and burn apart, and its "
+"dwellers - small spike-like creatures that move by rolling - quickly ran "
+"away, screaming in piercing shrieks while their white spikes melted.*"
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "morticians apprenticeship"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"need_to_discuss.mp4\n"
+"*It seems to be a part of some video for a newcomer mortician.*\n"
+"Host: … Oh, and also, do you remember those small pieces of metal we found covering the skin?  I recommend not throwing it away, but cleaning it up and storing it in some bag - apparently zebra departments really like to buy some of them for a whopping price.\n"
+"Cameraman: Do you know why?\n"
+"Host: I don't give a shit actually, but 50 bucks per month is 50 bucks per month."
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "the immovable bullet"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"record_17.06.mp3\n"
+"[Voice 1]: I'm here.\n"
+"[Voice 2]: And?\n"
+"[Voice 1]: As the report said.\n"
+"[Voice 2]: Fuck.\n"
+"*few seconds of complete silence*\n"
+"[Voice 2]: So it's completely impossible to move it?\n"
+"[Voice 1]: Correct, completely glued.\n"
+"*another few seconds of complete silence*\n"
+"[Voice 1]: So, in summary, we have a bullet, stuck in the air and completely immovable, in the middle of fucking nowhere.  I think I've seen something similar before…"
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "messages that shouldn't have been sent in the open"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"*cached messages in some chat app*\n"
+"B0yscout(Bravo 7): so, do you guys know what's going on?\n"
+"JackTrader(PD): wdym?\n"
+"B0yscout(Bravo 7): i mean the fuck is going on with the world?  when i just came here, you guys tried to solve a vampire disease, then a shifter overpopulation, and yesterday my unit happened to fight A MOTHERFUCKING ANGEL!  ANGEL!!!\n"
+"B0yscout(Bravo 7): am i tripping, or are we living in some junk novel, written by idiots without any sense of… eeh… you get it\n"
+"JackTrader(PD): oh\n"
+"JackTrader(PD): …\n"
+"JackTrader(PD): hmm, what do i say\n"
+"JackTrader(PD): it's actually pretty serious topic\n"
+"JackTrader(PD): i'd even say it's impossible to solve, because we can't really measure why this happens, and why that happens\n"
+"JackTrader(PD): but\n"
+"B0yscout(Bravo 7): :eyes:\n"
+"JackTrader(PD): we talked about it with @WHO and a few other folks from the paranormal department, and we think there are a few possibilities\n"
+"JackTrader(PD): the official one is that the portal shit is so massive, that the probability of us meeting something, that resembles our folklore is not that small\n"
+"JackTrader(PD): like you met a wheeled ball with feathers yesterday, but did you see a square of light, that spoke perfect english?\n"
+"JackTrader(PD): i did\n"
+"B0yscout(Bravo 7): i'm not surprised\n"
+"B0yscout(Bravo 7): i guess the juice is in the unofficial versions?\n"
+"JackTrader(PD): the first unofficial version, that we hope is correct, is that there were portal outbreaks before, and it's just not the first time planet Earth fights the vampire invasion or shit\n"
+"B0yscout(Bravo 7): why isn't it official?\n"
+"JackTrader(PD): because people are idiots, mostly.  Imagine if POTUS made a speech saying \"do you remember all this shit about satan and unicorns and loch ness?  well it's actually true.  except satan.  maybe\"\n"
+"B0yscout(Bravo 7): and?\n"
+"JackTrader(PD): you'd be surprised how much overlap there is between people who ~~think~~  thought unicorns are real, and people who think we should kill all jews\n"
+"B0yscout(Bravo 7): okay that makes sense\n"
+"B0yscout(Bravo 7): that's the only unofficial theory you discuss?\n"
+"JackTrader(PD): we thought about another one, but it's much, much worse\n"
+"JackTrader(PD): that the stuff, that invades our world, can connect to some sort of noosphere and thing, and can read our thoughts\n"
+"JackTrader(PD): as they know everything we are afraid of\n"
+"JackTrader(PD): demons\n"
+"JackTrader(PD): vampires\n"
+"JackTrader(PD): diseases\n"
+"JackTrader(PD): nuclear war\n"
+"B0yscout(Bravo 7): …\n"
+"B0yscout(Bravo 7): …\n"
+"B0yscout(Bravo 7): is it classified?\n"
+"JackTrader(PD): …oh shit "
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "Supernatural Abilities And Their Usage In Operative Work_5/6.mp4"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"SAATUIOW_1/6.mp4\n"
+"*The video seems to be a record of some drill in a large classroom.  The first few minutes are spent preparing the projector, then a person comes to the lectern*\n"
+"Good morning everyone, my name is *illegible*, and I am the assistant of doctor *illegible*.\n"
+"Today's lesson would be pretty general, because it's a theme on which we still lack information and a lot must be discussed.  We also don't have proper terms, so don't be surprised if part of it is picked from game slang and part from fantasy novels.  The lesson would be more than experimental.\n"
+"Okay.  You saw the name of the lesson before, it has a long, unreadable name, but overall it is described as \"magic\".  Yes, magic, because we still don't know why and don't know how it works.  You may hear a story about an altered objects that doesn't work, works in the wrong way, does something different, or even harms the user, but most of you don't know - No, Jamey, I know you know it, you are our consultant here, not a student.\n"
+"Yes, I forgot to present: this is Jamey, he is our retired field agent and a pretty experienced eater.  More on that later.\n"
+"So yes, you don't know… *The lecturer silently watches at Jamey for a few seconds*… that some \"subjects\" - I say \"subjects\", because some of them are not humans, we saw a similar result from apes, dogs, rats, and even, uh, was it a computer program?… Anyway, some \"subjects\" can not only touch these items without self-harm, but they can also, eh, use them?  It's not really \"using\", we think they'd rather \"redirect\" their paranormal properties into a more acceptable form.  Yes, they \"redirect\" the power, energy, mana, you name it, into a direction that gives them supernatural abilities.  They are not really limited, some individuals are able to use all of them, but most are not - the rules of these processes are unclear, so we classified them into a few branches…"
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "Supernatural Abilities And Their Usage In Operative Work_2/6.mp4"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"SAATUIOW_2/6.mp4\n"
+"…The first branch utilizes \"the knowledge\", people of this type \"know\" how to make tools, that seem impossible without decades of development or that violate a huge part of the physical laws we all know.  They are our most valuable resource: engineers that can build a railgun using M16 parts, assemble an EMP bomb using only a PlayStation and a few tools, a phone camera that sees through the walls, a Humvee engine that can use whiskey as fuel *cough cough*… yeah, the list of their abilities is pretty huge, and they can provide these tools to other users.  Sadly, they do not last long outside of their hands, breaking apart in a few weeks.\n"
+"- *illegible*\n"
+"No, there is no correlation between the user's IQ and the time it stopped working, we thought about it already.\n"
+"- *illegible*\n"
+"Yes, I know about Worm, and yes, it is surprisingly accurate in this part…\n"
+"…\n"
+"…\n"
+"Overall, their abilities are really wide, but it is really hard to differentiate them from their usefulness - currently we have only a few prototypes, useful for field agents like you, and a dozen of toothbrushes, modified to clean teeth better.  Two of them expect to be lethal.  Currently, most of them are busy with the \"Legion\" project in an attempt to turn the table, you may check about it later…"
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "Supernatural Abilities And Their Usage In Operative Work_3/6.mp4"
+msgstr ""
+
+#. ~ Snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid ""
+"SAATUIOW_3/6.mp4\n"
+"…The second branch utilizes, eh, \"the ethereal\" or \"extradimensional\" thingy, we like to name them \"dealers\".  Now I think it's a bad idea to split them like this, but anyway.  So yeah, it is easy to detect dealers, because some interdimensional creatures, usually hostile to humans, do not attack them.  We think they can kind of make a \"deal\" with sapient creatures, and yes, every creature they deal with is sapient, in one form or another, and I also don't understand how it works, that's what they told me.  Eeh, yeah, they \"deal\" with these creatures from the other side, they spend their life energy to merc them.  The one who was capable of talking said it was a pleasant dish, the same as our pancakes.  The ability to use such things is not cheap, and many dealers disappeared in unknown circumstances, but let's not talk about it…"
+msgstr ""
+
+#. ~ Name of a snippet in category "local_files_xedra"
+#. ~ Messages, logs and videos, that xedra agent may have on it's laptop
+#: data/mods/Xedra_Evolved/snippets/e_logs.json
+msgid "Supernatural Abilities And Their Usage In Operative Work_4/6.mp4"
+msgstr ""

@@ -1,0 +1,1769 @@
+# Batch 112 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of mission "Find the sunken helicopter"
+#: data/json/npcs/refugee_center/surface_visitors/NPC_old_guard_representative.json
+msgid ""
+"You got the location of a sunken helicopter, all that's left to do is find a "
+"way to get there."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/refugee_center/surface_visitors/NPC_scavenger_mercenary.json
+msgid "Well, thanks for the info.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/refugee_center/surface_visitors/NPC_visiting_scavenger.json
+msgid "Work here?  No, of course not.  <end_talking_leave>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/refugee_center/surface_visitors/NPC_visiting_scavenger.json
+msgid ""
+"You looking for a traveling companion?  I could use someone to watch my back."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/refugee_center/surface_visitors/NPC_visiting_scavenger.json
+msgid "Thanks!  <end_talking_leave>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid "About the gold you wanted…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid ""
+"Yeah!  Crazy shit.  They sent me to an office building to find a folder with "
+"a certain serial and get rid of it.  They didn't even care what was on it.  "
+"By the time I got there, though, the building was pretty much a wreck.  The "
+"folder had been sitting in a puddle for God knows how long, and there was "
+"nothing even remotely legible by then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid ""
+"As promised earlier, I'll let the Hub know that you're worth manufacturing "
+"some proper gear for.  Let 'em know that I sent you next time you talk with "
+"them and I'm sure they'll help you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid ""
+"Well, no.  It was obvious they just wanted to get rid of me, but I decided I wanted to show that I was useful.  They tell me to find a crashed drone somewhere in the surrounding area and bring it back here.  No directions, of course.  Y'know, go find this drone in the middle of the woods, it'll be easy.  But I had some tools in my bag, right?  And yours truly has repaired some drones in the park service.\"\n"
+"\n"
+"\"So it takes me a whole-ass afternoon, but I find their stupid drone stuck in a tree.  I can see the camera's still on, so I pick it up and I tell the lens: 'Hey, you want me to fix it too?'  And I do.  It was just a cracked frame and the wiring to the rotors was sliced up.  The propellers themselves were fine.  So I bring it out of the woods and turn it off.  Then I open up the casing, solder up the wires, and use superglue to hold the frame together, which wasn't perfect, but I figured it'd hold until it got back home.  Then I turned it back on, and wouldn't you know, it immediately starts up and sits there for a minute, like 'What the fuck?  Why am I working again?'  And then it flies away, and I walk my smug ass back home."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid ""
+"I guess I am, yeah.  Feels like a stupid fetch quest.\"  They suddenly pause."
+"  \"Hey.  If you happen across any gold out in the world, I'll pay you to "
+"bring it back for me.  Right now my assignment stipulates eight scrip per "
+"kilo, and I'd be willing to give you all of that.  I just want something else"
+" to do.  Just maybe don't mention it to the intercom, alright?  This is "
+"supposed to be my job."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/NPC_Cranberry_Foster.json
+msgid "I don't have 200 gold for you right now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/ROBOFAC_SURFACE_FREEMERCHANT.json
+msgid "When is the next shipment?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/ROBOFAC_SURFACE_FREEMERCHANT.json
+msgid "Around <interval>, if the caravan doesn't run into trouble."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/ROBOFAC_SURFACE_FREEMERCHANT.json
+msgid "Thanks for the info, bye."
+msgstr ""
+
+#. ~ Job description of "Mercenary" NPC class
+#. ~ An experienced survivor doing low importance work for Hub 01, or working
+#. under another ancillary. Has no access to Hub 01s custom gear.
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NC_ANCILLA_GRUNT.json
+msgid "Fighting in the name of Hub 01 and money, mostly money."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Ahh but if you want suggestions and are one for craft beers, I certainly "
+"suggest having some old world brew before it all goes flat or sour."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Speaking off, Cranberry here brought me a whole cask of Cabernet a few days "
+"ago.  So if red wines are your thing I can offer that by the gallon."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Just bought some of this new \"Free Whiskey\" from the caravaneer up above.  "
+"It's vile if you ask me, but it packs a good punch.  A real drink of the "
+"apocalypse I suppose."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"The water I boiled from a pool by the rails, so I don't suggest you get some."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"And you can also try chatting with some of the other patrons if networking is"
+" your thing."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Also have some old world sodas if alcohol isn't your kind of thing."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Not much fruit juice to make fancy drinks, but I can scrounge up some still."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Can also sell some dry foods if you want to stock for a trip somewhere."
+msgstr ""
+
+#. ~ Snippet in category "<ANCILLA_barkeep_suggestion>"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Also good for a chat if you don't want anything."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Ah great to see you around."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "How goes the surface?  All dead and walkey still?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Should hang around one of these days, help me out in the bar for a change, "
+"what do you say, eh?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "Oh, what can I do for you today?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Feel free to lounge around, and ask if there's anything you need."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Welcome to the Terminal, scavenger, longest standing underground bar in the "
+"state.  Feel free to ask if you need something."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "There should be a package for me here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Any good rumors?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"If what you want are jobs and opportunities, you'll probably be better off asking to my other patrons.  Have regulars from well across the state, I'm sure some can offer what you want.\"\n"
+"\n"
+" \"Really, I just tend the bar and don't ask many questions.  Things tend work out better that way."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "I'll ask around, thank you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Just the best spirits the whole of New England has to offer.  Well the best we've managed to loot so far at least.\n"
+"\n"
+" <ANCILLA_barkeep_suggestion>"
+msgstr ""
+
+#. ~ Affirmative response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "Just some water."
+msgstr ""
+
+#. ~ Negative response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "[$2] Just some water."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid "[$3] Get me a cup of red wine"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_BARKEEP.json
+msgid ""
+"Oh yes of course, think this should be all, well that's all there is anyhow."
+msgstr ""
+
+#. ~ Unique name of a male NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "Doc.  Stevens"
+msgstr ""
+
+#. ~ Name of an NPC class
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "Ancilla Doctor"
+msgstr ""
+
+#. ~ Job description of "Ancilla Doctor" NPC class
+#. ~ Job description of "Mercurial Medical Agent" NPC class
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "I try to keep this gang in one piece.  It's a full time job."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"Try not to touch anything.  Keeping this place clean is a full time job."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "npc:f"
+msgid "I'm free at the moment if you need something."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "npc:m"
+msgid "I'm free at the moment if you need something."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "npc:n"
+msgid "I'm free at the moment if you need something."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid ""
+"Did you know you can lose a medical license over tax fraud?  Couldn't be me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid ""
+"You try to use the autodoc alone and I'll let it carve you up.  I'm not "
+"kidding."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "Clinic is open, yes.  If you need medical assistance, I'm your man."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "I need to trade some medical supplies."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"I can take a look at you or your companions if you have any injuries.  It'll "
+"cost you, of course."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "[4 HGC, 30m] I need you to patch me up."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "[8 HGC, 1h] I need you to patch my friends up."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "Sure, what are you looking for?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"I was wondering if you could install a cybernetic implant in my friend here…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "I need help removing an implant from one of my friends…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid "Oh no, I was wondering if you knew where to get some."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"Now some protocol tests for brain damage.  Please stare at the light over "
+"there…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid ""
+"It might take some days for your nervous system to adapt.  Come back if you "
+"experience any concerning symptoms like…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "I suggest you take it easy for a few days now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgid "Take it easy now, or come back soon.  All the same to me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "u:f"
+msgid "Now try not to do whatever you did again.  No, don't tell me more."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "u:m"
+msgid "Now try not to do whatever you did again.  No, don't tell me more."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+#: data/mods/Aftershock/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+#: data/mods/aftershock_exoplanet/npcs/Augustmoon_Salvors/augustmoon_doctor.json
+msgctxt "u:n"
+msgid "Now try not to do whatever you did again.  No, don't tell me more."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid ""
+"If you want to carve up cyborg corpses, find someone at the bar, not me."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_DOCTOR.json
+msgid ""
+"It takes resources to keep this show running: disinfectant, antibiotics, "
+"anesthetics, so on.  I'll give you a great price if you bring any of those."
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ Generic Mercenary Guard for the ancilla hq.
+#. ~ A generic mercenary for decorative purposes.
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+#: data/mods/Aftershock/npcs/Independents/salvor_camp_solo.json
+#: data/mods/aftershock_exoplanet/npcs/Independents/salvor_camp_solo.json
+msgid "mercenary"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "We'll protect our own, marshal."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Make sure you don't get in trouble, officer."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Don't let me see you snooping around."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Stay out of trouble, right?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "How do you like that boot, huh?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Hey, oh, umm.  Yes, Sir?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgctxt "npc:f"
+msgid "&The mercenary looks noticeably tense as you approach."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgctxt "npc:m"
+msgid "&The mercenary looks noticeably tense as you approach."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgctxt "npc:n"
+msgid "&The mercenary looks noticeably tense as you approach."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Nothing to report, Sir!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Hey boss."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Great to see you back in base."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Here's hoping I get out of guard duty soon."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Got anything good?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "On an errand from the box?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Up and at them again?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Up for a drink when my shift ends?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid ""
+"Well I can't complain much, money and free food for standing around with a gun?\n"
+"\n"
+"Sure looks like a steal nowadays."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "If you don't have any business here, you better get going."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Terminal is down there, please move along."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Please head right down, scavenger."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Are you here to do anything?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid ""
+"If you are looking for the Terminal, it's in the first basement, right down "
+"the stairs and to the left."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Is there any way I can join your team?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid ""
+"Me?  Just standing around, looking scary.  Think I'm doing a good job?\n"
+"\n"
+"Don't answer that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Just making sure people don't ask stupid questions."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "I'm just on watch, move along."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Getting paid for standing around.  And you are getting in the way."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid ""
+"A few of us joined up to make this a safe house, and it's just my turn "
+"watching the gates."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid "Just go down to the Terminal if you want in."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/NPC_ANCILLA_HQ_GUARD.json
+msgid ""
+"Well you certainly look like you could.  Try ringing the box in the bunker "
+"across the street, or see if someone in the Terminal has a need for help."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:f"
+msgid "Sorry I'd rather be left alone right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:m"
+msgid "Sorry I'd rather be left alone right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:n"
+msgid "Sorry I'd rather be left alone right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:f"
+msgid ""
+"&A grim expression and deep sunken eyes imply some malady that can't be "
+"simply drowned with alcohol alone.  They interrupt you just as you were about"
+" to introduce yourself.  \"This anchor I'm wearing, I don't think I'll be "
+"needing it any more.  I-I'm just looking for someone to rid me of it"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:m"
+msgid ""
+"&A grim expression and deep sunken eyes imply some malady that can't be "
+"simply drowned with alcohol alone.  They interrupt you just as you were about"
+" to introduce yourself.  \"This anchor I'm wearing, I don't think I'll be "
+"needing it any more.  I-I'm just looking for someone to rid me of it"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:n"
+msgid ""
+"&A grim expression and deep sunken eyes imply some malady that can't be "
+"simply drowned with alcohol alone.  They interrupt you just as you were about"
+" to introduce yourself.  \"This anchor I'm wearing, I don't think I'll be "
+"needing it any more.  I-I'm just looking for someone to rid me of it"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Offer to buy the anchor for 1 HGC."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Well, what's that thing for anyways?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Sorry, I don't think I can help you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Alright, see you around then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:f"
+msgid ""
+"It takes only a moment to retrieve a suitable coin from your pockets, and yet"
+" your interlocutor found enough time to disappear, having left a sharp "
+"emptiness both in memory and the chair before you.  The anchor has been "
+"neatly folded on the table."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:m"
+msgid ""
+"It takes only a moment to retrieve a suitable coin from your pockets, and yet"
+" your interlocutor found enough time to disappear, having left a sharp "
+"emptiness both in memory and the chair before you.  The anchor has been "
+"neatly folded on the table."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:n"
+msgid ""
+"It takes only a moment to retrieve a suitable coin from your pockets, and yet"
+" your interlocutor found enough time to disappear, having left a sharp "
+"emptiness both in memory and the chair before you.  The anchor has been "
+"neatly folded on the table."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Take the anchor."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Take the anchor and leave the coin.  Do we have a deal?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgid "Just leave, this isn't right at all."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:f"
+msgid ""
+"The mercenary stares in silence, a flickering of the overhead lighting "
+"thankfully cuts the moment short."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:m"
+msgid ""
+"The mercenary stares in silence, a flickering of the overhead lighting "
+"thankfully cuts the moment short."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_anchor_seller.json
+msgctxt "npc:n"
+msgid ""
+"The mercenary stares in silence, a flickering of the overhead lighting "
+"thankfully cuts the moment short."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&A pair of veteran mercenaries share stories between bouts of heavy drinking."
+"  You could probably join them if you wanted to."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "[Join and hear them out for a while.]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "[Join them in their heavy drinking.]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "[Join them with a story of your own.]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "[Just move along.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&The veterans seem happy to have you, and you listen as the older mercenary narrates <merc_story>.\n"
+"\n"
+"You all share some drinks while going over the details and as the conversation winds down."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"You share increasingly embellished stories about your exploits as you dare "
+"each other into downing series of eye-watering drinks."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Bar… barshender!  We… we?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&As you sit, the older mercenary continues their narration of <merc_story>.\n"
+"\n"
+"When their tale reaches conclusion, you stop to consider what sort of story you could tell."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Recall that time when you rescued a farmer's son from a citadel full of alien"
+" horrors."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell them about your hunting of a pyramidal robot using a prototype energy "
+"rifle."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Recall the time you were tricked into fighting against distorted versions of "
+"yourself while lost in a place beyond time."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell about your slaying of an insectile horror after getting trapped within "
+"its lair."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Recall the long story of how you agreed to help the remnants of the Federal "
+"Government."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell them about the horrors uncovered by the mining expeditions of New "
+"England."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell them about the horrors wandering in these very same subway tunnels."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Recall that time when you used a tactical nuclear weapon."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Try to gross each other out with tales of mutant butchery."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Speak about the alien construct you found while lost in an endless sea of "
+"black glass."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell them the story of how you were trapped in an infinitely looping "
+"corridor, fighting the warped remnants of the researchers there and somehow "
+"the damned corridor itself.  And at the end of the day, you're not even sure "
+"the headache was worth it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"Tell them the story of how you dived into and were forced to fight for your "
+"life within a disgusting, toxic hellscape made from the un-living innards of "
+"some crushed zombie monstrosity.  All so the intercom could have some damned "
+"HDD back."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "[LIE] Just make something up."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&While the veterans indulge your storytelling, they clearly seem not too "
+"pleased nor impressed by your tale."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Well, ugh…  I should be going now…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&You make some small talk and share a pair of drinks after finishing your "
+"story."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&The clearly drunk mercenaries hail you as minor celebrity and invite you to "
+"a pair of rounds when your tale is finished."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Yeah I guess it really did happen just like that."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&The veterans eagerly accept your challenge, and none of you can really "
+"stomach the prospect of more drinks after the first pair of tales."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&The expressions on both the mercs' faces are a mix of confusion and visceral"
+" disgust as you relate your tale.  Finally, the younger mercenary blurts out,"
+" \"None of us wanted to touch that contract since the intercom was being so "
+"shifty about it.\"  \"You're my kind of free-range lunatic!\"  The older "
+"mercenary interjects.  \"I'll drink to that!\"."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Yeah, that was certainly an…  interesting experience."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid ""
+"&The veteran's expressions turn to a mixture of awe and fear as your tale "
+"nears conclusion, the younger mercenary is finally after a long  \"We heard "
+"someone had gone and completed that death trap contract, but I still couldn't"
+" believe it.\"  \"You're a damn madman!\"  The older mercenary interjects in "
+"agreement.  \"I'll drink to that!\"."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "Yeah looking back I really don't know why I did it."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_BEM_BEM_CHATTING_VETERANS_DRUNK_MESSAGE"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_chatting_veterans.json
+msgid "<ANCILLA_BAR_HANGOVER>"
+msgstr ""
+
+#. ~ Job description of "Mercenary" NPC class
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_drugs.json
+msgid "Drug running for the name of Hub 01 and money, mostly money."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_drugs.json
+msgctxt "npc:f"
+msgid ""
+"&This visitor seems way more watchful than normal.  You notice zip bags peeking out from <mypossesivepronoun> overcoat, they are clearly pushing something.  It doesn't take much longer for them to notice you in kind.\n"
+"\"You want something?  Or just gawking?\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_drugs.json
+msgctxt "npc:m"
+msgid ""
+"&This visitor seems way more watchful than normal.  You notice zip bags peeking out from <mypossesivepronoun> overcoat, they are clearly pushing something.  It doesn't take much longer for them to notice you in kind.\n"
+"\"You want something?  Or just gawking?\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_drugs.json
+msgctxt "npc:n"
+msgid ""
+"&This visitor seems way more watchful than normal.  You notice zip bags peeking out from <mypossesivepronoun> overcoat, they are clearly pushing something.  It doesn't take much longer for them to notice you in kind.\n"
+"\"You want something?  Or just gawking?\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_drugs.json
+msgid "Sure, let see what you offer."
+msgstr ""
+
+#. ~ Job description of "Mercenary" NPC class
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_gunrunner.json
+msgid "Fighting for the name of Hub 01 and money, mostly money."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_gunrunner.json
+msgid ""
+"&You find the gun runner intently assessing the swirling smoke of a stale cigarette.  <mypronoun> barely acknowledges your approach.  \"Let's cut it short, I have come upon an excess supply of exotic weaponry and let's say that it would be expedient for it to disappear and you seem like just the kind of person I'm looking for.\" .\n"
+"\n"
+"<mypronoun> hands you an inventory list, loosely annotated in a piece of graph paper.\n"
+"\n"
+"\"No harm in looking right?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_gunrunner.json
+msgid "Sure, let's see what you have to offer."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgid ""
+"I'm just looking for my next job.  So if you can't help with that, I rather "
+"we be on our own separate ways."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgid "Well then, what does it cost to hire you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgid "Ha I prefer the cheerful sort anyways."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgid "Well whatever."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgctxt "npc:f"
+msgid ""
+"The mercenary's demeanor changes completely when they realize you aren't here"
+" to waste time.  \"Alright, tell you what.  Get me twelve coins and that's "
+"giving my skills away, just anything to be done with that voice on a box.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgctxt "npc:m"
+msgid ""
+"The mercenary's demeanor changes completely when they realize you aren't here"
+" to waste time.  \"Alright, tell you what.  Get me twelve coins and that's "
+"giving my skills away, just anything to be done with that voice on a box.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgctxt "npc:n"
+msgid ""
+"The mercenary's demeanor changes completely when they realize you aren't here"
+" to waste time.  \"Alright, tell you what.  Get me twelve coins and that's "
+"giving my skills away, just anything to be done with that voice on a box.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_hireable.json
+msgid "[12 HGC] You have a deal."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "Fleshmonger"
+msgstr ""
+
+#. ~ Description of mission "Fleshmonger"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid ""
+"Deposit a human sample in a pit within the dead drop location.  Pick up your "
+"reward at the Terminal once that's done."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "Not in the mood for a talk, sorry."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:f"
+msgid ""
+"&The mercenary stares at the window, and speaks in a quiet and terse manner."
+"  \"I have a client looking for a medical-grade human biopsy sample, no "
+"questions asked.  Are you the right one for the job?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:m"
+msgid ""
+"&The mercenary stares at the window, and speaks in a quiet and terse manner."
+"  \"I have a client looking for a medical-grade human biopsy sample, no "
+"questions asked.  Are you the right one for the job?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:n"
+msgid ""
+"&The mercenary stares at the window, and speaks in a quiet and terse manner."
+"  \"I have a client looking for a medical-grade human biopsy sample, no "
+"questions asked.  Are you the right one for the job?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "Oh yes.  I actually have one right here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "I might be."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "No, but I might be looking to buy some."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "No, not at all."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid ""
+"Most I can give is two gold coins.  I've arranged a drop in the nearby woods,"
+" put the goods there and you can get your cash with the barkeep here."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "It'll get done."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "Not interested after all?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:f"
+msgid ""
+"&The mercenary gives you a quick appraisal.  \"Five coins for three, special "
+"price just for you.  Pay in advance, and I'll arrange a drop in the subway "
+"rails here for you to pick within two days.  Deal or not?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:m"
+msgid ""
+"&The mercenary gives you a quick appraisal.  \"Five coins for three, special "
+"price just for you.  Pay in advance, and I'll arrange a drop in the subway "
+"rails here for you to pick within two days.  Deal or not?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgctxt "npc:n"
+msgid ""
+"&The mercenary gives you a quick appraisal.  \"Five coins for three, special "
+"price just for you.  Pay in advance, and I'll arrange a drop in the subway "
+"rails here for you to pick within two days.  Deal or not?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "[5 HGC] Its a deal."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid "Sure, just let me find the cash."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_human_sample.json
+msgid ""
+"&<mypronoun> quickly removes the offending piece of meat from your hand and "
+"places two golden coins on the table, apparently unshaken by the prospect of "
+"meeting someone who casually visits bars while carrying cuts of human flesh."
+"  \"Now if you please, I have a meal to get rid of.\" <mypronoun> says, "
+"between poorly masked bouts of nausea."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "\"God\"-Slayer"
+msgstr ""
+
+#. ~ Description of mission ""God"-Slayer"
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid ""
+"A traumatized mercenary has claimed to have seen what you assume to be a "
+"powerful monster.  Maybe you should investigate this for the benefit of "
+"everyone."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid ""
+"&You see one more traumatized face, all too many and too frequent for any "
+"help to be worthwhile."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:f"
+msgid ""
+"&The mercenary stares intently at a stain in the ceiling, firmly clutching a "
+"now cold cup of soup.  No one else seems to be very concerned about this."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:m"
+msgid ""
+"&The mercenary stares intently at a stain in the ceiling, firmly clutching a "
+"now cold cup of soup.  No one else seems to be very concerned about this."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:n"
+msgid ""
+"&The mercenary stares intently at a stain in the ceiling, firmly clutching a "
+"now cold cup of soup.  No one else seems to be very concerned about this."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "Attempt a friendly approach."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "Leave the traveler to their trauma."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid ""
+"&<mypronoun> seems completely lost to the present, but you can't help but "
+"notice <mypossesivepronoun> gear is caked with mud and broken twigs.  It "
+"doesn't look like you'll be getting much conversation from this one."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "Press on in search of a reaction."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "Try to find someone more interested in conversation."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:f"
+msgid ""
+"&Continued prodding manages to extract a baffling response from your "
+"interlocutor \"I- I've seen it, the god of our new world, a god of flesh and "
+"bone.\" <mypronoun> says with a maddened glare, as though this were some sort"
+" of shocking revelation."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:m"
+msgid ""
+"&Continued prodding manages to extract a baffling response from your "
+"interlocutor \"I- I've seen it, the god of our new world, a god of flesh and "
+"bone.\" <mypronoun> says with a maddened glare, as though this were some sort"
+" of shocking revelation."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgctxt "npc:n"
+msgid ""
+"&Continued prodding manages to extract a baffling response from your "
+"interlocutor \"I- I've seen it, the god of our new world, a god of flesh and "
+"bone.\" <mypronoun> says with a maddened glare, as though this were some sort"
+" of shocking revelation."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid ""
+"Show your map to the mercenary, and have them mark where they saw this "
+"\"god\"."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "Yeah I'm sure I have seen that one too.  Try to stay safe."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_jabberwock.json
+msgid "&<mypronoun> silently points at your maps with a trembling hand."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgctxt "npc:f"
+msgid ""
+"&You spot the mercenary at the tail end of a deal.  \"Want in on the "
+"business?  Still have a pair of ID cards looking for buyers.  Two army and "
+"two science cards left, they sell together for 4 coins or not at all."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgctxt "npc:m"
+msgid ""
+"&You spot the mercenary at the tail end of a deal.  \"Want in on the "
+"business?  Still have a pair of ID cards looking for buyers.  Two army and "
+"two science cards left, they sell together for 4 coins or not at all."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgctxt "npc:n"
+msgid ""
+"&You spot the mercenary at the tail end of a deal.  \"Want in on the "
+"business?  Still have a pair of ID cards looking for buyers.  Two army and "
+"two science cards left, they sell together for 4 coins or not at all."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "[4 HGC] Its a deal."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "Offer to buy them for 2 coins."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "Huh where do you get those from"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "Sure whatever, two coins and its all yours."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "[2 HGC] Its a deal then."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "Oh, it looks like I don't actually have two coins right now…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "See you around then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid ""
+"Well that'd be telling.  Suffice to say that a few friends found them, and "
+"none of us are into the lab-dive business."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_keycard_seller.json
+msgid "Not a bargain bin kid, the price's the price."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgctxt "npc:f"
+msgid ""
+"&The mercenary seems uncharacteristically upbeat, or perhaps just drunk.  "
+"\"Found this neat gizmo in a lab run a few days ago.\"  <mypronoun> blurts "
+"while procuring a small cube of etched glass from <mypossesivepronoun> "
+"pocket.  \"Now, I have no use for such a thing, but perhaps you do.  What do "
+"you say?  It's yours for 3 coins.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgctxt "npc:m"
+msgid ""
+"&The mercenary seems uncharacteristically upbeat, or perhaps just drunk.  "
+"\"Found this neat gizmo in a lab run a few days ago.\"  <mypronoun> blurts "
+"while procuring a small cube of etched glass from <mypossesivepronoun> "
+"pocket.  \"Now, I have no use for such a thing, but perhaps you do.  What do "
+"you say?  It's yours for 3 coins.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgctxt "npc:n"
+msgid ""
+"&The mercenary seems uncharacteristically upbeat, or perhaps just drunk.  "
+"\"Found this neat gizmo in a lab run a few days ago.\"  <mypronoun> blurts "
+"while procuring a small cube of etched glass from <mypossesivepronoun> "
+"pocket.  \"Now, I have no use for such a thing, but perhaps you do.  What do "
+"you say?  It's yours for 3 coins.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "[3 HGC] It's a deal."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "Offer to buy it for 2 coins."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "I don't even know what that is."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "Sure whatever, two coins and it's all yours."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid "[2 HGC] It's a deal then."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid ""
+"A 'nanofabricator template', it seems, no idea what it's good for, but it "
+"sure looks valuable.  Are you buying it or not?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/BEM_template_seller.json
+msgid ""
+"Well I'm sure someone who values it will come around, thanks for hearing the "
+"pitch anyways."
+msgstr ""
+
+#. ~ Unique name of an NPC
+#. ~ These are all random people you met in a bar once, the fact that they
+#. don't have names is meant to emphasize the transient nature of the
+#. conversations you have with them
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the enterprising gunrunner"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ EOC-specific, should not spawn outside of trigger events.
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "cyborg rescue"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ EOC-specific, should not spawn outside of trigger events.
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "kicking cyborg"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the drinking veteran"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the pill pusher"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the traumatized traveler"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the shady mercenary"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the disconsolate mercenary"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the cheerful mercenary"
+msgstr ""
+
+#. ~ Unique name of an NPC
+#: data/json/npcs/robofac/robofac_ancilla_npcs/BAR_ENCOUNTER_MERCENARIES/NPC_BEMS.json
+msgid "the ID forger"
+msgstr ""
+
+#. ~ Refusal reason for a shop item group
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "You're not yet qualified to buy this"
+msgstr ""
+
+#. ~ Refusal reason for a shop item group
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "You need to earn an HWP first"
+msgstr ""
+
+#. ~ Reason for a shopkeeper blacklist entry
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "Will not buy back their own gear"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "Is there anything fancier you can sell?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "Let's discuss prototypes."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"I have found more of those golden robots, can you make anything of them yet?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"I need some gear to outfit my crew, I think five sets of police riot armor "
+"would do the trick."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "I'm here and I've got the goods."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "Cost of the armor plus everything left in the tower."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"&The intercom crackles with static as it turns on.  The LED next to the "
+"button lights up a bright red, and the camera lens whirs as it focuses on "
+"you.  There is no immediate response."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid "Well truth be told, this encounter ain't quite so random."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"We are listening…\n"
+"\n"
+"You detect a slight elevation in their voice, with a start you realize they are nervous."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"Actually I was just joking.  Our meeting is indeed a fortunate accident but "
+"now that I have your attention would you be interested in trading in some "
+"goods?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"Some mercenaries I met mentioned this place, said its a good place to find "
+"some work and possibly some valuable post-apocalyptic gear."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"You guys aren't as slick as you think.  You think no one's gonna notice a "
+"pristine looking meteorological station in the middle of nowhere with not a "
+"potted plant out of place?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/robofac/robofac_intercom/robofac_intercom.json
+msgid ""
+"Not without significantly advanced surveillance tech most of which were "
+"either decommissioned or destroyed post cataclysm."
+msgstr ""

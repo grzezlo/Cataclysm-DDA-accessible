@@ -1,0 +1,2017 @@
+# Batch 62 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "UNRESTRICTED"
+#: data/json/flags.json
+msgid "This clothing is able to <info>accommodate even mutated anatomy</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BLEEDSLOW"
+#: data/json/flags.json
+msgid ""
+"The character bleeds slower than normal, losing blood at 2/3rds the normal "
+"rate."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BLEEDSLOW2"
+#: data/json/flags.json
+msgid ""
+"The character bleeds even slower than normal, losing blood at 1/3rd the "
+"normal rate."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LIXA_SCIENCE_CARD"
+#: data/json/flags.json
+msgid "This grants access to the LIXA facility."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LIXA_SCIENCE_CARD_2"
+#: data/json/flags.json
+msgid "This grants access to the experiment chamber of the LIXA facility."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LIXA_SCIENCE_CARD_3"
+#: data/json/flags.json
+msgid ""
+"This grants access to the experiment chamber and PPE lockup for the LIXA "
+"facility."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "LIXA_MILITARY_CARD"
+#: data/json/flags.json
+msgid "This grants access to locked-down areas of the LIXA facility."
+msgstr ""
+
+#. ~ This is custom prefix added to item name. "PREFIX_XL"
+#: data/json/flags.json
+msgid "XL "
+msgstr ""
+
+#. ~ This is custom prefix added to item name. "PREFIX_XS"
+#: data/json/flags.json
+msgid "XS "
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "DECAYS_IN_AIR"
+#: data/json/flags.json
+msgid ""
+"This will eventually <bad>go bad</bad> if left in the open air too long."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "IRRITANT_IMMUNE"
+#: data/json/flags.json
+msgid ""
+"This gear <good>completely protects</good> you from <info>skin "
+"irritants</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ITEM_WATERPROOFING"
+#: data/json/flags.json
+msgid ""
+"Something is preventing your worn and carried items from being effected by "
+"water."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WATERWALKING"
+#: data/json/flags.json
+msgid "You can walk across the surface of water."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "CRAFT_IN_DARKNESS"
+#: data/json/flags.json
+#, no-c-format
+msgid "You can craft at 100% speed in any level of light."
+msgstr ""
+
+#. ~ Harvest message
+#: data/json/harvest.json
+msgid "You carefully crack open the hive structure and drain the liquid."
+msgstr ""
+
+#. ~ Harvest message
+#: data/json/harvest.json
+msgid ""
+"As you hack away at the chitinous amalgamation you can't help but follow the "
+"tunnel the (male?) dragonfly's tail bore into the flesh of its mate, ending "
+"up at a formless amalgamation of eyes, jaws, eggs, and ganglia deep within.  "
+"Love truly knows no bounds."
+msgstr ""
+
+#. ~ Harvest message
+#: data/json/harvest.json
+msgid "<mi-go_harvest>"
+msgstr ""
+
+#. ~ Description of profession "Archery (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've used a bow before and maybe taken a class or two.  You won't be "
+"pulling off any trick shots but at least you can usually get an arrow to fly "
+"forward instead of spinning off to the side."
+msgstr ""
+
+#. ~ Description of profession "Archery (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've used a bow before and maybe taken a class or two.  You won't be "
+"pulling off any trick shots but at least you can usually get an arrow to fly "
+"forward instead of spinning off to the side."
+msgstr ""
+
+#. ~ Description of profession "Archery (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're a modern day Robin Hood and probably have hella back muscles.  Perhaps"
+" you're an Olympic archer in training or maybe you're descended from the "
+"longbowmen of old.  In either case, sniping zombie heads should be as easy as"
+" pinning apples to trees for you."
+msgstr ""
+
+#. ~ Description of profession "Archery (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're a modern day Robin Hood and probably have hella back muscles.  Perhaps"
+" you're an Olympic archer in training or maybe you're descended from the "
+"longbowmen of old.  In either case, sniping zombie heads should be as easy as"
+" pinning apples to trees for you."
+msgstr ""
+
+#. ~ Description of profession "Swimming (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You can swim.  Probably not very well, and you won't break any speed records,"
+" but, you CAN swim."
+msgstr ""
+
+#. ~ Description of profession "Swimming (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You can swim.  Probably not very well, and you won't break any speed records,"
+" but, you CAN swim."
+msgstr ""
+
+#. ~ Description of profession "Swimming (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're an excellent swimmer and may be part fish.  Plus, all that swimming "
+"has left you in great shape.  There aren't any zombie sharks in the water, "
+"right?"
+msgstr ""
+
+#. ~ Description of profession "Swimming (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're an excellent swimmer and may be part fish.  Plus, all that swimming "
+"has left you in great shape.  There aren't any zombie sharks in the water, "
+"right?"
+msgstr ""
+
+#. ~ Description of profession "Baseball (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You used to play baseball, occasionally.  Maybe you were on your school team "
+"growing up, but it was never a focus of yours.  Hopefully you can still "
+"remember how to use a bat when your life depends on it."
+msgstr ""
+
+#. ~ Description of profession "Baseball (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You used to play baseball, occasionally.  Maybe you were on your school team "
+"growing up, but it was never a focus of yours.  Hopefully you can still "
+"remember how to use a bat when your life depends on it."
+msgstr ""
+
+#. ~ Description of profession "Baseball Pitcher (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're accustomed to striking out poor batters at the plate and can probably "
+"throw a mean knuckleball.  Now you get to practice your fastball, but perhaps"
+" with rocks or grenades this time."
+msgstr ""
+
+#. ~ Description of profession "Baseball Pitcher (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're accustomed to striking out poor batters at the plate and can probably "
+"throw a mean knuckleball.  Now you get to practice your fastball, but perhaps"
+" with rocks or grenades this time."
+msgstr ""
+
+#. ~ Description of profession "Baseball (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You didn't quite make it into the big leagues, but you were close.  Now it's "
+"time to go for the grand slam or you'll be dealing with worse than a strike "
+"out."
+msgstr ""
+
+#. ~ Description of profession "Baseball (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You didn't quite make it into the big leagues, but you were close.  Now it's "
+"time to go for the grand slam or you'll be dealing with worse than a strike "
+"out."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Maybe you've taken a few classes at a gym somewhere, or used to be on the "
+"youth team, or maybe you just liked to rough-house with your friends or "
+"family growing up.  You're not entirely unused to grappling, but you're "
+"hardly an expert."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Maybe you've taken a few classes at a gym somewhere, or used to be on the "
+"youth team, or maybe you just liked to rough-house with your friends or "
+"family growing up.  You're not entirely unused to grappling, but you're "
+"hardly an expert."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"While not the type of wrestler to use folding chairs as weapons, you have "
+"experience wrasslin' and tusslin' with others out on the mat.  There's no "
+"referees around to see, but hopefully your skills will help you avoid getting"
+" pinned by the undead."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"While not the type of wrestler to use folding chairs as weapons, you have "
+"experience wrasslin' and tusslin' with others out on the mat.  There's no "
+"referees around to see, but hopefully your skills will help you avoid getting"
+" pinned by the undead."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were likely on the 100+ wins list back in school and maybe you're a "
+"collegiate wrestler or you're using it as part of something like MMA.  "
+"Considering how grabby those zombies are, you should get plenty of use out of"
+" your skills."
+msgstr ""
+
+#. ~ Description of profession "Wrestling (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were likely on the 100+ wins list back in school and maybe you're a "
+"collegiate wrestler or you're using it as part of something like MMA.  "
+"Considering how grabby those zombies are, you should get plenty of use out of"
+" your skills."
+msgstr ""
+
+#. ~ Description of profession "DIY Crafting (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Whether due to circumstances forcing ingenuity or just an unhealthy "
+"fascination with tinkering you're a certified MacGyver with a very wide range"
+" of fabrication knowledge.  You could probably make a functioning cannon out "
+"of a paper clip and some bubble gum."
+msgstr ""
+
+#. ~ Description of profession "DIY Crafting (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Whether due to circumstances forcing ingenuity or just an unhealthy "
+"fascination with tinkering you're a certified MacGyver with a very wide range"
+" of fabrication knowledge.  You could probably make a functioning cannon out "
+"of a paper clip and some bubble gum."
+msgstr ""
+
+#. ~ Description of profession "Cooking (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You can cook well enough that you didn't have to live on instant noodles and "
+"takeout, but you've only really learned the bare minimum."
+msgstr ""
+
+#. ~ Description of profession "Cooking (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You can cook well enough that you didn't have to live on instant noodles and "
+"takeout, but you've only really learned the bare minimum."
+msgstr ""
+
+#. ~ Description of profession "Cooking (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're an excellent chef capable of making delicious meals out of almost "
+"anything and have a wide array of culinary knowledge.  Sadly, the undead "
+"would rather eat you than your meals."
+msgstr ""
+
+#. ~ Description of profession "Cooking (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're an excellent chef capable of making delicious meals out of almost "
+"anything and have a wide array of culinary knowledge.  Sadly, the undead "
+"would rather eat you than your meals."
+msgstr ""
+
+#. ~ Description of profession "Cheesemaking" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"The art of producing the finest quality cheeses has been passed down through "
+"your family for generations.  How useful these skills will be in the "
+"apocalypse remains to *brie* seen."
+msgstr ""
+
+#. ~ Description of profession "Cheesemaking" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"The art of producing the finest quality cheeses has been passed down through "
+"your family for generations.  How useful these skills will be in the "
+"apocalypse remains to *brie* seen."
+msgstr ""
+
+#. ~ Description of profession "Home canning" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Whether it was something practiced in your family or something you took it up"
+" to extend the shelf life of your groceries, you know how to preserve produce"
+" and meat in cans or mason jars.  With the electricity down and refrigerators"
+" dead, saying your skills could come in handy is an understatement."
+msgstr ""
+
+#. ~ Description of profession "Home canning" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Whether it was something practiced in your family or something you took it up"
+" to extend the shelf life of your groceries, you know how to preserve produce"
+" and meat in cans or mason jars.  With the electricity down and refrigerators"
+" dead, saying your skills could come in handy is an understatement."
+msgstr ""
+
+#. ~ Description of profession "Street Fighting (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've been in quite a few fights in the street.  You can throw and dodge a "
+"punch better than most."
+msgstr ""
+
+#. ~ Description of profession "Street Fighting (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've been in quite a few fights in the street.  You can throw and dodge a "
+"punch better than most."
+msgstr ""
+
+#. ~ Description of profession "Street Fighting (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Maybe you're the muscle of some criminal gang, maybe you're a bouncer at a "
+"club, or maybe you're just a huge asshole.  You've constantly been getting "
+"into fights with strangers on the streets for most of your life, and somehow "
+"you ain't dead yet, so you must be doing something right."
+msgstr ""
+
+#. ~ Description of profession "Street Fighting (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Maybe you're the muscle of some criminal gang, maybe you're a bouncer at a "
+"club, or maybe you're just a huge asshole.  You've constantly been getting "
+"into fights with strangers on the streets for most of your life, and somehow "
+"you ain't dead yet, so you must be doing something right."
+msgstr ""
+
+#. ~ Description of profession "Sewing (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are quite good at sewing torn clothes back together, and have even made "
+"your own clothes a few times."
+msgstr ""
+
+#. ~ Description of profession "Sewing (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are quite good at sewing torn clothes back together, and have even made "
+"your own clothes a few times."
+msgstr ""
+
+#. ~ Description of profession "Sewing (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Despite modern technology making career tailors obsolete you've spent much of"
+" your life hand-making clothing of all sorts, whether for historical purposes"
+" or to sell as artisanal goods.  Too bad you can't stitch the holes in "
+"reality closed."
+msgstr ""
+
+#. ~ Description of profession "Sewing (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Despite modern technology making career tailors obsolete you've spent much of"
+" your life hand-making clothing of all sorts, whether for historical purposes"
+" or to sell as artisanal goods.  Too bad you can't stitch the holes in "
+"reality closed."
+msgstr ""
+
+#. ~ Description of profession "Fencing (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've spent so long practicing your fencing you wouldn't look out of place "
+"in the Renaissance dueling with ne'er-do-wells and rapscallions.  En Garde!"
+msgstr ""
+
+#. ~ Description of profession "Fencing (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've spent so long practicing your fencing you wouldn't look out of place "
+"in the Renaissance dueling with ne'er-do-wells and rapscallions.  En Garde!"
+msgstr ""
+
+#. ~ Description of profession "Racing" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're a real speed demon in anything with an engine!  Pulling off hairpin "
+"turns at high speeds is a difficult skill to master but you can drift with "
+"the best of them."
+msgstr ""
+
+#. ~ Description of profession "Racing" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're a real speed demon in anything with an engine!  Pulling off hairpin "
+"turns at high speeds is a difficult skill to master but you can drift with "
+"the best of them."
+msgstr ""
+
+#. ~ Description of profession "Cardio Kickboxing" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've trained in non-combat kickboxing at a gym as a way to exercise.  While"
+" you were taught the moves, you've never sparred or fought anything more "
+"dangerous than a falling punching bag.  Whether you can remember your "
+"training when push kick comes to jab is up to you."
+msgstr ""
+
+#. ~ Description of profession "Cardio Kickboxing" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've trained in non-combat kickboxing at a gym as a way to exercise.  While"
+" you were taught the moves, you've never sparred or fought anything more "
+"dangerous than a falling punching bag.  Whether you can remember your "
+"training when push kick comes to jab is up to you."
+msgstr ""
+
+#. ~ Description of profession "Self-Defense" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You have taken some self-defense classes at a local gym.  You start with your"
+" choice of Boxing, Kickboxing, Capoeira, Krav Maga, Muay Thai, Ninjutsu, Wing"
+" Chun, or Zui Quan."
+msgstr ""
+
+#. ~ Description of profession "Self-Defense" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You have taken some self-defense classes at a local gym.  You start with your"
+" choice of Boxing, Kickboxing, Capoeira, Krav Maga, Muay Thai, Ninjutsu, Wing"
+" Chun, or Zui Quan."
+msgstr ""
+
+#. ~ Description of profession "Black Belt" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've been doing martial arts for years and have earned the coveted black "
+"belt in a martial art of your choice."
+msgstr ""
+
+#. ~ Description of profession "Black Belt" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've been doing martial arts for years and have earned the coveted black "
+"belt in a martial art of your choice."
+msgstr ""
+
+#. ~ Description of profession "Melee Training (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Despite firearms making traditional melee weapons largely obsolete, you have "
+"extensive experience fighting in hand-to-hand combat with tools of war.  "
+"Maybe it was full-contact HEMA or SCA sparring, or maybe you're just a badass"
+" commando with a machete.  You start with your choice of Barbaran Montante, "
+"Bōjutsu, Eskrima, Fencing, Fior Di Battaglia, Medieval Swordsmanship, Niten "
+"Ichi-Ryu, Pencak Silat, or Sōjutsu."
+msgstr ""
+
+#. ~ Description of profession "Melee Training (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Despite firearms making traditional melee weapons largely obsolete, you have "
+"extensive experience fighting in hand-to-hand combat with tools of war.  "
+"Maybe it was full-contact HEMA or SCA sparring, or maybe you're just a badass"
+" commando with a machete.  You start with your choice of Barbaran Montante, "
+"Bōjutsu, Eskrima, Fencing, Fior Di Battaglia, Medieval Swordsmanship, Niten "
+"Ichi-Ryu, Pencak Silat, or Sōjutsu."
+msgstr ""
+
+#. ~ Description of profession "Fine Dining" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You loved going to all kinds of restaurants and experiencing everything the "
+"world of culinary arts had to offer.  Nowadays, those chefs are all dead, so "
+"it'll be up to you to recreate the joys of your past."
+msgstr ""
+
+#. ~ Description of profession "Fine Dining" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You loved going to all kinds of restaurants and experiencing everything the "
+"world of culinary arts had to offer.  Nowadays, those chefs are all dead, so "
+"it'll be up to you to recreate the joys of your past."
+msgstr ""
+
+#. ~ Description of profession "Competitive Eating" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a professional eater before the Cataclysm and frequently "
+"participated in eating contests.  Thanks to your training, you can eat huge "
+"amounts of food without getting sick, and while eating forty hot dogs in ten "
+"minutes might not be too useful in the apocalypse, your fortitude might help "
+"you survive off food other survivors would pass over."
+msgstr ""
+
+#. ~ Description of profession "Competitive Eating" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a professional eater before the Cataclysm and frequently "
+"participated in eating contests.  Thanks to your training, you can eat huge "
+"amounts of food without getting sick, and while eating forty hot dogs in ten "
+"minutes might not be too useful in the apocalypse, your fortitude might help "
+"you survive off food other survivors would pass over."
+msgstr ""
+
+#. ~ Description of profession "Modeling" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were deep into the fashion scene, keeping up on the latest trends and "
+"even modeling clothes yourself.  Having style and good looks is just as, if "
+"not more, important to you than practicality."
+msgstr ""
+
+#. ~ Description of profession "Modeling" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were deep into the fashion scene, keeping up on the latest trends and "
+"even modeling clothes yourself.  Having style and good looks is just as, if "
+"not more, important to you than practicality."
+msgstr ""
+
+#. ~ Description of profession "Ham Radio" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You whiled your nights away using, building, and repairing old ham radios.  "
+"Now you have no one to talk to. But you won't give up hope, and maybe your "
+"electronics knowledge can help you somehow."
+msgstr ""
+
+#. ~ Description of profession "Ham Radio" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You whiled your nights away using, building, and repairing old ham radios.  "
+"Now you have no one to talk to. But you won't give up hope, and maybe your "
+"electronics knowledge can help you somehow."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Whether through regular commuting, or just riding for the joy of it, you're "
+"no stranger to bicycles."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Whether through regular commuting, or just riding for the joy of it, you're "
+"no stranger to bicycles."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've shed gallons of sweat, and more than a little blood, riding the "
+"streets and trails as a cyclist."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've shed gallons of sweat, and more than a little blood, riding the "
+"streets and trails as a cyclist."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've honed the fitness and form of a professional bicycle racer.  When "
+"you're riding, your wheels are like an extension of your body."
+msgstr ""
+
+#. ~ Description of profession "Cyclist (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've honed the fitness and form of a professional bicycle racer.  When "
+"you're riding, your wheels are like an extension of your body."
+msgstr ""
+
+#. ~ Description of profession "Basketball (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You used to shoot some b-ball outside of the school… at least, until a couple"
+" of corpses who were up to no good started making trouble in your "
+"neighborhood."
+msgstr ""
+
+#. ~ Description of profession "Basketball (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You used to shoot some b-ball outside of the school… at least, until a couple"
+" of corpses who were up to no good started making trouble in your "
+"neighborhood."
+msgstr ""
+
+#. ~ Description of profession "Basketball (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You can sink 3-pointers all day, and dribble around the most determined "
+"defenders."
+msgstr ""
+
+#. ~ Description of profession "Basketball (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You can sink 3-pointers all day, and dribble around the most determined "
+"defenders."
+msgstr ""
+
+#. ~ Description of profession "Football (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You'd occasionally play touch or flag football at the park, but never got too"
+" serious about it."
+msgstr ""
+
+#. ~ Description of profession "Football (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You'd occasionally play touch or flag football at the park, but never got too"
+" serious about it."
+msgstr ""
+
+#. ~ Description of profession "Football (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're no stranger to throwing the ol' pigskin and taking a few tackles.  "
+"Hopefully your skills in dodging defenders will help you charge through the "
+"hordes of undead."
+msgstr ""
+
+#. ~ Description of profession "Football (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're no stranger to throwing the ol' pigskin and taking a few tackles.  "
+"Hopefully your skills in dodging defenders will help you charge through the "
+"hordes of undead."
+msgstr ""
+
+#. ~ Description of profession "Football (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You played college ball, ya know.  You could have gone pro if the world "
+"hadn't ended."
+msgstr ""
+
+#. ~ Description of profession "Football (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You played college ball, ya know.  You could have gone pro if the world "
+"hadn't ended."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/json/hobbies.json
+msgctxt "profession_male"
+msgid "Soccer (Beginner)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You used to kick a ball around with your friends, having fun together.  "
+"Though it may not be the case anymore."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/json/hobbies.json
+msgctxt "profession_female"
+msgid "Soccer (Beginner)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You used to kick a ball around with your friends, having fun together.  "
+"Though it may not be the case anymore."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/json/hobbies.json
+msgctxt "profession_male"
+msgid "Soccer (Intermediate)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"Your fondness for the beautiful game shows with your flairs, skills and "
+"tackles.  Whether you can go past the backline of the undead is a question "
+"yet to be answered."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/json/hobbies.json
+msgctxt "profession_female"
+msgid "Soccer (Intermediate)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"Your fondness for the beautiful game shows with your flairs, skills and "
+"tackles.  Whether you can go past the backline of the undead is a question "
+"yet to be answered."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/json/hobbies.json
+msgctxt "profession_male"
+msgid "Soccer (Expert)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Expert)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were on trial at a professional club, ready to get a contract.  What a "
+"great opportunity for you, if only your coaches were still alive."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/json/hobbies.json
+msgctxt "profession_female"
+msgid "Soccer (Expert)"
+msgstr ""
+
+#. ~ Description of profession "Soccer (Expert)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were on trial at a professional club, ready to get a contract.  What a "
+"great opportunity for you, if only your coaches were still alive."
+msgstr ""
+
+#. ~ Description of profession "Shooting (Beginner)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've been to a gun range once or twice and maybe took a firearm safety "
+"class.  At the very least, you're confident you can point the gun in the "
+"correct direction."
+msgstr ""
+
+#. ~ Description of profession "Shooting (Beginner)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've been to a gun range once or twice and maybe took a firearm safety "
+"class.  At the very least, you're confident you can point the gun in the "
+"correct direction."
+msgstr ""
+
+#. ~ Description of profession "Shooting (Intermediate)" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You liked going to the local gun range and shooting at some targets or "
+"blasting cans off of fence posts with a variety of firearms.  Maybe if you "
+"just imagine targets on those undead, this could help."
+msgstr ""
+
+#. ~ Description of profession "Shooting (Intermediate)" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You liked going to the local gun range and shooting at some targets or "
+"blasting cans off of fence posts with a variety of firearms.  Maybe if you "
+"just imagine targets on those undead, this could help."
+msgstr ""
+
+#. ~ Description of profession "Trap Shooting" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You loved the smell of gunsmoke and blowing ceramic discs out of the sky.  "
+"Your future will likely involve shooting things a little fleshier than clay "
+"pigeons."
+msgstr ""
+
+#. ~ Description of profession "Trap Shooting" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You loved the smell of gunsmoke and blowing ceramic discs out of the sky.  "
+"Your future will likely involve shooting things a little fleshier than clay "
+"pigeons."
+msgstr ""
+
+#. ~ Description of profession "Woodworking - Luthier" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've learned woodworking in the field of making musical instruments.  "
+"You'll be able to create musical instruments in the Cataclysm."
+msgstr ""
+
+#. ~ Description of profession "Woodworking - Luthier" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've learned woodworking in the field of making musical instruments.  "
+"You'll be able to create musical instruments in the Cataclysm."
+msgstr ""
+
+#. ~ Description of profession "Home Improvement" for male
+#: data/json/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You'd fix up any holes and appliances in your own home with nothing but your "
+"two hands and some elbow grease.  You did it to save money on repairmen, but "
+"now it seems you'll do it to save your life."
+msgstr ""
+
+#. ~ Description of profession "Home Improvement" for female
+#: data/json/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You'd fix up any holes and appliances in your own home with nothing but your "
+"two hands and some elbow grease.  You did it to save money on repairmen, but "
+"now it seems you'll do it to save your life."
+msgstr ""
+
+#. ~ Item action name of "GEIGER"
+#: data/json/item_actions.json
+msgid "Use Geiger counter"
+msgstr ""
+
+#. ~ Item action name of "E_FILE_DEVICE"
+#: data/json/item_actions.json
+msgid "Manage files"
+msgstr ""
+
+#. ~ Item category name used for headers
+#: data/json/item_category.json
+msgid "Files"
+msgstr ""
+
+#. ~ Item category name used for headers
+#: data/json/item_category.json
+msgid "Software"
+msgstr ""
+
+#. ~ Name of spell "debug_kill_spell"
+#: data/json/item_spell_effects.json
+msgid "Debug Kill Creature"
+msgstr ""
+
+#. ~ Description of spell "debug_kill_spell ( Debug Kill Creature )"
+#: data/json/item_spell_effects.json
+#, c-format
+msgid "Deal damage equal to 100% of monster's HP."
+msgstr ""
+
+#. ~ Name of the limb score as displayed in the UI
+#: data/json/limb_scores.json
+msgid "Consume (Solid)"
+msgstr ""
+
+#. ~ Name of the limb score as displayed in the UI
+#: data/json/limb_scores.json
+msgid "Consume (Liquid)"
+msgstr ""
+
+#. ~ Description of loot zone "Loot: Default"
+#: data/json/loot_zones.json
+msgid "Destination for any loot without a more specific zone defined."
+msgstr ""
+
+#. ~ Description of loot zone "Loot: Martial arts manuals"
+#: data/json/loot_zones.json
+msgid "Destination for manuals for martial arts."
+msgstr ""
+
+#. ~ Description of loot zone "Loot: Tool Magazines"
+#: data/json/loot_zones.json
+msgid "Destination for tool magazines."
+msgstr ""
+
+#. ~ Description of loot zone "Loot: Traps"
+#: data/json/loot_zones.json
+msgid "Destination for traps."
+msgstr ""
+
+#. ~ Name of loot zone
+#: data/json/loot_zones.json
+msgid "Loot: Unload Everything"
+msgstr ""
+
+#. ~ Description of loot zone "Loot: Unload Everything"
+#: data/json/loot_zones.json
+msgid ""
+"Any containers in this zone you don't otherwise sort will have their contents"
+" dumped out and placed on the same tile.  This includes corpses, magazines, "
+"and magazine wells."
+msgstr ""
+
+#. ~ Initiate message of martial art "Aikido"
+#: data/json/martialarts.json
+msgid "You enter the hanmi stance."
+msgstr ""
+
+#. ~ Initiate message of martial art "Aikido"
+#: data/json/martialarts.json
+#, c-format
+msgid "%s enters a relaxed combat posture."
+msgstr ""
+
+#. ~ Description of buff "Aikido" in martial art "Aikido Stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"By disregarding offense in favor of defense, you are better at protecting yourself.\n"
+"\n"
+"Blocked damage reduced by 100% of Dexterity, +2 blocking effectiveness, +1.0 Dodging skill."
+msgstr ""
+
+#. ~ Description of martial art "Barbaran Montante"
+#: data/json/martialarts.json
+msgid ""
+"Barbaran Montante originated in 16th century Spain and focuses on overcoming "
+"thick armor with heavy weaponry and sweeping blows, transferring kinetic "
+"energy through armor and into vulnerable organs and bones."
+msgstr ""
+
+#. ~ Buff name of martial art "Brawling"
+#. ~ Clause text "buff_brawling_onpause" of UI widget
+#. "ma_buff_indicator_template"
+#: data/json/martialarts.json data/json/ui/ma_style.json
+msgid "Preparation to Hit"
+msgstr ""
+
+#. ~ Description of buff "Brawling" in martial art "Preparation to Hit"
+#: data/json/martialarts.json
+msgid ""
+"You take a moment to prepare your stance before the enemy, allowing you to hit a little more accurately.\n"
+"\n"
+"+1 accuracy.  Lasts 2 turns.  Stacks 2 times."
+msgstr ""
+
+#. ~ Description of buff "Capoeira" in martial art "Capoeira Momentum"
+#: data/json/martialarts.json
+msgid ""
+"You can feel the rhythm as you move.  You are harder to hit, and your kicks are even more amazing!\n"
+"\n"
+"+1.0 Dodging skill.\n"
+"Enables \"Spin Kick\" and \"Sweep Kick\" techniques.\n"
+"Lasts 3 turns."
+msgstr ""
+
+#. ~ Description of buff "Capoeira" in martial art "Capoeira Tempo"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Hit or miss, it's just part of the dance!  And the best part is about to start!\n"
+"\n"
+"+5% damage.\n"
+"Lasts 1 turn.  Stacks 3 times."
+msgstr ""
+
+#. ~ Description of buff "Crane Kung Fu" in martial art "Crane's Precision"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Your attacks strike at your opponents' weak spots with speed and precision instead of brute force.\n"
+"\n"
+"Bash damage increased by 75% of Dexterity but decreased by 75% of Strength."
+msgstr ""
+
+#. ~ Description of buff "Crane Kung Fu" in martial art "Crane's Flight"
+#: data/json/martialarts.json
+msgid ""
+"Much like the crane, you are quick to avoid danger and strike back.\n"
+"\n"
+"+1 accuracy, +1.0 Dodging skill.\n"
+"Enables \"Crane Kick\" and \"Crane Strike\" techniques.\n"
+"Lasts 3 turns."
+msgstr ""
+
+#. ~ Description of buff "Dragon Kung Fu" in martial art "Dragon's Knowledge"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You plan your attacks far in advance, relying on your intuition instead of your speed to strike true.\n"
+"\n"
+"Accuracy increased by 25% of Intelligence but decreased by 25% of Dexterity, bash damage increased by 75% of Intelligence but decreased by 75% of Strength."
+msgstr ""
+
+#. ~ Description of buff "Dragon Kung Fu" in martial art "Dragon Power"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You take a moment to reflect on battles past and to come.  This insight will protect you from future harm.\n"
+"\n"
+"+2 blocking effectiveness, blocked damage reduced by 100% of Intelligence, +1.0 Dodging skill.\n"
+"Lasts 2 turns."
+msgstr ""
+
+#. ~ Description of buff "Fencing" in martial art "Fencing Stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Your side stance reduces the chance that you will be harmed in combat.\n"
+"\n"
+"Blocked damage reduced by 50% of Dexterity."
+msgstr ""
+
+#. ~ Description of buff "Fencing" in martial art "Parry"
+#: data/json/martialarts.json
+msgid ""
+"Your next strike will find its mark much easier after your parry.\n"
+"\n"
+"+1 accuracy.\n"
+"Lasts 1 turn."
+msgstr ""
+
+#. ~ Description of martial art "Fior Di Battaglia"
+#: data/json/martialarts.json
+msgid ""
+"Medieval Europe's martial techniques for fighting with hooked weapons.  The "
+"\"Flower of Battle\" places great focus on countering one's opponent and "
+"knocking them down before landing a killing blow."
+msgstr ""
+
+#. ~ Description of martial art "Judo"
+#: data/json/martialarts.json
+msgid ""
+"Judo is a martial art that focuses on grabs and throws, both defensive and "
+"offensive.  You are resistant to most effects that can knock you down and can"
+" counter grab and takedown attacks with a strong judo throw."
+msgstr ""
+
+#. ~ Description of buff "Judo" in martial art "Judo Stance"
+#: data/json/martialarts.json
+msgid ""
+"Your knowledge of grappling allows you to recover from knockdown effects "
+"instantly.  In addition, you can counter grabs and takedown attacks with a "
+"judo throw."
+msgstr ""
+
+#. ~ Description of buff "Karate" in martial art "Karate Stance"
+#: data/json/martialarts.json
+msgid ""
+"Your no-nonsense stance allows you hit more accurately.\n"
+"\n"
+"+2 accuracy."
+msgstr ""
+
+#. ~ Name of martial art
+#: data/json/martialarts.json
+msgid "Kickboxing"
+msgstr ""
+
+#. ~ Description of martial art "Kickboxing"
+#: data/json/martialarts.json
+msgid ""
+"A martial art that combines western boxing with elements of Karate, "
+"Taekwondo, Muay Thai, and Savate, particularly in the use of kicks.  American"
+" Kickboxing in particular focuses on high kicks without knee or elbow "
+"strikes."
+msgstr ""
+
+#. ~ Initiate message of martial art "Kickboxing"
+#: data/json/martialarts.json
+msgid "You bring your fists up and stay light on your feet."
+msgstr ""
+
+#. ~ Initiate message of martial art "Kickboxing"
+#: data/json/martialarts.json
+#, c-format
+msgid "%s brings their fists up and stays light on their feet."
+msgstr ""
+
+#. ~ Buff name of martial art "Kickboxing"
+#. ~ Clause text "buff_kickboxing_stance_static" of UI widget
+#. "ma_buff_indicator_template"
+#: data/json/martialarts.json data/json/ui/ma_style.json
+msgid "Kick stance"
+msgstr ""
+
+#. ~ Description of buff "Kickboxing" in martial art "Kick stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You have adopted a stance which allows for greater mobility and stability.  Your hands are in a guard position with elbows forward to protect yourself.\n"
+"\n"
+"Blocked damage reduced by 25% of Strength.\n"
+"+1.0 Dodging skill."
+msgstr ""
+
+#. ~ Description of buff "Krav Maga" in martial art "Strike Vitals"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Like a fool, your opponent has left themselves wide open.\n"
+"\n"
+"+5% critical hit chance.\n"
+"Lasts 1 turn."
+msgstr ""
+
+#. ~ Description of martial art "Leopard Kung Fu"
+#: data/json/martialarts.json
+msgid ""
+"One of the five Shaolin animal styles.  The Leopard focuses on rapid, "
+"strategically-planned strikes.  Dexterity determines your damage, rather than"
+" Strength and also increases your critical hit chance."
+msgstr ""
+
+#. ~ Description of martial art "Medieval Swordsmanship"
+#: data/json/martialarts.json
+msgid ""
+"The art of the longsword and sword & buckler, preceding the later development"
+" of fencing.  Designed for combat both unarmored and in armor, it includes "
+"grappling as well as defensive and offensive sword techniques.  This style is"
+" a combination of the Italian and German traditions."
+msgstr ""
+
+#. ~ Description of buff "Medieval Swordsmanship" in martial art "Half
+#. Swording"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You grip the blade partway down for greater control.\n"
+"\n"
+"Blocked damage reduced by 50% of Strength, -1 accuracy.\n"
+"Enables \"Grab\" and \"Lethal Strike\" techniques.\n"
+"Lasts 2 turns."
+msgstr ""
+
+#. ~ Description of buff "Ninjutsu" in martial art "Sneak Attack"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"To a true shinobi, the first strike and the last strike are one and the same.\n"
+"\n"
+"+25% critical hit chance."
+msgstr ""
+
+#. ~ Description of buff "Ninjutsu" in martial art "Momentum Shift"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Ninja are trained to be extremely agile and mobile.\n"
+"\n"
+"+1.0 Dodging skill, accuracy increased by 20% of Dexterity.\n"
+"Lasts 1 turn."
+msgstr ""
+
+#. ~ Description of buff "Ninjutsu" in martial art "Loss of Surprise"
+#: data/json/martialarts.json
+msgid ""
+"Your intentions are known!  It will take you a few moments to sneak attack again.\n"
+"\n"
+"Disables \"Sneak Attack\" buff and \"Assassinate\" and \"Ninjutsu Takedown\" techniques.  Enables \"Swift Strike (crit)\" technique.\n"
+"Lasts 3 turns, persists after switching styles."
+msgstr ""
+
+#. ~ Description of martial art "Pankration"
+#: data/json/martialarts.json
+msgid ""
+"An ancient Greek martial art once used by the Spartans.  It combines boxing "
+"and wrestling techniques to create a brutal sport, though the modern revival "
+"of the art is more restrained and rules-based."
+msgstr ""
+
+#. ~ Description of buff "Pankration" in martial art "Close Combat"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You have your opponent right where you want them!\n"
+"\n"
+"+20% damage.\n"
+"Lasts 1 turn."
+msgstr ""
+
+#. ~ Initiate message of martial art "Silat"
+#: data/json/martialarts.json
+msgid "You give a salute of respect as you prepare for combat."
+msgstr ""
+
+#. ~ Description of buff "Silat" in martial art "Silat Stance"
+#: data/json/martialarts.json
+msgid ""
+"You try to stay as loose as possible when fighting to have more chances to dodge.\n"
+"\n"
+"+1 dodge attempt."
+msgstr ""
+
+#. ~ Description of buff "Silat" in martial art "Silat Appraisal"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Each time you dodge an attack, you learn a bit more about your opponent's fighting style.  This allows you to make more precise attacks against them.\n"
+"\n"
+"Accuracy increased by 15% of Dexterity.\n"
+"Lasts 2 turns.  Stacks 3 times."
+msgstr ""
+
+#. ~ Description of martial art "Snake Kung Fu"
+#: data/json/martialarts.json
+msgid ""
+"One of the five Shaolin animal styles.  The Snake focuses on sinuous movement"
+" and precision strikes.  Perception determines your accuracy and damage, "
+"rather than Dexterity and Strength.  Standing still increases the accuracy "
+"and critical hit chance of your next few attacks."
+msgstr ""
+
+#. ~ Description of buff "Snake Kung Fu" in martial art "Snake's Sight"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You are patient and know where to hit your opponent for best results.\n"
+"\n"
+"Accuracy increased by 25% of Perception but decreased by 25% of Dexterity, bash damage increased by 75% of Perception but decreased by 75% of Strength."
+msgstr ""
+
+#. ~ Description of buff "Snake Kung Fu" in martial art "Snake's Coil"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Every snake waits for the perfect moment to strike.  Aim as your opponents approach and attack their weak spots without mercy!\n"
+"\n"
+"+1 accuracy, +1 blocking effectiveness, +5% critical hit chance.\n"
+"Lasts 4 turns.  Stacks 3 times."
+msgstr ""
+
+#. ~ Description of martial art "Sōjutsu"
+#: data/json/martialarts.json
+msgid ""
+"Sōjutsu, \"The Way of the Spear\", is the Japanese martial art of fighting "
+"with a spear.  Sōjutsu focuses on keeping opponents at a distance in order to"
+" maintain the advantage in combat.  Standing still gives you an extra block "
+"attempt but moving will briefly increase your damage."
+msgstr ""
+
+#. ~ Description of martial art "Taekwondo"
+#: data/json/martialarts.json
+msgid ""
+"Taekwondo is the national sport of Korea, and was used by the South Korean "
+"army in the 20th century.  Focused on kicks, it does not benefit from wielded"
+" weapons.  It also includes strength training; your blocks absorb extra "
+"damage and your attacks do more damage if you are not holding anything."
+msgstr ""
+
+#. ~ Description of buff "Taekwondo" in martial art "Taekwondo Stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Using your legs to attack keeps your hands free for better defense.\n"
+"\n"
+"Blocked damage reduced by 50% of Strength."
+msgstr ""
+
+#. ~ Description of buff "Tai Chi" in martial art "Tai Chi Stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"You are focused on defense and predicting your opponents' attacks.\n"
+"\n"
+"+1 block attempt, blocked damage reduced by 100% Perception."
+msgstr ""
+
+#. ~ Description of martial art "Wing Chun"
+#: data/json/martialarts.json
+msgid ""
+"Wing Chun is a Chinese martial art that began by selecting the easiest-to-"
+"learn effective techniques from the various Shaolin animal forms.  It has a "
+"high stance, with one's weight resting entirely on the rear leg.  Wing Chun "
+"focuses on sensitivity to the opponent's direction of force, and flowing "
+"around it to create opportunities for attack."
+msgstr ""
+
+#. ~ Description of buff "Zui Quan" in martial art "Zui Quan Stance"
+#: data/json/martialarts.json
+#, no-c-format
+msgid ""
+"Others might think you stumble about at random, but you know better.  Each movement is calculated to evade harm with ease.\n"
+"\n"
+"+2 dodge attempts, Dodging skill increased by 20% of Intelligence."
+msgstr ""
+
+#. ~ Description of martial art "Bionic Combatives"
+#: data/json/martialarts_fictional.json
+msgid ""
+"A modern combat style for the post-modern human.  Nicknamed \"Biojutsu\", "
+"Bionic Combatives combines integrated weaponry, armor, and augments into a "
+"consolidated fighting discipline."
+msgstr ""
+
+#. ~ Description of buff "Centipede Kung Fu" in martial art "Centipede's
+#. Frenzy"
+#: data/json/martialarts_fictional.json
+msgid ""
+"Your attacks are a blur of hands and legs that become faster as you strike your opponents without rest.\n"
+"\n"
+"-4 move cost.\n"
+"Lasts 3 turns.  Stacks 4 times."
+msgstr ""
+
+#. ~ Description of buff "Lizard Kung Fu" in martial art "Lizard's Venom"
+#: data/json/martialarts_fictional.json
+#, no-c-format
+msgid ""
+"Your venom is a long-lasting pain that your opponents will never forget.\n"
+"\n"
+"+15% damage.\n"
+"Lasts 5 turns."
+msgstr ""
+
+#. ~ Description of buff "Scorpion Kung Fu" in martial art "Scorpion's Charge"
+#: data/json/martialarts_fictional.json
+#, no-c-format
+msgid ""
+"Rush forward and catch your prey!\n"
+"\n"
+"+10% damage.\n"
+"Enables \"Pincer Fist\" technique.\n"
+"Lasts 2 turns.  Stacks 2 times."
+msgstr ""
+
+#. ~ Description of martial art "Viper Kung Fu"
+#: data/json/martialarts_fictional.json
+msgid ""
+"A legacy of the Five Deadly Venoms, used by Qi Dong.  Viper Style (originally"
+" called Snake Style) is punishing to stunned opponents.  Stunning a foe with "
+"a Viper Bite will allow you to finish them off with the legendary Viper "
+"Strike."
+msgstr ""
+
+#. ~ Description of buff "Viper Kung Fu" in martial art "Viper's Rattle"
+#: data/json/martialarts_fictional.json
+msgid ""
+"You are a terrifying monster on the battlefield!  Opponents will have a harder time fighting back.\n"
+"\n"
+"+1 accuracy, +1.0 Dodging skill.\n"
+"Lasts 3 turns.  Stacks 2 times."
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "You were almost grabbed by %s, but you outmaneuver it"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they outmaneuver it"
+msgstr ""
+
+#. ~ Message of martial technique "Viper Bite"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "<npcname> lashes out at %s with a Viper Bite"
+msgstr ""
+
+#. ~ Condition description of martial technique "Viper Tail"
+#. ~ Condition description of martial technique "Viper Strike"
+#: data/json/martialarts_fictional.json
+msgid "Requires a stunned target"
+msgstr ""
+
+#. ~ Message of martial technique "Toad Slam"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "You meet %s head-on with a stunning slam"
+msgstr ""
+
+#. ~ Message of martial technique "Toad Slam"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "<npcname> meet %s head-on with a stunning slam"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "You were almost grabbed by %s, but you skitter free"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/martialarts_fictional.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they skitter free"
+msgstr ""
+
+#. ~ Bash damage verb of material
+#. ~ Damage adjective of material
+#: data/json/materials.json
+msgid "mangled"
+msgstr ""
+
+#. ~ Damage adjective of material
+#: data/json/materials.json
+msgid "compromised"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Exodii Ceramic"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Plutonium"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Gas"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Nitrogen"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Oxygen"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Hydrogen"
+msgstr ""
+
+#. ~ Damage adjective of material
+#: data/json/materials.json data/mods/Aftershock/items/materials.json
+#: data/mods/aftershock_exoplanet/items/materials.json
+msgid "unraveling"
+msgstr ""
+
+#. ~ Name of material
+#: data/json/materials.json
+msgid "Ballistic Barrier"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Had to suffer through an inane conversation"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Tingly feeling"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Anguished by memories of butchering a person's corpse"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Chemical enhancement moodswing"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Spent time around allies"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Spent time alone"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Covered in bile"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Saw the sun rise"
+msgstr ""
+
+#. ~ Morale text
+#: data/json/morale_types.json
+msgid "Saw the sun set"
+msgstr ""
+
+#. ~ Verb in activity "ACT_E_FILE"
+#: data/json/player_activities.json
+msgid "managing files"
+msgstr ""
+
+#. ~ Verb in activity "ACT_EBOOKSAVE"
+#: data/json/player_activities.json
+msgid "taking pictures of books"
+msgstr ""
+
+#. ~ Verb in activity "ACT_VEHICLE_FOLD"
+#: data/json/player_activities.json
+msgid "folding a vehicle"
+msgstr ""
+
+#. ~ Verb in activity "ACT_VEHICLE_UNFOLD"
+#: data/json/player_activities.json
+msgid "unfolding a vehicle"
+msgstr ""
+
+#. ~ Verb in activity "ACT_UNLOAD_LOOT"
+#: data/json/player_activities.json
+msgid "unloading loot"
+msgstr ""
+
+#. ~ Verb in activity "ACT_OUTFIT_SWAP"
+#: data/json/player_activities.json
+msgid "changing clothes"
+msgstr ""
+
+#. ~ Verb in activity "ACT_INVOKE_ITEM"
+#: data/json/player_activities.json
+msgid "using item"
+msgstr ""
+
+#. ~ Verb in activity "ACT_DATA_HANDLING"
+#: data/json/player_activities.json
+msgid "downloading data"
+msgstr ""
+
+#. ~ Verb in activity "ACT_REEL_CABLE"
+#: data/json/player_activities.json
+msgid "reeling cable"
+msgstr ""
+
+#. ~ Verb in activity "ACT_GLIDE"
+#: data/json/player_activities.json
+msgid "gliding"
+msgstr ""
+
+#. ~ Verb in activity "ACT_PHONE_RECOVERY_BASIC"
+#. ~ Verb in activity "ACT_PHONE_RECOVERY_ADVANCED"
+#: data/json/player_activities.json
+msgid "recovering"
+msgstr ""
+
+#. ~ Verb in activity "ACT_SALINE_INFUSE"
+#: data/json/player_activities.json
+msgid "infusing saline"
+msgstr ""
+
+#. ~ Verb in activity "ACT_MORTAR_AIMING"
+#: data/json/player_activities.json
+msgid "aiming the artillery"
+msgstr ""
+
+#. ~ Description of profession "Chemical Engineer" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You know your way around the periodic table and can name ten different "
+"industrial processes that involve any given chemical, but that did not "
+"prevent the prospect of employment from looking bleak for you.  Fortunately, "
+"the Cataclysm might just be the thing to save you from a dead end job."
+msgstr ""
+
+#. ~ Description of profession "Chemical Engineer" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You know your way around the periodic table and can name ten different "
+"industrial processes that involve any given chemical, but that did not "
+"prevent the prospect of employment from looking bleak for you.  Fortunately, "
+"the Cataclysm might just be the thing to save you from a dead end job."
+msgstr ""
+
+#. ~ Description of profession "Home Mechanic" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've always loved cars, and there's nothing like getting under the hood and"
+" fixing it yourself.  You've kept ahold of some handy tools for the job, and "
+"at least now you'll never want for parts."
+msgstr ""
+
+#. ~ Description of profession "Home Mechanic" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've always loved cars, and there's nothing like getting under the hood and"
+" fixing it yourself.  You've kept ahold of some handy tools for the job, and "
+"at least now you'll never want for parts."
+msgstr ""
+
+#. ~ Description of profession "Mechanical Engineer" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You've always loved machines, and have extensively incorporated them into "
+"your career.  Not long after receiving your degree, you seem to be the one "
+"being subjected to a stress test, and it remains unclear if you will retain "
+"your structural integrity."
+msgstr ""
+
+#. ~ Description of profession "Mechanical Engineer" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You've always loved machines, and have extensively incorporated them into "
+"your career.  Not long after receiving your degree, you seem to be the one "
+"being subjected to a stress test, and it remains unclear if you will retain "
+"your structural integrity."
+msgstr ""
+
+#. ~ Description of profession "Basketball Player" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"Your first major game was abruptly canceled when zombies stormed the court.  "
+"Quick feet and good reflexes meant you were among the lucky few to escape the"
+" stadium alive."
+msgstr ""
+
+#. ~ Description of profession "Basketball Player" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"Your first major game was abruptly canceled when zombies stormed the court.  "
+"Quick feet and good reflexes meant you were among the lucky few to escape the"
+" stadium alive."
+msgstr ""
+
+#. ~ Description of profession "Marine Infantryman" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are one of the few and the proud: a member of the US Marine Corps.  Now "
+"that military command has collapsed in on itself as far as you can tell, you "
+"suppose that it falls to you to carry the memory of the Corps forward into "
+"the future.  Semper fi."
+msgstr ""
+
+#. ~ Description of profession "Marine Infantrywoman" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are one of the few and the proud: a member of the US Marine Corps.  Now "
+"that military command has collapsed in on itself as far as you can tell, you "
+"suppose that it falls to you to carry the memory of the Corps forward into "
+"the future.  Semper fi."
+msgstr ""
+
+#. ~ Description of profession "Navy Sailor" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You're a sailor of the US Navy, and spent the last few years working shipside"
+" aboard an aircraft carrier.  Though you're trained in combat, maintenance of"
+" the vessel has been your primary duty.  After some event beyond your "
+"understanding, the carrier has become a floating graveyard in the middle of "
+"nowhere.  This is going to take more than a cup of coffee and a monkey wrench"
+" to fix."
+msgstr ""
+
+#. ~ Description of profession "Navy Sailor" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You're a sailor of the US Navy, and spent the last few years working shipside"
+" aboard an aircraft carrier.  Though you're trained in combat, maintenance of"
+" the vessel has been your primary duty.  After some event beyond your "
+"understanding, the carrier has become a floating graveyard in the middle of "
+"nowhere.  This is going to take more than a cup of coffee and a monkey wrench"
+" to fix."
+msgstr ""
+
+#. ~ Description of profession "Navy Diver" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a member of a Naval Special Warfare diving group, a skilled soldier "
+"adept at underwater infiltration and marine combat.  You were suiting up for "
+"a practice dive when the aircraft carrier you were stationed on was somehow "
+"flung from the Yellow Sea to who knows where.  You seem to be the only one "
+"who survived with your sanity intact, but it's not safe to stay here.  At "
+"least you're already dressed to abandon ship."
+msgstr ""
+
+#. ~ Description of profession "Navy Diver" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a member of a Naval Special Warfare diving group, a skilled soldier "
+"adept at underwater infiltration and marine combat.  You were suiting up for "
+"a practice dive when the aircraft carrier you were stationed on was somehow "
+"flung from the Yellow Sea to who knows where.  You seem to be the only one "
+"who survived with your sanity intact, but it's not safe to stay here.  At "
+"least you're already dressed to abandon ship."
+msgstr ""
+
+#. ~ Description of profession "Military Veteran" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"After being discharged from the armed forces, you were sent to a veterans' "
+"hospital for treatment.  Just when you thought you'd overcome your traumas "
+"and readjusted to civilian life, the world has come to an end and your worst "
+"nightmare has become a reality: life in an endless battlefield."
+msgstr ""
+
+#. ~ Description of profession "Military Veteran" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"After being discharged from the armed forces, you were sent to a veterans' "
+"hospital for treatment.  Just when you thought you'd overcome your traumas "
+"and readjusted to civilian life, the world has come to an end and your worst "
+"nightmare has become a reality: life in an endless battlefield."
+msgstr ""
+
+#. ~ Description of profession "Rifleman" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"When you were young, you dreamed of being a soldier.  War is hell and hell is"
+" war, but you never thought it would be this bad."
+msgstr ""
+
+#. ~ Description of profession "Rifleman" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"When you were young, you dreamed of being a soldier.  War is hell and hell is"
+" war, but you never thought it would be this bad."
+msgstr ""
+
+#. ~ Description of profession "Navy SEAL Marksmen" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"Recruited into the ranks of the US Navy's Special Warfare forces as a "
+"designated sniper, your training in precision marksmanship and maritime "
+"operations was extensive.  As a proficient soldier and combative in all "
+"respects, you provided overwatch and long-range elimination services in the "
+"line of duty.  Now, with naval command imploding and your spotter MIA, your "
+"skills with a rifle and covert operations are the only things standing "
+"between you and the Cataclysm."
+msgstr ""
+
+#. ~ Description of profession "Navy SEAL Marksmen" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"Recruited into the ranks of the US Navy's Special Warfare forces as a "
+"designated sniper, your training in precision marksmanship and maritime "
+"operations was extensive.  As a proficient soldier and combative in all "
+"respects, you provided overwatch and long-range elimination services in the "
+"line of duty.  Now, with naval command imploding and your spotter MIA, your "
+"skills with a rifle and covert operations are the only things standing "
+"between you and the Cataclysm."
+msgstr ""
+
+#. ~ Description of profession "Navy SEAL" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a member of the SEALs; a key component of the US Navy's special "
+"forces and a proficient combatant in both maritime and ground operations.  "
+"'The only easy day was yesterday', and with the chain of command in ruins, "
+"you may fulfill your final mission in any way you see fit."
+msgstr ""
+
+#. ~ Description of profession "Navy SEAL" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a member of the SEALs; a key component of the US Navy's special "
+"forces and a proficient combatant in both maritime and ground operations.  "
+"'The only easy day was yesterday', and with the chain of command in ruins, "
+"you may fulfill your final mission in any way you see fit."
+msgstr ""
+
+#. ~ Description of profession "Doctor" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a patient-facing doctor practicing general or specialized medicine."
+"  While your bedside manner might not get you far in this new world, your "
+"medical skills will certainly help."
+msgstr ""
+
+#. ~ Description of profession "Doctor" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a patient-facing doctor practicing general or specialized medicine."
+"  While your bedside manner might not get you far in this new world, your "
+"medical skills will certainly help."
+msgstr ""
+
+#. ~ Description of profession "Pharmacist" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a pharmacist working in a community pharmacy.  No simple pill-"
+"pusher, you have a plethora of knowledge of drug preparation, biochemistry, "
+"and biology.  With your trusty mortar and pestle, you hope to grind the "
+"undead to a pulp."
+msgstr ""
+
+#. ~ Description of profession "Pharmacist" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a pharmacist working in a community pharmacy.  No simple pill-"
+"pusher, you have a plethora of knowledge of drug preparation, biochemistry, "
+"and biology.  With your trusty mortar and pestle, you hope to grind the "
+"undead to a pulp."
+msgstr ""
+
+#. ~ Description of profession "Helicopter Pilot" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You got your pilot's license and earned a living ferrying businessmen and "
+"tourists around.  The Cataclysm has grounded you for now, but the sky still "
+"calls to you…"
+msgstr ""
+
+#. ~ Description of profession "Helicopter Pilot" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You got your pilot's license and earned a living ferrying businessmen and "
+"tourists around.  The Cataclysm has grounded you for now, but the sky still "
+"calls to you…"
+msgstr ""
+
+#. ~ Description of profession "Mounted Police Officer" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You have spent many long years forging a bond with your equine companion, "
+"from running down common thugs, to entertaining kids when you ride on by.  "
+"The Cataclysm is upon you, but at least you have each other."
+msgstr ""
+
+#. ~ Description of profession "Mounted Police Officer" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You have spent many long years forging a bond with your equine companion, "
+"from running down common thugs, to entertaining kids when you ride on by.  "
+"The Cataclysm is upon you, but at least you have each other."
+msgstr ""
+
+#. ~ Description of profession "Dog Lover" for male
+#: data/json/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You spent your days running around with your faithful dogs by your side.  "
+"When the world ended, you grabbed your companions along with some of their "
+"things to protect them.  The zombies could be nearby, but at least your "
+"canine friends won't have to worry about the rain."
+msgstr ""
+
+#. ~ Description of profession "Dog Lover" for female
+#: data/json/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You spent your days running around with your faithful dogs by your side.  "
+"When the world ended, you grabbed your companions along with some of their "
+"things to protect them.  The zombies could be nearby, but at least your "
+"canine friends won't have to worry about the rain."
+msgstr ""

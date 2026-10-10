@@ -1,0 +1,1780 @@
+# Batch 175 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "tame water beetle egg"
+#: data/mods/Tamable_Wildlife/items/comestibles/eggs.json
+msgid ""
+"The egg of a water beetle.  This one has been carefully tended for.  The "
+"larva inside seems more timid and calmer upon touch."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Tamable_Wildlife/items/comestibles/eggs.json
+msgid "tame water scorpion egg"
+msgid_plural "tame water scorpion eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tame water scorpion egg"
+#: data/mods/Tamable_Wildlife/items/comestibles/eggs.json
+msgid ""
+"The egg of a water scorpion.  This one has been carefully tended for.  The "
+"water scorpion inside seems more timid and calmer upon touch."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Tamable_Wildlife/items/comestibles/eggs.json
+msgid "tame centipede egg"
+msgid_plural "tame centipede eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "tame centipede egg"
+#: data/mods/Tamable_Wildlife/items/comestibles/eggs.json
+msgid ""
+"The egg of a centipede.  This one has been carefully tended for.  The "
+"centipede larva inside seems more timid and calmer upon touch."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Tamable_Wildlife/items/comestibles/other.json
+msgid "sweet goop"
+msgid_plural "sweet goop"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sweet goop"
+#: data/mods/Tamable_Wildlife/items/comestibles/other.json
+msgid ""
+"A bunch of sweet stuff with a wet, goopy consistency.  Normal bugs would die "
+"for this, just hope the mutants will like it as well."
+msgstr ""
+
+#. ~ name of the nested group
+#: data/mods/Tamable_Wildlife/recipes/nested.json
+msgid "tame eggs"
+msgstr ""
+
+#. ~ Description of the category "tame eggs"
+#: data/mods/Tamable_Wildlife/recipes/nested.json
+msgid "Recipes related to taming the eggs of aggressive invertebrates."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Termite Glue"
+#: data/mods/TropiCataclysm/effects.json
+msgid "Chemical Allergen"
+msgstr ""
+
+#. ~ Description of MOD "TropiCataclysm"
+#: data/mods/TropiCataclysm/modinfo.json
+msgid ""
+"Changes the setting from New England to an undisclosed region in Brazil.  "
+"Initially based out of Desert Region mod."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "pachira tree"
+msgstr ""
+
+#. ~ Description of terrain "pachira tree"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A massive wetland tree belonging to the 'Pachira' genus, also known as the "
+"Guiana Chestnut Tree.  If you look closely, you can see some unharvested "
+"chestnuts."
+msgstr ""
+
+#. ~ Description of terrain "chestnut tree"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A massive wetland tree belonging to the 'Pachira' genus, also known as the "
+"Guiana Chestnut tree."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "gevuina tree"
+msgstr ""
+
+#. ~ Description of terrain "gevuina tree"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A stubby tree belonging to the 'Gevuina' genus, also known as the Chilean "
+"Hazelnut Tree.  If you look closely, you can see some unharvested hazelnuts."
+msgstr ""
+
+#. ~ Description of terrain "gevuina tree"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A stubby tree belonging to the 'Gevuina' genus, also known as the Chilean "
+"Hazelnut Tree."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "avellanita bush"
+msgstr ""
+
+#. ~ Description of terrain "avellanita bush"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A species of bush belonging to the 'Avellanita' genus.  This plant is native "
+"to Chile and has potential due to their edible nuts."
+msgstr ""
+
+#. ~ Description of terrain "avellanita bush"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A species of bush belonging to the 'Avellanita' genus.  Currently devoid of "
+"nuts."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "ceiba"
+msgstr ""
+
+#. ~ Description of terrain "ceiba"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A massive tropical tree belonging to the 'Ceiba' genus.  These gigantic trees"
+" can be found from Mexico to Southern Chile."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "acacia"
+msgstr ""
+
+#. ~ Description of terrain "acacia"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A slender subtropical tree belonging to the 'Acacia' genus.  Members of this "
+"genus are mostly constrained to Australia but have been brought abroad for "
+"multiple purposes with some being considered invasive species."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "huizache"
+msgstr ""
+
+#. ~ Description of terrain "huizache"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A slender tropical tree belonging to the 'Vachellia' genus.  This genus of "
+"plants is related to acacias but are native to the Americas with a wide "
+"distribution from Mexico to Brazil and worldwide."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "parajubea"
+msgstr ""
+
+#. ~ Description of terrain "parajubea"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A medium sized palm tree belonging to the 'Parajubea' genus.  There are only "
+"three confirmed members of this genus, two of them endangered in Bolivia."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "guayacan"
+msgstr ""
+
+#. ~ Description of terrain "guayacan"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A medium sized tropical tree belonging to one of four different genera native"
+" to the Americas.  All well known for their incredibly sturdy wood."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid "ficus"
+msgstr ""
+
+#. ~ Description of terrain "ficus"
+#: data/mods/TropiCataclysm/furniture_and_terrain/tropical_terrain_flora.json
+msgid ""
+"A large tropical tree belonging to the 'Ficus' genus.  This genus has a "
+"worldwide distribution, specially known for their fruit known as 'figs' or "
+"the latex they produce when cut."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "greater rhea egg"
+msgid_plural "greater rhea eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "toco toucan egg"
+msgid_plural "toco toucan eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "white-eyed parakeet egg"
+msgid_plural "white-eyed parakeet eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "blue-and-yellow macaw egg"
+msgid_plural "blue-and-yellow macaw eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "saffron finch egg"
+msgid_plural "saffron finch eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "great kiskadee egg"
+msgid_plural "great kiskadee eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "rufous hornero egg"
+msgid_plural "rufous hornero eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "small-billed tinamou egg"
+msgid_plural "small-billed tinamou eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "red-legged seriema egg"
+msgid_plural "red-legged seriema eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "Chaco chachalaca egg"
+msgid_plural "Chaco chachalaca eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "dusky-legged guan egg"
+msgid_plural "dusky-legged guan eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "bare-faced curassow egg"
+msgid_plural "bare-faced curassow eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "alien roe"
+msgid_plural "alien roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "cluster of salamander eggs"
+msgid_plural "clusters of salamander eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cluster of salamander eggs"
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "A large clump of salamander eggs.  They're gelatinous and transparent."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "cluster of tadfish eggs"
+msgid_plural "clusters of tadfish eggs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "cluster of tadfish eggs"
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "A large clump of tadfish eggs.  Very similar to other amphibian eggs."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "lungfish roe"
+msgid_plural "lungfish roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "electric eel roe"
+msgid_plural "electric eel roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "pacu roe"
+msgid_plural "pacu roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "tambaqui roe"
+msgid_plural "tambaqui roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "piranha roe"
+msgid_plural "piranha roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "arowana roe"
+msgid_plural "arowana roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "arapaima roe"
+msgid_plural "arapaima roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "piraiba roe"
+msgid_plural "piraiba roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "pleco roe"
+msgid_plural "pleco roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "gar roe"
+msgid_plural "gar roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "tucunaré roe"
+msgid_plural "tucunaré roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "discus roe"
+msgid_plural "discus roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "angelfish roe"
+msgid_plural "angelfish roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "koi roe"
+msgid_plural "koi roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "tilapia roe"
+msgid_plural "tilapia roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "sabalo roe"
+msgid_plural "sabalo roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "oscar roe"
+msgid_plural "oscar roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "guapote roe"
+msgid_plural "guapote roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/mods/TropiCataclysm/items/comestibles/egg.json
+msgid "mayaheros roe"
+msgid_plural "mayaheros roe"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "greater rhea"
+msgid_plural "greater rheas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "greater rhea"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A distant relative of emus and African ostriches.  Found in the grasslands "
+"and various other open regions of South America."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "greater rhea chick"
+msgid_plural "greater rhea chicks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "greater rhea chick"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A miniature rhea.  The appearance of it is distinct enough to easily "
+"identify."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "toco toucan"
+msgid_plural "toco toucans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "toco toucan"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"The largest species of toucan sporting dark plumage and a bright colored "
+"beak.  This bird can be found pretty much all over South America, feeding on "
+"fruits and seeds."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "white-eyed parakeet"
+msgid_plural "white-eyed parakeets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "white-eyed parakeet"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A small bird with bright green-colored plumage and a short hooked beak.  This"
+" species is widespread throughout all of South America, on top of being quite"
+" intelligent and sometimes kept as pets."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "blue-and-yellow macaw"
+msgid_plural "blue-and-yellow macaws"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "blue-and-yellow macaw"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A large parrot sporting beautiful blue plumage.  Intelligent and often kept "
+"as a pet."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "saffron finch"
+msgid_plural "saffron finches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "saffron finch"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A tiny, golden bird bopping around in the canopy of trees.  Its cone-shaped "
+"bill tells you it s a seed eater."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "great kiskadee"
+msgid_plural "great kiskadees"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "great kiskadee"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"This large flycatcher has a black crown, prominent white eye stripe and a "
+"dominantly yellow body.  At almost a foot long, it swoops up a variety of "
+"flying insects."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "rufous hornero"
+msgid_plural "rufous horneros"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "rufous hornero"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A drab, robin-sized ground bird with startling red eyes.  More often spotted "
+"are their odd oven shaped nests."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "small-billed tinamou"
+msgid_plural "small-billed tinamous"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "small-billed tinamou"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"One of several species of tinamous present in Brazil.  Although these birds "
+"converged into shapes similar to domestic fowl, they are more closely related"
+" to the extinct moas, though unlike them, tinamous are capable of flight."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "red-legged seriema"
+msgid_plural "red-legged seriemas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "Chaco chachalaca"
+msgid_plural "Chaco chachalacas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Chaco chachalaca"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"Though its face looks oddly like a chicken's, complete with red wattle, this "
+"tan bird sounds nothing like one as it lets out raucous cries of 'chata-ra-"
+"ta.'"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "dusky-legged guan"
+msgid_plural "dusky-legged guans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dusky-legged guan"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"A medium-sized speckled bird.  Its bright orange wattle contrasts sharply "
+"with the rest of its brown body."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid "bare-faced curassow"
+msgid_plural "bare-faced curassows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bare-faced curassow"
+#: data/mods/TropiCataclysm/monsters/tropical_bird.json
+msgid ""
+"This black bird carries itself oddly proudly, despite the ridiculous mohawk-"
+"like fringe on the top of its head."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "baby crab"
+msgid_plural "baby crabs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "baby crab"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"A crab in its larval stage, incredibly fragile and tiny but produced by a "
+"truckload of eggs that have been carried by their mother."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "baby pancora crab"
+msgid_plural "baby pancora crabs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "baby pancora crab"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"A pancora crab in its larval stage, incredibly fragile and tiny but produced "
+"by a truckload of eggs that have been carried by their mother."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "fry"
+msgid_plural "fry"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "electric eel"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"An electric eel.  A strange elongated fish known for its ability to use "
+"electricity to hunt prey, despite their name they are not actually eels."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "river stingray"
+msgid_plural "river stingray"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "stingray fry"
+msgid_plural "stingray fries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "stingray fry"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"A baby stingray.  Like many other cartilaginous fishes, river stingrays are "
+"ovoviviparous and carry the eggs until the fries are ready to get out in to "
+"the world."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "gar"
+msgid_plural "gars"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gar"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"A fish belonging to the Lepisosteidae family.  These enormous fishes can be "
+"found from North America to the Caribbean and are well known for their "
+"prehistoric appearance."
+msgstr ""
+
+#. ~ Description of monster "discus"
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid ""
+"A round and colorful genus of fish native to the Amazon river basin.  Very "
+"popular in aquariums but expensive to maintain in captivity."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_fish.json
+msgid "koi"
+msgid_plural "koi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fungal scorpion"
+#: data/mods/TropiCataclysm/monsters/tropical_fungus.json
+msgid ""
+"A huge scorpion infected with a parasitic fungus.  The stinger on its tail "
+"gushes with an ominous gray liquid."
+msgstr ""
+
+#. ~ Description of monster "fungal ganglion"
+#: data/mods/TropiCataclysm/monsters/tropical_fungus.json
+msgid ""
+"An enormous fungus rooted to the ground that seems to be the nexus for all "
+"the fungus in the area.  It periodically gives birth to new saprolings."
+msgstr ""
+
+#. ~ Description of monster "saproling"
+#: data/mods/TropiCataclysm/monsters/tropical_fungus.json
+msgid ""
+"A very small mycoid born out of a fungal pod.  Very vulnerable but over time "
+"it will become a proper fungaloid."
+msgstr ""
+
+#. ~ Description of monster "fungal dispersor"
+#: data/mods/TropiCataclysm/monsters/tropical_fungus.json
+msgid ""
+"A strange fungal creature similar to a moving balloon.  It releases a cloud "
+"of spores in all directions."
+msgstr ""
+
+#. ~ Description of monster "oversized scorpion"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "A mutated scorpion the size of a large dog."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "scorpling"
+msgid_plural "scorplings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorpling"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "A pale-colored juvenile scorpion, about the size of a beer bottle."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "giant termite worker"
+msgid_plural "giant termite workers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant termite worker"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"An adult termite dedicated to tending the colony.  Termite workers, while "
+"developed, are still capable of growing into soldiers or alates given the "
+"time."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "giant termite soldier"
+msgid_plural "giant termite soldiers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster message of special attack of monster "giant termite soldier"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+#, c-format
+msgid "The %s sprays some chemical out of its head!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "giant termite alate"
+msgid_plural "giant termite alates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant termite alate"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"An enormous winged termite dedicated to spreading new colonies.  Does not "
+"appear violent, but perhaps you should not test its patience."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "giant termite king"
+msgid_plural "giant termite kings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant termite king"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"A gigantic termite dedicated to protecting the queen and their offspring.  "
+"While his main role is breeding, the king is certainly well armed as well."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "giant termite queen"
+msgid_plural "giant termite queens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant termite queen"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"A colossal termite making up the basis of the colony along with her king.  "
+"Her enlarged abdomen limits her movements but she barely needs to move "
+"anyway."
+msgstr ""
+
+#. ~ Description of monster "oversized velvet worm"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "A mutated velvet worm the size of a large dog."
+msgstr ""
+
+#. ~ Description of monster "giant velvet worm"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"A mutated velvet worm larger than a person.  These peculiar creatures hunt at"
+" night using silent feet and sticky attacks."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "giant velvet worm"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+#, c-format
+msgid "The %s shoots strings of goo from the appendages on its head!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "colossal velvet worm"
+msgid_plural "colossal velvet worms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "colossal velvet worm"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid ""
+"An enormous velvet worm the size of a small car.  Its mouthparts and skin "
+"have reinforced to hunt down and defend against the new fauna of the "
+"Cataclysm."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "velvet worm larva"
+msgid_plural "velvet worm larvae"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "velvet worm larva"
+#: data/mods/TropiCataclysm/monsters/tropical_insect_spider.json
+msgid "A pale wriggling worm with a bunch of little legs."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_mammal.json
+msgid "peccary piglet"
+msgid_plural "peccary piglets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "peccary piglet"
+#: data/mods/TropiCataclysm/monsters/tropical_mammal.json
+msgid ""
+"The small offspring of a peccary.  Much like true boar piglets, this one has "
+"a mottled fur as camouflage."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_mammal.json
+msgid "peccary"
+msgid_plural "peccaries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "sky phantom"
+#: data/mods/TropiCataclysm/monsters/tropical_nether.json
+msgid ""
+"A huge alien creature brought by the portal storms.  It resembles a "
+"Portuguese man-o'-war fused to a zeppelin."
+msgstr ""
+
+#. ~ Description of monster "beaded lizard"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A genus of venomous lizards found from the US to Guatemala.  The Gila monster"
+" makes part of this group."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "basiliscus"
+msgid_plural "basiliscuses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "basiliscus"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A genus of tropical lizards native to Central and South America.  It's know "
+"worldwide for its ability to run on the water."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "turipache"
+msgid_plural "turipaches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "turipache"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of the Corytophanes family.  These lizards can be distinguished for "
+"their color changing ability and their crested heads."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "lemacto"
+msgid_plural "lemactos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "lemacto"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of the Laemanctus family.  These long legged lizards can be "
+"distinguished for their long tails."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "chameleon"
+msgid_plural "chameleons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "chameleon"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of Chamaeleonidae.  These lizards are popular worldwide due to their"
+" long tongues and color shifting abilities, exported to America via pet "
+"trade."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "anole"
+msgid_plural "anoles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "anole"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of the Anolis genus.  These tiny lizards are similar to chameleons, "
+"living mostly on trees and using a flap on their neck during mating season."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "gecko"
+msgid_plural "geckos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gecko"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of Gekkota.  With over 1400 species this suborder of lizards is "
+"found in all the hot parts of the world, mostly known as tree dwellers."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "skink"
+msgid_plural "skinks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "skink"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A member of Scincidae.  With over 1500 species these lizards are found all "
+"around the world, usually in burrowing niches."
+msgstr ""
+
+#. ~ Description of monster "crocodile"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"The American crocodile, found from the Orinoco up to southernmost Florida.  "
+"It's well adapted to thrive in both fresh and salty waters and can get very "
+"large."
+msgstr ""
+
+#. ~ Description of monster "caiman"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A smaller relative of the alligator which can be found all around Central and"
+" South America.  They range on different sizes and live mostly in freshwater "
+"habitats."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "strange tadpole"
+msgid_plural "strange tadpoles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "strange tadpole"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"An overgrown tadpole that swims around eating algae and other biological "
+"matter.  For some reason its legs have not yet started to form."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "tadfish"
+msgid_plural "tadfish"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "tadfish"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A strange neotenic batrachian grown from a specific kind of tadpole.  Instead"
+" of growing legs it has become more fish-like."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "axolotl"
+msgid_plural "axolotls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "axolotl"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A particular neotenic salamander native to Mexico.  Very popular as a pet but"
+" critically endangered in the wild."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "mutant axolotl"
+msgid_plural "mutant axolotls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mutant axolotl"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"This axolotl seems to have grown to absurd size by the mutated environment.  "
+"It seems a bit more aggressive than usual."
+msgstr ""
+
+#. ~ Description of monster "giant axolotl"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A huge axolotl grown almost the size of a small croc.  It swims and ambushes "
+"prey on the murky depths like some distant paleozoic amphibian."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "caecilian larva"
+msgid_plural "caecilian larvas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "caecilian larva"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"Caecilians are a viviparous.  Their larvae are born inside the female and fed"
+" with specials cells until they get out of her body."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "caecilian"
+msgid_plural "caecilians"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "caecilian"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"One of several species of amphibians with a worm like body.  Caecilians can "
+"be found in the tropics burrowed in the ground but are equally capable of "
+"swimming."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "giant caecilian"
+msgid_plural "giant caecilians"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "giant caecilian"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A caecilian grown close to a snake in length.  It uses its strong head to dig"
+" on the soil looking for mutated worms to devour."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "minhocao"
+msgid_plural "minhocaos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "minhocao"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"A huge mutated caecilian as large and heavy as the largest constrictors.  It "
+"resembles something out of amazonian folklore, but may be passive unless "
+"provoked."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid "python"
+msgid_plural "pythons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "python"
+#: data/mods/TropiCataclysm/monsters/tropical_reptile_amphibian.json
+msgid ""
+"Pythons are a family of constrictor snakes native to the old world.  They are"
+" in most regards similar in niche to boas but are dedicate egg layers."
+msgstr ""
+
+#. ~ Verb in activity "ACT_CHANGELING_DREAMDROSS_TO_DREAMSPARKS"
+#: data/mods/Xedra_Evolved/activity_types.json
+msgid "extracting dreams"
+msgstr ""
+
+#. ~ Verb in activity "ACT_CHANGELING_RESEARCH_SEASONAL_MAGIC_SPRING"
+#. ~ Verb in activity "ACT_CHANGELING_RESEARCH_SEASONAL_MAGIC_SUMMER"
+#. ~ Verb in activity "ACT_CHANGELING_RESEARCH_SEASONAL_MAGIC_AUTUMN"
+#. ~ Verb in activity "ACT_CHANGELING_RESEARCH_SEASONAL_MAGIC_WINTER"
+#: data/mods/Xedra_Evolved/activity_types.json
+msgid "daydreaming"
+msgstr ""
+
+#. ~ Verb in activity "ACT_VAMPIRE_DRINKING_BLOOD"
+#: data/mods/Xedra_Evolved/activity_types.json
+msgid "drinking blood"
+msgstr ""
+
+#. ~ Name of the "human_blood" addiction's effect as it appears in the player's
+#. status
+#: data/mods/Xedra_Evolved/addictions.json
+msgid "Blood Hunger"
+msgstr ""
+
+#. ~ The name of the "human_blood" addiction's source
+#: data/mods/Xedra_Evolved/addictions.json
+msgid "blood_hunger"
+msgstr ""
+
+#. ~ Description of the "human_blood" addiction's effects as it appears in the
+#. player's status
+#: data/mods/Xedra_Evolved/addictions.json
+#, no-c-format
+msgid ""
+"You suffer from a quite unnatural thirst for the blood of your fellow man.  "
+"Unfortunately, the supply has shrunk by about 99% from a few months ago."
+msgstr ""
+
+#. ~ Name of the "lotus_blossom" addiction's effect as it appears in the
+#. player's status
+#: data/mods/Xedra_Evolved/addictions.json
+msgid "Lotus Eater"
+msgstr ""
+
+#. ~ The name of the "lotus_blossom" addiction's source
+#: data/mods/Xedra_Evolved/addictions.json
+msgid "lotus_eater"
+msgstr ""
+
+#. ~ Description of the "lotus_blossom" addiction's effects as it appears in
+#. the player's status
+#: data/mods/Xedra_Evolved/addictions.json
+msgid ""
+"You ate the lotus, you experienced the universe.  You washed the pain away."
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "upper right karma arm"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "upper karma arms"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "upper right karma arm"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "upper karma arms"
+msgstr ""
+
+#. ~ Heading of body part "upper right karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "up. r. karma arm"
+msgstr ""
+
+#. ~ Heading of body part "upper right karma arm"
+#. ~ Heading of body part "upper left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "up. karma arms"
+msgstr ""
+
+#. ~ HP bar UI text of body part "upper right karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "UP R K ARM"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "upper left karma arm"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "upper left karma arm"
+msgstr ""
+
+#. ~ Heading of body part "upper left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "up. l. karma arm"
+msgstr ""
+
+#. ~ HP bar UI text of body part "upper left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "UP L K ARM"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lower right karma arm"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lower karma arms"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "lower right karma arm"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "lower karma arms"
+msgstr ""
+
+#. ~ Heading of body part "lower right karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lw. r. karma arm"
+msgstr ""
+
+#. ~ Heading of body part "lower right karma arm"
+#. ~ Heading of body part "lower left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lw. karma arms"
+msgstr ""
+
+#. ~ HP bar UI text of body part "lower right karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "LW r K ARM"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lower left karma arm"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "lower left karma arm"
+msgstr ""
+
+#. ~ Heading of body part "lower left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "lw. l. karma arm"
+msgstr ""
+
+#. ~ HP bar UI text of body part "lower left karma arm"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "LW L K ARM"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "karma hand"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "karma hands"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "stalker's eyes"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "stalker's eyes"
+msgstr ""
+
+#. ~ Heading of body part "stalker's eyes"
+#. ~ Heading of body part "gracken's eyes"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "s. eyes"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "stalker eye"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "stalker eyes"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "gracken's eyes"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "gracken's eyes"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "gracken eye"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "gracken eyes"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "devil's tail"
+msgstr ""
+
+#. ~ Name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "devil's tails"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "devil's tail"
+msgstr ""
+
+#. ~ Accusative name of body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgctxt "bodypart_accusative"
+msgid "devil's tails"
+msgstr ""
+
+#. ~ Heading of body part "devil's tail"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "d. tail"
+msgstr ""
+
+#. ~ Heading of body part "devil's tail"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "d. tails"
+msgstr ""
+
+#. ~ Smash message of body part "devil's tail"
+#: data/mods/Xedra_Evolved/body_parts.json
+#, c-format
+msgid "You smash %s with your tail."
+msgstr ""
+
+#. ~ HP bar UI text of body part "devil's tail"
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "D. TAIL"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "devil's tail tip"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Xedra_Evolved/body_parts.json
+msgid "devil's tail tips"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Xedra_Evolved/construction_group.json
+msgid "Bed of Restful Repose"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_SHADOW_DAMAGE_EXTRA_BLIND_CHANCE"
+#: data/mods/Xedra_Evolved/damage_types.json
+msgid "A bit of shadowstuff settles over your eyes, blocking your vision!"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Xedra_Evolved/damage_types.json
+msgid "umbrous"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/Xedra_Evolved/dissect.json
+msgid ""
+"You search for any salvageable hardware in what's left of this monstrous "
+"ghoul."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "oily sheen"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "deep shadows"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "roiling shadows"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "karma splatter"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "karma stain"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "puddle of karma"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "greenish mist"
+msgstr ""
+
+#. ~ Player message on effect of field greenish mist
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist hisses as it touches you!"
+msgstr ""
+
+#. ~ NPC message on effect of field greenish mist
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist hisses around <npcname>!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid " green tinged fog"
+msgstr ""
+
+#. ~ Player message on effect of field  green tinged fog
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist hisses and pops as it touches you!"
+msgstr ""
+
+#. ~ NPC message on effect of field  green tinged fog
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist hisses and pops around <npcname>!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "dense dark green fog"
+msgstr ""
+
+#. ~ Player message on effect of field dense dark green fog
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist sizzles and pits your gear as it touches you!"
+msgstr ""
+
+#. ~ NPC message on effect of field dense dark green fog
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "The mist sizzles and pits <npcname>'s gear!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "pollen cloud"
+msgstr ""
+
+#. ~ Player message on effect of field pollen cloud
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "You feel sick from inhaling the pollen cloud."
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "solid fog"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "obscuring fog"
+msgstr ""
+
+#. ~ Player message on effect of field obscuring fog
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "You're lost in the fog!"
+msgstr ""
+
+#. ~ Field NPC complaint
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "I can't see a thing!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "thin ice"
+msgstr ""
+
+#. ~ Player message on effect of field thin ice
+#. ~ Player message on effect of field medium ice
+#. ~ Player message on effect of field thick ice
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "You slip on the ice!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "medium ice"
+msgstr ""

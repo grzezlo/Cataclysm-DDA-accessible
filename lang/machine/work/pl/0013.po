@@ -1,0 +1,2189 @@
+# Batch 13 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of variant "sheep plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"This loving and fluffy sheep plushie features soft, woolly fur in white, with"
+" cute floppy ears and expressive eyes."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "pig plushie"
+msgid_plural "pig plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pig plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"This loving, precious pig plushie has a soft pink fur, with endearing floppy "
+"ears and bright eyes.  It also has a plush snout with brown fur on its legs "
+"and paws.  Its nose is somewhat long and black, and its eyes are large and "
+"expressive."
+msgstr ""
+
+#. ~ Variant name of item "plush toy"
+#: data/json/items/toy.json
+msgid "unicorn plushie"
+msgid_plural "unicorn plushies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "unicorn plushie" of item "plush toy"
+#: data/json/items/toy.json
+msgid ""
+"This majestic unicorn plushie features a soft white body and horn, with tufts"
+" of white hair on its neck and tail.  Its black eyes are adorably large and "
+"round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "large figurine"
+msgid_plural "large figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A large manufactured figurine.  This is the default variant, if you see it "
+"something went wrong."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "T-rex figurine"
+msgid_plural "T-rex figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "T-rex figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid "A relatively large plastic figurine of a T-rex."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "mech figurine"
+msgid_plural "mech figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "mech figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A large figurine of a humanoid robot, armed with a rifle, with a smaller "
+"figure sitting inside the head."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "knight figurine"
+msgid_plural "knight figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "knight figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A large figurine of a knight in shining armor standing watch, with its sword "
+"planted at the ground at its feet."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "robot figurine"
+msgid_plural "robot figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "robot figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A very intricate looking model of a robotic skeleton with red eyes and a "
+"futuristic weapon in its hand."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "lizardman figurine"
+msgid_plural "lizardman figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "lizardman figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"An expensive figurine of a buff man in streetwear with a lizard head, holding"
+" a pair of knives in his hands."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "anime figurine"
+msgid_plural "anime figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "anime figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid "An expensive figurine of a cartoon woman in flashy clothing."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "video game figurine"
+msgid_plural "video game figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "video game figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A large figurine of a video game character, holding a massive Gatling gun in "
+"his giant arms."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "zombie figurine"
+msgid_plural "zombie figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "zombie figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"A nasty looking figurine of a mutant zombie, with a large tongue sprouting "
+"from its face.  You thankfully haven't encountered something like that yet."
+msgstr ""
+
+#. ~ Variant name of item "large figurine"
+#: data/json/items/toy.json
+msgid "alien figurine"
+msgid_plural "alien figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "alien figurine" of item "large figurine"
+#: data/json/items/toy.json
+msgid ""
+"An expensive looking figurine of a gnarly, jet-black alien covered in "
+"menacing looking spines."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "figurine"
+msgid_plural "figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A normal-sized manufactured figurine.  This is the default variant, if you "
+"see it something went wrong."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "swordsman figurine"
+msgid_plural "swordsman figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "swordsman figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A figurine of some unnamed swordsman, covered with scars and equipped with "
+"sturdy leather armor.  Seems to be ready to fight."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "fashionable doll"
+msgid_plural "fashionable dolls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "fashionable doll" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A plastic figurine of a young woman.  She's meant to be dressed up and "
+"accessorized with a wide variety of clothing, sold separately."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "nightmare figurine"
+msgid_plural "nightmare figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "nightmare figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A plastic figurine with a nightmarish, scarred face.  He wears a hat and has "
+"three long blades extending from a glove on the back of his hand."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "unicorn figurine"
+msgid_plural "unicorn figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "unicorn figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A figurine of a blue unicorn.  It is in a sitting position, shyly covering "
+"both eyes with its front hooves."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "swamp monster figurine"
+msgid_plural "swamp monster figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "swamp monster figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A figurine of a scaly green swamp monster emerging from some fetid lagoon."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "reaper figurine"
+msgid_plural "reaper figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "reaper figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"Your heart leaps to your throat as you see the face of Death itself staring "
+"back at you, scythe raised for the harvest!  You relax significantly once you"
+" realize it's only a few inches tall and made of plastic."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "mermaid figurine"
+msgid_plural "mermaid figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "mermaid figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A figurine of a redheaded mermaid sitting on a rock.  Like in the film this "
+"toy is based on, she gazes longingly out to a world she wants to be a part of"
+" - or she would be, but the face isn't drawn very well and doesn't express "
+"much emotion at all."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "avocado figurine"
+msgid_plural "avocado figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "avocado figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A plastic figurine of an anthropomorphic avocado, holding a salt shaker and a"
+" spoon.  Makes a great gift for the guacamole lover in your life, or as a "
+"decoration for your kitchen."
+msgstr ""
+
+#. ~ Variant name of item "figurine"
+#: data/json/items/toy.json
+msgid "superhero figurine"
+msgid_plural "superhero figurines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "superhero figurine" of item "figurine"
+#: data/json/items/toy.json
+msgid ""
+"A superhero action figure.  Its limbs can be adjusted for different poses, "
+"and it is designed to do battle against a wide variety of crooks and "
+"supervillains, sold separately."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "yoyo"
+msgid_plural "yoyos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "yoyo"
+#: data/json/items/toy.json
+msgid "A simple yoyo on a string.  Now you can be bored with style."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "fidget spinner"
+msgid_plural "fidget spinners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fidget spinner"
+#: data/json/items/toy.json
+msgid "A fidget spinner.  An artifact from when the times were simpler."
+msgstr ""
+
+#. ~ "menu_text" action message of item "fidget spinner"
+#: data/json/items/toy.json
+msgid "Spin"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_spinner_spinning" in use action of
+#. item "fidget spinner"
+#: data/json/items/toy.json
+msgid "You spin your fidget spinner."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "imperfect doll"
+msgid_plural "imperfect dolls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "imperfect doll"
+#: data/json/items/toy.json
+msgid ""
+"Its legs are mismatched, its arms misshapen, its eyes more crooked than its "
+"smile.  Everywhere, it sparkles with the golden thread that has put it back "
+"together.  It's beautiful."
+msgstr ""
+
+#. ~ "description" action message of item "imperfect doll"
+#: data/json/items/toy.json
+msgid "Hug the imperfect doll."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "floppy cotton legs"
+msgid_plural "floppy cotton legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "floppy cotton legs"
+#: data/json/items/toy.json
+msgid ""
+"They're different colors and different lengths.  It would be hard to run away"
+" with these."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "threadbare cotton arms"
+msgid_plural "threadbare cotton arms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "threadbare cotton arms"
+#: data/json/items/toy.json
+msgid ""
+"The spun cloth fingers are fraying away.  There's nothing that they could "
+"hold on to."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/toy.json
+msgid "buttons and thread"
+msgid_plural "buttons and thread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "buttons and thread"
+#: data/json/items/toy.json
+msgid ""
+"A pair of mismatched buttons and some dull yellow thread, to put on a brave "
+"face with."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto JHP"
+msgid_plural "10mm Auto JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10mm Auto JHP"
+#: data/json/items/ammo/10mm.json
+msgid ""
+"Jacketed 10mm Auto ammunition with a 180gr hollow point bullet, intended for "
+"use in self-defense, or perhaps hunting.  The 10mm Auto cartridge is a rather"
+" powerful handgun round and the progenitor to the more popular .40 S&W."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto +P"
+msgid_plural "10mm Auto +P"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "10mm Auto +P"
+#: data/json/items/ammo/10mm.json
+msgid ""
+"'Full House' 10mm Auto ammunition with a 140gr solid copper penetrator "
+"projectile, for hunting or self-defense from dangerous game.  The 10mm Auto "
+"cartridge is a rather powerful handgun round and the progenitor to the more "
+"popular .40 S&W."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto FMJ, matchhead powder"
+msgid_plural "10mm Auto FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto JHP, black powder"
+msgid_plural "10mm Auto JHP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto JHP, reloaded"
+msgid_plural "10mm Auto JHP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto JHP, matchhead powder"
+msgid_plural "10mm Auto JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/10mm.json
+msgid "10mm Auto +P, reloaded"
+msgid_plural "10mm Auto +P, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/22.json
+msgid ".22 FMJ, matchhead powder"
+msgid_plural ".22 FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/22.json
+msgid ".22 LR, matchhead powder"
+msgid_plural ".22 LR, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".223 Remington"
+#: data/json/items/ammo/223.json
+msgid ""
+".223 Remington ammunition with a 55gr FMJ-BT bullet, patterned after the M193"
+" loading.  The .223 round has been very popular with civilian shooters for "
+"almost a century, finding use in a wide variety of weapons.  The combination "
+"of high velocity with a thinly-jacketed, cannelured projectile led to "
+"unexpected yaw and fragmentation in soft tissue, increasing this round's "
+"performance."
+msgstr ""
+
+#. ~ Description of "5.56 NATO M855A1"
+#: data/json/items/ammo/223.json
+msgid ""
+"An updated loading of M855 5.56x45mm ammunition, featuring a 62 grain "
+"projectile containing an exposed steel penetrator and copper slug.  Designed "
+"as a mostly lead-free projectile, the opportunity was further taken to "
+"improve upon M855's penetration and lethality characteristics through "
+"penetrator design and increased pressure.  Its improved accuracy, penetration"
+" and lethality over M855 are appreciated by users of shorter-barreled AR "
+"variants."
+msgstr ""
+
+#. ~ Description of "5.56 NATO tracer"
+#: data/json/items/ammo/223.json
+msgid ""
+"An M856 tracer round.  Traditional practice is to load one tracer per every "
+"four normal rounds to help keep the weapon they are fired from on target.  "
+"They have the potential to ignite flammable surfaces at their point of "
+"impact."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/223.json
+msgid "5.56 NATO M995"
+msgid_plural "5.56 NATO M995"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5.56 NATO M995"
+#: data/json/items/ammo/223.json
+msgid ""
+"An armor piercing 5.56x45mm M995 round using a 52gr projectile, featuring a "
+"black-tipped, tungsten carbide penetrator over an aluminum slug.  Increased "
+"penetration over standard ball rounds at the cost of worse wounding potential"
+" in soft tissue."
+msgstr ""
+
+#. ~ Description of ".270 Winchester abstract"
+#: data/json/items/ammo/270win.json
+msgid ""
+".270 Winchester ammunition with a 130gr full metal jacket bullet.  It is a "
+"powerful round capable of taking down large targets with ease."
+msgstr ""
+
+#. ~ Description of ".270 Winchester JSP"
+#: data/json/items/ammo/270win.json
+msgid ""
+".270 Winchester ammunition with a 130gr soft point bullet.  The .270 round "
+"was not initially successful, but over a few decades it became one of the "
+"most popular rifle cartridges for hunting and silhouette shooting.  It is a "
+"powerful round capable of taking down large targets with ease."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/270win.json
+msgid ".270 Winchester FMJ, reloaded"
+msgid_plural ".270 Winchester FMJ, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/270win.json
+msgid ".270 Winchester FMJ, black powder"
+msgid_plural ".270 Winchester FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".300 Winchester Magnum"
+#: data/json/items/ammo/300.json
+msgid ""
+".300 Winchester Magnum ammunition with a 220gr JHP bullet.  The 300WM round "
+"is an extremely powerful and accurate rifle round introduced in 1963.  It has"
+" proven popular with hunters and snipers, although it is not as common as "
+".308 or .30-06."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 FMJ"
+msgid_plural ".30-06 FMJ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".30-06 FMJ"
+#: data/json/items/ammo/3006.json
+msgid ""
+"Jacketed .30-06 Springfield M2 Ball ammunition with a 150gr spitzer bullet.  "
+"The .30-06 cartridge was adopted in 1906 by the US military, where it served "
+"for some 50 years, and it remains popular today among collectors and hunters "
+"for its range, versatility, and power."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 JSP"
+msgid_plural ".30-06 JSP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".30-06 JSP"
+#: data/json/items/ammo/3006.json
+msgid ""
+".30-06 Springfield ammunition with a 165gr soft point bullet.  The .30-06 "
+"cartridge was adopted in 1906 by the US military, where it served for some 50"
+" years, and it remains popular today among collectors and hunters for its "
+"range, versatility, and power."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 JSP, black powder"
+msgid_plural ".30-06 JSP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 JSP, reloaded"
+msgid_plural ".30-06 JSP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 tracer"
+msgid_plural ".30-06 tracer"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".30-06 tracer"
+#: data/json/items/ammo/3006.json
+msgid ""
+".30-06 M14A1 tracer ammunition to help keep the weapon it is fired from on "
+"target."
+msgstr ""
+
+#. ~ Description of ".30-06 M2 AP"
+#: data/json/items/ammo/3006.json
+msgid ""
+"Armor piercing .30-06 M2 ammunition with a 166gr hardened steel core bullet."
+"  The .30-06 cartridge was adopted in 1906 by the US military, where it "
+"served for some 50 years, and it remains popular today among collectors and "
+"hunters for its range, versatility, and power."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 FMJ, black powder"
+msgid_plural ".30-06 FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 tracer, black powder"
+msgid_plural ".30-06 tracer, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 M2 AP, black powder"
+msgid_plural ".30-06 M2 AP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 FMJ, reloaded"
+msgid_plural ".30-06 FMJ, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/3006.json
+msgid ".30-06 tracer, reloaded"
+msgid_plural ".30-06 tracer, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".300 AAC Blackout"
+#: data/json/items/ammo/300blk.json
+msgid ""
+"A .300 AAC Blackout round with a 125gr open tip match bullet.  .300 BLK is an"
+" intermediate cartridge necked up from 5.56x45mm, designed to achieve similar"
+" ballistics to 7.62x39mm.  It is compatible with standard AR-15 lower "
+"receivers and will feed from STANAG magazines."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/300blk.json
+msgid ".300 AAC Blackout subsonic"
+msgid_plural ".300 AAC Blackout subsonic"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".300 AAC Blackout subsonic"
+#: data/json/items/ammo/300blk.json
+msgid ""
+"A subsonic .300 AAC Blackout round with a 220gr open tip match bullet.  When "
+"fired with a suppressor, it only emits low noise, making it ideal for "
+"silently eliminating your enemies.  It is compatible with standard AR-15 "
+"lower receivers and will feed from STANAG magazines."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/300blk.json
+msgid ".300 AAC Blackout subsonic, black powder"
+msgid_plural ".300 AAC Blackouts subsonic, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/300blk.json
+msgid ".300 AAC Blackout subsonic, reloaded"
+msgid_plural ".300 AAC Blackouts subsonic, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British FMJ"
+msgid_plural ".303 British FMJ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".303 British FMJ"
+#: data/json/items/ammo/303.json
+msgid ""
+"Jacketed .303 British ammunition loaded with a 174gr spitzer bullet, similar "
+"to the MK VII pattern.  The British Empire's standard combat cartridge from "
+"1888 until the 1950s."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British JSP"
+msgid_plural ".303 British JSP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".303 British JSP"
+#: data/json/items/ammo/303.json
+msgid ""
+"Jacketed .303 British ammunition loaded with a 180gr soft point bullet, for "
+"hunting medium game.  .303 British was the standard caliber for military "
+"rifles in the British Empire from 1888 until the 1950s.  This loading allows "
+"the round to undergo greater expansion upon striking targets, leading to "
+"larger wound channels."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British OTM"
+msgid_plural ".303 British OTM"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".303 British OTM"
+#: data/json/items/ammo/303.json
+msgid ""
+"Jacketed .303 British ammunition loaded with a 174gr open tip match bullet, "
+"for precision shooting.  .303 British was the standard caliber for military "
+"rifles in the British Empire from 1888 until the 1950s.  The projectile's "
+"open tip construction offers greater manufacturing precision and a marginal "
+"amount of increased expansion over regular full metal jacket bullets."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British OTM, black powder"
+msgid_plural ".303 British OTM, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British JSP, black powder"
+msgid_plural ".303 British JSP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British FMJ, black powder"
+msgid_plural ".303 British FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British OTM, reloaded"
+msgid_plural ".303 British OTM, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British JSP, reloaded"
+msgid_plural ".303 British JSP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/303.json
+msgid ".303 British FMJ, reloaded"
+msgid_plural ".303 British FMJ, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".308 Winchester"
+#: data/json/items/ammo/308.json
+msgid ""
+".308 Winchester ammunition with a 168gr hollow point bullet.  The .308 "
+"cartridge is one of the most popular hunting cartridges in the world due to "
+"its accuracy and power."
+msgstr ""
+
+#. ~ Description of "7.62x51mm NATO tracer"
+#: data/json/items/ammo/308.json
+msgid ""
+"An M62 tracer round.  Traditional practice is to load one of these for every "
+"four normal rounds to help keep the weapon they are fired from on target.  "
+"They have the potential to ignite flammable surfaces on impact."
+msgstr ""
+
+#. ~ Description of "7.62x51mm NATO M993"
+#: data/json/items/ammo/308.json
+msgid ""
+"An armor piercing 7.62x51mm round with a 126gr, tungsten carbide core "
+"projectile.  It offers significantly better armor penetration than standard "
+"ball rounds at the cost of worse wounding potential in soft tissue."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine FMJ"
+msgid_plural ".30 Carbine FMJ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".30 Carbine FMJ"
+#: data/json/items/ammo/30carbine.json
+msgid ""
+".30 Carbine ammunition with a 110gr full metal jacket bullet.  A light rifle "
+"round developed during the Second World War for use in the M1 carbine; it "
+"remains a popular sporting round today."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine JSP"
+msgid_plural ".30 Carbine JSP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".30 Carbine JSP"
+#: data/json/items/ammo/30carbine.json
+msgid ""
+".30 Carbine ammunition with a 110gr jacketed soft point bullet, which will "
+"perform better as a hunting round than FMJ.  A light rifle round developed "
+"during the Second World War for use in the M1 carbine; it remains a popular "
+"sporting round today."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine JSP, black powder"
+msgid_plural ".30 Carbine JSP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine JSP, reloaded"
+msgid_plural ".30 Carbine JSP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine JSP, matchhead powder"
+msgid_plural ".30 Carbine JSP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine, black powder"
+msgid_plural ".30 Carbine, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine, reloaded"
+msgid_plural ".30 Carbine, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/30carbine.json
+msgid ".30 Carbine, matchhead powder"
+msgid_plural ".30 Carbine, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP FMJ"
+msgid_plural ".32 ACP FMJ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".32 ACP FMJ"
+#: data/json/items/ammo/32.json
+msgid ""
+"A jacketed .32 ACP cartridge loaded with a 71 grain bullet.  .32 ACP was once"
+" a popular handgun cartridge in the 20th century.  It lacks power compared to"
+" .380 Auto and 9x19mm."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP, matchhead powder"
+msgid_plural ".32 ACP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP JHP"
+msgid_plural ".32 ACP JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".32 ACP JHP"
+#: data/json/items/ammo/32.json
+msgid ""
+"Jacketed .32 ACP ammunition with a 71gr hollow point bullet, intended for use"
+" in self-defense.  This caliber was once a popular handgun cartridge in the "
+"20th century, though it lacks power compared to .380 Auto and 9x19mm."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP JHP, black powder"
+msgid_plural ".32 ACP JHP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP JHP, reloaded"
+msgid_plural ".32 ACP JHP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/32.json
+msgid ".32 ACP JHP, matchhead powder"
+msgid_plural ".32 ACP JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua HPBT"
+msgid_plural ".338 Lapua HPBT"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".338 Lapua HPBT"
+#: data/json/items/ammo/338lapua.json
+msgid ""
+".338 Lapua ammunition, loaded with a 300-grain hollow-point boat-tailed "
+"bullet.  Developed as a joint venture between Accuracy International, SAKO, "
+"and Lapua, the .338 round is a long-range sniping cartridge that boasts "
+"impressive accuracy and devastating terminal ballistics.  With burgeoning "
+"interest among military, law enforcement, and civilian circles before the "
+"Cataclysm, the .338 cartridge filled the gap between lighter infantry "
+"munitions and anti-material rounds, although its potential utility as a "
+"hunting cartridge was somewhat diminished due to its high cost."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua AP485"
+msgid_plural ".338 Lapua AP485"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".338 Lapua AP485"
+#: data/json/items/ammo/338lapua.json
+msgid ""
+".338 Lapua ammunition, loaded with a 248-grain armor-piercing bullet.  "
+"Developed as a joint venture between Accuracy International, SAKO, and Lapua,"
+" the .338 round is a long-range sniping cartridge that boasts impressive "
+"accuracy and devastating terminal ballistics.  This specialized loading of "
+".338 Lapua features a highly penetrative full-metal jacketed bullet, which "
+"comes at the cost of negligible expansion once the round thunders into, and "
+"likely straight through, the target."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua API526"
+msgid_plural ".338 Lapua API526"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".338 Lapua API526"
+#: data/json/items/ammo/338lapua.json
+msgid ""
+".338 Lapua ammunition, loaded with a 256-grain armor-piercing incendiary "
+"bullet.  Developed as a joint venture between Accuracy International, SAKO, "
+"and Lapua, the .338 round is a long-range sniping cartridge that boasts "
+"impressive accuracy and devastating terminal ballistics.  This specialized "
+"loading of .338 Lapua features a tungsten carbide penetrator as well as an "
+"extra dose of nastiness in the form of an incendiary loading, which serves to"
+" highlight the point of impact and possibly set flammable materials alight."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua HPBT, black powder"
+msgid_plural ".338 Lapua HPBT, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua AP485, black powder"
+msgid_plural ".338 Lapua AP485, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua API526, black powder"
+msgid_plural ".338 Lapua API526, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua HPBT, reloaded"
+msgid_plural ".338 Lapua HPBT, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua AP485, reloaded"
+msgid_plural ".338 Lapua AP485, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/338lapua.json
+msgid ".338 Lapua API526, reloaded"
+msgid_plural ".338 Lapua API526, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".357 Magnum JHP"
+#: data/json/items/ammo/357mag.json
+msgid ""
+"Jacketed hollow point .357 Magnum ammunition.  The .357 Magnum round is "
+"derived from the earlier .38 Special, with a marginally longer case and "
+"generating greater pressure."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/357mag.json
+msgid ".357 Magnum FMJ, matchhead powder"
+msgid_plural ".357 Magnum FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/357mag.json
+msgid ".357 Magnum JHP, matchhead powder"
+msgid_plural ".357 Magnum JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".357 SIG FMJ"
+#: data/json/items/ammo/357sig.json
+msgid ""
+"Jacketed .357 SIG ammunition.  Based on a 10mm Auto case necked down to a "
+".355 inch bullet, the .357 SIG round is a high velocity pistol cartridge, "
+"giving it a flatter trajectory than many handgun rounds."
+msgstr ""
+
+#. ~ Description of ".357 SIG JHP"
+#: data/json/items/ammo/357sig.json
+msgid ""
+"Jacketed hollow point .357 SIG ammunition.  Based on a 10mm Auto case necked "
+"down to a .355 inch bullet, the .357 SIG round is a high velocity pistol "
+"cartridge, giving it a flatter trajectory than many handgun rounds."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/357sig.json
+msgid ".357 SIG FMJ, matchhead powder"
+msgid_plural ".357 SIG FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/357sig.json
+msgid ".357 SIG JHP, matchhead powder"
+msgid_plural ".357 SIG JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special FMJ"
+msgid_plural ".38 Special FMJ"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".38 Special FMJ"
+#: data/json/items/ammo/38.json
+msgid ""
+".38 Special ammunition with a 130gr FMJ bullet.  From its inception, the .38 "
+"Special round has been known for its accuracy and low recoil.  Because it was"
+" initially a black powder cartridge, .38 Special is very low pressure."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special JHP"
+msgid_plural ".38 Special JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".38 Special JHP"
+#: data/json/items/ammo/38.json
+msgid ""
+"Jacketed .38 Special ammunition with a 130gr hollowpoint bullet.  From its "
+"inception, the .38 Special round has been known for its accuracy and low "
+"recoil.  Because it was initially a black powder cartridge, .38 Special is "
+"very low pressure."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special +P"
+msgid_plural ".38 Special +P"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".38 Special +P"
+#: data/json/items/ammo/38.json
+msgid ""
+"Overpressure .38 Special ammunition with a jacketed 135gr hollowpoint bullet."
+"  The round's increased velocity results in superior penetration and stopping"
+" power at the cost of higher recoil."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special FMJ, reloaded"
+msgid_plural ".38 Special FMJ, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special JHP, reloaded"
+msgid_plural ".38 Special JHP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special +P, reloaded"
+msgid_plural ".38 Special +P, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special FMJ, black powder"
+msgid_plural ".38 Special FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special JHP, black powder"
+msgid_plural ".38 Special JHP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special FMJ, matchhead powder"
+msgid_plural ".38 Special FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38.json
+msgid ".38 Special JHP, matchhead powder"
+msgid_plural ".38 Special JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".380 ACP FMJ"
+#: data/json/items/ammo/380.json
+msgid ""
+".380 ACP ammunition with a brass jacketed 95gr bullet.  Popular in pocket "
+"pistols for over a century, it is often considered the weakest caliber to "
+"consider for self-defense.  One should be careful not to chamber it in 9x18mm"
+" Makarov or 9x19mm firearms."
+msgstr ""
+
+#. ~ Description of ".380 ACP +P"
+#: data/json/items/ammo/380.json
+msgid ""
+"Overpressure .380 ACP ammunition with a 90gr jacketed hollow point bullet.  "
+"This defensive loading is designed to maximize performance and tends to be "
+"more accurate than practice ammo.  One should be careful not to chamber it in"
+" 9x18mm Makarov or 9x19mm firearms."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/380.json
+msgid ".380 ACP FMJ, matchhead powder"
+msgid_plural ".380 ACP FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/380.json
+msgid ".380 ACP JHP, matchhead powder"
+msgid_plural ".380 ACP JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".38 Super FMJ"
+#: data/json/items/ammo/38super.json
+msgid ""
+".38 Super ammunition with a 124gr FMJ bullet.  The .38 Super round was "
+"developed from .38 ACP in 1929 to penetrate body armor of the era.  The "
+"caliber saw some resurgence in popularity among competition shooters in the "
+"1980's prior to the proliferation of double stack 9mm pistols."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super JHP"
+msgid_plural ".38 Super JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".38 Super JHP"
+#: data/json/items/ammo/38super.json
+msgid ""
+".38 Super ammunition with a 115gr JHP bullet.  The .38 Super round was "
+"developed from .38 ACP in 1929 to penetrate body armor of the era.  The "
+"caliber saw some resurgence in popularity among competition shooters in the "
+"1980's prior to the proliferation of double stack 9mm pistols."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super JHP, reloaded"
+msgid_plural ".38 Super JHP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super FMJ, black powder"
+msgid_plural ".38 Super FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super JHP, black powder"
+msgid_plural ".38 Super JHP, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super JHP, matchhead powder"
+msgid_plural ".38 Super JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/38super.json
+msgid ".38 Super FMJ, matchhead powder"
+msgid_plural ".38 Super FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".40 S&W FMJ"
+#: data/json/items/ammo/40.json
+msgid ""
+".40 S&W ammunition with a 180gr FMJ bullet.  The .40 S&W round is descended "
+"from the 10mm Auto cartridge and maintains most of its predecessor's "
+"strengths while reducing recoil.  It was popular among law enforcement before"
+" the FBI switched to 9mm."
+msgstr ""
+
+#. ~ Description of ".40 S&W JHP"
+#: data/json/items/ammo/40.json
+msgid ""
+".40 S&W ammunition with a 135gr JHP bullet.  The .40 S&W round is descended "
+"from the 10mm Auto cartridge and maintains most of its predecessor's "
+"strengths while reducing recoil.  It was popular among law enforcement before"
+" the FBI switched to 9mm."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40.json
+msgid ".40 S&W FMJ, matchhead powder"
+msgid_plural ".40 S&W FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/40.json
+msgid ".40 S&W JHP, matchhead powder"
+msgid_plural ".40 S&W JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x46mm M433 HEDP"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A low velocity 40x46mm high explosive dual-purpose grenade.  It can penetrate"
+" 2 inches of steel armor, and the fragmentation of the projectile body also "
+"makes it suitable for use against infantry."
+msgstr ""
+
+#. ~ Description of "40x46mm M576 buckshot"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A 40x46mm buckshot load, designed for use in thick vegetation or room "
+"clearing.  Due to the limitations of weapons built to fire 40x46mm grenades, "
+"it's much less powerful than you'd expect."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40x46mm.json
+msgid "40x46mm .22 LR beehive"
+msgid_plural "40x46mm .22 LR beehive"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x46mm .410 hornet's nest"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A set of four .410 000 shotshells and a large pistol primer loaded into a "
+"40mm adapter.  Fires all four rounds at once with an internal firing "
+"assembly, which is set off by the primer."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40x46mm.json
+msgid "40x46mm .410 slug's nest"
+msgid_plural "40x46mm .410 slug's nest"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x46mm .410 slug's nest"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A set of four .410 slug shells and a large pistol primer loaded into a 40mm "
+"adapter.  Fires all four rounds at once with an internal firing assembly, "
+"which is set off by the primer."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40x46mm.json
+msgid "40x46mm .410 bird's nest"
+msgid_plural "40x46mm .410 bird's nest"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x46mm .410 bird's nest"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A set of four .410 birdshot shells and a large pistol primer loaded into a "
+"40mm adapter.  Fires all four rounds at once with an internal firing "
+"assembly, which is set off by the primer."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40x46mm.json
+msgid "40x46mm .410 scrap nest"
+msgid_plural "40x46mm .410 scrap nest"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x46mm .410 scrap nest"
+#: data/json/items/ammo/40x46mm.json
+msgid ""
+"A set of four .410 'scrap-shot' shells and a large pistol primer loaded into "
+"a 40mm adapter.  Fires all four rounds at once with an internal firing "
+"assembly, which is set off by the primer."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/40x53mm.json
+msgid "40x53mm M1001 flechette"
+msgid_plural "40x53mm M1001 flechette"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "40x53mm M1001 flechette"
+#: data/json/items/ammo/40x53mm.json
+msgid "A 40x53mm canister shot load, with 113 17-grain flechettes."
+msgstr ""
+
+#. ~ Description of "40x53mm M430A1 HEDP"
+#: data/json/items/ammo/40x53mm.json
+msgid ""
+"A high velocity 40x53mm high explosive dual-purpose grenade.  It can "
+"penetrate 3 inches of steel armor, and the fragmentation of the projectile "
+"body also makes it suitable for use against infantry."
+msgstr ""
+
+#. ~ Description of "40x53mm flechette, reloaded"
+#. ~ Description of "40x53mm flechette, black powder"
+#: data/json/items/ammo/40x53mm.json
+msgid ""
+"An improvised 40x53mm flechette load containing 115 steel darts, similar to a"
+" M1001 flechette load."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 slug"
+msgid_plural ".410 slug"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".410 slug"
+#: data/json/items/ammo/410shot.json
+msgid ""
+"A .410 shotshell loaded with a 110gr slug.  Decent for hunting medium game or"
+" possibly self-defense."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 slug, reloaded"
+msgid_plural ".410 slug, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 slug, black powder"
+msgid_plural ".410 slug, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".410 000 shot"
+#: data/json/items/ammo/410shot.json
+msgid ""
+"A .410 shotshell loaded with five 000 pellets.  Good for a hunting or combat "
+"load."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 000 shot, black powder"
+msgid_plural ".410 000 shot, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 birdshot"
+msgid_plural ".410 birdshot"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".410 birdshot"
+#: data/json/items/ammo/410shot.json
+msgid ""
+"A .410 shotshell loaded with 3/8th of an ounce of #4 brass-plated steel "
+"birdshot.  Designed for hunting birds and other small game, its applications "
+"in combat are very limited."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 birdshot, reloaded"
+msgid_plural ".410 birdshot, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 birdshot, black powder"
+msgid_plural ".410 birdshot, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 scrap shot"
+msgid_plural ".410 scrap shot"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".410 scrap shot"
+#: data/json/items/ammo/410shot.json
+msgid ""
+"A .410 shotshell filled with whatever scrap metal was lying around.  More "
+"damaging than birdshot, but fairly inaccurate."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/410shot.json
+msgid ".410 scrap shot, black powder"
+msgid_plural ".410 scrap shot, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".44 Magnum FMJ"
+#: data/json/items/ammo/44.json
+msgid ""
+"Jacketed .44 Magnum ammunition with a 240gr bullet.  The .44 Magnum round is "
+"one of the most powerful handgun cartridges available.  It has excellent "
+"stopping power but suffers from extremely high recoil for a handgun round."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/44.json
+msgid ".44 Magnum JHP"
+msgid_plural ".44 Magnum JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".44 Magnum JHP"
+#: data/json/items/ammo/44.json
+msgid ""
+"Jacketed .44 Magnum ammunition with a 240gr hollowpoint bullet.  The .44 "
+"Magnum round is one of the most powerful handgun cartridges available.  It "
+"has excellent stopping power but suffers from extremely high recoil for a "
+"handgun round."
+msgstr ""
+
+#. ~ Description of ".45 ACP FMJ"
+#: data/json/items/ammo/45.json
+msgid ""
+".45 ACP ammunition with a 230gr FMJ bullet.  Due to a reputation for "
+"effectiveness, the .45 ACP round has been common for over a century."
+msgstr ""
+
+#. ~ Description of ".45 ACP JHP"
+#: data/json/items/ammo/45.json
+msgid ""
+".45 ACP ammunition with a 185gr JHP bullet.  The .45 ACP round was developed "
+"to replace the .38 Long Colt cartridge in the early 20th century, but has "
+"since lost some of its popularity to more modern handgun ammo."
+msgstr ""
+
+#. ~ Description of ".45 ACP +P"
+#: data/json/items/ammo/45.json
+msgid ""
+"Overpressure .45 ACP ammunition with a 185gr JHP bullet.  This cartridge has "
+"higher muzzle energy than typical loads, leading to greater damage, accuracy "
+"and recoil."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45.json
+msgid ".45 FMJ, matchhead powder"
+msgid_plural ".45 FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45.json
+msgid ".45 ACP JHP, matchhead powder"
+msgid_plural ".45 ACP JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Bushmaster FTX"
+msgid_plural ".450 Bushmaster FTX"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".450 Bushmaster FTX"
+#: data/json/items/ammo/450bushmaster.json
+msgid ""
+".450 Bushmaster ammunition, loaded with a plastic-capped 250-grain Flex Tip "
+"bullet.  Born from discontent with the .223 Remington's weak stopping "
+"potential, the .450 Bushmaster round was crafted in line with the so-called "
+"'Thumper' concept: an envisioned need for a large-bore, semi-automatic "
+"sporting cartridge capable of downing game in one shot.  Along with its elder"
+" sibling, the .50-caliber Beowulf cartridge, the .450 Bushmaster is one of a "
+"number of such high-caliber rounds and is compatible with appropriately "
+"converted AR-15-platform rifles.  This particular cartridge possesses a "
+"plastic-tipped projectile, which acts as an improved hollow point bullet with"
+" uniform and devastating expansion within wound cavities."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Bushmaster Xtreme Hunter"
+msgid_plural ".450 Bushmaster Xtreme Hunter"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".450 Bushmaster Xtreme Hunter"
+#: data/json/items/ammo/450bushmaster.json
+msgid ""
+".450 Bushmaster ammunition, loaded with a solid-copper 220-grain penetrator "
+"bullet.  Born from discontent with the .223 Remington's weak stopping "
+"potential, the .450 Bushmaster round was crafted in line with the so-called "
+"'Thumper' concept: an envisioned need for a large-bore, semi-automatic "
+"sporting cartridge capable of downing game in one shot.  Along with its elder"
+" sibling, the .50-caliber Beowulf cartridge, the .450 Bushmaster is one of a "
+"number of such high-caliber rounds and is compatible with appropriately "
+"converted AR-15-platform rifles.  This particular cartridge is loaded with a "
+"solid-copper projectile: excellent at punching through thick barriers and "
+"delivering massive amounts of energy to anything unfortunate enough to be "
+"hit."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Bushmaster FTX, black powder"
+msgid_plural ".450 Bushmaster FTX, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Bushmaster Xtreme Hunter, black powder"
+msgid_plural ".450 Bushmaster Xtreme Hunter, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Bushmaster FTX, reloaded"
+msgid_plural ".450 Bushmaster FTX, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/450bushmaster.json
+msgid ".450 Xtreme Hunter, reloaded"
+msgid_plural ".450 Xtreme Hunter, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".454 Casull"
+#: data/json/items/ammo/454.json
+msgid ""
+".454 Casull ammunition with a 300gr jacketed soft point bullet.  The .454 "
+"Casull round is derived from .45 Long Colt with a stronger, lengthened case."
+"  It is an exceptionally powerful cartridge with higher stopping power than "
+"many rifle rounds, although its extreme recoil makes it unsuitable for most "
+"purposes."
+msgstr ""
+
+#. ~ Description of ".45-70 SP"
+#: data/json/items/ammo/4570.json
+msgid ""
+".45-70 Government ammunition loaded with a 305 grain soft point bullet.  One "
+"of the oldest cartridges still in use, it is still a favorite for large game "
+"hunting at short ranges."
+msgstr ""
+
+#. ~ Description of ".45-70 +P penetrator"
+#: data/json/items/ammo/4570.json
+msgid ""
+".45-70 Government overpressure ammunition loaded with a 305 grain solid "
+"copper penetrator projectile.  Designed for maximum penetration through thick"
+" hide and bone while maintaining ideal wounding characteristics."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/4570.json
+msgid ".45-70 LFN, reloaded"
+msgid_plural ".45-70 LFN, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/4570.json
+msgid ".45-70 LFN, black powder"
+msgid_plural ".45-70 LFN, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/458wm.json
+msgid ".458 WM JSP"
+msgid_plural ".458 WM JSP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".458 WM JSP"
+#: data/json/items/ammo/458wm.json
+msgid ""
+"Jacketed .458 Winchester Magnum loaded with a 350gr soft point bullet.  "
+"Compared to other cartridges of this size, the straight walls of the case and"
+" the 'belt' near the base of the case give the cartridge a strange "
+"appearance.  .458 Winchester Magnum is a modern Big Five game rifle "
+"cartridge, intended for taking any of Africa's large and dangerous game, "
+"which quickly supplanted other cartridges in use by hunters, guides and "
+"wardens."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/458wm.json
+msgid ".458 WM, reloaded"
+msgid_plural ".458 WM, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/458wm.json
+msgid ".458 WM, black powder"
+msgid_plural ".458 WM, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt LFN cowboy"
+msgid_plural ".45 Colt LFN cowboy"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".45 Colt LFN cowboy"
+#: data/json/items/ammo/45colt.json
+msgid ""
+".45 Long Colt ammunition with a 250gr lead flat nose bullet.  Originally "
+"designed for the Colt Single Action Army, and still used for modern "
+"reproduction revolvers.  This ammunition is loaded to be safer in antiques "
+"and for cowboy action shooting, and is thus less powerful than other, hotter "
+"loads."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt LFN, reloaded"
+msgid_plural ".45 Colt LFN, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt LFN, black powder"
+msgid_plural ".45 Colt LFN, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt LFN, matchhead powder"
+msgid_plural ".45 Colt LFN, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt +P JHP"
+msgid_plural ".45 Colt +P JHP"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".45 Colt +P JHP"
+#: data/json/items/ammo/45colt.json
+msgid ""
+"Jacketed .45 Colt ammunition with a 225gr hollow point bullet, loaded much "
+"hotter than regular loads for this cartridge.  Hollowpoints in this venerable"
+" caliber were issued by the occasional police department looking for extra "
+"lethality before the '97 North Hollywood shootout.  Since then they were "
+"mostly used for home defense, and now by the post-apocalyptic cowboy."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt +P JHP, reloaded"
+msgid_plural ".45 Colt +P JHP, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".45 Colt JHP, black powder"
+#: data/json/items/ammo/45colt.json
+msgid ""
+"Jacketed .45 Colt ammunition with a 225gr hollow point bullet, loaded much "
+"hotter than regular loads for this cartridge.  The resource scarcity of the "
+"Cataclysm inspired someone to hand-reload this one with black powder, "
+"bringing the round closer to its original incarnation.  It's kind of poetic, "
+"when you think about it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt JHP, matchhead powder"
+msgid_plural ".45 Colt JHP, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt +P FMJ, reloaded"
+msgid_plural ".45 Colt +P FMJ, reloaded"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".45 Colt +P FMJ, reloaded"
+#: data/json/items/ammo/45colt.json
+msgid ""
+"Jacketed .45 Long Colt ammunition with a 225gr bullet.  Originally designed "
+"for the Colt Single Action Army, and still used for modern reproduction "
+"revolvers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt FMJ, black powder"
+msgid_plural ".45 Colt FMJ, black powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of ".45 Colt FMJ, black powder"
+#: data/json/items/ammo/45colt.json
+msgid ""
+"Jacketed .45 Long Colt ammunition with a 225gr bullet.  Originally designed "
+"for the Colt Single Action Army, and still used for modern reproduction "
+"revolvers.  The resource scarcity of the Cataclysm inspired someone to hand-"
+"reload this one with black powder, bringing the round closer to its original "
+"incarnation.  It's kind of poetic, when you think about it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/ammo/45colt.json
+msgid ".45 Colt FMJ, matchhead powder"
+msgid_plural ".45 Colt FMJ, matchhead powder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "4.6x30mm"
+#: data/json/items/ammo/46.json
+msgid ""
+"4.6x30mm ammunition with a 31gr copper plated steel bullet.  The 4.6x30mm "
+"round was developed by H&K to compete with FN Herstal's 5.7x28mm cartridge.  "
+"It has low recoil and excellent armor penetration."
+msgstr ""
+
+#. ~ Description of "4.6x30mm, black powder"
+#. ~ Description of "4.6x30mm, reloaded"
+#: data/json/items/ammo/46.json
+msgid ""
+"4.6x30mm ammunition with a 31gr copper plated lead bullets.  The 4.6x30mm "
+"round was developed by H&K to compete with FN Herstal's 5.7x28mm cartridge.  "
+"It has low recoil, but lacks its usual armor penetration due to using a "
+"simple lead bullet rather than a proper factory-made penetrator projectile."
+msgstr ""

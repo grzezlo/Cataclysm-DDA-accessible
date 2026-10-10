@@ -1,0 +1,1300 @@
+# Batch 3 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: src/faction.cpp
+msgid "(POISON)"
+msgstr ""
+
+#: src/faction.cpp
+msgid "(DANGER)"
+msgstr ""
+
+#: src/faction.cpp
+msgid "(MEAGER)"
+msgstr ""
+
+#: src/faction.cpp
+#, c-format
+msgid "Food Supply: %s %d kilocalories"
+msgstr ""
+
+#: src/faction.cpp
+msgid "Worst vitamin:"
+msgstr ""
+
+#: src/faction.cpp
+msgid "Worst toxin:"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Choose New Leader"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Have A Meal"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Hide Mission(s)"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Reveal Hidden Mission(s)"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Survey terrain and try to convert it to Field"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%1$s failed to start the %2$s basecamp, %3$s appliance/vehicle seems to be in"
+" the way."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "%s isn't under your control!"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Notes:\n"
+"This will open the regular crafting screen where you may select a recipe and batch size.\n"
+"\n"
+"You will be prompted to select a NPC to perform the craft after selecting the recipe.\n"
+"\n"
+"Kcal cost will be shown last, you will be prompted to accept or back out."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Total calorie cost: %s (have %d)"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Send a companion to clear a nearby forest.\n"
+"Note that it's likely both forest and field roads look exactly the same after having been cleared.\n"
+"\n"
+"Skill used: fabrication\n"
+"Difficulty: 1\n"
+"Effects:\n"
+"> 95%% of trees/trunks at the forest position will be cut down.\n"
+"> 0%% of total material will be brought back.\n"
+"> Forest should become a field tile.\n"
+"> Useful for clearing land for another faction camp.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Active\n"
+"Time: 6 Hour Base + Travel Time + Cutting Time\n"
+"Positions: %d/1\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Hide one or more missions to clean up the UI."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Reveal one or more missions previously hidden.\n"
+"Current number of hidden missions: %d"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"\n"
+"\n"
+"Skill used: fabrication\n"
+"Difficulty: N/A\n"
+"Effects:\n"
+"> Restores farm plots created in previous expansion upgrades.\n"
+"> Does not damage existing crops.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Moderate\n"
+"Time: 5 Min / Plot\n"
+"Positions: 0/1\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Nearby terrain can be turned into fields if it is completely cleared of terrain that isn't grass or dirt.  Doing so makes that terrain eligible for usage for standard base camp expansion.  Note that log cutting does this conversion automatically when the trees are depleted, but not all terrain can be logged.\n"
+"\n"
+"Skill used: N/A\n"
+"Effects:\n"
+"> If the expansion direction selected is eligible for conversion into a field this mission will perform that conversion.  If it is not eligible you are told as much, and would have to make it suitable for conversion by removing everything that isn't grass or soil.  Mining zones are useful to remove pavement, for instance.  Note that removal of buildings is dangerous, laborious, and may still fail to get rid of everything if e.g. a basement or an opening to underground areas (such as a manhole) remains.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Moderate\n"
+"Time: 0 Hours\n"
+"Positions: %d/1\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Recover Field Surveyor"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Expansions open up new opportunities but can be expensive and time-consuming.  Pick them carefully, at most 8 can be built at each camp.\n"
+"\n"
+"Skill used: N/A\n"
+"Effects:\n"
+"> Choose any one of the available expansions.  Starting with a farm is always a solid choice since food is used to support companion missions and minimal investment is needed to get it going.  A forge is also a great idea, allowing you to refine resources for subsequent expansions, craft better gear and make charcoal.\n"
+"\n"
+"NOTE: Actions available through expansions are located in separate tabs of the Camp Manager window.\n"
+"\n"
+"Risk: None\n"
+"Intensity: Moderate\n"
+"Time: 3 Hours\n"
+"Positions: %d/1\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Notes:\n"
+"Distribute food to your follower and fill your larders.  Place the food you wish to distribute in the camp food zone.  You must have a camp food zone, and a camp storage zone, or you will be prompted to create them using the zone manager.\n"
+"Effects:\n"
+"> Increases your faction's food supply value which in turn is used to pay laborers for their time\n"
+"\n"
+"Must have enjoyability >= -6\n"
+"Total faction food stock: %d kcal\n"
+"or %d / %d / %d days' rations\n"
+"where the days is measured for Extra / Moderate / No exercise levels"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Notes:\n"
+"Choose a new leader for your faction.\n"
+"<color_yellow>You will switch to playing as the new leader.</color>\n"
+"Difficulty: N/A\n"
+"Risk: None\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Notes:\n"
+"Eat some food from the larder.\n"
+"Nutritional value depends on food stored in the larder.\n"
+"Difficulty: N/A\n"
+"Risk: None\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "It's too early for that.  A new leader can be chosen in %s."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "autocratic"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "sortition"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "democratic"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Choose how the new leader will be determined."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"As an experienced leader, only you know what will be required of future leaders.  You will choose.\n"
+"\n"
+"Is this acceptable?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"You will allow fate to choose the next leader.  Whether it's by dice, drawing straws, or picking names out of a hat, it will be purely random.\n"
+"\n"
+"Is this acceptable?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Fate calls for you to remain in your role as leader… for now."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Fate chooses %s to lead your faction."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"A leader can only lead those willing to follow.  Everyone must get a say in choosing the new leader.\n"
+"\n"
+"Is this acceptable?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You win the election!"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%1$s wins the election with a popularity of %2$s!  The runner-up had a "
+"popularity of %3$s."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Have a meal?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Snack"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Meal"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Just stuff your face.  You're hungry!"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You decide not to have anything after all."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"You check storage for some food, but there is nothing but dust and cobwebs…"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "There's only one meal left.  Guess that's dinner!"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "departs to look for suitable fields…"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "There are no NPCs stationed here"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Set all priorities"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Priority for all jobs "
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "%s isn't a recognized terrain.  Please file a bug report."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"The logged tile has been cleared and cannot be logged further after this "
+"mission."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select a forest (or road/trail) from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Forests are the only valid cutting locations, with forest dirt roads, forest "
+"rural roads, and trails being valid as well.  Note that it's likely both "
+"forest and field roads look exactly the same after having been cleared."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select a forest, swamp, or field from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select an existing hide site from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You need equipment to transport to/from the hide site…"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select a start point from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select an end point from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Select checkpoints until you reach maximum range or select the last point "
+"again to end.  Cancel to undo a selection."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "There's nobody assigned to work at the camp!"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Eligible locations must be a terrain OR furniture (not item) that can contain"
+" liquid, and does not already have any items on its tile."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Choose a NPC to craft"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "lacks necessary skills"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "lacks necessary proficiencies"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "already working on something else"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "This will cost %i kcal (you have %i stored), is that acceptable?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Not enough stored food."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Selected seeds"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%1$s failed to build the %2$s upgrade, %3$s vehicle/appliance seems to be in "
+"the way."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "stops looking for terrain to turn into fields…"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"You already have an expansion at that location.  Do you want to finish this "
+"mission?  If not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"This location is already a field.  Do you want to finish this mission?  If "
+"not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"This location has %d tiles blocking it from being converted.  Do you want to "
+"finish this mission?  If not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"This location has now been converted into a field!  Do you want to finish the"
+" mission?  If not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "gives up trying to create an expansion…"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"You can't build any expansion in a %s.  Do you want to finish this mission?  "
+"If not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Do you want to finish this mission?  If not, another tile can be checked."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%1$s failed to add the %2$s expansion, %3$s vehicle/appliance seems to be in "
+"the way."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Do you want to finish this mission?  If not, another tile can be checked, or "
+"you can try again after clearing away the obstacle."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid "Select a location from %d to %d tiles away."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"You must select a target from %d to %d range.  Your selection was range %d."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Confirm again to finalize the path, or cancel to undo."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "This path is too far, continue to undo and try again."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Please create some sorting zones.  You must create a camp food zone, and a "
+"camp storage zone."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ">One Way: %15d trips\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"Skill used: %s\n"
+"Difficulty: %d\n"
+"%s\n"
+"Time: %s\n"
+"Calories per craft: %s\n"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You are too full to eat right now, and put the meal back into storage."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"<npcname> is too full to eat right now, and puts the meal back into storage."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%s takes one look at the food and declines, explaining they're allergic."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%s takes a bite but spits it out.  It seems something in the food disagrees "
+"with them."
+msgstr ""
+
+#: src/faction_camp.cpp
+#, c-format
+msgid ""
+"%s thanks you for the meal, but when they see what's in the meal their "
+"attitude suddenly changes!"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"Do you also wish to distribute comestibles without any calorie value (i.e. "
+"multivitamins, mutagens)?"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You distribute vitamins and medicine to your companions."
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Select mission(s) to reveal, escape when done"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "You're done for now…"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid "Select mission(s) to hide, escape when done"
+msgstr ""
+
+#: src/faction_camp.cpp
+msgid ""
+"No eligible locations found to place resulting liquids, placing them at random.\n"
+"\n"
+"Eligible locations must be a terrain OR furniture (not item) that can contain liquid, and does not already have any items on its tile."
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Loading the zoomed out tileset failed: %s"
+msgstr ""
+
+#: src/game.cpp
+msgid ""
+"Debug character detected.  Quick setup applied, good luck on the testing!"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_XE_RIDDLE_17"
+#: src/game.cpp data/mods/Xedra_Evolved/eocs/eoc_riddles.json
+msgid "The End"
+msgstr ""
+
+#: src/game.cpp
+msgid "Master save"
+msgstr ""
+
+#: src/game.cpp
+msgid "Character save"
+msgstr ""
+
+#: src/game.cpp
+msgid "Map memory"
+msgstr ""
+
+#: src/game.cpp
+msgid "Diary"
+msgstr ""
+
+#: src/game.cpp
+msgid "player achievements"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid ""
+"You can't drive because you have to wield a %s.\n"
+"\n"
+"Put it away?"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid ""
+"You can't drive because you have to wield a %s with both hands.\n"
+"\n"
+"Put it away?"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "%s may be upset by this.  Continue?"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid ""
+"You're in the territory of %s, they probably won't appreciate your actions.  "
+"Continue anyway?"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Shown faction: %s"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Add"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Personal"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Remove"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Enable"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Toggle zone display"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Enable personal"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Disable personal"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Move up"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Move down"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "zones manager"
+msgid "Edit"
+msgstr ""
+
+#: src/game.cpp
+msgid "You can't see the destination."
+msgstr ""
+
+#: src/game.cpp
+msgid "<s>ort: name"
+msgstr ""
+
+#: src/game.cpp
+msgid "<s>ort: cat-dist"
+msgstr ""
+
+#: src/game.cpp
+msgid "<s>ort: cat-name"
+msgstr ""
+
+#: src/game.cpp
+msgid "<T>ravel to"
+msgstr ""
+
+#: src/game.cpp src/overmap_ui.cpp
+msgctxt "string input"
+msgid "History"
+msgstr ""
+
+#: src/game.cpp src/overmap_ui.cpp
+msgctxt "string input"
+msgid "Save"
+msgstr ""
+
+#: src/game.cpp
+msgctxt "crafting gui"
+msgid "hides contents"
+msgstr ""
+
+#: src/game.cpp
+msgid "Filter items"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "%s: %s and %d items"
+msgstr ""
+
+#: src/game.cpp src/handle_action.cpp
+#, c-format
+msgid "Cleared ammo preferences for %s."
+msgstr ""
+
+#: src/game.cpp src/handle_action.cpp
+#, c-format
+msgid "Selected %s as default ammo for %s."
+msgstr ""
+
+#: src/game.cpp src/handle_action.cpp
+msgid "You need to keep that ammo on you to select it as default ammo."
+msgstr ""
+
+#. ~ %1$s: Description of primary monster spotted ("3 fat zombies")
+#. ~ %2$s: Description of how far away the monsters are ("7 tiles" or "5-20
+#. tiles")
+#. ~ %3$s: Description of where the primary monster is ("to the east and
+#. south")
+#. ~ %4$s: Description of any other monsters spotted (" and 4 others")
+#: src/game.cpp
+#, c-format
+msgid "%1$s %2$s %3$s%4$s"
+msgstr ""
+
+#: src/game.cpp
+msgid ""
+"It's so dark and scary in there!  You can't force yourself to walk into this "
+"tile.  Switch to running movement mode to move there."
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "You move into the %s, releasing it."
+msgstr ""
+
+#: src/game.cpp
+msgid "You barely fit in this tiny human vehicle."
+msgstr ""
+
+#: src/game.cpp
+msgid ""
+"All the stuff you're carrying isn't making it any easier to move in here."
+msgstr ""
+
+#: src/game.cpp
+msgid "You load the furniture onto the vehicle."
+msgstr ""
+
+#: src/game.cpp
+msgid "Your Joint Servo bionic powers down."
+msgstr ""
+
+#: src/game.cpp
+msgid "You're almost sent flying, but something holds you in place!"
+msgstr ""
+
+#: src/game.cpp
+msgid "<npcname> is almost sent flying, but something holds them in place!"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Climb down %s (%s)"
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid "Climb up %s (%s)"
+msgstr ""
+
+#: src/game.cpp src/iexamine.cpp
+#, c-format
+msgid ""
+"You can't climb because you have to wield a %s with both hands.\n"
+"\n"
+"Put it away?"
+msgstr ""
+
+#: src/game.cpp
+msgid "There appears to be a dangerous field at your destination.  Continue?"
+msgstr ""
+
+#: src/game.cpp
+msgid "You swim down."
+msgstr ""
+
+#: src/game.cpp
+msgid ""
+"You are already underwater and there is no more water beneath you to swim "
+"down!"
+msgstr ""
+
+#: src/game.cpp
+msgid "You can't dive while walking on water."
+msgstr ""
+
+#: src/game.cpp
+msgid "You swim up."
+msgstr ""
+
+#: src/game.cpp
+msgid "You are already underwater and there is no water above you to swim up!"
+msgstr ""
+
+#: src/game.cpp
+msgid "Set scent map sensitivity to?"
+msgstr ""
+
+#: src/game.cpp
+msgid "No support for curses mode"
+msgstr ""
+
+#: src/game.cpp
+msgid "Your skill in parkour makes up for your bad knees while climbing."
+msgstr ""
+
+#: src/game.cpp
+msgid "You are winded, which makes climbing harder."
+msgstr ""
+
+#: src/game.cpp
+msgid "You are out of breath, which makes climbing much harder."
+msgstr ""
+
+#: src/game.cpp
+msgid ""
+"You can't catch your breath, which makes it much more difficult to climb."
+msgstr ""
+
+#: src/game.cpp
+msgid "You feel faint and can't keep your balance."
+msgstr ""
+
+#: src/game.cpp
+#, c-format
+msgid ""
+"There appears to be a dangerous <color_red>%s</color> at your destination."
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Pour %s | %s %s into"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "You don't have a suitable container to pour %s into."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Can't pick up gasses."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Does not have any pocket for frozen liquids!"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Can't consume spilt gasses."
+msgstr ""
+
+#. ~ kcal_estimated_intake
+#: src/game_inventory.cpp
+msgid "none "
+msgstr ""
+
+#. ~ kcal_estimated_intake
+#: src/game_inventory.cpp
+msgid "minimal "
+msgstr ""
+
+#. ~ kcal_estimated_intake
+#: src/game_inventory.cpp
+msgid "low "
+msgstr ""
+
+#. ~ kcal_estimated_intake
+#: src/game_inventory.cpp
+msgid "high "
+msgstr ""
+
+#. ~ kcal_estimated_intake
+#: src/game_inventory.cpp
+msgid "very high "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Vitamin Intake: "
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "%s: %d%%.  "
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "%s: %s.  "
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "%1$s</color> <color_dark_gray>or</color> <color_light_green>%2$s"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "you lack the skills to reinstall"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "must be unloaded before removing this mod"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "has mods attached"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "You don't have any mods to remove."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "E-reader is broken and won't turn on."
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Needs at least %d charge."
+msgid_plural "Needs at least %d charges."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/game_inventory.cpp
+msgid "You don't have any e-readers you can use."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Select e-reader."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Charges"
+msgstr ""
+
+#: src/game_inventory.cpp src/iuse.cpp
+msgid "Estimated time"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "SELECT BOOKS TO SCAN"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Scan which books?"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "You have no books to scan."
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid " (using %s)?"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid " which device"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "You have no eligible devices to "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Select devices to "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid " which devices"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Estimated time:"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Estimated time (slow!):"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Processed / Available Memory: "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid " which files?"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Files selected:"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid ""
+"Using two devices without high-speed compatibility will result in longer transfer times.\n"
+"Having an external storage device compatible with both devices can avoid this."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "You have no files to "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Select files to "
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Selected file size exceeds available storage size."
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "<color_red>NONE</color>"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "MATERIALS AVAILABLE"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "DAMAGE CHANCE"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "DIFFICULTY"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Tool: <color_cyan>%s</color>"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Skill used: <color_cyan>%s (%d)</color>"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Saw stock"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Attach an item to the %s"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid ""
+"You don't have any items compatible with %s.\n"
+"\n"
+"Allowed equipment:\n"
+"%s"
+msgstr ""
+
+#: src/game_inventory.cpp
+#, c-format
+msgid "Choose a tool to attach to %s"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Shown as"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Change appearance of your armor:"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "LOCATION"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "DESTINATION"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "AMOUNT"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "DAMAGE"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "PIERCE"
+msgstr ""
+
+#: src/game_inventory.cpp
+msgid "Choose ammo to reload"
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "You lock the %1$s's %2$s."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "That %s can only be locked from the inside."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "That %s is already locked."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "You cannot lock the %s."
+msgstr ""
+
+#: src/gates.cpp
+msgid "a soft chk."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "You unlock the %1$s's %2$s."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "That %s can only be unlocked from the inside."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "That %s is already unlocked."
+msgstr ""
+
+#: src/gates.cpp
+#, c-format
+msgid "You cannot unlock the %s."
+msgstr ""
+
+#: src/gates.cpp
+msgid "a soft click."
+msgstr ""
+
+#: src/grab.cpp
+#, c-format
+msgid "The %s is at too sharp an angle to move like this!"
+msgstr ""
+
+#: src/grab.cpp
+#, c-format
+msgid "The %s is steered too far to move like this!"
+msgstr ""
+
+#: src/grab.cpp
+#, c-format
+msgid "You let go of the %s as it turns."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid "You have no idea how to make the vehicle move."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "That %s is locked."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "Set %s to %s."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "Warning: Options > %s > %s > %s set to %s."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid "You can't move that, it's attached to the wall."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid ""
+"That's part of a power grid.  Separate it from the grid so you can move it?"
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "Grab %s on %s?"
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "You grab the %s loaded on the %s."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "You can't move the %s while you're boarding it."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid "You can not grab the %s."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid ""
+"Select items on current tile to haul with you as you move.\n"
+"If autohaul is enabled, you will automatically add encountered items to the haul.\n"
+"You can set a filter to limit which items are automatically added."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid ""
+"You are currently not hauling any items, but autohaul is enabled, so any new "
+"items encountered on the ground will be hauled."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid ""
+"You are currently hauling %d items.\n"
+"Autohaul is enabled, so any new items encountered on the ground will be hauled."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid ""
+"You are currently hauling %d items.\n"
+"Autohaul is disabled."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid ""
+"You are currently not hauling.  Select items to haul or enable autohaul to "
+"start."
+msgstr ""
+
+#: src/handle_action.cpp
+msgid ""
+"\n"
+"Autohaul filter not set."
+msgstr ""
+
+#: src/handle_action.cpp
+#, c-format
+msgid ""
+"\n"
+"Autohaul filter: %s"
+msgstr ""
+
+#: src/handle_action.cpp
+msgid "Stop hauling"
+msgstr ""
+
+#: src/handle_action.cpp
+msgid "Haul everything here"
+msgstr ""
+
+#: src/handle_action.cpp
+msgid "Choose items to haul"
+msgstr ""

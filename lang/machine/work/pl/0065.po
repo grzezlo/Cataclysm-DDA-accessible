@@ -1,0 +1,1614 @@
+# Batch 65 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Speech from speaker mon_whisper_fungus
+#: data/json/speech.json
+msgid "the sharp sound of snapping bones."
+msgstr ""
+
+#. ~ Speech from speaker mon_whisper_fungus
+#: data/json/speech.json
+msgid "the sharp sound of snapping wood."
+msgstr ""
+
+#. ~ Speech from speaker mon_skeleton, mon_skeleton_brute,
+#. mon_skeleton_electric, mon_skeleton_slasher
+#: data/json/speech.json
+msgid "hissing."
+msgstr ""
+
+#. ~ Speech from speaker mon_nether_huntsman
+#: data/json/speech.json
+msgid "wet clicking, turning into a drone."
+msgstr ""
+
+#. ~ Speech from speaker mon_nether_huntsman
+#: data/json/speech.json
+msgid "a series of clicks, changing in pitch."
+msgstr ""
+
+#. ~ Speech from speaker mon_nether_huntsman
+#: data/json/speech.json
+msgid "a visceral hissing screech!"
+msgstr ""
+
+#. ~ Speech from speaker mon_nether_huntsman
+#: data/json/speech.json
+msgid "a quiet drone."
+msgstr ""
+
+#. ~ Speech from speaker mon_feral_human_pipe, mon_feral_sapien_spear,
+#. mon_chud, mon_feral_human_crowbar, mon_feral_human_axe,
+#. mon_feral_human_tool, mon_feral_labsecurity_flashlight,
+#. mon_feral_prepper_mace, mon_feral_prepper_knife, mon_feral_survivalist,
+#. mon_feral_militia, mon_feral_soldier, mon_feral_swimmer_kickboard,
+#. mon_feral_sailor_wrench, mon_feral_sailor_axe, mon_feral_sailor_mop,
+#. mon_feral_sailor_lug_wrench, mon_feral_marine_bayonet, mon_feral_officer,
+#. mon_feral_cop, mon_feral_prisoner
+#: data/json/speech.json
+msgid "loud grunting."
+msgstr ""
+
+#. ~ Speech from speaker mon_feral_human_pipe, mon_feral_sapien_spear,
+#. mon_chud, mon_feral_human_crowbar, mon_feral_human_axe,
+#. mon_feral_human_tool, mon_feral_labsecurity_flashlight,
+#. mon_feral_prepper_mace, mon_feral_prepper_knife, mon_feral_survivalist,
+#. mon_feral_militia, mon_feral_soldier, mon_feral_swimmer_kickboard,
+#. mon_feral_sailor_wrench, mon_feral_sailor_axe, mon_feral_sailor_mop,
+#. mon_feral_sailor_lug_wrench, mon_feral_marine_bayonet, mon_feral_officer,
+#. mon_feral_cop, mon_feral_prisoner
+#: data/json/speech.json
+msgid "mutterings."
+msgstr ""
+
+#. ~ Speech from speaker mon_feral_human_pipe, mon_feral_sapien_spear,
+#. mon_chud, mon_feral_human_crowbar, mon_feral_human_axe,
+#. mon_feral_human_tool, mon_feral_labsecurity_flashlight,
+#. mon_feral_prepper_mace, mon_feral_prepper_knife, mon_feral_survivalist,
+#. mon_feral_militia, mon_feral_soldier, mon_feral_swimmer_kickboard,
+#. mon_feral_sailor_wrench, mon_feral_sailor_axe, mon_feral_sailor_mop,
+#. mon_feral_sailor_lug_wrench, mon_feral_marine_bayonet, mon_feral_officer,
+#. mon_feral_cop, mon_feral_prisoner
+#: data/json/speech.json
+msgid "garbled speech."
+msgstr ""
+
+#. ~ Speech from speaker mon_feral_human_pipe, mon_feral_sapien_spear,
+#. mon_chud, mon_feral_human_crowbar, mon_feral_human_axe,
+#. mon_feral_human_tool, mon_feral_labsecurity_flashlight,
+#. mon_feral_prepper_mace, mon_feral_prepper_knife, mon_feral_survivalist,
+#. mon_feral_militia, mon_feral_soldier, mon_feral_swimmer_kickboard,
+#. mon_feral_sailor_wrench, mon_feral_sailor_axe, mon_feral_sailor_mop,
+#. mon_feral_sailor_lug_wrench, mon_feral_marine_bayonet, mon_feral_officer,
+#. mon_feral_cop, mon_feral_prisoner
+#: data/json/speech.json
+msgid "incoherent yelling."
+msgstr ""
+
+#. ~ Speech from speaker mon_feral_human_pipe, mon_feral_sapien_spear,
+#. mon_chud, mon_feral_human_crowbar, mon_feral_human_axe,
+#. mon_feral_human_tool, mon_feral_labsecurity_flashlight,
+#. mon_feral_prepper_mace, mon_feral_prepper_knife, mon_feral_survivalist,
+#. mon_feral_militia, mon_feral_soldier, mon_feral_swimmer_kickboard,
+#. mon_feral_sailor_wrench, mon_feral_sailor_axe, mon_feral_sailor_mop,
+#. mon_feral_sailor_lug_wrench, mon_feral_marine_bayonet, mon_feral_officer,
+#. mon_feral_cop, mon_feral_prisoner
+#: data/json/speech.json
+msgid "exasperated screaming."
+msgstr ""
+
+#. ~ Name of starting location "sloc_exodii_castle"
+#: data/json/start_locations.json
+msgid "Exodii castle"
+msgstr ""
+
+#. ~ Name of starting location "sloc_town_in_the_open"
+#: data/json/start_locations.json
+msgid "Town, in the open"
+msgstr ""
+
+#. ~ Mission name
+#: data/json/starting_missions.json
+msgid "Find a new rifle"
+msgstr ""
+
+#. ~ Description of mission "Find a new rifle"
+#: data/json/starting_missions.json
+msgid ""
+"When you were escaping an evacuation point that was overrun, you had to leave"
+" your rifle behind.  Shame on you, what's a hunter without their hunting "
+"rifle?  You have to find one immediately."
+msgstr ""
+
+#. ~ Description of mission "Dress with style"
+#: data/json/starting_missions.json
+msgid ""
+"You need to always dress in style and fashion.  Find a dress or tuxedo for "
+"your personal use."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/starting_missions.json
+msgid "Go to the refueling stop"
+msgstr ""
+
+#. ~ Description of mission "Go to the refueling stop"
+#: data/json/starting_missions.json
+msgid ""
+"Your bird is now on the ground, never again able to fly, you could search for"
+" a new one in the closest refueling stop requisitioned by the military."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/starting_missions.json
+msgid "Deliver Your Cargo"
+msgstr ""
+
+#. ~ Description of mission "Deliver Your Cargo"
+#: data/json/starting_missions.json
+msgid ""
+"You're not sure who orders takeout when the world's ending, but that doesn't "
+"matter.  Evacuation doesn't matter.  Nothing, indeed, matters, save for "
+"safely delivering your precious cargo to its destination: a remote mansion."
+msgstr ""
+
+#. ~ Mission name
+#: data/json/starting_missions.json
+msgid "Survive your pursuer"
+msgstr ""
+
+#. ~ Description of mission "Survive your pursuer"
+#: data/json/starting_missions.json
+msgid ""
+"Since the start of the Cataclysm, something has been hunting you "
+"relentlessly.  You can fight it but never truly kill it.  It won't end until "
+"you die."
+msgstr ""
+
+#. ~ Description of event statistic "num_moves_veh_onboard"
+#: data/json/statistics.json
+msgid "square traveled on board vehicles"
+msgid_plural "squares traveled on board vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "min_move_veh_onboard_z"
+#: data/json/statistics.json
+msgid "minimum z level reached in a vehicle"
+msgid_plural "minimum z level reached in a vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_move_veh_onboard_z"
+#: data/json/statistics.json
+msgid "maximum z level reached in a vehicle"
+msgid_plural "maximum z level reached in a vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_veh_ctrl_direct"
+#: data/json/statistics.json
+msgid "square traveled while controlling vehicle"
+msgid_plural "squares traveled while controlling vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_veh_ctrl_remote"
+#: data/json/statistics.json
+msgid "square traversed by remote controlled vehicles"
+msgid_plural "squares traversed by remote controlled vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_veh_onboard_ctrl_remote"
+#: data/json/statistics.json
+msgid "square traveled on board remote controlled vehicle"
+msgid_plural "squares traveled on board remote controlled vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_veh_onboard_ctrl_none"
+#: data/json/statistics.json
+msgid "square traveled as vehicle passenger"
+msgid_plural "squares traveled as vehicle passenger"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_acft_onboard"
+#: data/json/statistics.json
+msgid "square traveled on board aircraft"
+msgid_plural "squares traveled on board aircraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_acft_ctrl_direct"
+#: data/json/statistics.json
+msgid "square traveled while piloting aircraft"
+msgid_plural "squares traveled while piloting aircraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_velocity_acft"
+#: data/json/statistics.json
+msgid "maximum velocity attained while piloting an aircraft"
+msgid_plural "maximum velocity attained while piloting an aircraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_move_acft_ctrl_direct_z"
+#: data/json/statistics.json
+msgid "maximum z level reached while piloting an aircraft"
+msgid_plural "maximum z level reached while piloting an aircraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_boat_onboard"
+#: data/json/statistics.json
+msgid "square traveled on board watercraft"
+msgid_plural "squares traveled on board watercraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_boat_ctrl_direct"
+#: data/json/statistics.json
+msgid "square traveled while sailing watercraft"
+msgid_plural "squares traveled while sailing watercraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_velocity_boat"
+#: data/json/statistics.json
+msgid "maximum velocity attained while sailing a watercraft"
+msgid_plural "maximum velocity attained while sailing a watercraft"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_rail_onboard"
+#: data/json/statistics.json
+msgid "square traveled on board rail vehicles"
+msgid_plural "squares traveled on board rail vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_rail_ctrl_direct"
+#: data/json/statistics.json
+msgid "square traveled while driving rail vehicles"
+msgid_plural "squares traveled while driving rail vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_velocity_rail"
+#: data/json/statistics.json
+msgid "maximum velocity attained while driving a rail vehicle"
+msgid_plural "maximum velocity attained while driving a rail vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_gndv_onboard"
+#: data/json/statistics.json
+msgid "square traveled on board land vehicles"
+msgid_plural "squares traveled on board land vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_gndv_ctrl_direct"
+#: data/json/statistics.json
+msgid "square traveled while driving land vehicles"
+msgid_plural "squares traveled while driving land vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_velocity_gndv"
+#: data/json/statistics.json
+msgid "maximum velocity attained while driving a land vehicle"
+msgid_plural "maximum velocity attained while driving a land vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_move_gndv_ctrl_direct_z"
+#: data/json/statistics.json
+msgid "maximum z level reached while driving a land vehicle"
+msgid_plural "maximum z level reached while driving a land vehicle"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_moves_gndv_skidding"
+#: data/json/statistics.json
+msgid "square skidded while driving land vehicles"
+msgid_plural "squares skidded while driving land vehicles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "max_velocity_skidding"
+#: data/json/statistics.json
+msgid "maximum velocity that a driven vehicle skidded at"
+msgid_plural "maximum velocity that a driven vehicle skidded at"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_lab_finale"
+#: data/json/statistics.json
+msgid "lab finale entered"
+msgid_plural "lab finales entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "witnessed_portal_storm"
+#: data/json/statistics.json
+msgid "portal storms seen"
+msgid_plural "portal storms seen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_hospital"
+#: data/json/statistics.json
+msgid "hospital entered"
+msgid_plural "hospitals entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_mansion"
+#: data/json/statistics.json
+msgid "mansion entered"
+msgid_plural "mansions entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_mine"
+#: data/json/statistics.json
+msgid "mine entered"
+msgid_plural "mines entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_police_station"
+#: data/json/statistics.json
+msgid "Police Station entered"
+msgid_plural "Police Stations entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_trans_lab"
+#: data/json/statistics.json
+msgid "Trans Coastal Lab entered"
+msgid_plural "Trans Coastal Labs entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_enters_LIXA"
+#: data/json/statistics.json
+msgid "LIXA entered"
+msgid_plural "LIXAs entered"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Message of martial technique "Headbutt"
+#: data/json/techniques.json
+#, c-format
+msgid "You headbutt %s"
+msgstr ""
+
+#. ~ Message of martial technique "Headbutt"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> headbutts %s"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/json/techniques.json
+msgid "Penetrating Strike"
+msgstr ""
+
+#. ~ Description of martial technique "Penetrating Strike"
+#: data/json/techniques.json
+msgid "Increase armor penetration by 2 times melee skill"
+msgstr ""
+
+#. ~ Message of martial technique "Penetrating Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "You find a weak spot in %s's armor"
+msgstr ""
+
+#. ~ Message of martial technique "Penetrating Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> finds a weak spot in %s's armor"
+msgstr ""
+
+#. ~ Condition description of martial technique "Brutal Strike"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned mundane</info> target of <info>similar or"
+" smaller</info> size, may fail on enemies grabbing you"
+msgstr ""
+
+#. ~ Message of martial technique "Vorpal Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "Snicker-snack!  You slice through %s like a hot knife through butter"
+msgstr ""
+
+#. ~ Message of martial technique "Vorpal Strike"
+#: data/json/techniques.json
+#, c-format
+msgid ""
+"Snicker-snack!  <npcname> slices through %s like a hot knife through butter"
+msgstr ""
+
+#. ~ Condition description of martial technique "Wrap Attack"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a target of <info>similar size</info> with limbs to catch"
+msgstr ""
+
+#. ~ Condition description of martial technique "Sweep Attack"
+#. ~ Condition description of martial technique "Knee Strike"
+#. ~ Condition description of martial technique "Cross Counter"
+#. ~ Condition description of martial technique "Crane Kick"
+#. ~ Condition description of martial technique "Low Strike"
+#. ~ Condition description of martial technique "Displace and Hook"
+#. ~ Condition description of martial technique "Hook and Drag"
+#. ~ Condition description of martial technique "Heavy Staff Strike"
+#. ~ Condition description of martial technique "Takedown"
+#. ~ Condition description of martial technique "Grab"
+#. ~ Condition description of martial technique "Ninjutsu Takedown (unarmed)"
+#. ~ Condition description of martial technique "Ninjutsu Takedown (melee)"
+#. ~ Condition description of martial technique "Bite the Dust"
+#. ~ Condition description of martial technique "Red Leaf's Cut"
+#. ~ Condition description of martial technique "Kick"
+#. ~ Condition description of martial technique "Hamstring"
+#. ~ Condition description of martial technique "Trip"
+#. ~ Condition description of martial technique "Sweep Kick"
+#. ~ Condition description of martial technique "Grasp the Sparrow's Tail"
+#. ~ Condition description of martial technique "Tiger Takedown"
+#. ~ Condition description of martial technique "L-hook"
+#. ~ Condition description of martial technique "Low Sweep"
+#: data/json/techniques.json data/mods/MMA/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>similar or"
+" smaller</info> size incapable of flight"
+msgstr ""
+
+#. ~ Condition description of martial technique "Precise Strike"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned humanoid</info> target of <info>similar "
+"or smaller</info> size"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you break its grab"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they break its grab"
+msgstr ""
+
+#. ~ Condition description of martial technique "Counter Throw (block)"
+#. ~ Condition description of martial technique "Counter Throw (dodge)"
+#. ~ Condition description of martial technique "Disarming Throw (block)"
+#. ~ Condition description of martial technique "Disarming Throw (dodge)"
+#. ~ Condition description of martial technique "Grab and Throw"
+#. ~ Condition description of martial technique "Spinning Back Kick"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>similar or"
+" smaller</info> size incapable of flight, may fail on targets <info>grabbing "
+"you</info>"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you smoothly break free"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they smoothly break free"
+msgstr ""
+
+#. ~ Message of martial technique "Knee Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "After blocking %s's attack <npcname> quickly strikes at their knee"
+msgstr ""
+
+#. ~ Message of martial technique "Overhead Front Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> blocks %s's attack and counter with a Overhead Front Strike"
+msgstr ""
+
+#. ~ Condition description of martial technique "Overhead Front Strike"
+#. ~ Condition description of martial technique "Spin Kick"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned</info> target of <info>similar or "
+"smaller</info> size"
+msgstr ""
+
+#. ~ Message of martial technique "Rolling Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "Using their rolling staff <npcname> quickly strikes %s"
+msgstr ""
+
+#. ~ Condition description of martial technique "Uppercut"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned</info> target of <info>similar</info> "
+"size incapable of flight"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you force yourself free"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they break free"
+msgstr ""
+
+#. ~ Condition description of martial technique "Power Hit"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed and non-stunned</info> target of "
+"<info>similar or smaller</info> size incapable of flight"
+msgstr ""
+
+#. ~ Condition description of martial technique "Trip"
+#. ~ Condition description of martial technique "Sweep Kick"
+#. ~ Condition description of martial technique "Dragon Tail"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of "
+"<info>similar</info> size incapable of flight"
+msgstr ""
+
+#. ~ Message of martial technique "Crane Wing"
+#: data/json/techniques.json
+#, c-format
+msgid "You raise your arms intimidatingly at %s"
+msgstr ""
+
+#. ~ Message of martial technique "Crane Wing"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> performs the Crane Wing at %s"
+msgstr ""
+
+#. ~ Message of martial technique "Crane Flap"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you swing your arms and break free"
+msgstr ""
+
+#. ~ Message of martial technique "Crane Flap"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they flap free"
+msgstr ""
+
+#. ~ Condition description of martial technique "Crane Strike"
+#. ~ Condition description of martial technique "Stunning Strike"
+#. ~ Condition description of martial technique "Fencing Riposte"
+#. ~ Condition description of martial technique "Knifehand Strike"
+#. ~ Condition description of martial technique "Cheap Shot"
+#. ~ Condition description of martial technique "Leopard Fist"
+#. ~ Condition description of martial technique "Knee Strike"
+#. ~ Condition description of martial technique "Fire and Stone's Cut"
+#. ~ Condition description of martial technique "Dirty Hit"
+#. ~ Condition description of martial technique "Snake Strike"
+#. ~ Condition description of martial technique "Double Palm Strike"
+#. ~ Condition description of martial technique "Tiger Claw"
+#. ~ Condition description of martial technique "Finishing Move"
+#. ~ Condition description of martial technique "Dazing Strike"
+#. ~ Condition description of martial technique "Herzschlag"
+#. ~ Condition description of martial technique "Hydra Slaying Strike"
+#. ~ Condition description of martial technique "Irresistible Mountain Strike"
+#: data/json/techniques.json data/mods/MMA/techniques.json
+msgid ""
+"* Only works on a <info>non-stunned mundane</info> target of <info>similar or"
+" smaller</info> size"
+msgstr ""
+
+#. ~ Message of martial technique "Feint"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> steadies their weapon and fakes a thrust at %s"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you push away"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they push away"
+msgstr ""
+
+#. ~ Condition description of martial technique "Throw"
+#. ~ Condition description of martial technique "Disarming Throw"
+#. ~ Condition description of martial technique "Back Throw"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of "
+"<info>identical</info> size incapable of flight"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you break their feeble grapple"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they break its feeble grapple"
+msgstr ""
+
+#. ~ Message of martial technique "Staff Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> strikes %s with their staff"
+msgstr ""
+
+#. ~ Message of martial technique "Push Kick"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> shoves %s back with a front kick"
+msgstr ""
+
+#. ~ Condition description of martial technique "Push Kick"
+#. ~ Condition description of martial technique "Shove"
+#. ~ Condition description of martial technique "Side Kick"
+#. ~ Condition description of martial technique "Palm Strike"
+#. ~ Condition description of martial technique "Straight Punch (Knockback)"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a target of <info>similar or smaller</info> size, may fail on"
+" enemies grabbing you"
+msgstr ""
+
+#. ~ Message of martial technique "Disarming Slap"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> quickly slaps and disarms %s"
+msgstr ""
+
+#. ~ Message of martial technique "Cheap Shot"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> hits %s with a cheap shot"
+msgstr ""
+
+#. ~ Condition description of martial technique "Bone Breaker"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>downed</info> and <info>stunned</info> humanoid "
+"target"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you wrestle free"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they wrestle free"
+msgstr ""
+
+#. ~ Condition description of martial technique "Leopard Pounce"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>identical "
+"or smaller</info> size incapable of flight"
+msgstr ""
+
+#. ~ Message of martial technique "Knee Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> drives their knee into %s"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you break the clinch"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they break the clinch"
+msgstr ""
+
+#. ~ Message of martial technique "Ninjutsu Takedown (unarmed)"
+#. ~ Message of martial technique "Ninjutsu Takedown (melee)"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> quickly grabs and brings %s to the ground"
+msgstr ""
+
+#. ~ Message of martial technique "Bite the Dust"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> sweeps %s to the ground"
+msgstr ""
+
+#. ~ Message of martial technique "Dirty Kill"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> strikes and confines %s to the ground"
+msgstr ""
+
+#. ~ Condition description of martial technique "Dirty Kill"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>downed</info> and <info>non-stunned mundane</info> "
+"target of <info>similar or smaller</info> size"
+msgstr ""
+
+#. ~ Message of martial technique "In-One Timing"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> strikes at %s's weak spot"
+msgstr ""
+
+#. ~ Message of martial technique "Snake Slither"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you slither free"
+msgstr ""
+
+#. ~ Message of martial technique "Snake Slither"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they slither free"
+msgstr ""
+
+#. ~ Message of martial technique "Grasp the Sparrow's Tail"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> diverts %s's attack and leads them to the ground"
+msgstr ""
+
+#. ~ Message of martial technique "Double Palm Strike"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname>'s double-handed palm strikes %s"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you are too powerful to be caged"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid ""
+"<npcname> was almost grabbed by %s, but they are too powerful to be caged"
+msgstr ""
+
+#. ~ Message of martial technique "Straight Punch"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> delivers a straight vertical punch to %s"
+msgstr ""
+
+#. ~ Message of martial technique "Straight Punch (Knockback)"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> forces %s back with a straight horizontal punch"
+msgstr ""
+
+#. ~ Condition description of martial technique "L-hook (Knockback)"
+#: data/json/techniques.json
+msgid ""
+"* Only works on a <info>non-downed humanoid</info> target of <info>similar or"
+" smaller</info> size incapable of flight, may fail on targets grabbing you"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you stumble away"
+msgstr ""
+
+#. ~ Message of martial technique "Grab Break"
+#: data/json/techniques.json
+#, c-format
+msgid "<npcname> was almost grabbed by %s, but they stumble away"
+msgstr ""
+
+#. ~ Name of tool quality "FISH_TRAP"
+#: data/json/tool_qualities.json
+msgid "fish trapping"
+msgstr ""
+
+#. ~ Name of tool quality "TREE_TAP"
+#: data/json/tool_qualities.json
+msgid "tree tapping"
+msgstr ""
+
+#. ~ Name of tool quality "SIEVE"
+#: data/json/tool_qualities.json
+msgid "sieving"
+msgstr ""
+
+#. ~ Name of tool quality "WINNOW"
+#: data/json/tool_qualities.json
+msgid "winnowing"
+msgstr ""
+
+#. ~ Name of tool quality "STRAIN"
+#: data/json/tool_qualities.json
+msgid "straining"
+msgstr ""
+
+#. ~ Name of tool quality "SNOW_MAKING"
+#: data/json/tool_qualities.json
+msgid "snow making"
+msgstr ""
+
+#. ~ Name of tool quality "JUMPSTART"
+#: data/json/tool_qualities.json
+msgid "jump starting"
+msgstr ""
+
+#. ~ Name of tool quality "CUT_GLASS"
+#: data/json/tool_qualities.json
+msgid "glass cutting"
+msgstr ""
+
+#. ~ Name of tool quality "BLOW_HOT_AIR"
+#: data/json/tool_qualities.json
+msgid "hot air blowing"
+msgstr ""
+
+#. ~ Name of tool quality "THREAD_CUT"
+#: data/json/tool_qualities.json
+msgid "thread cutting"
+msgstr ""
+
+#. ~ Name of tool quality "THREAD_TAP"
+#: data/json/tool_qualities.json
+msgid "thread tapping"
+msgstr ""
+
+#. ~ Memorial message of trap "tr_microlab_shifting_hall"
+#. ~ Memorial message of trap "tr_microlab_shifting_hall_2"
+#. ~ Memorial message of trap "tr_microlab_portal_elevator_physics_shift"
+#: data/json/traps.json
+msgctxt "memorial_male"
+msgid "Triggered a dimensional anomaly."
+msgstr ""
+
+#. ~ Memorial message of trap "tr_microlab_shifting_hall"
+#. ~ Memorial message of trap "tr_microlab_shifting_hall_2"
+#. ~ Memorial message of trap "tr_microlab_portal_elevator_physics_shift"
+#: data/json/traps.json
+msgctxt "memorial_female"
+msgid "Triggered a dimensional anomaly."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/json/traps.json
+msgid "microlab shifting elevator"
+msgstr ""
+
+#. ~ Message in nested effect in then statement in effect in EoC "EOC_TELEPAD"
+#: data/json/traps.json
+msgid "The air shimmers around <u_name>…"
+msgstr ""
+
+#. ~ Memorial message of trap "tr_dissector"
+#: data/json/traps.json
+msgctxt "memorial_male"
+msgid "Stepped into an exposed high-energy conduit."
+msgstr ""
+
+#. ~ Memorial message of trap "tr_dissector"
+#: data/json/traps.json
+msgctxt "memorial_female"
+msgid "Stepped into an exposed high-energy conduit."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/json/traps.json
+msgid "hole to outside"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/json/traps.json
+msgid "scattered monster teeth"
+msgstr ""
+
+#. ~ Memorial message of trap "tr_teeth"
+#: data/json/traps.json
+msgctxt "memorial_male"
+msgid "Stepped on teeth."
+msgstr ""
+
+#. ~ Memorial message of trap "tr_teeth"
+#: data/json/traps.json
+msgctxt "memorial_female"
+msgid "Stepped on teeth."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/json/traps.json
+msgid "monster teeth caltrops"
+msgstr ""
+
+#. ~ Memorial message of trap "tr_caltrops_teeth"
+#: data/json/traps.json
+msgctxt "memorial_male"
+msgid "Stepped on a tooth caltrop."
+msgstr ""
+
+#. ~ Memorial message of trap "tr_caltrops_teeth"
+#: data/json/traps.json
+msgctxt "memorial_female"
+msgid "Stepped on a tooth caltrop."
+msgstr ""
+
+#. ~ Name of a trap
+#. ~ Terrain name
+#: data/json/furniture_and_terrain/netherum/terrain_labyrinth_any.json
+#: data/json/traps.json
+msgid "sparkling chasm"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Morphine Milligram Equivalent (percentile)"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Alpha Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Frog Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Beast Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Bird Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Cattle Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Cephalopod Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Chimera Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Crustacean Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Elf-A Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Feline Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Fish Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Snail Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Insect Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Lizard Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Lupine Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Medical Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Mouse Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Plant Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Rabbit Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Raptor Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Rat Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Chiropteran Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Slime Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Spider Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Troglobite Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Ursine Primer"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/json/vitamin.json
+msgid "Triffid Fiber"
+msgstr ""
+
+#. ~ Weather type name
+#: data/json/weather_type.json
+msgid "Mist"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "ammo loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "armor loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "artifacts loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "auto drink zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "auto eat zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "basecamp food zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "basecamp storage zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "bionics loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "books loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "chemical loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "chop trees zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "clothing loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "construction blueprint zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "containers loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "corpses loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "currency loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "custom loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "default loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "disassembly work zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "drink loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "drugs loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "farm plot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "filthy armor loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "filthy clothing loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "firewood source zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "fishing spot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "food loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "fuel loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "guns loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "ignore favorites loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "ignore loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "item group loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "keys loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "magazines loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "manuals loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "maps loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "martial arts manuals loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "mine terrain zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "mods loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "mop tile zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "mutagens loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "no auto pickup zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "no NPC pickup zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "npc_ignore_sounds zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "NPC investigation area zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "NPC retreat zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "other loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "perishable drink loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "perishable food loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "seeds loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "spare parts loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "start point zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "strip_corpses loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "tools loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "tool_magazines loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "traps loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "unload everything loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "unsorted loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "vehicle deconstruct zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "vehicle parts loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "vehicle patrol zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "vehicle repair zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "weapons loot zone"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/json/zone_field_type.json
+msgid "wood loot zone"
+msgstr ""
+
+#. ~ Description of loot zone "Disassembly Work"
+#: data/json/zones.json
+msgid "Items in this zone are marked for disassembly."
+msgstr ""
+
+#. ~ Name of loot zone
+#: data/json/zones.json
+msgid "Start Point"
+msgstr ""
+
+#. ~ Description of loot zone "Start Point"
+#: data/json/zones.json
+msgid "A prioritized spawn point."
+msgstr ""
+
+#. ~ Item name
+#: data/json/artifact/artifact_item_types.json
+msgid "royal robe"
+msgid_plural "royal robes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "royal robe"
+#: data/json/artifact/artifact_item_types.json
+msgid ""
+"An ornately decorated robe with an unfamiliar royal symbol on it.  The humanoid figure on the seal has two pairs of eyes.  It is the only one of its kind.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/json/artifact/artifact_item_types.json
+msgid "ancient burial shroud"
+msgid_plural "ancient burial shrouds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ancient burial shroud"
+#: data/json/artifact/artifact_item_types.json
+msgid ""
+"A cloak of thin, faded cloth.  The faint silhouette of a long-dead humanoid is barely visible on it.  It is the only one of its kind.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/json/artifact/artifact_item_types.json
+msgid "ornate fur coat"
+msgid_plural "ornate fur coats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ornate fur coat"
+#: data/json/artifact/artifact_item_types.json
+msgid ""
+"A heavy, finely crafted coat made of the fur of an unidentifiable creature.  It is the only one of its kind.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/json/artifact/artifact_item_types.json
+msgid "ancient stone mask"
+msgid_plural "ancient stone masks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ancient stone mask"
+#: data/json/artifact/artifact_item_types.json
+msgid ""
+"A sinister mask made of a smooth green stone.  It is the only one of its kind.\n"
+"It may have unknown powers; try activating them."
+msgstr ""
+
+#. ~ Item name
+#: data/json/artifact/artifact_item_types.json
+msgid "ancient bronze helmet"
+msgid_plural "ancient bronze helmets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "ancient bronze helmet"
+#: data/json/artifact/artifact_item_types.json
+msgid ""
+"A helmet with an imposing face plate.  Though the corrosion has completely defaced the symbols written on the sides, it seems sturdy.  It is the only one of its kind.\n"
+"It may have unknown powers; try activating them."
+msgstr ""

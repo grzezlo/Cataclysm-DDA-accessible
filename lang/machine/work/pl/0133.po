@@ -1,0 +1,1639 @@
+# Batch 133 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Recycler"
+msgstr ""
+
+#. ~ Description of mutation "Recycler"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Even with no one around you feel obligated to clean up the streets.  You find"
+" full cans of soda in the weirdest places."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Trouble seeker"
+msgstr ""
+
+#. ~ Description of mutation "Trouble seeker"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"As if the apocalypse itself wasn't enough, you are constantly looking for "
+"some trouble.  Zombies will sometimes appear out of nowhere to attack you.  "
+"Fortunately, they always appear at a good distance from you.  Activate to "
+"toggle."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Hemophage"
+msgstr ""
+
+#. ~ Description of mutation "Hemophage"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You do not drink…wine.  You are immune to the negative consequences of "
+"drinking blood, such as parasitic infection."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "The Blood is the Life"
+msgstr ""
+
+#. ~ Description of mutation "The Blood is the Life"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Drinking blood makes you feel really good.  REALLY good.  So good that all "
+"your aches and pains just seem to fade away.  Every time you drink blood, you"
+" heal a bit of damage and lose a bit of pain."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Of sailors and spinach"
+msgstr ""
+
+#. ~ Description of mutation "Of sailors and spinach"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You spent several years on the high sea and now your muscles visibly swell "
+"and clench when you eat raw spinach."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Playing God"
+msgstr ""
+
+#. ~ Description of mutation "Playing God"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've been dissecting critters since high school.  Last night a voice gave "
+"you an idea for how to bring them back to life.  Activate the perk to gain "
+"insight into the nature of life itself!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Safety net"
+msgstr ""
+
+#. ~ Description of mutation "Safety net"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You've always felt like someone was looking out for you upstairs.  When you "
+"are attacked there is a 5% chance the attack will deal no damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Lucky dodge"
+msgstr ""
+
+#. ~ Description of mutation "Lucky dodge"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have a habit of always ducking at the right time.  You have a 5% chance "
+"to dodge any incoming attack."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Long shot"
+msgstr ""
+
+#. ~ Description of mutation "Long shot"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You always ate your carrots, that good eyesight is paying off.  You can use "
+"ranged weapons effectively up to 4 more tiles away."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Firstest Aid"
+msgstr ""
+
+#. ~ Description of mutation "Firstest Aid"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"It's called \"First Aid\", right, so obviously it's better the faster you "
+"apply it.  Your bandages are 50% better at stopping bleeding, but only if you"
+" apply them within 2 minutes of taking damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Absit Invidia"
+msgstr ""
+
+#. ~ Description of mutation "Absit Invidia"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Your Nana told you about the evil eye and how to protect yourself when you "
+"were a small child.  You don't remember her telling you the evil eye was "
+"giant, disembodied, and on fire, but some of the things she taught you work "
+"all the same.  You are immune to the Tainted Mind effect as long as you're "
+"wearing a holy symbol necklace, and can use some salt to remove it if you do "
+"acquire it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Quicken Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Quicken Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have learned to cast spells in a way that is much quicker, but also more "
+"wasteful.  -95% cast time, +100% cast cost.  Can be toggled on or of by "
+"activating this trait.  Does not work on spells that consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Widen Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Widen Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have learned to cast spells that affects a larger area.  +100% area of "
+"effect, +50% cast cost.  Can be toggled on or of by activating this trait.  "
+"Does not work on spells that consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Reach Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Reach Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have learned to cast spells from a longer distance.  +100% reach, +50% "
+"cast cost.  Can be toggled on or of by activating this trait.  Does not work "
+"on spells that consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Silent Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Silent Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have learned to cast spells quietly.  -100% noise, +20% cast cost, "
+"ignores mouth encumbrance.  Can be toggled on or of by activating this trait."
+"  Does not work on spells that consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Still Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Still Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You have learned to cast spells without moving.  +20% cast cost, ignores arm,"
+" leg, and hand encumbrance.  Can cast spells while holding items.  Can be "
+"toggled on or of by activating this trait.  Does not work on spells that "
+"consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Careful Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Careful Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You take your time when casting spells in order to get it right.  +200% cast "
+"time, -5 difficulty.  Can be toggled on or of by activating this trait."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Efficient Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Efficient Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You can cast your spells more efficiently at the cost of a more difficult "
+"cast.  *75% casting cost, +5 difficulty.  Can be toggled on or of by "
+"activating this trait."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Metamagic: Intuitive Spell"
+msgstr ""
+
+#. ~ Description of mutation "Metamagic: Intuitive Spell"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Casting spells comes more naturally for you.  You don't have to think as much"
+" when casting.  Focus no longer affects casting, +20% cast cost.  Can be "
+"toggled on or of by activating this trait.  Only affects spells that are "
+"affected by focus.  Does not work on spells that consumes runes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Crafty hands"
+msgstr ""
+
+#. ~ Description of mutation "Crafty hands"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"You really like to do stuff with your own hands.  +10% for crafting speed."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Chainsmoker"
+msgstr ""
+
+#. ~ Description of mutation "Chainsmoker"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Smoking is bad, but damn it's badass.  You deal more damage and shoot more "
+"accurately when you smoke."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Complimentary Remarks"
+msgstr ""
+
+#. ~ Description of mutation "Complimentary Remarks"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"The way you take care of the enemies is commendable, so much so that someone "
+"or something seems to praise your ways of fighting.  For every kills you have"
+" made, a praise may be given in the message log."
+msgstr ""
+
+#. ~ Description of mutation "Below the Belt"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"After some time surviving in the apocalypse, you realized that you don't have"
+" to fight fair in melee combat.  Now you can hit below the belt on most "
+"humanoid monsters."
+msgstr ""
+
+#. ~ Description of mutation "Empath"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always had a passion for people, and a deep understanding of their "
+"thoughts and feelings.  Now that almost everyone's dead that has to extend to"
+" other things too!  When you kill a creature gain some of its abilities "
+"temporarily."
+msgstr ""
+
+#. ~ Description of mutation "Iron arm"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always been a bit of a bull in a china shop; people used to call you "
+"heavy handed but now they aren't saying much at all.  You deal extra damage "
+"based on how protective your right arm is."
+msgstr ""
+
+#. ~ Description of mutation "Skin and bones"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"People always used to tell you that you should eat more.  It seems you needed"
+" their reminders because you can see your bones at this point.  You have "
+"skeletal armor."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Compressed Eating Window"
+msgstr ""
+
+#. ~ Description of mutation "Compressed Eating Window"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You're so used to squeezing all your meals into a short time that your body "
+"has adapted to it.  You gain 2.5 times as many calories and vitamins from any"
+" meals eaten between noon and 6 p.m., but 0 calories and vitamins for any "
+"meals eaten outside that time period."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "The Great Communicator"
+msgstr ""
+
+#. ~ Description of mutation "The Great Communicator"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always had something to say about ripping apart things with chainsaws."
+"  You can swing powered blades faster."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Olde Reliables"
+msgstr ""
+
+#. ~ Description of mutation "Olde Reliables"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always had a bit of a fondness for the older firearms.  Post "
+"apocalypse, this has translated into a damage boost when using WWII and older"
+" weapons."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Damage dice"
+msgstr ""
+
+#. ~ Description of mutation "Damage dice"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Before Cataclysm, you always used dice to determine the damage in the game.  "
+"Now, the power of fate allows you to use dice to deal additional mysterious "
+"damage.  Throwing dice using a sling or similar weapon deals additional "
+"damage, which depends on the number of sides of the dice."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Moonstruck"
+msgstr ""
+
+#. ~ Description of mutation "Moonstruck"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You've always been greatly affected by the phases of the moon.  During a full"
+" moon, you gain a +3 bonus to all stats.  During a waxing moon, you gain a +1"
+" bonus to all stats, and during a new moon, you suffer a -2 penalty to all "
+"stats."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "In a Crimson Mist"
+msgstr ""
+
+#. ~ Description of mutation "In a Crimson Mist"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid ""
+"Far from being terrified or even unnerved by the creatures of the Nether, "
+"their presence fills you with atavistic killing fury.  You do +35% melee "
+"damage when in melee combat with Nether beings and take 15% less damage from "
+"all sources, but if you attack any other target when there is a Nether-beast "
+"to slay, you suffer a large penalty to your accuracy."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Nocturnal"
+msgstr ""
+
+#. ~ Description of mutation "Nocturnal"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Darkness is your ally.  Others have merely adopted the dark, but you were "
+"born in it, molded by it.  You gain +2 Perception and +1 Intelligence at "
+"night, and have a much easier time sleeping during the day.  However, you "
+"also suffer -2 Perception when outdoors during the day and have a harder time"
+" sleeping at night."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Ascetic Empowerment"
+msgstr ""
+
+#. ~ Description of mutation "Ascetic Empowerment"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"People talk about getting a high from fasting and for you that's true on a "
+"more visceral level.  You gain bonuses to all stats that scale with how "
+"hungry, thirsty, and tired you are."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Thick-blooded"
+msgstr ""
+
+#. ~ Description of mutation "Thick-blooded"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Your blood has always been thicker than most, making you lose less of it when"
+" bleeding."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Armor of dreams"
+msgstr ""
+
+#. ~ Description of mutation "Armor of dreams"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"People often say that they feel safer when they sleep, but in your case you "
+"are literally safer when asleep.  As long as you sleep, most attacks won't "
+"injure you."
+msgstr ""
+
+#. ~ Description of mutation "Red rage"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You hate the feeling of your blood leaking so much that it empowers you.  "
+"Deal more melee damage the more you are bleeding."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Peer pressure"
+msgstr ""
+
+#. ~ Description of mutation "Peer pressure"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You know how to leverage your allies' presence when talking with others, "
+"granting you a small boost to lying, persuading and intimidating for each "
+"nearby ally."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Numb from the toxin"
+msgstr ""
+
+#. ~ Description of mutation "Numb from the toxin"
+#: data/mods/BombasticPerks/perks.json
+#, no-c-format
+msgid "Poisons tend to make you feel numb.  When poisoned, feel 80% less pain."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Unopenable grip"
+msgstr ""
+
+#. ~ Description of mutation "Unopenable grip"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"After being stolen the things you held in your hands countless times, your "
+"grip became strong enough to keep anything in your hands as long as you will "
+"it.  Activate to toggle the ability to drop your held item."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Radioactive infusion"
+msgstr ""
+
+#. ~ Description of mutation "Radioactive infusion"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You somehow learned to focus on an item to make it emit radiation forever.  "
+"You still have trouble understanding how this could ever be useful, but maybe"
+" you might find a use for it.  Activate to use."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Speedballing"
+msgstr ""
+
+#. ~ Description of mutation "Speedballing"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You love the rush of taking different drugs at once, and now this rush is "
+"much more impactful than before.  You gain +3 speed for each recreational or "
+"combat-enhancing drug currently affecting you."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Item name
+#: data/mods/BombasticPerks/perkdata/flawless_memory.json
+#: data/mods/BombasticPerks/perks.json
+msgid "Flawless memory"
+msgid_plural "Flawless memory"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of mutation "Flawless memory"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You cannot forget anything at all, ever.  This grants you the ability to "
+"memorize books for you to read in your head later and makes you able to store"
+" mental images so detailled it's almost as if you were taking pictures with "
+"your mind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Blood of the Forge"
+msgstr ""
+
+#. ~ Description of mutation "Blood of the Forge"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Your blood might not be able to make weapons, but it still can make anything "
+"coated with sturdier but unable to be repaired.  Activate to use."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Bird"
+msgstr ""
+
+#. ~ Description of mutation "Stormwrought: Bird"
+#. ~ Description of mutation "Stormwrought: Feline"
+#. ~ Description of mutation "Stormwrought: Insect"
+#. ~ Description of mutation "Stormwrought: Lupine"
+#. ~ Description of mutation "Stormwrought: Plant"
+#. ~ Description of mutation "Stormwrought: Spider"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"Exposure to portal storms and related phenomena causes your body change along"
+" predictable lines.  When out in a portal storm without any protection, you "
+"periodically have a chance to mutate."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Feline"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Insect"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Lupine"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Plant"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Stormwrought: Spider"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Double Action Action"
+msgstr ""
+
+#. ~ Description of mutation "Double Action Action"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You always knew nothing can beat the good old six shooters.  You have a minor"
+" bonus using revolvers."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/BombasticPerks/perks.json
+msgid "Rimfire Rebel"
+msgstr ""
+
+#. ~ Description of mutation "Rimfire Rebel"
+#: data/mods/BombasticPerks/perks.json
+msgid ""
+"You always appreciated the size of this little fella named \"Dot Two Two Long"
+" Rifle\", but they laughed at you.  Not anymore!  You found that the size of "
+"a bullet that small is perfect to hit into little spots between armor or "
+"narrow places.  .22 weapons have additional armor penetration and quadrupled "
+"chance to hit a weakpoint."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "What settings would you like to modify?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Notifications"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Exp to level"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Should the perk menu pop up on level up?"
+msgstr ""
+
+#. ~ Failure explanation for NPC dialogue response
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Current Setting"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid ""
+"Set exp required per level.  Does not affect levels already gained, or "
+"current level."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Should there be requirements to get perks?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+msgid "Prerequisites"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/config_menu.json
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "No Prerequisites"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_bombastic_perks_initialize"
+#: data/mods/BombasticPerks/corefiles/core_eocs.json
+msgid ""
+"Bombastic Perks is loaded, configuration menu should appear.  If the mod is "
+"properly loaded you should have a new mutation called \"perk menu\".  If you "
+"do not, you can enable the mod manually by activating the "
+"\"EOC_bombastic_perks_try_configure\" EOC in debug."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_bombastic_perks_try_configure"
+#: data/mods/BombasticPerks/corefiles/core_eocs.json
+msgid ""
+"Configuration menu closed, if Bombastic Perks was not properly configured "
+"menu will open again in 30 seconds."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid ""
+"Welcome to Bombastic Perks.  Once you complete this configuration, your character should receive a \"perk menu\" trait which you can use to check your EXP, level, and browse available perks.\n"
+"Please configure the mod with the settings below."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Use Default Settings"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Customize Settings"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "How much experience should be required to get to the first level?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Custom Value"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid ""
+"How much more experience should be required to get to each additional level?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Should some perks be allowed to be locked behind prerequisites?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Prerequisites (default)"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid ""
+"Normal perks are considered lifestyle perks and are small bonuses to help "
+"your character progress.  Playstyle perks on the other hand can vary wildly "
+"in power, in some cases aren't well balanced, and will define your "
+"character's playstyle.  Do you want to enable playstyle perks and if so, how "
+"many perk points should they cost?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Default (4 perk points)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid "Enabled, Custom Cost"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/BombasticPerks/corefiles/welcomemenu.json
+msgid ""
+"You are about to enable the mod with:\n"
+"First perk at: <u_val:exp_to_perk> exp.\n"
+"Additional exp required per level: <u_val:exp_per_level>.\n"
+"<u_val:dialogue_perks_prereq_note>\n"
+"<u_val:dialogue_perks_playstyle_note>"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ANTI_EVIL_EYE_GEAR"
+#: data/mods/BombasticPerks/perkdata/absit_invidia.json
+msgid "Wearing this will protect you from the Evil Eye."
+msgstr ""
+
+#. ~ "description" action message of item "salt"
+#: data/mods/BombasticPerks/perkdata/absit_invidia.json
+msgid "Throw some salt over your shoulder."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PERK_ABSIT_INVIDIA_SALT"
+#: data/mods/BombasticPerks/perkdata/absit_invidia.json
+msgid ""
+"You toss the salt over your shoulder and mutter under your breath the words "
+"that you remember from your childhood."
+msgstr ""
+
+#. ~ Name of effect type id "effect_perk_bellringer"
+#: data/mods/BombasticPerks/perkdata/bellringer.json
+msgid "Bell-ringing"
+msgstr ""
+
+#. ~ Description of effect type "Bell-ringing"
+#: data/mods/BombasticPerks/perkdata/bellringer.json
+msgid ""
+"This is really going to hurt.  Applied to targets of the Bellringer perk."
+msgstr ""
+
+#. ~ Sentence fragment describing the "groin" weakpoint
+#: data/mods/BombasticPerks/perkdata/belowthebelt.json
+msgid "the groin"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/BombasticPerks/perkdata/closedfist.json
+#: data/mods/BombasticPerks/perkdata/openpalm.json
+#: data/mods/BombasticPerks/perkdata/pinchedfingers.json
+msgid "callused hands"
+msgid_plural "callused hands"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "callused hands"
+#: data/mods/BombasticPerks/perkdata/closedfist.json
+msgid ""
+"You've dealt so many blows your hands are rough with calluses.  The bottoms "
+"of your hand can deal blows hard enough to hammer or finely crush objects."
+msgstr ""
+
+#. ~ Player message in effect in EoC "eoc_perk_dice_addition_damage"
+#: data/mods/BombasticPerks/perkdata/dice_addition_damage.json
+msgid ""
+"Damage dice result: 1D<context_val:dice_side_nums> = "
+"<context_val:dice_result>"
+msgstr ""
+
+#. ~ Name of effect type id "effect_perk_duck_and_weave"
+#: data/mods/BombasticPerks/perkdata/duck_and_weave.json
+msgid "Running without Rhythm"
+msgstr ""
+
+#. ~ Description of effect type "Running without Rhythm"
+#: data/mods/BombasticPerks/perkdata/duck_and_weave.json
+msgid ""
+"You definitely won't attract the worm.  +5 effective dodge, +1 dodge attempt."
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/BombasticPerks/perkdata/early_to_rise.json
+msgid "Early Riser"
+msgstr ""
+
+#. ~ Name of effect type id "effect_zombie"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Zombie Empathy"
+msgstr ""
+
+#. ~ Description of effect type "Zombie Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid ""
+"You are really feeling for the last zombie you killed.  That must have been "
+"really hard for it to die again.  Though you aren't really feeling pain right"
+" now."
+msgstr ""
+
+#. ~ Apply message of effect type "Zombie Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "You feel a bit hungry for brains."
+msgstr ""
+
+#. ~ Decay message of effect type "Zombie Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Brains are overrated anyways."
+msgstr ""
+
+#. ~ Description of effect type "Animal Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid ""
+"You are really feeling for the last animal you killed.  Reminds you of that "
+"scene in the movie where they kill the pet, really sad stuff.  Though you are"
+" feeling ready to learn to fight right now."
+msgstr ""
+
+#. ~ Apply message of effect type "Animal Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "You are ready for a fight."
+msgstr ""
+
+#. ~ Decay message of effect type "Animal Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Your animal instincts dissipate."
+msgstr ""
+
+#. ~ Name of effect type id "effect_nether"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Nether Empathy"
+msgstr ""
+
+#. ~ Description of effect type "Nether Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid ""
+"You are really feeling for the last demon you killed.  Must be hard to die "
+"when you don't truly exist.  Though you are feeling rejuvenated."
+msgstr ""
+
+#. ~ Apply message of effect type "Nether Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "You feel your wounds begin to seal."
+msgstr ""
+
+#. ~ Decay message of effect type "Nether Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Your regeneration ceases."
+msgstr ""
+
+#. ~ Name of effect type id "effect_fungus"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Fungal Empathy"
+msgstr ""
+
+#. ~ Description of effect type "Fungal Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid ""
+"You are really feeling for the last mushroom you killed.  You always hated "
+"mushrooms on food, too earthy for your taste.  Though you feel like your "
+"illness is gone."
+msgstr ""
+
+#. ~ Apply message of effect type "Fungal Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "You feel like something eats all the sickness inside you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_insect"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Bug Empathy"
+msgstr ""
+
+#. ~ Description of effect type "Bug Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid ""
+"You are really feeling for the last bug you killed.  You always hated "
+"squishing bugs, what did they ever do to you.  Though you feel like your skin"
+" has hardened."
+msgstr ""
+
+#. ~ Apply message of effect type "Bug Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Your skin hardens significantly."
+msgstr ""
+
+#. ~ Decay message of effect type "Bug Empathy"
+#: data/mods/BombasticPerks/perkdata/empath.json
+msgid "Your skin softens again."
+msgstr ""
+
+#. ~ Description of "Flawless memory"
+#: data/mods/BombasticPerks/perkdata/flawless_memory.json
+msgid ""
+"You can remember with perfect detail everything you've ever lived, even "
+"allowing you to read books and play games by remembering them."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_forge_blood_check_blood" in nested
+#. EOCs in effect in EoC "EOC_forge_blood_check" in nested EOCs on true
+#. condition in effect in EoC "EOC_forge_blood"
+#: data/mods/BombasticPerks/perkdata/forge_blood.json
+msgid "You pour some of your blood on the object, imbuing it with durability."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_forge_blood_check_blood" in
+#. nested EOCs in effect in EoC "EOC_forge_blood_check" in nested EOCs on true
+#. condition in effect in EoC "EOC_forge_blood"
+#: data/mods/BombasticPerks/perkdata/forge_blood.json
+msgid "You do not have enough blood to safely use this ability."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_forge_blood_check" in nested
+#. EOCs on true condition in effect in EoC "EOC_forge_blood"
+#: data/mods/BombasticPerks/perkdata/forge_blood.json
+msgid "This object is durable enough, there's no need to use your blood on it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_frankenstein_insight"
+#: data/mods/BombasticPerks/perkdata/frankenstein.json
+msgid "You have already mastered the art of bringing back the undead!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_frankenstein_insight"
+#: data/mods/BombasticPerks/perkdata/frankenstein.json
+msgid ""
+"With a flash of insight you now understand how to bring the dead back to "
+"life!"
+msgstr ""
+
+#. ~ Item name
+#. ~ Monster name
+#: data/mods/BombasticPerks/perkdata/frankenstein.json
+msgid "homunculus"
+msgid_plural "homunculi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "homunculus"
+#: data/mods/BombasticPerks/perkdata/frankenstein.json
+msgid ""
+"A stitched together monstrosity of meat and bone, with limbs as wide as trash"
+" cans.  This one is still sleeping.  It would require a master's touch to "
+"bring it to life."
+msgstr ""
+
+#. ~ Description of monster "homunculus"
+#: data/mods/BombasticPerks/perkdata/frankenstein.json
+msgid ""
+"A stitched together monstrosity of meat and bone, with limbs as wide as trash"
+" cans."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_PERK_GRIT_YOUR_TEETH"
+#: data/mods/BombasticPerks/perkdata/grit_your_teeth.json
+msgid ""
+"You need more time to collect yourself before you can grit your teeth again."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/BombasticPerks/perkdata/holdout_pocket.json
+msgid "holdout pocket"
+msgid_plural "holdout pocket"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "holdout pocket"
+#: data/mods/BombasticPerks/perkdata/holdout_pocket.json
+msgid "A secret pocket no one knows about that can easily store a weapon."
+msgstr ""
+
+#. ~ Name of effect type id "effect_perk_moonstruck_full"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid "Moonstruck: Full Moon"
+msgstr ""
+
+#. ~ Description of effect type "Moonstruck: Full Moon"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid ""
+"Under the clear light of the full moon, you have unlocked your greatest "
+"potential."
+msgstr ""
+
+#. ~ Name of effect type id "effect_perk_moonstruck_waxing"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid "Moonstruck: Waxing Moon"
+msgstr ""
+
+#. ~ Description of effect type "Moonstruck: Waxing Moon"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid "The silver light of the waxing moon enhances your prowess."
+msgstr ""
+
+#. ~ Name of effect type id "effect_perk_moonstruck_new"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid "Moonstruck: New Moon"
+msgstr ""
+
+#. ~ Description of effect type "Moonstruck: New Moon"
+#: data/mods/BombasticPerks/perkdata/moonstruck.json
+msgid "In the dark of the moon, you feel your vital essence weaken."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "Walther PPK"
+msgid_plural "Walther PPKs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "M3 SMG"
+msgid_plural "M3 SMGs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "Broomhandle pistol"
+msgid_plural "Broomhandle pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "callused hands"
+#: data/mods/BombasticPerks/perkdata/openpalm.json
+msgid ""
+"You've dealt so many blows your hands are rough with calluses.  The edge of "
+"your hand is sharp enough to cut paper."
+msgstr ""
+
+#. ~ Description of "callused hands"
+#: data/mods/BombasticPerks/perkdata/pinchedfingers.json
+msgid ""
+"You've dealt so many blows your hands are rough with calluses.  The tips of "
+"your fingers can pinch firmly enough to pry nails or turn small bolts."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC "EOC_spinach_consumption"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid ""
+"You swallow the spinach raw and grow visibly stronger, for a short while."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_spinach_consumption"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid "You don't have any spinach!"
+msgstr ""
+
+#. ~ Name of spell "spell_strength_of_spinach"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid "Strength in Spinach"
+msgstr ""
+
+#. ~ Description of spell "spell_strength_of_spinach ( Strength in Spinach )"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid "You gain the strength of a sailor."
+msgstr ""
+
+#. ~ Name of effect type id "spinach_strength"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid "Strength of Spinach"
+msgstr ""
+
+#. ~ Description of effect type "Strength of Spinach"
+#: data/mods/BombasticPerks/perkdata/popeye.json
+msgid "You have the strength of a sailor!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "You deserve a pat on the back!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Groovy!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Bitchin'!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Hip hip hurray!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Gee that's swell!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Good for you!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "I say, smashing job!"
+msgstr ""
+
+#. ~ Snippet in category "<good_job>"
+#: data/mods/BombasticPerks/perkdata/praise.json
+msgid "Like, totally gnarly!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_radio_infusion_true" in nested EOCs
+#. on true condition in effect in EoC "EOC_radio_infusion"
+#: data/mods/BombasticPerks/perkdata/radio_infusion.json
+msgid ""
+"You focus on what you are holding, and suddenly it starts glowing green."
+msgstr ""
+
+#. ~ Description of effect type "Red Rage"
+#: data/mods/BombasticPerks/perkdata/rage_against_the_unnatural.json
+msgid "You are filled with a furious rage that is sending your swings wide."
+msgstr ""
+
+#. ~ Apply message of effect type "Red Rage"
+#: data/mods/BombasticPerks/perkdata/rage_against_the_unnatural.json
+msgid ""
+"Crimson clouds your vision as a rage fills you at the presence of these hell-"
+"spawn.  You must slay them!  It is they who should feel the sting of your "
+"blade, not the rabble!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_can_hunting"
+#: data/mods/BombasticPerks/perkdata/recycler.json
+msgid "Someone left a perfectly good can of soda on the ground!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_can_finder_on"
+#: data/mods/BombasticPerks/perkdata/recycler.json
+msgid "You start hunting for cans"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_can_finder_off"
+#: data/mods/BombasticPerks/perkdata/recycler.json
+msgid "You stop looking for cans"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_perk_sight_beyond_sight_ON"
+#: data/mods/BombasticPerks/perkdata/sight_beyond_sight.json
+msgid "You close your eyes and feel the air."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_perk_sight_beyond_sight_ON"
+#: data/mods/BombasticPerks/perkdata/sight_beyond_sight.json
+msgid "You open your eyes."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/BombasticPerks/perkdata/skeleton.json
+msgid "skeletal plate"
+msgid_plural "skeletal plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skeletal plate"
+#: data/mods/BombasticPerks/perkdata/skeleton.json
+msgid "A full body multilayered suit of skeletal plate armor."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_BIRD_MUTATOR"
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_FELINE_MUTATOR"
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_INSECT_MUTATOR"
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_LUPINE_MUTATOR"
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_PLANT_MUTATOR"
+#. ~ Player message in effect in EoC "EOC_PERK_PORTAL_STORM_SPIDER_MUTATOR"
+#: data/mods/BombasticPerks/perkdata/stormwrought.json
+msgid "Your whole body pulses in time with the raging storm."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/BombasticPerks/perkdata/thick_skull.json
+msgid "thick skull"
+msgid_plural "thick skull"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thick skull"
+#: data/mods/BombasticPerks/perkdata/thick_skull.json
+msgid "You've taken so many hits to the head that your skull's gotten thicker."
+msgstr ""
+
+#. ~ Player sees monster spawns in effect in EoC "EOC_troubleseeking"
+#: data/mods/BombasticPerks/perkdata/troubleseeker.json
+msgid "You suddenly feel that you have found some trouble."
+msgstr ""
+
+#. ~ Player sees monsters spawn in effect in EoC "EOC_troubleseeking"
+#: data/mods/BombasticPerks/perkdata/troubleseeker.json
+msgid "You suddenly feel that you have found a lot of trouble."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_troubleseek_on"
+#: data/mods/BombasticPerks/perkdata/troubleseeker.json
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/troubleseeker.json
+msgid "You start seeking trouble."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_troubleseek_off"
+#: data/mods/BombasticPerks/perkdata/troubleseeker.json
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/troubleseeker.json
+msgid "You stop seeking trouble for now."
+msgstr ""
+
+#. ~ Description of effect type "Undying Loyalty"
+#: data/mods/BombasticPerks/perkdata/undying_loyalty.json
+msgid "You'll protect your allies no matter the cost."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_unopenable_grip_toggle_check" in
+#. nested EOCs on true condition in effect in EoC "EOC_unopenable_grip"
+#: data/mods/BombasticPerks/perkdata/unopenable_grip.json
+msgid "You focus on your grip, making it impossible to drop what you hold."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_unopenable_grip_toggle_attempt" in
+#. nested EOCs in false effect in EoC "EOC_unopenable_grip_toggle_check" in
+#. nested EOCs on true condition in effect in EoC "EOC_unopenable_grip"
+#: data/mods/BombasticPerks/perkdata/unopenable_grip.json
+msgid ""
+"You loosen your grip on what you're holding.  You can now drop it if you "
+"want."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_unopenable_grip_toggle_attempt"
+#. in nested EOCs in false effect in EoC "EOC_unopenable_grip_toggle_check" in
+#. nested EOCs on true condition in effect in EoC "EOC_unopenable_grip"
+#: data/mods/BombasticPerks/perkdata/unopenable_grip.json
+msgid ""
+"You cannot get a proper grip on this item, so your attempts to hold it with "
+"all your might are fruitless."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "IS_GRIPPED"
+#: data/mods/BombasticPerks/perkdata/unopenable_grip.json
+msgid ""
+"You are holding this object really hard, so hard it cannot be removed from "
+"your hand unless you die.  Activate the unopenable grip perk again to be able"
+" to drop this object."
+msgstr ""
+
+#. ~ Description of enchantment "Vengeful"
+#: data/mods/BombasticPerks/perkdata/vengeful.json
+msgid "Oh, you aren't getting away with that."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_careful"
+#: data/mods/BombasticPerks/perkdata/metamagic/careful.json
+msgid "You activate your careful metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_careful"
+#: data/mods/BombasticPerks/perkdata/metamagic/careful.json
+msgid "You deactivate your careful metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_efficient"
+#: data/mods/BombasticPerks/perkdata/metamagic/efficient.json
+msgid "You activate your efficient metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_efficient"
+#: data/mods/BombasticPerks/perkdata/metamagic/efficient.json
+msgid "You deactivate your efficient metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_intuitive"
+#: data/mods/BombasticPerks/perkdata/metamagic/intuitive.json
+msgid "You activate your intuitive metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_intuitive"
+#: data/mods/BombasticPerks/perkdata/metamagic/intuitive.json
+msgid "You deactivate your intuitive metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_quicken"
+#: data/mods/BombasticPerks/perkdata/metamagic/quicken.json
+msgid "You activate your quicken metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_quicken"
+#: data/mods/BombasticPerks/perkdata/metamagic/quicken.json
+msgid "You deactivate your quicken metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_reach"
+#: data/mods/BombasticPerks/perkdata/metamagic/reach.json
+msgid "You activate your reach metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_reach"
+#: data/mods/BombasticPerks/perkdata/metamagic/reach.json
+msgid "You deactivate your reach metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_silent"
+#: data/mods/BombasticPerks/perkdata/metamagic/silent.json
+msgid "You activate your silent metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_silent"
+#: data/mods/BombasticPerks/perkdata/metamagic/silent.json
+msgid "You deactivate your silent metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_still"
+#: data/mods/BombasticPerks/perkdata/metamagic/still.json
+msgid "You activate your still metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_still"
+#: data/mods/BombasticPerks/perkdata/metamagic/still.json
+msgid "You deactivate your still metamagic"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_metamagic_toggle_widen"
+#: data/mods/BombasticPerks/perkdata/metamagic/widen.json
+msgid "You activate your widen metamagic"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_metamagic_toggle_widen"
+#: data/mods/BombasticPerks/perkdata/metamagic/widen.json
+msgid "You deactivate your widen metamagic"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#, c-format
+msgid "%1$s hits your %2$s with a bottle!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/CrazyCataclysm/crazy_attacks.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a bottle!"
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid "Powerthirst - Manana Flavor"
+msgid_plural "Powerthirst - Manana Flavor"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Powerthirst - Manana Flavor"
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid ""
+"POWERTHIRST in new Manana flavor.  Contains preposterous amounts of "
+"testosterone.  PREPOSTERONE.  It's like crystal meth in a can.  It's crystal "
+"meth in a can.  Powerthirst is crystal meth."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid "Powerthirst - Fizzbitch Flavor"
+msgid_plural "Powerthirst - Fizzbitch Flavor"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Powerthirst - Fizzbitch Flavor"
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid ""
+"POWERTHIRST in new Fizzbitch flavor.  Contains preposterous amounts of "
+"testosterone.  PREPOSTERONE.  It's like crystal meth in a can.  It's crystal "
+"meth in a can.  Powerthirst is crystal meth."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid "Powerthirst - Gun Flavor"
+msgid_plural "Powerthirst - Gun Flavor"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Powerthirst - Gun Flavor"
+#: data/mods/CrazyCataclysm/crazy_comestibles.json
+msgid ""
+"POWERTHIRST in new Gun flavor.  Contains preposterous amounts of "
+"testosterone.  PREPOSTERONE.  It's like crystal meth in a can.  It's crystal "
+"meth in a can.  Powerthirst is crystal meth."
+msgstr ""
+
+#. ~ Description of "Rising Sun"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"This is a katana with a nozzle just behind the cutting edge of the blade.  "
+"People love fire, and people love katana, so why not put them together?  The "
+"gas burners attached to this blade can really turn up the heat on your foes."
+"  Use to ignite."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "rocket can"
+msgid_plural "rocket cans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "rocket can"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"A beverage can shaped like a rocket with a peeling label that reads "
+"'POWERTHIRST: ROCKET CAN EDITION'.  Its tagline claims that it contains "
+"everything you've ever wanted."
+msgstr ""
+
+#. ~ Description of "0.5L pressurized fuel tank"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"A pressurized 0.5L canister built crafting into a small auxiliary "
+"flamethrower."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "party rock"
+msgid_plural "party rocks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "party rock"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"Party rock condensed into physical form.  This should be too much for any "
+"mere mortal to handle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "AK 90-round magazine"
+msgid_plural "AK 90-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "AK 90-round magazine"
+#. ~ Description of "AK 90-round magazine"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"A homemade AK magazine made out of welding magazines together.  Looks really "
+"stupid, and doesn't work."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "Diamond Sword"
+msgid_plural "Diamond Swords"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "Diamond Sword"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "A sword made with two diamonds and a stick."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "compromised ceramic plate"
+msgid_plural "compromised ceramic plates"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "compromised ceramic plate"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "A ceramic dinner plate that's been shattered."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "50 Cent coin"
+msgid_plural "50 Cent coins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "50 Cent coin"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"A fifty-cent coin, featuring a portrait of famed rapper 50 Cent.  On the back"
+" is the date of minting, and the G-Unit symbol."
+msgstr ""
+
+#. ~ Variant name of item "pride flag"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid "NB flag"
+msgid_plural "NB flags"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "NB flag" of item "pride flag"
+#: data/mods/CrazyCataclysm/crazy_items.json
+msgid ""
+"A yellow flag with a ship and lion, representing New Brunswick.  You have a "
+"feeling this might be the wrong NB flag."
+msgstr ""
+
+#. ~ Description of map extra "Jackson"
+#: data/mods/CrazyCataclysm/crazy_mapgen.json
+msgid "It's close to midnight, and something evil's lurking in the dark."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid "party rocker"
+msgid_plural "party rockers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "party rocker"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid ""
+"After the event on March 2nd, seemingly ordinary people started coming down "
+"with some odd, mass hysteria like dancing.  While some people may have "
+"scoffed it off as a silly dance craze, those in the know knew, it was the "
+"Party Rock Outbreak.  This one has a pipe of the non-smoking kind."
+msgstr ""

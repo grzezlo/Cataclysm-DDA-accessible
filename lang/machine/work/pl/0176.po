@@ -1,0 +1,1549 @@
+# Batch 176 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "thick ice"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "frozen time"
+msgstr ""
+
+#. ~ Bashing message of fields "frozen time"
+#. ~ Bashing message of fields "stable frozen time"
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "Your strength is stronger than time itself!"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "stable frozen time"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "accelerated time"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "IRONSWORN"
+#: data/mods/Xedra_Evolved/flags.json
+msgid ""
+"This gear <good>completely protects</good> you from <info>cold iron "
+"damage</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "INVENTOR_CRAFTED"
+#: data/mods/Xedra_Evolved/flags.json
+msgid ""
+"This thing was crafted by a mad inventor.  It is very unstable and will "
+"rapidly degrade without an inventor's presence."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WOODEN_WEAPON"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "This weapon is primarily or mostly made of wood."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "ARVORE_POLLEN_IMMUNE"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "This character cannot be affected by Arvore pollens."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "SKINCHANGED"
+#: data/mods/Xedra_Evolved/flags.json
+msgid ""
+"This gear will transform you into animal form, and may have some side "
+"effects."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "HEDGE_ENCHANTED"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "This item has a <good>charm</good> on it."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "BLESSED_WEAPON"
+#: data/mods/Xedra_Evolved/flags.json
+msgid ""
+"This weapon does <good>extra damage</good> against creatures of the "
+"<info>Nether</info>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "EVIL_EYE_IMMUNE"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "You are immune to the evil eye."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "WARDING_SYMBOL"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "Wearing this is <good>comforting</good>."
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "STABILIZED_TIMELINE"
+#: data/mods/Xedra_Evolved/flags.json
+msgid "You are immune to adverse affects on your timeline."
+msgstr ""
+
+#. ~ Help menu
+#: data/mods/Xedra_Evolved/help_file.json
+msgid "Xedra Evolved: Basics"
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Basics"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Welcome to Xedra Evolved, the urban fantasy mod for Cataclysm.  This mod adds"
+" folklore based enemies, experiences and magicks to the Cataclysm.  Humans "
+"who experience particularly vivid dreams might learn how to wield them into "
+"strange magicks.  Former Xedra employees include cyborgs with stolen bionics,"
+" magick wielders and even a Gracken or two."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Basics"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"The world of Xedra Evolved had decades of dimensional seepage and places "
+"where our world connected to other realities.  During these years before the "
+"Cataclysm the world became weirder.  Supernatural creatures from myth and "
+"legend returned, visited for the first time or left the shadows.  Some games "
+"you'll fight against them.  Some days you may very well be one of them."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Basics"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"There are multiple types of supernatural beings that the player can start as "
+"or sometimes become.  It is intended that their abilities cannot be mixed and"
+" matched except in very specific circumstances."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Basics"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Some times you may want to play a normal game with extra enemies and no dream"
+" magick, take the Dreamless trait."
+msgstr ""
+
+#. ~ Help menu
+#: data/mods/Xedra_Evolved/help_file.json
+msgid "Xedra Evolved: Possible Starts"
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Possible Starts"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Cyborg starts exist in XE.  However, those cbms inside of you were pulled out"
+" of dead Exodii offworld.  Now that the Exodii are here on planet don't "
+"expect them to help you."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Possible Starts"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"If you are interested in starting with significant dream magick, look at the "
+"four melded task force professions."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Possible Starts"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"To start as a werewolf, newly bitten vampire, Lilit, elemental fae, or "
+"Chronomancer look at the mod specific scenarios."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Possible Starts"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"There are a number of more mundane/less high powered starts available such as"
+" a foreign spy, cryptid hunter all the way to hedge magician and changeling."
+msgstr ""
+
+#. ~ Help menu
+#: data/mods/Xedra_Evolved/help_file.json
+msgid "Xedra Evolved: Learning New Powers"
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Learning New Powers"
+#: data/mods/Xedra_Evolved/help_file.json
+#, c-format
+msgid ""
+"Both the Dreamsmith and Mad Inventor classes have research actions that you "
+"can perform.  They will often fail, but each failure moves the percentage "
+"chance for your next attempt to succeed up until it hits 100%."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Learning New Powers"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Alchemy can be discovered in game.  It requires some luck to find it in the "
+"game world, but if you selected Bombastic Perks mod as an additional mod, you"
+" can learn Alchemy easily via the perk system."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Learning New Powers"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Vampires will get a random assortment of powers as they age up and grow.  "
+"Every run as a vampire should have a slightly different mix of powers."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Learning New Powers"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Elemental Fae, Paraclesians need to gather samples from the other elements "
+"and make potions that grant them new powers."
+msgstr ""
+
+#. ~ Help message in menu "Xedra Evolved: Learning New Powers"
+#: data/mods/Xedra_Evolved/help_file.json
+msgid ""
+"Gracken are a work in progress but the idea is that they are monster hunters "
+"who take parts of their kills and use those parts to transform themselves in "
+"new and different ways.  Look in their Gracken recipe tab."
+msgstr ""
+
+#. ~ Name of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "Tezcatlipoca's blood"
+msgstr ""
+
+#. ~ Name of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "Elemental gossamer"
+msgstr ""
+
+#. ~ Name of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "Obsidian"
+msgstr ""
+
+#. ~ Cut damage verb of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "bleached"
+msgstr ""
+
+#. ~ Bash damage verb of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "shaken"
+msgstr ""
+
+#. ~ Name of material
+#: data/mods/Xedra_Evolved/material.json
+msgid "Fireproof Paper"
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Xedra_Evolved/missions.json
+msgid "Kill that mosquito"
+msgstr ""
+
+#. ~ Description of mission "Kill that mosquito"
+#: data/mods/Xedra_Evolved/missions.json
+msgid ""
+"You summoned a dream-draining mosquito.  Now it is time for you to kill it."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Xedra_Evolved/missions.json
+msgid "Kill the Luna-attuned revenant"
+msgstr ""
+
+#. ~ Description of mission "Kill the Luna-attuned revenant"
+#: data/mods/Xedra_Evolved/missions.json
+msgid ""
+"You created a Luna-attuned revenant.  Now it is time for you to kill it."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Xedra_Evolved/missions.json
+msgid "Find the source of the bloody footsteps."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Xedra_Evolved/missions.json
+msgid "Find the source of the acid-burned hole."
+msgstr ""
+
+#. ~ Description of MOD "Xedra Evolved"
+#: data/mods/Xedra_Evolved/modinfo.json
+msgid ""
+"An urban fantasy content mod for Agent Mulder in the apocalypse.  Creates a "
+"multi decade timeline of dimensional spillage prior to the Cataclysm.  This "
+"spillage was characterized by thin places appearing where people could step "
+"through into another dimension, but things from those dimensions could wander"
+" into our world as well.  XEDRA proliferated into an alphabet soup of "
+"agencies dedicated to simultaneously stopping, controlling, and utilizing "
+"these thin places with varying degrees of success.  Contains monsters of "
+"various types, new professions and locations, new uses for existing "
+"skills,the new deduction skill, new magic systems, and content of every type "
+"that a multidimensional Cataclysm has to offer.  This is a heavily science-"
+"fantasy mod where you are as likely to encounter supernatural monsters as you"
+" are UFOs, Sasquatch, and Chupacabra.  Please examine the readme.md file for "
+"further details."
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Ate dreamdross"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Satisfied your vampiric hunger"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "A crimson taste at the back of your mouth"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "A hum at the edge of your thoughts"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Broke one of the ancient laws of the fae"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Focusing on the positive"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Certainty of stone"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Boring aftertaste"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Barred from mortal joys."
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Haunted by the Lies."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Principles of Alien Biology"
+msgstr ""
+
+#. ~ Description of proficiency "Principles of Alien Biology"
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Very basic familiarity with various types of alien creatures."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Principles of Gossamer Weaving"
+msgstr ""
+
+#. ~ Description of proficiency "Principles of Gossamer Weaving"
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid ""
+"It's particularly difficult to turn daydreams and moonlight into clothing, "
+"but you seem to have gotten the hang of it."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Skilled Gossamer Weaving"
+msgstr ""
+
+#. ~ Description of proficiency "Skilled Gossamer Weaving"
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid ""
+"Even the Bright Lords would bid on your clothing if they found it at a Goblin"
+" Market."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Skilled Treesinging"
+msgstr ""
+
+#. ~ Description of proficiency "Skilled Treesinging"
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid ""
+"The trees always hearken to your voice and wood practically molds itself like"
+" clay in your hands."
+msgstr ""
+
+#. ~ Proficiency name
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid "Artisan Treesinging"
+msgstr ""
+
+#. ~ Description of proficiency "Artisan Treesinging"
+#: data/mods/Xedra_Evolved/proficiencies.json
+msgid ""
+"Not only can you create furniture and other large constructs using "
+"treesinging, you can mold treesung wood into weapons and armor as well."
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_male"
+msgid "Paraclesian Birth"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_female"
+msgid "Paraclesian Birth"
+msgstr ""
+
+#. ~ Description of scenario "Paraclesian Birth" for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_male"
+msgid ""
+"Your first moments of life.  An elemental fae birth on a dying world.  Now "
+"you have to figure out how to survive on your own.  (Select the location that"
+" matches your profession or you may have a short journey)  P.S. This scenario"
+" is still in development, PRs for additional content welcome."
+msgstr ""
+
+#. ~ Description of scenario "Paraclesian Birth" for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_female"
+msgid ""
+"Your first moments of life.  An elemental fae birth on a dying world.  Now "
+"you have to figure out how to survive on your own.  (Select the location that"
+" matches your profession or you may have a short journey)  P.S. This scenario"
+" is still in development, PRs for additional content welcome."
+msgstr ""
+
+#. ~ Starting location of scenario "Paraclesian Birth"
+#. ~ Starting location of scenario "Paraclesian Birth, Lost and Alone"
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "start_name"
+msgid "Paraclesian Birth"
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_male"
+msgid "Werewolf, Natural-born"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_female"
+msgid "Werewolf, Natural-born"
+msgstr ""
+
+#. ~ Description of scenario "Werewolf, Natural-born" for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_male"
+msgid ""
+"You had no idea what was going on the first time it happened, when you woke "
+"up with mud on your bare feet and a sour taste in your mouth, but you were "
+"soon found.  The People of the Moon, they called themselves, and they said "
+"you were one of them.  A werewolf.  You lived out in the wilderness for a "
+"while but didn't entirely abandon human civilization, and when the Cataclysm "
+"hit you ignored the evacuation warnings and struck it out on your own.  Maybe"
+" some of the People are still out there."
+msgstr ""
+
+#. ~ Description of scenario "Werewolf, Natural-born" for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_female"
+msgid ""
+"You had no idea what was going on the first time it happened, when you woke "
+"up with mud on your bare feet and a sour taste in your mouth, but you were "
+"soon found.  The People of the Moon, they called themselves, and they said "
+"you were one of them.  A werewolf.  You lived out in the wilderness for a "
+"while but didn't entirely abandon human civilization, and when the Cataclysm "
+"hit you ignored the evacuation warnings and struck it out on your own.  Maybe"
+" some of the People are still out there."
+msgstr ""
+
+#. ~ Starting location of scenario "Werewolf, Natural-born"
+#. ~ Starting location of scenario "Werewolf, Naked and Unafraid"
+#. ~ Starting location of scenario "The Owl, Naked and Afraid"
+#. ~ Starting location of scenario "Once Bitten, Naked and Afraid"
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "start_name"
+msgid "Alone"
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_male"
+msgid "Once Bitten"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/Xedra_Evolved/mod_interactions/innawood/player/scenarios.json
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_female"
+msgid "Once Bitten"
+msgstr ""
+
+#. ~ Description of scenario "Once Bitten" for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_male"
+msgid ""
+"Whether you were visiting Salem's Lot, boating on the Demeter, vacationing to"
+" Transylvania, or just another lost boy or girl, you've been bitten by a "
+"stranger at twilight the night before.  As a new day breaks you might want to"
+" find someone to interview about how you are feeling.  Dark shadows feel more"
+" inviting than yesterday and you don't feel like you are long for the day "
+"shift."
+msgstr ""
+
+#. ~ Description of scenario "Once Bitten" for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_female"
+msgid ""
+"Whether you were visiting Salem's Lot, boating on the Demeter, vacationing to"
+" Transylvania, or just another lost boy or girl, you've been bitten by a "
+"stranger at twilight the night before.  As a new day breaks you might want to"
+" find someone to interview about how you are feeling.  Dark shadows feel more"
+" inviting than yesterday and you don't feel like you are long for the day "
+"shift."
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_male"
+msgid "The Owl's Abode"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_female"
+msgid "The Owl's Abode"
+msgstr ""
+
+#. ~ Description of scenario "The Owl's Abode" for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_male"
+msgid ""
+"For most or all of your life, you've had a secret; you are a predator.  While"
+" you don't need to drink blood or eat flesh or anything so crude, you must "
+"absorb the spiritual essence, the \"ruach\", of living beings in order to "
+"maintain your health and vitality.  You had to hide your condition before the"
+" Cataclysm, especially as things became stranger in the years leading up to "
+"it, but now you don't have to hide anymore.  On the other hand, your "
+"potential ruach supply has taken a drastic decline."
+msgstr ""
+
+#. ~ Description of scenario "The Owl's Abode" for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_female"
+msgid ""
+"For most or all of your life, you've had a secret; you are a predator.  While"
+" you don't need to drink blood or eat flesh or anything so crude, you must "
+"absorb the spiritual essence, the \"ruach\", of living beings in order to "
+"maintain your health and vitality.  You had to hide your condition before the"
+" Cataclysm, especially as things became stranger in the years leading up to "
+"it, but now you don't have to hide anymore.  On the other hand, your "
+"potential ruach supply has taken a drastic decline."
+msgstr ""
+
+#. ~ Starting location of scenario "The Owl's Abode"
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "start_name"
+msgid "Away from town"
+msgstr ""
+
+#. ~ Scenario name for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_male"
+msgid "Challenge - Temporal Misadventure"
+msgstr ""
+
+#. ~ Scenario name for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scenario_female"
+msgid "Challenge - Temporal Misadventure"
+msgstr ""
+
+#. ~ Description of scenario "Challenge - Temporal Misadventure" for male
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_male"
+msgid ""
+"During the Cataclysmic portal storms, you and several other people were lost "
+"trying to escape the monsters attacking you.  Eventually, something caught "
+"up, and as your fellows started turning into frozen statues you ran straight "
+"into what should have been open air.  The pain of that impact was nothing "
+"compared to the knife you suddenly found stabbed into your torso.  The most "
+"you saw of your attacker was a quick blur before everything suddenly changed."
+"  Snow covers the ground, the sun has set, you are freezing cold, and the "
+"knife is still stuck in your torso.  However, you've gained a dramatic new "
+"sense of time, and what is definitely the beginning of the ability to "
+"manipulate it.  Even beyond the knife and the winter you never thought you'd "
+"have to prepare for, your new powers tell you that there is much more wrong "
+"with you than is immediately apparent.  Hopefully you can use your skills and"
+" powers to survive both your new condition and every other horror of the "
+"Cataclysm."
+msgstr ""
+
+#. ~ Description of scenario "Challenge - Temporal Misadventure" for female
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "scen_desc_female"
+msgid ""
+"During the Cataclysmic portal storms, you and several other people were lost "
+"trying to escape the monsters attacking you.  Eventually, something caught "
+"up, and as your fellows started turning into frozen statues you ran straight "
+"into what should have been open air.  The pain of that impact was nothing "
+"compared to the knife you suddenly found stabbed into your torso.  The most "
+"you saw of your attacker was a quick blur before everything suddenly changed."
+"  Snow covers the ground, the sun has set, you are freezing cold, and the "
+"knife is still stuck in your torso.  However, you've gained a dramatic new "
+"sense of time, and what is definitely the beginning of the ability to "
+"manipulate it.  Even beyond the knife and the winter you never thought you'd "
+"have to prepare for, your new powers tell you that there is much more wrong "
+"with you than is immediately apparent.  Hopefully you can use your skills and"
+" powers to survive both your new condition and every other horror of the "
+"Cataclysm."
+msgstr ""
+
+#. ~ Starting location of scenario "Challenge - Temporal Misadventure"
+#: data/mods/Xedra_Evolved/scenario.json
+msgctxt "start_name"
+msgid "Monochrome Meadow"
+msgstr ""
+
+#. ~ Skill name
+#: data/mods/Xedra_Evolved/skills.json
+msgid "deduction"
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You can't even think yourself out of a paper bag."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You get the gist of playing a round of chess."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid ""
+"You realized that one weird tabloid paper you've read a long time ago might "
+"have been correct all this time."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You probably know how to deduce an electronic lock's password."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You can easily rule out non-magickal causes in a given situation."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You're aware of more supernatural happenings than everyone else."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You know even what you don't know."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You can't even solve a simple Sudoku puzzle."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You can deduce the whereabouts of your missing item in your house."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You solve murder mysteries in the first chapter."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid ""
+"You can figure out the workings of the world mundane and supernatural from "
+"some observations."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "You're basically modern day Sherlock Holmes."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "No secret is safe from you."
+msgstr ""
+
+#. ~ Level description of skill "deduction"
+#: data/mods/Xedra_Evolved/skills.json
+msgid "Even the unknowable unknowns are known to you."
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_SHOT"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid ""
+"Your devil tail shoots itself into %s, penetrating its body like a bullet"
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_SHOT"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid ""
+"<npcname>'s devil tail shoots itself into %s, penetrating its body like a "
+"bullet"
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_SWEEP"
+#: data/mods/Xedra_Evolved/techniques.json
+msgid "Your devil tail makes a fast move, heavily cutting everybody in front"
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_SWEEP"
+#: data/mods/Xedra_Evolved/techniques.json
+msgid ""
+"<npcname>'s devil tail makes a fast move, heavily cutting everybody in front"
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_GRAB"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid "Your devil tail grabs %s and throws them to the ground"
+msgstr ""
+
+#. ~ Message of martial technique "TAIL_GRAB"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid "<npcname>'s devil tail grabs %s and throws them to the ground"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Xedra_Evolved/techniques.json
+msgid "Pneumatic Strike"
+msgstr ""
+
+#. ~ Description of martial technique "Pneumatic Strike"
+#: data/mods/Xedra_Evolved/techniques.json
+#, no-c-format
+msgid ""
+"Down 4 turns, knockback 3 tiles, 250% damage, 140% move, crit only, min 3 "
+"melee"
+msgstr ""
+
+#. ~ Condition description of martial technique "Pneumatic Strike"
+#. ~ Condition description of martial technique "Wide Shot"
+#: data/mods/Xedra_Evolved/techniques.json
+msgid "* Only works on target of <info>similar or bigger</info> size"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/Xedra_Evolved/techniques.json
+msgid "Wide Shot"
+msgstr ""
+
+#. ~ Description of martial technique "Wide Shot"
+#: data/mods/Xedra_Evolved/techniques.json
+#, no-c-format
+msgid "150% damage, 120% move, attack multiple enemies, crit only, min 4 melee"
+msgstr ""
+
+#. ~ Message of martial technique "Wide Shot"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid "In an instant you melt %s and those nearby with a sprawling attack"
+msgstr ""
+
+#. ~ Message of martial technique "Wide Shot"
+#: data/mods/Xedra_Evolved/techniques.json
+#, c-format
+msgid ""
+"In an instant <npcname> melts %s and those nearby with a sprawling attack"
+msgstr ""
+
+#. ~ Name of tool quality "DREAM_HAMMER"
+#: data/mods/Xedra_Evolved/tool_qualities.json
+msgid "hammer of dreams"
+msgstr ""
+
+#. ~ Name of tool quality "AI_TOOL"
+#: data/mods/Xedra_Evolved/tool_qualities.json
+msgid "intelligent agent"
+msgstr ""
+
+#. ~ Name of tool quality "SACRIFICE"
+#: data/mods/Xedra_Evolved/tool_qualities.json
+msgid "sacrificial altar"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "sigil of detonation"
+msgstr ""
+
+#. ~ Memorial message of trap "tr_salamander_bomb"
+#: data/mods/Xedra_Evolved/traps.json
+msgctxt "memorial_male"
+msgid "Detonated by elemental magicks."
+msgstr ""
+
+#. ~ Memorial message of trap "tr_salamander_bomb"
+#: data/mods/Xedra_Evolved/traps.json
+msgctxt "memorial_female"
+msgid "Detonated by elemental magicks."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "time cage"
+msgstr ""
+
+#. ~ Message when NPC triggers trap "tr_xedra_dreamsmith_time_trap"
+#: data/mods/Xedra_Evolved/traps.json
+msgid "<npcname> is frozen in time!"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "species snare trap"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "pentagram snare trap"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "QR snare trap"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "ARG snare trap"
+msgstr ""
+
+#. ~ Name of a trap
+#: data/mods/Xedra_Evolved/traps.json
+msgid "changeling snare trap"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Stolen Blood"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Stolen Vampire Blood"
+msgstr ""
+
+#. ~ Vitamin name
+#. ~ Label of UI widget "ruach_counter_meter"
+#. ~ Label of UI widget "ruach_counter_numbers"
+#. ~ Label of UI widget "ruach_counter_spacebar_numbers"
+#. ~ Label of UI widget "ruach_counter_spacebar_graph"
+#. ~ Label of UI widget "ruach_counter_graph"
+#: data/mods/Xedra_Evolved/ui/ruach_counter.json
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Ruach"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Cheval"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Hallucinating on Fae blood"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Processed Creativity"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Creative Spark"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Metaphysical Connection"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Insight into Time"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Knowledge of the Lies"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Ierde Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Arvore Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Arvore Alchemical Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Undine Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Salamander Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Homullus Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Sylph Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Noble Fair Folk Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Brownie Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Pooka Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Selkie Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Trow Mutagen"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Xedra_Evolved/vitamin.json
+msgid "Lilin Mutagen"
+msgstr ""
+
+#. ~ Weather type name
+#: data/mods/Xedra_Evolved/weather_type.json
+msgid "Blotted Sun"
+msgstr ""
+
+#. ~ Weather type name
+#: data/mods/Xedra_Evolved/weather_type.json
+msgid "Dense Fog"
+msgstr ""
+
+#. ~ Description of requirement of achievement "Never Wake again"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Gained access to dream magic."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Destroy what doesn't belong."
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Gained access to eater magic."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Forged by dreams"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Gained access to dream forging magic"
+msgstr ""
+
+#. ~ Description of requirement of achievement "This has a small, but
+#. fascinating, chance of actually working!  Let's do it!"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Gained access to mad genius inventions."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Welcome to Salem's Lot."
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Developed an unnatural thirst."
+msgstr ""
+
+#. ~ Description of requirement of achievement "John 'Not-A-Vampire-At-All'
+#. Smith"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid ""
+"You could still become a Black Ribboner and join the League of Temperance."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Ivy Tamwood, eat your heart
+#. out.  'kisskiss' hand motion."
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Right on the edge of becoming a true vampire."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Embracing the curse, building your power."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Embracing the curse, building
+#. your power."
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "You became a true vampire, forsaking your mortality forevermore."
+msgstr ""
+
+#. ~ Name of achievement
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Fully walked the shadowed path of blood."
+msgstr ""
+
+#. ~ Description of requirement of achievement "Fully walked the shadowed path
+#. of blood."
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid ""
+"You reached the final state of vampirism, becoming worthy of the title of "
+"ruler of the night."
+msgstr ""
+
+#. ~ Description of achievement "Inspector Lestrade"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid ""
+"Sherlock Holmes you are not but you definitely see more details than you did "
+"before."
+msgstr ""
+
+#. ~ Description of event statistic "num_gains_deduction_level_1"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Investigation skill level 1 gained"
+msgid_plural "Investigation skill level 1 gained"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of achievement "The Truth is out there"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid ""
+"You can quickly deduce the events leading to every death scene you come "
+"across, unfortunately the cause is now always either zombie or suicide."
+msgstr ""
+
+#. ~ Description of event statistic "num_gains_deduction_level_5"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Investigation skill level 5 gained"
+msgid_plural "Investigation skill level 5 gained"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of achievement
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Knowing everything you weren't meant to know"
+msgstr ""
+
+#. ~ Description of achievement "Knowing everything you weren't meant to know"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid ""
+"The things that aren't, that never were, that have yet to be and that are but"
+" shouldn't be, they hold no secret from you now."
+msgstr ""
+
+#. ~ Description of event statistic "num_gains_deduction_level_10"
+#: data/mods/Xedra_Evolved/achievements/achievements.json
+msgid "Investigation skill level 10 gained"
+msgid_plural "Investigation skill level 10 gained"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of event statistic "num_avatar_vampire_kills"
+#: data/mods/Xedra_Evolved/achievements/statistics.json
+msgid "vampire killed"
+msgid_plural "vampires killed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ NPC dialogue line
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid ""
+"As a chronomancer, you have a nigh-unique ability to alter the flow of time to your benefit.  However, in order to improve your abilities you must have insight into time.\n"
+"\n"
+"You may gain chronal insight in several ways:\n"
+" #1: Using any chronomancy spell will temporarily allow you to gain insight on killing any enemy for a short time based on the difficulty of the spell.\n"
+" #2: Killing time altered creatures, such as monochrome zombies, will give you immediate insight based on the difficulty of that enemy.\n"
+" #3: You will gain a small amount of insight every day, proportionally increased by the amount of negative temporal traits you have.\n"
+"\n"
+" Current Insight: <u_val:xedra_chronomancer_insight_count>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_time_bubble>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_time_freeze_target>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_normalize_time>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_entropic_burst>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_revert_wound>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_time_loop>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_time_stop>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_revert_location>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_cement_time>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_paradox>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_chronal_acceleration>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_stable_loop>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_destabilizing_strikes>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_stabilize_timeline>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_reverse_entropy>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_rewrite_wound_causality>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level [<spell_name:xedra_chronomancer_rewrite_equipment_causality>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Resolve [<trait_name:XEDRA_CHRONOMANCER_LOOPING_WOUND>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Resolve [<trait_name:XEDRA_CHRONOMANCER_TIME_SLOWDOWN>]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Resolve [<trait_name:XEDRA_CHRONOMANCER_UNSTABLE_POWERS>]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid ""
+"You either don't have enough insight or you fail to meet the prerequisites "
+"for this power."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid ""
+"You either don't have enough insight or you fail to meet the prerequisites to"
+" resolve this issue."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Learn Power."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Level Power."
+msgstr ""
+
+#. ~ Player message in an effect
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "You improve the spell!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Resolve Problem."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Chronomancy Settings:"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Disable Insight Gain Messages."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Xedra_Evolved/dialogue/chronomancer_insight_menu.json
+msgid "Enable Insight Gain Messages."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_EATER_CHECK"
+#: data/mods/Xedra_Evolved/effects/effect_on_condition.json
+msgid ""
+"You suddenly realize that your ability to sense the unnatural has expanded to"
+" a level beyond those of the normal five senses."
+msgstr ""
+
+#. ~ Name of effect type id "haste_vampire"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Blood Haste"
+msgstr ""
+
+#. ~ Description of effect type "Blood Haste"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Stolen blood is boosting your speed enormously."
+msgstr ""
+
+#. ~ Name of effect type id "buoyant"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Buoyant"
+msgstr ""
+
+#. ~ Description of effect type "Buoyant"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are more buoyant than before.  This will make swimming much easier."
+msgstr ""
+
+#. ~ Apply message of effect type "Buoyant"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel more buoyant!"
+msgstr ""
+
+#. ~ Remove message of effect type "Buoyant"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel less buoyant."
+msgstr ""
+
+#. ~ Name of effect type id "acidic_mist"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Acidic mist"
+msgstr ""
+
+#. ~ Description of effect type "Acidic mist"
+#. ~ Apply message of effect type "Acidic mist"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The mist is burning you!"
+msgstr ""
+
+#. ~ Name of effect type id "effect_wild_hunt_illumination"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Witchfire"
+msgstr ""
+
+#. ~ Description of effect type "Witchfire"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are surrounded by an eldritch glow."
+msgstr ""
+
+#. ~ Name of effect type id "effect_reduced_healing"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Painful Wounds"
+msgstr ""
+
+#. ~ Description of effect type "Painful Wounds"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your wounds ache."
+msgstr ""
+
+#. ~ Apply message of effect type "Painful Wounds"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The cut begins to burn!"
+msgstr ""
+
+#. ~ Remove message of effect type "Painful Wounds"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The ache from your wounds finally fades."
+msgstr ""
+
+#. ~ Apply message of effect type "vamp_blood_weave"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your wound closes up and covers over instantly."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "xtr_str_aspirin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Strange Painkiller"
+msgstr ""
+
+#. ~ Male memorial remove log of effect type "Blood Spiders"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_male"
+msgid "Eradicated the spiders in their blood."
+msgstr ""
+
+#. ~ Female memorial remove log of effect type "Blood Spiders"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_female"
+msgid "Eradicated the spiders in their blood."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Blood Spiders"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Unknown Hemolytic Parasite"
+msgstr ""
+
+#. ~ Apply message of effect type "glamoured"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The colors brighten and your vision sharpens."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "glamoured"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Cross-dimensional Narcotic, unexpected physics encountered"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Angled, Canted, Mirrored"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Anomalous Readings"
+msgstr ""
+
+#. ~ Name of effect type id "effect_monster_shadow_damage_reduction"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Shadow Damage Reduction"
+msgstr ""
+
+#. ~ Description of effect type "Shadow Damage Reduction"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are flatter and less real in ways that makes you less susceptible to "
+"damage."
+msgstr ""
+
+#. ~ Name of effect type id "creativity"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "One Amazing Idea"
+msgstr ""
+
+#. ~ Name of effect type id "creativity"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Several Inspired Tangents"
+msgstr ""
+
+#. ~ Name of effect type id "creativity"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Brimming with Creativity"
+msgstr ""
+
+#. ~ Description of effect type "One Amazing Idea"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You have an incredibly amazing idea.  You think you should "
+"<color_yellow>research</color> it."
+msgstr ""
+
+#. ~ Description of effect type "Several Inspired Tangents"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You've got a few theories you'd like to explore.  Grab a laptop, a cup of "
+"coffee, and <color_yellow>research</color> it like a proper scientist."
+msgstr ""
+
+#. ~ Description of effect type "Brimming with Creativity"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your brain can't hold any more brilliance.  To the "
+"<color_yellow>research</color> table!"
+msgstr ""
+
+#. ~ Apply message of effect type "One Amazing Idea, Several Inspired Tangents,
+#. Brimming with Creativity"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"A great idea has illuminated your mind, it's probably a good time to pick up "
+"your laptop and do some calculations."
+msgstr ""
+
+#. ~ Name of effect type id "mental_exhaustion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Mental Exhaustion"
+msgstr ""
+
+#. ~ Description of effect type "Mental Exhaustion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You have recently realized a new alchemical recipe and your thoughts are "
+"scattered."
+msgstr ""
+
+#. ~ Remove message of effect type "Mental Exhaustion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your mind feels normal enough that you could focus on new alchemy ideas once "
+"again."
+msgstr ""
+
+#. ~ Name of effect type id "dreamer_eff"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Matter Twist"
+msgstr ""
+
+#. ~ Name of effect type id "dreamer_eff"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Matter Deformation"
+msgstr ""
+
+#. ~ Name of effect type id "dreamer_eff"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Dimensional Shift"
+msgstr ""
+
+#. ~ Name of effect type id "dreamer_eff"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Dimensional Chasm"
+msgstr ""
+
+#. ~ Name of effect type id "dreamer_eff"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Reality Gateway"
+msgstr ""
+
+#. ~ Description of effect type "Matter Twist"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sometimes the world nearby twists.  Was it you?"
+msgstr ""
+
+#. ~ Description of effect type "Matter Deformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sometimes you hear an odd noise, like a whisper."
+msgstr ""
+
+#. ~ Description of effect type "Dimensional Shift"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel someone's presences.  They are wondering."
+msgstr ""
+
+#. ~ Description of effect type "Dimensional Chasm"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Random voices jump into your head from time to time.  Most of them are "
+"friendly."
+msgstr ""
+
+#. ~ Description of effect type "Reality Gateway"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You clearly feel the otherworldly presence.  They are ready to help you."
+msgstr ""
+
+#. ~ Name of effect type id "night_sight"
+#. ~ Name of spell "night_sight"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/spells/classless_spells.json
+msgid "Night Sight"
+msgstr ""
+
+#. ~ Remove message of effect type "Night Sight"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The darkness loses its shape and your eyes return to their usual hue."
+msgstr ""

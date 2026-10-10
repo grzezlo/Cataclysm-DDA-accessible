@@ -1,0 +1,1629 @@
+# Batch 165 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of spell "telekinetic_water_walk"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Water Walking (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_water_walk ( [Ψ]Water Walking (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Lift yourself enough to counteract your mass, allowing the surface tension of liquids to support you, enabling you to walk on water.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It requires <color_yellow>even more concentration</color> than usual."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_lifting_field"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Lifting Field (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_lifting_field ( [Ψ]Lifting Field (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Hover a single object next to you, freeing your hands for other tasks and making it easy to access.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_strength"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Enhance Strength (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_strength ( [Ψ]Enhance Strength (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Focus your powers to allow you to move much heavier objects and smash through walls.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_vehicle_lift"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Lift Vehicle (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_vehicle_lift ( [Ψ]Lift Vehicle (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Focus your powers to raise a vehicle just enough to change a tire or perform repairs.  As your powers increase, you will be able to lift heavier vehicles.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_shield"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Inertial Barrier (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_shield ( [Ψ]Inertial Barrier (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Create a telekinetic barrier around yourself to protect you from damage.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_explosion"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Wrecking Ball"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_explosion ( [Ψ]Wrecking Ball )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"A burst of telekinetic force shatters the terrain at the target location, as "
+"well as anything caught inside."
+msgstr ""
+
+#. ~ Message of spell "telekinetic_explosion ( [Ψ]Wrecking Ball )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "You indiscriminately blast your targets!"
+msgstr ""
+
+#. ~ Name of spell "telekinetic_levitation"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Levitation (C)"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_levitation ( [Ψ]Levitation (C) )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Use your telekinesis and lift yourself up, defying gravity.  While not true flight, you can cross open air and descend safely.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>.  It requires <color_yellow>even more concentration</color> than usual."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_move_large_weight"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Megakinesis"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_move_large_weight ( [Ψ]Megakinesis )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Telekinesis on a grand scale, this power allows you to move truly enormous "
+"amounts of weight, hurling a human-sized target at lethal speeds or picking "
+"up and throwing something monstrously large.  The amount of weight you can "
+"move is dependent on the power level."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_aegis"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Aegis"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_aegis ( [Ψ]Aegis )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Create a shield impenetrable to physical damage around yourself.  It will "
+"<color_yellow>only last a few moments</color>.  You will be <color_red>unable"
+" to move</color> while the power is in effect."
+msgstr ""
+
+#. ~ Message of spell "telekinetic_aegis ( [Ψ]Aegis )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "The air around you becomes as hard as adamant."
+msgstr ""
+
+#. ~ Name of spell "telekinetic_earthshaker"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid "[Ψ]Earthshaker"
+msgstr ""
+
+#. ~ Description of spell "telekinetic_earthshaker ( [Ψ]Earthshaker )"
+#: data/mods/MindOverMatter/powers/telekinesis.json
+msgid ""
+"Seize the nearby earth with your powers and *wrench* it, toppling buildings "
+"and knocking everyone nearby off their feet."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_WATER_WALKING"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "Your steps feel very light on the ground."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_LIFTING_FIELD_INITIATE"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "You prepare to hover an item close to hand."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_STRENGTH_INITIATE"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "You concentrate and prepare to lift something heavy."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_SHIELD_INITIATE"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "The air around you shimmers slightly."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_SUMMON_JACKING_TOOL_INITIATE"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "You ready yourself to lift a car just enough to work on it."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_REMOVE_JACKING_TOOL"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "You let the vehicle settle gently to the ground."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEKIN_LEVITATION_INITIATE"
+#: data/mods/MindOverMatter/powers/telekinesis_concentration_eoc.json
+msgid "You begin floating a hand's breadth above the ground."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_TELEKINETIC_THROW_WEIGHT_HANDLER"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid "The weight ratio is <u_val:weight_ratio>."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_TELEKINETIC_THROW_WEIGHT_HANDLER"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid "The effective spell level is <u_val:telekinesis_shove_spell_level>."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in nested effect in else
+#. statement in effect in EoC "EOC_TELEKINETIC_THROW_WEIGHT_HANDLER"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid ""
+"The effective spell level for pulling is "
+"<u_val:telekinesis_shove_spell_level>."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_FORCE_SHOVE_SELECTOR"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid "Shove a target in a particular direction."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_MOVE_LARGE_WEIGHT_SELECTOR"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid "Shove a target in particular direction."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEKINETIC_MOVE_LARGE_WEIGHT_SELECTOR"
+#: data/mods/MindOverMatter/powers/telekinesis_eoc.json
+msgid "Pull something toward you."
+msgstr ""
+
+#. ~ Name of spell "telepathic_concentration"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Concentration Trance (C)"
+msgstr ""
+
+#. ~ Description of spell "telepathic_concentration ( [Ψ]Concentration Trance
+#. (C) )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Focus your own mind into a trance state, increasing learning speed.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It is <color_red>canceled by engaging in combat</color>."
+msgstr ""
+
+#. ~ Description of spell "telepathic_shield ( [Ψ]Telepathic Shield (C) )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"You can protect your mind from the dangers of the post-Cataclysmic world.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "telepathic_mesmerize"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Mesmerize"
+msgstr ""
+
+#. ~ Description of spell "telepathic_mesmerize ( [Ψ]Mesmerize )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Hypnotize a target, causing them to stand in a trance or wander around in a "
+"small area.  Any damage taken will snap the target out of their trance.  Some"
+" targets are more resistant to mesmerism than others."
+msgstr ""
+
+#. ~ Name of spell "telepathic_morale"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Mood Stabilization (C)"
+msgstr ""
+
+#. ~ Description of spell "telepathic_morale ( [Ψ]Mood Stabilization (C) )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"With the ability to edit others' thoughts comes the ability to edit your own, removing negative moods to a degree.  You have also learned to do this more subtly on others, calming their anger or assuaging their fears.\n"
+"\n"
+"When used on yourself, this power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Description of spell "telepathic_blast ( [Ψ]Synaptic Overload )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Short-circuit and overwhelm a target's brain, causing extreme damage or "
+"death."
+msgstr ""
+
+#. ~ Name of spell "telepathic_animal_mind_control"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Beastmaster"
+msgstr ""
+
+#. ~ Description of spell "telepathic_animal_mind_control ( [Ψ]Beastmaster )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Take control of an animal's mind, forcing it to obey you.  This power will "
+"not work on insects, spiders, or similar beings."
+msgstr ""
+
+#. ~ Name of spell "telepathic_fear"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Primal Terror"
+msgstr ""
+
+#. ~ Message of spell "telepathic_fear ( [Ψ]Primal Terror )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "You unleash your target's fears."
+msgstr ""
+
+#. ~ Name of spell "telepathic_invisibility"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Obscurity"
+msgstr ""
+
+#. ~ Description of spell "telepathic_invisibility ( [Ψ]Obscurity )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Use a light touch on others' minds to hide your presence.  You will be invisible to the target(s) while the power is in effect.\n"
+"\n"
+"This power is <color_red>canceled by engaging in combat</color> with your target."
+msgstr ""
+
+#. ~ Message of spell "telepathic_invisibility ( [Ψ]Obscurity )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "You hide your presence from your enemies."
+msgstr ""
+
+#. ~ Name of spell "telepathic_blast_radius"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Psychic Scream"
+msgstr ""
+
+#. ~ Description of spell "telepathic_blast_radius ( [Ψ]Psychic Scream )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Emit an uncontrolled psychic scream, attacking the mind of anyone nearby.  "
+"This power does not distinguish between friend and foe."
+msgstr ""
+
+#. ~ Message of spell "telepathic_blast_radius ( [Ψ]Psychic Scream )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "You unleash a mind-piercing psionic shriek!"
+msgstr ""
+
+#. ~ Name of spell "telepathic_beast_taming"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Beast Tamer"
+msgstr ""
+
+#. ~ Description of spell "telepathic_beast_taming ( [Ψ]Beast Tamer )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Perform mental surgery on an animal, making it friendly to you for a much "
+"longer duration.  The animal must already be friendly, either naturally or "
+"through powers such as Beastmastery, in order to be tamed."
+msgstr ""
+
+#. ~ Message of spell "telepathic_beast_taming ( [Ψ]Beast Tamer )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "The animal sniffs at your palm."
+msgstr ""
+
+#. ~ Name of spell "telepathic_mind_control"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Mind Control"
+msgstr ""
+
+#. ~ Description of spell "telepathic_mind_control ( [Ψ]Mind Control )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "Seize control of the target's mind, forcing them to do your bidding."
+msgstr ""
+
+#. ~ Message of spell "telepathic_mind_control ( [Ψ]Mind Control )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "You take control of your target's mind!"
+msgstr ""
+
+#. ~ Name of spell "telepathic_network"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid "[Ψ]Network Effect"
+msgstr ""
+
+#. ~ Description of spell "telepathic_network ( [Ψ]Network Effect )"
+#: data/mods/MindOverMatter/powers/telepathy.json
+msgid ""
+"Forge an unconscious telepathic network between you and nearby allies, "
+"allowing you all to send and receive information about nearby dangers and "
+"react more quickly in combat.  The network requires at least one ally nearby "
+"to be effective."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPATH_CONCENTRATION_INITIATE"
+#: data/mods/MindOverMatter/powers/telepathy_concentration_eoc.json
+msgid ""
+"Your vision narrows to what is directly in front of you as you concentrate."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPATH_MORALE_INITIATE_SELF"
+#: data/mods/MindOverMatter/powers/telepathy_concentration_eoc.json
+msgid "You begin to edit out your discouraging thoughts."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#. ~ NPC message in nested effect in then statement in false effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "You mesmerize your target and they stand in a daze."
+msgstr ""
+
+#. ~ NPC message in nested effect in else statement in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#. ~ NPC message in nested effect in else statement in false effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "Your target resists the mesmerism!"
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in false effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "You mesmerize the alien creature and it stands in a daze."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in false effect in EoC
+#. "EOC_TELEPATH_MESMERIZE_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MESMERIZE"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "You mesmerize the feral human and they stand in a daze."
+msgstr ""
+
+#. ~ NPC message in effect in EoC "EOC_TELEPATH_MORALE_MODIFY_NPC_VALUES_2" in
+#. nested EOCs in effect in EoC "EOC_TELEPATH_MORALE_MODIFY_NPC_VALUES"
+#. ~ NPC message in effect in EoC "EOC_TELEPATH_MORALE_MODIFY_MONSTER_VALUES_2"
+#. in nested EOCs in effect in EoC "EOC_TELEPATH_MORALE_MODIFY_MONSTER_VALUES"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid ""
+"You reach in and, with a deft touch, sooth your target's negative emotions."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC
+#. "EOC_TELEPATH_MORALE_MODIFY_NPC_VALUES_2" in nested EOCs in effect in EoC
+#. "EOC_TELEPATH_MORALE_MODIFY_NPC_VALUES"
+#. ~ NPC message in false effect in EoC
+#. "EOC_TELEPATH_MORALE_MODIFY_MONSTER_VALUES_2" in nested EOCs in effect in
+#. EoC "EOC_TELEPATH_MORALE_MODIFY_MONSTER_VALUES"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid ""
+"You attempt to edit the target's mood, but your powers slam into a smooth, "
+"unyielding barrier and slide off."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC "EOC_TELEPATH_MORALE_MODIFY_NPC_VALUES"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid ""
+"You don't want to risk affecting the target's mind too quickly, and withdraw."
+msgstr ""
+
+#. ~ Player spell casting message in effect in EoC
+#. "EOC_TELEPATH_NETWORK_ALLY_CHECK"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "You now have an instinctive awareness of your allies, and they of you."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_TELEPATH_NETWORK_ALLY_CHECK"
+#: data/mods/MindOverMatter/powers/telepathy_eoc.json
+msgid "With no nearby allies, there is no one to network with."
+msgstr ""
+
+#. ~ Name of spell "teleport_blink"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Blink"
+msgstr ""
+
+#. ~ Description of spell "teleport_blink ( [Ψ]Blink )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Step briefly into the void between dimensions and emerge at a random nearby location.\n"
+"\n"
+"The power <color_red>will fail</color> if the volume of your carried gear is too great."
+msgstr ""
+
+#. ~ Name of spell "teleport_slow"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Stutterstep"
+msgstr ""
+
+#. ~ Description of spell "teleport_slow ( [Ψ]Stutterstep )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Manipulate space to increase relative distance around the target, reducing "
+"their speed."
+msgstr ""
+
+#. ~ Message of spell "teleport_slow ( [Ψ]Stutterstep )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "You warp the space around your enemies!"
+msgstr ""
+
+#. ~ Name of spell "teleport_phase"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Phase"
+msgstr ""
+
+#. ~ Description of spell "teleport_phase ( [Ψ]Phase )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"By stepping for a moment into the void between dimensions, you can bypass a "
+"wall or walk from the ground to the roof of a house."
+msgstr ""
+
+#. ~ Name of spell "teleport_item_apport"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Apportation"
+msgstr ""
+
+#. ~ Description of spell "teleport_item_apport ( [Ψ]Apportation )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Rather than teleporting yourself, you could teleport an item you're holding somewhere nearby without having to follow it to its destination.\n"
+"\n"
+"Items that are <color_yellow>too large</color> cannot be apported."
+msgstr ""
+
+#. ~ Name of spell "teleport_stride"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Extended Stride (C)"
+msgstr ""
+
+#. ~ Description of spell "teleport_stride ( [Ψ]Extended Stride (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"By warping space to shorten distances, you can make each of your movements carry you much further.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Message of spell "teleport_stride ( [Ψ]Extended Stride (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "Your steps devour the distance."
+msgstr ""
+
+#. ~ Name of spell "teleport_transpose"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Transposition"
+msgstr ""
+
+#. ~ Description of spell "teleport_transpose ( [Ψ]Transposition )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Entangle yourself with your target's position and, with a twist, swap places "
+"with them."
+msgstr ""
+
+#. ~ Message of spell "teleport_transpose ( [Ψ]Transposition )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"There is a moment of darkness and terrible cold, and you are somewhere else, "
+"and so is your target."
+msgstr ""
+
+#. ~ Name of spell "teleport_displacement"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Displacement"
+msgstr ""
+
+#. ~ Description of spell "teleport_displacement ( [Ψ]Displacement )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"With a touch, you can send your target through the void to re-emerge "
+"somewhere nearby, further away from you.  Targets that are <color_yellow>too "
+"large</color> cannot be displaced."
+msgstr ""
+
+#. ~ Name of spell "teleport_reactive_displacement"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Reactive Displacement (C)"
+msgstr ""
+
+#. ~ Description of spell "teleport_reactive_displacement ( [Ψ]Reactive
+#. Displacement (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Maintain a field of unstable space around you, allowing you to effortlessly teleport enemies that strike you further away.  Unfortunately, their attacks will still hurt you as normal.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "teleport_reactive_displacement_teleport"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Reactive Displacement (C) - Teleport"
+msgstr ""
+
+#. ~ Description of spell "teleport_reactive_displacement_teleport (
+#. [Ψ]Reactive Displacement (C) - Teleport )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"The actual teleport effect of reactive displacement.  Having this spell is a "
+"bug."
+msgstr ""
+
+#. ~ Name of spell "teleport_collapse"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Spacial Vortex"
+msgstr ""
+
+#. ~ Description of spell "teleport_collapse ( [Ψ]Spacial Vortex )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Affect the fabric of space, changing relative distance around a point so that"
+" everything moving within finds themselves moving towards it."
+msgstr ""
+
+#. ~ Message of spell "teleport_collapse ( [Ψ]Spacial Vortex )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"The air around your enemies shimmers as their forward motion carries them "
+"rapidly towards each other."
+msgstr ""
+
+#. ~ Name of spell "teleport_relocation"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Relocation"
+msgstr ""
+
+#. ~ Description of spell "teleport_relocation ( [Ψ]Relocation )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Transport items in your hands through the Nether to an attuned location."
+msgstr ""
+
+#. ~ Name of spell "teleport_warped_strikes"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Warped Strikes (C)"
+msgstr ""
+
+#. ~ Description of spell "teleport_warped_strikes ( [Ψ]Warped Strikes (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"By warping space as you attack, you can allow your melee attacks to reach much further than normal.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "teleport_ephemeral_walk"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Ephemeral Walk (C)"
+msgstr ""
+
+#. ~ Description of spell "teleport_ephemeral_walk ( [Ψ]Ephemeral Walk (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"By moving slightly into the void between dimensions, you can exist in a state"
+" that allows effortless travel through obstacles."
+msgstr ""
+
+#. ~ Name of spell "teleport_farstep"
+#. ~ Name of spell "teleport_farstep_real"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Farstep"
+msgstr ""
+
+#. ~ Description of spell "teleport_farstep ( [Ψ]Farstep )"
+#. ~ Description of spell "teleport_farstep_real ( [Ψ]Farstep )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Skating along the void between dimensions, move to a specific place nearby.\n"
+"\n"
+"The power <color_red>will fail</color> if the volume of your carried gear is too great."
+msgstr ""
+
+#. ~ Name of spell "teleport_banish"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Oubliette"
+msgstr ""
+
+#. ~ Description of spell "teleport_banish ( [Ψ]Oubliette )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Teleport the target through the nether to some other dimension.  They are "
+"technically not dead, but they are no longer your concern.  Oubliette will "
+"occasionally fail when used against very powerful enemies, or succeed but "
+"cause damage to the teleporter."
+msgstr ""
+
+#. ~ Name of spell "teleport_loci_establishment"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Loci Establishment (C)"
+msgstr ""
+
+#. ~ Description of spell "teleport_loci_establishment ( [Ψ]Loci Establishment
+#. (C) )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Start concentrating on your current location, allowing you to return here at will with the [Ψ]Loci Technique power.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "teleport_loci_technique"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Loci Technique"
+msgstr ""
+
+#. ~ Description of spell "teleport_loci_technique ( [Ψ]Loci Technique )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Transport yourself through the nether to your established loci location.  You"
+" must currently be concentrating on your [Ψ]Loci Establishment (C) for this "
+"to function."
+msgstr ""
+
+#. ~ Name of spell "teleport_gateway"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Gateway"
+msgstr ""
+
+#. ~ Description of spell "teleport_gateway ( [Ψ]Gateway )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Transport yourself through the Nether to an attuned location.  You must attune yourself to the place you wish to travel to.\n"
+"\n"
+"The power <color_red>will fail</color> if the volume of your carried gear is too great."
+msgstr ""
+
+#. ~ Name of spell "teleport_dilated_gateway"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Dilated Gateway"
+msgstr ""
+
+#. ~ Description of spell "teleport_dilated_gateway ( [Ψ]Dilated Gateway )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Transport yourself and every adjacent creature to a chosen location.  You "
+"must have already attuned an area with [Ψ]Gateway."
+msgstr ""
+
+#. ~ Name of spell "teleport_dilated_gateway_teleport_others"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Dilated Gateway - Teleport Others"
+msgstr ""
+
+#. ~ Description of spell "teleport_dilated_gateway_teleport_others (
+#. [Ψ]Dilated Gateway - Teleport Others )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"The spell that actually teleports the adjacent targets.  Should only be "
+"casted via teleport_gateway_other's EOC."
+msgstr ""
+
+#. ~ Name of spell "teleport_dilated_gateway_teleport_self"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Dilated Gateway - Teleport Self"
+msgstr ""
+
+#. ~ Description of spell "teleport_dilated_gateway_teleport_self ( [Ψ]Dilated
+#. Gateway - Teleport Self )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"The spell that actually teleports the player.  Should only be casted via "
+"teleport_gateway_other's EOC."
+msgstr ""
+
+#. ~ Name of spell "teleport_summon"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Breach"
+msgstr ""
+
+#. ~ Description of spell "teleport_summon ( [Ψ]Breach )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Open a brief passage to the Nether using yourself or an enemy as an anchor and allow one (or more) of its inhabitants to come through.  You have no control over what finds the doorway and no ability to command it when it arrives.\n"
+"\n"
+"Remember that some denizens of the Nether die instantly in sunlight."
+msgstr ""
+
+#. ~ Name of spell "teleport_warper_combat"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Flickerflash Stance"
+msgstr ""
+
+#. ~ Description of spell "teleport_warper_combat ( [Ψ]Flickerflash Stance )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Through constant contraction and expansion of nearby space, as well as near-constant micro-teleports less than decimeter in distance, you can increase the effective momentum behind your strikes, make your exact position nearly impossible to determine, and your blows nearly impossible to stop.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  It requires <color_yellow>even more concentration</color> than usual."
+msgstr ""
+
+#. ~ Name of spell "teleport_reality_tear"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid "[Ψ]Reality Tear"
+msgstr ""
+
+#. ~ Description of spell "teleport_reality_tear ( [Ψ]Reality Tear )"
+#: data/mods/MindOverMatter/powers/teleportation.json
+msgid ""
+"Make your own contribution to the Cataclysm by opening a rift in reality, "
+"allowing all manners of netherium creatures access to Earth.  The rift is "
+"temporary…hopefully."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_STRIDE_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid "Your steps are taking you further than your eyes tell you they should."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_WARPED_STRIKES_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid "You are ready to momentarily warp space to coincide with your attacks."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_EPHEMERAL_WALK_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid ""
+"You feel a strange coolness as matter around you feels somehow less solid."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_TELEPORT_REACTIVE_DISPLACEMENT_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid "You are prepared to displace your attackers."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_LOCI_ESTABLISHMENT_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid "You've established a locus to return to later."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_WARPER_COMBAT_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_concentration_eoc.json
+msgid "The world jerks as you start continually blinking from place to place."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_SELF_CARRIED_VOLUME_CHECKER"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your carried volume is <u_val:teleport_total_carried_volume>."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_BLINK_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your Blink volume limit is <context_val:teleport_blink_limit>."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPORT_BLINK_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You vanish and reappear nearby."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_TELEPORT_BLINK_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You attempt to teleport to somewhere nearby, but your skin merely tingles and"
+" nothing happens.  You're carrying too much."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_PHASE_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your Phase volume limit is <context_val:teleport_blink_limit>."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPORT_PHASE_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"There is a brief moment of darkness and terrible cold, and you are somewhere "
+"else."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in effect in EoC
+#. "EOC_TELEPORT_PHASE_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You attempt to phase through the barrier, but your skin merely tingles and "
+"nothing happens.  You're carrying too much."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_TELEPORT_ITEM_APPORT_ITEM_QUALIFIES" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_ITEM_APPORT_NEXT" in nested EOCs on true condition in effect
+#. in EoC "EOC_TELEPORT_ITEM_APPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Select apport location."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_TELEPORT_ITEM_APPORT_ITEM_QUALIFIES" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_ITEM_APPORT_NEXT" in nested EOCs on true condition in effect
+#. in EoC "EOC_TELEPORT_ITEM_APPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You cannot apport an item inside a solid object."
+msgstr ""
+
+#. ~ Player message in nested effect in else statement in nested effect in then
+#. statement in effect in EoC "EOC_TELEPORT_ITEM_APPORT_ITEM_QUALIFIES" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_ITEM_APPORT_NEXT" in nested EOCs on true condition in effect
+#. in EoC "EOC_TELEPORT_ITEM_APPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"The item in your hands grows freezing cold for a moment before vanishing."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_TELEPORT_ITEM_APPORT_ITEM_DOES_NOT_QUALIFY" in nested EOCs on false
+#. condition in effect in EoC "EOC_TELEPORT_ITEM_APPORT_NEXT" in nested EOCs on
+#. true condition in effect in EoC "EOC_TELEPORT_ITEM_APPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"The air around the item wavers, but nothing happens.  The item is too large."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_ITEM_APPORT_FAIL" in nested
+#. EOCs on false condition in effect in EoC "EOC_TELEPORT_ITEM_APPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You must be holding something to apport it."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in nested effect in then
+#. statement in effect in EoC "EOC_TELEPORT_DISPLACEMENT_CHECK"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "As <u_name> strikes you, they are suddenly somewhere else"
+msgstr ""
+
+#. ~ NPC message in nested effect in else statement in nested effect in then
+#. statement in effect in EoC "EOC_TELEPORT_DISPLACEMENT_CHECK"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You touch <u_name> and they are suddenly somewhere else"
+msgstr ""
+
+#. ~ NPC message in nested effect in else statement in nested effect in else
+#. statement in effect in EoC "EOC_TELEPORT_DISPLACEMENT_CHECK"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You touch <u_name> but nothing happens.  They are too big to teleport."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_FARSTEP_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your Farstep volume limit is <context_val:teleport_farstep_limit>."
+msgstr ""
+
+#. ~ Player message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPORT_FARSTEP_INITIATE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"There is a moment of darkness and terrible cold, and you are somewhere else."
+msgstr ""
+
+#. ~ NPC message in false effect in EoC "EOC_TELEPORTER_OUBLIETTE_HANDLING"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your target wavers for a moment, but nothing happens."
+msgstr ""
+
+#. ~ NPC message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPORTER_OUBLIETTE_HANDLING_2"
+#. ~ NPC message in nested effect in then statement in false effect in EoC
+#. "EOC_TELEPORTER_OUBLIETTE_HANDLING_2"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "With a tremendous mental exertion, you hurl your target…elsewhere."
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_TELEPORTER_GATEWAY_MESSAGE_CARRYING_TOO_MUCH"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You attempt to teleport to your destination, but your skin merely tingles and"
+" nothing happens.  You're carrying too much."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORTER_ATTUNING_MESSAGE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You concentrate and begin memorizing every detail of the current area you are"
+" in."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORTER_ATTUNED_MESSAGE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You have successfully memorized the local area, and may now return to it with"
+" your powers."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_1>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_2>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_3>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_4>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_5>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_6>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_7>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_8>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_9>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Gateway: <u_val:gateway_destination_name_10>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport/Attune to a destination."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_01"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_1>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_01"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_02"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_03"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_04"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_05"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_06"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_07"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_08"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_09"
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Attune to Area"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_01"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_1>."
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_01"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_02"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_03"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_04"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_05"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_06"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_07"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_08"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_09"
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Attune to a new destination."
+msgstr ""
+
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_01_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_02_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_03_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_04_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_05_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_06_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_07_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_08_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_09_SUCCESS"
+#. ~ String input window's title in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_10_SUCCESS"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Input a destination name:"
+msgstr ""
+
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_01_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_02_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_03_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_04_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_05_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_06_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_07_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_08_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_09_SUCCESS"
+#. ~ String input window's description in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_ATTUNE_10_SUCCESS"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination Name:"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_02"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_2>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_02"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_2>."
+msgstr ""
+
+#. ~ Message in nested effect in then statement in effect in EoC
+#. "EOC_TELEPORT_GATEWAY_TELEPORT_02"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination coordinates are <u_val:gateway_destination_2>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_03"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_3>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_03"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_3>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_04"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_4>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_04"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_4>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_05"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_5>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_05"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_5>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_06"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_6>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_06"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_6>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_07"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_7>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_07"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_7>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_08"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_8>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_08"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_8>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_09"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_9>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_09"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_9>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Destination: <u_val:gateway_destination_name_10>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_GATEWAY_SELECTOR_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport to <u_val:gateway_destination_name_10>."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_1>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_2>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_3>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_4>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_5>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_6>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_7>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_8>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_9>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Dilated Gateway: <u_val:gateway_destination_name_10>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC
+#. "EOC_TELEPORT_dilated_gateway_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport target to a destination."
+msgstr ""
+
+#. ~ Message in effect in EoC "EOC_TELEPORT_EXTERNAL_TELEPORT"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "<u_name> vanishes!"
+msgstr ""
+
+#. ~ Player message in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_NO_HELD_ITEM_PRE" in nested EOCs on
+#. false condition in effect in EoC "EOC_TELEPORT_RELOCATION_PRE_CHECK"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Try as you might, you cannot teleport nothing."
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_1>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_2>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_3>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_4>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_5>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_6>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_7>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_8>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_9>"
+msgstr ""
+
+#. ~ EOC option name in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Item Portal: <u_val:gateway_destination_name_10>"
+msgstr ""
+
+#. ~ EOC option description in effect in EoC "EOC_TELEPORT_RELOCATION_SELECTOR"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Teleport items to a destination."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_01" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_01"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_02" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_02"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_03" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_03"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_04" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_04"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_05" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_05"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_06" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_06"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_07" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_07"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_08" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_08"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_09" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_09"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_10" in
+#. nested EOCs on true condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "The items in your hands vanish with a faint pop sound."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_01"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_01"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_02"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_02"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_03"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_03"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_04"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_04"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_05"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_05"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_06"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_06"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_07"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_07"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_08"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_08"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_09"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_09"
+#. ~ Player message in effect in EoC "EOC_TELEPORT_RELOCATION_TELEPORT_FAIL_10"
+#. in nested EOCs on false condition in effect in EoC
+#. "EOC_TELEPORT_RELOCATION_SELECT_10"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"The items in your hands flicker and appear to shrink before returning to "
+"normal.  Nothing else happens."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_REALITY_TEAR_CHECKER"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Your adjusted chance is <context_val:reality_tear_adjustment>."
+msgstr ""
+
+#. ~ Success message in teleportation in effect in EoC
+#. "EOC_TELEPORT_LOCI_TECHNIQUE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid ""
+"You feel a moment of darkness and terrible cold, but you are quickly back at "
+"your established locus."
+msgstr ""
+
+#. ~ Fail message in teleportation in effect in EoC
+#. "EOC_TELEPORT_LOCI_TECHNIQUE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "Something goes wrong with the Loci Technique!"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "EOC_TELEPORT_LOCI_TECHNIQUE"
+#: data/mods/MindOverMatter/powers/teleportation_eoc.json
+msgid "You are currently not concentrating on [Ψ]Loci Establishment!"
+msgstr ""
+
+#. ~ Name of spell "vita_health_power"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Healthy Glow (C)"
+msgstr ""
+
+#. ~ Description of spell "vita_health_power ( [Ψ]Healthy Glow (C) )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"Your powers can keep you in the bloom of health.  This can also stop or prevent an asthma attack.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  Healthy Glow <color_red>cannot be active</color> with Leucocyte Acculumation"
+msgstr ""
+
+#. ~ Name of spell "vita_slow_bleeding"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Coagulation (C)"
+msgstr ""
+
+#. ~ Description of spell "vita_slow_bleeding ( [Ψ]Coagulation (C) )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"By increasing the efficiency of your platelets and speeding their movement, you can slow your rate of bleeding and even prevent it before it starts.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "vita_stop_bleeding"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Staunch Wound"
+msgstr ""
+
+#. ~ Description of spell "vita_stop_bleeding ( [Ψ]Staunch Wound )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"You concentrate on your injuries, and they close and the blood flow stops."
+msgstr ""
+
+#. ~ Message of spell "vita_stop_bleeding ( [Ψ]Staunch Wound )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "You summon up the energy to close your wounds!"
+msgstr ""
+
+#. ~ Name of spell "vita_concentrated_healing"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Leukocyte Accumulation (C)"
+msgstr ""
+
+#. ~ Description of spell "vita_concentrated_healing ( [Ψ]Leukocyte
+#. Accumulation (C) )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"By rerouting blood and stem cells from more lightly damaged areas, you can speed the healing of your most grievous wounds at the cost of lessened healing elsewhere.  You may also use this to control an asthma attack.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>.  Leucocyte Acculumation <color_red>cannot be active</color> with Healthy Glow"
+msgstr ""
+
+#. ~ Name of spell "vita_hurt_touch"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Enervating Touch"
+msgstr ""
+
+#. ~ Description of spell "vita_hurt_touch ( [Ψ]Enervating Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"With but a touch you can cause your target to begin deteriorating slowly.  "
+"This is most effective on targets with preternatural means of healing but has"
+" some effect on anyone."
+msgstr ""
+
+#. ~ Message of spell "vita_hurt_touch ( [Ψ]Enervating Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "You touch your target and leave an angry red weal behind."
+msgstr ""
+
+#. ~ Name of spell "vita_health_power_ally"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Medicinal Touch"
+msgstr ""
+
+#. ~ Description of spell "vita_health_power_ally ( [Ψ]Medicinal Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"You can apply your Healthy Glow power to a follower or ally.  This can stop "
+"an asthma attack."
+msgstr ""
+
+#. ~ Message of spell "vita_health_power_ally ( [Ψ]Medicinal Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "Your touch your target and they seem to perk up."
+msgstr ""
+
+#. ~ Name of spell "vita_remove_poison"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Detoxification"
+msgstr ""
+
+#. ~ Description of spell "vita_remove_poison ( [Ψ]Detoxification )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"When poisoned, you can isolate the poison and move it to your sweat glands "
+"where you will harmlessly sweat it out.  While doing so, your flesh will be "
+"toxic to any creatures that take a bite."
+msgstr ""
+
+#. ~ Name of spell "vita_sleeping_trance"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Wakeful Rest"
+msgstr ""
+
+#. ~ Description of spell "vita_sleeping_trance ( [Ψ]Wakeful Rest )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"In lieu of sleep, you can meditate.  As long as you maintain your "
+"meditations, you will rarely need to spend a night sleeping."
+msgstr ""
+
+#. ~ Message of spell "vita_sleeping_trance ( [Ψ]Wakeful Rest )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "You begin meditating."
+msgstr ""
+
+#. ~ Name of spell "vita_cure_disease"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Immunostimulus (C)"
+msgstr ""
+
+#. ~ Description of spell "vita_cure_disease ( [Ψ]Immunostimulus (C) )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"Kick your immune system into overdrive in order to overcome any illnesses you may be suffering from.\n"
+"\n"
+"This power <color_yellow>is maintained by concentration</color> and <color_red>may fail</color> if <color_yellow>concentration is interrupted</color>."
+msgstr ""
+
+#. ~ Name of spell "vita_stop_infection"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Allay Infection"
+msgstr ""
+
+#. ~ Description of spell "vita_stop_infection ( [Ψ]Allay Infection )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"Before you could stop your bleeding with but a thought.  Now, you can treat "
+"infected wounds with your powers as well."
+msgstr ""
+
+#. ~ Message of spell "vita_stop_infection ( [Ψ]Allay Infection )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "You concentrate on the injuries, and the itching eases."
+msgstr ""
+
+#. ~ Name of spell "vita_healing_trance"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Revitalizing Meditation"
+msgstr ""
+
+#. ~ Description of spell "vita_healing_trance ( [Ψ]Revitalizing Meditation )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"Enter a trance state and heal your injuries many times faster than they would"
+" heal naturally."
+msgstr ""
+
+#. ~ Name of spell "vita_attack_touch"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Lacerating Touch"
+msgstr ""
+
+#. ~ Description of spell "vita_attack_touch ( [Ψ]Lacerating Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"With an inverse of vitakinesis's healing powers, you randomly tear flesh and "
+"cut blood vessels, causing significant damage in your target."
+msgstr ""
+
+#. ~ Message of spell "vita_attack_touch ( [Ψ]Lacerating Touch )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "You touch your target and wounds open on their flesh."
+msgstr ""
+
+#. ~ Name of spell "vita_purge_rads"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid "[Ψ]Radiation Decontamination"
+msgstr ""
+
+#. ~ Description of spell "vita_purge_rads ( [Ψ]Radiation Decontamination )"
+#: data/mods/MindOverMatter/powers/vitakinesis.json
+msgid ""
+"Use your powers to isolate and flush radiation from your body.  Depending on "
+"your level of contamination, this power may have serious side effects."
+msgstr ""

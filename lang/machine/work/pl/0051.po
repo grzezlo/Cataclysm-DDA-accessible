@@ -1,0 +1,1901 @@
+# Batch 51 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "flint and steel"
+#: data/json/items/tool/fire.json
+msgid ""
+"A piece of flint paired with a hardened high carbon steel striker.  Use it to"
+" spark a flame."
+msgstr ""
+
+#. ~ Description of "lighter"
+#: data/json/items/tool/fire.json
+msgid ""
+"A disposable plastic lighter, capable of creating a small flame with the "
+"flick of a finger.  Allows you to use various drugs like cigarettes, light "
+"explosives like Molotov cocktails, or light nearby items on fire."
+msgstr ""
+
+#. ~ Description of "magnifying glass"
+#: data/json/items/tool/fire.json
+msgid ""
+"A magnifying glass, for closely examining fine details.  It can also be used "
+"for starting fires if direct sunlight is available."
+msgstr ""
+
+#. ~ Description of "fire piston"
+#: data/json/items/tool/fire.json
+msgid ""
+"A firestarting tool of Southeast Asian origin, consisting of a thin, hollow "
+"wooden cylinder sealed at one end and open at the other, and a wooden piston "
+"forming an airtight circular seal with it, making use of rapid and adiabatic "
+"air compression to ignite a piece of tinder.  It also comes with a tinder "
+"container to keep tinder dry.  Use it to start a fire."
+msgstr ""
+
+#. ~ Description of "matchbook"
+#: data/json/items/tool/fire.json
+msgid ""
+"A small book of matches with a coarse strike surface on the outside flap for "
+"lighting them.  Allows you to use various drugs like cigarettes, light "
+"explosives like Molotov cocktails, or light nearby items on fire.  Due to the"
+" matches being lightly glued to the matchbook, they can be removed, but not "
+"replaced on the book."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fire.json
+msgid "survival match"
+msgid_plural "survival matches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "survival match"
+#: data/json/items/tool/fire.json
+msgid "A solid strike anywhere match.  One and done."
+msgstr ""
+
+#. ~ Description of "matchbox"
+#: data/json/items/tool/fire.json
+msgid ""
+"A small box of matches with a coarse strike surface on the side for lighting "
+"them.  Allows you to use various drugs like cigarettes, light explosives like"
+" Molotov cocktails, or light nearby items on fire."
+msgstr ""
+
+#. ~ Description of "refillable lighter"
+#: data/json/items/tool/fire.json
+msgid ""
+"A stylish lighter featuring a flip-top cover and a refuelable tank, capable "
+"of creating a small flame with the flick of a finger.  Allows you to use "
+"various drugs like cigarettes, light explosives like Molotov cocktails, or "
+"light nearby items on fire."
+msgstr ""
+
+#. ~ Description of "refillable lighter"
+#: data/json/items/tool/fire.json
+msgid ""
+"A stylish lighter featuring a flip-top cover and a refuelable tank.  It is "
+"lit."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fire.json
+msgid "refillable butane lighter"
+msgid_plural "refillable butane lighters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "refillable butane lighter"
+#: data/json/items/tool/fire.json
+msgid ""
+"A large lighter with a trigger and a safety, reloaded by fitting a can of "
+"butane inside the base.  Allows you to use various drugs like cigarettes, "
+"light explosives like Molotov cocktails, or light nearby items on fire."
+msgstr ""
+
+#. ~ Description of "ember carrier"
+#: data/json/items/tool/fire.json
+msgid ""
+"A small container for holding tinder, with holes punched in it to provide a "
+"controlled airflow.  It can nurture a smoldering ember for a long time, to "
+"start fires without modern tools."
+msgstr ""
+
+#. ~ Description of "ember carrier (lit)"
+#: data/json/items/tool/fire.json
+msgid ""
+"A small container for holding tinder, with holes punched in it to provide a "
+"controlled airflow.  An ember is smoldering inside it, and can be used to "
+"start a campfire."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fire.json
+msgid "electric lighter"
+msgid_plural "electric lighters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "electric lighter"
+#: data/json/items/tool/fire.json
+msgid "A rechargeable electric lighter."
+msgstr ""
+
+#. ~ Description of "mini lighter"
+#: data/json/items/tool/fire.json
+msgid ""
+"A miniature disposable plastic lighter, capable of creating a small flame "
+"with the flick of a finger.  Allows you to use various drugs, like "
+"cigarettes, light explosives like Molotov cocktails, or light nearby items on"
+" fire."
+msgstr ""
+
+#. ~ Description of "crash axe"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A short, lightweight emergency tool with a quarter-circular blade, a short "
+"pick opposite the blade, and an insulated handle.  Used on airplanes to chop "
+"down or pry walls or cabinets to gain access in case of a fire."
+msgstr ""
+
+#. ~ Description of "large fire extinguisher"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"An emergency fire extinguisher containing five gallons of fire-retardant "
+"foam.  Useful for putting out adjacent fires."
+msgstr ""
+
+#. ~ Description of "fire axe"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A large, two-handed pickhead axe normally used by firefighters.  It makes a "
+"powerful melee weapon, but is a bit slow to recover between swings.  The "
+"pickhead is for spiking into doors and glass and is not effective at hooking "
+"limbs of opponents."
+msgstr ""
+
+#. ~ Description of a pocket in item "fire axe"
+#: data/json/items/tool/firefighting.json
+msgid "Marrying strap for a Halligan bar."
+msgstr ""
+
+#. ~ Description of "Halligan bar"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A heavy, multiple-use tool commonly carried by firefighters, law enforcement,"
+" and military rescue units.  Use it to open locked doors without destroying "
+"them or to lift manhole covers.  You could also wield it to bash some heads "
+"in."
+msgstr ""
+
+#. ~ Description of "small fire extinguisher"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A handheld fire extinguisher containing a liter of highly compressed CO2 gas."
+"  Useful for putting out adjacent fires."
+msgstr ""
+
+#. ~ Description of "throwable fire extinguisher"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A fire extinguisher in grenade form.  While not as effective as a regular "
+"fire extinguisher, you can use it from a farther distance.  It has a plastic "
+"plug that can be pulled, but is primarily activated by heat, so just throw it"
+" into the flames."
+msgstr ""
+
+#. ~ Description of "active throwable fire extinguisher"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"An active extinguisher grenade, likely to burst any second now.  Better throw"
+" it!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/firefighting.json
+msgid "EOD hot stick"
+msgid_plural "EOD hot sticks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "EOD hot stick"
+#: data/json/items/tool/firefighting.json
+msgid ""
+"A durable tool consisting of a sturdy fiberglass shaft tipped with a set of 3"
+" hooks, one large opposed by two small.  Hot sticks are used to maintain some"
+" standoff distance when manual manipulation of explosives is necessary, and "
+"robot assistance is unavailable."
+msgstr ""
+
+#. ~ Description of "plastic fish trap"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A makeshift fish trap made from plastic bottles.  It's simple, even "
+"primitive, but easy to use.  The principle of action: the fish swims inside "
+"to eat the bait, but can't get out.  Not humane and prohibited by law, but "
+"there are no cops left to care."
+msgstr ""
+
+#. ~ Description of "basket fish trap"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A long wicker fish trap made from bark, reeds, cordage, or other natural "
+"materials.  It's a staple fishing tool in many pre-industrial societies.  The"
+" principle of action: the fish swims inside to eat the bait, but can't get "
+"out."
+msgstr ""
+
+#. ~ Description of "fishing hook"
+#: data/json/items/tool/fishing.json
+msgid "A simple metal fishing hook."
+msgstr ""
+
+#. ~ Description of "pro fishing rod"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A professional fishing rod with a matching set of weights.  With this, you "
+"should be able to catch 'em all."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fishing.json
+msgid "two-piece fishing rod (packed)"
+msgid_plural "two-piece fishing rods (packed)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "two-piece fishing rod (packed)"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A commercial two-piece fishing rod that has been disassembled for ease of "
+"transport and storage."
+msgstr ""
+
+#. ~ "menu_text" action message of item "two-piece fishing rod (packed)"
+#: data/json/items/tool/fishing.json
+msgid "Assemble"
+msgstr ""
+
+#. ~ "msg" action message of item "two-piece fishing rod (packed)"
+#: data/json/items/tool/fishing.json
+msgid "You put together your two-piece fishing rod."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fishing.json
+msgid "two-piece fishing rod"
+msgid_plural "two-piece fishing rods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "two-piece fishing rod"
+#: data/json/items/tool/fishing.json
+msgid "A commercial two-piece fishing rod, assembled and ready for use."
+msgstr ""
+
+#. ~ "menu_text" action message of item "two-piece fishing rod"
+#: data/json/items/tool/fishing.json
+msgid "Disassemble"
+msgstr ""
+
+#. ~ "msg" action message of item "two-piece fishing rod"
+#: data/json/items/tool/fishing.json
+msgid "You take apart your two-piece fishing rod."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fishing.json
+msgid "telescoping fishing rod (packed)"
+msgid_plural "telescoping fishing rods (packed)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "telescoping fishing rod (packed)"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A commercial telescoping fishing rod that has been retracted for ease of "
+"transport and storage."
+msgstr ""
+
+#. ~ "msg" action message of item "telescoping fishing rod (packed)"
+#: data/json/items/tool/fishing.json
+msgid "You extend your telescoping fishing rod."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fishing.json
+msgid "telescoping fishing rod"
+msgid_plural "telescoping fishing rods"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "telescoping fishing rod"
+#: data/json/items/tool/fishing.json
+msgid "A commercial telescoping fishing rod, extended and ready for use."
+msgstr ""
+
+#. ~ "msg" action message of item "telescoping fishing rod"
+#: data/json/items/tool/fishing.json
+msgid "You retract your telescoping fishing rod."
+msgstr ""
+
+#. ~ Description of "plastic hand fishing reel"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A commercial hand fishing reel.  It is a short rod with a section on one end "
+"with fishing line wrapped around it, with a rotating guard around that.  It "
+"is not as effective as a normal fishing pole, but is much more compact."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/fishing.json
+msgid "wooden hand fishing reel"
+msgid_plural "wooden hand fishing reels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wooden hand fishing reel"
+#: data/json/items/tool/fishing.json
+msgid ""
+"A short wooden rod with a section on one end with fishing line wrapped around"
+" it, with a notch to put the string though to help pull in fish.  It is not "
+"as effective as a normal fishing pole, but is much more compact than them."
+msgstr ""
+
+#. ~ Description of "hand press"
+#: data/json/items/tool/handloading.json
+msgid ""
+"A small hand press for hand loading firearm ammunition.  It comes with "
+"everything you need to start hand loading your own munitions."
+msgstr ""
+
+#. ~ Description of "makeshift shotshell 'press'"
+#: data/json/items/tool/handloading.json
+msgid ""
+"A collection of items improvised for field reloading of shotshells.  A plank "
+"with a hole cut in the center, a medium-sized nail, and a whittled dowel are "
+"used to seat wads, decap primers, and (carefully!) reprime hulls.  Powder and"
+" shot are measured with a cut-down shotshell hull.  The opposite side of the "
+"plank has been shaped to allow for roll-crimping of the plastic hulls.  "
+"There's no provision for resizing, so reloaded hulls will fire best in the "
+"firearm they were fired from."
+msgstr ""
+
+#. ~ Description of "kinetic bullet puller"
+#: data/json/items/tool/handloading.json
+msgid "A tool used for properly disassembling firearm ammunition."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "internal gasoline tank"
+msgid_plural "internal gasoline tanks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "internal gasoline tank"
+#: data/json/items/tool/integrated.json
+msgid "The internal tank for a gasoline fuel cell bionic."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "internal ethanol tank"
+msgid_plural "internal ethanol tanks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "internal ethanol tank"
+#: data/json/items/tool/integrated.json
+msgid "The internal ethanol tank for an ethanol burner bionic."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "internal oil tank"
+msgid_plural "internal oil tanks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "internal oil tank"
+#: data/json/items/tool/integrated.json
+msgid "The internal oil tank for an oil generator bionic."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "internal battery compartment"
+msgid_plural "internal battery compartments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "internal battery compartment"
+#: data/json/items/tool/integrated.json
+msgid ""
+"The internal compartment for holding medium sized batteries, for a battery "
+"system bionic."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "integrated multitool"
+msgid_plural "integrated multitool"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "integrated multitool"
+#: data/json/items/tool/integrated.json
+msgid "Integrated bionic tools implanted in your fingers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "integrated welder"
+msgid_plural "integrated welder"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "integrated welder"
+#: data/json/items/tool/integrated.json
+msgid "Integrated bionic miniature welding tool implanted in your fingers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "integrated multimeter"
+msgid_plural "integrated multimeter"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "integrated multimeter"
+#: data/json/items/tool/integrated.json
+msgid "Integrated bionic multimeter implanted in your fingers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/integrated.json
+msgid "integrated soldering iron"
+msgid_plural "integrated soldering iron"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "integrated soldering iron"
+#: data/json/items/tool/integrated.json
+msgid "Integrated soldering iron and screwdriver set."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/knives.json
+msgid "small kitchen knife"
+msgid_plural "small kitchen knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "steak knife" of item "small kitchen knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A sharp knife designed for cutting meat.  It makes a poor melee weapon, but "
+"is decent at butchering corpses."
+msgstr ""
+
+#. ~ Description of variant "paring knife" of item "small kitchen knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A short-bladed knife with a sharp blade, made for fine controlled cuts to "
+"vegetables without using a cutting board."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/knives.json
+msgid "large kitchen knife"
+msgid_plural "large kitchen knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "chef knife" of item "large kitchen knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A long-bladed kitchen knife.  The blade is wider than the handle, giving room"
+" for the wielder's knuckles, and it has a characteristic curve for a fast "
+"rocking action for chopping vegetables.  It makes an acceptable melee weapon,"
+" but the wide blade is unwieldy for butchering."
+msgstr ""
+
+#. ~ Description of variant "carving knife" of item "large kitchen knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A long-bladed kitchen knife with a thin, slightly curved blade for deftly "
+"slicing meat either in flat sheets or around the bone.  It makes a decent "
+"melee weapon, and is excellent for butchery."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/knives.json
+msgid "huge kitchen knife"
+msgid_plural "huge kitchen knives"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "butcher knife" of item "huge kitchen knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A sharp, heavy knife.  It makes a good melee weapon, and is an ideal item for"
+" butchering corpses."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/knives.json
+msgid "cleaver"
+msgid_plural "cleavers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "meat cleaver" of item "cleaver"
+#: data/json/items/tool/knives.json
+msgid ""
+"A menacing-looking knife with a broad, square-shaped blade.  Its heft and "
+"sharpness would make it a very effective melee weapon and an excellent "
+"butchering tool."
+msgstr ""
+
+#. ~ Description of variant "vegetable cleaver" of item "cleaver"
+#: data/json/items/tool/knives.json
+msgid ""
+"A menacing-looking knife with a broad, square shaped blade, curved for fast "
+"vegetable chopping.  Its heft and sharpness make it a decent weapon as well, "
+"although not as good as a meat cleaver."
+msgstr ""
+
+#. ~ Description of "copper knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A knife made of crudely-worked copper with a simple handle.  Primitive, but a"
+" step above stone-age."
+msgstr ""
+
+#. ~ Description of "bronze knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A cast bronze knife with a full tang, with a handle wrapped in cord and "
+"leather, lovingly work-hardened and sharpened to a fine edge."
+msgstr ""
+
+#. ~ Description of "dive knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A short, sturdy knife with a serrated edge for cutting lines and straps, and "
+"a blunt tip for prying.  Used primarily by divers, this knife has been fitted"
+" with cork to slow its descent if dropped underwater, so it takes up more "
+"space than usual."
+msgstr ""
+
+#. ~ Description of "honey scraper"
+#: data/json/items/tool/knives.json
+msgid ""
+"A sharp, knife-like tool used for harvesting honey from beehives.  Makes a "
+"passable melee weapon."
+msgstr ""
+
+#. ~ Description of "pocket knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A small pocket knife.  It isn't great for combat, but it's better than "
+"nothing.  It's sharp enough to butcher with."
+msgstr ""
+
+#. ~ Description of "stone knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A sharpened stone set into a hollowed handle.  Not nearly as usable as a "
+"proper knife, but it's better than nothing."
+msgstr ""
+
+#. ~ Description of "boxcutter knife"
+#: data/json/items/tool/knives.json
+msgid ""
+"A small knife designed for opening boxes.  It could cause some damage, but it"
+" really should be used against inanimate objects.  It is too small to "
+"effectively butcher corpses with."
+msgstr ""
+
+#. ~ Description of "digging stick"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A large stick with the end carved into a broad blade for digging.  It could "
+"be used to dig shallow pits, but not deep ones."
+msgstr ""
+
+#. ~ Description of "hoe"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A farming implement.  You can use it to turn tillable land into a slow-to-"
+"cross pile of dirt, or dig a shallow pit."
+msgstr ""
+
+#. ~ Description of "bronze hoe"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A farming implement made from bronze.  The added heft and durability should "
+"let you till soil for farming more easily as well."
+msgstr ""
+
+#. ~ Description of "wooden shovel"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A crude shovel with a shovelhead made from wood, historically used as an "
+"alternative to metal shovels when metal was too expensive.  It works passably"
+" well, but really can't compare to a metal shovel."
+msgstr ""
+
+#. ~ Description of "scythe"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"An old-fashioned farming tool used to cut tall grass.  Despite being a giant "
+"blade on the end of a stick, it is incredibly awkward to use for anything but"
+" its intended purpose."
+msgstr ""
+
+#. ~ Description of "scythe"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A dull, cheaply-made replica of an old-fashioned farming tool used to cut "
+"tall grass."
+msgstr ""
+
+#. ~ Description of "grim reaper's scythe"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A long, crooked tool used to reap souls, with a skull engraved in its blade."
+"  Let the harvest begin."
+msgstr ""
+
+#. ~ Description of "shovel"
+#: data/json/items/tool/landscaping.json
+msgid "A digging tool.  Use it to dig pits adjacent to your location."
+msgstr ""
+
+#. ~ Description of "snow shovel"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A sturdy metal shovel used for picking up snow and moving it somewhere else."
+"  It was useful before the Cataclysm, but now it's useless."
+msgstr ""
+
+#. ~ Description of "plastic snow shovel"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A cheap plastic shovel used for picking up snow and moving it somewhere else."
+"  It was useful before the Cataclysm, but now it's useless."
+msgstr ""
+
+#. ~ Description of "stone sickle"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A primitive tool for cutting grass.  The sharp, crescent-shaped stone at the "
+"end of the handle is barely good enough for the job."
+msgstr ""
+
+#. ~ Description of "sickle"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"An old-fashioned farming tool for cutting tall grass.  Despite being a "
+"massive curved blade on a handle, it is incredibly awkward to use for "
+"anything but its intended purpose."
+msgstr ""
+
+#. ~ Description of "bronze sickle"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A handheld grass-cutting tool with a cast bronze blade, fastened to a wood "
+"handle wrapped with leather."
+msgstr ""
+
+#. ~ Description of "bill"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A long, slightly curved and hooked steel blade on the end of a sturdy shaft."
+"  Could be used to thoroughly ruin something's day, or cut branches and small"
+" trees."
+msgstr ""
+
+#. ~ Description of "bronze bill"
+#: data/json/items/tool/landscaping.json
+msgid ""
+"A long, slightly curved and hooked bronze blade on the end of a sturdy shaft."
+"  Could be used to thoroughly ruin something's day, or cut branches and small"
+" trees."
+msgstr ""
+
+#. ~ Description of "atomic lamp"
+#: data/json/items/tool/lighting.json
+msgid ""
+"Powered by the magic of nuclear decay and low-energy LEDs, this very "
+"expensive lamp will emit a small amount of light for at least a decade.  "
+"Before the Cataclysm, it was mostly an expensive way to show off your "
+"preparedness.  Now, it's actually really useful.  Use it to close the cover "
+"and hide the light."
+msgstr ""
+
+#. ~ Description of "atomic lamp (covered)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"Powered by the magic of nuclear decay and low-energy LEDs, this very "
+"expensive lamp will emit a small amount of light for at least a decade.  "
+"Before the Cataclysm, it was mostly an expensive way to show off your "
+"preparedness.  Now, it's actually really useful.  The cover is closed.  Use "
+"it to open the cover and show the light."
+msgstr ""
+
+#. ~ Description of "candle"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A thick wax candle.  It doesn't provide very much light, but it can burn for "
+"quite a long time.  You'll need a lighter or matches to light it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "burning candle"
+msgid_plural "burning candles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "burning candle"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A thick wax candle.  It doesn't provide very much light, but it can burn for "
+"quite a long time.  This candle is lit."
+msgstr ""
+
+#. ~ Description of "electric lantern (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A battery-powered lamp.  It does not provide much light, but it lasts a long "
+"time."
+msgstr ""
+
+#. ~ Description of "flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A typical household flashlight with a plastic handle, powered by batteries."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "mini diving flashlight (off)"
+msgid_plural "mini diving flashlights (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "mini diving flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small waterproof flashlight with an aluminum handle, powered by batteries."
+"  Can be attached to some diving masks and hoods."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "mini diving flashlight (on)"
+msgid_plural "mini diving flashlights (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "high-power mini diving flashlight (off)"
+msgid_plural "high-power mini diving flashlights (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high-power mini diving flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small waterproof high-power flashlight with an aluminum handle, powered by "
+"batteries.  Can be attached to some diving masks and hoods."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "high-power mini diving flashlight (on)"
+msgid_plural "high-power mini diving flashlights (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high-power mini diving flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A waterproof variable power flashlight with a plastic handle, powered by "
+"batteries.  Can be attached to some diving masks and hoods and onto a "
+"proprietary wrist mount."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "variable power diving flashlight (on, high)"
+msgid_plural "variable power mini diving flashlights (on, high)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "menu_text" action message of item "variable power diving flashlight (on,
+#. high)"
+#. ~ "menu_text" action message of item "variable power diving flashlight (on,
+#. medium)"
+#: data/json/items/tool/lighting.json
+msgid "Lower power"
+msgstr ""
+
+#. ~ "msg" action message of item "variable power diving flashlight (on, high)"
+#. ~ "msg" action message of item "variable power diving flashlight (on,
+#. medium)"
+#: data/json/items/tool/lighting.json
+msgid "You decrease power of the flashlight."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "variable power diving flashlight (on, medium)"
+msgid_plural "variable power mini diving flashlights (on, medium)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "variable power diving flashlight (on, low)"
+msgid_plural "variable power mini diving flashlights (on, low)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "gasoline lantern (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small gasoline-powered lantern.  It does not provide much light, but it "
+"lasts a long time.  Use it to turn it on."
+msgstr ""
+
+#. ~ Description of "gasoline lantern (on)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small gasoline-powered lantern.  It does not provide much light, but it "
+"lasts a long time.  It is turned on.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "glowstick"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small blue-light glowstick.  Use it to bend the plastic and break the glass"
+" cylinder inside to start the reaction.  It will produce a small amount of "
+"light."
+msgstr ""
+
+#. ~ Description of "dead glowstick"
+#: data/json/items/tool/lighting.json
+msgid "A spent glowstick.  It is essentially trash."
+msgstr ""
+
+#. ~ Description of "active glowstick"
+#: data/json/items/tool/lighting.json
+msgid ""
+"An active glowstick, currently producing light.  It will last for a few hours"
+" before burning out."
+msgstr ""
+
+#. ~ Description of "flare"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A slow-burning magnesium flare.  Use it to strike the striker and light it.  "
+"It will produce a bright light for about a half hour."
+msgstr ""
+
+#. ~ Description of "active flare"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A burning magnesium flare that is producing light.  It will last for about a "
+"half hour before burning out."
+msgstr ""
+
+#. ~ Description of "active flare"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A bright burning flare that is producing light.  It will last for about a "
+"minute before burning out."
+msgstr ""
+
+#. ~ Description of "heavy-duty flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A heavy-duty LED flashlight with a durable polymer housing.  It's impact-"
+"resistant, chemical-resistant, waterproof and certified for use in hazardous "
+"environments.  Designed for firefighters, rescue personnel and miners but it "
+"can also be used for smacking hooligans.  It has a spring-loaded clip that "
+"can be attached to your torso."
+msgstr ""
+
+#. ~ "need_charges_msg" action message of item "heavy-duty flashlight (off)"
+#: data/json/items/tool/lighting.json
+msgid "The heavy-duty flashlight's battery is dead."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "LED strip"
+msgid_plural "LED strips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ "msg" action message of item "LED strip"
+#: data/json/items/tool/lighting.json
+msgid "You turn off the LED strip."
+msgstr ""
+
+#. ~ Dying message of tool "LED strip"
+#: data/json/items/tool/lighting.json
+msgid "The LED strip fades away."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "LED strip (inactive)"
+msgid_plural "LED strips (inactive)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "LED strip (inactive)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"25 feet of colorful LED strip, that are often used as house lights or on some"
+" holidays."
+msgstr ""
+
+#. ~ "msg" action message of item "LED strip (inactive)"
+#: data/json/items/tool/lighting.json
+msgid "You turn on the LED strip."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "kerosene lamp (off)"
+msgid_plural "kerosene lamps (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "kerosene lamp (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A kerosene-fueled lamp.  It does not provide much light, but it lasts a long "
+"time.  Use it to turn it on."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "kerosene lamp"
+msgid_plural "kerosene lamps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "kerosene lamp"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A kerosene-fueled lamp.  It does not provide much light, but it lasts a long "
+"time.  It is turned on.  Use it to turn it off."
+msgstr ""
+
+#. ~ Description of "clay oil lamp (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A specialized small clay container with a wick, an ancient form of oil lamp."
+"  Unlike newer designs, it isn't windproof, so the flame is likely to be "
+"extinguished if exposed to wind; better use it indoors.  It does not provide "
+"much light, but it lasts a long time.  Use it to light it."
+msgstr ""
+
+#. ~ Description of "clay oil lamp"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A specialized small clay container with a wick, an ancient form of oil lamp."
+"  Unlike newer designs, it isn't windproof, so the flame is likely to be "
+"extinguished if exposed to wind; better use it indoors.  It does not provide "
+"much light, but lasts a long time.  It is lit, consuming oil and providing "
+"light.  Use it to extinguish the flame."
+msgstr ""
+
+#. ~ Description of "smart lamp (off)"
+#: data/json/items/tool/lighting.json
+msgid "A smart lamp that can be activated remotely."
+msgstr ""
+
+#. ~ Description of "smart lamp (on)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A smart lamp which can be deactivated remotely.  Currently it is turned on."
+msgstr ""
+
+#. ~ Description of "torch"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A large stick wrapped in rags that are soaked with flammable material.  When "
+"lit, it produces a fair amount of light.  You'll need a lighter or matches to"
+" light it."
+msgstr ""
+
+#. ~ Description of "torch"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A large stick wrapped in rags that are soaked with flammable material.  It is"
+" burning, producing plenty of light."
+msgstr ""
+
+#. ~ Description of "propane lantern (off)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small propane-powered lantern.  It does not provide much light, but it "
+"lasts a long time.  Use it to turn it on."
+msgstr ""
+
+#. ~ Description of "propane lantern (on)"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A small propane-powered lantern.  It does not provide much light, but it "
+"lasts a long time.  It is turned on.  Use it to turn it off."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "small candle"
+msgid_plural "small candles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small candle"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A thin wax candle.  It doesn't provide very much light and will burn "
+"relatively quickly.  You'll need a lighter or matches to light it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "burning small candle"
+msgid_plural "burning small candles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "burning small candle"
+#: data/json/items/tool/lighting.json
+msgid ""
+"A thin wax candle.  It doesn't provide very much light and will burn "
+"relatively quickly.  This candle is lit."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/lighting.json
+msgid "menorah"
+msgid_plural "menorahs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "menorah"
+#: data/json/items/tool/lighting.json
+msgid ""
+"An eight-branched candelabra more properly called a 'hanukkiah', the menorah "
+"is used to celebrate the Jewish festival of Hanukkah."
+msgstr ""
+
+#. ~ Description of "masonry saw (off)"
+#: data/json/items/tool/masonry.json
+msgid ""
+"A construction tool for cutting through concrete or other surfaces.  It runs "
+"on gasoline.  Using this item will cause it to turn on, turning it into a "
+"very powerful but unwieldy melee weapon or a terrible chainsaw."
+msgstr ""
+
+#. ~ value of variable 'success_message' in effect in EoC
+#. "EOC_toolweapon_activate__masonrysaw" in use action of item "masonry saw
+#. (off)"
+#: data/json/items/tool/masonry.json
+msgid "With a roar, the <npc_name> screams to life!"
+msgstr ""
+
+#. ~ value of variable 'sound_message' in effect in EoC
+#. "EOC_toolweapon_running__masonrysaw" in use action of item "masonry saw
+#. (on)"
+#: data/json/items/tool/masonry.json
+msgid "Your masonry saw buzzes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/masonry.json
+msgid "electric masonry saw (off)"
+msgid_plural "electric masonry saws (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "electric masonry saw (off)"
+#: data/json/items/tool/masonry.json
+msgid ""
+"A construction tool for cutting through concrete or other surfaces.  It uses "
+"electric motor with integrated battery and is compatible with a UPS.  Using "
+"this item will cause it to turn on, turning it into a very powerful but "
+"unwieldy melee weapon or a terrible chainsaw."
+msgstr ""
+
+#. ~ "msg" action message of item "electric masonry saw (off)"
+#: data/json/items/tool/masonry.json
+msgid "You turn on the masonry saw."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/masonry.json
+msgid "electric masonry saw (on)"
+msgid_plural "electric masonry saws (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "electric masonry saw (on)"
+#: data/json/items/tool/masonry.json
+msgid ""
+"This electric masonry saw is on and making a lot of noise.  Use it to turn it"
+" off."
+msgstr ""
+
+#. ~ value of variable 'sound_message' in effect in EoC
+#. "EOC_toolweapon_running__electric_masonrysaw" in use action of item
+#. "electric masonry saw (on)"
+#: data/json/items/tool/masonry.json
+msgid "Your electric masonry saw buzzes."
+msgstr ""
+
+#. ~ Description of "grinder blade"
+#: data/json/items/tool/masonry.json
+msgid ""
+"A 125 mm angle grinder blade.  You could make a power tool with it, or throw "
+"it.  Wielding it without sturdy gloves is a bad idea."
+msgstr ""
+
+#. ~ Description of "adhesive bandage"
+#: data/json/items/tool/med.json
+msgid ""
+"A small medical dressing made of a piece of sterile cloth and sticky tape, "
+"used for small injuries not serious enough to require a full-size bandage."
+msgstr ""
+
+#. ~ Description of "bandage"
+#: data/json/items/tool/med.json
+msgid ""
+"A sterile cloth bandage.  Used for stopping blood loss and protecting wounds "
+"from aggravation to help them heal faster."
+msgstr ""
+
+#. ~ Description of "makeshift bandage"
+#: data/json/items/tool/med.json
+msgid ""
+"A reasonably clean piece of cloth wrapped for use as a simple bandage.  "
+"Better than nothing."
+msgstr ""
+
+#. ~ Description of "bleached makeshift bandage"
+#: data/json/items/tool/med.json
+msgid ""
+"A piece of cloth treated with a bleach solution to sterilize it for use as a "
+"bandage."
+msgstr ""
+
+#. ~ Description of "boiled makeshift bandage"
+#: data/json/items/tool/med.json
+msgid "A piece of cloth boiled in water to sterilize it for use as a bandage."
+msgstr ""
+
+#. ~ Description of "cotton balls"
+#: data/json/items/tool/med.json
+msgid ""
+"Fluffy balls of clean, white cotton.  They can serve as makeshift bandages in"
+" an emergency."
+msgstr ""
+
+#. ~ Description of "antiseptic soaked cotton balls"
+#: data/json/items/tool/med.json
+msgid ""
+"Fluffy balls of clean white cotton.  Now that they've been soaked with "
+"antiseptic, they are somewhat useful to disinfect a wound."
+msgstr ""
+
+#. ~ Description of "inhaler"
+#: data/json/items/tool/med.json
+msgid ""
+"An albuterol inhaler.  Used in the treatment of bronchospasm, it is a "
+"lifeline for people with asthma.  A mild stimulant, it may cause anxiety or "
+"tremors."
+msgstr ""
+
+#. ~ Description of "medical gauze"
+#: data/json/items/tool/med.json
+msgid ""
+"A decent-sized piece of cotton, sterilized and sealed.  It's designed for "
+"medical purposes."
+msgstr ""
+
+#. ~ Description of "spray bottle of liquid bandage"
+#: data/json/items/tool/med.json
+msgid ""
+"Liquid bandage for minor cuts and scrapes, packaged in a tiny bottle with an "
+"atomizer spray for convenient application."
+msgstr ""
+
+#. ~ Description of "RX12 jet injector"
+#: data/json/items/tool/med.json
+msgid ""
+"A Rivtech RX12 jet injector, a small pistol-shaped device used to inject "
+"advanced fast-healing chemicals through the skin without using a needle.  A "
+"label on the side warns against using more than two doses per hour."
+msgstr ""
+
+#. ~ Description of "scalpel"
+#: data/json/items/tool/med.json
+msgid ""
+"A very sharp knife designed for surgical cutting.  Its small, sharp blade "
+"allows for precision strikes in the hands of the skilled."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "small oxygen delivery kit"
+msgid_plural "small oxygen delivery kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small oxygen delivery kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A small tank of compressed medical oxygen with a folding regulator and mask."
+"  Commonly used in emergency situations, it provides immediate relief for "
+"asthma attacks or smoke inhalation, and can provide a brief burst of energy."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "oxygen delivery kit"
+msgid_plural "oxygen delivery kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "oxygen delivery kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A tank of compressed medical oxygen with a regulator and mask.  Commonly used"
+" in emergency situations, it provides immediate relief for asthma attacks or "
+"smoke inhalation, and can provide a brief burst of energy."
+msgstr ""
+
+#. ~ Description of "blood draw kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A kit for drawing blood, including a test tube for holding the sample.  Use "
+"this tool to draw blood, either from yourself or from a corpse you are "
+"standing on."
+msgstr ""
+
+#. ~ Description of "wrapped radiation badge"
+#: data/json/items/tool/med.json
+msgid ""
+"A badge that detects radiation dosage, sealed in a radiation-blocking bag.  "
+"Use it to remove it from the bag."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "pair of medical scissors"
+msgid_plural "pairs of medical scissors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of medical scissors"
+#: data/json/items/tool/med.json
+msgid ""
+"A pair of medical scissors, typically used by nurses or paramedics to cut "
+"bandages or fabric."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "small saline infusion kit"
+msgid_plural "small saline infusion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A small, sealed plastic bag for liquids used in intravenous therapy, with "
+"rubber tube and cannula - all you need to perform an infusion.  Holds 250 mL "
+"of completely sterile saline, therefore it is safe to put it inside your "
+"veins, if you know how."
+msgstr ""
+
+#. ~ "description" action message of item "small saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"You can use it to mitigate the consequences of blood loss.  Require health "
+"care 3 and some disinfectant."
+msgstr ""
+
+#. ~ "menu_text" action message of item "small saline infusion kit"
+#. ~ "menu_text" action message of item "medium saline infusion kit"
+#. ~ "menu_text" action message of item "large saline infusion kit"
+#. ~ "menu_text" action message of item "huge saline infusion kit"
+#: data/json/items/tool/med.json
+msgid "Infuse saline"
+msgstr ""
+
+#. ~ Player message in false effect in EoC "SALINE_INFUSION_250" in use action
+#. of item "small saline infusion kit"
+#. ~ Player message in false effect in EoC "SALINE_INFUSION_500" in use action
+#. of item "medium saline infusion kit"
+#. ~ Player message in false effect in EoC "SALINE_INFUSION_1000" in use action
+#. of item "large saline infusion kit"
+#. ~ Player message in false effect in EoC "SALINE_INFUSION_2000" in use action
+#. of item "huge saline infusion kit"
+#: data/json/items/tool/med.json
+msgid "You don't actually know how to use it properly."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "medium saline infusion kit"
+msgid_plural "medium saline infusion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "medium saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A sealed plastic bag for liquids used in intravenous therapy, with rubber "
+"tube and cannula - all you need to perform an infusion.  Holds 500 mL of "
+"completely sterile saline, therefore it is safe to put it inside your veins, "
+"if you know how."
+msgstr ""
+
+#. ~ "description" action message of item "medium saline infusion kit"
+#. ~ "description" action message of item "large saline infusion kit"
+#. ~ "description" action message of item "huge saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"You can use it to mitigate the consequences of blood loss.  Require health "
+"care 4."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "large saline infusion kit"
+msgid_plural "large saline infusion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A large, sealed plastic bag for liquids used in intravenous therapy, with "
+"rubber tube and cannula - all you need to perform an infusion.  Holds a liter"
+" of completely sterile saline, therefore it is safe to put it inside your "
+"veins, if you know how."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "huge saline infusion kit"
+msgid_plural "huge saline infusion kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "huge saline infusion kit"
+#: data/json/items/tool/med.json
+msgid ""
+"A huge, sealed plastic bag for liquids used in intravenous therapy, with "
+"rubber tube and cannula - all you need to perform an infusion.  Holds two "
+"liters of completely sterile saline, therefore it is safe to put it inside "
+"your veins, if you know how."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/med.json
+msgid "dental tool set"
+msgid_plural "dental tool sets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "dental tool set"
+#: data/json/items/tool/med.json
+msgid "A set of picks, hooks, and scrapers designed for cleaning teeth."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "crude bronze nail"
+msgid_plural "crude bronze nails"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crude bronze nail"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A crude bronze nail.  Probably not useful for many things due to its size and"
+" shape."
+msgstr ""
+
+#. ~ Description of "anvil"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A heavy block of oddly-shaped steel complete with a pritchel hole and hardy "
+"hole.  Once installed, it can be used in most metalworking fabrication "
+"recipes."
+msgstr ""
+
+#. ~ Description of "bronze anvil"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A block of oddly-shaped bronze complete with a pritchel hole and hardy hole."
+"  Once installed, it can be used in most metalworking fabrication recipes."
+msgstr ""
+
+#. ~ Description of "heavy anvil"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"An absolutely enormous block of oddly-shaped steel with all the bells and "
+"whistles a blacksmith could ask for on an anvil.  Necessary for heavy-duty "
+"metalworking or dropping on roadrunners."
+msgstr ""
+
+#. ~ Description of "small anvil"
+#: data/json/items/tool/metalworking.json
+msgid "A proper, albeit small, anvil.  Pretty handy."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "scavenger's anvil"
+msgid_plural "scavenger's anvils"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "scavenger's anvil"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A portion of heavy steel machinery that has been smoothed and shaped to form "
+"a very adequate anvil."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "makeshift stump anvil"
+msgid_plural "makeshift stump anvils"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "makeshift stump anvil"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A heavy, thick log to which several flat steel bits have been bolted to serve"
+" as an anvil.  Not sufficient for detailed nor heavy work."
+msgstr ""
+
+#. ~ Description of "pair of bolt cutters"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A large pair of bolt cutters.  You could use them to cut padlocks or heavy "
+"gauge wire."
+msgstr ""
+
+#. ~ Description of "charcoal forge"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A portable, charcoal-fired metalworking forge.  With the right tools, you "
+"could use this for metalworking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "portable charcoal kiln"
+msgid_plural "portable charcoal kilns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "portable charcoal kiln"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A somewhat portable drum kiln to produce charcoal via pyrolysis: the "
+"incomplete burning of organic materials in the absence of oxygen.  Needs to "
+"be deployed before use."
+msgstr ""
+
+#. ~ Description of "metalworking chisel"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A short, stout metalworking chisel.  It's used in some metalworking "
+"fabrication recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "bronze chisel"
+msgid_plural "bronze chisels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bronze chisel"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A short, stout metalworking chisel made of bronze.  It's used in some "
+"metalworking fabrication recipes.  Bronze chisels spark less than their steel"
+" counterparts, but are less durable."
+msgstr ""
+
+#. ~ Description of "crucible"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A small metalworking crucible.  Looks like a stout drink tumbler.  It's used "
+"in some metalworking fabrication recipes."
+msgstr ""
+
+#. ~ Description of "clay crucible"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A primitive metalworking crucible made of clay.  Looks like a stout drink "
+"tumbler.  You could use it for metalworking."
+msgstr ""
+
+#. ~ Description of "electric forge"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"An electric metalworking forge, powered by your electric grid.  With the "
+"right tools, you could use this for metalworking."
+msgstr ""
+
+#. ~ Description of "chainmail sheet"
+#. ~ Description of "mild steel chainmail sheet"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A sheet of riveted chainmail.  With some skill, several of these sheets could"
+" be connected to make effective armor."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "mild steel chainmail sheet"
+msgid_plural "mild steel chainmail sheets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "swage and die set"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A set of swages and dies for metalsmithing.  These loops and metal blocks are"
+" used in some metalworking fabrication recipes."
+msgstr ""
+
+#. ~ Description of "hotcut"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A hardened chisel-like object for metalsmithing.  It's used to cut lengths of"
+" metal in some metalworking fabrication recipes."
+msgstr ""
+
+#. ~ Description of "drift"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A hardened spike-like object for metalsmithing.  It's used to make holes in "
+"metal in some metalworking fabrication recipes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "pair of kitchen tongs"
+msgid_plural "pairs of kitchen tongs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of kitchen tongs"
+#: data/json/items/tool/metalworking.json
+msgid "A pair of long, metal tongs.  They are commonly used for cooking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "pair of flatjaw bronze tongs"
+msgid_plural "pairs of flatjaw bronze tongs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pair of flatjaw tongs"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A pair of flatjaw tongs.  They are commonly used for metalworking, "
+"fabrication, or forging recipes."
+msgstr ""
+
+#. ~ Description of "sandleather"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A patch of leather paired with a handful of sand.  Works as a substitute for "
+"sandpaper."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "small sandcasting mold"
+msgid_plural "small sandcasting molds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "small sandcasting mold"
+#: data/json/items/tool/metalworking.json
+msgid "A small mold for casting molten metals into different shapes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "large sandcasting mold"
+msgid_plural "large sandcasting molds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "large sandcasting mold"
+#: data/json/items/tool/metalworking.json
+msgid "A large mold for casting molten metals into different shapes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "long sandcasting mold"
+msgid_plural "long sandcasting molds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "long sandcasting mold"
+#: data/json/items/tool/metalworking.json
+msgid "A large, long, mold for casting molten metals into different shapes."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/metalworking.json
+msgid "sandcasting mold"
+msgid_plural "sandcasting molds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "sandcasting mold"
+#: data/json/items/tool/metalworking.json
+msgid "A medium mold for casting molten metals into different shapes."
+msgstr ""
+
+#. ~ Description of "polishing stone"
+#: data/json/items/tool/metalworking.json
+msgid "A large natural stone with a flat surface to grind against."
+msgstr ""
+
+#. ~ Description of "gas forge"
+#: data/json/items/tool/metalworking.json
+msgid ""
+"A gas-fueled metalworking forge.  With the right tools, you could use this "
+"for metalworking."
+msgstr ""
+
+#. ~ Description of "compressed air horn"
+#: data/json/items/tool/misc.json
+msgid ""
+"A small can of compressed air attached to a plastic horn.  Pressing the "
+"button on top causes it to emit a loud honking sound."
+msgstr ""
+
+#. ~ Description of "can of butane"
+#: data/json/items/tool/misc.json
+msgid ""
+"A non-refillable can of butane with an adapter for refilling lighters.  It "
+"could be useful as a fuel, but also as a solvent or chemical reagent."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/misc.json
+msgid "notched plank"
+msgid_plural "notched planks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "notched plank"
+#: data/json/items/tool/misc.json
+msgid ""
+"A quarter of a wooden plank with notches cut into it, used with a fire drill "
+"to create embers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/misc.json
+msgid "notched stick"
+msgid_plural "notched sticks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "notched stick"
+#: data/json/items/tool/misc.json
+msgid ""
+"A wooden stick with notches cut into it, used with a fire drill to create "
+"embers."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/misc.json
+msgid "clay urn"
+msgid_plural "clay urns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "clay urn"
+#: data/json/items/tool/misc.json
+msgid "A clay container for storing cremated ashes."
+msgstr ""
+
+#. ~ Description of "cow bell"
+#: data/json/items/tool/misc.json
+msgid "A cow bell.  You feel like you need more of it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/misc.json
+msgid "crystal urn"
+msgid_plural "crystal urns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "crystal urn"
+#: data/json/items/tool/misc.json
+msgid ""
+"An exquisite, translucent container for cremated ashes, decorated with floral"
+" patterns."
+msgstr ""
+
+#. ~ Description of "entrenching tool"
+#: data/json/items/tool/misc.json
+msgid ""
+"A stout, collapsible spade.  It's commonly used by military forces and "
+"favored by hikers for digging."
+msgstr ""
+
+#. ~ Description of "etched human skull"
+#: data/json/items/tool/misc.json
+msgid "A human skull covered with strange etchings."
+msgstr ""

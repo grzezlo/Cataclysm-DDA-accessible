@@ -1,0 +1,1915 @@
+# Batch 53 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of "bear trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A spring-loaded pair of steel jaws connected to a sensitive pressure plate.  "
+"Use it to set it on the ground, creating a trap that will ensnare and damage "
+"anything that steps on it.  If you are carrying a shovel, you will have the "
+"option of burying it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/traps.json
+msgid "light snare kit"
+msgid_plural "light snare kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "light snare kit"
+#: data/json/items/tool/traps.json
+msgid ""
+"A simple loop snare, comprising a carefully wound loop of string, two anchor "
+"points, and a tool to hammer them in.  It is suitable for immobilizing only "
+"small animals.  It has no means of harming its target, as live meat lasts "
+"longer."
+msgstr ""
+
+#. ~ Description of "blade trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A machete attached laterally to a motor, with a tripwire controlling its "
+"throttle.  When the tripwire is pulled, the blade is swung around with great "
+"force.  The trap forms a 3x3 area of effect."
+msgstr ""
+
+#. ~ "done_message" action message of item "blade trap"
+#: data/json/items/tool/traps.json
+msgid "You set the blade trap 2 squares away."
+msgstr ""
+
+#. ~ Description of "nailboard trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"Several pieces of wood nailed together, with some nails sticking straight up."
+"  If an unsuspecting victim steps on it, they'll get nails through the foot."
+msgstr ""
+
+#. ~ Description of "booby trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A crude explosive device triggered by a piece of string.  Use it to set it up"
+" and wait for some poor bastard to trigger it."
+msgstr ""
+
+#. ~ Description of "bubble wrap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A sheet of plastic covered with air-filled bubbles.  Use it to set it on the "
+"ground, creating a trap that will warn you with noise when something steps on"
+" it."
+msgstr ""
+
+#. ~ Description of "loose caltrops"
+#: data/json/items/tool/traps.json
+msgid ""
+"A handful of small metal objects covered with many sharp points.  If an "
+"unsuspecting victim steps on one, they'll get a spine through the foot."
+msgstr ""
+
+#. ~ Description of "loose glass caltrops"
+#: data/json/items/tool/traps.json
+msgid ""
+"A handful of glass shards glued together to expose all their sharp edges.  If"
+" an unsuspecting victim steps on one, they'll get cut."
+msgstr ""
+
+#. ~ Description of "crossbow trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A simple tripwire attached to the trigger of a loaded crossbow.  When the "
+"tripwire is pulled, the crossbow fires.  Only a single bolt can be used, "
+"after which the trap is disabled."
+msgstr ""
+
+#. ~ Description of "land mine"
+#: data/json/items/tool/traps.json
+msgid ""
+"A military anti-personnel fragmentation mine that is triggered when stepped "
+"on."
+msgstr ""
+
+#. ~ Description of "shotgun trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A simple tripwire attached to the trigger of a loaded double slam-fire "
+"shotgun.  When the tripwire is pulled, the shotgun fires.  Two shells are "
+"loaded; the first time the trigger is pulled, one or both shells may be "
+"discharged."
+msgstr ""
+
+#. ~ Description of "tripwire trap"
+#: data/json/items/tool/traps.json
+msgid ""
+"A length of thin string with some affixing tools on either end.  It must be "
+"placed across a doorway or other thin passage to function.  Its purpose is to"
+" trip up trespassers, causing them to stumble and possibly hurt themselves "
+"slightly."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/traps.json
+msgid "loose teeth caltrops"
+msgid_plural "loose teeth caltrops"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "loose teeth caltrops"
+#: data/json/items/tool/traps.json
+msgid ""
+"A handful of small impossibly-sharp teeth glued together.  If an unsuspecting"
+" victim steps on one, they'll get a tooth through the foot."
+msgstr ""
+
+#. ~ "done_message" action message of item "loose teeth caltrops"
+#: data/json/items/tool/traps.json
+#, c-format
+msgid "You scatter the teeth caltrops on the %s."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/unfoldable.json
+msgid "folded Bicycle"
+msgid_plural "folded Bicycles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "folded Bicycle"
+#: data/json/items/tool/unfoldable.json
+msgid "A folded Bicycle."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/unfoldable.json
+msgid "folded wheelchair"
+msgid_plural "folded wheelchairs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "folded wheelchair"
+#: data/json/items/tool/unfoldable.json
+msgid "A folded Wheelchair."
+msgstr ""
+
+#. ~ Description of "inflatable boat"
+#: data/json/items/tool/unfoldable.json
+msgid ""
+"This rubber rowboat (with oars included) is deflated for storage.  Activate "
+"it with an air pump in your inventory to inflate and launch it."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/unfoldable.json
+msgid "skateboard"
+msgid_plural "skateboards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skateboard"
+#: data/json/items/tool/unfoldable.json
+msgid "A skateboard."
+msgstr ""
+
+#. ~ Description of "wood axe"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A large, two-handed wood axe.  It makes a good melee weapon, but is a bit "
+"slow to recover between swings."
+msgstr ""
+
+#. ~ Description of "bow saw"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A saw that is more at home outdoors than inside.  It's used for trimming "
+"trees, pruning, and cutting firewood, but may be used for other rough cuts as"
+" well."
+msgstr ""
+
+#. ~ Description of "chainsaw (off)"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A treecutting tool moonlighting as a weapon of opportunity.  If loaded with "
+"gas, using this item will turn it on, turning it into a very powerful but "
+"unwieldy melee weapon."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/woodworking.json
+msgid "pole saw (off)"
+msgid_plural "pole saws (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pole saw (off)"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A lumbering tool intended for trimming hedges and tree branches at a "
+"distance.  If loaded with gas, using this item will cause it to turn on, "
+"making it into an unwieldy polearm."
+msgstr ""
+
+#. ~ value of variable 'success_message' in effect in EoC
+#. "EOC_toolweapon_activate__polesaw" in use action of item "pole saw (off)"
+#: data/json/items/tool/woodworking.json
+msgid "With a roar, the pole saw screams to life!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/woodworking.json
+msgid "pole saw (on)"
+msgid_plural "pole saws (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pole saw (on)"
+#: data/json/items/tool/woodworking.json
+msgid "This pole saw is on and making a lot of noise.  Use it to turn it off."
+msgstr ""
+
+#. ~ value of variable 'sound_message' in effect in EoC
+#. "EOC_toolweapon_running__polesaw" in use action of item "pole saw (on)"
+#: data/json/items/tool/woodworking.json
+msgid "Your pole saw rumbles."
+msgstr ""
+
+#. ~ Description of "circular saw (off)"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A lightweight, handheld cordless circular saw.  Spins a circular blade fast "
+"enough to cut wood, zombies, or in an emergency, pizza.  The blade, while "
+"effective in combat, is hard to hit with due to its small size."
+msgstr ""
+
+#. ~ value of variable 'success_message' in effect in EoC
+#. "EOC_toolweapon_activate__circsaw" in use action of item "circular saw
+#. (off)"
+#: data/json/items/tool/woodworking.json
+msgid "With a loud buzz, the <npc_name> roars to life!"
+msgstr ""
+
+#. ~ Description of "circular saw (on)"
+#. ~ Description of "chainsaw spear (on)"
+#: data/json/items/tool/woodworking.json
+#: data/mods/Xedra_Evolved/items/inventor/melee.json
+msgid ""
+"A lightweight, handheld cordless circular saw.  It is currently on and the "
+"blade is spinning; use this item to turn it off."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/woodworking.json
+msgid "copper hatchet"
+msgid_plural "copper hatchets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "copper hatchet"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A primitive axe made from a small wedge of copper affixed to a short haft."
+msgstr ""
+
+#. ~ Description of "bronze axe"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A socketed bronze axe with a work-hardened edge, tightly bound to the shaft "
+"with cords."
+msgstr ""
+
+#. ~ Description of "hatchet"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A one-handed hatchet.  Makes a great melee weapon, and is useful both for "
+"chopping things and hammering them."
+msgstr ""
+
+#. ~ Description of "electric chainsaw (off)"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A treecutting tool moonlighting as a weapon of opportunity.  If loaded with "
+"batteries, using this item will turn it on, turning it into a very powerful "
+"but unwieldy melee weapon."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/woodworking.json
+msgid "corded electric chainsaw (off)"
+msgid_plural "corded electric chainsaws (off)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "corded electric chainsaw (off)"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A treecutting tool moonlighting as a weapon of opportunity.  It has a short "
+"electric cord, which you can connect to the generator or your home grid.  "
+"Extension cord not included."
+msgstr ""
+
+#. ~ value of variable 'success_message' in effect in EoC
+#. "EOC_toolweapon_activate__elec_chainsaw_cord" in use action of item "corded
+#. electric chainsaw (off)"
+#: data/json/items/tool/woodworking.json
+msgid "With a roar, the corded electric chainsaw screams to life!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/woodworking.json
+msgid "corded electric chainsaw (on)"
+msgid_plural "corded electric chainsaws (on)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ value of variable 'sound_message' in effect in EoC
+#. "EOC_toolweapon_running__elec_chainsaw_cord" in use action of item "corded
+#. electric chainsaw (on)"
+#: data/json/items/tool/woodworking.json
+msgid "Your corded electric chainsaw rumbles."
+msgstr ""
+
+#. ~ Description of "stone axe head"
+#: data/json/items/tool/woodworking.json
+msgid "A broad piece of stone with an edge narrow enough to roughly chop wood."
+msgstr ""
+
+#. ~ Description of "metal axe head"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A chunk of steel with one edge hammered down to something resembling a "
+"cutting edge.  It works passably well, but really can't compare to a proper "
+"axe."
+msgstr ""
+
+#. ~ Description of "stone adze"
+#: data/json/items/tool/woodworking.json
+msgid "A stone adze, a primitive tool for smoothing or scraping wood objects."
+msgstr ""
+
+#. ~ Description of "stone axe"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A stone with a narrow edge affixed to a stick.  It can chop wood, but "
+"requires much more effort than a modern axe."
+msgstr ""
+
+#. ~ Description of "wood saw"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A thin saw, useful for cutting through wood objects.  Activate it to turn "
+"pre-cut logs into planks."
+msgstr ""
+
+#. ~ Description of "stone chisel"
+#: data/json/items/tool/woodworking.json
+msgid ""
+"A short, primitive chisel made from hard stone, usually used for primitive "
+"woodworking."
+msgstr ""
+
+#. ~ Description of "pallet of dry adobe bricks"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A pallet of humble mud bricks that have dried for a week while you were out "
+"risking your life.  Disassemble it to retrieve your frame and building "
+"supplies."
+msgstr ""
+
+#. ~ Description of "acetylene-gas machine"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A bulky device that turns water and calcium carbide into unpressurized "
+"acetylene."
+msgstr ""
+
+#. ~ Description of "angle grinder"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A widespread power tool, often used for removing excess material or polishing"
+" surfaces."
+msgstr ""
+
+#. ~ Description of "cutoff disc"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A manufactured disc for an angle grinder, with a thin, abrasive edge designed"
+" for cutting metal."
+msgstr ""
+
+#. ~ Description of "metal grinding disc"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A manufactured disc for an angle grinder, with a thick, abrasive surface "
+"designed for grinding and shaping metal."
+msgstr ""
+
+#. ~ Description of "brick kiln"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A portable coal-or-charcoal-fired kiln.  It is designed for firing bricks, "
+"but you could use it to fire anything made of clay."
+msgstr ""
+
+#. ~ Description of "makeshift vacuum mold"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A homemade vacuum-forming machine with an air pump.  It's used for creating "
+"plastic molds."
+msgstr ""
+
+#. ~ Description of "vacuum molder"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A vacuum-forming machine with an air pump.  It's used for creating plastic "
+"molds."
+msgstr ""
+
+#. ~ Description of "clamp"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A metal clamp, useful for holding things in place, especially if you have "
+"several of them."
+msgstr ""
+
+#. ~ Description of "claw bar"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A small prying tool with a clawed bend at one end for pulling spikes.  Use it"
+" to open locked doors without destroying them or to lift manhole covers.  You"
+" could also wield it to bash some heads in."
+msgstr ""
+
+#. ~ Description of "concrete mixer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A portable concrete mixer.  It is large and heavy, but it can be operated "
+"solo.  Unfold to use."
+msgstr ""
+
+#. ~ Description of "cordless drill"
+#: data/json/items/tool/workshop.json
+msgid "A cordless battery-powered drill with a selection of drill bits."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "power drill"
+msgid_plural "power drills"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "power drill"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A black power drill with a selection of bits.  Uses a power cord, so it will "
+"have to be plugged into a power grid or vehicle to function."
+msgstr ""
+
+#. ~ Description of "cordless impact wrench"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A cordless battery-powered impact wrench, designed to deliver high torque via"
+" an internal rotating hammer.  It comes with a standard set of sockets, and "
+"makes a loud ratcheting sound when it operates.  You could use it to turn "
+"large bolts or change a vehicle wheel."
+msgstr ""
+
+#. ~ Description of "electric jackhammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A construction tool for drilling through hard rock or other surfaces.  It "
+"runs on a cell compatible with a UPS.  Use it to blast a hole in adjacent "
+"solid terrain."
+msgstr ""
+
+#. ~ Description of "hacksaw"
+#: data/json/items/tool/workshop.json
+msgid "A sturdy saw, useful for cutting through metal objects."
+msgstr ""
+
+#. ~ Description of "tin snips"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A pair of tin snips, resembling a sturdy pair of scissors with beefy blades "
+"designed to cut through thin sheets of soft metal.  These cannot cut through "
+"thick metals like a hacksaw can, but are better suited to precision work and "
+"leave a cleaner edge."
+msgstr ""
+
+#. ~ Description of "hammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A demagnetized steel claw hammer with a wooden grip.  With a hammer, nails, "
+"and planks in your inventory, you could board up adjacent doors and windows."
+"  It has myriad other uses as well."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bronze hammer"
+msgid_plural "bronze hammers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bronze hammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A simple crude bronze hammer.  It is not as sophisticated or useful as its "
+"steel alternative but it does get the job of hammering in nails well enough."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bronze nail puller"
+msgid_plural "bronze nail pullers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bronze nail puller"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A crude nail puller made of bronze.  Not really as good as its steel "
+"alternative but it gets job of pulling out nails good enough."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bronze wood saw"
+msgid_plural "bronze wood saws"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bronze wood saw"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A simple wood saw made of bronze.  Not as great as its steel equivalent, but "
+"it's good enough."
+msgstr ""
+
+#. ~ Description of "hand drill"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A primitive manual drill with a single drill bit.  It is slow to use, and "
+"will exhaust you quickly."
+msgstr ""
+
+#. ~ Description of "rubber hose"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A flexible rubber hose.  It could be used for crafting or siphoning fuel from"
+" a vehicle."
+msgstr ""
+
+#. ~ Description of "makeshift jack"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A poorly-constructed improvised scissor jack used for lifting vehicles if "
+"you're brave enough to use it."
+msgstr ""
+
+#. ~ Description of "jackhammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A construction tool for drilling through hard rock or other surfaces.  It "
+"runs on gasoline.  Use it (if loaded) to blast a hole in adjacent solid "
+"terrain."
+msgstr ""
+
+#. ~ Description of "electric kiln"
+#: data/json/items/tool/workshop.json
+msgid ""
+"An electric kiln, powered by your electric grid.  It is designed for firing "
+"bricks, but you could use it to fire anything made of clay.  With a little "
+"mechanical know-how, you could probably even convert it to run directly off a"
+" vehicle's power system."
+msgstr ""
+
+#. ~ Description of "gunsmith repair kit"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A complete tool kit made to repair damaged firearms.  Powered by standard "
+"batteries, it is a vital tool for long-term firearms maintenance.  It "
+"requires 1 charge of battery power per use."
+msgstr ""
+
+#. ~ Description of "makeshift hammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A crude hammer made from a piece of metal affixed to a stick.  It functions "
+"adequately, but really can't compare to a proper hammer."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bronze fileset"
+msgid_plural "bronze filesets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "metal fileset"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A set of tools commonly used to remove small amounts of material from the "
+"surface of metal objects."
+msgstr ""
+
+#. ~ Description of "metallic smoother"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A tool that is most often used to smooth concrete or mortar in construction "
+"projects."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "miscellaneous repair kit"
+msgid_plural "miscellaneous repair kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "miscellaneous repair kit"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A portable tool kit consisting of a small craft knife for precise carving of "
+"replacement parts from raw materials, a wood saw for more heavy-duty wood "
+"cutting, and a patch of soft material for cleaning surfaces.  If supplied "
+"with duct tape, it can be used to repair certain items."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "camping multitool"
+msgid_plural "camping multitools"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "camping multitool"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A 'Hideman' brand multi-tool.  This model includes extra options for outdoors"
+" use such as a firestarting rod, awl, rescue whistle and a hammering surface."
+msgstr ""
+
+#. ~ Description of "acetylene torch"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A compact tool kit intended for welding and cutting metal, this portable "
+"oxygen-acetylene torch includes a torch handle and cutting attachment in an "
+"easy-to-carry tote.  It needs to be connected to a pressurized cylinder of an"
+" appropriate welding gas before use.  In addition to its metalworking uses, "
+"you can activate it in order to destroy metal barriers."
+msgstr ""
+
+#. ~ Description of "pickaxe"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A large steel pickaxe, suitable for breaking up hard things or (with enough "
+"skill) hard targets.  Strike the earth!"
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bronze pickaxe"
+msgid_plural "bronze pickaxes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bronze pickaxe"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A heavy-headed cast and worked tool with a pointed wedge on one side for "
+"breaking stone and a flat wedge on the other for prying it out.  You could "
+"mine with this."
+msgstr ""
+
+#. ~ Description of "pliers"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A basic pair of slip-joint pliers, able to handle basic mechanical work.  "
+"Anything more complex will require a wrench."
+msgstr ""
+
+#. ~ Description of "tongue-and-groove pliers"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A large pair of slip-joint pliers bent at the elbow, able to handle basic "
+"mechanical work.  Anything more complex will require a wrench."
+msgstr ""
+
+#. ~ Description of "locking pliers"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A pair of pliers with extra-hefty jaws and an adjustable mechanism to clamp "
+"them in a locked grip on whatever unfortunate object is trapped between them."
+"  They could grip and turn a fairly large bolt head, or clamp two parts "
+"together temporarily."
+msgstr ""
+
+#. ~ Description of "electric polisher"
+#: data/json/items/tool/workshop.json
+msgid ""
+"An electric polisher, used to buff metal surfaces until they are reflective "
+"like a mirror."
+msgstr ""
+
+#. ~ Description of "stone hammer"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A rock affixed to a stick in the crude facsimile of a hammer.  It functions "
+"adequately, but really can't compare to a proper hammer, and can't pull out "
+"nails either."
+msgstr ""
+
+#. ~ Description of "reciprocating saw"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A battery-powered tool, commonly known by the generic trademark Sawzall, that"
+" uses an electric motor to push a straight sawblade back and forth to rapidly"
+" cut wood or metal.  It is useful for heavy demolition and construction work,"
+" but poorly suited to precision tasks."
+msgstr ""
+
+#. ~ Description of "Hub 01 HWP maintenance kit"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A heavy-duty bag marked with the Hub 01 logo.  It contains space for barrels,"
+" adapters, and proprietary tools.  Embossed on the inside is a sketch of the "
+"Hybrid Weapons Platform."
+msgstr ""
+
+#. ~ Description of "screwdriver"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A Philips-head screwdriver.  It is important for almost all electronics "
+"crafting, most mechanics crafting, and has many more uses."
+msgstr ""
+
+#. ~ Description of "screwdriver set"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A set of screwdrivers in several sizes and blade types.  Guaranteed to have "
+"the right tools for more precise work."
+msgstr ""
+
+#. ~ Description of "socket screwdriver set"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A ratcheting screwdriver with a collection of hex sockets for turning small "
+"bolts or nuts, including a couple standard screwdriver bits."
+msgstr ""
+
+#. ~ Description of "socket wrench set"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A thick-handled ratchet wrench with an assortment of interchangeable sockets "
+"in common hex bolt sizes.  You could loosen or tighten fairly large bolts "
+"with this, and the ratchet makes a satisfying clicking sound."
+msgstr ""
+
+#. ~ Description of "firearm repair kit"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A portable tool kit made to repair damaged firearms.  Powered by standard "
+"batteries, it is a vital tool for long-term firearms maintenance.  It "
+"requires one charge of battery power per use."
+msgstr ""
+
+#. ~ Description of "soldering iron"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A device with a metal tip that can get very hot.  It is necessary for "
+"advanced electronics crafting.  Has a short cable that you can plug to your "
+"grid."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "portable soldering iron"
+msgid_plural "portable soldering irons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "portable soldering iron"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A device with a metal tip that can get very hot.  It is necessary for "
+"advanced electronics crafting.  This one is a portable version, and contains "
+"a slot for a battery."
+msgstr ""
+
+#. ~ Description of "toolbox"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A stout metal box for holding tools.  It has a handle on the top and a latch "
+"on the front."
+msgstr ""
+
+#. ~ Description of "workshop toolbox"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A stout metal box for holding tools.  It is much bigger than a regular "
+"toolbox, and can be used to store more tools as a result."
+msgstr ""
+
+#. ~ Description of "arc welder"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A cable-powered tool for welding metal pieces together using an electric arc."
+"  It is an indispensable tool for construction or repair."
+msgstr ""
+
+#. ~ Description of "makeshift arc welder"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A crude arc welder fashioned from a few small transformers, some wire, an "
+"improvised electrode holder, and a complete disregard for personal safety.  "
+"While it's not as efficient as a factory-made welder, it will serve in a "
+"pinch."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "high-temperature welding kit"
+msgid_plural "high-temperature welding kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "high-temperature welding kit"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A welder combined with a fireproof insulating blanket allows for advanced "
+"welds and repairs to tempered steels."
+msgstr ""
+
+#. ~ Description of "wooden smoother"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A large makeshift tool used in smoothing concrete or mortar in construction "
+"projects.  You could also use it as an improvised head-basher."
+msgstr ""
+
+#. ~ Description of "X-Acto knife"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A small, sharp knife, designed for making precise cuts for textiles or "
+"crafts.  It could cause decent damage, but is difficult to land a solid hit "
+"with.  Its small, sharp blade allows for precision strikes in the hands of "
+"the skilled."
+msgstr ""
+
+#. ~ Description of "small adjustable wrench"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A compact adjustable crescent wrench, with a short handle that fits in the "
+"palm of your hand.  It could be used for turning small hex-head nuts or "
+"bolts."
+msgstr ""
+
+#. ~ Description of "adjustable wrench"
+#: data/json/items/tool/workshop.json
+msgid ""
+"An adjustable crescent wrench.  It is used in many mechanics crafting "
+"recipes."
+msgstr ""
+
+#. ~ Description of "large adjustable wrench"
+#: data/json/items/tool/workshop.json
+msgid ""
+"An unusually large adjustable crescent wrench, with a long handle and jaws "
+"that widen over two inches.  This could easily turn most bolts, and should "
+"even work on wheel lug nuts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "heavy-duty pipe wrench"
+msgid_plural "heavy-duty pipe wrenches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "heavy-duty pipe wrench"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A 48in pipe wrench, normally used in oil fields and in the maintenance of "
+"public utilities.  It's much larger and heavier than you have any practical "
+"use for."
+msgstr ""
+
+#. ~ Description of "leather hose"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A hose made of leather.  Watertight and flexible, it can be used to siphon "
+"fuel from a vehicle tank.  However, it's not as elastic as a rubber hose."
+msgstr ""
+
+#. ~ Description of "makeshift hand drill"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A makeshift manual drill made with a pipe and an improvised drill bit.  Using"
+" it is very slow, and will exhaust you quickly."
+msgstr ""
+
+#. ~ Description of "propane torch"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A compact tool kit intended for heating metal, this portable propane torch "
+"includes a torch handle and accessories in an easy-to-carry tote.  It needs "
+"to be connected to a pressurized propane cylinder before use."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "block and tackle"
+msgid_plural "blocks and tackles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "block and tackle"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A sturdy metal housing with a number of pulleys that can be used with a thick"
+" rope or a chain to gain mechanical advantage on a lift."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "wooden block and tackle"
+msgid_plural "wooden blocks and tackles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "wooden block and tackle"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A wooden housing with a pair of pulleys that can be used with a thick rope or"
+" a chain to gain mechanical advantage on a lift.  Not as durable as a metal "
+"set."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "welding blanket"
+msgid_plural "welding blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "welding blanket"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A non-flammable mat used to protect surfaces from welding splatter, or to "
+"insulate a weld when repairing tempered metal.  This one is made with "
+"asbestos."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "makeshift welding blanket"
+msgid_plural "makeshift welding blankets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "makeshift welding blanket"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A makeshift mostly-non-flammable mat used to protect surfaces from welding "
+"splatter or to insulate a weld when repairing tempered metal.  This one is "
+"stitched together from oven insulation batts."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "thread cutting set"
+msgid_plural "thread cutting sets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "thread cutting set"
+#: data/json/items/tool/workshop.json
+msgid ""
+"This is a set of a external thread cutting die inserted into a manual grip "
+"and an internal thread cutting die used as a drill bit."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "fanning mill"
+msgid_plural "fanning mills"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "fanning mill"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A machine for separating seed from chaff.  It mechanized the winnowing "
+"process, in which the grain was separated from the lighter chaff and straw by"
+" blowing a leather bellows."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/tool/workshop.json
+msgid "bench vise"
+msgid_plural "bench vises"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "bench vise"
+#: data/json/items/tool/workshop.json
+msgid ""
+"A heavy, metal vise bolted down to a work surface.  With its jaws and screw, "
+"it can tightly hold items, useful for a wide array of handiwork such as "
+"soldering, woodworking, welding, anything that can be aided by a firm grip.  "
+"Also has a small, flat metal surface, useful for light metalworking if "
+"needed."
+msgstr ""
+
+#. ~ Description of "Exodii kiln"
+#: data/json/items/tool/workshop.json
+msgid ""
+"An electric kiln, powered by your electric grid.  A bit larger than a "
+"refridgerator, this Exodii-manufactured kiln is large enough to repair the "
+"sheets of ceramic they use for armor.  It is designed for firing sheets of "
+"the Exodii's ceramic, but you could use it to fire anything made of clay.  A "
+"large and power-hungry appliance."
+msgstr ""
+
+#. ~ Description of "motorbike alternator"
+#: data/json/items/vehicle/alternator.json
+msgid ""
+"A compact, lightweight alternator used to power small vehicle electrical "
+"systems."
+msgstr ""
+
+#. ~ Description of "yoke and harness"
+#: data/json/items/vehicle/animals.json
+msgid ""
+"A bar and harness to attach a sufficiently large creature to a wheeled "
+"vehicle, allowing them to pull it along."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/animals.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "reinforced yoke and harness"
+msgid_plural "reinforced yokes and harnesses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "reinforced yoke and harness"
+#: data/json/items/vehicle/animals.json
+msgid ""
+"Heavy steel beams and harness to attach a sufficiently large creature to a "
+"wheeled vehicle, allowing them to pull it along, reinforced to withstand the "
+"rigors of the apocalypse and ill-advised off-roading.  You would still need "
+"separate armor for said creature to wear."
+msgstr ""
+
+#. ~ Description of "rebar grate"
+#: data/json/items/vehicle/armor.json
+msgid ""
+"Several interlocked rods of rebar serving as makeshift armor, allowing for "
+"light and effective reinforcement of vehicle sections."
+msgstr ""
+
+#. ~ Description of "shock absorber"
+#: data/json/items/vehicle/armor.json
+msgid ""
+"A makeshift combination of springs and scrap that protects a particular "
+"section of a vehicle from the shock of impacts.  The springs can absorb a "
+"surprising amount of damage."
+msgstr ""
+
+#. ~ Description of magazine "car battery"
+#. ~ Description of "car battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A 12 V lead-acid battery used to power car electrical systems.  Can also be "
+"plugged into a static power grid."
+msgstr ""
+
+#. ~ Description of magazine "motorbike battery"
+#. ~ Description of "motorbike battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A 12 V lead-acid battery used to power smaller vehicles' electrical systems."
+msgstr ""
+
+#. ~ Description of magazine "small motorbike battery"
+#. ~ Description of "small motorbike battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A miniature 12 V lead-acid battery used to power smaller vehicles' electrical"
+" systems."
+msgstr ""
+
+#. ~ Description of "storage battery case"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"An empty case that can hold a storage battery, complete with a charging "
+"controller chip and connecting wires."
+msgstr ""
+
+#. ~ Description of "tool battery mount"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"An empty mount that can connect conventional batteries used in most handheld "
+"tools to a vehicular power grid.  It has a power converter, a charging "
+"controller chip, connecting wires, and a harness for securing a battery."
+msgstr ""
+
+#. ~ Description of magazine "very large storage battery"
+#. ~ Description of "very large storage battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A huge storage battery containing many lithium-ion cells.  Holds a tremendous"
+" amount of energy.  Could be installed into a storage battery case for easy "
+"removal from a vehicle, or just welded straight in.  Can also be plugged into"
+" a static power grid."
+msgstr ""
+
+#. ~ Description of magazine "medium storage battery"
+#. ~ Description of "medium storage battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A medium storage battery containing multiple lithium-ion cells.  Can be "
+"plugged into a static power grid."
+msgstr ""
+
+#. ~ Description of magazine "small storage battery"
+#. ~ Description of "small storage battery"
+#: data/json/items/vehicle/battery.json
+msgid ""
+"A small storage battery created with pre-Cataclysm lithium-ion technology.  "
+"Useful for crafting.  Can be plugged into a static power grid."
+msgstr ""
+
+#. ~ Description of "wood boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"A wooden board that keeps the boat afloat.  Add boat hulls to a vehicle until"
+" it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Description of "raft boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"Logs tied together to make a vehicle float.  Add boat hulls to a vehicle "
+"until it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Description of "plastic boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"A rigid plastic sheet that keeps the boat afloat.  Add boat hulls to a "
+"vehicle until it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Description of "carbon fiber boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"A rigid carbon fiber sheet that keeps the boat afloat.  Add boat hulls to a "
+"vehicle until it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Description of "oars"
+#: data/json/items/vehicle/boat.json
+msgid "A pair of oars for a boat."
+msgstr ""
+
+#. ~ Description of "sail"
+#: data/json/items/vehicle/boat.json
+msgid "A sail for a boat."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/boat.json data/json/vehicleparts/vehicle_parts.json
+msgid "aluminum boat hull"
+msgid_plural "aluminum boat hulls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "aluminum boat hull"
+#: data/json/items/vehicle/boat.json
+msgid ""
+"An aluminum hull that keeps the boat afloat.  Add boat hulls to a vehicle "
+"until it floats, then attach oars or a motor to get the boat to move."
+msgstr ""
+
+#. ~ Description of "floor trunk"
+#: data/json/items/vehicle/cargo.json
+msgid ""
+"A section of flooring with a cargo space beneath and a hinged door for "
+"access."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/controls.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "reinforced security camera"
+msgid_plural "reinforced security cameras"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "reinforced security camera"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"A security camera with a cage built around it to protect it from damage "
+"without reducing its effectiveness."
+msgstr ""
+
+#. ~ Description of "drive by wire controls"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"A fully electronic vehicle control system.  You could control it remotely if "
+"you had the proper tools."
+msgstr ""
+
+#. ~ Description of "robot driving unit"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"A set of servos, microcontrollers, and other devices, together capable of "
+"driving an unmanned vehicle.  Its AI is not functional, but it should still "
+"have some sort of maintenance mode."
+msgstr ""
+
+#. ~ Description of "turret control unit"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"A set of motors, cameras, and various electronic modules banded together to "
+"allow for tracking targets, friend-or-foe identification, and firing the "
+"connected turret in full automatic mode."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/controls.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "hand controls"
+msgid_plural "hand controls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "hand controls"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"An accessibility tool for the paraplegic or very short, this is a simple pair"
+" of metal tubes that clamp to a vehicle's gas and brake pedals, allowing them"
+" to be operated by hand with the help of a trigger."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/controls.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "pedal extenders"
+msgid_plural "pedal extenders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "pedal extenders"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"These thick rubber pads can clamp securely onto a vehicle's gas and brake "
+"pedals, allowing even very short people to drive a car."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/controls.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "makeshift pedal extenders"
+msgid_plural "makeshift pedal extenders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "makeshift pedal extenders"
+#: data/json/items/vehicle/controls.json
+msgid ""
+"It is probably not a great idea, but if you wanted to, you could tape these "
+"blocks to a vehicle's gas and brake pedals so that a kid or very short adult "
+"could drive."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.05 L 1-cylinder engine"
+msgid_plural "0.05 L 1-cylinder engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.05 L 1-cylinder engine"
+#: data/json/items/vehicle/engine.json
+msgid "A 50 cc single-cylinder 4-stroke combustion engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.2 L large 1-cylinder engine"
+msgid_plural "0.2 L large 1-cylinder engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.2 L large 1-cylinder engine"
+#: data/json/items/vehicle/engine.json
+msgid "A high-compression, 200 cc single-cylinder 4-stroke combustion engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.2 L medium 1-cylinder engine"
+msgid_plural "0.2 L medium 1-cylinder engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.2 L medium 1-cylinder engine"
+#: data/json/items/vehicle/engine.json
+msgid "A high-compression, 150 cc single-cylinder 4-stroke combustion engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.2 L large 1-cylinder diesel engine"
+msgid_plural "0.2 L large 1-cylinder diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.2 L large 1-cylinder diesel engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A high-compression, 200 cc single-cylinder 4-stroke diesel combustion engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.02 L small 1-cylinder engine"
+msgid_plural "0.02 L small 1-cylinder engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.02 L small 1-cylinder engine"
+#: data/json/items/vehicle/engine.json
+msgid "A small, 25 cc single-cylinder 2-stroke combustion engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "5.24 L light aero-engine"
+msgid_plural "5.24 L light aero-engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "1.6 L I4 engine"
+msgid_plural "1.6 L I4 engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1.6 L I4 engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A small, 1600 cc 4-cylinder combustion engine, commonly called a straight-"
+"four."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "1.6 L I4 diesel engine"
+msgid_plural "1.6 L I4 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "1.6 L I4 diesel engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A small, yet powerful 4-cylinder diesel engine, commonly called a straight-"
+"four."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.5 L I1 diesel engine"
+msgid_plural "0.5 L I1 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.5 L I1 diesel engine"
+#: data/json/items/vehicle/engine.json
+msgid "A small, diesel powered one-cylinder, four-stroke air-cooled engine."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "6 L I6 diesel engine"
+msgid_plural "6 L I6 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "6 L I6 diesel engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"An industrial-sized 6-cylinder diesel engine, commonly called a straight-six."
+"  About as powerful as a V6 engine but significantly larger for use in heavy "
+"equipment."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "0.6 L V2 engine"
+msgid_plural "0.6 L V2 engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "0.6 L V2 engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A 600 cc, 2-cylinder 4-stroke combustion engine, commonly called a V-twin."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "2.8 L V6 engine"
+msgid_plural "2.8 L V6 engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "2.8 L V6 diesel engine"
+msgid_plural "2.8 L V6 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "4.5 L V8 engine"
+msgid_plural "4.5 L V8 engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "4.5 L V8 diesel engine"
+msgid_plural "4.5 L V8 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "7 L V12 engine"
+msgid_plural "7 L V12 engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "7 L V12 engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A massive and extremely powerful 12-cylinder combustion engine, usually built"
+" into high-end sports cars."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "7 L V12 diesel engine"
+msgid_plural "7 L V12 diesel engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "makeshift steam engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A small, primitive steam engine.  An integrated boiler burns coal to heat "
+"water into steam, driving a reciprocating shaft.  A condenser recaptures the "
+"water, making this a closed-cycle system."
+msgstr ""
+
+#. ~ Description of "small steam engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A small steam engine.  An integrated boiler burns coal to heat water into "
+"steam, driving a reciprocating shaft.  A condenser recaptures the water, "
+"making this a closed-cycle system."
+msgstr ""
+
+#. ~ Description of "medium steam engine"
+#: data/json/items/vehicle/engine.json
+msgid ""
+"A medium-sized steam engine.  An integrated boiler burns coal to heat water "
+"into steam, driving a reciprocating shaft.  A condenser recaptures the water,"
+" making this a closed-cycle system."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "25 L 650 HP gas turbine engine"
+msgid_plural "25 L 650 HP gas turbine engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "25 L 650 HP gas turbine engine"
+#: data/json/items/vehicle/engine.json
+msgid "A gas turbine engine.  Used primarily for small helicopters."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "38 L 1,900 HP gas turbine engine"
+msgid_plural "38 L 1,900 HP gas turbine engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#: data/json/items/vehicle/engine.json
+msgid "119.5 L 6,000 HP gas turbine engine"
+msgid_plural "119.5 L 6,000 HP gas turbine engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "steel boom"
+#: data/json/items/vehicle/engineering.json
+msgid ""
+"A large, rigid steel boom.  If attached to a frame it could be used to lift "
+"up to 20 metric tonnes."
+msgstr ""
+
+#. ~ Description of "telescopic cantilever"
+#: data/json/items/vehicle/engineering.json
+msgid ""
+"A small, telescoping steel cantilever.  If attached to a frame it could be "
+"used to lift up to 3.5 metric tonnes."
+msgstr ""
+
+#. ~ Description of "rockwheel"
+#: data/json/items/vehicle/engineering.json
+msgid "A large, heavy, jagged metal disc for digging trenches."
+msgstr ""
+
+#. ~ Description of "motorcycle kickstand"
+#: data/json/items/vehicle/engineering.json
+msgid ""
+"A kickstand to keep a bike from falling over.  You could use this to lean a "
+"small vehicle forward or backward to change a tire."
+msgstr ""
+
+#. ~ Description of "seed drill"
+#: data/json/items/vehicle/farming.json
+msgid ""
+"An assembly of tubes, spikes, and wheels that, when dragged along the ground,"
+" allows a vehicle to plant seeds automatically in suitably tilled land."
+msgstr ""
+
+#. ~ Description of "reaper"
+#: data/json/items/vehicle/farming.json
+msgid ""
+"An assembly of a blade, wheels, and a small lever for engaging/disengaging, "
+"used to cut down crops prior to picking them up."
+msgstr ""
+
+#. ~ Description of "advanced reaper"
+#: data/json/items/vehicle/farming.json
+msgid ""
+"An advanced electronic device used to cut down, collect, and store crops."
+msgstr ""
+
+#. ~ Description of "advanced seed drill"
+#: data/json/items/vehicle/farming.json
+msgid ""
+"An assembly of tubes, spikes, and wheels that, when dragged along the ground,"
+" allows a vehicle to plant seeds automatically in suitably tilled land.  This"
+" one is equipped with an electronic control system and will avoid damaging "
+"itself when used on untilled land."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
+msgid "foldable light frame"
+msgid_plural "foldable light frames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "foldable light frame"
+#: data/json/items/vehicle/frames.json
+msgid "A small, foldable lightweight frame made from pipework."
+msgstr ""
+
+#. ~ Description of "extra-light frame"
+#: data/json/items/vehicle/frames.json
+msgid "A small, lightweight frame made from pipework.  Useful for crafting."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/vehicle/frames.json
+msgid "foldable extra-light frame"
+msgid_plural "foldable extra-light frames"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "foldable extra-light frame"
+#: data/json/items/vehicle/frames.json
+msgid "A small, foldable lightweight frame made from aluminum."
+msgstr ""
+
+#. ~ Description of "foldable wooden frame"
+#: data/json/items/vehicle/frames.json
+msgid "A small, foldable frame made from scrap wood."
+msgstr ""
+
+#. ~ Description of "light wooden frame"
+#: data/json/items/vehicle/frames.json
+msgid ""
+"A small frame made of a few pieces of wood, held together by rope.  Useful "
+"for crafting."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
+msgid "skateboard deck"
+msgid_plural "skateboard decks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "skateboard deck"
+#: data/json/items/vehicle/frames.json
+msgid "A small skateboard frame made of thin layers of wood glued together."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
+msgid "concrete mixer chassis"
+msgid_plural "concrete mixer chassis"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "concrete mixer chassis"
+#. ~ Description of vehicle part "concrete mixer chassis"
+#: data/json/items/vehicle/frames.json data/json/vehicleparts/frames.json
+msgid "The chassis of a concrete mixer."
+msgstr ""
+
+#. ~ Description of magazine "fuel bunker"
+#. ~ Description of "fuel bunker"
+#: data/json/items/vehicle/fuel_storage.json
+msgid ""
+"A bin for holding solid fuel.  Contains up to 50 liters of coal or charcoal."
+msgstr ""
+
+#. ~ Description of "emergency vehicle light (red)"
+#: data/json/items/vehicle/lights.json
+msgid ""
+"A red light from the top of an emergency services vehicle.  When turned on, "
+"the light rotates to shine in all directions."
+msgstr ""
+
+#. ~ Description of "emergency vehicle light (blue)"
+#: data/json/items/vehicle/lights.json
+msgid ""
+"A blue light from the top of an emergency services vehicle.  When turned on, "
+"the light rotates to shine in all directions."
+msgstr ""
+
+#. ~ Description of "floodlight"
+#: data/json/items/vehicle/lights.json
+msgid "A large, heavy light designed to illuminate wide areas."
+msgstr ""
+
+#. ~ Description of "directed floodlight"
+#: data/json/items/vehicle/lights.json
+msgid ""
+"A large, heavy light designed to illuminate a wide area in a half-circular "
+"cone."
+msgstr ""
+
+#. ~ Description of "set of hand rims"
+#: data/json/items/vehicle/manual.json
+msgid "A set of hand rims for use on a wheelchair."
+msgstr ""
+
+#. ~ Description of "foot crank"
+#: data/json/items/vehicle/manual.json
+msgid "A pedal and gear assembly from a bicycle."
+msgstr ""
+
+#. ~ Description of "water wheel"
+#: data/json/items/vehicle/mills.json
+msgid ""
+"A water wheel that will slowly recharge electrical power when built over "
+"shallow moving water."
+msgstr ""
+
+#. ~ Description of "large water wheel"
+#: data/json/items/vehicle/mills.json
+msgid ""
+"A large water wheel with wooden supports.  It will recharge electrical power "
+"when built over shallow moving water."
+msgstr ""
+
+#. ~ Description of "electric motor"
+#: data/json/items/vehicle/motors.json
+msgid "A standard electric motor.  Suitable for use in ultra-light vehicles."
+msgstr ""
+
+#. ~ Description of "enhanced electric motor"
+#: data/json/items/vehicle/motors.json
+msgid ""
+"A powerful electric motor, as found in those consumer electric sports cars "
+"with ridiculous or ludicrous acceleration options."
+msgstr ""
+
+#. ~ Description of "super electric motor"
+#: data/json/items/vehicle/motors.json
+msgid ""
+"An extremely powerful electric motor.  This delivers massive torque and would"
+" be well suited to an electric racing car."
+msgstr ""
+
+#. ~ Description of "large electric motor"
+#: data/json/items/vehicle/motors.json
+msgid "A large electric motor.  Could be used to power a full-size car or SUV."
+msgstr ""
+
+#. ~ Description of "small electric motor"
+#: data/json/items/vehicle/motors.json
+msgid ""
+"A light-duty electric motor.  Strong enough for an electric moped or golf "
+"cart."
+msgstr ""
+
+#. ~ Description of "tiny electric motor"
+#: data/json/items/vehicle/motors.json
+msgid ""
+"A small electric motor, suitable for powering a bicycle or a hedge trimmer."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/vehicle/motors.json data/json/vehicleparts/motor.json
+msgid "1,300 HP electric train engine"
+msgid_plural "1,300 HP electric train engines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "steel plating"
+#: data/json/items/vehicle/plating.json
+msgid "A piece of vehicle armor plating made of steel."
+msgstr ""
+
+#. ~ Description of "superalloy plating"
+#: data/json/items/vehicle/plating.json
+msgid "A piece of vehicle armor plating made of sturdy superalloy."
+msgstr ""
+
+#. ~ Description of "spiked plating"
+#: data/json/items/vehicle/plating.json
+msgid ""
+"A piece of vehicle armor plating made of steel.  It is covered with menacing "
+"spikes."
+msgstr ""
+
+#. ~ Description of "hard plating"
+#: data/json/items/vehicle/plating.json
+msgid ""
+"A piece of very thick vehicle armor plating made of tempered steel.  Can be "
+"used as a makeshift anvil."
+msgstr ""
+
+#. ~ Description of "military composite plating"
+#: data/json/items/vehicle/plating.json
+msgid ""
+"A thick sheet of military-grade armor; the best bullet-stopper you can stick "
+"on a vehicle."
+msgstr ""

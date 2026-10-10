@@ -1,0 +1,1611 @@
+# Batch 188 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of mutation "Shape of the Shadowed Path"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can shroud your body and what you are carrying with shadows, amplifying "
+"your combat ability but preventing communication and using other powers until"
+" you return to your normal form.  It also costs blood for every second you "
+"spend in that state."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Last Breath's Mist"
+msgstr ""
+
+#. ~ Description of mutation "Last Breath's Mist"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your mastery over your mist form has increased to the point that you can now "
+"instinctively activate it should you be about to die.  It requires you to "
+"have a lot of stolen blood in your body and can't trigger more than once a "
+"week but might save your life."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Immortal Iron Mind"
+msgstr ""
+
+#. ~ Description of mutation "Immortal Iron Mind"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your vampiric potency has reinforced your mind beyond anything a mortal could"
+" ever hope.  You are immune to anything that could negatively impact your "
+"mind."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Blind the Sun"
+msgstr ""
+
+#. ~ Description of mutation "Blind the Sun"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You mastery over the shadowed path of blood has become much more potent, allowing you to use your vampiric powers and a massive expense of blood to blot out the sun for a few dozen minutes.\n"
+"\n"
+"<color_light_red>Initial Blood Cost:</color> 3000 ml (<u_val:blood_amount_for_graph> ml current)"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Renfield"
+msgstr ""
+
+#. ~ Description of mutation "Renfield"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"This person is now a renfield, a human obsessed with serving their vampire "
+"masters.  This obsession impedes their cognition as they struggle to think "
+"about anything but serving said vampire masters."
+msgstr ""
+
+#. ~ Message in effect "mentor_vanish"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You're not supposed to see this.  Open a bug report on Github about having "
+"the Mentor's Peace trait."
+msgstr ""
+
+#. ~ NPC message in effect "mentor_vanish"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+#, c-format
+msgid "%1$s vanishes in a fine mist."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: blood drain"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: blood drain"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You thirst for blood is more intense than usual.  You now need much more "
+"blood to prevent blood starvation."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: revolting appearance"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: revolting appearance"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your body brings to mind a rotting corpse.  Social interactions will be much "
+"harder for you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: earth-sleeper"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: earth-sleeper"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You now depend on the proximity to the earth to sleep well.  Should you sleep"
+" or torpor aboveground or not surrounded by earth, you will suffer penalties "
+"for the next day."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: rebuked by holy ground"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: rebuked by holy ground"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your flesh will burn should you ever enter a sanctified area.  Only places "
+"that are holy will burn you, so holy places filled with vampires or unholy "
+"humans are safe for you to enter."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: melted by vast water"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: melted by vast water"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your flesh will melt should you ever try to cross a large body of water or "
+"get too close to them.  Only rivers, lakes and oceans have enough water to "
+"trigger this weakness, but it will take effect even if floating or water-"
+"walking."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: hated by animals"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: hated by animals"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Animals cannot tolerate your wicked presence.  Expect any animal you "
+"encounter to either flee or attack you on sight."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: vulnerable to fire"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: vulnerable to fire"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Fire damages you far more than it should.  You take massive damage from fire "
+"and flames, mundane and magical."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: cold as a corpse"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: cold as a corpse"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You now lack amy body heat.  You feel colder at all times, and being cold "
+"will slow you down."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: living-drinker"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: living-drinker"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You now need to drink some fresh, warm blood from a living being once in a "
+"while or suffer growing penalties.  You better find someone willing to share "
+"their blood, as blood from fresh corpses won't satisfy this need."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: picky feeding"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: picky feeding"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your ability to process varied types of blood is now hampered.  Blood that "
+"isn't regular human blood will only sate your thirst half as much."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: blood cravings"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: blood cravings"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your thirst for blood will occasionally magnify, causing painful cravings.  "
+"You can calm these cravings as or before they happen by consuming blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Vampiric weakness: barred from mortal joys"
+msgstr ""
+
+#. ~ Description of mutation "Vampiric weakness: barred from mortal joys"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Blood is the only thing that can bring a smile to your lips.  Nothing else "
+"gives you any lasting joy or pleasure.  It is impossible for you to be truly "
+"happy unless you recently consumed blood."
+msgstr ""
+
+#. ~ Description of mutation "Vampiric Anathema"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Through the consumption of self-cannibalizing vampire blood, you gained the "
+"ability to consume vampire blood to gain vampiric abilities undreamt of by "
+"other vampires."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Inner Vault of Blood"
+msgstr ""
+
+#. ~ Description of mutation "Inner Vault of Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your vestigial circulatory system is now better at holding stolen blood.  You"
+" can hold five more liters inside you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Eternally-Gleaming Eyes"
+msgstr ""
+
+#. ~ Description of mutation "Eternally-Gleaming Eyes"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your ability to see in the dark has expanded.  You no longer need to spend "
+"blood to maintain your gleaming eyes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Claim the Crimson Wine"
+msgstr ""
+
+#. ~ Description of mutation "Claim the Crimson Wine"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You can now attract the blood within a corpse's veins, extracting it all in a"
+" second through a small cut.  In addition, you can create temporary blood "
+"containers by spending mana."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Apex Vampire's Sight"
+msgstr ""
+
+#. ~ Description of mutation "Apex Vampire's Sight"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"In comparison to you, regular vampires are the same as mortals.  You can now "
+"detect nearby vampires, your new prey, even through walls."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Unlimited Drinking"
+msgstr ""
+
+#. ~ Description of mutation "Unlimited Drinking"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your digestive system has warped to repurpose some vestigial parts, making "
+"you much better at drinking blood.  Drinking reasonable amounts of blood "
+"won't ever stretch your stomach, and you drink blood much faster now."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "See Through Night's Eyes"
+msgstr ""
+
+#. ~ Description of mutation "See Through Night's Eyes"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your supernatural senses have expanded.  You can now see anything close to "
+"some nocturnal creatures, even if they lack sight."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Sanguine Paradise"
+msgstr ""
+
+#. ~ Description of mutation "Sanguine Paradise"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Becoming more vampire than vampires are has affected your new palate, making "
+"the consumption of blood feel even better than before.  You now enjoy "
+"drinking blood so much that enough of it will bolster your resolve for a "
+"while."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Dead Silent Strikes"
+msgstr ""
+
+#. ~ Description of mutation "Dead Silent Strikes"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your lack of movement noise is now encompassing any noise you could do in "
+"combat.  All such noises you would've made by attacking in melee are "
+"nullified."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Ascended Anathema"
+msgstr ""
+
+#. ~ Description of mutation "Ascended Anathema"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You drank enough vampire blood to gain access to power the mentors never "
+"thought possible.  There is no more limit to how powerful of a vampire you "
+"can be."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Inner Sea of Blood"
+msgstr ""
+
+#. ~ Description of mutation "Inner Sea of Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your new power allows you to store even more stolen blood inside your body.  "
+"You can hold another ten liters inside you."
+msgstr ""
+
+#. ~ Description of mutation "Shrouded by the Shadowed Path"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Darkness is your home, and you can call it to shroud you from others.  When "
+"away from the sun, you can become invisible with a constant expense of blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Stitched by the Shadowed Path"
+msgstr ""
+
+#. ~ Description of mutation "Stitched by the Shadowed Path"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Darkness is your new friend, and like a good friend it helps you through hard"
+" times.  Passively heal your wounds and reduce your pain while away from the "
+"sun."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Boiling Crimson Cauldron"
+msgstr ""
+
+#. ~ Description of mutation "Boiling Crimson Cauldron"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The powers of vampires come through their sustenance of blood, and you now "
+"know how to use this at your advantage.  You can increase your need for blood"
+" to boost your vampiric potency until you decide to stop the effect.  If you "
+"do not have enough blood, it will have no effect until you drink more blood."
+msgstr ""
+
+#. ~ Description of mutation "Boiling Crimson Cauldron Real"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Increases blood potency and drain while the player-visible version is active "
+"and has enough blood.  You should never see this."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Immortal's Health"
+msgstr ""
+
+#. ~ Description of mutation "Immortal's Health"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Being protected against mundane afflictions only is something your flesh has "
+"stopped tolerating.  Your condition now protects you from any illness, "
+"parasite and poison, no matter how dangerous they are."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Mastery of Forms"
+msgstr ""
+
+#. ~ Description of mutation "Mastery of Forms"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You are much more attuned to your other forms, and they are now easier to "
+"activate than ever.  The cost to activate them is halved."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Second Final Breath"
+msgstr ""
+
+#. ~ Description of mutation "Second Final Breath"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your instinctive mastery of your mist form has expanded.  You now recover "
+"from triggering Last Breath's Mist twice as quickly."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Fueled by the Blood-Drinkers' Blood"
+msgstr ""
+
+#. ~ Description of mutation "Fueled by the Blood-Drinkers' Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Vampires, mortals, they are all the same for you now.  Drinking vampire blood"
+" now gives all the benefits of drinking regular blood, in addition to growing"
+" your power."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Knowledge of the Blood"
+msgstr ""
+
+#. ~ Description of mutation "Knowledge of the Blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your own blood now reveals its secrets to you.  Every week, you will gain a "
+"new gift of the blood.  It will only give you what researching your blood "
+"gifts could give you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Maximal Mastery of the Mortal Mind"
+msgstr ""
+
+#. ~ Description of mutation "Maximal Mastery of the Mortal Mind"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your mind-control abilities are much simpler to use now, halving their cost."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Anathema's Weakness: Slain by the Sun"
+msgstr ""
+
+#. ~ Description of mutation "Anathema's Weakness: Slain by the Sun"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Vampires burn under the sun, and becoming more of a vampire made you burn far"
+" more than any other vampire would.  While under the sun, you will take "
+"constant damage no matter how covered you are."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Anathema's Weakness: Blood-Muddled Mind"
+msgstr ""
+
+#. ~ Description of mutation "Anathema's Weakness: Blood-Muddled Mind"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Your constant consumption of vampire blood has permanently destabilized your "
+"mind, and it will only grow worse with each new vampire drained.  Each time "
+"you drink vampire blood, you have a growing chance to gain a new mental "
+"affliction."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Anathema's Weakness: Apex's Thirst"
+msgstr ""
+
+#. ~ Description of mutation "Anathema's Weakness: Apex's Thirst"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Drinking all this vampire blood has left your body yearning for more.  Going "
+"too long without drinking vampire blood will progressively increase your "
+"thirst for blood with each passing day until you starve or drink vampire "
+"blood."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Saint's blood"
+msgstr ""
+
+#. ~ Description of mutation "Saint's blood"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Through a complicated ritual utilizing a saint's relic, you have "
+"transubstantiated your own blood with the holy blood of the saints.  It'll "
+"prevent you from becoming infected with vampirism while you live, effects "
+"postmortem unknown."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Future Sight"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Eater's Sixth Sense"
+msgstr ""
+
+#. ~ Description of mutation "Eater's Sixth Sense"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You are no longer limited to the five senses common to most humans in your "
+"hunt for the unnatural."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Fae Authority"
+msgstr ""
+
+#. ~ Description of mutation "Fae Authority"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"Boann bestowed upon you the right to summon a few daffodil warriors once a "
+"day."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Fae Enmity"
+msgstr ""
+
+#. ~ Description of mutation "Fae Enmity"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The Fair Folk can sense the stolen power within you and their vengeance will "
+"be terrible."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "False Arvore"
+msgstr ""
+
+#. ~ Description of mutation "False Arvore"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The arvore can sense the stolen power within you and they will not react well"
+" to it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "False Homullus"
+msgstr ""
+
+#. ~ Description of mutation "False Homullus"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The homullus can sense the stolen power within you and they will not react "
+"well to it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "False Salamander"
+msgstr ""
+
+#. ~ Description of mutation "False Salamander"
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"The salamanders can sense the stolen power within you and they will not react"
+" well to it."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "profession_male"
+msgid "Unknowing Changeling, Noble (Species)"
+msgstr ""
+
+#. ~ Description of profession "Unknowing Changeling, Noble (Species)" for male
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "prof_desc_male"
+msgid ""
+"You grew up thinking you were human, just another person among billions, but "
+"you were born Under the Hill and swapped for a human baby shortly after "
+"birth.  Your parents were the nobility of the Fair Folk, the great lords and "
+"ladies who traveled in spider-silk carriages on roads built of moonbeams and "
+"danced the unending nights away before leading fantastic armies in battle the"
+" next morning.  When the Cataclysm hit, your parents' slumbering power "
+"asserted itself, giving you access to a portion of their fae magick.  "
+"Hopefully it will help you survive."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "profession_female"
+msgid "Unknowing Changeling, Noble (Species)"
+msgstr ""
+
+#. ~ Description of profession "Unknowing Changeling, Noble (Species)" for
+#. female
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "prof_desc_female"
+msgid ""
+"You grew up thinking you were human, just another person among billions, but "
+"you were born Under the Hill and swapped for a human baby shortly after "
+"birth.  Your parents were the nobility of the Fair Folk, the great lords and "
+"ladies who traveled in spider-silk carriages on roads built of moonbeams and "
+"danced the unending nights away before leading fantastic armies in battle the"
+" next morning.  When the Cataclysm hit, your parents' slumbering power "
+"asserted itself, giving you access to a portion of their fae magick.  "
+"Hopefully it will help you survive."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "profession_male"
+msgid "Unknowing Changeling, Commoner (Species)"
+msgstr ""
+
+#. ~ Description of profession "Unknowing Changeling, Commoner (Species)" for
+#. male
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "prof_desc_male"
+msgid ""
+"You grew up thinking you were human, just another person among billions, but "
+"you were born Under the Hill and swapped for a human baby shortly after "
+"birth.  Your parents come from the common masses of the Fair Folk, the pooka,"
+" redcaps, hobgoblins, trow, pixies, knockers, selkies, or any of the myriad "
+"of others.  When the Cataclysm hit, your parents' slumbering power asserted "
+"itself, revealing your heritage and giving you access to a portion of their "
+"fae magick.  Hopefully it will help you survive."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "profession_female"
+msgid "Unknowing Changeling, Commoner (Species)"
+msgstr ""
+
+#. ~ Description of profession "Unknowing Changeling, Commoner (Species)" for
+#. female
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgctxt "prof_desc_female"
+msgid ""
+"You grew up thinking you were human, just another person among billions, but "
+"you were born Under the Hill and swapped for a human baby shortly after "
+"birth.  Your parents come from the common masses of the Fair Folk, the pooka,"
+" redcaps, hobgoblins, trow, pixies, knockers, selkies, or any of the myriad "
+"of others.  When the Cataclysm hit, your parents' slumbering power asserted "
+"itself, revealing your heritage and giving you access to a portion of their "
+"fae magick.  Hopefully it will help you survive."
+msgstr ""
+
+#. ~ Description of mutation "Noble"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You have awakened your long-slumbering heritage as one of the nobility of the"
+" Fair Folk."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Commoner Changeling"
+msgstr ""
+
+#. ~ Description of mutation "Commoner Changeling"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This tracks your heritage, used to pick a subcategory.  You shouldn't see it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Summer Court"
+msgstr ""
+
+#. ~ Description of mutation "Summer Court"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are a member of the Summer Court, sometimes called the Seelie Court, the "
+"faeries recognized as benevolent by mortals.  Or, at least, the faeries who "
+"are slightly less likely to levy a generational curses on those who wrong "
+"them."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Winter Court"
+msgstr ""
+
+#. ~ Description of mutation "Winter Court"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are a member of the Winter Court, sometimes called the Unseelie Court, "
+"the faeries most feared by mortals.  Too bad there's so few of them around "
+"nowadays."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Glamour"
+msgstr ""
+
+#. ~ Description of mutation "Glamour"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This provides the school trait for Changeling magic.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Description of mutation "Spring"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This provides the school trait for Spring seasonal magic.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Description of mutation "Summer"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This provides the school trait for Summer seasonal magic.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Description of mutation "Autumn"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This provides the school trait for Autumn seasonal magic.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Description of mutation "Winter"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"This provides the school trait for Winter seasonal magic.  It should not be "
+"visible."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Changeling"
+msgstr ""
+
+#. ~ Description of mutation "Changeling"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You grew up thinking you were human, just another person among billions, but "
+"you were born Under the Hill and swapped for a human baby shortly after "
+"birth.  While you find it uncomfortable ever since your heritage asserted "
+"itself, your time in the mortal realm has inured you to the presence of iron."
+"  However, it has not done so enough to allow you to install any CBMs."
+msgstr ""
+
+#. ~ Description of mutation "Brownie"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You have awakened your long-slumbering heritage as a brownie, hard-working "
+"and mostly unseen."
+msgstr ""
+
+#. ~ Description of mutation "Pooka"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You have awakened your long-slumbering heritage as a pooka, a shapeshifter "
+"close to nature."
+msgstr ""
+
+#. ~ Description of mutation "Selkie"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You have awakened your long-slumbering heritage as a selkie, with one foot on"
+" the land and one in the sea."
+msgstr ""
+
+#. ~ Description of mutation "Trow"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You have awakened your long-slumbering heritage as a trow, strong and "
+"enduring as the mountains."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_noble_cure_bad_conditions_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Lights of Imbolc"
+msgstr ""
+
+#. ~ Description of mutation "Lights of Imbolc"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The end of winter brings hope for the coming of spring, and in the light of "
+"the candles lit at Imbolc the dust and gloom of the long nights end."
+msgstr ""
+
+#. ~ Description of mutation "Fires of Bealtaine"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The bonfires of Bealtaine drive away evil and purify both man and beast."
+msgstr ""
+
+#. ~ Description of mutation "Deeds of Lughnasadh"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Lughnasadh is a time for bringing in the harvest and for contests of skill "
+"and stamina."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_noble_summon_ghosts_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Hosts of Samhain"
+msgstr ""
+
+#. ~ Description of mutation "Hosts of Samhain"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"As the year dies and winter's winds begin to blow, the dead return for a "
+"short time to visit the living."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Right of Passage"
+msgstr ""
+
+#. ~ Description of mutation "Right of Passage"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The Fair Folk have dealt with many mortal civilizations over the aeons, and "
+"have come to mutually beneficial arrangements with some of them.  Activate "
+"this trait to make your fae nature obvious, invoking those ancient "
+"agreements.  This <color_yellow>may anger</color> some who have especially "
+"bad relationships with the fae."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the A.E. poem 'A Call of the Sidhe'
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Murmurs the Mighty One"
+msgstr ""
+
+#. ~ Description of mutation "Murmurs the Mighty One"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are strong enough to defend a crossroads at twilight against all comers."
+"  +3 Strength."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the Rose Fyleman poem 'Alms in Autumn'
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "All Dancing with Delight"
+msgstr ""
+
+#. ~ Description of mutation "All Dancing with Delight"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are graceful enough to dance the night away beneath a crystal dome on a "
+"floor of mirror-bright silver.  +3 Dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the Lord Dunsany poem 'The Fairy Child'
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "At Speed Unthought Of"
+msgstr ""
+
+#. ~ Description of mutation "At Speed Unthought Of"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Your reactions are inhumanly quick.  +15 Speed."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Wisdom from the Well"
+msgstr ""
+
+#. ~ Description of mutation "Wisdom from the Well"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Like the legendary salmon who ate the nine acorns, you have gained a plethora"
+" of wisdom.  +3 Intelligence."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the Charlotte Mew poem 'The Changeling'
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Hear the Whole World Whispering"
+msgstr ""
+
+#. ~ Description of mutation "Hear the Whole World Whispering"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You senses are far more attuned to your surroundings than previously.  +3 "
+"Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/paraclesians/homullus_mutations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Dreamwalker"
+msgstr ""
+
+#. ~ Description of mutation "Dreamwalker"
+#: data/mods/Xedra_Evolved/mutations/paraclesians/homullus_mutations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"From the dreams of mortals, you can spin remnants of fantasy into material "
+"substance.  When you sleep near mortals, you have a chance to awaken with "
+"some dreamdross nearby."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_noble_command_commoners_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Sovereign's Command"
+msgstr ""
+
+#. ~ Description of mutation "Sovereign's Command"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Invoke your rights as one of noble birth and exert your authority over the "
+"commoner fae, forcing them to obey your commands.  The glamour will only last"
+" a short time, and the target is under no obligation to look on your "
+"favorably afterwards."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the Yeats poem 'The Stolen Child'
+#. ~ Name of spell "changeling_noble_charm_humans_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Come Away, O Human Child"
+msgstr ""
+
+#. ~ Description of mutation "Come Away, O Human Child"
+#. ~ Description of mutation "Beguilement"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Glamour a human into defending you for a short period of time.  When the "
+"glamour ends, all effects end and the human will not be well-disposed toward "
+"you afterwards."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ A reference to the Yeats poem 'The Hosting of the Sidhe'
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Empty Your Heart of its Mortal Dream"
+msgstr ""
+
+#. ~ Description of mutation "Empty Your Heart of its Mortal Dream"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your mindset is shifting to the alien morality of those from Under the Hill."
+"  You can control this to some extent, though it may also overtake you in "
+"times of pain or stress."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Household Artistry"
+msgstr ""
+
+#. ~ Description of mutation "Household Artistry"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The brownies are the unassuming crafters of the Fair Folk, and it's easy for "
+"you to build and repair things, as long as no one is nearby to watch you do "
+"it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Adept Household Artistry"
+msgstr ""
+
+#. ~ Description of mutation "Adept Household Artistry"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The brownies are the unassuming crafters of the Fair Folk, and it's very easy"
+" for you to build and repair things, as long as no one is nearby to watch you"
+" do it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Incomparable Household Artistry"
+msgstr ""
+
+#. ~ Description of mutation "Incomparable Household Artistry"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The brownies are the unassuming crafters of the Fair Folk, and it's almost "
+"effortless for you to build and repair things, as long as no one is nearby to"
+" watch you do it."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Unobtrusive"
+msgstr ""
+
+#. ~ Description of mutation "Unobtrusive"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your appearance hasn't changed, but people don't seem to notice you as much "
+"as they used to.  As long as you don't engage in combat, you're easy to "
+"overlook."
+msgstr ""
+
+#. ~ Description of mutation "Inconspicuous"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your appearance hasn't changed, but people really don't seem to notice you as"
+" much as they used to.  As long as you don't engage in combat, you're very "
+"easy to overlook."
+msgstr ""
+
+#. ~ Description of mutation "Cold Tolerance"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "The cold doesn't seem to bother you quite as much anymore."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Cold Endurance"
+msgstr ""
+
+#. ~ Description of mutation "Cold Endurance"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Even on a winter day, you need only a light jacket now."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Inured to Cold"
+msgstr ""
+
+#. ~ Description of mutation "Inured to Cold"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Legends say that brownies went about naked clad only in their almost-furry "
+"coat, and while you wouldn't go that far, you could wear a swimsuit in a "
+"blizzard without much trouble."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Churning As Quick as a Wink"
+msgstr ""
+
+#. ~ Description of mutation "Churning As Quick as a Wink"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Brownies are famous for their ability to do household chores, and you now "
+"have an instinctive understanding of making milk and cheese."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Coat of Fur"
+msgstr ""
+
+#. ~ Description of mutation "Coat of Fur"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your hair has thickened to almost the level of fur covering your entire body."
+"  It's very warm and provides some level of protection against attacks."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Seneschal's Gaze"
+msgstr ""
+
+#. ~ Description of mutation "Seneschal's Gaze"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"With a few quick glances you can take in the contents of an entire room.  +3 "
+"Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Chatelain's Mind"
+msgstr ""
+
+#. ~ Description of mutation "Chatelain's Mind"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"It takes a keen mind to keep a household running smoothly.  +2 Intelligence."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Homebody"
+msgstr ""
+
+#. ~ Description of mutation "Homebody"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Brownies know every corner of their homes, all the well-worn grooves in the "
+"floor and the quick paths from place to place.  Your speed is increased the "
+"longer you spend in the same area."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Sense Intruders"
+msgstr ""
+
+#. ~ Description of mutation "Sense Intruders"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"With the knowledge of one's home comes the knowledge that something is off "
+"about it.  You can sense any intruders nearby, as long as you are indoors and"
+" have been in the same location for some time."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "moving_creature"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Intruder!"
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_brownie_blink_indoors_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Slip Through the Cracks"
+msgstr ""
+
+#. ~ Description of mutation "Slip Through the Cracks"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You can tell every nook and cranny of indoor spaces, and know how to quickly "
+"get from one place to another."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_teleport_home_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Hurry Home"
+msgstr ""
+
+#. ~ Description of mutation "Hurry Home"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can return home from anywhere, as quick as a wink."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "changeling_pooka_charm_animals_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Friend to Birds and Beasts"
+msgstr ""
+
+#. ~ Description of mutation "Friend to Birds and Beasts"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are close enough to the birds and beasts that you can speak their "
+"language and ask them for aid."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Antlers (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Antlers (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow an impressive rack of antlers, allowing you to make a headbutt attack "
+"but preventing you from wearing a helmet."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Curled Horns (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Curled Horns (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow a set of spiraling curled horns, allowing you to make a headbutt attack "
+"but preventing you from wearing a helmet."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Fangs (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Fangs (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Grow a set of sharp fangs, allowing you to make a bite attack."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Vicious Fangs (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Vicious Fangs (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow a set of long, saber-like fangs, preventing you from wearing mouth gear "
+"but allowing you to make rending bite attacks."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Wolf Ears (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Wolf Ears (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Change your ears into the ears of a wolf, granting you increased hearing."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Feline Ears (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Feline Ears (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Change your ears into the ears of a great cat, granting you increased "
+"hearing."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Claws (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Claws (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow a set of claws, improving your unarmed damage if you aren't wearing "
+"gloves."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Vicious Claws (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Vicious Claws (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow a powerful set of claws, nearly as hard as steel, greatly improving your"
+" unarmed damage if you aren't wearing gloves."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Bird Wings (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Bird Wings (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Transform your arms into bird wings, allow you to slow your fall when jumping"
+" from a high place and glide short distances."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Thick Fur (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Thick Fur (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow a coat of thick fur, keeping you warm in the winter and protecting you "
+"from attacks."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Chitin Carapace (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Chitin Carapace (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow an armored suit of chitin, protecting you and making your punches hit "
+"harder."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Quadruped (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Quadruped (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow paws and animal-like legs, allowing you to run much faster on all fours,"
+" but preventing you from wearing shoes or gloves."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Quadruped"
+msgstr ""
+
+#. ~ Description of mutation "Quadruped"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your arms, hands, and legs are animal-like, allowing you to move quickly when"
+" running on all fours, but preventing you from wearing shoes or gloves."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Leaping Legs (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Leaping Legs (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow strong frog- or cat-like legs, allowing you to leap great distances."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Wolf Tail (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Wolf Tail (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow the tail of a wolf, making it harder to wear pants but improving your "
+"balance."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Cat Tail (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Cat Tail (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow the tail of a cat, making it harder to wear pants but improving your "
+"balance."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spiked Tail (Shapeshift)"
+msgstr ""
+
+#. ~ Description of mutation "Spiked Tail (Shapeshift)"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Grow the tail of a scorpion, making it harder to wear pants but allowing you "
+"to attack with the stinger."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Bestial Strength"
+msgstr ""
+
+#. ~ Description of mutation "Bestial Strength"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Even when not shapeshifted you can bring part of a wild animal's strength to "
+"bear.  +2 Strength."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Untamed Agility"
+msgstr ""
+
+#. ~ Description of mutation "Untamed Agility"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You have the quick reactions of a wild animal.  +3 Dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Initiate of Forms"
+msgstr ""
+
+#. ~ Description of mutation "Initiate of Forms"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are getting better at shapeshifting and are able to maintain one more "
+"simultaneous shapeshift without drawing on your mana."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Adept of Forms"
+msgstr ""
+
+#. ~ Description of mutation "Adept of Forms"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are getting much better at shapeshifting and are able to maintain two "
+"more simultaneous shapeshifts without drawing on your mana."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Master of Forms"
+msgstr ""
+
+#. ~ Description of mutation "Master of Forms"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You are a master of shapeshifting and are able to maintain four more "
+"simultaneous shapeshifts without drawing on your mana."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Bat"
+msgstr ""
+
+#. ~ Description of mutation "Spirit of the Bat"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a bat."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Raven"
+msgstr ""
+
+#. ~ Description of mutation "Spirit of the Raven"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a raven."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Bear"
+msgstr ""
+
+#. ~ Description of mutation "Spirit of the Bear"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a bear."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Deer"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Wolf"
+msgstr ""
+
+#. ~ Description of mutation "Spirit of the Wolf"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a wolf."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Spirit of the Cougar"
+msgstr ""
+
+#. ~ Description of mutation "Spirit of the Cougar"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a cougar."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Instinctive Attacks"
+msgstr ""
+
+#. ~ Description of mutation "Instinctive Attacks"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"You're getting used to moving and reacting like an animal.  When without "
+"weapons or armor and using your gifts of shapeshifting, your natural attacks "
+"do more damage."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Animalistic Defense"
+msgstr ""
+
+#. ~ Description of mutation "Animalistic Defense"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"The best defense is not getting hit, especially if you're a wild animal.  "
+"When using your shapeshifting and not wearing armor or using a weapon, you "
+"gain a bonus to your dodging."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Primal Alacrity"
+msgstr ""
+
+#. ~ Description of mutation "Primal Alacrity"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Like the animals you mimic, you're quicker than you seem.  You gain a speed "
+"bonus while shapeshifted as long as you're unarmed and unarmored."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Bending Like the River"
+msgstr ""
+
+#. ~ Description of mutation "Bending Like the River"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your movements are graceful whether on land or in the water.  +3 Dexterity."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Eyes On the Waterline"
+msgstr ""
+
+#. ~ Description of mutation "Eyes On the Waterline"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Your sight is keen whether in or out of the water.  +2 Perception."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Thoughts like Clear Water"
+msgstr ""
+
+#. ~ Description of mutation "Thoughts like Clear Water"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid ""
+"Your mind flows easily from topic to topic while remembering the important "
+"details.  +2 Intelligence."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of spell "selkie_beguilement_spell"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Beguilement"
+msgstr ""
+
+#. ~ Description of mutation "Cloak of Fog"
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "Surround yourself with a thick fog, obscuring your position."
+msgstr ""

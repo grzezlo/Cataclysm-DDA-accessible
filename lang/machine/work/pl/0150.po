@@ -1,0 +1,1905 @@
+# Batch 150 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Monster message of special attack of monster "feral druid"
+#. ~ Monster message of special attack of monster "feral high druid"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s weaves their hands in a complicated gesture!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s screams words of magic and jagged shards of wood impact your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and jagged shards of wood impact <npcname>'s "
+"%2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and you narrowly avoid jagged shards of wood!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and <npcname> narrowly avoids jagged shards of "
+"wood!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and your %2$s is impacted by jagged shards of "
+"wood, but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and <npcname>'s %2$s is impacted by jagged shards"
+" of wood, but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral druid"
+#. ~ Monster message of special attack of monster "feral high druid"
+#. ~ Monster message of special attack of monster "goblin thornweaver"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s waves their hands and roots burst from the ground around you!"
+msgstr ""
+
+#. ~ Monster name
+#. ~ High here meaning Grand, Powerful, Mighty, like High Elf
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral high druid"
+msgid_plural "feral high druids"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral high druid"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"Once a leader of a druidic order, this feral is barely recognizable anymore "
+"beneath the patches of bark, fur, and scales that cover their skin.  They "
+"occasionally stop and sniff the air like an animal."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and sharp roots thrust from the ground into your "
+"%2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and sharp roots thrust from the ground into "
+"<npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and you narrowly avoid sharp roots thrusting from"
+" the ground!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and <npcname> narrowly avoids sharp roots "
+"thrusting from the ground!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and your %2$s is hit by sharp roots thrusting "
+"from the ground, but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and <npcname>'s %2$s is hit by sharp roots "
+"thrusting from the ground, but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high druid"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s throws back their head and howls!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral earthshaper"
+msgid_plural "feral earthshapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral earthshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"An earthen wizard, obvious by the rocky texture of their skin and the granite"
+" dust that flakes off of them when they move.  Their eyes, still obviously "
+"human, are bloodshot and their gaze is unfocused."
+msgstr ""
+
+#. ~ Monster attack message
+#. ~ Monster message of special attack of monster "gnome"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s stomps heavily and the ground shakes!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture and heavy chunks of rock impact your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture and heavy chunks of rock impact <npcname>'s "
+"%2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture and you narrowly avoid heavy chunks of rock!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture and <npcname> narrowly avoids heavy chunks of "
+"rock!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture your %2$s is impacted by heavy chunks of rock, "
+"but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s makes a throwing gesture and <npcname>'s %2$s is impacted by heavy "
+"chunks of rock, but they do no damage."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral high earthshaper"
+msgid_plural "feral high earthshapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral high earthshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"Once a master of earthshaping, this feral now wanders haphazardly through the"
+" post-Cataclysmic world.  Their skin is stone covered in fine crystalline "
+"spikes, and their bloodshot eyes glitter like polished gems, but their "
+"movements are uncoordinated.  Occasionally, the earth shakes when they take a"
+" step."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s reaches out and touches your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s reaches out and touches <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s reaches out and you narrowly avoid their touch!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s reaches out and <npcname> narrowly avoids their touch!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high earthshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s claps both hands in the air and shouts at %3$s."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral magus"
+msgid_plural "feral magi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"A mage gone feral, their bloodshot eyes looking to and fro as eldritch light "
+"occasionally trails from their hands.  The arcane sigils on their clothing "
+"and the rings and jewelry they wear bespeak that they were once a mage of "
+"considerable power before the Cataclysm took their mind."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral magus"
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s screams words of magic."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral magus"
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s screams words of magic and waves their hands."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral magus"
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s makes a quick gesture and disappears."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral high magus"
+msgid_plural "feral high magi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"A mage gone feral, their bloodshot eyes looking to and fro as eldritch light "
+"occasionally trails from their hands.  They randomly make half-remembered "
+"arcane gestures, but the occasional spells that result are no less potent for"
+" it."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s screams words of magic and the world suddenly starts moving much slower."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s screams words of magic and the sounds around you grow muffled."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high magus"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s pushes both arms outward in a sudden gesture."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral stormshaper"
+msgid_plural "feral stormshapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"Their hair standing on end and sparks emitting from their fingers, this feral"
+" still evinces some of the control over lightning they had before the "
+"Cataclysm."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and sparks impact your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and sparks impact <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and you narrowly avoid a shower of sparks!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and <npcname> narrowly avoids a shower of sparks!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s gestures and your %2$s is impacted by a shower of spark bolts, but they "
+"do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s gestures and <npcname>'s %2$s is impacted by a shower of spark bolts, "
+"but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and fog rapidly condenses out of the air!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral stormshaper"
+#. ~ Monster message of special attack of monster "feral high stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s surges forward in a burst of sparks."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s makes a quick gesture and the air erupts into eye-searing light!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral stormshaper"
+#. ~ Monster message of special attack of monster "feral high stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s snaps an arm out and a hammer made of lightning crackles into existence."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s stormhammers your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s stormhammers <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s tries to stormhammers you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s tries to stormhammer <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s stormhammers your %2$s, but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s stormhammers <npcname>'s %2$s, but they do no damage."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral high stormshaper"
+msgid_plural "feral high stormshapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral high stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"Lightning crackles across the surface of this feral wizard.  Their bloodshot "
+"eyes shine with actinic glow and their hands are wreathed in lightning.  Was "
+"that a rumble of thunder?"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s gestures and your %2$s is impacted by a shower of sparks bolt, but they "
+"do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s gestures and <npcname>'s %2$s is impacted by a shower of sparks bolt, "
+"but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high stormshaper"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and a sudden force slams you into the ground!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s tries to stormhammer you, but you dodge!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral technomancer"
+msgid_plural "feral technomancers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"At first seeming like just another feral, a closer look shows the implanted "
+"metal amid the flesh, a tell-tale sign of a technomancer.  Their movements "
+"are more controlled than most of the other ferals, but they still have "
+"bloodshot eyes."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral technomancer"
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s raises an arm and a blade of glowing light materializes."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral technomancer"
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s raises an arm and a suit of glowing armor appears on their body."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s hits your %2$s with a blade of light!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a blade of light!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s swings a blade of light at you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s swings a blade of light at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s swings a blade of light at your %2$s, but it does no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid ""
+"%1$s swings a blade of light at <npcname>'s %2$s, but it does no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral technomancer"
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s points and fires a beam of light!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral technomancer"
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s mutters some words and their body is limned in light."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid "feral high technomancer"
+msgid_plural "feral high technomancers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+msgid ""
+"This feral human has obvious bionic enhancements in what would have been the "
+"sign of a powerful technomancer before the Cataclysm.  They move with much "
+"more speed and grace than most feral humans you've seen."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s makes a gesture and disappears."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s gestures and swords appear out of thin air!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "feral high technomancer"
+#: data/mods/Magiclysm/monsters/feral_wizards.json
+#, c-format
+msgid "%1$s mutters some words and begins moving much faster."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/forgedwellers.json
+msgid "forge born"
+msgid_plural "forge born"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/forgedwellers.json
+msgid "forge hound"
+msgid_plural "forge hounds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "goblin warrior"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"A goblin, but like something out of history.  Over the dirty, tattered "
+"remnants of their street clothes, they're wearing improvised armor and "
+"carrying a heavy club.  They look at you like a wolf seeing a particularly "
+"juicy hunk of lamb."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s hits your %2$s with a cudgel!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with a cudgel!"
+msgstr ""
+
+#. ~ Description of monster "goblin slinger"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"A goblin, but like something out of history.  Over the dirty, tattered "
+"remnants of their street clothes, they're wearing improvised armor and "
+"carrying a sling with a pouch for extra stones.  They look at you like a wolf"
+" seeing a particularly juicy hunk of lamb."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid "goblin leader"
+msgid_plural "goblin leaders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "goblin leader"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"A goblin, slightly larger than the others and bearing a weapon with more "
+"craftsmanship.  The goblins around them scurry to obey their orders."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s hits your %2$s with their spear!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with their spear!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid "goblin thornweaver"
+msgid_plural "goblin thornweavers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "goblin thornweaver"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"A goblin in tattered clothing, muttering to themselves.  Occasionally, they "
+"wave a hand and an eldritch viridian glow trails after it."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and your %2$s is surrounded by a cloud of "
+"scratching thorns!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and <npcname>'s %2$s is surrounded by a cloud of"
+" scratching thorns!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and you narrowly avoid a cloud of scratching "
+"thorns!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and <npcname> narrowly avoids a cloud of "
+"scratching thorns!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and your %2$s is surrounded by a cloud of "
+"scratching thorns, but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"%1$s chatters words of magic and <npcname>'s %2$s is surrounded by a cloud of"
+" scratching thorns, but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "goblin thornweaver"
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid "%1$s waves their hands and %1$s is surrounded in greenish vapors."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid "warg"
+msgid_plural "wargs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "warg"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"An enormous wolf, a meter and a half high at the shoulder, as large as a "
+"young horse.  Tamed wargs were common as pets before the Cataclysm, but this "
+"one looks anything but tame."
+msgstr ""
+
+#. ~ Feed message of monster "warg"
+#: data/mods/Magiclysm/monsters/goblin.json
+#, c-format
+msgid ""
+"The %s approaches you, acknowledging your ancient bond, and eats the meat you"
+" offer."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid "bugbear"
+msgid_plural "bugbears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bugbear"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"An enormous gray-green humanoid, over two meters tall with thick fur at their"
+" joints and long, tufted ears, this creature no longer has much resemblance "
+"to a goblin other than the color.  Despite their size, they move in almost "
+"complete silence and hold a long bladed weapon in their hand."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid "%1$s hits your %2$s with their blade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/goblin.json
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with their blade!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid "bugbear stalker"
+msgid_plural "bugbear stalkers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bugbear stalker"
+#: data/mods/Magiclysm/monsters/goblin.json
+msgid ""
+"An enormous gray-green humanoid, over two meters tall with thick fur at their"
+" joints and long, tufted ears, this creature no longer has much resemblance "
+"to a goblin other than the color.  Despite their size, they move in almost "
+"complete silence and hold a long spear in their hand.  Strangely, you can "
+"only see them when you're looking directly at them; when in the corner of "
+"your vision they simply fade from sight."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/golems.json
+msgid "earthshaper's golem"
+msgid_plural "earthshaper's golems"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "earthshaper's golem"
+#: data/mods/Magiclysm/monsters/golems.json
+msgid ""
+"This golem is easy to separate from other golems - the metallic earthshaper's"
+" emblem shines on its smooth body, and it's eyes and hands are made out of "
+"amethyst."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/holiday_magiclysm.json
+msgid "Yule cat"
+msgid_plural "Yule cats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/holiday_magiclysm.json
+msgid "Yule cat cub"
+msgid_plural "Yule cat cubs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yule cat cub"
+#: data/mods/Magiclysm/monsters/holiday_magiclysm.json
+msgid ""
+"The child of a Yule cat, this catlike creature looks as if it poses no threat"
+" to you, but looks can be deceiving."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/holiday_magiclysm.json
+msgid "workshop elf"
+msgid_plural "workshop elves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/holiday_magiclysm.json
+msgid "leprechaun"
+msgid_plural "leprechauns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/lizardfolk.json
+msgid "lizardfolk chieftain"
+msgid_plural "lizardfolk chieftains"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "lizardfolk chieftain"
+#: data/mods/Magiclysm/monsters/lizardfolk.json
+msgid ""
+"Among the lizardfolk, ambition is a rare quality.  Chieftains earn their "
+"place by exhibiting unusually high levels of ambition, often mistaken by "
+"outsiders as excessive, brutal violence.  This chief is the largest and "
+"strongest member of its tribe and carries a fierce trident to compliment its "
+"teeth and claws."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/mi-go.json
+msgid "mi-go fleshwarper"
+msgid_plural "mi-go fleshwarpers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mi-go fleshwarper"
+#: data/mods/Magiclysm/monsters/mi-go.json
+msgid ""
+"An alien creature of uncertain origin.  Its shapeless pink body bears "
+"numerous sets of paired appendages of unknown function, and a pair of ribbed,"
+" membranous wings which seem to be quite useless.  Its odd, vaguely pyramid-"
+"shaped head bristles with numerous wavering antennae, and it moves with an "
+"uncanny fluidity on its many legs.  Its flesh occasionally ripples, as though"
+" something inside was squirming and trying to get free."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go fleshwarper"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid "%1$s's numerous antennae move rhythmically for a moment."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go fleshwarper"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid "%1$s's numerous antennae twitch in all directions for a moment."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go fleshwarper"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid "As %1$s touches %3$s, the flesh warps and twists!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/mi-go.json
+msgid "mi-go nethermancer"
+msgid_plural "mi-go nethermancers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mi-go nethermancer"
+#: data/mods/Magiclysm/monsters/mi-go.json
+msgid ""
+"An alien creature of uncertain origin.  Its shapeless pink body bears "
+"numerous sets of paired appendages of unknown function, and a pair of ribbed,"
+" membranous wings which seem to be quite useless.  Its odd, vaguely pyramid-"
+"shaped head bristles with numerous wavering antennae, and it moves with an "
+"uncanny fluidity on its many legs.  Its carapace is covered in regular "
+"patterns which occasionally shift as you look at them before settling into a "
+"new configuration."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go nethermancer"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid ""
+"%1$s twitches its antennae at %3$s and %3$s is lifted up and pulled towards "
+"them!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go nethermancer"
+#. ~ Monster message of special attack of monster "mi-go lightbringer"
+#. ~ Monster message of special attack of monster "mi-go mindrender"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#: data/mods/MindOverMatter/monsters/mi_go.json
+#, c-format
+msgid "%1$s's numerous antennae sync their movements for a brief moment."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go nethermancer"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid "%1$s's numerous antennae weave in a complicated pattern."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mi-go nethermancer"
+#: data/mods/Magiclysm/monsters/mi-go.json
+#, c-format
+msgid "%1$s numerous antennae point directly at %3$s."
+msgstr ""
+
+#. ~ Description of monster "animated blade"
+#: data/mods/Magiclysm/monsters/mics.json
+msgid ""
+"A conjured glowing longsword that darts and dodges around, slicing and "
+"cutting enemies into small pieces."
+msgstr ""
+
+#. ~ Description of monster "hologram"
+#: data/mods/Magiclysm/monsters/mics.json
+msgid "Hologram copy of you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/mics.json
+msgid "watcher spirit"
+msgid_plural "watcher spirits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "watcher spirit"
+#: data/mods/Magiclysm/monsters/mics.json
+msgid ""
+"A summoned watcher spirit, translucent and barely visible.  It gazes all "
+"around itself."
+msgstr ""
+
+#. ~ Death message of monster "watcher spirit"
+#: data/mods/Magiclysm/monsters/mics.json
+#, c-format
+msgid "The %s dissipates in a gust of wind!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "hunllef ram"
+msgid_plural "hunllef rams"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "will-o-wisp"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"Will-o'-wisps can be yellow, white, green, or blue.  They are easily mistaken"
+" for lanterns, especially in the foggy marshes and swamps where they reside."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "will-o-wisp"
+#: data/mods/Magiclysm/monsters/monsters.json
+#, c-format
+msgid "%1$s glitters in an eerie pattern."
+msgstr ""
+
+#. ~ Description of monster "troll"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A monstrous, green-skinned humanoid, almost three meters tall but as thin as "
+"the average human.  Trolls are renowned for their thick hides and natural "
+"regenerative ability."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "rock troll"
+msgid_plural "rock trolls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "rock troll"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A monstrous, gray-skinned humanoid, almost three meters tall but as thin as "
+"the average human.  Rock trolls have rocky skin that's almost impervious to "
+"hand weapons, but they turn to stone in the sunlight."
+msgstr ""
+
+#. ~ Death message of monster "rock troll"
+#: data/mods/Magiclysm/monsters/monsters.json
+#, c-format
+msgid "The %s turns to stone."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "sea troll"
+msgid_plural "sea trolls"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "sea troll"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A monstrous, green-skinned humanoid, almost three meters tall but as thin as "
+"the average human.  Sea trolls are just as mean and dangerous as trolls on "
+"land, but they can also swim and breathe in water."
+msgstr ""
+
+#. ~ Description of monster "frog"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A conspicuously average American bullfrog.  You better keep prince charming "
+"away from it."
+msgstr ""
+
+#. ~ Description of monster "loup garou"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"Previously thought extinct outside of rural Quebec and Louisiana this cursed "
+"creature has been known to breed with true wolves when it isn't madly "
+"destroying any signs of humanity in its territory.  These once normal men, "
+"women, elves and dwarves are now forever cursed to roam the wilderness as "
+"four legged avatars of destruction; giant, rabid, maddened wolves that never "
+"know peace when they can smell or see the creations of the mortal races.  "
+"Immortal until killed it would be difficult to remember they were once mortal"
+" until cutting beneath the fur shows meat that somehow remembers a different "
+"life."
+msgstr ""
+
+#. ~ Description of monster "fiery nightmare"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A colossal figure which seems to consist entirely of shadows engulfed in "
+"flames.  Their immense dark wings extend from wall to wall.  Two eyes that "
+"resemble burning coals are gazing down on you with hatred.  In one hand they "
+"hold a huge sword, in the other a many thonged whip, both glowing with red-"
+"hot flames."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "teravolt"
+msgid_plural "teravolts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "teravolt"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "A small energy sphere that slowly floats towards the target."
+msgstr ""
+
+#. ~ Death message of monster "teravolt"
+#: data/mods/Magiclysm/monsters/monsters.json
+#, c-format
+msgid "The %s explode, creating a giant cloud of sparks."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "electric demon"
+msgid_plural "electric demons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "electric demon"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"Small, pure electric elemental that jumps from target to target, attacking "
+"anything and everything in their sight bar the caster."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "thunder pillar"
+msgid_plural "thunder pillars"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "thunder pillar"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"They look like a giant floating stone shard, but are actually an intelligent "
+"creature that can use electric branches as their own bodies."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "thunder pillar"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "The pillar weaves electricity around themself!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "ankheg"
+msgid_plural "ankhegs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ankheg"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A huge, segmented, burrowing insect, two meters long and pale greenish-yellow"
+" in color."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "ankheg"
+#: data/mods/Magiclysm/monsters/monsters.json
+#, c-format
+msgid "The ankheg spits a stream of acid at %3$s!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "otyugh"
+msgid_plural "otyughs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "otyugh"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"An enormous, bulbous body dominated by a toothy maw, with three tentacles "
+"extending from the top.  Two tentacles are tipped with grasping filaments and"
+" the last has several dark spots that might be eyes.  It smells indescribably"
+" foul."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid "catoblepas"
+msgid_plural "catoblepases"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "catoblepas"
+#: data/mods/Magiclysm/monsters/monsters.json
+msgid ""
+"A terrible stench is the first sign of this monster's presence.  It has an "
+"ox-like body and warthog-like head, with a neck almost as long as a "
+"giraffe's.  It keeps its head low to the ground, but there's something odd "
+"about its eyes."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "catoblepas"
+#: data/mods/Magiclysm/monsters/monsters.json
+#, c-format
+msgid "The catoblepas looks at %3$s!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid "mossling"
+msgid_plural "mosslings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "mossling"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"A dog-sized mass of lichen and plant matter, ambling about on a series of "
+"short limbs.  It looks around the forest floor for fallen leaves to eat."
+msgstr ""
+
+#. ~ Death message of monster "mossling"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s collapses into a pile of moss."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid "dryad"
+msgid_plural "dryads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "dryad"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"You would have thought this was a tree until it suddenly moved.  It is human-"
+"shaped and human-sized, but with wood for skin and leaves for hair.  It "
+"regards you impassively."
+msgstr ""
+
+#. ~ Death message of monster "dryad"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s collapses into splinters."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid "brackenwight"
+msgid_plural "brackenwights"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "brackenwight"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"An animate pile of moss, leaves, sticks, and other forest detritus, towering "
+"almost three meters high.  Three pits near the top with a lambent green glow "
+"might be eyes.  It slowly walks on massive limbs."
+msgstr ""
+
+#. ~ Death message of monster "brackenwight"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s collapses into a massive pile of leaves and sticks."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "brackenwight"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "Questing roots explode out of %1$s toward %3$s!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid "treant"
+msgid_plural "treants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "treant"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"A walking tree, slowly moving on a tangle of roots like a land-bound octopus,"
+" with its branches swaying in the wind.  There is the vague suggestion of a "
+"face in the whorls of its bark."
+msgstr ""
+
+#. ~ Death message of monster "treant"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s returns to immobility."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s squeezes your %2$s with its roots!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s squeezes <npcname> with its roots!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s squeezes your %2$s, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s squeezes <npcname>, but their armor protects them."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#: data/mods/Magiclysm/monsters/summoned.json
+msgid "keeper of the glades"
+msgid_plural "keeper of the glades"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "keeper of the glades"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"An enormous stag with a body made of wood and vines, this is the king of the "
+"forest.  Its ivy-wreathed horns bloom with flowers and grass grows with every"
+" step that it takes.  Two luminous green eyes gaze at its surroundings."
+msgstr ""
+
+#. ~ Death message of monster "keeper of the glades"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s collapses into a massive pile of splinters."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "keeper of the glades"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "%1$s rears and roots burst from the ground!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "keeper of the glades"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid ""
+"%1$s's viridian eyes blaze as it stares at the unnatural creatures nearby!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "keeper of the glades"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid ""
+"%1$s's viridian eyes blaze and grasping roots drag the unnatural creature "
+"down beneath the soil!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid "gnome"
+msgid_plural "gnomes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gnome"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+msgid ""
+"A small mass of animate stone in the rough shape of a human, with clay for "
+"joints.  Two gemstone eyes stare at you without blinking."
+msgstr ""
+
+#. ~ Death message of monster "gnome"
+#: data/mods/Magiclysm/monsters/nature_spirits.json
+#, c-format
+msgid "The %s collapses into broken stone!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid "ogre"
+msgid_plural "ogres"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ogre"
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid ""
+"An enormous, pale green beast known for living in swamps and eating "
+"passersby, clutching a gigantic club in a single meaty hand; it will kill "
+"anything it gets its hands on."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid "%1$s hits your %2$s with an enormous club!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with an enormous club!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid "ogre mage"
+msgid_plural "ogre mages"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ogre mage"
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid ""
+"An enormous, blue beast known for living in swamps and eating passersby, "
+"slightly smaller than the other ogres you've seen.  This ogre has a more "
+"calculating look.  As it idly waves the hand not holding a club, you see "
+"sparkles trail through the air after its fingers."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid "%1$s rumbles words of magic and an eldritch bolt impacts your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid ""
+"%1$s rumbles words of magic and an eldritch bolt impacts <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid "%1$s rumbles words of magic and you narrowly avoid an eldritch bolt!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid ""
+"%1$s rumbles words of magic and <npcname> narrowly avoids an eldritch bolt!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid ""
+"%1$s rumbles words of magic and your %2$s is impacted by an eldritch bolt, "
+"but it does no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid ""
+"%1$s rumbles words of magic and <npcname>'s %2$s is impacted by an eldritch "
+"bolt, but it does no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "ogre mage"
+#: data/mods/Magiclysm/monsters/ogre.json
+#, c-format
+msgid "%1$s gestures and %1$s is enveloped in darkness!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid "ettin"
+msgid_plural "ettins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ettin"
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid ""
+"An enormous, clay-colored beast known for living in swamps and eating "
+"passersby.  This one has two heads, both moving independently and gazing "
+"around at their surroundings."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid "ettercap"
+msgid_plural "ettercaps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ettercap"
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid ""
+"A hideous monstrosity, like a spider in the shape of a man.  Its dark purple "
+"skin is half-covered in chitin, long claws extend from its hands and feet, "
+"and eight eyes peer out from a distorted humanlike face."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid "athach"
+msgid_plural "athach"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "athach"
+#: data/mods/Magiclysm/monsters/ogre.json
+msgid ""
+"A gigantic, ogre-like monster, nearly half again as tall as an ogre.  Two "
+"huge tusks jut forth from a mouth twisted into a snarl, and a third arm "
+"protrudes from the center of its chest."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid "orc warrior"
+msgid_plural "orc warriors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "orc warrior"
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid ""
+"Like a goblin, but stretched and exaggerated until they're as tall as a human"
+" but much more heavily muscled, wearing improvised armor and carrying a "
+"spear."
+msgstr ""
+
+#. ~ Description of monster "orc archer"
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid ""
+"Like a goblin, but stretched and exaggerated until they're as tall as a human"
+" but much more heavily muscled, wearing improvised armor and carrying a bow."
+"  They smile silently, baring a set of sharp teeth, as they aim at you."
+msgstr ""
+
+#. ~ Description of special attack of monster "orc archer"
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid "The orc shoots you with laser accuracy!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid "blood orc"
+msgid_plural "blood orcs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "blood orc"
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid ""
+"Like a goblin, but stretched and exaggerated until they're as tall as a human"
+" but much more heavily muscled, wearing improvised armor and carrying an "
+"enormous metallic club.  There are red streaks all over their skin, like they"
+" had bathed themselves in blood."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid "%1$s hits your %2$s with their mace!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid "%1$s hits <npcname>'s %2$s with their mace!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid "orc blood-mage"
+msgid_plural "orc blood-mages"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "orc blood-mage"
+#: data/mods/Magiclysm/monsters/orcs.json
+msgid ""
+"Like a goblin, but stretched and exaggerated until they're as tall as a human"
+" but much more heavily muscled, wearing improvised armor.  There are red "
+"streaks all over their skin, like they had bathed themselves in blood, and "
+"their hands glow faintly red."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and your %2$s is impacted by a bolt of carmine "
+"energy!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and <npcname>'s %2$s is impacted by a bolt of "
+"carmine energy!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and you narrowly avoid a bolt of carmine energy!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and <npcname> narrowly avoids a bolt of carmine "
+"energy!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and your %2$s is surrounded by a cloud of "
+"scratching thorns, but they do no damage."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s growls words of magic and <npcname>'s %2$s is surrounded by a cloud of "
+"scratching thorns, but they do no damage."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "orc blood-mage"
+#: data/mods/Magiclysm/monsters/orcs.json
+#, c-format
+msgid ""
+"%1$s makes a frenzied cry and as they point, %3$s is surrounded by a red "
+"glow."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid "tanglevine"
+msgid_plural "tanglevines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "tanglevine"
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+msgid ""
+"A thick mass of animated vine, lashing back and forth at anything that comes "
+"within reach.  Long thorns grow from its sides."
+msgstr ""
+
+#. ~ Death message of monster "tanglevine"
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "The %s rots into nothingness in moments."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s squeezes and its thorns dig into your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s squeezes <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s tries to squeeze you, but you fight back!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s tries to squeeze <npcname>, but they fight back!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s squeezes your %2$s, but fails to penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/plants.json
+#: data/mods/Xedra_Evolved/monsters/summoned_monsters.json
+#, c-format
+msgid "%1$s squeezes <npcname>, but fails to penetrate their armor."
+msgstr ""
+
+#. ~ Description of monster "massive stag beetle"
+#: data/mods/Magiclysm/monsters/summoned.json
+msgid "This enormous stag beetle has reached mutated maturity."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/triffids.json
+msgid "triffid vineweaver"
+msgid_plural "triffid vineweavers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "triffid vineweaver"
+#: data/mods/Magiclysm/monsters/triffids.json
+msgid ""
+"A particularly large mobile plant, taller than a moose.  It has a single "
+"bark-covered stalk supporting a flowery head with a paralyzing sting "
+"concealed within.  Some of its fronds move in particular patterns, an "
+"eldritch light trailing after them.  Nature will be healed."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid vineweaver"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds in a deliberate pattern."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid vineweaver"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds toward the ground."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid vineweaver"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s twitches its base and roots burst from the ground around %3$s."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/triffids.json
+msgid "triffid seedshaper"
+msgid_plural "triffid seedshapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "triffid seedshaper"
+#: data/mods/Magiclysm/monsters/triffids.json
+msgid ""
+"A creeping mobile plant, as tall as a moose.  It has a single bark-covered "
+"stalk supporting a flowery head with a paralyzing sting concealed within.  A "
+"hazy cloud of pollen hangs around it."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid seedshaper"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds and pollen erupts out in a cone!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid seedshaper"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds and a glow surrounds %3$s."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid seedshaper"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds and %3$s starts moving faster!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "triffid seedshaper"
+#: data/mods/Magiclysm/monsters/triffids.json
+#, c-format
+msgid "%1$s waves its fronds and golden pollen cascades down over %3$s!"
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "thaumic zombie"
+msgid_plural "thaumic zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "thaumic zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"A human body, swaying as it moves, an unstoppable rage visible in its oily "
+"black eyes.  Faint blue lines are visible beneath parts of its exposed skin, "
+"letting off an eldritch glow."
+msgstr ""

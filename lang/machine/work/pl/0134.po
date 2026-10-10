@@ -1,0 +1,1516 @@
+# Batch 134 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of special attack of monster "party rocker"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid "The party rocker party rocks!"
+msgstr ""
+
+#. ~ Description of monster "party rocker"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid ""
+"A party rocker who's not dancing with as much energy, and they seem to be "
+"stopping often to cough and catch their breath."
+msgstr ""
+
+#. ~ Description of monster "party rocker"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid ""
+"A party rocker who's grown painful mushroom stalks out of their body, "
+"writhing in pain as their last neurons still instruct them to dance."
+msgstr ""
+
+#. ~ Description of monster "party rocker"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid ""
+"After the event on March 2nd, seemingly ordinary people started coming down "
+"with some odd, mass hysteria like dancing.  While some people may have "
+"scoffed it off as a silly dance craze, those in the know knew, it was the "
+"Party Rock Outbreak.  This one has a drink in hand."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid "immortal snail"
+msgid_plural "immortal snails"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "immortal snail"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid ""
+"A small nondescript immortal snail that is slowly but relentlessly making its"
+" way toward you.  You get a strong feeling you should not touch the snail."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+#, c-format
+msgid "%s touches you, killing you instantly."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+#, c-format
+msgid "%s tries to touch you, but misses."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+#, c-format
+msgid "%s touches you, yet somehow you live!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "eoc_you_touch_the_immortal_snail"
+#: data/mods/CrazyCataclysm/crazy_monsters.json
+msgid "You touch the snail and die instantly."
+msgstr ""
+
+#. ~ Description of mutation "Lucky"
+#: data/mods/CrazyCataclysm/crazy_mutations.json
+msgid "You're naturally quite lucky!"
+msgstr ""
+
+#. ~ Description of mutation "Unlucky"
+#: data/mods/CrazyCataclysm/crazy_mutations.json
+msgid "You're naturally quite unlucky."
+msgstr ""
+
+#. ~ Speech from speaker mon_mi_go, mon_mi_go_slaver
+#: data/mods/CrazyCataclysm/crazy_speech.json
+msgid "\"You can't handle the truth!\""
+msgstr ""
+
+#. ~ Speech from speaker mon_mi_go, mon_mi_go_slaver
+#: data/mods/CrazyCataclysm/crazy_speech.json
+msgid "\"They're here!\""
+msgstr ""
+
+#. ~ Skill name
+#: data/mods/CrazyCataclysm/mod_interactions/mindovermatter/skills.json
+msgid "woo woo"
+msgstr ""
+
+#. ~ Description of skill "woo woo"
+#: data/mods/CrazyCataclysm/mod_interactions/mindovermatter/skills.json
+msgid ""
+"Crystals, meditation, astral projection, remote viewing, channeling, ESP; "
+"it's all real, man.  It all works if you believe."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/game_win.json
+msgid ""
+"&Through all your struggles, you have won the day against the unknown.  Do "
+"you wish to struggle more, or rest in your triumph."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/game_win.json
+msgid "I wish to rest in my triumph, and let the struggle end."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/game_win.json
+msgid ""
+"I will continue on and face oblivion, even if it costs me my life and limb."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Defense_Mode/items.json
+msgid "service contract"
+msgid_plural "service contracts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "service contract"
+#: data/mods/Defense_Mode/items.json
+msgid ""
+"A slip of paper signed by the issuer and the recipient, detailing the terms "
+"of service of a hiring contract."
+msgstr ""
+
+#. ~ Mission name
+#: data/mods/Defense_Mode/missions.json
+msgid "Survive"
+msgstr ""
+
+#. ~ Description of mission "Survive"
+#: data/mods/Defense_Mode/missions.json
+msgid ""
+"You don't know how you got here, or why.  All you know is that you need to "
+"live."
+msgstr ""
+
+#. ~ MOD name
+#: data/mods/Defense_Mode/modinfo.json
+msgid "Defense Mode"
+msgstr ""
+
+#. ~ Description of MOD "Defense Mode"
+#: data/mods/Defense_Mode/modinfo.json
+msgid ""
+"This transforms the game into a horde-based wave defense mode.  Pick a "
+"starting location, create your character, and defend your bastion against the"
+" relentless waves of zombies, insects, aliens, you name it!  Complex "
+"customizations allow the game to be tinkered with to your hearts content, and"
+" extensive mod compatibility allows for your favorite additions to work "
+"perfectly in the new game.  It's kill or be killed!"
+msgstr ""
+
+#. ~ Name of spell "gargantuan_raptor_spawn"
+#: data/mods/Defense_Mode/monster_spells.json
+msgid "Summon Raptor Horde"
+msgstr ""
+
+#. ~ Description of spell "gargantuan_raptor_spawn ( Summon Raptor Horde )"
+#: data/mods/Defense_Mode/monster_spells.json
+msgid "Summons a horde of zombiespawn raptors."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Defense_Mode/monsters.json
+msgid "shadow of reality"
+msgid_plural "shadow of reality"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shadow of reality"
+#: data/mods/Defense_Mode/monsters.json
+msgid ""
+"Something is there!  Against all reason, this shadow lurks at the corners of "
+"your vision.  You close your eyes, but still, it is there.  No matter how far"
+" you run, it is there.  Behind heavy fortifications, it is there.  The maw of"
+" the void, the all consumer, the most powerful.  Now you will know why you "
+"fear the night, the day, and the unknown."
+msgstr ""
+
+#. ~ Death message of monster "shadow of reality"
+#: data/mods/Defense_Mode/monsters.json
+msgid "Grasping at the air, the shadow melts away and vanishes!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "shadow of reality"
+#: data/mods/Defense_Mode/monsters.json
+msgid ""
+"The shadow opens its mouth, and gore-smeared winged beasts fly out of it!"
+msgstr ""
+
+#. ~ Name suffix of an NPC
+#. ~ Despite being similar to most other bandits, these are made to attack
+#. head-on.
+#: data/mods/Defense_Mode/npcs.json
+msgid "raider"
+msgstr ""
+
+#. ~ Job description of "Merchant" NPC class
+#: data/mods/Defense_Mode/npcs.json
+msgid "I'm the one who sells you things."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/npcs.json
+msgid "Debug No HP"
+msgstr ""
+
+#. ~ Description of mutation "Debug No HP"
+#. ~ Description of mutation "Debug No HP II"
+#: data/mods/Defense_Mode/npcs.json
+msgid ""
+"You will die in one hit, more or less.  Sneezing too hard will kill you."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/npcs.json
+msgid "Debug No HP II"
+msgstr ""
+
+#. ~ Name of spell "remove_opponents"
+#: data/mods/Defense_Mode/spells.json
+msgid "Debug Opponent Kill"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid ""
+"Nice to see you again.  Would you like to buy something, hire someone, or "
+"somethin' else?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid "I'll buy something."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid "What'll it cost me to get some help around here?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid "I'd like to hire some help."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid "Nevermind, I don't want anything."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid ""
+"It's usually $500.  You can pay me up front in either goods or money, then "
+"we'll talk."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_DM_MERCHANT.json
+msgid "Anything else I can do for you?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Nice to see you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid ""
+"Oh, you're not one of the <zombies>.  I'm glad to see another survivor out "
+"here, such a relief."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "What are you doing out here in the sticks?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Why don't you come with me, maybe we can hold out here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid ""
+"I can't remember, actually.  I have a vague sense of being in my house, "
+"asleep, before I woke up in the middle of a field.  I have this strange "
+"feeling that something's after me, keep seeing things out in the woods, so I "
+"had to keep moving."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Seems like a hard life."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Where'd you get all your stuff at?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid ""
+"I guess we're both in a similar predicament, then.  Why not team up with me?"
+"  We can hold out together and try to stay alive."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid ""
+"I just found it near where I woke up at.  Who's it was and where it came from"
+" I have no idea, but I couldn't find anyone else around, and it seemed like "
+"it'd all been left there for someone to pick up."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/TALK_WANDERING_SURVIVOR.json
+msgid "Makes sense."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Play!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"Hello, and welcome to Defense Mode!  Please alter the options as you desire, "
+"then we'll get started!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Enemy Options"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Preset Game Options"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Advanced Game Options"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Difficulty Options"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "What kinds of enemies do you want to see?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow regular zombies."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable regular zombies."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow special zombies."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable special zombies."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow spiders."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable spiders."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow triffids."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable triffids."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow robots."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable robots."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow eldritch horrors."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable eldritch horrors."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow dinosaurs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable dinosaurs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow lizardfolk."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable lizardfolk."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow golems."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable golems."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow goblins."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable goblins."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow orcs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable orcs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow megafauna."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable megafauna."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow psychics."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable psychics."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow sweets."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable sweets."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Mgah'ehye ya nyth'drnn."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Mgah ya nyth'drnn."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow Exodii."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable Exodii."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow XEDRA offworlders."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable XEDRA offworlders."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Allow exoplanetary residents."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable exoplanetary residents."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"We have a grand variety of preselected game modes for you to choose from!  "
+"Pick one and play now!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Shaun of The Dead</color>: (Defend a bar against classic "
+"zombies with your five friends.  Easy and fun.)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Dawn of The Dead</color>: (Classic zombies only, slower and "
+"more realistic.)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Eight-Legged Freaks</color>: (Hordes of spiders!  Not "
+"arachnophobia friendly!)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Day of The Triffids</color>: (Protect your mansion against the "
+"triffids.)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Skynet</color>: (Robots have decided that humans are the "
+"enemy!)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>The Call of Cthulhu</color>: (Fend off hordes of eldritch "
+"horrors.)"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"Please alter these game options as you wish, make the experience just like "
+"you want it."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable merchant trading."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Enable merchant trading."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable special waves."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Enable special waves."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable portal storms."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Enable portal storms."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Disable random events."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Enable random events."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "How hard do you want your game to be?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Easy</color>: No additional enemies spawn per wave, and you get"
+" a second chance when you die the first time.  Good for newcomers or those "
+"not familiar with isometric horde fighters."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Normal</color>: The basic way to play, no additional enemies, "
+"with no safety nets.  This is considered the default."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Difficult</color>: More enemies spawn per wave, but nothing too"
+" extreme.  You'll have to fight harder to live, but more loot comes with it "
+"too."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Hard</color>: Twice the number of enemies will spawn per wave."
+"  A true challenge to test your metal."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>Nightmare</color>: Three times the number of enemies will "
+"attack you, making things a long and brutal slog though guts and blood.  Come"
+" prepared to possibly fail a few times."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"<color_yellow>DOOM</color>: Fives times the number of enemies will attack "
+"you.  Armies will come to your door, and what they will be met with is up to "
+"you to decide.  Incredibly difficult."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Make a custom difficulty."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid ""
+"What difficulty modifier would you prefer?  Current modifier: "
+"<global_val:diffulty_modifier>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Increase by 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Increase by 5"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Decrease by 1"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Decrease by 5"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/Defense_Mode/dialogue/menu_screen.json
+msgid "Choose a preset difficulty."
+msgstr ""
+
+#. ~ Player message in effect in EoC "defense_mode_game_start_final_setup"
+#: data/mods/Defense_Mode/effects_on_condition/backend_eocs.json
+msgid "Get ready for the first wave, it's not that far away!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "defense_mode_caravan_spawn"
+#: data/mods/Defense_Mode/effects_on_condition/backend_eocs.json
+msgid "A caravan approaches!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_FORTRESS_TRAP"
+#: data/mods/Defense_Mode/effects_on_condition/backend_eocs.json
+msgid "You can't leave your fortress behind!"
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_DEFENSE_MODE_PREVENT_DEATH"
+#: data/mods/Defense_Mode/effects_on_condition/backend_eocs.json
+msgid ""
+"For an instant that is also an eternity, you exist only in an empty void.  "
+"Then you feel something vast, alien, and merciless reach through a "
+"preexisting connection to give you just enough energy to exist.  Its motives "
+"for doing so are not likely to be benign."
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_WAVE_SPECIAL_FERALS"
+#: data/mods/Defense_Mode/effects_on_condition/wave_eocs.json
+msgid ""
+"You hear the wild howls of crazed individuals and unintelligible, carnal "
+"gibberish and slavering cries.  Something is coming, and it doesn't have your"
+" best interest in mind."
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_WAVE_SPECIAL_RATKIN"
+#: data/mods/Defense_Mode/effects_on_condition/wave_eocs.json
+msgid ""
+"Squeaking and chittering can be heard nearby, with the pattering of many "
+"feet, like a swarm of rats traveling quickly.  However, this sounds more, "
+"organized?  Almost like they're all walking in formation."
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_WAVE_SPECIAL_MILITARY"
+#: data/mods/Defense_Mode/effects_on_condition/wave_eocs.json
+msgid ""
+"You hear crazed, half-pronounced orders screamed from afar.  The tamping of "
+"boots and off-beat shouts of two-three-four sound like the signs of an "
+"approaching army, but all the footfall is out of tune."
+msgstr ""
+
+#. ~ Player message in effect in EoC "DEFENSE_MODE_WAVE_SPECIAL_SHADOW"
+#: data/mods/Defense_Mode/effects_on_condition/wave_eocs.json
+msgid ""
+"Your vision flickers with black, blob-like creatures for a moment.  An "
+"intense feeling of paranoia washes over you, as if the world itself is now "
+"out to kill you, the night itself reaching for your mind to rip it apart.  "
+"Somethings wicked comes this way, and it wants you dead."
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Must have completed a wave"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Requires Slice & Dice, Bash & Mash, and Knifey"
+msgstr ""
+
+#. ~ Text variable value in an effect
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkmenu.json
+msgid "Requires athletics 5 and Gym Rat"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Money Makin' Mercenary"
+msgstr ""
+
+#. ~ Description of mutation "Money Makin' Mercenary"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"You've always had a knack for finding the value in life, whether it's $200 or"
+" $50 for a life.  You get more money from completing hordes."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Slice n' Dice"
+msgstr ""
+
+#. ~ Description of mutation "Slice n' Dice"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"You've become very skilled with cutting weapons of all sorts, and know how to"
+" use them better."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Bash n' Mash"
+msgstr ""
+
+#. ~ Description of mutation "Bash n' Mash"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"You've become very skilled with blunt instruments of all sorts, and know how "
+"to use them better."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Knifey"
+msgstr ""
+
+#. ~ Description of mutation "Knifey"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "You're very in tune with the ways of stabbing somebody."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Melee Master"
+msgstr ""
+
+#. ~ Description of mutation "Melee Master"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "You've become a master of melee, and are skilled with melee weapons."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Gym Rat King"
+msgstr ""
+
+#. ~ Description of mutation "Gym Rat King"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Your time exercising has gotten you used to being winded, and has vastly "
+"expanded your stamina.  You can go for longer and harder now."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Living on a Prayer"
+msgstr ""
+
+#. ~ Description of mutation "Living on a Prayer"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"You're like a cat, and it always seemed to you like you've had nine lives.  "
+"When things get rough, by pure luck or divine intervention, you can get out "
+"of it."
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Unique name of an NPC
+#. ~ Name of an NPC class
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/mysterious_stranger.json
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid "Mysterious Stranger"
+msgstr ""
+
+#. ~ Description of mutation "Mysterious Stranger"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perks.json
+msgid ""
+"Someone must be watching over you!  Whenever you're in combat, you can call "
+"for the help of a stranger for a short amount of time."
+msgstr ""
+
+#. ~ Player message in false effect in EoC "mysterious_stranger_activate"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/mysterious_stranger.json
+msgid "Nobody hears you…"
+msgstr ""
+
+#. ~ Name of effect type id "mysterious_stranger_cooldown"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/mysterious_stranger.json
+msgid "Mysterious Stranger's Break"
+msgstr ""
+
+#. ~ Description of effect type "Mysterious Stranger's Break"
+#. ~ Apply message of effect type "Mysterious Stranger's Break"
+#: data/mods/Defense_Mode/mod_interactions/bombastic_perks/perkdata/mysterious_stranger.json
+msgid "The stranger will be back…"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Stego Mutation, Stego
+#. Transformation, Stego Metamorphosis"
+#: data/mods/DinoMod/effects.json
+msgid "Stego Mutagen Contamination"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_horns"
+#: data/mods/DinoMod/effects.json
+msgid "Horns Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_horns"
+#: data/mods/DinoMod/effects.json
+msgid "Horns Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_horns"
+#: data/mods/DinoMod/effects.json
+msgid "Horns Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Horns Mutation"
+#: data/mods/DinoMod/effects.json
+msgid "You consumed horns mutagen."
+msgstr ""
+
+#. ~ Description of effect type "Horns Transformation"
+#: data/mods/DinoMod/effects.json
+msgid "You consumed a large amount of horns mutagen."
+msgstr ""
+
+#. ~ Description of effect type "Horns Metamorphosis"
+#: data/mods/DinoMod/effects.json
+msgid "You consumed a life-changing amount of horns mutagen."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Horns Mutation, Horns
+#. Transformation, Horns Metamorphosis"
+#: data/mods/DinoMod/effects.json
+msgid "Horns Mutagen Contamination"
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Tyrant Mutation, Tyrant
+#. Transformation, Tyrant Metamorphosis"
+#: data/mods/DinoMod/effects.json
+msgid "Tyrant Mutagen Contamination"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/DinoMod/harvest_dissect.json
+msgid ""
+"Slicing carefully into the dinosaur, you discover stomach contents that may "
+"be useful"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/DinoMod/harvest_dissect.json
+msgid ""
+"Slicing carefully into the mosasaurus body, you discover stomach contents and"
+" biological samples that may be useful"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/DinoMod/harvest_dissect.json
+msgid ""
+"Slicing carefully into the scaly plesiosaurus body, you discover biological "
+"samples that may be useful"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/DinoMod/harvest_dissect.json
+msgid ""
+"Slicing carefully into this technologically enhanced dinosaur, you discover "
+"items that may be useful"
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/DinoMod/harvest_dissect.json
+msgid ""
+"Slicing carefully into this technologically enhanced dinosaur, you discover "
+"items that may be useful, and some potentially interesting samples"
+msgstr ""
+
+#. ~ Snippet in category "lab_notes"
+#: data/mods/DinoMod/lab_notes.json
+msgid ""
+"Strange sounds have been reported from the swamp nearby.  An enhanced "
+"security team was dispatched, but has not returned in 48 hours.  The facility"
+" is on lockdown.  We can't let them get back in."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s catches your %2$s in its long sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s grabs <npcname> in a powerful bite!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to catch your %2$s in its teeth, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s tries to close its teeth around <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s grabs your %2$s in its long sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s grabs <npcname> in its long sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s rips your %2$s with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s rips a gash into <npcname> with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to rip your %2$s, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to rip a gash into <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to rip your %2$s with its sharp teeth, but fails to penetrate your"
+" armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to rip a gash into <npcname>, but fails to penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s punctures your %2$s with its long sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s punctures <npcname> in a powerful bite!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s pulls your %2$s apart with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s pulls away a large chunk of flesh from <npcname> with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to pull your %2$s apart, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to pull away a large chunk of flesh from <npcname>, but they "
+"dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to pull your %2$s apart with its sharp teeth, but fails to "
+"penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to pull away a large chunk of flesh from <npcname>, but fails to "
+"penetrate their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tears into your %2$s with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tears into the flesh of <npcname> with its sharp teeth!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#: data/mods/Xedra_Evolved/monster_special_attacks/monster_special_attacks.json
+#, c-format
+msgid "%1$s tries to bite your %2$s, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to tear into the flesh of <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to bite into your %2$s with its sharp teeth, but fails to "
+"penetrate your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to bite into the flesh of <npcname>, but fails to penetrate their "
+"armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s stomps on your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s stomps on <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to stomp on you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s tries to stomp on <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s stomps on your %2$s, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s stomps on <npcname>, but their armor protects them."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s swings its massive tail at your %2$s, pulverizing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s swings its massive tail at <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its tail at you, but you dodge it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its tail at <npcname>, who dodges it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its tail at you, but it's blunted by your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its tail at <npcname>, but they appear unharmed."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s swings its spiked tail at your %2$s, smashing it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s swings its spiked tail at <npcname>'s %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its spiked tail at you, but you dodge it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its spiked tail at <npcname>, who dodges it!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its spiked tail at you, but it's blunted by your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s swings its spiked tail at <npcname>, but they appear unharmed."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its long horn at you, piercing your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its long horn at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s thrusts its long horn at you, but you evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s's thrusts its long horn at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s's long horn hits your %2$s, but it glances off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s's long horn hits <npcname>, but it glances off their armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its long horns at you, piercing your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s thrusts its long horns at <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s thrusts its long horns at you, but you evade!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%s's thrusts its long horns at <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s's long horns hit your %2$s, but they glance off your armor."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/DinoMod/monster_attacks.json
+#, c-format
+msgid "%1$s's long horns hit <npcname>, but they glance off their armor."
+msgstr ""
+
+#. ~ Name of spell "CBM_TRex_recording"
+#: data/mods/DinoMod/monster_attacks.json
+msgid "T-Rex Bio-Operator recording"
+msgstr ""
+
+#. ~ Description of spell "CBM_TRex_recording ( T-Rex Bio-Operator recording )"
+#: data/mods/DinoMod/monster_attacks.json
+msgid "Causes some noise"
+msgstr ""
+
+#. ~ Sound description of spell "CBM_TRex_recording ( T-Rex Bio-Operator
+#. recording )"
+#: data/mods/DinoMod/monster_attacks.json
+msgid "a recorded message"
+msgstr ""
+
+#. ~ Message of spell "CBM_TRex_recording ( T-Rex Bio-Operator recording )"
+#: data/mods/DinoMod/monster_attacks.json
+msgid ""
+"IF YOU CAN HEAR THIS RECORDING, PLEASE EXIT THE FACILITY.  THE TIGER IS "
+"LOOSE."
+msgstr ""
+
+#. ~ Name of starting location "sloc_dinozoo_cafeteria"
+#: data/mods/DinoMod/startlocations.json
+msgid "DinoZoo (Cafeteria)"
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/DinoMod/vitamin.json
+msgid "Horns Mutagen"
+msgstr ""
+
+#. ~ Job description of "Swamper" NPC class
+#: data/mods/DinoMod/NPC/NC_BO_BARONYX.json
+msgid "The great eaters have returned and they must be fed."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NC_BO_BARONYX.json
+msgid ""
+"The great eaters have returned, along with the false ones.  We must feed the "
+"eaters and destroy the pretenders, child."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NC_BO_BARONYX.json
+msgid ""
+"The great eaters are the ones that were lost, what we call dinosaurs, whose "
+"meat we took and who are taking it back.  The pretenders are those others "
+"that have come to steal the meat of this world.  It does not belong to them "
+"and we will take it from their mouths."
+msgstr ""
+
+#. ~ Dialogue line in mission "Gather meat for Bo Baronyx.  About 8 should do
+#. it."
+#: data/mods/DinoMod/NPC/NC_BO_BARONYX.json
+msgid "The eaters are hungry.  They need meat."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NC_BO_BARONYX.json
+msgid "The eaters have fed.  They will be hungry again in time."
+msgstr ""
+
+#. ~ Name of the monster "mon_zombie_scientist" placed on map update on start
+#. of mission "Kiernan consult"
+#: data/mods/DinoMod/NPC/NC_Yoshimi.json
+msgid "Kiernan"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NPC_Old_Guard_RED_Soldier_1.json
+msgid "Kill all dinosaurs."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NPC_Old_Guard_RED_Soldier_1.json
+msgid "Welcome to whatever this is."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NPC_Old_Guard_RED_Soldier_1.json
+msgid ""
+"I'm supposed to direct all questions to my leadership, that's Red over there."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/DinoMod/NPC/NPC_Old_Guard_RED_Soldier_1.json
+msgid "Sure sure…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/mods/DinoMod/NPC/NPC_old_guard_representative.json
+msgid ""
+"They just started showing up about the same time it all fell apart.  They "
+"attack the caravans and the bandits both.  Hungry bastards.  All dinosaurs "
+"are shoot on sight.  We don't eat them, they're probably poisoned with "
+"whatever got the dead ones.  Best to burn and bury them.  Same with the eggs."
+"  We have a team out working on wiping them all out in the region.  Check the"
+" mass graves.  Talk to Red there."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Yes, and what can I tell you about the grass being green and the sun being
+#. yellow?  All of the large baby chickens do what they do and we get no
+#. benefit from it regardless of what we say about them.  Why do you ask, you
+#. person with a physical body?  Do you like the big turkeys?
+#: data/mods/DinoMod/NPC/exodii_merchant_talk.json
+msgid ""
+"Aye, 'n what c'n I yark'n ye around the grassins what be a'green 'n that the "
+"big brassy what be a'yeller?  All'n those great chickees do what they do 'n "
+"we profit none 'n the immortalinity of the crabs consists just so. What of it"
+" ye long and bobbly?  Ye takin' a shinin' to the jibble-necks?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/DinoMod/NPC/exodii_merchant_talk.json
+msgid "This was unhelpful."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/DinoMod/NPC/exodii_merchant_talk.json
+msgid "Are you really this nonchalant about the dinosaurs?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ Yes, and yes again.  If every world has zombies, 90% of the ones we reach
+#. have dinos.
+#: data/mods/DinoMod/NPC/exodii_merchant_talk.json
+msgid ""
+"Aye, n'aye again!  E'ry ball o mud has the Enemy.  Nine mudballs out o' ten  "
+"are mudded up wit thunder chickees."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/mods/DinoMod/NPC/exodii_merchant_talk.json
+msgid "I wonder why most worlds have dinosaurs roaming?"
+msgstr ""

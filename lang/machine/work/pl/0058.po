@@ -1,0 +1,1783 @@
+# Batch 58 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Snippet in category "Shadow_Warnings_Snippets_late"
+#: data/json/monsters/singularities.json
+msgid ""
+"Suddenly, there are some vague, but threatening shapes in the distance you do"
+" not recognize."
+msgstr ""
+
+#. ~ Snippet in category "Shadow_Warnings_Snippets_late"
+#: data/json/monsters/singularities.json
+msgid "For a moment, the wind picks up and whistles an eerie song."
+msgstr ""
+
+#. ~ Snippet in category "Shadow_Warnings_Snippets_late"
+#: data/json/monsters/singularities.json
+msgid "The darkness makes you anxious."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/slimes.json
+msgid "sewer slime"
+msgid_plural "sewer slimes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "sewer slime"
+#: data/json/monsters/slimes.json
+msgid ""
+"This moving, black glob emits a foul stench.  It has incorporated both the "
+"liquid and solid contents of the sewer water."
+msgstr ""
+
+#. ~ Death message of monster "sewer slime"
+#: data/json/monsters/slimes.json
+#, c-format
+msgid "The %s bursts, releasing its vile contents!"
+msgstr ""
+
+#. ~ Description of monster "triffid"
+#: data/json/monsters/triffid.json
+msgid ""
+"A creeping mobile plant, as tall as a moose.  It has a single bark-covered "
+"stalk supporting a flowery head with a paralyzing sting concealed within.  "
+"Nature is healing."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/triffid.json
+msgid "fungicidal triffid"
+msgid_plural "fungicidal triffids"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/turrets.json
+msgid "M2HB autonomous CROWS II"
+msgid_plural "M2HB autonomous CROWS II"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/turrets.json
+msgid "M249 autonomous CROWS II"
+msgid_plural "M249 autonomous CROWS II"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/turrets.json data/mods/No_Hope/monsters.json
+msgid "M240 autonomous CROWS II"
+msgid_plural "M240 autonomous CROWS II"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/utility_bot.json
+msgid "demining bot"
+msgid_plural "demining bots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "Yrax triakis"
+msgid_plural "Yrax triakis"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yrax triakis"
+#: data/json/monsters/yrax.json
+msgid ""
+"Short-snakelike limbs seamlessly extend from an aggressively faceted body.  "
+"Its movements keep it low to the ground, coiled like a trap waiting to "
+"spring."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "Yrax sphenocorona"
+msgid_plural "Yrax sphenocoronae"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yrax sphenocorona"
+#: data/json/monsters/yrax.json
+msgid ""
+"Manipulator arrays seamlessly protract from asymmetric facets, their testing "
+"spaces undisturbed by the forces affixing it to the sky."
+msgstr ""
+
+#. ~ Death message of monster "Yrax sphenocorona"
+#. ~ Monster message of special attack of monster "Yrax sphenocorona"
+#: data/json/monsters/yrax.json
+#, c-format
+msgid "The %s abruptly falls to the ground!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "Yrax sphenocorona"
+#. ~ Monster message of special attack of monster "golden monolith"
+#: data/json/monsters/yrax.json
+#, c-format
+msgid "Shards of gleaming alloy detach from the %s's surface!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "golden monolith"
+#: data/json/monsters/yrax.json
+#, c-format
+msgid "The %s unfolds into an alien robot!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "Yrax apeirohedron"
+msgid_plural "Yrax apeirohedra"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yrax apeirohedron"
+#: data/json/monsters/yrax.json
+msgid ""
+"Its uncountable surfaces flow against each other in a dazzling sea of gold."
+msgstr ""
+
+#. ~ Death message of monster "Yrax apeirohedron"
+#: data/json/monsters/yrax.json
+#, c-format
+msgid "The %s folds away."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "Yrax quadraphract"
+msgid_plural "Yrax quadraphracts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yrax quadraphract"
+#: data/json/monsters/yrax.json
+msgid ""
+"A gleaming, burnished gold, four legged structure the size of a small "
+"vehicle, but much taller; this looks vaguely robotic, but too smooth and "
+"perfect to fit in this world.  Its legs are smooth faceted figures, with no "
+"visible joints, and hold its gem-like body aloft with an eery, sculpted "
+"grace.  At the peak of the gem-body is a deep, goblet-shaped crown that "
+"slowly swivels about, pointing at nothing in specific.  Though nothing about "
+"its appearance is familiar to you, it nevertheless strikes you with a mixture"
+" of awe and dread."
+msgstr ""
+
+#. ~ Death message of monster "Yrax quadraphract"
+#: data/json/monsters/yrax.json
+msgid "The quadraphract collapses, dead at last."
+msgstr ""
+
+#. ~ Description of special attack of monster "Yrax quadraphract"
+#: data/json/monsters/yrax.json
+msgid "reality seems to warp around the quadraphract's crown as it fires."
+msgstr ""
+
+#. ~ Targeting sound of special attack of monster "Yrax quadraphract"
+#: data/json/monsters/yrax.json
+msgid "a deep thrumming sound."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "quadraphract leg"
+msgid_plural "quadraphract legs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "quadraphract leg"
+#: data/json/monsters/yrax.json
+msgid ""
+"A morphing lune of burnished gold attached to the greater structure.  "
+"Seemingly jointless it moves with a fluid grace, allowing the quadraphract to"
+" glide aboveground with a speed and agility that belies its size."
+msgstr ""
+
+#. ~ Death message of monster "quadraphract leg"
+#: data/json/monsters/yrax.json
+msgid ""
+"The quadraphract stumbles as one of its legs looses coherence and collapses."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/yrax.json
+msgid "Yrax delta"
+msgid_plural "Yrax deltas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Yrax delta"
+#: data/json/monsters/yrax.json
+msgid ""
+"A kite shaped blade of metal, darting through air and foes by indiscernible "
+"means."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "Yrax delta"
+#. ~ Monster message of special attack of monster "charged amalgamation"
+#: data/json/monsters/yrax.json data/json/monsters/zed_amalgamation.json
+#, c-format
+msgid "A bolt of electricity arcs from %s!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "cuspated dog"
+msgid_plural "cuspated dogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "cuspated dog"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"This dog's snout and jaw have seemingly fused together, the skin and flesh "
+"ranging from completely gone to barely hanging on.  The boney mass as a whole"
+" has an incredibly sharp yet jagged point.  It stumbles around, barely "
+"keeping its hefty 'beak' from hitting the ground."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "howling dog"
+msgid_plural "howling dogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "howling dog"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"The underbelly of this undead canine expands and contracts arrhythmically, "
+"almost like it's breathing.  Despite that, it is clearly in an advanced state"
+" of decomposition.  Its snout and throat appear far too large for its "
+"species, and the remains of its eyes appear much more analytical than its "
+"brethren."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "scorched dog"
+msgid_plural "scorched dogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorched dog"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"A charred and damaged corpse of a canid, covered in fused patches of burnt "
+"hide and flesh."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "scorched hulking dog"
+msgid_plural "scorched hulking dogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorched hulking dog"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"A charred and damaged corpse of what you can only assume was once a horribly "
+"mutated dog.  Covering its entire body is a layer of fused and melted hide, "
+"giving it an armored appearance."
+msgstr ""
+
+#. ~ Description of monster "skeletal wolf"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"This undead canine has shed all of its skin, revealing a carapace of fused "
+"bones and ribs."
+msgstr ""
+
+#. ~ Description of monster "spearcat hunter"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"This undead cougar's eyes ooze with dark, oily fluid, and its fur is torn, "
+"revealing deep, festering wounds.  Its claws and teeth are unnaturally long, "
+"and sharpened into dangerous looking spikes."
+msgstr ""
+
+#. ~ Description of monster "skeletal zombear"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"As if a zombified bear wasn't already a problem, this one is layered in thick"
+" bone growths that protect it from harm.  The irregular way the plates grow "
+"against each other has somewhat stifled its movement, but not enough to stop "
+"it from easily gaining up on you."
+msgstr ""
+
+#. ~ Description of monster "acidic zombear"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"Most of this bear's fur has burnt off and its body looks to be falling apart,"
+" not entirely immune to its own acidic fluids.  Despite its weakened state, "
+"the strength of a bear hasn't left it."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "acidic zombie horse"
+msgid_plural "acidic zombie horses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "acidic zombie horse"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"The abdomen of this once majestic horse has grown rotund to the point you can"
+" see through the skin, at the reservoir of caustic bile inside.  Its neck is "
+"equally enlarged as well as slightly longer than normal."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "sinewy warhorse"
+msgid_plural "sinewy warhorses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "sinewy warhorse"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"A zombified horse without skin, its overgrown, bloody musculature clear for "
+"all to see.  Some muscles occasionally tear from their tendons as it barrels "
+"towards its target, flailing around like a loose hose before weaving back "
+"into place."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "smoldering stallion"
+msgid_plural "smoldering stallions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "smoldering stallion"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"This undead horse has a charred hide as black as soot, the underside of which"
+" is littered with gashes and holes.  Pillars of choking black smoke pour from"
+" the wounds, smothering everything that draws near."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zanimal_upgrade.json
+msgid "pale charger"
+msgid_plural "pale chargers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "pale charger"
+#: data/json/monsters/zanimal_upgrade.json
+msgid ""
+"With plates of asymmetrical bone tissue overlapping its body, this ignoble "
+"steed needs no rider for you to fear its approach.  Completing its ghoulish "
+"look is an overgrown skull which, judging by the flattened and battered "
+"forehead, has become its main weapon."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-animal.json
+msgid "abyssal terror"
+msgid_plural "abyssal terrors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "abyssal terror"
+#: data/json/monsters/zed-animal.json
+msgid ""
+"Once a former apex predator of the seas, now an undead nightmare, this "
+"zombified Great White shark terrorizes the waters with its relentless hunger "
+"and aggression."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-animal.json
+msgid "zombie sheep"
+msgid_plural "zombie sheep"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie sheep"
+#: data/json/monsters/zed-animal.json
+msgid ""
+"This sheep's once pure white wool is now barely hanging by its rotten flesh, "
+"held together by dried mud and blood.  Its legs now buckle as the rotten "
+"muscles have a hard time sustaining the rest of the body."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-animal.json
+msgid "zombie goat"
+msgid_plural "zombie goats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie goat"
+#: data/json/monsters/zed-animal.json
+msgid ""
+"The moving corpse of what once was a goat is now left stumbling around, with "
+"pitch black empty eyes, looking for anything alive to kill."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-animal.json
+msgid "zombie llama"
+msgid_plural "zombie llamas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie llama"
+#: data/json/monsters/zed-animal.json
+msgid ""
+"This llama oozes a dark oil from a multitude of lesions and cuts.  Its wool "
+"has sloughed off with parts of its skin, revealing pulsating muscles and "
+"flesh.  Its mouth drips with a sickly green substance which it seems to be "
+"chewing on."
+msgstr ""
+
+#. ~ Description of special attack of monster "zombie llama"
+#: data/json/monsters/zed-animal.json
+msgid "The vicious vicuña spits a glob of acid!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-animal.json
+msgid "zombie reindeer"
+msgid_plural "zombie reindeers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie cop"
+#: data/json/monsters/zed-classic.json
+msgid ""
+"A human body covered by a weather-beaten and badly damaged set of police "
+"gear."
+msgstr ""
+
+#. ~ Description of monster "medical horror"
+#: data/json/monsters/zed-medical.json
+msgid ""
+"A former doctor of some sort, though its uniform has been torn apart.  You "
+"assume the oversized muscles that cover it to be the culprit."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed-medical.json
+msgid "regenerating zombie medic"
+msgid_plural "regenerating zombie medics"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "regenerating zombie medic"
+#: data/json/monsters/zed-medical.json
+msgid ""
+"The zombified remains of a practitioner of medicine, you aren't certain what "
+"field - your focus is instead drawn to the way that its pink flesh snakes all"
+" over it, weaving its way over wounds and injuries."
+msgstr ""
+
+#. ~ Description of monster "sawbones"
+#: data/json/monsters/zed-medical.json
+msgid ""
+"A malformed armor of misshapen bone has grown over this zombie, having pushed"
+" what remains of the skin out of the way.  The clothes of a medical worker "
+"are still draped over it."
+msgstr ""
+
+#. ~ Description of monster "doctor burns"
+#: data/json/monsters/zed-medical.json
+msgid ""
+"This is the body of a doctor or nurse of some kind.  It's hard to tell now "
+"that most of its clothing has corroded away from whatever vile acid its "
+"secreting."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_zombie_crawler_pupa"
+#. ~ Monster message of special attack of monster "mon_zombie_pupa"
+#. ~ Monster message of special attack of monster "mon_brute_pupa"
+#: data/json/monsters/zed-pupating.json
+#, c-format
+msgid "%s bursts, and gore-smeared winged beasts climb out of the corpse!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_hulk_pupa"
+#: data/json/monsters/zed-pupating.json
+#, c-format
+msgid "%s opens its mouth, and a gore-smeared winged beast flies out of it!"
+msgstr ""
+
+#. ~ Monster message of special attack of monster "mon_zombie_pupa_shady"
+#: data/json/monsters/zed-pupating.json
+#, c-format
+msgid "%s bursts, and shadowy winged beasts climb out of the corpse!"
+msgstr ""
+
+#. ~ Description of monster "corrosive zombie"
+#: data/json/monsters/zed_acid.json
+msgid ""
+"This zombie has swollen to immense proportions, but still manages to hold "
+"itself together with semi-congealed acid all over its bloated, leathery body."
+"  It moves clumsily, but spits from a large reserve of acid with uncanny "
+"accuracy."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "tiny meat cocoon"
+msgid_plural "tiny meat cocoons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "tiny meat cocoon"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A small, wet sack of pink skin, with something dog-sized moving around "
+"underneath the surface.  Black roots anchor it to the ground."
+msgstr ""
+
+#. ~ Death message of monster "tiny meat cocoon"
+#. ~ Death message of monster "small meat cocoon"
+#. ~ Death message of monster "large meat cocoon"
+#. ~ Death message of monster "gigantic meat cocoon"
+#: data/json/monsters/zed_amalgamation.json
+#, c-format
+msgid "The %s explodes in a shower of gore!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "small meat cocoon"
+msgid_plural "small meat cocoons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "small meat cocoon"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A sack of pink flesh sitting in the middle of a net of black roots.  At "
+"irregular intervals it shudders as something (or multiple somethings?) inside"
+" changes position.  You're not sure you want to know what's inside."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "large meat cocoon"
+msgid_plural "large meat cocoons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "large meat cocoon"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A mass of pink flesh the size of a fridge squirming constantly, black veins "
+"anchoring it to the ground.  Occasionally a malformed limb pushes against the"
+" skin from the inside, before a churn of the cocoon pushes it back.  Not "
+"ready yet, it seems."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "gigantic meat cocoon"
+msgid_plural "gigantic meat cocoons"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "gigantic meat cocoon"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A rigid, off-white lump of flesh the size of a small car constricted by bands"
+" of rope-sized pulsing black veins that tie it to the floor below.  The whole"
+" thing is shuddering constantly, and gives off an otherworldly stench."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "swarming amalgamation"
+msgid_plural "swarming amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "swarming amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A small, flat creature dashing around erratically on seven short legs.  Its "
+"form is dominated by an oversized set of black mandibles on an almost "
+"comically small head, featureless apart from a single black eye.  The rest of"
+" the body is covered with sickly white skin crisscrossed by black veins."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "vigilant amalgamation"
+msgid_plural "vigilant amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "vigilant amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"An inflated white body carried by five dainty legs, waving its remaining two "
+"limbs constantly.  Each one is tipped by a head-sized compound eye, "
+"independently scanning the horizon for prey."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "vigilant amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid "The amalgamation screams!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "caustic amalgamation"
+msgid_plural "caustic amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "caustic amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A gangly creature running on six legs, its form made irregular by the green "
+"pustules at the limbs' base, each feeding into a large vein leading to two "
+"blackened claws.  What must have been a seventh leg fused with the creature's"
+" head forming a jagged proboscis emerging from below its eyes, dripping a "
+"caustic liquid."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "leaping amalgamation"
+msgid_plural "leaping amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "leaping amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A four-legged white creature about the size of a human, running with a "
+"decidedly feline gait, the three remaining limbs holding an almost-"
+"translucent skin membrane outstretched on its side and rear.  Much of its "
+"head is taken up by a beak like a raven's, which opens to reveal a set of "
+"jagged black teeth."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "charged amalgamation"
+msgid_plural "charged amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "charged amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A short, crablike creature waddling around on six multi-jointed legs, its "
+"body dominated by a large glowing organ bulging from between the white armor "
+"plates.  A single raised appendage connects to the mass, its tip surrounded "
+"by brilliant white sparks."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "charged amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+#, c-format
+msgid "A cloud of electricity explodes from the %s"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amalgamation.json
+msgid "brutish amalgamation"
+msgid_plural "brutish amalgamations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "brutish amalgamation"
+#: data/json/monsters/zed_amalgamation.json
+msgid ""
+"A large, thickly armored creature built not unlike a bear, if a bear had a "
+"long, clubbed tail and two short limbs ending in black talons framing a "
+"vertical mouth on an otherwise smooth, featureless head.  On second thought, "
+"not that much like a bear at all."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "zombie frog"
+msgid_plural "zombie frogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie frog"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"A hypothetical frog of the zombie variety.  You should not be seeing it "
+"without debug."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "giant zombie bullfrog"
+msgid_plural "giant zombie bullfrogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "colossal zombie bullfrog"
+msgid_plural "colossal zombie bullfrogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "colossal zombie bullfrog"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"This gigantic zombified frog lets out an ear splitting unholy wail as it "
+"slowly takes notice of you.  Its mostly lethargic movements are offset by its"
+" ability to leap great distances using its gargantuan stout legs."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "zombie toad"
+msgid_plural "zombie toads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie toad"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The revivified remains of a giant mutant toad.  Its condition has left it "
+"slowed but no less dangerous."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "zapping zombfrog"
+msgid_plural "zapping zombfrogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zapping zombfrog"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The hum coming from this giant, rotten frog sounds unlike any kind of "
+"vocalization.  The sound is clearly a result of the bolts of electricity that"
+" skip across its skin and arc between its lips."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "bloated zombie toad"
+msgid_plural "bloated zombie toads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bloated zombie toad"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"This zombified toad wobbles as it drags along its immense, inflated form.  A "
+"yellow-brown sludge dribbles from its mouth and seeps out from its bulging, "
+"cracking skin."
+msgstr ""
+
+#. ~ Death message of monster "bloated zombie toad"
+#: data/json/monsters/zed_amphibian.json
+#, c-format
+msgid "The %s's body bursts, expelling sludge."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "zombie treefrog"
+msgid_plural "zombie treefrogs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie treefrog"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The pale, empty eyes of this large, reanimated treefrog still swivel in their"
+" sockets, searching for prey.  Its steps are ungainly but its hind legs look "
+"capable of great leaps."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "shadow leaper"
+msgid_plural "shadow leapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "shadow leaper"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"A lithe and leggy form rests flat against the ground, wreathed in darkness.  "
+"When it leaps, the shadows follow with it."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "warted monstrosity"
+msgid_plural "warted monstrosities"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "warted monstrosity"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"A festering toad the size of a dune buggy.  It struggles to pull its bulk "
+"towards you.  The warts covering its back appear fit to burst with yellow "
+"sludge, and more of the stuff flows freely from both ends of it."
+msgstr ""
+
+#. ~ Death message of monster "warted monstrosity"
+#: data/json/monsters/zed_amphibian.json
+#, c-format
+msgid "The %s's body bursts, expelling a copious amount of sludge."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "death mask zombie toad"
+msgid_plural "death mask zombie toads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "death mask zombie toad"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The face and head of this enormous once-frog is encased in ossified tissue.  "
+"Its dead eyes peer out from this death mask of hardened bone, which curves "
+"into a jagged beak around its mouth.  Even its warts appear to have stiffened"
+" into dense osteoderms."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "leaping husk"
+msgid_plural "leaping husks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "leaping husk"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The dehydrated remains of a frog, like the unfortunate sort you might find "
+"trapped between a window and screen.  This one is much larger than those and "
+"surely capable of doing you real harm.  You see its dry skin crack and shed "
+"wisps of tainted dust as it moves."
+msgstr ""
+
+#. ~ Death message of monster "leaping husk"
+#. ~ Monster message of special attack of monster "leaping husk"
+#. ~ Monster message of special attack of monster "batrachian mummy"
+#. ~ Monster message of special attack of monster "batrachian smoker"
+#: data/json/monsters/zed_amphibian.json
+#, c-format
+msgid "The %s crumbles!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "batrachian mummy"
+msgid_plural "batrachian mummies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "batrachian mummy"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"The ambulatory, desiccated corpse of an enormous amphibian.  What papery skin"
+" remains hugs tightly to the bones and shrunken flesh beneath.  Each "
+"stuttering leap it makes leaves it looking worse off as it sheds clouds of "
+"ash and soot."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_amphibian.json
+msgid "batrachian smoker"
+msgid_plural "batrachian smokers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "batrachian smoker"
+#: data/json/monsters/zed_amphibian.json
+msgid ""
+"Even without the haze of smoke that constantly fumes off of it, it would be "
+"difficult to tell what this once was.  The massive thing seems to have dried "
+"out and shriveled up, though unevenly.  Rind through core it has warped.  Its"
+" whole dry body crinkles and folds as it moves."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_burned.json
+msgid "scorched zombie child"
+msgid_plural "scorched zombie children"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorched zombie child"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"A diminutive humanoid figure, its body ravaged by fire into a blackened, "
+"charred shell.  Its leathery flesh has mended in patches, and the tattered "
+"clothing is still clinging to its emaciated frame making it clear it once was"
+" - and still is - the body of a child."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_burned.json
+msgid "scorched zombie brute"
+msgid_plural "scorched zombie brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorched zombie brute"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"An oversized charred human form.  The remains of its burnt and blackened "
+"musculature are clearly visible between the cracks of the shell formed from "
+"its melted skin."
+msgstr ""
+
+#. ~ Description of monster "scorched zombie"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"A heavily burned zombie that still reeks of charred meat.  Its now leathery "
+"flesh has mended into patches, giving it a more armored appearance."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_burned.json
+msgid "scorched lasher"
+msgid_plural "scorched lashers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "scorched lasher"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"A heavily burned corpse with unnaturally long arms dragging behind it as it "
+"moves.  The burnt scar tissue covering it gives it a mildly armored "
+"appearance."
+msgstr ""
+
+#. ~ Description of monster "fiend"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"A monstrous burnt vaguely humanoid creature, walking around on its knuckles "
+"like a gorilla.  Tattered and blackened strands of muscle fibers dangle all "
+"around its body, with patches of fused melded skin and bone visible between."
+"  Its forelimbs end in lengthy skeletal claws."
+msgstr ""
+
+#. ~ Description of monster "mon_zombie_scorched_rust"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"A heavily burned zombie that still reeks of charred meat.  Its now leathery "
+"flesh has mended into patches, giving it a more armored appearance.  This one"
+" appears to have metal fragments sticking out of its body."
+msgstr ""
+
+#. ~ Description of monster "mon_zombie_fiend_rust"
+#: data/json/monsters/zed_burned.json
+msgid ""
+"An oversized charred human form.  The remains of its burnt and blackened "
+"musculature are clearly visible between the cracks of the shell formed from "
+"its melted skin.  This one appears to have metal fragments sticking out of "
+"its body."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_children.json
+msgid "wretched hatchery"
+msgid_plural "wretched hatcheries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "wretched hatchery"
+#: data/json/monsters/zed_children.json
+msgid ""
+"Lethargically resting on its back, this hideous mass of sagging flesh and "
+"writhing organs, which used to be a child, twitches feebly as its midsection "
+"churns.  Almost bursting from its skin, the child's ribcage has arched "
+"outward, forming a hive-like construct covered by severely stretched "
+"epidermis.  Through the wretched organism's taut abdominal flesh, you witness"
+" small forms swarming within its ribcage—its guts roiling as new beings are "
+"sculpted from pilfered flesh and bone.  The creature's limbs rest haphazardly"
+" on the ground, contorted in ways that suggest the absence of bones or any "
+"interior construct."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "wretched hatchery"
+#: data/json/monsters/zed_children.json
+msgid ""
+"Ripping and tearing, a small beast burrows free of the wretch's abdomen!"
+msgstr ""
+
+#. ~ Description of monster "skeletal master"
+#: data/json/monsters/zed_command.json
+msgid ""
+"A strange zombie covered in bone plates from face to toe.  Despite the added "
+"weight on its body, its movements are coordinated, almost as if capable of "
+"analyzing your movements."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_command.json
+msgid "zombie lich"
+msgid_plural "zombie liches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie lich"
+#: data/json/monsters/zed_command.json
+msgid ""
+"A twisted visage of the human body decked in bone from head to toe.  Its "
+"vague shape is reminiscent of some tabletop monster, and it walks and watches"
+" your actions with a cold and calculating demeanor."
+msgstr ""
+
+#. ~ Name of a trap
+#: data/json/monsters/zed_dormant.json
+msgid "dormant zombie corpse"
+msgstr ""
+
+#. ~ Message when player triggers trap "tr_dormant_corpse"
+#. ~ Message when NPC triggers trap "tr_dormant_corpse"
+#: data/json/monsters/zed_dormant.json
+msgid "A zombie rises from the ground!"
+msgstr ""
+
+#. ~ Sound description of spell "cause_loud_moaning ( cause loud moaning )"
+#: data/json/monsters/zed_dormant.json
+msgid "a zombie moaning!"
+msgstr ""
+
+#. ~ Description of monster "shocker brute"
+#: data/json/monsters/zed_electric.json
+msgid ""
+"A huge beast covered in visible scarring from the lightning bolts that arc "
+"out of its body.  Being near it, you can hear a slight humming, like that of "
+"an electrical transformer."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_explosive.json
+msgid "swollen tearjerker"
+msgid_plural "swollen tearjerkers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "swollen tearjerker"
+#: data/json/monsters/zed_explosive.json
+msgid ""
+"A bloated corpse, its ballooning skin blistered and rashy and its face caked "
+"in mucus.  The off-color orange gas that occasionally leaks from it makes "
+"your eyes water and smells faintly of pepper."
+msgstr ""
+
+#. ~ No ammo sound of special attack of monster "gangrenous impaler"
+#: data/json/monsters/zed_fusion.json
+msgid "unch"
+msgstr ""
+
+#. ~ Description of monster "zombie scientist"
+#: data/json/monsters/zed_lab.json
+msgid ""
+"The remaining protective gear, laboratory equipment, and long, formerly white"
+" labcoat tell you that this zombie was some kind of researcher before "
+"turning."
+msgstr ""
+
+#. ~ Description of monster "phase skulker"
+#: data/json/monsters/zed_lab.json
+msgid ""
+"What remains of a researcher lost to the portal storms, twisted and enervated"
+" by the presences that lurk beneath natural perception.  It walks and "
+"stumbles in a stuttered manner, and is granted tenuous corporeality only by "
+"grace of the experimental gear it wore when it died."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "bruiser zombie"
+msgid_plural "bruiser zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bruiser zombie"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"This zombie's right arm has been grotesquely deformed into a massive mace-"
+"like shape.  What remains of its hand has been covered in spiky bone, and the"
+" upper arm's skin is clearly coming apart from the pressure on it."
+msgstr ""
+
+#. ~ Description of monster "zombie wrestler"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"A slab of festering muscle the size of a well-toned bodybuilder.  With "
+"popping and cracking sounds its arm muscles constantly lengthen and contract "
+"as it reaches out with deformed muscular hands the size of dinner plates."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "zombie prowler"
+msgid_plural "zombie prowlers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie prowler"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"Enveloped in darkness is the outline of what used to be a person, quick and "
+"spindly - and nigh invisible in the shadows.  Even with the unnatural "
+"camouflage hiding its features you can make out large teeth and even larger "
+"claws."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "fleshy hunter"
+msgid_plural "fleshy hunters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fleshy hunter"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"A zombie prowling around on all fours; its exposed muscles churn and snake, "
+"unraveling before restitching themselves elsewhere along its red-raw figure."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "regenerating abomination"
+msgid_plural "regenerating abominations"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "regenerating abomination"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"This zombie hardly resembles a human anymore - Its skeleton has been "
+"repeatedly dismantled and reassembled into a horrid quadrupedal shape, like "
+"some sort of mismatched action figure.  Slick, bloodied flesh writhes on its "
+"frame with an almost viscous quality, digesting and reconstituting itself in "
+"an endless ouroboros of undead flesh."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "ocular zombie"
+msgid_plural "ocular zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "ocular zombie"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"This otherwise-regular zombie's head is absolutely filled to the brim with "
+"eyes, half of them frantically swiveling in their orbits.  The other half are"
+" staring directly at you."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_misc.json
+msgid "fursuited zombie"
+msgid_plural "fursuited zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fursuited zombie"
+#: data/json/monsters/zed_misc.json
+msgid ""
+"A human body, swaying awkwardly in a torn cloth suit of an anthropomorphized "
+"animal.  Black goo and blood cakes the suit, and it gives off a foul, rotting"
+" odor."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_nomex.json
+msgid "Nomex zombie"
+msgid_plural "Nomex zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Nomex zombie"
+#: data/json/monsters/zed_nomex.json
+msgid ""
+"This zombie was a firefighter in its past life, still donned in its turnout "
+"equipment - said equipment has melded with its flesh, with the tough, flame "
+"resistant fibers becoming incorporated into its skin as armor and body mass."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_nomex.json
+msgid "fireproof zombie"
+msgid_plural "fireproof zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fireproof zombie"
+#: data/json/monsters/zed_nomex.json
+msgid ""
+"This zombie appears to have once been a firefighter or similar first "
+"responder, the wilted remains of its turnout gear clinging to it like a "
+"molted carapace.  Fibrous streaks resembling the fireproof materials of its "
+"gear run through its flesh like roots, giving the thing a mottled, off-yellow"
+" appearance as it prowls on all fours."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_nomex.json
+msgid "fireproof grappler"
+msgid_plural "fireproof grapplers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fireproof grappler"
+#: data/json/monsters/zed_nomex.json
+msgid ""
+"This zombie appears to have once been a firefighter or similar first "
+"responder, its body having ripped through and absorbed the majority of its "
+"uniform.  Its torso and back are swollen, and its muscles are marbled with "
+"knotted growths resembling the Nomex fibers of its former gear, feeding into "
+"lanky arms that drag on the floor."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_nomex.json
+msgid "fireproof brute"
+msgid_plural "fireproof brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fireproof brute"
+#: data/json/monsters/zed_nomex.json
+msgid ""
+"This zombie appears to have once been a firefighter or similar first "
+"responder, but the uniform is hardly recognizable at this point, as the thing"
+" has grown new flesh and muscle overtop.  Its sinewy body has taken on a "
+"composition similar to the uniform's fire-resistant fabric, most of it "
+"congealed into a pair of clubs on the ends of its hands."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_prisoner.json
+msgid "prisoner zombie brute"
+msgid_plural "prisoner zombie brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_prisoner.json
+msgid "fat prisoner zombie"
+msgid_plural "fat prisoner zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_prisoner.json
+msgid "tough prisoner zombie"
+msgid_plural "tough prisoner zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_skeletal.json
+msgid "skeletal slasher"
+msgid_plural "skeletal slashers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "skeletal slasher"
+#: data/json/monsters/zed_skeletal.json
+msgid ""
+"The fingers of this bone-clad zombie have turned into ossified blades the "
+"size of large knives.  Most of the soft tissue on its head is gone, exposing "
+"a significantly thickened skull."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_skeletal.json
+msgid "skeletal executioner"
+msgid_plural "skeletal executioners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "skeletal executioner"
+#: data/json/monsters/zed_skeletal.json
+msgid ""
+"The hands and forearms of this tall, bone-clad zombie have transformed into "
+"sword-like ossified blades.  Its jaw is partially fused with the bone mask "
+"covering its face, leaving sinister-looking gaps.  Its movements are stiff "
+"but precise."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_skeletal.json
+msgid "skeletal reaper"
+msgid_plural "skeletal reapers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "skeletal reaper"
+#: data/json/monsters/zed_skeletal.json
+msgid ""
+"This large, bone-armored zombie has scythe-like blades in place of its hands,"
+" resembling a praying mantis.  Its face is covered by a thick, ossified mask,"
+" with its only remaining facial features being eyes that ooze black goo.  Its"
+" movements are filled with unnatural rage."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "zombie soldier test only"
+msgid_plural "zombie soldier test only"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Kevlar zombie"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"This zombie dons a uniform with heavy, bulletproof materials sewn in.  "
+"Peculiarly, the uniform seems to have fused to its skin in certain places, "
+"its flesh gripping the edges of its gear as though the body were trying to "
+"absorb it."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "Kevlar brute"
+msgid_plural "Kevlar brutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie military pilot"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Once a pilot, it is wearing a flight suit and a sturdy-looking flight helmet."
+"  The head twitches and adjusts constantly, following any and every source of"
+" movement."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "zombie mariner"
+msgid_plural "zombie mariners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie mariner"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Still dressed in the ragged remains of deep blue naval fatigues, it's clear "
+"that this walking corpse was once a sailor of some description.  The US "
+"Navy's insignia is embroidered on the shredded sleeve and shoulder of its "
+"bloodied jacket, the dead crewman's battered cap is beaten into the remains "
+"of its fractured skull and its inky black eyes are scanning the area around "
+"it as dark ooze drips from its limply hanging maw."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "zombie officer"
+msgid_plural "zombie officers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie officer"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Dressed in the shredded blue dress uniform of a naval officer, this undead "
+"corpse was evidently a higher ranking crewman in life.  Having more than "
+"likely not been clad in body armor, the result now staggers before you: "
+"horrific wounds exposed to the air and large portions of flesh and muscle "
+"ripped from its glistening skeleton."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "zombie marine"
+msgid_plural "zombie marines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie marine"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Dressed head to toe in naval combat equipment and with Marine insignia "
+"embroidered on its gear, this lurching corpse still retains its physical "
+"fitness in death.  From underneath its helmet, its inky black eyes scan the "
+"area around it."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_soldiers.json
+msgid "bestial stalker"
+msgid_plural "bestial stalkers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "bestial stalker"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Lumbering about on all fours, this mutated beast's dagger-like claws clack "
+"against the ground as it predatorially moves: thick strands of exposed muscle"
+" tissue running across its rotting body.  The addition of its new bulk has "
+"caused the skin along its arms and back to split, and the brute's teeth have "
+"extended into spikes of bone.  The Marine insignias on the remains of the "
+"creature's pulverized gear are the only testaments to the soldier that this "
+"hulking abomination used to be."
+msgstr ""
+
+#. ~ Description of monster "mon_bestial_stalker"
+#: data/json/monsters/zed_soldiers.json
+msgid ""
+"Lumbering about on all fours, this mutated beast's dagger-like claws clack "
+"against the ground as it predatorially moves: thick strands of exposed muscle"
+" tissue running across its rotting body.  The addition of its new bulk has "
+"caused the skin along its arms and back to split, and the brute's teeth have "
+"extended into spikes of bone.  The military insignias on the remains of the "
+"creature's pulverized gear are the only testaments to the soldier that this "
+"hulking abomination used to be."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_survivor.json
+msgid "zombie survivor test only"
+msgid_plural "zombie survivor test only"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie survivor test only"
+#: data/json/monsters/zed_survivor.json
+msgid "This zombie survivor is for testing purposes only."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_survivor.json
+msgid "paramilitary zombie"
+msgid_plural "paramilitary zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "paramilitary zombie"
+#: data/json/monsters/zed_survivor.json
+msgid ""
+"Wearing military surplus gear including an armored vest with patches of local"
+" militias, cartoon women, obscene statements, or local political groups.  "
+"This person definitely thought they were ready for the apocalypse."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_tentacle.json
+msgid "lashing zombie"
+msgid_plural "lashing zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "lashing zombie"
+#: data/json/monsters/zed_tentacle.json
+msgid ""
+"This zombie has very elongated arms.  While they're menacingly long, they "
+"seem quite thin and floppy, as if they lack bones."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_tentacle.json
+msgid "tentacled zombie"
+msgid_plural "tentacled zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "tentacled zombie"
+#: data/json/monsters/zed_tentacle.json
+msgid ""
+"What likely used to be the arms of this zombie are now a set of strange, "
+"purplish tentacles, with what appear to be vestigial fingers at the end.  "
+"They trail several meters behind the tall zombie as it shambles along."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/zed_tentacle.json
+msgid "zombie strider"
+msgid_plural "zombie striders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie strider"
+#: data/json/monsters/zed_tentacle.json
+msgid ""
+"In front of you lies the most disgusting rendition of a starfish you've ever "
+"seen.  Not just the arms, but the legs and even the head have been "
+"horrendously deformed and stretched several meters long.  It walks around "
+"hunchback, looking through the remains of its head for its next victim."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "fleshborg"
+msgid_plural "fleshborgs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "fleshborg"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid ""
+"Compared to the cyborgs you've seen elsewhere, this one looks almost "
+"inverted.  Its body is made of smooth, segmented, paper-thin metallic plates;"
+" fleshy protrusions and bits of bone jut from components growing off this "
+"base frame.  It moves wildly, but not like a zombie; more like a machine gone"
+" haywire."
+msgstr ""
+
+#. ~ Description of special attack of monster "fleshborg"
+#. ~ Description of special attack of monster "advanced fleshborg"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "The fleshborg launches a bony dart at you!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "advanced fleshborg"
+msgid_plural "advanced fleshborgs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "advanced fleshborg"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid ""
+"Compared to the cyborgs you've seen elsewhere, this one looks almost "
+"inverted.  Its body is made of smooth, segmented, paper-thin metallic plates;"
+" fleshy protrusions and bits of bone jut from components growing off this "
+"base frame.  It moves with dire purpose, like a trained combat machine."
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "flesh turret"
+msgid_plural "flesh turrets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "flesh turret"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid ""
+"At first glance, this looks like a turret made from scraps.  As you look "
+"closer, it becomes clear it's actually a grinding pile of cartilage, bone, "
+"and tendon, slowly rotating and scanning the area."
+msgstr ""
+
+#. ~ Description of special attack of monster "flesh turret"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "The turret launches a bony dart at you!"
+msgstr ""
+
+#. ~ Monster name
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid "Stiltwalker"
+msgid_plural "Stiltwalkers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Stiltwalker"
+#: data/json/monsters/netherum/labyrinth_monsters.json
+msgid ""
+"This lanky, quadrupedal entity has a loosely humanoid torso, towering high "
+"over the ground on long bladed legs.  Its body is covered in what looks like "
+"fur made of rusting, metallic wire, and its face is a polished, hollow mask "
+"with holes where the mouth and eyes should be."
+msgstr ""

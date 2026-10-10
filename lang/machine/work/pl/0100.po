@@ -1,0 +1,1770 @@
+# Batch 100 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "It's nice to see you again <u_name>.  What can I do for you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:f"
+msgid ""
+"It's nice to see a new face around here.  I'm <npc_name>, it's a pleasure "
+"meeting you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:m"
+msgid ""
+"It's nice to see a new face around here.  I'm <npc_name>, it's a pleasure "
+"meeting you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:n"
+msgid ""
+"It's nice to see a new face around here.  I'm <npc_name>, it's a pleasure "
+"meeting you."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "Nice to meet you too, I'm <u_name>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "Hands up!  Hand over everything you've got, and nobody gets hurt!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "So, what can I do for you?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid ""
+"Unfortunately, I'm still gathering resources and cooking new stuff.  Maybe "
+"ask again after <interval>."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "Alright.  thanks nonetheless."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:f"
+msgid ""
+"Like I said before, I'm a chemist.  I've been living out here for a while, "
+"decided to set up shop in this old cabin.  I even found some good equipment "
+"out here, and a couple useful things here in the cupboards.  I decided to "
+"stay right here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:m"
+msgid ""
+"Like I said before, I'm a chemist.  I've been living out here for a while, "
+"decided to set up shop in this old cabin.  I even found some good equipment "
+"out here, and a couple useful things here in the cupboards.  I decided to "
+"stay right here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:n"
+msgid ""
+"Like I said before, I'm a chemist.  I've been living out here for a while, "
+"decided to set up shop in this old cabin.  I even found some good equipment "
+"out here, and a couple useful things here in the cupboards.  I decided to "
+"stay right here."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:f"
+msgid ""
+"I used to be a chemist.  Well, I am a chemist.  I've been living out here in "
+"the wilderness for a little while now since <the_cataclysm>.  Lucky enough, I"
+" even found some good equipment out here, though unfortunately missing some "
+"of the more sensitive and expensive stuff.  I found a couple useful things "
+"here in the cupboards, but other than that, entirely empty.  So, I moved in."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:m"
+msgid ""
+"I used to be a chemist.  Well, I am a chemist.  I've been living out here in "
+"the wilderness for a little while now since <the_cataclysm>.  Lucky enough, I"
+" even found some good equipment out here, though unfortunately missing some "
+"of the more sensitive and expensive stuff.  I found a couple useful things "
+"here in the cupboards, but other than that, entirely empty.  So, I moved in."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:n"
+msgid ""
+"I used to be a chemist.  Well, I am a chemist.  I've been living out here in "
+"the wilderness for a little while now since <the_cataclysm>.  Lucky enough, I"
+" even found some good equipment out here, though unfortunately missing some "
+"of the more sensitive and expensive stuff.  I found a couple useful things "
+"here in the cupboards, but other than that, entirely empty.  So, I moved in."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+#: data/json/npcs/other/homeless/group_camp/TALK_homeless_group_survivors.json
+#: data/json/npcs/scrap_trader/scrap_trader.json
+#: data/mods/Xedra_Evolved/npc/talk_computers.json
+msgid "Hmm."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:f"
+msgid ""
+"Not my place, just somewhere I ended up.  Some old shack, maybe a hunting "
+"cabin or something more… criminal, at least judging by some of what I found "
+"on the shelves.  You certainly wouldn't attract much attention synthesizing "
+"illegal substances all the way out here, that's all I'm saying.  I found it "
+"while I was trying to escape all the <zombies> in the city, and I decided to "
+"stay."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:m"
+msgid ""
+"Not my place, just somewhere I ended up.  Some old shack, maybe a hunting "
+"cabin or something more… criminal, at least judging by some of what I found "
+"on the shelves.  You certainly wouldn't attract much attention synthesizing "
+"illegal substances all the way out here, that's all I'm saying.  I found it "
+"while I was trying to escape all the <zombies> in the city, and I decided to "
+"stay."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgctxt "npc:n"
+msgid ""
+"Not my place, just somewhere I ended up.  Some old shack, maybe a hunting "
+"cabin or something more… criminal, at least judging by some of what I found "
+"on the shelves.  You certainly wouldn't attract much attention synthesizing "
+"illegal substances all the way out here, that's all I'm saying.  I found it "
+"while I was trying to escape all the <zombies> in the city, and I decided to "
+"stay."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid ""
+"I'm out of some things, <name_g>.  It takes a while to source the good stuff "
+"- days usually - but I'm working hard to replace it.  What can I get you in "
+"the meantime?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid ""
+"I'll see what I've got around here for you.  I've gotta warn you: it's gonna "
+"be expensive.  Hard to stay supplied in the apocalypse, you know.  What do "
+"you need?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[10$]  I'll buy some bandages."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[40$]  I'll buy some aspirin."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[50$]  I'll buy some sprayable fungicide."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[50$]  I'll buy some powder fungicide."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[50$]  I'll buy some disinfectant."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[120$]  I'll buy some antibiotics."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[140$]  I'll buy some antifungal drugs."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[200$]  I'll buy some black gunpowder."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "[300$]  I'll buy some napalm."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+msgid "Is there anything else you need?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/cabin_chemist/chemist_npc.json
+#: data/json/npcs/scrap_trader/scrap_trader.json
+msgid "No, that's all."
+msgstr ""
+
+#. ~ Unique name of a female NPC
+#. ~ Appears in the Great Library as essentially a shopkeeper.  Faction
+#. critical.
+#: data/json/npcs/campus/NPC_Elvira_Fish.json
+msgid "Elvira Fish"
+msgstr ""
+
+#. ~ Name suffix of a female NPC
+#. ~ Appears in the Great Library as essentially a shopkeeper.  Faction
+#. critical.
+#. ~ Name of an NPC class
+#. ~ Elvira is a young librarian, one of the few surviving librarians from
+#. before.  She is also heir to the fabulous Fish fortune, but she threw that
+#. all away to pursue her passion for library science.
+#: data/json/npcs/campus/NPC_Elvira_Fish.json
+msgid "Circulations"
+msgstr ""
+
+#. ~ Job description of "Circulations" NPC class
+#. ~ Elvira is a young librarian, one of the few surviving librarians from
+#. before.  She is also heir to the fabulous Fish fortune, but she threw that
+#. all away to pursue her passion for library science.
+#: data/json/npcs/campus/NPC_Elvira_Fish.json
+msgid "I'm a librarian."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid "Stay alert, there's trouble in these woods."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid "Just on lookout, move along."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid "Hello.  Welcome to the library."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid "Good evening.  Welcome to the library."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid "How did you get stuck with guard duty?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid ""
+"Everybody left has to take a turn.  I guess it's fair but not everyone is "
+"really suited for beating up zombies or whatever."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:f"
+msgid ""
+"I'm not even supposed to be here today, I just lost a bet and had to take "
+"this shift."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:m"
+msgid ""
+"I'm not even supposed to be here today, I just lost a bet and had to take "
+"this shift."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:n"
+msgid ""
+"I'm not even supposed to be here today, I just lost a bet and had to take "
+"this shift."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:f"
+msgid ""
+"I should be resting right now, this is my third straight shift.  Too many "
+"people sick or hurt right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:m"
+msgid ""
+"I should be resting right now, this is my third straight shift.  Too many "
+"people sick or hurt right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#. ~ You don't need to translate genders that aren't in your language
+#. ~ Check: https://github.com/CleverRaven/Cataclysm-
+#. DDA/blob/master/doc/TRANSLATING.md#grammatical-gender
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgctxt "npc:n"
+msgid ""
+"I should be resting right now, this is my third straight shift.  Too many "
+"people sick or hurt right now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/NPC_campus_guard_generic.json
+msgid ""
+"I live for this stuff.  I'm not really big on books, so this is probably what"
+" I'm best at here."
+msgstr ""
+
+#. ~ Job description of "Guard" NPC class
+#: data/json/npcs/campus/generic_class_definitions.json
+#: data/json/npcs/refugee_center/surface_staff/generic_class_definitions.json
+msgid "I'm on a guard shift."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "*whispering.  \"Welcome back to the Library.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "*whispering.  \"Hello again.  Can I help you find something?\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "*whispering.  \"Hello.\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "*waves and smiles.  \"Welcome fellow reader.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Hello, who are you?  This is a library, is it?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Oh sorry, I'm not interested right now."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Let me see what you have."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Just saying hello."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Always glad to help another reader."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Never stop learning."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "I just love books."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "When will you have new material?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+#: data/json/npcs/refugee_center/surface_staff/Smokes/free_merchant_shopkeep_talk.json
+msgid "That's all for now.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid ""
+"It can be hard to predict the way things are now, but I am expecting new "
+"materials around <interval>."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid ""
+"I am expecting some new materials <interval>, hopefully some good escapism."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Thanks, I will make sure to check back."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid ""
+"Before you ask, we can't lend out books anymore.  We've had too many stolen "
+"and destroyed.  If you want to read something, either do it here or I will "
+"need to sell it to you for something useful, like a book.  Oh, my name is "
+"Elvira Fish, I run Circulations here.  I hope you learn something."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Can you answer some questions for me?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Let me look at what you have."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "I just want to browse.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Of course, how can I help?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "I would be happy to assist."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "Of course, please ask."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "What questions do you have?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "You can't lend out books?  What kind of library is that?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid "You want even more books?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid ""
+"Some, here and there.  My responsibilities keep me here but I have spoken "
+"with traveling merchants.  They thought we wanted guns and were confused that"
+" we wished to trade books for books.  I must assume that most of the other "
+"survivors are more violent and less scholarly."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk.json
+msgid ""
+"Yes we are.  We still have some of our original collection, but far too much "
+"of it was stolen or destroyed, and of course it was far from complete even "
+"before.  Some of us go out to try and rebuild the collection from towns "
+"nearby, but mostly we rely on people passing through like you.  We especially"
+" want anything rare and hard to find."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"*frowning.  \"Listen, we are doing our best here.  Most of our original staff"
+" is gone and people keep stealing and breaking things for no reason.  We're "
+"just trying to protect some information for the future.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "Okay, I'm sorry."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "But why bother then?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "*deep breath, tired smile.  \"How else can I help you?\""
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"*frowning, grimacing.  \"I don't know.  It's.  I can't talk about this right "
+"now.\""
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "Of course, I'm sorry."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "Oh.  Um.  I guess I like stories.  And quiet."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "How did you end up here?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Oh, well I took a job here about a year before <the_cataclysm>, and I was "
+"living alone when things got bad and I thought I might be safer here with "
+"work friends.  My friends Beatrice and Ross and I got some supplies ready and"
+" then more people started to join us.  And then it got bad.  But I think that"
+" has settled down some now."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Oh.  Um.  I don't.  I don't think that makes sense right now.  I have enough "
+"help here, and we.  Maybe when things are more settled but not now.  But you "
+"might ask others if they need help."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "I'm useful!  I have skills!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Um.  Right, I guess you made it this far.  But.  Really I don't have "
+"something right now.  But really if you could find some books to trade us "
+"that would be great.  We really should be rebuilding the collection.  Really."
+"  Um."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Um.  Well.  You shouldn't.  I shouldn't.  Um.  I don't.  Let's talk about "
+"something else."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Yes, so I hear.  One trader I talked to said they have a whole market "
+"somewhere with all kinds of useful things.  Not a lot of books though, it "
+"sounds like."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Trying to keep the library here in good order.  She's seen some hard times "
+"recently and needs a lot of love.  Past that, well…I guess it would be good "
+"to get the rest of the campus cleaned up.  That's what Jack wants to do but "
+"we don't have any guns and we don't want to.  I know Callista wants to get "
+"classes going again as soon as possible though I imagine we have some "
+"problems with the academic interests of the students still with us and the "
+"teachers we have left."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "You're really just going to keep going like nothing happened?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid "I hope it works out for you."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"*frowning.  \"It's not.  I'm not saying nothing happened.  We lost a lot.  I "
+"lost a lot.  We just need to go forward.  We need to put things back together"
+" and help people.  That's why this place is here.  What else would we do?  We"
+" can't give up too."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/campus/great_library_librarian_talk_fluff.json
+msgid ""
+"Oh, we did have a President, Mx. Rose.  As things were starting to get bad "
+"they locked themself into the administrative building with all of the senior "
+"staff.  It's a good thing too because that building is full of the dead now, "
+"just like the rest except the library here.  For now everyone is still trying"
+" to operate under the old library structure, so I guess I'm in charge now as "
+"the most senior library staff left, though we have some survivors here from "
+"the other buildings from other divisions.  Callista Rupp from Academics is "
+"here, she taught physics.  I think she was at MIT for a while.  And Jack "
+"Springer from Facilities is here too, he's probably the only really practical"
+" person here, very handy!  It was his idea to board up the other buildings."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid ""
+"&You see this crazed fellows eyes darting around anxiously, always "
+"anticipating impending doom.  Every now and then you can even hear them "
+"whimper in fear.  Although they do not seem aggressive, they definitely are "
+"out of their mind."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "You need to get to safety!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "[Awkwardly distance yourself.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "&They shriek and stumble backwards, as if you just became a threat."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "I'm gonna kill all these <freaking> things!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "&They let out a bellowing warcry and wave their knife."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "I'M INVINCIBLE!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "Are you crazy?  Get out of here!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "[Leave them to their futile fight.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Like hell I will!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Fuck that, I'm not going out like a coward!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Stand aside citizen, I'll handle this!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Don't worry, I'm with the police<punc>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid ""
+"&The officer scans the area, looking for trouble.  They have a dangerous "
+"glint in their eyes."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "[Back away.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "I'm gonna kill all these <swear> things!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "&They let out a bellowing warcry and wave their gun."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid ""
+"&They are still breathing but unable to move and speak.  You are unsure if "
+"they are even fully conscious and yet shudder at the thought of being trapped"
+" inside your body."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "[Leave them to their ultimate fate.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "No!  I just know it, they are still alive!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "[Let them keep on searching.]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Have you seen my child?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "I am not leaving without my little one!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/civilians/civilians.json
+msgid "Where is my kid?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/civilians/civilians.json
+msgid "Your child is likely dead by now and you should get to safety!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "No, just no…"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+#: data/json/npcs/your_followers/liam_main_dialogue.json
+#: data/json/npcs/your_followers/luo_follower.json
+msgid "[DEBUG MIND CONTROL] Now listen closely… (DEBUG FUNCTIONS)"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Set up pickup rules."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "<end_talking_nevermind>  <lets_go>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Yeah, I'm sure.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Please study from an e-book."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Please study from books you have in order."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Can you craft this item?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "All right, tell me if you want me to go somewhere."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid " *tshk* Not sure it works when I am that far."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Trust me (+10 trust)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not trust me (-10 trust)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Fear me (+10 fear)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not fear me (-10 fear)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Value me (+10 value)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not value me (-10 value)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Be angry (+10 anger)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not be angry (-10 anger)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Owe me (+10 owed)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not owe me (-10 owed)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Favor me (+10 favors)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do not favor me (-10 favors)."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Train me."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_ALLY.json
+msgid "Do a seminar."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+msgid "Whatever.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+msgid ""
+"I found it, but I'm keeping it, and I'll find you another one.  "
+"<done_conversation_section>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+msgid ""
+"I found it, but I'm keeping it, and I'll find you another one.  "
+"<end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+msgid "Glad to help.  I need no payment.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_MISSION.json
+msgid "Glad to help.  <end_talking_bye>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#. ~ Snippet in category "<whats_up>"
+#. ~ Friendly or neutral greetings.
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+#: data/json/npcs/snippets/talk_tags_line.json
+#: data/json/npcs/your_followers/liam_main_dialogue.json
+#: data/json/npcs/your_followers/luo_follower.json
+msgid "Let's talk."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+msgid "Never mind, I'll do without.  <end_talking_bye>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+msgid "No, and if you ask again, I'll fucking obliterate you!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+msgid "No, fuck off!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_COMMON_OTHER.json
+#: data/json/npcs/other/NPC_pizzaiolo.json
+#: data/json/npcs/other/TALK_NPC_APARTMENT_SURVIVOR.json
+#: data/json/npcs/other/TALK_NPC_PREPPER_SURVIVOR.json
+#: data/json/npcs/other/TALK_shelter_survivors.json
+#: data/json/npcs/other/meteorologist.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_crop_overseer.json
+#: data/json/npcs/tacoma_ranch/NPC_ranch_woodcutter1.json
+msgid "<end_talking_later>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/common_chat/TALK_FRIEND_CONVERSATION.json
+msgid "You're right.  <lets_go>"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&<color_light_blue>Cyma Interface [version 0.85.1004]\n"
+"************************************************\n"
+"*  Copyright (c) Cyma Enterprise Systems 2023  *\n"
+"************************************************</color>\n"
+"\n"
+"Login:\n"
+"\n"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Attempt a login"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Login using the scribbled credentials"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Login with Hub 01 credentials"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Shut down"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&LOGIN FAILED\n"
+"\n"
+"Login:\n"
+"\n"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&<color_red>WARNING: ADMINISTRATIVE LOCKDOWN IN EFFECT.  USAGE OF SYSTEM 14 HAS BEEN CURTAILED.</color>\n"
+"\n"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Install the Hub software package."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Attempt to access System 14."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Browse stored documents."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+#, no-c-format
+msgid ""
+"&Processing 1 of 1 - Installing Sys3_rnp_4b12\n"
+"[====================] 100%\n"
+"The operation completed successfully.\n"
+"\n"
+"Restart to apply changes.\n"
+"Do you want to restart now?  (Y/N)\n"
+"\n"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Restart the computer and leave."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&Listing all saved files:\n"
+"A. P-144MS TALON UGV platform - Generative optimizations"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "View and print the Talon Schematics."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Return."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "&Printing…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&ERROR: Schematic access denied - too many requests.\n"
+"Please contact the system administrator."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "&<color_red>ERROR</color>"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Return"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&Module Name - Notice of Deactivation\n"
+"This unit has been disconnected and its predictive capabilities disabled.  Please press any key to export the results of the last logged experiment.\n"
+"\n"
+"No further input will be processed.\n"
+"Have a nice day."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid "Press any key and shut down."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_MSU14.json
+msgid ""
+"&<color_light_blue>Cyma Interface [version 0.67.0459]\n"
+"************************************************\n"
+"*  Copyright (c) Cyma Enterprise Systems 2022  *\n"
+"************************************************</color>\n"
+"\n"
+"DATA TRANSMISSION COMPLETED.  NO FURTHER ACTIONS REQUIRED.\n"
+"\n"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_MSU14.json
+#: data/mods/Aftershock/npcs/computers/escape_pod_control.json
+#: data/mods/aftershock_exoplanet/npcs/computers/escape_pod_control.json
+#: data/mods/aftershock_exoplanet/npcs/computers/starcrane_pilot.json
+msgid "Shut down."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Nursing Home.\n"
+" You are logged in as: Joe Shert, Receptionist.\n"
+"\n"
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Assigned Tasks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Ghosts!?"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Performance Evaluation"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Mrs.  Palmero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Housekeeping"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Connie Malackey, Receptionist\n"
+" TO: Joe Shert, Receptionist\n"
+" RE: Ghosts!?\n"
+"\n"
+" Joe!  After we heard those weird noises the other night, I talked to some of the nurses.\n"
+" We aren't the only ones!  Everyone has heard weird noises coming from the walls.\n"
+" Do you think this place is haunted!?"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Bryan Rooters, Reception Manager\n"
+" TO: Joe Shert, Receptionist\n"
+" RE: Performance Eval\n"
+"\n"
+" Hi Joe.\n"
+" Your 90-day performance evaluation is due.  Please plan to meet with me in my office on Tuesday.\n"
+" Thanks."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Bryan Rooters, Reception Manager\n"
+" TO: Receptionists\n"
+" RE: Housekeeping\n"
+"\n"
+" Hi team,\n"
+" Please be aware that the decision has been made to let go some of the housekeeping staff.\n"
+" This decision was made by management to ensure that our operation can run as smoothly and efficiently as possible by passing on these cost savings to the residents.\n"
+" To keep up with our high standards of elder care, I will be assigning some additional small tasks to you in the near future.\n"
+" As you know, here at Shady Hills we value each and every employee and see this as an excellent opportunity to grow, learn, and provide for the Shady Hills family.\n"
+" Please let me know if you have any questions.\n"
+" Thanks."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Connie Malackey, Receptionist\n"
+" TO: Joe Shert, Receptionist\n"
+" RE: Mrs.  Palmero\n"
+"\n"
+" Hi Joe.\n"
+" So - you know how Mrs.  Palmero has been acting weird and constantly talking about baking cookies?\n"
+" I was talking to one of the nurses and they said that Mrs.  Palmero was prescribed this new medicine?\n"
+" It's this weird powder stuff.  Apparently the nurses aren't even qualified to give it to her - she needs a special doctor to come in every day!\n"
+" Crazy, right?  I wish all I had to worry about was baking cookies…"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR C310; UNABLE TO CONNECT TO SCHEDULING SERVER.\n"
+" ERROR REFRESHING TASKS.  NOT ALL TASKS MAY BE DISPLAYED.\n"
+" REPORT COMPLETED TASKS DIRECTLY TO SUPERVISOR VIA MESSAGING SYSTEM.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "New Assignments [1]"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Pending Assignments"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Completed Assignments"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO ASSIGNED TASKS"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Welcome Joe to Shady Hills Assignment Database,\n"
+"\n"
+" You have [1] new task(s) assigned to you by your supervisor.\n"
+" When you have completed each task, be sure to submit them for approval."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Clean Bathrooms [NEW!]"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"TASK: Clean Bathrooms\n"
+" Assigned to: Joe Shert, Reception\n"
+" Assigned by: Bryan Rooters, Reception Manager\n"
+" Priority: High\n"
+" Due in: 1 Day\n"
+"\n"
+" Notes: Clean each bathroom stall and refresh toilet paper."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Set Task to Completed"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Add Comment"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Nursing Home.\n"
+" You are logged in as: Bryan Rooters, Reception Manager.\n"
+"\n"
+" WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Employee Files"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Do Your Job"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Connie Malackey"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Kristi Gordee, SVP Operations\n"
+" TO: Bryan Rooters, Reception Manager\n"
+" RE: Do Your Job\n"
+"\n"
+" Bryan,\n"
+" Do you not conduct thorough background checks and reviews on new hires?  Joe is related to the Mayor of Springfield.  His 90 day New Employee evaluation is coming up.  Do your job."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Joe Shert, Receptionist\n"
+" TO: Bryan Rooters, Reception Manager\n"
+" RE: Performance Evaluation\n"
+"\n"
+" Hi Mr. Rooters, I look forward to seeing you Tuesday for my evaluation.  I've been working really hard to show that I am Shady Hills material!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Kristi Gordee, SVP Operations\n"
+" TO: Bryan Rooters, Reception Manager\n"
+" RE: Connie Malackey\n"
+"\n"
+" Bryan,\n"
+" Connie has been asking a lot of weird questions about 'Ghosts' and other such nonsense.\n"
+" This could look bad for us.  To make it worse, she is hanging out with Joe Shert a lot.\n"
+" Shut it down."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Joe Shert, Receptionist\n"
+" TO: Bryan Rooters, Reception Manager\n"
+" RE: Housekeeping\n"
+"\n"
+" Hi Mr. Rooters, with all due respect I feel that I may have been assigned more of these tasks than the other Receptionists.\n"
+" Jim said he hasn't had to do any cleaning in two weeks, yet I have been on cleaning duty 3 times.\n"
+" To be clear, I certainly do not mind the extra work!  I just want to ensure you're aware in case there is a computer glitch.\n"
+" Thank you and have a great day!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Amanda Hugentskis, Receptionist\n"
+" TO: Bryan Rooters, Reception Manager\n"
+" RE: Housekeeping\n"
+"\n"
+" Seriously?  This is ridiculous.  This place was a mess even with housekeeping personnel.\n"
+" I quit."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR D809; UNABLE TO CONNECT TO DATABASE.\n"
+" ERROR REFRESHING DATABASE.  NOT ALL RECORDS MAY BE DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" Please select an employee record below."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "JOSEPH SHERT; RECEPTIONIST"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "CONNIE MALACKEY; RECEPTIONIST"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "AMANDA HUGENTSKIS; RECEPTIONIST"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "JAMES NEONDORTHALL; RECEPTIONIST"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO EMPLOYEES"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"EMPLOYEE NAME: Joseph Shert\n"
+" EMPLOYEE TITLE: Receptionist\n"
+" HIRE DATE: xx-xx-xxxx\n"
+" STATUS: Active\n"
+" REVIEW DUE: June\n"
+"\n"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Assign Task to This Employee"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Most Recent Evaluation"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Conduct an Evaluation for This Employee"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"EMPLOYEE NAME: Connie Malackey\n"
+" EMPLOYEE TITLE: Receptionist\n"
+" HIRE DATE: xx-xx-xxxx\n"
+" Status: Active\n"
+" REVIEW DUE: May\n"
+"\n"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"EMPLOYEE NAME: Amanda Hugentskis\n"
+" EMPLOYEE TITLE: Receptionist\n"
+" HIRE DATE: xx-xx-xxxx\n"
+" Status: Terminated\n"
+" REVIEW DUE: December\n"
+"\n"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"EMPLOYEE NAME: Joseph Shert\n"
+" EMPLOYEE TITLE: Receptionist\n"
+" REVIEW DATE: 06-xx-xxxx\n"
+" REVIEW BY: Bryan Rooters, Reception Manager\n"
+"\n"
+" Joseph is always on time for work and gets along well with coworkers.  However, he has trouble taking direction and often speaks out against his superiors [See attached email: Housekeeping].\n"
+" Joe speaks a big game but unfortunately does not perform to the Shady Hills standard.\n"
+" As our standard is extremely important for the health and wellbeing of our residents, I have no choice but to recommend termination.\n"
+"\n"
+" Signed,\n"
+" Bryan Rooters\n"
+" Reception Manager"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO RECORD"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#, no-c-format
+msgid ""
+"EMPLOYEE NAME: Connie Malackey\n"
+" EMPLOYEE TITLE: Receptionist\n"
+" REVIEW DATE: 05-xx-xxxx\n"
+" REVIEW BY: Bryan Rooters, Reception Manager\n"
+"\n"
+" Connie gets along well with coworkers.  I have occasionally needed to remind her to start work on time as clocking in late is detrimental to other employees and, ultimately, our precious residents.  Connie works hard on assigned tasks but often lacks the drive to seek out additional tasks.\n"
+" I am recommending a generous 0.5% pay wage increase per corporate policy.\n"
+"\n"
+" Signed,\n"
+" Bryan Rooters\n"
+" Reception Manager"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Nursing Home.\n"
+" You are logged in as: Kristi Gordee, SVP Operations.\n"
+"\n"
+" WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Nursing Home Main Drive"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Encrypted Drive"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "WARNING: Encrypted file.  Enter secure password."
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO MAIN DRIVE"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"Shady Hills Nursing Home.\n"
+" You are logged in as: Kristi Gordee, SVP Operations.\n"
+"\n"
+" WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR B231; UNABLE TO CONNECT TO MESSAGING SERVER.\n"
+" ERROR REFRESHING MESSAGES.  NOT ALL MESSAGES MAY BE DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Thank you for your order"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Budget"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: Kristi, Act Now and Save!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RE: I am going to sue you"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Big Science Supply Depot\n"
+" TO: Kristi Gordee, SVP Operations\n"
+" RE: Thank you for your order\n"
+"\n"
+" Hi KRISTI GORDEE,\n"
+"\n"
+" We have received your order and will begin processing it immediately.\n"
+" 1x Jet Injector, RX12 by Rivtech\n"
+"\n"
+" You will receive an additional email when your order has shipped.\n"
+" Thank you for shopping BIG SCIENCE SUPPLY DEPOT!\n"
+"\n"
+" Please do not reply to this message as your reply will be routed to an unmonitored inbox.\n"
+" Questions?  Contact customer service xxx-xxx-xxxx."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Peter St. Travers, SVP Research & Development\n"
+" TO: Kristi Gordee, SVP Operations\n"
+" RE: Budget\n"
+"\n"
+" Hi KRISTI GORDEE,\n"
+"\n"
+" Kristi, please see attached for my budget proposal.\n"
+" We need more jet injectors.\n"
+"  I am on the verge of a breakthrough - you need to run interference on this Shepherds issue.\n"
+" - Peter"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "View Attachment"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+#, no-c-format
+msgid ""
+"FROM: Big Science Supply Depot\n"
+" TO: Kristi Gordee, SVP Operations\n"
+" RE: Kristi, Act Now and Save!\n"
+"\n"
+" Hi KRISTI GORDEE,\n"
+"\n"
+" We appreciate you choosing BIG SCIENCE SUPPLY DEPOT for all your laboratory needs!  Based on your purchase history, might we recommend some of the below items?\n"
+" Now on sale for 15% off!\n"
+"\n"
+" * Book: Advanced Physical Chemistry\n"
+" * 1,000pc Medical Gauze\n"
+" * Jumbo Chemistry Kit\n"
+"\n"
+" Thank you for shopping BIG SCIENCE SUPPLY DEPOT!\n"
+"\n"
+" Please do not reply to this message as your reply will be routed to an unmonitored inbox.\n"
+" Questions?  Contact customer service xxx-xxx-xxxx."
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"FROM: Leah Shepherds\n"
+" TO: Kristi Gordee, SVP Operations\n"
+" RE: I am going to sue you\n"
+"\n"
+" I don't know what kind of sick game your sham of a home is playing, but I am getting to the bottom of it.\n"
+" I've hired a lawyer and we are going to sue you.\n"
+" I should never have left grandpa in your care.\n"
+" How does a PERSON go missing from a NURSING HOME!?  I have pictures of how dirty and disgusting that place is.\n"
+" You should be ashamed!"
+msgstr ""
+
+#. ~ NPC dialogue line
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid ""
+"WARNING!  ERROR A101; FAILURE DETECTED IN POWER SUPPLY.\n"
+" RESERVE POWER ACTIVATED.  CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!\n"
+"\n"
+" WARNING!  ERROR D766; UNABLE TO CONNECT TO MAIN SERVER.\n"
+" ERROR REFRESHING DATABASE.  ONLY CACHED INFORMATION DISPLAYED.\n"
+" CONTACT INFORMATION TECHNOLOGY DEPARTMENT IMMEDIATELY!"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Resident Records"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Employee Records"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Budget Database"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Access Legal Files"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "RETURN TO RESIDENT RECORDS"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Pablo Shepherds"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Nina Palmero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Vorm E. Thracks"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Mord R. Yuni-Korne"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Robbie D. Nero"
+msgstr ""
+
+#. ~ Response to NPC dialogue
+#: data/json/npcs/computers/TALK_NURSING_HOME.json
+msgid "Resident: Niklaus Kaje"
+msgstr ""

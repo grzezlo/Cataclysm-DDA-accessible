@@ -1,0 +1,1435 @@
+# Batch 178 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Remove message of effect type "Enhanced Dodging"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your enhanced dodging ability fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_paraclesian_see_fae"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/paraclesian_mutations.json
+msgid "Wyrd Sight"
+msgstr ""
+
+#. ~ Description of effect type "Wyrd Sight"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You can sense nearby creatures that come from under the hill."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "fae_sense"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You sense fae here."
+msgstr ""
+
+#. ~ Name of effect type id "effect_sense_vampire"
+#. ~ Name of spell "homullus_sense_vampires"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/homullus_mutation_spells.json
+#: data/mods/Xedra_Evolved/mutations/paraclesians/homullus_mutations.json
+msgid "Sense the Night Hunters"
+msgstr ""
+
+#. ~ Description of effect type "Sense the Night Hunters"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You can sense nearby vampires."
+msgstr ""
+
+#. ~ Description of creature revealed by special vision "vamnpire_sense"
+#. ~ Description of creature revealed by special vision "vampire_sense"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "You detect a vampire here."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_nether_eye_paste"
+#. ~ Item name
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/items/hedge_magic_items.json
+msgid "Blood-and-Ash Paste"
+msgid_plural "Blood-and-Ash Paste"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of effect type "Blood-and-Ash Paste"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You rubbed the paste of blood and herbs and ashes on your eyes.  It stings.  "
+"A lot."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_magic_luck_spell"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Step of Gad"
+msgstr ""
+
+#. ~ Description of effect type "Step of Gad"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your foot seems to keep finding just the right place to step."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_increase_healing_rate"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Convalescence"
+msgstr ""
+
+#. ~ Description of effect type "Convalescence"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your wounds are healing more quickly, as long as you don't do too much to "
+"upset the charm."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_increase_bandaging_rate"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Halt the Scarlet Flow"
+msgstr ""
+
+#. ~ Description of effect type "Halt the Scarlet Flow"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Blood easily stops flowing under your touch."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_walk_on_water"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Walk Across the Flowing Waters"
+msgstr ""
+
+#. ~ Description of effect type "Walk Across the Flowing Waters"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The waters are bearing you up."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_astral_projection"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Etheric Form"
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_protect_the_mind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mod_interactions/mindovermatter/effects.json
+msgid "Ordered Mind"
+msgstr ""
+
+#. ~ Description of effect type "Ordered Mind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your mind is set in order, walled and guarded."
+msgstr ""
+
+#. ~ Name of effect type id "effect_skinchanged_penalties"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Skinchanged Mind"
+msgstr ""
+
+#. ~ Description of effect type "Skinchanged Mind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You're starting to get used to being an animal.  Even enjoy it."
+msgstr ""
+
+#. ~ Description of effect type "Animalistic Mind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Hunt.  Kill.  Feed.  Sleep."
+msgstr ""
+
+#. ~ Description of effect type "Water-Walking"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"NAHARIAMA\n"
+"A  Q\n"
+"H      E\n"
+"A Q\n"
+"R\n"
+"I\n"
+"A      Q\n"
+"M     QA\n"
+"A"
+msgstr ""
+
+#. ~ Remove message of effect type "Water-Walking"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your water-walking charm has faded."
+msgstr ""
+
+#. ~ Decay message of effect type "Water-Walking"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your water-walking charm is about to fade."
+msgstr ""
+
+#. ~ Name of effect type id "effect_hedge_breathe_water_magic_square"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Water-Breathing"
+msgstr ""
+
+#. ~ Description of effect type "Water-Breathing"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"BURNAHEU\n"
+"ULORIPTE\n"
+"ROMILAPH\n"
+"NRITILIA\n"
+"AILITIRN\n"
+"HPALIMOR\n"
+"ETPIROLU\n"
+"UEHANRUB"
+msgstr ""
+
+#. ~ Remove message of effect type "Water-Breathing"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your water-breathing charm has faded."
+msgstr ""
+
+#. ~ Decay message of effect type "Water-Breathing"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your water-breathing charm is about to fade."
+msgstr ""
+
+#. ~ Description of effect type "Invisibility"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"TALAC\n"
+"A   A\n"
+"L   L\n"
+"A   A\n"
+"CALAT"
+msgstr ""
+
+#. ~ Remove message of effect type "Invisibility"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your invisibility charm has faded."
+msgstr ""
+
+#. ~ Decay message of effect type "Invisibility"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your invisibility charm is about to fade."
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Arvore Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Arvore destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Arvore Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Arvore destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Arvore Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Arvore destiny draught."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Arvore Mutation, Arvore
+#. Transformation, Arvore Metamorphosis"
+#. ~ Blood analysis description of effect type "Arvore Stolen Power Mutation,
+#. Arvore Stolen Power Transformation, Arvore Stolen Power Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Anomalous chlorophyll content in blood sample"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_alchemical_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Stolen Power Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_alchemical_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Stolen Power Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_alchemical_plantkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Arvore Stolen Power Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Arvore Stolen Power Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Arvore alchemical draught."
+msgstr ""
+
+#. ~ Description of effect type "Arvore Stolen Power Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Arvore alchemical draught."
+msgstr ""
+
+#. ~ Description of effect type "Arvore Stolen Power Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Arvore alchemical draught."
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_waterkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Undine Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_waterkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Undine Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_waterkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Undine Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Undine Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Undine destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Undine Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Undine destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Undine Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Undine destiny draught."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Undine Mutation, Undine
+#. Transformation, Undine Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Excessive water content in blood sample"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_flamekin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Salamander Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_flamekin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Salamander Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_flamekin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Salamander Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Salamander Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Salamander destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Salamander Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Salamander destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Salamander Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Salamander destiny draught."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Salamander Mutation, Salamander
+#. Transformation, Salamander Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Blood sample displays unnatural heat generation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_dollkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Homullus Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_dollkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Homullus Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_dollkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Homullus Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Homullus Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Homullus destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Homullus Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Homullus destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Homullus Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Homullus destiny draught."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Homullus Mutation, Homullus
+#. Transformation, Homullus Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Inert elements providing some functions of blood"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_airkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sylph Mutation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_airkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sylph Transformation"
+msgstr ""
+
+#. ~ Name of effect type id "mutagen_airkin"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sylph Metamorphosis"
+msgstr ""
+
+#. ~ Description of effect type "Sylph Mutation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed Sylph destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Sylph Transformation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a large amount of Sylph destiny draught."
+msgstr ""
+
+#. ~ Description of effect type "Sylph Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You consumed a life-changing amount of Sylph destiny draught."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Sylph Mutation, Sylph
+#. Transformation, Sylph Metamorphosis"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Dangerous levels of oxygen and nitrogen in blood sample"
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_invisibility"
+#. ~ Mutation name
+#. ~ Name of spell "changeling_invisibility_spell"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Hidden from Mortal Eyes"
+msgstr ""
+
+#. ~ Description of effect type "Hidden from Mortal Eyes"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "They could have sworn you were there a moment ago."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_noble_burning_weapon"
+#. ~ Mutation name
+#. ~ Name of spell "changeling_noble_burning_weapon_spell"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Fires of Bealtaine"
+msgstr ""
+
+#. ~ Description of effect type "Fires of Bealtaine"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your weapon is burning with white-gold fire."
+msgstr ""
+
+#. ~ Remove message of effect type "Fires of Bealtaine"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The flames on your weapon go out."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_noble_movement_buffs"
+#. ~ Name of effect type id "effect_changeling_noble_movement_buffs_ally"
+#. ~ Mutation name
+#. ~ Name of spell "changeling_noble_movement_buffs_spell"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+#: data/mods/Xedra_Evolved/spells/changeling_spells.json
+msgid "Deeds of Lughnasadh"
+msgstr ""
+
+#. ~ Description of effect type "Deeds of Lughnasadh"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You would have definitely won the contests."
+msgstr ""
+
+#. ~ Remove message of effect type "Deeds of Lughnasadh"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your athletic prowess fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_noble_broken_right_of_passage"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Broken Right of Passage"
+msgstr ""
+
+#. ~ Description of effect type "Broken Right of Passage"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are no longer protected by the contracts of eld."
+msgstr ""
+
+#. ~ Name of effect type id "effect_brownie_attacked_someone"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Conspicuous"
+msgstr ""
+
+#. ~ Description of effect type "Conspicuous"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "People can definitely see you now."
+msgstr ""
+
+#. ~ Name of effect type id "called_daffodil"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Called the daffodil"
+msgstr ""
+
+#. ~ Description of effect type "Called the daffodil"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You recently called some daffodils.  You need to wait a day before you can "
+"call more."
+msgstr ""
+
+#. ~ Name of effect type id "effect_dream_drainer_speed"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Accelerated"
+msgstr ""
+
+#. ~ Description of effect type "Accelerated"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "A burst of speed."
+msgstr ""
+
+#. ~ Name of effect type id "effect_dream_drainer_armor"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Armored"
+msgstr ""
+
+#. ~ Name of effect type id "effect_moon_withdrawal"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Moon-starved"
+msgstr ""
+
+#. ~ Name of effect type id "last_breath_mist_cooldown"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Recovering from the last breath's mist"
+msgstr ""
+
+#. ~ Description of effect type "Recovering from the last breath's mist"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Triggering your abilities that way has taken their toll on you.  You cannot "
+"save yourself from death that way another time yet."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_ruach_drain_side_effects"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Ruach-drained"
+msgstr ""
+
+#. ~ Description of effect type "Ruach-drained"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "A lilit has drained away some of your life-force."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_no_ruach"
+#. ~ Biblical Hebrew for 'famine' or 'starvation'
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Ra'ab"
+msgstr ""
+
+#. ~ Description of effect type "Ra'ab"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are out of ruach and gradually weakening."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_attribute_bonuses"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Might of the Nephilim"
+msgstr ""
+
+#. ~ Description of effect type "Might of the Nephilim"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are enhancing your physical abilities."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_speed_boost"
+#. ~ Mutation name
+#. ~ Name of spell "lilin_speed_dodge_boost_spell"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+#: data/mods/Xedra_Evolved/spells/lilin_spells.json
+msgid "Reaping the Whirlwind"
+msgstr ""
+
+#. ~ Description of effect type "Reaping the Whirlwind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are moving incredibly quickly."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_silent_at_night"
+#. ~ Mutation name
+#. ~ This is a reference to Samuel 2:9
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Silent in Darkness"
+msgstr ""
+
+#. ~ Description of effect type "Silent in Darkness"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your movements make as little noise as the shadows of the night."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_steady_speed"
+#. ~ Mutation name
+#. ~ This is a reference to Psalms 72:5
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "Enduring Through All Generations"
+msgstr ""
+
+#. ~ Description of effect type "Enduring Through All Generations"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You will endure all obstacles without faltering."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_limb_score_bonuses_at_night"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The Night Hunter"
+msgstr ""
+
+#. ~ Description of effect type "The Night Hunter"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Now they will know why they fear the night."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_incremental_speed_boost"
+#. ~ Mutation name
+#. ~ This is a reference to Isaiah 45:3
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/xe_lilin.json
+msgid "The Treasures of Darkness"
+msgstr ""
+
+#. ~ Description of effect type "The Treasures of Darkness"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Having spent a long time in the shadows, you are now quicker than usual."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_allowed_ruach_drain"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Willingly drained"
+msgstr ""
+
+#. ~ Description of effect type "Willingly drained"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"This follower allowed you to take some of their ruach, and they won't respond"
+" kindly to being drained more this soon."
+msgstr ""
+
+#. ~ Name of effect type id "effect_sleep_shield_check"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Promises of undisrupted sleep"
+msgstr ""
+
+#. ~ Description of effect type "Promises of undisrupted sleep"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "I wish you a good night."
+msgstr ""
+
+#. ~ Apply message of effect type "Promises of undisrupted sleep"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You could swear that this man wished you a good night."
+msgstr ""
+
+#. ~ Name of effect type id "effect_sleep_shield"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Undisrupted sleep"
+msgstr ""
+
+#. ~ Description of effect type "Undisrupted sleep"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Sleep well.  Nothing but you can disrupt your sleep."
+msgstr ""
+
+#. ~ Apply message of effect type "Undisrupted sleep"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "As you fall asleep, you feel safer than you ever were."
+msgstr ""
+
+#. ~ Remove message of effect type "Undisrupted sleep"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "As you wake up, the feeling of safety quickly fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_aoe_daze"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Disoriented"
+msgstr ""
+
+#. ~ Description of effect type "Disoriented"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "A loud noise fueled by a curse has sent you reeling."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_supernatural_disease"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Miasma"
+msgstr ""
+
+#. ~ Description of effect type "Miasma"
+#. ~ Description of effect type "Devouring Plague"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are infected by a supernatural disease."
+msgstr ""
+
+#. ~ Name of effect type id "effect_lilin_supernatural_disease_focused"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Devouring Plague"
+msgstr ""
+
+#. ~ Name of effect type id "effect_chronomancy_field"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Chronomancy Field"
+msgstr ""
+
+#. ~ Description of effect type "Chronomancy Field"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You have engaged some of your temporal abilities and any kills you make while"
+" this is active will grant you insight."
+msgstr ""
+
+#. ~ Apply message of effect type "Chronomancy Field"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You gain an increased awareness of the 4th dimension and how it interacts "
+"with the universe."
+msgstr ""
+
+#. ~ Remove message of effect type "Chronomancy Field"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your awareness of the 4th dimension fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_time_freeze"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Frozen in Time"
+msgstr ""
+
+#. ~ Description of effect type "Frozen in Time"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are completely frozen in time."
+msgstr ""
+
+#. ~ Remove message of effect type "Frozen in Time"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Everything is suddenly different."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_eater_stabilize_reality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Stabilized Reality"
+msgstr ""
+
+#. ~ Description of effect type "Stabilized Reality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are anchored in normal reality."
+msgstr ""
+
+#. ~ Remove message of effect type "Stabilized Reality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel much more vulnerable."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_dreamer_generate_accelerated_time"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Accelerated Time Emission"
+msgstr ""
+
+#. ~ Description of effect type "Accelerated Time Emission"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You continuously generate fields of short-lived accelerated time."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_dreamer_accelerated_time"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Time Accelerated"
+msgstr ""
+
+#. ~ Description of effect type "Time Accelerated"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your local time is far accelerated to the baseline, allowing you to act much "
+"quicker."
+msgstr ""
+
+#. ~ Remove message of effect type "Time Accelerated"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Everything seems much quicker."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_eater_erosion"
+#. ~ Name of spell "xedra_eater_erosion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/spells/eater_spells.json
+msgid "Erosion"
+msgstr ""
+
+#. ~ Description of effect type "Erosion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You maintain a field of unstable time around you.  When you attack targets in"
+" melee they will degrade over time."
+msgstr ""
+
+#. ~ Remove message of effect type "Erosion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your field of unstable time fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_chronomancer_chronal_accel"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Chronal Acceleration"
+msgstr ""
+
+#. ~ Description of effect type "Chronal Acceleration"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are accelerating your relative progression of time compared to the "
+"universal baseline."
+msgstr ""
+
+#. ~ Apply message of effect type "Chronal Acceleration"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The world slows down around you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_chronomancer_destabilizing_strikes"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Destabilizing Strikes"
+msgstr ""
+
+#. ~ Description of effect type "Destabilizing Strikes"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You maintain a field of destabilized time around you.  Your attacks cause "
+"your targets to erode over time."
+msgstr ""
+
+#. ~ Apply message of effect type "Destabilizing Strikes"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your hands turn gray as the air around them starts to flicker."
+msgstr ""
+
+#. ~ Remove message of effect type "Destabilizing Strikes"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your field of destabilized time fades."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_chronomancer_stabilize_timeline"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Stabilized Timeline"
+msgstr ""
+
+#. ~ Description of effect type "Stabilized Timeline"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are protected from adverse changes in your personal timestream."
+msgstr ""
+
+#. ~ Apply message of effect type "Stabilized Timeline"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You may not look any different, but you can tell that you're completely "
+"protected from harmful time magic"
+msgstr ""
+
+#. ~ Remove message of effect type "Stabilized Timeline"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel more vulnerable to manipulated time."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_chronomancer_reverse_entropy"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Reversed Entropy"
+msgstr ""
+
+#. ~ Description of effect type "Reversed Entropy"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your equipment is slowly losing its damage, repairing itself to its original,"
+" ideal form."
+msgstr ""
+
+#. ~ Apply message of effect type "Reversed Entropy"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your equipment obtains a gray tint and appears ever so slightly more whole."
+msgstr ""
+
+#. ~ Remove message of effect type "Reversed Entropy"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your equipment loses its gray tint."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_rewrite_wound_causality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Rewriting Wound Causality"
+msgstr ""
+
+#. ~ Description of effect type "Rewriting Wound Causality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your injuries are disappearing in a harmless paradox."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_rewrite_equipment_causality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Rewriting Equipment Causality"
+msgstr ""
+
+#. ~ Description of effect type "Rewriting Equipment Causality"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The equipments' faults are disappearing in a harmless paradox."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_time_loop"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Time Looped"
+msgstr ""
+
+#. ~ Description of effect type "Time Looped"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Every few seconds every change to your person reverts."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_chronomancer_stable_timeloop"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Stable Time Loop"
+msgstr ""
+
+#. ~ Description of effect type "Stable Time Loop"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are prepared to revert yourself to a prior point in time."
+msgstr ""
+
+#. ~ Name of effect type id "effect_xedra_monster_erosion"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Eroding Time"
+msgstr ""
+
+#. ~ Description of effect type "Eroding Time"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"This creature destabilizes time around it, eroding everything it touches."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vampire_recently_reshuffled_weaknesses"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Reshuffled Weaknesses"
+msgstr ""
+
+#. ~ Description of effect type "Reshuffled Weaknesses"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You recently reshuffled your vampiric weaknesses.  Until your blood "
+"stabilizes, further attempts will be fruitless."
+msgstr ""
+
+#. ~ Remove message of effect type "Reshuffled Weaknesses"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Your blood has stabilized enough to let you try to reshuffle your weaknesses "
+"again, should they prove too much to bear."
+msgstr ""
+
+#. ~ Name of effect type id "vampire_need_living_blood"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Thirst for Living Blood"
+msgstr ""
+
+#. ~ Description of effect type "Thirst for Living Blood"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Cold blood is not enough.  You need some warm blood straight from the vein, "
+"you need it NOW!"
+msgstr ""
+
+#. ~ Apply message of effect type "Thirst for Living Blood"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You want to sink your fangs in someone's neck and drink their blood."
+msgstr ""
+
+#. ~ Miss message of effect type "Thirst for Living Blood"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your thirst distract you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_earth_sleeper_penalty"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Disrupted Rest"
+msgstr ""
+
+#. ~ Description of effect type "Disrupted Rest"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You have slept away from the earth, leaving you fatigued and weakened for an "
+"entire day."
+msgstr ""
+
+#. ~ Name of effect type id "effect_holy_place_burn"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Rebuked by holiness"
+msgstr ""
+
+#. ~ Description of effect type "Rebuked by holiness"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The sanctity of this place is killing you."
+msgstr ""
+
+#. ~ Miss message of effect type "Rebuked by holiness"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel rejected by this place."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vast_water_burn"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Melted by the vast waters"
+msgstr ""
+
+#. ~ Description of effect type "Melted by the vast waters"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are dissolving in the vast waters."
+msgstr ""
+
+#. ~ Miss message of effect type "Melted by the vast waters"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You are melting from your proximity to water."
+msgstr ""
+
+#. ~ Name of effect type id "effect_slain_by_the_sun"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Slain by the Sun"
+msgstr ""
+
+#. ~ Description of effect type "Slain by the Sun"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The sun is burning you like a dry leaf in a wildfire."
+msgstr ""
+
+#. ~ Miss message of effect type "Slain by the Sun"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The sun is burning you."
+msgstr ""
+
+#. ~ Description of effect type "Blood Craving"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Need blood must have blood blood right now DRINK BLOOD NOW!"
+msgstr ""
+
+#. ~ Apply message of effect type "Blood Craving"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are wracked with pain as your craving hits you.  You can only think about"
+" getting some of that delicious blood you so desesperately need."
+msgstr ""
+
+#. ~ Remove message of effect type "Blood Craving"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your craving calms down."
+msgstr ""
+
+#. ~ Miss message of effect type "Blood Craving"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your craving distract you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_anathema_final_form"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Hasted by shadows"
+msgstr ""
+
+#. ~ Description of effect type "Hasted by shadows"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The Anathema is much quicker now thanks to vampiric abilities."
+msgstr ""
+
+#. ~ Name of effect type id "effect_player_anathema_potency_boost"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Apex Vampire's Potency"
+msgstr ""
+
+#. ~ Description of effect type "Apex Vampire's Potency"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "All the vampire blood you drank has empowered you."
+msgstr ""
+
+#. ~ Name of effect type id "effect_anathema_need_vampire_blood"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Apex's Thirst"
+msgstr ""
+
+#. ~ Description of effect type "Apex's Thirst"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your blood is consuming itself in its thirst for the blood of vampires."
+msgstr ""
+
+#. ~ Apply message of effect type "Apex's Thirst"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You feel a gnawing thirst for the blood of vampires.  Better find some, "
+"before your blood devours itself."
+msgstr ""
+
+#. ~ Remove message of effect type "Apex's Thirst"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your thirst for vampire blood calms down."
+msgstr ""
+
+#. ~ Name of effect type id "effect_vampire_invisible_in_dark"
+#. ~ Mutation name
+#: data/mods/Xedra_Evolved/effects/effects.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Shrouded by the Shadowed Path"
+msgstr ""
+
+#. ~ Description of effect type "Shrouded by the Shadowed Path"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"Until the shadows you gathered fade or the sun shines upon you, you cannot be"
+" seen."
+msgstr ""
+
+#. ~ Apply message of effect type "Shrouded by the Shadowed Path"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The shadows you gathered meld with you, hiding you from sight."
+msgstr ""
+
+#. ~ Remove message of effect type "Shrouded by the Shadowed Path"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "The shadows aren't hiding you anymore."
+msgstr ""
+
+#. ~ Name of effect type id "effect_anathema_mind_chaos"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Blood-Muddled Mind"
+msgstr ""
+
+#. ~ Description of effect type "Blood-Muddled Mind"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Your mind reels from all the vampire blood you drank."
+msgstr ""
+
+#. ~ Name of effect type id "xe_hydrating_gout_incubation"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Imminent Hydrating Gout"
+msgstr ""
+
+#. ~ Description of effect type "Imminent Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are about to suffer from the hydrating gout.  This disease causes the "
+"spontaneous generation of water inside the body, and becomes more virulent "
+"the more hydrated the afflicted is."
+msgstr ""
+
+#. ~ Apply message of effect type "Imminent Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You have a bad feeling about drinking more water."
+msgstr ""
+
+#. ~ Blood analysis description of effect type "Imminent Hydrating Gout"
+#. ~ Blood analysis description of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Unknown water-producing pathogen."
+msgstr ""
+
+#. ~ Name of effect type id "xe_hydrating_gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Hydrating Gout"
+msgstr ""
+
+#. ~ Description of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid ""
+"You are suffering from the peculiar illness known as hydrating gout.  This "
+"disease causes the spontaneous generation of water inside the body, and "
+"becomes more virulent the more hydrated the afflicted is."
+msgstr ""
+
+#. ~ Apply message of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You feel you're going to drown in your own body water."
+msgstr ""
+
+#. ~ Remove message of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "You no longer fear the absence of thirst."
+msgstr ""
+
+#. ~ Male memorial apply log of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_male"
+msgid "Caught a supernatural illness."
+msgstr ""
+
+#. ~ Female memorial apply log of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_female"
+msgid "Caught a supernatural illness."
+msgstr ""
+
+#. ~ Male memorial remove log of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_male"
+msgid "Got over the hydrating gout."
+msgstr ""
+
+#. ~ Female memorial remove log of effect type "Hydrating Gout"
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgctxt "memorial_female"
+msgid "Got over the hydrating gout."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_spring_reduce_scent"
+#. ~ Name of spell "changeling_spring_reduce_scent_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Scent of Fresh Flowers"
+msgstr ""
+
+#. ~ Description of effect type "Scent of Fresh Flowers"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "A sweet scent fills the air."
+msgstr ""
+
+#. ~ Remove message of effect type "Scent of Fresh Flowers"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The scent of flowers fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_spring_prevent_bad_conditions"
+#. ~ Name of spell "changeling_spring_prevent_bad_conditions_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Spring Cleansing"
+msgstr ""
+
+#. ~ Description of effect type "Spring Cleansing"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You feel like you've just come outside after a long winter."
+msgstr ""
+
+#. ~ Apply message of effect type "Spring Cleansing"
+#. ~ Message of spell "supercoffee ( Recover fatigue for dreams )"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/eater_spells.json
+msgid "You feel refreshed."
+msgstr ""
+
+#. ~ Remove message of effect type "Spring Cleansing"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The refreshing feeling fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_spring_protective_plant_armor"
+#. ~ Name of spell "changeling_spring_protective_plant_armor_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Viridian Cuirass"
+msgstr ""
+
+#. ~ Description of effect type "Viridian Cuirass"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You are covered in a set of living bark armor."
+msgstr ""
+
+#. ~ Apply message of effect type "Viridian Cuirass"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Bark and leaves quickly grow over your skin."
+msgstr ""
+
+#. ~ Remove message of effect type "Viridian Cuirass"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The bark armor cracks and falls away."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_changeling_spring_healing_increase_while_outside"
+#. ~ Name of spell "changeling_spring_healing_increase_while_outside_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "New Growth"
+msgstr ""
+
+#. ~ Description of effect type "New Growth"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You are drawing on the energy of life to increase your healing rate."
+msgstr ""
+
+#. ~ Remove message of effect type "New Growth"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The warmth fades away."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_spring_charm_control_target"
+#. ~ Name of spell "changeling_spring_charm_control_target_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_spring.json
+msgid "Ishtar's Folly"
+msgstr ""
+
+#. ~ Description of effect type "Ishtar's Folly"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your devotion is stronger than adamant."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_light"
+#. ~ Name of effect type id "effect_changeling_summer_light_spell"
+#. ~ Name of spell "changeling_summer_light_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Bonefire's Light"
+msgstr ""
+
+#. ~ Description of effect type "Bonefire's Light"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "A wisp of flickering insubstantial fire hovers near your shoulder."
+msgstr ""
+
+#. ~ Remove message of effect type "Bonefire's Light"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "The wisp winks out."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_sun_glasses"
+#. ~ Name of effect type id "effect_changeling_summer_sun_glasses_spell"
+#. ~ Name of spell "changeling_summer_sun_glasses_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Shading Your Eyes"
+msgstr ""
+
+#. ~ Description of effect type "Shading Your Eyes"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "Nearby lights don't seem quite as bright now."
+msgstr ""
+
+#. ~ Remove message of effect type "Shading Your Eyes"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "You blink as nearby lights grow brighter."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_protect_from_hot_weather"
+#. ~ Name of spell "changeling_summer_protect_from_hot_weather_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Gift of Warm Blood"
+msgstr ""
+
+#. ~ Description of effect type "Gift of Warm Blood"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The essence of summer protects you from excessive heat."
+msgstr ""
+
+#. ~ Remove message of effect type "Gift of Warm Blood"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Your blood loses its glamoured warmth."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_fire_melee_damage"
+#. ~ Name of effect type id "effect_changeling_fire_melee_damage_spell"
+#. ~ Name of spell "changeling_summer_fire_melee_damage_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Burning Solar Grasp"
+msgstr ""
+
+#. ~ Description of effect type "Burning Solar Grasp"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "Ethereal flames flicker around your hands"
+msgstr ""
+
+#. ~ Remove message of effect type "Burning Solar Grasp"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/obsoletion_and_migration/effects.json
+msgid "The flames gutter out."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_slow_and_sweat_debuff"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "Sun-struck"
+msgstr ""
+
+#. ~ Description of effect type "Sun-struck"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You need to sit down in the shade."
+msgstr ""
+
+#. ~ Name of effect type id "effect_changeling_summer_run_for_long_periods"
+#. ~ Name of spell "changeling_summer_run_for_long_periods_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "Outracing the Sun"
+msgstr ""
+
+#. ~ Description of effect type "Outracing the Sun"
+#. ~ Apply message of effect type "Outracing the Sun"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "You are filled with burning energy."
+msgstr ""
+
+#. ~ Remove message of effect type "Outracing the Sun"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The burning energy filling your muscles dissipates."
+msgstr ""
+
+#. ~ Name of effect type id
+#. "effect_changeling_summer_bonus_stamina_near_enemies"
+#. ~ Name of spell "changeling_summer_bonus_stamina_near_enemies_spell"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+#: data/mods/Xedra_Evolved/spells/changeling_seasonal_magic_summer.json
+msgid "A Fire in the Blood"
+msgstr ""
+
+#. ~ Description of effect type "A Fire in the Blood"
+#: data/mods/Xedra_Evolved/effects/effects_changeling_seasonal_magic.json
+msgid "The light of the summer sun gives you strength to fight."
+msgstr ""

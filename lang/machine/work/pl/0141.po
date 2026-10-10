@@ -1,0 +1,2024 @@
+# Batch 141 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic toes"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "left bionic ankle"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic ankles"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "left bionic heel"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic heels"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "right bionic foot bottom"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic right foot arch"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic right toes"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic right ankle"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic right heel"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "tank treads shell"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "tank treads tracks"
+msgstr ""
+
+#. ~ Name of sub body part
+#: data/mods/Limb_WIP/mutations/sub_limbs.json
+msgid "bionic treads"
+msgstr ""
+
+#. ~ Description of "Pocket Monster Encyclopedia"
+#: data/mods/MMA/martial.json
+msgid ""
+"This encyclopedia contains a detailed listing of the strengths and techniques"
+" of various fictional monsters and how to apply them in a real fight."
+msgstr ""
+
+#. ~ Description of buff "Setting Sun" in martial art "Fool's Strike"
+#: data/mods/MMA/martialarts.json
+#, no-c-format
+msgid ""
+"You moved in such a deceptive way that you have turned your opponent's attack against them.\n"
+"\n"
+"+20% damage.\n"
+"Lasts 2 turns."
+msgstr ""
+
+#. ~ Description of mutation "Ki Strike"
+#: data/mods/MMA/mutations.json
+msgid ""
+"Who needs weapons?  You deal more melee damage while your hands are empty.  "
+"This damage improves as your unarmed skill increases."
+msgstr ""
+
+#. ~ Description of mutation "Pokken Master"
+#: data/mods/MMA/mutations.json
+msgid ""
+"You are well versed in the monstrous Pocket Fist martial art.  Train well, "
+"because it is your destiny to be a master."
+msgstr ""
+
+#. ~ Condition description of martial technique "Mighty Throw"
+#. ~ Condition description of martial technique "Ballista Throw"
+#: data/mods/MMA/techniques.json
+msgid ""
+"* Only works on a <info>non-downed</info> target of <info>similar or "
+"smaller</info> size, may fail on enemies grabbing you"
+msgstr ""
+
+#. ~ Martial technique name
+#: data/mods/MMA/techniques.json
+msgid "Irresistible Mountain Strike"
+msgstr ""
+
+#. ~ Message of martial technique "Wolverine Stance"
+#: data/mods/MMA/techniques.json
+#, c-format
+msgid "You were almost grabbed by %s, but you thrash your way to freedom"
+msgstr ""
+
+#. ~ Message of martial technique "Wolverine Stance"
+#: data/mods/MMA/techniques.json
+#, c-format
+msgid ""
+"<npcname> was almost grabbed by %s, but they thrash their way to freedom"
+msgstr ""
+
+#. ~ Description of bionic "Blood Power Generator"
+#: data/mods/Magiclysm/bionics.json
+msgid ""
+"Embedded into your back and connected to your bionic power supply is a "
+"powerful spell focus able to consume blood from dead creatures to produce "
+"bionic power.  It can store up to 750 mL of blood."
+msgstr ""
+
+#. ~ Item name
+#: data/mods/Magiclysm/bionics.json
+msgid "internal blood bank"
+msgid_plural "internal blood banks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "internal blood bank"
+#: data/mods/Magiclysm/bionics.json
+msgid "Internal tank for blood power generator bionic."
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Build Translocator Portal"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Set up Everburning Candelabra"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Inscribe Magic Circle"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Attach Everburning Sconce"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Enhance existing Magic Circle"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+#: data/mods/Xedra_Evolved/recipes/construction.json
+msgid "Build Standing Alembic"
+msgstr ""
+
+#. ~ Construction group name
+#: data/mods/Magiclysm/construction_group.json
+msgid "Place Orrery"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Magiclysm/damage_types.json
+msgid "poisoning"
+msgstr ""
+
+#. ~ A verb describing how this damage typeis applied (ex: "bashing")
+#: data/mods/Magiclysm/damage_types.json
+msgid "necrotizing"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json data/mods/MindOverMatter/fields.json
+#: data/mods/Xedra_Evolved/field_type.json
+msgid "heated air"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json data/mods/MindOverMatter/fields.json
+msgid "chill air"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json data/mods/Xedra_Evolved/field_type.json
+msgid "thick fog"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json data/mods/Xedra_Evolved/field_type.json
+msgid "very thick fog"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json data/mods/Xedra_Evolved/field_type.json
+msgid "impenetrable fog"
+msgstr ""
+
+#. ~ Field intensity level
+#: data/mods/Magiclysm/field.json
+msgid "emptiness"
+msgstr ""
+
+#. ~ Please leave anything in <angle brackets> unchanged.
+#. ~ Description of JSON flag "MAGICAL_MIND_PROTECTION"
+#: data/mods/Magiclysm/flags.json
+msgid "Your magic protects your mind against assault."
+msgstr ""
+
+#. ~ Harvest message
+#: data/mods/Magiclysm/harvest_dissect.json
+msgid ""
+"You search for any salvageable hardware in what's left of the technomancer.  "
+"They have not given much care to their bionics, but some of the electronics "
+"look surprisingly intact."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Spellcraft (Beginner)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Beginner)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You took a few classes about magical theory before the Cataclysm and still "
+"remember most of it."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Spellcraft (Beginner)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Beginner)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You took a few classes about magical theory before the Cataclysm and still "
+"remember most of it."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Spellcraft (Intermediate)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Intermediate)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were either a practicing mage or made a formal study of magical theory.  "
+"You could have designed spells in your spare time, if you had wanted."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Spellcraft (Intermediate)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Intermediate)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were either a practicing mage or made a formal study of magical theory.  "
+"You could have designed spells in your spare time, if you had wanted."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Spellcraft (Expert)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Expert)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You could have taught magical theory to mages, whether you know any spells or"
+" not."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Spellcraft (Expert)"
+msgstr ""
+
+#. ~ Description of profession "Spellcraft (Expert)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You could have taught magical theory to mages, whether you know any spells or"
+" not."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Freshen Up)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Freshen Up)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Freshen Up, the most common spell in the pre-Cataclysm world.  "
+"It saved up a lot of time before work in your old life and you've certainly "
+"made a lot of use of it now that there's no more running water."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Freshen Up)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Freshen Up)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Freshen Up, the most common spell in the pre-Cataclysm world.  "
+"It saved up a lot of time before work in your old life and you've certainly "
+"made a lot of use of it now that there's no more running water."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Crystallize Mana)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Crystallize Mana)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Crystallize Mana.  Sure, it ruined your social life and you "
+"slept for 12 hours a day, but you made a tidy sum of money producing mana "
+"crystals for mages who needed them.  Too bad all that money is useless now."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Crystallize Mana)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Crystallize Mana)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Crystallize Mana.  Sure, it ruined your social life and you "
+"slept for 12 hours a day, but you made a tidy sum of money producing mana "
+"crystals for mages who needed them.  Too bad all that money is useless now."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Magical Light)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Magical Light)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Magical Light.  It was mostly a party trick, to be honest, and "
+"the weeks learning to cast a spell that any smartphone could replicate showed"
+" you how much work trying to learn real magic actually was.  But the nights "
+"are dark enough nowadays that you're glad you put in the effort."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Magical Light)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Magical Light)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Magical Light.  It was mostly a party trick, to be honest, and "
+"the weeks learning to cast a spell that any smartphone could replicate showed"
+" you how much work trying to learn real magic actually was.  But the nights "
+"are dark enough nowadays that you're glad you put in the effort."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Aura of Protection)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Aura of Protection)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Aura of Protection.  To be honest, you originally learned it to"
+" try to replace the umbrella you kept leaving at home and were very "
+"disappointed when that didn't work.  It's saved you at least once from some "
+"strange gas in the air, though, so all that effort paid off."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Aura of Protection)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Aura of Protection)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Aura of Protection.  To be honest, you originally learned it to"
+" try to replace the umbrella you kept leaving at home and were very "
+"disappointed when that didn't work.  It's saved you at least once from some "
+"strange gas in the air, though, so all that effort paid off."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Sound Bomb)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Sound Bomb)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Sound Bomb.  You mostly used it for jokes, to play pranks on "
+"your friends and annoy the neighborhood dogs, but it's proven its worth now "
+"at the end of the world."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Sound Bomb)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Sound Bomb)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Sound Bomb.  You mostly used it for jokes, to play pranks on "
+"your friends and annoy the neighborhood dogs, but it's proven its worth now "
+"at the end of the world."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Knowing the Day and the Hour)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knowing the Day and the Hour)" for
+#. male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knowing the Day and the Hour.  Your non-mage friends were "
+"always asking you why you bothered learning what was widely considered to be "
+"the least useful spell in the world, and sometimes you weren't sure yourself."
+"  Even now that the network is done, you're still not entirely sure how "
+"important it is to know that it's exactly 6:12 a.m. vs. just \"sunrise\".  "
+"But if it ever is important, you'll know it."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Knowing the Day and the Hour)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knowing the Day and the Hour)" for
+#. female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knowing the Day and the Hour.  Your non-mage friends were "
+"always asking you why you bothered learning what was widely considered to be "
+"the least useful spell in the world, and sometimes you weren't sure yourself."
+"  Even now that the network is done, you're still not entirely sure how "
+"important it is to know that it's exactly 6:12 a.m. vs. just \"sunrise\".  "
+"But if it ever is important, you'll know it."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Peaceful Rest)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Peaceful Rest)" for male
+#: data/mods/Magiclysm/hobbies.json
+#, c-format
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Peaceful Rest.  Ever since you were a child, you dreaded "
+"bedtime.  Falling asleep was an ordeal, a battle between you and the bed, and"
+" it seemed like no matter how many sheep you counted, sleep hygiene habits "
+"you practiced, or exhausted you felt, it was an hour or more until you "
+"finally fell into sleep.  You became a mage because you were tired of having "
+"5% of your life stuck staring at the ceiling while waiting for sleep to come,"
+" and ever since the world ended, you're even more grateful you can fall "
+"asleep whenever you need to."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Peaceful Rest)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Peaceful Rest)" for female
+#: data/mods/Magiclysm/hobbies.json
+#, c-format
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Peaceful Rest.  Ever since you were a child, you dreaded "
+"bedtime.  Falling asleep was an ordeal, a battle between you and the bed, and"
+" it seemed like no matter how many sheep you counted, sleep hygiene habits "
+"you practiced, or exhausted you felt, it was an hour or more until you "
+"finally fell into sleep.  You became a mage because you were tired of having "
+"5% of your life stuck staring at the ceiling while waiting for sleep to come,"
+" and ever since the world ended, you're even more grateful you can fall "
+"asleep whenever you need to."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Ignus Fatuus)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Ignus Fatuus)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Ignus Fatuus.  It was mostly just for your amusement, summoning"
+" the will-o'-the-wisps at sundown and watching them dance, but they've proven"
+" handy more than once lately by leading some monster astray while you ran for"
+" your life."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Ignus Fatuus)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Ignus Fatuus)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Ignus Fatuus.  It was mostly just for your amusement, summoning"
+" the will-o'-the-wisps at sundown and watching them dance, but they've proven"
+" handy more than once lately by leading some monster astray while you ran for"
+" your life."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Summon Watcher Spirit)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Summon Watcher Spirit)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Summon Watcher Spirit.  You initially learned it to keep an eye"
+" on your cat while you were doing chores around the house, but it ended up "
+"being even more valuable than you thought once the world ended."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Summon Watcher Spirit)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Summon Watcher Spirit)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Summon Watcher Spirit.  You initially learned it to keep an eye"
+" on your cat while you were doing chores around the house, but it ended up "
+"being even more valuable than you thought once the world ended."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Witchsight)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Witchsight)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Witchsight.  People asked you why you would bother learning a "
+"spell that only let you know if other people were mages, but every bit of "
+"information helped.  A gun you can see, an expensive suit, the size and "
+"strength of a person or the way they carry themselves, but a mage's talent is"
+" all hidden until they a cast spell.  Unless, of course, you knew how to "
+"look, and you did."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Witchsight)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Witchsight)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Witchsight.  People asked you why you would bother learning a "
+"spell that only let you know if other people were mages, but every bit of "
+"information helped.  A gun you can see, an expensive suit, the size and "
+"strength of a person or the way they carry themselves, but a mage's talent is"
+" all hidden until they a cast spell.  Unless, of course, you knew how to "
+"look, and you did."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Knit the Rent Flesh)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knit the Rent Flesh)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knit the Rent Flesh.  Certainly no one ever asked your reasons "
+"for studying biomancy, especially after you saw that guy get hit by a truck "
+"running a red light and managed to stop him from bleeding out before the "
+"paramedics arrived.  It was disturbing to watch, but it was undoubtedly "
+"effective.  As long as you're light on your feet, you won't have to worry "
+"about dying of your injuries now."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Knit the Rent Flesh)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knit the Rent Flesh)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knit the Rent Flesh.  Certainly no one ever asked your reasons "
+"for studying biomancy, especially after you saw that guy get hit by a truck "
+"running a red light and managed to stop him from bleeding out before the "
+"paramedics arrived.  It was disturbing to watch, but it was undoubtedly "
+"effective.  As long as you're light on your feet, you won't have to worry "
+"about dying of your injuries now."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Carrion Feast)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Carrion Feast)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Carrion Feast.  You had your reasons for studying it, "
+"certainly, and perhaps it is best not to speculate about them now."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Carrion Feast)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Carrion Feast)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Carrion Feast.  You had your reasons for studying it, "
+"certainly, and perhaps it is best not to speculate about them now."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Water's Cooling Touch)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Water's Cooling Touch)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Water's Cooling Touch.  You always hated summer, the "
+"stickiness, the heat, the sunburns, and your dislike of the weather drove you"
+" to study druidic magic to overcome it.  With your water bottle handy, you'll"
+" never have to worry about being too hot in the sun again."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Water's Cooling Touch)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Water's Cooling Touch)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Water's Cooling Touch.  You always hated summer, the "
+"stickiness, the heat, the sunburns, and your dislike of the weather drove you"
+" to study druidic magic to overcome it.  With your water bottle handy, you'll"
+" never have to worry about being too hot in the sun again."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Traverse the Wilds)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Traverse the Wilds)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Traverse the Wilds.  Part of the joy of hiking is taking your "
+"time, of being away from the tyranny of clocks and schedules and deadlines.  "
+"But sometimes, it was nice to just see the miles fly by, to reach the summit "
+"before sunrise and take in the view without getting up at 2 a.m., to finish "
+"the entire trail and still have time to sit down and eat a leisurely dinner."
+"  And it's not like you teleported, after all.  Regardless of the magic, you "
+"still had to walk every single step."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Traverse the Wilds)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Traverse the Wilds)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Traverse the Wilds.  Part of the joy of hiking is taking your "
+"time, of being away from the tyranny of clocks and schedules and deadlines.  "
+"But sometimes, it was nice to just see the miles fly by, to reach the summit "
+"before sunrise and take in the view without getting up at 2 a.m., to finish "
+"the entire trail and still have time to sit down and eat a leisurely dinner."
+"  And it's not like you teleported, after all.  Regardless of the magic, you "
+"still had to walk every single step."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Goodberry)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Goodberry)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"Biohacking was your passion, trying to optimize your life through diet, "
+"exercise, and sleep tricks, and you turned to druidic magic to cut out wasted"
+" time.  When the Pomodoro timer went off, you scurried to the fridge, grabbed"
+" a handful of berries and enchanted them, scarfed them down, and then got "
+"back to work.  You never had to deal with meal replacement nonsense, you just"
+" ate your berries and got things done.  Your clients are dead now and "
+"everything you worked on is ash and dust, but eating those berries has proven"
+" to be the best habit you picked up."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Goodberry)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Goodberry)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"Biohacking was your passion, trying to optimize your life through diet, "
+"exercise, and sleep tricks, and you turned to druidic magic to cut out wasted"
+" time.  When the Pomodoro timer went off, you scurried to the fridge, grabbed"
+" a handful of berries and enchanted them, scarfed them down, and then got "
+"back to work.  You never had to deal with meal replacement nonsense, you just"
+" ate your berries and got things done.  Your clients are dead now and "
+"everything you worked on is ash and dust, but eating those berries has proven"
+" to be the best habit you picked up."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Utility Molding)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Utility Molding)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Utility Molding.  You read a pamphlet once entitled, \"One "
+"Spell is All You Need!\" and thought it seemed like a good idea.  And true, "
+"maybe you've never needed a mining pick before, but the ability to all up a "
+"knife or a shovel or a hammer whenever you want has come in handy countless "
+"times."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Utility Molding)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Utility Molding)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Utility Molding.  You read a pamphlet once entitled, \"One "
+"Spell is All You Need!\" and thought it seemed like a good idea.  And true, "
+"maybe you've never needed a mining pick before, but the ability to all up a "
+"knife or a shovel or a hammer whenever you want has come in handy countless "
+"times."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Tremorsense)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Tremorsense)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Tremorsense.  It kept you safe, letting you know if someone was"
+" nearby even if you were absorbed in a task or listening to music, but now "
+"that most of the people you meet want to eat you it's proven invaluable."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Tremorsense)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Tremorsense)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Tremorsense.  It kept you safe, letting you know if someone was"
+" nearby even if you were absorbed in a task or listening to music, but now "
+"that most of the people you meet want to eat you it's proven invaluable."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (The Turning of the Earth)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (The Turning of the Earth)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, the Turning of the Earth.  Gardening was your passion and you "
+"got sick of manually digging rows in early spring or mid-summer weather.  "
+"After your studies you could just cast the spell and the earth neatly parted,"
+" waiting for seeds to be planted.  Once the canned food runs out, you're sure"
+" you'll get even more use of your powers."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (The Turning of the Earth)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (The Turning of the Earth)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, the Turning of the Earth.  Gardening was your passion and you "
+"got sick of manually digging rows in early spring or mid-summer weather.  "
+"After your studies you could just cast the spell and the earth neatly parted,"
+" waiting for seeds to be planted.  Once the canned food runs out, you're sure"
+" you'll get even more use of your powers."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Finger Firelighter)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Finger Firelighter)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Finger Firelighter.  You had a lot of great conversations with "
+"people, late at night outside clubs and restaurants, when they'd ask for a "
+"light and you'd just snap your fingers.  Lately, though, you've used it to "
+"cook food more than light cigarettes and haven't had anyone to talk to, but "
+"at least the fires at night are warm."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Finger Firelighter)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Finger Firelighter)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Finger Firelighter.  You had a lot of great conversations with "
+"people, late at night outside clubs and restaurants, when they'd ask for a "
+"light and you'd just snap your fingers.  Lately, though, you've used it to "
+"cook food more than light cigarettes and haven't had anyone to talk to, but "
+"at least the fires at night are warm."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Flames of Passion)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Flames of Passion)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Flames of Passion.  Alcohol is a social lubricant, and if you "
+"already had a drink in your hand, why not use it to let you loosen up and "
+"make it easier to talk to people?  You were out at parties almost every "
+"weekend and had a wide circle of friends.  Hopefully at least a few of them "
+"made it through all of this."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Flames of Passion)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Flames of Passion)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Flames of Passion.  Alcohol is a social lubricant, and if you "
+"already had a drink in your hand, why not use it to let you loosen up and "
+"make it easier to talk to people?  You were out at parties almost every "
+"weekend and had a wide circle of friends.  Hopefully at least a few of them "
+"made it through all of this."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Slowfall)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Slowfall)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Slowfall.  Some people become mages due to a dream, or a goal "
+"they want to pursue, but for you it was the memory of falling down the stairs"
+" as a child and breaking your leg.  With your magic you could jump off a roof"
+" and it was no more dangerous than jumping off a low stone wall, and that's "
+"been pretty useful for some of the situations you've found yourself in since "
+"the Cataclysm."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Slowfall)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Slowfall)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Slowfall.  Some people become mages due to a dream, or a goal "
+"they want to pursue, but for you it was the memory of falling down the stairs"
+" as a child and breaking your leg.  With your magic you could jump off a roof"
+" and it was no more dangerous than jumping off a low stone wall, and that's "
+"been pretty useful for some of the situations you've found yourself in since "
+"the Cataclysm."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Faerie Fire)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Faerie Fire)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Faerie Fire.  Maybe it wasn't a great use of your time, but it "
+"was fun at parties and one time when your cat ran off it made it very easy to"
+" find her.  Since the Cataclysm, though, your magical powers have become much"
+" more useful."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Faerie Fire)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Faerie Fire)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Faerie Fire.  Maybe it wasn't a great use of your time, but it "
+"was fun at parties and one time when your cat ran off it made it very easy to"
+" find her.  Since the Cataclysm, though, your magical powers have become much"
+" more useful."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Sorcerer's Hand)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Sorcerer's Hand)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Sorcerer's Hand.  Alright, fine, you admit it, you learned "
+"magic because of laziness.  It seems odd to say, with all the hours after "
+"work and late at night, studying until you could make your keys twitch and "
+"fall off the table and eventually until you can grab a drink from across the "
+"room, but it's true.  You could reach nearly everything without having to get"
+" up.  Anyway, you're way more active now, and being able to grab things from "
+"across the room has come in handy more than once since the end of the world."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Sorcerer's Hand)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Sorcerer's Hand)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Sorcerer's Hand.  Alright, fine, you admit it, you learned "
+"magic because of laziness.  It seems odd to say, with all the hours after "
+"work and late at night, studying until you could make your keys twitch and "
+"fall off the table and eventually until you can grab a drink from across the "
+"room, but it's true.  You could reach nearly everything without having to get"
+" up.  Anyway, you're way more active now, and being able to grab things from "
+"across the room has come in handy more than once since the end of the world."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Spider Climb)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Spider Climb)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Spider Climb.  A lot of people in the rockclimbing community "
+"said you were cheating, and, to be honest, they were right.  But every time "
+"you saw one of those spectacular views from the summit, well, those "
+"complaints didn't mean that much."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Spider Climb)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Spider Climb)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Spider Climb.  A lot of people in the rockclimbing community "
+"said you were cheating, and, to be honest, they were right.  But every time "
+"you saw one of those spectacular views from the summit, well, those "
+"complaints didn't mean that much."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Windrunning)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Windrunning)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Windrunning.  It's embarrassing to admit, but you became a mage"
+" because you were always running late.  Just one spell made it much easier to"
+" catch that bus, to beat that red light across the crosswalk, to make it to "
+"work on time instead of a few minutes late.  Nowadays you have a lot more "
+"practice at running and that speed still comes in handy."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Windrunning)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Windrunning)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Windrunning.  It's embarrassing to admit, but you became a mage"
+" because you were always running late.  Just one spell made it much easier to"
+" catch that bus, to beat that red light across the crosswalk, to make it to "
+"work on time instead of a few minutes late.  Nowadays you have a lot more "
+"practice at running and that speed still comes in handy."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Fire Spark)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Fire Spark)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Fire Spark.  Most people when they wanted to light a fire "
+"thought of kelvinists, but electricity always fascinated you.  You used to "
+"love watching the storms roll in, sitting on your porch as the lightning "
+"played across the sky, and while summoning lightning bolts wouldn't have been"
+" useful for anything at all, catching fires with a spark has come in handy."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Fire Spark)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Fire Spark)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Fire Spark.  Most people when they wanted to light a fire "
+"thought of kelvinists, but electricity always fascinated you.  You used to "
+"love watching the storms roll in, sitting on your porch as the lightning "
+"played across the sky, and while summoning lightning bolts wouldn't have been"
+" useful for anything at all, catching fires with a spark has come in handy."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Air Bubble)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Air Bubble)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Air Bubble.  It was originally because of your diving trips.  "
+"You were sick of having the goggles and the respirator between you and the "
+"sea, and if one simple spell would make it so you didn't have to worry about "
+"that again, you were willing to put in the time to learn it.  When you had to"
+" swim across that river to escape the horde a while ago, it definitely proved"
+" its worth."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Air Bubble)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Air Bubble)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Air Bubble.  It was originally because of your diving trips.  "
+"You were sick of having the goggles and the respirator between you and the "
+"sea, and if one simple spell would make it so you didn't have to worry about "
+"that again, you were willing to put in the time to learn it.  When you had to"
+" swim across that river to escape the horde a while ago, it definitely proved"
+" its worth."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Lamp)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Lamp)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Lamp.  Sure, phones had lights, but they weren't nearly as "
+"bright as a magical one was, and it was pretty nice to just recite the words "
+"and light up an entire room like a high-powered flashlight.  Now that the "
+"power's out, it's even more useful."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Lamp)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Lamp)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Lamp.  Sure, phones had lights, but they weren't nearly as "
+"bright as a magical one was, and it was pretty nice to just recite the words "
+"and light up an entire room like a high-powered flashlight.  Now that the "
+"power's out, it's even more useful."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_male"
+msgid "Dabbler (Knock)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knock)" for male
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knock.  You originally learned it because you always forgot "
+"your keys and after the third time you were locked out of your apartment, to "
+"turned to magic to solve the problem.  Of course, once you did have to use "
+"magic to get back in you realized that anyone else could have done the same "
+"thing, so in the end it just ruined your peace of mind.  At least now you can"
+" be sure there's no one home at the places you're entering."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "profession_female"
+msgid "Dabbler (Knock)"
+msgstr ""
+
+#. ~ Description of profession "Dabbler (Knock)" for female
+#: data/mods/Magiclysm/hobbies.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were one of the hundreds of millions of people who knew a single spell.  "
+"In your case, Knock.  You originally learned it because you always forgot "
+"your keys and after the third time you were locked out of your apartment, to "
+"turned to magic to solve the problem.  Of course, once you did have to use "
+"magic to get back in you realized that anyone else could have done the same "
+"thing, so in the end it just ruined your peace of mind.  At least now you can"
+" be sure there's no one home at the places you're entering."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_male"
+msgid "Elf (Species)"
+msgstr ""
+
+#. ~ Description of profession "Elf (Species)" for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are one of the Firstborn, called \"alfar\" or \"sidhe\" or, more "
+"recently, \"elves\" by the humans.  Your people had integrated into human "
+"society before the Cataclysm, doing jobs involving animals and nature since "
+"modern industry was never to your liking.  Had technological development "
+"continued, you might have been forced to make some unpleasant compromises, "
+"but not as unpleasant as you have during the end of the world."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_female"
+msgid "Elf (Species)"
+msgstr ""
+
+#. ~ Description of profession "Elf (Species)" for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are one of the Firstborn, called \"alfar\" or \"sidhe\" or, more "
+"recently, \"elves\" by the humans.  Your people had integrated into human "
+"society before the Cataclysm, doing jobs involving animals and nature since "
+"modern industry was never to your liking.  Had technological development "
+"continued, you might have been forced to make some unpleasant compromises, "
+"but not as unpleasant as you have during the end of the world."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_male"
+msgid "Dwarf (Species)"
+msgstr ""
+
+#. ~ Description of profession "Dwarf (Species)" for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are a Child of the Stone, called \"dwarf\" by the humans.  The legends "
+"tell that long ago, your people were born of stone and mined your way up to "
+"the surface world and its light, where you found the other sapient species of"
+" Earth.  While the scale of the human world was always a bit of a problem, "
+"you fit in well due to your people's long tradition of craftsdwarfship and "
+"hard work.  Now that society has collapsed, maybe you can turn that same "
+"drive to rebuilding it."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_female"
+msgid "Dwarf (Species)"
+msgstr ""
+
+#. ~ Description of profession "Dwarf (Species)" for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are a Child of the Stone, called \"dwarf\" by the humans.  The legends "
+"tell that long ago, your people were born of stone and mined your way up to "
+"the surface world and its light, where you found the other sapient species of"
+" Earth.  While the scale of the human world was always a bit of a problem, "
+"you fit in well due to your people's long tradition of craftsdwarfship and "
+"hard work.  Now that society has collapsed, maybe you can turn that same "
+"drive to rebuilding it."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_male"
+msgid "Goblin (Species)"
+msgstr ""
+
+#. ~ Description of profession "Goblin (Species)" for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are a goblin.  Before the Cataclysm your people were always a little out "
+"of place: the houses weren't designed for you, the shops weren't open when "
+"you were awake, and your appearance sometimes gave human or elven children "
+"nightmares that you were going to steal them or reminded dwarves of the "
+"ancient wars your peoples fought.  As it turned out, you weren't what any of "
+"them should have been worrying about."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_female"
+msgid "Goblin (Species)"
+msgstr ""
+
+#. ~ Description of profession "Goblin (Species)" for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are a goblin.  Before the Cataclysm your people were always a little out "
+"of place: the houses weren't designed for you, the shops weren't open when "
+"you were awake, and your appearance sometimes gave human or elven children "
+"nightmares that you were going to steal them or reminded dwarves of the "
+"ancient wars your peoples fought.  As it turned out, you weren't what any of "
+"them should have been worrying about."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_male"
+msgid "Lizardfolk (Species)"
+msgstr ""
+
+#. ~ Description of profession "Lizardfolk (Species)" for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are one of the Scaled Ones, called \"lizardfolk\" by the warmbloods.  For"
+" generations, your tribe served a dragon as its eyes and ears in the outside "
+"world, until civilization encroached far enough that even all the dragon's "
+"might could not hold it back.  You were sent out to integrate into the modern"
+" world, but you were only there a few years before human science ended their "
+"world.  Now, you have to survive in the mess they've created."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_female"
+msgid "Lizardfolk (Species)"
+msgstr ""
+
+#. ~ Description of profession "Lizardfolk (Species)" for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are one of the Scaled Ones, called \"lizardfolk\" by the warmbloods.  For"
+" generations, your tribe served a dragon as its eyes and ears in the outside "
+"world, until civilization encroached far enough that even all the dragon's "
+"might could not hold it back.  You were sent out to integrate into the modern"
+" world, but you were only there a few years before human science ended their "
+"world.  Now, you have to survive in the mess they've created."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_male"
+msgid "Ravenfolk (Species)"
+msgstr ""
+
+#. ~ Description of profession "Ravenfolk (Species)" for male
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are one of the Kor'uru, called \"ravenfolk\" by those who can't make the "
+"appropriate clacking sound due to their lack of beak.  While your people "
+"could not fly without the aid of magic, you were always drawn to explore the "
+"world, and had traveled to nearly every country and continent even before "
+"modern society made such travel easy.  You were well-integrated into society "
+"at all levels…and that made you just as vulnerable as everyone else when it "
+"fell."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "profession_female"
+msgid "Ravenfolk (Species)"
+msgstr ""
+
+#. ~ Description of profession "Ravenfolk (Species)" for female
+#: data/mods/Magiclysm/hobbies_fantasy_species.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are one of the Kor'uru, called \"ravenfolk\" by those who can't make the "
+"appropriate clacking sound due to their lack of beak.  While your people "
+"could not fly without the aid of magic, you were always drawn to explore the "
+"world, and had traveled to nearly every country and continent even before "
+"modern society made such travel easy.  You were well-integrated into society "
+"at all levels…and that made you just as vulnerable as everyone else when it "
+"fell."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s impales your %2$s with its trident!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s impales <npcname>'s %2$s with its trident!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to impale your %2$s with its trident, but fails to penetrate your "
+"armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to impale <npcname>'s %2$s with its trident, but fails to "
+"penetrate their armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s crushes your %2$s with its greatclub!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s crushes <npcname>'s %2$s with its greatclub!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to crush your %2$s with its greatclub, but swings wide and "
+"stumbles."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s tries to crush <npcname>'s %2$s with its greatclub, but swings wide and "
+"stumbles."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s lashes you with its flaming whip!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s lashes <npcname> with its flaming whip!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s lashes you with its flaming whip, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "%1$s lashes <npcname> with its flaming whip, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s lashes you with its flaming whip, but fails to penetrate your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid ""
+"%1$s lashes <npcname> with its flaming whip, but fails to penetrate their "
+"armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+msgid "Electric current stream through your body!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+msgid "Electric current stream through <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "The %1$s tries to hit you, but you dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "The %1$s tries to hit <npcname>, but they dodge!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "The %1$s tries to hit you, but fails to penetrate your armor!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monster_attacks.json
+#, c-format
+msgid "The %1$s tries to hit <npcname>, but fails to penetrate their armor!"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Magiclysm/morale_types.json
+msgid "Enjoyed Iocus"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Magiclysm/morale_types.json
+#: data/mods/Xedra_Evolved/morale_types.json
+msgid "Peace of the Forest"
+msgstr ""
+
+#. ~ Morale text
+#: data/mods/Magiclysm/morale_types.json
+msgid "Lacking shiny objects"
+msgstr ""
+
+#. ~ Description of profession "Novice Earthshaper" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were always tough in a fight.  Your coach managed to teach you a trick or"
+" two to make you a little tougher."
+msgstr ""
+
+#. ~ Description of profession "Novice Earthshaper" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were always tough in a fight.  Your coach managed to teach you a trick or"
+" two to make you a little tougher."
+msgstr ""
+
+#. ~ Description of profession "Freezing Dancer" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are a highly sought exotic magic dancer.  You can heat the room "
+"temperature with your moves and your body, but whenever it lights too much "
+"you freeze it with your magic, granting you great control over your public.  "
+"They can see, but never touch."
+msgstr ""
+
+#. ~ Description of profession "Freezing Dancer" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are a highly sought exotic magic dancer.  You can heat the room "
+"temperature with your moves and your body, but whenever it lights too much "
+"you freeze it with your magic, granting you great control over your public.  "
+"They can see, but never touch."
+msgstr ""
+
+#. ~ Description of profession "Dimensionalist Mage" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are an expert in dimensionalism, with its most common example being "
+"teleportation magic, that is the reason why you could survive while your "
+"colleagues could not.  Your only hope is that your highly specialized skills "
+"will continue keeping you alive."
+msgstr ""
+
+#. ~ Description of profession "Dimensionalist Mage" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are an expert in dimensionalism, with its most common example being "
+"teleportation magic, that is the reason why you could survive while your "
+"colleagues could not.  Your only hope is that your highly specialized skills "
+"will continue keeping you alive."
+msgstr ""
+
+#. ~ Description of profession "Shadow Burglar" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"Helped by all kind of magical tools and your great talents, you were planning"
+" your next great break in.  The world ended before you had time to escape "
+"with all of your ill-gained plunder, but at least now nobody can stop you now"
+" from breaking whatever locks you desire."
+msgstr ""
+
+#. ~ Description of profession "Shadow Burglar" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"Helped by all kind of magical tools and your great talents, you were planning"
+" your next great break in.  The world ended before you had time to escape "
+"with all of your ill-gained plunder, but at least now nobody can stop you now"
+" from breaking whatever locks you desire."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Magic Drunkard"
+msgstr ""
+
+#. ~ Description of profession "Magic Drunkard" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were lucky enough to find a weird flask that refills itself with whiskey!"
+"  You now spend your days just waiting for every refill and keeping it from "
+"the hands of any envious neighbor of yours."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Magic Drunkard"
+msgstr ""
+
+#. ~ Description of profession "Magic Drunkard" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were lucky enough to find a weird flask that refills itself with whiskey!"
+"  You now spend your days just waiting for every refill and keeping it from "
+"the hands of any envious neighbor of yours."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Magic Miner"
+msgstr ""
+
+#. ~ Description of profession "Magic Miner" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were the most prepared of them all.  The miner that never lacked tools "
+"and could control the ground itself.  Sadly, you are not sure those abilities"
+" will save you in what is to come."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Magic Miner"
+msgstr ""
+
+#. ~ Description of profession "Magic Miner" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were the most prepared of them all.  The miner that never lacked tools "
+"and could control the ground itself.  Sadly, you are not sure those abilities"
+" will save you in what is to come."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Magic Butler"
+msgstr ""
+
+#. ~ Description of profession "Magic Butler" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You are a descendant of a long line of housekeepers for magical families.  "
+"Trained in several spells to facilitate your job you were easily hired to "
+"take care of your current job, sadly, it looks like this could be your last."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Magic Maid"
+msgstr ""
+
+#. ~ Description of profession "Magic Maid" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You are a descendant of a long line of housekeepers for magical families.  "
+"Trained in several spells to facilitate your job you were easily hired to "
+"take care of your current job, sadly, it looks like this could be your last."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Wild Druid"
+msgstr ""
+
+#. ~ Description of profession "Wild Druid" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"For a long time you lived in the wild, free of interference from whatever "
+"inhabited outside the woods, now that the woods are collapsing you finally "
+"return to civilization."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Wild Druid"
+msgstr ""
+
+#. ~ Description of profession "Wild Druid" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"For a long time you lived in the wild, free of interference from whatever "
+"inhabited outside the woods, now that the woods are collapsing you finally "
+"return to civilization."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Archer Druid"
+msgstr ""
+
+#. ~ Description of profession "Archer Druid" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a skillful and committed archer druid, making constant excursions to"
+" the forests in which you dedicated yourself to living off of and with what "
+"nature had to offer you.  You were returning from your last travel when "
+"civilization fell upon itself."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Archer Druid"
+msgstr ""
+
+#. ~ Description of profession "Archer Druid" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a skillful and committed archer druid, making constant excursions to"
+" the forests in which you dedicated yourself to living off of and with what "
+"nature had to offer you.  You were returning from your last travel when "
+"civilization fell upon itself."
+msgstr ""
+
+#. ~ Description of profession "Academy Wizard" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"A year of enrollment in a wizard's academy has taught you patience, wisdom, "
+"and a handful of useful spells.  With the teachers converted into the undead "
+"and classes canceled, the final lesson has begun."
+msgstr ""
+
+#. ~ Description of profession "Academy Wizard" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"A year of enrollment in a wizard's academy has taught you patience, wisdom, "
+"and a handful of useful spells.  With the teachers converted into the undead "
+"and classes canceled, the final lesson has begun."
+msgstr ""
+
+#. ~ Description of profession "Shock Officer" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were enrolled in an experimental law enforcement program designed to "
+"decrease suspect casualties and equipment costs by substituting tasers and "
+"bullets for less-lethal Stormshaping."
+msgstr ""
+
+#. ~ Description of profession "Shock Officer" for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were enrolled in an experimental law enforcement program designed to "
+"decrease suspect casualties and equipment costs by substituting tasers and "
+"bullets for less-lethal Stormshaping."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Hy-Brasilean ambassadorial honor guard"
+msgstr ""
+
+#. ~ Description of profession "Hy-Brasilean ambassadorial honor guard" for
+#. male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"You were a ceremonial guard for the Hy-Brasilean ambassador to the United "
+"States, equipped to bring to mind the elven forest warriors of old.  You were"
+" trained in archery, since you had to use your bow to impress foreign "
+"dignitaries, but you never expected you'd actually have to take it into a "
+"real battle.  Then the Cataclysm hit.  The ambassador and most of your fellow"
+" guards are dead, and you'll probably never see home again, but hopefully "
+"your skills will keep you alive."
+msgstr ""
+
+#. ~ Profession name for female
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_female"
+msgid "Hy-Brasilean ambassadorial honor guard"
+msgstr ""
+
+#. ~ Description of profession "Hy-Brasilean ambassadorial honor guard" for
+#. female
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_female"
+msgid ""
+"You were a ceremonial guard for the Hy-Brasilean ambassador to the United "
+"States, equipped to bring to mind the elven forest warriors of old.  You were"
+" trained in archery, since you had to use your bow to impress foreign "
+"dignitaries, but you never expected you'd actually have to take it into a "
+"real battle.  Then the Cataclysm hit.  The ambassador and most of your fellow"
+" guards are dead, and you'll probably never see home again, but hopefully "
+"your skills will keep you alive."
+msgstr ""
+
+#. ~ Profession name for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "profession_male"
+msgid "Shifter Druid"
+msgstr ""
+
+#. ~ Description of profession "Shifter Druid" for male
+#: data/mods/Magiclysm/professions.json
+msgctxt "prof_desc_male"
+msgid ""
+"The ancient druidic art of taking animal forms had mostly fallen out of favor"
+" by the modern era, since most people didn't need to be a bear in their daily"
+" lives and even if they did transform into a raven, they still had to "
+"physically fly to their destination and couldn't check the internet for "
+"directions.  You, however, studied the ancient arts and gained the ability to"
+" transform yourself.  It's come in very handy since the world ended."
+msgstr ""

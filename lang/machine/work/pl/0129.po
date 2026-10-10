@@ -1,0 +1,2114 @@
+# Batch 129 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Firing mode of gun
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid "2rd burst"
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Variant name of gun "W1011 Silvergram"
+#. ~ Variant name of item "W1011 Silvergram"
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid "W1011 Silvergram"
+msgid_plural "W1011 Silvergrams"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "W1011 Silvergram"
+#. ~ Description of variant "W1011 Silvergram" of gun "W1011 Silvergram"
+#. ~ Description of "W1011 Silvergram"
+#. ~ Description of variant "W1011 Silvergram" of item "W1011 Silvergram"
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid ""
+"A finely sculpted white and silver pistol entrusted to Wraitheon's corporate "
+"elite.  It employs advanced targeting and precision guiding capabilities to "
+"deliver devastating bursts of guided 10mm microjet darts.  Firing is as "
+"expensive as it looks."
+msgstr ""
+
+#. ~ Variant name of gun "W1011 Silvergram"
+#. ~ Variant name of item "W1011 Silvergram"
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid "W1011 Silverhawk"
+msgid_plural "W1011 Silverhawks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "W1011 Silvergram" of gun "W1011 Silverhawk"
+#. ~ Description of variant "W1011 Silverhawk" of item "W1011 Silvergram"
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid ""
+"A Silvergram smart pistol given a far less conspicuous \"military carbon\" "
+"black finish.  Its performance and smart targeting capacities are otherwise "
+"identical."
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+msgid "2rd.  burst"
+msgstr ""
+
+#. ~ Skill associated with gun
+#. ~ Target of gun mod
+#: data/mods/Aftershock/items/gun/10mm.json
+#: data/mods/Aftershock/items/gun/25mm.json
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/Aftershock/items/gun/voltaic.json
+#: data/mods/Aftershock/items/gunmods/sights.json
+#: data/mods/Aftershock/items/gunmods/sling.json
+#: data/mods/aftershock_exoplanet/items/gun/10mm.json
+#: data/mods/aftershock_exoplanet/items/gun/25mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/voltaic.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sights.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sling.json
+msgctxt "gun_type_type"
+msgid "smartgun"
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/25mm.json
+#: data/mods/aftershock_exoplanet/items/gun/25mm.json
+msgid "1025 Goa"
+msgid_plural "1025 Goa"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/25mm.json
+#: data/mods/aftershock_exoplanet/items/gun/25mm.json
+msgid "Wraitheon Armory 2519"
+msgid_plural "Wraitheon Armory 2519s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Wraitheon Armory 2519"
+#. ~ Description of "Wraitheon Armory 2519"
+#: data/mods/Aftershock/items/gun/25mm.json
+#: data/mods/aftershock_exoplanet/items/gun/25mm.json
+msgid ""
+"The much feared 2519 smart sniper platform leverages advanced ballistic "
+"targeting and guidance computers to deliver heavy munitions with unerring "
+"precision.  Its undisputed lethality makes it a rare sight outside of the "
+"company's max security divisions."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/40mm_grenade.json
+#: data/mods/aftershock_exoplanet/items/gun/40mm_grenade.json
+msgid "vatforged grenade launcher"
+msgid_plural "vatforged grenade launchers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "vatforged grenade launcher"
+#. ~ Description of "vatforged grenade launcher"
+#: data/mods/Aftershock/items/gun/40mm_grenade.json
+#: data/mods/aftershock_exoplanet/items/gun/40mm_grenade.json
+msgid ""
+"A crude grenade launcher that's been either ripped from a broken robot or "
+"built using a hacked template.  The remnants of a loading rack allow it to "
+"hold three 40mm grenades at once."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid "MarSec. T72"
+msgid_plural "MarSec. T72s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "MarSec. T72"
+#. ~ Description of "MarSec. T72"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid ""
+"A massive, unwieldy revolver, using combined magnetic and chemical propulsion to fire 7.50mm rounds at energies that rival a sniping platform.  It additionally features a secondary barrel for a single 00 shot shell.\n"
+"\n"
+"The T72 remains a relic of the early hyperspace era, meant to be used by and against the posthuman.  Its perhaps most notable for its use by fictional rebel figures than for any sort of actual combat effectiveness."
+msgstr ""
+
+#. ~ Description of gun "landfall survival gun"
+#. ~ Description of "landfall survival gun"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid ""
+"A lightweight, bolt-action gun that is barely more than a 7.50mm barrel "
+"mounted within a flimsy metal assembly.  Cheaply made and outdated in all "
+"respects, it's only useful in the most extenuating of circumstances."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Variant name of gun "G&W SR-P77"
+#. ~ Variant name of item "G&W SR-P77"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid "G&W SR-P77"
+msgid_plural "G&W SR-P77s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "G&W SR-P77"
+#. ~ Description of variant "G&W SR-P77" of gun "G&W SR-P77"
+#. ~ Description of "G&W SR-P77"
+#. ~ Description of variant "G&W SR-P77" of item "G&W SR-P77"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid ""
+"Compact and powerful, the SR-77 serves as the current main firearm of UICA "
+"assault teams, having replaced the SR-P9 in the very last decade of the "
+"reclamation wars.  Designed for combat withing the tight confines of "
+"spacecraft and habitats, the SR-77 is a bullpup carbine with a top-mounted "
+"magazine and a high rate of fire.  Performance in open terrain is subpar."
+msgstr ""
+
+#. ~ Variant name of gun "G&W SR-P77"
+#. ~ Variant name of item "G&W SR-P77"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid "Gibson-77 Sentinel"
+msgid_plural "Gibson-77 Sentinels"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "G&W SR-P77" of gun "Gibson-77 Sentinel"
+#. ~ Description of variant "Gibson-77 Sentinel" of item "G&W SR-P77"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid ""
+"A rare version of the m90-UASTA PDW built to its original private market "
+"specifications, featuring an ergonomic bullpup design and a large magazine "
+"capacity underneath a sleek white and chromed finish.  Actual combat "
+"performance is slightly improved over the more common military model, due to "
+"the use of higher-quality materials within the barrel and ETC ignition "
+"system."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid "Wraitheon Vahagn 10XR"
+msgid_plural "Wraitheon Vahagn 10XRs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Wraitheon Vahagn 10XR"
+#. ~ Description of "Wraitheon Vahagn 10XR"
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid ""
+"The legendary apex of smartgun technology, believed to be an urban legend by most.  Bleeding-edge targeting systems allow it to track up 10 distinct targets simultaneously, with every trigger pull delivering a burst of two 7.5mm microjet darts to each target with a precision that is best described as supernatural.  One needs only to point the weapon in the general direction of the enemy, and the Vahagn will do the rest.\n"
+"\n"
+"Prohibitive cost and complexity kept this weapon from ever seeing the light of day, and only a handful of prototypes are believed to exist within the black market.  Finding one here can only mean that corporate forces beyond the ordinary have made Salus IV their battleground."
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/mods/Aftershock/items/gun/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/gun/7.50mm.json
+msgid "SMART TRACK"
+msgstr ""
+
+#. ~ Description of gun "wrist-trilaser"
+#. ~ Description of "wrist-trilaser"
+#: data/mods/Aftershock/items/gun/laser.json
+#: data/mods/aftershock_exoplanet/items/gun/laser.json
+msgid ""
+"A powerful tri-barreled laser weapon, still mounted to the robotic hand of "
+"the Wraitheon drone it originally belonged to.  Can still be fired when "
+"connected to an UPS."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/laser.json
+#: data/mods/aftershock_exoplanet/items/gun/laser.json
+msgid "Izhevsk PLC-75"
+msgid_plural "Izhevsk PLC-75s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Izhevsk PLC-75"
+#. ~ Description of "Izhevsk PLC-75"
+#: data/mods/Aftershock/items/gun/laser.json
+msgid ""
+"Straight from the bureaus of the old Soviet Union the PLC-75 is the crude and"
+" brutal answer to the constraints posed by the design of heavy laser "
+"ordnance.  Its use of antiquated flashtube pumped laser technology makes it "
+"unwieldy and wholly incompatible with modern equipment, whether this offers "
+"any consolation to downrange targets remains a matter of contentious dispute."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/laser.json
+#: data/mods/aftershock_exoplanet/items/gun/laser.json
+msgid "Shikishma A-82 tactical laser"
+msgid_plural "Shikishma A-82 tactical lasers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Shikishma A-82 tactical laser"
+#. ~ Description of "Shikishma A-82 tactical laser"
+#: data/mods/Aftershock/items/gun/laser.json
+#: data/mods/aftershock_exoplanet/items/gun/laser.json
+msgid ""
+"Crown jewel of Shikishma armories, and possible product of unsanctioned data "
+"scavenging, the A-82 is the undisputed market leader when it comes to man "
+"portable laser weaponry.  Sustained fire is likely to cause secondary "
+"explosions as target layers are vaporized."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/laser.json
+#: data/mods/aftershock_exoplanet/items/gun/laser.json
+msgid "mounted a7 laser rifle"
+msgid_plural "mounted a7 laser rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/mining_rod.json
+#: data/mods/aftershock_exoplanet/items/gun/mining_rod.json
+msgid "mining rod launcher"
+msgid_plural "mining rod launchers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "mining rod launcher"
+#. ~ Description of "mining rod launcher"
+#: data/mods/Aftershock/items/gun/mining_rod.json
+#: data/mods/aftershock_exoplanet/items/gun/mining_rod.json
+msgid ""
+"Based on an old TsKBEM design, this is a rail launcher used in mining "
+"exploration.  The rod is fired into a rock face and a seismic mapper on the "
+"launcher displays ore veins.  Not being designed for combat, it is difficult "
+"to use without the augmented strength of an exosuit and the reloading process"
+" is quite slow.  The barrel is covered in warning labels indemnifying the "
+"manufacturer of any injuries caused by misuse."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/needle.json
+#: data/mods/aftershock_exoplanet/items/gun/needle.json
+msgid "GG-860 Wasp Rifle"
+msgid_plural "GG-860 Wasp Rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "GG-860 Wasp Rifle"
+#. ~ Description of "GG-860 Wasp Rifle"
+#: data/mods/Aftershock/items/gun/needle.json
+#: data/mods/aftershock_exoplanet/items/gun/needle.json
+msgid ""
+"This light coilgun fires 3x35mm armor-piercing flechette.  Classified as a "
+"support crew weapon that can be stashed in hidden lockers throughout the "
+"floors of a ship.  Designed to be fired in short bursts, if the flechettes "
+"pierce a ship's hull they leave tiny holes that are easily repaired."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/needle.json
+#: data/mods/aftershock_exoplanet/items/gun/needle.json
+msgid "3x35mm automatic 'Wandering Priest' coilpistol"
+msgid_plural "3x35mm automatic 'Wandering Priest' coilpistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "3x35mm automatic 'Wandering Priest' coilpistol"
+#. ~ Description of "3x35mm automatic 'Wandering Priest' coilpistol"
+#: data/mods/Aftershock/items/gun/needle.json
+#: data/mods/aftershock_exoplanet/items/gun/needle.json
+msgid ""
+"An automatic coilgun made entirely of lightweight ceramics, with no moving "
+"pieces and if loaded with splinter rounds almost entirely invisible on most "
+"security scanners.  No one is sure who manufactures this assassin's tool, but"
+" they randomly come onto the back room markets frequented by the unsavory."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid "Magnadrive 230K"
+msgid_plural "Magnadrive 230K"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Magnadrive 230K"
+#. ~ Description of "Magnadrive 230K"
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid ""
+"A heavy plasma railgun that easily defeats most forms of conventional armor "
+"and flash-incinerates anything  behind it.  Its large size and liability to "
+"overheat make it unsuitable for infantry use, but it is a common sight on "
+"military vehicles and in the hands of power-armored troops, especially when "
+"heavy armor is expected."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid "direct fusion gun"
+msgid_plural "direct fusion gun"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "direct fusion gun"
+#. ~ Description of "direct fusion gun"
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid ""
+"Exhaust from a salvaged starship engine is channeled through a series of "
+"magnetic coils and focused into a searing fan of plasma, creating a crude but"
+" effective short range weapon that can easily melt through most forms of "
+"armor.  Its makeshift nature and lack of proper cooling systems make it prone"
+" to overheating and catastrophic failure."
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/Isolation-Protocol/unique_items.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid "standard"
+msgstr ""
+
+#. ~ Firing mode of gun
+#: data/mods/Aftershock/items/gun/plasma.json
+#: data/mods/aftershock_exoplanet/items/gun/plasma.json
+msgid "unsafe"
+msgstr ""
+
+#. ~ Description of gun "bionic skullgun"
+#. ~ Description of "bionic skullgun"
+#: data/mods/Aftershock/items/gun/projectile.json
+#: data/mods/aftershock_exoplanet/items/gun/projectile.json
+msgid "Bionic one-shot subdermal 10mm pistol integrated with your head."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Variant name of gun "Benelli 315"
+#. ~ Variant name of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "Benelli 315"
+msgid_plural "Benelli 315s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Benelli 315"
+#. ~ Description of variant "Benelli 315" of gun "Benelli 315"
+#. ~ Description of "Benelli 315"
+#. ~ Description of variant "Benelli 315" of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"A widely popular combat shotgun featuring minor iterative refinements to a "
+"base design nearly three centuries old.  Whether the design is outdated or "
+"unsurpassable remains a matter of personal opinion."
+msgstr ""
+
+#. ~ Variant name of gun "Benelli 315"
+#. ~ Variant name of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "vatforged shotgun"
+msgid_plural "vatforged shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Benelli 315" of gun "vatforged shotgun"
+#. ~ Description of variant "vatforged shotgun" of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"A crude but otherwise serviceable pump-action shotgun built from a hacked or "
+"scavenged template.  Frequently seen in the hands of frontier pirates, "
+"settlers or salvors.  Not that such groups are much different from one "
+"another."
+msgstr ""
+
+#. ~ Variant name of gun "Benelli 315"
+#. ~ Variant name of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "m2101-UASTA shotgun"
+msgid_plural "m2101-UASTA shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Benelli 315" of gun "m2101-UASTA shotgun"
+#. ~ Description of variant "m2101-UASTA shotgun" of item "Benelli 315"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"The standard issue combat shotgun of UICA marine and colonial forces.  Shot "
+"shells have poor performance against modern combat armor, so the M2101 is "
+"more often used during policing and peacekeeping operations."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "Accipiter Magnastorm-12"
+msgid_plural "Accipiter Magnastorm-12"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Accipiter Magnastorm-12"
+#. ~ Description of "Accipiter Magnastorm-12"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"An advanced shotgun that combines chemical and electromagnetic propulsion "
+"systems to accelerate and focus a cloud of steel flechettes.  Resulting in a "
+"longer effective range and greater penetration than whats conventionally "
+"possible.  Most often deployed during low-intensity corporate conflicts."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "Raketa"
+msgid_plural "Raketas"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Raketa"
+#. ~ Description of "Raketa"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"A massive TSKBEM-design shotgun intended for exosuit forces, the Raketa aka "
+"'Rocket' is a magazine-fed bullpup shotgun featuring twin barrels.  This "
+"design remains popular for extra-atmospheric operations as the 12ga rounds "
+"are less likely to pierce a ship or station's delicate hull."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "Drotik Shotpistol"
+msgid_plural "Drotik Shotpistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Drotik Shotpistol"
+#. ~ Description of "Drotik Shotpistol"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"A massive TSKBEM-designed 'sidearm' intended for exosuits and uplifts, the "
+"Drotik aka 'Dart' is a large revolver firing 12ga shells."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid "MarSec. T72 shotgun"
+msgid_plural "MarSec. T72 shotguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "MarSec. T72 shotgun"
+#. ~ Description of gun mod "MarSec. T72 shotgun"
+#. ~ Description of "MarSec. T72 shotgun"
+#: data/mods/Aftershock/items/gun/shot.json
+#: data/mods/aftershock_exoplanet/items/gun/shot.json
+msgid ""
+"The single round 00 bore barrel built at the center of the T72 revolver.  Can"
+" function as a backup in case the power pack of the main weapon is depleted."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/voltaic.json
+#: data/mods/aftershock_exoplanet/items/gun/voltaic.json
+msgid "W3310 Archangel ENR"
+msgid_plural "W3310 Archangel ENRs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "W3310 Archangel ENR"
+#. ~ Description of "W3310 Archangel ENR"
+#: data/mods/Aftershock/items/gun/voltaic.json
+#: data/mods/aftershock_exoplanet/items/gun/voltaic.json
+msgid ""
+"A powerful anti-drone defense weapon, the W3310 Archangel is capable of "
+"firing a chain of electrical discharges that can arc between multiple "
+"targets.  Most effective against groups of lightly armored foes, use within "
+"closed spaces is not recommended due to the risk of self-inflicted injury."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/mods/Aftershock/items/gun/voltaic.json
+#: data/mods/aftershock_exoplanet/items/gun/voltaic.json
+msgid "W3100 Volt"
+msgid_plural "W3100 Volts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "W3100 Volt"
+#. ~ Description of "W3100 Volt"
+#: data/mods/Aftershock/items/gun/voltaic.json
+#: data/mods/aftershock_exoplanet/items/gun/voltaic.json
+msgid ""
+"Wraitheon Armories' premier electrolaser personal defense weapon.  The W3100 "
+"Volt adjustable power settings make it adaptable to most conflict situations,"
+" lethal or otherwise, and make it a favorite among well-off security forces "
+"and law enforcement corps."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid "ETC firmware (overpressure)"
+msgid_plural "ETC firmware (overpressure)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "ETC firmware (overpressure)"
+#. ~ Description of "ETC firmware (overpressure)"
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid ""
+"Custom firmware for the electrical ignition system of caseless firearms.  "
+"Tweaks the ignition timing to maximize pressure in the chamber, increasing "
+"muzzle velocity and armor penetration at the cost of increased wear on the "
+"weapon."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid "ETC firmware (subsonic)"
+msgid_plural "ETC firmware (subsonic)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "ETC firmware (subsonic)"
+#. ~ Description of "ETC firmware (subsonic)"
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid ""
+"Custom firmware for the electrical ignition system of caseless firearms.  "
+"Tweaks the ignition timing to ensure that fired bullets remain subsonic, "
+"reducing noise at the cost of range and armor penetration."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid "ETC firmware (incendiary)"
+msgid_plural "ETC firmware (incendiary)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "ETC firmware (incendiary)"
+#. ~ Description of "ETC firmware (incendiary)"
+#: data/mods/Aftershock/items/gunmods/ETC_firmware.json
+#: data/mods/aftershock_exoplanet/items/gunmods/ETC_firmware.json
+msgid ""
+"Custom firmware for the electrical ignition system of caseless firearms.  "
+"Increases the potency of the heat ignition system, causing bullets to melt "
+"and be subsequently fired as globules of superheated metal.  The projectiles "
+"will set targets on fire, at the cost of direct damage, range, and weapon "
+"durability."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/shotguns.json
+#: data/mods/aftershock_exoplanet/items/gunmods/shotguns.json
+msgid "magnetic choke"
+msgid_plural "magnetic chokes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "magnetic choke"
+#. ~ Description of "magnetic choke"
+#: data/mods/Aftershock/items/gunmods/shotguns.json
+#: data/mods/aftershock_exoplanet/items/gunmods/shotguns.json
+msgid ""
+"A choke that uses a powerful cross-shaped electromagnet to pull the shot "
+"cloud together, greatly reducing the spread of shot.  Prevents the use of "
+"slugs."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/shotguns.json
+#: data/mods/aftershock_exoplanet/items/gunmods/shotguns.json
+msgid "shotgun gauss array"
+msgid_plural "shotgun gauss arrays"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "shotgun gauss array"
+#. ~ Description of "shotgun gauss array"
+#: data/mods/Aftershock/items/gunmods/shotguns.json
+#: data/mods/aftershock_exoplanet/items/gunmods/shotguns.json
+msgid ""
+"A tuned set of electromagnets that accelerate projectiles to a much higher "
+"velocity than normal, increasing range and damage.  The required "
+"modifications are invasive and cannot be removed once installed."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/sights.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sights.json
+msgid "ballistic computer"
+msgid_plural "ballistic computer"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun mod "ballistic computer"
+#. ~ Description of "ballistic computer"
+#: data/mods/Aftershock/items/gunmods/sights.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sights.json
+msgid ""
+"An integrated ballistic computer completely replaces the sights of this "
+"weapon.  Aiming depends on a small glass screen on which targets are "
+"automatically highlighted."
+msgstr ""
+
+#. ~ Item name
+#. ~ Gun mod name
+#: data/mods/Aftershock/items/gunmods/sling.json
+#: data/mods/aftershock_exoplanet/items/gunmods/sling.json
+msgid "adjustable sling "
+msgid_plural "adjustable slings "
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/10mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/10mm.json
+msgid "MarSec 14-round magazine"
+msgid_plural "MarSec 14-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "MarSec 14-round magazine"
+#. ~ Description of "MarSec 14-round magazine"
+#: data/mods/Aftershock/items/magazine/10mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/10mm.json
+msgid "A magazine for the MarSec handguns.  It holds 14 rounds."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/10mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/10mm.json
+msgid "Silvergram 22-round magazine"
+msgid_plural "Silvergram 22-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Silvergram 22-round magazine"
+#. ~ Description of "Silvergram 22-round magazine"
+#: data/mods/Aftershock/items/magazine/10mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/10mm.json
+msgid ""
+"A transparent polymer 22-round magazine for Silvergram pattern smart pistols."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid "MarSec. T72 7.50mm speedloader"
+msgid_plural "MarSec. T72 7.50mm speedloaders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "MarSec. T72 7.50mm speedloader"
+#. ~ Description of "MarSec. T72 7.50mm speedloader"
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid ""
+"A speedloader for the MarSec T72 revolver, holds 9 rounds of 7.50mm "
+"ammunition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid "SR-77 45-round magazine"
+msgid_plural "SR-77 45-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "SR-77 45-round magazine"
+#. ~ Description of "SR-77 45-round magazine"
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid "A translucent 45-round box magazine, for use with the SR-77."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid "Vahagn 10XR 80-round magazine"
+msgid_plural "Vahagn 10XR 80-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Vahagn 10XR 80-round magazine"
+#. ~ Description of "Vahagn 10XR 80-round magazine"
+#: data/mods/Aftershock/items/magazine/7.50mm.json
+#: data/mods/aftershock_exoplanet/items/magazine/7.50mm.json
+msgid ""
+"A large box magazine and accompanying feed chute for the Vahagn 10XR.  Holds "
+"80 rounds of 7.50mm SDART ammunition."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/needle.json
+#: data/mods/aftershock_exoplanet/items/magazine/needle.json
+msgid "3x35mm 150-round magazine"
+msgid_plural "3x35mm 150-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "3x35mm 150-round magazine"
+#. ~ Description of "3x35mm 150-round magazine"
+#: data/mods/Aftershock/items/magazine/needle.json
+#: data/mods/aftershock_exoplanet/items/magazine/needle.json
+msgid ""
+"A 150-round box magazine for use with 3x35mm flechette coilguns.  Marketed as"
+" GGS150."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/needle.json
+#: data/mods/aftershock_exoplanet/items/magazine/needle.json
+msgid "3x35mm 75-round magazine"
+msgid_plural "3x35mm 75-round magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "3x35mm 75-round magazine"
+#. ~ Description of "3x35mm 75-round magazine"
+#: data/mods/Aftershock/items/magazine/needle.json
+#: data/mods/aftershock_exoplanet/items/magazine/needle.json
+msgid ""
+"A 75-round box magazine for use with 3x35mm flechette coilguns.  Marketed as "
+"GGS75."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/plasma.json
+#: data/mods/aftershock_exoplanet/items/magazine/plasma.json
+msgid "20g plasma cell"
+msgid_plural "20g plasma cells"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "20g plasma cell"
+#. ~ Description of "20g plasma cell"
+#: data/mods/Aftershock/items/magazine/plasma.json
+#: data/mods/aftershock_exoplanet/items/magazine/plasma.json
+msgid ""
+"A reinforced canister that can safely store up to 20 grams of solid hydrogen "
+"in a cryo-pressurized state."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/shot.json
+#: data/mods/aftershock_exoplanet/items/magazine/shot.json
+msgid "Raketa 30-round shotgun magazine"
+msgid_plural "Raketa 30-round shotgun magazines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Raketa 30-round shotgun magazine"
+#. ~ Description of "Raketa 30-round shotgun magazine"
+#: data/mods/Aftershock/items/magazine/shot.json
+#: data/mods/aftershock_exoplanet/items/magazine/shot.json
+msgid ""
+"A removable 30-round horizontal magazine, for use with the Raketa shotgun."
+msgstr ""
+
+#. ~ Item name
+#. ~ Magazine name
+#: data/mods/Aftershock/items/magazine/shot.json
+#: data/mods/aftershock_exoplanet/items/magazine/shot.json
+msgid "Drotik speedloader"
+msgid_plural "Drotik speedloaders"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of magazine "Drotik speedloader"
+#. ~ Description of "Drotik speedloader"
+#: data/mods/Aftershock/items/magazine/shot.json
+#: data/mods/aftershock_exoplanet/items/magazine/shot.json
+msgid ""
+"This speedloader holds up to eight 12ga shotgun shells, intended for use with"
+" the Drotik."
+msgstr ""
+
+#. ~ Graffiti placed on map crashing_ship_3, crashing_ship_2, crashing_ship_1,
+#. crashing_ship_6, crashing_ship_5, crashing_ship_4, crashing_ship_9,
+#. crashing_ship_8, crashing_ship_7
+#: data/mods/Aftershock/maps/crashing_ship.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/crashing_ship.json
+msgid "Barracks"
+msgstr ""
+
+#. ~ Graffiti placed on map crashing_ship_3, crashing_ship_2, crashing_ship_1,
+#. crashing_ship_6, crashing_ship_5, crashing_ship_4, crashing_ship_9,
+#. crashing_ship_8, crashing_ship_7
+#: data/mods/Aftershock/maps/crashing_ship.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/crashing_ship.json
+msgid "Cargo Bay 01"
+msgstr ""
+
+#. ~ Graffiti placed on map crashing_ship_3, crashing_ship_2, crashing_ship_1,
+#. crashing_ship_6, crashing_ship_5, crashing_ship_4, crashing_ship_9,
+#. crashing_ship_8, crashing_ship_7
+#: data/mods/Aftershock/maps/crashing_ship.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/crashing_ship.json
+msgid "Workshop"
+msgstr ""
+
+#. ~ Graffiti placed on map crashing_ship_3, crashing_ship_2, crashing_ship_1,
+#. crashing_ship_6, crashing_ship_5, crashing_ship_4, crashing_ship_9,
+#. crashing_ship_8, crashing_ship_7
+#: data/mods/Aftershock/maps/crashing_ship.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/crashing_ship.json
+msgid "Shuttle Bay 01"
+msgstr ""
+
+#. ~ Graffiti placed on map crashing_ship_3, crashing_ship_2, crashing_ship_1,
+#. crashing_ship_6, crashing_ship_5, crashing_ship_4, crashing_ship_9,
+#. crashing_ship_8, crashing_ship_7
+#: data/mods/Aftershock/maps/crashing_ship.json
+#: data/mods/aftershock_exoplanet/maps/mapgen/crashing_ship.json
+msgid "Escape Pods & Vehicle Bay"
+msgstr ""
+
+#. ~ Description of furniture "monomolecular saw"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"A wire the size of a cheese cutter runs in a single direction in this tool, "
+"allowing atomically precise cuts at almost any angle.  Even unpowered it "
+"gives off a visual distortion for several inches around it to prevent you "
+"from losing a hand.  It is impossible to deconstruct this device without the "
+"wire self destructing."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "Exosuit gantry"
+msgstr ""
+
+#. ~ Description of furniture "Exosuit gantry"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"A gantry for supporting an exosuit upright during maintenance and repair.  "
+"Includes the specialized tools needed for complex repairs and will also "
+"charge the suit's power when active.  This one is not currently functioning."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "drone recharging station"
+msgstr ""
+
+#. ~ Description of furniture "drone recharging station"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "An hybrid recharge and storage point for robots of all types."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "ancient processor"
+msgstr ""
+
+#. ~ Description of furniture "ancient processor"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"Hundreds of paper thin photonics lie staked within its core, most are "
+"shattered or otherwise damaged beyond repair."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "drone scheduler core"
+msgstr ""
+
+#. ~ Description of furniture "drone scheduler core"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"An AI unit meant to manage large cadres of working drones from afar.  This "
+"one is in a very bad shape, and it's not clear if it can be repaired."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "pristine drone scheduler core"
+msgstr ""
+
+#. ~ Description of furniture "pristine drone scheduler core"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"An AI unit meant to manage large cadres of working drones from afar.  It as "
+"functional as the day it was built, at least if its system checks are to be "
+"believed."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "broken command console"
+msgstr ""
+
+#. ~ Description of furniture "broken command console"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"A complex control station for an habitat or space ship.  It might still be "
+"possible to salvage some parts from it."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid "shuttle seat"
+msgstr ""
+
+#. ~ Description of furniture "shuttle seat"
+#: data/mods/Aftershock/maps/furniture.json
+#: data/mods/aftershock_exoplanet/maps/furniture.json
+msgid ""
+"The cushioned and upright facing seat of a short-ranged shuttle pod.  Has a "
+"locking bar that fits over your shoulders."
+msgstr ""
+
+#. ~ Name of starting location "sloc_crashed_gunship"
+#: data/mods/Aftershock/maps/overmap_locations.json
+#: data/mods/aftershock_exoplanet/maps/overmap_locations.json
+msgid "Crashed gunship"
+msgstr ""
+
+#. ~ Description of map extra "Scavenger Party"
+#: data/mods/Aftershock/maps/overmap_map_extras.json
+#: data/mods/aftershock_exoplanet/maps/overmap_map_extras.json
+msgid "A group of scavengers who double as bandits."
+msgstr ""
+
+#. ~ Description of map extra "Gunship Crash"
+#: data/mods/Aftershock/maps/overmap_map_extras.json
+#: data/mods/aftershock_exoplanet/maps/overmap_map_extras.json
+msgid "Gunship crashed here."
+msgstr ""
+
+#. ~ Name of NPC faction camp
+#: data/mods/Aftershock/maps/overmap_specials.json
+#: data/mods/aftershock_exoplanet/maps/overmap_specials.json
+msgid "PrepNet"
+msgstr ""
+
+#. ~ Name of NPC faction camp
+#. ~ Item name
+#: data/mods/Aftershock/maps/overmap_specials.json
+#: data/mods/Sky_Island/upgrade_missions.json
+#: data/mods/aftershock_exoplanet/maps/overmap_specials.json
+msgid "Landing Pad"
+msgid_plural "Landing Pads"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Name of NPC faction camp
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_specials.json
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_specials.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "UICA Shuttle Base"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Salvor Encampment"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Mercurial Gene Clinic"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Cafe"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Saloon"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "EV Charging Station"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Aerodrone Landing Pad"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Sporting Goods"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Urban Farm"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Office"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+#: data/mods/aftershock_exoplanet/maps/overmap_terrain.json
+msgid "Grocer"
+msgstr ""
+
+#. ~ Overmap terrain name
+#: data/mods/Aftershock/maps/overmap_terrain.json
+msgid "Gas Station Roof"
+msgstr ""
+
+#. ~ Message after transforming to "t_door_metal_c"
+#: data/mods/Aftershock/maps/ter_furn_transforms.json
+#: data/mods/aftershock_exoplanet/maps/ter_furn_transforms.json
+msgid "The doors unlock."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "Mercurial Resequencer"
+msgstr ""
+
+#. ~ Description of furniture "Mercurial Resequencer"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A large bio-sarcophagus and accompanying control machinery.  Used in gene "
+"editing and for general medical purposes, can impart or remove traits using a"
+" variety of gene templates."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "Deactivated Mercurial Resequencer"
+msgstr ""
+
+#. ~ Description of furniture "Deactivated Mercurial Resequencer"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A large bio-sarcophagus and accompanying control machinery.  Used in gene "
+"editing and for general medical purposes, can impart or remove traits using a"
+" variety of gene templates.  This one stands lifelessly, its screens black "
+"and the hum of machinery replaced by an eerie silence."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "Ravaged Mercurial Resequencer"
+msgstr ""
+
+#. ~ Description of furniture "Ravaged Mercurial Resequencer"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A large bio-sarcophagus and accompanying control machinery.  Panels dangle "
+"loosely from their hinges revealing a rat's nest of wires and cabling ripped "
+"from the machine.  Useless metal and electronics scraps are strewn about "
+"haphazardly on the floor.  It's clear anything of value has long been taken "
+"from this machine."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "storage board"
+msgstr ""
+
+#. ~ Description of furniture "storage board"
+#. ~ Description of terrain "storage board"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "The wall-mounted, steel and plastic storage solution of tomorrow."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "integrated washroom"
+msgstr ""
+
+#. ~ Description of furniture "integrated washroom"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"Waste and water pipes, conjoined into the most compact bathroom that could "
+"possibly be built."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "industrial floodlight"
+msgstr ""
+
+#. ~ Description of furniture "industrial floodlight"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A wall mountable floodlight, designed to illuminate large areas with a "
+"bright, white light.  Still functional thanks to some unknown backup power "
+"source."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "screen mirror"
+msgstr ""
+
+#. ~ Description of furniture "screen mirror"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A wall mounted digital display.  It would once have served as an "
+"entertainment and advertising system."
+msgstr ""
+
+#. ~ Description of furniture "screen mirror"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "The screen wall is awash with rolling advertisements."
+msgstr ""
+
+#. ~ Furniture name
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "intermodal shipping crate"
+msgstr ""
+
+#. ~ Description of furniture "intermodal shipping crate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A sealed metal crate used to ferry cargo to and from orbit.  This one appears"
+" to be open."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "sealed intermodal crate"
+msgstr ""
+
+#. ~ Description of furniture "sealed intermodal crate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A sealed metal crate used to ferry cargo to and from orbit.  This one appears"
+" to be secured with an electric lock."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "powered down intermodal crate"
+msgstr ""
+
+#. ~ Description of furniture "powered down intermodal crate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A sealed metal crate used to ferry cargo to and from orbit.  This one appears"
+" to be secured with an electric lock that has shut down."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "reinforced display case"
+msgstr ""
+
+#. ~ Description of furniture "reinforced display case"
+#. ~ Description of furniture "powered down reinforced display case"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A secure metal case at about waist-height, with reinforced glass paneling on "
+"top.  Useful for storing valuable things while still showing them off.  "
+"Secured with an electronic lock."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "powered down reinforced display case"
+msgstr ""
+
+#. ~ Description of furniture "reinforced display case"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A secure metal case at about waist-height, with reinforced glass paneling on "
+"top.  Useful for storing valuable things while still showing them off.  This "
+"one had its lock hacked and is open."
+msgstr ""
+
+#. ~ Description of furniture "broken display case"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A secure metal case at about waist-height, with reinforced glass paneling on "
+"top.  Would be useful for storing valuable things while still showing them "
+"off, if the glass hadn't been shattered."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "Net Breacher recliner"
+msgstr ""
+
+#. ~ Description of furniture "Net Breacher recliner"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A reclined metal chair adorned with soft fabric padding.  A number of cables "
+"dangle from the headrest, waiting to be connected to a bionic interface.  In "
+"the past, this state-of-the-art equipment would have served as a hypercloud "
+"access point for cyber security specialists."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "security override panel"
+msgstr ""
+
+#. ~ Description of furniture "security override panel"
+#. ~ Description of furniture "burnt out security override panel"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A slim wall mounted metal panel covering an electronic interface to manually "
+"override nearby security systems."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "burnt out security override panel"
+msgstr ""
+
+#. ~ Description of furniture "safe"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A small, heavy, and near-unbreachable metal box with an electronic lock.  "
+"This one isn't actually locked, just closed."
+msgstr ""
+
+#. ~ Description of furniture "safe"
+#. ~ Description of furniture "powered down safe"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A small, heavy, and near-unbreachable metal box with an electronic lock.  "
+"With a hacking tool and the right skills you might be able to crack it."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "powered down safe"
+msgstr ""
+
+#. ~ Description of furniture "open safe"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A small, heavy, and near-unbreachable metal box with an electronic lock, "
+"albeit significantly less secure with the door open."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid "Genetech display mannequin"
+msgstr ""
+
+#. ~ Description of furniture "Genetech display mannequin"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat.json
+msgid ""
+"A life-size painted plastic figure of a person displaying prominent genetic "
+"alterations.  Commonly used as part of Mercurial Ad campaigns intended to "
+"sell the public on Genetech treatments."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "ECU"
+msgstr ""
+
+#. ~ Description of furniture "ECU"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid ""
+"The central node of a life support system, tasked with regulating "
+"atmospherics and water flow to the rest of an habitat or ship."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "Cryo-fluid pump"
+msgstr ""
+
+#. ~ Description of furniture "Cryo-fluid pump"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid ""
+"An insulated metal tank prepared for the storage of exotic cryo-coolants.  "
+"Relatively advanced in construction, it can be salvaged for valuable scrap."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "atmospherics controller"
+msgstr ""
+
+#. ~ Description of furniture "atmospherics controller"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid ""
+"An imposing brick of circuitry inlaid tubing adorned with a single console.  "
+"It might still half-work, even after all this time."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "automated charging station"
+msgstr ""
+
+#. ~ Description of furniture "automated charging station"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "An automated charging console for electric vehicles."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid "broken automated charging station"
+msgstr ""
+
+#. ~ Description of furniture "broken automated charging station"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_habitat_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_habitat_machinery.json
+msgid ""
+"An automated charging console for electric vehicles.  It's broken.  This is "
+"not a good thing."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+msgid "Direct fusion drive"
+msgstr ""
+
+#. ~ Description of furniture "Direct fusion drive"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+msgid ""
+"A powerful fusion engine fueled by helium.  A miracle of hyperspace age "
+"technology, painstakingly reproduced from original schematics without true "
+"understanding.  Its core components are notably expensive."
+msgstr ""
+
+#. ~ Furniture name
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+msgid "Multi-axis maneuvering thruster"
+msgstr ""
+
+#. ~ Description of furniture "Multi-axis maneuvering thruster"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+msgid ""
+"A set of highly maneuverable chemical thrusters used is small to medium "
+"spacecraft."
+msgstr ""
+
+#. ~ Description of furniture "radioactive slag"
+#: data/mods/Aftershock/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/furniture_spaceship_machinery.json
+msgid ""
+"A pile of melted slag from a destroyed spaceship reactor.  Incandescently hot"
+" and highly radioactive, you'd need a purposefully armored suit to even "
+"approach it."
+msgstr ""
+
+#. ~ Description of terrain "foamcrete wall"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain.json
+msgid ""
+"Automatically deployed by the ship to block breaches and seal off damaged "
+"sections, this foamcrete wall is a temporary solution at best."
+msgstr ""
+
+#. ~ Description of terrain "foamcrete floor"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain.json
+msgid ""
+"Automatically deployed by the ship to block breaches and seal off damaged "
+"sections, this foamcrete floor is a temporary solution at best."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain.json
+msgid "hard vacuum"
+msgstr ""
+
+#. ~ Description of terrain "hard vacuum"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain.json
+msgid ""
+"The cold inhospitable vacuum of space.  Going this way without an EVA pack "
+"will end in either a slow cold death as your life support fades or a slow hot"
+" death as you drop into the planet's atmosphere."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid "Old TSKBEM Card Reader"
+msgstr ""
+
+#. ~ Description of terrain "Old TSKBEM Card Reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid ""
+"A smartcard based lock system once fitted to TSKBEM prefab industrial "
+"facilities.  While an original key would be impossible to find, the machine "
+"is ancient and obsolete, and it can be hacked or masterkeys can be obtained "
+"to bypass it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid "Old Enforcer Card Reader"
+msgstr ""
+
+#. ~ Description of terrain "Old Enforcer Card Reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid ""
+"A smartcard based lock system once fitted to corporate police prefab "
+"facilities.  While an original key would be impossible to find, the machine "
+"is ancient and obsolete, and it can be hacked or masterkeys can be obtained "
+"to bypass it."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid "Old Mercurial Card Reader"
+msgstr ""
+
+#. ~ Description of terrain "Old Mercurial Card Reader"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_card_readers.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_card_readers.json
+msgid ""
+"A smartcard based lock system once fitted to corporate Mercurial prefab "
+"facilities.  While an original key would be impossible to find, the machine "
+"is ancient and obsolete, and it can be hacked or masterkeys can be obtained "
+"to bypass it."
+msgstr ""
+
+#. ~ Description of terrain "closed metal door"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_doors.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_doors.json
+msgid ""
+"A galvanized steel door, forged to withstand punishment and impede anyone or "
+"anything.  This one is secured with an electronic lock."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_doors.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_doors.json
+msgid "open security gate"
+msgstr ""
+
+#. ~ Description of terrain "open security gate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_doors.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_doors.json
+msgid ""
+"A metal floor adorned with hazard lines indicating the presence of a security"
+" gate."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_doors.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_doors.json
+msgid "closed security gate"
+msgstr ""
+
+#. ~ Description of terrain "closed security gate"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_doors.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_doors.json
+msgid ""
+"An extremely resilient gate made of assorted steel, carved and pounded into "
+"shape."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "clearcrete skylight"
+msgstr ""
+
+#. ~ Description of terrain "clearcrete skylight"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"A roof made from transparent fiber-reinforced concrete, allowing light to "
+"pass through.  Often used to build greenhouses in unfavorable environments."
+msgstr ""
+
+#. ~ Bashing sound
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "stone shattering"
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "metal floor, inactive overhead light"
+msgstr ""
+
+#. ~ Description of terrain "metal floor, inactive overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"High-quality and tough checkered metal flooring to reduce the risk of slips "
+"and falls, with a still-functioning inactive light attached to the ceiling "
+"above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "linoleum tile, inactive overhead light"
+msgstr ""
+
+#. ~ Description of terrain "linoleum tile, inactive overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"A section of flooring made out of a tough, rubbery material.  Colored a "
+"simple white.  There is a still-functioning inactive light attached to the "
+"ceiling above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "strong concrete floor, inactive overhead light"
+msgstr ""
+
+#. ~ Description of terrain "strong concrete floor, inactive overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"An extremely resilient floor made from carefully placed rebar and poured "
+"concrete, with a still-functioning inactive light attached to the ceiling "
+"above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "concrete floor, inactive overhead light"
+msgstr ""
+
+#. ~ Description of terrain "concrete floor, inactive overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"A bare and cold concrete floor with a still-functioning inactive light "
+"attached to the ceiling above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "simple metal floor, overhead light"
+msgstr ""
+
+#. ~ Description of terrain "simple metal floor, overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"A crudely welded-together metal floor with steel trusses and supporting "
+"girders.  Can support a roof.  A still-functioning light hangs from the "
+"ceiling above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid "simple metal floor, inactive overhead light"
+msgstr ""
+
+#. ~ Description of terrain "simple metal floor, inactive overhead light"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_habitat_floor.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_habitat_floor.json
+msgid ""
+"A crudely welded-together metal floor with steel trusses and supporting "
+"girders.  Can support a roof.  A still-functioning inactive light hangs from "
+"the ceiling above."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "broken treads"
+msgstr ""
+
+#. ~ Description of terrain "broken treads"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A large set of broken and frozen over vehicle treads."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "gunship hull"
+msgstr ""
+
+#. ~ Description of terrain "gunship hull"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A hull segment from a combat rated civilian gunship.  Provides some defense "
+"against weapons fire."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "gunship locker"
+msgstr ""
+
+#. ~ Description of terrain "gunship locker"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A locker built into the hull of a ship.  May contain equipment."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "bathroom unit"
+msgstr ""
+
+#. ~ Description of terrain "bathroom unit"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A bathroom unit for a gunship.  Unlikely to be working."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "gunship refrigeration unit"
+msgstr ""
+
+#. ~ Description of terrain "gunship refrigeration unit"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A refrigeration unit for a gunship.  Unlikely to be working."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "ruined hull"
+msgstr ""
+
+#. ~ Description of terrain "ruined hull"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"This patch of hull has more holes in it than an ancient terran cheese.  It "
+"may provide some cover or it might get shot through."
+msgstr ""
+
+#. ~ Description of terrain "gunship hull"
+#. ~ Description of terrain "closed starship hatch"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "A closed hatch in the wall of a spaceship."
+msgstr ""
+
+#. ~ Description of terrain "gunship hull"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "An open hatch in the wall of a spaceship."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "prison grating"
+msgstr ""
+
+#. ~ Description of terrain "prison grating"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A detention wall made up of crisscrossed stainless steel bars.  There doesn't"
+" appear to be a lock on the bars, maybe look for a computer nearby?"
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "retracted prison grating"
+msgstr ""
+
+#. ~ Description of terrain "retracted prison grating"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"A floor and ceiling where you can see that bars can come out of each side to "
+"meet in the middle."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "gunship kitchenette"
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "view port"
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Iblis Interplanetary Drive"
+msgstr ""
+
+#. ~ Description of terrain "Iblis Interplanetary Drive"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The housing and guts of an Interplanetary drive engine.  It is plastered with"
+" warning signs.  If it's not working you could probably try to break into it "
+"for parts."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Iblis Interplanetary Drive Console"
+msgstr ""
+
+#. ~ Description of terrain "Iblis Interplanetary Drive Console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The control panel for the engines and generators that power the drive.  It "
+"would likely render the ship irrecoverable but it might do some damage to any"
+" robots near or in the ship if you set the engines to overload."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_GUNSHIP_DRIVE_OVERLOAD" in
+#. terrain "Iblis Interplanetary Drive Console"'s examine action
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "You hear a high pitched whine start and increase in volume."
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Do you want to overload the ship's drive?"
+msgstr ""
+
+#. ~ Description of terrain "Iblis Interplanetary Drive Console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "The engine has been overloaded and burnt out."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_GUNSHIP_DRIVE_OVERLOADED" in
+#. terrain "Iblis Interplanetary Drive Console"'s examine action
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "The engine is burnt out and worthless."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Iblis Interplanetary Navigation Console"
+msgstr ""
+
+#. ~ Description of terrain "Iblis Interplanetary Navigation Console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The control panel for navigation.  Useless here on the ground but in space "
+"the only way to plot long distance travel."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Wraitheon Gunnery AI"
+msgstr ""
+
+#. ~ Description of terrain "Wraitheon Gunnery AI"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The display screen for interacting with the gunnery ai is blank, there's no "
+"telling right now if the ai module survived the crash or not from here."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "command console"
+msgstr ""
+
+#. ~ Description of terrain "command console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The display screen for interacting with the ships command and control console"
+" is dead.  Normally the ship's AI runs most systems but there is no way to "
+"know whether it survived."
+msgstr ""
+
+#. ~ Terrain name
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Prisoner Cell Console"
+msgstr ""
+
+#. ~ Description of terrain "Prisoner Cell Console"
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid ""
+"The control panel for the prisoner cell.  Might be able to open and close "
+"cell grating."
+msgstr ""
+
+#. ~ Player message in effect in EoC "EOC_AFS_PRISON_CONSOLE_OPEN" in terrain
+#. "Prisoner Cell Console"'s examine action
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "The cell grates retract into the floor and ceiling."
+msgstr ""
+
+#. ~ Query message shown in a popup
+#: data/mods/Aftershock/maps/furniture_and_terrain/terrain_spaceship.json
+#: data/mods/aftershock_exoplanet/maps/furniture_and_terrain/terrain_spaceship.json
+msgid "Do you want to open the cell?"
+msgstr ""

@@ -1,0 +1,2310 @@
+# Batch 40 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Description of variant "coffee mug" of item "coffee mug"
+#: data/json/items/generic/dining_kitchen.json
+msgid "The side of the mug reads \"Worlds Worst Dad\"."
+msgstr ""
+
+#. ~ Description of "pewter bowl"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A small pewter serving bowl without a lid.  Holds 250 mL of liquid."
+msgstr ""
+
+#. ~ Description of "plastic tupperware"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A piece of plastic tupperware with a matching watertight lid.  Holds 750 mL "
+"of liquid."
+msgstr ""
+
+#. ~ Description of "plastic fork"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A plastic disposable fork.  Great for picnic lunches in the post-apocalyptic "
+"wasteland."
+msgstr ""
+
+#. ~ Description of "plastic straw"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A plastic straw, for drinking things and littering."
+msgstr ""
+
+#. ~ Description of "vegetable peeler"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A simple tool for peeling the outer skin off fruits and veggies without "
+"stabbing yourself."
+msgstr ""
+
+#. ~ Description of "whisk"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A tool designed for finely mixing ingredients or introducing air into the "
+"blend.  Also known as a 'wire whip', but it's a less effective weapon than "
+"that name makes it sound."
+msgstr ""
+
+#. ~ Description of "potato masher"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A tool for mashing potatoes and soft root vegetables; it cannot do the twist."
+msgstr ""
+
+#. ~ Description of "garlic press"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A tool for squashing a clove or two of garlic into a fine paste."
+msgstr ""
+
+#. ~ Description of "carving fork"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A utensil used to hold meat still while you slice it.  It's like a tiny "
+"pitchfork, or a very large dinner fork."
+msgstr ""
+
+#. ~ Description of "rolling pin"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A stout piece of hardwood, turned and sanded smooth, with rounded handles at "
+"the ends.  This timeless kitchen tool also doubles as an effective club."
+msgstr ""
+
+#. ~ Description of "pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A cooking pot, useful for boiling water and making all kinds of food."
+msgstr ""
+
+#. ~ Description of "copper pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A cooking pot, useful for boiling water and making all kinds of food.  Made "
+"from copper, with a lining of tin to prevent metal from leaching into acidic "
+"foods."
+msgstr ""
+
+#. ~ Description of "stock pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A large pot with 20 gauge walls and a thick aluminum bottom, used for making "
+"soup stocks.  You could fit a whole turkey in there, with a bit of shoving."
+msgstr ""
+
+#. ~ Description of "canning pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A very large 20 liter pot, primarily meant for canning food in glass jars via"
+" the water bath method, though it can cook normal foods just as well.  "
+"Canning foods with it will require a lot of water.  If you're only canning a "
+"couple of jars at a time, you'd fill it up with rocks or something to "
+"displace the water above the lids."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/dining_kitchen.json
+msgid "coffee pot"
+msgid_plural "coffee pots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "coffee pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid "A glass pot for making a cup of joe."
+msgstr ""
+
+#. ~ Description of "mesh colander"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A stainless steel mesh colander, for washing rice and vegetables, or "
+"straining liquid off from noodles or other foods."
+msgstr ""
+
+#. ~ Description of "cutting board"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A large, flat piece of wood for chopping vegetables on without ruining your "
+"knife or your countertop."
+msgstr ""
+
+#. ~ Description of "improvised oven"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A large pot converted into an improvised oven, suitable for basic baking on a"
+" hot surface."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/dining_kitchen.json
+msgid "aluminum frying pan"
+msgid_plural "aluminum frying pans"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "aluminum frying pan"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"An aluminum frying pan.  Makes a decent melee weapon, and is used for "
+"cooking."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/dining_kitchen.json
+msgid "aluminum pot"
+msgid_plural "aluminum pots"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "aluminum pot"
+#: data/json/items/generic/dining_kitchen.json
+msgid ""
+"A cooking pot, useful for boiling water and making all kinds of food.  Made "
+"from aluminum."
+msgstr ""
+
+#. ~ Description of "envelope"
+#: data/json/items/generic/mail.json
+msgid ""
+"A flat paper container with a sealable flap, used to enclose a letter or "
+"other paper goods."
+msgstr ""
+
+#. ~ Description of "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from one person to another, usually put in an envelope.  "
+"Reading it would be rude."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "love letter"
+msgid_plural "love letters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "love letter" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a soldier to their partner, carefully folded into its "
+"envelope.  Their deployment ends soon and they can't wait to see their lover."
+"  Reading the rest of it would be rude."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "angry letter home"
+msgid_plural "angry letters home"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "angry letter home" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a soldier to their partner, stuffed angrily into its "
+"envelope.  They know, they know she knows, and don't even pretend you don't "
+"know.  This letter is full of expletives you don't dare read aloud."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "sad letter home"
+msgid_plural "sad letters home"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "sad letter home" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a soldier to their parents.  Their deployment has been"
+" extended and they won't be home for the holidays.  This sad letter makes you"
+" feel homesick."
+msgstr ""
+
+#. ~ Description of variant "love letter" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a woman to her lover, it's sealed with a heart-shaped "
+"sticker and smells of perfume.  You start to read it but it quickly becomes "
+"embarrassing."
+msgstr ""
+
+#. ~ Description of variant "sad letter home" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a student to their parents scrawled on notebook paper."
+"  They're having a really bad time at college and want to come home, nothing "
+"seems to be going well, their grades and heart are in the dumps."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "letter home"
+msgid_plural "letters home"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "letter home" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message from a student to their parents scrawled on notebook paper."
+"  They're having a great time at college and can't wait to introduce you to "
+"their new lover.  Coincidently they have run out of money for gas again and "
+"it sure would be great if you could send some."
+msgstr ""
+
+#. ~ Description of variant "letter home" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A written message home in a foreign tongue, carefully folded into its "
+"envelope."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "pink slip"
+msgid_plural "pink slips"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pink slip" of item "letter"
+#: data/json/items/generic/mail.json
+msgid "A folded pink sheet of paper declaring the homeowner fired!  Oh no."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "credit card offer"
+msgid_plural "credit card offers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "credit card offer" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A notification from a credit card company, the recipient has been "
+"preapproved!  Attached in a thick wad of glue is a fake credit card, this "
+"could be theirs if they wanted it."
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "late rent notice"
+msgid_plural "late rent notices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "late rent notice" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A letter to recipient notifying them of their overdue rent, they have 30 days"
+" to pay or they are going to court!"
+msgstr ""
+
+#. ~ Variant name of item "letter"
+#: data/json/items/generic/mail.json
+msgid "automated speeding ticket"
+msgid_plural "automated speeding tickets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "automated speeding ticket" of item "letter"
+#: data/json/items/generic/mail.json
+msgid ""
+"A notice from the local police, there is a tiny picture of a car and a demand"
+" of 350 dollars for speeding in a school zone."
+msgstr ""
+
+#. ~ Description of "postcard"
+#: data/json/items/generic/mail.json
+msgid ""
+"A piece of thick, rectangular paper intended for writing and mailing without "
+"an envelope."
+msgstr ""
+
+#. ~ Variant name of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid "baby shower card"
+msgid_plural "baby shower cards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "farewell card" of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid ""
+"A white greeting card with a stylized drawing of an empty road.  Words "
+"printed on it read: \"You're going places (literally).  Wishing you the "
+"best!\""
+msgstr ""
+
+#. ~ Variant name of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid "get well card"
+msgid_plural "get well cards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid "retirement card"
+msgid_plural "retirement cards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "retirement card" of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid ""
+"A greeting card wishing the recipient a long and happy retirement.  This one "
+"displays a drawing of a rocking chair surrounded with white roses."
+msgstr ""
+
+#. ~ Variant name of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid "sympathy card"
+msgid_plural "sympathy cards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "sympathy card" of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid ""
+"A black greeting card with a picture of a dimly lit candle.  Words printed on"
+" it read: \"Please accept our deepest and most heartfelt condolences at this "
+"challenging time.\""
+msgstr ""
+
+#. ~ Variant name of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid "thank you card"
+msgid_plural "thank you cards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "thank you card" of item "greeting card"
+#: data/json/items/generic/mail.json
+msgid ""
+"A plain white greeting card featuring an expression of gratitude to the "
+"recipient."
+msgstr ""
+
+#. ~ Description of "headphones"
+#: data/json/items/generic/music.json
+msgid ""
+"A pair of headphones that cover your ears for improved sound quality and "
+"private listening.  This pair is from a well-known brand that is very high "
+"quality, with a detachable 1/8\" cable.  Comes with a 1/8\" to 1/4\" adapter."
+msgstr ""
+
+#. ~ Description of "XLR microphone"
+#: data/json/items/generic/music.json
+msgid ""
+"A microphone used to record or amplify sound.  Comes with a clip.  Has a "
+"3-pin XLR connector on the bottom in order to connect to an amp."
+msgstr ""
+
+#. ~ Description of "guitar stand"
+#: data/json/items/generic/music.json
+msgid ""
+"A small, oddly-shaped piece of aluminum hardware with three legs.  When "
+"placed on the ground, this can support one guitar in an upright position."
+msgstr ""
+
+#. ~ Description of "plectrum"
+#: data/json/items/generic/music.json
+msgid ""
+"A flat piece of plastic with a pointed tip, designed for plucking the strings"
+" of an instrument."
+msgstr ""
+
+#. ~ Description of "mixer"
+#: data/json/items/generic/music.json
+msgid ""
+"A device with faders, switches, and knobs that mixes input signal and sends "
+"it to two output XLR cables, a left one and a right one."
+msgstr ""
+
+#. ~ Description of "drive belt"
+#: data/json/items/generic/spares.json
+msgid ""
+"A synthetic rubber V-belt with steel reinforcement fibers.  Commonly fitted "
+"to engines or other industrial equipment."
+msgstr ""
+
+#. ~ Item name
+#. ~ Vehicle part name
+#: data/json/items/generic/spares.json
+#: data/json/vehicleparts/vehicle_parts.json
+msgid "5-point harness"
+msgid_plural "5-point harnesses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "5-point harness"
+#: data/json/items/generic/spares.json
+msgid ""
+"A harness made of five belts meant to be mounted on vehicle to fasten a "
+"passenger securely to their seat."
+msgstr ""
+
+#. ~ Description of "compressor"
+#: data/json/items/generic/spares.json
+msgid ""
+"An electrically-powered device which compresses gas to increase pressure.  "
+"Used in fridges, air conditioners and many other appliances."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/spares.json
+msgid "magnet"
+msgid_plural "magnets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "magnet"
+#: data/json/items/generic/spares.json
+msgid ""
+"A small but strong permanent magnet made from alnico alloy, which produces a "
+"magnetic field that attracts ferromagnetic materials such as steel.  Useful "
+"for crafting."
+msgstr ""
+
+#. ~ Description of "heavy duty valve"
+#: data/json/items/generic/spares.json
+msgid ""
+"A short section of thick-walled pipe with a valve integrated into it, "
+"allowing an operator to regulate the flow of gas or liquid through it."
+msgstr ""
+
+#. ~ Description of "small pressure vessel"
+#: data/json/items/generic/spares.json
+msgid ""
+"A rather small steel vessel with thick walls designed to contain high "
+"pressure.  Quite heavy for its size."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/spares.json
+msgid "simple crank mechanism"
+msgid_plural "simple crank mechanisms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "simple crank mechanism"
+#: data/json/items/generic/spares.json
+msgid ""
+"A simple cranking mechanism, consisting of a bent metal arm attached at a "
+"right angle to a rotating shaft.  It can be used to convert circular motion "
+"into reciprocating motion, or vice versa, by means of muscle power."
+msgstr ""
+
+#. ~ Description of "seat belt"
+#: data/json/items/generic/string.json
+msgid ""
+"A length of synthetic fiber weaved into a flat band, usually used to securely"
+" fasten passenger inside vehicles."
+msgstr ""
+
+#. ~ Description of "swimming kickboard"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"A swimming kickboard, would be a great training aid for the beach or the "
+"pool, if only they weren't full of zombies and mutant fish."
+msgstr ""
+
+#. ~ Description of "golf tee"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"A pin-shaped piece of wood meant for holding a golf ball slightly off the "
+"ground."
+msgstr ""
+
+#. ~ Description of "golf ball"
+#: data/json/items/generic/toys_and_sports.json
+msgid "A small, hard plastic ball with round indentations on it."
+msgstr ""
+
+#. ~ Description of "pool ball"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"A colorful, hard plastic ball for playing games on a pool table.  Essentially"
+" a rock."
+msgstr ""
+
+#. ~ Description of "bowling ball"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"A large, heavy ball with finger holes for better grip.  Before the "
+"apocalypse, its main purpose was to be rolled along waxed floors."
+msgstr ""
+
+#. ~ Description of "football"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"An oval-shaped ball made of leather and string, it's easily thrown but does "
+"little damage.  You could take it apart into leather if you wanted."
+msgstr ""
+
+#. ~ Description of "basketball"
+#: data/json/items/generic/toys_and_sports.json
+msgid "A high-quality, size 7 indoor basketball."
+msgstr ""
+
+#. ~ Item name
+#: data/json/items/generic/toys_and_sports.json
+msgid "aim game target practice kit"
+msgid_plural "aim game target practice kits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of "aim game target practice kit"
+#: data/json/items/generic/toys_and_sports.json
+msgid ""
+"A collection of laser guns and targets designed to help you practice "
+"shooting.  The spot you 'hit' is displayed on the targets."
+msgstr ""
+
+#. ~ Variant name of gun "10mm/.40 revolver"
+#. ~ Variant name of item "10mm/.40 revolver"
+#: data/json/items/gun/10mm.json
+msgid "S&W 610 revolver"
+msgid_plural "S&W 610 revolvers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "compact Glock pistol"
+#. ~ Description of "compact Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A small pistol accepting Glock magazines and chambered in 10mm.  Because of "
+"its size, it is easy to carry, but it has rather fierce recoil."
+msgstr ""
+
+#. ~ Variant name of gun "compact Glock pistol"
+#. ~ Variant name of item "compact Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid "Glock 29 pistol"
+msgid_plural "Glock 29 pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Glock pistol"
+#. ~ Description of "Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A semi-automatic pistol chambered in 10mm and accepting Glock magazines."
+msgstr ""
+
+#. ~ Variant name of gun "Glock pistol"
+#. ~ Variant name of item "Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid "Glock 20 pistol"
+msgid_plural "Glock 20 pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/10mm.json
+msgid "hunter Glock pistol"
+msgid_plural "hunter Glock pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "hunter Glock pistol"
+#. ~ Description of "hunter Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A full-sized, long-slide version of the highly successful Glock, chambered in"
+" hard-hitting 10mm Auto.  The extra barrel length makes for slightly more "
+"accurate and powerful shots, and the extra slide length means the sights are "
+"a little easier to use.  It also features Glock's Modular Optic System, "
+"making aftermarket optics much easier to mount."
+msgstr ""
+
+#. ~ Variant name of gun "hunter Glock pistol"
+#. ~ Variant name of item "hunter Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid "Glock 40 pistol"
+msgid_plural "Glock 40 pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "hunter Glock pistol" of gun "Glock 40 pistol"
+#. ~ Description of variant "Glock 40 pistol" of item "hunter Glock pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A full-sized, long-slide version of the highly successful Glock, chambered in"
+" hard-hitting 10mm Auto.  The extra barrel length makes for slightly more "
+"accurate and powerful shots, and the extra slide length means the sights are "
+"a little easier to use."
+msgstr ""
+
+#. ~ Description of gun "BA10 rifle"
+#. ~ Description of "BA10 rifle"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A semi-automatic carbine chambered in 10mm and accepting BA10 magazines."
+msgstr ""
+
+#. ~ Description of variant "BA10 rifle" of gun "BA10 rifle"
+#. ~ Description of variant "BA10 rifle" of item "BA10 rifle"
+#: data/json/items/gun/10mm.json
+msgid ""
+"The MP5/10 served the FBI briefly alongside their 10mm Auto pistols, adding "
+"to the caliber's overall mystique.  Though the gun's usage was short-lived, a"
+" handful of clones were made and sold occasionally.  This semi-automatic "
+"clone manufactured by Brethren Arms features a welded-on M1913 rail and a "
+"collapsible arm brace."
+msgstr ""
+
+#. ~ Description of variant "Colt Delta Elite pistol" of gun "Colt Delta Elite
+#. pistol"
+#. ~ Description of variant "Colt Delta Elite pistol" of item "Colt Delta Elite
+#. pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A modernized, match-grade variant of the venerable M1911 chambered in hard-"
+"hitting 10mm Auto.  Early variants were known to crack frames; modern 1911s, "
+"like this one, are slotted to prevent such crack formation."
+msgstr ""
+
+#. ~ Description of gun "EAA Witness pistol"
+#. ~ Description of "EAA Witness pistol"
+#: data/json/items/gun/10mm.json
+msgid ""
+"A semi-automatic pistol chambered in 10mm and accepting EAA Witness "
+"magazines."
+msgstr ""
+
+#. ~ Variant name of gun "EAA Witness pistol"
+#. ~ Variant name of item "EAA Witness pistol"
+#: data/json/items/gun/10mm.json
+msgid "EAA Witness 10mm pistol"
+msgid_plural "EAA Witness 10mm pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "SIG pistol"
+#. ~ Description of "SIG pistol"
+#: data/json/items/gun/10mm.json
+msgid "A semi-automatic pistol chambered in 10mm and accepting SIG magazines."
+msgstr ""
+
+#. ~ Variant name of gun "SIG pistol"
+#. ~ Variant name of item "SIG pistol"
+#: data/json/items/gun/10mm.json
+msgid "SIG P220 10mm pistol"
+msgid_plural "SIG P220 10mm pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "XD-M pistol"
+#. ~ Description of "XD-M pistol"
+#: data/json/items/gun/10mm.json
+msgid "A semi-automatic pistol chambered in 10mm and accepting XD-M magazines."
+msgstr ""
+
+#. ~ Variant name of gun "XD-M pistol"
+#. ~ Variant name of item "XD-M pistol"
+#: data/json/items/gun/10mm.json
+msgid "XD-M Competition 10mm pistol"
+msgid_plural "XD-M Competition 10mm pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/10mm.json data/json/items/gun/45.json
+msgid "Glock submachine gun"
+msgid_plural "Glock submachine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Glock submachine gun"
+#. ~ Description of "Glock submachine gun"
+#: data/json/items/gun/10mm.json
+msgid "A submachine gun chambered in 10mm, accepting Glock magazines."
+msgstr ""
+
+#. ~ Variant name of gun "Glock submachine gun"
+#. ~ Variant name of item "Glock submachine gun"
+#: data/json/items/gun/10mm.json
+msgid "Vector SDP 10mm pistol"
+msgid_plural "Vector SDP 10mm pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "H&K G80 railgun"
+#. ~ Description of "H&K G80 railgun"
+#: data/json/items/gun/12mm.json
+msgid ""
+"A highly advanced infantry weapon that magnetically propels a ferromagnetic "
+"projectile using an alternating current.  Markings and serials imply it was "
+"manufactured by Heckler & Koch, but the maturity of the implemented "
+"technologies makes such a claim suspect.  Powered by UPS."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "small game rifle"
+msgid_plural "small game rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "small game rifle"
+#. ~ Description of "small game rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A venerable .22 caliber lever-action rifle, with a 19-round tube magazine and"
+" a classic design that dates back over a century.  Generally used for the "
+"hunting of small game like rabbits, the strict taxonomic classification of "
+"zombies as 'small game' is debatable, but this decades-old weapon can still "
+"be counted upon to help manage the undead population."
+msgstr ""
+
+#. ~ Variant name of gun "small game rifle"
+#. ~ Variant name of item "small game rifle"
+#: data/json/items/gun/22.json
+msgid "Marlin 39A rifle"
+msgid_plural "Marlin 39A rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid ".22 pipe rifle"
+msgid_plural ".22 pipe rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "varmint rifle"
+msgid_plural "varmint rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "varmint rifle"
+#. ~ Description of "varmint rifle"
+#. ~ Description of gun "tube fed varmint rifle"
+#. ~ Description of "tube fed varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A lightweight and modular pistol caliber hunting carbine, firing the low "
+"power .22 LR cartridge.  Before the Cataclysm, a mix of high customizability,"
+" cheap ammunition, and low recoil made this a very popular varmint rifle "
+"among civilian shooters."
+msgstr ""
+
+#. ~ Variant name of gun "varmint rifle"
+#. ~ Variant name of item "varmint rifle"
+#: data/json/items/gun/22.json
+msgid "Ruger 10/22 rifle"
+msgid_plural "Ruger 10/22 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "full-auto varmint rifle"
+msgid_plural "full-auto varmint rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "full-auto varmint rifle"
+#. ~ Description of "full-auto varmint rifle"
+#: data/json/items/gun/22.json
+msgid "A handy and lightweight rifle, modified to fire semi and full auto."
+msgstr ""
+
+#. ~ Variant name of gun "full-auto varmint rifle"
+#. ~ Variant name of item "full-auto varmint rifle"
+#: data/json/items/gun/22.json
+msgid "full-auto Ruger 10/22 rifle"
+msgid_plural "full-auto Ruger 10/22 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "full-auto varmint rifle" of gun "full-auto Ruger
+#. 10/22 rifle"
+#. ~ Description of variant "full-auto Ruger 10/22 rifle" of item "full-auto
+#. varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A Ruger 10/22 modified post-Cataclysm to selective fire.  While the .22 round"
+" isn't very powerful, full auto makes it a lot more effective, and still "
+"easily controllable in full auto."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid ".22 caliber revolver"
+msgid_plural ".22 caliber revolvers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun ".22 caliber revolver"
+#. ~ Description of ".22 caliber revolver"
+#: data/json/items/gun/22.json
+msgid "A comparatively dainty revolver, chambered for 8 tiny rounds of .22 LR."
+msgstr ""
+
+#. ~ Variant name of gun ".22 caliber revolver"
+#. ~ Variant name of item ".22 caliber revolver"
+#: data/json/items/gun/22.json
+msgid "Ruger LCR .22 revolver"
+msgid_plural "Ruger LCR .22 revolvers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "firefly training pistol"
+msgid_plural "firefly training pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "firefly training pistol"
+#. ~ Description of "firefly training pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"A medium sized, .22 caliber semi-automatic pistol, for training with a pistol"
+" similar to more powerful pistols.  Built from aluminum and polymer "
+"components, the weapon is lightweight and concealable, but its chambering is "
+"not very powerful."
+msgstr ""
+
+#. ~ Variant name of gun "firefly training pistol"
+#. ~ Variant name of item "firefly training pistol"
+#: data/json/items/gun/22.json
+msgid "GSG Firefly"
+msgid_plural "GSG Fireflies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "firefly training pistol" of gun "GSG Firefly"
+#. ~ Description of variant "GSG Firefly" of item "firefly training pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"The GSG firefly is a .22 semi-automatic handgun.  While the GSG Firefly "
+"started off as the SIG Mosquito, after the Mosquito ceased production, German"
+" Sport Guns picked it up and renamed it to the Firefly."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "Walther training pistol"
+msgid_plural "Walther training pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Walther training pistol"
+#. ~ Description of "Walther training pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"A dainty training pistol offered by the Walther Arms company, making use of "
+"the .22 LR cartridge, for training on a pistol very similar to more powerful "
+"pistols."
+msgstr ""
+
+#. ~ Variant name of gun "Walther training pistol"
+#. ~ Variant name of item "Walther training pistol"
+#: data/json/items/gun/22.json
+msgid "Walther P22 pistol"
+msgid_plural "Walther P22 pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Walther training pistol" of gun "Walther P22
+#. pistol"
+#. ~ Description of variant "Walther P22 pistol" of item "Walther training
+#. pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"The Walther P22 is a blowback operated semi-automatic pistol intended for "
+"training with a platform very similar to more defensive handguns.  It is "
+"about half the size of most Walthers.  It is made mostly with plastic, with "
+"the slide and key components (other than the barrel) being made of die-cast "
+"zinc alloy."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "high capacity handgun"
+msgid_plural "high capacity handguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "high capacity handgun"
+#. ~ Description of "high capacity handgun"
+#: data/json/items/gun/22.json
+msgid ""
+"A large capacity handgun, chambered in .22 and feeding from quad stack "
+"magazines.  Used both recreationally and in competition."
+msgstr ""
+
+#. ~ Variant name of gun "high capacity handgun"
+#. ~ Variant name of item "high capacity handgun"
+#: data/json/items/gun/22.json
+msgid "CP33"
+msgid_plural "CP33s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "high capacity handgun" of gun "CP33"
+#. ~ Description of variant "CP33" of item "high capacity handgun"
+#: data/json/items/gun/22.json
+msgid ""
+"The Kel-Tec CP33, standing for Competition Pistol 33, is a .22 semi automatic"
+" pistol targeted towards competition shooters and recreational shooters "
+"alike, with the ability to feed from 33 round quad stack magazines, or even "
+"50 with an extension.  While in a fairly weak cartridge, the capacity makes "
+"it quite a formidable weapon in the right hands."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "Ruger target pistol"
+msgid_plural "Ruger target pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Ruger target pistol"
+#. ~ Description of "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"A light and handy .22 LR handgun from Ruger, this handgun is one of the most "
+"popular .22 handguns ever created."
+msgstr ""
+
+#. ~ Variant name of gun "Ruger target pistol"
+#. ~ Variant name of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid "Ruger Mark II"
+msgid_plural "Ruger Mark IIs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger target pistol" of gun "Ruger Mark II"
+#. ~ Description of variant "Ruger Mark II" of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"The 2nd version of the Ruger Standard, which replaced production of the "
+"Standard in 1982 and continued until 2005 with the main feature of having "
+"adjustable sights.  Features a 5.5 inch barrel and feeds from a 10 round "
+"magazine."
+msgstr ""
+
+#. ~ Variant name of gun "Ruger target pistol"
+#. ~ Variant name of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid "Ruger Mark III"
+msgid_plural "Ruger Mark IIIs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger target pistol" of gun "Ruger Mark III"
+#. ~ Description of variant "Ruger Mark III" of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"The 3rd version of the Ruger Standard, which replaced production of the Mark "
+"II in 2005 and continued until 2016.  Features a 5.5 inch barrel and feeds "
+"from a 10 round magazine."
+msgstr ""
+
+#. ~ Variant name of gun "Ruger target pistol"
+#. ~ Variant name of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid "Ruger Mark IV"
+msgid_plural "Ruger Mark IVs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Ruger target pistol" of gun "Ruger Mark IV"
+#. ~ Description of variant "Ruger Mark IV" of item "Ruger target pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"The 4th, and most modern version of the Ruger Standard.  Still in production "
+"since 2016, and has a simplified disassembly feature.  Has a 5.5 inch barrel "
+"and feeds from a 10 round magazine."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json data/mods/classic_zombies/items/guns.json
+msgid "pump action varmint rifle"
+msgid_plural "pump action varmint rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "pump action varmint rifle"
+#. ~ Description of "pump action varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A lightweight, wood framed pump action rifle, holding 15 rounds of .22 with "
+"an 18 inch barrel.  While pump actions tend to be largely shotguns, they can "
+"be made in calibers such as .22 LR."
+msgstr ""
+
+#. ~ Variant name of gun "pump action varmint rifle"
+#. ~ Variant name of item "pump action varmint rifle"
+#: data/json/items/gun/22.json
+msgid "Rossi Gallery"
+msgid_plural "Rossi Galleries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "pump action varmint rifle" of gun "Rossi Gallery"
+#. ~ Description of variant "Rossi Gallery" of item "pump action varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A modern take on the Winchester 1890, the Rossi Gallery is a .22 LR rifle, "
+"notably using a pump action.  Much like a pump action shotgun, the magazine "
+"tube is below its 18 inch barrel and can hold 15 rounds.  While pump actions "
+"are quite often associated with shotguns, the mechanism can be applied to "
+"rifles as well, though in practice it's limited to .22 LR."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid ".22 six-shooter"
+msgid_plural ".22 six-shooters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun ".22 six-shooter"
+#. ~ Description of ".22 six-shooter"
+#: data/json/items/gun/22.json
+msgid "A revolver chambered in .22 LR, with 6 shots and a 6.5 inch barrel."
+msgstr ""
+
+#. ~ Variant name of gun ".22 six-shooter"
+#. ~ Variant name of item ".22 six-shooter"
+#: data/json/items/gun/22.json
+msgid "Heritage Rough Rider 6.5\""
+msgid_plural "Heritage Rough Riders 6.5\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant ".22 six-shooter" of gun "Heritage Rough Rider
+#. 6.5""
+#. ~ Description of variant "Heritage Rough Rider 6.5"" of item ".22 six-
+#. shooter"
+#: data/json/items/gun/22.json
+msgid ""
+"A cheap, single action revolver chambered in .22 LR.  While it makes for a "
+"handy plinking gun, the single action mechanism, size of the firearm, "
+"combined with the lack of a swing out cylinder makes for a less than ideal "
+"zombie fighting handgun."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "large .22 six-shooter"
+msgid_plural "large .22 six-shooters"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "large .22 six-shooter"
+#. ~ Description of "large .22 six-shooter"
+#: data/json/items/gun/22.json
+msgid "A revolver chambered in .22 LR, with 6 shots and a 9 inch barrel."
+msgstr ""
+
+#. ~ Variant name of gun "large .22 six-shooter"
+#. ~ Variant name of item "large .22 six-shooter"
+#: data/json/items/gun/22.json
+msgid "Heritage Rough Rider 9\""
+msgid_plural "Heritage Rough Riders 9\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "large .22 six-shooter" of gun "Heritage Rough
+#. Rider 9""
+#. ~ Description of variant "Heritage Rough Rider 9"" of item "large .22 six-
+#. shooter"
+#: data/json/items/gun/22.json
+msgid ""
+"A cheap, single action revolver chambered in .22 LR.  While it makes for a "
+"handy plinking gun, the single action mechanism, size of the firearm, "
+"combined with the lack of a swing out cylinder makes for a less than ideal "
+"zombie fighting handgun, even with the slightly increased performance from "
+"the longer barrel."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid ".22 1911 pistol"
+msgid_plural ".22 1911 pistols"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun ".22 1911 pistol"
+#. ~ Description of ".22 1911 pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"A 1911 in .22 LR, with a 4 1/4\" barrel, and feeding from 10 round magazines."
+msgstr ""
+
+#. ~ Variant name of gun ".22 1911 pistol"
+#. ~ Variant name of item ".22 1911 pistol"
+#: data/json/items/gun/22.json
+msgid "1911-22"
+msgid_plural "1911-22s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant ".22 1911 pistol" of gun "1911-22"
+#. ~ Description of variant "1911-22" of item ".22 1911 pistol"
+#: data/json/items/gun/22.json
+msgid ""
+"A 1911 handgun with \"1911-22\" stamped on the slide.  While .22 LR 1911s "
+"were first devised as a training aid for US soldiers, it found large civilian"
+" use from concealed carry to plinking thanks to the readily available "
+"ammunition and familiar platform."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "small game lever-action rifle"
+msgid_plural "small game lever-action rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "small game lever-action rifle"
+#. ~ Description of "small game lever-action rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A .22 Long Rifle lever-action rifle, which holds 15 rounds of ammo.  While "
+"quite useful against small game, its effectiveness isn't as great against the"
+" undead."
+msgstr ""
+
+#. ~ Variant name of gun "small game lever-action rifle"
+#. ~ Variant name of item "small game lever-action rifle"
+#: data/json/items/gun/22.json
+msgid "Rossi Rio Bravo"
+msgid_plural "Rossi Rio Bravos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "small game lever-action rifle" of gun "Rossi Rio
+#. Bravo"
+#. ~ Description of variant "Rossi Rio Bravo" of item "small game lever-action
+#. rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A modern .22 LR lever-action rifle, the Rio Bravo features an 18\" barrel "
+"with 15 rounds of ammo in its tube magazine, which is loaded from the front "
+"of the rifle.  The mechanical origins date back decades, being based off of "
+"Rossi's R92 series of rifles which themselves were based off of the "
+"Winchester 1892."
+msgstr ""
+
+#. ~ Description of gun "small game lever-action rifle"
+#. ~ Description of "small game lever-action rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A .22 Long Rifle lever-action rifle, which holds 16 rounds of ammo.  While "
+"quite useful against small game, its effectiveness isn't as great against the"
+" undead."
+msgstr ""
+
+#. ~ Variant name of gun "small game lever-action rifle"
+#. ~ Variant name of item "small game lever-action rifle"
+#: data/json/items/gun/22.json
+msgid "Henry Golden Boy"
+msgid_plural "Henry Golden Boys"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "small game lever-action rifle" of gun "Henry
+#. Golden Boy"
+#. ~ Description of variant "Henry Golden Boy" of item "small game lever-action
+#. rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A modern .22 LR lever-action rifle, the Henry Golden Boy features an 20\" "
+"octagonal barrel with 16 rounds of ammo in its tube magazine, which is loaded"
+" from the front of the rifle.  It fairly resembles the original Henry Model "
+"1860 with its brass colored receiver, though with wooden furniture at the "
+"front, and without a doubt using modern manufacturing."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "tube fed varmint rifle"
+msgid_plural "tube fed varmint rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "tube fed varmint rifle"
+#. ~ Variant name of item "tube fed varmint rifle"
+#: data/json/items/gun/22.json
+msgid "Marlin Model 60"
+msgid_plural "Marlin Model 60s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "tube fed varmint rifle" of gun "Marlin Model 60"
+#. ~ Description of variant "Marlin Model 60" of item "tube fed varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"The Model 60 is a semi-automatic rifle chambered in .22 LR, and looks awfully"
+" familiar to a 10/22.  However, instead of a detachable magazine, it features"
+" a tubular magazine below the barrel.  While out of production, a large "
+"number of them have been made since the 60s, making it a very commonplace "
+"rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "high capacity revolver"
+msgid_plural "high capacity revolvers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "high capacity revolver"
+#. ~ Description of "high capacity revolver"
+#: data/json/items/gun/22.json
+msgid "A revolver chambered in .22 LR, with 10 shots and a 6 inch barrel."
+msgstr ""
+
+#. ~ Variant name of gun "high capacity revolver"
+#. ~ Variant name of item "high capacity revolver"
+#: data/json/items/gun/22.json
+msgid "S&W 617"
+msgid_plural "S&W 617s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "high capacity revolver" of gun "S&W 617"
+#. ~ Description of variant "S&W 617" of item "high capacity revolver"
+#: data/json/items/gun/22.json
+msgid ""
+"The S&W 617 is a fine revolver, chambered in .22 LR.  However, instead of "
+"more common 6 rounds revolvers come in, this revolver has a 10 round capacity"
+" cylinder.  While still a revolver, and to boot a revolver in .22 LR, 10 is "
+"still bigger than 6."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid ".22 plinking handgun"
+msgid_plural ".22 plinking handguns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun ".22 plinking handgun"
+#. ~ Description of ".22 plinking handgun"
+#: data/json/items/gun/22.json
+msgid "A small handgun with a short barrel.  Feeds from 10 round magazines."
+msgstr ""
+
+#. ~ Variant name of gun ".22 plinking handgun"
+#. ~ Variant name of item ".22 plinking handgun"
+#: data/json/items/gun/22.json
+msgid "Ruger SR22"
+msgid_plural "Ruger SR22s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant ".22 plinking handgun" of gun "Ruger SR22"
+#. ~ Description of variant "Ruger SR22" of item ".22 plinking handgun"
+#: data/json/items/gun/22.json
+msgid ""
+"A very popular handgun, the SR22 is a more conventional pistol than Ruger's "
+"other famous .22 LR handguns, the Ruger Standards.  While .22 LR is still "
+"capable of killing, the very short barrel brings that into question."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "Glock 44"
+msgid_plural "Glock 44s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Glock 44"
+#. ~ Description of "Glock 44"
+#: data/json/items/gun/22.json
+msgid ""
+"A Glock chambered in .22LR.  While effective against paper targets and "
+"rodents, it will struggle against the walking dead."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "small game single shot rifle"
+msgid_plural "small game single shot rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "small game single shot rifle"
+#. ~ Description of variant "small game single shot rifle" of gun "Savage
+#. Rascal"
+#. ~ Description of "small game single shot rifle"
+#. ~ Description of variant "Savage Rascal" of item "small game single shot
+#. rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A .22 Long Rifle rifle that chambers just one shot.  Its main use is for the "
+"youth, and not much else.  God help you if you hope to use this thing to a "
+"meaningful effect."
+msgstr ""
+
+#. ~ Variant name of gun "small game single shot rifle"
+#. ~ Variant name of item "small game single shot rifle"
+#: data/json/items/gun/22.json
+msgid "Savage Rascal"
+msgid_plural "Savage Rascals"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/22.json
+msgid "modern varmint rifle"
+msgid_plural "modern varmint rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "modern varmint rifle"
+#. ~ Description of "modern varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"Resembling a military rifle, this firearm is made from polymer.  Despite its "
+"looks, it only shoots .22 LR in a semi-automatic fashion."
+msgstr ""
+
+#. ~ Variant name of gun "modern varmint rifle"
+#. ~ Variant name of item "modern varmint rifle"
+#: data/json/items/gun/22.json
+msgid "M&P 15-22"
+msgid_plural "M&P 15-22s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "modern varmint rifle" of gun "M&P 15-22"
+#. ~ Description of variant "M&P 15-22" of item "modern varmint rifle"
+#: data/json/items/gun/22.json
+msgid ""
+"A .22 LR version of the M&P-15, this rifle resembles an AR-15 in form and "
+"function, but does not have the ability for compatible uppers or lowers."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "AR \"pistol\""
+msgid_plural "AR \"pistols\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "AR "pistol""
+#. ~ Description of "AR "pistol""
+#: data/json/items/gun/223.json
+msgid ""
+"The common AR-15 platform, with its stock removed and buffer tube covered by "
+"a thick, padded sleeve that allows the user to brace it like a rifle.  AR "
+"pistols lack stocks, or have arm braces due to restrictions on short barreled"
+" rifles, and so without a stock, they're legally classified as a pistol."
+msgstr ""
+
+#. ~ Variant name of gun "M27 assault rifle"
+#. ~ Variant name of item "M27 assault rifle"
+#: data/json/items/gun/223.json
+msgid "H&K416 A5 rifle"
+msgid_plural "H&K416 A5 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M27 assault rifle"
+#. ~ Variant name of item "M27 assault rifle"
+#: data/json/items/gun/223.json
+msgid "M27 IAR carbine"
+msgid_plural "M27 IAR carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M27 assault rifle"
+#. ~ Variant name of item "M27 assault rifle"
+#: data/json/items/gun/223.json
+msgid "M38 DMR rifle"
+msgid_plural "M38 DMR rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "civilian FN SCAR-L rifle"
+msgid_plural "civilian FN SCAR-L rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "civilian FN SCAR-L rifle"
+#. ~ Description of "civilian FN SCAR-L rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"A highly accurate and modular rifle specially designed for the United States "
+"Special Operations Command, in semi-auto only to be sold on the civilian "
+"market."
+msgstr ""
+
+#. ~ Variant name of gun "civilian FN SCAR-L rifle"
+#. ~ Variant name of item "civilian FN SCAR-L rifle"
+#: data/json/items/gun/223.json
+msgid "FN SCAR 16S"
+msgid_plural "FN SCAR 16Ss"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "civilian FN SCAR-L rifle" of gun "FN SCAR 16S"
+#. ~ Description of variant "FN SCAR 16S" of item "civilian FN SCAR-L rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"The SCAR 16S is the civilian-legal version of the SCAR-L rifle.  It is still "
+"very expensive, not like that matters now anymore."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "SL8 civilian rifle"
+msgid_plural "SL8 civilian rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "SL8 civilian rifle"
+#. ~ Description of "SL8 civilian rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"A semi-automatic clone of an older German assault rifle.  Due to importation "
+"bans, it is semi-auto and can only feed from 10 round magazines."
+msgstr ""
+
+#. ~ Variant name of gun "SL8 civilian rifle"
+#. ~ Variant name of item "SL8 civilian rifle"
+#: data/json/items/gun/223.json
+msgid "SL8-6"
+msgid_plural "SL8-6s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "SL8 civilian rifle" of gun "SL8-6"
+#. ~ Description of variant "SL8-6" of item "SL8 civilian rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"The SL8 is an importation-legal gun similar to the German G36, made to be "
+"semi-auto only, and to only feed from 10 round single stack magazines.  It "
+"also features a distinctive thumbhole stock, a polymer handguard, and a top "
+"rail for mounting optics."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "M249 machine gun"
+msgid_plural "M249 machine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "M249S machine gun"
+msgid_plural "M249S machine guns"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M4 carbine"
+#. ~ Variant name of item "M4 carbine"
+#: data/json/items/gun/223.json
+msgid "M4A1 carbine"
+msgid_plural "M4A1 carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M4 carbine"
+#. ~ Variant name of item "M4 carbine"
+#: data/json/items/gun/223.json
+msgid "Mk 18 CQBR carbine"
+msgid_plural "Mk 18 CQBR carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M16 burst rifle"
+#. ~ Variant name of item "M16 burst rifle"
+#: data/json/items/gun/223.json
+msgid "M16A4 rifle"
+msgid_plural "M16A4 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "M16 auto rifle"
+#. ~ Variant name of item "M16 auto rifle"
+#: data/json/items/gun/223.json
+msgid "M16A3 rifle"
+msgid_plural "M16A3 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "Ruger Mini-14 carbine"
+msgid_plural "Ruger Mini-14 carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "SIG civilian rifle"
+msgid_plural "SIG civilian rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "SIG civilian rifle"
+#. ~ Description of "SIG civilian rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"A civilian variant of an automatic Swiss rifle for military service.  Accepts"
+" STANAG magazines."
+msgstr ""
+
+#. ~ Variant name of gun "SIG civilian rifle"
+#. ~ Variant name of item "SIG civilian rifle"
+#: data/json/items/gun/223.json
+msgid "SIG SG 556"
+msgid_plural "SIG SG 556s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "SIG civilian rifle" of gun "SIG SG 556"
+#. ~ Description of variant "SIG SG 556" of item "SIG civilian rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"The SG 556 is a civilian model of the Swiss SIG SG 550 series, manufactured "
+"in New Hampshire.  It lacks any automatic fire capability and has a 16 inch "
+"barrel, but still retains a folding stock, with the feature of feeding from "
+"STANAG magazines instead of the SG 550 series magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "ZPAP AK-style rifle"
+msgid_plural "ZPAP AK-style rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "ZPAP AK-style rifle"
+#. ~ Description of "ZPAP AK-style rifle"
+#: data/json/items/gun/223.json
+msgid "A civilian AK pattern rifle, chambered in 5.56x45 NATO."
+msgstr ""
+
+#. ~ Variant name of gun "ZPAP AK-style rifle"
+#. ~ Variant name of item "ZPAP AK-style rifle"
+#: data/json/items/gun/223.json
+msgid "ZPAP M90"
+msgid_plural "ZPAP M90s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "ZPAP AK-style rifle" of gun "ZPAP M90"
+#. ~ Description of variant "ZPAP M90" of item "ZPAP AK-style rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"A Serbian-made AK pattern rifle made by Zastava in 5.56x45mm NATO.  To avoid "
+"import restrictions, Zastava USA has added a number of American-made parts."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "Desert Tech bullpup carbine"
+msgid_plural "Desert Tech bullpup carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Desert Tech bullpup carbine"
+#. ~ Description of "Desert Tech bullpup carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"Produced by the Desert Tech gun company, this is a highly modular, semi-"
+"automatic rifle of remarkably modest dimensions.  The weapon is notable for "
+"the simplicity of converting it to fire a wide number of different "
+"cartridges, with retool kits for .223 Remington, .308 Winchester, and .300 "
+"AAC Blackout being available."
+msgstr ""
+
+#. ~ Variant name of gun "Desert Tech bullpup carbine"
+#. ~ Variant name of item "Desert Tech bullpup carbine"
+#: data/json/items/gun/223.json
+msgid "Desert Tech MDRX carbine"
+msgid_plural "Desert Tech MDRX carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Desert Tech bullpup carbine" of gun "Desert Tech
+#. MDRX carbine"
+#. ~ Description of variant "Desert Tech MDRX carbine" of item "Desert Tech
+#. bullpup carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"Bringing a compact, highly modular, and soft-recoiling weapon system to the "
+"table, the Desert Tech Micro Dynamic Rifle Extreme (MDRX) is a gas-operated "
+"bullpup carbine originally unveiled in 2014, with this updated model of the "
+"weapon having been released in 2019.  One of the rifle's most notable "
+"features is the utter simplicity of swapping the carbine's chambering, with "
+"an easy change of the barrel, bolt, and a handful of other components being "
+"all the steps required to chamber the MDRX for either .223 Remington, .308 "
+"Winchester, or .300 AAC Blackout."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "Bren 5.56x45mm carbine"
+msgid_plural "Bren 5.56x45mm carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Bren 5.56x45mm carbine"
+#. ~ Description of "Bren 5.56x45mm carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"A semi-automatic clone of the Czech Republic's standard infantry carbine, "
+"sold for civilian sport shooting and recreational use, this modular rifle "
+"makes use of the standard magazines of the AR-15 platform and a 5.56x45mm "
+"cartridge."
+msgstr ""
+
+#. ~ Variant name of gun "Bren 5.56x45mm carbine"
+#. ~ Variant name of item "Bren 5.56x45mm carbine"
+#. ~ Variant name of gun "Bren 7.62mm carbine"
+#. ~ Variant name of item "Bren 7.62mm carbine"
+#: data/json/items/gun/223.json data/json/items/gun/762.json
+msgid "CZ Bren 2 carbine"
+msgid_plural "CZ Bren 2 carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Bren 5.56x45mm carbine" of gun "CZ Bren 2 carbine"
+#. ~ Description of variant "CZ Bren 2 carbine" of item "Bren 5.56x45mm
+#. carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"Hailing from the Czech Republic, this modular carbine supplanted the older CZ"
+" 805 rifle within Czech military use, improving upon the former's features "
+"and bringing fully ambidextrous controls, a streamlined design, and an easily"
+" adjustable gas system to the table.  Chambered for the 5.56x45mm NATO "
+"cartridge, this particular weapon possesses a 16.5-inch barrel and is a "
+"civilian MS, 'modular semi-automatic,' model.  Incorporating a number of US-"
+"made parts, the weapon features a removable muzzle break rather than the "
+"flash hider that comes standard with military rifles."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "bolt-action trail carbine"
+msgid_plural "bolt-action trail carbines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "bolt-action trail carbine"
+#. ~ Description of "bolt-action trail carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"Compact, svelte, and lightweight, this Leen bolt-action rifle packs the same "
+"features of larger sporting weapons into a backpack-sized package.  "
+"Possessing an adjustable buttstock, a detachable magazine-based system, and a"
+" quick-swap barrel that can be exchanged to accommodate the firing of .223 "
+"Remington or 7.62x39mm Soviet ammunition, the weapon is a commendable "
+"backpacker or prepper rifle."
+msgstr ""
+
+#. ~ Variant name of gun "bolt-action trail carbine"
+#. ~ Variant name of item "bolt-action trail carbine"
+#: data/json/items/gun/223.json
+msgid "CZ 600 TRAIL rifle"
+msgid_plural "CZ 600 TRAIL rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "bolt-action trail carbine" of gun "CZ 600 TRAIL
+#. rifle"
+#. ~ Description of variant "CZ 600 TRAIL rifle" of item "bolt-action trail
+#. carbine"
+#: data/json/items/gun/223.json
+msgid ""
+"A handy bolt-action offering from CZ, the 600 Trail is a box magazine-fed "
+"ranch rifle that utilizes an aluminum chassis to keep its overall heft to a "
+"minimum.  Possessing an extendable buttstock, extensive modularity, and a "
+"quick-swap barrel assembly switchable to accommodate the firing of either "
+".223 or 7.62x39mm ammunition, the rifle was intended for use by backpackers, "
+"trail hikers, and preppers."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "5.56x45mm bullpup rifle"
+msgid_plural "5.56x45mm bullpup rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "5.56x45mm bullpup rifle"
+#. ~ Description of "5.56x45mm bullpup rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"This is a semi-automatic bullpup rifle with a lightened body due to the use "
+"of polymers and aluminum, using standard magazines of the AR-15 platform and "
+"a 5.56x45mm cartridge."
+msgstr ""
+
+#. ~ Variant name of gun "5.56x45mm bullpup rifle"
+#. ~ Variant name of item "5.56x45mm bullpup rifle"
+#: data/json/items/gun/223.json
+msgid "Kel-Tec RDB rifle"
+msgid_plural "Kel-Tec RDB rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "5.56x45mm bullpup rifle" of gun "Kel-Tec RDB
+#. rifle"
+#. ~ Description of variant "Kel-Tec RDB rifle" of item "5.56x45mm bullpup
+#. rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"This is a semi-automatic bullpup rifle with a lightened body due to the use "
+"of polymers and aluminum, using standard magazines from the AR-15 platform "
+"and the 5.56 NATO cartridge.  The name stands for rifle, downward-ejection, "
+"bullpup, and its design was intended to incorporate some technical solutions,"
+" such as downward case ejection and convenience for left-handers, to solve "
+"some problems with bullpup guns.  However, the good idea's execution is not "
+"as perfect as the manufacturer (and user) would like.  No good idea from Kel-"
+"Tec is immune to Kel-Tec manufacturing issues, sadly."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "IWI Tavor X95"
+msgid_plural "IWI Tavor X95s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "IWI Tavor X95"
+#. ~ Description of "IWI Tavor X95"
+#: data/json/items/gun/223.json
+msgid ""
+"The Tavor is an Israeli series of bullpup rifles designed and produced by "
+"Israel Weapon Industries.  This is the Tavor X95, a civilian-legal rifle "
+"lacking any full-auto capability, and sporting a 16.5\" barrel.  Chambered in"
+" 5.56/.223, this rifle feeds from STANAG magazines."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/223.json
+msgid "sporter AR rifle"
+msgid_plural "sporter AR rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "sporter AR rifle"
+#. ~ Description of "sporter AR rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"A lightweight AR-15 platform rifle, capable of feeding standard AR magazines."
+"  Unlike the military versions, it has no threaded barrel or collapsing "
+"stock."
+msgstr ""
+
+#. ~ Variant name of gun "sporter AR rifle"
+#. ~ Variant name of item "sporter AR rifle"
+#: data/json/items/gun/223.json
+msgid "M&P 15"
+msgid_plural "M&P 15s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "sporter AR rifle" of gun "M&P 15"
+#. ~ Description of variant "M&P 15" of item "sporter AR rifle"
+#: data/json/items/gun/223.json
+msgid ""
+"S&Ws version of the AR-15, the M&P-15 is a very common rifle.  Despite being "
+"very similar to an AR-15 in both form and function, the receivers and uppers "
+"are incompatible."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/270win.json
+msgid "bolt-action hunting rifle"
+msgid_plural "bolt-action hunting rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "bolt-action hunting rifle"
+#. ~ Description of "bolt-action hunting rifle"
+#: data/json/items/gun/270win.json
+msgid ""
+"Featuring a handsome set of wooden furnishings, a classic design, and a no "
+"nonsense .270 caliber chambering, this is a powerful hunting rifle.  With a "
+"tried and proven pedigree dating back over 60 years, millions of such rugged "
+"arms have been made, exported, and used throughout the United States and the "
+"world at large.  Where hunting is concerned, this is a highly capable and "
+"well proven weapon in all respects.  Fortunate, given that your prey in these"
+" dark days may turn out to be a little bit more feisty than typical White-"
+"Tailed deer, moose, and black bears."
+msgstr ""
+
+#. ~ Variant name of gun "bolt-action hunting rifle"
+#. ~ Variant name of item "bolt-action hunting rifle"
+#: data/json/items/gun/270win.json
+msgid "Remington 700 .270 Win rifle"
+msgid_plural "Remington 700 .270 Win rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "M2010 ESR"
+#. ~ Description of "M2010 ESR"
+#: data/json/items/gun/300.json
+msgid ""
+"A bolt-action, box-magazine-fed sniper rifle chambered in the powerful .300 "
+"Winchester Magnum round.  The M2010 had completely replaced the M24 rifle "
+"series by 2017."
+msgstr ""
+
+#. ~ Description of gun "Weatherby Mark V"
+#. ~ Description of "Weatherby Mark V"
+#: data/json/items/gun/300.json
+msgid ""
+"The Weatherby Mark V is one of the world's finest bolt-action rifles.  "
+"Designed in 1955 by Roy Weatherby and Fred Jennie, it has a strong action "
+"designed to safely fire high-pressure cartridges.  These rifles were "
+"presented to celebrities as part of a marketing campaign."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/300.json data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "Winchester Model 70"
+msgid_plural "Winchester Model 70s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/300.json
+msgid "Ruger Precision Rifle"
+msgid_plural "Ruger Precision Rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Ruger Precision Rifle"
+#. ~ Description of "Ruger Precision Rifle"
+#: data/json/items/gun/300.json
+msgid ""
+"Originally introduced to the Ruger gun corporation's family of high-end "
+"marksman rifles in 2015, the Ruger Precision Rifle is a modern and highly "
+"modular long-range bolt-action weapon.  By incorporating a unique in-line "
+"recoil path that manages recoil from the rear of the receiver to the "
+"buttstock, as opposed to traditional bedding, the rifle offers maximal "
+"accuracy potential, while the arm's additional bells and whistles, an "
+"incorporated marksman's trigger, muzzle brake, and this particular rifle's "
+"powerhouse chambering of .300 Win Mag, help to make the most from any long-"
+"range engagement."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+msgid "BLR lever-action hunting rifle"
+msgid_plural "BLR lever-action hunting rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "BLR lever-action hunting rifle"
+#. ~ Variant name of item "BLR lever-action hunting rifle"
+#: data/json/items/gun/3006.json
+msgid "Browning BLR"
+msgid_plural "Browning BLRs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "BLR lever-action hunting rifle" of gun "Browning
+#. BLR"
+#. ~ Description of variant "Browning BLR" of item "BLR lever-action hunting
+#. rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"The Browning BLR is notable for being a lever-action rifle, chambered in "
+"calibers with spitzer bullets.  This is unusual for lever-actions, as a "
+"spitzer bullet risks setting off other cartridges in a typical tube magazine."
+"  The BLR gets around this issue by utilizing box magazines instead, making "
+"it quite unique among other lever-action rifles.  This one is chambered for "
+"30-06."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+msgid "Garand battle rifle"
+msgid_plural "Garand battle rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Variant name of gun "Garand battle rifle"
+#. ~ Variant name of item "Garand battle rifle"
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+#: data/mods/BombasticPerks/perkdata/old_guns.json
+msgid "M1 Garand"
+msgid_plural "M1 Garand"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of variant "Garand battle rifle" of gun "M1 Garand"
+#. ~ Description of variant "M1 Garand" of item "Garand battle rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"The M1 Garand is a widely celebrated battle rifle, being one of the most "
+"mass-produced battle rifles in the world.  It saw widespread use in the US "
+"military, being used extensively in WW2 and the Korean War.  While its "
+"military use has dwindled down, being out of US service for more than 50 "
+"years, some of its mechanical influence still remains through rifles such as "
+"AKs or M14s.  It still sees widespread use in civilian spaces as an accurate "
+"competition or hunting rifle."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+msgid "Springfield rifle"
+msgid_plural "Springfield rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "Springfield rifle"
+#. ~ Description of "Springfield rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"A powerful military rifle chambered in .30-06, developed to replace the US "
+"Army's older Krag rifle.  It served as the main American rifle in World War "
+"I, was used alongside the M1 Garand in World War II, and was used as a sniper"
+" rifle as late as the Vietnam War."
+msgstr ""
+
+#. ~ Description of variant "Springfield rifle" of gun "M1903 Springfield"
+#. ~ Description of variant "M1903 Springfield" of item "Springfield rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"A powerful military rifle originally chambered in .30-03 Springfield, "
+"developed to replace the US Army's older Krag rifle.  It was quickly "
+"rechambered into the .30-06 caliber with its spitzer bullet.  While an "
+"American rifle produced and developed around WW1, manufacturing couldn't keep"
+" up with demand, and saw service alongside the M1917 Enfield, a British rifle"
+" rechambered for the American 30-06.  It saw service as a sniper rifle up to "
+"the Vietnam War, but nowadays is mainly used by civilians, either as hunting "
+"rifles or in collections."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+msgid "BAR rifle"
+msgid_plural "BAR rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of gun "BAR rifle"
+#. ~ Description of "BAR rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"This heavy rifle was designed near the end of World War I, and provided fire "
+"support for the US Army from World War II all the way to the Vietnam War.  "
+"Too much firepower to serve as a battle rifle, but not enough to be an ideal "
+"light machine gun, it still found a niche on the battlefield."
+msgstr ""
+
+#. ~ Description of variant "BAR rifle" of gun "Browning Automatic Rifle"
+#. ~ Description of variant "Browning Automatic Rifle" of item "BAR rifle"
+#: data/json/items/gun/3006.json
+msgid ""
+"Designed near the end of World War I, the BAR provided fire support for the "
+"US Army from World War II all the way to the Vietnam War.  Originally "
+"developed to fill a now outdated role as an \"automatic rifle\", it was "
+"pushed into service for use as a light machine gun.  Despite being heavy and "
+"cumbersome, without filling its designed role, it saw service for over 50 "
+"years.  While newer models have a slow and fast fully automatic setting, this"
+" one is an older one, with just semi and full auto."
+msgstr ""
+
+#. ~ Item name
+#. ~ Name of a gun
+#: data/json/items/gun/3006.json
+msgid "Remington 700 .30-06 rifle"
+msgid_plural "Remington 700 .30-06 rifles"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

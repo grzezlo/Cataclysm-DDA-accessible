@@ -1,0 +1,1636 @@
+# Batch 151 of 204 from lang/machine/pl.po.
+# Merge it back with lang/access_catalog.py merge.
+msgid ""
+msgstr ""
+"Project-Id-Version: cataclysm-dda-access\n"
+"POT-Creation-Date: 2026-10-10 14:50+0200\n"
+"PO-Revision-Date: 2026-10-10 14:50+0200\n"
+"Last-Translator: Cataclysm: DDA Access contributors\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s hits your %2$s!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s hits <npcname>!"
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s misses <npcname>."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s hits your %2$s, but your armor protects you."
+msgstr ""
+
+#. ~ Monster attack message
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s hits <npcname>, but their armor protects them."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "leyspark zombie"
+msgid_plural "leyspark zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "leyspark zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"This zombie's ley lines are visibly glowing beneath its skin, casting a blue "
+"light on its surroundings.  A stronger burst of light, almost blinding, "
+"occasionally flashes from one of the ley lines."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "levinbolt zombie"
+msgid_plural "levinbolt zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "levinbolt zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"A strong blue glow surrounds this zombie, frequently letting off bright "
+"sparks.  Occasionally, it makes an awkward gesture and a series of magical "
+"bolts flash from its fingers into the scenery."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "levinbolt zombie"
+#. ~ Monster message of special attack of monster "manastorm zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s flings its arms out and glowing bolts erupt from them."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "manastorm zombie"
+msgid_plural "manastorm zombies"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "manastorm zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"This zombie is barely visible behind the bright blue glow and constantly "
+"flashes of light.  When it can be seen, its body is covered in a bright "
+"tracery of active ley lines."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "manastorm zombie"
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s makes a jerky motion and eldritch blue fire explodes from its arm."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "zombie queller"
+msgid_plural "zombie quellers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie queller"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"This zombie's ley lines are glowing beneath its skin, but very dimly.  They "
+"seem to absorb nearby light."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "zombie disruptor"
+msgid_plural "zombie disruptors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie disruptor"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"The light seems to grow dim around this zombie's hands, in contrast to the "
+"blue glow of its eyes.  Barely-visible blue paths on its visible skin, like "
+"traceries of veins, mark the site of its ley lines."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid "magebreaker"
+msgid_plural "magebreakers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "magebreaker"
+#: data/mods/Magiclysm/monsters/zombies.json
+msgid ""
+"The air continuously wavers around this zombie's hands and its eyes are a "
+"luminous shining blue.  It occasionally gestures at some of the nearby "
+"scenery and light warps, like you're looking at it through a kaleidoscope.  "
+"You can't tell a difference after it turns to normal, but you still don't "
+"want to end up inside it."
+msgstr ""
+
+#. ~ Monster message of special attack of monster "magebreaker"
+#: data/mods/Magiclysm/monsters/zombies.json
+#, c-format
+msgid "%1$s raises both of its hands toward %3$s."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie dwarf"
+msgid_plural "zombie dwarves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie dwarf"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"Once a dwarf, this zombie now has rent flesh and a beard in tatters.  Its "
+"face is twisted in an expression of rage."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie dwarven miner"
+msgid_plural "zombie dwarven miners"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie dwarven miner"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"Once a dwarven miner, this zombie now has rent flesh and a beard in tatters."
+"  Its face is twisted in an expression of rage."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie elf"
+msgid_plural "zombie elves"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie elf"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"Its face twisted in an expression of pure rage and with glassy eyes, this elf"
+" looks nothing like the ethereal elves from before the Cataclysm.  Though it "
+"also lacks the elves' characteristic grace, its movements are quieter than "
+"the other dead."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie goblin"
+msgid_plural "zombie goblins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie goblin"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"With bared teeth and black eyes filled with rage, this formerly-living goblin"
+" is now a walking nightmare.  While small, unlike the human zombies it was "
+"born with teeth and claws."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie ravenfolk"
+msgid_plural "zombie ravenfolk"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie ravenfolk"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"With bedraggled wings, dull eyes, and beak hanging open, this ravenfolk body "
+"still walks, a slight sway as it moves."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid "zombie lizardfolk"
+msgid_plural "zombie lizardfolk"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombie lizardfolk"
+#: data/mods/Magiclysm/monsters/zombified_fantasy_species.json
+msgid ""
+"A proud servant of dragons reduced to a walking corpse, this lizardfolk's "
+"scales are streaked with grime and its black eyes burn with rage.  It has not"
+" lost its teeth and claws in the transition to undeath."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "rotting wolf man"
+msgid_plural "rotting wolf men"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "rotting wolf man"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"The classic half man half wolf of the movies, but with a new twist: UNDEATH!"
+"  This monster lopes along alternating between two and four legged gaits.  "
+"It's jet black eyes seething with insatiable hunger.  Now you will know why "
+"you fear the night."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zorc"
+msgid_plural "zorcs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zowlbear"
+msgid_plural "zowlbears"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zowlbear predator"
+msgid_plural "zowlbear predators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zowlbear predator"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"A once zombified owlbear, now faster and much bigger in size.  Its thick skin"
+" protects the monster from harm, a sharp beak capable of rending through "
+"metal and a fury in its eyes warns you to stay away."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "undying"
+msgid_plural "undying"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zombified Yule cat"
+msgid_plural "zombified Yule cats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombified Yule cat"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"A magical beast from Icelandic folklore, known for their catlike appearance "
+"and their hobby of eating Workshop Elves.  It creepily stumbles on its 4 legs"
+" with its squirming uneven body after meeting demise and being reborn just to"
+" eat you."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "Tod cat"
+msgid_plural "Tod cats"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "Tod cat"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"Once used to its decomposed body, this nightmarish cat with thick teeth and "
+"razor-sharp claws seems to be looking around for things to \"play\" with.  "
+"Though its head is of a feline, it grins at you sadistically with a glint in "
+"its cold demonic eyes."
+msgstr ""
+
+#. ~ Monster name
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zombified catoblepas"
+msgid_plural "zombified catoblepases"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombified catoblepas"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"Already foul in life, this catoblepas now has oozing sores on its body and an"
+" even more rank odor.  At least whatever was odd about its eyes is gone, now "
+"that they're black and filled with rage."
+msgstr ""
+
+#. ~ Monster name
+#. ~ Word is invented: meaning is given as 'white-striders'
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid "zombified aenor"
+msgid_plural "zombified aenóren"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. ~ Description of monster "zombified aenor"
+#: data/mods/Magiclysm/monsters/zombified_monsters.json
+msgid ""
+"With bedraggled feathers and rent skin, stumbling as it walks, this formerly-"
+"living aenor is in a sad state."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "You have a strange dream about dragons."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "You have a disturbing dream of rampaging in a village."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid ""
+"While dreaming, you see a distinctively dragon-like reflection of yourself."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid ""
+"You blissfully dream of soaring over a human village.  The thought of "
+"destroying it and abducting the chiefs daughter is somewhat disturbing."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "You have a disturbingly lifelike dream of living as a dragon."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "In your dream you are the nightmare of a human."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "You have a disturbingly satisfying dream of ravaging a human village."
+msgstr ""
+
+#. ~ Dream of mutation category "DRAGON_BLACK"
+#: data/mods/Magiclysm/mutations/dreams.json
+msgid "You dream of raiding a castle and abducting the princess."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid "Human Magic"
+msgstr ""
+
+#. ~ Description of mutation "Human Magic"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid "Your body is depressingly mundane."
+msgstr ""
+
+#. ~ Description of mutation "Wildshape: Fish"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid "You are fish-like.  Just keep swimming!"
+msgstr ""
+
+#. ~ Description of mutation "Wildshape: Bear"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid ""
+"You are bear-like, granting you raw bestial power in exchange for "
+"intelligence."
+msgstr ""
+
+#. ~ Description of mutation "Wildshape: Deer"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid ""
+"You are deer-like, giving you the ability to move quickly and escape danger."
+"  It is hard to use your arms in combat, however."
+msgstr ""
+
+#. ~ Description of mutation "Empty"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid ""
+"You are one of the Empty, the rare few unable to cast even the simplest "
+"spells.  Your complete lack of mana prevents you from ever casting any magic,"
+" no matter how well you know it.  At least it doesn't prevent the use of "
+"magical items and potions."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid "Mana-Shackled"
+msgstr ""
+
+#. ~ Description of mutation "Mana-Shackled"
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid ""
+"For a reason or another you are wearing a mana-leech shackle, leaving you "
+"constantly empty of mana.  Should you get rid of it you will regain the "
+"ability to use your mana, but this is much easier said than done.  You know "
+"that these shackles are often used in prisons, so maybe you could find a way "
+"to remove it in there?"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutations.json
+msgid "Mana-Shackled effect"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutations.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid "Iron Intolerance"
+msgstr ""
+
+#. ~ Description of mutation "Iron Intolerance"
+#: data/mods/Magiclysm/mutations/mutations.json
+#: data/mods/Xedra_Evolved/mutations/mutations.json
+msgid ""
+"You were born with an allergy to iron and, to a lesser extent, steel.  "
+"Wearing or touching anything made of iron or steel will cause you pain and "
+"discomfort."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Channeling"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Channeling"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master channeling spells.  "
+"You are unable to cast any spell of the channeling school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Evocation"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Evocation"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master evocation spells.  "
+"You are unable to cast any spell of the evocation school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Conjuration"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Conjuration"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master conjuration spells.  "
+"You are unable to cast any spell of the conjuration school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Enhancement"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Enhancement"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master enhancement spells.  "
+"You are unable to cast any spell of the enhancement school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Enervation"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Enervation"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master enervation spells.  "
+"You are unable to cast any spell of the enervation school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Conveyance"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Conveyance"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master conveyance spells.  "
+"You are unable to cast any spell of the conveyance school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Restoration"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Restoration"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master restoration spells.  "
+"You are unable to cast any spell of the restoration school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid "School Deficiency: Transformation"
+msgstr ""
+
+#. ~ Description of mutation "School Deficiency: Transformation"
+#: data/mods/Magiclysm/mutations/school_deficiencies.json
+msgid ""
+"No matter how hard you try, you never managed to master transformation "
+"spells.  You are unable to cast any spell of the transformation school."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "Form of the Forest King"
+msgstr ""
+
+#. ~ Description of mutation "Form of the Forest King"
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "You can transform yourself into a bear.  Roar."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "Form of the Stalking Hunter"
+msgstr ""
+
+#. ~ Description of mutation "Form of the Stalking Hunter"
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "You can transform yourself into a cougar and stalk your enemies."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "Form of the Swift Runner"
+msgstr ""
+
+#. ~ Description of mutation "Form of the Swift Runner"
+#. ~ Description of mutation "Spirit of the Deer"
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+#: data/mods/Xedra_Evolved/mutations/playable_changeling.json
+msgid "You can transform yourself into a deer."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "Form of the Soaring Wings"
+msgstr ""
+
+#. ~ Description of mutation "Form of the Soaring Wings"
+#: data/mods/Magiclysm/mutations/shapeshifter_mutations.json
+msgid "You can transform yourself into a raven and take wing."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+#: data/mods/Xedra_Evolved/mutations/temporary.json
+msgid "Giant-sized"
+msgstr ""
+
+#. ~ Description of mutation "Giant-sized"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "Magic has made you grow to enormous size!"
+msgstr ""
+
+#. ~ Description of mutation "Lashing Tentacles"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid ""
+"You have a pair of vicious barbed tentacles growing from your shoulders."
+msgstr ""
+
+#. ~ Message when player with mutation "Lashing Tentacles" attacks
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+#, c-format
+msgid "You lash at %s with your tentacles!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Lashing Tentacles" attacks
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+#, c-format
+msgid "%1$s lashes at %2$s with their tentacles!"
+msgstr ""
+
+#. ~ Mutation name
+#. ~ Name of effect type id "effect_skinchanged_animalistic_mind"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+#: data/mods/Xedra_Evolved/effects/effects.json
+msgid "Animalistic Mind"
+msgstr ""
+
+#. ~ Description of mutation "Animalistic Mind"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "It's hard to think.  Let the instinct take over."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "Predator's Mind"
+msgstr ""
+
+#. ~ Description of mutation "Predator's Mind"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "Hunt.  Kill.  Feed."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "Beetle Bond"
+msgstr ""
+
+#. ~ Description of mutation "Beetle Bond"
+#: data/mods/Magiclysm/mutations/spell_invoked_mutations.json
+msgid "You have gained a bond with a stag beetle."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Cold Aura"
+msgstr ""
+
+#. ~ Description of mutation "Cold Aura"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your presence is so dangerous you can freeze everything around yourself.  You"
+" are currently suppressing this power."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Cold Aura" to "COLD_AURA_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Everything around you is covered in frost!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Cold Aura (on)"
+msgstr ""
+
+#. ~ Description of mutation "Cold Aura (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your presence is so dangerous you can freeze everything around yourself."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Cold Aura (on)" to
+#. "COLD_AURA_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your frozen powers."
+msgstr ""
+
+#. ~ Description of mutation "Split"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your body and soul were split in half, and part of it were left inside the "
+"ley-line, connected with your main body with tiniest, ethereal thread.  In "
+"danger situation, you will abandon your main body and turn back into copy, "
+"with all knowledge and skills you have."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Frozen Pressure"
+msgstr ""
+
+#. ~ Description of mutation "Frozen Pressure"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your presence is so dangerous living creatures nearby are smashed.  You are "
+"currently suppressing this power."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Frozen Pressure" to
+#. "FROZEN_PRESSURE_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Living creatures around you are crushed!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Frozen Pressure (on)"
+msgstr ""
+
+#. ~ Description of mutation "Frozen Pressure (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Your presence is so dangerous living creatures nearby are smashed."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Frozen Pressure (on)" to
+#. "FROZEN_PRESSURE_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your frozen pressure."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Rad Senses"
+msgstr ""
+
+#. ~ Description of mutation "Rad Senses"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"You can perceive radiation being emitted in your surroundings with sufficient"
+" precision to see while totally blind.  You suppress it now."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Rad Senses" to "CLAIRVOYANCE_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You see everything!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Rad Senses (on)"
+msgstr ""
+
+#. ~ Description of mutation "Rad Senses (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"You can perceive radiation being emitted in your surroundings with sufficient"
+" precision to see while totally blind."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Rad Senses (on)" to
+#. "CLAIRVOYANCE_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your rad senses."
+msgstr ""
+
+#. ~ Description of mutation "Mind Reading"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"You can feel the living energy of creatures around you, which allows you to "
+"predict their movements or words.  You suppress it now."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Mind Reading" to "MIND_READ_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You reach out with your powers, seeking nearby living beings."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Mind Reading (on)"
+msgstr ""
+
+#. ~ Description of mutation "Mind Reading (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"You can feel the living energy of creatures around you, which allows you to "
+"predict their movements or words."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Mind Reading (on)" to
+#. "MIND_READ_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your mind abilities."
+msgstr ""
+
+#. ~ Description of mutation "Soul Pressure"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your presence is so dangerous you can burn living creatures around you.  You "
+"suppress it now."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Soul Pressure" to
+#. "SOUL_PRESSURE_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Living creatures around you start to burn!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Soul Pressure (on)"
+msgstr ""
+
+#. ~ Description of mutation "Soul Pressure (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Your presence is so dangerous you can burn living creatures around you."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Soul Pressure (on)" to
+#. "SOUL_PRESSURE_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your soul pressure."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Freezing Aura"
+msgstr ""
+
+#. ~ Description of mutation "Freezing Aura"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your body emits a large amount of cold energy, which freezes all enemies near"
+" you.  You suppress this ability now."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Freezing Aura" to
+#. "FREEZING_AURA_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Living creatures around you freezes!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Freezing Aura (on)"
+msgstr ""
+
+#. ~ Description of mutation "Freezing Aura (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your body emits a large amount of cold energy, which freezes all enemies near"
+" you."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Freezing Aura (on)" to
+#. "FREEZING_AURA_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your freezing aura."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Toxic Aura"
+msgstr ""
+
+#. ~ Description of mutation "Toxic Aura"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid ""
+"Your body can emit an aura of deadly toxins.  You suppress this ability now."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Toxic Aura" to "TOXIC_AURA_ON"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Living creatures around you are poisoned!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Toxic Aura (on)"
+msgstr ""
+
+#. ~ Description of mutation "Toxic Aura (on)"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "Your body can emit an aura of deadly toxins."
+msgstr ""
+
+#. ~ Message when transforming from mutation  "Toxic Aura (on)" to
+#. "TOXIC_AURA_OFF"
+#: data/mods/Magiclysm/mutations/spell_triggering_mutations.json
+msgid "You suppress your toxic aura."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: blue"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: blue"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "You have a sky- or sea-colored skin tone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: green"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: green"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "You have a green skin tone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: gray"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: gray"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "You have a gray skin tone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: midnight"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: midnight"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "You have an almost pure black skin tone."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: opal"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: opal"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid ""
+"You have an opalescent skin tone, pale with a faint shimmering rainbow of "
+"colors."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "Skin tone: red"
+msgstr ""
+
+#. ~ Description of mutation "Skin tone: red"
+#: data/mods/Magiclysm/mutations/vanity.json
+msgid "You have a reddish or very ruddy skin tone."
+msgstr ""
+
+#. ~ Description of mutation "Blood Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Animists are known for their blood magic, and being a Biomancer you are able to take it another step further by strengthening your blood.  The dark arts have opened to you, and while dangerous, are incredible to behold.\n"
+"\n"
+"Ichor: Your Blood Mage abilities grant you the ability to steal some health from your enemies from time to time, and immunity to bleeding."
+msgstr ""
+
+#. ~ Description of mutation "Boreal Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Named for the auroras that grace the poles of the earth, the Boreal mage specializes in auras that protect ethereally.  Boreal mages definitely know their way around cold spells, but their real strength is protection.\n"
+"\n"
+"Boreal Wind: Your Boreal Mage abilities grant you good resistance to temperature conditions.  Also, your hands emit a small amount of cold, increasing your damage in melee."
+msgstr ""
+
+#. ~ Description of mutation "Cleansing Flame"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The Cleansing Flame is the fire that burns away the chaff, in preparation for the regrowth of new life.\n"
+"\n"
+"Cleansing Blaze: Your Cleansing Flame abilities grant you good resistance to temperature conditions.  You are also immune to infection, as your body cleanses every tainted part of you, constantly."
+msgstr ""
+
+#. ~ Description of mutation "Earth Elemental"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Stone is superior to flesh.  You have allowed this axiom into your life, and work to correct your own weakness with biomancy.  The strength of the Earth rushed up to meet you with open arms.\n"
+"\n"
+"Earth Creep: Your Earth Elemental body grant you good resistance against cut damage, total immunity to electricity, great strength, and colossal stamina."
+msgstr ""
+
+#. ~ Description of mutation "Fire Elemental"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"You have used your expertise in Biomancy to change your body more toward your affinity for fire as a Kelvinist.  Fire doesn't bother you as much anymore, and your blood is flammable when it touches the air, resulting in a gout of flame when something hurts you.  You are also starting to study more spells that focus on using your own body's affinity for fire.\n"
+"\n"
+"Salamander: Your Fire Elemental abilities grant you good resistance to temperature conditions and heat damage.  Also, your body emits streams of blistering heat towards anyone who attacks you."
+msgstr ""
+
+#. ~ Message in effect "FIRE_ELEMENTAL_BURNBACK"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid "Flame and heat flash out from where you've been hit."
+msgstr ""
+
+#. ~ NPC message in effect "FIRE_ELEMENTAL_BURNBACK"
+#. ~ NPC message in effect "integrated_coal_skin_burnback"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+#: data/mods/Xedra_Evolved/spells/integrated_armor_spells.json
+#, c-format
+msgid "%1$s's body jets fire and heat out from the wound."
+msgstr ""
+
+#. ~ Description of mutation "Force Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Force = Mass x Acceleration.  This is the typical thing that people think of nowadays when the word is used, but Force Mages have a different meaning, coming from traditional roots: untyped magical damage appears to be a ghostly \"force.\"  This might be the effect of the attunement, but the cause is even more intriguing: they appear to turn Newton's Third Law on its head.  Magical scholars of the 21st century have theorized that this isn't really the case; instead of the opposite reaction happening on this plane of existence, a Force Mage uses the Aetherium's alternate Laws to rebound the force back upon itself, effectively doubling the force in the same direction instead.  However this ability comes with limitations, as the Force Mage can only do this for melee damage.\n"
+"\n"
+"Motion: Your Force Mage abilities grant you better speed, and increased damage in melee."
+msgstr ""
+
+#. ~ Description of mutation "Gaia's Chosen"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The Champion of the Earth, Gaia's Chosen is blessed on all things nature, animate and inanimate.\n"
+"\n"
+"Gaia's Champion: Your Gaia's Chosen abilities grant you a larger HP pool, and enemies have a chance to impale themselves upon your thorns when they attack you.  However, the thorns growing from your skin means you feel pain more acutely."
+msgstr ""
+
+#. ~ Message in effect "GAIAS_CHOSEN_THORNS"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid "Thorns tear at your opponent as they strike you."
+msgstr ""
+
+#. ~ NPC message in effect "GAIAS_CHOSEN_THORNS"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+#, c-format
+msgid "%1$s's thorny brambles bite into their attacker."
+msgstr ""
+
+#. ~ Description of mutation "Glacier Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The power of a Glacier Mage is backed by a thousand tons of ice and snow, with a brutal might in their spells.  While they are skilled with cold spells, their greatest strength is in offense.\n"
+"\n"
+"Stalactite: Your Glacier Mage abilities grant you good resistance to temperature conditions, and enemies are often hurt when try to attack you in melee."
+msgstr ""
+
+#. ~ Description of mutation "Golemancer"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The Golemancer is the ancient myth of the clay golem, made reality from constant use of Animist summons and Earthshaper self-strengthening spells.  Takes some traits from the golems they create, such as immunity to slowing effects.\n"
+"\n"
+"Clay: Your Golemancer abilities make you perfectly steady, as nothing can slow you down.  Your body also deflects some of the damage you take."
+msgstr ""
+
+#. ~ Description of mutation "Gravity Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The fundamental Laws of the universe are thought of as the end-all-be-all in magical circles, and the Gravity Mage is a result of mages mucking around with those laws.  Unfortunately, this attunement does not give supreme control over gravity as a fundamental force, though the affinity is prominent and comes with some non-negligible benefits.\n"
+"\n"
+"Weight: Your Gravity Mage abilities increase your attack speed and melee damage for a bit, double your ability to carry weight, and allow you to climb without using ladders or support."
+msgstr ""
+
+#. ~ Description of mutation "Ice Elemental"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Through your power in Biomancy, you have changed your body towards your Kelvinist affinity for ice.  Extreme cold has less effect on you, and your superchilled skin causes frostbite when touching others.  You're also starting to research more magic that focuses on your body's inherent ice affinity.\n"
+"\n"
+"Iceberg: Your Ice Elemental abilities grant you good resistance to temperature conditions and cold damage, your hands can emit small amount of cold, increasing your damage in melee, and enemies impale themselves on ice spikes when they attack you."
+msgstr ""
+
+#. ~ Description of mutation "Magnetism Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"This attunement grants you a magical control over the forces of magnetism.\n"
+"\n"
+"Power: Your Magnetism Mage abilities grant you a good defense against firearms, perfect electric immunity, and the ability to see electric creatures from any distance."
+msgstr ""
+
+#. ~ Description of mutation "Permafrost Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"This attunement focuses on continuously freezing foes to death.\n"
+"\n"
+"Blizzard: Your Permafrost Mage abilities grant you good resistance to temperature conditions.  Also, enemies who attack you may find themselves frozen solid."
+msgstr ""
+
+#. ~ Description of mutation "Shaman"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Deeply attuned to the spiritual fabric that shapes and nurtures the natural world, shamans call upon the primeval spirits of nature for aid and advice.  Be careful however, for ancient spirits are fickle and unknowable things.\n"
+"\n"
+"Spirits: Your Shaman abilities double your natural mana regeneration."
+msgstr ""
+
+#. ~ Description of mutation "Soulfire"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The Soulfire is a phenomena of the caster's spirit binding to a fragment of a spirit of flame.  This makes it possible for the Soulfire to use its namesake as an element - much like fire, it does burn, but it burns away at the soul instead of the flesh.\n"
+"\n"
+"Spirit Flames: Your Soulfire abilities grant you good resistance to temperature conditions.  Your hands also emit the purest of blazes, which increases your damage in melee."
+msgstr ""
+
+#. ~ Description of mutation "Storm Elemental"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"You've used your knowledge of Biomancy to change your body into a form befitting a Stormshaper.  You can better withstand the power of electricity, and sparks leap from your skin when something hits you.  You're beginning to study spells that utilize your body's affinity for the electric.\n"
+"\n"
+"Cyclone: Your Storm Elemental abilities grant you total electric immunity, and reflective zippers to anyone who tries to attack you."
+msgstr ""
+
+#. ~ Message in effect "STORM_ELEMENTAL_ZAPBACK"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid "Electricity arcs out from where you've been hit."
+msgstr ""
+
+#. ~ NPC message in effect "STORM_ELEMENTAL_ZAPBACK"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+#, c-format
+msgid "%1$s's body arcs electricity from the wound."
+msgstr ""
+
+#. ~ Description of mutation "Sun Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The Sun Mage has been studying the Laws governing heat, and has attained a special relationship with that life-giving yellow orb in the sky.  Glimpses of the Sun meet its foes, and its own burning light pierces the darkness.\n"
+"\n"
+"Solar Warrior: Your Sun Mage abilities blind everyone who are mean to you."
+msgstr ""
+
+#. ~ Message in effect "solar_blinding"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid "A brilliant light radiates from where you've been hit."
+msgstr ""
+
+#. ~ NPC message in effect "solar_blinding"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+#, c-format
+msgid "%1$s's body is enveloped in a bright glare."
+msgstr ""
+
+#. ~ Description of mutation "Tundra Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"The barren cold of the world's far reaches flows through the Tundra Mage.  They find power in the all-pervasive frost of the North and in the creatures that defy its deathly chill.\n"
+"\n"
+"Arctic: Your Tundra Mage abilities grant you good resistance to temperature conditions."
+msgstr ""
+
+#. ~ Description of mutation "Void Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"Where there is nothing, there is still power, and the Void Mages embody that power.  The ability to wield emptiness itself is at their fingertips, and no living creature can withstand the call of the void.\n"
+"\n"
+"Drainer: Your Void Mage abilities grant you perfect night vision, and envenom everyone you attack."
+msgstr ""
+
+#. ~ Description of mutation "Vulcanist"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"One of the most destructive forces on earth, a Volcano Mage takes some aspect of its namesake.  Their spells tend to be a little slow, but their resilience in proximity to a volcano is legendary.\n"
+"\n"
+"Lava: Your Vulcanist abilities grant you good resistance to temperature conditions, total heat immunity, and immunity to smoke."
+msgstr ""
+
+#. ~ Description of mutation "Wither Mage"
+#: data/mods/Magiclysm/mutations/magic_classes/attunements.json
+msgid ""
+"While biomancers focus on both life and death; Wither Mages set their sights on the transitional period between these two stages.  They wield entropy and decay hand and hand, using it to enhance their combat prowess to surgical precision.  This confluence of abilities are what lead to assassin mages gaining this attunement.\n"
+"\n"
+"Fading: Your Wither Mage abilities grant you the ability to consume the enemies powers for a short time."
+msgstr ""
+
+#. ~ Description of mutation "Kelvinist"
+#: data/mods/Magiclysm/mutations/magic_classes/classes.json
+msgid ""
+"Disciples of the great Archwizard Lord Kelvin.  Kelvinists focus their magic "
+"on manipulation and control of the temperature of their environment, leading "
+"to spectacularly powerful explosions or bone-chilling cold.  Your powers "
+"grant you some immunity from fire that increases with your skills."
+msgstr ""
+
+#. ~ Description of mutation "Stormshaper"
+#: data/mods/Magiclysm/mutations/magic_classes/classes.json
+msgid ""
+"Stormshapers follow ancient arcane disciplines of meditation and harmony with"
+" the winds and tides that shape the planet.  Through their deep connection to"
+" these forces, they can request powerful changes.  Your powers grant you some"
+" immunity from electricity that increases with your skills."
+msgstr ""
+
+#. ~ Description of mutation "Black Dragon Scales"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"Your skin has grown thick and a set of draconic black scales has grown to "
+"cover most of your body, acting as natural armor.  Greatly reduces wet "
+"effects."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Reptilian Legs"
+msgstr ""
+
+#. ~ Description of mutation "Reptilian Legs"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"Your legs and feet have become reptile-like and your toenails have grown into"
+" short claws.  Fortunately they don't impede your movement."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Dragon Legs"
+msgstr ""
+
+#. ~ Description of mutation "Dragon Legs"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"Your legs and feet have become dragon-like and the claws on your toes have "
+"developed into incredibly tough talons.  These are fearsome and powerful, but"
+" prevent you from wearing shoes and slightly impede your movement."
+msgstr ""
+
+#. ~ Message when player with mutation "Dragon Legs" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "You slash %s with your clawed feet!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Dragon Legs" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "%1$s slashes %2$s with their clawed feet!"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Dragon Horns"
+msgstr ""
+
+#. ~ Description of mutation "Dragon Horns"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"You have a pair of long, curved back, dragon-like horns.  They allow you to "
+"make a strong bashing headbutt attack, but prevent wearing headwear that is "
+"not made of fabric."
+msgstr ""
+
+#. ~ Message when player with mutation "Dragon Horns" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "You headbutt %s with your draconic horns!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Dragon Horns" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "%1$s headbutts %2$s with their draconic horns!"
+msgstr ""
+
+#. ~ Description of mutation "Black Dragon Wings"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"You have a pair of large, black scaled dragon wings.  While you have control "
+"of them and can make attacks with them, they are not large enough nor strong "
+"enough to allow you to fly and they throw you off balance, greatly reducing "
+"your ability to dodge.  They can be used to cast a protective spell on "
+"yourself however."
+msgstr ""
+
+#. ~ Message when player with mutation "Black Dragon Wings" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "You bash %s with your powerful wings!"
+msgstr ""
+
+#. ~ Message when NPC with mutation "Black Dragon Wings" attacks
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+#, c-format
+msgid "%1$s bashes %2$s with their powerful wings!"
+msgstr ""
+
+#. ~ Description of mutation "Draconic Magic"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"You are imbued with the ancient magic powers of dragons, improving your mana "
+"reserves and opening your mind to amazing feats of magic."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Stubby Dragon Tail"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Short Dragon Tail"
+msgstr ""
+
+#. ~ Description of mutation "Short Dragon Tail"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"You have a short, dragonlike tail.  You can use it decently as a club of "
+"sorts, but it's not doing anything to help you balance.  Prevents wearing "
+"non-fabric pants."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Draconic Predator"
+msgstr ""
+
+#. ~ Description of mutation "Draconic Predator"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"You have become something more than human.  Something better - and far, far "
+"worse.  Combat skills are easy to learn and maintain, and unlike lesser "
+"predators, your mental faculties don't suffer at all."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Draconic Apex Predator"
+msgstr ""
+
+#. ~ Description of mutation "Draconic Apex Predator"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"Your mind and brain have fully adapted to your new place at the top of the "
+"magical food chain.  You can effortlessly master and maintain combat skills, "
+"and your malevolent intellect only grows."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid "Draconic Acid Immunity"
+msgstr ""
+
+#. ~ Description of mutation "Draconic Acid Immunity"
+#: data/mods/Magiclysm/mutations/mutation_paths/black_dragon.json
+msgid ""
+"Like your scale and hide, your remaining flesh has been transmuted by black "
+"dragon's essence.  You are invulnerable to acid now."
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Dwarf"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Dwarf"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Your heart beats in time with the rhythm of the Earth."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Dwarf" for male
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_male"
+msgid "Entered the halls of the King Under the Mountain."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Dwarf" for female
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_female"
+msgid "Entered the halls of the King Under the Mountain."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Child of the Stone"
+msgstr ""
+
+#. ~ Description of mutation "Child of the Stone"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"Trust the humans to make a mess of the world.  Trust a dwarf to rebuild it "
+"better than they found it."
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Dwarven Purifier"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Elf"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Elf"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "You hear the songs of nature."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Elf" for male
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_male"
+msgid "Passed into the West."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Elf" for female
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_female"
+msgid "Passed into the West."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Firstborn"
+msgstr ""
+
+#. ~ Description of mutation "Firstborn"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"The first elves sprang forth from magic and moonlight before the ancestors of"
+" humanity stopped scurrying through the underbrush to avoid the dinosaurs.  "
+"You won't let that legacy die with you."
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Elven Purifier"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Goblin"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Goblin"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "You feel the urge to steal a baby or two."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Goblin" for male
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_male"
+msgid "Went full goblin mode."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Goblin" for female
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_female"
+msgid "Went full goblin mode."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Night Stalker"
+msgstr ""
+
+#. ~ Description of mutation "Night Stalker"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"Long ago, the others feared your people as hunters in the night.  In this new"
+" world, it's time to revive that legacy."
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Goblin Purifier"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Lizardfolk"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Lizardfolk"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "You remember the warmth of your home swamps."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Lizardfolk" for male
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_male"
+msgid "Returned to the World Egg."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Lizardfolk" for female
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_female"
+msgid "Returned to the World Egg."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Scaled One"
+msgstr ""
+
+#. ~ Description of mutation "Scaled One"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"The old world was nothing like your home swamps, but this new world is "
+"something you understand."
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Lizardfolk Purifier"
+msgstr ""
+
+#. ~ Mutation class name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Ravenfolk"
+msgstr ""
+
+#. ~ "mutagen_message" of mutation class "Ravenfolk"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"You feel the call of the sky.  There are treasures out there to collect."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Ravenfolk" for male
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_male"
+msgid "Fell from your perch on the World Tree."
+msgstr ""
+
+#. ~ Memorial message of mutation class "Ravenfolk" for female
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgctxt "memorial_female"
+msgid "Fell from your perch on the World Tree."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Thought and Memory"
+msgstr ""
+
+#. ~ Description of mutation "Thought and Memory"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"In the ruins of the old world, you're sure there are plenty of new places to "
+"go and new things to find."
+msgstr ""
+
+#. ~ Vitamin name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Ravenfolk Purifier"
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Dwarven Build"
+msgstr ""
+
+#. ~ Description of mutation "Dwarven Build"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"Dwarves are smaller than humans, the better to deal with confined spaces "
+"underground, but as solid as the mountains (+2 STR, -1 DEX)."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Earthborn Artisan"
+msgstr ""
+
+#. ~ Description of mutation "Earthborn Artisan"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+#, no-c-format
+msgid ""
+"Born from the living earth, your people are naturally adept at the "
+"manipulation of the physical world.  Your crafting speed is 10% faster, and "
+"you can even craft in darkness."
+msgstr ""
+
+#. ~ Mutation name
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid "Darksight"
+msgstr ""
+
+#. ~ Description of mutation "Darksight"
+#: data/mods/Magiclysm/mutations/mutation_paths/fantasy_species.json
+msgid ""
+"Long ages underground or under the night boughs have made your people capable"
+" of seeing into the infrared spectrum."
+msgstr ""
