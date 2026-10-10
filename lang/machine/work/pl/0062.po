@@ -1306,7 +1306,7 @@ msgstr "Miejsce docelowe dla podręczników sztuk walki."
 #. ~ Description of loot zone "Loot: Tool Magazines"
 #: data/json/loot_zones.json
 msgid "Destination for tool magazines."
-msgstr "Miejsce docelowe dla magazynów narzędziowych."
+msgstr "Miejsce docelowe dla czasopism o narzędziach."
 
 #. ~ Description of loot zone "Loot: Traps"
 #: data/json/loot_zones.json
@@ -1350,7 +1350,7 @@ msgid ""
 msgstr ""
 "Rezygnując z ataku na rzecz obrony, lepiej chronisz się przed obrażeniami.\n"
 "\n"
-"Obrażenia przy blokowaniu zmniejszone o 100% zręczności, +2 do skuteczności blokowania, +1,0 do umiejętności uniki."
+"Obrażenia przy blokowaniu zmniejszone o 100% zręczności, +2 do skuteczności blokowania, +1,0 do umiejętności wykonywania uników."
 
 #. ~ Description of martial art "Barbaran Montante"
 #: data/json/martialarts.json
@@ -1392,7 +1392,7 @@ msgid ""
 msgstr ""
 "Czujesz rytm podczas ruchu. Trudniej cię trafić, a twoje kopnięcia są jeszcze wspanialsze!\n"
 "\n"
-"+1,0 do umiejętności uniki.\n"
+"+1,0 do umiejętności wykonywania uników.\n"
 "Umożliwia techniki „Kopniak z obrotu” i „Kopniak z zamachem”.\n"
 "Trwa 3 tury."
 
@@ -1433,7 +1433,7 @@ msgid ""
 msgstr ""
 "Podobnie jak żuraw, szybko unikasz niebezpieczeństwa i odpowiadasz ciosem.\n"
 "\n"
-"+1 do celności, +1,0 do umiejętności uniki.\n"
+"+1 do celności, +1,0 do umiejętności wykonywania uników.\n"
 "Umożliwia techniki „Kopniak żurawia” i „Uderzenie żurawia”.\n"
 "Trwa 3 tury."
 
@@ -1460,7 +1460,7 @@ msgid ""
 msgstr ""
 "Poświęcasz chwilę na rozmyślanie o minionych i przyszłych bitwach. Ta refleksja ochroni cię przed kolejnymi obrażeniami.\n"
 "\n"
-"+2 do skuteczności blokowania, obrażenia przy blokowaniu zmniejszone o 100% inteligencji, +1,0 do umiejętności uniki.\n"
+"+2 do skuteczności blokowania, obrażenia przy blokowaniu zmniejszone o 100% inteligencji, +1,0 do umiejętności wykonywania uników.\n"
 "Trwa 2 tury."
 
 #. ~ Description of buff "Fencing" in martial art "Fencing Stance"
@@ -1579,7 +1579,7 @@ msgstr ""
 "Przyjmujesz postawę zapewniającą większą ruchliwość i stabilność. Trzymasz ręce w gardzie z łokciami z przodu, by się chronić.\n"
 "\n"
 "Obrażenia przy blokowaniu zmniejszone o 25% siły.\n"
-"+1,0 do umiejętności uniki."
+"+1,0 do umiejętności wykonywania uników."
 
 #. ~ Description of buff "Krav Maga" in martial art "Strike Vitals"
 #: data/json/martialarts.json
@@ -1659,7 +1659,7 @@ msgid ""
 msgstr ""
 "Ninja szkolą się, by osiągnąć niezwykłą zwinność i ruchliwość.\n"
 "\n"
-"+1,0 do umiejętności uniki, celność zwiększona o 20% zręczności.\n"
+"+1,0 do umiejętności wykonywania uników, celność zwiększona o 20% zręczności.\n"
 "Trwa 1 turę."
 
 #. ~ Description of buff "Ninjutsu" in martial art "Loss of Surprise"
@@ -1695,7 +1695,7 @@ msgid ""
 "+20% damage.\n"
 "Lasts 1 turn."
 msgstr ""
-"Twój przeciwnik jest dokładnie tam, gdzie go chcesz!\n"
+"Masz przeciwnika dokładnie tam, gdzie chcesz go mieć!\n"
 "\n"
 "+20% do obrażeń.\n"
 "Trwa 1 turę."
@@ -1844,7 +1844,7 @@ msgid ""
 msgstr ""
 "Inni mogą sądzić, że zataczasz się bez celu, ale ty wiesz swoje. Każdy ruch jest obliczony na łatwe uniknięcie obrażeń.\n"
 "\n"
-"+2 próby uniku, umiejętność uniki zwiększona o 20% inteligencji."
+"+2 próby uniku, umiejętność wykonywania uników zwiększona o 20% inteligencji."
 
 #. ~ Description of martial art "Bionic Combatives"
 #: data/json/martialarts_fictional.json
@@ -1924,7 +1924,7 @@ msgid ""
 msgstr ""
 "Jesteś przerażającym potworem na polu bitwy! Przeciwnikom trudniej będzie się bronić.\n"
 "\n"
-"+1 do celności, +1,0 do umiejętności uniki.\n"
+"+1 do celności, +1,0 do umiejętności wykonywania uników.\n"
 "Trwa 3 tury. Kumuluje się 2 razy."
 
 #. ~ Message of martial technique "Grab Break"
@@ -1944,7 +1944,7 @@ msgstr ""
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "<npcname> lashes out at %s with a Viper Bite"
-msgstr "<npcname> wykonuje Ukąszenie żmii, cel: %s"
+msgstr "<npcname> wykonuje technikę „Ukąszenie żmii” na celu: %s"
 
 #. ~ Condition description of martial technique "Viper Tail"
 #. ~ Condition description of martial technique "Viper Strike"
@@ -1956,7 +1956,7 @@ msgstr "Wymaga ogłuszonego celu"
 #: data/json/martialarts_fictional.json
 #, c-format
 msgid "You meet %s head-on with a stunning slam"
-msgstr "Zderzasz się czołowo z celem %s, zadając ogłuszający cios"
+msgstr "Zderzasz się czołowo z celem: %s, zadając mu ogłuszający cios"
 
 #. ~ Message of martial technique "Toad Slam"
 #: data/json/martialarts_fictional.json
@@ -2041,7 +2041,7 @@ msgstr "Uczucie mrowienia"
 #. ~ Morale text
 #: data/json/morale_types.json
 msgid "Anguished by memories of butchering a person's corpse"
-msgstr "Udręka przez wspomnienia ćwiartowania ludzkich zwłok"
+msgstr "Udręka na wspomnienie ćwiartowania ludzkich zwłok"
 
 #. ~ Morale text
 #: data/json/morale_types.json
@@ -2299,7 +2299,7 @@ msgid ""
 "nowhere.  This is going to take more than a cup of coffee and a monkey wrench"
 " to fix."
 msgstr ""
-"Służysz jako marynarka w US Navy i spędziłaś ostatnie kilka lat, pracując na "
+"Służysz w US Navy jako marynarz i spędziłaś ostatnie kilka lat, pracując na "
 "pokładzie lotniskowca. Choć przeszkolono cię do walki, twoim głównym "
 "obowiązkiem było utrzymanie okrętu. Po jakimś zdarzeniu, którego nie "
 "rozumiesz, lotniskowiec stał się pływającym cmentarzem pośrodku niczego. "
@@ -2496,10 +2496,10 @@ msgid ""
 "and biology.  With your trusty mortar and pestle, you hope to grind the "
 "undead to a pulp."
 msgstr ""
-"Byłeś farmaceutą pracującym w ogólnodostępnej aptece. Nie tylko wydawałeś "
-"tabletki: masz ogromną wiedzę o przygotowywaniu leków, biochemii i biologii. "
-"Ze swoim niezawodnym moździerzem i tłuczkiem masz nadzieję utrzeć nieumarłych"
-" na miazgę."
+"Byłeś farmaceutą pracującym w lokalnej aptece. Nie tylko wydawałeś tabletki: "
+"masz ogromną wiedzę o przygotowywaniu leków, biochemii i biologii. Ze swoim "
+"niezawodnym moździerzem i tłuczkiem masz nadzieję utrzeć nieumarłych na "
+"miazgę."
 
 #. ~ Description of profession "Pharmacist" for female
 #: data/json/professions.json
