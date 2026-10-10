@@ -19,11 +19,13 @@ msgid ""
 "A module that uses a combination of vector integration and egocentric mapping"
 " to find the best path available."
 msgstr ""
+"Moduł, który łączy integrację wektorową z mapowaniem egocentrycznym, aby "
+"znaleźć najlepszą dostępną ścieżkę."
 
 #. ~ Description of "memory banks module"
 #: data/json/items/robot_parts.json
 msgid "A module that allows for the storage and recovery of information."
-msgstr ""
+msgstr "Moduł umożliwiający przechowywanie i odzyskiwanie informacji."
 
 #. ~ Description of "self monitoring sensors"
 #: data/json/items/robot_parts.json
@@ -31,6 +33,8 @@ msgid ""
 "An array of sensors and diagnostic modules allowing a robot to perceive "
 "itself."
 msgstr ""
+"Zestaw czujników i modułów diagnostycznych, dzięki którym robot może "
+"postrzegać samego siebie."
 
 #. ~ Description of "AI core"
 #: data/json/items/robot_parts.json
@@ -38,30 +42,33 @@ msgid ""
 "A module that is responsible for decision-making, it basically runs the AI of"
 " a robot."
 msgstr ""
+"Moduł odpowiedzialny za podejmowanie decyzji; w zasadzie to on obsługuje SI "
+"robota."
 
 #. ~ Description of "gun operating system"
 #: data/json/items/robot_parts.json
 msgid "A system that can operate most conventional weapons."
-msgstr ""
+msgstr "System, który potrafi obsługiwać większość konwencjonalnej broni."
 
 #. ~ Description of "set of tiny spidery legs"
 #: data/json/items/robot_parts.json
 msgid "A set of tiny, pointy legs, like the ones found under a skitterbot."
-msgstr ""
+msgstr "Zestaw maleńkich, spiczastych odnóży, takich jak te pod smyrgobotem."
 
 #. ~ Item name
 #: data/json/items/robot_parts.json
 msgid "set of small tank treads"
 msgid_plural "sets of small tank treads"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zestaw małych gąsienic"
+msgstr[1] "zestawy małych gąsienic"
+msgstr[2] "zestawów małych gąsienic"
+msgstr[3] "zestawu małych gąsienic"
 
 #. ~ Description of "set of small tank treads"
 #: data/json/items/robot_parts.json
 msgid "A set of small tank treads, like the ones used by the \"Beagle\" mini-tank."
 msgstr ""
+"Zestaw małych gąsienic, takich jak te używane przez mini-czołg „Beagle”."
 
 #. ~ Description of "police bot chassis"
 #: data/json/items/robot_parts.json
@@ -69,15 +76,17 @@ msgid ""
 "What's left when you remove all moving parts and electronics.  It's the "
 "skeleton and armor of a police bot."
 msgstr ""
+"To, co zostaje po usunięciu wszystkich ruchomych części i elektroniki. To "
+"szkielet i pancerz bota policyjnego."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "encryption codes"
 msgid_plural "encryption codes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "kody szyfrujące"
+msgstr[1] "kody szyfrujące"
+msgstr[2] "kodów szyfrujących"
+msgstr[3] "kodów szyfrujących"
 
 #. ~ Description of "encryption codes"
 #: data/json/items/software.json
@@ -85,15 +94,17 @@ msgid ""
 "There are numerous security keys with dates for potential future access to "
 "encrypted archived data."
 msgstr ""
+"Liczne klucze bezpieczeństwa z datami, umożliwiające potencjalny przyszły "
+"dostęp do zaszyfrowanych danych archiwalnych."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "archive data"
 msgid_plural "archive data"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "dane archiwalne"
+msgstr[1] "dane archiwalne"
+msgstr[2] "danych archiwalnych"
+msgstr[3] "danych archiwalnych"
 
 #. ~ Description of "archive data"
 #: data/json/items/software.json
@@ -103,29 +114,33 @@ msgid ""
 "report closer to the Cataclysm, but also a reduction in the number of "
 "facilities still submitting reports."
 msgstr ""
+"Niezwykle mocno skompresowane dane badawcze, statystyki obserwacji i "
+"eksperymentów. Jedyny wzorzec, jaki udaje ci się rozpoznać, to wzrost liczby "
+"raportów w miarę zbliżania się Kataklizmu, ale też spadek liczby placówek, "
+"które wciąż nadsyłały raporty."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "junk file"
 msgid_plural "junk files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zbędny plik"
+msgstr[1] "zbędne pliki"
+msgstr[2] "zbędnych plików"
+msgstr[3] "zbędnego pliku"
 
 #. ~ Description of "junk file"
 #: data/json/items/software.json
 msgid "A useless piece of electronic data."
-msgstr ""
+msgstr "Bezużyteczny kawałek danych elektronicznych."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "questionable media file"
 msgid_plural "questionable media files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "podejrzany plik multimedialny"
+msgstr[1] "podejrzane pliki multimedialne"
+msgstr[2] "podejrzanych plików multimedialnych"
+msgstr[3] "podejrzanego pliku multimedialnego"
 
 #. ~ Description of "questionable media file"
 #: data/json/items/software.json
@@ -133,29 +148,33 @@ msgid ""
 "You kept this file on the off-chance that it might be interesting, but you "
 "need to take a more thorough look to find out what's inside."
 msgstr ""
+"Zachowałeś ten plik na wypadek, gdyby okazał się interesujący, ale musisz mu "
+"się dokładniej przyjrzeć, żeby sprawdzić, co zawiera."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "map cache"
 msgid_plural "map caches"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pamięć podręczna mapy"
+msgstr[1] "pamięci podręczne mapy"
+msgstr[2] "pamięci podręcznych mapy"
+msgstr[3] "pamięci podręcznej mapy"
 
 #. ~ Description of "map cache"
 #: data/json/items/software.json
 msgid "Information about nearby locations stored from previous use."
 msgstr ""
+"Informacje o pobliskich miejscach zapisane podczas wcześniejszego "
+"użytkowania."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "recipe catalog"
 msgid_plural "recipe catalogs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "katalog przepisów"
+msgstr[1] "katalogi przepisów"
+msgstr[2] "katalogów przepisów"
+msgstr[3] "katalogu przepisów"
 
 #. ~ Description of "recipe catalog"
 #: data/json/items/software.json
@@ -164,33 +183,36 @@ msgid ""
 "instructions for making useful items.  Any electronic recipe catalogs will be"
 " added to this one."
 msgstr ""
+"Wyselekcjonowany zbiór plików PDF, obrazów i tekstów zawierających instrukcje"
+" wykonania przydatnych przedmiotów. Wszelkie elektroniczne katalogi przepisów"
+" zostaną dołączone do tego."
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "scientific recipe catalog"
 msgid_plural "scientific recipe catalogs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "naukowy katalog przepisów"
+msgstr[1] "naukowe katalogi przepisów"
+msgstr[2] "naukowych katalogów przepisów"
+msgstr[3] "naukowego katalogu przepisów"
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "medical recipe catalog"
 msgid_plural "medical recipe catalogs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "medyczny katalog przepisów"
+msgstr[1] "medyczne katalogi przepisów"
+msgstr[2] "medycznych katalogów przepisów"
+msgstr[3] "medycznego katalogu przepisów"
 
 #. ~ Item name
 #: data/json/items/software.json
 msgid "photo gallery"
 msgid_plural "photo galleries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "galeria zdjęć"
+msgstr[1] "galerie zdjęć"
+msgstr[2] "galerii zdjęć"
+msgstr[3] "galerii zdjęć"
 
 #. ~ Description of "photo gallery"
 #: data/json/items/software.json
@@ -198,11 +220,13 @@ msgid ""
 "A varied collection of detailed photos.  Any collections of this kind will be"
 " added to this one."
 msgstr ""
+"Zróżnicowana kolekcja szczegółowych zdjęć. Wszelkie kolekcje tego rodzaju "
+"zostaną dołączone do tej."
 
 #. ~ Description of "arm splint"
 #: data/json/items/tool_armor.json
 msgid "A tool to help set arm bones and hold them in place."
-msgstr ""
+msgstr "Narzędzie pomagające nastawić kości ręki i utrzymać je na miejscu."
 
 #. ~ Description of "arm splint"
 #: data/json/items/tool_armor.json
@@ -210,6 +234,8 @@ msgid ""
 "A tool to help set arm bones and hold them in place.  It is specifically "
 "designed to fit Huge survivors."
 msgstr ""
+"Narzędzie pomagające nastawić kości ręki i utrzymać je na miejscu. "
+"Zaprojektowano je specjalnie dla olbrzymich ocalonych."
 
 #. ~ Description of "arm splint"
 #: data/json/items/tool_armor.json
@@ -217,6 +243,8 @@ msgid ""
 "A tool to help set arm bones and hold them in place.  It is specifically "
 "designed to fit Tiny survivors."
 msgstr ""
+"Narzędzie pomagające nastawić kości ręki i utrzymać je na miejscu. "
+"Zaprojektowano je specjalnie dla malutkich ocalonych."
 
 #. ~ Description of "tourniquet (arm)"
 #. ~ Description of "tourniquet (leg)"
@@ -227,6 +255,10 @@ msgid ""
 "prolonged use will harm the limb.  It can be adjusted in size to fit "
 "different limbs."
 msgstr ""
+"Przyrząd pierwszej pomocy służący do uciskania kończyny w celu ograniczenia "
+"przepływu krwi. Należy go używać wyłącznie przy silnym krwawieniu, ponieważ "
+"długotrwałe stosowanie uszkadza kończynę. Jego rozmiar można dopasować do "
+"różnych kończyn."
 
 #. ~ Description of "makeshift blindfold"
 #: data/json/items/tool_armor.json
@@ -234,22 +266,25 @@ msgid ""
 "A crude eye covering woven from blades of grass with string attached to "
 "fasten it.  Useful for sleeping in bright areas.  Use to raise it."
 msgstr ""
+"Prymitywna opaska na oczy upleciona ze źdźbeł trawy, z przymocowanym "
+"sznurkiem do zawiązania. Przydatna do spania w jasnych miejscach. Użyj, aby "
+"ją unieść."
 
 #. ~ "msg" action message of item "makeshift blindfold"
 #. ~ "msg" action message of item "blindfold"
 #. ~ "msg" action message of item "duct tape blindfold"
 #: data/json/items/tool_armor.json
 msgid "You uncover your eyes."
-msgstr ""
+msgstr "Odsłaniasz oczy."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "makeshift blindfold (raised)"
 msgid_plural "makeshift blindfolds (raised)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "prowizoryczna opaska na oczy (uniesione)"
+msgstr[1] "prowizoryczne opaski na oczy (uniesione)"
+msgstr[2] "prowizorycznych opasek na oczy (uniesione)"
+msgstr[3] "prowizorycznej opaski na oczy (uniesione)"
 
 #. ~ Description of "makeshift blindfold (raised)"
 #: data/json/items/tool_armor.json
@@ -257,6 +292,9 @@ msgid ""
 "A crude eye covering woven from blades of grass with string attached to "
 "fasten it.  It's currently raised, letting you see.  Use to lower it."
 msgstr ""
+"Prymitywna opaska na oczy upleciona ze źdźbeł trawy, z przymocowanym "
+"sznurkiem do zawiązania. Obecnie jest uniesiona, więc widzisz. Użyj, aby ją "
+"opuścić."
 
 #. ~ Description of "blindfold"
 #: data/json/items/tool_armor.json
@@ -264,15 +302,17 @@ msgid ""
 "A simple fabric covering tied over the eyes to block sight.  Useful for "
 "sleeping in bright areas.  Use to raise it."
 msgstr ""
+"Prosta opaska z materiału zawiązywana na oczach, by zasłonić wzrok. Przydatna"
+" do spania w jasnych miejscach. Użyj, aby ją unieść."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "blindfold (raised)"
 msgid_plural "blindfolds (raised)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "opaska na oczy (uniesione)"
+msgstr[1] "opaski na oczy (uniesione)"
+msgstr[2] "opasek na oczy (uniesione)"
+msgstr[3] "opaski na oczy (uniesione)"
 
 #. ~ Description of "blindfold (raised)"
 #: data/json/items/tool_armor.json
@@ -280,6 +320,8 @@ msgid ""
 "A simple fabric covering tied over the eyes to block sight.  It's currently "
 "raised, letting you see.  Use to lower it."
 msgstr ""
+"Prosta opaska z materiału zawiązywana na oczach, by zasłonić wzrok. Obecnie "
+"jest uniesiona, więc widzisz. Użyj, aby ją opuścić."
 
 #. ~ Description of "duct tape blindfold"
 #: data/json/items/tool_armor.json
@@ -287,15 +329,17 @@ msgid ""
 "A simple covering tied over the eyes to block sight, made out of duct tape.  "
 "Useful for sleeping in bright areas.  Use to raise it."
 msgstr ""
+"Prosta opaska z taśmy klejącej zawiązywana na oczach, by zasłonić wzrok. "
+"Przydatna do spania w jasnych miejscach. Użyj, aby ją unieść."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "duct tape blindfold (raised)"
 msgid_plural "duct tape blindfolds (raised)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "opaska na oczy z taśmy klejącej (uniesione)"
+msgstr[1] "opaski na oczy z taśmy klejącej (uniesione)"
+msgstr[2] "opasek na oczy z taśmy klejącej (uniesione)"
+msgstr[3] "opaski na oczy z taśmy klejącej (uniesione)"
 
 #. ~ Description of "duct tape blindfold (raised)"
 #: data/json/items/tool_armor.json
@@ -303,11 +347,13 @@ msgid ""
 "A simple covering tied over the eyes to block sight, made out of duct tape.  "
 "It's currently raised, letting you see.  Use to lower it."
 msgstr ""
+"Prosta opaska z taśmy klejącej zawiązywana na oczach, by zasłonić wzrok. "
+"Obecnie jest uniesiona, więc widzisz. Użyj, aby ją opuścić."
 
 #. ~ Description of "pair of ear plugs"
 #: data/json/items/tool_armor.json
 msgid "Industrial-grade ear plugs.  They fit inside the ears."
-msgstr ""
+msgstr "Przemysłowe zatyczki do uszu. Wkłada się je do uszu."
 
 #. ~ Description of "go bag"
 #: data/json/items/tool_armor.json
@@ -316,6 +362,9 @@ msgid ""
 "Judging by the feel, a National Guardsman could have packed this to be ready "
 "for deployment.  Activate to unpack and enjoy."
 msgstr ""
+"Ogromna torba marynarska z przypiętym plecakiem, oba wypchane po brzegi. "
+"Sądząc po dotyku, mógł to spakować żołnierz Gwardii Narodowej, by być gotowym"
+" do wyjazdu na misję. Aktywuj, aby rozpakować i cieszyć się zawartością."
 
 #. ~ Description of "personal go bag"
 #: data/json/items/tool_armor.json
@@ -323,11 +372,14 @@ msgid ""
 "A huge duffel bag with a backpack attached, both packed to the gills.  You "
 "packed this to be ready for deployment.  Activate to unpack and enjoy."
 msgstr ""
+"Ogromna torba marynarska z przypiętym plecakiem, oba wypchane po brzegi. "
+"Spakowałeś to, by być gotowym do wymarszu. Aktywuj, aby rozpakować i cieszyć "
+"się zawartością."
 
 #. ~ Description of "leg splint"
 #: data/json/items/tool_armor.json
 msgid "A tool to help set leg bones and hold them in place."
-msgstr ""
+msgstr "Narzędzie pomagające nastawić kości nogi i utrzymać je na miejscu."
 
 #. ~ Description of "leg splint"
 #: data/json/items/tool_armor.json
@@ -335,6 +387,8 @@ msgid ""
 "A tool to help set leg bones and hold them in place.  It is specifically "
 "designed to fit Huge people."
 msgstr ""
+"Narzędzie pomagające nastawić kości nogi i utrzymać je na miejscu. "
+"Zaprojektowano je specjalnie dla olbrzymich ludzi."
 
 #. ~ Description of "leg splint"
 #: data/json/items/tool_armor.json
@@ -342,6 +396,8 @@ msgid ""
 "A tool to help set leg bones and hold them in place.  It is specifically "
 "designed to fit Tiny people."
 msgstr ""
+"Narzędzie pomagające nastawić kości nogi i utrzymać je na miejscu. "
+"Zaprojektowano je specjalnie dla malutkich ludzi."
 
 #. ~ Description of "crude welding mask"
 #: data/json/items/tool_armor.json
@@ -350,15 +406,18 @@ msgid ""
 "while welding, but it's a bit less comfortable than the real deal.  Activate "
 "it to push it up your head."
 msgstr ""
+"Prymitywna maska spawalnicza wykonana z wyprofilowanej stali. Ochroni twarz "
+"podczas spawania, ale jest nieco mniej wygodna niż prawdziwa. Aktywuj, aby "
+"zsunąć ją na czubek głowy."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "smart watch"
 msgid_plural "smart watches"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "smartwatch"
+msgstr[1] "smartwatche"
+msgstr[2] "smartwatchy"
+msgstr[3] "smartwatcha"
 
 #. ~ Description of "smart watch"
 #: data/json/items/tool_armor.json
@@ -366,15 +425,18 @@ msgid ""
 "A touchscreen watch that comes with many uses, such as a calendar, alarm, and"
 " even a fitness app, for when you want to check your health on the go!"
 msgstr ""
+"Zegarek z ekranem dotykowym o wielu zastosowaniach, takich jak kalendarz, "
+"budzik, a nawet aplikacja fitness, gdy chcesz sprawdzać swoje zdrowie w "
+"biegu!"
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "advanced smart watch"
 msgid_plural "advanced smart watches"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "zaawansowany smartwatch"
+msgstr[1] "zaawansowane smartwatche"
+msgstr[2] "zaawansowanych smartwatchy"
+msgstr[3] "zaawansowanego smartwatcha"
 
 #. ~ Description of "advanced smart watch"
 #: data/json/items/tool_armor.json
@@ -384,6 +446,10 @@ msgid ""
 "is more expensive model, featuring shock-resistant and waterproof case and a "
 "bunch of additional sensors."
 msgstr ""
+"Zegarek z ekranem dotykowym o wielu zastosowaniach, takich jak kalendarz, "
+"budzik, a nawet aplikacja fitness, gdy chcesz sprawdzać swoje zdrowie w "
+"biegu! To droższy model z odporną na wstrząsy, wodoszczelną obudową i "
+"dodatkowymi czujnikami."
 
 #. ~ Description of "fitness band"
 #: data/json/items/tool_armor.json
@@ -391,26 +457,30 @@ msgid ""
 "A fitness band that can track your heartbeat, exercise level, and calories, "
 "and also has a clock.  Activate to see your metrics."
 msgstr ""
+"Opaska fitness, która mierzy tętno, poziom aktywności i spalone kalorie, a "
+"także ma zegar. Aktywuj, aby zobaczyć swoje wskaźniki."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "diving flashlight wrist mount"
 msgid_plural "diving flashlight wrist mounts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "uchwyt latarki nurkowej na nadgarstek"
+msgstr[1] "uchwyty latarki nurkowej na nadgarstek"
+msgstr[2] "uchwytów latarki nurkowej na nadgarstek"
+msgstr[3] "uchwytu latarki nurkowej na nadgarstek"
 
 #. ~ Description of "diving flashlight wrist mount"
 #: data/json/items/tool_armor.json
 msgid ""
 "A proprietary wrist mount for a flashlight.  Not very useful on its own."
 msgstr ""
+"Niestandardowy uchwyt na nadgarstek do latarki. Sam w sobie niezbyt "
+"przydatny."
 
 #. ~ Description of a pocket in item "diving flashlight wrist mount"
 #: data/json/items/tool_armor.json
 msgid "Proprietary mount for a diving flashlight."
-msgstr ""
+msgstr "Niestandardowe mocowanie na latarkę nurkową."
 
 #. ~ Description of "fedora"
 #: data/json/items/tool_armor.json
@@ -418,6 +488,8 @@ msgid ""
 "A high-crowned, wide-brimmed, sable-colored fedora.  Its brim helps keep the "
 "sun out of your eyes.  The perfect hat for treasure hunting."
 msgstr ""
+"Fedora z wysoką główką i szerokim rondem w kolorze sobolowej czerni. Rondo "
+"chroni oczy przed słońcem. Idealny kapelusz do poszukiwania skarbów."
 
 #. ~ Description of "pair of thermal electric socks"
 #: data/json/items/tool_armor.json
@@ -425,6 +497,8 @@ msgid ""
 "A pair of socks with internal battery-powered heating elements.  Use it to "
 "turn it on."
 msgstr ""
+"Para skarpet z wewnętrznymi elementami grzewczymi zasilanymi z baterii. Użyj,"
+" aby je włączyć."
 
 #. ~ Description of "pair of thermal electric socks (on)"
 #: data/json/items/tool_armor.json
@@ -432,6 +506,8 @@ msgid ""
 "A pair of socks with internal battery-powered heating elements.  They are "
 "currently on, and continually draining batteries.  Use it to turn them off."
 msgstr ""
+"Para skarpet z wewnętrznymi elementami grzewczymi zasilanymi z baterii. "
+"Obecnie są włączone i stale zużywają baterie. Użyj, aby je wyłączyć."
 
 #. ~ Description of "thermal electric suit"
 #: data/json/items/tool_armor.json
@@ -439,6 +515,8 @@ msgid ""
 "A full-body suit of thin thermal underwear equipped with internal battery-"
 "powered heating elements.  Use it to turn it on."
 msgstr ""
+"Kombinezon z cienkiej bielizny termicznej na całe ciało, wyposażony w "
+"wewnętrzne elementy grzewcze zasilane z baterii. Użyj, aby go włączyć."
 
 #. ~ Description of "thermal electric suit (on)"
 #: data/json/items/tool_armor.json
@@ -447,6 +525,9 @@ msgid ""
 "powered heating elements.  It is currently on, and continually draining "
 "batteries.  Use it to turn it off."
 msgstr ""
+"Kombinezon z cienkiej bielizny termicznej na całe ciało, wyposażony w "
+"wewnętrzne elementy grzewcze zasilane z baterii. Obecnie jest włączony i "
+"stale zużywa baterie. Użyj, aby go wyłączyć."
 
 #. ~ Description of "pair of thermal electric gloves"
 #: data/json/items/tool_armor.json
@@ -454,6 +535,8 @@ msgid ""
 "A pair of gloves with internal battery-powered heating elements.  Use it to "
 "turn it on."
 msgstr ""
+"Para rękawiczek z wewnętrznymi elementami grzewczymi zasilanymi z baterii. "
+"Użyj, aby je włączyć."
 
 #. ~ Description of "pair of thermal electric gloves (on)"
 #: data/json/items/tool_armor.json
@@ -461,6 +544,8 @@ msgid ""
 "A pair of gloves with internal battery-powered heating elements.  They are "
 "currently on, and continually draining batteries.  Use it to turn them off."
 msgstr ""
+"Para rękawiczek z wewnętrznymi elementami grzewczymi zasilanymi z baterii. "
+"Obecnie są włączone i stale zużywają baterie. Użyj, aby je wyłączyć."
 
 #. ~ Description of "thermal electric balaclava"
 #: data/json/items/tool_armor.json
@@ -468,6 +553,8 @@ msgid ""
 "A snug cloth mask with internal battery-powered heating elements.  Use it to "
 "turn it on."
 msgstr ""
+"Dopasowana materiałowa maska z wewnętrznymi elementami grzewczymi zasilanymi "
+"z baterii. Użyj, aby ją włączyć."
 
 #. ~ Description of "thermal electric balaclava (on)"
 #: data/json/items/tool_armor.json
@@ -475,6 +562,9 @@ msgid ""
 "A snug cloth mask with internal battery-powered heating elements.  It is are "
 "currently on, and continually draining batteries.  Use it to turn it off."
 msgstr ""
+"Dopasowana materiałowa maska z wewnętrznymi elementami grzewczymi zasilanymi "
+"z baterii. Obecnie jest włączona i stale zużywa baterie. Użyj, aby ją "
+"wyłączyć."
 
 #. ~ Description of "headlamp"
 #: data/json/items/tool_armor.json
@@ -482,15 +572,17 @@ msgid ""
 "An LED headlamp with an adjustable strap so as to be comfortably worn on your"
 " head or attached to your helmet.  Use it to turn it on."
 msgstr ""
+"Latarka czołowa LED z regulowanym paskiem, dzięki któremu można ją wygodnie "
+"nosić na głowie lub przymocować do hełmu. Użyj, aby ją włączyć."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "wearable camera"
 msgid_plural "wearable cameras"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "aparat fotograficzny do noszenia"
+msgstr[1] "aparaty fotograficzne do noszenia"
+msgstr[2] "aparatów fotograficznych do noszenia"
+msgstr[3] "aparatu fotograficznego do noszenia"
 
 #. ~ Description of "wearable camera"
 #: data/json/items/tool_armor.json
@@ -499,15 +591,18 @@ msgid ""
 "sight', and flash.  You can look at your photos on the digital screen, or "
 "transfer them with a memory card.  This one can be worn over your neck."
 msgstr ""
+"Cyfrowy aparat kompaktowy z cyfrowym wizjerem, zapasowym „celownikiem "
+"mechanicznym” i lampą błyskową. Możesz oglądać zdjęcia na wyświetlaczu albo "
+"przenieść je za pomocą karty pamięci. Ten egzemplarz można nosić na szyi."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "wearable professional camera"
 msgid_plural "wearable professional cameras"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "profesjonalny aparat do noszenia"
+msgstr[1] "profesjonalne aparaty do noszenia"
+msgstr[2] "profesjonalnych aparatów do noszenia"
+msgstr[3] "profesjonalnego aparatu do noszenia"
 
 #. ~ Description of "wearable professional camera"
 #: data/json/items/tool_armor.json
@@ -518,6 +613,11 @@ msgid ""
 "Cataclysm, you could have taken professional-grade photos using this.  This "
 "one can be worn over your neck."
 msgstr ""
+"Cyfrowa lustrzanka jednoobiektywowa (SLR) 35 mm z wizjerem optycznym i "
+"cyfrowym, obiektywem zmiennoogniskowym z autofokusem i stabilizacją oraz "
+"lampą błyskową. Możesz oglądać na niej zdjęcia albo przenieść je za pomocą "
+"karty pamięci. Przed Kataklizmem można było nią robić zdjęcia na "
+"profesjonalnym poziomie. Ten egzemplarz można nosić na szyi."
 
 #. ~ Description of "headlamp (on)"
 #: data/json/items/tool_armor.json
@@ -526,15 +626,18 @@ msgid ""
 " head or attached to your helmet.  It is turned on, and continually draining "
 "batteries.  Use it to turn it off."
 msgstr ""
+"Latarka czołowa LED z regulowanym paskiem, dzięki któremu można ją wygodnie "
+"nosić na głowie lub przymocować do hełmu. Jest włączona i stale zużywa "
+"baterie. Użyj, aby ją wyłączyć."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "heavy-duty headlamp (on)"
 msgid_plural "heavy-duty headlamps (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przemysłowa latarka czołowa (wł.)"
+msgstr[1] "przemysłowe latarki czołowe (wł.)"
+msgstr[2] "przemysłowych latarek czołowych (wł.)"
+msgstr[3] "przemysłowej latarki czołowej (wł.)"
 
 #. ~ Description of "heavy-duty headlamp (on)"
 #: data/json/items/tool_armor.json
@@ -544,15 +647,19 @@ msgid ""
 "environments.  Designed for firefighters, rescue personnel and miners.  Use "
 "it to turn it off."
 msgstr ""
+"Wytrzymała latarka czołowa LED w trwałej obudowie z polimeru. Jest odporna na"
+" uderzenia i chemikalia, wodoszczelna i certyfikowana do użytku w "
+"środowiskach niebezpiecznych. Zaprojektowana dla strażaków, ratowników i "
+"górników. Użyj, aby ją wyłączyć."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "heavy-duty headlamp"
 msgid_plural "heavy-duty headlamps"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "przemysłowa latarka czołowa"
+msgstr[1] "przemysłowe latarki czołowe"
+msgstr[2] "przemysłowych latarek czołowych"
+msgstr[3] "przemysłowej latarki czołowej"
 
 #. ~ Description of "heavy-duty headlamp"
 #: data/json/items/tool_armor.json
@@ -562,6 +669,10 @@ msgid ""
 "environments.  Designed for firefighters, rescue personnel and miners.  Use "
 "it to turn it on."
 msgstr ""
+"Wytrzymała latarka czołowa LED w trwałej obudowie z polimeru. Jest odporna na"
+" uderzenia i chemikalia, wodoszczelna i certyfikowana do użytku w "
+"środowiskach niebezpiecznych. Zaprojektowana dla strażaków, ratowników i "
+"górników. Użyj, aby ją włączyć."
 
 #. ~ Description of "atomic headlamp"
 #: data/json/items/tool_armor.json
@@ -571,6 +682,10 @@ msgid ""
 "comfortably worn on your head or attached to your helmet.  Use it to close "
 "the cover and hide the light."
 msgstr ""
+"Wykonana na zamówienie, wzmocniona latarka czołowa zasilana magią rozpadu "
+"jądrowego, ze skupionym strumieniem dla bardziej użytecznej jasności. "
+"Regulowany pasek pozwala wygodnie nosić ją na głowie lub przymocować do "
+"hełmu. Użyj, aby zamknąć osłonę i ukryć światło."
 
 #. ~ Description of "atomic headlamp (covered)"
 #: data/json/items/tool_armor.json
@@ -580,6 +695,10 @@ msgid ""
 "comfortably worn on your head or attached to your helmet.  Use it to open the"
 " cover and show the light."
 msgstr ""
+"Wykonana na zamówienie, wzmocniona latarka czołowa zasilana magią rozpadu "
+"jądrowego, ze skupionym strumieniem dla bardziej użytecznej jasności. "
+"Regulowany pasek pozwala wygodnie nosić ją na głowie lub przymocować do "
+"hełmu. Użyj, aby otworzyć osłonę i odsłonić światło."
 
 #. ~ Description of "pair of basic AR glasses"
 #: data/json/items/tool_armor.json
@@ -587,15 +706,17 @@ msgid ""
 "A pair of compact augmented reality glasses with some basic functionality.  "
 "There is a camera on the rim, and it has an alarm clock feature."
 msgstr ""
+"Para kompaktowych okularów rozszerzonej rzeczywistości z podstawowymi "
+"funkcjami. Na oprawce znajduje się kamera, a okulary mają funkcję budzika."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "pair of advanced AR glasses"
 msgid_plural "pairs of advanced AR glasses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "para zaawansowanych okularów AR"
+msgstr[1] "pary zaawansowanych okularów AR"
+msgstr[2] "par zaawansowanych okularów AR"
+msgstr[3] "pary zaawansowanych okularów AR"
 
 #. ~ Description of "pair of advanced AR glasses"
 #: data/json/items/tool_armor.json
@@ -605,6 +726,11 @@ msgid ""
 "glasses.  An augmented reality overlay allows the user to zoom their view, "
 "and it displays handy information about local topology."
 msgstr ""
+"Drogi model okularów rozszerzonej rzeczywistości z adaptacyjną korekcją "
+"światła i kilkoma gadżetami, zaprojektowany tak, by współpracował z okularami"
+" korekcyjnymi. Nakładka rozszerzonej rzeczywistości pozwala użytkownikowi "
+"przybliżać widok i wyświetla przydatne informacje o ukształtowaniu terenu w "
+"okolicy."
 
 #. ~ Description of "EOD helmet"
 #: data/json/items/tool_armor.json
@@ -614,6 +740,10 @@ msgid ""
 "It is designed to protect against overpressure, fragmentation, impact, and "
 "heat."
 msgstr ""
+"Opancerzony hełm z ekranowaniem elektronicznym, zawierający kamerę, "
+"dwukierunkowe radio i latarkę czołową; dla redundancji wszystkie te "
+"urządzenia można włączać głosem. Zaprojektowany do ochrony przed "
+"nadciśnieniem, odłamkami, uderzeniami i gorącem."
 
 #. ~ Description of "RM13 combat armor"
 #: data/json/items/tool_armor.json
@@ -622,6 +752,9 @@ msgid ""
 "of Rivtech's powered armor technology.  It has a proprietary internal battery"
 " recharged by UPS.  Use it to turn it on."
 msgstr ""
+"Elegancka czarna wojskowa zbroja na całe ciało, będąca szczytowym "
+"osiągnięciem technologii zbroi wspomaganych firmy Rivtech. Ma firmową "
+"wewnętrzną baterię ładowaną z UPS-a. Użyj, aby ją włączyć."
 
 #. ~ "msg" action message of item "RM13 combat armor"
 #: data/json/items/tool_armor.json
@@ -635,11 +768,19 @@ msgid ""
 "Electro-reactive armor system:  ONLINE.\n"
 "All systems nominal."
 msgstr ""
+"Aktywujesz swoją zbroję bojową RM13.\n"
+"Rivtech Model 13 RivOS v2.19:        ONLINE.\n"
+"System obrony CBRN:                  ONLINE.\n"
+"System tłumienia akustycznego:       ONLINE.\n"
+"System regulacji termicznej:         ONLINE.\n"
+"System wzmacniania wzroku:           ONLINE.\n"
+"System pancerza elektroreaktywnego:  ONLINE.\n"
+"Wszystkie systemy w normie."
 
 #. ~ "need_charges_msg" action message of item "RM13 combat armor"
 #: data/json/items/tool_armor.json
 msgid "The RM13 combat armor's battery is dead."
-msgstr ""
+msgstr "Bateria zbroi bojowej RM13 jest rozładowana."
 
 #. ~ Description of "RM13 combat armor (on)"
 #: data/json/items/tool_armor.json
@@ -649,6 +790,10 @@ msgid ""
 "surface, the armor tenses, almost as though it were alive.  Use it to turn it"
 " off."
 msgstr ""
+"Elegancka czarna wojskowa zbroja na całe ciało, będąca szczytowym "
+"osiągnięciem technologii zbroi wspomaganych firmy Rivtech. Gdy przesuwasz "
+"palcami po jej powierzchni, zbroja się napina, niemal jakby była żywa. Użyj, "
+"aby ją wyłączyć."
 
 #. ~ "msg" action message of item "RM13 combat armor (on)"
 #: data/json/items/tool_armor.json
@@ -658,12 +803,16 @@ msgid ""
 "Shutting down.\n"
 "Your RM13 combat armor turns off."
 msgstr ""
+"Dezaktywujesz swoją zbroję bojową RM13.\n"
+"Rozpoczęto sekwencję wyłączania RivOS v2.19.\n"
+"Wyłączanie.\n"
+"Twoja zbroja bojowa RM13 wyłącza się."
 
 #. ~ "msg" action message of item "5-point anchor"
 #: data/json/items/tool_armor.json
 #, c-format
 msgid "An LED light in the %s flickers on."
-msgstr ""
+msgstr "Zapala się migocząca dioda LED w urządzeniu %s."
 
 #. ~ Description of "5-point anchor (on)"
 #: data/json/items/tool_armor.json
@@ -671,6 +820,8 @@ msgid ""
 "The harness' shoulder-mounted LED glows with a soft green hue.  There's no "
 "further indication of anything happening."
 msgstr ""
+"Dioda LED umieszczona na ramieniu uprzęży świeci łagodnym zielonym blaskiem. "
+"Nic więcej nie wskazuje, by cokolwiek się działo."
 
 #. ~ Description of "malfunctioning 5-point anchor"
 #: data/json/items/tool_armor.json
@@ -679,6 +830,9 @@ msgid ""
 "\"X.E.D.R.A\" and \"5-point anchor\" are barely legible on its radiation-"
 "stained front and back."
 msgstr ""
+"Poobijane urządzenie w kształcie dysku zamontowane na uprzęży. Na jego "
+"przedniej i tylnej stronie, poplamionych promieniowaniem, ledwo da się "
+"odczytać napisy „X.E.D.R.A” i „5-punktowa kotwica”."
 
 #. ~ "msg" action message of item "malfunctioning 5-point anchor"
 #: data/json/items/tool_armor.json
@@ -687,6 +841,8 @@ msgid ""
 "The %s emits a low-pitched clicking alarm as its mounted LED light flashes "
 "yellow."
 msgstr ""
+"Urządzenie %s emituje niski, klikający alarm, a zamontowana na nim dioda LED "
+"miga na żółto."
 
 #. ~ Description of "phase immersion suit"
 #: data/json/items/tool_armor.json
@@ -697,6 +853,11 @@ msgid ""
 "environmental protection, both in this Earth and beyond.  Use it to turn it "
 "on."
 msgstr ""
+"Pokryty zachodzącymi na siebie płytami z odblaskowego metalu, ten "
+"zaawansowany kombinezon przypomina zarówno zbroję płytową, jak i skafander "
+"astronauty. Zaprojektowany do ochrony użytkownika podczas wypraw "
+"międzywymiarowych, zapewnia niezrównaną ochronę przed warunkami otoczenia, "
+"zarówno na tej Ziemi, jak i poza nią. Użyj, aby go włączyć."
 
 #. ~ Description of "gas mask"
 #: data/json/items/tool_armor.json
@@ -709,6 +870,13 @@ msgid ""
 "admirable job at preventing smoke, gas, and contaminants derived from "
 "chemical and lab work from taking up residence in your organs."
 msgstr ""
+"Pełnotwarzowa przemysłowa maska oddechowa wykonana z mieszanki litego "
+"czarnego silikonu i gumy butylowej, zapewniająca przyzwoity komfort, czyste "
+"pole widzenia i pewne dopasowanie dzięki jednoczęściowemu wizjerowi i "
+"sześciopunktowemu mocowaniu na głowie. Jeśli do prawego portu filtra wkręcono"
+" pochłaniacz, a maskę przygotowano, znakomicie zapobiegnie temu, by dym, gazy"
+" i zanieczyszczenia z prac chemicznych i laboratoryjnych zagnieździły się w "
+"twoich narządach."
 
 #. ~ Description of a pocket in item "gas mask"
 #: data/json/items/tool_armor.json
@@ -716,21 +884,23 @@ msgid ""
 "A number of external brackets arranged around the eyepiece to retain an outer"
 " attachment."
 msgstr ""
+"Kilka zewnętrznych uchwytów rozmieszczonych wokół wizjera, służących do "
+"mocowania nakładki zewnętrznej."
 
 #. ~ Description of a pocket in item "gas mask"
 #: data/json/items/tool_armor.json
 msgid ""
 "A space behind the visor designed to accommodate the installation of inserts."
-msgstr ""
+msgstr "Przestrzeń za wizjerem przeznaczona do montażu wkładek."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "half-face gas mask"
 msgid_plural "half-face gas masks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "półmaska przeciwgazowa"
+msgstr[1] "półmaski przeciwgazowe"
+msgstr[2] "półmasek przeciwgazowych"
+msgstr[3] "półmaski przeciwgazowej"
 
 #. ~ Description of "half-face gas mask"
 #: data/json/items/tool_armor.json
@@ -740,6 +910,9 @@ msgid ""
 "chemical contaminants - though safety goggles are advised!  It must be "
 "prepared before use."
 msgstr ""
+"Lekka, dopasowana maska zakładana na usta i nos, zapewniająca pełną ochronę "
+"przed wdychaniem dymu, gazu łzawiącego i zanieczyszczeń chemicznych – choć "
+"zaleca się gogle ochronne! Przed użyciem trzeba ją przygotować."
 
 #. ~ Description of "survivor firemask"
 #: data/json/items/tool_armor.json
@@ -747,6 +920,8 @@ msgid ""
 "A custom-made leather gasmask faced with Nomex.  It must be prepared before "
 "use."
 msgstr ""
+"Wykonana na zamówienie skórzana maska przeciwgazowa pokryta Nomeksem. Przed "
+"użyciem trzeba ją przygotować."
 
 #. ~ Description of "heavy survivor mask"
 #: data/json/items/tool_armor.json
@@ -754,15 +929,17 @@ msgid ""
 "A gas mask handcrafted from treated leather with a steel faceplate overtop.  "
 "It must be prepared before use."
 msgstr ""
+"Maska przeciwgazowa ręcznie wykonana z garbowanej skóry, z nałożoną na "
+"wierzch stalową osłoną twarzy. Przed użyciem trzeba ją przygotować."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "survivor half mask"
 msgid_plural "survivor half masks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "półmaska ocalonych"
+msgstr[1] "półmaski ocalonych"
+msgstr[2] "półmasek ocalonych"
+msgstr[3] "półmaski ocalonych"
 
 #. ~ Description of "survivor half mask"
 #: data/json/items/tool_armor.json
@@ -770,12 +947,16 @@ msgid ""
 "A half-face gasmask handcrafted from treated leather.  It provides no "
 "protection for the eyes, and must be activated before use."
 msgstr ""
+"Półmaska przeciwgazowa ręcznie wykonana z garbowanej skóry. Nie chroni oczu, "
+"a przed użyciem trzeba ją aktywować."
 
 #. ~ Description of "survivor mask"
 #: data/json/items/tool_armor.json
 msgid ""
 "A gas mask handcrafted from treated leather.  It must be prepared before use."
 msgstr ""
+"Maska przeciwgazowa ręcznie wykonana z garbowanej skóry. Przed użyciem trzeba"
+" ją przygotować."
 
 #. ~ Description of "pair of light amp goggles"
 #: data/json/items/tool_armor.json
@@ -783,6 +964,8 @@ msgid ""
 "A pair of battery-powered goggles that use a infrared LED in conjunction with"
 " a IR camera, allowing you to see in the dark.  Use it to turn them on."
 msgstr ""
+"Para zasilanych z baterii gogli, które wykorzystują diodę podczerwieni w "
+"połączeniu z kamerą IR, co pozwala widzieć w ciemności. Użyj, aby je włączyć."
 
 #. ~ Description of "pair of light amp goggles (on)"
 #: data/json/items/tool_armor.json
@@ -791,6 +974,9 @@ msgid ""
 " a IR camera, allowing you to see in the dark.  It is turned on, and "
 "continually draining batteries.  Use it to turn them off."
 msgstr ""
+"Para zasilanych z baterii gogli, które wykorzystują diodę podczerwieni w "
+"połączeniu z kamerą IR, co pozwala widzieć w ciemności. Są włączone i stale "
+"zużywają baterie. Użyj, aby je wyłączyć."
 
 #. ~ Description of "wearable RX12 jet injector"
 #: data/json/items/tool_armor.json
@@ -798,6 +984,8 @@ msgid ""
 "A modified RX12 jet injector which can be worn on the body.  A label on the "
 "side warns against using more than two doses per hour."
 msgstr ""
+"Zmodyfikowany wstrzykiwacz RX12, który można nosić na ciele. Etykieta z boku "
+"ostrzega przed przyjmowaniem więcej niż dwóch dawek na godzinę."
 
 #. ~ Description of "RX11 stimulant delivery system"
 #: data/json/items/tool_armor.json
@@ -806,6 +994,9 @@ msgid ""
 "the user's body.  A simple press of its activator injects powerful chemical "
 "stimulants into the bloodstream without using a needle."
 msgstr ""
+"System zasilania w stymulanty Rivtech RX11 – bezigłowy autowstrzykiwacz "
+"noszony na ciele użytkownika. Wystarczy nacisnąć aktywator, by bez użycia "
+"igły wstrzyknąć do krwiobiegu silne stymulanty chemiczne."
 
 #. ~ Description of "survivor divemask"
 #. ~ Description of "survivor divemask (on)"
@@ -815,6 +1006,9 @@ msgid ""
 "Provides excellent protection from harm as well providing breathing gas while"
 " underwater.  Use it to turn it on."
 msgstr ""
+"Wykonana na zamówienie, opancerzona maska z aparatem oddechowym o obiegu "
+"zamkniętym, zakrywająca twarz i oczy. Zapewnia doskonałą ochronę przed "
+"obrażeniami, a także dostarcza gaz oddechowy pod wodą. Użyj, aby ją włączyć."
 
 #. ~ Description of "survivor divemask (on)"
 #: data/json/items/tool_armor.json
@@ -824,6 +1018,10 @@ msgid ""
 " underwater.  It is turned on, and continually consuming its filter.  Use it "
 "to turn it off."
 msgstr ""
+"Wykonana na zamówienie, opancerzona maska z aparatem oddechowym o obiegu "
+"zamkniętym, zakrywająca twarz i oczy. Zapewnia doskonałą ochronę przed "
+"obrażeniami, a także dostarcza gaz oddechowy pod wodą. Jest włączona i stale "
+"zużywa filtr. Użyj, aby ją wyłączyć."
 
 #. ~ Description of "survivor divemask (on)"
 #: data/json/items/tool_armor.json
@@ -833,6 +1031,10 @@ msgid ""
 "harm as well providing breathing gas while underwater.  It is turned on, and "
 "continually consuming its filter.  Use it to turn it off."
 msgstr ""
+"Wykonana na zamówienie, opancerzona maska z aparatem oddechowym o obiegu "
+"zamkniętym, zakrywająca twarz i oczy bez względu na stopień twojej mutacji. "
+"Zapewnia doskonałą ochronę przed obrażeniami, a także dostarcza gaz oddechowy"
+" pod wodą. Jest włączona i stale zużywa filtr. Użyj, aby ją wyłączyć."
 
 #. ~ Description of "radiation biomonitor"
 #: data/json/items/tool_armor.json
@@ -840,6 +1042,8 @@ msgid ""
 "A small, battery-powered biometric safety device worn on the wrist.  Activate"
 " to check your current level of radiation exposure."
 msgstr ""
+"Małe, zasilane z baterii biometryczne urządzenie zabezpieczające noszone na "
+"nadgarstku. Aktywuj, aby sprawdzić aktualny poziom napromieniowania."
 
 #. ~ Description of "towel"
 #: data/json/items/tool_armor.json
@@ -849,6 +1053,10 @@ msgid ""
 "struggle against terrible odds, win through, and still know where their towel"
 " is, is clearly a force to be reckoned with."
 msgstr ""
+"Duży, puszysty ręcznik. Można się nim wytrzeć. Każdy, kto potrafi przemierzyć"
+" apokalipsę wzdłuż i wszerz, żyć w prymitywnych warunkach, klepać biedę, "
+"walczyć z przeciwnościami losu, zwyciężyć i wciąż wiedzieć, gdzie jest jego "
+"ręcznik, jest bez wątpienia kimś, z kim należy się liczyć."
 
 #. ~ Description of "towel"
 #: data/json/items/tool_armor.json
@@ -856,6 +1064,8 @@ msgid ""
 "A large, sopping wet towel.  If you wait a little bit, it should dry out.  "
 "Don't panic."
 msgstr ""
+"Duży, przemoczony ręcznik. Jeśli chwilę poczekasz, powinien wyschnąć. Nie "
+"panikuj."
 
 #. ~ Description of "straw fedora"
 #: data/json/items/tool_armor.json
@@ -863,6 +1073,8 @@ msgid ""
 "A straw fedora hat, comfortable and stylish.  Its brim helps keep the sun out"
 " of your eyes."
 msgstr ""
+"Pleciona słomkowa fedora, wygodna i stylowa. Jej rondo chroni oczy przed "
+"słońcem."
 
 #. ~ Description of "thermal electric outfit"
 #: data/json/items/tool_armor.json
@@ -871,6 +1083,9 @@ msgid ""
 "equipped with internal battery-powered heating elements.  Use it to turn it "
 "on."
 msgstr ""
+"Strój z cienkiej bielizny termicznej, który okrywa cię od stóp do głów i jest"
+" wyposażony w wewnętrzne elementy grzewcze zasilane z baterii. Użyj, aby go "
+"włączyć."
 
 #. ~ Description of "thermal electric outfit (on)"
 #: data/json/items/tool_armor.json
@@ -879,6 +1094,9 @@ msgid ""
 "equipped with internal battery-powered heating elements.  It is currently on,"
 " and continually draining batteries.  Use it to turn it off."
 msgstr ""
+"Strój z cienkiej bielizny termicznej, który okrywa cię od stóp do głów i jest"
+" wyposażony w wewnętrzne elementy grzewcze zasilane z baterii. Obecnie jest "
+"włączony i stale zużywa baterie. Użyj, aby go wyłączyć."
 
 #. ~ Description of "turtleneck"
 #: data/json/items/tool_armor.json
@@ -886,6 +1104,8 @@ msgid ""
 "A tasteful wool turtleneck, modeled after cashmere.  Unencumbering and warm, "
 "but lacking storage."
 msgstr ""
+"Gustowny wełniany golf, wzorowany na kaszmirowym. Nie krępuje ruchów i jest "
+"ciepły, ale nie ma miejsca do przechowywania."
 
 #. ~ Description of "turtleneck shirt"
 #: data/json/items/tool_armor.json
@@ -893,6 +1113,8 @@ msgid ""
 "A tasteful cotton turtleneck shirt, thick for a shirt, thin for a sweater, "
 "and completely lacking storage."
 msgstr ""
+"Gustowna bawełniana koszula z golfem, gruba jak na koszulę, cienka jak na "
+"sweter, zupełnie pozbawiona miejsca do przechowywania."
 
 #. ~ Description of "ski mask"
 #: data/json/items/tool_armor.json
@@ -901,20 +1123,23 @@ msgid ""
 "most of your head and mouth, and can be adjusted to hang around your throat "
 "instead."
 msgstr ""
+"Ciepła wełniana maska, która chroni głowę i twarz przed zimnem. Zakrywa "
+"większą część głowy i usta, ale można ją też przestawić, by zwisała wokół "
+"szyi."
 
 #. ~ "menu_text" action message of item "ski mask"
 #: data/json/items/tool_armor.json
 msgid "Wear as collar"
-msgstr ""
+msgstr "Noś jako kołnierz"
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "ski mask (collar)"
 msgid_plural "ski masks (collar)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "maska narciarska (kołnierz)"
+msgstr[1] "maski narciarskie (kołnierz)"
+msgstr[2] "masek narciarskich (kołnierz)"
+msgstr[3] "maski narciarskiej (kołnierz)"
 
 #. ~ Description of "ski mask (collar)"
 #: data/json/items/tool_armor.json
@@ -923,11 +1148,14 @@ msgid ""
 "wrapped around your throat, and can be adjusted to cover your mouth and more "
 "of your head."
 msgstr ""
+"Ciepła wełniana maska, która chroni głowę i twarz przed zimnem. Jest owinięta"
+" wokół szyi, ale można ją przestawić, by zakrywała usta i większą część "
+"głowy."
 
 #. ~ "menu_text" action message of item "ski mask (collar)"
 #: data/json/items/tool_armor.json
 msgid "Wear around head"
-msgstr ""
+msgstr "Noś na głowie"
 
 #. ~ Description of "shooter's earmuffs"
 #: data/json/items/tool_armor.json
@@ -938,6 +1166,11 @@ msgid ""
 "ears from injury while otherwise allowing you to hear normally.  The earmuffs"
 " are currently off."
 msgstr ""
+"Para nauszników cenionych przez strzelców. Bez baterii lub po wyłączeniu "
+"działają jak zwykłe nauszniki i blokują wszystkie dźwięki. Po włączeniu "
+"blokują tylko dźwięki powyżej określonej liczby decybeli, chroniąc uszy przed"
+" uszkodzeniem, a poza tym pozwalając normalnie słyszeć. Nauszniki są obecnie "
+"wyłączone."
 
 #. ~ Description of "shooter's earmuffs"
 #: data/json/items/tool_armor.json
@@ -946,6 +1179,9 @@ msgid ""
 " block sounds over a certain decibel amount while otherwise allowing you to "
 "hear normally."
 msgstr ""
+"Para nauszników cenionych przez strzelców. Nauszniki są włączone i blokują "
+"dźwięki powyżej określonej liczby decybeli, a poza tym pozwalają normalnie "
+"słyszeć."
 
 #. ~ Description of "shooter's ear plugs"
 #: data/json/items/tool_armor.json
@@ -956,11 +1192,16 @@ msgid ""
 "decibel amount when turned on, to protect your ears from injury while "
 "otherwise allowing you to hear normally.  The earplugs are currently off."
 msgstr ""
+"Para dousznych przetworników, które tłumią głośne dźwięki i wzmacniają ciche."
+" Bez baterii lub po wyłączeniu działają jak zwykłe zatyczki do uszu i blokują"
+" większość dźwięków. Po włączeniu blokują tylko dźwięki powyżej określonej "
+"liczby decybeli, chroniąc uszy przed uszkodzeniem, a poza tym pozwalając "
+"normalnie słyszeć. Zatyczki są obecnie wyłączone."
 
 #. ~ "need_charges_msg" action message of item "shooter's ear plugs"
 #: data/json/items/tool_armor.json
 msgid "The earplugs' batteries are dead."
-msgstr ""
+msgstr "Baterie zatyczek są rozładowane."
 
 #. ~ Description of "shooter's ear plugs (on)"
 #: data/json/items/tool_armor.json
@@ -969,11 +1210,16 @@ msgid ""
 "sounds.  The earplugs are turned on, and will block sounds over a certain "
 "decibel amount while otherwise allowing you to hear normally."
 msgstr ""
+"Para dousznych przetworników, które tłumią głośne dźwięki i wzmacniają ciche."
+" Zatyczki są włączone i blokują dźwięki powyżej określonej liczby decybeli, a"
+" poza tym pozwalają normalnie słyszeć."
 
 #. ~ Description of "stethoscope"
 #: data/json/items/tool_armor.json
 msgid "A medical listening tool.  Use it to listen to things.  Closely."
 msgstr ""
+"Medyczny przyrząd do osłuchiwania. Użyj go, by osłuchiwać różne rzeczy. Z "
+"bliska."
 
 #. ~ Description of "makeshift stethoscope"
 #: data/json/items/tool_armor.json
@@ -981,6 +1227,8 @@ msgid ""
 "A relatively cumbersome DIY child's medical listening toy.  Use it to listen "
 "to things.  Closely."
 msgstr ""
+"Dość nieporęczna, domowej roboty dziecięca zabawka do osłuchiwania. Użyj jej,"
+" by osłuchiwać różne rzeczy. Z bliska."
 
 #. ~ Description of "solar backpack (folded)"
 #: data/json/items/tool_armor.json
@@ -990,6 +1238,10 @@ msgid ""
 "normal backpack, and has an integrated cable to plug it into a cable charger "
 "system CBM."
 msgstr ""
+"Osobisty przenośny system ładujący składający się z zestawu paneli "
+"słonecznych zgrabnie złożonych w kształt dużego plecaka. Można go nosić jak "
+"zwykły plecak i ma zintegrowany kabel do podłączenia do KMB System ładowania "
+"przewodowego."
 
 #. ~ Description of "solar backpack (unfolded)"
 #: data/json/items/tool_armor.json
@@ -997,6 +1249,8 @@ msgid ""
 "An unfolded array of portable solar panels, ready to push some power into an "
 "active cable charger system CBM."
 msgstr ""
+"Rozłożony zestaw przenośnych paneli słonecznych, gotowych dostarczać energię "
+"do aktywnego KMB System ładowania przewodowego."
 
 #. ~ Description of "riot helmet"
 #: data/json/items/tool_armor.json
@@ -1004,6 +1258,8 @@ msgid ""
 "A riot helmet with a plastic face shield that covers your entire face.  "
 "Activate to raise the face shield."
 msgstr ""
+"Hełm do tłumienia zamieszek z plastikową osłoną zakrywającą całą twarz. "
+"Aktywuj, aby podnieść osłonę."
 
 #. ~ Description of "riot helmet (raised visor)"
 #: data/json/items/tool_armor.json
@@ -1011,6 +1267,8 @@ msgid ""
 "A riot helmet with a plastic face shield, which is raised up.  Activate to "
 "lower the shield."
 msgstr ""
+"Hełm do tłumienia zamieszek z plastikową osłoną twarzy, która jest "
+"podniesiona. Aktywuj, aby opuścić osłonę."
 
 #. ~ Description of "sallet helm"
 #. ~ Description of "sallet helm (raised)"
@@ -1019,6 +1277,8 @@ msgid ""
 "A popular German helmet of the late medieval era, the sallet covers the head "
 "and eyes.  Activate it to toggle the visor."
 msgstr ""
+"Popularny niemiecki hełm z późnego średniowiecza; salada osłania głowę i "
+"oczy. Aktywuj, aby podnieść lub opuścić zasłonę."
 
 #. ~ Description of "armet helm"
 #. ~ Description of "armet helm (raised)"
@@ -1028,15 +1288,17 @@ msgid ""
 "knight's helmet, it looks something like this.  Activate it to toggle the "
 "visor."
 msgstr ""
+"Kultowy rycerski hełm z późnego średniowiecza. Gdy myślisz o hełmie rycerza, "
+"wygląda on mniej więcej tak. Aktywuj, aby podnieść lub opuścić zasłonę."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "diving cylinder"
 msgid_plural "diving cylinders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "butla nurkowa"
+msgstr[1] "butle nurkowe"
+msgstr[2] "butli nurkowych"
+msgstr[3] "butli nurkowej"
 
 #. ~ Description of "diving cylinder"
 #. ~ Description of "diving cylinder (on)"
@@ -1046,24 +1308,27 @@ msgid ""
 "compressed mixture of oxygen and nitrogen.  It is equipped with an on-demand "
 "regulator and a mouthpiece designed mostly for underwater use."
 msgstr ""
+"Wysokociśnieniowa butla nurkowa 232 bar, która może pomieścić do 12 l "
+"sprężonej mieszaniny tlenu i azotu. Jest wyposażona w automat oddechowy i "
+"ustnik przeznaczony głównie do użytku pod wodą."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "diving cylinder (on)"
 msgid_plural "diving cylinders (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "butla nurkowa (wł.)"
+msgstr[1] "butle nurkowe (wł.)"
+msgstr[2] "butli nurkowych (wł.)"
+msgstr[3] "butli nurkowej (wł.)"
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "small diving cylinder"
 msgid_plural "small diving cylinders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała butla nurkowa"
+msgstr[1] "małe butle nurkowe"
+msgstr[2] "małych butli nurkowych"
+msgstr[3] "małej butli nurkowej"
 
 #. ~ Description of "small diving cylinder"
 #. ~ Description of "small diving cylinder (on)"
@@ -1073,15 +1338,18 @@ msgid ""
 "compressed mixture of oxygen and nitrogen.  It is equipped with an on-demand "
 "regulator and a mouthpiece designed mostly for underwater use."
 msgstr ""
+"Mała, wysokociśnieniowa zapasowa butla nurkowa 200 bar, która może pomieścić "
+"4 l sprężonej mieszaniny tlenu i azotu. Jest wyposażona w automat oddechowy i"
+" ustnik przeznaczony głównie do użytku pod wodą."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "small diving cylinder (on)"
 msgid_plural "small diving cylinders (on)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mała butla nurkowa (wł.)"
+msgstr[1] "małe butle nurkowe (wł.)"
+msgstr[2] "małych butli nurkowych (wł.)"
+msgstr[3] "małej butli nurkowej (wł.)"
 
 #. ~ Description of "electric blanket"
 #: data/json/items/tool_armor.json
@@ -1090,6 +1358,9 @@ msgid ""
 "Its power drain is usually negligible, but without being able to plug it into"
 " a wall, it chews through batteries insanely quickly."
 msgstr ""
+"Podgrzewany koc z poliestru. Najwygodniejsza rzecz na Ziemi. Zwykle pobiera "
+"znikomo mało prądu, ale bez możliwości podłączenia do gniazdka zżera baterie "
+"w szalonym tempie."
 
 #. ~ Description of "pair of attached ear plugs (in)"
 #: data/json/items/tool_armor.json
@@ -1097,6 +1368,8 @@ msgid ""
 "A pair of industrial-grade ear plugs attached together by some string.  They "
 "are inside your ears, activate them to take them out."
 msgstr ""
+"Para przemysłowych zatyczek do uszu połączonych sznurkiem. Są w twoich "
+"uszach; aktywuj, aby je wyjąć."
 
 #. ~ Description of "pair of attached ear plugs (out)"
 #: data/json/items/tool_armor.json
@@ -1104,6 +1377,8 @@ msgid ""
 "A pair of industrial-grade ear plugs, they are attached together by some "
 "string.  They hang around your neck, use them to plug them in."
 msgstr ""
+"Para przemysłowych zatyczek do uszu połączonych sznurkiem. Wiszą na twojej "
+"szyi; użyj, aby włożyć je do uszu."
 
 #. ~ Description of "military flight helmet"
 #: data/json/items/tool_armor.json
@@ -1112,6 +1387,8 @@ msgid ""
 "dampening system.  The helmet is also fitted with plastic rail for a night-"
 "vision attachment."
 msgstr ""
+"Wojskowy hełm lotniczy. Wyposażony w wizjer, mikrofon i system tłumienia "
+"hałasu. Hełm ma też plastikową szynę do mocowania noktowizora."
 
 #. ~ Description of a pocket in item "military flight helmet"
 #. ~ Description of a pocket in item "heavy combat exoskeleton head armor"
@@ -1119,16 +1396,16 @@ msgstr ""
 #: data/json/items/armor/combat_exoskeleton_armor.json
 #: data/json/items/armor/helmets.json data/json/items/tool_armor.json
 msgid "Pocket for a front night vision attachment."
-msgstr ""
+msgstr "Kieszeń na przedni noktowizor."
 
 #. ~ Item name
 #: data/json/items/tool_armor.json
 msgid "combo cover"
 msgid_plural "combo covers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "czapka oficerska z daszkiem"
+msgstr[1] "czapki oficerskie z daszkiem"
+msgstr[2] "czapek oficerskich z daszkiem"
+msgstr[3] "czapki oficerskiej z daszkiem"
 
 #. ~ Description of "battery powered utility exoskeleton"
 #: data/json/items/tool_armor.json
@@ -1136,6 +1413,8 @@ msgid ""
 "A skeletal frame of sturdy metal with attached motors to allow the user to "
 "move heavier loads with less strain on the body."
 msgstr ""
+"Szkielet z wytrzymałego metalu z przymocowanymi silnikami, który pozwala "
+"użytkownikowi przenosić cięższe ładunki przy mniejszym obciążeniu ciała."
 
 #. ~ Description of "battery powered utility exoskeleton (on)"
 #: data/json/items/tool_armor.json
@@ -1144,6 +1423,9 @@ msgid ""
 "move heavier loads with less strain on the body.  It is turned on and "
 "continually drawing power.  Use it to turn it off."
 msgstr ""
+"Szkielet z wytrzymałego metalu z przymocowanymi silnikami, który pozwala "
+"użytkownikowi przenosić cięższe ładunki przy mniejszym obciążeniu ciała. Jest"
+" włączony i stale pobiera energię. Użyj, aby go wyłączyć."
 
 #. ~ Description of "ICE utility exoskeleton"
 #: data/json/items/tool_armor.json
@@ -1152,6 +1434,9 @@ msgid ""
 "move heavier loads with less strain on the body.  This model uses a compact "
 "internal combustion engine for power."
 msgstr ""
+"Szkielet z wytrzymałego metalu z przymocowanymi silnikami, który pozwala "
+"użytkownikowi przenosić cięższe ładunki przy mniejszym obciążeniu ciała. Ten "
+"model jest zasilany kompaktowym silnikiem spalinowym."
 
 #. ~ Description of "ICE utility exoskeleton (on)"
 #: data/json/items/tool_armor.json
@@ -1161,6 +1446,10 @@ msgid ""
 "internal combustion engine for power.  It is turned on and continually "
 "draining gasoline.  Use it to turn it off."
 msgstr ""
+"Szkielet z wytrzymałego metalu z przymocowanymi silnikami, który pozwala "
+"użytkownikowi przenosić cięższe ładunki przy mniejszym obciążeniu ciała. Ten "
+"model jest zasilany kompaktowym silnikiem spalinowym. Jest włączony i stale "
+"zużywa benzynę. Użyj, aby go wyłączyć."
 
 #. ~ Description of "UPS conversion mod"
 #: data/json/items/toolmod.json
@@ -1169,15 +1458,18 @@ msgid ""
 " that can plug into a UPS.  Any device modified with this can be used without"
 " a battery as long as you have a charged UPS with you."
 msgstr ""
+"Urządzenie zastępujące konwencjonalne złącza baterii portem, który można "
+"podłączyć do UPS-a. Każdego urządzenia zmodyfikowanego w ten sposób można "
+"używać bez baterii, o ile masz przy sobie naładowany UPS."
 
 #. ~ Item name
 #: data/json/items/toolmod.json
 msgid "bionic power conversion mod"
 msgid_plural "bionic power conversion mods"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mod konwersji zasilania bionicznego"
+msgstr[1] "mody konwersji zasilania bionicznego"
+msgstr[2] "modów konwersji zasilania bionicznego"
+msgstr[3] "moda konwersji zasilania bionicznego"
 
 #. ~ Description of "bionic power conversion mod"
 #: data/json/items/toolmod.json
@@ -1187,15 +1479,20 @@ msgid ""
 "Any device modified with this is powered by your own bionic power storage "
 "instead of conventional batteries."
 msgstr ""
+"Zestaw zastępujący konwencjonalne złącza baterii obwodami i przewodami "
+"potrzebnymi do pobierania energii ze Standardowego interfejsu "
+"neurobionicznego (SNI). Każde urządzenie zmodyfikowane w ten sposób jest "
+"zasilane z twojego bionicznego magazynu energii zamiast z konwencjonalnych "
+"baterii."
 
 #. ~ Item name
 #: data/json/items/toolmod.json
 msgid "tool battery mod"
 msgid_plural "tool battery mods"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "mod baterii do narzędzi"
+msgstr[1] "mody baterii do narzędzi"
+msgstr[2] "modów baterii do narzędzi"
+msgstr[3] "moda baterii do narzędzi"
 
 #. ~ Description of "tool battery mod"
 #: data/json/items/toolmod.json
@@ -1203,15 +1500,17 @@ msgid ""
 "A battery compartment mod that allows the use of tool batteries in tools that"
 " otherwise could not."
 msgstr ""
+"Mod komory baterii, który pozwala używać baterii do narzędzi w narzędziach, "
+"które normalnie tego nie umożliwiają."
 
 #. ~ Item name
 #: data/json/items/toy.json
 msgid "plush toy"
 msgid_plural "plush toys"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa zabawka"
+msgstr[1] "pluszowe zabawki"
+msgstr[2] "pluszowych zabawek"
+msgstr[3] "pluszowej zabawki"
 
 #. ~ Description of "plush toy"
 #: data/json/items/toy.json
@@ -1219,15 +1518,17 @@ msgid ""
 "A manufactured plush toy.  This is the default variant, if you see it "
 "something went wrong."
 msgstr ""
+"Fabryczna pluszowa zabawka. To domyślny wariant; jeśli go widzisz, coś poszło"
+" nie tak."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "sloth teddy bear"
 msgid_plural "sloth teddy bears"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy miś leniwiec"
+msgstr[1] "pluszowe misie leniwce"
+msgstr[2] "pluszowych misiów leniwców"
+msgstr[3] "pluszowego misia leniwca"
 
 #. ~ Description of variant "sloth teddy bear" of item "plush toy"
 #: data/json/items/toy.json
@@ -1236,15 +1537,18 @@ msgid ""
 "like a pair of white glasses or a white bandit mask.  It is wearing a little "
 "white t-shirt and a pajama hat, but no pants."
 msgstr ""
+"Masowo produkowany czarny pluszowy miś ze znakiem na pyszczku przypominającym"
+" białe okulary albo białą maskę bandyty. Nosi mały biały t-shirt i czapkę od "
+"piżamy, ale nie ma spodni."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "panda teddy bear"
 msgid_plural "panda teddy bears"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy miś panda"
+msgstr[1] "pluszowe misie pandy"
+msgstr[2] "pluszowych misiów pand"
+msgstr[3] "pluszowego misia pandy"
 
 #. ~ Description of variant "panda teddy bear" of item "plush toy"
 #: data/json/items/toy.json
@@ -1252,58 +1556,61 @@ msgid ""
 "A mass-produced plush panda teddy bear.  It is wearing a little gray t-shirt,"
 " but no pants."
 msgstr ""
+"Masowo produkowany pluszowy miś panda. Nosi mały szary t-shirt, ale nie ma "
+"spodni."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "ferret plushie"
 msgid_plural "ferret plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa fretka"
+msgstr[1] "pluszowe fretki"
+msgstr[2] "pluszowych fretek"
+msgstr[3] "pluszowej fretki"
 
 #. ~ Description of variant "ferret plushie" of item "plush toy"
 #: data/json/items/toy.json
 msgid "A large plush ferret with cute beady eyes."
-msgstr ""
+msgstr "Duża pluszowa fretka o uroczych paciorkowatych oczkach."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "T-rex plushie"
 msgid_plural "T-rex plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy T-rex"
+msgstr[1] "pluszowe T-reksy"
+msgstr[2] "pluszowych T-reksów"
+msgstr[3] "pluszowego T-reksa"
 
 #. ~ Description of variant "T-rex plushie" of item "plush toy"
 #: data/json/items/toy.json
 msgid "A large plush t-rex."
-msgstr ""
+msgstr "Duży pluszowy T-rex."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "triceratops plushie"
 msgid_plural "triceratops plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy triceratops"
+msgstr[1] "pluszowe triceratopsy"
+msgstr[2] "pluszowych triceratopsów"
+msgstr[3] "pluszowego triceratopsa"
 
 #. ~ Description of variant "triceratops plushie" of item "plush toy"
 #: data/json/items/toy.json
 msgid ""
 "A large, round, cuddly dinosaur plushie with soft horns and a sturdy build."
 msgstr ""
+"Duży, okrągły, milutki pluszowy dinozaur z miękkimi rogami i solidną budową."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "stegosaurus plushie"
 msgid_plural "stegosaurus plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy stegozaur"
+msgstr[1] "pluszowe stegozaury"
+msgstr[2] "pluszowych stegozaurów"
+msgstr[3] "pluszowego stegozaura"
 
 #. ~ Description of variant "stegosaurus plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1311,15 +1618,17 @@ msgid ""
 "A large stegosaurus plushie with a spiky back and soft, huggable body.  Don't"
 " worry, it is completely docile!"
 msgstr ""
+"Duży pluszowy stegozaur z kolczastym grzbietem i miękkim ciałem, które aż "
+"chce się przytulić. Nie martw się, jest zupełnie łagodny!"
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "brontosaurus plushie"
 msgid_plural "brontosaurus plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy brontozaur"
+msgstr[1] "pluszowe brontozaury"
+msgstr[2] "pluszowych brontozaurów"
+msgstr[3] "pluszowego brontozaura"
 
 #. ~ Description of variant "brontosaurus plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1327,43 +1636,47 @@ msgid ""
 "A silly, oversized and soft brontosaurus plushie with a long tail, a long "
 "neck and a small head with a friendly smile."
 msgstr ""
+"Zabawny, przerośnięty i miękki pluszowy brontozaur z długim ogonem, długą "
+"szyją i małą głową z przyjaznym uśmiechem."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "penguin plushie"
 msgid_plural "penguin plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy pingwin"
+msgstr[1] "pluszowe pingwiny"
+msgstr[2] "pluszowych pingwinów"
+msgstr[3] "pluszowego pingwina"
 
 #. ~ Description of variant "penguin plushie" of item "plush toy"
 #: data/json/items/toy.json
 msgid "A velvety-soft plush penguin.  It makes a funny noise when you hug it."
 msgstr ""
+"Aksamitnie miękki pluszowy pingwin. Wydaje zabawny dźwięk, kiedy go "
+"przytulasz."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "rabbit plushie"
 msgid_plural "rabbit plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy królik"
+msgstr[1] "pluszowe króliki"
+msgstr[2] "pluszowych królików"
+msgstr[3] "pluszowego królika"
 
 #. ~ Description of variant "rabbit plushie" of item "plush toy"
 #: data/json/items/toy.json
 msgid "A large plush rabbit."
-msgstr ""
+msgstr "Duży pluszowy królik."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "fox plushie"
 msgid_plural "fox plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy lis"
+msgstr[1] "pluszowe lisy"
+msgstr[2] "pluszowych lisów"
+msgstr[3] "pluszowego lisa"
 
 #. ~ Description of variant "fox plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1371,15 +1684,18 @@ msgid ""
 "A large plush fox.  It isn't realistic enough to trick a zombie into going "
 "after it, but it's very cute and makes a comforting bedtime companion."
 msgstr ""
+"Duży pluszowy lis. Nie jest na tyle realistyczny, żeby skłonić zombie do "
+"pogoni za nim, ale jest bardzo uroczy i stanowi pocieszające towarzystwo "
+"przed snem."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "moose plushie"
 msgid_plural "moose plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy łoś"
+msgstr[1] "pluszowe łosie"
+msgstr[2] "pluszowych łosi"
+msgstr[3] "pluszowego łosia"
 
 #. ~ Description of variant "moose plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1388,15 +1704,18 @@ msgid ""
 "big antlers.  It has a special huggability feature that makes it delightfully"
 " squishy, perfect for comforting cuddles."
 msgstr ""
+"Milutki pluszak przedstawiający potężnego łosia, z miękkim brązowym futrem, "
+"oklapniętymi uszami i wielkim porożem. Ma specjalną funkcję przytulania, "
+"dzięki której jest rozkosznie mięciutki – idealny do pocieszających uścisków."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "bobcat plushie"
 msgid_plural "bobcat plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy ryś"
+msgstr[1] "pluszowe rysie"
+msgstr[2] "pluszowych rysiów"
+msgstr[3] "pluszowego rysia"
 
 #. ~ Description of variant "bobcat plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1405,15 +1724,18 @@ msgid ""
 "and soft brown fur.  It has embroidered both soft whiskers and claws that add"
 " a touch of realism to its cute and playful design."
 msgstr ""
+"Miękki, uroczy pluszowy ryś z uroczymi uszami zakończonymi pędzelkami, "
+"puszystym ogonem i miękkim brązowym futrem. Ma wyhaftowane miękkie wąsy i "
+"pazury, które dodają realizmu jego uroczemu i zabawnemu wyglądowi."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "eagle plushie"
 msgid_plural "eagle plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy orzeł"
+msgstr[1] "pluszowe orły"
+msgstr[2] "pluszowych orłów"
+msgstr[3] "pluszowego orła"
 
 #. ~ Description of variant "eagle plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1423,15 +1745,19 @@ msgid ""
 "pair of special eyes that glow as brightly as the stars and stripes of Old "
 "Glory, the perfect partner to fend off your enemies in the Cataclysm."
 msgstr ""
+"Milutki i majestatyczny pluszowy bielik amerykański z miękkimi, brązowo-"
+"białymi sztucznymi piórami z bawełny, zakrzywionym miękkim dziobem i "
+"patriotyczną miną. Ma specjalne oczy, które świecą jasno jak gwiazdy i pasy "
+"na Old Glory – idealny partner do odpierania wrogów podczas Kataklizmu."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "seal plushie"
 msgid_plural "seal plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa foka"
+msgstr[1] "pluszowe foki"
+msgstr[2] "pluszowych fok"
+msgstr[3] "pluszowej foki"
 
 #. ~ Description of variant "seal plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1440,15 +1766,18 @@ msgid ""
 "features a realistic texture that mimics the soft and textural quality of "
 "real seals' fur."
 msgstr ""
+"Milutka pluszowa foka z miękkim, szarawym futrem i wielkimi, uduchowionymi "
+"oczami. Ma realistyczną fakturę, która naśladuje miękkość i strukturę futra "
+"prawdziwych fok."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "otter plushie"
 msgid_plural "otter plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa wydra"
+msgstr[1] "pluszowe wydry"
+msgstr[2] "pluszowych wydr"
+msgstr[3] "pluszowej wydry"
 
 #. ~ Description of variant "otter plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1458,15 +1787,19 @@ msgid ""
 "makes it the perfect bathtub companion for those who love to play with their "
 "toys while they get clean."
 msgstr ""
+"Wesoła i puchata pluszowa wydra kanadyjska z brązowym futrem i zaciekawioną "
+"miną. Ma specjalne, nowoczesne, częściowo wodoodporne wykończenie, dzięki "
+"któremu jest idealną towarzyszką kąpieli dla tych, którzy lubią bawić się "
+"zabawkami podczas mycia."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "falcon plushie"
 msgid_plural "falcon plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy sokół"
+msgstr[1] "pluszowe sokoły"
+msgstr[2] "pluszowych sokołów"
+msgstr[3] "pluszowego sokoła"
 
 #. ~ Description of variant "falcon plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1476,15 +1809,19 @@ msgid ""
 "sleek plushie design, this toy plushie is sure to take imaginative people on "
 "make-believe high-flying chase scenes!"
 msgstr ""
+"Milutki pluszowy sokół wędrowny z miękkimi, brązowo-białymi sztucznymi "
+"piórami z bawełny, miękkim zakrzywionym dziobem i czujną miną. Dzięki "
+"szybkiej i smukłej sylwetce ta pluszowa zabawka z pewnością zabierze ludzi z "
+"wyobraźnią w wymyślone podniebne pościgi!"
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "chipmunk plushie"
 msgid_plural "chipmunk plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy pręgowiec"
+msgstr[1] "pluszowe pręgowce"
+msgstr[2] "pluszowych pręgowców"
+msgstr[3] "pluszowego pręgowca"
 
 #. ~ Description of variant "chipmunk plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1493,15 +1830,18 @@ msgid ""
 "big eyes.  It features a harmless, special crinkly texture that mimics the "
 "sound of chipmunks rustling in the leaves."
 msgstr ""
+"Słodki, uroczy pluszowy pręgowiec amerykański z miękkim, rudobrązowym futrem "
+"i wielkimi oczami. Ma nieszkodliwą, specjalną szeleszczącą fakturę, która "
+"naśladuje odgłos pręgowców buszujących w liściach."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "deer plushie"
 msgid_plural "deer plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy jeleń"
+msgstr[1] "pluszowe jelenie"
+msgstr[2] "pluszowych jeleni"
+msgstr[3] "pluszowego jelenia"
 
 #. ~ Description of variant "deer plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1509,15 +1849,17 @@ msgid ""
 "A very huggable white-tailed deer plushie with soft, brown fur and a cute "
 "expression with adorable antlers."
 msgstr ""
+"Bardzo przytulaśny pluszowy jeleń wirginijski z miękkim brązowym futrem, "
+"uroczą miną i rozkosznym porożem."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "skunk plushie"
 msgid_plural "skunk plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy skunks"
+msgstr[1] "pluszowe skunksy"
+msgstr[2] "pluszowych skunksów"
+msgstr[3] "pluszowego skunksa"
 
 #. ~ Description of variant "skunk plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1525,15 +1867,17 @@ msgid ""
 "A cute striped skunk plushie with soft, black-and-white fur and a playful "
 "expression.  Ironically, it has a weak, pleasant pine scent."
 msgstr ""
+"Uroczy pluszowy skunks w paski, z miękkim, czarno-białym futrem i zawadiacką "
+"miną. Jak na ironię, ma delikatny, przyjemny zapach sosny."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "racoon plushie"
 msgid_plural "racoon plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy szop pracz"
+msgstr[1] "pluszowe szopy pracze"
+msgstr[2] "pluszowych szopów praczy"
+msgstr[3] "pluszowego szopa pracza"
 
 #. ~ Description of variant "racoon plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1543,15 +1887,19 @@ msgid ""
 " from its hiding spot in the toy, reminiscent of one of the raccoon's "
 "greatest attributes."
 msgstr ""
+"Pluszak z miękkim, czarno-szaro-białym futrem i zaciekawioną miną z "
+"charakterystyczną maską bandyty. Ma specjalną funkcję, dzięki której jego "
+"ogon wysuwa się z kryjówki w zabawce, co przypomina jedną z największych "
+"zalet szopa pracza."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "owl plushie"
 msgid_plural "owl plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa sowa"
+msgstr[1] "pluszowe sowy"
+msgstr[2] "pluszowych sów"
+msgstr[3] "pluszowej sowy"
 
 #. ~ Description of variant "owl plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1559,15 +1907,17 @@ msgid ""
 "A cuddly and wise-looking owl plushie with fluffy white cotton faux feathers,"
 " orange eyes, and a cute expression."
 msgstr ""
+"Milutka pluszowa sowa o mądrym wyglądzie, z puszystymi białymi sztucznymi "
+"piórami z bawełny, pomarańczowymi oczami i uroczą miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "turkey plushie"
 msgid_plural "turkey plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy indyk"
+msgstr[1] "pluszowe indyki"
+msgstr[2] "pluszowych indyków"
+msgstr[3] "pluszowego indyka"
 
 #. ~ Description of variant "turkey plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1577,15 +1927,19 @@ msgid ""
 " of making gobbling sounds when squeezed, almost perfectly mimicking the "
 "turkey's unique calls."
 msgstr ""
+"Milutki, duży pluszowy indyk dziki z brązowymi sztucznymi piórami z bawełny, "
+"wydatnym, miękkim dziobem i wyrazistymi, uduchowionymi oczami. Po ściśnięciu "
+"wydaje specjalne gulgoczące dźwięki, niemal idealnie naśladując "
+"charakterystyczne odgłosy indyka."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "crocodile plushie"
 msgid_plural "crocodile plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy krokodyl"
+msgstr[1] "pluszowe krokodyle"
+msgstr[2] "pluszowych krokodyli"
+msgstr[3] "pluszowego krokodyla"
 
 #. ~ Description of variant "crocodile plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1595,15 +1949,19 @@ msgid ""
 "hissing and growling sounds, just like a real crocodile.  Or is it an "
 "alligator?  It's hard to tell."
 msgstr ""
+"Miękki i milutki pluszowy krokodyl z miękkimi zielonymi łuskami, szerokim "
+"uśmiechem i długim pyskiem. Ściśnięty lub dotknięty, wydaje autentyczne "
+"syczenie i warczenie, zupełnie jak prawdziwy krokodyl. A może to aligator? "
+"Trudno powiedzieć."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "iguana plushie"
 msgid_plural "iguana plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy legwan"
+msgstr[1] "pluszowe legwany"
+msgstr[2] "pluszowych legwanów"
+msgstr[3] "pluszowego legwana"
 
 #. ~ Description of variant "iguana plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1612,15 +1970,18 @@ msgid ""
 "curious expression.  It possess a special ribbed texture to mimic the skin of"
 " a real iguana."
 msgstr ""
+"Milutki pluszowy legwan z miękkimi zielonymi łuskami, wielkimi oczami i "
+"przyjazną, zaciekawioną miną. Ma specjalną żłobkowaną fakturę naśladującą "
+"skórę prawdziwego legwana."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "gecko plushie"
 msgid_plural "gecko plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy gekon"
+msgstr[1] "pluszowe gekony"
+msgstr[2] "pluszowych gekonów"
+msgstr[3] "pluszowego gekona"
 
 #. ~ Description of variant "gecko plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1630,15 +1991,19 @@ msgid ""
 "its tail wiggle and move playfully when squeezed enough, just like a real "
 "lizard's tail."
 msgstr ""
+"Uroczy i kolorowy pluszowy gekon z miękką, jaskrawą skórą i wielkimi, "
+"figlarnymi oczami. Ma specjalny wewnętrzny mechanizm z bawełny, dzięki "
+"któremu po wystarczająco mocnym ściśnięciu jego ogon wesoło się wije i "
+"porusza, zupełnie jak ogon prawdziwej jaszczurki."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "chameleon plushie"
 msgid_plural "chameleon plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy kameleon"
+msgstr[1] "pluszowe kameleony"
+msgstr[2] "pluszowych kameleonów"
+msgstr[3] "pluszowego kameleona"
 
 #. ~ Description of variant "chameleon plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1649,15 +2014,20 @@ msgid ""
 "you pet it properly, enabling people, especially children, to explore and "
 "learn about the biology of this fascinating reptile."
 msgstr ""
+"Milutki i miękki pluszowy kameleon, który potrafi zmieniać kolory, z "
+"wielkimi, okrągłymi oczami i uroczą miną. Tkanina na jego miękkim ciele ma "
+"prosty mechanizm zmiany koloru z zielonego na brązowy, jeśli odpowiednio go "
+"pogłaszczesz, co pozwala ludziom, zwłaszcza dzieciom, odkrywać i poznawać "
+"biologię tego fascynującego gada."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "chicken plushie"
 msgid_plural "chicken plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy kurczak"
+msgstr[1] "pluszowe kurczaki"
+msgstr[2] "pluszowych kurczaków"
+msgstr[3] "pluszowego kurczaka"
 
 #. ~ Description of variant "chicken plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1665,15 +2035,17 @@ msgid ""
 "A precious soft and cuddly chicken plushie with soft, warm brown cotton faux "
 "feathers and a gentle expression."
 msgstr ""
+"Przeuroczy, miękki i milutki pluszowy kurczak z miękkimi, ciepłobrązowymi "
+"sztucznymi piórami z bawełny i łagodną miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "goose plushie"
 msgid_plural "goose plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa gęś"
+msgstr[1] "pluszowe gęsi"
+msgstr[2] "pluszowych gęsi"
+msgstr[3] "pluszowej gęsi"
 
 #. ~ Description of variant "goose plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1682,15 +2054,18 @@ msgid ""
 " beak, and big, playful eyes.  This plushie produces realistic honking sounds"
 " when hugged!"
 msgstr ""
+"Pluszowa gęś z miękkimi, białymi sztucznymi piórami z bawełny, uroczym, "
+"miękkim pomarańczowym dziobem i wielkimi, figlarnymi oczami. Gdy się ją "
+"przytuli, realistycznie gęga!"
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "duck plushie"
 msgid_plural "duck plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa kaczka"
+msgstr[1] "pluszowe kaczki"
+msgstr[2] "pluszowych kaczek"
+msgstr[3] "pluszowej kaczki"
 
 #. ~ Description of variant "duck plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1699,15 +2074,19 @@ msgid ""
 "feet, and a lovable quack.  This plushie has special water-repellent "
 "properties to make it float in water, just like a real duck!"
 msgstr ""
+"Milutka pluszowa kaczka z miękkimi, żółtymi sztucznymi piórami z bawełny, "
+"uroczymi pomarańczowymi łapkami i rozkosznym kwakaniem. Ma specjalne "
+"właściwości hydrofobowe, dzięki którym unosi się na wodzie, zupełnie jak "
+"prawdziwa kaczka!"
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "puppy plushie"
 msgid_plural "puppy plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy szczeniak"
+msgstr[1] "pluszowe szczeniaki"
+msgstr[2] "pluszowych szczeniaków"
+msgstr[3] "pluszowego szczeniaka"
 
 #. ~ Description of variant "puppy plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1715,15 +2094,17 @@ msgid ""
 "A fluffy and cuddly plushie of a mutt puppy with soft, fuzzy fur, big, round "
 "eyes, and a playful expression."
 msgstr ""
+"Puchaty i milutki pluszak przedstawiający szczeniaka kundelka z miękkim, "
+"puszystym futrem, wielkimi, okrągłymi oczami i figlarną miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "kitty plushie"
 msgid_plural "kitty plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy kotek"
+msgstr[1] "pluszowe kotki"
+msgstr[2] "pluszowych kotków"
+msgstr[3] "pluszowego kotka"
 
 #. ~ Description of variant "kitty plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1732,15 +2113,18 @@ msgid ""
 "eyes, and a gentle expression.  You can't tell if it is a short-haired one or"
 " a long-haired one."
 msgstr ""
+"Uroczy i kochany pluszowy kotek domowy z miękkim, pluszowym futrem, wielkimi,"
+" okrągłymi oczami i łagodną miną. Nie potrafisz stwierdzić, czy jest "
+"krótkowłosy, czy długowłosy."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "walrus plushie"
 msgid_plural "walrus plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy mors"
+msgstr[1] "pluszowe morsy"
+msgstr[2] "pluszowych morsów"
+msgstr[3] "pluszowego morsa"
 
 #. ~ Description of variant "walrus plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1748,15 +2132,17 @@ msgid ""
 "A big, soft and cuddly walrus plushie with fluffy brown fur, cute, soft "
 "tusks, and big, wise soulful eyes."
 msgstr ""
+"Duży, miękki i milutki pluszowy mors z puszystym brązowym futrem, uroczymi, "
+"miękkimi kłami i wielkimi, mądrymi, uduchowionymi oczami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "crow plushie"
 msgid_plural "crow plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa wrona"
+msgstr[1] "pluszowe wrony"
+msgstr[2] "pluszowych wron"
+msgstr[3] "pluszowej wrony"
 
 #. ~ Description of variant "crow plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1764,15 +2150,17 @@ msgid ""
 "A plushie with black fluffy cotton faux feathers, big curious eyes, and an "
 "inquisitive expression."
 msgstr ""
+"Pluszak z czarnymi, puszystymi sztucznymi piórami z bawełny, wielkimi, "
+"zaciekawionymi oczami i dociekliwą miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "frog plushie"
 msgid_plural "frog plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa żaba"
+msgstr[1] "pluszowe żaby"
+msgstr[2] "pluszowych żab"
+msgstr[3] "pluszowej żaby"
 
 #. ~ Description of variant "frog plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1782,15 +2170,19 @@ msgid ""
 "squeezed and a special texture that makes it fun to squeeze and manipulate.  "
 "Or is it a frog?  You can't really tell."
 msgstr ""
+"Pluszowa żaba z miękką, zieloną i chropowatą skórą, wielkimi, figlarnymi "
+"oczami i typowymi żabimi nogami. Po ściśnięciu realistycznie rechocze i ma "
+"specjalną fakturę, dzięki której fajnie się ją ściska i wygina. A może to "
+"żaba? Naprawdę trudno powiedzieć."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "bat plushie"
 msgid_plural "bat plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy nietoperz"
+msgstr[1] "pluszowe nietoperze"
+msgstr[2] "pluszowych nietoperzy"
+msgstr[3] "pluszowego nietoperza"
 
 #. ~ Description of variant "bat plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1798,15 +2190,18 @@ msgid ""
 "A precious bat plushie with soft, black fur, big ears, and somewhat small, "
 "curious eyes.  It produces a special squeaker sound effect when squeezed."
 msgstr ""
+"Przeuroczy pluszowy nietoperz z miękkim, czarnym futrem, dużymi uszami i dość"
+" małymi, zaciekawionymi oczami. Po ściśnięciu wydaje specjalny piszczący "
+"dźwięk."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "gorilla plushie"
 msgid_plural "gorilla plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy goryl"
+msgstr[1] "pluszowe goryle"
+msgstr[2] "pluszowych goryli"
+msgstr[3] "pluszowego goryla"
 
 #. ~ Description of variant "gorilla plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1814,15 +2209,17 @@ msgid ""
 "A cuddly and adorable gorilla plushie with soft, black fur, big eyes, and a "
 "friendly expression."
 msgstr ""
+"Milutki i rozkoszny pluszowy goryl z miękkim, czarnym futrem, wielkimi oczami"
+" i przyjazną miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "orangutan plushie"
 msgid_plural "orangutan plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy orangutan"
+msgstr[1] "pluszowe orangutany"
+msgstr[2] "pluszowych orangutanów"
+msgstr[3] "pluszowego orangutana"
 
 #. ~ Description of variant "orangutan plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1831,15 +2228,18 @@ msgid ""
 " friendly eyes in a big, wise-looking face.  This plushie makes playful and "
 "cuddly jungle sounds when squeezed and hugged."
 msgstr ""
+"Kochany i przytulaśny pluszowy orangutan z miękkim, pomarańczowobrązowym "
+"futrem i wielkimi, przyjaznymi oczami na dużej, mądrze wyglądającej twarzy. "
+"Ściśnięty i przytulony wydaje zabawne, milusie odgłosy dżungli."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "chimpanzee plushie"
 msgid_plural "chimpanzee plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy szympans"
+msgstr[1] "pluszowe szympansy"
+msgstr[2] "pluszowych szympansów"
+msgstr[3] "pluszowego szympansa"
 
 #. ~ Description of variant "chimpanzee plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1847,15 +2247,17 @@ msgid ""
 "A cute and cuddly chimpanzee plushie with soft, brown fur, big, curious eyes,"
 " and a playful expression."
 msgstr ""
+"Uroczy i milutki pluszowy szympans z miękkim, brązowym futrem, wielkimi, "
+"zaciekawionymi oczami i figlarną miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "lion plushie"
 msgid_plural "lion plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy lew"
+msgstr[1] "pluszowe lwy"
+msgstr[2] "pluszowych lwów"
+msgstr[3] "pluszowego lwa"
 
 #. ~ Description of variant "lion plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1867,15 +2269,20 @@ msgid ""
 " now, without many humans, maybe these animals don't have to worry so much "
 "about their habitat being destroyed."
 msgstr ""
+"Ten jasny, niezwykle uroczy pluszowy lew ma długie, miękkie, złociste futro i"
+" niezwykle figlarne usposobienie. Na metce napisano, że jest ambasadorem "
+"swojego gatunku, a pieniądze zebrane ze sprzedaży pluszaków przekazano na "
+"ochronę gatunku. Teraz, gdy nie ma już wielu ludzi, te zwierzęta może nie "
+"muszą się aż tak martwić niszczeniem swojego siedliska."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "tarantula plushie"
 msgid_plural "tarantula plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy ptasznik"
+msgstr[1] "pluszowe ptaszniki"
+msgstr[2] "pluszowych ptaszników"
+msgstr[3] "pluszowego ptasznika"
 
 #. ~ Description of variant "tarantula plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1883,15 +2290,17 @@ msgid ""
 "A somewhat scary, but cuddly tarantula plushie with soft, fuzzy brown fur and"
 " big, curious eyes."
 msgstr ""
+"Nieco straszny, ale milutki pluszowy ptasznik z miękkim, puszystym brązowym "
+"futrem i wielkimi, zaciekawionymi oczami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "ant plushie"
 msgid_plural "ant plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa mrówka"
+msgstr[1] "pluszowe mrówki"
+msgstr[2] "pluszowych mrówek"
+msgstr[3] "pluszowej mrówki"
 
 #. ~ Description of variant "ant plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1899,15 +2308,17 @@ msgid ""
 "A ant plushie with a sturdy, hard yet soft shell mimic, and big, inquisitive "
 "eyes."
 msgstr ""
+"Pluszowa mrówka z imitacją solidnego, twardego, a jednak miękkiego pancerza i"
+" wielkimi, dociekliwymi oczami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "ladybug plushie"
 msgid_plural "ladybug plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa biedronka"
+msgstr[1] "pluszowe biedronki"
+msgstr[2] "pluszowych biedronek"
+msgstr[3] "pluszowej biedronki"
 
 #. ~ Description of variant "ladybug plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1917,15 +2328,19 @@ msgid ""
 " soft wing mechanic sewed directly into the body that gives it the authentic "
 "appearance of a ladybug about to fly."
 msgstr ""
+"Urocza i kochana pluszowa biedronka z miękkimi, czerwonymi skrzydłami w "
+"czarne kropki i wielkimi, przyjaznymi oczami. Ma specjalny mechanizm "
+"chowanych, miękkich, kropkowanych skrzydeł, wszyty bezpośrednio w ciało, "
+"który nadaje jej autentyczny wygląd biedronki gotowej do lotu."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "crab plushie"
 msgid_plural "crab plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy krab"
+msgstr[1] "pluszowe kraby"
+msgstr[2] "pluszowych krabów"
+msgstr[3] "pluszowego kraba"
 
 #. ~ Description of variant "crab plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1933,15 +2348,17 @@ msgid ""
 "An amazing crab plushie with soft, textured blue and red bumpy shell and big,"
 " curious eyes."
 msgstr ""
+"Niesamowity pluszowy krab z miękkim, fakturowanym, niebiesko-czerwonym, "
+"chropowatym pancerzem i wielkimi, zaciekawionymi oczami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "whale plushie"
 msgid_plural "whale plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy wieloryb"
+msgstr[1] "pluszowe wieloryby"
+msgstr[2] "pluszowych wielorybów"
+msgstr[3] "pluszowego wieloryba"
 
 #. ~ Description of variant "whale plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1949,15 +2366,17 @@ msgid ""
 "A large, funny, cuddly whale plushie with soft, blue-gray fur, big, friendly "
 "eyes, and a playful expression."
 msgstr ""
+"Duży, zabawny, milutki pluszowy wieloryb z miękkim, niebieskoszarym futrem, "
+"wielkimi, przyjaznymi oczami i figlarną miną."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "camel plushie"
 msgid_plural "camel plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowy wielbłąd"
+msgstr[1] "pluszowe wielbłądy"
+msgstr[2] "pluszowych wielbłądów"
+msgstr[3] "pluszowego wielbłąda"
 
 #. ~ Description of variant "camel plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1965,15 +2384,17 @@ msgid ""
 "A cuddly and sweet camel plushie with two soft humps, tan fur and big, "
 "soulful eyes."
 msgstr ""
+"Milutki i słodki pluszowy wielbłąd z dwoma miękkimi garbami, płowym futrem i "
+"wielkimi, uduchowionymi oczami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "alpaca plushie"
 msgid_plural "alpaca plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa alpaka"
+msgstr[1] "pluszowe alpaki"
+msgstr[2] "pluszowych alpak"
+msgstr[3] "pluszowej alpaki"
 
 #. ~ Description of variant "alpaca plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1981,15 +2402,17 @@ msgid ""
 "A cute and loving alpaca plushie featuring soft, curly fur in shades of white"
 " and brown, shiny black eyes, and slightly short legs."
 msgstr ""
+"Urocza i kochana pluszowa alpaka z miękkim, kręconym futrem w odcieniach "
+"bieli i brązu, błyszczącymi czarnymi oczami i nieco krótkimi nogami."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "cow plushie"
 msgid_plural "cow plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa krowa"
+msgstr[1] "pluszowe krowy"
+msgstr[2] "pluszowych krów"
+msgstr[3] "pluszowej krowy"
 
 #. ~ Description of variant "cow plushie" of item "plush toy"
 #: data/json/items/toy.json
@@ -1998,12 +2421,15 @@ msgid ""
 " patches, with endearing floppy ears and bright eyes, together with a pair of"
 " soft horns and the typical cow udder."
 msgstr ""
+"Ta bardzo starannie wykonana pluszowa krowa ma miękkie, aksamitne futro w "
+"czarno-białe łaty, rozczulające oklapnięte uszy i błyszczące oczy, a do tego "
+"parę miękkich rogów i typowe krowie wymię."
 
 #. ~ Variant name of item "plush toy"
 #: data/json/items/toy.json
 msgid "sheep plushie"
 msgid_plural "sheep plushies"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pluszowa owca"
+msgstr[1] "pluszowe owce"
+msgstr[2] "pluszowych owiec"
+msgstr[3] "pluszowej owcy"
